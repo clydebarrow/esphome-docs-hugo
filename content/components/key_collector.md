@@ -6,8 +6,8 @@ title: "Key collector component"
 {{< seo description="" image="" >}}
 
 The `key_collector` component collects key presses from components
-like [matrix_keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}),[Wiegand keypad ]({{< relref "/components/wiegand" >}})`
-or LVGL [Keyboard]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}}), [Button Matrix]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
+like [Matrix keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}),[Wiegand keypad ]({{< relref "/components/wiegand" >}})`
+or LVGL [``keyboard``]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}}), [``buttonmatrix``]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
 widgets. It allows you to process key sequences and treat them as one, for
 example to allow inputting of a PIN code or a passkey. The component outputs
 the result of the keypress sequence as a variable usable in automations.
@@ -45,8 +45,8 @@ key_collector:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this entry for use in lambdas.
-- **source_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the key input device.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this entry for use in lambdas.
+- **source_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the key input device.
 - **min_length** (*Optional*, integer): The minimal length of the desired key sequence. Below
   this, `on_result` automation will not trigger even if any of the `end_keys` was pressed.
 - **max_length** (*Optional*, integer): The maximum length of the desired key sequence, after 
@@ -58,7 +58,7 @@ Configuration variables:
 - **clear_keys** (*Optional*, string): Keys used to entirely clear the sequence, all the pressed keys.
 - **allowed_keys** (*Optional*, string): Keys allowed to be used. If not specified, then any otherwise 
   unused keys will be allowed.
-- **timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Timeout after which to cancel building the sequence and delete all the keys.
+- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Timeout after which to cancel building the sequence and delete all the keys.
 - **enable_on_boot** (*Optional*, boolean): If enabled, this key collector will be enabled on boot. Defaults to `true`.
 
 At least one of `end_keys` or `max_length` have to be specified. The rest are optional.
@@ -111,6 +111,6 @@ on_...:
 
 - [/components/matrix_keypad]({{< ref "/components/matrix_keypad" >}})
 - [/components/wiegand]({{< ref "/components/wiegand" >}})
-- [LVGL Button Matrix widget]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
-- [LVGL Keyboard widget]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
+- [``buttonmatrix``]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
+- [``keyboard``]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/key_collector.md)

@@ -6,7 +6,7 @@ title: "Web Server Component"
 {{< seo description="" image="" >}}
 
 The `web_server` component creates a simple web server on the node that can be accessed
-through any browser and a simple [api-rest]({{< ref "web-api/_index#api-rest" >}}). Please note that enabling this component
+through any browser and a simple [REST API]({{< ref "web-api/_index#api-rest" >}}). Please note that enabling this component
 will take up *a lot* of memory and may decrease stability, especially on ESP8266.
 
 ![Web server version 1](/components/images/web_server.png)
@@ -60,12 +60,12 @@ web_server:
   Defaults to `true`.
 - **log** (*Optional*, boolean): Turn on or off the log feature inside webserver. Defaults to `true`.
 - **ota** (*Optional*, boolean): Turn on or off the OTA feature inside webserver. Strongly not suggested without enabled authentication settings. Defaults to `true`. Cannot be used with the `esp-idf` framework.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **local** (*Optional*, boolean): Include supporting javascript locally allowing it to work without internet access. Defaults to `false`.
 - **version** (*Optional*, string): `1`, `2` or `3`. Version 1 displays as a table. Version 2 uses web components and has more functionality. Version 3 uses HA-Styling. Defaults to `2`.
-- **sorting_groups** (*Optional*, list): Available only on `version: 3`. A list of group ID's and names to group the entities. See [Webserver Entity Grouping]({{< ref "components/web_server#config-webserver-grouping" >}}).
+- **sorting_groups** (*Optional*, list): Available only on `version: 3`. A list of group ID's and names to group the entities. See [Entity grouping]({{< ref "components/web_server#config-webserver-grouping" >}}).
   
-  - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for the group.
+  - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for the group.
   - **name** (**Required**, string): A string representing the group name which is displayed as the header of the group
   - **sorting_weight** (*Optional*, float): A float representing the weight of the group. A group with a smaller `sorting_weight` will be displayed first. Defaults to `50`
 
@@ -239,8 +239,8 @@ Sensor value graph
 
 ## See Also
 
-- [api-event-source]({{< ref "web-api/_index#api-event-source" >}})
-- [api-rest]({{< ref "web-api/_index#api-rest" >}})
+- [Event Source API]({{< ref "web-api/_index#api-event-source" >}})
+- [REST API]({{< ref "web-api/_index#api-rest" >}})
 - :apiref:`web_server/web_server.h`
 - [prometheus]({{< ref "prometheus/" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/web_server.md)

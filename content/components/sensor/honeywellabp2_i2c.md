@@ -8,7 +8,7 @@ title: "Honeywell ABP 2 Pressure Sensors"
 The `honeywellabp2_i2c` sensor platform allows you to use your Honeywell ABP 
 ([website](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/board-mount-pressure-sensors/basic-abp2-series),
 [datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp2-series/documents/sps-siot-abp2-series-datasheet-32350268-en.pdf?download=false)) 
-pressure and temperature sensors with ESPHome. The [I2C]({{< ref "components/i2c#i2c" >}}) is
+pressure and temperature sensors with ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work
 
 ![Honeywell ABP Pressure and Temperature Sensor.](../images/honeywellabp.jpg)
@@ -38,20 +38,20 @@ set `min_pressure` and `max_pressure` to the measurement range, `transfer_functi
   - **min_pressure** (**Required**, int or float): Minimum pressure for the pressure sensor.
   - **max_pressure** (**Required**, int or float): Maximum pressure for the pressure sensor.
   - **transfer_function** (**Required**, "A" or "B"): Transfer function used by the pressure sensor.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Some sensors do not have temperature sensing ability, see datasheet. In some cases the sensor may return a valid temperature even though the 
 datasheet indicates that the sensor does not measure temperature.
 
 - **temperature** (*Optional*): The information for the temperature sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`honeywellabp/honeywellabp2.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/honeywellabp2_i2c.md)

@@ -24,16 +24,16 @@ sensor:
 ## Configuration variables:
 
 - **temperature** (**Required**): The information for the temperature sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (**Required**): The information for the humidity sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`honeywell_hih_i2c/honeywell_hih.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/honeywell_hih_i2c.md)

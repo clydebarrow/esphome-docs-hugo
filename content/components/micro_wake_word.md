@@ -25,11 +25,11 @@ micro_wake_word:
 ```
 ## Configuration variables:
 
-- **microphone** (**Required**, [config-microphone-source]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr[microphone ]({{< relref "/components/microphone/index" >}})to use for audio input.
+- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr[microphone ]({{< relref "/components/microphone/index" >}})to use for audio input.
 - **stop_after_detection** (*Optional*, boolean): Whether to stop the component after detecting a wake word. Defaults to `true`.
 - **models** (**Required**, list): The models to use. Only the first model is enabled by default on the first boot. Each model's enabled state is then saved/restored to/from the flash.
 
-  - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The optional ID used for the model actions below.
+  - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The optional ID used for the model actions below.
   - **model** (**Required**, string): This can be one of:
 
         - A simple name of a model that exists in the official [ESPHome Models repository](https://github.com/esphome/micro-wake-word-models).

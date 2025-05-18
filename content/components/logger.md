@@ -30,7 +30,7 @@ logger:
 -  **logs** (*Optional*, mapping): Manually set the log level for a
    specific component or tag. See :ref:`Manual Log Levels for more
    information <logger-manual_tag_specific_levels>`.
--  **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+-  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 Advanced settings:
 
@@ -41,7 +41,7 @@ Advanced settings:
    This prevents API disconnections when multiple threads attempt to log simultaneously.
    Set to `0` to disable the log buffer. Defaults to `768B`.
 -  **hardware_uart** (*Optional*, string): The Hardware UART to use for logging. The default varies depending on
-   the specific processor/chip and framework you are using. See the [table below]({{< ref "components/logger#logger-default_hardware_interfaces" >}}).
+   the specific processor/chip and framework you are using. See the [Default Hardware Interfaces]({{< ref "components/logger#logger-default_hardware_interfaces" >}}).
 -  **esp8266_store_log_strings_in_flash** (*Optional*, boolean): If set to false, disables storing
    log strings in the flash section of the device (uses more memory). Defaults to true.
 -  **on_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
@@ -179,7 +179,7 @@ that have a lower severity than the global log level.
 
 Print a formatted message to the logs.
 
-In the `format` option, you can use `printf`-style formatting (see [display-printf]({{< ref "components/display/_index#display-printf" >}})).
+In the `format` option, you can use `printf`-style formatting (see [Formatted Text]({{< ref "components/display/_index#display-printf" >}})).
 
 ```yaml
 on_...:
@@ -194,10 +194,10 @@ on_...:
 ```
 Configuration options:
 
--  **format** (**Required**, string): The format for the message in [printf-style]({{< ref "components/display/_index#display-printf" >}}).
--  **args** (*Optional*, list of [lambda]({{< ref "automations/templates#config-lambda" >}})): The optional arguments for the
+-  **format** (**Required**, string): The format for the message in [Formatted Text]({{< ref "components/display/_index#display-printf" >}}).
+-  **args** (*Optional*, list of [Templates]({{< ref "automations/templates#config-lambda" >}})): The optional arguments for the
    format message.
--  **level** (*Optional*, string): The [log level]({{< ref "components/logger#logger-log_levels" >}}) to print the message
+-  **level** (*Optional*, string): The [Log Levels]({{< ref "components/logger#logger-log_levels" >}}) to print the message
    with. Defaults to `DEBUG`.
 -  **tag** (*Optional*, string): The tag (seen in front of the message in the logs) to print the message
    with. Defaults to `main`.
@@ -228,7 +228,7 @@ on_...:
 **************
 
 This automation will be triggered when a new message is added to the log.
-In [lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the message, log level and tag from the trigger
+In [Templates]({{< ref "automations/templates#config-lambda" >}}) you can get the message, log level and tag from the trigger
 using `message` (`const char *`), `level` (`int`) and `tag` (`const char *`).
 
 ```yaml

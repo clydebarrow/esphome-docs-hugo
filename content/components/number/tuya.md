@@ -94,7 +94,7 @@ Therefore there is also an option to store them on the ESPHome side and they wil
   - **initial_value** (*Optional*, float): The value to be written at initialization. Must be between `min_value` and `max_value`.
   - **restore_value** (*Optional*, boolean): Saves and loads the state to RTC/Flash. Defaults to `false`.
 
-- All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
+- All other options from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
 
 ## See Also
 

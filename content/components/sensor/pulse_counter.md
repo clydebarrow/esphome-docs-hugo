@@ -24,7 +24,7 @@ on the ESP32. However, due to the use of the pulse counter peripheral, a maximum
 
 ## Configuration variables
 
-- **pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to count pulses on.
+- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to count pulses on.
 - **count_mode** (*Optional*): Configure how the counter should behave
   on a detected rising edge/falling edge.
 
@@ -36,13 +36,13 @@ on the ESP32. However, due to the use of the pulse counter peripheral, a maximum
     Defaults to `DISABLE`.
 
 - **use_pcnt** (*Optional*, boolean): Use hardware `PCNT` pulse counter. Only supported on ESP32. Defaults to `true`.
-- **internal_filter** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): If a pulse shorter than this
+- **internal_filter** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): If a pulse shorter than this
   time is detected, it's discarded and no pulse is counted. Defaults to `13us`. On the ESP32, when using the hardware pulse counter
   this value can not be higher than `13us`, for the ESP8266 or with `use_pcnt: false` you can use larger intervals too.
   If you enable this, set up the `count_mode` to increase on the falling edge, not leading edge. For S0 pulse meters that are used to meter power consumption 50-100 ms is a reasonable value.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 - **total** (*Optional*): Report the total number of pulses.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< note >}}
 See :doc:`integration sensor </components/sensor/integration>` for summing up pulse counter
@@ -52,7 +52,7 @@ values over time.
 ## Converting units
 
 The sensor defaults to measuring its values using a unit of measurement
-of “pulses/min”. You can change this by using [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}}).
+of “pulses/min”. You can change this by using [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}).
 For example, if you're using the pulse counter with a photodiode to
 count the light pulses on a power meter, you can do the following:
 
@@ -153,7 +153,7 @@ circuiting the wire by mistake.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [/components/sensor/pulse_meter]({{< ref "/components/sensor/pulse_meter" >}})
 - [rotary_encoder]({{< ref "rotary_encoder/" >}})
 - [esp-idf Pulse Counter API](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html).

@@ -8,12 +8,12 @@ title: "LVGL Text Sensor"
 The `lvgl` text sensor platform creates a Text Sensor from an LVGL textual widget
 and requires [LVGL ]({{< relref "/components/lvgl/index" >}}) to be configured.
 
-Supported widgets are [lvgl-widget-textarea]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}) and [lvgl-widget-label]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}). A single text sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome text sensor component.
+Supported widgets are [``textarea``]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}) and [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}). A single text sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome text sensor component.
 
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a `textarea` widget configured in LVGL, which will reflect the state of the text sensor.
-- All other variables from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other variables from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 Example:
 
@@ -30,8 +30,8 @@ Widget-specific actions (``lvgl.label.update``, ``lvgl.textarea.update``) will t
 {{< /note >}}
 ## See Also
 - [LVGL Main component ]({{< relref "/components/lvgl/index" >}})
-- [Label widget]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}})
-- [Textarea widget]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}})
+- [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}})
+- [``textarea``]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}})
 - [/components/binary_sensor/lvgl]({{< ref "/components/binary_sensor/lvgl" >}})
 - [/components/sensor/lvgl]({{< ref "/components/sensor/lvgl" >}})
 - [/components/number/lvgl]({{< ref "/components/number/lvgl" >}})

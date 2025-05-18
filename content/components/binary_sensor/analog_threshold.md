@@ -13,7 +13,7 @@ When the signal is above or equal to the threshold the binary sensor is `true`
 
 It provides an *hysteresis* option to reduce instability when the source signal is noisy
 using different limits depending on the current state.
-Additionally a [delay filter]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}) could be used to only change
+Additionally a [Binary Sensor Filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}) could be used to only change
 after a new state has been kept a minimum time.
 
 If the source sensor is uninitialized at the moment of component creation, the initial
@@ -35,14 +35,14 @@ binary_sensor:
 ```
 ## Configuration variables
 
--  **sensor_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the source sensor.
--  **threshold** (**Required**, float [templatable]({{< ref "automations/templates#config-templatable" >}}) or mapping): Configures the reference for comparison. Accepts either a shorthand
+-  **sensor_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the source sensor.
+-  **threshold** (**Required**, float [Templating Actions]({{< ref "automations/templates#config-templatable" >}}) or mapping): Configures the reference for comparison. Accepts either a shorthand
    float number that will be used as both upper/lower threshold, or a mapping to define different values for each (to
    use hysteresis).
 
-   -  **upper** (**Required**, float [templatable]({{< ref "automations/templates#config-templatable" >}})): Upper threshold, that needs to be crossed to transition from `low` to `high` states.
-   -  **lower** (**Required**, float [templatable]({{< ref "automations/templates#config-templatable" >}})): Lower threshold, that needs to be crossed to transition from `high` to `low` states.
--  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+   -  **upper** (**Required**, float [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Upper threshold, that needs to be crossed to transition from `low` to `high` states.
+   -  **lower** (**Required**, float [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Lower threshold, that needs to be crossed to transition from `high` to `low` states.
+-  All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 
 
@@ -50,6 +50,6 @@ binary_sensor:
 
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`analog_threshold/analog_threshold_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/analog_threshold.md)

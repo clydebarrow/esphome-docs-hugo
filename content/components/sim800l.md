@@ -45,12 +45,12 @@ connect ``TX`` and ``RX`` lines directly without any level shifter.
 
 Configuration variables:
 
-- **uart_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **on_sms_received** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when an SMS is received. See [sim800l-on_sms_received]({{< ref "components/sim800l#sim800l-on_sms_received" >}}).
+  performed when an SMS is received. See [``on_sms_received`` Trigger]({{< ref "components/sim800l#sim800l-on_sms_received" >}}).
 - **on_incoming_call** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when a call is received. See [sim800l-on_incoming_call]({{< ref "components/sim800l#sim800l-on_incoming_call" >}}).
+  performed when a call is received. See [``on_incoming_call`` Trigger]({{< ref "components/sim800l#sim800l-on_incoming_call" >}}).
 - **on_call_connected** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
   performed when a call is connected, either because an outgoing call accepted is
   accepted or an incoming call answered.
@@ -71,7 +71,7 @@ Configuration variables:
 
 - **rssi** (*Optional*): The informed Received signal strength indication (RSSI) in dBm.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ## Binary Sensor
@@ -87,14 +87,14 @@ Configuration variables:
 
 - **registered** (*Optional*): Indicates if the SIM800L has successfully registered in the cellular network.
 
-  - All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+  - All options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "sim800l-on_sms_received" >}}
 
 ## ``on_sms_received`` Trigger
 
 With this configuration option you can write complex automations whenever an SMS message
-is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
+is received. To use the message content, use a [Templates]({{< ref "automations/templates#config-lambda" >}})
 template, the message content and the sender phone number are available inside that lambda
 under the variables named `message` and `sender` respectively.
 
@@ -164,10 +164,10 @@ on_...:
 ```
 Configuration options:
 
-- **recipient** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The message recipient.
+- **recipient** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The message recipient.
   number.
-- **message** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The message content.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
+- **message** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The message content.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
 
 
 {{< anchor "sim800l-dial_action" >}}
@@ -185,8 +185,8 @@ on_...:
 ```
 Configuration options:
 
-- **recipient** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The number to dial.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
+- **recipient** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The number to dial.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
 
 
 ## ``sim800l.connect`` Action

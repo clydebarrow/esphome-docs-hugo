@@ -23,12 +23,12 @@ binary_sensor:
 ```
 ## Configuration variables
 
--  **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+-  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 -  **provider** (**Required**, string): The name of the provider node.
--  **remote_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the original binary sensor in the provider device. If not specified defaults to the ID configured with `id:`.
+-  **remote_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the original binary sensor in the provider device. If not specified defaults to the ID configured with `id:`.
 -  **name** (*Optional*, string): The name of the binary sensor.
 -  **internal** (*Optional*, boolean): Whether the sensor should be exposed via API (e.g. to Home Assistant.) Defaults to `true` if name is not set, required if name is provided.
--  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+-  All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 At least one of `id` and `remote_id` must be configured.
 
@@ -46,5 +46,5 @@ configured.
 
 - [/components/packet_transport/index]({{< ref "/components/packet_transport/index" >}})
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/packet_transport.md)

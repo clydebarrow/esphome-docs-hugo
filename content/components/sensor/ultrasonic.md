@@ -40,21 +40,21 @@ timeout option which specifies how long to wait for values.
   periodically send the trigger pulse to.
 - **echo_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The input pin on which to
   wait for the echo.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Advanced options:
 
 - **timeout** (*Optional*, float): The number of meters for the
   timeout. Most sensors can only sense up to 2 meters. Defaults to 2 meters.
-- **pulse_time** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The duration for which the trigger pin will be
+- **pulse_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration for which the trigger pin will be
   active. Defaults to `10us`.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [template]({{< ref "template/" >}})
 - :apiref:`ultrasonic/ultrasonic_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ultrasonic.md)

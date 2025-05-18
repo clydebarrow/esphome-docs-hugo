@@ -33,15 +33,15 @@ sensor:
 ## Configuration variables:
 
 - **tvoc** (**Required**): The information for the total Volatile Organic Compounds sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **address** (*Optional*, int): Manually specify the I²C address of
   the sensor. Defaults to `0x1A`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **version** (*Optional*): The firmware version of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **resistance** (*Optional*): The initial value of the sensor resistance.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Actions:
 
@@ -68,7 +68,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
 - **mode** (**Required**, enum): One of supported modes:
 
   - `FACTORY_DEFAULT` - reset to the factory zero-point
@@ -102,12 +102,12 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
 - **address** (**Required**, int): New I2C address.
 
   
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ags10/ags10.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ags10.md)

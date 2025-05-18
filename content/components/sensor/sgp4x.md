@@ -46,7 +46,7 @@ communication.
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
 
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **nox** (*Optional*): NOx Index. Only available with SGP41. If a SGP40 sensor is detected this sensor will be ignored
 
@@ -59,17 +59,17 @@ communication.
     - **std_initial** (*Optional*): The initial estimate for standard deviation parameter has no impact for NOx. This parameter is still in place for consistency reasons with the VOC tuning parameters command. This parameter must always be set to 50.
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`
 - **store_baseline** (*Optional*, boolean): Stores and retrieves the baseline information for quicker startups. Defaults to `true`
 
 - **compensation** (*Optional*): The block containing sensors used for compensation. If not set defaults will be used.
 
-  - **temperature_source** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Give an external temperature sensor ID
+  - **temperature_source** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give an external temperature sensor ID
     here. This can improve the sensor's internal calculations. Defaults to `25`
 
-  - **humidity_source** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Give an external humidity sensor ID
+  - **humidity_source** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give an external humidity sensor ID
     here. This can improve the sensor's internal calculations. Defaults to `50`
 
 
@@ -89,7 +89,7 @@ sensor:
 ```
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [dht]({{< ref "dht/" >}})
 - [dht12]({{< ref "dht12/" >}})
 - [hdc1080]({{< ref "hdc1080/" >}})

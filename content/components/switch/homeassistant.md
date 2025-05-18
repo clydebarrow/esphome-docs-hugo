@@ -25,7 +25,7 @@ switch:
 ## Configuration variables:
 
 - **entity_id** (**Required**, string): The entity ID to import / control from Home Assistant.
-- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## Supported domains
 
@@ -42,6 +42,6 @@ The following entity domains from Home Assistant are supported by this platform.
 
 ## See Also
 
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/switch/homeassistant_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/homeassistant.md)

@@ -17,6 +17,6 @@ select:
 ```
 ## See Also
 
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - [/components/logger]({{< ref "/components/logger" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/logger.md)

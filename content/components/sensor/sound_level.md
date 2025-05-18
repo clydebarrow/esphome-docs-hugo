@@ -28,16 +28,16 @@ sensor:
 ```
 ## Configuration variables:
 
-- **microphone** (**Required**, [config-microphone-source]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr[microphone ]({{< relref "/components/microphone/index" >}})to use for input. Multiple channels may be selected.
-- **measurement_duration** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
+- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr[microphone ]({{< relref "/components/microphone/index" >}})to use for input. Multiple channels may be selected.
+- **measurement_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
 - **passive** (**Required**, boolean). Whether passive mode is enabled. See [Passive Mode]({{< ref "components/sensor/sound_level#sound_level-passive" >}}).
 - **peak** (*Optional*): The information for the peak loudness sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **rms** (*Optional*): The information for the Root Mean Square loudness sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "sound_level-passive" >}}
 
@@ -67,6 +67,6 @@ Stops measuring sound levels. Does nothing in passive mode.
 ## See Also
 
 - [Root Mean Square (Wikipedia)](https://en.wikipedia.org/wiki/Root_mean_square)
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`sound_level/sound_level.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sound_level.md)

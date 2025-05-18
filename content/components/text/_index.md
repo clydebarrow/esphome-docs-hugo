@@ -34,7 +34,7 @@ Configuration variables:
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
       you want the text to use that name, you can set `name: None`.
 
 - **icon** (*Optional*, icon): Manually set the icon to use for the text in the frontend.
@@ -49,20 +49,20 @@ Configuration variables:
   for a list of available options. Set to `""` to remove the default entity category.
 - **mode** (**Required**, string): Defines how the text should be displayed in the frontend.
   One of `text` or `password`.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 Automations:
 
 - **on_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a new value is published. See [text-on_value]({{< ref "components/text/_index#text-on_value" >}}).
+  when a new value is published. See [``on_value``]({{< ref "components/text/_index#text-on_value" >}}).
 
 MQTT Options:
 
-- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 ## Text Automation
 
-You can access the most recent state of the text in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
+You can access the most recent state of the text in [Templates]({{< ref "automations/templates#config-lambda" >}}) using
 `id(text_id).state`.
 
 {{< anchor "text-on_value" >}}
@@ -70,7 +70,7 @@ You can access the most recent state of the text in [lambdas]({{< ref "automatio
 `on_value`
 ************
 
-This automation will be triggered when a new value is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
+This automation will be triggered when a new value is published. In [Templates]({{< ref "automations/templates#config-lambda" >}})
 you can get the value from the trigger with `x`.
 
 ```yaml
@@ -91,7 +91,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 `text.set` Action
 *******************
 
-This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a text state.
+This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting a text state.
 
 ```yaml
 - text.set:
@@ -101,8 +101,8 @@ This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the text to set.
-- **value** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the text to set.
+- **value** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   The value to set the text to.
 
 {{< anchor "text-lambda_calls" >}}
@@ -110,7 +110,7 @@ Configuration variables:
 lambda calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call certain methods on all texts to do some
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call certain methods on all texts to do some
 advanced stuff (see the full API Reference for more info).
 
 - `.make_call()`: Make a call for updating the text value.

@@ -27,9 +27,9 @@ templates to offer access to the actions you need. Please see :ref:`ezo-pmp-ha-c
 
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the pump so that you can control it.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the pump so that you can control it.
 - **address** (*Optional*, int): Specify the I²C address of the sensor. Defaults to 103.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Sensors
@@ -54,8 +54,8 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "ezo_pmp-total_volume_dosed_sensor" >}}
 
@@ -74,8 +74,8 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "ezo_pmp-absolute_total_volume_dosed_sensor" >}}
 
@@ -93,8 +93,8 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "ezo_pmp-last_volume_requested_sensor" >}}
 
@@ -113,16 +113,16 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "ezo_pmp-max_flow_rate_sensor" >}}
 
 ## ``max_flow_rate``
 
 The pump provides its own calculation of the maximum flow rate it can provide (in ml/minute). Dosing requests that exceed this rate
-will fail. When using the [Dose Continuously]({{< ref "components/ezo_pmp#ezo_pmp-dose_continuously_action" >}}) Action, this is the volume the pump will
-dose every minute. This value will get updated after the pump is calibrated (see [ezo_pmp-set_calibration_volume_action]({{< ref "components/ezo_pmp#ezo_pmp-set_calibration_volume_action" >}})).
+will fail. When using the [``ezo_pmp.dose_continuously`` Action]({{< ref "components/ezo_pmp#ezo_pmp-dose_continuously_action" >}}) Action, this is the volume the pump will
+dose every minute. This value will get updated after the pump is calibrated (see [``ezo_pmp.set_calibration_volume`` Action]({{< ref "components/ezo_pmp#ezo_pmp-set_calibration_volume_action" >}})).
 
 ```yaml
 sensor:
@@ -134,8 +134,8 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "ezo_pmp-pump_voltage_sensor" >}}
 
@@ -153,8 +153,8 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Binary Sensors
 
@@ -174,8 +174,8 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "ezo_pmp-is_paused_binary_sensor" >}}
 
@@ -193,8 +193,8 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 
 ## Text Sensors
@@ -215,8 +215,8 @@ text_sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 {{< anchor "ezo_pmp-calibration_status_text_sensor" >}}
 
@@ -234,8 +234,8 @@ text_sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Actions
 
@@ -243,8 +243,8 @@ Configuration variables:
 
 ## ``ezo_pmp.dose_continuously`` Action
 
-Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose continuously
-at the [Maximum Flow Rate]({{< ref "components/ezo_pmp#ezo_pmp-max_flow_rate_sensor" >}}). The pump will automatically stop after 20 days
+Use this action in an [Automation]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose continuously
+at the [``max_flow_rate``]({{< ref "components/ezo_pmp#ezo_pmp-max_flow_rate_sensor" >}}). The pump will automatically stop after 20 days
 of running in continuous mode.
 
 ```yaml
@@ -256,15 +256,15 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
 
 
 {{< anchor "ezo_pmp-dose_volume_action" >}}
 
 ## ``ezo_pmp.dose_volume`` Action
 
-Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific volume (in milliliters)
-at the [Maximum Flow Rate]({{< ref "components/ezo_pmp#ezo_pmp-max_flow_rate_sensor" >}}). If the volume is negative the pump will run backwards.
+Use this action in an [Automation]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific volume (in milliliters)
+at the [``max_flow_rate``]({{< ref "components/ezo_pmp#ezo_pmp-max_flow_rate_sensor" >}}). If the volume is negative the pump will run backwards.
 
 ```yaml
 on_...:
@@ -282,14 +282,14 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
-- **volume** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): The volume to dose in milliliters. If negative, pump will run in reverse.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **volume** (**Required**, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The volume to dose in milliliters. If negative, pump will run in reverse.
 
 {{< anchor "ezo_pmp-dose_volume_over_time_action" >}}
 
 ## ``ezo_pmp.dose_volume_over_time`` Action
 
-Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific `volume` (in milliliters)
+Use this action in an [Automation]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific `volume` (in milliliters)
 over the provided `duration` (in minutes). At the end of the time period the pump will have dosed the specified `volume`.
 If the volume is negative the pump will run backwards.
 
@@ -312,16 +312,16 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
-- **volume** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): The volume to dose in milliliters. If negative, pump will run in reverse.
-- **duration** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The time (in minutes) the pump will take to dose the volume requested.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **volume** (**Required**, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The volume to dose in milliliters. If negative, pump will run in reverse.
+- **duration** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The time (in minutes) the pump will take to dose the volume requested.
 
 
 {{< anchor "ezo_pmp-dose_with_constant_flow_rate_action" >}}
 
 ## ``ezo_pmp.dose_with_constant_flow_rate`` Action
 
-Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific `volume` (in milliliters) every minute
+Use this action in an [Automation]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific `volume` (in milliliters) every minute
 for the provided `duration` (in minutes). At the end of the time period the pump will have dosed the specified `volume` times the `duration`.
 If the volume is negative the pump will run backwards.
 
@@ -344,15 +344,15 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
-- **volume_per_minute** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): The volume to dose in milliliters every minute. If negative, pump will run in reverse.
-- **duration** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The time (in minutes) the pump will dose the volume requested every minute.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **volume_per_minute** (**Required**, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The volume to dose in milliliters every minute. If negative, pump will run in reverse.
+- **duration** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The time (in minutes) the pump will dose the volume requested every minute.
 
 {{< anchor "ezo_pmp-pause_dosing_action" >}}
 
 ## ``ezo_pmp.pause_dosing`` Action
 
-Use this action to pause a Dosing command that was previously issued. To determine if the dosing is paused or not, you can use the [Is Paused]({{< ref "components/ezo_pmp#ezo_pmp-is_paused_binary_sensor" >}}) sensor.
+Use this action to pause a Dosing command that was previously issued. To determine if the dosing is paused or not, you can use the [``is_paused``]({{< ref "components/ezo_pmp#ezo_pmp-is_paused_binary_sensor" >}}) sensor.
 If the pump is currently paused, issuing this action again will unpause it.
 
 ```yaml
@@ -364,7 +364,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
 
 {{< anchor "ezo_pmp-stop_dosing_action" >}}
 
@@ -381,14 +381,14 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
 
 {{< anchor "ezo_pmp-clear_total_volume_dosed_action" >}}
 
 ## ``ezo_pmp.clear_total_volume_dosed`` Action
 
-Clear the values of the [Total Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-total_volume_dosed_sensor" >}}), [Current Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-current_volume_dosed_sensor" >}})
-and [Absolute Total Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-absolute_total_volume_dosed_sensor" >}}) sensors.
+Clear the values of the [``total_volume_dosed``]({{< ref "components/ezo_pmp#ezo_pmp-total_volume_dosed_sensor" >}}), [``current_volume_dosed``]({{< ref "components/ezo_pmp#ezo_pmp-current_volume_dosed_sensor" >}})
+and [``absolute_total_volume_dosed``]({{< ref "components/ezo_pmp#ezo_pmp-absolute_total_volume_dosed_sensor" >}}) sensors.
 
 ```yaml
 on_...:
@@ -399,7 +399,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
 
 {{< anchor "ezo_pmp-set_calibration_volume_action" >}}
 
@@ -425,8 +425,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
-- **volume** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): The volume measured as part of the calibration process.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **volume** (**Required**, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The volume measured as part of the calibration process.
 
 
 {{< anchor "ezo_pmp-clear_calibration_action" >}}
@@ -445,7 +445,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
 
 {{< anchor "ezo_pmp-find_action" >}}
 
@@ -462,7 +462,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
 
 {{< anchor "ezo_pmp-change_i2c_address_action" >}}
 
@@ -481,8 +481,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
-- **address** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The new I2C address for the pump.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pump.
+- **address** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The new I2C address for the pump.
 
 {{< anchor "ezo-pmp-ha-config" >}}
 
@@ -530,7 +530,7 @@ button:
 
 ## lambda calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can also access the actions on the peristaltic pump to do some
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can also access the actions on the peristaltic pump to do some
 advanced stuff (see the full API Reference for more info). The name of the functions is the same as the name
 of the actions in YAML config.
 

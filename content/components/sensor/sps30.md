@@ -56,49 +56,49 @@ This sensor supports both UART and I²C communication. However, at the moment on
 
 - **pm_1_0** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 1μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pm_2_5** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 2.5μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pm_4_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 4μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pm_10_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 10μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pmc_0_5** (*Optional*): The information for the **Number Concentration** sensor for ultrafine particles up to 0.5μm. Readings in particles/cm³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pmc_1_0** (*Optional*): The information for the **Number Concentration** sensor for fine particles up to 1μm. Readings in particles/cm³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pmc_2_5** (*Optional*): The information for the **Number Concentration** sensor for fine particles up to 2.5μm. Readings in particles/cm³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pmc_4_0** (*Optional*): The information for the **Number Concentration** sensor for coarse particles up to 4μm. Readings in particles/cm³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pmc_10_0** (*Optional*): The information for the **Number Concentration** sensor for coarse particles up to 10μm. Readings in particles/cm³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pm_size** (*Optional*): Typical particle size in μm.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **auto_cleaning_interval** (*Optional*): The interval in seconds of the periodic fan-cleaning.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x69`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Wiring:
@@ -121,7 +121,7 @@ Disabling of automatic-cleaning or setting a manual interval is not supported at
 
 ## ``sps30.start_fan_autoclean`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) manually starts fan-cleaning.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) manually starts fan-cleaning.
 
 ```yaml
 on_...:
@@ -132,7 +132,7 @@ on_...:
 ```
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [sds011]({{< ref "sds011/" >}})
 - [pmsx003]({{< ref "pmsx003/" >}})
 - [ccs811]({{< ref "ccs811/" >}})

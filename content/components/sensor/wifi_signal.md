@@ -21,7 +21,7 @@ measured in decibel-milliwatts (dBm). These values are always negative and the c
         name: "WiFi Signal Sensor"
         update_interval: 60s
 
-To additionally display signal strength in percentage use the [copy-sensor]({{< ref "components/copy#copy-sensor" >}}) (it's not possible to add the same sensor twice, because it has a static `uniqueid` reported to Home Assistant):
+To additionally display signal strength in percentage use the [Copy Sensor]({{< ref "components/copy#copy-sensor" >}}) (it's not possible to add the same sensor twice, because it has a static `uniqueid` reported to Home Assistant):
 
 ```yaml
 # Example configuration entry with 2 sensors and filter
@@ -44,9 +44,9 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< warning >}}
 Signal strength readings are only available when WiFi is in station mode. Readings are not valid
@@ -55,7 +55,7 @@ if the device is acting as an access point without any station mode connection.
 {{< /warning >}}
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [/components/wifi]({{< ref "/components/wifi" >}})
 - [/components/text_sensor/wifi_info]({{< ref "/components/text_sensor/wifi_info" >}})
 - :apiref:`wifi_signal/wifi_signal_sensor.h`

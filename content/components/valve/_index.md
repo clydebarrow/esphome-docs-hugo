@@ -33,7 +33,7 @@ Configuration variables:
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and you want the valve
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and you want the valve
       to use that name, you can set `name: None`.
 
 - **device_class** (*Optional*, string): The device class for the sensor. See
@@ -48,20 +48,20 @@ Advanced options:
   (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI). Defaults to `false`.
 - **entity_category** (*Optional*, string): The category of the entity. See
   https://developers.home-assistant.io/docs/core/entity/#generic-properties for a list of available options. Set to `""` to remove the default entity category.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 MQTT options:
 
 - **position_state_topic** (*Optional*, string): The topic to publish valve position changes to.
 - **position_command_topic** (*Optional*, string): The topic to receive valve position commands on.
-- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 
 {{< anchor "valve-open_action" >}}
 
 ## ``valve.open`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) opens the valve with the given ID when executed.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) opens the valve with the given ID when executed.
 
 ```yaml
 on_...:
@@ -83,7 +83,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ## ``valve.close`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) closes the valve with the given ID when executed.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) closes the valve with the given ID when executed.
 
 ```yaml
 on_...:
@@ -105,7 +105,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ## ``valve.stop`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) stops the valve with the given ID when executed.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) stops the valve with the given ID when executed.
 
 ```yaml
 on_...:
@@ -127,7 +127,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ## ``valve.toggle`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) toggles the valve with the given ID when executed, cycling through the states
+This [All Actions]({{< ref "automations/actions#config-action" >}}) toggles the valve with the given ID when executed, cycling through the states
 close/stop/open/stop... This allows the valve to be controlled by a single push button.
 
 ```yaml
@@ -150,7 +150,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ## ``valve.control`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) is a more generic version of the other valve actions and allows all valve attributes
+This [All Actions]({{< ref "automations/actions#config-action" >}}) is a more generic version of the other valve actions and allows all valve attributes
 to be set.
 
 ```yaml
@@ -163,7 +163,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The valve to control.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The valve to control.
 - **stop** (*Optional*, boolean): Whether to stop the valve.
 - **state** (*Optional*, string): The state to set the valve to - one of `OPEN` or `CLOSE`.
 - **position** (*Optional*, float): The valve position to set.
@@ -186,7 +186,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ## Lambdas
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can access the current state of the valve (note that these fields are
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can access the current state of the valve (note that these fields are
 read-only, if you want to act on the valve, use the `make_call()` method as shown above).
 
 - `position`: Retrieve the current position of the valve, as a value between `0.0` (closed) and `1.0` (open).

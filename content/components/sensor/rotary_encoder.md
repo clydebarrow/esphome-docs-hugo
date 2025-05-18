@@ -74,10 +74,10 @@ pin_a:
     - `ALWAYS_ZERO` - Always initialize the counter with value zero (0).
 
 - **on_clockwise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Actions to be performed when
-  the knob is turned clockwise. See [sensor-rotary_encoder-triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
+  the knob is turned clockwise. See [``on_clockwise`` and ``on_anticlockwise`` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
 - **on_anticlockwise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Actions to be performed when
-  the knob is turned anticlockwise. See [sensor-rotary_encoder-triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  the knob is turned anticlockwise. See [``on_clockwise`` and ``on_anticlockwise`` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "sensor-rotary_encoder-set_value_action" >}}
 
@@ -108,8 +108,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the rotary encoder.
-- **value** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the rotary encoder.
+- **value** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   The value to set the internal counter to.
 
 {{< anchor "sensor-rotary_encoder-triggers" >}}
@@ -130,7 +130,7 @@ on_anticlockwise:
 ```
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [pulse_counter]({{< ref "pulse_counter/" >}})
 - [template]({{< ref "template/" >}})
 - [Mechanical Input Library](https://github.com/jkDesignDE/MechInputs) by [Jochen Krapf](https://github.com/JK-de)

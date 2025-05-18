@@ -20,7 +20,7 @@ At the current stage of implementation only DC motor is implemented.
 Configuration variables:
 ************************
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this TB6612FNG component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this TB6612FNG component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x14`.
 
@@ -115,6 +115,6 @@ on_...:
 ```
 ## See Also
 
-- [i2c]({{< ref "components/i2c#i2c" >}})
+- [I²C Bus]({{< ref "components/i2c#i2c" >}})
 - [switch/gpio]({{< ref "switch/gpio" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/grove_tb6612fng.md)

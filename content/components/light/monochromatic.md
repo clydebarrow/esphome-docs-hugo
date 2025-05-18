@@ -6,7 +6,7 @@ title: "Monochromatic Light"
 {{< seo description="" image="" >}}
 
 The `monochromatic` light platform creates a simple brightness-only light from an
-[float output component]({{< ref "components/output/_index#output" >}}).
+[Output Component]({{< ref "components/output/_index#output" >}}).
 
 ![Example of a brightness-only LED strip that can be used with this component.](../images/monochromatic-strip.jpg)
 *Example of a brightness-only LED strip that can be used with this component.*
@@ -25,8 +25,8 @@ The `monochromatic` light platform creates a simple brightness-only light from a
 
 ## Configuration variables:
 
-- **output** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- **output** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.
+- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also
 

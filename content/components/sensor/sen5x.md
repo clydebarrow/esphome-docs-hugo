@@ -63,29 +63,29 @@ This sensor supports both UART and I²C communication. Only I²C communication i
 
 - **pm_1_0** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 1μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pm_2_5** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 2.5μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pm_4_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 4μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pm_10_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 10μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **auto_cleaning_interval** (*Optional*): Reads/Writes the interval in seconds of the periodic fan-cleaning.
 
 - **temperature** (*Optional*): Temperature.Note only available with Sen54 or Sen55. The sensor will be ignored on unsupported models.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): Relative Humidity. Note only available with Sen54 or Sen55. The sensor will be ignored on unsupported models.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **voc** (*Optional*): VOC Index. Note only available with Sen54 or Sen55. The sensor will be ignored on unsupported models.
 
@@ -98,7 +98,7 @@ This sensor supports both UART and I²C communication. Only I²C communication i
     - **std_initial** (*Optional*): Initial estimate for standard deviation. Lower value boosts events during initial learning period, but may result in larger device-todevice variations. Allowed values are in range 10..5000. The default value is 50.
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **nox** (*Optional*): NOx Index. Note: Only available with Sen55. The sensor will be ignored on unsupported models.
 
@@ -111,7 +111,7 @@ This sensor supports both UART and I²C communication. Only I²C communication i
     - **std_initial** (*Optional*): The initial estimate for standard deviation parameter has no impact for NOx. This parameter is still in place for consistency reasons with the VOC tuning parameters command. This parameter must always be set to 50.
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **store_baseline** (*Optional*, boolean): Stores and retrieves the baseline VOC and NOx information for quicker startups. Defaults to `true`
 - **temperature_compensation** (*Optional*): These parameters allow to compensate temperature effects of the design-in at customer side by applying a custom temperature offset to the ambient temperature.
@@ -171,7 +171,7 @@ The default automatic-cleaning interval is 168 hours (1 week) of uninterrupted u
 
 ## ``sen5x.start_fan_autoclean`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) manually starts fan-cleaning.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) manually starts fan-cleaning.
 
 ```yaml
 on_...:
@@ -184,7 +184,7 @@ on_...:
 ```
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [absolute_humidity]({{< ref "absolute_humidity/" >}})
 - [sds011]({{< ref "sds011/" >}})
 - [pmsx003]({{< ref "pmsx003/" >}})

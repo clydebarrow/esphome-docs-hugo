@@ -51,14 +51,14 @@ sensor:
 ```
 ## Configuration variables:
 
-- **nextion_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the Nextion display.
+- **nextion_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the Nextion display.
 - **component_name** (*Optional*, string): Manually specify the name of the Nextion component.
 - **variable_name** (*Optional*, string): Manually specify the name of the Nextion variable.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})):  The duration to update the sensor
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})):  The duration to update the sensor
 - **precision** (*Optional*, int):  This is for Nextion float components. This sets
   the precision that the component is set to. This typically is the `vvs1` setting of the component.
-- **background_color** (*Optional*, [config-color]({{< ref "components/display/_index#config-color" >}})):  The background color
-- **foreground_color** (*Optional*, [config-color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
+- **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
+- **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **visible** (*Optional*, boolean):  Visible or not
 
 Waveform Settings
@@ -68,19 +68,19 @@ Waveform Settings
   and this to the max value that will be sent. This will set up the proper scaling.
 - **waveform_send_last_value** (*Optional*, int): This will send the last value set during an update interval. Setting to true will give a timeseries style graph
 - **wave_max_length** (*Optional*, int): How many data points to store. Typically this is the width of the component in the Nextion
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})):  The duration to update the sensor. This typically should be set for waveforms to send periodic updates.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})):  The duration to update the sensor. This typically should be set for waveforms to send periodic updates.
 
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
   .. note::
 
       `background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings<nextion_sensor_settings>]({{< ref "#Sensor Settings<nextion_sensor_settings>" >}}).
-      A [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
+      A [- ``update_components_by_prefix(std::string page)``: This will send the current state of any **component_name**]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor Component]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
 
 
-See [nextion_sensor_how_things_update]({{< ref "components/sensor/nextion#nextion_sensor_how_things_update" >}}) for additional information
+See [How things Update]({{< ref "components/sensor/nextion#nextion_sensor_how_things_update" >}}) for additional information
 
 Globals
 *******
@@ -124,11 +124,11 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion sensor.
-- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The float state to publish.
-- **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion sensor.
+- **state** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The float state to publish.
+- **publish_state** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
   Default is true.
-- **send_to_nextion** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
+- **send_to_nextion** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
   display which will update component. Default is true.
 
 {{< note >}}
@@ -140,7 +140,7 @@ This action can also be written in lambdas. See :ref:`nextion_sensor_lambda_call
 Lambda Calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full :apiref:`nextion/sensor/nextion_sensor.h` for more info).
 
 {{< anchor "nextion_sensor_set_state" >}}
@@ -162,7 +162,7 @@ some more advanced functions (see the full :apiref:`nextion/sensor/nextion_senso
 
 ## How things Update
 A Nextion component with an integer value (.val) or Nextion variable will be automatically polled if **update_interval** is set.
-To have the Nextion send the data you can use the [nextion_custom_sensor_protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) for this. Add the [nextion_custom_sensor_protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) to the
+To have the Nextion send the data you can use the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) for this. Add the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) to the
 component or function you want to trigger the send. Typically this is in *Touch Press Event* but some components, like a slider, should have it
 set in the *Touch Release Event* to capture all the changes. Since this is a custom protocol it can be sent from anywhere (timers/functions/components)
 in the Nextion.
@@ -174,7 +174,7 @@ since this will be sending the real value to esphome.
 {{< /note >}}
 Using the above yaml example:
   - "Current Humidity" will poll the Nextion for the `humidity.val` value and set the sensor accordingly.
-  - "Current Temperature" will NOT poll the Nextion. Either the Nextion will need to use the [nextion_custom_sensor_protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) or use a lambda:
+  - "Current Temperature" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) or use a lambda:
 
     - [Lambda Calls]({{< ref "components/sensor/nextion#nextion_sensor_lambda_calls" >}}).
 

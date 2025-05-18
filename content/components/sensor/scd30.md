@@ -33,15 +33,15 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 
 - **co2** (*Optional*): The information for the CO₂ sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the Temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): The information for the Humidity sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature_offset** (*Optional*, float): Temperature and humidity
   offsets may occur when operating the sensor in end-customer
@@ -62,7 +62,7 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x61`.
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Available range: [2 … 1800]. Defaults to `60s`.
 
 
@@ -96,7 +96,7 @@ number:
 ```
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [absolute_humidity]({{< ref "absolute_humidity/" >}})
 - [dht]({{< ref "dht/" >}})
 - [dht12]({{< ref "dht12/" >}})

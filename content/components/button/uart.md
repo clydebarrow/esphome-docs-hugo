@@ -23,8 +23,8 @@ button:
 
 - **data** (**Required**, string or list of bytes): The data to send via UART. Either an ASCII string
   or a list of bytes.
-- **uart_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
-- All other options from [Button]({{< ref "components/button/_index#config-button" >}}).
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
+- All other options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
 
 ## See Also
 

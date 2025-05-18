@@ -53,15 +53,15 @@ canbus:
 
 **Configuration variables:**
 
-- **platform** (**Required**, [platforms-canbus]({{< ref "components/canbus/_index#platforms-canbus" >}})): One of the supported CAN bus [platform<platforms-canbus>]({{< ref "#platform<platforms-canbus>" >}}).
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **platform** (**Required**, [Platforms]({{< ref "components/canbus/_index#platforms-canbus" >}})): One of the supported CAN bus [platform<platforms-canbus>]({{< ref "#platform<platforms-canbus>" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **can_id** (**Required**, int): default *CAN ID* used for transmitting frames.
 - **use_extended_id** (*Optional*, boolean): Identifies the type of `can_id`:
 
   - `false`: Standard 11-bit IDs *(default)*
   - `true`: Extended 29-bit IDs
 
-- **bit_rate** (*Optional*, enum): One of the supported bit rates. See [this table]({{< ref "components/canbus/esp32_can#esp32-can-bit-rate" >}}) for a
+- **bit_rate** (*Optional*, enum): One of the supported bit rates. See [The following table lists the bit rates supported by the component for ESP32 variants:]({{< ref "components/canbus/esp32_can#esp32-can-bit-rate" >}}) for a
   list of supported bit rates by the internal CAN (TWAI) controllers of different ESP32 variants. Defaults to `125KBPS`.
 
     - `1KBPS` - Support by `esp32_can` depends on ESP32 variant
@@ -86,7 +86,7 @@ canbus:
     - `1000KBPS`
 
 - **on_frame** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a
-  CAN frame is received. See [canbus-on-frame]({{< ref "components/canbus/_index#canbus-on-frame" >}}).
+  CAN frame is received. See [``on_frame`` Trigger]({{< ref "components/canbus/_index#canbus-on-frame" >}}).
 
 {{< anchor "platforms-canbus" >}}
 
@@ -174,7 +174,7 @@ on_...:
 ```
 **Configuration variables:**
 
-- **data** (**Required**, binary data, [templatable]({{< ref "automations/templates#config-templatable" >}})): Data to transmit, up to eight
+- **data** (**Required**, binary data, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Data to transmit, up to eight
   bytes/characters are supported by CAN bus per frame.
 - **canbus_id** (*Optional*): Sets the CAN bus ID to use for transmitting the frame. Required if you are have multiple
   CAN bus platforms defined in your configuration.

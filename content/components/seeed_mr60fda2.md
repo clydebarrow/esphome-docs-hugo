@@ -9,7 +9,7 @@ title: "Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit"
 
 The [seeed_mr60fda2` platform allows you to use Seeed Studio's MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (`Product Page](https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html)) with ESPHome.
 
-The [UART]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
+The [UART Bus]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
 You can use the ESP32 software or hardware (recommended) serial to use the MR60FDA2; its default baud rate is 115200.
 
 ![Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6](../images/seeed_mr60fda2.jpg)
@@ -25,9 +25,9 @@ seeed_mr60fda2:
 Configuration variables:
 ************************
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for [seeed_mr60fda2]({{< ref "seeed_mr60fda2/" >}})fda2` component if you need multiple components.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for [seeed_mr60fda2]({{< ref "seeed_mr60fda2/" >}})fda2` component if you need multiple components.
 
 ## Binary Sensor
 
@@ -46,9 +46,9 @@ Configuration variables:
 ************************
 
 - **people_exist** (*Optional*): If true when target (person) is detected.
-  All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+  All options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 - **fall_detected** (*Optional*): An indication of whether the radar has detected a fall.
-  All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Button
 
@@ -67,9 +67,9 @@ Configuration variables:
 ************************
 
 - **factory_reset** (*Optional*): Restore all radar settings to factory parameters. 
-  All options from [Button]({{< ref "components/button/_index#config-button" >}}).
+  All options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
 - **get_radar_parameters** (*Optional*): Get all the current setup parameters of the radar.
-  All options from [Button]({{< ref "components/button/_index#config-button" >}}).
+  All options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
 
 
 ## Select
@@ -91,11 +91,11 @@ Configuration variables:
 ************************
 
 - **install_height** (*Optional*): Before using the MR60FDA2, please select the installation height of the radar according to the actual situation in order to obtain accurate identification results. The default is 3m.
-  All options from [Select]({{< ref "components/select/_index#config-select" >}}).
+  All options from [Base Select Configuration]({{< ref "components/select/_index#config-select" >}}).
 - **height_threshold** (*Optional*): To accurately distinguish between a person falling and sitting still in this area, you need to set the trigger height that triggers fall detection. This height refers to the distance between the person and the ground at the time of the fall. The default is 0.6m.
-  All options from [Select]({{< ref "components/select/_index#config-select" >}}).
+  All options from [Base Select Configuration]({{< ref "components/select/_index#config-select" >}}).
 - **sensitivity** (*Optional*): Fall sensitivity factor. Defaults to 1 with a range of 1-3, 3 = high and 1 = low.
-  All options from [Select]({{< ref "components/select/_index#config-select" >}}).
+  All options from [Base Select Configuration]({{< ref "components/select/_index#config-select" >}}).
 
 ## See Also
 

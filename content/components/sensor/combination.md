@@ -75,13 +75,13 @@ sensor:
   `MOST_RECENTLY_UPDATED`, `RANGE`, or `SUM`.
 - **sources** (**Required**, list): A list of sensors to use as source.
   
-  - **source** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}}) [/components/sensor/index]({{< ref "/components/sensor/index" >}})ndex`): The
+  - **source** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}) [/components/sensor/index]({{< ref "/components/sensor/index" >}})ndex`): The
     sensor id that is used as sample source.
-  - **error** (**Required**, only for `KALMAN` type, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): 
+  - **error** (**Required**, only for `KALMAN` type, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): 
     The standard deviation of the sensor's measurements. This works like the `process_std_dev` 
     parameter, with low values marking accurate data. If implemented as a template, the 
     measurement is in parameter `x`.
-  - **coeffecient** (**Required**, only for `LINEAR` type, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): 
+  - **coeffecient** (**Required**, only for `LINEAR` type, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): 
     The coeffecient to multiply the sensor's state by before summing all source sensor states.
     If implemented as a template, the measurement is in parameter `x`.
 
@@ -91,12 +91,12 @@ sensor:
   will place high importance on the current state and be slow to respond to
   changes in the measured samples. A high value will update faster, but also be
   more noisy.
-- **std_dev** (*Optional*, only for `KALMAN` type, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): A sensor
+- **std_dev** (*Optional*, only for `KALMAN` type, [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})): A sensor
   that publishes the current standard deviation of the state with each update.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`combination/combination.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/combination.md)

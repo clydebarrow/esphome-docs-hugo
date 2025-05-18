@@ -13,7 +13,7 @@ with ESPHome.
 *Havells On Grid Solar Inverter.*
 
 
-The communication with this component is done via a [Modbus]({{< ref "components/modbus#modbus" >}}) using [UART]({{< ref "components/uart#uart" >}}).
+The communication with this component is done via a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using [UART Bus]({{< ref "components/uart#uart" >}}).
 You must therefore have a `uart:` and `modbus:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 
@@ -98,9 +98,9 @@ sensor:
 - **phase_a** (*Optional*): The group of exposed sensors for Phase A/1.
 
   - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-    [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-    All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **phase_b** (*Optional*): The group of exposed sensors for Phase B/2 on applicable inverters.
 
@@ -113,56 +113,56 @@ sensor:
 - **pv1** (*Optional*): The group of exposed sensors for Photo Voltaic 1.
 
   - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-    [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-    All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **active_power** (*Optional*): Use the (active) power value of the sensor in watts. All options
-    from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **voltage_sampled_by_secondary_cpu** (*Optional*): Use the photo voltiac's voltage sampled by
-    slave CPU value of the sensor in volts. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    slave CPU value of the sensor in volts. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **insulation_of_p_to_ground** (*Optional*): Use the insulation of photo voltiac's +ve terminal to
-    ground value of the sensor in kilo ohms. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    ground value of the sensor in kilo ohms. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pv2** (*Optional*): The group of exposed sensors for Photo Voltaic 2.
 
   - All options from **pv1**
 
 - **active_power** (*Optional*): Use the (active) power value of the sensor in watts. All options
-  from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **reactive_power** (*Optional*): Use the reactive power value of the sensor in VAR. All
-  options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **frequency** (*Optional*): Use the frequency value of the sensor in hertz.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **energy_production_day** (*Optional*): Use the export active energy value for same day of the
-  sensor in kilo watt hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  sensor in kilo watt hours. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **total_energy_production** (*Optional*): Use the total exported energy value of the sensor in
-  kilo watt hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  kilo watt hours. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **total_generation_time** (*Optional*): Use the total generation time value of the sensor in
-  hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  hours. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **today_generation_time** (*Optional*): Use the day generation time value for same day of the
-  sensor in minutes. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  sensor in minutes. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **inverter_module_temp** (*Optional*): Use the inverter module temperature value of the sensor in
-  degree celsius. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  degree celsius. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **inverter_inner_temp** (*Optional*): Use the inverter inner temperature value of the sensor in
-  degree celsius. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  degree celsius. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **inverter_bus_voltage** (*Optional*): Use the inverter bus voltage value of the sensor in volts.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **insulation_of_pv_n_to_ground** (*Optional*): Use the insulation  of  photo  voltiacs's
-  -ve terminal to ground value of the sensor in kilo ohms. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  -ve terminal to ground value of the sensor in kilo ohms. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **gfci_value** (*Optional*): Use the GFCI value of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **dci_of_r** (*Optional*): Use the DCI of R value of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **dci_of_s** (*Optional*): Use the DCI of S value of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **dci_of_t** (*Optional*): Use the DCI of T value of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/havells_solar.md)

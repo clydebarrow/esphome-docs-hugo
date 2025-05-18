@@ -44,7 +44,7 @@ from Home Assistant, use the :doc:`Home Assistant Text Sensor </components/text_
 - **entity_id** (**Required**, string): The entity ID to import from Home Assistant.
 - **attribute** (*Optional*, string): The name of the state attribute to import from the
   specified entity. The entity state is used when this option is omitted.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 {{< note >}}
@@ -57,7 +57,7 @@ are not inherited from the imported sensor so you need to set them manually.
 {{< /note >}}
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/sensor/homeassistant_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/homeassistant.md)

@@ -28,7 +28,7 @@ detection, so it's assumed that the protocol is the same across all models.
 
 {{< /note >}}
 As the communication with the garage door drive is done using UART, you need to
-have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin`
+have an [UART Bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin`
 connected unit's USB D- line and the `tx_pin` connected to the USB's D+ line.
 The baud rate should be set to 9600. See `Setup`_ for more detailed
 instructions.
@@ -68,15 +68,15 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 ## Configuration variables:
 
 - **name** (**Required**, string): The name of the cover.
-- **open_duration** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time the
+- **open_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time the
   gate is expected to need to go from a fully closed to opened state. Defaults
   to `15s`. Used to interpolate the position value published to Home Assistant
   during gate movements, and for stopping the gate at a specific requested
   position. This value is automatically recalibrated after an uninterrupted
   closed -> opened movement.
-- **close_duration** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The opposite of
+- **close_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The opposite of
   `open_duration`. Defaults to `22s`.
-- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from [Base Cover Configuration]({{< ref "components/cover/_index#config-cover" >}}).
 
 ## Known Issues
 
@@ -93,6 +93,6 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 ## See Also
 
 - [index]({{< ref "index/" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`tormatic/tormatic_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/tormatic.md)

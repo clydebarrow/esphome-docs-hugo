@@ -5,7 +5,7 @@ title: "RGB Light"
 
 {{< seo description="" image="" >}}
 
-The `rgb` light platform creates an RGB light from 3 [float output components]({{< ref "components/output/_index#output" >}})
+The `rgb` light platform creates an RGB light from 3 [Output Component]({{< ref "components/output/_index#output" >}})
 (one for each color channel).
 
 ![Example of an RGB LED strip that can be used with this component.](../images/rgb-strip.jpg)
@@ -29,7 +29,7 @@ The `rgb` light platform creates an RGB light from 3 [float output components]({
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
 perceived intensity of different colors will generally vary. This can be done by using
-[max_power]({{< ref "components/output/_index#config-output" >}}) on individual output channels:
+[Base Output Configuration]({{< ref "components/output/_index#config-output" >}}) on individual output channels:
 
 ```yaml
 # Example configuration entry
@@ -54,10 +54,10 @@ Remember that ``gamma_correct`` is enabled by default (``γ=2.8``), and you may 
 {{< /note >}}
 ## Configuration variables:
 
-- **red** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
-- **green** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
-- **blue** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- **red** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
+- **green** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
+- **blue** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
+- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also
 

@@ -54,7 +54,7 @@ Here is another example output for a Tuya ME-81H thermostat:
 ```
 ## Configuration variables:
 
-- **time_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Some Tuya devices support obtaining local time from ESPHome.
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Some Tuya devices support obtaining local time from ESPHome.
   Specify the ID of the [time/index]({{< ref "time/index" >}}) which will be used.
 
 - **status_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Some Tuya devices support WiFi status reporting ONLY through gpio pin.
@@ -65,7 +65,7 @@ Here is another example output for a Tuya ME-81H thermostat:
 
 Automations:
 
-- **on_datapoint_update** (*Optional*): An automation to perform when a Tuya datapoint update is received. See [tuya-on_datapoint_update]({{< ref "components/tuya#tuya-on_datapoint_update" >}}).
+- **on_datapoint_update** (*Optional*): An automation to perform when a Tuya datapoint update is received. See [``on_datapoint_update``]({{< ref "components/tuya#tuya-on_datapoint_update" >}}).
 
 ## Tuya Automation
 

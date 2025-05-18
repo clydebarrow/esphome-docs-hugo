@@ -41,20 +41,20 @@ sensor:
 ## Configuration variables:
 
 - **nitrogen_dioxide** (**Required**): The Nitrogen Dioxide sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **ethanol** (**Required**): The Ethanol (C2H5OH) sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **carbon_monoxide** (**Required**): The Carbon Monoxide sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **tvoc** (**Required**): The Total Volatile Organic Compounds (TVOC) sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 Advanced:
 
-- **address** (*Optional*, int): The [I²C]({{< ref "components/i2c#i2c" >}}) address of the sensor.
+- **address** (*Optional*, int): The [I²C Bus]({{< ref "components/i2c#i2c" >}}) address of the sensor.
   Defaults to `0x08`
 
 {{< anchor "grove-gas-mc-v2-preheating" >}}
@@ -71,7 +71,7 @@ than 6 months.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [Grove Multichannel V2 Library](https://github.com/Seeed-Studio/Seeed_Arduino_MultiGas)
 - :apiref:`grove_gas_mc_v2/grove_gas_mc_v2.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/grove_gas_mc_v2.md)

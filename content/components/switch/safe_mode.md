@@ -20,7 +20,7 @@ This component requires [/components/safe_mode]({{< ref "/components/safe_mode" 
 
 ## Configuration variables:
 
-- All options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## See Also
 

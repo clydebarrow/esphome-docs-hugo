@@ -6,7 +6,7 @@ title: "Template Text Sensor"
 {{< seo description="" image="" >}}
 
 The `template` text sensor platform allows you to create a text sensor with templated values
-using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+using [Templates]({{< ref "automations/templates#config-lambda" >}}).
 
 ```yaml
 # Example configuration entry
@@ -27,11 +27,11 @@ Possible return values for the lambda:
 
 ## Configuration variables:
 
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the new value of the text sensor
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   text sensor. Set to `never` to disable updates. Defaults to `60s`.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 {{< anchor "text_sensor-template-publish_action" >}}
 
@@ -61,8 +61,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template text sensor.
-- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template text sensor.
+- **state** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 
 {{< note >}}
@@ -111,6 +111,6 @@ text_sensor:
 ## See Also
 
 - [/components/text_sensor/index]({{< ref "/components/text_sensor/index" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/text_sensor/template_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/template.md)

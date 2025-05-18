@@ -32,12 +32,12 @@ as an introduction to the working principle of CT clamp sensors and how to hook 
 
 ## Configuration variables:
 
-- **sensor** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The source sensor to measure voltage values from.
-- **sample_duration** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The time duration to sample the current clamp
+- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The source sensor to measure voltage values from.
+- **sample_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration to sample the current clamp
   with. Higher values can increase accuracy. Defaults to `200ms` which would be 10 whole cycles on a 50Hz system.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`. The **update_interval** for `ct_clamp` has to be greater than **sample_duration**.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Calibration
 

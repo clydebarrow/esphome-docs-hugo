@@ -69,9 +69,9 @@ like ``1122aaff``, or 128 bit long like ``11223344-5566-7788-99aa-bbccddeeff00``
 -  **ibeacon_minor** (*Optional*, int): The iBeacon minor identifier of the beacon that needs
    to be tracked. Usually used to identify beacons within an iBeacon group.
 -  **min_rssi** (*Optional*, int): at which minimum RSSI level would the component report the device be present.
--  **timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The delay after last detecting the device before publishing not present state.
+-  **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The delay after last detecting the device before publishing not present state.
    The default is 5 minutes.
--  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+-  All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "esp32_ble_tracker-setting_up_devices" >}}
 

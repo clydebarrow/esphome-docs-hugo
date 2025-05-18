@@ -30,11 +30,11 @@ To use the sensor, set up an [I²C Bus]({{< ref "components/i2c#i2c" >}}) and co
 
 - **address** (*Optional*, int): The I²C address of the sensor. Defaults to `0x21`.
 - **measurement_mode** (*Optional*): The measurement mode of the sensor. Valid options are `differential_pressure` and `mass_flow`. Defaults to `differential_pressure`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`sdp3x/sdp3x.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sdp3x.md)

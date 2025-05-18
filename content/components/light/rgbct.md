@@ -6,7 +6,7 @@ title: "RGBCT Light"
 {{< seo description="" image="" >}}
 
 The `rgbct` light platform creates an RGBWT (color temperature + white brightness)
-light from 5 [float output components]({{< ref "components/output/_index#output" >}}) (one for each channel).
+light from 5 [Output Component]({{< ref "components/output/_index#output" >}}) (one for each channel).
 
 ```yaml
 # Example configuration entry
@@ -24,12 +24,12 @@ light:
 ```
 ## Configuration variables:
 
-- **red** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
-- **green** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
-- **blue** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
-- **color_temperature** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the
+- **red** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
+- **green** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
+- **blue** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
+- **color_temperature** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the
   color temperature channel.
-- **white_brightness** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the brightness
+- **white_brightness** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the brightness
   of the white leds.
 - **cold_white_color_temperature** (**Required**, float): The coldest color temperature supported by this light. This
   is the lowest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the highest value when
@@ -38,8 +38,8 @@ light:
   is the highest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the lowest value when
   expressed in Kelvin.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See [rgbw_color_interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+  time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
+- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also
 

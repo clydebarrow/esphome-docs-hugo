@@ -19,7 +19,7 @@ through Home Assistant.
 
 ## Configuration variables:
 
-- All options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## See Also
 

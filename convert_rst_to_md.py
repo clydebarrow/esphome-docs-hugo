@@ -33,21 +33,23 @@ def build_anchor_map(input_dir):
                 # Handle index files
                 if os.path.basename(doc_path) == 'index':
                     doc_path = os.path.dirname(doc_path) + '/_index'
-                
-                with open(rst_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                
-                # Find all anchor definitions (.. _anchor:)
-                for match in re.finditer(r'^.. _([^:]+):$', content, re.MULTILINE):
-                    anchor_name = match.group(1).strip()
-                    anchor_map[anchor_name] = doc_path
-    
+
+                rel_path, rst_content = get_rst_content(input_dir, rst_file)
+                for i, line in enumerate(rst_content):
+
+                    if line.startswith('.. _') and line.endswith(':'):
+                        anchor_name = line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
+                        if i < len(rst_content) - 2:
+                            text = rst_content[i + 2].strip()
+                        else:
+                            text = ''
+                        anchor_map[anchor_name] = doc_path, text
+
     print(f"Found {len(anchor_map)} anchors across all documents")
 
-def convert_rst_to_md(rst_content, filename):
+def convert_rst_to_md(lines, filename):
     """Convert RST content to Markdown using line-by-line processing."""
-    lines = rst_content.split('\n')
-    
+
     # Extract title and SEO data
     title = ""
     explicit_title = ""
@@ -104,7 +106,7 @@ def convert_rst_to_md(rst_content, filename):
     # Skip SEO block
     if seo_start != -1 and seo_end != -1:
         i = seo_end
-    
+
     while i < len(lines):
         line = lines[i]
         
@@ -366,7 +368,10 @@ def process_inline_markup(line):
             ref_id = ref_id.rstrip(">")
             
             # Look up the document path for this anchor
-            doc_path = anchor_map.get(ref_id, "")
+            doc_path, anchor_text = anchor_map.get(ref_id, ("", ""))
+            if not doc_path:
+                print(f"Warning: Could not find document path for anchor '{ref_id}'")
+            text = anchor_text or text
             if doc_path:
                 replacement = f"[{text}]({{{{< ref \"{doc_path}#{ref_id}\" >}}}})"
             else:
@@ -375,12 +380,13 @@ def process_inline_markup(line):
         else:
             # Simple references
             # Look up the document path for this anchor
-            doc_path = anchor_map.get(content, "")
+            doc_path, anchor_text = anchor_map.get(content, ("", ""))
+            anchor_text = anchor_text or content
             if doc_path:
-                replacement = f"[{content}]({{{{< ref \"{doc_path}#{content}\" >}}}})"
+                replacement = f"[{anchor_text}]({{{{< ref \"{doc_path}#{content}\" >}}}})"
             else:
                 # If we can't find the document, just use the anchor
-                replacement = f"[{content}]({{{{< ref \"#{content}\" >}}}})"
+                replacement = f"[{anchor_text}]({{{{< ref \"#{content}\" >}}}})"
         
         processed_line = processed_line.replace(placeholder, replacement)
     
@@ -608,20 +614,8 @@ def process_file(rst_file, output_dir, input_dir):
         print(f"\nProcessing file: {rst_file}")
         
         # Read the RST file
-        with open(rst_file, 'r', encoding='utf-8') as f:
-            rst_content = f.read()
-        
-        print(f"File size: {len(rst_content)} bytes")
-        
-        # Get the relative path of the file
-        rel_path = os.path.relpath(rst_file, input_dir)
-        
-        # Process includes before conversion
-        current_dir = os.path.dirname(rst_file)
-        rst_lines = rst_content.split('\n')
-        rst_lines = process_includes(rst_lines, current_dir)
-        rst_content = '\n'.join(rst_lines)
-        
+        rel_path, rst_content = get_rst_content(input_dir, rst_file)
+
         # Convert RST to Markdown
         md_content = convert_rst_to_md(rst_content, rel_path)
         
@@ -648,6 +642,20 @@ def process_file(rst_file, output_dir, input_dir):
         import traceback
         traceback.print_exc()
         return None
+
+
+def get_rst_content(input_dir, rst_file):
+    with open(rst_file, 'r', encoding='utf-8') as f:
+        rst_content = f.read()
+    print(f"File size: {len(rst_content)} bytes")
+    # Get the relative path of the file
+    rel_path = os.path.relpath(rst_file, input_dir)
+    # Process includes before conversion
+    current_dir = os.path.dirname(rst_file)
+    rst_lines = rst_content.split('\n')
+    rst_lines = process_includes(rst_lines, current_dir)
+    return rel_path, rst_lines
+
 
 def process_directory(input_dir, output_dir):
     """Process all RST files in a directory and its subdirectories."""

@@ -21,7 +21,7 @@ pressing the reset button or restarting the power supply.
 
 ## Configuration variables:
 
-- All options from [Button]({{< ref "components/button/_index#config-button" >}}).
+- All options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
 
 ## See Also
 

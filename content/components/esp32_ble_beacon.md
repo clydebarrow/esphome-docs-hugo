@@ -29,7 +29,7 @@ esp32_ble_beacon:
 - **type** (**Required**): The type of beacon to create, currently only supports `iBeacon`.
 - **uuid** (**Required**): The [universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)
   to identify the beacon.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for code generation.
 
 Advanced options:
 
@@ -38,10 +38,10 @@ Advanced options:
   the BLE receiver doesn't use it. Defaults to `10167`.
 - **minor** (*Optional*, int): The iBeacon minor identifier of this beacon. Usually used to
   identify beacons within an iBeacon group. Defaults to `61958`.
-- **min_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The iBeacon minimum transmit interval in milliseconds from 20 to 10240.
+- **min_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The iBeacon minimum transmit interval in milliseconds from 20 to 10240.
   Setting this less than `max_interval` gives the BLE hardware a better chance to avoid
   collisions with other BLE transmissions. Defaults to the iBeacon specification's defined interval: `100ms`.
-- **max_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The iBeacon maximum transmit interval in milliseconds from 20 to 10240.
+- **max_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The iBeacon maximum transmit interval in milliseconds from 20 to 10240.
   Setting this greater than `min_interval` gives the BLE hardware a better chance to avoid
   collisions with other BLE transmissions. Defaults to the iBeacon specification's defined interval: `100ms`.
 - **measured_power** (*Optional*, int): The RSSI of the iBeacon as measured 1 meter from the device.

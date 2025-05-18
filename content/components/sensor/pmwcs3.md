@@ -7,7 +7,7 @@ title: "PMWCS3 Capacitive Soil Moisture and Temperature Sensor"
 
 The `pmwcs3` sensor platform allows you to use your PMWCS3
 ([informations](https://tinovi.com/wp-content/uploads/2020/01/PM-WCS-3-I2C.pdf))
-capacitive soil moisture and temperature sensor with ESPHome. The [I²C bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in
+capacitive soil moisture and temperature sensor with ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in
 your configuration for this sensor to work. Wiring scheme: red is 3.3V, black & shield is GND, green is SDA and white is SCL.
 2.2kOhm resistors are advised to pullup both SDA & SDA lines.
 
@@ -33,16 +33,16 @@ sensor:
 ## Configuration variables:
 
 - **e25** (*Optional*): Electrical Conductivity, reference at 25°C in dS/m. 
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **ec** (*Optional*): Electrical Conductivity in mS/m. 
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **temperature** (*Optional*): Soil temperature in °C.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **vwc** (*Optional*): Volumetric Water Content in cm3cm−3.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x63`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< anchor "sensor-PMWCS3AirCalibrationAction" >}}
@@ -67,7 +67,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
 
 {{< anchor "sensor-PMWCS3WaterCalibrationAction" >}}
 
@@ -91,7 +91,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
 
 {{< anchor "sensor-PMWCS3NewI2cAddressAction" >}}
 
@@ -115,12 +115,12 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
 - **address** (**Required**, int): New I2C address.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`pmwcs3/pmwcs3.h`
 - [Temperature Compensation for Conductivity](https://www.aqion.de/site/112)
 - [PMWCS3 Library](https://github.com/tinovi/i2cArduino) by [@tinovi](https://github.com/tinovi)

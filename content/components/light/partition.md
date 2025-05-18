@@ -91,7 +91,7 @@ light:
 
   *For addressable segments:*
 
-  - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the addressable light to be controlled by this segment.
+  - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the addressable light to be controlled by this segment.
   - **from** (**Required**, int): The index of the first LED to address in the segment. Counting starts with 0,
     so first LED is 0.
   - **to** (**Required**, int): The index of the last LED to address in this segment.
@@ -99,10 +99,10 @@ light:
 
   *For single light segments:*
 
-  - **single_light_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of a single addressable or non-addressable light.
+  - **single_light_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of a single addressable or non-addressable light.
     If an addressable light is specified, it will be treated as a single light in the partition.
 
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
 
 {{< note >}}
 Do *not* use this platform to control each LED on your addressable light - the light

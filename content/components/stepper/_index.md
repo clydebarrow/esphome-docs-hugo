@@ -54,7 +54,7 @@ stepper:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the stepper so that you can control it.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the stepper so that you can control it.
 - **step_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The `STEP` pin of the A4988
   stepper driver.
 - **dir_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The `DIRECTION` pin of the A4988
@@ -63,7 +63,7 @@ Configuration variables:
   of the A4988 stepper driver. If specified, the driver will be put into sleep mode as soon as the stepper
   reaches the target steps.
 
-- All other from [base_stepper_config]({{< ref "components/stepper/_index#base_stepper_config" >}}).
+- All other from [Base Stepper Configuration]({{< ref "components/stepper/_index#base_stepper_config" >}}).
 
 {{< note >}}
 If the stepper is driving in the wrong direction, you can invert the ``dir_pin``:
@@ -101,7 +101,7 @@ stepper:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the stepper so that you can control it.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the stepper so that you can control it.
 - **pin_a** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin **a** of the stepper control board.
 - **pin_b** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin **b** of the stepper control board.
 - **pin_c** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin **c** of the stepper control board.
@@ -114,13 +114,13 @@ Configuration variables:
     - `HALF_STEP`
     - `WAVE_DRIVE`
 
-- All other from [base_stepper_config]({{< ref "components/stepper/_index#base_stepper_config" >}}).
+- All other from [Base Stepper Configuration]({{< ref "components/stepper/_index#base_stepper_config" >}}).
 
 {{< anchor "stepper-set_target_action" >}}
 
 ## ``stepper.set_target`` Action
 
-To use your stepper motor in [automations]({{< ref "automations/_index#automation" >}}) or templates, you can use this action to set the target
+To use your stepper motor in [Automation]({{< ref "automations/_index#automation" >}}) or templates, you can use this action to set the target
 position (in steps). The stepper will always run towards the target position and stop once it has reached the target.
 
 ```yaml
@@ -143,8 +143,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
-- **target** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The target position in steps.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **target** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The target position in steps.
 
 {{< warning >}}
 This turns the stepper to an absolute position! To have the stepper motor move *relative* to the current
@@ -199,14 +199,14 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
-- **position** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The position to report in steps.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **position** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The position to report in steps.
 
 {{< anchor "stepper-set_speed_action" >}}
 
 ## ``stepper.set_speed`` Action
 
-This [Action]({{< ref "automations/actions#config-action" >}}) allows you to set the speed of a stepper at runtime.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) allows you to set the speed of a stepper at runtime.
 
 ```yaml
 on_...:
@@ -217,15 +217,15 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
-- **speed** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The speed
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **speed** (**Required**, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), float): The speed
   in `steps/s` (steps per seconds) to drive the stepper at.
 
 {{< anchor "stepper-set_acceleration_action" >}}
 
 ## ``stepper.set_acceleration`` Action
 
-This [Action]({{< ref "automations/actions#config-action" >}}) allows you to set the acceleration of a stepper at runtime.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) allows you to set the acceleration of a stepper at runtime.
 
 ```yaml
 on_...:
@@ -236,15 +236,15 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
-- **acceleration** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The acceleration
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **acceleration** (**Required**, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), float): The acceleration
   in `steps/s^2` (steps per seconds squared) to use when starting to move.
 
 {{< anchor "stepper-set_deceleration_action" >}}
 
 ## ``stepper.set_deceleration`` Action
 
-This [Action]({{< ref "automations/actions#config-action" >}}) allows you to set the deceleration of a stepper at runtime.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) allows you to set the deceleration of a stepper at runtime.
 
 ```yaml
 on_...:
@@ -255,8 +255,8 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
-- **deceleration** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The same as `acceleration`,
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **deceleration** (**Required**, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), float): The same as `acceleration`,
   but for when the motor is decelerating shortly before reaching the set position.
 
 {{< anchor "stepper-ha-config" >}}
@@ -264,7 +264,7 @@ Configuration variables:
 ## Home Assistant Configuration
 
 The easiest way to control your stepper from Home Assistant is to add a `number` to your ESPHome
-configuration. See [Number]({{< ref "components/number/_index#config-number" >}}) for more information.
+configuration. See [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}) for more information.
 
 ```yaml
 number:
@@ -289,7 +289,7 @@ stepper:
 
 ## lambda calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on stepper motors to do some
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on stepper motors to do some
 advanced stuff (see the full API Reference for more info).
 
 - `set_target`: Set the target position of the motor as an integer.

@@ -43,16 +43,16 @@ modbus:
 ```
 ## Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
 
-- **flow_control_pin** (*Optional*, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin used to switch flow control.
+- **flow_control_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin used to switch flow control.
   This is useful for RS485 transceivers that do not have automatic flow control switching,
   like the common MAX485.
 
-- **send_wait_time** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Time in milliseconds before the next ModBUS command is sent when an answer from a previous command has not yet started (i.e. when to timeout and assume no response is coming). Defaults to 250 ms.
+- **send_wait_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time in milliseconds before the next ModBUS command is sent when an answer from a previous command has not yet started (i.e. when to timeout and assume no response is coming). Defaults to 250 ms.
   Set this value to the maximum time required for the slowest device on the bus to begin responding (time to first byte).
   If a device starts responding within this time, the next command will be queued and sent after the response is finished, no matter how long the response.  
   
@@ -70,6 +70,6 @@ modbus:
 - [/components/select/modbus_controller]({{< ref "/components/select/modbus_controller" >}})
 - [/components/text_sensor/modbus_controller]({{< ref "/components/text_sensor/modbus_controller" >}})
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
-- [uart]({{< ref "components/uart#uart" >}})
+- [UART Bus]({{< ref "components/uart#uart" >}})
 - :apiref:`modbus/modbus.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/modbus.md)

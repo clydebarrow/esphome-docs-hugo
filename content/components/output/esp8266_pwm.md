@@ -28,10 +28,10 @@ light:
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to use PWM on.
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
 - **frequency** (*Optional*, frequency): The frequency to run the PWM with. Lower frequencies
   have more visual artifacts, but can represent much more colors. Defaults to `1000 Hz`.
-- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+- All other options from [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}).
 
 {{< note >}}
 If you previously had Tasmota installed on your device and have just flashed ESPHome onto it,
@@ -45,7 +45,7 @@ should fix it.
 
 ## ``output.esp8266_pwm.set_frequency`` Action
 
-This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually change the frequency of an ESP8266 PWM
+This [All Actions]({{< ref "automations/actions#config-action" >}}) allows you to manually change the frequency of an ESP8266 PWM
 channel at runtime. Use cases include controlling a passive buzzer (for pitch control).
 
 ```yaml
@@ -57,8 +57,8 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the PWM output to change.
-- **frequency** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The frequency
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the PWM output to change.
+- **frequency** (**Required**, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), float): The frequency
   to set in hertz.
 
 ## See Also

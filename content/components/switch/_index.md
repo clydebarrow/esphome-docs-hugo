@@ -26,7 +26,7 @@ Configuration variables:
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
       you want the switch to use that name, you can set `name: None`.
 
 - **icon** (*Optional*, icon): Manually set the icon to use for the
@@ -53,10 +53,10 @@ Configuration variables:
 
   Unless a specific platform defines another default value, the default is `ALWAYS_OFF`.
 
-- **on_turn_on** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the switch is turned on. See [switch-on_turn_on_off_trigger]({{< ref "components/switch/_index#switch-on_turn_on_off_trigger" >}}).
-- **on_turn_off** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the switch is turned off. See [switch-on_turn_on_off_trigger]({{< ref "components/switch/_index#switch-on_turn_on_off_trigger" >}}).
+- **on_turn_on** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the switch is turned on. See [``switch.on_turn_on`` / ``switch.on_turn_off`` Trigger]({{< ref "components/switch/_index#switch-on_turn_on_off_trigger" >}}).
+- **on_turn_off** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the switch is turned off. See [``switch.on_turn_on`` / ``switch.on_turn_off`` Trigger]({{< ref "components/switch/_index#switch-on_turn_on_off_trigger" >}}).
 - **disabled_by_default** (*Optional*, boolean): If true, then this entity should not be added to any client's frontend,
   (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI).
   Defaults to `false`.
@@ -67,8 +67,8 @@ Configuration variables:
 - **device_class** (*Optional*, string): The device class for the switch.
   See https://www.home-assistant.io/integrations/switch/#device-class
   for a list of available options.
-- If MQTT enabled, All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If MQTT enabled, All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 {{< anchor "switch-toggle_action" >}}
 
@@ -115,7 +115,7 @@ on_...:
 `switch.is_on` / `switch.is_off` Condition
 **********************************************
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given switch is ON (or OFF).
+This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the given switch is ON (or OFF).
 
 ```yaml
 # In some trigger:
@@ -131,7 +131,7 @@ on_...:
 lambda calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all switches to do some
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all switches to do some
 advanced stuff (see the full API Reference for more info).
 
 - `publish_state()`: Manually cause the switch to publish a new state and store it internally.

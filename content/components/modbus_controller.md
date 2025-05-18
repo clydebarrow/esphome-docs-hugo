@@ -46,16 +46,16 @@ See :doc:`logger` for more details
 {{< /note >}}
 ## Configuration variables:
 
-- **modbus_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the `modbus` hub.
+- **modbus_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the `modbus` hub.
 
-- **address** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The Modbus address of the slave device.
+- **address** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The Modbus address of the slave device.
 
 - **allow_duplicate_commands** (*Optional*, boolean): Whether to allow duplicate commands in the queue. Defaults to `false`.
 
-- **command_throttle** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): minimum time in between 2 requests to the device. Default is `0ms`.
+- **command_throttle** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): minimum time in between 2 requests to the device. Default is `0ms`.
   Some Modbus slave devices limit the rate of requests from the master, so this allows the interval between requests to be altered.
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval that the sensors should be checked.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval that the sensors should be checked.
   Defaults to 60 seconds.
 
 {{< anchor "modbus_controller-offline_skip_updates" >}}
@@ -86,14 +86,14 @@ See :doc:`logger` for more details
 
     Defaults to `U_WORD`.
 
-  - **read_lambda** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+  - **read_lambda** (**Required**, [Templates]({{< ref "automations/templates#config-lambda" >}})):
     Lambda that returns the value of this register.
 
 Automations:
 
-- **on_command_sent** (*Optional*, [modbus_controller-on_command_sent]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})): An automation to perform when a modbus command has been sent. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_online** (*Optional*, [modbus_controller-on_online]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})): An automation to perform when a modbus controller goes online. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_offline** (*Optional*, [modbus_controller-on_offline]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})): An automation to perform when a modbus controller goes offline. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_command_sent** (*Optional*, [``on_command_sent``]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})): An automation to perform when a modbus command has been sent. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_online** (*Optional*, [``on_online``]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})): An automation to perform when a modbus controller goes online. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_offline** (*Optional*, [``on_offline``]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})): An automation to perform when a modbus controller goes offline. See [Automation]({{< ref "automations/_index#automation" >}})
 
 ## Example Client
 
@@ -198,7 +198,7 @@ sensor:
 
 
 ```
-Check out the various Modbus components available at the bottom of the document in the [modbusseealso]({{< ref "components/modbus_controller#modbusseealso" >}}) section. They can be directly defined *(inline)* under the `modbus_controller` hub or as standalone components. Technically there is no difference between the *inline* and the standard definitions approach.
+Check out the various Modbus components available at the bottom of the document in the [.. _modbus_controller-automations:]({{< ref "components/modbus_controller#modbusseealso" >}}) section. They can be directly defined *(inline)* under the `modbus_controller` hub or as standalone components. Technically there is no difference between the *inline* and the standard definitions approach.
 
 Below you find a few general tips about using Modbus in more advanced scenarios. Applicable component functionalities have links pointing here:
 
@@ -729,7 +729,7 @@ Then battery charge settings are sent.
 `on_command_sent`
 *******************
 
-This automation will be triggered when a command has been sent by the `modbus_controller`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
+This automation will be triggered when a command has been sent by the `modbus_controller`. In [Templates]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml
@@ -746,7 +746,7 @@ modbus_controller:
 `on_online`
 *******************
 
-This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
+This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In [Templates]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml
@@ -763,7 +763,7 @@ modbus_controller:
 `on_offline`
 *******************
 
-This automation will be triggered when a `modbus_controller` goes `offline` (See [Lambdas]({{< ref "automations/templates#config-lambda" >}})). In [offline_skip_updates]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
+This automation will be triggered when a `modbus_controller` goes `offline` (See [Templates]({{< ref "automations/templates#config-lambda" >}})). In [- **offline_skip_updates** (*Optional*, integer): When a slave doesn't respond to a command, it is]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml

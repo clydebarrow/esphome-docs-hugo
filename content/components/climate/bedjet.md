@@ -40,11 +40,11 @@ bedjet:
 Configuration variables:
 ************************
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **ble_client_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the BLE Client.
-- **time_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID [/components/time/index]({{< ref "/components/time/index" >}})ndex` which
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the BLE Client.
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [/components/time/index]({{< ref "/components/time/index" >}})ndex` which
   can be used to set the time on the BedJet device.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to dispatch status
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to dispatch status
   changes to child components. Defaults to `5s`. Each child component can decide whether to
   publish its own updated state on this interval, or use another (longer) update interval to
   throttle its own updates.
@@ -52,7 +52,7 @@ Configuration variables:
 lambda calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call methods to do some advanced stuff.
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call methods to do some advanced stuff.
 
 - `.upgrade_firmware`: Check for and install updated BedJet firmware.
 
@@ -107,7 +107,7 @@ climate:
 Configuration variables:
 ************************
 
-- **bedjet_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
+- **bedjet_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
 - **heat_mode** (*Optional*, string): The primary heating mode to use for `HVACMode.HEAT`:
 
     - `heat` (Default) - Setting `hvac_mode=heat` uses the BedJet "HEAT" mode.
@@ -122,7 +122,7 @@ Configuration variables:
       reported as the climate entity's current temperature.
     - `outlet` - The temperature of the air being discharged by the BedJet will be
       reported as the climate entity's current temperature.
-- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+- All other options from [Base Climate Configuration]({{< ref "components/climate/_index#config-climate" >}}).
 
 ## ``bedjet`` Fan
 
@@ -143,8 +143,8 @@ fan:
 Configuration variables:
 ************************
 
-- **bedjet_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
-- Other options from [Fan]({{< ref "components/fan/_index#config-fan" >}}).
+- **bedjet_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
+- Other options from [Base Fan Configuration]({{< ref "components/fan/_index#config-fan" >}}).
 
 ## ``bedjet`` Sensor
 
@@ -165,11 +165,11 @@ Configuration variables:
 
 - **outlet_temperature** (*Optional*): If specified, the temperature of the air being
   discharged from the BedJet will be reported as a sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **ambient_temperature** (*Optional*): If specified, the temperature of the room the
   BedJet is in will be reported as a sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Known issues:
 

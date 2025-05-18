@@ -47,27 +47,27 @@ sensor:
 
 rssi options:
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 characteristic options:
 
-- **ble_client_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
+- **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
 - **service_uuid** (**Required**, UUID): UUID of the service on the device.
 - **characteristic_uuid** (**Required**, UUID): UUID of the service's characteristic to query.
 - **descriptor_uuid** (*Optional*, UUID): UUID of the characteristic's descriptor to query.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID to use for code generation, and for reference by dependent components.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for converting a raw data
-  reading to a sensor value. See [ble-sensor-lambda]({{< ref "components/sensor/ble_client#ble-sensor-lambda" >}}) for more information.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID to use for code generation, and for reference by dependent components.
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for converting a raw data
+  reading to a sensor value. See [Raw Data Parsing Lambda]({{< ref "components/sensor/ble_client#ble-sensor-lambda" >}}) for more information.
 - **notify** (*Optional*, boolean): Instruct the server to send notifications for this
   characteristic.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device.
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Automations:
 
 - **on_notify** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
-  perform when a notify message is received from the device. See [ble_sensor-on_notify]({{< ref "components/sensor/ble_client#ble_sensor-on_notify" >}}).
+  perform when a notify message is received from the device. See [``on_notify``]({{< ref "components/sensor/ble_client#ble_sensor-on_notify" >}}).
 
 {{< anchor "ble-sensor-lambda" >}}
 
@@ -124,6 +124,6 @@ Some common ones:
 ## See Also
 
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ble_sensor/ble_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ble_client.md)

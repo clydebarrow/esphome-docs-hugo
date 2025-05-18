@@ -21,7 +21,7 @@ text_sensor:
 ## Configuration variables:
 
 - **sensor_datapoint** (**Required**, int): The datapoint id number of the sensor.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## See Also
 

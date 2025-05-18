@@ -36,21 +36,21 @@ sensor:
 ```
 ## Configuration variables:
 
-- **clock_pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the clock bus is connected.
-- **data_pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the data bus is connected.
+- **clock_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the clock bus is connected.
+- **data_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the data bus is connected.
 - **co2** (*Optional*): The information for the CO2 sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): The information for the humidity sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 
@@ -62,7 +62,7 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 {{< /note >}}
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [absolute_humidity]({{< ref "absolute_humidity/" >}})
 - [mhz19]({{< ref "mhz19/" >}})
 - [CO2mon-esp firmware](https://github.com/Anonym-tsk/co2mon-esp) by [@anonym-tsk](https://github.com/Anonym-tsk)

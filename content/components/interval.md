@@ -7,7 +7,7 @@ title: ""
 
 This component allows you to run actions at fixed time intervals. For example, if you want to toggle a switch every
 minute, you can use this component. Please note that it's possible to achieve the same thing with the
-[time.on_time]({{< ref "components/time/_index#time-on_time" >}}) trigger, but this technique is more light-weight and user-friendly.
+[``on_time`` Trigger]({{< ref "components/time/_index#time-on_time" >}}) trigger, but this technique is more light-weight and user-friendly.
 
 ```yaml
 # Example configuration entry
@@ -23,9 +23,9 @@ If a startup delay is configured, the first execution of the actions will not oc
 Configuration variables:
 ************************
 
-- **interval** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to execute the action with.
-- **startup_delay** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): An optional startup delay - defaults to zero.
-- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform.
+- **interval** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to execute the action with.
+- **startup_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): An optional startup delay - defaults to zero.
+- **then** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action to perform.
 
 ## See Also
 

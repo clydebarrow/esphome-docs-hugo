@@ -6,7 +6,7 @@ title: "Template Binary Sensor"
 {{< seo description="" image="" >}}
 
 The `template` binary sensor platform allows you to define a boolean condition and use it to provide a binary sensor.
-The condition may be expressed as a C++ lambda, or as a [YAML expression]({{< ref "automations/actions#config-condition" >}}).
+The condition may be expressed as a C++ lambda, or as a [All Conditions]({{< ref "automations/actions#config-condition" >}}).
 The condition expression will be evaluated continually, on each call to the component's `loop()` method, which is typically every 16ms.
 
 The example below polls an analog sensor and yields a value dependent on whether the sensor value is above a threshold.
@@ -32,7 +32,7 @@ Possible return values of the lambda:
  - `return false;` if the binary sensor should be OFF.
  - `return {};` if the state is not known. The last known state will be maintained.
 
-As an alternative to using a lambda you may use ESPHome [condition expressions]({{< ref "automations/actions#config-condition" >}}):
+As an alternative to using a lambda you may use ESPHome [All Conditions]({{< ref "automations/actions#config-condition" >}}):
 
 ```yaml
 # Example configuration entry
@@ -48,10 +48,10 @@ binary_sensor:
 ```
 ## Configuration variables:
 
--  **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+-  **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
    C++ Lambda to be evaluated repeatedly to get the current state of the binary sensor.
-- **condition** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine the value of the binary sensor. `lambda` and `condition` may not both be present in the configuration.
--  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- **condition** (*Optional*, [All Conditions]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine the value of the binary sensor. `lambda` and `condition` may not both be present in the configuration.
+-  All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "binary_sensor-template-publish_action" >}}
 
@@ -81,8 +81,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template binary sensor.
-- **state** (**Required**, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template binary sensor.
+- **state** (**Required**, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 
 {{< note >}}
@@ -97,6 +97,6 @@ This action can also be written in lambdas:
 
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - [/components/sensor/template]({{< ref "/components/sensor/template" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/binary_sensor/template_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/template.md)

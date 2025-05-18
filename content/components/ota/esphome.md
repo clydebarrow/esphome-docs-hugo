@@ -33,10 +33,10 @@ ota:
    - `8266` for the ESP8266
    - `2040` for the RP2040
    - `8892` for Beken chips
--  **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+-  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 -  **version** (*Optional*, int): Version of OTA protocol to use. Version 2 is more stable. To downgrade to legacy
    ESPHome, the device should be updated with OTA version 1 first. Defaults to `2`.
--  All [automations]({{< ref "automations/_index#automation" >}}) supported by :doc:`/com[/components/ota/index]({{< ref "/components/ota/index" >}})
+-  All [Automation]({{< ref "automations/_index#automation" >}}) supported by :doc:`/com[/components/ota/index]({{< ref "/components/ota/index" >}})
 
 {{< note >}}
 After a serial upload, ESP8266 modules must be reset before OTA updates will work. If you attempt to perform an OTA

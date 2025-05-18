@@ -26,9 +26,9 @@ canbus:
 - **tx_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Transmit pin.
 - **rx_queue_len** (*Optional*, int): Length of RX queue.
 - **tx_queue_len** (*Optional*, int): Length of TX queue, 0 to disable.
-- **tx_enqueue_timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Maximum time to wait when the TX queue is full before
+- **tx_enqueue_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Maximum time to wait when the TX queue is full before
   dropping the message (by default, this is set to the time it takes to send 10 CAN messages at the given bit rate).
-- All other options from [Canbus]({{< ref "components/canbus/_index#config-canbus" >}}).
+- All other options from [**Configuration variables:**]({{< ref "components/canbus/_index#config-canbus" >}}).
 
 {{< anchor "esp32-can-bit-rate" >}}
 

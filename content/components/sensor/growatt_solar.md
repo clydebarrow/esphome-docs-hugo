@@ -11,7 +11,7 @@ The `Growatt Inverter` sensor platform allows you to use growatt inverter data r
 *Growatt Logo*
 
 
-The communication with this component is done over a [Modbus]({{< ref "components/modbus#modbus" >}}) using [UART bus]({{< ref "components/uart#uart" >}}).
+The communication with this component is done over a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using [UART Bus]({{< ref "components/uart#uart" >}}).
 You must therefore have a `uart:` and `modbus:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 
@@ -92,11 +92,11 @@ sensor:
 - **phase_a** (*Optional*): The group of exposed sensors for Phase A/1.
 
   - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-    [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-    All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **active_power** (*Optional*): Use the (active) power value of the sensor in watts. All options
-    from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **phase_b** (*Optional*): The group of exposed sensors for Phase B/2 on applicable inverters.
 
@@ -109,36 +109,36 @@ sensor:
 - **pv1** (*Optional*): The group of exposed sensors for Photo Voltaic 1.
 
   - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-    [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-    All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **active_power** (*Optional*): Use the (active) power value of the sensor in watts. All options
-    from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+    from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pv2** (*Optional*): The group of exposed sensors for Photo Voltaic 2.
 
   - All options from **pv1**
 
 - **active_power** (*Optional*): Use the (active) power value for the Grid in watts. All options
-  from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pv_active_power** (*Optional*): Use the (active) power value of PVs in total in watts. All options
-  from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **frequency** (*Optional*): Use the frequency value of the sensor in hertz.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **energy_production_day** (*Optional*): Use the export active energy value for same day of the
-  sensor in kilo watt hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  sensor in kilo watt hours. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **total_energy_production** (*Optional*): Use the total exported energy value of the sensor in
-  kilo watt hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  kilo watt hours. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **inverter_module_temp** (*Optional*): Use the inverter module temperature value of the sensor in
-  degree celsius. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+  degree celsius. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `10s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/growatt_solar.md)

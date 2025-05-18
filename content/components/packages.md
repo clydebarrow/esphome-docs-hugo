@@ -126,7 +126,7 @@ For each package:
   - list of objects containing `path` and `vars`
 
 - **ref** (*Optional*, string): The Git ref(erence) to be used when pulling content from the repository.
-- **refresh** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval at which the content from the repository should be refreshed.
+- **refresh** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval at which the content from the repository should be refreshed.
 
 ## Packages as Templates
 

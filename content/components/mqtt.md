@@ -41,7 +41,7 @@ Support for esp-idf is still experminental. Please report issues you have with m
 - **clean_session** (*Optional*, boolean): Whether the broker will clean
   the MQTT session after disconnect. Defaults to `false`.
 - **client_id** (*Optional*, string): The client id to use for opening
-  connections. See [mqtt-defaults]({{< ref "components/mqtt#mqtt-defaults" >}}) for more information.
+  connections. See [Defaults]({{< ref "components/mqtt#mqtt-defaults" >}}) for more information.
 - **discover_ip** (*Optional*, boolean): If Home Assistant automatic device
   discovery should be enabled. Defaults to `true`.
 - **discovery** (*Optional*, boolean): If Home Assistant automatic entity
@@ -66,33 +66,33 @@ Support for esp-idf is still experminental. Please report issues you have with m
   messages. Should not contain trailing slash. Defaults to `<APP_NAME>`.
   Use `null` to disable publishing or subscribing of any MQTT topic unless
   it is explicitly configured.
-- **log_topic** (*Optional*, [mqtt-message]({{< ref "components/mqtt#mqtt-message" >}})): The topic to send MQTT log
+- **log_topic** (*Optional*, [MQTTMessage]({{< ref "components/mqtt#mqtt-message" >}})): The topic to send MQTT log
   messages to. Use `null` if you want to disable sending logs to MQTT.
 
   The `log_topic` has an additional configuration option:
 
   - **level** (*Optional*, string): The log level to use for MQTT logs. See
-    [logger-log_levels]({{< ref "components/logger#logger-log_levels" >}}) for options.
+    [Log Levels]({{< ref "components/logger#logger-log_levels" >}}) for options.
 
-- **birth_message** (*Optional*, [mqtt-message]({{< ref "components/mqtt#mqtt-message" >}})): The message to send when
-  a connection to the broker is established. See [mqtt-last_will_birth]({{< ref "components/mqtt#mqtt-last_will_birth" >}}) for more information.
-- **will_message** (*Optional*, [mqtt-message]({{< ref "components/mqtt#mqtt-message" >}})): The message to send when
-  the MQTT connection is dropped. See [mqtt-last_will_birth]({{< ref "components/mqtt#mqtt-last_will_birth" >}}) for more information.
-- **shutdown_message** (*Optional*, [mqtt-message]({{< ref "components/mqtt#mqtt-message" >}})): The message to send when
-  the node shuts down and the connection is closed cleanly. See [mqtt-last_will_birth]({{< ref "components/mqtt#mqtt-last_will_birth" >}}) for more information.
+- **birth_message** (*Optional*, [MQTTMessage]({{< ref "components/mqtt#mqtt-message" >}})): The message to send when
+  a connection to the broker is established. See [Last Will And Birth Messages]({{< ref "components/mqtt#mqtt-last_will_birth" >}}) for more information.
+- **will_message** (*Optional*, [MQTTMessage]({{< ref "components/mqtt#mqtt-message" >}})): The message to send when
+  the MQTT connection is dropped. See [Last Will And Birth Messages]({{< ref "components/mqtt#mqtt-last_will_birth" >}}) for more information.
+- **shutdown_message** (*Optional*, [MQTTMessage]({{< ref "components/mqtt#mqtt-message" >}})): The message to send when
+  the node shuts down and the connection is closed cleanly. See [Last Will And Birth Messages]({{< ref "components/mqtt#mqtt-last_will_birth" >}}) for more information.
 - **ssl_fingerprints** (*Optional*, list): Only on ESP8266. A list of SHA1 hashes used
-  for verifying SSL connections. See [mqtt-ssl_fingerprints]({{< ref "components/mqtt#mqtt-ssl_fingerprints" >}}).
+  for verifying SSL connections. See [SSL Fingerprints]({{< ref "components/mqtt#mqtt-ssl_fingerprints" >}}).
   for more information.
-- **certificate_authority** (*Optional*, string): Only with `esp-idf`. CA certificate in PEM format. See [mqtt-tls-idf]({{< ref "components/mqtt#mqtt-tls-idf" >}}) for more information
+- **certificate_authority** (*Optional*, string): Only with `esp-idf`. CA certificate in PEM format. See [TLS with esp-idf (esp32)]({{< ref "components/mqtt#mqtt-tls-idf" >}}) for more information
 - **client_certificate** (*Optional*, string): Only on `esp32`. Client certificate in PEM format.
 - **client_certificate_key** (*Optional*, string): Only on `esp32`. Client private key in PEM format.
 - **skip_cert_cn_check** (*Optional*, bool): Only with `esp-idf`. Don't verify if the common name in the server certificate matches the value of `broker`.
 - **idf_send_async** (*Optional*, bool): Only with `esp-idf`. If true publishing the message happens from the internal mqtt task. The client only enqueues the message. Defaults to `false`.
   The advantage of asyncronous publishing is that it doesn't block the esphome main thread. The disadvantage is a delay (up to 1-2 seconds) until the messages are actually sent out.
   Set this to true if you send large amounts of of data over mqtt.
-- **reboot_timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before rebooting when no
+- **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before rebooting when no
   MQTT connection exists. Can be disabled by setting this to `0s`. Defaults to `15min`.
-- **keepalive** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The time
+- **keepalive** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time
   to keep the MQTT socket alive, decreasing this can help with overall stability due to more
   WiFi traffic with more pings. Defaults to 15 seconds.
 - **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a connection
@@ -100,10 +100,10 @@ Support for esp-idf is still experminental. Please report issues you have with m
 - **on_disconnect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection
   to the broker is dropped.
 - **on_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when a message on a specific MQTT topic is received. See [mqtt-on_message]({{< ref "components/mqtt#mqtt-on_message" >}}).
+  performed when a message on a specific MQTT topic is received. See [``on_message`` Trigger]({{< ref "components/mqtt#mqtt-on_message" >}}).
 - **on_json_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when a JSON message on a specific MQTT topic is received. See [mqtt-on_json_message]({{< ref "components/mqtt#mqtt-on_json_message" >}}).
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+  performed when a JSON message on a specific MQTT topic is received. See [``on_json_message`` Trigger]({{< ref "components/mqtt#mqtt-on_json_message" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **publish_nan_as_none** (*Optional*, bool): Publish `None` instead of `NaN` to handle Unknown/Unavailable sensor states in Home Assistant. Defaults to `false`.
 
 {{< anchor "mqtt-message" >}}
@@ -320,8 +320,8 @@ mqtt:
     payload: offline
 
 ```
-- **birth_message** (*Optional*, [mqtt-message]({{< ref "components/mqtt#mqtt-message" >}}))
-- **will_message** (*Optional*, [mqtt-message]({{< ref "components/mqtt#mqtt-message" >}}))
+- **birth_message** (*Optional*, [MQTTMessage]({{< ref "components/mqtt#mqtt-message" >}}))
+- **will_message** (*Optional*, [MQTTMessage]({{< ref "components/mqtt#mqtt-message" >}}))
 
 If the birth message and last will message have empty topics or topics
 that are different from each other, availability reporting will be
@@ -451,7 +451,7 @@ Configuration variables:
    level advertised in discovery for subscribing (only if discovery is enabled). Defaults to 0.
 -  **availability** (*Optional*): Manually set what should be sent to
    Home Assistant for showing entity availability. Default derived from
-   [global birth/last will message]({{< ref "components/mqtt#mqtt-last_will_birth" >}}).
+   [Last Will And Birth Messages]({{< ref "components/mqtt#mqtt-last_will_birth" >}}).
 -  **state_topic** (*Optional*, string): The topic to publish state
    updates to. Defaults to
    `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/state`.
@@ -494,7 +494,7 @@ mqtt:
 ## ``on_message`` Trigger
 
 With this configuration option you can write complex automations whenever an MQTT
-message on a specific topic is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
+message on a specific topic is received. To use the message content, use a [Templates]({{< ref "automations/templates#config-lambda" >}})
 template, the message payload is available under the name `x` inside that lambda.
 
 ```yaml
@@ -554,7 +554,7 @@ This action can also be used in :ref:`lambdas <config-lambda>`:
 ## ``on_json_message`` Trigger
 
 With this configuration option you can write complex automations whenever a JSON-encoded MQTT
-message is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
+message is received. To use the message content, use a [Templates]({{< ref "automations/templates#config-lambda" >}})
 template, the decoded message payload is available under the name `x` inside that lambda.
 
 The [x` object is of type `JsonObject` by the `ArduinoJson](https://github.com/bblanchon/ArduinoJson)
@@ -641,13 +641,13 @@ on_...:
 ```
 Configuration options:
 
--  **topic** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+-  **topic** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
    The MQTT topic to publish the message.
--  **payload** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The message content.
--  **qos** (*Optional*, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The `Quality of
+-  **payload** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The message content.
+-  **qos** (*Optional*, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The `Quality of
    Service <https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels>`__
    level of the topic. Defaults to 0.
--  **retain** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): If the published message should
+-  **retain** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): If the published message should
    have a retain flag on or not. Defaults to `false`.
 
 
@@ -691,9 +691,9 @@ on_...:
 ```
 Configuration options:
 
--  **topic** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+-  **topic** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
    The MQTT topic to publish the message.
--  **payload** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})): The message content.
+-  **payload** (**Required**, [Templates]({{< ref "automations/templates#config-lambda" >}})): The message content.
 -  **qos** (*Optional*, int): The `Quality of
    Service <https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels>`__
    level of the topic. Defaults to 0.
@@ -770,7 +770,7 @@ on_...:
 
 ## ``mqtt.connected`` Condition
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the MQTT client is currently connected to
+This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the MQTT client is currently connected to
 the MQTT broker.
 
 ```yaml

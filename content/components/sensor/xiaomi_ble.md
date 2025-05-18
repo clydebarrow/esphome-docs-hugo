@@ -156,7 +156,7 @@ CGG1
 
 Cleargrass (Qingping): hygro thermometer, round body, e-ink display.
 
-New firmware requires a bindkey in order to decrypt the received data (see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})), and stopped broadcasting battery level.
+New firmware requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})), and stopped broadcasting battery level.
 
 ![Configuration example:](../images/xiaomi_cgg1.jpg)
 *Configuration example:*
@@ -190,7 +190,7 @@ Hygro thermometer, small square body, segment LCD, encrypted, broadcasts tempera
 *There are the following possibilities to operate this sensor:*
 
 
-1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
+1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
 2. Device flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware
 3. Device flashed with [ATC MiThermometer](https://github.com/atc1441/ATC_MiThermometer) custom firmware
 
@@ -276,7 +276,7 @@ sensor:
 MHO-C401
 ********
 
-Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
 ![( MHO-C201 doesn't have BT )](../images/xiaomi_mhoc401.jpg)
 *( MHO-C201 doesn't have BT )*
@@ -284,7 +284,7 @@ Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature
 
 Similar to the LYWSD03MMC, there is custom firmware available for this device, so there are the following possibilities to operate this sensor:
 
-1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
+1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
 2. Device flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware
 
    - "Mi Like" advertisement (dummy bindkey required)
@@ -325,7 +325,7 @@ sensor:
 CGD1
 ****
 
-Cleargrass (Qingping) alarm clock, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Cleargrass (Qingping) alarm clock, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
 ![Configuration example:](../images/xiaomi_cgd1.jpg)
 *Configuration example:*
@@ -347,7 +347,7 @@ sensor:
 CGDK2
 *****
 
-Cleargrass (Qingping) Temp & RH Lite, round body, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Cleargrass (Qingping) Temp & RH Lite, round body, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 The measurements are broadcast every 10-15 minutes.
 
 ![Configuration example:](../images/xiaomi_cgdk2.jpg)
@@ -433,7 +433,7 @@ binary_sensor:
 MJYD02YL-A
 **********
 
-Xiaomi Yeelight night light, in-shape replacement of MJYD02YL with BLE, broadcasts light on/off status, motion detection, idle time since last motion event and battery status. Requires a bindkey in order to decrypt the received data (see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})). Implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
+Xiaomi Yeelight night light, in-shape replacement of MJYD02YL with BLE, broadcasts light on/off status, motion detection, idle time since last motion event and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})). Implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
 ![Configuration example:](../images/xiaomi_mjyd02yla.jpg)
 *Configuration example:*
@@ -460,7 +460,7 @@ binary_sensor:
 CGPR1
 *****
 
-Qingping motion & ambient light sensor. Broadcasts motion detection, idle time since last motion event, lux value and battery status. Requires a bindkey in order to decrypt the received data (see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Qingping motion & ambient light sensor. Broadcasts motion detection, idle time since last motion event, lux value and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
 ![Configuration example:](../images/xiaomi_cgpr1.png)
 *Configuration example:*
@@ -484,7 +484,7 @@ RTCGQ02LM - Mi Motion Sensor 2
 ******************************
 
 Motion & ambient light sensor. Broadcasts motion detection, light/dark and battery status. Also has a button that broadcasts when pressed.
-Requires a bindkey in order to decrypt the received data (see [obtaining_the_bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
 ![Configuration example:](../images/xiaomi_rtcgq02lm.jpg)
 *Configuration example:*
@@ -522,7 +522,7 @@ Required:
 - **mac_address** (MAC Address): The MAC address of the device.
 - **bindkey** (string, 32 characters, case insensitive): The key to decrypt the BLE advertisements for encrypted sensor types
 
-All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) are supported for:
+All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) are supported for:
 
 - **temperature**
 - **humidity**

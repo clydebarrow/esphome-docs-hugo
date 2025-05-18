@@ -29,7 +29,7 @@ Configuration variables:
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
       you want the media player to use that name, you can set `name: None`.
 
 - **icon** (*Optional*, icon): Manually set the icon to use for the
@@ -53,7 +53,7 @@ your configuration YAML.
 
 Configuration variables:
 
-**id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The media player to control. Defaults to the only one in YAML.
+**id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The media player to control. Defaults to the only one in YAML.
 
 
 {{< anchor "media_player-play" >}}

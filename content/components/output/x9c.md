@@ -39,13 +39,13 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
 - **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Chip Select pin
 - **inc_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Increment pin
 - **ud_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Up/Down pin
 - **initial_value** (*Optional*, float): Manually specify the initial potentiometer value, between `0.01` and `1.0`. Defaults to `1.0`.
 - **step_delay** (*Optional*, int): Manually specify the delay between steps (in microseconds) between `1us` and `100us`. Defaults to `1us`.
-- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+- All other options from [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}).
 
 ## See Also
 

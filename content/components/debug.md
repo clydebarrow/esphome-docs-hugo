@@ -69,30 +69,30 @@ Configuration variables:
     - SDK, Core & Boot versions
     - Reset reason & information
 
-  Accepts all options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  Accepts all options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
-- **reset_reason** (*Optional*): Reports the last reboot reason in a human-readable form. Accepts all options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **reset_reason** (*Optional*): Reports the last reboot reason in a human-readable form. Accepts all options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Sensor
 Configuration variables:
 
-- **free** (*Optional*): Reports the free heap size in bytes. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **free** (*Optional*): Reports the free heap size in bytes. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **fragmentation** (*Optional*): Reports the fragmentation metric of the heap 
   (0% is clean, more than ~50% is not harmless). Only available on ESP8266 with Arduino 2.5.2+.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **block** (*Optional*): Reports the largest contiguous free RAM block on the heap in bytes. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **block** (*Optional*): Reports the largest contiguous free RAM block on the heap in bytes. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
   
-- **loop_time** (*Optional*): Reports the longest time between successive iterations of the main loop. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **loop_time** (*Optional*): Reports the longest time between successive iterations of the main loop. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **psram** (*Optional*): Reports the free PSRAM in bytes. Only available on ESP32. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **psram** (*Optional*): Reports the free PSRAM in bytes. Only available on ESP32. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **cpu_frequency** (*Optional*): Reports the CPU frequency in Hz. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **cpu_frequency** (*Optional*): Reports the CPU frequency in Hz. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [logger]({{< ref "logger/" >}})
 - :apiref:`debug/debug_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/debug.md)

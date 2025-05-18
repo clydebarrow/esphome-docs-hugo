@@ -119,21 +119,21 @@ sensor:
 
 ```
 ## Configuration variables:
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Default is `0x29`.
 - **type** (*Optional*, string): The type of the sensor. Valid values are `ALS_PS` *(default)* for
   integrated sensors, `ALS` for ambient light only or `PS` for proximity only devices.
 - **auto_mode** (*Optional*, boolean): Automatic gain and integration time selection. Defaults to True.
 - **gain** (*Optional*, string): The gain the device will use. Higher values are better in low-light conditions.
   Valid values are `1X` *(default)*, `2X`, `4X`, `8X`, `48X`, `96X`.
-- **integration_time** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})):
+- **integration_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})):
   The amount of time sensors are exposed. Longer means more accurate values.
   Valid values are: `50ms` *(default)*, `100ms`, `150ms`, `200ms`, `250ms`, `300ms`, `350ms`, `400ms`.
 - **glass_attenuation_factor** (*Optional*, float): The attenuation factor of glass if it's behind some glass
   or plastic facia.  Default is `1.0` means `100%` transmissivity. `2` means `50%` transmissivity etc.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval for checking the sensors.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval for checking the sensors.
   Defaults to `60s`.
-- **ps_cooldown** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The "cooldown" period after the proximity sensor is triggered.
+- **ps_cooldown** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The "cooldown" period after the proximity sensor is triggered.
   Helps to avoid multiple calls.  Defaults to `5s`.
 - **ps_gain** (*Optional*, string): The gain the device will use for proximity sensor. Higher values are better in low-light conditions.
   Valid values are `16X` *(default)*, `32X`, `64X`. Only for **LTR-659ALS**.
@@ -149,8 +149,8 @@ sensor:
 ### Sensors
 This component offers five sensors for ALS-equipped devices and one sensor for PS-equipped devices.
 You can configure all or any subset of these sensors. Each configured sensor is reported separately
-on each `update_interval`. Each is an ESPHome [sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and may be configured
-accordingly; if you don't need to configure additional [sensor]({{< ref "components/sensor/_index#config-sensor" >}}) variables, you
+on each `update_interval`. Each is an ESPHome [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) and may be configured
+accordingly; if you don't need to configure additional [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) variables, you
 may simply use the shorthand syntax for the sensor. For example: `ambient_light: "Ambient light"`
 
 - **ambient_light** (*Optional*): Illuminance of ambient light, close to human eye spectre, lx.

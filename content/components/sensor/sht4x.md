@@ -27,18 +27,18 @@ sensor:
 
 - **temperature** (*Optional*): Temperature.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): Relative Humidity.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **precision** (*Optional*, string): The measurement precision, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_max_duty** (*Optional*, float): The maximum duty cycle of the heater (limited to `0.05`). Default is `0.0`, i.e. heater off.
 - **heater_power** (*Optional*, string): The heater power, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_time** (*Optional*, string):  The length of time to run the heater, either `Long` (1000ms) or `Short` (100ms). Default is `Long`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Default is `0x44`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
 ## Heater Configuration:
 
@@ -57,7 +57,7 @@ for more information about heater operation.
 
 - [/components/sensor/sht3xd]({{< ref "/components/sensor/sht3xd" >}})
 - [/components/sensor/shtcx]({{< ref "/components/sensor/shtcx" >}})
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [absolute_humidity]({{< ref "absolute_humidity/" >}})
 - :apiref:`sht4x/sht4x.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sht4x.md)

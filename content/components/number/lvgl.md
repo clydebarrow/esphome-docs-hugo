@@ -8,7 +8,7 @@ title: "LVGL Number"
 The `lvgl` number platform creates a number component from an LVGL widget
 and requires [LVGL ]({{< relref "/components/lvgl/index" >}}) to be configured.
 
-Supported widgets are [lvgl-widget-spinbox]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}}), [lvgl-widget-slider]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}), [lvgl-widget-bar]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}}) and [lvgl-widget-arc]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}). A single number supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome number component.
+Supported widgets are [``spinbox``]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}}), [``slider``]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}), [``bar``]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}}) and [``arc``]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}). A single number supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome number component.
 
 ## Configuration variables:
 
@@ -16,7 +16,7 @@ Supported widgets are [lvgl-widget-spinbox]({{< ref "components/lvgl/widgets#lvg
 - **animated** (*Optional*, boolean): Whether to set the value of the widget with an animation (if supported by the widget). Defaults to `true`.
 - **update_on_release** (*Optional*, boolean): By default the number will publish a new value each time the value of the associated widget changes. If this option is `true` then the value will only be published when touch is released.
 - **restore_value**: (*Optional*, bool) Restore the value of the number from non-volatile memory when the device is restarted. Defaults to `false`.
-- All other variables from [Number]({{< ref "components/number/_index#config-number" >}}).
+- All other variables from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
 
 Example:
 
@@ -33,10 +33,10 @@ Widget-specific actions (``lvgl.arc.update``, ``lvgl.bar.update``, ``lvgl.slider
 {{< /note >}}
 ## See Also
 - [LVGL Main component ]({{< relref "/components/lvgl/index" >}})
-- [Arc widget]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}})
-- [Bar widget]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}})
-- [Slider widget]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})
-- [Spinbox widget]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}})
+- [``arc``]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}})
+- [``bar``]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}})
+- [``slider``]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})
+- [``spinbox``]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}})
 - [/components/binary_sensor/lvgl]({{< ref "/components/binary_sensor/lvgl" >}})
 - [/components/sensor/lvgl]({{< ref "/components/sensor/lvgl" >}})
 - [/components/switch/lvgl]({{< ref "/components/switch/lvgl" >}})

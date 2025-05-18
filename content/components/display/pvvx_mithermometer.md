@@ -44,16 +44,16 @@ display:
 ```
 ## Configuration variables:
 
-- **ble_client_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
-- **time_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): ID [/components/time/index]({{< ref "/components/time/index" >}})ndex`. If set, the time will be synchronized with every connection.
-- **disconnect_delay** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time the BLE connection is maintained before being disconnected again. Defaults to `5s`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to transmit the display data. Defaults to `60s`.
-- **validity_period** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The time periode for which the pvvx device should display the information. Defaults to `5min`.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use to define the information to be displayed.
-  See [display-pvvx_mithermometer_lambda]({{< ref "components/display/pvvx_mithermometer#display-pvvx_mithermometer_lambda" >}}) for more information.
+- **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID [/components/time/index]({{< ref "/components/time/index" >}})ndex`. If set, the time will be synchronized with every connection.
+- **disconnect_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time the BLE connection is maintained before being disconnected again. Defaults to `5s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to transmit the display data. Defaults to `60s`.
+- **validity_period** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time periode for which the pvvx device should display the information. Defaults to `5min`.
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use to define the information to be displayed.
+  See [Rendering Lambda]({{< ref "components/display/pvvx_mithermometer#display-pvvx_mithermometer_lambda" >}}) for more information.
 - **auto_clear_enabled** (*Optional*, boolean): Whether to automatically clear the display data before each lambda call,
   or to keep the existing display content (must overwrite explicitly, e.g., only on data change). Defaults to `true` if a lambda or pages are configured, false otherwise.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< anchor "display-pvvx_mithermometer_lambda" >}}
 

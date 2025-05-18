@@ -26,11 +26,11 @@ ADC in your device to measure a voltage on certain pins.
 
 ## Configuration variables:
 
-- **pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to measure the voltage on.
-  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see [adc-vcc]({{< ref "components/sensor/adc#adc-vcc" >}}).
+- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to measure the voltage on.
+  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see [Measuring VCC]({{< ref "components/sensor/adc#adc-vcc" >}}).
 - **attenuation** (*Optional*): Only on ESP32. Specify the ADC
-  attenuation to use. See [adc-esp32_attenuation]({{< ref "components/sensor/adc#adc-esp32_attenuation" >}}). Defaults to `0db`.
-- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See [adc-raw]({{< ref "components/sensor/adc#adc-raw" >}}). Defaults to `false`.
+  attenuation to use. See [ESP32 Attenuation]({{< ref "components/sensor/adc#adc-esp32_attenuation" >}}). Defaults to `0db`.
+- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See [Different ESP32-ADC behavior since 2021.11]({{< ref "components/sensor/adc#adc-raw" >}}). Defaults to `false`.
 - **samples** (*Optional*): The amount of ADC readings to take per sensor update. On the ESP32 this value is ignored if `attenuation` is set to `auto`. Defaults to `1`.
 - **sampling_mode** (*Optional*): Sampling method to use when multiple samples are taken.
 
@@ -38,9 +38,9 @@ ADC in your device to measure a voltage on certain pins.
   - `min` minimal value from all samples
   - `max` maximal value from all samples
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< note >}}
 This component prints the voltage as seen by the chip pin. On the ESP8266, this is always 0.0V to 1.0V
@@ -194,7 +194,7 @@ This works on SKU:DFR0654. For more information see: [manufacturer's website](ht
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [ads1115]({{< ref "ads1115/" >}})
 - [max6675]({{< ref "max6675/" >}})
 - :apiref:`adc/adc_sensor.h`

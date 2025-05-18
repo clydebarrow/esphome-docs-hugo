@@ -10,8 +10,8 @@ This series features exactly the same API as the MCP230xx I/O Expander (I²C).
 
 **Supported Variants :**
 
-- [mcp23S08-label]({{< ref "components/mcp23sxx#mcp23S08-label" >}})
-- [mcp23S17-label]({{< ref "components/mcp23sxx#mcp23S17-label" >}})
+- [MCP23S08 Component]({{< ref "components/mcp23sxx#mcp23S08-label" >}})
+- [MCP23S17 Component]({{< ref "components/mcp23sxx#mcp23S17-label" >}})
 
 {{< anchor "mcp23S08-label" >}}
 
@@ -57,7 +57,7 @@ binary_sensor:
 Configuration variables:
 ************************
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S08 component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S08 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use
 - **deviceaddress** (*Optional*, int): The address of the chip.
   Defaults to `0`.
@@ -68,7 +68,7 @@ Configuration variables:
 Pin Configuration Variables:
 ****************************
 
-- **mcp23xxx** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S08 component.
+- **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S08 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
 - All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
@@ -124,7 +124,7 @@ binary_sensor:
 Configuration variables:
 ************************
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S17 component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S17 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use.
 - **deviceaddress** (*Optional*, int): The address of the chip.
   Defaults to `0`.
@@ -135,14 +135,14 @@ Configuration variables:
 Pin Configuration Variables:
 ****************************
 
-- **mcp23xxx** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S17 component.
+- **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S17 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
 - All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
 
 ## See Also
 
-- [spi]({{< ref "components/spi#spi" >}})
+- [SPI Bus]({{< ref "components/spi#spi" >}})
 - [switch/gpio]({{< ref "switch/gpio" >}})
 - [binary_sensor/gpio]({{< ref "binary_sensor/gpio" >}})
 - :apiref:`API Reference (MCP23S08) <mcp23S08/mcp23S08.h>`

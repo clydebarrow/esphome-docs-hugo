@@ -25,15 +25,15 @@ number:
 ## Configuration variables:
 
 - **entity_id** (**Required**, string): The Home Assistant entity ID of the number to synchronize with.
-- All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
+- All other options from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
 
 ## ``number.set`` Action
 
 You can also set the number for the Home Assistant number from elsewhere in your YAML file
-with the [number-set_action]({{< ref "components/number/_index#number-set_action" >}}).
+with the [``number.set`` Action]({{< ref "components/number/_index#number-set_action" >}}).
 
 ## See Also
 
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/number/homeassistant_number.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/number/homeassistant.md)

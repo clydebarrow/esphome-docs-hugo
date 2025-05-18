@@ -30,8 +30,8 @@ esp32:
 - **variant** (*Optional*, string): The variant of the ESP32 that is used on this board. One of `esp32`,
   `esp32s2`, `esp32s3`, `esp32c3` and `esp32h2`. Defaults to the variant that is detected from the board; if
   a board that's unknown to ESPHome is used, this option is mandatory.
-- **framework** (*Optional*): Options for the underlying framework used by ESPHome. See [esp32-arduino_framework]({{< ref "components/esp32#esp32-arduino_framework" >}})
-  and [esp32-espidf_framework]({{< ref "components/esp32#esp32-espidf_framework" >}}).
+- **framework** (*Optional*): Options for the underlying framework used by ESPHome. See [Arduino framework]({{< ref "components/esp32#esp32-arduino_framework" >}})
+  and [ESP-IDF framework]({{< ref "components/esp32#esp32-espidf_framework" >}}).
 
 {{< anchor "esp32-arduino_framework" >}}
 
@@ -63,7 +63,7 @@ Configuration variables:
   custom or patched version of the framework.
 - **platform_version** (*Optional*, string): The version of the
   [pioarduino/espressif32](https://github.com/pioarduino/platform-espressif32/releases) package to use.
-- **advanced** (*Optional*, mapping): See [esp32-advanced_configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
+- **advanced** (*Optional*, mapping): See [Advanced Configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
 
 {{< anchor "esp32-espidf_framework" >}}
 
@@ -99,7 +99,7 @@ Configuration variables:
 - **sdkconfig_options** (*Optional*, mapping): Custom sdkconfig
   [compiler options](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/kconfig.html#compiler-options)
   to set in the ESP-IDF project.
-- **advanced** (*Optional*, mapping): See [esp32-advanced_configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
+- **advanced** (*Optional*, mapping): See [Advanced Configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
 
 {{< anchor "esp32-advanced_configuration" >}}
 

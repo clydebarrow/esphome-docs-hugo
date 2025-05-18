@@ -23,8 +23,8 @@ The `output` lock platform allows you to use any output component as a lock.
 
 ## Configuration variables:
 
-- **output** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.
-- All other options from [Lock]({{< ref "components/lock/_index#config-lock" >}}).
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.
+- All other options from [Base Lock Configuration]({{< ref "components/lock/_index#config-lock" >}}).
 
 ## See Also
 

@@ -39,13 +39,13 @@ Possible return values for the optional lambda:
 
 ## Configuration variables:
 
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated repeatedly to get the current state of the valve.
-- **open_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
+- **open_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
   (like Home Assistant's frontend) requests the valve to be opened.
-- **close_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
+- **close_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
   requests the valve to be closed.
-- **stop_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
+- **stop_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
   requests the valve to be stopped.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode, any command sent to
   the template valve will immediately update the reported state and no lambda needs to be used. Defaults to `false`.
@@ -59,10 +59,10 @@ Possible return values for the optional lambda:
   Assistant frontend show buttons for both OPEN and CLOSE actions, instead of hiding one of them. Defaults to `false`.
 - **has_position** (*Optional*, boolean): Whether this valve will publish its position as a floating point number.
   By default (`false`), the valve only publishes OPEN/CLOSED position.
-- **position_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
+- **position_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should be performed when the remote
   (like Home Assistant's frontend) requests the valve be set to a specific position. The desired position is available
   in the lambda in the `pos` variable. Requires `has_position` (above) to be set to `true`.
-- All other options from [Valve]({{< ref "components/valve/_index#config-valve" >}}).
+- All other options from [Base Valve Configuration]({{< ref "components/valve/_index#config-valve" >}}).
 
 {{< anchor "valve-template-publish_action" >}}
 
@@ -91,12 +91,12 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template valve.
-- **state** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template valve.
+- **state** (*Optional*, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish. One of `OPEN`, `CLOSED`. If using a lambda, use `VALVE_OPEN` or `VALVE_CLOSED`.
-- **position** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), float):
+- **position** (*Optional*, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), float):
   The position to publish, from 0 (CLOSED) to 1.0 (OPEN)
-- **current_operation** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), string):
+- **current_operation** (*Optional*, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), string):
   The current operation mode to publish. One of `IDLE`, `OPENING` and `CLOSING`. If using a lambda, use
   `VALVE_OPERATION_IDLE`, `VALVE_OPERATION_OPENING`, and `VALVE_OPERATION_CLOSING`.
 
@@ -112,7 +112,7 @@ This action can also be written in lambdas:
 ## See Also
 
 - [/components/valve/index]({{< ref "/components/valve/index" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - [/cookbook/garage-door]({{< ref "/cookbook/garage-door" >}})
 - :apiref:`template/valve/template_valve.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/valve/template.md)

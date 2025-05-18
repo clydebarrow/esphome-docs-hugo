@@ -11,10 +11,10 @@ or 433 MHz radio frequency (RF) signals.
 The component is split into two parts:
 
 - The remote receiver "hub", which defines the pin and a few additional settings, and...
-- Individual [remote receiver binary sensors]({{< ref "components/remote_receiver#remote-receiver-binary-sensor" >}}) which will activate when their
+- Individual [Binary Sensor]({{< ref "components/remote_receiver#remote-receiver-binary-sensor" >}}) which will activate when their
   respective signal is received.
 
-**See** [remote-setting-up-rf]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **and** [remote-setting-up-infrared]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **for details.**
+**See** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **and** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **for details.**
 
 ```yaml
 # Example configuration entry
@@ -27,12 +27,12 @@ Multiple remote receivers can be configured as a list of dict definitions within
 
 ## Configuration variables:
 
-- **pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to receive the remote signal on.
+- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to receive the remote signal on.
 - **dump** (*Optional*, list): Decode and dump these remote codes in the logs (at log.level=DEBUG).
   Set to `all` to dump all available codecs:
 
   - **abbwelcome**: Decode and dump ABB-Welcome codes. Messages are sent via copper wires. See
-    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more details.
+    [``remote_transmitter.transmit_abbwelcome`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more details.
   - **aeha**: Decode and dump AEHA infrared codes.
   - **beo4**: Decode and dump B&O Beo4 infrared codes.
   - **byronsx**: Decode and dump Byron SX doorbell RF codes.
@@ -66,20 +66,20 @@ Multiple remote receivers can be configured as a list of dict definitions within
   - **mirage**: Decode and dump Mirage infrared codes.
   - **toto**: Decode and dump Toto infrared codes.
 
-- **tolerance** (*Optional*, int, [config-time]({{< ref "guides/configuration-types#config-time" >}}) or mapping): The percentage or time that the remote signal lengths
+- **tolerance** (*Optional*, int, [Time]({{< ref "guides/configuration-types#config-time" >}}) or mapping): The percentage or time that the remote signal lengths
   can deviate in the decoding process.  Defaults to `25%`.
 
   - **type** (**Required**, enum): Set the type of the tolerance. Can be `percentage` or `time`.
-  - **value** (**Required**, int or [config-time]({{< ref "guides/configuration-types#config-time" >}})): The percentage or time value. Allowed values are in range `0`
+  - **value** (**Required**, int or [Time]({{< ref "guides/configuration-types#config-time" >}})): The percentage or time value. Allowed values are in range `0`
     to `100%` or `0` to `4294967295us`.
 
 - **buffer_size** (*Optional*, int): The size of the internal buffer for storing the remote codes. Defaults to `10kB`
   on the ESP32 and `1kB` on the ESP8266.
-- **filter** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Filter any pulses that are shorter than this. Useful for removing
+- **filter** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Filter any pulses that are shorter than this. Useful for removing
   glitches from noisy signals. Allowed values are in range `0` to `4294967295us`. Defaults to `50us`.
-- **idle** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time that a signal should remain stable/unchanged for it to
+- **idle** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time that a signal should remain stable/unchanged for it to
   be considered complete. Allowed values are in range `0` to `4294967295us`. Defaults to `10ms`.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Useful when multiple
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Useful when multiple
   receivers are configured on a single device.
 
 ESP32 IDF configuration variables:
@@ -275,14 +275,14 @@ binary_sensor:
 Configuration variables:
 ************************
 
-- **receiver_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The remote receiver to receive the remote code with. Required if
+- **receiver_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The remote receiver to receive the remote code with. Required if
   multiple receivers configured.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 Remote code selection (exactly one of these has to be included):
 
 - **abbwelcome**: Trigger on a decoded ABB-Welcome code with the given data, see the
-  [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more info.
+  [``remote_transmitter.transmit_abbwelcome`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more info.
 
   - **source_address** (**Required**, int): The source address to trigger on.
   - **destination_address** (**Required**, int): The destination address to trigger on.
@@ -299,7 +299,7 @@ Remote code selection (exactly one of these has to be included):
 
   - **address** (**Required**, int): The address to trigger on, see dumper output for more info.
   - **data** (**Required**, 3-35 bytes list): The code to listen for, see
-    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_aeha" >}}) for more info. Usually you only need to copy this
+    [``remote_transmitter.transmit_aeha`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_aeha" >}}) for more info. Usually you only need to copy this
     directly from the dumper output.
 
 - **beo4**: Trigger on a decoded B&O Beo4 infrared remote code with the given data.
@@ -369,7 +369,7 @@ Remote code selection (exactly one of these has to be included):
 - **haier**: Trigger on a Haier remote code with the given code.
 
   - **code** (**Required**, 13-bytes list): The code to listen for, see
-    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_haier" >}}) for more info. Usually you only need to copy
+    [``remote_transmitter.transmit_haier`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_haier" >}}) for more info. Usually you only need to copy
     this directly from the dumper output.
 
 - **lg**: Trigger on a decoded LG remote code with the given data.
@@ -386,7 +386,7 @@ Remote code selection (exactly one of these has to be included):
 - **midea**: Trigger on a Midea remote code with the given code.
 
   - **code** (**Required**, 5-bytes list): The code to listen for, see
-    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_midea" >}}) for more info. Usually you only need to copy
+    [``remote_transmitter.transmit_midea`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_midea" >}}) for more info. Usually you only need to copy
     first 5 bytes directly from the dumper output.
 
 - **nec**: Trigger on a decoded NEC remote code with the given data.
@@ -414,7 +414,7 @@ Remote code selection (exactly one of these has to be included):
 - **pronto**: Trigger on a Pronto remote code with the given code.
 
   - **data** (**Required**, string): The code to listen for, see
-    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
+    [``remote_transmitter.transmit_raw`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
     directly from the dumper output.
   - **delta** (*Optional*, integer): This parameter allows you to manually specify the allowed difference
     between what Pronto code is specified, and what IR signal has been sent by the remote control.
@@ -422,7 +422,7 @@ Remote code selection (exactly one of these has to be included):
 - **raw**: Trigger on a raw remote code with the given code.
 
   - **code** (**Required**, list): The code to listen for, see
-    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
+    [``remote_transmitter.transmit_raw`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
     directly from the dumper output.
 
 - **rc5**: Trigger on a decoded RC5 remote code with the given data.
@@ -439,7 +439,7 @@ Remote code selection (exactly one of these has to be included):
 
   - **code** (**Required**, string): The remote code to listen for, copy this from the dumper output. To ignore a bit
     in the received data, use `x` at that place in the **code**.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
     more info.
 
 - **rc_switch_type_a**: Trigger on a decoded RC Switch Type A remote code with the given data.
@@ -447,7 +447,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, string): The group, binary string.
   - **device** (**Required**, string): The device in the group, binary string.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
     more info.
 
 - **rc_switch_type_b**: Trigger on a decoded RC Switch Type B remote code with the given data.
@@ -455,7 +455,7 @@ Remote code selection (exactly one of these has to be included):
   - **address** (**Required**, int): The address, int from 1 to 4.
   - **channel** (**Required**, int): The channel, int from 1 to 4.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
     more info.
 
 - **rc_switch_type_c**: Trigger on a decoded RC Switch Type C remote code with the given data.
@@ -464,7 +464,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, int): The group. Range is 1 to 4.
   - **device** (**Required**, int): The device. Range is 1 to 4.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
     more info.
 
 - **rc_switch_type_d**: Trigger on a decoded RC Switch Type D remote code with the given data.
@@ -472,7 +472,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, int): The group. Range is 1 to 4.
   - **device** (**Required**, int): The device. Range is 1 to 3.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
     more info.
 
 - **roomba**: Trigger on a decoded Roomba remote code with the given data.
@@ -503,7 +503,7 @@ Remote code selection (exactly one of these has to be included):
 - **mirage**: Trigger on a Mirage remote code with the given code.
 
   - **code** (**Required**, 14-bytes list): The code to listen for, see
-    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_mirage" >}}) for more info. Usually you only need to copy
+    [``remote_transmitter.transmit_mirage`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_mirage" >}}) for more info. Usually you only need to copy
     this directly from the dumper output.
 
 - **toto**: Trigger on a decoded Toto remote code with the given data.
@@ -582,8 +582,8 @@ rendering the hardware hack uncessary. This software passthrough mode can be use
 
 - [index]({{< ref "index/" >}})
 - [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})
-- [remote-setting-up-infrared]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}})
-- [remote-setting-up-rf]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}})
+- [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}})
+- [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}})
 - [/components/rf_bridge]({{< ref "/components/rf_bridge" >}})
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - :apiref:`remote/remote_receiver.h`

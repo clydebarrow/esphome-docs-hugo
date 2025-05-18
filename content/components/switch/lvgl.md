@@ -8,12 +8,12 @@ title: "LVGL Switch"
 The `lvgl` switch platform creates a switch from an LVGL widget
 and requires [LVGL ]({{< relref "/components/lvgl/index" >}}) to be configured.
 
-Supported widgets are [lvgl-widget-checkbox]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}}) (with `checkable` option enabled), [lvgl-widget-switch]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}) and [lvgl-widget-button]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}}). A single switch supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome switch component.
+Supported widgets are [``checkbox``]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}}) (with `checkable` option enabled), [``switch``]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}) and [``button``]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}}). A single switch supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome switch component.
 
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the switch.
-- All other variables from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All other variables from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
 
 Example:
 
@@ -26,9 +26,9 @@ switch:
 ```
 ## See Also
 - [LVGL Main component ]({{< relref "/components/lvgl/index" >}})
-- [Button widget]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}})
-- [Switch widget]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}})
-- [Checkbox widget]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}})
+- [``button``]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}})
+- [``switch``]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}})
+- [``checkbox``]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}})
 - [/components/binary_sensor/lvgl]({{< ref "/components/binary_sensor/lvgl" >}})
 - [/components/sensor/lvgl]({{< ref "/components/sensor/lvgl" >}})
 - [/components/number/lvgl]({{< ref "/components/number/lvgl" >}})

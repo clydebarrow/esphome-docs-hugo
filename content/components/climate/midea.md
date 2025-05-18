@@ -68,11 +68,11 @@ climate:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of[../uart]({{< ref "../uart" >}})uart` if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of[../uart]({{< ref "../uart" >}})uart` if you want
   to use multiple UART buses.
-- **transmitter_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Defined and used automatically when u[../remote_transmitter]({{< ref "../remote_transmitter" >}})tter` component for IR commands transmit.
-- **period** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Minimal period between requests to the appliance. Defaults to `1s`.
-- **timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Request response timeout until next request attempt. Defaults to `2s`.
+- **transmitter_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Defined and used automatically when u[../remote_transmitter]({{< ref "../remote_transmitter" >}})tter` component for IR commands transmit.
+- **period** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Minimal period between requests to the appliance. Defaults to `1s`.
+- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Request response timeout until next request attempt. Defaults to `2s`.
 - **num_attempts** (*Optional*, int): Number of request attempts between 1 and 5 inclusive. Defaults to `3`.
 - **autoconf** (*Optional*, boolean): Get capabilities automatically. Allows you not to manually define most of the capabilities of the appliance.
   Defaults to `True`.
@@ -85,16 +85,16 @@ climate:
 - **outdoor_temperature** (*Optional*): The information for the outdoor temperature
   sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **power_usage** (*Optional*): The information for the current power consumption
   sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **humidity_setpoint** (*Optional*): The information for the humidity indoor
   sensor (experimental).
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Climate Configuration]({{< ref "components/climate/_index#config-climate" >}}).
 
 ## Automations
 
@@ -157,16 +157,16 @@ on_...:
 ```
 Configuration variables:
 
-- **temperature** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})):  
+- **temperature** (**Required**, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):  
   Sets the value of an internal temperature sensor. The value will be **clamped** to the range:  
 
   - *0 °C to 37 °C* when `use_fahrenheit` is `false`.  
   - *32 °F to 99 °F* when `use_fahrenheit` is `true`.
 
-- **use_fahrenheit** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):  
+- **use_fahrenheit** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):  
   Specifies if the `temperature` value is in Fahrenheit. When set to `true`, the temperature is parsed and sent in Fahrenheit. Defaults to `false` (Celsius).
 
-- **beeper** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):  
+- **beeper** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):  
   Sets beep on update. Defaults to `false`.
 
 

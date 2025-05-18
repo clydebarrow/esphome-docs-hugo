@@ -14,7 +14,7 @@ It has 8 knobs, a switch and can individually drive 9 RGB LEDs.
 *The m5stack_8angle unit.*
 
 
-The `m5stack_8angle` component communicates through an [I²C]({{< ref "components/i2c#i2c" >}}) bus and uses a default address of 0x43.
+The `m5stack_8angle` component communicates through an [I²C Bus]({{< ref "components/i2c#i2c" >}}) bus and uses a default address of 0x43.
 
 ```yaml
 # Example configuration entry
@@ -25,8 +25,8 @@ m5stack_8angle:
 Configuration variables:
 ************************
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **i2c_id** (*Optional*, [I²C Component]({{< ref "components/i2c#i2c" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you need
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **i2c_id** (*Optional*, [I²C Bus]({{< ref "components/i2c#i2c" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you need
 - **address** (*Optional*, int): Manually specify the I²C address of the device. Defaults to `0x43`.
 
 
@@ -50,10 +50,10 @@ sensor:
 Configuration variables:
 ************************
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `10s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `10s`.
 - **bit_depth** (*Optional*, one of `12 bit` or `8 bit`) determines the precision of the analog readout, defaults to `8bit`.
 - **raw** (*Optional*, boolean) if true, the sensor returns the raw readout value of the knob.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ## Input switch binary sensor
@@ -70,8 +70,8 @@ binary_sensor:
 Configuration variables:
 ************************
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `10s`.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `10s`.
+- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 
 ## Lights
@@ -89,7 +89,7 @@ light:
 ```
 Configuration variables:
 ************************
-- All options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
    
 
 ## Read knob's positions and switch state in Lambdas
@@ -129,7 +129,7 @@ light:
 ```
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - [template]({{< ref "template/" >}})

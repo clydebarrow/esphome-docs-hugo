@@ -6,7 +6,7 @@ title: "Managed Updates via HTTP Request"
 {{< seo description="" image="" >}}
 
 This platform allows you to manage the deployment of updates to your ESPHome devices. It works by reading a
-[JSON manifest file]({{< ref "components/update/http_request#update_http_request-manifest_format" >}}) and using it to determine the presence of an update.
+[Update Manifest Format]({{< ref "components/update/http_request#update_http_request-manifest_format" >}}) and using it to determine the presence of an update.
 
 To use it, the following components are required in your device's configuration:
 
@@ -26,9 +26,9 @@ update:
 ## Configuration variables:
 
 - **source** (**Required**, string): The URL of the YAML manifest file containing the firmware metadata.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval at which to check for (**not install**) updates.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval at which to check for (**not install**) updates.
   Defaults to 6 hours.
-- All other options from [Update]({{< ref "components/update/_index#config-update" >}}).
+- All other options from [Configuration variables:]({{< ref "components/update/_index#config-update" >}}).
 
 {{< anchor "update_http_request-manifest_format" >}}
 

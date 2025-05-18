@@ -8,7 +8,7 @@ title: "Honeywell ABP Pressure Sensors"
 The `honeywellabp` sensor platform allows you to use your Honeywell ABP
 ([website](https://sps.honeywell.com/us/en/products/sensing-and-iot/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp-series),
 [datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp-series/documents/sps-siot-basic-board-mount-pressure-abp-series-datasheet-32305128-ciid-155789.pdf?download=false),
-[Mouser](https://www.mouser.ca/new/honeywell/honeywell-abp-pressure-sensors/)) pressure and temperature sensors with ESPHome. The [SPI]({{< ref "components/spi#spi" >}}) is
+[Mouser](https://www.mouser.ca/new/honeywell/honeywell-abp-pressure-sensors/)) pressure and temperature sensors with ESPHome. The [SPI Bus]({{< ref "components/spi#spi" >}}) is
 required to be set up in your configuration for this sensor to work
 
 ![Honeywell ABP Pressure and Temperature Sensor.](../images/honeywellabp.jpg)
@@ -38,22 +38,22 @@ the measurement range and `unit_of_measurement` to the appropriate unit for your
 
   - **min_pressure** (**Required**, int or float): Minimum pressure for the pressure sensor, default unit `psi`.
   - **max_pressure** (**Required**, int or float): Maximum pressure for the pressure sensor, default unit `psi`.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Some sensors do not have temperature sensing ability, see datasheet. In some cases the sensor may return a valid temperature even though the
 datasheet indicates that the sensor does not measure temperature.
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
-- **cs_pin** (**Required**, [SPI]({{< ref "components/spi#spi" >}})): Chip select pin.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **cs_pin** (**Required**, [SPI Bus]({{< ref "components/spi#spi" >}})): Chip select pin.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`honeywellabp/honeywellabp.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/honeywellabp.md)

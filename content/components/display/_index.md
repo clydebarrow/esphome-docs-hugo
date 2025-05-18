@@ -16,7 +16,7 @@ engine. Fundamentally, there are these types of displays:
 
 For graphical displays, which offer the greatest flexibility, there are two options for displaying content:
 
-- ESPHome's [own rendering engine]({{< ref "components/display/_index#display-engine" >}})
+- ESPHome's [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}})
 - [LVGL ]({{< relref "/components/lvgl/index" >}}) - Light and Versatile Graphics Library
 
 {{< anchor "display-configuration" >}}
@@ -26,10 +26,10 @@ Configuration variables:
 
 All display components inherit these configuration variables.
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Required if there are multiple displays.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [display-engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Required if there are multiple displays.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 
 All *graphical* displays also inherit these configuration variables.
 
@@ -46,7 +46,7 @@ All *graphical* displays also inherit these configuration variables.
 ESPHome's own powerful rendering engine can handle many common tasks such as drawing basic shapes,
 printing text with fonts of your choice, or even rendering images.
 
-To achieve all this flexibility displays tie in directly into ESPHome's [lambda system]({{< ref "automations/templates#config-lambda" >}}).
+To achieve all this flexibility displays tie in directly into ESPHome's [Templates]({{< ref "automations/templates#config-lambda" >}}).
 So when you want to write some text or sensor values to the screen you will be writing in C++ code
 using an API that is designed to
 
@@ -66,7 +66,7 @@ So, first a few basics: When setting up a display platform in ESPHome there will
 option called `lambda:` which will be called every time ESPHome wants to re-render the display.
 In each cycle, the display is automatically cleared before the lambda is executed. You can disable
 this behavior by setting `auto_clear_enabled: false`.
-In the lambda, you can write code like in any [lambda]({{< ref "automations/templates#config-lambda" >}}) in ESPHome. Display
+In the lambda, you can write code like in any [Templates]({{< ref "automations/templates#config-lambda" >}}) in ESPHome. Display
 lambdas are additionally passed a variable called `it` which represents the rendering engine object.
 
 ![.. code-block:: yaml](../images/display_rendering_line.png)
@@ -199,7 +199,7 @@ You can view the full API documentation for the rendering engine in the "API Ref
 
 ## Drawing Static Text
 
-To be able to display text, you need to prepare some fonts. ESPHome's [font renderer]({{< ref "components/font#display-fonts" >}}) allows you to use OpenType/TrueType/Bitmap fonts for your texts. This is very flexiblle because you can prepare various sets of fonts at different sizes with a different number of glyphs which is extremely convenient when we're talking about flash space.
+To be able to display text, you need to prepare some fonts. ESPHome's [Font Renderer Component]({{< ref "components/font#display-fonts" >}}) allows you to use OpenType/TrueType/Bitmap fonts for your texts. This is very flexiblle because you can prepare various sets of fonts at different sizes with a different number of glyphs which is extremely convenient when we're talking about flash space.
 
 In your display code, you can render static text by referencing the font and just entering your string enclosed in double quotes:
 
@@ -376,7 +376,7 @@ you can use the :doc:`/components/text_sensor/mqtt_subscribe` (see the example t
 
 ## Displaying Time
 
-You can display current time using a time component. Please see the example [here]({{< ref "components/time/_index#strftime" >}}).
+You can display current time using a time component. Please see the example [strftime]({{< ref "components/time/_index#strftime" >}}).
 
 {{< anchor "clipping" >}}
 
@@ -586,8 +586,8 @@ display:
             ESP_LOGD("display", "Page changed from 1 to 2");
 
 ```
-- **from** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing from this page. Defaults to all pages.
-- **to** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing to this page. Defaults to all pages.
+- **from** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing from this page. Defaults to all pages.
+- **to** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing to this page. Defaults to all pages.
 
 Additionally the old page will be given as the variable `from` and the new one as the variable `to`.
 
@@ -619,10 +619,10 @@ For displays in 8 bit mode you will see distinct color blocks rather than a smoo
 
 - :apiref:`display/display_buffer.h`
 - [LVGL ]({{< relref "/components/lvgl/index" >}})
-- [Fonts]({{< ref "components/font#display-fonts" >}})
+- [Font Renderer Component]({{< ref "components/font#display-fonts" >}})
 - [Graph Component]({{< ref "components/graph#display-graphs" >}})
 - [QR Code Component]({{< ref "components/qr_code#display-qrcode" >}})
-- [Image Component]({{< ref "components/image#display-image" >}})
-- [Animation Component]({{< ref "components/animation#display-animation" >}})
-- [Online Image]({{< ref "components/online_image#online_image" >}})
+- [Images]({{< ref "components/image#display-image" >}})
+- [Animation]({{< ref "components/animation#display-animation" >}})
+- [Online Image Component]({{< ref "components/online_image#online_image" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/index.md)

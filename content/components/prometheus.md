@@ -25,10 +25,10 @@ prometheus:
 ```
 ## Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **include_internal** (*Optional*, boolean): Whether `internal` entities should be displayed on the
   web interface. Defaults to `false`.
-- **relabel** (*Optional*): Override metric labels. See [prometheus-relabel]({{< ref "components/prometheus#prometheus-relabel" >}})
+- **relabel** (*Optional*): Override metric labels. See [``relabel``]({{< ref "components/prometheus#prometheus-relabel" >}})
 
 {{< note >}}
 Example integration into the configuration of your prometheus:
@@ -96,7 +96,7 @@ prometheus:
 ## See Also
 
 - [/components/web_server]({{< ref "/components/web_server" >}})
-- [api-rest]({{< ref "web-api/_index#api-rest" >}})
+- [REST API]({{< ref "web-api/_index#api-rest" >}})
 - [/components/http_request]({{< ref "/components/http_request" >}})
 - :apiref:`prometheus/prometheus_handler.h`
 - [Prometheus](https://prometheus.io/)

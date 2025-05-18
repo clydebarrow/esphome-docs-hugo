@@ -28,7 +28,7 @@ There are plenty of other examples and ready to buy solutions on the web.
 
 ## Component/Hub
 
-As the communciation with the sensor is done using UART, you need to have the [UART bus]({{< ref "components/uart#uart" >}})
+As the communciation with the sensor is done using UART, you need to have the [UART Bus]({{< ref "components/uart#uart" >}})
 in your configuration. The interface parameters should be set to 9600/8N1 or 9600/7E1 depending on your
 smart meter. If you see checksum errors in the log try changing the interface parameter.
 
@@ -50,8 +50,8 @@ sml:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
 
 ## Sensor
@@ -74,8 +74,8 @@ sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [SML platform]({{< ref "components/sml#sml-platform" >}})): The ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}})
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **sml_id** (*Optional*, [Component/Hub]({{< ref "components/sml#sml-platform" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}})
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ## Text Sensor
@@ -93,15 +93,15 @@ text_sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [SML platform]({{< ref "components/sml#sml-platform" >}})): The ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}})
+- **sml_id** (*Optional*, [Component/Hub]({{< ref "components/sml#sml-platform" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}})
 - **format** (*Optional*, string): Override the automatic interpretation of the transmitted binary data value. Possible values (`int`, `uint`, `bool`, `hex`, `text`).
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 
 ## Automations:
 
 - **on_data** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a
-  SML message is received. See [sml-on-data]({{< ref "components/sml#sml-on-data" >}}).
+  SML message is received. See [``on_data`` Trigger]({{< ref "components/sml#sml-on-data" >}}).
 
 {{< anchor "sml-on-data" >}}
 
@@ -120,7 +120,7 @@ identifies your smart meter. If you have only one hardware component attached to
 don't have to care about the server id and you may ommit it in your configuration.
 
 In order to get the server id and the available OBIS codes provided by your smart meter, simply set up the
-[log level]({{< ref "components/logger#logger-log_levels" >}}) and observe the log output (the [SML platform]({{< ref "components/sml#sml-platform" >}})
+[Log Levels]({{< ref "components/logger#logger-log_levels" >}}) and observe the log output (the [Component/Hub]({{< ref "components/sml#sml-platform" >}})
 must be set to at least `debug`!).
 
 Your log output will show something like this:

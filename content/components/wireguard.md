@@ -83,7 +83,7 @@ wireguard:
 - **netmask** (*Optional*, IPv4 address): The netmask for the configured address.
   Default to `255.255.255.255`.
 
-  See section [wireguard-static-routes]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
+  See section [Static routes and outgoing connections]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
   expected to transit through the VPN link (e.g. with [mqtt]({{< ref "mqtt/" >}}) to a
   remote MQTT broker).
 
@@ -99,7 +99,7 @@ wireguard:
 - **peer_preshared_key** (*Optional*, string): The chosen pre-shared key between
   local device and remote peer.
 
-- **peer_persistent_keepalive** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of
+- **peer_persistent_keepalive** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of
   time after which a *keepalive* packet is sent through the tunnel.
   By default this feature is disabled (`0s`).
 
@@ -112,11 +112,11 @@ wireguard:
 
   The device own `address/32` is always added by default to this list.
 
-  See section [wireguard-static-routes]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
+  See section [Static routes and outgoing connections]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
   expected to transit through the VPN link (e.g. with [mqtt]({{< ref "mqtt/" >}}) to a
   remote MQTT broker).
 
-- **reboot_timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait
+- **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait
   before rebooting the device when the remote peer is unreachable. Can be disabled
   by setting this to `0s`. Default to `15min`.
 
@@ -132,10 +132,10 @@ wireguard:
   active too. To bypass such deadlock set this parameter to `true` in
   order to not initialize MQTT until the remote peer is up.
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): How often to check
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): How often to check
   the connection status and the latest handshake value. Default to `10s`.
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< anchor "wireguard-static-routes" >}}
 
@@ -216,7 +216,7 @@ binary_sensor:
       name: 'WireGuard Status'
 
 ```
-All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
+All options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
 ### Enabled Binary Sensor
@@ -231,7 +231,7 @@ binary_sensor:
       name: 'WireGuard Enabled'
 
 ```
-All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
+All options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
 ### Latest Handshake Sensor
@@ -246,12 +246,12 @@ sensor:
       name: 'WireGuard Latest Handshake'
 
 ```
-All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) can be added to the
+All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) can be added to the
 above configuration.
 
 ### Address Text Sensor
 
-This sensor exposes to the frontend the configured [address]({{< ref "components/wireguard#wireguard-address" >}}).
+This sensor exposes to the frontend the configured [- **address** (**Required**, IPv4 address): The local VPN address of the device.]({{< ref "components/wireguard#wireguard-address" >}}).
 
 ```yaml
 # Example configuration entry
@@ -261,7 +261,7 @@ text_sensor:
       name: 'WireGuard Address'
 
 ```
-All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) can be added to the
+All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) can be added to the
 above configuration.
 
 {{< anchor "wireguard-actions" >}}
@@ -367,7 +367,7 @@ These are the steps:
 1. go to the Home Assistant "Integrations" page
 2. click on the "Add Integration" button (bottom right corner)
 3. select "ESPHome" from the list
-4. insert the configured IP [address]({{< ref "components/wireguard#wireguard-address" >}})
+4. insert the configured IP [- **address** (**Required**, IPv4 address): The local VPN address of the device.]({{< ref "components/wireguard#wireguard-address" >}})
    as the host name
 
 The device should now be linked to your remote Home Assistant.
@@ -382,7 +382,7 @@ of the :ref:`address <wireguard-address>` configured here.
 
 - [time/index]({{< ref "time/index" >}})
 - [time/sntp]({{< ref "time/sntp" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - |wireguard|_ official website
 - `Home Assistant Community Add-on: WireGuard
   <https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662>`__

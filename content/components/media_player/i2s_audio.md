@@ -25,15 +25,15 @@ media_player:
   - `external`: Use an external DAC, for example the NS4168, or UDA1334A.
   - `internal`: Use the internal DAC
 
-- All other options from [Media Player]({{< ref "components/media_player/_index#config-media_player" >}})
+- All other options from [Base Media Player Configuration]({{< ref "components/media_player/_index#config-media_player" >}})
 
 External DAC
 ************
 
-- **i2s_dout_pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The GPIO pin to use for the I²S `DOUT/SDOUT` *(Data Out)* signal, also referred to as `SD/SDATA` *(Serial Data)* or `DACDAT` *(Digital to Analog Converter Data)*.
+- **i2s_dout_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The GPIO pin to use for the I²S `DOUT/SDOUT` *(Data Out)* signal, also referred to as `SD/SDATA` *(Serial Data)* or `DACDAT` *(Digital to Analog Converter Data)*.
 - **mute_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use to mute the media player.
 - **mode** (*Optional*, string): The mode of the I²S bus. Can be `mono` or `stereo`. Defaults to `mono`.
-- **i2s_audio_id** (*Optional*, [I²S Audio]({{< ref "components/i2s_audio#i2s_audio" >}})): The ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this media player.
+- **i2s_audio_id** (*Optional*, [I²S Audio Component]({{< ref "components/i2s_audio#i2s_audio" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this media player.
 - **i2s_comm_fmt** (*Optional*, string): I2S communication format. By default MSB format is used (AC101, PCM5102A).
   Set to `lsb` if using an external DAC that uses Japanese (Least Significant Bit Justified) format (like PT8211).
   Can be `msb` or `lsb`. Defaults to `msb`.

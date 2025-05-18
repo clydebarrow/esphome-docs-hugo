@@ -38,11 +38,11 @@ text_sensor:
 - **entity_id** (**Required**, string): The entity ID to import from Home Assistant.
 - **attribute** (*Optional*, string): The name of the state attribute to import from the
   specified entity. The entity state is used when this option is omitted.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/text_sensor/homeassistant_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/homeassistant.md)

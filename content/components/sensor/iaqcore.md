@@ -33,14 +33,14 @@ sensor:
 
 - **i2c_id** (*Optional*, ID): The id of the I²C Bus.
 - **address** (*Optional*, int): Manually specifiy the I²C address of the sensor. Defaults to `0x5A`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 - **co2** (*Optional*): The configuration for the CO2 sensor. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **tvoc** (*Optional*): The configuration for the TVOC sensor. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/iaqcore.md)

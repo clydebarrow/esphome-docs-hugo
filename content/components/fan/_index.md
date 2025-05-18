@@ -29,7 +29,7 @@ Configuration variables:
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
       you want the fan to use that name, you can set `name: None`.
 
 - **icon** (*Optional*, icon): Manually set the icon to use for the fan in the frontend.
@@ -53,7 +53,7 @@ Configuration variables:
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 MQTT options:
 
@@ -73,24 +73,24 @@ MQTT options:
   speed state changes to (options: LOW, MEDIUM, HIGH).
 - **speed_command_topic** (*Optional*, string): The topic to receive
   speed commands on (options: LOW, MEDIUM, HIGH).
-- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 Automation triggers:
 
-- **on_state** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the fan state is changed. See [fan-on_state_trigger]({{< ref "components/fan/_index#fan-on_state_trigger" >}}).
-- **on_turn_on** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the fan is turned on. See [fan-on_turn_on_off_trigger]({{< ref "components/fan/_index#fan-on_turn_on_off_trigger" >}}).
-- **on_turn_off** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the fan is turned off. See [fan-on_turn_on_off_trigger]({{< ref "components/fan/_index#fan-on_turn_on_off_trigger" >}}).
-- **on_direction_set** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the fan direction is changed. See [fan-on_direction_set_trigger]({{< ref "components/fan/_index#fan-on_direction_set_trigger" >}}).
-- **on_oscillating_set** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the fan oscillating state is changed. See [fan-on_oscillating_set_trigger]({{< ref "components/fan/_index#fan-on_oscillating_set_trigger" >}}).
-- **on_speed_set** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the fan speed is changed. See [fan-on_speed_set_trigger]({{< ref "components/fan/_index#fan-on_speed_set_trigger" >}}).
-- **on_preset_set** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the fan preset mode is changed. See [fan-on_preset_set_trigger]({{< ref "components/fan/_index#fan-on_preset_set_trigger" >}}).
+- **on_state** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the fan state is changed. See [``fan.on_state`` Trigger]({{< ref "components/fan/_index#fan-on_state_trigger" >}}).
+- **on_turn_on** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the fan is turned on. See [``fan.on_turn_on`` / ``fan.on_turn_off`` Trigger]({{< ref "components/fan/_index#fan-on_turn_on_off_trigger" >}}).
+- **on_turn_off** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the fan is turned off. See [``fan.on_turn_on`` / ``fan.on_turn_off`` Trigger]({{< ref "components/fan/_index#fan-on_turn_on_off_trigger" >}}).
+- **on_direction_set** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the fan direction is changed. See [``fan.on_direction_set`` Trigger]({{< ref "components/fan/_index#fan-on_direction_set_trigger" >}}).
+- **on_oscillating_set** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the fan oscillating state is changed. See [``fan.on_oscillating_set`` Trigger]({{< ref "components/fan/_index#fan-on_oscillating_set_trigger" >}}).
+- **on_speed_set** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the fan speed is changed. See [``fan.on_speed_set`` Trigger]({{< ref "components/fan/_index#fan-on_speed_set_trigger" >}}).
+- **on_preset_set** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the fan preset mode is changed. See [``fan.on_preset_set`` Trigger]({{< ref "components/fan/_index#fan-on_preset_set_trigger" >}}).
 
 {{< anchor "fan-toggle_action" >}}
 
@@ -133,12 +133,12 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the fan.
-- **oscillating** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the fan.
+- **oscillating** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   Set the oscillation state of the fan. Defaults to not affecting oscillation.
-- **speed** (*Optional*, int, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **speed** (*Optional*, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   Set the speed level of the fan. Can be a number between 1 and the maximum speed level of the fan.
-- **direction** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **direction** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   Set the direction of the fan. Can be either `forward` or `reverse`. Defaults to not changing the direction.
 
 {{< anchor "fan-cycle_speed_action" >}}
@@ -159,15 +159,15 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the fan.
-- **off_speed_cycle** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): Determines if the fan will cycle off after cycling though its highest speed. Can be `true` or `false`. If `false` fan will cycle to its lowest speed instead of turning off.  Defaults to `true`.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the fan.
+- **off_speed_cycle** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Determines if the fan will cycle off after cycling though its highest speed. Can be `true` or `false`. If `false` fan will cycle to its lowest speed instead of turning off.  Defaults to `true`.
 
 {{< anchor "fan-is_on_condition" >}}
 {{< anchor "fan-is_off_condition" >}}
 
 ## ``fan.is_on`` / ``fan.is_off`` Condition
 
-This [condition]({{< ref "automations/actions#config-condition" >}}) passes if the given fan is on or off.
+This [All Conditions]({{< ref "automations/actions#config-condition" >}}) passes if the given fan is on or off.
 
 ```yaml
 # in a trigger:
@@ -284,7 +284,7 @@ fan:
 ```
 ## Lambda calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all fans to do some
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all fans to do some
 advanced stuff (see the full API Reference for more info).
 
 - `state`: Retrieve the current state (on/off) of the fan.

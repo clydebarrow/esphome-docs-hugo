@@ -28,19 +28,19 @@ text_sensor:
 ```
 ## Configuration variables:
 
-- **ble_client_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
+- **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
 - **service_uuid** (**Required**, UUID): UUID of the service on the device.
 - **characteristic_uuid** (**Required**, UUID): UUID of the service's characteristic to query.
 - **descriptor_uuid** (*Optional*, UUID): UUID of the characteristic's descriptor to query.
 - **notify** (*Optional*, boolean): Instruct the server to send notifications for this
   characteristic. Defaults to `false`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device. Defaults to `60s`.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device. Defaults to `60s`.
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 Automations:
 
 - **on_notify** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
-  perform when a notify message is received from the device. See [ble_text_sensor-on_notify]({{< ref "components/text_sensor/ble_client#ble_text_sensor-on_notify" >}}).
+  perform when a notify message is received from the device. See [``on_notify``]({{< ref "components/text_sensor/ble_client#ble_text_sensor-on_notify" >}}).
 
 
 ## BLE Sensor Automation
@@ -59,6 +59,6 @@ A variable `x` of type `std::string` is passed to the automation for use in lamb
 
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
 - [/components/sensor/ble_client]({{< ref "/components/sensor/ble_client" >}})
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ble_text_sensor/ble_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/ble_client.md)

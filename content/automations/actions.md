@@ -58,7 +58,7 @@ switch:
      id: dehumidifier1
 
 ```
-First, we have to give the dehumidifier `switch` an [config-id]({{< ref "guides/configuration-types#config-id" >}}) so that we can refer to it inside of our
+First, we have to give the dehumidifier `switch` an [ID]({{< ref "guides/configuration-types#config-id" >}}) so that we can refer to it inside of our
 automation.
 
 {{< anchor "actions-trigger" >}}
@@ -214,12 +214,12 @@ Configuration variables:
 
 At least one of `condition`, `all` or `any` must be provided.
   
-- **condition** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine which branch to take. If this is configured with a list of conditions then they must all be true for the condition to be true.
-- **all** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): Takes a list of conditions, all of which must be true (and is therefore equivalent to `condition`.)
-- **any** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): Takes a list of conditions; if at least one is true, the condition will be true.
-- **then** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform if the condition evaluates to true.
+- **condition** (*Optional*, [All Conditions]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine which branch to take. If this is configured with a list of conditions then they must all be true for the condition to be true.
+- **all** (*Optional*, [All Conditions]({{< ref "automations/actions#config-condition" >}})): Takes a list of conditions, all of which must be true (and is therefore equivalent to `condition`.)
+- **any** (*Optional*, [All Conditions]({{< ref "automations/actions#config-condition" >}})): Takes a list of conditions; if at least one is true, the condition will be true.
+- **then** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action to perform if the condition evaluates to true.
   Defaults to doing nothing.
-- **else** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform if the condition evaluates to false.
+- **else** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action to perform if the condition evaluates to false.
   Defaults to doing nothing.
 
 {{< anchor "lambda_action" >}}
@@ -227,7 +227,7 @@ At least one of `condition`, `all` or `any` must be provided.
 `lambda` Action
 *****************
 
-This action executes an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}})).
+This action executes an arbitrary piece of C++ code (see [Templates]({{< ref "automations/templates#config-lambda" >}})).
 
 ```yaml
 on_...:
@@ -258,7 +258,7 @@ on_...:
 Configuration variables:
 
 - **count** (**Required**, int): The number of times the action should be repeated.  The counter is available to lambdas using the reserved word "iteration".
-- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to repeat.
+- **then** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action to repeat.
 
 {{< anchor "wait_until_action" >}}
 
@@ -293,15 +293,15 @@ on_...:
 ```
 Configuration variables:
 
-- **condition** (**Required**, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to wait to become true.
-- **timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before timing out. Defaults to never timing out.
+- **condition** (**Required**, [All Conditions]({{< ref "automations/actions#config-condition" >}})): The condition to wait to become true.
+- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before timing out. Defaults to never timing out.
 
 {{< anchor "while_action" >}}
 
 `while` Action
 ****************
 
-This action is similar to the [if]({{< ref "automations/actions#if_action" >}}) Action. The `while` action loops
+This action is similar to the [``if`` Action]({{< ref "automations/actions#if_action" >}}) Action. The `while` action loops
 through a block as long as the given condition is true.
 
 ```yaml
@@ -318,8 +318,8 @@ on_...:
 ```
 Configuration variables:
 
-- **condition** (**Required**, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine whether or not to execute.
-- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform until the condition evaluates to false.
+- **condition** (**Required**, [All Conditions]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine whether or not to execute.
+- **then** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action to perform until the condition evaluates to false.
 
 {{< anchor "component-update_action" >}}
 
@@ -350,7 +350,7 @@ Using this action you can manually call the `stop_poller()` method of a componen
 After this action the component will stop being refreshed.
 
 While the poller is suspendend, it's still possible to trigger on-demand updates by
-using [component.update]({{< ref "automations/actions#component-update_action" >}})
+using [``component.update`` Action]({{< ref "automations/actions#component-update_action" >}})
 
 Please note that this only works with PollingComponent types and others will result in a
 compile error.
@@ -455,7 +455,7 @@ on_...:
 ```
 Configuration variables:
 
-- **time** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **time** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}}), [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
   The time for which the condition has to have been true.
 - **condition** (**Required**, [condition<config-condition>]({{< ref "#condition<config-condition>" >}})): The condition to check.
 
@@ -464,7 +464,7 @@ Configuration variables:
 `lambda` Condition
 ********************
 
-This condition performs an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}}))
+This condition performs an arbitrary piece of C++ code (see [Templates]({{< ref "automations/templates#config-lambda" >}}))
 and can be used to create conditional flow in actions.
 
 ```yaml
@@ -484,7 +484,7 @@ on_...:
 
 *See the respective component's page(s) for more detail.*
 
-See also: [common-actions]({{< ref "automations/actions#common-actions" >}}).
+See also: [Common Actions]({{< ref "automations/actions#common-actions" >}}).
 
 - **ags10:** `new_i2c_address`, `set_zero_point`
 - **alarm_control_panel:** `arm_away`, `arm_home`, `arm_night`, `chime`, `disarm`, `pending`, `ready`, `triggered`
@@ -572,7 +572,7 @@ See also: [common-actions]({{< ref "automations/actions#common-actions" >}}).
 
 *See the respective component's page(s) for more detail.*
 
-See also: [common_conditions]({{< ref "automations/actions#common_conditions" >}}).
+See also: [Common Conditions]({{< ref "automations/actions#common_conditions" >}}).
 
 - **alarm_control_panel:** `is_armed`, `ready`
 - **api:** `connected`

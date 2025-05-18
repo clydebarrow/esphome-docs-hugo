@@ -72,11 +72,11 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The sensor to read the resistance values from
+- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor to read the resistance values from
   to convert to temperature readings.
 - **calibration** (**Required**, float): The calibration parameters of the sensor - see above
   for more details.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Self-Heating
 
@@ -118,6 +118,6 @@ interval:
 
 - [adc]({{< ref "adc/" >}})
 - [resistance]({{< ref "resistance/" >}})
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ntc/ntc.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ntc.md)

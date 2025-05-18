@@ -52,7 +52,7 @@ Configuration variables:
 - **sync_mode** (*Optional*, boolean, default **false**): Synchronous communication mode prevents other components
   from disabling interrupts while we are talking to the boiler. Enable if you experience a lot of random intermittent
   invalid response errors (very likely to happen while using Dallas temperature sensors).
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.  Required if you have
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.  Required if you have
   multiple busses.
 
 ### Optional Boiler-specific Configuration
@@ -74,7 +74,7 @@ correctly. You can use the following settings in hub configuration to make your 
 - **before_send** (**Optional**) An automation to perform on OpenTherm message before it is sent to the boiler.
 - **before_process_response** (**Optional**) An automation to perform on boiler response before it is processed.
 
-See [on-the-fly-message-editing]({{< ref "components/opentherm#on-the-fly-message-editing" >}}) for details.
+See [On-the-fly Message Editing]({{< ref "components/opentherm#on-the-fly-message-editing" >}}) for details.
 
 Note about sync mode
 ********************
@@ -100,7 +100,7 @@ The most important function for a thermostat is to set the boiler temperature se
 to provide this input: using a Home Assistant sensor from which the setpoint can be read, using a
 [/components/number/index]({{< ref "/components/number/index" >}}), or defining an output to which other components can write. For most users, the last
 option is the most useful one, as it can be combined with the [/components/climate/pid]({{< ref "/components/climate/pid" >}}) component to create a
-thermostat that works as you would expect a thermostat to work. See [thermostat-pid-basic]({{< ref "components/opentherm#thermostat-pid-basic" >}}) for an example.
+thermostat that works as you would expect a thermostat to work. See [Basic PID thermostat]({{< ref "components/opentherm#thermostat-pid-basic" >}}) for an example.
 
 Numerical values
 ****************

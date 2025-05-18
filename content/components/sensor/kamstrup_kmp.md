@@ -25,7 +25,7 @@ that uses the Kamstrup Meter Protocol for communication.
 This component can be used to request measurements from the meter using
 the optical interface.
 
-A [UART bus]({{< ref "components/uart#uart" >}}) is required to communicate with the meter.
+A [UART Bus]({{< ref "components/uart#uart" >}}) is required to communicate with the meter.
 
 ## Configuration
 
@@ -51,23 +51,23 @@ sensor:
 Configuration variables:
 
 - **heat_energy** (*Optional*): Heat energy delivered.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **power** (*Optional*): Current power delivered.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **temp1** (*Optional*): Temperatue of sensor 1.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **temp2** (*Optional*): Temperatue of sensor 2.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **temp_diff** (*Optional*): Temperature difference between the 2 sensors.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **flow** (*Optional*): Water flow.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **volume** (*Optional*): Volume.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **custom** (*Optional*): List of custom sensors.
 
   - **command** (**Required**, 2-byte hex): The KMP command code (e.g. 0x003C).
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*): The polling interval. Defaults to `60s`.
 
@@ -112,6 +112,6 @@ magnets.
 
 ## See Also
 
-- [config-sensor]({{< ref "components/sensor/_index#config-sensor" >}})
+- [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})
 - [DIY hardware with housing](https://github.com/cfeenstra1024/kamstrup-multical-hardware#readme) by [Chris Feenstra](https://github.com/cfeenstra1024)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/kamstrup_kmp.md)

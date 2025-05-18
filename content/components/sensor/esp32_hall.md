@@ -32,9 +32,9 @@ by the hall sensor.
 
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< warning >}}
 The values this sensor outputs were only calibrated with a few magnets and no real "truth" sensor.
@@ -47,7 +47,7 @@ please feel free to do so 😺.
 {{< /warning >}}
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [adc]({{< ref "adc/" >}})
 - [/components/esp32]({{< ref "/components/esp32" >}})
 - :apiref:`esp32_hall/esp32_hall.h`

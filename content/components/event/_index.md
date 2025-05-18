@@ -47,12 +47,12 @@ Configuration variables:
 
 One of `id` or `name` is required.
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. At least one of **id** and **name** must be specified.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the event. At least one of **id** and **name** must be specified.
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
       you want the event to use that name, you can set `name: None`.
 
 - **icon** (*Optional*, icon): Manually set the icon to use for the event in the frontend.
@@ -73,7 +73,7 @@ One of `id` or `name` is required.
 
   See https://www.home-assistant.io/integrations/event/#device-class
   for a list of available options.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 Automations:
 
@@ -81,7 +81,7 @@ Automations:
 
 MQTT options:
 
-- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 ## Event Automation
 
@@ -91,7 +91,7 @@ MQTT options:
 ************
 
 This automation will be triggered when an event of the specified types is triggered.
-In [Lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the event type from the trigger with `event_type`.
+In [Templates]({{< ref "automations/templates#config-lambda" >}}) you can get the event type from the trigger with `event_type`.
 
 ```yaml
 event:
@@ -118,7 +118,7 @@ This action allows for the triggering of an event from within an automation.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the event.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the event.
 - **event_type** (**Required**, string): The type of event to trigger.
 
 {{< anchor "event-lambda_calls" >}}
@@ -126,7 +126,7 @@ Configuration variables:
 lambda Calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can trigger an event.
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can trigger an event.
 
 - `trigger(std::string event_type)`: Trigger an event with the specified type.
 

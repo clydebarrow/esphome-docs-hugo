@@ -34,15 +34,15 @@ of the cover can be restored at node reboot.
 
 ## Configuration variables:
 
-- **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **open_action** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be opened.
-- **open_duration** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to open up from the fully-closed state.
-- **close_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **close_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be closed.
-- **close_duration** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to close from the fully-open state.
-- **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **stop_action** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed to stop the cover when the remote requests the cover to be stopped or
   when the cover has been opening/closing for the given durations.
 - **has_built_in_endstop** (*Optional*, boolean): Indicates that the cover has built in end stop
@@ -59,7 +59,7 @@ of the cover can be restored at node reboot.
 - **assumed_state** (*Optional*, boolean): Whether the true state of the cover is not known.
   This will make the Home Assistant frontend show buttons for both OPEN and CLOSE actions, instead
   of hiding or disabling one of them. Defaults to `true`.
-- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from [Base Cover Configuration]({{< ref "components/cover/_index#config-cover" >}}).
 
 
 {{< note >}}
@@ -89,6 +89,6 @@ This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issue
 ## See Also
 
 - [index]({{< ref "index/" >}})
-- [automation]({{< ref "automations/_index#automation" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`time_based/time_based_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/time_based.md)

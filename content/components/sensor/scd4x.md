@@ -28,16 +28,16 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 
 - **co2** (*Optional*): The information for the CO₂ sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the Temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 - **humidity** (*Optional*): The information for the Humidity sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature_offset** (*Optional*, float):  The temperature offset can depend
   on various factors such as the SCD4x measurement mode, self-heating of close
@@ -63,17 +63,17 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
   - `low_power_periodic`: The sensor takes a new measurement every 30 seconds. Make sure `update_interval` is at least 30 seconds.
   - `single_shot`: A measurement is started in every update interval. A measurement takes 5 seconds. This mode is only available on scd41 and useful if low power consumption is required.
     The automatic self-calibration is optimized for single shot measurements performed every 5 minutes.
-    To reduce noise levels, you can can perform several single shot measurements in a row and average the output values using a [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}}).
+    To reduce noise levels, you can can perform several single shot measurements in a row and average the output values using a [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}).
   - `single_shot_rht_only`: A measurement is started in every update interval. A measurement takes 50 ms. Only humidity and temperature is measured. CO2 is reported as 0 ppm. This mode is only available on scd41 and useful if low power consumption is required.
 
 
-- **ambient_pressure_compensation_source** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Set an external pressure sensor ID used for ambient pressure compensation.
+- **ambient_pressure_compensation_source** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set an external pressure sensor ID used for ambient pressure compensation.
   The pressure sensor must report pressure in hPa. the correction is applied before updating the state of the co2 sensor.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x62`.
 
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Actions:
@@ -82,7 +82,7 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 
 ## ``perform_forced_calibration`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) manually calibrates the sensor to the provided value in ppm.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) manually calibrates the sensor to the provided value in ppm.
 Operate the SCD4x in the operation mode later used in normal sensor operation (periodic measurement, low power periodic measurement or single shot) for > 3 minutes in an environment with homogenous and constant CO2 concentration before performing a forced recalibration.
 As of April 2022 the average fresh air Co² concentration is 419 ppm.
 
@@ -113,7 +113,7 @@ api:
 
 ## ``factory_reset`` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) triggers a factory reset of the sensor. Calibration settings are restored from factory settings.
+This [All Actions]({{< ref "automations/actions#config-action" >}}) triggers a factory reset of the sensor. Calibration settings are restored from factory settings.
 
 ```yaml
 on_...:
@@ -123,7 +123,7 @@ on_...:
 ```
 ## Pressure compensation
 
-A static ambient pressure value can be set with `ambient_pressure_compensation` or `altitude_compensation`. It can also be changed dynamically with [lambdas]({{< ref "automations/templates#config-lambda" >}}) using `set_ambient_pressure_compensation(<mBar>)`, or by pointing `ambient_pressure_compensation_source` to a local pressure sensor.
+A static ambient pressure value can be set with `ambient_pressure_compensation` or `altitude_compensation`. It can also be changed dynamically with [Templates]({{< ref "automations/templates#config-lambda" >}}) using `set_ambient_pressure_compensation(<mBar>)`, or by pointing `ambient_pressure_compensation_source` to a local pressure sensor.
 
 Example with a local sensor
 ***************************
@@ -171,7 +171,7 @@ sensor:
 ```
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [absolute_humidity]({{< ref "absolute_humidity/" >}})
 - [scd30]({{< ref "scd30/" >}})
 - :apiref:`scd4x/scd4x.h`

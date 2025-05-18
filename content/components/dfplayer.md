@@ -12,7 +12,7 @@ allows you to play sound and music stored in an SD card or USB flash drive.
 *DF-Player mini Module.*
 
 
-For this component to work you need to have set up a [UART bus]({{< ref "components/uart#uart" >}}) in your configuration.
+For this component to work you need to have set up a [UART Bus]({{< ref "components/uart#uart" >}}) in your configuration.
 
 ## Overview
 
@@ -31,8 +31,8 @@ dfplayer:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **on_finished_playback** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
   performed when playback is finished.
 
@@ -88,9 +88,9 @@ on_...:
 ```
 Configuration options:
 
-- **file** (*Optional*, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The global track
+- **file** (*Optional*, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The global track
   number (from all tracks in the device). If not specified plays the first track.
-- **loop** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
+- **loop** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
   the same track. Defaults to `false`.
 
 ## ``dfplayer.play_mp3`` Action
@@ -121,7 +121,7 @@ on_...:
 ```
 Configuration options:
 
-- **file** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The file number
+- **file** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The file number
   inside the `mp3` folder to play.
 
 
@@ -156,10 +156,10 @@ on_...:
 ```
 Configuration options:
 
-- **folder** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The folder number.
-- **file** (*Optional*, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The file number
+- **folder** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The folder number.
+- **file** (*Optional*, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The file number
   inside the folder to play. Optional only if `loop` is not set.
-- **loop** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
+- **loop** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
   all files in the folder. Causes `file` to be ignored. Defaults to `false`.
 
 
@@ -188,7 +188,7 @@ on_...:
 ```
 Configuration options:
 
-- **volume** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The volume value.
+- **volume** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The volume value.
   Valid values goes from `0` to `30`.
 
 ## ``dfplayer.volume_up`` Action
@@ -293,7 +293,7 @@ on_...:
 ```
 ## All actions
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the DFPlayer if you have multiple components.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the DFPlayer if you have multiple components.
 
 
 ## Test setup

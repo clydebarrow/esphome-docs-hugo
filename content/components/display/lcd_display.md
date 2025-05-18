@@ -26,7 +26,7 @@ with ESPHome. This component is only for LCDs that display individual characters
 ## lcd_pcf8574 Component
 
 `lcd_pcf8574` is for LCD displays with a PCF8574 GPIO expander module connected to all the data pins. This has the
-benefit that you only need to connect two data wires to the ESP instead of the six or ten as with the [lcd-gpio]({{< ref "components/display/lcd_display#lcd-gpio" >}}).
+benefit that you only need to connect two data wires to the ESP instead of the six or ten as with the [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}}).
 The communication happens via [I²C Bus]({{< ref "components/i2c#i2c" >}}), you need to have an `i2c:` section in your configuration.
 
 ![LCD Display with a PCF8574 board attached on the back](../images/lcd-pcf8574.jpg)
@@ -52,11 +52,11 @@ Configuration variables:
 
 - **dimensions** (**Required**, string): The dimensions of the display with `COLUMNSxROWS`. If you're not
   sure, power the display up and just count them.
-- **address** (*Optional*, int): The [I²C]({{< ref "components/i2c#i2c" >}}) address of the PCF8574 chip, defaults to `0x3F`.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [display-lcd_lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **address** (*Optional*, int): The [I²C Bus]({{< ref "components/i2c#i2c" >}}) address of the PCF8574 chip, defaults to `0x3F`.
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+  See [Rendering Lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< note >}}
 If you're not seeing anything on the display, try turning the contrast potentiometer around on the
@@ -96,17 +96,17 @@ Configuration variables:
 
 - **dimensions** (**Required**, string): The dimensions of the display with `COLUMNSxROWS`. If you're not
   sure, power the display on, turn contrast high up and just count them.
-- **data_pins** (**Required**, list of [pins]({{< ref "guides/configuration-types#config-pin_schema" >}})): A list of the data pins you
+- **data_pins** (**Required**, list of [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): A list of the data pins you
   have hooked up to the LCD. The list can either be 4 items long (operating in 4-bit mode with
   either the first 4 data pins connected or the last 4 data pins connected), or 8 items long (when you have
   connected all 8 data pins).
-- **enable_pin** (**Required**, [pin]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `E` (`06`) hooked up to.
-- **rs_pin** (**Required**, [pin]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `RS` (`04`) hooked up to.
-- **rw_pin** (*Optional*, [pin]({{< ref "guides/configuration-types#config-pin_schema" >}})): Optionally set the pin you have `R/W` (`05`) hooked up to. You can also just permanently connect that pin to `GND`.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [display-lcd_lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **enable_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `E` (`06`) hooked up to.
+- **rs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `RS` (`04`) hooked up to.
+- **rw_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Optionally set the pin you have `R/W` (`05`) hooked up to. You can also just permanently connect that pin to `GND`.
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+  See [Rendering Lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< note >}}
 If you're not seeing anything on the display, make sure you apply ``3.3V`` to the ``VEE`` (``03``) contrast control
@@ -118,7 +118,7 @@ pin of the board. You can use a potentiometer to make it adjustable.
 
 ## Rendering Lambda
 
-The LCD displays has a similar API to the fully fledged [display-engine]({{< ref "components/display/_index#display-engine" >}}), but it's only a subset as LCD displays
+The LCD displays has a similar API to the fully fledged [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}), but it's only a subset as LCD displays
 don't have a concept of individual pixels. In the lambda you're passed a variable called `it`
 as with all other displays. In this case however, `it` is an instance of either `GPIOLCDDisplay` or `PCF8574LCDDisplay`.
 
@@ -158,8 +158,8 @@ time:
   id: my_time
 
 ```
-Please see [display-printf]({{< ref "components/display/_index#display-printf" >}}) for a quick introduction into the `printf` formatting rules and
-[display-strftime]({{< ref "components/display/_index#display-strftime" >}}) for an introduction into the `strftime` time formatting.
+Please see [Formatted Text]({{< ref "components/display/_index#display-printf" >}}) for a quick introduction into the `printf` formatting rules and
+[Displaying Time]({{< ref "components/display/_index#display-strftime" >}}) for an introduction into the `strftime` time formatting.
 
 ## User Defined Characters
 
@@ -254,7 +254,7 @@ binary_sensor:
 - [/components/switch/gpio]({{< ref "/components/switch/gpio" >}})
 - [/components/binary_sensor/gpio]({{< ref "/components/binary_sensor/gpio" >}})
 - [LCD Menu]({{< ref "components/display_menu/lcd_menu#lcd_menu" >}})
-- [Add pages to LCD display]({{< ref "cookbook/lambda_magic#lambda_magic_pages" >}})
+- [Display pages alternative]({{< ref "cookbook/lambda_magic#lambda_magic_pages" >}})
 - [/components/pcf8574]({{< ref "/components/pcf8574" >}})
 - [HD44780U (LCD-II) datasheet](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)
 - [Charset cheatsheet](https://user-images.githubusercontent.com/1550668/173113487-9c98e866-8ee4-4a3c-a83f-61fe62057c5f.png)

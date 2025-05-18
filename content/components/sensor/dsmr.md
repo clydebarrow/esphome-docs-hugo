@@ -40,24 +40,24 @@ text_sensor:
 ```
 Configuration variables:
 
-- **decryption_key** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}}), 32 characters, case insensitive): The key to decrypt the
+- **decryption_key** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), 32 characters, case insensitive): The key to decrypt the
   telegrams. Used in Lux only.
 - **gas_mbus_id** (*Optional*, int): The id of the gas meter. Defaults to `1`.
 - **crc_check** (*Optional*, boolean): Specifies if the CRC check must be done. This is required to be set to false for
   older DSMR versions as they do not provide a CRC. Defaults to `true`.
 - **max_telegram_length** (*Optional*, integer): The size of the buffer used for reading DSMR telegrams. Increase
   if you are reading from a smart meter that sends large telegrams. Defaults to `1500`.
-- **uart_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
 - **request_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin that can be used for controlling
   the P1 port's Data Request pin. Defaults to not using a Data Request pin.
-  See [Using the P1 Data Request pin]({{< ref "components/sensor/dsmr#sensor-dsmr-request_pin" >}}).
-- **request_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The minimum time between two telegram readings.
+  See [P1 Data Request pin]({{< ref "components/sensor/dsmr#sensor-dsmr-request_pin" >}}).
+- **request_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The minimum time between two telegram readings.
   Defaults to `0ms`, meaning that the pace at which the smart meter sends its data determines the update frequency.
   This works best in combination with a `request_pin`, but this option will work without one too.
-- **receive_timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The timeout on incoming data while reading a telegram.
+- **receive_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The timeout on incoming data while reading a telegram.
   When no new data arrive within the given timeout, the device will consider the current telegram a loss and
   starts looking for the header of the next telegram. Defaults to `200ms`.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the DSMR if you have multiple components.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the DSMR if you have multiple components.
 
 ## Sensor
 
@@ -69,139 +69,139 @@ Configuration variables:
 
 - **energy_delivered_tariff1** (*Optional*): Energy Consumed Tariff 1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **energy_delivered_tariff2** (*Optional*): Energy Consumed Tariff 2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **energy_returned_tariff1** (*Optional*): Energy Produced Tariff 1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **energy_returned_tariff2** (*Optional*): Energy Produced Tariff 2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_delivered** (*Optional*): Power Consumed.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_returned** (*Optional*): Power Produced.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_failures** (*Optional*): Electricity Failures.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_long_failures** (*Optional*): Long Electricity Failures.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_sags_l1** (*Optional*): Number of voltage sags in phase L1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_sags_l2** (*Optional*): Number of voltage sags in phase L2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_sags_l3** (*Optional*): Number of voltage sags in phase L3.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_swells_l1** (*Optional*): Number of voltage swells in phase L1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_swells_l2** (*Optional*): Number of voltage swells in phase L2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **electricity_swells_l3** (*Optional*): Number of voltage swells in phase L3.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **voltage_l1** (*Optional*): Voltage Phase 1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **voltage_l2** (*Optional*): Voltage Phase 2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **voltage_l3** (*Optional*): Voltage Phase 3.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **current_l1** (*Optional*): Current Phase 1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **current_l2** (*Optional*): Current Phase 2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **current_l3** (*Optional*): Current Phase 3.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_delivered_l1** (*Optional*): Power Consumed Phase 1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_delivered_l2** (*Optional*): Power Consumed Phase 2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_delivered_l3** (*Optional*): Power Consumed Phase 3.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_returned_l1** (*Optional*): Power Produced Phase 1.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_returned_l2** (*Optional*): Power Produced Phase 2.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **power_returned_l3** (*Optional*): Power Produced Phase 3.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **gas_delivered** (*Optional*): Gas Consumed.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Belgium
 
 - **gas_delivered_be** (*Optional*): Gas Consumed Belgium.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **active_energy_import_current_average_demand** (*Optional*): Current Average Quarterly Demand for Peak Tarrif Belgium.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **active_energy_import_maximum_demand_running_month** (*Optional*): Current Month's Maximum Quarterly Demand for Peak Tarrif Belgium.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **active_energy_import_maximum_demand_last_13_months** (*Optional*): 13 Month Maximum Quarterly Demand for Peak Tarrif Belgium.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Luxembourg
 
 - **energy_delivered_lux** (*Optional*): Energy Consumed Luxembourg
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **energy_returned_lux** (*Optional*): Energy Produced Luxembourg
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Text Sensor
 
@@ -209,60 +209,60 @@ Configuration variables:
 
 - **identification** (*Optional*): DSMR Identification
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **p1_version** (*Optional*): DSMR Version
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **timestamp** (*Optional*): Timestamp
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **electricity_tariff** (*Optional*): The current tariff. According to the specs value
   '0001' means 'normal tariff' and value '0002' means 'low tariff'. Your meter may report differently.
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **electricity_failure_log** (*Optional*): Electricity Failure Log
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **message_short** (*Optional*): Message Short
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **message_long** (*Optional*): Message Long
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **gas_equipment_id** (*Optional*): Gas Equipment ID.
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **water_equipment_id** (*Optional*): Water Equipment ID
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **sub_equipment_id** (*Optional*): Sub Equipment ID
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **gas_delivered_text** (*Optional*): A text sensor which unformatted gas data. You need to
   apply a custom parsing of this value depending on your meter format.
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 - **telegram** (*Optional*): The (decrypted) unparsed telegram, marked as internal sensor.
   Can also be used to trigger an action based on the last values.
 
-  - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 Belgium
 
 - **p1_version_be** (*Optional*): DSMR Version Belgium
 
-  - All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Older DSMR meters support
 

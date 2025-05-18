@@ -6,7 +6,7 @@ title: "Pylontech Battery"
 {{< seo description="" image="" >}}
 
 The Pylontech component allows you to pull data from Pylontech Batteries into ESPHome.
-It uses [UART]({{< ref "components/uart#uart" >}}) for communication.
+It uses [UART Bus]({{< ref "components/uart#uart" >}}) for communication.
 
 Once configured, you can use sensors as described below for your projects.
 
@@ -58,9 +58,9 @@ pylontech:
 Configuration variables:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this Pylontech component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this Pylontech component.
 - **uart_id** (*Optional*): The uart Bus ID
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
 ## Sensor
 
@@ -85,15 +85,15 @@ Configuration variables:
 
 - **pylontech_id** (*Optional*): Manually specify the ID of the pylontech instance if there are multiple.
 - **battery** (**Required**): Which battery to monitor. 1 stands for the main battery, 2..16 for child batteries.
-- **voltage** (*Optional*): Voltage of the battery. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **current** (*Optional*): Current flowing into the battery. Negative when discharging. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **coulomb** (*Optional*): State of Charge in percent. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **temperature** (*Optional*): Temperature. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **temperature_low** (*Optional*): Historic minimum temperature. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **temperature_high** (*Optional*): Historic maximum temperature. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **voltage_low** (*Optional*): Voltage of the lowest cell. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **voltage_high** (*Optional*): Voltage of the highest cell. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **mos_temperature** (*Optional*): Temperature of the mosfets. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **voltage** (*Optional*): Voltage of the battery. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **current** (*Optional*): Current flowing into the battery. Negative when discharging. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **coulomb** (*Optional*): State of Charge in percent. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **temperature** (*Optional*): Temperature. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **temperature_low** (*Optional*): Historic minimum temperature. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **temperature_high** (*Optional*): Historic maximum temperature. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **voltage_low** (*Optional*): Voltage of the lowest cell. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **voltage_high** (*Optional*): Voltage of the highest cell. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **mos_temperature** (*Optional*): Temperature of the mosfets. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Text Sensor
 
@@ -115,10 +115,10 @@ Configuration variables:
 
 - **pylontech_id** (*Optional*): Manually specify the ID of the pylontech instance if there are multiple.
 - **battery** (**Required**): Which battery to monitor. 1 stands for the main battery, 2..16 for child batteries.
-- **base_state** (*Optional*): Base state. Usually reads `Dischg`, `Charge` or `Idle`. All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
-- **voltage_state** (*Optional*): Voltage state. Usually reads `Normal`. All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
-- **current_state** (*Optional*): Current state. Usually reads `Normal`. All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
-- **temperature_state** (*Optional*): Temperature state. Usually reads `Normal`. All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **base_state** (*Optional*): Base state. Usually reads `Dischg`, `Charge` or `Idle`. All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **voltage_state** (*Optional*): Voltage state. Usually reads `Normal`. All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **current_state** (*Optional*): Current state. Usually reads `Normal`. All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **temperature_state** (*Optional*): Temperature state. Usually reads `Normal`. All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Energy Monitoring
 
@@ -171,5 +171,5 @@ sensor:
 - [nodered-pylontech-console-reader](https://github.com/juanhaywood/nodered-pylontech-console-reader)
 - [MultiSIBControl](http://www.multisibcontrol.net/)
 - [ioBroker.pylontech](https://github.com/PLCHome/ioBroker.pylontech/)
-- [uart]({{< ref "components/uart#uart" >}})
+- [UART Bus]({{< ref "components/uart#uart" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/pylontech.md)

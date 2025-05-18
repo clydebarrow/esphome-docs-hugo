@@ -24,12 +24,12 @@ through this platform.
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
   GPIO pin to use for the switch.
 - **interlock** (*Optional*, list): A list of other GPIO switches in an interlock group. See
-  [switch-gpio-interlocking]({{< ref "components/switch/gpio#switch-gpio-interlocking" >}}).
-- **interlock_wait_time** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): For interlocking mode, set how long
+  [Interlocking]({{< ref "components/switch/gpio#switch-gpio-interlocking" >}}).
+- **interlock_wait_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): For interlocking mode, set how long
   to wait after other items in an interlock group have been disabled before re-activating.
   Useful for motors where immediately turning on in the other direction could cause problems.
 
-- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## Active Low Switch
 

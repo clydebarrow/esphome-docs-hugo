@@ -26,7 +26,7 @@ Currently, most displays managed by Esphome are single-color E-Ink displays; but
 *Waveshare E-Paper 7.3 Inch ACeP 7-Color E-Paper Display.*
 
 
-The communication ESPHome has chosen to use for this integration is 4-wire [SPI]({{< ref "components/spi#spi" >}}), as it's the most stable and high-speed. So you need to make sure your board is set to the 4-wire SPI mode and have an `spi:` section in your
+The communication ESPHome has chosen to use for this integration is 4-wire [SPI Bus]({{< ref "components/spi#spi" >}}), as it's the most stable and high-speed. So you need to make sure your board is set to the 4-wire SPI mode and have an `spi:` section in your
 configuration.
 
 ==================== ===================== =====================
@@ -155,15 +155,15 @@ The BUSY pin on the ``gdew0154m09``, the ``Waveshare 7.30in-f`` and the ``Wavesh
   because artifacts accumulate. On the `1.54in`, `1.54inv2`, `2.13in`, `2.13inv2`, `2.90in`, `2.90inv2`,  `7.50inV2p` and `gdew029t5` models, you have the option to only
   do a full-redraw every x-th time using this option. Defaults to `30` on the described models and a full update for
   all other models.
-- **reset_duration** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Duration for the display reset operation. Defaults to `200ms`.
+- **reset_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Duration for the display reset operation. Defaults to `200ms`.
   Setting this value to `2ms` may resolve issues with newer e-Paper Driver modules (e.g. Rev 2.1).
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [display-engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`, use `never` to only manually update the screen via `component.update`.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [display-pages]({{< ref "components/display/_index#display-pages" >}}).
-- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`, use `never` to only manually update the screen via `component.update`.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
+- **spi_id** (*Optional*, [SPI Bus]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple SPI buses.
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 ## See Also
 

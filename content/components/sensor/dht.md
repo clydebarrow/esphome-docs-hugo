@@ -42,20 +42,20 @@ if you're having issues try the 4.7kΩ recommended by the manufacturer) between
 
 ## Configuration variables:
 
-- **pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the DHT bus is connected.
+- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the DHT bus is connected.
 - **temperature** (**Required**): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (**Required**): The information for the humidity sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 - **model** (*Optional*, int): Manually specify the DHT model, can be
   one of `AUTO_DETECT`, `DHT11`, `DHT22`, `DHT22_TYPE2`, `AM2302`, `RHT03`, `SI7021`, `AM2120`
   and helps with some connection issues. Defaults to `AUTO_DETECT`.  Auto detection doesn't work for the SI7021 chip.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< note >}}
@@ -73,7 +73,7 @@ set ``pullup: false`` under your ``pin`` configuration.
 {{< /note >}}
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [absolute_humidity]({{< ref "absolute_humidity/" >}})
 - [dht12]({{< ref "dht12/" >}})
 - [hdc1080]({{< ref "hdc1080/" >}})

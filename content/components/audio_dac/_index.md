@@ -20,7 +20,7 @@ audio_dac:
 
 ## Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< anchor "automations-audio_dac" >}}
 
@@ -33,7 +33,7 @@ This action unmutes the output of the DAC.
 
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
 
 `audio_dac.mute_on` Action
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,7 +42,7 @@ This action mutes the output of the DAC.
 
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
 
 `audio_dac.set_volume` Action
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,8 +51,8 @@ This action sets the output volume of the DAC.
 
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
-- **volume** (**Required**, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The desired volume level for the
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
+- **volume** (**Required**, percentage, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The desired volume level for the
   output from 0% to 100%.
 
 ## See Also

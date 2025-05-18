@@ -31,7 +31,7 @@ Configuration variables:
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
       you want the binary sensor to use that name, you can set `name: None`.
 
 - **device_class** (*Optional*, string): The device class for the
@@ -39,25 +39,25 @@ Configuration variables:
   for a list of available options.
 - **icon** (*Optional*, icon): Manually set the icon to use for the binary sensor in the frontend.
 - **filters** (*Optional*, list): A list of filters to apply on the binary sensor values such as
-  inverting signals. See [binary_sensor-filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}).
+  inverting signals. See [Binary Sensor Filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}).
 
 Automations:
 
 - **on_press** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the button is pressed. See [binary_sensor-on_press]({{< ref "components/binary_sensor/_index#binary_sensor-on_press" >}}).
+  when the button is pressed. See [``on_press``]({{< ref "components/binary_sensor/_index#binary_sensor-on_press" >}}).
 - **on_release** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the button is released. See [binary_sensor-on_release]({{< ref "components/binary_sensor/_index#binary_sensor-on_release" >}}).
+  when the button is released. See [``on_release``]({{< ref "components/binary_sensor/_index#binary_sensor-on_release" >}}).
 - **on_state** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a state change is published. See [binary_sensor-on_state]({{< ref "components/binary_sensor/_index#binary_sensor-on_state" >}}).
+  when a state change is published. See [``on_state``]({{< ref "components/binary_sensor/_index#binary_sensor-on_state" >}}).
 - **on_click** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the button is held down for a specified period of time.
-  See [binary_sensor-on_click]({{< ref "components/binary_sensor/_index#binary_sensor-on_click" >}}).
+  See [``on_click``]({{< ref "components/binary_sensor/_index#binary_sensor-on_click" >}}).
 - **on_double_click** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the button is pressed twice for specified periods of time.
-  See [binary_sensor-on_double_click]({{< ref "components/binary_sensor/_index#binary_sensor-on_double_click" >}}).
+  See [``on_double_click``]({{< ref "components/binary_sensor/_index#binary_sensor-on_double_click" >}}).
 - **on_multi_click** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the button is pressed in a specific sequence.
-  See [binary_sensor-on_multi_click]({{< ref "components/binary_sensor/_index#binary_sensor-on_multi_click" >}}).
+  See [``on_multi_click``]({{< ref "components/binary_sensor/_index#binary_sensor-on_multi_click" >}}).
 
 Advanced options:
 
@@ -73,8 +73,8 @@ Advanced options:
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- If MQTT enabled, all other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If MQTT enabled, all other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 {{< anchor "binary_sensor-filters" >}}
 
@@ -121,7 +121,7 @@ Simple filter that just inverts every value from the binary sensor.
 `delayed_on`
 **************
 
-(**Required**, time, [templatable]({{< ref "automations/templates#config-templatable" >}})): When a signal ON is received,
+(**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): When a signal ON is received,
 wait for the specified time period until publishing an ON state. If an OFF value is received
 while waiting, the ON action is discarded. Or in other words:
 Only send an ON value if the binary sensor has stayed ON for at least the specified time period.
@@ -131,7 +131,7 @@ When using a lambda call, you should return the delay value in milliseconds.
 `delayed_off`
 ***************
 
-(**Required**, time, [templatable]({{< ref "automations/templates#config-templatable" >}})): When a signal OFF is received,
+(**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): When a signal OFF is received,
 wait for the specified time period until publishing an OFF state. If an ON value is received
 while waiting, the OFF action is discarded. Or in other words:
 Only send an OFF value if the binary sensor has stayed OFF for at least the specified time period.
@@ -155,7 +155,7 @@ binary_sensor:
       - delayed_on_off: 1s
 
 ```
-(**Required**, time, [templatable]({{< ref "automations/templates#config-templatable" >}})): ON and OFF delay.
+(**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): ON and OFF delay.
 When using a lambda call, you should return the delay value in milliseconds.
 **Useful for debouncing binary switches**.
 
@@ -173,8 +173,8 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **time_on** (**Required**, time, [templatable]({{< ref "automations/templates#config-templatable" >}})): ON delay.
-- **time_off** (**Required**, time, [templatable]({{< ref "automations/templates#config-templatable" >}})): OFF delay.
+- **time_on** (**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): ON delay.
+- **time_off** (**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): OFF delay.
 
 When using a lambda call, you should return the delay value in milliseconds.
 
@@ -197,21 +197,21 @@ set to default values.
 
 Configuration variables:
 
-- **delay** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Delay to proceed to the next timing. Defaults to `1s`.
-- **time_off** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Interval to hold the output at OFF. Defaults to `100ms`.
-- **time_on** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Interval to hold the output at ON. Defaults to `900ms`.
+- **delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Delay to proceed to the next timing. Defaults to `1s`.
+- **time_off** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Interval to hold the output at OFF. Defaults to `100ms`.
+- **time_on** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Interval to hold the output at ON. Defaults to `900ms`.
 
 `lambda`
 **********
 
-Specify any [lambda]({{< ref "automations/templates#config-lambda" >}}) for more complex filters. The input value from
+Specify any [Templates]({{< ref "automations/templates#config-lambda" >}}) for more complex filters. The input value from
 the binary sensor is `x` and you can return `true` for ON, `false` for OFF, and `{}` to stop
 the filter chain.
 
 `settle`
 **********
 
-(**Required**, time, [templatable]({{< ref "automations/templates#config-templatable" >}})): When a signal is received, publish the state
+(**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): When a signal is received, publish the state
 but wait for the received state to remain the same for specified time period before publishing any
 additional state changes. This filter complements the `delayed_on_off` filter but publishes value changes at
 the beginning of the delay period.
@@ -223,7 +223,7 @@ When using a lambda call, you should return the delay value in milliseconds.
 The triggers for binary sensors in ESPHome use the lingo from computer mouses.
 For example, a `press` is triggered in the first moment when the button on your mouse is pushed down.
 
-You can access the current state of the binary sensor in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
+You can access the current state of the binary sensor in [Templates]({{< ref "automations/templates#config-lambda" >}}) using
 `id(binary_sensor_id).state`.
 
 {{< anchor "binary_sensor-on_press" >}}
@@ -271,7 +271,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 This automation will be triggered when a new state is received (and thus combines `on_press`
 and `on_release` into one trigger). The new state will be given as the variable `x` as a boolean
-and can be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+and can be used in [Templates]({{< ref "automations/templates#config-lambda" >}}).
 
 ```yaml
 binary_sensor:
@@ -306,8 +306,8 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **min_length** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The minimum duration the click should last. Defaults to `50ms`.
-- **max_length** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the click should last. Defaults to `350ms`.
+- **min_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The minimum duration the click should last. Defaults to `50ms`.
+- **max_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the click should last. Defaults to `350ms`.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< note >}}
@@ -353,8 +353,8 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **min_length** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The minimum duration the click should last. Defaults to `50ms`.
-- **max_length** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the click should last. Defaults to `350ms`.
+- **min_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The minimum duration the click should last. Defaults to `50ms`.
+- **max_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the click should last. Defaults to `350ms`.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< anchor "binary_sensor-on_multi_click" >}}
@@ -388,7 +388,7 @@ Configuration variables:
   - `<ON/OFF> for at least <TIME>`
   - `<ON/OFF> for at most <TIME>`
 
-- **invalid_cooldown** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): If a multi click is started, but the timing
+- **invalid_cooldown** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): If a multi click is started, but the timing
   set in `timing` does not match, a "cool down" period will be activated during which no timing
   will be matched. Defaults to `1s`.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
@@ -430,7 +430,7 @@ on_multi_click:
 `binary_sensor.is_on` / `binary_sensor.is_off` Condition
 ************************************************************
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given binary sensor is ON (or OFF).
+This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the given binary sensor is ON (or OFF).
 
 ```yaml
 # In some trigger:
@@ -446,7 +446,7 @@ on_...:
 lambda calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all binary sensors to do some
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all binary sensors to do some
 advanced stuff.
 
 - `publish_state()`: Manually cause the binary sensor to publish and store a state from anywhere

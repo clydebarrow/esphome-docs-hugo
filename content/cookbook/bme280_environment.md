@@ -5,7 +5,7 @@ title: "BME280 Environment"
 
 {{< seo description="" image="" >}}
 
-The [/components/sensor/bme280]({{< ref "/components/sensor/bme280" >}}) is a simple temperature, humidity, and pressure sensor with communication over [SPI]({{< ref "components/spi#spi" >}}) or [I²C]({{< ref "components/i2c#i2c" >}}).
+The [/components/sensor/bme280]({{< ref "/components/sensor/bme280" >}}) is a simple temperature, humidity, and pressure sensor with communication over [SPI Bus]({{< ref "components/spi#spi" >}}) or [I²C Bus]({{< ref "components/i2c#i2c" >}}).
 With some simple math it is possible to either determine the height of the sensor, or the current pressure at sea level.
 This guide can be applied to any sensor measuring temperature and pressure at the same time, like the
 [/components/sensor/bme680]({{< ref "/components/sensor/bme680" >}}), or [/components/sensor/bmp280]({{< ref "/components/sensor/bmp280" >}}).

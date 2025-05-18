@@ -33,10 +33,10 @@ on_...:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
 - **address** (*Optional*, int): Manually specify the I²C address of
   the DAC. Defaults to `0x2E`.
-- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+- All other options from [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}).
 
 ## See Also
 

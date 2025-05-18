@@ -22,7 +22,7 @@ device as a binary sensor.
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to periodically check.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 ## Activating internal pullups
 
@@ -61,7 +61,7 @@ binary_sensor:
 ## Debouncing Values
 
 Some binary sensors are a bit unstable and quickly transition between the ON and OFF state while
-they're pressed. To fix this and debounce the signal, use the [binary sensor filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}):
+they're pressed. To fix this and debounce the signal, use the [Binary Sensor Filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}):
 
 ```yaml
 # Example configuration entry
@@ -90,6 +90,6 @@ binary_sensor:
 ## See Also
 
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
-- [config-pin_schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
+- [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 - :apiref:`gpio/binary_sensor/gpio_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/gpio.md)

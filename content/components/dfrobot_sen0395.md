@@ -64,9 +64,9 @@ dfrobot_sen0395:
 Configuration variables:
 ************************
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Necessary if you want
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Necessary if you want
   to define multiple instances of this component.
-- **uart_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of[/components/uart]({{< ref "/components/uart" >}})uart` if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of[/components/uart]({{< ref "/components/uart" >}})uart` if you want
   to use multiple UART buses.
 
 {{< anchor "dfrobot_sen0395-binary_sensor" >}}
@@ -102,9 +102,9 @@ Via UART
 
 Connecting the sensor via the serial connection (UART) allows both changing its settings as well as reading its state.
 Note, however, that the UART peripheral cannot wake the processor; if you plan on sleeping the processor, you'll likely
-still need to use the [GPIO pin]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-via_gpio" >}}) approach described above (in addition to the UART).
+still need to use the [Via GPIO]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-via_gpio" >}}) approach described above (in addition to the UART).
 
-First, setup a [/components/uart]({{< ref "/components/uart" >}}) and [dfrobot_sen0395-component]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-component" >}}) and then use its binary sensor platform
+First, setup a [/components/uart]({{< ref "/components/uart" >}}) and [Hub Component]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-component" >}}) and then use its binary sensor platform
 to create individual binary sensors for each presence sensor.
 
 ```yaml
@@ -116,15 +116,15 @@ binary_sensor:
 Configuration variables:
 ************************
 
-- **dfrobot_sen0395_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the DFRobot mmWave component defined above.
+- **dfrobot_sen0395_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the DFRobot mmWave component defined above.
   Required when multiple instances of the `dfrobot_sen0395` component are defined.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "dfrobot_sen0395-switch" >}}
 
 ## Switch
 
-[Switch components]({{< ref "components/switch/_index#config-switch" >}}) are used to enable/disable various module features/functions.
+[Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}) are used to enable/disable various module features/functions.
 
 ```yaml
 switch:
@@ -137,7 +137,7 @@ switch:
 Configuration variables:
 ************************
 
-- **dfrobot_sen0395_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the DFRobot mmWave component defined above.
+- **dfrobot_sen0395_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the DFRobot mmWave component defined above.
   Required when multiple instances of the `dfrobot_sen0395` component are defined.
 - **type** (**Required**): One of:
 
@@ -149,7 +149,7 @@ Configuration variables:
   - `turn_on_led`: when enabled, the mmWave sensor's LED blinks during operation; when disabled, the LED will always
     remain off.
 
-- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
 
 {{< anchor "dfrobot_sen0395-actions" >}}
 
@@ -190,7 +190,7 @@ on_...:
 Configuration variables:
 ````````````````````````
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the mmWave sensor on which settings should be
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the mmWave sensor on which settings should be
   changed. If only one radar is defined, this is optional.
 - **factory_reset** (*Optional*, boolean): If set to true, a factory reset of the sensor will be performed (before
   changing other options if present). Ignored if not set or set to `false`.
@@ -226,10 +226,10 @@ Configuration variables:
 
 - **output_latency** (*Optional*, dictionary):
 
-  - **delay_after_detect** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before signaling that a person was
+  - **delay_after_detect** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before signaling that a person was
     detected. Specify in steps of 25 ms. Factory default is 2.5s. Value is tempatable: Return seconds value
     (100 ms = 0.1). Returning -1 keeps the value unchanged.
-  - **delay_after_disappear** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before signaling that a person
+  - **delay_after_disappear** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before signaling that a person
     is no longer detected. Specify in steps of 25 ms. Factory default is 10 s. Value is tempatable: Return seconds
     value (100 ms = 0.1). Returning -1 keeps the value unchanged.
 
@@ -249,11 +249,11 @@ on_...:
 Configuration variables:
 ````````````````````````
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the mmWave component. Useful when multiple instances of this component are defined.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the mmWave component. Useful when multiple instances of this component are defined.
 
 ## See Also
-- [UART bus]({{< ref "components/uart#uart" >}})
-- [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
-- [config-id]({{< ref "guides/configuration-types#config-id" >}})
+- [UART Bus]({{< ref "components/uart#uart" >}})
+- [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
+- [ID]({{< ref "guides/configuration-types#config-id" >}})
 - [DFRobot mmWave Radar Wiki page](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/dfrobot_sen0395.md)

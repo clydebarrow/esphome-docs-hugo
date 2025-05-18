@@ -131,7 +131,7 @@ Battery Level Reporting
 ***********************
 
 If you wish to have the 'percentage of battery life remaining'
-reported as a sensor, you can make use of the [copy-sensor]({{< ref "components/copy#copy-sensor" >}}) component.
+reported as a sensor, you can make use of the [Copy Sensor]({{< ref "components/copy#copy-sensor" >}}) component.
 
 The examples below are based on standard alkaline-chemistry batteries;
 if you use other types of batteries you may need to adjust the

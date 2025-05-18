@@ -10,9 +10,9 @@ This sensor allows you to use A01NYUB waterproof ultrasonic sensor by DFRobot
 with ESPHome to measure distances. This sensor can measure
 ranges between 28 centimeters and 750 centimeters with a resolution of 1 milimeter.
 
-Since this sensor reads multiple times per second, [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}}) are highly recommended.
+Since this sensor reads multiple times per second, [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}) are highly recommended.
 
-To use the sensor, first set up an [uart]({{< ref "components/uart#uart" >}}) with a baud rate of 9600 and connect the sensor to the specified pin.
+To use the sensor, first set up an [UART Bus]({{< ref "components/uart#uart" >}}) with a baud rate of 9600 and connect the sensor to the specified pin.
 
 ![A01NYUB Waterproof Ultrasonic Distance Sensor.](../images/a01nyub-full.jpg)
 *A01NYUB Waterproof Ultrasonic Distance Sensor.*
@@ -28,13 +28,13 @@ sensor:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [UART bus]({{< ref "components/uart#uart" >}})): The ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this sensor.
+- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this sensor.
   Use this if you want to use multiple UART buses at once.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [uart]({{< ref "components/uart#uart" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [UART Bus]({{< ref "components/uart#uart" >}})
 - :apiref:`a01nyub/a01nyub.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/a01nyub.md)

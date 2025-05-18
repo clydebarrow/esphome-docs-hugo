@@ -29,18 +29,18 @@ text_sensor:
 ```
 ## Configuration variables:
 
-- **nextion_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion display.
+- **nextion_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion display.
 - **component_name** (*Optional*, string): The name of the Nextion component.
-- **update_interval** (*Optional*, [nextion_custom_text_sensor_protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}})): The duration to update the sensor. If using a [config-time]({{< ref "guides/configuration-types#config-time" >}}) this should not be used
-- **background_color** (*Optional*, [config-color]({{< ref "components/display/_index#config-color" >}})):  The background color
-- **foreground_color** (*Optional*, [config-color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
+- **update_interval** (*Optional*, [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}})): The duration to update the sensor. If using a [Time]({{< ref "guides/configuration-types#config-time" >}}) this should not be used
+- **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
+- **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **font_id** (*Optional*, int):  The font id for the component
 - **visible** (*Optional*, boolean):  Visible or not
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
-See [nextion_text_sensor_how_things_update]({{< ref "components/text_sensor/nextion#nextion_text_sensor_how_things_update" >}}) for additional information
+See [How things Update]({{< ref "components/text_sensor/nextion#nextion_text_sensor_how_things_update" >}}) for additional information
 
 Globals
 *******
@@ -84,11 +84,11 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion text sensor.
-- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The string to publish.
-- **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion text sensor.
+- **state** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The string to publish.
+- **publish_state** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
   Default is true.
-- **send_to_nextion** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
+- **send_to_nextion** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
   display which will update component. Default is true.
 
 {{< note >}}
@@ -100,7 +100,7 @@ This action can also be written in lambdas. See :ref:`nextion_text_sensor_lambda
 Lambda Calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full :apiref:`nextion/text_sensor/nextion_textsensor.h` for more info).
 
 {{< anchor "nextion_text_sensor_set_state" >}}
@@ -121,7 +121,7 @@ some more advanced functions (see the full :apiref:`nextion/text_sensor/nextion_
 
 ## How things Update
 A Nextion component with an integer value (.val) or Nextion variable will be automatically polled if **update_interval** is set.
-To have the Nextion send the data you can use the [nextion_custom_text_sensor_protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) for this. Add the [nextion_custom_text_sensor_protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) to the
+To have the Nextion send the data you can use the [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) for this. Add the [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) to the
 component or function you want to trigger the send. Typically this is in *Touch Press Event* but some components, like a slider, should have it
 set in the *Touch Release Event* to capture all the changes. Since this is a custom protocol it can be sent from anywhere (timers/functions/components)
 in the Nextion.

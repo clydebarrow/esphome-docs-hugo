@@ -32,12 +32,12 @@ display:
 Configuration variables:
 ************************
 
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [display-engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
+- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
 - **sdl_options** (*Optional*, string): Build arguments if required to specify include or library paths. Should not be required if SDL2 is properly installed.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [display-pages]({{< ref "components/display/_index#display-pages" >}}).
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 
 {{< note >}}
@@ -92,7 +92,7 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 
 ## See Also
 
-- [SDL touchscreen]({{< ref "components/touchscreen/sdl#sdl_touchscreen" >}})
+- [The ``sdl`` touchscreen platform allows emulating a touch screen by using the mouse with the ``sdl`` display driver.]({{< ref "components/touchscreen/sdl#sdl_touchscreen" >}})
 - [SDL binary sensor ]({{< relref "/components/binary_sensor/sdl" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`sdl/sdl_esphome.h`

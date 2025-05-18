@@ -23,34 +23,34 @@ Configuration variables:
 
   .. note::
 
-      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
       you want the switch to use that name, you can set `name: None`.
 
-- **on_state** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm changes state. See [alarm_control_panel_on_state_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_state_trigger" >}}).
-- **on_arming** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm state changes to `arming`. See [alarm_control_panel_on_arming_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_arming_trigger" >}}).
-- **on_pending** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm state changes to `pending`. See [alarm_control_panel_on_pending_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_pending_trigger" >}}).
-- **on_armed_home** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm state changes to `armed_home`. See [alarm_control_panel_on_armed_home_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_armed_home_trigger" >}}).
-- **on_armed_night** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm state changes to `armed_night`. See [alarm_control_panel_on_armed_night_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_armed_night_trigger" >}}).
-- **on_armed_away** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm state changes to `armed_away`. See [alarm_control_panel_on_armed_away_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_armed_away_trigger" >}}).
-- **on_triggered** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm triggers. See [alarm_control_panel_on_triggered_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_triggered_trigger" >}}).
-- **on_disarmed** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm state changes to `disarmed`. See [alarm_control_panel_on_disarmed_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_disarmed_trigger" >}}).
-- **on_cleared** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the alarm clears. See [alarm_control_panel_on_cleared_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_cleared_trigger" >}}).
-- **on_ready** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the logical 'and' of all the zone sensors change state. See [alarm_control_panel_on_ready_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_ready_trigger" >}}).
-- **on_chime** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
+- **on_state** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm changes state. See [``on_state`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_state_trigger" >}}).
+- **on_arming** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm state changes to `arming`. See [``on_arming`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_arming_trigger" >}}).
+- **on_pending** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm state changes to `pending`. See [``on_pending`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_pending_trigger" >}}).
+- **on_armed_home** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm state changes to `armed_home`. See [``on_armed_home`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_armed_home_trigger" >}}).
+- **on_armed_night** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm state changes to `armed_night`. See [``on_armed_night`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_armed_night_trigger" >}}).
+- **on_armed_away** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm state changes to `armed_away`. See [``on_armed_away`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_armed_away_trigger" >}}).
+- **on_triggered** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm triggers. See [``on_triggered`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_triggered_trigger" >}}).
+- **on_disarmed** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm state changes to `disarmed`. See [``on_disarmed`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_disarmed_trigger" >}}).
+- **on_cleared** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the alarm clears. See [``on_cleared`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_cleared_trigger" >}}).
+- **on_ready** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the logical 'and' of all the zone sensors change state. See [``on_ready`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_ready_trigger" >}}).
+- **on_chime** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): An automation to perform
   when a zone has been marked as chime in the configuration, and it changes from closed to open.
-  See [alarm_control_panel_on_chime_trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_chime_trigger" >}}).
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
-- If MQTT enabled, all other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+  See [``on_chime`` Trigger]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_on_chime_trigger" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If MQTT enabled, all other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 
 ## Automation:
@@ -314,7 +314,7 @@ on_...:
 `is_armed` Condition
 **********************
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the alarm control panel is armed.
+This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the alarm control panel is armed.
 
 ```yaml
 on_...:
@@ -329,7 +329,7 @@ on_...:
 lambda calls
 ************
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call the following methods:
+From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call the following methods:
 
 - `arm_away(code)`
 - `arm_home(code)`

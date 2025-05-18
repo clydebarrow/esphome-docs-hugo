@@ -15,7 +15,7 @@ ESPHome node, without the requirement of a network connection.
 
 --------
 
-The component implements the [Display Menu]({{< ref "components/display_menu/_index#display_menu" >}}) component providing
+The component implements the [The component provides a menu primarily intended to be controlled either by a rotary encoder]({{< ref "components/display_menu/_index#display_menu" >}}) component providing
 a hierarchical menu primarily intended to be controlled either by a rotary encoder
 with a button or a five-button joystick controller.
 
@@ -38,13 +38,13 @@ graphical_display_menu:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **display** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): ID of the display to render to. See 
-  [drawing_modes]({{< ref "components/display_menu/graphical_display_menu#drawing_modes" >}}) for more details
-- **font** (**Required**, [Font]({{< ref "components/font#display-fonts" >}})): Specifies the font to use
-- **foreground_color** (*Optional*, [config-color]({{< ref "components/display/_index#config-color" >}})): Specifies the foreground color to use.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **display** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the display to render to. See 
+  [Drawing Modes]({{< ref "components/display_menu/graphical_display_menu#drawing_modes" >}}) for more details
+- **font** (**Required**, [Font Renderer Component]({{< ref "components/font#display-fonts" >}})): Specifies the font to use
+- **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})): Specifies the foreground color to use.
   Defaults to COLOR_ON
-- **background_color** (*Optional*, [config-color]({{< ref "components/display/_index#config-color" >}})): Specifies the background color to use.
+- **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})): Specifies the background color to use.
   Defaults to COLOR_OFF
 
 Automations:
@@ -53,7 +53,7 @@ Automations:
   when the menu needs to be redrawn. This can be useful if your display has slow refresh rates.
   For example E-Ink displays that are used with `display_interval: never`.
 
-Additional configuration is described in the [Display Menu]({{< ref "components/display_menu/_index#display_menu" >}}) component.
+Additional configuration is described in the [The component provides a menu primarily intended to be controlled either by a rotary encoder]({{< ref "components/display_menu/_index#display_menu" >}}) component.
 
 {{< anchor "drawing_modes" >}}
 
@@ -62,7 +62,7 @@ Additional configuration is described in the [Display Menu]({{< ref "components/
 Pop Up Mode
 ***********
 
-When a **display** is specified the menu will create a [page]({{< ref "components/display/_index#display-pages" >}}) as part of the initialisation. It will render to the entire
+When a **display** is specified the menu will create a [Display Pages]({{< ref "components/display/_index#display-pages" >}}) as part of the initialisation. It will render to the entire
 of the display when invoked. This is useful when you may want to use the display for other purposes but show a menu in response to user
 interaction.
 
@@ -104,7 +104,7 @@ Emulating Pop Up Mode
 *********************
 
 If you wish to emulate Pop Up Mode the following sample will emulate the same behaviour. This can
-be useful if you're using a display without [pages]({{< ref "components/display/_index#display-pages" >}}) or if you have other
+be useful if you're using a display without [Display Pages]({{< ref "components/display/_index#display-pages" >}}) or if you have other
 requirements that requires control over how and where the menu is rendered.
 
 ```yaml
@@ -137,7 +137,7 @@ display:
 By default menu items with a value will be rendered between a set of parenthesis. This can be
 controlled via the `menu_item_value` parameter.
 
-- **menu_item_value** (*Optional*, [config-lambda]({{< ref "automations/templates#config-lambda" >}})): Specifies how to render values for
+- **menu_item_value** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): Specifies how to render values for
   menu items that have values (eg. Selects, numbers). Defaults to rendering the value as 
   "(value here)". Receives a MenuItemValueArguments as the argument`it`.
 
@@ -225,9 +225,9 @@ binary_sensor:
 ```
 ## See Also
 
-- [Display Menu]({{< ref "components/display_menu/_index#display_menu" >}})
-- [Display]({{< ref "components/display/_index#display-engine" >}})
-- [display-fonts]({{< ref "components/font#display-fonts" >}})
-- [display-pages]({{< ref "components/display/_index#display-pages" >}})
+- [The component provides a menu primarily intended to be controlled either by a rotary encoder]({{< ref "components/display_menu/_index#display_menu" >}})
+- [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}})
+- [Font Renderer Component]({{< ref "components/font#display-fonts" >}})
+- [Display Pages]({{< ref "components/display/_index#display-pages" >}})
 - :apiref:`graphical_display_menu/graphical_display_menu.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display_menu/graphical_display_menu.md)

@@ -26,13 +26,13 @@ required to be set up in your configuration for this sensor to work.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x4A`.
-- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
-- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [dht]({{< ref "dht/" >}})
 - [dht12]({{< ref "dht12/" >}})
 - [hdc1080]({{< ref "hdc1080/" >}})

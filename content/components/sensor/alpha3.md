@@ -47,8 +47,7 @@ sensor:
 
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **flow** (*Optional*): The estimated volume flow of the medium in `m³/h`.

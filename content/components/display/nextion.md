@@ -123,8 +123,7 @@ individual Nextion components/platforms. **See Below**
 See [display-strftime]({{< ref "components/display/_index#display-strftime" >}}) for a quick introduction to the `printf` formatting rules and [display-printf]({{< ref "components/display/_index#display-printf" >}}) for
 an introduction to `strftime` time formatting.
 
-Using Lambdas
-*************
+### Using Lambdas
 
 Several methods are available for use within [lambdas]({{< ref "automations/templates#config-lambda" >}}); these permit advanced functionality beyond
 simple display updates. There are too many to cover here; please see the :apiref:`nextion/nextion.h` for more detail.
@@ -197,8 +196,7 @@ The example below demonstrates how to define a user-API so Home Assistant can se
 
 ## Nextion Automations
 
-Triggers
-********
+### Triggers
 
 Several [actions-trigger]({{< ref "automations/actions#actions-trigger" >}}) are available for use with your Nextion display.
 
@@ -318,8 +316,7 @@ on_buffer_overflow:
         ESP_LOGW("nextion.on_buffer_overflow", "Nextion reported a buffer overflow event!");
 
 ```
-Actions
-*******
+### Actions
 
 
 `display.nextion.set_brightness`
@@ -376,8 +373,7 @@ button:
         - lambda: 'id(nextion1)->upload_tft();'
 
 ```
-Home Assistant
-**************
+### Home Assistant
 
 To host the TFT file from Home Assistant, create a `www` directory (if it doesn't already exist) in your `config`
 directory. If you wish, you may also create a subdirectory for your TFT files.

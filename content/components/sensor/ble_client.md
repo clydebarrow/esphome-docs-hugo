@@ -95,8 +95,7 @@ sensor:
 ## BLE Sensor Automation
 
 
-`on_notify`
-*************
+### ``on_notify``
 
 This automation is triggered when the device/server sends a notify message for
 a characteristic. The config variable *notify* must be true or this will have

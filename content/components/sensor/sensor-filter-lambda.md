@@ -3,8 +3,7 @@ description: ""
 title: ""
 ---
 
-`lambda`
-**********
+### ``lambda``
 
 Perform a simple mathematical operation over the sensor values. The input value is `x` and
 the result of the lambda is used as the output (use `return`).

@@ -56,8 +56,7 @@ The ESP32 Improv component provides various [automations]({{< ref "automations/_
 the Improv provisioning process.
 
 
-`on_start`
-************
+### ``on_start``
 
 This automation will be triggered when the device is waiting for authorization (usually by pressing a button on the
 device, if configured -- see `authorizer` above) and/or upon authorization.
@@ -70,8 +69,7 @@ esp32_improv:
 
 ```
 
-`on_provisioned`
-******************
+### ``on_provisioned``
 
 This automation will be triggered when provisioning has completed.
 
@@ -83,8 +81,7 @@ esp32_improv:
 
 ```
 
-`on_provisioning`
-*******************
+### ``on_provisioning``
 
 This automation will be triggered when provisioning begins.
 
@@ -96,8 +93,7 @@ esp32_improv:
 
 ```
 
-`on_stop`
-***********
+### ``on_stop``
 
 This automation will be triggered when Improv has stopped.
 
@@ -109,8 +105,7 @@ esp32_improv:
 
 ```
 
-`on_state`
-************
+### ``on_state``
 
 This automation will be triggered on every state change.
 

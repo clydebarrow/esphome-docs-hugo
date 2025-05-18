@@ -44,8 +44,7 @@ light:
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 
-Manual Timings
-**************
+### Manual Timings
 
 These can be used if you know the timings and your chipset is not set above. If you have a new specific chipset,
 please consider adding support to the codebase and add it to the list above.

@@ -123,8 +123,7 @@ on_...:
 
 A static ambient pressure value can be set with `ambient_pressure_compensation` or `altitude_compensation`. It can also be changed dynamically with [lambdas]({{< ref "automations/templates#config-lambda" >}}) using `set_ambient_pressure_compensation(<mBar>)`, or by pointing `ambient_pressure_compensation_source` to a local pressure sensor.
 
-Example with a local sensor
-***************************
+### Example with a local sensor
 
 Note: remember your pressure sensor needs to output in mBar
 
@@ -143,8 +142,7 @@ sensor:
       name: "CO2 level"
 
 ```
-Example with a remote sensor
-****************************
+### Example with a remote sensor
 
 This example creates a service `set_ambient_pressure` that can be called from Home Assistant:
 

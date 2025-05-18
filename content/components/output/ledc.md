@@ -37,8 +37,7 @@ which chooses adjacent channels with shared timers. See
 
 Note: this variable is only available for the esp-idf framework
 
-Example Usage For a Light
-*************************
+### Example Usage For a Light
 
 ```yaml
 # Example configuration entry
@@ -54,8 +53,7 @@ light:
     name: "Kitchen Light"
 
 ```
-Example Usage For a Piezo Buzzer
-********************************
+### Example Usage For a Piezo Buzzer
 
 ```yaml
 # Configure the output

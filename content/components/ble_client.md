@@ -62,8 +62,7 @@ Automations:
 ## BLE Client Automation
 
 
-`on_connect`
-**************
+### ``on_connect``
 
 This automation is triggered when the client connects to the BLE device.
 
@@ -78,8 +77,7 @@ ble_client:
 
 ```
 
-`on_disconnect`
-*****************
+### ``on_disconnect``
 
 This automation is triggered when the client disconnects from a BLE device.
 
@@ -95,8 +93,7 @@ ble_client:
 
 ```
 
-`on_passkey_request`
-**********************
+### ``on_passkey_request``
 
 This automation is triggered when the BLE device requests a passkey for authentication.
 
@@ -112,8 +109,7 @@ ble_client:
 
 ```
 
-`on_passkey_notification`
-***************************
+### ``on_passkey_notification``
 
 This automation is triggered when a passkey is received from the BLE device.
 
@@ -129,8 +125,7 @@ ble_client:
 
 ```
 
-`on_numeric_comparison_request`
-*********************************
+### ``on_numeric_comparison_request``
 
 This automation is triggered when a numeric comparison is requested by the BLE device.
 

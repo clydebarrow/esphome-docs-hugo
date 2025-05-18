@@ -64,8 +64,7 @@ Once everything is hooked up and flashed, enable `esp32_touch:` `setup_mode: tru
 
 ------------
 
-Normal state
-************
+### Normal state
 
 ![Wet state](../images/leak-detector-m5stickC_dry.jpg)
 *Wet state*

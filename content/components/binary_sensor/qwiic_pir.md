@@ -36,8 +36,7 @@ binary_sensor:
 -  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 
-Debounce Modes
-**************
+### Debounce Modes
 
 There are three options for `debounce_mode`.
 

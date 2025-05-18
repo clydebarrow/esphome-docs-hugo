@@ -114,8 +114,7 @@ Automations:
 ## ESP32 Bluetooth Low Energy Tracker Automation
 
 
-`on_ble_advertise` Trigger
-************************************************
+### ``on_ble_advertise`` Trigger
 
 This automation will be triggered when a Bluetooth advertising is received. A variable `x` of type
 :apiclass:`esp32_ble_tracker::ESPBTDevice` is passed to the automation for use in lambdas.
@@ -151,8 +150,7 @@ Configuration variables:
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
 
-`on_ble_manufacturer_data_advertise` Trigger
-************************************************
+### ``on_ble_manufacturer_data_advertise`` Trigger
 
 This automation will be triggered when a Bluetooth advertising with manufacturer data is received. A
 variable `x` of type `std::vector<uint8_t>` is passed to the automation for use in lambdas.
@@ -181,8 +179,7 @@ Configuration variables:
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
 
-`on_ble_service_data_advertise` Trigger
-************************************************
+### ``on_ble_service_data_advertise`` Trigger
 
 This automation will be triggered when a Bluetooth advertising with service data is received. A
 variable `x` of type `std::vector<uint8_t>` is passed to the automation for use in lambdas.
@@ -207,8 +204,7 @@ Configuration variables:
 - **service_uuid** (**Required**, string): 16 bit, 32 bit, or 128 bit BLE Service UUID.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
-`on_scan_end` Trigger
-************************************************
+### ``on_scan_end`` Trigger
 
 This automation will be triggered when a Bluetooth scanning sequence has completed. If running
 with continuous set to true, this will trigger every time the scan completes (the duration of
@@ -228,8 +224,7 @@ Configuration variables:
 
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
-`esp32_ble_tracker.start_scan` Action
-************************************************
+### ``esp32_ble_tracker.start_scan`` Action
 
 Start a Bluetooth scan. If there is a scan already in progress, then the action is ignored.
 
@@ -258,8 +253,7 @@ esp32_ble_tracker:
 id(ble_tracker_id).start_scan()
 
 ```
-`esp32_ble_tracker.stop_scan` Action
-************************************************
+### ``esp32_ble_tracker.stop_scan`` Action
 
 Stops the bluetooth scanning. It can be started again with the above start scan action.
 

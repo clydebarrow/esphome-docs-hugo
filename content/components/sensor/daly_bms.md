@@ -23,8 +23,7 @@ daly_bms:
 
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Delay between data requests.
 - **address** (*Optional*, int): Address to use, defaults to `0x80`.
@@ -76,8 +75,7 @@ sensor:
       name: "Cell 4 Voltage"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **voltage** (*Optional*): Voltage of the battery pack connected to Daly BMS.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
@@ -138,8 +136,7 @@ text_sensor:
       name: "BMS Status"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **status** (*Optional*): The BMS Status (Charging, Discharging, Stationary).
   All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
@@ -157,8 +154,7 @@ binary_sensor:
       name: "Discharging MOS"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **charging_mos_enabled** (*Optional*): The BMS charging MOS status to enable the recharge of the battery.
   All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).

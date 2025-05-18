@@ -47,8 +47,7 @@ display:
 
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **model** (**Required**): One of
 
@@ -95,8 +94,7 @@ Configuration variables:
 ## Example configurations
 
 
-Lilygo T4-S3
-************
+### Lilygo T4-S3
 
 ```yaml
 spi:
@@ -136,8 +134,7 @@ psram:
   speed: 80MHz
 
 ```
-Lilygo T-Display S3 AMOLED
-**************************
+### Lilygo T-Display S3 AMOLED
 
 ```yaml
 spi:
@@ -178,8 +175,7 @@ display:
 
 
 ```
-JC4832W535 3.5" LCD Board
-*************************
+### JC4832W535 3.5" LCD Board
 
 This rotates the display into landscape mode using software rotation.
 

@@ -24,8 +24,7 @@ esp32_touch:
   setup_mode: false
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 -  **setup_mode** (*Optional*, boolean): Whether debug messages with the touch pad value should
    be displayed in the logs. Useful for finding out suitable thresholds for the binary sensors, but
@@ -128,8 +127,7 @@ an `OFF` state.
         pin: GPIOXX
         threshold: 1000
 
-Configuration variables:
-************************
+### Configuration variables:
 
 -  **pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to detect touch
    events on.

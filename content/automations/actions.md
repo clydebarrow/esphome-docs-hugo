@@ -156,8 +156,7 @@ useful (and even essential) for building all sorts of automations.
 ## Common Actions
 
 
-`delay` Action
-****************
+### ``delay`` Action
 
 This action delays the execution of the next action in the action list by a specified
 time period.
@@ -178,8 +177,7 @@ the delay is happening. When using a lambda call, you should return the delay va
 
 {{< /note >}}
 
-`if` Action
-*************
+### ``if`` Action
 
 This action first evaluates the `condition:` and then either
 executes the `then:` branch if the condition returns true or the `else:` branch if the condition returns false.
@@ -218,8 +216,7 @@ At least one of `condition`, `all` or `any` must be provided.
   Defaults to doing nothing.
 
 
-`lambda` Action
-*****************
+### ``lambda`` Action
 
 This action executes an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}})).
 
@@ -231,8 +228,7 @@ on_...:
 
 ```
 
-`repeat` Action
-*****************
+### ``repeat`` Action
 
 This action allows you to repeat a block a given number of times.
 For example, the automation below will flash the light five times.
@@ -254,8 +250,7 @@ Configuration variables:
 - **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to repeat.
 
 
-`wait_until` Action
-*********************
+### ``wait_until`` Action
 
 This action allows your automations to wait until a condition evaluates to true. (So this is just
 a shorthand way of writing a `while` action with an empty `then` block.)
@@ -289,8 +284,7 @@ Configuration variables:
 - **timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before timing out. Defaults to never timing out.
 
 
-`while` Action
-****************
+### ``while`` Action
 
 This action is similar to the [if]({{< ref "automations/actions#if_action" >}}) Action. The `while` action loops
 through a block as long as the given condition is true.
@@ -313,8 +307,7 @@ Configuration variables:
 - **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform until the condition evaluates to false.
 
 
-`component.update` Action
-***************************
+### ``component.update`` Action
 
 Using this action you can manually call the `update()` method of a component.
 
@@ -331,8 +324,7 @@ on_...:
 
 ```
 
-`component.suspend` Action
-****************************
+### ``component.suspend`` Action
 
 Using this action you can manually call the `stop_poller()` method of a component.
 
@@ -354,8 +346,7 @@ on_...:
 
 ```
 
-`component.resume` Action
-***************************
+### ``component.resume`` Action
 
 Using this action you can manually call the `start_poller()` method of a component.
 
@@ -391,8 +382,7 @@ on_...:
 "Conditions" provide a way for your device to take an action only when a specific (set of) condition(s) is satisfied.
 
 
-`and` / `all` / `or` / `any` / `xor` / `not` Condition
-******************************************************************
+### ``and`` / ``all`` / ``or`` / ``any`` / ``xor`` / ``not`` Condition
 
 Check a combination of conditions. `all` is a synonym for `and`, and `any` is a synonym for `or`.
 `all` and `any` may also be used directly in place of `condition`.
@@ -416,8 +406,7 @@ on_...:
 
 ```
 
-`for` Condition
-*****************
+### ``for`` Condition
 
 Allows you to check if a given condition has been true for at least a given amount of time.
 
@@ -440,8 +429,7 @@ Configuration variables:
 - **condition** (**Required**, [condition<config-condition>]({{< ref "#condition<config-condition>" >}})): The condition to check.
 
 
-`lambda` Condition
-********************
+### ``lambda`` Condition
 
 This condition performs an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}}))
 and can be used to create conditional flow in actions.
@@ -588,8 +576,7 @@ See also: [common_conditions]({{< ref "automations/actions#common_conditions" >}
 ## Tips and Tricks
 
 
-Do Automations Work Without a Network Connection
-************************************************
+### Do Automations Work Without a Network Connection
 
 This is a common question and the answer is **YES!** All automations you define in ESPHome are executed on the
 microcontroller itself and will continue to work even if the Wi-Fi network is down or the MQTT server is not reachable.
@@ -607,8 +594,7 @@ Beware, however, that disabling the reboot timeout(s) effectively disables the r
 power-cycle the device if it proves to be/remain unreachable on the network.
 
 
-Timers and Timeouts
-*******************
+### Timers and Timeouts
 
 While ESPHome does not provide a construction for timers, you can easily implement them by
 combining `script` and `delay`. You can have an absolute timeout or sliding timeout by

@@ -112,8 +112,7 @@ climate:
 ## Automations
 
 
-`on_alarm_start` Trigger
-**************************
+### ``on_alarm_start`` Trigger
 
 This automation will be triggered when a new alarm is activated by AC. The error code of the alarm will be given in the variable `code` (`uint8_t`), error message in the variable `message` (`const char *`). Those variables can be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
@@ -129,8 +128,7 @@ climate:
 
 ```
 
-`on_alarm_end` Trigger
-************************
+### ``on_alarm_end`` Trigger
 
 This automation will be triggered when a previously activated alarm is deactivated by AC. The error code of the alarm will be given in the variable `code` (`uint8_t`), error message in the variable `message` (`const char *`). Those variables can be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
@@ -146,8 +144,7 @@ climate:
 
 ```
 
-`on_status_message` Trigger
-*****************************
+### ``on_status_message`` Trigger
 
 This automation will be triggered when component receives new status packet from AC. Raw message binary (without header and checksum) will be provided in the variable `data` (`const char *`), message length in the variable `data_size` (`uint8_t`). Those variables can be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 This trigger can be used to support some features that unique for the model and not supported by others.
@@ -163,8 +160,7 @@ climate:
             args: [ 'data_size', 'data[0]', 'data[1]' ]
 
 ```
-`climate.haier.power_on` Action
-*********************************
+### ``climate.haier.power_on`` Action
 
 This action turns AC power on.
 
@@ -174,8 +170,7 @@ on_...:
     climate.haier.power_on: device_id
 
 ```
-`climate.haier.power_off` Action
-**********************************
+### ``climate.haier.power_off`` Action
 
 This action turns AC power off
 
@@ -185,8 +180,7 @@ on_...:
     climate.haier.power_off: device_id
 
 ```
-`climate.haier.power_toggle` Action
-*************************************
+### ``climate.haier.power_toggle`` Action
 
 This action toggles AC power
 
@@ -196,8 +190,7 @@ on_...:
     climate.haier.power_toggle: device_id
 
 ```
-`climate.haier.display_on` Action
-***********************************
+### ``climate.haier.display_on`` Action
 
 This action turns the AC display on.
 
@@ -207,8 +200,7 @@ on_...:
     climate.haier.display_on: device_id
 
 ```
-`climate.haier.display_off` Action
-************************************
+### ``climate.haier.display_off`` Action
 
 This action turns the AC display off.
 
@@ -218,8 +210,7 @@ on_...:
     climate.haier.display_off: device_id
 
 ```
-`climate.haier.health_on` Action
-**********************************
+### ``climate.haier.health_on`` Action
 
 Turn on health mode ([UV light sterilization](https://www.haierhvac.eu/en/node/1809)).
 
@@ -229,8 +220,7 @@ on_...:
     climate.haier.health_on: device_id
 
 ```
-`climate.haier.health_off` Action
-***********************************
+### ``climate.haier.health_off`` Action
 
 Turn off health mode.
 
@@ -240,8 +230,7 @@ on_...:
     climate.haier.health_off: device_id
 
 ```
-`climate.haier.beeper_on` Action
-**********************************
+### ``climate.haier.beeper_on`` Action
 
 (supported only by hOn) This action enables beep feedback on every command sent to AC.
 
@@ -251,8 +240,7 @@ on_...:
     climate.haier.beeper_on: device_id
 
 ```
-`climate.haier.beeper_off` Action
-***********************************
+### ``climate.haier.beeper_off`` Action
 
 (supported only by hOn) This action disables beep feedback on every command sent to AC (keep in mind that this will not work for IR remote commands).
 
@@ -262,8 +250,7 @@ on_...:
     climate.haier.beeper_off: device_id
 
 ```
-`climate.haier.set_vertical_airflow` Action
-*********************************************
+### ``climate.haier.set_vertical_airflow`` Action
 
 (supported only by hOn) Set direction for vertical airflow if the vertical swing is disabled. Possible values: Health_Up, Max_Up, Up, Center, Down, Health_Down.
 
@@ -275,8 +262,7 @@ on_...:
       vertical_airflow: Up
 
 ```
-`climate.haier.set_horizontal_airflow` Action
-***********************************************
+### ``climate.haier.set_horizontal_airflow`` Action
 
 (supported only by hOn) Set direction for horizontal airflow if the horizontal swing is disabled. Possible values: `Max_Left`, `Left`, `Center`, `Right`, `Max_Right`.
 
@@ -288,8 +274,7 @@ on_...:
       vertical_airflow: Right
 
 ```
-`climate.haier.start_self_cleaning` Action
-********************************************
+### ``climate.haier.start_self_cleaning`` Action
 
 (supported only by hOn) Start [self-cleaning](https://www.haier.com/in/blogs/beat-the-summer-heat-with-haier-self-cleaning-ac.shtml).
 
@@ -299,8 +284,7 @@ on_...:
     - climate.haier.start_self_cleaning: device_id
 
 ```
-`climate.haier.start_steri_cleaning` Action
-*********************************************
+### ``climate.haier.start_steri_cleaning`` Action
 
 (supported only by hOn) Start 56°C steri-cleaning.
 

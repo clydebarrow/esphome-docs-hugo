@@ -21,8 +21,7 @@ binary_sensor:
     name: "Copy of source_binary_sensor"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The binary sensor that should be mirrored.
 - All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
@@ -37,8 +36,7 @@ button:
     name: "Copy of source_button"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The button that should be mirrored.
 - All other options from [Button]({{< ref "components/button/_index#config-button" >}}).
@@ -53,8 +51,7 @@ cover:
     name: "Copy of source_cover"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The cover that should be mirrored.
 - All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
@@ -69,8 +66,7 @@ fan:
     name: "Copy of source_fan"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The fan that should be mirrored.
 - All other options from [Fan]({{< ref "components/fan/_index#config-fan" >}}).
@@ -85,8 +81,7 @@ lock:
     name: "Copy of source_lock"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The lock that should be mirrored.
 - All other options from [Lock]({{< ref "components/lock/_index#config-lock" >}}).
@@ -101,8 +96,7 @@ number:
     name: "Copy of source_number"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The number that should be mirrored.
 - All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
@@ -117,8 +111,7 @@ select:
     name: "Copy of source_select"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The select that should be mirrored.
 - All other options from [Select]({{< ref "components/select/_index#config-select" >}}).
@@ -134,8 +127,7 @@ sensor:
     name: "Copy of source_sensor"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The sensor that should be mirrored.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
@@ -150,8 +142,7 @@ switch:
     name: "Copy of source_switch"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The switch that should be mirrored.
 - All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
@@ -166,8 +157,7 @@ text_sensor:
     name: "Copy of source_text_sensor"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The text sensor that should be mirrored.
 - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
@@ -182,8 +172,7 @@ text:
     name: "Copy of source_text"
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The text that should be mirrored.
 - All other options from [Text]({{< ref "components/text/_index#config-text" >}}).

@@ -89,8 +89,7 @@ Notice that relative paths are supported, so you can enter `my_components` as th
 ESPHome will load components from a `my_components` folder in the same folder where your YAML configuration
 is.
 
-Example of local components
-***************************
+### Example of local components
 
 Given the above example of `my_components`, the folder structure must look like:
 
@@ -122,8 +121,7 @@ folder. The latter makes sharing a component from a forked ESPHome repository ea
 
 The url to the repository may be remote (`http:` or `https:` scheme) or local (`file:` scheme with an absolute path.)
 
-Example of git repositories
-***************************
+### Example of git repositories
 
 For repositories where you share one or a few components:
 
@@ -206,8 +204,7 @@ security measure; your username and password will necessarily be stored in clear
 `.esphome` directory.
 
 
-Refresh
-*******
+### Refresh
 
 Components are initially cloned into a cache directory, then the repository is checked for updates
 (via *git pull*) after the `refresh:` time passes since last check.

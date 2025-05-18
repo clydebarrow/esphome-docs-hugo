@@ -51,8 +51,7 @@ binary_sensor:
       inverted: false
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23008 component.
 - **address** (*Optional*, int): The I²C address of the driver.
@@ -61,8 +60,7 @@ Configuration variables:
   Useful when the MCP23008's power supply is greater than 3.3 volts. Note that this pin
   will require a pull-up resistor (to 3.3 volts) when this mode is enabled.
 
-Pin configuration variables:
-****************************
+### Pin configuration variables:
 
 - **mcp23xxx** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23008 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
@@ -113,15 +111,13 @@ binary_sensor:
 
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23016 component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x20`.
 
-Pin configuration variables:
-****************************
+### Pin configuration variables:
 
 - **mcp23xxx** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23016 component.
 - All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
@@ -176,8 +172,7 @@ binary_sensor:
       inverted: false
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23017 component.
 - **address** (*Optional*, int): The I²C address of the driver.
@@ -186,8 +181,7 @@ Configuration variables:
   Useful when the MCP23017's power supply is greater than 3.3 volts. Note that these pins
   will require pull-up resistors (to 3.3 volts) when this mode is enabled.
 
-Pin configuration variables:
-****************************
+### Pin configuration variables:
 
 - **mcp23xxx** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23017 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.

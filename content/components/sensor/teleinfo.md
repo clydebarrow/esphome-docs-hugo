@@ -65,8 +65,7 @@ In teleinfo platform:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation or multiple hubs.
 
-Sensor
-******
+### Sensor
 
 ```yaml
 sensor:
@@ -94,8 +93,7 @@ sensor:
 - **teleinfo_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of used hub.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-Text Sensor
-***********
+### Text Sensor
 
 ```yaml
 text_sensor:

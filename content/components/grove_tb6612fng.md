@@ -17,8 +17,7 @@ At the current stage of implementation only DC motor is implemented.
       - address: 0x14
         id: test_motor
 
-Configuration variables:
-************************
+### Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this TB6612FNG component.
 - **address** (*Optional*, int): The I²C address of the driver.

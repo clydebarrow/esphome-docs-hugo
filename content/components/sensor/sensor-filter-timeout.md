@@ -3,8 +3,7 @@ description: ""
 title: ""
 ---
 
-`timeout`
-************
+### ``timeout``
 
 After the first value has been sent, if no subsequent value is published within the
 `specified time period`, send a templatable value which defaults to `NaN`.

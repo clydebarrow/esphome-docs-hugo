@@ -34,8 +34,7 @@ touchscreen:
         ...
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 - **display** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The display to use this touchscreen with.
 - **transform** (*Optional*): Transform the touchscreen presentation using hardware. All defaults are `false`.
 
@@ -257,8 +256,7 @@ binary_sensor:
     use_raw: true
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **touchscreen_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the touchscreen.
 - **x_min** (**Required**, int): Left coordinate of the screen area to be detected as the virtual button.

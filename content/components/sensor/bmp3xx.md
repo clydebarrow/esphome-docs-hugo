@@ -31,8 +31,7 @@ sensor:
 
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **address** (*Optional*, int): Manually specify the I²C address of  the sensor. Defaults to `0x77`. 
   Another address can be `0x76`.
@@ -71,8 +70,7 @@ sensor:
 
 
 ```
-Configuration variables:
-************************
+### Configuration variables:
 
 - **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The Chip Select (CS) pin.
 - **temperature** (*Optional*): The information for the temperature sensor.

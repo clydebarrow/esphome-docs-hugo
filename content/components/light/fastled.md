@@ -48,8 +48,7 @@ Clockless FastLED lights differ from the
         rgb_order: BRG
         name: "FastLED WS2811 Light"
 
-Configuration variables:
-************************
+### Configuration variables:
 
 - **chipset** (**Required**, string): Set a chipset to use.
   See [fastled_clockless-chipsets]({{< ref "components/light/fastled#fastled_clockless-chipsets" >}}) for options.
@@ -65,8 +64,7 @@ Configuration variables:
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 
-Supported Chipsets
-******************
+### Supported Chipsets
 
 - `NEOPIXEL`
 - `WS2811`
@@ -120,8 +118,7 @@ whereas the clockless lights only need a single pin.
         rgb_order: BRG
         name: "FastLED SPI Light"
 
-Configuration variables:
-************************
+### Configuration variables:
 
 - **chipset** (**Required**, string): Set a chipset to use. See [fastled_spi-chipsets]({{< ref "components/light/fastled#fastled_spi-chipsets" >}}) for options.
 - **data_pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the FastLED light.
@@ -140,8 +137,7 @@ Configuration variables:
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 
-Supported Chipsets
-******************
+### Supported Chipsets
 
 - `APA102`
 - `DOTSTAR`

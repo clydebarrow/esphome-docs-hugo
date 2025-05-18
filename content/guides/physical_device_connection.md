@@ -108,8 +108,7 @@ topic not covered here, but does not pose any safety risk.
 is wrong or are uncomfortable with continuing, stop immediately.
 
 {{< /warning >}}
-USB Port on Device
-******************
+### USB Port on Device
 
 ![A device with a USB port and a serial adapter built-in](/images/nodemcu_esp8266.jpg)
 *A device with a USB port and a serial adapter built-in*
@@ -125,8 +124,7 @@ This isn't likely to be very useful without connecting additional sensors to it
 by either soldering or using a breadboard, but you do not need anything else to
 *just* flash ESPHome on it.
 
-Pre-soldered Programming Header
-*******************************
+### Pre-soldered Programming Header
 
 ![A device that comes with programming headers pre-installed](../images/programming-header-populated.jpg)
 *A device that comes with programming headers pre-installed*
@@ -136,8 +134,7 @@ In this situation, you'll need just [jumper wires]({{< ref "#jumper-wires" >}}) 
 [USB to serial adapter]({{< ref "#usb-serial-adapter" >}}). You don't need to solder
 anything, that's already been done by the factory.
 
-Unpopulated Programming Header
-******************************
+### Unpopulated Programming Header
 
 ![A device that has a spot for programming headers on the circuit board](../images/programming-header-unpopulated.jpg)
 *A device that has a spot for programming headers on the circuit board*
@@ -152,8 +149,7 @@ These headers sometimes have writing on the circuit board indicating what each
 pin is. If your header does not, either look it up on the internet, or use a
 multimeter in continuity mode to figure it out (advanced topic).
 
-Solder-filled Programming Header
-********************************
+### Solder-filled Programming Header
 
 ![A set of programming headers that are filled with solder](../images/programming-header-filled.jpg)
 *A set of programming headers that are filled with solder*
@@ -171,8 +167,7 @@ These headers sometimes have writing on the circuit board indicating what each
 pin is. If your header does not, either look it up on the internet, or use a
 multimeter in continuity mode to figure it out (advanced topic).
 
-Module Only
-***********
+### Module Only
 
 ![An ESP8266 module with programming wires soldered on](../images/module-only-programming.jpg)
 *An ESP8266 module with programming wires soldered on*
@@ -189,8 +184,7 @@ module. You can find the correct places to solder the wires by looking up the
 module model number on the internet. You can find `one list of commonly used
 modules here <https://tasmota.github.io/docs/Pinouts/>`_.
 
-Bare Chip
-*********
+### Bare Chip
 
 ![A bare ESP8266 IC with no programming header](../images/programming-bare-chip.jpg)
 *A bare ESP8266 IC with no programming header*

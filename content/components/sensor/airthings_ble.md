@@ -34,8 +34,7 @@ Once the device is found, remove the `airthings_ble` device tracker from your co
 
 ## Supported Devices
 
-Airthings Wave Plus Sensor
-**************************
+### Airthings Wave Plus Sensor
 
 AirThings Wave Plus tracks radon (24h and long term), airborne chemicals, CO2, temperature, atmospheric pressure and humidity.
 
@@ -78,8 +77,7 @@ ble_client:
 esp32_ble_tracker:
 
 ```
-Airthings Wave Mini Sensor
-**************************
+### Airthings Wave Mini Sensor
 
 AirThings Wave Mini tracks airborne chemicals, temperature, pressure and humidity.
 
@@ -127,8 +125,7 @@ interval.
 
 
 {{< /note >}}
-Battery Level Reporting
-***********************
+### Battery Level Reporting
 
 If you wish to have the 'percentage of battery life remaining'
 reported as a sensor, you can make use of the [copy-sensor]({{< ref "components/copy#copy-sensor" >}}) component.

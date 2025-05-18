@@ -719,8 +719,7 @@ Then battery charge settings are sent.
 ## Automation
 
 
-`on_command_sent`
-*******************
+### ``on_command_sent``
 
 This automation will be triggered when a command has been sent by the `modbus_controller`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
@@ -735,8 +734,7 @@ modbus_controller:
 
 ```
 
-`on_online`
-*******************
+### ``on_online``
 
 This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
@@ -751,8 +749,7 @@ modbus_controller:
 
 ```
 
-`on_offline`
-*******************
+### ``on_offline``
 
 This automation will be triggered when a `modbus_controller` goes `offline` (See [Lambdas]({{< ref "automations/templates#config-lambda" >}})). In [offline_skip_updates]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
 you can get the function code in `function_code` and the register address in `address`.

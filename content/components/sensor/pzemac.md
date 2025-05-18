@@ -85,8 +85,7 @@ sensor:
 - **modbus_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the Modbus hub.
 
 
-`pzemac.reset_energy` Action
-******************************
+### ``pzemac.reset_energy`` Action
 
 This action resets the total energy value of the pzemac device with the given ID when executed.
 

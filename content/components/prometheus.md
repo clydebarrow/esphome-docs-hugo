@@ -77,8 +77,7 @@ You can relabel metric name or ID labels by adding a `relabel` block in the `pro
 and then adding a block with `id` and/or `name` fields for each sensor whose labels your want to override.
 
 
-`relabel`
-***********
+### ``relabel``
 
 Set the `id` and `name` label values of the Prometheus metric for the sensor with the specified ID.
 

@@ -70,8 +70,7 @@ Automations:
 ## Tuya Automation
 
 
-`on_datapoint_update`
-***********************
+### ``on_datapoint_update``
 
 This automation will be triggered when a a Tuya datapoint update is received.
 A variable `x` is passed to the automation for use in lambdas.

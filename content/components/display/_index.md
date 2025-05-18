@@ -20,8 +20,7 @@ For graphical displays, which offer the greatest flexibility, there are two opti
 - [LVGL ]({{< relref "/components/lvgl/index" >}}) - Light and Versatile Graphics Library
 
 
-Configuration variables:
-************************
+### Configuration variables:
 
 All display components inherit these configuration variables.
 

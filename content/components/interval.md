@@ -20,8 +20,7 @@ interval:
 ```
 If a startup delay is configured, the first execution of the actions will not occur before at least that time after boot.
 
-Configuration variables:
-************************
+### Configuration variables:
 
 - **interval** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to execute the action with.
 - **startup_delay** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): An optional startup delay - defaults to zero.

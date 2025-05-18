@@ -306,8 +306,7 @@ service data enter
 { "file": 23 }
 
 ```
-Sample code
-***********
+### Sample code
 
 ```yaml
 uart:

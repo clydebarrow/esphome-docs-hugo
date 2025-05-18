@@ -67,8 +67,7 @@ CTS/RTS pins in the event that you need to use GPIO1 and GPIO3 for something els
 Note that many common boards have their USB-to-serial adapters fixed to the default GPIOs used by `UART0`,
 so if you use any other configuration you will not get log messages over the on-board USB.
 
-Default UART GPIO Pins
-**********************
+### Default UART GPIO Pins
 
 |  | `UART0` | `UART0_SWAP` | `UART1` | `UART2` | `USB_CDC` | `USB_SERIAL_JTAG` |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -218,8 +217,7 @@ on_...:
 ## Logger Automation
 
 
-`on_message`
-**************
+### ``on_message``
 
 This automation will be triggered when a new message is added to the log.
 In [lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the message, log level and tag from the trigger

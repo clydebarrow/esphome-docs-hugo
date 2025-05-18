@@ -1912,8 +1912,7 @@ on_...:
 ## Automations
 
 
-Actions
-*******
+### Actions
 
 As outlined in the sections above, each widget type supports several of its own, unique actions.
 Several universal actions are also available for all widgets, these are outlined below.
@@ -1988,8 +1987,7 @@ These [actions]({{< ref "automations/actions#actions-action" >}}) are shorthands
 
 ```
 
-Triggers
-********
+### Triggers
 
 Specific triggers like `on_value` and `on_change`` are available for certain widgets; they are described above in their respective section.
 Some universal triggers are also available for all of the widgets:
@@ -2045,8 +2043,7 @@ when the page becomes active or inactive respectively.
 
 
 ```
-`on_boot`
-*************
+### ``on_boot``
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered after LVGL has been setup. It is available on the `lvgl` component and any widget and can be used to perform any LVGL related setup that is not possible with static configuration.
 When used on a widget, it does not act specifically on that widget but can be used to keep actions related to that widget together with its configuration.

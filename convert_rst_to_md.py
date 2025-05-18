@@ -143,6 +143,13 @@ def convert_rst_to_md(rst_content, filename):
             md_lines.append(f"## {line}")
             i += 2
             continue
+            
+        # Handle asterisk-style headings (subheadings)
+        if i + 1 < len(lines) and re.match(r'^\*+$', lines[i + 1]) and line:
+            # Use heading level 3 (###) for asterisk-style headings
+            md_lines.append(f"### {line}")
+            i += 2
+            continue
         
         # Handle code blocks - check for both standalone and nested code blocks
         if line.lstrip().startswith('.. code-block::'):

@@ -178,8 +178,7 @@ lvgl:
 See [lvgl-cookbook-navigator]({{< ref "cookbook/lvgl#lvgl-cookbook-navigator" >}}) in the Cookbook for an example which demonstrates how to implement a page navigation bar at the bottom of the screen.
 
 
-Choosing a buffer size
-**********************
+### Choosing a buffer size
 
 The `buffer_size` option is a percentage of the display size. For example, if you have a 320x240 display, the buffer size is `320 * 240 * 2` bytes (for RGB565) = `153600` bytes. If you set the buffer size to `50%`,
 then the buffer will be `76800` bytes. If you set it to `25%`, then the buffer will be `38400` bytes. The default value is `100%`.
@@ -195,8 +194,7 @@ This may however reduce the internal RAM available for other components. A buffe
 
 
 
-Multiple LVGL configurations
-****************************
+### Multiple LVGL configurations
 
 If you have multiple displays configured, and wish to have different content displayed on each display, you can configure multiple LVGL configurations. For example:
 
@@ -214,8 +212,7 @@ lvgl:
             text: 'Hello World #2!'
 ```
 
-Colors
-******
+### Colors
 
 Colors can be specified anywhere in the LVGL configuration either by referencing a preconfigured [ESPHome color]({{< ref "components/display/_index#config-color" >}}) ID or by representing the color in the common hexadecimal notation. For example, `0xFF0000` would be red.
 
@@ -230,8 +227,7 @@ label:
 
 ```
 
-Opacity
-*******
+### Opacity
 
 Various parts of the widgets (like background, borders etc.) support opacity. It can be specified in one of several ways:
 
@@ -243,8 +239,7 @@ Various parts of the widgets (like background, borders etc.) support opacity. It
 Default values depend on widget specifics.
 
 
-Fonts
-*****
+### Fonts
 
 Two font choices are available:
 
@@ -304,8 +299,7 @@ In addition to the above, the following special fonts are available from LVGL as
 - `dejavu_16_persian_hebrew`: 16 px font with normal range + Hebrew, Arabic, Persian letters and all their forms.
 
 
-Style properties
-****************
+### Style properties
 
 LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
@@ -393,8 +387,7 @@ These style properties may be applied to any widget, though not all widgets use 
 - **translate_y** (*Optional*, int16 or percentage): Movement of the widget with this value in vertical direction.
 
 
-Themes
-******
+### Themes
 
 You can configure a global theme for all widgets of a given type at the top level with the `theme:` configuration variable. In the example below, all the `arc`, `slider` and `button` widgets will, by default, use the styles and properties defined here. A combination of styles and [states]({{< ref "components/lvgl/widgets#lvgl-widgetproperty-state" >}}) can be chosen for every widget.
 
@@ -473,8 +466,7 @@ Feel free to experiment to discover inheritance and precedence of the styles bas
 
 [lvgl-cookbook-theme]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) The Cookbook contains an example which demonstrates how to implement a gradient style for your widgets.
 
-`lvgl.style.update`
-*********************
+### ``lvgl.style.update``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) allows changing/updating the properties of a style at run time. This can be used to
 implement dynamic themes, e.g. light/dark mode, or to change the appearance of widgets based on user interaction.
@@ -500,8 +492,7 @@ on_...:
 
 ```
 
-Layouts
-*******
+### Layouts
 
 Layouts aim to position widgets automatically, eliminating the need to specify `x` and `y` coordinates to position each widget. This is a great way to simplify your configuration as it allows you to omit alignment options.
 
@@ -642,8 +633,7 @@ Values for use with `grid_column_align`, `grid_row_align`, `grid_cell_x_align`, 
     To visualize real, calculated sizes of transparent widgets you can temporarily set `outline_width: 1` on them.
 
 
-Gradients
-*********
+### Gradients
 
 A gradient is a sequence of colors which can be applied to an object using the `bg_grad` style option. Gradients are defined in the *gradients* section of the LVGL configuration by providing two or more color stop points.
  Each entry has the following options:
@@ -692,8 +682,7 @@ Several actions are available for the LVGL component itself, these are outlined 
 
 
 
-`lvgl.widget.redraw`
-**********************
+### ``lvgl.widget.redraw``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) redraws the entire screen, or optionally only selected widgets. It does not change
 any widget properties. It is mostly useful to redraw the screen after resuming LVGL from the paused state.
@@ -710,8 +699,7 @@ on_...:
 
 ```
 
-`lvgl.widget.refresh`
-***********************
+### ``lvgl.widget.refresh``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) re-evaluates all properties specified with lambdas in the specified widget's configuration. This offers
 an alternative technique to using the `lvgl.widget.update` action, which updates specified properties.
@@ -733,8 +721,7 @@ on_...:
 
 ```
 
-`lvgl.pause`
-**************
+### ``lvgl.pause``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) pauses the activity of LVGL, including rendering.
 
@@ -749,8 +736,7 @@ on_...:
 
 ```
 
-`lvgl.resume`
-***************
+### ``lvgl.resume``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) resumes the activity of LVGL, including rendering.
 
@@ -763,8 +749,7 @@ on_...:
 
 
 ```
-`lvgl.update`
-***************
+### ``lvgl.update``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) allows changing/updating the `disp_bg_color` or `disp_bg_image` configuration variables of the main component, making it possible to change the background color or wallpaper at any time.
 
@@ -779,8 +764,7 @@ on_...:
 
 ```
 
-`lvgl.page.next`, `lvgl.page.previous`
-******************************************
+### ``lvgl.page.next``, ``lvgl.page.previous``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) changes the page to the next/previous based on the configuration (pages with their `skip` option enabled are...skipped). Page changes will wrap around at the end.
 
@@ -802,8 +786,7 @@ on_...:
 
 ```
 
-`lvgl.page.show`
-******************
+### ``lvgl.page.show``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) shows a specific page (including pages with their `skip` option enabled).
 
@@ -823,8 +806,7 @@ on_...:
 
 ```
 
-`lvgl.widget.focus`
-*********************
+### ``lvgl.widget.focus``
 
 This [action]({{< ref "automations/actions#actions-action" >}}) moves the input focus to the nominated widget. Used mainly with encoder inputs
 to select a specific widget to receive input events. It may also allow the focus to be frozen on that widget,
@@ -875,8 +857,7 @@ on_...:
 ## Conditions
 
 
-`lvgl.is_idle`
-****************
+### ``lvgl.is_idle``
 
 This [condition]({{< ref "automations/actions#common_conditions" >}}) checks if the amount of time specified has passed since the last touch event.
 
@@ -898,8 +879,7 @@ on_...:
 
 ```
 
-`lvgl.is_paused`
-******************
+### ``lvgl.is_paused``
 
 This [condition]({{< ref "automations/actions#common_conditions" >}}) checks if LVGL is in the paused state or not.
 
@@ -915,8 +895,7 @@ on_...:
           - lvgl.resume:
 
 ```
-`lvgl.page.is_showing`
-************************
+### ``lvgl.page.is_showing``
 
 This [condition]({{< ref "automations/actions#common_conditions" >}}) checks if the nominated page is the one currently showing.
 
@@ -938,8 +917,7 @@ on_...:
 Widget level [interaction triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) are available, plus a few for the LVGL component itself:
 
 
-`on_idle`
-***********
+### ``on_idle``
 
 LVGL has a notion of screen inactivity -- i.e. the time since the last user interaction with the screen is tracked. This can, for example, be used to dim the display backlight or turn it off after a moment of inactivity (like a screen saver). Every use of an input device (touchscreen, rotary encoder) counts as an activity and resets the inactivity counter.
 
@@ -963,20 +941,17 @@ lvgl:
 See [lvgl-cookbook-idlescreen]({{< ref "cookbook/lvgl#lvgl-cookbook-idlescreen" >}}) for an example which demonstrates how to implement screen saving with idle settings.
 
 
-`on_pause`
-************
+### ``on_pause``
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered when LVGL is paused. This can be used to perform any desired actions when the screen is locked, such as turning off the display backlight.
 
 
-`on_resume`
-*************
+### ``on_resume``
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered when LVGL is resumed. This can be used to perform any desired actions when the screen is unlocked, such as turning on the display backlight.
 
 
-`on_boot`
-*************
+### ``on_boot``
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered after LVGL has been setup. It is also available on any widget, but the timing is the same.
 

@@ -58,8 +58,7 @@ Additional configuration is described in the [Display Menu]({{< ref "components/
 
 ## Drawing Modes
 
-Pop Up Mode
-***********
+### Pop Up Mode
 
 When a **display** is specified the menu will create a [page]({{< ref "components/display/_index#display-pages" >}}) as part of the initialisation. It will render to the entire
 of the display when invoked. This is useful when you may want to use the display for other purposes but show a menu in response to user
@@ -70,8 +69,7 @@ Pop Up Mode requires that your display makes use of :ref:`pages <display-pages>`
 behave as expected. Instead you will have to use Advanced Mode
 
 {{< /note >}}
-Advanced Drawing Mode
-*********************
+### Advanced Drawing Mode
 
 If you do not specify a **display** when setting up a menu you will be responsible for controlling drawing of the menu. This also allows you to
 render the menu to a smaller portion than the available screen size. It May be useful in situations where you want to display a menu as part of a
@@ -99,8 +97,7 @@ display:
         it.menu(half_display_width, 0, id(my_menu), half_display_width, display_height);
 
 ```
-Emulating Pop Up Mode
-*********************
+### Emulating Pop Up Mode
 
 If you wish to emulate Pop Up Mode the following sample will emulate the same behaviour. This can
 be useful if you're using a display without [pages]({{< ref "components/display/_index#display-pages" >}}) or if you have other

@@ -1,0 +1,25 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "Image" -}}
+{{- $caption := .Get "caption" -}}
+{{- $class := .Get "class" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+
+{{/* Check if image exists in local images directory first */}}
+{{- $localPath := printf "images/%s" $src -}}
+{{- $componentPath := printf "%s/images/%s" (path.Dir .Page.File.Path) $src -}}
+{{- $globalPath := printf "images/%s" $src -}}
+
+{{- $imagePath := "" -}}
+{{- if fileExists (printf "static/%s" $componentPath) -}}
+  {{- $imagePath = $componentPath -}}
+{{- else if fileExists (printf "static/%s" $globalPath) -}}
+  {{- $imagePath = $globalPath -}}
+{{- else -}}
+  {{- $imagePath = $src -}}
+{{- end -}}
+
+<figure {{ with $class }}class="{{ . }}"{{ end }}>
+  <img src="{{ $imagePath | relURL }}" alt="{{ $alt }}" {{ with $width }}width="{{ . }}"{{ end }} {{ with $height }}height="{{ . }}"{{ end }}>
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

@@ -56,7 +56,7 @@ rtl87xx:
 {{< note >}}
 Support for the LibreTiny platform is still in development and there could be issues or missing components.
 
-Please report any issues on `LibreTiny GitHub <https://github.com/kuba2k2/libretiny>`__.
+Please report any issues on [LibreTiny GitHub](https://github.com/kuba2k2/libretiny).
 
 {{< /note >}}
 ## Getting Started

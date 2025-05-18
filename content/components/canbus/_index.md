@@ -193,7 +193,7 @@ Standard IDs and Extended IDs can coexist on the same segment.
 
 {{< note >}}
 It is important to know that "standard" and "extended" addresses denote different addresses. For example,
-Standard ``0x123`` and Extended ``0x123`` are, in fact, different addresses.
+Standard `0x123` and Extended `0x123` are, in fact, different addresses.
 
 {{< /note >}}
 Decimal or hexadecimal notation may be used for IDs:

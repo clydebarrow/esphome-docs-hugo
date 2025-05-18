@@ -48,7 +48,7 @@ This should open the ESPHome add-on page; once you're there, just click the INST
 
 {{< note >}}
 If you're running Home Assistant in a way that does not provide access to add-ons, you may
-:ref:`run the ESPHome Device Builder independently in Docker<esphome-device-builder-docker>`.
+[run the ESPHome Device Builder independently in Docker<esphome-device-builder-docker>]({{< ref "#run the ESPHome Device Builder independently in Docker<esphome-device-builder-docker>" >}}).
 
 {{< /note >}}
 The web UI will present a wizard which will walk you through creating your first configuration:
@@ -61,7 +61,7 @@ The web UI will present a wizard which will walk you through creating your first
 The initial installation of ESPHome onto a new device is often the most difficult and/or intimidating part -- at
 least until you've done it a few times.
 
-If you haven't done this before, please see :doc:`physical_device_connection`.
+If you haven't done this before, please see [physical_device_connection]({{< ref "physical_device_connection/" >}}).
 
 {{< /note >}}
 If you didn't do so when prompted upon creating your first device, you'll need to enter your Wi-Fi network credentials
@@ -100,13 +100,13 @@ configuration for the "Bedroom Light" node in the picture above can be found in 
 {{< note >}}
 Home Assistant add-ons run as individual containers; this can make accessing your configuration files/logs a bit
 challenging. If you wish to do so, you'll need to install Home Assistant's
-`SSH add-on <https://www.home-assistant.io/common-tasks/os/#installing-and-using-the-ssh-add-on>`__, configure it
+[SSH add-on](https://www.home-assistant.io/common-tasks/os/#installing-and-using-the-ssh-add-on), configure it
 with a username and password and also disable "Protection Mode" (please assess the risks associated with doing so).
 
 Finally, to access the logs from a device through an SSH client, you can log in and use a command like
-``docker exec -it addon_15ef4d2f_esphome esphome logs /config/esphome/bedroom-light.yaml``.
+`docker exec -it addon_15ef4d2f_esphome esphome logs /config/esphome/bedroom-light.yaml`.
 
-See :doc:`getting_started_command_line` for more detail.
+See [getting_started_command_line]({{< ref "getting_started_command_line/" >}}) for more detail.
 
 {{< /note >}}
 ## Adding Features

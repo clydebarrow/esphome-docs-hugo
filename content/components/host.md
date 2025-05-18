@@ -12,7 +12,7 @@ The only configuration required is to optionally set a dummy MAC address that wi
 configuration to Home Assistant (the native MAC address is not readily available.)
 
 {{< note >}}
-HA will not automatically discover an ESPHome instance running on ``host`` using mDNS, and you will need
+HA will not automatically discover an ESPHome instance running on `host` using mDNS, and you will need
 to add it explicitly using the IP address of your host computer.
 
 {{< /note >}}

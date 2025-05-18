@@ -68,9 +68,9 @@ image:
   - `FLOYDSTEINBERG`: Uses Floyd-Steinberg dither to approximate the original image luminosity levels.
 
 {{< note >}}
-To use images you will need to have the python ``pillow`` package installed.
+To use images you will need to have the python `pillow` package installed.
 Additionally, if you want to use SVG images (including MDI images), you will
-additionally need to have the python ``cairosvg`` package installed. These are automatically installed when
+additionally need to have the python `cairosvg` package installed. These are automatically installed when
 setting up ESPHome via the usual methods.
 
 {{< /note >}}

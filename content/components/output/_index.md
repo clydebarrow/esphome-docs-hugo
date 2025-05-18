@@ -61,11 +61,11 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(light_1).turn_on();
+```cpp
+id(light_1).turn_on();
+```
 
 {{< /note >}}
 {{< anchor "output-turn_off_action" >}}
@@ -82,11 +82,11 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(light_1).turn_off();
+```cpp
+id(light_1).turn_off();
+```
 
 {{< /note >}}
 {{< anchor "output-set_level_action" >}}
@@ -106,12 +106,12 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    // range is 0.0 (off) to 1.0 (on)
-    id(light_1).set_level(0.5);
+```cpp
+// range is 0.0 (off) to 1.0 (on)
+id(light_1).set_level(0.5);
+```
 
 {{< /note >}}
 ## Full Output Index

@@ -73,9 +73,9 @@ Configuration variables:
 {{< note >}}
 This action can also be written in lambdas:
 
-.. code-block:: cpp
-
-    id(my_global_var) = 10;
+```cpp
+id(my_global_var) = 10;
+```
 
 {{< /note >}}
 ## See Also

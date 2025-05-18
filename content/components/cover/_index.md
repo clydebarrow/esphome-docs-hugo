@@ -78,13 +78,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(cover_1).make_call();
-    call.set_command_open();
-    call.perform();
+```cpp
+auto call = id(cover_1).make_call();
+call.set_command_open();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "cover-close_action" >}}
@@ -100,13 +100,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(cover_1).make_call();
-    call.set_command_close();
-    call.perform();
+```cpp
+auto call = id(cover_1).make_call();
+call.set_command_close();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "cover-stop_action" >}}
@@ -122,13 +122,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(cover_1).make_call();
-    call.set_command_stop();
-    call.perform();
+```cpp
+auto call = id(cover_1).make_call();
+call.set_command_stop();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "cover-toggle_action" >}}
@@ -146,13 +146,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(cover_1).make_call();
-    call.set_command_toggle();
-    call.perform();
+```cpp
+auto call = id(cover_1).make_call();
+call.set_command_toggle();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "cover-control_action" >}}
@@ -184,14 +184,14 @@ Configuration variables:
 - **tilt** (*Optional*, float): The tilt position to set. In range 0% - 100%.
 
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(cover_1).make_call();
-    // set attributes
-    call.set_position(0.5);
-    call.perform();
+```cpp
+auto call = id(cover_1).make_call();
+// set attributes
+call.set_position(0.5);
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "cover-lambda_calls" >}}

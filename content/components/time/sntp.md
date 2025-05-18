@@ -24,11 +24,11 @@ time:
 - All other options from [Base Time Configuration]({{< ref "components/time/_index#base_time_config" >}}).
 
 {{< note >}}
-If your are using :ref:`wifi-manual_ip` make sure to configure a DNS Server (dns1, dns2) or use only IP addresses for the NTP servers.
+If your are using [Manual IPs]({{< ref "components/wifi#wifi-manual_ip" >}}) make sure to configure a DNS Server (dns1, dns2) or use only IP addresses for the NTP servers.
 
 {{< /note >}}
 {{< warning >}}
-Due to limitations of the SNTP implementation, this component will trigger ``on_time_sync`` only once when it detects that the
+Due to limitations of the SNTP implementation, this component will trigger `on_time_sync` only once when it detects that the
 system clock has been set, even if the update was not done by the SNTP implementation!
 This must be taken into consideration when SNTP is used together with other real time components, where another time source could
 update the time before SNTP synchronizes.

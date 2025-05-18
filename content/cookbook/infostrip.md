@@ -86,7 +86,7 @@ light:
 
 ```
 {{< warning >}}
-Consider the warning in :doc:`/components/light/partition` regarging the increased memory usage.
+Consider the warning in [/components/light/partition]({{< ref "/components/light/partition" >}}) regarging the increased memory usage.
 
 {{< /warning >}}
 ## Home Assistant configuration

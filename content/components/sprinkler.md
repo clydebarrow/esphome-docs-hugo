@@ -530,13 +530,13 @@ on_...:
 
 ```
 {{< note >}}
-- The ``start_single_valve`` action ignores whether a valve is enabled via its enable switch.
-- The ``next_valve`` and ``previous_valve`` actions may not appear to respond immediately if either
-  ``manual_selection_delay`` or any of the various delay mechanisms described in the
-  :ref:`sprinkler-controller-pump_and_distribution_valve_coordination` section below are configured.
+- The `start_single_valve` action ignores whether a valve is enabled via its enable switch.
+- The `next_valve` and `previous_valve` actions may not appear to respond immediately if either
+  `manual_selection_delay` or any of the various delay mechanisms described in the
+  [Pump and Distribution Valve Coordination]({{< ref "components/sprinkler#sprinkler-controller-pump_and_distribution_valve_coordination" >}}) section below are configured.
   If you are using any of these configuration options, be sure to allow the delay intervals to elapse
   before assuming something isn't working!
-- If a valve is active when its ``run_duration`` or the multiplier value is changed, the active
+- If a valve is active when its `run_duration` or the multiplier value is changed, the active
   valve's run duration will remain unaffected until the next time it is started.
 
 {{< /note >}}
@@ -589,8 +589,8 @@ valve would be switched off three seconds prior to the upstream valve. (In these
 be desirable to enable `valve_open_delay`, as well.)
 
 {{< note >}}
-Using ``pump_stop_valve_delay`` or ``pump_stop_pump_delay`` with ``valve_open_delay`` and
-``pump_switch_off_during_valve_open_delay`` may increase the off-time inserted between the operation
+Using `pump_stop_valve_delay` or `pump_stop_pump_delay` with `valve_open_delay` and
+`pump_switch_off_during_valve_open_delay` may increase the off-time inserted between the operation
 of each zone, as the controller must wait for a given zone (pump *and* valve) to fully shut down before
 it can be started again.
 

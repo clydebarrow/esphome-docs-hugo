@@ -26,7 +26,7 @@ light:
 
 ```
 {{< note >}}
-To have linear brightness control, ``gamma_correct`` of the light is set by default to ``0``.
+To have linear brightness control, `gamma_correct` of the light is set by default to `0`.
 
 {{< /note >}}
 ## See Also

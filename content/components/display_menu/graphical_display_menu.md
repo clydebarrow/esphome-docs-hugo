@@ -67,7 +67,7 @@ of the display when invoked. This is useful when you may want to use the display
 interaction.
 
 {{< note >}}
-Pop Up Mode requires that your display makes use of :ref:`pages <display-pages>`. If you are using a drawing lambda, without pages, it will not
+Pop Up Mode requires that your display makes use of [Display Pages]({{< ref "components/display/_index#display-pages" >}}). If you are using a drawing lambda, without pages, it will not
 behave as expected. Instead you will have to use Advanced Mode
 
 {{< /note >}}
@@ -159,7 +159,7 @@ graphical_display_menu:
 
 ```
 {{< note >}}
-Ensure that all characters you use in the menu_item_value are available glyphs for your :ref:`font <display-fonts>`
+Ensure that all characters you use in the menu_item_value are available glyphs for your [Font Renderer Component]({{< ref "components/font#display-fonts" >}})
 
 {{< /note >}}
 ## User Interaction Example

@@ -124,13 +124,13 @@ You should see log output like below:
 If the log output is flooded with "Received Raw" messages, you can also disable raw
 remote code reporting and rely on rc_switch to decode the values.
 
-.. code-block:: yaml
-
-    remote_receiver:
-      pin: GPIOXX
-      dump:
-        - rc_switch
-      ...
+```yaml
+remote_receiver:
+  pin: GPIOXX
+  dump:
+    - rc_switch
+  ...
+```
 
 {{< /note >}}
 If the codec is already implemented in ESPHome, you will see the decoded value directly -
@@ -182,7 +182,7 @@ in the frontend. Click on it and you should see the remote signal being transmit
 Some devices require that the transmitted code be repeated for the signal to be picked up
 as valid. Also the interval between repetitions can be important. Check that the pace of
 repetition logs are consistent between the remote controller and the transmitter node.
-You can adjust the ``repeat:`` settings accordingly.
+You can adjust the `repeat:` settings accordingly.
 
 {{< /note >}}
 ## See Also

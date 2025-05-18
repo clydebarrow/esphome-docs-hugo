@@ -103,10 +103,10 @@ Configuration options:
 {{< note >}}
 This action can also be written in lambdas:
 
-.. code-block:: cpp
-
-    id(my_template_valve).position = VALVE_OPEN;
-    id(my_template_valve).publish_state();
+```cpp
+id(my_template_valve).position = VALVE_OPEN;
+id(my_template_valve).publish_state();
+```
 
 {{< /note >}}
 ## See Also

@@ -45,7 +45,7 @@ on the ESP32. However, due to the use of the pulse counter peripheral, a maximum
 - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< note >}}
-See :doc:`integration sensor </components/sensor/integration>` for summing up pulse counter
+See [integration sensor ]({{< relref "/components/sensor/integration" >}}) for summing up pulse counter
 values over time.
 
 {{< /note >}}

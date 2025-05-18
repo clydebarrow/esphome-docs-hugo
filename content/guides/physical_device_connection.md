@@ -51,9 +51,9 @@ If it's not showing up as a serial port, you might not have the required drivers
 installed. The model number you need is engraved on the chip connected to the USB port.
 ESPs and programmers usually ship with one of these UART chips:
 
-* CH34x: `driver <https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers>`__
-* CP2102: `driver <https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers>`__
-* PL2303: `driver <https://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41>`__
+* CH34x: [driver](https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers)
+* CP2102: [driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+* PL2303: [driver](https://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
 
 {{< /note >}}
 With the exception of the situation where you have a USB port, you need to make
@@ -73,7 +73,7 @@ When using an external `3.3V` supply, ensure the ground (`GND`) of both are conn
 this ensures a common ground. A PC power supply can be a good source for `3.3V` DC power.
 
 {{< note >}}
-Some adapters can be switched between ``3.3V`` and ``5V`` for the data pins, but still provide 5V on the power pin which will irreparably destroy your device. You **MUST** make sure the data (``RX`` and ``TX``) and ``VCC`` pins are set for ``3.3V``.
+Some adapters can be switched between `3.3V` and `5V` for the data pins, but still provide 5V on the power pin which will irreparably destroy your device. You **MUST** make sure the data (`RX` and `TX`) and `VCC` pins are set for `3.3V`.
 
 {{< /note >}}
 ESP needs to be put into programming mode or flash mode before the firmware can be uploaded. This is

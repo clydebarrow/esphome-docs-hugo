@@ -7,7 +7,7 @@ title: "Peacefair PZEM-004T V3 Energy Monitor"
 
 {{< note >}}
 This page is incomplete and could use some work. If you want to contribute, please see our
-`developer site <https://developers.esphome.io>`__. This page is missing:
+[developer site](https://developers.esphome.io). This page is missing:
 
   - Images/screenshots/example configs of this device being used in action.
 
@@ -31,7 +31,7 @@ Please note that metering chip inside of PZEM module is powered from AC side and
 
 {{< warning >}}
 This page refers to version V3 of the PZEM004T.
-For using the older V1 variant of this sensor please see :doc:`pzem004t <pzem004t>`.
+For using the older V1 variant of this sensor please see [pzem004t ]({{< relref "pzem004t/" >}}).
 
 {{< /warning >}}
 The communication with this component is done via a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using [UART Bus]({{< ref "components/uart#uart" >}}).

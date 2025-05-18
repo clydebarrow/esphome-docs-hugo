@@ -121,10 +121,10 @@ To set up a PID climate controller, you need a couple of components:
 
 {{< note >}}
 The sensor should have a short update interval. The PID update frequency is tied to the update
-interval of the sensor. Set a short ``update_interval`` like ``5s`` on the sensor.
+interval of the sensor. Set a short `update_interval` like `5s` on the sensor.
 
-We recommend putting a filter on the sensor (see filters in :doc:`/components/sensor/index`) and
-using ``output_averaging_samples`` to calm the PID sensor from a noisy input sensor.
+We recommend putting a filter on the sensor (see filters in [/components/sensor/index]({{< ref "/components/sensor/index" >}})) and
+using `output_averaging_samples` to calm the PID sensor from a noisy input sensor.
 
 {{< /note >}}
 ## Deadband Setup

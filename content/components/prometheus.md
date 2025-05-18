@@ -33,12 +33,12 @@ prometheus:
 {{< note >}}
 Example integration into the configuration of your prometheus:
 
-.. code-block:: yaml
-
-    scrape_configs:
-      - job_name: esphome
-        static_configs:
-          - targets: [<ip or node_name.local>]
+```yaml
+scrape_configs:
+  - job_name: esphome
+    static_configs:
+      - targets: [<ip or node_name.local>]
+```
 
 {{< /note >}}
 ## Supported ESPHome Components

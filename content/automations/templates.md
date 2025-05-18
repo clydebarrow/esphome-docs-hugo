@@ -54,22 +54,22 @@ retrieving the current state of the end stop using `.state` and using it to cons
 {{< note >}}
 ESPHome does not check the validity of lambda expressions you enter and will blindly copy them into the generated
 C++ code. If compilation fails or something else is not working as expected with lambdas, it's always best to look
-at the generated C++ source file under ``<NODE_NAME>/src/main.cpp``.
+at the generated C++ source file under `<NODE_NAME>/src/main.cpp`.
 
 {{< /note >}}
-.. tip::
+{{< tip >}}
+To store local variables inside lambdas that retain their value across executions, you can create `static`
+variables as shown in the example below. Here, the variable `num_executions` is incremented by one each time the
+lambda is executed and the current value is logged.
 
-    To store local variables inside lambdas that retain their value across executions, you can create `static`
-    variables as shown in the example below. Here, the variable `num_executions` is incremented by one each time the
-    lambda is executed and the current value is logged.
+```yaml
+lambda: |-
+  static int num_executions = 0;
+  ESP_LOGD("main", "I am at execution number %d", num_executions);
+  num_executions += 1;
+```
 
-    ```yaml
-    lambda: |-
-      static int num_executions = 0;
-      ESP_LOGD("main", "I am at execution number %d", num_executions);
-      num_executions += 1;
-
-    ```
+{{< /tip >}}
 {{< anchor "config-templatable" >}}
 
 ## Templating Actions

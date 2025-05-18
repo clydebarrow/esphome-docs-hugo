@@ -68,7 +68,7 @@ converts the currently measured temperature and relative humidity to absolute hu
 {{< note >}}
 Calculating the altitude with the BME280 sensor accurately requires this value to be known at sea level for your location and day.
 
-This can be achieved by replacing the global constant ``STANDARD_SEA_LEVEL_PRESSURE`` by for example
+This can be achieved by replacing the global constant `STANDARD_SEA_LEVEL_PRESSURE` by for example
 pulling this value live from the internet or a stationary sensor via MQTT.
 
 {{< /note >}}

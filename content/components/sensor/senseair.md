@@ -47,7 +47,7 @@ sensor:
 
 
 {{< note >}}
-``G+`` should be connected to power supply (supported voltage is 4.5 V to 5.25 V), ``G0`` to ``GND`` pin
+`G+` should be connected to power supply (supported voltage is 4.5 V to 5.25 V), `G0` to `GND` pin
 
 {{< /note >}}
 {{< anchor "senseair-background_calibration_action" >}}

@@ -21,7 +21,7 @@ This sensor component only supports the following sensors:
 
 Sensors are calibrated for propane only.
 
-See :doc:`/components/sensor/mopeka_std_check` for original Mopeka Check sensors support.
+See [/components/sensor/mopeka_std_check]({{< ref "/components/sensor/mopeka_std_check" >}}) for original Mopeka Check sensors support.
 
 {{< /warning >}}
 ![Mopeka Pro Check LP over BLE.](../images/mopeka_pro_check.jpg)

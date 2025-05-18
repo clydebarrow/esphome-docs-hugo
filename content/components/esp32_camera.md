@@ -171,8 +171,8 @@ Test Setting:
 
 
 {{< note >}}
-Camera uses PWM timer #1. If you need PWM (via the ``ledc`` platform) you need to manually specify
-a channel there (with the ``channel: 2``  parameter)
+Camera uses PWM timer #1. If you need PWM (via the `ledc` platform) you need to manually specify
+a channel there (with the `channel: 2`  parameter)
 
 {{< /note >}}
 ## Configuration examples

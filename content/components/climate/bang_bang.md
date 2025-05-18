@@ -9,7 +9,7 @@ The `bang_bang` climate platform allows you to regulate a value with a
 [bang-bang controller](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control) (also called hysteresis controller).
 
 {{< note >}}
-The :doc:`thermostat <thermostat>` component behaves more like a common thermostat; it is
+The [thermostat ]({{< relref "thermostat/" >}}) component behaves more like a common thermostat; it is
 essentially two bang-bang controllers in one. Please see the `Bang-bang vs. Thermostat`_ section below
 if you are not sure which is appropriate for your application.
 

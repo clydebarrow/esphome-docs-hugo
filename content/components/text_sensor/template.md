@@ -68,9 +68,9 @@ Configuration options:
 {{< note >}}
 This action can also be written in lambdas:
 
-.. code-block:: cpp
-
-    id(template_text).publish_state("Hello World");
+```cpp
+id(template_text).publish_state("Hello World");
+```
 
 {{< /note >}}
 ## Useful Template Sensors

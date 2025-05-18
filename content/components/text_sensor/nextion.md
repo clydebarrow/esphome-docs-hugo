@@ -92,8 +92,8 @@ Configuration variables:
   display which will update component. Default is true.
 
 {{< note >}}
-This action can also be written in lambdas. See :ref:`nextion_text_sensor_lambda_calls`
-    
+This action can also be written in lambdas. See [Lambda Calls]({{< ref "components/text_sensor/nextion#nextion_text_sensor_lambda_calls" >}})
+
 {{< /note >}}
 {{< anchor "nextion_text_sensor_lambda_calls" >}}
 

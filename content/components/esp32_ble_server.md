@@ -12,7 +12,7 @@ manufacturer and board. BLE GATT services and characteristics can be added to th
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as :doc:`/components/voice_assistant` and other
+configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
 audio components are most likely to cause issues.
 
 {{< /warning >}}

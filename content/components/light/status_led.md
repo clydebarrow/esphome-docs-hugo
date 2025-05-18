@@ -25,7 +25,7 @@ light:
 
 ```
 {{< note >}}
-When using this platform the high level ``status_led`` component should not be included (at least over the same pin),
+When using this platform the high level `status_led` component should not be included (at least over the same pin),
 as its functionality is directly provided by this platform.
 
 The only difference is that the platform won't be loaded in OTA safe mode, while the component would be.
@@ -39,13 +39,13 @@ The only difference is that the platform won't be loaded in OTA safe mode, while
 
 {{< note >}}
 If your Status LED is in an active-LOW mode (such as with the D1 Mini ESP8266 boards), use the
-``inverted`` option of the :ref:`Pin Schema <config-pin_schema>`:
+`inverted` option of the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}):
 
-.. code-block:: yaml
-
-    pin:
-      number: GPIOXX
-      inverted: true
+```yaml
+pin:
+  number: GPIOXX
+  inverted: true
+```
 
 
 

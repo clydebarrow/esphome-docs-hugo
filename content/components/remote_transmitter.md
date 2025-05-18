@@ -174,7 +174,7 @@ Configuration variables:
 {{< note >}}
 ABB-Welcome messages are sent over the two-wire bus of your intercom system.
 A custom receiver and transmitter circuit is required.
-`More info <https://github.com/Mat931/esp32-doorbell-bus-interface>`__
+[More info](https://github.com/Mat931/esp32-doorbell-bus-interface)
 
 {{< /note >}}
 {{< anchor "remote_transmitter-transmit_aeha" >}}
@@ -560,9 +560,9 @@ This [All Actions]({{< ref "automations/actions#config-action" >}}) sends an NEC
 In version 2021.12, the order of transferring bits was corrected from MSB to LSB in accordance with the NEC
 standard. Therefore, if the configuration file has come from an earlier version of ESPhome, it is necessary to
 reverse the order of the address and command bits when moving to 2021.12 or above. For example,
-``address: 0x84ED``, ``command: 0x13EC`` becomes ``0xB721`` and ``0x37C8``, respectively. In additional, ESPHome
-does not automatically generate parity bits or pad values to 2 bytes. For example, to send command ``0x0``, you
-need to use ``0xFF00`` (``0x00`` being the command and ``0xFF`` being the logical inverse).
+`address: 0x84ED`, `command: 0x13EC` becomes `0xB721` and `0x37C8`, respectively. In additional, ESPHome
+does not automatically generate parity bits or pad values to 2 bytes. For example, to send command `0x0`, you
+need to use `0xFF00` (`0x00` being the command and `0xFF` being the logical inverse).
 
 {{< /note >}}
 ```yaml
@@ -1033,7 +1033,7 @@ Configuration variables:
 - All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
 
 {{< note >}}
-Toto remotes repeat all codes three times at a 36ms interval. This behavior will occur by default, but may be overridden by specifying ``repeat`` and ``wait time`` configuration variables.
+Toto remotes repeat all codes three times at a 36ms interval. This behavior will occur by default, but may be overridden by specifying `repeat` and `wait time` configuration variables.
 
 
 {{< /note >}}

@@ -139,7 +139,7 @@ information and wiring details refer to the link in the *See also* section.
 
 {{< /note >}}
 {{< note >}}
-SPI based chips do *not* use :doc:`spi`. This means that SPI pins can't be shared with other devices.
+SPI based chips do *not* use [spi]({{< ref "spi/" >}}). This means that SPI pins can't be shared with other devices.
 
 {{< /note >}}
 ## Configuration examples

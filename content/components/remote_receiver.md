@@ -522,56 +522,56 @@ Depending on the hardware used they may interfere with each other when enabled s
 **NEC codes**: In version 2021.12, the order of transferring bits was corrected from MSB to LSB in accordance with
 the NEC standard. Therefore, if the configuration file has come from an earlier version of ESPhome, it is necessary
 to reverse the order of the address and command bits when moving to 2021.12 or above. For example,
-``address: 0x84ED``, ``command: 0x13EC`` becomes ``0xB721`` and ``0x37C8``, respectively.
+`address: 0x84ED`, `command: 0x13EC` becomes `0xB721` and `0x37C8`, respectively.
 
 
 {{< /note >}}
 {{< note >}}
 Some receivers, such as the TSOP38238, may require the use of a pull-up resistor. You can enable this as follows:
 
-.. code-block:: yaml
-
-    remote_receiver:
-      pin:
-        number: GPIOXX
-        inverted: true
-        mode:
-          input: true
-          pullup: true
-      dump: all
+```yaml
+remote_receiver:
+  pin:
+    number: GPIOXX
+    inverted: true
+    mode:
+      input: true
+      pullup: true
+  dump: all
+```
 
 
 {{< /note >}}
 {{< note >}}
 For the black Sonoff RF Bridge, you can bypass the EFM8BB1 microcontroller handling RF signals with
-`this hack <https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-RF-Bridge---Direct-Hack>`__
+[this hack](https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-RF-Bridge---Direct-Hack)
 created by the GitHub user wildwiz. Then use this configuration for the remote receiver/transmitter hubs:
 
-.. code-block:: yaml
-
-    remote_receiver:
-      pin: 4
-      dump: all
+```yaml
+remote_receiver:
+  pin: 4
+  dump: all
+```
 
     remote_transmitter:
       pin: 5
       carrier_duty_percent: 100%
 
-There's also a software `"hack" <https://github.com/mightymos/RF-Bridge-OB38S003>`__ that allows the radio chip to mirror all the voltages to the ESP to do the decoding,
+There's also a software ["hack"](https://github.com/mightymos/RF-Bridge-OB38S003) that allows the radio chip to mirror all the voltages to the ESP to do the decoding,
 rendering the hardware hack uncessary. This software passthrough mode can be used for the OB38S003 (white) and EFM8BB1 (black) sonoff RF bridge. Then use this configuration for the remote receiver/transmitter hubs:
 
-.. code-block:: yaml
-
-    remote_receiver:
-      pin:
-        # sonoff and wemos board
-        number: GPIO3
-        mode:
-          input: true
-          pullup: false
-      tolerance: 60%
-      filter: 4us
-      idle: 4ms
+```yaml
+remote_receiver:
+  pin:
+    # sonoff and wemos board
+    number: GPIO3
+    mode:
+      input: true
+      pullup: false
+  tolerance: 60%
+  filter: 4us
+  idle: 4ms
+```
 
     remote_transmitter:
       pin: 1

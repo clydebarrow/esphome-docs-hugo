@@ -29,7 +29,7 @@ and requires [/components/modbus_controller]({{< ref "/components/modbus_control
      - `ANSI`: Each byte is treated as an `ANSI` character. All control characters are ignored.
 
 {{< note >}}
-From version 2024.7, default encoding is ``ANSI``. Thus, all control characters are now ignored. If you need to receive all characters, use ``NONE`` encoding.
+From version 2024.7, default encoding is `ANSI`. Thus, all control characters are now ignored. If you need to receive all characters, use `NONE` encoding.
 
 {{< /note >}}
 - **force_new_range** (*Optional*, boolean): If possible sensors with sequential addresses are grouped together and requested in one range. Setting `force_new_range: true` enforces the start of a new range at that address.

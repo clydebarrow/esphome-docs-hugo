@@ -87,7 +87,7 @@ Either the `row` and `col` parameters, or the `key` parameter has to be provided
 
 {{< note >}}
 Automatic handling of multiple keys (e.g. PIN code entry) is possible with the
-the :ref:`Key Collector <key_collector>` component.
+the [Key collector component]({{< ref "components/key_collector#key_collector" >}}) component.
 
 {{< /note >}}
 ## See Also

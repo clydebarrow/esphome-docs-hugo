@@ -143,13 +143,13 @@ substitutions:
 <<: !include common.yaml
 
 ```
-.. tip::
+{{< tip >}}
+To hide these base files from the dashboard, you can
 
-    To hide these base files from the dashboard, you can
+- Place them in a subdirectory (dashboard only shows files in top-level directory)
+- Prepend a dot to the filename, like `.base.yaml`
 
-    - Place them in a subdirectory (dashboard only shows files in top-level directory)
-    - Prepend a dot to the filename, like `.base.yaml`
-
+{{< /tip >}}
 ## See Also
 
 - [ESPHome index ]({{< relref "/index" >}})

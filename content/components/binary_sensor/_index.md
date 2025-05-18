@@ -311,23 +311,23 @@ Configuration variables:
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< note >}}
-Multiple ``on_click`` entries can be defined like this (see also :ref:`binary_sensor-on_multi_click`
+Multiple `on_click` entries can be defined like this (see also [``on_multi_click``]({{< ref "components/binary_sensor/_index#binary_sensor-on_multi_click" >}})
 for more complex matching):
 
-.. code-block:: yaml
-
-    binary_sensor:
-      - platform: gpio
-        # ...
-        on_click:
-        - min_length: 50ms
-          max_length: 350ms
-          then:
-            - switch.turn_off: relay_1
-        - min_length: 500ms
-          max_length: 1000ms
-          then:
-            - switch.turn_on: relay_1
+```yaml
+binary_sensor:
+  - platform: gpio
+    # ...
+    on_click:
+    - min_length: 50ms
+      max_length: 350ms
+      then:
+        - switch.turn_off: relay_1
+    - min_length: 500ms
+      max_length: 1000ms
+      then:
+        - switch.turn_on: relay_1
+```
 
 
 {{< /note >}}
@@ -395,7 +395,7 @@ Configuration variables:
 
 {{< note >}}
 Getting the timing right for your use-case can sometimes be a bit difficult. If you set the
-:ref:`global log level <logger-log_levels>` to ``VERBOSE``, the multi click trigger shows logs
+[Log Levels]({{< ref "components/logger#logger-log_levels" >}}) to `VERBOSE`, the multi click trigger shows logs
 about what stopped the trigger from happening.
 
 {{< /note >}}

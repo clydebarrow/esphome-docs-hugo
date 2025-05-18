@@ -59,7 +59,7 @@ individually.
 
 {{< note >}}
 Display hardware is complex and sometimes doesn't behave as expected. If you're having trouble with your display,
-please see :ref:`troubleshooting` below.
+please see [Troubleshooting]({{< ref "components/display/_index#troubleshooting" >}}) below.
 
 {{< /note >}}
 So, first a few basics: When setting up a display platform in ESPHome there will be a configuration
@@ -84,7 +84,7 @@ lambdas are additionally passed a variable called `it` which represents the rend
 
 {{< note >}}
 Lambdas are essentially just a lightly modified version of C++. So don't forget to end each line
-with a semicolon (``;``). Otherwise you will be greeted by a long error message at the compilation stage.
+with a semicolon (`;`). Otherwise you will be greeted by a long error message at the compilation stage.
 
 {{< /note >}}
 If you compile and upload the configuration above, you should see a black (or white, depending on the display)
@@ -369,7 +369,7 @@ display:
 ```
 {{< note >}}
 For displaying external data on the display, for example data from your Home Assistant instance,
-you can use the :doc:`/components/text_sensor/mqtt_subscribe` (see the example there for more information).
+you can use the [/components/text_sensor/mqtt_subscribe]({{< ref "/components/text_sensor/mqtt_subscribe" >}}) (see the example there for more information).
 
 {{< /note >}}
 {{< anchor "display-strftime" >}}
@@ -536,17 +536,17 @@ on_...:
 
 ```
 {{< note >}}
-To trigger a redraw right after the page show use a :ref:`component.update <component-update_action>`
+To trigger a redraw right after the page show use a [``component.update`` Action]({{< ref "automations/actions#component-update_action" >}})
 action:
 
-.. code-block:: yaml
-
-    # For example cycle through pages on a timer
-    interval:
-      - interval: 5s
-        then:
-          - display.page.show_next: my_display
-          - component.update: my_display
+```yaml
+# For example cycle through pages on a timer
+interval:
+  - interval: 5s
+    then:
+      - display.page.show_next: my_display
+      - component.update: my_display
+```
 
 {{< /note >}}
 {{< anchor "display-is_displaying_page-condition" >}}

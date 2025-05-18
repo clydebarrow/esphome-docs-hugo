@@ -50,12 +50,12 @@ http_request:
   - `verify_ssl: false` is implied
 
 {{< warning >}}
-Setting ``verify_ssl`` to ``false`` **reduces security** when using HTTPS connections!
+Setting `verify_ssl` to `false` **reduces security** when using HTTPS connections!
 
 Without the root certificate bundle, certificates used by the remote HTTPS server cannot be verified, opening the
 HTTPS connection up to person-in-the-middle attacks.
 
-To maximize security, do not set ``verify_ssl`` to ``false`` *unless:*
+To maximize security, do not set `verify_ssl` to `false` *unless:*
 
 - a custom CA/self-signed certificate is used,
 - the Arduino framework is used, or

@@ -33,9 +33,9 @@ higher baud rates.
 
 {{< /note >}}
 {{< note >}}
-From ESPHome 2021.8 the ``ESP8266SoftwareSerial`` UART ``write_byte`` function had the parity bit fixed to be correct
+From ESPHome 2021.8 the `ESP8266SoftwareSerial` UART `write_byte` function had the parity bit fixed to be correct
 for the data being sent. This could cause unexpected issues if you are using the Software UART and have devices that
-explicity check the parity. Most likely you will need to flip the ``parity`` flag in YAML.
+explicity check the parity. Most likely you will need to flip the `parity` flag in YAML.
 
 {{< /note >}}
 {{< note >}}

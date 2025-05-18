@@ -7,7 +7,7 @@ title: "Button Component"
 
 {{< note >}}
 To attach a physical button to ESPHome, see
-:doc:`GPIO Binary Sensor </components/binary_sensor/gpio>`.
+[GPIO Binary Sensor ]({{< relref "/components/binary_sensor/gpio" >}}).
 
 {{< /note >}}
 ESPHome has support for components to create button entities in Home Assistant. A button entity is
@@ -109,7 +109,7 @@ Configuration variables:
 Buttons are designed to trigger an action on a device from Home Assistant, and have an unidirectional flow from
 Home Assistant to ESPHome. If you press a button using this action, no button press event will be triggered in Home
 Assistant. If you want to trigger an automation in Home Assistant, you should use a
-:ref:`Home Assistant event <api-homeassistant_event_action>` instead.
+[``homeassistant.event`` Action]({{< ref "components/api#api-homeassistant_event_action" >}}) instead.
 
 {{< /note >}}
 {{< anchor "button-lambda_calls" >}}

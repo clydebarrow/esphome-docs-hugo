@@ -41,24 +41,24 @@ i2c:
 {{< note >}}
 If the device can support multiple I²C buses these buses need to be defined as below and sensors need to be setup specifying the correct bus:
 
-.. code-block:: yaml
-
-    # Example configuration entry
-    i2c:
-      - id: bus_a
-        sda: GPIOXX
-        scl: GPIOXX
-        scan: true
-      - id: bus_b
-        sda: GPIOXX
-        scl: GPIOXX
-        scan: true
-    # Sensors should be specified as follows
-    sensor:
-      - platform: bme680
-        i2c_id: bus_b
-        address: 0x76
-    # ...
+```yaml
+# Example configuration entry
+i2c:
+  - id: bus_a
+    sda: GPIOXX
+    scl: GPIOXX
+    scan: true
+  - id: bus_b
+    sda: GPIOXX
+    scl: GPIOXX
+    scan: true
+# Sensors should be specified as follows
+sensor:
+  - platform: bme680
+    i2c_id: bus_b
+    address: 0x76
+# ...
+```
 
 {{< /note >}}
 For I²C multiplexing see [/components/tca9548a]({{< ref "/components/tca9548a" >}}).

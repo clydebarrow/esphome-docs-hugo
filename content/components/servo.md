@@ -19,7 +19,7 @@ only operate in this frequency range.
 
 {{< note >}}
 This component will not show up in the Home Assistant front-end automatically because
-Home Assistant doesn't have support for servos. Please see :ref:`servo-ha-config`.
+Home Assistant doesn't have support for servos. Please see [Home Assistant Configuration]({{< ref "components/servo#servo-ha-config" >}}).
 
 {{< /note >}}
 ```yaml
@@ -61,7 +61,7 @@ Advanced Options:
 {{< note >}}
 Some servos support a larger range for the level. For continuous rotation servos
 this can speed them up a bit and for absolute servos this can extend their angle range.
-You can configure the ``min_level`` and ``max_level`` options to adjust the level range
+You can configure the `min_level` and `max_level` options to adjust the level range
 to match your servo (Experiment with these values).
 
 {{< /note >}}
@@ -105,11 +105,11 @@ Configuration options:
   Range is from -100% to 100% (-1.0 to 1.0).
 
 {{< note >}}
-This action can also be expressed as a :ref:`lambda <config-lambda>`:
+This action can also be expressed as a [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(my_servo).write(1.0);
+```cpp
+id(my_servo).write(1.0);
+```
 
 {{< /note >}}
 {{< anchor "servo-detach_action" >}}
@@ -126,11 +126,11 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed as a :ref:`lambda <config-lambda>`:
+This action can also be expressed as a [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(my_servo).detach();
+```cpp
+id(my_servo).detach();
+```
 
 {{< /note >}}
 {{< anchor "servo-ha-config" >}}

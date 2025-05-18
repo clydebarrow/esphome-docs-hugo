@@ -18,18 +18,18 @@ available for ESP32, ESP8266 and BK72xx microcontrollers *only*.
 {{< warning >}}
 To successfully use this component you must have |wireguard| also
 on your remote host (already installed and ready to accept connections).
-If you don't have it please read the section :ref:`wireguard-installation`.
+If you don't have it please read the section [Remote peer setup]({{< ref "components/wireguard#wireguard-installation" >}}).
 
 {{< /warning >}}
 {{< warning >}}
 This component requires the system clock to be synchronized.
 
-See :doc:`time/index` to setup a time source
-and **do not use** ``homeassistant`` time-platform if
+See [time/index]({{< ref "time/index" >}}) to setup a time source
+and **do not use** `homeassistant` time-platform if
 Home Assistant is on the remote peer because the time
 synchronization is a prerequisite to establish the VPN link.
 
-The :doc:`time/sntp` is a valid time-platform choice.
+The [time/sntp]({{< ref "time/sntp" >}}) is a valid time-platform choice.
 
 {{< /warning >}}
 A VPN tunnel can be created to a **single** remote peer
@@ -193,7 +193,7 @@ Let's explain with some examples:
 +--------------+---------------------+----------------------+------------------------------+
 
 {{< note >}}
-Setting the ``netmask`` to ``0.0.0.0`` has the effect of routing
+Setting the `netmask` to `0.0.0.0` has the effect of routing
 through the VPN link any traffic. It is like having set the wireguard
 interface as the system default.
 
@@ -284,7 +284,7 @@ The lambda equivalent is `id(wireguard_id).disable()`.
 
 {{< note >}}
 To disable |wireguard| since device boot you can execute this action
-in the :ref:`esphome-on_boot` step.
+in the [``on_boot``]({{< ref "components/esphome#esphome-on_boot" >}}) step.
 
 {{< /note >}}
 ### ``wireguard.enable``
@@ -374,8 +374,8 @@ The device should now be linked to your remote Home Assistant.
 
 {{< note >}}
 If you have issues linking the ESP device try setting
-the ``use_address`` parameter of the :doc:`wifi` to the value
-of the :ref:`address <wireguard-address>` configured here.
+the `use_address` parameter of the [wifi]({{< ref "wifi/" >}}) to the value
+of the [- **address** (**Required**, IPv4 address): The local VPN address of the device.]({{< ref "components/wireguard#wireguard-address" >}}) configured here.
 
 {{< /note >}}
 ## See Also

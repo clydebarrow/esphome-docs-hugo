@@ -10,8 +10,8 @@ If you are connecting to Home Assistant, you may prefer to use the native API,
 in which case this is not needed.
 
 {{< warning >}}
-If you enable MQTT and you do *not* use the :doc:`/components/api`, you must
-remove the ``api:`` configuration or set ``reboot_timeout: 0s``, otherwise the ESP will
+If you enable MQTT and you do *not* use the [/components/api]({{< ref "/components/api" >}}), you must
+remove the `api:` configuration or set `reboot_timeout: 0s`, otherwise the ESP will
 reboot every 15 minutes because no client connected to the native API.
 
 {{< /warning >}}
@@ -376,9 +376,9 @@ The Common Name check only works if the CN is explicitly reported in the certifi
 
 If a secure connection is necessary for your device, you really want to set:
 
-.. code-block:: yaml
-
-    skip_cert_cn_check: false
+```yaml
+skip_cert_cn_check: false
+```
 
 {{< /warning >}}
 ```yaml
@@ -519,34 +519,34 @@ Configuration variables:
   you specify with this option is received, the automation will be executed.
 
 {{< note >}}
-You can even specify multiple ``on_message`` triggers by using a YAML list:
+You can even specify multiple `on_message` triggers by using a YAML list:
 
-.. code-block:: yaml
-
-    mqtt:
-      on_message:
-         - topic: some/topic
-           then:
-             - # ...
-         - topic: some/other/topic
-           then:
-             - # ...
+```yaml
+mqtt:
+  on_message:
+     - topic: some/topic
+       then:
+         - # ...
+     - topic: some/other/topic
+       then:
+         - # ...
+```
 
 {{< /note >}}
 {{< note >}}
-This action can also be used in :ref:`lambdas <config-lambda>`:
+This action can also be used in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: yaml
+```yaml
+mqtt:
+  # Give the mqtt component an ID
+  id: mqtt_client
+```
 
-    mqtt:
-      # Give the mqtt component an ID
-      id: mqtt_client
-
-.. code-block:: cpp
-
-    id(mqtt_client).subscribe("the/topic", [=](const std::string &topic, const std::string &payload) {
-        // do something with payload
-    });
+```cpp
+id(mqtt_client).subscribe("the/topic", [=](const std::string &topic, const std::string &payload) {
+    // do something with payload
+});
+```
 
 {{< /note >}}
 {{< anchor "mqtt-on_json_message" >}}
@@ -598,23 +598,23 @@ Configuration variables:
 
 {{< note >}}
 Due to the way this trigger works internally it is incompatible with certain actions and will
-trigger a compile failure. For example with the ``delay`` action.
+trigger a compile failure. For example with the `delay` action.
 
 {{< /note >}}
 {{< note >}}
-This action can also be used in :ref:`lambdas <config-lambda>`:
+This action can also be used in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: yaml
+```yaml
+mqtt:
+  # Give the mqtt component an ID
+  id: mqtt_client
+```
 
-    mqtt:
-      # Give the mqtt component an ID
-      id: mqtt_client
-
-.. code-block:: cpp
-
-    id(mqtt_client).subscribe_json("the/topic", [=](const std::string &topic, JsonObject root) {
-        // do something with JSON-decoded value root
-    });
+```cpp
+id(mqtt_client).subscribe_json("the/topic", [=](const std::string &topic, JsonObject root) {
+    // do something with JSON-decoded value root
+});
+```
 
 {{< /note >}}
 {{< anchor "mqtt-publish_action" >}}
@@ -652,17 +652,17 @@ Configuration options:
 
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: yaml
+```yaml
+mqtt:
+  # Give the mqtt component an ID
+  id: mqtt_client
+```
 
-    mqtt:
-      # Give the mqtt component an ID
-      id: mqtt_client
-
-.. code-block:: cpp
-
-    id(mqtt_client).publish("the/topic", "The Payload");
+```cpp
+id(mqtt_client).publish("the/topic", "The Payload");
+```
 
 {{< /note >}}
 {{< anchor "mqtt-publish_json_action" >}}
@@ -702,19 +702,19 @@ Configuration options:
 
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: yaml
+```yaml
+mqtt:
+  # Give the mqtt component an ID
+  id: mqtt_client
+```
 
-    mqtt:
-      # Give the mqtt component an ID
-      id: mqtt_client
-
-.. code-block:: cpp
-
-    id(mqtt_client).publish_json("the/topic", [=](JsonObject root) {
-      root["something"] = id(my_sensor).state;
-    });
+```cpp
+id(mqtt_client).publish_json("the/topic", [=](JsonObject root) {
+  root["something"] = id(my_sensor).state;
+});
+```
 
 {{< /note >}}
 ## ``mqtt.disable`` Action
@@ -728,7 +728,7 @@ on_...:
 
 ```
 {{< note >}}
-The configuration option ``enable_on_boot`` can be set to ``false`` if you do not want MQTT to be enabled on boot.
+The configuration option `enable_on_boot` can be set to `false` if you do not want MQTT to be enabled on boot.
 
 
 {{< /note >}}
@@ -743,8 +743,8 @@ on_...:
 
 ```
 {{< note >}}
-The configuration option ``enable_on_boot`` can be set to ``false`` if you do not want MQTT to be enabled on boot.
-``mqtt.enable`` can be useful for custom setups. For example, if the broker name is negotiated dynamically and saved in a global variable.
+The configuration option `enable_on_boot` can be set to `false` if you do not want MQTT to be enabled on boot.
+`mqtt.enable` can be useful for custom setups. For example, if the broker name is negotiated dynamically and saved in a global variable.
 
 {{< /note >}}
 ```yaml
@@ -783,19 +783,19 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: yaml
+```yaml
+mqtt:
+  # Give the mqtt component an ID
+  id: mqtt_client
+```
 
-    mqtt:
-      # Give the mqtt component an ID
-      id: mqtt_client
-
-.. code-block:: cpp
-
-    if (id(mqtt_client)->is_connected()) {
-      // do something if MQTT is connected
-    }
+```cpp
+if (id(mqtt_client)->is_connected()) {
+  // do something if MQTT is connected
+}
+```
 
 {{< /note >}}
 ## See Also

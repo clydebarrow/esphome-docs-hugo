@@ -13,7 +13,7 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 {{< note >}}
 This component will not be directly controllable in the Home Assistant front-end automatically because
 Home Assistant doesn't have support for pumps. In order to control the pump from the frontend you will need to use
-templates to offer access to the actions you need. Please see :ref:`ezo-pmp-ha-config`.
+templates to offer access to the actions you need. Please see [Home Assistant Configuration]({{< ref "components/ezo_pmp#ezo-pmp-ha-config" >}}).
 
 {{< /note >}}
 ![.. code-block:: yaml](../images/ezo-pmp.jpg)

@@ -85,9 +85,9 @@ Configuration options:
 This action can also be written in lambdas, the parameter of the `publish_state` method denotes if
 the switch is currently on or off:
 
-.. code-block:: cpp
-
-    id(template_swi).publish_state(false);
+```cpp
+id(template_swi).publish_state(false);
+```
 
 {{< /note >}}
 ## See Also

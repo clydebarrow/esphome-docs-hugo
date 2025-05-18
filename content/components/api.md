@@ -20,8 +20,8 @@ A Python library that implements this protocol is [aioesphomeapi](https://github
 
 {{< note >}}
 **Actions** were previously called **Services**. ESPHome changed the name in line with
-`Home Assistant <https://developers.home-assistant.io/blog/2024/07/16/service-actions/>`__
-but will continue to support YAML with ``services`` and ``homeassistant.service`` for the foreseeable future.
+[Home Assistant](https://developers.home-assistant.io/blog/2024/07/16/service-actions/)
+but will continue to support YAML with `services` and `homeassistant.service` for the foreseeable future.
 Documentation will only refer to **Actions**.
 
 {{< /note >}}
@@ -111,7 +111,7 @@ Then:
 ******************************
 
 {{< note >}}
-Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
+Be sure to [Actions]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
 your device to perform actions.
 
 {{< /note >}}
@@ -144,7 +144,7 @@ Configuration variables:
 ********************************
 
 {{< note >}}
-Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
+Be sure to [Actions]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
 your device to perform actions.
 
 {{< /note >}}
@@ -220,7 +220,7 @@ on_...:
 ************************************
 
 {{< note >}}
-Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
+Be sure to [Actions]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
 your device to make action calls.
 
 {{< /note >}}

@@ -29,7 +29,7 @@ This permits faster communication with the Nextion display and it is highly reco
 [Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}).
 
 {{< warning >}}
-**We highly recommend using only** :ref:`uart-hardware_uarts` **with Nextion displays.**
+**We highly recommend using only** [Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}) **with Nextion displays.**
 
 *Use of software UARTs is known to result in unpredictable/inconsistent behavior.*
 
@@ -164,26 +164,26 @@ The list below calls out a few commonly-used methods:
 {{< note >}}
 The example below demonstrates how to define a user-API so Home Assistant can send updates to the Nextion by code.
 
-.. code-block:: yaml
-
-    # Enable Home Assistant API
-    api:
-      actions:
-        - action: set_nextion_sensor
-          variables:
-            nextion_type: int
-            name: string
-            state: float
-          then:
-            - lambda: |-
-                id(nextion1).set_nextion_sensor_state(nextion_type,name,state);
-        - action: set_nextion_text
-          variables:
-            name: string
-            state: string
-          then:
-            - lambda: |-
-                id(nextion1).set_nextion_text_state(name,state);
+```yaml
+# Enable Home Assistant API
+api:
+  actions:
+    - action: set_nextion_sensor
+      variables:
+        nextion_type: int
+        name: string
+        state: float
+      then:
+        - lambda: |-
+            id(nextion1).set_nextion_sensor_state(nextion_type,name,state);
+    - action: set_nextion_text
+      variables:
+        name: string
+        state: string
+      then:
+        - lambda: |-
+            id(nextion1).set_nextion_text_state(name,state);
+```
 
 {{< /note >}}
 {{< anchor "nextion_queue_types" >}}
@@ -365,7 +365,7 @@ logging or other [automations]({{< relref "/automations/index" >}}) will occur. 
 update process failing.*
 
 If you experience problems with the update process and are using a software UART (for example, on the ESP8266), you
-should switch to an ESP32 or supported variant which has more available :ref:`uart-hardware_uarts`.
+should switch to an ESP32 or supported variant which has more available [Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}).
 
 {{< /warning >}}
 You can use Home Assistant itself or any other web server to host the TFT file. When using HTTPS (generally

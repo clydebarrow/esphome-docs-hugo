@@ -25,9 +25,9 @@ Python 3.10.1
 
 ```
 {{< note >}}
-Don't copy the ``>``. That's used to show that this is a command that goes
+Don't copy the `>`. That's used to show that this is a command that goes
 in the console, and to let you see what the expected results are (shown on
-the next line without a ``>``)
+the next line without a `>`)
 
 {{< /note >}}
 Looks good? You can go ahead and install ESPHome:

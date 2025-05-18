@@ -25,7 +25,7 @@ text_sensor:
 
 ```
 {{< note >}}
-Widget-specific actions (``lvgl.label.update``, ``lvgl.textarea.update``) will trigger correspponding component updates to be sent to Home Assistant.
+Widget-specific actions (`lvgl.label.update`, `lvgl.textarea.update`) will trigger correspponding component updates to be sent to Home Assistant.
 
 {{< /note >}}
 ## See Also

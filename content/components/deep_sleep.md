@@ -165,31 +165,31 @@ For example, if you want to upload a binary via OTA with deep sleep mode it can 
 catch the ESP being active.
 
 You can use this automation to automatically prevent deep sleep when a MQTT message on the topic
-``livingroom/ota_mode`` is received. Then, to do the OTA update, just
+`livingroom/ota_mode` is received. Then, to do the OTA update, just
 use a MQTT client to publish a retained MQTT message described below. When the node wakes up again
 it will no longer enter deep sleep mode and you can upload your OTA update.
 
 Remember to turn "OTA mode" off again after the OTA update by sending a MQTT message with the payload
-``OFF``. To enter the deep sleep again after the OTA update send a message on the topic ``livingroom/sleep_mode``
-with payload ``ON``. Deep sleep will start immediately. Don't forget to delete the payload before the node
+`OFF`. To enter the deep sleep again after the OTA update send a message on the topic `livingroom/sleep_mode`
+with payload `ON`. Deep sleep will start immediately. Don't forget to delete the payload before the node
 wakes up again.
 
-.. code-block:: yaml
-
-    deep_sleep:
-      # ...
-      id: deep_sleep_1
-    mqtt:
-      # ...
-      on_message:
-        - topic: livingroom/ota_mode
-          payload: 'ON'
-          then:
-            - deep_sleep.prevent: deep_sleep_1
-        - topic: livingroom/sleep_mode
-          payload: 'ON'
-          then:
-            - deep_sleep.enter: deep_sleep_1
+```yaml
+deep_sleep:
+  # ...
+  id: deep_sleep_1
+mqtt:
+  # ...
+  on_message:
+    - topic: livingroom/ota_mode
+      payload: 'ON'
+      then:
+        - deep_sleep.prevent: deep_sleep_1
+    - topic: livingroom/sleep_mode
+      payload: 'ON'
+      then:
+        - deep_sleep.enter: deep_sleep_1
+```
 
 {{< /note >}}
 {{< anchor "deep_sleep-allow_action" >}}

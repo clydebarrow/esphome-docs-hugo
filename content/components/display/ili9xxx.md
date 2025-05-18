@@ -41,7 +41,7 @@ beyond the basic SPI connections, and a reasonable amount of RAM, it is not well
 
 {{< note >}}
 PSRAM is not automatically enabled on the ESP32 (this changed with the 2025.2 release.) If PSRAM is available, you
-should enable it with the :doc:`PSRAM configuration </components/psram>`.
+should enable it with the [PSRAM configuration ]({{< relref "/components/psram" >}}).
 Use of 16 bit colors requires twice the amount of RAM as 8 bit, and may not be usable unless PSRAM is available.
 
 {{< /note >}}
@@ -117,13 +117,13 @@ pins wired to GPIOs.
    - **mirror_y** (*Optional*, boolean): If true, mirror the y axis.
 
 {{< note >}}
-The ``rotation`` variable will do a software based rotation.
-It is better to use the ``transform`` option to rotate the display in hardware. Use one of the following combinations:
-- 90 degrees - use ``swap_xy`` with ``mirror_x``
-- 180 degrees - use ``mirror_x`` with ``mirror_y``
-- 270 degrees - use ``swap_xy`` with ``mirror_y``
+The `rotation` variable will do a software based rotation.
+It is better to use the `transform` option to rotate the display in hardware. Use one of the following combinations:
+- 90 degrees - use `swap_xy` with `mirror_x`
+- 180 degrees - use `mirror_x` with `mirror_y`
+- 270 degrees - use `swap_xy` with `mirror_y`
 
-With 90 and 270 rotations you will also need to swap the ``height`` and ``width`` in ``dimensions`` (see example below.
+With 90 and 270 rotations you will also need to swap the `height` and `width` in `dimensions` (see example below.
 
 
 

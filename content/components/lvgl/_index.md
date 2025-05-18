@@ -256,10 +256,10 @@ Two font choices are available:
 
 You can use [fonts configured normally<display-fonts>]({{< ref "#fonts configured normally<display-fonts>" >}}), the glyphs will be rendered while building the binary. This has the advantage that you can define custom sets of glyphs of any size, with icons or diacritic characters of your choice, for any language, from any TrueType/OpenType font, allowing a more optimal flash space usage because you don't need to include all glyphs for all sizes you wish to use.
 
-.. tip::
+{{< tip >}}
+For best results, set `bpp: 4` to get the glyphs rendered with proper anti-aliasing.
 
-    For best results, set `bpp: 4` to get the glyphs rendered with proper anti-aliasing.
-
+{{< /tip >}}
 Check out [Battery status icon]({{< ref "cookbook/lvgl#lvgl-cookbook-iconbatt" >}}), [Toggle state icon button]({{< ref "cookbook/lvgl#lvgl-cookbook-iconstat" >}}) and [MDI icons in text]({{< ref "cookbook/lvgl#lvgl-cookbook-icontext" >}}) in the Cookbook for examples which demonstrate how to use icons and text with TrueType/OpenType fonts.
 
 **Library fonts**
@@ -642,10 +642,10 @@ Values for use with `grid_column_align`, `grid_row_align`, `grid_cell_x_align`, 
           grid_cell_column_pos: 0
 
 ```
-.. tip::
+{{< tip >}}
+To visualize real, calculated sizes of transparent widgets you can temporarily set `outline_width: 1` on them.
 
-    To visualize real, calculated sizes of transparent widgets you can temporarily set `outline_width: 1` on them.
-
+{{< /tip >}}
 {{< anchor "lvgl-gradients" >}}
 
 Gradients

@@ -13,8 +13,8 @@ heating element through a relay where a fast PWM update cycle would not be appro
 This is for **slow** PWM output. For fast-switching PWM outputs (for example,
 lights), see these outputs:
 
-- ESP32: :doc:`ledc`
-- ESP8266: :doc:`esp8266_pwm`
+- ESP32: [ledc]({{< ref "ledc/" >}})
+- ESP8266: [esp8266_pwm]({{< ref "esp8266_pwm/" >}})
 
 {{< /note >}}
 ```yaml
@@ -43,8 +43,8 @@ output:
 
 
 {{< note >}}
-- If ``pin`` is defined the GPIO pin state is writen before any action is executed.
-- ``state_change_action`` and ``turn_on_action``/``turn_off_action`` can be used togther. ``state_change_action`` is called before ``turn_on_action``/``turn_off_action``. It's recommended to use either ``state_change_action`` or ``turn_on_action``/``turn_off_action`` to change the state of an output. Using both automations together is only recommended for monitoring.
+- If `pin` is defined the GPIO pin state is writen before any action is executed.
+- `state_change_action` and `turn_on_action`/`turn_off_action` can be used togther. `state_change_action` is called before `turn_on_action`/`turn_off_action`. It's recommended to use either `state_change_action` or `turn_on_action`/`turn_off_action` to change the state of an output. Using both automations together is only recommended for monitoring.
 
 
 {{< /note >}}
@@ -66,7 +66,7 @@ output:
 ```
 {{< note >}}
 If the duty cycle is not constrained to a maximum value, the
-:doc:`/components/output/sigma_delta_output` component offers faster updates and
+[/components/output/sigma_delta_output]({{< ref "/components/output/sigma_delta_output" >}}) component offers faster updates and
 greater control over the switching frequency. This is better for loads that
 need some time to fully change between on and off, like eletric thermal
 actuator heads or fans.

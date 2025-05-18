@@ -39,7 +39,7 @@ Possible return values for the optional lambda:
  - `return {};` if the last state should be repeated.
 
 {{< note >}}
-Only ``LOCK_STATE_LOCKED`` and ``LOCK_STATE_UNLOCKED`` are supported by the MQTT component in Home Assistant
+Only `LOCK_STATE_LOCKED` and `LOCK_STATE_UNLOCKED` are supported by the MQTT component in Home Assistant
 
 {{< /note >}}
 ## Configuration variables:
@@ -94,9 +94,9 @@ Configuration options:
 This action can also be written in lambdas, the parameter of the `publish_state` method denotes the state the
 lock should become:
 
-.. code-block:: cpp
-
-    id(template_lock1).publish_state(lock::LOCK_STATE_LOCKED);
+```cpp
+id(template_lock1).publish_state(lock::LOCK_STATE_LOCKED);
+```
 
 {{< /note >}}
 ## See Also

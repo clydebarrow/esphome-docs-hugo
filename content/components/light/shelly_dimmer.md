@@ -49,12 +49,12 @@ light:
 {{< note >}}
 Currently, only the first hardware UART of the ESP is supported, which has to be configured like this:
 
-.. code-block:: yaml
-
-    uart:
-        tx_pin: 1
-        rx_pin: 3
-        baud_rate: 115200
+```yaml
+uart:
+    tx_pin: 1
+    rx_pin: 3
+    baud_rate: 115200
+```
 
 
 {{< /note >}}
@@ -78,11 +78,11 @@ Currently, only the first hardware UART of the ESP is supported, which has to be
 {{< note >}}
 When flashing Shelly Dimmer with esphome for the first time, automatic flashing the STM firmware is necessary too for the dimmer to work and enabled by the following configuration.:
 
-.. code-block:: yaml
-
-    firmware:
-      version: "51.6" #<-- set version here
-      update: true
+```yaml
+firmware:
+  version: "51.6" #<-- set version here
+  update: true
+```
 
 There is no action required by the user to flash the STM32. There is no way to revert to stock firmware on the STM32 at the time of writing.
 

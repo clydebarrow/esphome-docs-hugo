@@ -12,8 +12,8 @@ that the original `efm8bb1` firmware implements. The device is connected via the
 which is 19200bps.
 
 {{< warning >}}
-If you are using the :doc:`logger` make sure you disable the uart logging with the
-``baud_rate: 0`` option.
+If you are using the [logger]({{< ref "logger/" >}}) make sure you disable the uart logging with the
+`baud_rate: 0` option.
 
 {{< /warning >}}
 ![Sonoff RF Bridge 433, version R1 or R2 V1.0](../images/rf_bridge-full.jpg)
@@ -89,11 +89,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).send_code(0x700, 0x800, 0x1000, 0xABC123);
+```cpp
+id(rf_bridge).send_code(0x700, 0x800, 0x1000, 0xABC123);
+```
 
 
 {{< /note >}}
@@ -120,11 +120,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).send_raw("AAA5070008001000ABC12355");
+```cpp
+id(rf_bridge).send_raw("AAA5070008001000ABC12355");
+```
 
 
 {{< /note >}}
@@ -146,11 +146,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).learn();
+```cpp
+id(rf_bridge).learn();
+```
 
 
 {{< /note >}}
@@ -204,11 +204,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).send_advanced_code(0x04, 0x01, "ABC123");
+```cpp
+id(rf_bridge).send_advanced_code(0x04, 0x01, "ABC123");
+```
 
 
 {{< /note >}}
@@ -231,11 +231,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).start_advanced_sniffing();
+```cpp
+id(rf_bridge).start_advanced_sniffing();
+```
 
 
 {{< /note >}}
@@ -257,11 +257,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).stop_advanced_sniffing();
+```cpp
+id(rf_bridge).stop_advanced_sniffing();
+```
 
 {{< /note >}}
 {{< anchor "rf_bridge-start_bucket_sniffing_action" >}}
@@ -274,7 +274,7 @@ The raw data will be available in the log and can later be used with [``rf_bridg
 
 {{< note >}}
 A conversion from *B1* (received) raw format to *B0* (send) raw command format should be applied.
-For this, you can use the tool `BitBucket Converter <https://bbconv.hrbl.pl/>`__
+For this, you can use the tool [BitBucket Converter](https://bbconv.hrbl.pl/)
 
 {{< /note >}}
 {{< note >}}
@@ -293,11 +293,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).start_bucket_sniffing();
+```cpp
+id(rf_bridge).start_bucket_sniffing();
+```
 
 
 {{< /note >}}
@@ -322,11 +322,11 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    id(rf_bridge).beep(100);
+```cpp
+id(rf_bridge).beep(100);
+```
 
 {{< /note >}}
 ## Getting started with Home Assistant

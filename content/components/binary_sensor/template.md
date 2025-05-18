@@ -88,9 +88,9 @@ Configuration options:
 {{< note >}}
 This action can also be written in lambdas:
 
-.. code-block:: cpp
-
-    id(template_bin).publish_state(true);
+```cpp
+id(template_bin).publish_state(true);
+```
 
 {{< /note >}}
 ## See Also

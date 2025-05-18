@@ -48,13 +48,13 @@ Some development boards like the Wemos D1 mini include external voltage divider 
 a 3.3V input signal to the chip-internal 1.0V. If your board has this circuitry, add a multiply filter to
 get correct values:
 
-.. code-block:: yaml
-
-    sensor:
-      - platform: adc
-        # ...
-        filters:
-          - multiply: 3.3
+```yaml
+sensor:
+  - platform: adc
+    # ...
+    filters:
+      - multiply: 3.3
+```
 
 
 {{< /note >}}
@@ -70,7 +70,7 @@ To simplify this, we provide the setting `attenuation: auto` for an automatic/se
 <https://github.com/esphome/esphome/blob/dev/esphome/components/adc/adc_sensor_esp32.cpp>`__ combines all available ranges to allow the best resolution without having to compromise on a specific attenuation.
 
 {{< note >}}
-In our tests, the usable ADC range was from ~0.075V to ~3.12V (with the ``attenuation: auto`` setting), and anything outside that range capped out at either end.
+In our tests, the usable ADC range was from ~0.075V to ~3.12V (with the `attenuation: auto` setting), and anything outside that range capped out at either end.
 Even though the measurements are calibrated, the range *limits* are variable among chips due to differences in the internal voltage reference.
 
 
@@ -149,7 +149,7 @@ Our experiments indicate the drop being ~0.1V for Pico and ~0.25V for Pico W; yo
 
 {{< note >}}
 On Raspberry Pi Pico W the ADC GPIO29 pin for VSYS is shared with WiFi chip, so attempting to use it explicitly will likely hang the WiFi connection.
-It is recommended to use ``VCC`` as ADC pin in that case.
+It is recommended to use `VCC` as ADC pin in that case.
 
 
 {{< /note >}}

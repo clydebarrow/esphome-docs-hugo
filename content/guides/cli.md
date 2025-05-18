@@ -17,9 +17,9 @@ esphome [OPTIONS] <COMMAND> <CONFIGURATION...> [ARGUMENTS]
 You can specify multiple configuration files in the command line interface for some commands,
 just list all files after the <COMMAND> like so:
 
-.. code-block:: console
-
-    esphome run livingroom.yaml kitchen.yaml
+```console
+esphome run livingroom.yaml kitchen.yaml
+```
 
 {{< /note >}}
 ## ``--help`` Option

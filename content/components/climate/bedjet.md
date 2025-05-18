@@ -182,7 +182,7 @@ Only one client can be connected to the BedJet BLE service at a time, so you can
 use the BedJet mobile app to monitor or control the BedJet device while this component
 is connected. To use the mobile app, you should disconnect the ESP client first.
 
-To set up a (dis-)connect switch, see :doc:`/components/switch/ble_client`.
+To set up a (dis-)connect switch, see [/components/switch/ble_client]({{< ref "/components/switch/ble_client" >}}).
 
 {{< /note >}}
 {{< note >}}
@@ -192,17 +192,17 @@ configuration. If this occurs, see the previous note about adding disconnect swi
 and toggle those off while performing the installation. This will free up resources
 on the ESP and allow the installation to complete.
 
-Additionally, you may use an :ref:`ota.on_begin <ota-on_begin>` :ref:`Automation<automation>`
+Additionally, you may use an [Automation<automation>]({{< ref "#Automation<automation>" >}}) [``on_begin``]({{< ref "components/ota/_index#ota-on_begin" >}})
 to do this automatically:
 
-.. code-block:: yaml
-
-    ota:
-      on_begin:
-        then:
-          - logger.log: "Disconnecting clients for OTA update..."
-          - switch.turn_off: bedjet_1_monitor
-          - switch.turn_off: bedjet_2_monitor
+```yaml
+ota:
+  on_begin:
+    then:
+      - logger.log: "Disconnecting clients for OTA update..."
+      - switch.turn_off: bedjet_1_monitor
+      - switch.turn_off: bedjet_2_monitor
+```
 
 {{< /note >}}
 ## See Also

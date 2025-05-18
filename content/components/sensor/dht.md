@@ -59,16 +59,16 @@ if you're having issues try the 4.7kΩ recommended by the manufacturer) between
   sensor. Defaults to `60s`.
 
 {{< note >}}
-The default ``accuracy_decimals`` value of the *humidity* levels is ``0``, as the DHT11 for which this was
+The default `accuracy_decimals` value of the *humidity* levels is `0`, as the DHT11 for which this was
 originally written does not have a higher resolution. All other DHT sensors have a higher resolution, it's worth
-to configure them with ``accuracy_decimals: 1``.
+to configure them with `accuracy_decimals: 1`.
 
 If you're seeing lots of invalid temperature/humidity warnings in the logs, try manually setting the
-DHT model with the ``model:`` configuration variable. Other problems could be wrong pull-up resistor values
+DHT model with the `model:` configuration variable. Other problems could be wrong pull-up resistor values
 on the DATA pin or too long cables.
 
 If you're using a DHT module with an external pull-up resistor and seeing invalid temperature/humidity warnings in the logs,
-set ``pullup: false`` under your ``pin`` configuration.
+set `pullup: false` under your `pin` configuration.
 
 {{< /note >}}
 ## See Also

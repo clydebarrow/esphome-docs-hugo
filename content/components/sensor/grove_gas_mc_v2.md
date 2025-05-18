@@ -15,7 +15,7 @@ Compounds (VOCs).
 The Grove Multichannel Gas Sensor V2 is a qualitative, not quantitative, sensor.
 This means values reported back are raw ADC values. Values are **not** in a common unit
 of measurement, such as PPM (parts per million). If you have known baseline readings
-for any of the gases, :ref:`sensor-filters` could be used to calibrate the raw readings.
+for any of the gases, [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}) could be used to calibrate the raw readings.
 
 {{< /note >}}
 ![Grove Multichannel Gas Sensor V2](/images/grove-gas-mc-v2.png)

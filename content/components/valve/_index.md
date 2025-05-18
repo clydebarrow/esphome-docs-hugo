@@ -70,13 +70,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(valve_1).make_call();
-    call.set_command_open();
-    call.perform();
+```cpp
+auto call = id(valve_1).make_call();
+call.set_command_open();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "valve-close_action" >}}
@@ -92,13 +92,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(valve_1).make_call();
-    call.set_command_close();
-    call.perform();
+```cpp
+auto call = id(valve_1).make_call();
+call.set_command_close();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "valve-stop_action" >}}
@@ -114,13 +114,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(valve_1).make_call();
-    call.set_command_stop();
-    call.perform();
+```cpp
+auto call = id(valve_1).make_call();
+call.set_command_stop();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "valve-toggle_action" >}}
@@ -137,13 +137,13 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(valve_1).make_call();
-    call.set_command_toggle();
-    call.perform();
+```cpp
+auto call = id(valve_1).make_call();
+call.set_command_toggle();
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "valve-control_action" >}}
@@ -172,14 +172,14 @@ Configuration variables:
   - `1.0` = `100%` = `OPEN`
 
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    auto call = id(valve_1).make_call();
-    // set attributes
-    call.set_position(0.5);
-    call.perform();
+```cpp
+auto call = id(valve_1).make_call();
+// set attributes
+call.set_position(0.5);
+call.perform();
+```
 
 {{< /note >}}
 {{< anchor "valve-lambda_calls" >}}

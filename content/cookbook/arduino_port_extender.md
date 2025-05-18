@@ -137,7 +137,7 @@ The listed `sensors` supports all options from [Base Sensor Configuration]({{< r
 automations and filters.
 
 {{< note >}}
-Sensors are polled by default every loop cycle so it is recommended to use the ``throttle`` filter
+Sensors are polled by default every loop cycle so it is recommended to use the `throttle` filter
 to not flood the network.
 
 {{< /note >}}

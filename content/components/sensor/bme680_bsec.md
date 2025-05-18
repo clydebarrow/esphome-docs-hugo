@@ -19,7 +19,7 @@ for CO₂ and Breath Volatile Organic Compounds (b-VOC) using a correlation betw
   you are explicitly agreeing to the terms of the `BSEC license agreement`_. You must not distribute any compiled firmware
   binaries that include this component.
 
-- We recommend using the newer :doc:`bme68x_bsec2 <bme68x_bsec2>` component whenever possible.
+- We recommend using the newer [bme68x_bsec2 ]({{< relref "bme68x_bsec2/" >}}) component whenever possible.
 
 {{< /note >}}
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.

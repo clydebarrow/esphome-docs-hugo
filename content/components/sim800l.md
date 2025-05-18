@@ -14,14 +14,14 @@ of the module which is by default 9600bps. The required connection wires are `+V
 `RX` and `TX`.
 
 {{< warning >}}
-If you are using the :doc:`logger` make sure you are not using the same pins for ``TX`` and ``RX`` or
-otherwise disable the UART logging with the ``baud_rate: 0`` option.
+If you are using the [logger]({{< ref "logger/" >}}) make sure you are not using the same pins for `TX` and `RX` or
+otherwise disable the UART logging with the `baud_rate: 0` option.
 
 {{< /warning >}}
 {{< note >}}
 This module requires a power supply between 3.8V and 4.2V that can handle current spikes up
 to 2 amps, it will not work by powering from the same 3.3V power source of the ESP. However you can
-connect ``TX`` and ``RX`` lines directly without any level shifter.
+connect `TX` and `RX` lines directly without any level shifter.
 
 {{< /note >}}
 ![.. code-block:: yaml](../images/sim800l-full.jpg)

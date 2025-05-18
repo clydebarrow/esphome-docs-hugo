@@ -10,7 +10,7 @@ It is best to set the component's vscope to global in the Nextion Editor. This w
 if the page is shown or not.
 
 {{< note >}}
-The Nextion can receive an integer but it can only send 3 bytes for a negative integer. The range if using the :ref:`nextion_custom_sensor_protocol` is:
+The Nextion can receive an integer but it can only send 3 bytes for a negative integer. The range if using the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) is:
     -16777215 to 4294967295
 
 {{< /note >}}
@@ -132,7 +132,7 @@ Configuration variables:
   display which will update component. Default is true.
 
 {{< note >}}
-This action can also be written in lambdas. See :ref:`nextion_sensor_lambda_calls`
+This action can also be written in lambdas. See [Lambda Calls]({{< ref "components/sensor/nextion#nextion_sensor_lambda_calls" >}})
 
 {{< /note >}}
 {{< anchor "nextion_sensor_lambda_calls" >}}

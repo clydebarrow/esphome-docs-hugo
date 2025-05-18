@@ -7,7 +7,7 @@ title: "Peacefair PZEM-004T Energy Monitor"
 
 {{< note >}}
 This page is incomplete and could use some work. If you want to contribute, please see our
-`developer site <https://developers.esphome.io>`__. This page is missing:
+[developer site](https://developers.esphome.io). This page is missing:
 
   - An image for the front page.
   - Images/screenshots/example configs of this device being used in action.
@@ -20,7 +20,7 @@ ESPHome.
 {{< warning >}}
 This page refers to version V1 of the PZEM-004T, which has been out of stock for a while.
 The PZEM-004, however, is still working (and selling) with this protocol and does not use modbus.
-For using the newer V3 variant of this sensor please see :doc:`pzemac <pzemac>`.
+For using the newer V3 variant of this sensor please see [pzemac ]({{< relref "pzemac/" >}}).
 
 {{< /warning >}}
 The communication with this component is done via a [UART Bus]({{< ref "components/uart#uart" >}}).
@@ -65,7 +65,7 @@ These devices have optocouplers on the UART port and the resistors mounted on th
 ESPs need a [Level Shifter](https://www.adafruit.com/product/1875) to be compatible with TTL levels.
 
 {{< note >}}
-You need a IC level shifter and not a `Mosfet-based <https://www.sparkfun.com/products/12009>`__ level shifter, because you need
+You need a IC level shifter and not a [Mosfet-based](https://www.sparkfun.com/products/12009) level shifter, because you need
 to power the optocoupler's LEDs without an additional resistor in the path.
 
 {{< /note >}}

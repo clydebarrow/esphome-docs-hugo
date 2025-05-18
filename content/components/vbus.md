@@ -72,8 +72,8 @@ vbus:
 
 ```
 {{< warning >}}
-If you are using the :doc:`logger` make sure you are not using the same pins for it or otherwise disable the UART
-logging with the ``baud_rate: 0`` option.
+If you are using the [logger]({{< ref "logger/" >}}) make sure you are not using the same pins for it or otherwise disable the UART
+logging with the `baud_rate: 0` option.
 
 {{< /warning >}}
 Configuration variables:
@@ -136,7 +136,7 @@ All sensors are *Optional* and support all other options from [Base Sensor Confi
 
 {{< note >}}
 Sensors are updated every time a data packet is sent by the device. Some models send data very often, possibly every second. If you are
-concerned about the load on the receiving database, you can add a ``throttle`` filter to the sensors.
+concerned about the load on the receiving database, you can add a `throttle` filter to the sensors.
 
 
 

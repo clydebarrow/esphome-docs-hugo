@@ -26,7 +26,7 @@ select:
 
 ```
 {{< note >}}
-Widget-specific actions (``lvgl.dropdown.update``, ``lvgl.roller.update``) will trigger correspponding component updates to be sent to Home Assistant.
+Widget-specific actions (`lvgl.dropdown.update`, `lvgl.roller.update`) will trigger correspponding component updates to be sent to Home Assistant.
 
 {{< /note >}}
 ## See Also

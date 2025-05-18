@@ -6,13 +6,13 @@ title: "FastLED Light"
 {{< seo description="" image="" >}}
 
 {{< warning >}}
-FastLED does **not** work as expected with Arduino 3 or newer for ESP8266. For now, you can either downgrade the arduino version or use :doc:`neopixelbus`.
+FastLED does **not** work as expected with Arduino 3 or newer for ESP8266. For now, you can either downgrade the arduino version or use [neopixelbus]({{< ref "neopixelbus/" >}}).
 
-.. code-block:: yaml
-
-    esp8266:
-      framework:
-        version: 2.7.4
+```yaml
+esp8266:
+  framework:
+    version: 2.7.4
+```
 
 See these related issues:
 
@@ -23,7 +23,7 @@ See these related issues:
 {{< warning >}}
 FastLED does **not** work with ESP-IDF.
 
-For addressable lights, you can use :doc:`esp32_rmt_led_strip` or for SPI LEDs see :doc:`spi_led_strip`..
+For addressable lights, you can use [spi_led_strip]({{< ref "spi_led_strip/" >}}) or for SPI LEDs see [esp32_rmt_led_strip]({{< ref "esp32_rmt_led_strip/" >}})..
 
 {{< /warning >}}
 {{< anchor "fastled-clockless" >}}

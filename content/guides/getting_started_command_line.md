@@ -45,7 +45,7 @@ services:
 {{< note >}}
 If you are using NFS share to back your container's config volume, you may
 need to mount the volume with the `nolock` option, otherwise platformio may
-freeze on container startup as per `platformIO-core Issue 3089 <https://github.com/platformio/platformio-core/issues/3089>`__
+freeze on container startup as per [platformIO-core Issue 3089](https://github.com/platformio/platformio-core/issues/3089)
 
 {{< /note >}}
 The project provides multiple docker tags; please pick the one that suits you
@@ -141,7 +141,7 @@ docker run --rm --privileged -v "${PWD}":/config --device=/dev/ttyUSB0 -it ghcr.
 
 ```
 {{< note >}}
-Alternatively, you can flash the binary using :ref:`ESPHome Web or esptool <esphome-esptool>`.
+Alternatively, you can flash the binary using [What is ``esptool``?]({{< ref "guides/faq#esphome-esptool" >}}).
 
 {{< /note >}}
 Now when you go to the Home Assistant **Integrations** screen (under **Configuration** panel), you

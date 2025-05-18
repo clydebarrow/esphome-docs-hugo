@@ -12,7 +12,7 @@ and ULN2003 ([datasheet](http://www.ti.com/lit/ds/symlink/uln2003a.pdf)) are sup
 
 {{< note >}}
 This component will not show up in the Home Assistant front-end automatically because
-Home Assistant doesn't have support for steppers. Please see :ref:`stepper-ha-config`.
+Home Assistant doesn't have support for steppers. Please see [Home Assistant Configuration]({{< ref "components/stepper/_index#stepper-ha-config" >}}).
 
 {{< /note >}}
 {{< anchor "base_stepper_config" >}}
@@ -66,16 +66,16 @@ Configuration variables:
 - All other from [Base Stepper Configuration]({{< ref "components/stepper/_index#base_stepper_config" >}}).
 
 {{< note >}}
-If the stepper is driving in the wrong direction, you can invert the ``dir_pin``:
+If the stepper is driving in the wrong direction, you can invert the `dir_pin`:
 
-.. code-block:: yaml
-
-    stepper:
-      - platform: a4988
-        # ...
-        dir_pin:
-          number: GPIOXX
-          inverted: true
+```yaml
+stepper:
+  - platform: a4988
+    # ...
+    dir_pin:
+      number: GPIOXX
+      inverted: true
+```
 
 {{< /note >}}
 ## ULN2003 Component
@@ -150,17 +150,17 @@ Configuration options:
 This turns the stepper to an absolute position! To have the stepper motor move *relative* to the current
 position, first reset the current position and then set the target to the relative value.
 
-.. code-block:: yaml
-
-    on_...:
-      then:
-        # Move 150 steps forward
-        - stepper.report_position:
-            id: my_stepper
-            position: 0
-        - stepper.set_target:
-            id: my_stepper
-            target: 150
+```yaml
+on_...:
+  then:
+    # Move 150 steps forward
+    - stepper.report_position:
+        id: my_stepper
+        position: 0
+    - stepper.set_target:
+        id: my_stepper
+        target: 150
+```
 
 {{< /warning >}}
 {{< anchor "stepper-report_position_action" >}}

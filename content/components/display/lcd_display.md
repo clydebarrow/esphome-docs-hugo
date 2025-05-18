@@ -109,7 +109,7 @@ Configuration variables:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< note >}}
-If you're not seeing anything on the display, make sure you apply ``3.3V`` to the ``VEE`` (``03``) contrast control
+If you're not seeing anything on the display, make sure you apply `3.3V` to the `VEE` (`03`) contrast control
 pin of the board. You can use a potentiometer to make it adjustable.
 
 

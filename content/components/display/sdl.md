@@ -42,7 +42,7 @@ Configuration variables:
 
 {{< note >}}
 To build with this display you must have the
-`SDL2 <https://wiki.libsdl.org/SDL2/Installation>`__ package installed. The Sodium encryption library will
+[SDL2](https://wiki.libsdl.org/SDL2/Installation) package installed. The Sodium encryption library will
 also be required for any API calls. See below for installation hints.
 
 {{< /note >}}

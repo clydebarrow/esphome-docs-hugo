@@ -38,12 +38,12 @@ Additionally, you can use the `animation.next_frame`, `animation.prev_frame` or 
 {{< note >}}
 To draw the next animation independent of Display draw cycle use an interval:
 
-.. code-block:: yaml
-
-    interval:
-      - interval: 5s
-          then:
-            animation.next_frame: my_animation
+```yaml
+interval:
+  - interval: 5s
+      then:
+        animation.next_frame: my_animation
+```
 
 {{< /note >}}
 ## Configuration variables:

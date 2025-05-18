@@ -7,7 +7,7 @@ title: "Peacefair PZEM-00X DC Energy Monitor"
 
 {{< note >}}
 This page is incomplete and could use some work. If you want to contribute, please see our
-`developer site <https://developers.esphome.io>`__. This page is missing:
+[developer site](https://developers.esphome.io). This page is missing:
 
   - Images/screenshots/example configs of this device being used in action.
 

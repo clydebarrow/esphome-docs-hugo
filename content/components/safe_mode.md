@@ -35,7 +35,7 @@ safe_mode:
 - **on_safe_mode** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed once when safe mode is invoked.
 
 {{< warning >}}
-The ``on_safe_mode`` :ref:`automation <automation>` is intended for use by recovery actions **only**.
+The `on_safe_mode` [Automation]({{< ref "automations/_index#automation" >}}) is intended for use by recovery actions **only**.
 
 As mentioned above, in safe mode, all components are disabled except serial logging, network (Wi-Fi or Ethernet)
 and OTA component(s).

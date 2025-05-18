@@ -24,16 +24,16 @@ do *periodic disconnections and reconnections* will permit using more than 3 of 
 Passively broadcasted sensor data (that is advertised by certain devices without active connections) is received
 separately from these, and is not limited to a specific number.
 
-The :doc:`esp32` component should be configured to use the ``esp-idf`` framework, as the ``arduino`` framework
+The [esp32]({{< ref "esp32/" >}}) component should be configured to use the `esp-idf` framework, as the `arduino` framework
 uses significantly more memory and performs poorly with the Bluetooth proxy enabled. When switching from
-``arduino`` to ``esp-idf``, make sure to update the device with a serial cable as the partition table is
-different between the two frameworks as :doc:`/components/ota/index` updates will not change the partition table.
+`arduino` to `esp-idf`, make sure to update the device with a serial cable as the partition table is
+different between the two frameworks as [/components/ota/index]({{< ref "/components/ota/index" >}}) updates will not change the partition table.
 
-The :doc:`web_server` component should be disabled as the device is likely
+The [web_server]({{< ref "web_server/" >}}) component should be disabled as the device is likely
 to run out of memory and will malfunction when both components are enabled simultaneously.
 
 Not all devices are supported and ESPHome does not decode or keep a list. To find out if your device is supported,
-please search for it in the `Home Assistant Integrations <https://www.home-assistant.io/integrations/>`__ list.
+please search for it in the [Home Assistant Integrations](https://www.home-assistant.io/integrations/) list.
 
 {{< /warning >}}
 ## Configuration:
@@ -65,7 +65,7 @@ esp32_ble_tracker:
     window: 1100ms
 ```
 {{< note >}}
-For WiFi-based proxies, changing the ``interval`` or ``window`` from their default values may result in an unstable WiFi connection. Using the default values for ``interval`` and ``window`` will usually resolve any instability.
+For WiFi-based proxies, changing the `interval` or `window` from their default values may result in an unstable WiFi connection. Using the default values for `interval` and `window` will usually resolve any instability.
 
 {{< /note >}}
 Avoid placing the ESP node in racks, close to routers/switches or other network equipment as EMI interference will degrade Bluetooth signal reception. For best results put as far away as possible, at least 3 meters distance from any other such equipment. Place your ESPHome devices close to the Bluetooth devices that you want to interact with for the best experience.

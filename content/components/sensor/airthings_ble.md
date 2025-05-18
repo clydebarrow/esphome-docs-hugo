@@ -119,8 +119,8 @@ The sensor uses active polling of devices every 5 minutes as per the device repo
 Battery-voltage reporting defaults to once every 24 hours in order
 to reduce BLE traffic (obtaining the battery voltage requires quite
 a few BLE commands/responses); if you wish to have it reported
-more frequently configure the ``battery_update_interval``. The main
-sensor ``update_interval`` controls the overall polling frequency
+more frequently configure the `battery_update_interval`. The main
+sensor `update_interval` controls the overall polling frequency
 so setting the interval for the battery voltage to a lower value
 will result in the battery voltage being reported once per polling
 interval.

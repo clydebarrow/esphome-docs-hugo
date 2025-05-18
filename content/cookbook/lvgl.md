@@ -12,7 +12,7 @@ Many of the examples below call service actions in Home Assistant; however, Home
 
 {{< /note >}}
 {{< note >}}
-The examples below assume you've set up LVGL correctly with your display and its input device, and you have the knowledge to set up various components in ESPHome. Some examples use absolute positioning for a screen with dimensions of ``240x320px``; if your display's dimensions differ, you'll need to adjust them in order to obtain the expected results.
+The examples below assume you've set up LVGL correctly with your display and its input device, and you have the knowledge to set up various components in ESPHome. Some examples use absolute positioning for a screen with dimensions of `240x320px`; if your display's dimensions differ, you'll need to adjust them in order to obtain the expected results.
 
 {{< /note >}}
 {{< anchor "lvgl-cookbook-relay" >}}
@@ -183,7 +183,7 @@ lvgl:
 The `adv_hittest` option ensures that accidental touches to the screen won't cause sudden volume changes (more details in the [``slider``]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})).
 
 {{< note >}}
-Keep in mind that ``on_value`` is triggered *continuously* by the slider while it's being dragged. This generally has a negative effect on performance. For example, you shouldn't use this trigger to set the target temperature of a heat pump via Modbus, or set the position of motorized covers, because it will likely cause malfunctions. To mitigate this, consider using a universal widget trigger like ``on_release`` to get the ``x`` variable once after the interaction has completed.
+Keep in mind that `on_value` is triggered *continuously* by the slider while it's being dragged. This generally has a negative effect on performance. For example, you shouldn't use this trigger to set the target temperature of a heat pump via Modbus, or set the position of motorized covers, because it will likely cause malfunctions. To mitigate this, consider using a universal widget trigger like `on_release` to get the `x` variable once after the interaction has completed.
 
 {{< /note >}}
 {{< anchor "lvgl-cookbook-gauge" >}}
@@ -280,10 +280,10 @@ lvgl:
                     text: "+10"
 
 ```
-.. tip::
+{{< tip >}}
+The `obj` used to hide the middle part of the meter indicator line has `radius` equal to half of the `width` and `height`. This results in a circle - which is actually a square with extra large rounded corners. 
 
-    The `obj` used to hide the middle part of the meter indicator line has `radius` equal to half of the `width` and `height`. This results in a circle - which is actually a square with extra large rounded corners. 
-
+{{< /tip >}}
 {{< anchor "lvgl-cookbook-thermometer" >}}
 
 ## Thermometer
@@ -431,10 +431,10 @@ lvgl:
                     y: -6
 
 ```
-.. tip::
+{{< tip >}}
+You can omit the `obj` used to hide the middle part of meter indicator line by using a bitmap `image` indicator as needle, were only the part hanging above the ticks scale is visible, the rest is transparent.
 
-    You can omit the `obj` used to hide the middle part of meter indicator line by using a bitmap `image` indicator as needle, were only the part hanging above the ticks scale is visible, the rest is transparent.
-
+{{< /tip >}}
 {{< anchor "lvgl-cookbook-climate" >}}
 
 ## Climate control
@@ -1233,15 +1233,15 @@ lvgl:
               text_font: roboto_icons_42
 
 ```
-.. tip::
+{{< tip >}}
+Follow these steps to choose your MDI icons:
 
-    Follow these steps to choose your MDI icons:
-    
-    - To lookup your icons, use the [Pictogrammers](https://pictogrammers.com/library/mdi/) site. Click on the desired icon and note its codepoint (it's the hexadecimal number near the download options).
-    - To get the TrueType font with all the icons in it, head on to the [Pictogrammers GitHub repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/) and from a recent version folder, download the `materialdesignicons-webfont.ttf` file and place it in your ESPHome config directory under a folder named `fonts` (to match the example above).
-    - To use the desired icon, prepend the copied codepoint with `\U000`. The Unicode character escape sequence has to start with capital `\U` and have exactly 8 hexadecimal digits.
-    - To translate the escape sequence into the real glyph, make sure you enclose your strings in double quotes.    
+- To lookup your icons, use the [Pictogrammers](https://pictogrammers.com/library/mdi/) site. Click on the desired icon and note its codepoint (it's the hexadecimal number near the download options).
+- To get the TrueType font with all the icons in it, head on to the [Pictogrammers GitHub repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/) and from a recent version folder, download the `materialdesignicons-webfont.ttf` file and place it in your ESPHome config directory under a folder named `fonts` (to match the example above).
+- To use the desired icon, prepend the copied codepoint with `\U000`. The Unicode character escape sequence has to start with capital `\U` and have exactly 8 hexadecimal digits.
+- To translate the escape sequence into the real glyph, make sure you enclose your strings in double quotes.    
 
+{{< /tip >}}
 {{< anchor "lvgl-cookbook-ckboxmark" >}}
 
 ## Restore checkbox mark
@@ -1492,26 +1492,26 @@ lvgl:
               duration: 2200ms
 
 ```
-.. tip::
+{{< tip >}}
+You can use both battery examples above placed on top of each other, and switch their `hidden` flag depending if the charger is connected or not:
 
-    You can use both battery examples above placed on top of each other, and switch their `hidden` flag depending if the charger is connected or not:
+```yaml
+binary_sensor:
+  - platform: ...
+    id: charger_connected
+    on_press:
+      then:
+        - lvgl.widget.show: ani_battery_charging
+        - lvgl.widget.hide: lbl_battery_status
+    on_release:
+      then:
+        - lvgl.widget.show: lbl_battery_status
+        - lvgl.widget.hide: ani_battery_charging
+```
 
-    ```yaml
-    binary_sensor:
-      - platform: ...
-        id: charger_connected
-        on_press:
-          then:
-            - lvgl.widget.show: ani_battery_charging
-            - lvgl.widget.hide: lbl_battery_status
-        on_release:
-          then:
-            - lvgl.widget.show: lbl_battery_status
-            - lvgl.widget.hide: ani_battery_charging
+Use `x`, `y`, `align` widget properties for precise positioning.
 
-    ```
-    Use `x`, `y`, `align` widget properties for precise positioning.
-
+{{< /tip >}}
 {{< anchor "lvgl-cookbook-clock" >}}
 
 ## An analog clock

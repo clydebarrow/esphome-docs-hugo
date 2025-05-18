@@ -111,11 +111,11 @@ Configuration options:
 {{< note >}}
 This action can also be written in lambdas:
 
-.. code-block:: cpp
-
-    id(template_cov).position = COVER_OPEN;
-    id(template_cov).tilt = 0.5;
-    id(template_cov).publish_state();
+```cpp
+id(template_cov).position = COVER_OPEN;
+id(template_cov).tilt = 0.5;
+id(template_cov).publish_state();
+```
 
 {{< /note >}}
 ## See Also

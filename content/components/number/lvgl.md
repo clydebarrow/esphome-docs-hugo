@@ -28,7 +28,7 @@ number:
 
 ```
 {{< note >}}
-Widget-specific actions (``lvgl.arc.update``, ``lvgl.bar.update``, ``lvgl.slider.update``, ``lvgl.spinbox.update``, ``lvgl.spinbox.decrement``, ``lvgl.spinbox.increment``) will trigger correspponding component updates to be sent to Home Assistant.
+Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.update`, `lvgl.spinbox.update`, `lvgl.spinbox.decrement`, `lvgl.spinbox.increment`) will trigger correspponding component updates to be sent to Home Assistant.
 
 {{< /note >}}
 ## See Also

@@ -13,7 +13,7 @@ connections to them for use by other components.
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as :doc:`/components/voice_assistant` and other
+configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
 audio components are most likely to cause issues.
 
 {{< /warning >}}
@@ -24,7 +24,7 @@ connect more devices, use additional ESP32 boards.
 This component supports devices that require a 6 digit PIN code for authentication.
 
 Currently, devices connected with the client cannot be supported by other components based on
-:doc:`/components/esp32_ble_tracker` as they listen to advertisements which are only sent by devices
+[/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}) as they listen to advertisements which are only sent by devices
 without an active connection.
 
 {{< /note >}}

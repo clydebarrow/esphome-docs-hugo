@@ -54,8 +54,8 @@ display:
 
 
 {{< note >}}
-When enabled (the default, but also via ``it.set_enabled(true)``), any effect currently running on the
-addressable light will be disabled. When disabled (``it.set_enabled(false)``), the last configured effect will
+When enabled (the default, but also via `it.set_enabled(true)`), any effect currently running on the
+addressable light will be disabled. When disabled (`it.set_enabled(false)`), the last configured effect will
 be restored.
 
 While the display is enabled, it is still possible to control the parent addressable light component in some

@@ -256,13 +256,13 @@ Configuration variables:
   to.
 
 {{< note >}}
-This condition can also be expressed in :ref:`lambdas <config-lambda>`:
+This condition can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
 
-.. code-block:: cpp
-
-    if (id(my_text_sensor).state == "Hello World") {
-      // do something
-    }
+```cpp
+if (id(my_text_sensor).state == "Hello World") {
+  // do something
+}
+```
 
 {{< /note >}}
 {{< anchor "text_sensor-lambda_calls" >}}

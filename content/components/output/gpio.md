@@ -26,7 +26,7 @@ output:
 {{< warning >}}
 This is an **output component** and will not be visible from the frontend. Output components are intermediary
 components that can be attached to for example lights. To have a GPIO pin in the Home Assistant frontend, please
-see the :doc:`/components/switch/gpio`.
+see the [/components/switch/gpio]({{< ref "/components/switch/gpio" >}}).
 
 {{< /warning >}}
 ## See Also

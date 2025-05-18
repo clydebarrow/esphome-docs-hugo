@@ -120,7 +120,7 @@ too many WiFi/MQTT connection attempts, Over-The-Air updates being applied or th
 
 {{< note >}}
 It's not guaranteed that all components are in a connected state when this automation is triggered. For
-example, the MQTT client may have already disconnected. For use-cases that require specific shutdown ordering, look at the ``priority`` parameter.
+example, the MQTT client may have already disconnected. For use-cases that require specific shutdown ordering, look at the `priority` parameter.
 
 {{< /note >}}
 ```yaml
@@ -320,7 +320,7 @@ have unique identification for customer installs.
 
 {{< note >}}
 End users will need to create an individual YAML config file if they want to OTA update the
-devices in the future.  Creators can facilitate this process by providing ``dashboard_import`` URL
+devices in the future.  Creators can facilitate this process by providing `dashboard_import` URL
 for end users.  This allows them to easily update their devices as new features are made available
 upstream.
 

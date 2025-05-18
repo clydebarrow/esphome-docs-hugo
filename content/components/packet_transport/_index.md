@@ -115,13 +115,13 @@ require a 2-way network connection, and it only works on local networks because 
 nonce to the providers.
 
 {{< note >}}
-Occasionally a ``Ping key not seen`` warning message may appear in the device log. This is expected, because it may
+Occasionally a `Ping key not seen` warning message may appear in the device log. This is expected, because it may
 happen that while the consumer has regenerated the *ping* key, it subsequently received a *pong* with the previous key,
 most likely because the messages crossed in transit. In such a case, the message will be rejected, but the next message
 will contain the correct *pong*.
 
-Because of this, ``ping-pong`` is only recommended to be used for state transmissions, which are updated periodically
-at ``update_interval``.
+Because of this, `ping-pong` is only recommended to be used for state transmissions, which are updated periodically
+at `update_interval`.
 
 {{< /note >}}
 **Security considerations**

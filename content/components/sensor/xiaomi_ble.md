@@ -9,7 +9,7 @@ The `xiaomi_ble` sensor platform lets you track the output of Xiaomi Bluetooth L
 
 
 {{< note >}}
-You may alternatively use ESPHome's :doc:`/components/bluetooth_proxy` component to forward sensor data to Home Assistant and have Mija devices configured using its own Mija BLE component. This should work for the devices flashed with `PVVX MiThermometer <https://github.com/pvvx/ATC_MiThermometer>`__ custom firmware, as well as the regular, stock firmware.
+You may alternatively use ESPHome's [/components/bluetooth_proxy]({{< ref "/components/bluetooth_proxy" >}}) component to forward sensor data to Home Assistant and have Mija devices configured using its own Mija BLE component. This should work for the devices flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware, as well as the regular, stock firmware.
 
 
 {{< /note >}}
@@ -42,7 +42,7 @@ sensor:
 ```
 {{< note >}}
 Newer versions of HHCCJCY01 ship with firmware 3.2.1, and they
-`don't send the battery level data anymore <https://github.com/esphome/esphome/pull/1288#issuecomment-695809481>`__.
+[don't send the battery level data anymore](https://github.com/esphome/esphome/pull/1288#issuecomment-695809481).
 
 {{< /note >}}
 GCLS002

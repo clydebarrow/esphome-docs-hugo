@@ -23,7 +23,7 @@ status_led:
 
 ```
 {{< note >}}
-If your device has a single LED that needs to be shared use  :doc:`status_led light platform </components/light/status_led>` instead.
+If your device has a single LED that needs to be shared use  [status_led light platform ]({{< relref "/components/light/status_led" >}}) instead.
 
 {{< /note >}}
 ## Configuration variables:
@@ -34,14 +34,14 @@ If your device has a single LED that needs to be shared use  :doc:`status_led li
 
 {{< note >}}
 If your LED is in an active-LOW mode (when it's on if the output is enabled), use the
-``inverted`` option of the :ref:`Pin Schema <config-pin_schema>`:
+`inverted` option of the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}):
 
-.. code-block:: yaml
-
-    status_led:
-      pin:
-        number: GPIOXX
-        inverted: true
+```yaml
+status_led:
+  pin:
+    number: GPIOXX
+    inverted: true
+```
 
 {{< /note >}}
 ## See Also

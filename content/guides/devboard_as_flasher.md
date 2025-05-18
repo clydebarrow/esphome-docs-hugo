@@ -31,7 +31,7 @@ You need to make the following electrical connections:
 
 {{< note >}}
 - Most ESP32 S and C series devboards do *not* have a separate USB-UART chip - they have it built into the ESP. See below for instructions regarding ESP32-S series.
-- The 5V connection on either board may be labelled either ``5V`` or ``VIN``. Some boards may not have a 5V connection and will require 3.3V only.
+- The 5V connection on either board may be labelled either `5V` or `VIN`. Some boards may not have a 5V connection and will require 3.3V only.
 - Rather than powering the target board from the flasher board, it is also possible to use a separate power supply, just make sure all the ground pins are connected together.
 
 {{< /note >}}
@@ -45,7 +45,7 @@ Pulling down `EN` by connecting it to `GND` on the flasher board prevents
 the ESP chip on flasher module from booting and polluting the serial lines.
 
 {{< note >}}
-- If the board has not previously had ESPHome loaded, you may need to pull the ``IO0`` pin low (i.e. connected to ``GND``) to force the board into flash mode.
+- If the board has not previously had ESPHome loaded, you may need to pull the `IO0` pin low (i.e. connected to `GND`) to force the board into flash mode.
   This must be done before power is applied.
 - Do not connect 3V3 to VIN of the target devices with a 3V3 LDO as it may lead to brownouts.
 

@@ -34,8 +34,8 @@ receive data,  for example:
 to RXD are the default ones but any other pins can be used as well. 3.3V to VCC and GND to GND.
 
 {{< warning >}}
-If you are using the :ref:`logger` make sure you are not using the same pins for it or otherwise disable the UART
-logging with the ``baud_rate: 0`` option.
+If you are using the [Logger Component]({{< ref "components/logger#logger" >}}) make sure you are not using the same pins for it or otherwise disable the UART
+logging with the `baud_rate: 0` option.
 
 {{< /warning >}}
 ## Component

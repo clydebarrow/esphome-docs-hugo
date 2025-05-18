@@ -14,7 +14,7 @@ triggered in Home Assistant via automations.
 {{< note >}}
 Events in ESPHome are designed to trigger an action in Home Assistant, and have a unidirectional flow from ESPHome to Home Assistant.
 Home Assistant event entities are different from events on event bus. If you just want to trigger an event on the
-Home Assistant event bus, you should use a :ref:`Home Assistant event <api-homeassistant_event_action>` instead.
+Home Assistant event bus, you should use a [``homeassistant.event`` Action]({{< ref "components/api#api-homeassistant_event_action" >}}) instead.
 
 
 {{< /note >}}

@@ -106,7 +106,7 @@ It is strongly recommended to monitor the device temperature using the NTC tempe
 This safety feature is also present in the original firmware.
 
 {{< warning >}}
-The ADE7953 IRQ line is connected to the GPIO16. The ``irq_pin`` parameter for the :doc:`ADE7953 </components/sensor/ade7953>` MUST be
+The ADE7953 IRQ line is connected to the GPIO16. The `irq_pin` parameter for the [ADE7953 ]({{< relref "/components/sensor/ade7953" >}}) MUST be
 set to GPIO16 to prevent device overheat (>70ºC idling).
 
 {{< /warning >}}

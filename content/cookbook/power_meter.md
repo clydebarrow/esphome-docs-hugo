@@ -43,20 +43,20 @@ sensor:
 Adjust `GPIO12` to match your set up of course. The output from the pulse counter sensor is in pulses/min and we also know that 10000 pulses from the LED should equal 1kWh of power usage. Thus, rearranging the expression yields a proportional factor of 6 from pulses/min to *W*.
 
 {{< note >}}
-The ``pulse_meter`` sensor sends an update every time a pulse is detected. This can quickly lead to sub-second updates which can be a bit much for Home Assistant to handle. To avoid this, you can use the ``throttle_average`` filter to only send updates up to a desired interval:
+The `pulse_meter` sensor sends an update every time a pulse is detected. This can quickly lead to sub-second updates which can be a bit much for Home Assistant to handle. To avoid this, you can use the `throttle_average` filter to only send updates up to a desired interval:
 
-.. code-block:: yaml
-
-    sensor:
-      - platform: pulse_meter
-        # ...
-        filters:
-          - throttle_average: 10s
-          - filter_out: NaN
+```yaml
+sensor:
+  - platform: pulse_meter
+    # ...
+    filters:
+      - throttle_average: 10s
+      - filter_out: NaN
+```
 
 {{< /note >}}
 {{< note >}}
-The ``pulse_meter`` sensor has an internal filter that is used to debounce the input signal. This filter is set to ``13us`` by default. To increase the safety margin, you can increase this value. For this you need to know the *minimum pulse width* that you can expect to see from your power meter within the expected load range.
+The `pulse_meter` sensor has an internal filter that is used to debounce the input signal. This filter is set to `13us` by default. To increase the safety margin, you can increase this value. For this you need to know the *minimum pulse width* that you can expect to see from your power meter within the expected load range.
 
 The minimum pulse width threshold is determined by considering the upper limit of the *load* the meter is designed to handle, as well as the meter's *impulse constant* (x pulses / kWh). Here's the calculation involved:
 
@@ -66,12 +66,12 @@ The minimum pulse width threshold is determined by considering the upper limit o
 
 - **Minimum Pulse Width Calculation**: Use the pulse rate to calculate the minimum pulse width threshold. In our example, with a maximum pulse rate of 44.4/sec, the minimum pulse width we expect to see is approximately 22.5 milliseconds. Choose a slightly smaller value than this to avoid missing pulses.
 
-.. code-block:: yaml
-
-    sensor:
-      - platform: pulse_meter
-        # ...
-        internal_filter: 20ms
+```yaml
+sensor:
+  - platform: pulse_meter
+    # ...
+    internal_filter: 20ms
+```
 
 {{< /note >}}
 If a technician shows up and he looks confused about what the heck you have done to your power meter, tell them about ESPHome 😉

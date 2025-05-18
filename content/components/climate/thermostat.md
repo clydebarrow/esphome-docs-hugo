@@ -391,8 +391,8 @@ These configuration items determine default values the thermostat controller sho
     - `default_preset`: The thermostat will always switch to the preset specified by **default_preset**
 
 {{< note >}}
-You can specify a ``default_preset`` and set ``on_boot_restore_from`` to ``memory``. In this mode when
-the settings from last boot cannot be retrieved, for any reason, then the specified ``default_preset``
+You can specify a `default_preset` and set `on_boot_restore_from` to `memory`. In this mode when
+the settings from last boot cannot be retrieved, for any reason, then the specified `default_preset`
 will be applied.
 
 {{< /note >}}
@@ -505,9 +505,9 @@ Hysteresis Values
 {{< note >}}
 - While this platform uses the term temperature everywhere, it can also be used to regulate other values.
   For example, controlling humidity is also possible with this platform.
-- ``min_temperature`` and ``max_temperature`` from the base climate component are used the define the range of
+- `min_temperature` and `max_temperature` from the base climate component are used the define the range of
   adjustability and the defaults will probably not make sense for control of things like humidity. See
-  :doc:`/components/climate/index`.
+  [/components/climate/index]({{< ref "/components/climate/index" >}}).
 
 {{< /note >}}
 ## Bang-Bang vs. Thermostat

@@ -14,9 +14,9 @@ After reboot all states, parameters and variables will be reinitialized with the
 
 {{< note >}}
 **USE WITH GREAT CAUTION!** All credentials, global variables, counters and saved states stored in non-volatile memory will be lost with no chance of recovering them.
-Even raw reading of flash memory with ``esptool`` will not help, since data is physically erased from flash memory.
+Even raw reading of flash memory with `esptool` will not help, since data is physically erased from flash memory.
 
-For devices configured using :doc:`captive portal </components/captive_portal>`, this will reset WiFi settings as well, thus making such devices offline.
+For devices configured using [captive portal ]({{< relref "/components/captive_portal" >}}), this will reset WiFi settings as well, thus making such devices offline.
 You'll need to be in close proximity to your device to configure it again using a built-in WiFi access point and captive portal.
 
 

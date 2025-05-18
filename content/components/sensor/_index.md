@@ -91,19 +91,19 @@ MQTT Options:
 
 {{< note >}}
 If you're trying to setup filters for a sensor that has multiple outputs - for example a DHT22 which
-reports temperature *and* humidity - put the ``filters`` option into each sensor output like this:
+reports temperature *and* humidity - put the `filters` option into each sensor output like this:
 
-.. code-block:: yaml
-
-    sensor:
-      - platform: dht
+```yaml
+sensor:
+  - platform: dht
+    # ...
+    temperature:
+      filters:
         # ...
-        temperature:
-          filters:
-            # ...
-        humidity:
-          filters:
-            # ...
+    humidity:
+      filters:
+        # ...
+```
 
 {{< /note >}}
 {{< anchor "sensor-filters" >}}

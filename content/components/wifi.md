@@ -160,7 +160,7 @@ network doesn't allow for `.local` addresses. When a manual IP is in your config
 the OTA process will automatically choose that as the target for the upload.
 
 {{< note >}}
-See also :ref:`esphome-changing_node_name`.
+See also [Changing ESPHome Node Name]({{< ref "components/esphome#esphome-changing_node_name" >}}).
 
 {{< /note >}}
 {{< anchor "wifi-power_save_mode" >}}
@@ -313,7 +313,7 @@ on_...:
 
 ```
 {{< note >}}
-The configuration option ``enable_on_boot`` can be set to ``false`` if you do not want wifi to be enabled on boot.
+The configuration option `enable_on_boot` can be set to `false` if you do not want wifi to be enabled on boot.
 
 {{< /note >}}
 {{< anchor "wifi-configure" >}}

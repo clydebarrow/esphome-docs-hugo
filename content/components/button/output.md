@@ -31,9 +31,9 @@ momentarily set a GPIO pin using a button.
 - All other options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
 
 {{< note >}}
-When used with a :doc:`/components/output/gpio`, the pin will be low by default and pulled high when the button is
+When used with a [/components/output/gpio]({{< ref "/components/output/gpio" >}}), the pin will be low by default and pulled high when the button is
 pressed. To invert this behaviour and have the pin pulled low when the button is pressed, set the `inverted` option
-in the :ref:`config-pin_schema`.
+in the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}).
 
 {{< /note >}}
 ## See Also

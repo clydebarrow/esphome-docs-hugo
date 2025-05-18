@@ -64,7 +64,7 @@ of the cover can be restored at node reboot.
 
 {{< note >}}
 The stop button on the UI is always enabled even when the cover is stopped and each press
-on the button will cause the ``stop_action`` to be performed.
+on the button will cause the `stop_action` to be performed.
 
 {{< /note >}}
 ## Handle stop_action:

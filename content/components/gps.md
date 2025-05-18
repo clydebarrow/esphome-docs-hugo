@@ -1,0 +1,82 @@
+---
+description: "GPS Component"
+title: "GPS Component"
+---
+
+{{< seo description="" image="" >}}
+
+The `gps` component allows you to connect GPS modules to your ESPHome project.
+Any GPS module that uses the standardized NMEA communication protocol will work.
+
+![GPS Module. Image by `Adafruit`_](../images/gps-full.jpg)
+*GPS Module. Image by `Adafruit`_*
+
+
+.. _Adafruit: https://www.adafruit.com/product/746
+
+For this component to work you need to have set up a [UART bus]({{< ref "components/uart#uart" >}})
+in your configuration - only the RX pin should be necessary.
+
+```yaml
+# Example configuration entry
+
+# Declare GPS module
+gps:
+  latitude:
+    name: "Latitude"
+  longitude:
+    name: "Longitude"
+  altitude:
+    name: "Altitude"
+
+# GPS as time source
+time:
+  - platform: gps
+
+```
+The component is split up in platforms, by defining the GPS module
+(as seen above).
+
+In addition to retrieving GPS position data, the module can also be used as a
+time platform to get the current date and time via the very accurate GPS clocks
+without a network connection.
+
+See [time/gps]({{< ref "time/gps" >}}) for config options for the GPS time source.
+
+## Configuration variables:
+- **latitude** (*Optional*): Include the Latitude as a sensor
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **longitude** (*Optional*): Include the Longitude as a sensor
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **speed** (*Optional*): Include the measured speed as a sensor
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **course** (*Optional*): Include the measured course as a sensor
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **altitude** (*Optional*): Include the measured altitude as a sensor
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **satellites** (*Optional*): Include the number of tracking satellites being used as a sensor
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **hdop** (*Optional*): Include the measured HDOP (Horizontal Dilution Of Precision) as a sensor
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval of sensor updates. Defaults to  `20s`.
+
+## See Also
+
+- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [TinyGPS++ library](http://arduiniana.org/libraries/tinygpsplus/)
+- :apiref:`gps/gps.h`
+- :ghedit:`Edit`

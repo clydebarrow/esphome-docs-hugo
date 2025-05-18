@@ -1,0 +1,50 @@
+---
+description: "Color Temperature Light"
+title: "Color Temperature Light"
+---
+
+{{< seo description="" image="" >}}
+
+The `color_temperature` light platform creates a Color Temperature
+light from 2 [float output components]({{< ref "components/output/_index#output" >}}). One channel controls the LED temperature,
+and the other channel controls the brightness.
+
+```yaml
+# Example configuration entry
+light:
+  - platform: color_temperature
+    name: "Livingroom Lights"
+    color_temperature: output_component1
+    brightness: output_component2
+    cold_white_color_temperature: 6536 K
+    warm_white_color_temperature: 2000 K
+
+```
+## Configuration variables:
+
+- **color_temperature** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the color temperature. It returns a float from 0 to 1 in the mired scale. Hereby 0 corresponds to the cold white temperature and 1 to the warm white temperature.
+- **brightness** (**Required**, [output]({{< ref "components/output/_index#output" >}})): The id of the float [config-id]({{< ref "guides/configuration-types#config-id" >}}) to use for the brightness. It returns a float from 0 to 1.
+- **cold_white_color_temperature** (**Required**, float): The coldest color temperature supported by this light. This
+  is the lowest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the highest value when
+  expressed in Kelvin.
+- **warm_white_color_temperature** (**Required**, float): The warmest color temperature supported by this light. This
+  is the highest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the lowest value when
+  expressed in Kelvin.
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+
+## See Also
+
+- [/components/output/index]({{< ref "/components/output/index" >}})
+- [/components/light/index]({{< ref "/components/light/index" >}})
+- [/components/light/cwww]({{< ref "/components/light/cwww" >}})
+- [/components/light/rgb]({{< ref "/components/light/rgb" >}})
+- [/components/light/rgbw]({{< ref "/components/light/rgbw" >}})
+- [/components/light/rgbww]({{< ref "/components/light/rgbww" >}})
+- [/components/light/rgbct]({{< ref "/components/light/rgbct" >}})
+- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
+- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
+- [/components/output/pca9685]({{< ref "/components/output/pca9685" >}})
+- [/components/output/tlc59208f]({{< ref "/components/output/tlc59208f" >}})
+- :apiref:`color_temperature/ct_light_output.h`
+- :ghedit:`Edit`

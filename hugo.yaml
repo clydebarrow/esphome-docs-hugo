@@ -1,0 +1,68 @@
+baseURL: https://esphome.io/
+languageCode: en-us
+title: ESPHome - Smart Home Made Simple
+theme: esphome-theme
+
+params:
+  description: ESPHome - Smart Home Made Simple. ESPHome turns ESP32, ESP8266, and RP2040 microcontrollers into fully-featured smart home devices.
+  images:
+    - logo.svg
+  
+  # Social media links
+  social:
+    - name: GitHub
+      url: https://github.com/esphome/esphome
+    - name: Discord
+      url: https://discord.gg/KhAMKrd
+    - name: Forums
+      url: https://community.home-assistant.io/c/esphome/
+
+menu:
+  main:
+    - name: Getting Started
+      weight: 10
+      identifier: getting-started
+    - name: Components
+      url: /components/
+      weight: 20
+    - name: Guides
+      url: /guides/
+      weight: 30
+    - name: Automations
+      url: /automations/
+      weight: 40
+    - name: Changelog
+      url: /changelog/
+      weight: 50
+
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    lineNos: false
+    style: monokai
+  goldmark:
+    renderer:
+      unsafe: true  # Allow HTML in markdown files
+
+# Enable search functionality
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Static file configuration
+staticDir: 
+  - static
+
+mediaTypes:
+  image/svg+xml:
+    suffixes:
+      - svg
+
+outputFormats:
+  SVG:
+    mediaType: image/svg+xml
+    isPlainText: true
+    isHTML: false

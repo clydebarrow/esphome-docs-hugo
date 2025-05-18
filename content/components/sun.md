@@ -1,0 +1,127 @@
+---
+description: "Sun"
+title: "Sun"
+---
+
+{{< seo description="" image="" >}}
+
+The `sun` component allows you to track the sun's position in the sky. Calculations are done every 60 seconds.
+
+```yaml
+# Example configuration entry
+sun:
+  latitude: 48.8584°
+  longitude: 2.2945°
+
+# At least one time source is required
+time:
+  - platform: homeassistant
+
+```
+## Configuration variables:
+
+- **latitude** (**Required**, float): The latitude for performing the calculation.
+- **longitude** (**Required**, float): The longitude for performing the calculation.
+
+- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+
+Automation:
+
+```yaml
+# Example configuration entry
+sun:
+  latitude: 48.8584°
+  longitude: 2.2945°
+
+  on_sunrise:
+    - then:
+        - logger.log: Good morning!
+    # Custom elevation, will be called shortly after the trigger above.
+    - elevation: 5°
+      then:
+        - logger.log: Good morning 2!
+
+  on_sunset:
+    - then:
+        - logger.log: Good evening!
+
+```
+- **on_sunrise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform at sunrise
+  when the sun crosses a specified angle.
+
+  - **elevation** (*Optional*, float): The elevation to cross. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
+
+- **on_sunset** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform at sunset
+  when the sun crosses a specified angle.
+
+  - **elevation** (*Optional*, float): The elevation to cross. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
+
+## ``sun`` Sensor
+
+Additionally, the sun component exposes its values over a sensor platform.
+
+```yaml
+# Example configuration entry
+sensor:
+  - platform: sun
+    name: Sun Elevation
+    type: elevation
+  - platform: sun
+    name: Sun Azimuth
+    type: azimuth
+
+```
+![Configuration variables:](../images/sun-sensor-ui.png)
+*Configuration variables:*
+
+
+- **type** (**Required**, string): The type of value to track. One of `elevation` and
+  `azimuth`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+## ``sun`` Text Sensor
+
+Other properties like the next sunset time can be read out with the sun text_sensor platform.
+
+```yaml
+# Example configuration entry
+text_sensor:
+  - platform: sun
+    name: Sun Next Sunrise
+    type: sunrise
+  - platform: sun
+    name: Sun Next Sunset
+    type: sunset
+
+```
+![Configuration variables:](../images/sun-text_sensor-ui.png)
+*Configuration variables:*
+
+
+- **type** (**Required**, string): The type of value to track. One of `sunrise` and
+  `sunset`.
+- **elevation** (*Optional*, float): The elevation to calculate the next sunrise/sunset event
+  for. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
+- **format** (*Optional*, string): The format to format the time value with, see [strftime]({{< ref "components/time/_index#strftime" >}})
+  for more information. Defaults to `%X`.
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+
+
+## ``sun.is_above_horizon`` / ``sun.is_below_horizon`` Conditions
+
+The `sun.is_above_horizon` and `sun.is_below_horizon` [conditions]({{< ref "automations/actions#config-condition" >}})
+allow you to check if the sun is currently above or below the horizon.
+
+```yaml
+on_...:
+  - if:
+      condition:
+        - sun.is_above_horizon:
+      then:
+        - logger.log: Sun is above horizon!
+
+```
+## See Also
+
+- :apiref:`sun/sun.h`
+- :ghedit:`Edit`

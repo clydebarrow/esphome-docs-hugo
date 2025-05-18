@@ -1,0 +1,15 @@
+<div class="admonition warning">
+  <p class="admonition-title">Warning</p>
+  {{ .Inner | markdownify }}
+</div>
+
+<style>
+.admonition.warning {
+  background-color: #fef5e7;
+  border-color: #e67e22;
+}
+
+.admonition.warning .admonition-title {
+  color: #e67e22;
+}
+</style>

@@ -1,0 +1,127 @@
+---
+description: "MH-Z19 CO_2 and Temperature Sensor"
+title: "MH-Z19 CO_2 and Temperature Sensor"
+---
+
+{{< seo description="" image="" >}}
+
+The `mhz19` sensor platform allows you to use MH-Z19 CO_2 and temperature sensors
+(`Revspace`_) with ESPHome.
+The CO_2 measurement also works with the MH-Z16 and MH-Z14 sensors.
+
+![MH-Z19 CO_2 and Temperature Sensor.](../images/mhz19-full.jpg)
+*MH-Z19 CO_2 and Temperature Sensor.*
+
+
+.. _Revspace: https://revspace.nl/MHZ19
+
+As the communication with the MH-Z19 is done using UART, you need
+to have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin` connected to the TX pin of the
+MH-Z19 and the `tx_pin` connected to the RX Pin of the MH-Z19 (it's switched because the
+TX/RX labels are from the perspective of the MH-Z19). Additionally, you need to set the baud rate to 9600.
+
+```yaml
+# Example configuration entry
+sensor:
+  - platform: mhz19
+    co2:
+      name: MH-Z19 CO2 Value
+    temperature:
+      name: MH-Z19 Temperature
+
+```
+## Configuration variables:
+
+
+- **co2** (*Optional*): The CO_2 data from the sensor in parts per million (ppm).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **temperature** (*Optional*): The information for the temperature sensor. Please note that this is
+  not officially documented in the datasheet and seems to be quite inaccurate.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+  sensor. Defaults to `60s`.
+
+- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you want
+  to use multiple UART buses.
+
+- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for actions.
+
+- **automatic_baseline_calibration** (*Optional*, boolean): MH-Z19 has automatic calibration procedure.
+  The automatic calibration cycle is every 24 hours after powered on.
+  Set this value to `false` to disable ABC on boot (it's better if you use sensor indoor).
+  Set this value to `true` to enable ABC on boot.
+  Doesn't send calibration command if not set (default sensor logic will be used).
+
+- **warmup_time** (*Optional*, Time): The sensor has a warmup time and before that, it returns bougus readings (eg: 500ppm, 505ppm...). This setting discards readings until the warmup time happened (`NAN` is returned). The datasheet says preheating takes 1min, but empirical tests have shown it often takes more, so the 75s default should be enough to accomodate for that.
+
+![Pins on the MH-Z19. Only the ones marked with a red circle need to be connected.](../images/mhz19-pins.jpg)
+*Pins on the MH-Z19. Only the ones marked with a red circle need to be connected.*
+
+
+
+## ``mhz19.calibrate_zero`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) executes zero point calibration command on the sensor with the given ID.
+
+If you want to execute zero point calibration, the MH-Z19 sensor must work in stable gas environment (400ppm)
+for over 20 minutes and you execute this function.
+
+```yaml
+on_...:
+  then:
+    - mhz19.calibrate_zero: my_mhz19_id
+
+```
+You can provide an [action]({{< ref "components/api#api-device-actions" >}}) to perform from Home Assistant
+
+```yaml
+api:
+  actions:
+    - action: mhz19_calibrate_zero
+      then:
+        - mhz19.calibrate_zero: my_mhz19_id
+
+```
+
+## ``mhz19.abc_enable`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) enables automatic baseline calibration on the sensor with the given ID.
+
+```yaml
+on_...:
+  then:
+    - mhz19.abc_enable: my_mhz19_id
+
+```
+
+## ``mhz19.abc_disable`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) disables automatic baseline calibration on the sensor with the given ID.
+
+```yaml
+on_...:
+  then:
+    - mhz19.abc_disable: my_mhz19_id
+
+```
+You can provide switch and control ABC from Home Assistant
+
+```yaml
+switch:
+  - platform: template
+    name: "MH-Z19 ABC"
+    optimistic: true
+    on_turn_on:
+      mhz19.abc_enable: my_mhz19_id
+    on_turn_off:
+      mhz19.abc_disable: my_mhz19_id
+
+```
+## See Also
+
+- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [MH-Z19 library](https://github.com/nara256/mhz19_uart) by [@nara356](https://github.com/nara256)
+- :apiref:`mhz19/mhz19.h`
+- :ghedit:`Edit`

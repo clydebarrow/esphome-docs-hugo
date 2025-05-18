@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="sticky-nav">
+            <div class="nav-logo">
+                <a href="{{ "/" | relURL }}"><img src="{{ "images/logo.svg" | relURL }}" alt="ESPHome Logo" height="30"></a>
+            </div>
+            <button type="button" class="hamburger-button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">Getting Started</button>
+                    <div class="dropdown-content">
+                        <a href="{{ "guides/getting_started_hassio/" | relURL }}">From Home Assistant</a>
+                        <a href="{{ "guides/getting_started_command_line/" | relURL }}">Using Command Line</a>
+                        <a href="{{ "projects/" | relURL }}">Ready-Made Projects</a>
+                        <a href="{{ "guides/migrate_sonoff_tasmota/" | relURL }}">Migrate from Tasmota</a>
+                        <a href="{{ "guides/faq/" | relURL }}">FAQ and Tips</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">Next Steps</button>
+                    <div class="dropdown-content">
+                        <a href="{{ "components/" | relURL }}">Documentation</a>
+                        <a href="{{ "automations/" | relURL }}">Automations</a>
+                        <a href="{{ "guides/configuration-types/" | relURL }}">Configuration Types</a>
+                        <a href="https://devices.esphome.io/">Device Examples</a>
+                        <a href="{{ "guides/diy/" | relURL }}">DIY Examples</a>
+                        <a href="{{ "guides/creators/" | relURL }}">Sharing ESPHome Devices</a>
+                        <a href="{{ "guides/made_for_esphome/" | relURL }}">Made for ESPHome</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">Keeping Up</button>
+                    <div class="dropdown-content">
+                        <a href="{{ "changelog/" | relURL }}">Changelog</a>
+                        <a href="https://discord.gg/KhAMKrd">Discord</a>
+                        <a href="https://community.home-assistant.io/c/esphome/">Forums</a>
+                        <a href="https://developers.esphome.io">Development</a>
+                        <a href="{{ "guides/supporters/" | relURL }}">Supporters</a>
+                    </div>
+                </div>
+                <div class="nav-search">
+                    <div id="search-container"></div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="{{ "images/logo.svg" | relURL }}" alt="ESPHome Logo" height="30">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li><a href="{{ "components/" | relURL }}">Components</a></li>
+                        <li><a href="{{ "guides/" | relURL }}">Guides</a></li>
+                        <li><a href="{{ "automations/" | relURL }}">Automations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/KhAMKrd">Discord</a></li>
+                        <li><a href="https://community.home-assistant.io/c/esphome/">Forums</a></li>
+                        <li><a href="https://github.com/esphome/esphome">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="{{ "changelog/" | relURL }}">Changelog</a></li>
+                        <li><a href="https://devices.esphome.io/">Device Database</a></li>
+                        <li><a href="https://developers.esphome.io">Development</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ now.Format "2006" }} Open Home Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>

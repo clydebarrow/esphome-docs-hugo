@@ -1,0 +1,48 @@
+---
+description: "HRXL/XL MaxSonar WR Series"
+title: "HRXL/XL MaxSonar WR Series"
+---
+
+{{< seo description="" image="" >}}
+
+This sensor allows you to use HRXL MaxSonar WR series ultrasonic sensors by MaxBotix
+([datasheet](https://www.maxbotix.com/documents/HRXL-MaxSonar-WR_Datasheet.pdf))
+or the XL MaxSonar WR series
+([datasheet](https://www.maxbotix.com/documents/XL-MaxSonar-WR_Datasheet.pdf))
+with ESPHome to measure distances. Depending on the model, these sensors can measure
+in a range between 30 centimeters and 10 meters.
+
+This sensor platform works with the **TTL versions** of those sensors and expects the
+sensor's TTL pin to be wired to one of the ESP's input pins. Since these sensors read
+multiple times per second, filtering is highly recommended.
+
+
+![MB7388 HRXL-MaxSonar-WRMLT Ultrasonic Distance Sensor.](../images/hrxl_maxsonar_wr-full.jpg)
+*MB7388 HRXL-MaxSonar-WRMLT Ultrasonic Distance Sensor.*
+
+
+```yaml
+# Example configuration entry
+sensor:
+  - platform: "hrxl_maxsonar_wr"
+    name: "Rainwater Tank"
+
+
+```
+## Configuration variables:
+
+- All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+Advanced options:
+
+- **uart_id** (*Optional*, [UART bus]({{< ref "components/uart#uart" >}})): The ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this sensor.
+  Use this if you want to use multiple UART buses at once.
+
+
+## See Also
+
+- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [uart]({{< ref "components/uart#uart" >}})
+- [template]({{< ref "template/" >}})
+- :apiref:`hrxl_maxsonar_wr/hrxl_maxsonar_wr.h`
+- :ghedit:`Edit`

@@ -1,0 +1,27 @@
+<div class="admonition note">
+  <p class="admonition-title">Note</p>
+  {{ .Inner | markdownify }}
+</div>
+
+<style>
+.admonition {
+  margin: 1.5em 0;
+  padding: 0 1em;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.admonition.note {
+  background-color: #e7f2fa;
+  border-color: #3498db;
+}
+
+.admonition-title {
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+.admonition.note .admonition-title {
+  color: #3498db;
+}
+</style>

@@ -1,0 +1,15 @@
+{{ $title := .Get 0 }}
+{{ $link := .Get 1 }}
+{{ $image := .Get 2 }}
+{{ $description := .Get 3 }}
+{{ $class := .Get 4 }}
+
+<div class="component-card">
+  <a href="{{ $link | relURL }}">
+    <div class="component-icon">
+      <img src="{{ printf "images/%s" $image | relURL }}" alt="{{ $title }}" {{ if $class }}class="{{ $class }}"{{ end }}>
+    </div>
+    <div class="component-name">{{ $title }}</div>
+    {{ if $description }}<div class="component-description">{{ $description }}</div>{{ end }}
+  </a>
+</div>

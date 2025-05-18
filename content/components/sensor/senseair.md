@@ -1,0 +1,119 @@
+---
+description: "SenseAir CO_2 Sensor"
+title: "SenseAir CO_2 Sensor"
+---
+
+{{< seo description="" image="" >}}
+
+The `senseair` sensor platform allows you to use SenseAir CO_2 sensor
+(`website`_) with ESPHome.
+
+![SenseAir S8 CO_2 Sensor.](../images/senseair_s8-full.jpg)
+*SenseAir S8 CO_2 Sensor.*
+
+
+.. _website: https://senseair.com/products/size-counts/s8-residential/
+
+As the communication with the SenseAir is done using UART, you need
+to have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin` connected to the TX pin of the
+sensor and the `tx_pin` connected to the RX Pin (it's switched because the
+TX/RX labels are from the perspective of the SenseAir sensor). Additionally, you need to set the baud rate to 9600.
+
+```yaml
+# Example configuration entry
+sensor:
+  - platform: senseair
+    co2:
+      name: "SenseAir CO2 Value"
+
+```
+## Configuration variables:
+
+
+- **co2** (*Optional*): The CO_2 data from the sensor in parts per million (ppm).
+
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+
+- **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+  sensor. Defaults to `60s`.
+
+- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you want
+  to use multiple UART buses.
+
+- **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for actions.
+
+![Pins on the SenseAir S8. Only the ones marked with a red circle need to be connected.](../images/senseair_s8-pins.jpg)
+*Pins on the SenseAir S8. Only the ones marked with a red circle need to be connected.*
+
+
+{{< note >}}
+``G+`` should be connected to power supply (supported voltage is 4.5 V to 5.25 V), ``G0`` to ``GND`` pin
+
+{{< /note >}}
+
+## ``senseair.background_calibration`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) initiates a background calibration on the sensor with the given ID: the current
+CO2 level will be used as a reference for the 400ppm threshold. Ensure that the sensor is in a stable environment with
+fresh ambient air, preferably near a window that has already been opened for a sufficient time.
+
+```yaml
+on_...:
+  then:
+    - senseair.background_calibration: my_senseair_id
+
+```
+
+## ``senseair.background_calibration_result`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) requests the result of the background calibration procedure from the sensor
+with the given ID. The value will be printed in ESPHome logs.
+
+Wait at least one sensor lamp cycle after having triggered the background calibration before requesting its result.
+
+```yaml
+on_...:
+  then:
+    - senseair.background_calibration_result: my_senseair_id
+
+```
+
+## ``senseair.abc_get_period`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) requests the currently configured ABC interval from the sensor with the given ID.
+The value will be printed in ESPHome logs.
+
+```yaml
+on_...:
+  then:
+    - senseair.abc_get_period: my_senseair_id
+
+```
+
+## ``senseair.abc_enable`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) enables Automatic Baseline Calibration on the sensor with the given ID.
+ABC will be activated with the default interval of 180 hours.
+
+```yaml
+on_...:
+  then:
+    - senseair.abc_enable: my_senseair_id
+
+```
+
+## ``senseair.abc_disable`` Action
+
+This [action]({{< ref "automations/actions#config-action" >}}) disables Automatic Baseline Calibration on the sensor with the given ID.
+
+```yaml
+on_...:
+  then:
+    - senseair.abc_disable: my_senseair_id
+
+```
+## See Also
+
+- [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :apiref:`senseair/senseair.h`
+- :ghedit:`Edit`

@@ -1,0 +1,28 @@
+---
+description: "Wake-on-LAN Button"
+title: "Wake-on-LAN Button"
+---
+
+{{< seo description="" image="" >}}
+
+The `wake_on_lan` button platform allows you to send a Wake-on-LAN magic packet to a computer on the network
+by specifying its MAC address.
+
+```yaml
+# Example configuration entry
+button:
+  - platform: wake_on_lan
+    name: "Start the Server"
+    target_mac_address: XX:XX:XX:XX:XX:XX
+
+```
+## Configuration variables:
+
+- **target_mac_address** (**Required**, MAC Address): The MAC Address of the target computer.
+- All other options from [Button]({{< ref "components/button/_index#config-button" >}}).
+
+## See Also
+
+- [template]({{< ref "template/" >}})
+- :apiref:`wake_on_lan/wake_on_lan.h`
+- :ghedit:`Edit`

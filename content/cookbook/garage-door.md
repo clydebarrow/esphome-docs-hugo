@@ -1,0 +1,49 @@
+---
+description: "Simple Garage Door"
+title: "Simple Garage Door"
+---
+
+{{< seo description="" image="" >}}
+
+The following is a possible configuration file for garage doors that are controlled by two relays:
+One for opening and another one for closing the garage door. When either one of them is turned on
+for a short period of time, the close/open action begins.
+
+```yaml
+switch:
+  - platform: gpio
+    pin: GPIOXX
+    name: "Garage Door Open Switch"
+    id: open_switch
+  - platform: gpio
+    pin: GPIOXX
+    name: "Garage Door Close Switch"
+    id: close_switch
+cover:
+  - platform: template
+    name: "Garage Door"
+    open_action:
+      # Cancel any previous action
+      - switch.turn_off: close_switch
+      # Turn the OPEN switch on briefly
+      - switch.turn_on: open_switch
+      - delay: 0.1s
+      - switch.turn_off: open_switch
+    close_action:
+      - switch.turn_off: open_switch
+      - switch.turn_on: close_switch
+      - delay: 0.1s
+      - switch.turn_off: close_switch
+    stop_action:
+      - switch.turn_off: close_switch
+      - switch.turn_off: open_switch
+    optimistic: true
+    assumed_state: true
+
+```
+## See Also
+
+- [/automations/index]({{< ref "/automations/index" >}})
+- [/components/switch/gpio]({{< ref "/components/switch/gpio" >}})
+- [/components/cover/template]({{< ref "/components/cover/template" >}})
+- :ghedit:`Edit`

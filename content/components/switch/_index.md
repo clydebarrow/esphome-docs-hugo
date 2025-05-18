@@ -1,0 +1,182 @@
+---
+description: "Switch Component"
+title: "Switch Component"
+---
+
+{{< seo description="" image="" >}}
+
+The `switch` domain includes all platforms that should show up like a
+switch and can only be turned ON or OFF.
+
+
+## Base Switch Configuration
+
+```yaml
+switch:
+  - platform: ...
+    name: "Switch Name"
+    icon: "mdi:restart"
+
+```
+Configuration variables:
+
+- **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
+- **name** (*Optional*, string): The name of the switch. At least one of **id** and **name** must be specified.
+
+  .. note::
+
+      If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+      you want the switch to use that name, you can set `name: None`.
+
+- **icon** (*Optional*, icon): Manually set the icon to use for the
+  sensor in the frontend.
+- **inverted** (*Optional*, boolean): Whether to invert the binary
+  state, i.e. report ON states as OFF and vice versa. Defaults
+  to `false`.
+- **internal** (*Optional*, boolean): Mark this component as internal. Internal components will
+  not be exposed to the frontend (like Home Assistant). Only specifying an `id` without
+  a `name` will implicitly set this to true.
+- **restore_mode** (*Optional*): Control how the switch attempts to restore state on bootup.
+  **NOTE** : Not all components consider **restore_mode**. Check the documentation of the specific component to understand how
+  this feature works for a particular component or device.
+  For restoring on ESP8266s, also see `restore_from_flash` in the
+  [esp8266 section ]({{< relref "/components/esp8266" >}}).
+
+    - `RESTORE_DEFAULT_OFF` - Attempt to restore state and default to OFF if not possible to restore.
+    - `RESTORE_DEFAULT_ON` - Attempt to restore state and default to ON.
+    - `RESTORE_INVERTED_DEFAULT_OFF` - Attempt to restore state inverted from the previous state and default to OFF.
+    - `RESTORE_INVERTED_DEFAULT_ON` - Attempt to restore state inverted from the previous state and default to ON.
+    - `ALWAYS_OFF` (Default) - Always initialize the switch as OFF on bootup.
+    - `ALWAYS_ON` - Always initialize the switch as ON on bootup.
+    - `DISABLED` - Does nothing and leaves it up to the downstream platform component to decide. For example, the component could read hardware and determine the state, or have a specific configuration option to regulate initial state.
+
+  Unless a specific platform defines another default value, the default is `ALWAYS_OFF`.
+
+- **on_turn_on** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the switch is turned on. See [switch-on_turn_on_off_trigger]({{< ref "components/switch/_index#switch-on_turn_on_off_trigger" >}}).
+- **on_turn_off** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
+  when the switch is turned off. See [switch-on_turn_on_off_trigger]({{< ref "components/switch/_index#switch-on_turn_on_off_trigger" >}}).
+- **disabled_by_default** (*Optional*, boolean): If true, then this entity should not be added to any client's frontend,
+  (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI).
+  Defaults to `false`.
+- **entity_category** (*Optional*, string): The category of the entity.
+  See https://developers.home-assistant.io/docs/core/entity/#generic-properties
+  for a list of available options.
+  Set to `""` to remove the default entity category.
+- **device_class** (*Optional*, string): The device class for the switch.
+  See https://www.home-assistant.io/integrations/switch/#device-class
+  for a list of available options.
+- If MQTT enabled, All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+
+
+`switch.toggle` Action
+************************
+
+This action toggles a switch with the given ID when executed.
+
+```yaml
+on_...:
+  then:
+    - switch.toggle: relay_1
+
+```
+
+`switch.turn_on` Action
+*************************
+
+This action turns a switch with the given ID on when executed.
+
+```yaml
+on_...:
+  then:
+    - switch.turn_on: relay_1
+
+```
+
+`switch.turn_off` Action
+**************************
+
+This action turns a switch with the given ID off when executed.
+
+```yaml
+on_...:
+  then:
+    - switch.turn_off: relay_1
+
+```
+
+`switch.is_on` / `switch.is_off` Condition
+**********************************************
+
+This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given switch is ON (or OFF).
+
+```yaml
+# In some trigger:
+on_...:
+  if:
+    condition:
+      # Same syntax for is_off
+      switch.is_on: my_switch
+
+```
+
+lambda calls
+************
+
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all switches to do some
+advanced stuff (see the full API Reference for more info).
+
+- `publish_state()`: Manually cause the switch to publish a new state and store it internally.
+  If it's different from the last internal state, it's additionally published to the frontend.
+
+  ```yaml
+  // Within lambda, make the switch report a specific state
+  id(my_switch).publish_state(false);
+  id(my_switch).publish_state(true);
+
+  ```
+- `state`: Retrieve the current state of the switch.
+
+  ```yaml
+  // Within lambda, get the switch state and conditionally do something
+  if (id(my_switch).state) {
+    // Switch is ON, do something here
+  } else {
+    // Switch is OFF, do something else here
+  }
+
+  ```
+- `turn_off()`/`turn_on()`: Manually turn the switch ON/OFF from code.
+  Similar to the `switch.turn_on` and `switch.turn_off` actions,
+  but can be used in complex lambda expressions.
+
+  ```yaml
+  id(my_switch).turn_off();
+  id(my_switch).turn_on();
+  // Toggle the switch
+  id(my_switch).toggle();
+
+  ```
+
+`switch.on_turn_on` / `switch.on_turn_off` Trigger
+******************************************************
+
+This trigger is activated each time the switch is turned on. It becomes active
+right after the switch component has acknowledged the state (e.g. after it switched
+ON/OFF itself).
+
+```yaml
+switch:
+  - platform: gpio  # or any other platform
+    # ...
+    on_turn_on:
+    - logger.log: "Switch Turned On!"
+    on_turn_off:
+    - logger.log: "Switch Turned Off!"
+
+```
+## See Also
+
+- :apiref:`switch/switch.h`
+- :ghedit:`Edit`

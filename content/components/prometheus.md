@@ -77,7 +77,8 @@ You can relabel metric name or ID labels by adding a `relabel` block in the `pro
 and then adding a block with `id` and/or `name` fields for each sensor whose labels your want to override.
 
 
-### ``relabel``
+`relabel`
+***********
 
 Set the `id` and `name` label values of the Prometheus metric for the sensor with the specified ID.
 
@@ -98,4 +99,4 @@ prometheus:
 - [/components/http_request]({{< ref "/components/http_request" >}})
 - :apiref:`prometheus/prometheus_handler.h`
 - [Prometheus](https://prometheus.io/)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/prometheus.md)

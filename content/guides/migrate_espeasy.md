@@ -46,4 +46,4 @@ Happy Hacking!
 - [/components/esp32]({{< ref "/components/esp32" >}})
 - [migrate_espurna]({{< ref "migrate_espurna/" >}})
 - [migrate_sonoff_tasmota]({{< ref "migrate_sonoff_tasmota/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/migrate_espeasy.md)

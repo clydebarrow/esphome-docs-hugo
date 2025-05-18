@@ -65,4 +65,4 @@ light:
 - [/components/fan/speed]({{< ref "/components/fan/speed" >}})
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`esp32_dac/esp32_dac.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/esp32_dac.md)

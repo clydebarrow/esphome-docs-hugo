@@ -442,7 +442,8 @@ E.g. for calling `fingerprint_grow.enroll` select the action `esphome.test_node_
 { "finger_id": 0, "num_scans": 2 }
 
 ```
-### Sample code
+Sample code
+***********
 
 ```yaml
 uart:
@@ -513,4 +514,4 @@ api:
 - :apiref:`fingerprint_grow/fingerprint_grow.h`
 - [Tutorial from Adafruit](https://learn.adafruit.com/adafruit-optical-fingerprint-sensor)
 - [Adafruit Fingerprint Sensor Library](https://github.com/adafruit/Adafruit-Fingerprint-Sensor-Library) by [Adafruit](https://www.adafruit.com/)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/fingerprint_grow.md)

@@ -389,4 +389,4 @@ of the :ref:`address <wireguard-address>` configured here.
 - `Home Assistant Community Add-on: WireGuard
   <https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662>`__
   (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/wireguard.md)

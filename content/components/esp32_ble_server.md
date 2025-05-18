@@ -264,4 +264,4 @@ Configuration variables:
 - [esp32_ble]({{< ref "esp32_ble/" >}})
 - [esp32_improv]({{< ref "esp32_improv/" >}})
 - :apiref:`esp32_ble/ble.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/esp32_ble_server.md)

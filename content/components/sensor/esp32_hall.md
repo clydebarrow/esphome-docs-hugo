@@ -51,4 +51,4 @@ please feel free to do so 😺.
 - [adc]({{< ref "adc/" >}})
 - [/components/esp32]({{< ref "/components/esp32" >}})
 - :apiref:`esp32_hall/esp32_hall.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/esp32_hall.md)

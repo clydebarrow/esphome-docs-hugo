@@ -105,7 +105,8 @@ Then:
 #. Then click "submit".
 
 
-### ``homeassistant.event`` Action
+`homeassistant.event` Action
+******************************
 
 {{< note >}}
 Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
@@ -136,7 +137,8 @@ Configuration variables:
   Values are [lambdas]({{< ref "automations/templates#config-lambda" >}}) and will be evaluated before sending the request.
 
 
-### ``homeassistant.action`` Action
+`homeassistant.action` Action
+********************************
 
 {{< note >}}
 Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
@@ -210,7 +212,8 @@ on_...:
 
 ```
 
-### ``homeassistant.tag_scanned`` Action
+`homeassistant.tag_scanned` Action
+************************************
 
 {{< note >}}
 Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
@@ -235,7 +238,8 @@ Configuration variables:
 ## Triggers
 
 
-### ``on_client_connected`` Trigger
+`on_client_connected` Trigger
+*******************************
 
 This trigger is activated each time a client connects to the API. Two variables of
 type `std::string` are available for use by actions called from within this trigger:
@@ -254,7 +258,8 @@ api:
 
 ```
 
-### ``on_client_disconnected`` Trigger
+`on_client_disconnected` Trigger
+**********************************
 
 This trigger is activated each time the API disconnects from the API. Two variables of
 type `std::string` are available for use by actions called from within this trigger:
@@ -373,4 +378,4 @@ never be removed. Features of native API (vs. MQTT):
 ## See Also
 
 - :apiref:`api/api_server.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/api.md)

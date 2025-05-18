@@ -284,4 +284,4 @@ binary_sensor:
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
 - [Resol manuals](https://www.resol.de/en/dokumente)
 - [VBus protocol](https://danielwippermann.github.io/resol-vbus)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/vbus.md)

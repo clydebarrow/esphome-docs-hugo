@@ -39,4 +39,4 @@ see the :doc:`/components/switch/gpio`.
 - [/components/fan/binary]({{< ref "/components/fan/binary" >}})
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`gpio/output/gpio_binary_output.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/gpio.md)

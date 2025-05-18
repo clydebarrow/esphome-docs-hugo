@@ -48,4 +48,4 @@ sensor:
 - [esphome-pressure device](https://github.com/gcormier/esphome-pressure/)
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`sdp3x/sdp3x.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/xgzp68xx.md)

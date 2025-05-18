@@ -306,7 +306,8 @@ service data enter
 { "file": 23 }
 
 ```
-### Sample code
+Sample code
+***********
 
 ```yaml
 uart:
@@ -412,4 +413,4 @@ api:
 ## See Also
 
 - :apiref:`dfplayer/dfplayer.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/dfplayer.md)

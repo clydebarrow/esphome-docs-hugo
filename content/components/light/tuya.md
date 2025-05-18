@@ -91,4 +91,4 @@ Therefore the ``gamma_correct`` setting default is ``1.0`` and the
 - [/components/tuya]({{< ref "/components/tuya" >}})
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - :apiref:`tuya/light/tuya_light.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/tuya.md)

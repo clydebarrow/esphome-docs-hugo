@@ -32,4 +32,4 @@ sensor:
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`mqtt_subscribe/sensor/mqtt_subscribe_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/mqtt_subscribe.md)

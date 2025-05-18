@@ -92,4 +92,4 @@ It can work with multiple beacons simultaneously.
 - [binary_sensor/ble_presence]({{< ref "binary_sensor/ble_presence" >}})
 - :apiref:`esp32_ble_beacon/esp32_ble_beacon.h`
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/esp32_ble_beacon.md)

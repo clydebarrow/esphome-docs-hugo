@@ -3,7 +3,8 @@ description: ""
 title: ""
 ---
 
-### ``min``
+`min`
+*******
 
 A moving minimum over the last few values. A large window size will make the filter slow to
 react to input changes.

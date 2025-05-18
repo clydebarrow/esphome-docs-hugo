@@ -46,7 +46,8 @@ update process. When using these automation triggers, note that:
 - Your automation action(s) must not consume any significant amount of time; if they do, OTA updates may fail.
 
 
-### ``on_begin``
+`on_begin`
+************
 
 This automation will be triggered when an OTA update is started.
 
@@ -59,7 +60,8 @@ ota:
 
 ```
 
-### ``on_progress``
+`on_progress`
+***************
 
 Using this automation, it is possible to report on the OTA update progress. It will be triggered repeatedly during the
 OTA update. You can get the actual progress percentage (a value between 0 and 100) from the trigger with variable `x`.
@@ -75,7 +77,8 @@ ota:
 
 ```
 
-### ``on_end``
+`on_end`
+**********
 
 This automation will be triggered when an OTA update has completed successfully, immediately before the device is
 rebooted.
@@ -93,7 +96,8 @@ ota:
 
 ```
 
-### ``on_error``
+`on_error`
+************
 
 This automation will be triggered when an OTA update has failed. You can get the internal error code with variable `x`.
 
@@ -111,7 +115,8 @@ ota:
 
 ```
 
-### ``on_state_change``
+`on_state_change`
+*******************
 
 This automation will be triggered on every state change. You can get the actual state with variable `state`, which
 will contain one of values for the `OTAState` enum. These values are:
@@ -143,4 +148,4 @@ expected. This is automatically enabled by the `ota` component, but it may be di
 
 - :apiref:`ota/ota_component.h`
 - [/components/safe_mode]({{< ref "/components/safe_mode" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/ota/index.md)

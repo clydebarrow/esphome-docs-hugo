@@ -28,4 +28,4 @@ text_sensor:
 - [/components/tuya]({{< ref "/components/tuya" >}})
 - [/components/text_sensor/index]({{< ref "/components/text_sensor/index" >}})
 - :apiref:`tuya/text_sensor/tuya_text_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/tuya.md)

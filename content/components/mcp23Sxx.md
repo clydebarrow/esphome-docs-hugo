@@ -53,7 +53,8 @@ binary_sensor:
       inverted: false
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S08 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use
@@ -63,7 +64,8 @@ binary_sensor:
   Useful when the MCP23S08's power supply is greater than 3.3 volts. Note that these pins
   will require pull-up resistors (to 3.3 volts) when this mode is enabled.
 
-### Pin Configuration Variables:
+Pin Configuration Variables:
+****************************
 
 - **mcp23xxx** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S08 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
@@ -117,7 +119,8 @@ binary_sensor:
       inverted: false
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S17 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use.
@@ -127,7 +130,8 @@ binary_sensor:
   Useful when the MCP23S17's power supply is greater than 3.3 volts. Note that these pins
   will require pull-up resistors (to 3.3 volts) when this mode is enabled.
 
-### Pin Configuration Variables:
+Pin Configuration Variables:
+****************************
 
 - **mcp23xxx** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S17 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
@@ -141,4 +145,4 @@ binary_sensor:
 - [binary_sensor/gpio]({{< ref "binary_sensor/gpio" >}})
 - :apiref:`API Reference (MCP23S08) <mcp23S08/mcp23S08.h>`
 - :apiref:`API Reference (MCP23S17) <mcp23S17/mcp23S17.h>`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/mcp23Sxx.md)

@@ -113,4 +113,4 @@ on_...:
 - [/components/wiegand]({{< ref "/components/wiegand" >}})
 - [LVGL Button Matrix widget]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
 - [LVGL Keyboard widget]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/key_collector.md)

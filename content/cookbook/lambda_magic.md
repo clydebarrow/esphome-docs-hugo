@@ -341,4 +341,4 @@ button:
 - [config-lambda]({{< ref "automations/templates#config-lambda" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/lambda_magic.md)

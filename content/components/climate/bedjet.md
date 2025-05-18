@@ -37,7 +37,8 @@ bedjet:
     ble_client_id: bedjet_ble_id1
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **ble_client_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the BLE Client.
@@ -48,7 +49,8 @@ bedjet:
   publish its own updated state on this interval, or use another (longer) update interval to
   throttle its own updates.
 
-### lambda calls
+lambda calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call methods to do some advanced stuff.
 
@@ -102,7 +104,8 @@ climate:
     bedjet_id: bedjet_1
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **bedjet_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
 - **heat_mode** (*Optional*, string): The primary heating mode to use for `HVACMode.HEAT`:
@@ -137,7 +140,8 @@ fan:
     bedjet_id: bedjet_1
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **bedjet_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
 - Other options from [Fan]({{< ref "components/fan/_index#config-fan" >}}).
@@ -156,7 +160,8 @@ sensor:
       name: "My BedJet Ambient Temperature"
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **outlet_temperature** (*Optional*): If specified, the temperature of the air being
   discharged from the BedJet will be reported as a sensor.
@@ -205,4 +210,4 @@ to do this automatically:
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
 - [/components/climate/index]({{< ref "/components/climate/index" >}})
 - :apiref:`bedjet/bedjet.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/bedjet.md)

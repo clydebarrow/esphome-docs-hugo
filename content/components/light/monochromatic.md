@@ -42,4 +42,4 @@ The `monochromatic` light platform creates a simple brightness-only light from a
 - [/components/output/tlc59208f]({{< ref "/components/output/tlc59208f" >}})
 - [/components/output/my9231]({{< ref "/components/output/my9231" >}})
 - :apiref:`monochromatic/monochromatic_light_output.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/monochromatic.md)

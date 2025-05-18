@@ -70,7 +70,8 @@ Automations:
 ## Tuya Automation
 
 
-### ``on_datapoint_update``
+`on_datapoint_update`
+***********************
 
 This automation will be triggered when a a Tuya datapoint update is received.
 A variable `x` is passed to the automation for use in lambdas.
@@ -135,4 +136,4 @@ Configuration variables:
 - [/components/text_sensor/tuya]({{< ref "/components/text_sensor/tuya" >}})
 - [/components/number/tuya]({{< ref "/components/number/tuya" >}})
 - :apiref:`tuya/tuya.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/tuya.md)

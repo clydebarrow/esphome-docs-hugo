@@ -325,4 +325,4 @@ Configuration options:
 ## See Also
 
 - [uart]({{< ref "components/uart#uart" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/pipsolar.md)

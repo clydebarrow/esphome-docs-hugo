@@ -3,7 +3,8 @@ description: ""
 title: ""
 ---
 
-### ``exponential_moving_average``
+`exponential_moving_average`
+******************************
 
 A simple `exponential moving average
 <https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average>`__ over the last few

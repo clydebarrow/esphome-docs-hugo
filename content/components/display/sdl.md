@@ -28,7 +28,8 @@ display:
 
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [display-engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
@@ -94,4 +95,4 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 - [SDL binary sensor ]({{< relref "/components/binary_sensor/sdl" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`sdl/sdl_esphome.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/sdl.md)

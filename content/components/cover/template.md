@@ -123,4 +123,4 @@ This action can also be written in lambdas:
 - [automation]({{< ref "automations/_index#automation" >}})
 - [/cookbook/garage-door]({{< ref "/cookbook/garage-door" >}})
 - :apiref:`template/cover/template_cover.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/template.md)

@@ -132,4 +132,4 @@ Configuration variables:
 
 - [Protocol Analysis](https://github.com/kroimon/uponor-smatrix-analysis)
 - :apiref:`uponor_smatrix/uponor_smatrix.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/uponor_smatrix.md)

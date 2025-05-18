@@ -110,4 +110,4 @@ number:
 - [/components/text_sensor/modbus_controller]({{< ref "/components/text_sensor/modbus_controller" >}})
 
 - https://www.modbustools.com/modbus.html
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/number/modbus_controller.md)

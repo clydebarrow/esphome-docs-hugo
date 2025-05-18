@@ -43,4 +43,4 @@ MiFlora, tuya (pink) version, measures temperature, moisture, ambient light and 
 ## See Also
 
 - [ble_client]({{< ref "ble_client/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/xiaomi_hhccjcy10.md)

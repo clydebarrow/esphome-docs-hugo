@@ -60,7 +60,8 @@ dfrobot_sen0395:
   ...
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Necessary if you want
   to define multiple instances of this component.
@@ -71,7 +72,8 @@ dfrobot_sen0395:
 ## Binary Sensor
 
 
-### Via GPIO
+Via GPIO
+********
 
 To determine presence, you can simply use a [/components/binary_sensor/gpio]({{< ref "/components/binary_sensor/gpio" >}}) and connect a single GPIO pin
 from your processor to the IO2 pin of the mmWave radar. Using a dedicated GPIO pin may offer an advantage since
@@ -91,7 +93,8 @@ binary_sensor:
 
 ```
 
-### Via UART
+Via UART
+********
 
 Connecting the sensor via the serial connection (UART) allows both changing its settings as well as reading its state.
 Note, however, that the UART peripheral cannot wake the processor; if you plan on sleeping the processor, you'll likely
@@ -106,7 +109,8 @@ binary_sensor:
     name: Presence Detected via UART
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **dfrobot_sen0395_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the DFRobot mmWave component defined above.
   Required when multiple instances of the `dfrobot_sen0395` component are defined.
@@ -125,7 +129,8 @@ switch:
     name: mmWave Active
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **dfrobot_sen0395_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the DFRobot mmWave component defined above.
   Required when multiple instances of the `dfrobot_sen0395` component are defined.
@@ -145,7 +150,8 @@ switch:
 ## Actions
 
 
-### ``dfrobot_sen0395.settings`` Action
+`dfrobot_sen0395.settings` Action
+***********************************
 
 {{< warning >}}
 Each change to the configuration of the mmWave radar triggers a write to its internal flash/EEPROM.
@@ -223,7 +229,8 @@ Configuration variables:
 - **sensitivity** (*Optional*, int): Set the sensitivity of the sensor. Ranges from 0 to 9. Value is tempatable:
   Return 0-9. Returning -1 keeps the value unchanged.
 
-### ``dfrobot_sen0395.reset`` Action
+`dfrobot_sen0395.reset` Action
+********************************
 
 Restart the sensor.
 
@@ -242,4 +249,4 @@ Configuration variables:
 - [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
 - [config-id]({{< ref "guides/configuration-types#config-id" >}})
 - [DFRobot mmWave Radar Wiki page](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/dfrobot_sen0395.md)

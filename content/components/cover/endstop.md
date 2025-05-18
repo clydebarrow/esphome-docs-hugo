@@ -69,4 +69,4 @@ current position of the cover.
 - [index]({{< ref "index/" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`endstop/endstop_cover.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/endstop.md)

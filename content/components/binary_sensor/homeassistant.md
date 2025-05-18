@@ -44,4 +44,4 @@ binary_sensor:
 
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/binary_sensor/homeassistant_binary_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/homeassistant.md)

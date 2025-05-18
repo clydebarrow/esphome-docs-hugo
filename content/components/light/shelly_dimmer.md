@@ -94,4 +94,4 @@ There is no action required by the user to flash the STM32. There is no way to r
 
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - :apiref:`shelly_dimmer/light/shelly_dimmer.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/shelly_dimmer.md)

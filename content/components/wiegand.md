@@ -73,4 +73,4 @@ but check the logs to see which key code you get and use the corresponding chara
 ## See Also
 
 - [/components/key_collector]({{< ref "/components/key_collector" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/wiegand.md)

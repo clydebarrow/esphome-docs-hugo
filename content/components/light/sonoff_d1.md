@@ -110,4 +110,4 @@ light:
 - [/components/uart]({{< ref "/components/uart" >}})
 - [/components/logger]({{< ref "/components/logger" >}})
 - [/components/esp8266]({{< ref "/components/esp8266" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/sonoff_d1.md)

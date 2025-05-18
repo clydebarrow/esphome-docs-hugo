@@ -20,7 +20,8 @@ sensor:
     update_interval: 120s
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **address** (*Optional*, int): The address of the sensor. Required if there is more than one device on the bus.
 - **resolution** (*Optional*, int): An optional resolution from 9 to 12. Higher means more accurate.
@@ -36,4 +37,4 @@ sensor:
 - [Arduino DallasTemperature library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
   by [Miles Burton](https://github.com/milesburton)
 - :apiref:`dallas_temp/dallas_temp.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/dallas_temp.md)

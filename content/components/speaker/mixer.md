@@ -68,4 +68,4 @@ Configuration variables:
 ## See also
 
 - [index]({{< ref "index/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/speaker/mixer.md)

@@ -43,4 +43,4 @@ sensor:
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/iaqcore.md)

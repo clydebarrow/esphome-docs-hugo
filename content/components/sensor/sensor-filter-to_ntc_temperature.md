@@ -3,7 +3,8 @@ description: ""
 title: ""
 ---
 
-### ``to_ntc_temperature``
+`to_ntc_temperature`
+**********************
 
 Convert your sensor values available as resistance values into corresponding
 temperatures using an NTC characteristic curve.

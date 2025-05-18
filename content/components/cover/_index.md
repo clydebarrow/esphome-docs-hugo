@@ -222,7 +222,8 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
 
     ```
 
-### ``cover.on_open`` Trigger
+`cover.on_open` Trigger
+*************************
 
 This trigger is activated each time the cover reaches a fully open state.
 
@@ -235,7 +236,8 @@ cover:
 
 ```
 
-### ``cover.on_closed`` Trigger
+`cover.on_closed` Trigger
+***************************
 
 This trigger is activated each time the cover reaches a fully closed state.
 
@@ -250,4 +252,4 @@ cover:
 ## See Also
 
 - :apiref:`cover/cover.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/index.md)

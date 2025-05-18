@@ -330,4 +330,4 @@ switch:
 
 - :apiref:`sim800l/sim800l.h`
 - [/components/uart]({{< ref "/components/uart" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sim800l.md)

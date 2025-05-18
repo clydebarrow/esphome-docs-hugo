@@ -47,4 +47,4 @@ binary_sensor:
 
 - [/components/sensor/hydreon_rgxx]({{< ref "/components/sensor/hydreon_rgxx" >}})
 - [index]({{< ref "index/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/hydreon_rgxx.md)

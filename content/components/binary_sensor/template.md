@@ -98,4 +98,4 @@ This action can also be written in lambdas:
 - [/components/sensor/template]({{< ref "/components/sensor/template" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/binary_sensor/template_binary_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/template.md)

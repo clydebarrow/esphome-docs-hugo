@@ -46,7 +46,8 @@ switch:
 
 See [nextion_switch_how_things_update]({{< ref "components/switch/nextion#nextion_switch_how_things_update" >}}) for additional information
 
-### Globals
+Globals
+*******
 The Nextion does not retain data on Nextion page changes. Additionally, if a page is changed and the **component_name** does not exist on that page then
 nothing will be updated. To get around this, the Nextion components can be changed to have a vscope of `global`. If this is set then the **component_name**
 should be prefixed with the page name (page0/page1 or whatever you have changed it to).
@@ -98,7 +99,8 @@ This action can also be written in lambdas. See :ref:`nextion_switch_lambda_call
 
 {{< /note >}}
 
-### Lambda Calls
+Lambda Calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full :apiref:`nextion/nextion_switch.h` for more info).
@@ -167,4 +169,4 @@ printh FF FF FF
 - [/components/display/nextion]({{< ref "/components/display/nextion" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`nextion/switch/nextion_switch.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/nextion.md)

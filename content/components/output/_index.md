@@ -47,7 +47,8 @@ Float outputs only:
 
 
 
-### ``output.turn_on`` Action
+`output.turn_on` Action
+*************************
 
 This action turns the output with the given ID on when executed.
 
@@ -66,7 +67,8 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 {{< /note >}}
 
-### ``output.turn_off`` Action
+`output.turn_off` Action
+**************************
 
 This action turns the output with the given ID off when executed.
 
@@ -85,7 +87,8 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 {{< /note >}}
 
-### ``output.set_level`` Action
+`output.set_level` Action
+***************************
 
 This action sets the float output to the given level when executed. Note: This only
 works with floating point outputs like [/components/output/slow_pwm]({{< ref "/components/output/slow_pwm" >}}), [/components/output/sigma_delta_output]({{< ref "/components/output/sigma_delta_output" >}}), [/components/output/ledc]({{< ref "/components/output/ledc" >}}), [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}}).
@@ -119,6 +122,6 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 - :apiref:`binary_output.h <output/binary_output.h>`,
   :apiref:`float_output.h <output/float_output.h>`
 
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/index.md)
 
 

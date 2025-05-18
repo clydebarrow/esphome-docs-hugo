@@ -139,4 +139,4 @@ select:
 - [/components/text_sensor/modbus_controller]({{< ref "/components/text_sensor/modbus_controller" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - https://www.modbustools.com/modbus.html
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/select/modbus_controller.md)

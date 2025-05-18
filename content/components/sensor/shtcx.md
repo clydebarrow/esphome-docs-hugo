@@ -53,4 +53,4 @@ required to be set up in your configuration for this sensor to work.
 - [htu21d]({{< ref "htu21d/" >}})
 - [sht3xd]({{< ref "sht3xd/" >}})
 - :apiref:`shtcx/shtcx.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/shtcx.md)

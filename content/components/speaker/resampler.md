@@ -46,4 +46,4 @@ Resampling is processor intensive and should be avoided as much as possible. The
 
 - [ART Audio Resampler (GitHub)](https://github.com/dbry/audio-resampler)
 - [index]({{< ref "index/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/speaker/resampler.md)

@@ -76,4 +76,4 @@ use a voltage divider here instead.
 
 - [index]({{< ref "index/" >}})
 - :apiref:`canbus/canbus.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/canbus/esp32_can.md)

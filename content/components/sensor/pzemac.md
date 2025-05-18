@@ -85,7 +85,8 @@ sensor:
 - **modbus_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the Modbus hub.
 
 
-### ``pzemac.reset_energy`` Action
+`pzemac.reset_energy` Action
+******************************
 
 This action resets the total energy value of the pzemac device with the given ID when executed.
 
@@ -154,4 +155,4 @@ modbus_controller:
 - [pzem004t]({{< ref "pzem004t/" >}})
 - [pzemdc]({{< ref "pzemdc/" >}})
 - :apiref:`pzemac/pzemac.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/pzemac.md)

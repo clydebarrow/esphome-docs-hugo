@@ -32,4 +32,4 @@ sensor:
 - [/components/text_sensor/uptime]({{< ref "/components/text_sensor/uptime" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`uptime/uptime_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/uptime.md)

@@ -143,13 +143,6 @@ def convert_rst_to_md(rst_content, filename):
             md_lines.append(f"## {line}")
             i += 2
             continue
-            
-        # Handle asterisk-style headings (subheadings)
-        if i + 1 < len(lines) and re.match(r'^\*+$', lines[i + 1]) and line:
-            # Use heading level 3 (###) for asterisk-style headings
-            md_lines.append(f"### {line}")
-            i += 2
-            continue
         
         # Handle code blocks - check for both standalone and nested code blocks
         if line.lstrip().startswith('.. code-block::'):
@@ -267,8 +260,13 @@ def convert_rst_to_md(rst_content, filename):
         
         # Process the line for inline markup
         processed_line = process_inline_markup(line)
-        
-        # Fix image paths in markdown content
+        if ":ghedit:" in processed_line:
+            processed_line = re.sub(r':ghedit:`([^`]+)`',
+                                    lambda m: f"[Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/{filename.replace('.rst', '.md')})",
+                                    processed_line)
+
+
+    # Fix image paths in markdown content
         if '/components/' in filename and '![' in processed_line and '](/components/' in processed_line:
             processed_line = processed_line.replace('](/components/', '](../')
         elif '/components/' in filename and '![' in processed_line and '](images/' in processed_line:

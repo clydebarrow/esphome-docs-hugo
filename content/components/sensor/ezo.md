@@ -184,4 +184,4 @@ with the information retrieved from the sensor. For more information on the comm
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ezo/ezo.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/ezo.md)

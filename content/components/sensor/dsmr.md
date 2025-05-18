@@ -419,4 +419,4 @@ text_sensor:
 ## See Also
 
 - :apiref:`dsmr/dsmr.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/dsmr.md)

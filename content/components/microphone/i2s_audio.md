@@ -71,7 +71,8 @@ microphone:
 
 ## Known Devices
 
-### M5Stack Atom Echo
+M5Stack Atom Echo
+*****************
 
 ```yaml
 microphone:
@@ -81,7 +82,8 @@ microphone:
     pdm: true
 
 ```
-### RaspiAudio Muse Luxe
+RaspiAudio Muse Luxe
+********************
 
 ```yaml
 microphone:
@@ -95,4 +97,4 @@ microphone:
 ## See also
 
 - [index]({{< ref "index/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/microphone/i2s_audio.md)

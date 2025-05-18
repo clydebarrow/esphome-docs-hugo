@@ -120,4 +120,4 @@ interval:
 - [resistance]({{< ref "resistance/" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ntc/ntc.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/ntc.md)

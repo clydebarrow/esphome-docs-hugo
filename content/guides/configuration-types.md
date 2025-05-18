@@ -161,4 +161,4 @@ some_config_option:
 - [ESPHome index ]({{< relref "/index" >}})
 - [getting_started_command_line]({{< ref "getting_started_command_line/" >}})
 - [faq]({{< ref "faq/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/configuration-types.md)

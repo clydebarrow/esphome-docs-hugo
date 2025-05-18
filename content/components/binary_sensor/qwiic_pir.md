@@ -36,7 +36,8 @@ binary_sensor:
 -  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 
-### Debounce Modes
+Debounce Modes
+**************
 
 There are three options for `debounce_mode`.
 
@@ -63,4 +64,4 @@ There are three options for `debounce_mode`.
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`qwiic_pir/qwiic_pir.h`
 - [SparkFun Qwiic PIR Library](https://github.com/sparkfun/SparkFun_Qwiic_PIR_Arduino_Library) by [SparkFun](https://www.sparkfun.com/)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/qwiic_pir.md)

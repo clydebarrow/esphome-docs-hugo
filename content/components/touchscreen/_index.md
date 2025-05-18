@@ -34,7 +34,8 @@ touchscreen:
         ...
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 - **display** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The display to use this touchscreen with.
 - **transform** (*Optional*): Transform the touchscreen presentation using hardware. All defaults are `false`.
 
@@ -256,7 +257,8 @@ binary_sensor:
     use_raw: true
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **touchscreen_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the touchscreen.
 - **x_min** (**Required**, int): Left coordinate of the screen area to be detected as the virtual button.
@@ -284,4 +286,4 @@ binary_sensor:
 - [GT911 ]({{< relref "/components/touchscreen/gt911" >}})
 - :apiref:`touchscreen/touchscreen.h`
 - :apiref:`touchscreen/binary_sensor/touchscreen_binary_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/touchscreen/index.md)

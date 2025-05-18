@@ -85,4 +85,4 @@ the `color_mode` option of the [light control actions]({{< ref "components/light
 - [/components/output/my9231]({{< ref "/components/output/my9231" >}})
 - [/components/output/sm16716]({{< ref "/components/output/sm16716" >}})
 - :apiref:`rgbw/rgb_light_output.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/rgbw.md)

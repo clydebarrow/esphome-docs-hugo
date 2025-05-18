@@ -56,7 +56,8 @@ The ESP32 Improv component provides various [automations]({{< ref "automations/_
 the Improv provisioning process.
 
 
-### ``on_start``
+`on_start`
+************
 
 This automation will be triggered when the device is waiting for authorization (usually by pressing a button on the
 device, if configured -- see `authorizer` above) and/or upon authorization.
@@ -69,7 +70,8 @@ esp32_improv:
 
 ```
 
-### ``on_provisioned``
+`on_provisioned`
+******************
 
 This automation will be triggered when provisioning has completed.
 
@@ -81,7 +83,8 @@ esp32_improv:
 
 ```
 
-### ``on_provisioning``
+`on_provisioning`
+*******************
 
 This automation will be triggered when provisioning begins.
 
@@ -93,7 +96,8 @@ esp32_improv:
 
 ```
 
-### ``on_stop``
+`on_stop`
+***********
 
 This automation will be triggered when Improv has stopped.
 
@@ -105,7 +109,8 @@ esp32_improv:
 
 ```
 
-### ``on_state``
+`on_state`
+************
 
 This automation will be triggered on every state change.
 
@@ -156,4 +161,4 @@ The `status_indicator` has the following patterns:
 - [captive_portal]({{< ref "captive_portal/" >}})
 - [Improv Wi-Fi](https://www.improv-wifi.com/)
 - :apiref:`esp32_improv/esp32_improv_component.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/esp32_improv.md)

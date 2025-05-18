@@ -76,4 +76,4 @@ Remember that ``gamma_correct`` is enabled by default (``γ=2.8``), and you may 
 - [/components/output/my9231]({{< ref "/components/output/my9231" >}})
 - [/components/output/sm16716]({{< ref "/components/output/sm16716" >}})
 - :apiref:`rgb/rgb_light_output.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/rgb.md)

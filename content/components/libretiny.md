@@ -210,4 +210,4 @@ bk72xx:
 - [/components/text_sensor/libretiny]({{< ref "/components/text_sensor/libretiny" >}})
 - [LibreTiny Documentation](https://docs.libretiny.eu/) (external)
 - [/components/tuya]({{< ref "/components/tuya" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/libretiny.md)

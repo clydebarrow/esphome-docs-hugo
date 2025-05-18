@@ -79,7 +79,8 @@ To maximize security, do not set ``verify_ssl`` to ``false`` *unless:*
 The `http_request` component supports a number of [actions]({{< ref "automations/actions#config-action" >}}) that can be used to send requests.
 
 
-### ``http_request.get`` Action
+`http_request.get` Action
+***************************
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a GET request.
 
@@ -113,7 +114,8 @@ on_...:
 - **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform if the request cannot be completed.
 
 
-### ``http_request.post`` Action
+`http_request.post` Action
+****************************
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a POST request.
 
@@ -137,7 +139,8 @@ on_...:
 - All other options from [http_request-get_action]({{< ref "components/http_request#http_request-get_action" >}}).
 
 
-### ``http_request.send`` Action
+`http_request.send` Action
+****************************
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a request.
 
@@ -207,7 +210,8 @@ are available for use in [lambdas]({{< ref "automations/templates#config-lambda"
 
 ## Examples
 
-### Templatable values
+Templatable values
+******************
 
 ```yaml
 on_...:
@@ -222,7 +226,8 @@ on_...:
 
 
 ```
-### POST Body in JSON format (syntax 1)
+POST Body in JSON format (syntax 1)
+***********************************
 
 **Note:** all values of the map must be strings. It is not possible to send JSON `boolean` or `numbers` with this
 syntax.
@@ -240,7 +245,8 @@ on_...:
     # {"key": "42.0", "greeting": "Hello World"}
 
 ```
-### POST Body in JSON format (syntax 2)
+POST Body in JSON format (syntax 2)
+***********************************
 
 **Note:** use this syntax to send `boolean` or `numbers` in JSON.
 
@@ -260,7 +266,8 @@ on_...:
     # {"key": 42.0, "greeting": "Hello World"}
 
 ```
-### GET values from a JSON body response
+GET values from a JSON body response
+************************************
 If you want to retrieve the value for the vol key and assign it to a template sensor or number component whose id is
 set to player_volume you can do this, but note that checking for the presence of the key will prevent difficult-to-read
 error messages:
@@ -305,4 +312,4 @@ on_...:
 - [index]({{< ref "index/" >}})
 - :apiref:`http_request/http_request.h`
 - [/components/json]({{< ref "/components/json" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/http_request.md)

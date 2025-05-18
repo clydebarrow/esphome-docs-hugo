@@ -37,7 +37,8 @@ which chooses adjacent channels with shared timers. See
 
 Note: this variable is only available for the esp-idf framework
 
-### Example Usage For a Light
+Example Usage For a Light
+*************************
 
 ```yaml
 # Example configuration entry
@@ -53,7 +54,8 @@ light:
     name: "Kitchen Light"
 
 ```
-### Example Usage For a Piezo Buzzer
+Example Usage For a Piezo Buzzer
+********************************
 
 ```yaml
 # Configure the output
@@ -140,4 +142,4 @@ Configuration variables:
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`ledc/ledc_output.h`
 - [esp-idf LEDC API docs](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/ledc.md)

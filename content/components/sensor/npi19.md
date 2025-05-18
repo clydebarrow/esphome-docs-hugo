@@ -48,7 +48,8 @@ sensor:
 
 The NPI-19 pressure sensor is not calibrated to units, you have to convert the measurement to units yourself.
 
-### Estimated
+Estimated
+*********
 
 On page 1 of the [product application note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
 the value `1638` maps to approximately `10%` of the maximum value of the sensor (e.g. `0.5` psi for a `5` psi sensor);
@@ -63,7 +64,8 @@ filters:
     - 14746 -> 4.5
 
 ```
-### Calibrated
+Calibrated
+**********
 1. Expose the sensor to a low known pressure, for example `5` psi.
 2. Observe the value of the raw pressure sensor, for example `1500`.
 3. Expose the sensor to a high pressure, for example `90` psi.
@@ -94,4 +96,4 @@ compensation.
 - [NPI-19 Product Page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)
 - [NPI-19 Datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf)
 - [NPI-19 Product Application Note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/npi19.md)

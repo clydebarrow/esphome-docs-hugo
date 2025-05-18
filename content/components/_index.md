@@ -181,7 +181,8 @@ Create update entities simplifying management of OTA updates.
 
 Sensors are organized into categories; if a given sensor fits into more than one category, it will appear multiple times.
 
-### Core
+Core
+****
 
 .. imgtable::
 
@@ -192,7 +193,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     Uptime Sensor, components/sensor/uptime, timer.svg, dark-invert
     WiFi Signal Strength, components/sensor/wifi_signal, network-wifi.svg, dark-invert
 
-### Air Quality
+Air Quality
+***********
 
 .. imgtable::
 
@@ -227,7 +229,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     T6613/15, components/sensor/t6615, t6615.jpg, CO2
     ZyAura, components/sensor/zyaura, zgm053.jpg, CO2 & Temperature & Humidity
 
-### Analogue
+Analogue
+********
 
 .. imgtable::
 
@@ -241,7 +244,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     NAU7802, components/sensor/nau7802, nau7802.jpg, ADC
     Resistance, components/sensor/resistance, omega.svg, dark-invert
 
-### Bluetooth Low Energy (BLE)
+Bluetooth Low Energy (BLE)
+**************************
 
 .. imgtable::
 
@@ -256,7 +260,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     RuuviTag, components/sensor/ruuvitag, ruuvitag.jpg, Temperature & Humidity & Accelerometer
     Xiaomi BLE, components/sensor/xiaomi_ble, xiaomi_mijia_logo.jpg, Various
 
-### Digital Signals
+Digital Signals
+***************
 
 .. imgtable::
 
@@ -265,7 +270,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     Pulse Meter, components/sensor/pulse_meter, pulse.svg, dark-invert
     Pulse Width, components/sensor/pulse_width, pulse.svg, dark-invert
 
-### Distance
+Distance
+********
 
 .. imgtable::
 
@@ -278,7 +284,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     VL53L0x, components/sensor/vl53l0x, vl53l0x.jpg, IR optical distance
     Zio Ultrasonic Sensor, components/sensor/zio_ultrasonic, zio_ultrasonic.jpg, Acoustic distance
 
-### Electricity
+Electricity
+***********
 
 .. imgtable::
 
@@ -316,7 +323,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     Teleinfo, components/sensor/teleinfo, teleinfo.jpg, Electrical counter
     Total Daily Energy, components/sensor/total_daily_energy, sigma.svg, dark-invert
 
-### Environmental
+Environmental
+*************
 
 .. imgtable::
 
@@ -382,14 +390,16 @@ Sensors are organized into categories; if a given sensor fits into more than one
     TMP117, components/sensor/tmp117, tmp117.jpg, Temperature
     XGZP68xx Series, components/sensor/xgzp68xx, 6897d.jpg, Differential Pressure
 
-### Health/Safety
+Health/Safety
+*************
 
 .. imgtable::
 
     Seeed Studio MR60BHA2 mmWave, components/seeed_mr60bha2, seeed_mr60bha2.jpg, Breathing & heartbeat detection
     Seeed Studio MR60FDA2 mmWave, components/seeed_mr60fda2, seeed_mr60fda2.jpg, Presence & Fall detection
 
-### Light
+Light
+*****
 
 .. imgtable::
 
@@ -416,7 +426,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     VEML6030, components/sensor/veml7700, veml6030.jpg, Lux
     VEML7700, components/sensor/veml7700, veml7700.jpg, Lux
 
-### Magnetic
+Magnetic
+********
 
 .. imgtable::
 
@@ -428,7 +439,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     MMC5983, components/sensor/mmc5983, mmc5983.jpg, 3-Axis magnetometer
     QMC5883L, components/sensor/qmc5883l, qmc5883l.jpg, 3-Axis magnetometer
 
-### Miscellaneous
+Miscellaneous
+*************
 
 .. imgtable::
 
@@ -461,7 +473,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     uFire ISE sensor, components/sensor/ufire_ise, ufire_ise.png, pH & Temperature
     WireGuard, components/wireguard, wireguard_custom_logo.svg, dark-invert
 
-### Motion
+Motion
+******
 
 .. imgtable::
 
@@ -477,7 +490,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     RuuviTag, components/sensor/ruuvitag, ruuvitag.jpg, Temperature & Humidity & Accelerometer
     Seeed Studio MR24HPC1 mmWave, components/seeed_mr24hpc1, seeed-mr24hpc1.jpg, Motion & Presence
 
-### Thermocouple
+Thermocouple
+************
 
 .. imgtable::
 
@@ -488,7 +502,8 @@ Sensors are organized into categories; if a given sensor fits into more than one
     MAX6675, components/sensor/max6675, max6675.jpg, K-Type,
     MCP9600, components/sensor/mcp9600, mcp9600.jpg, All types
 
-### Weight
+Weight
+******
 
 .. imgtable::
 
@@ -505,7 +520,8 @@ configuration <https://devices.esphome.io/devices/temt6000>`__.
 
 Binary Sensors are organized into categories; if a given sensor fits into more than one category, it will appear multiple times.
 
-### Core
+Core
+****
 
 .. imgtable::
 
@@ -517,7 +533,8 @@ Binary Sensors are organized into categories; if a given sensor fits into more t
     Switch, components/binary_sensor/switch, electric-switch.svg, dark-invert
     Host SDL2, components/binary_sensor/sdl, sdl.png
 
-### Capacitive Touch
+Capacitive Touch
+****************
 
 .. imgtable::
 
@@ -526,7 +543,8 @@ Binary Sensors are organized into categories; if a given sensor fits into more t
     MPR121  Capacitive Touch Sensor, components/binary_sensor/mpr121, mpr121.jpg
     TTP229, components/binary_sensor/ttp229, ttp229.jpg
 
-### Mechanical
+Mechanical
+**********
 
 .. imgtable::
 
@@ -534,7 +552,8 @@ Binary Sensors are organized into categories; if a given sensor fits into more t
     TM1637, components/display/tm1637, tm1637.jpg
     TM1638, components/display/tm1638, tm1638.jpg
 
-### NFC/RFID
+NFC/RFID
+********
 
 Often known as "tag" or "card" readers within the community.
 
@@ -548,7 +567,8 @@ Often known as "tag" or "card" readers within the community.
     RDM6300, components/binary_sensor/rdm6300, rdm6300.jpg
     Wiegand Reader, components/wiegand, wiegand.jpg
 
-### Touchscreen
+Touchscreen
+***********
 
 .. imgtable::
 
@@ -559,7 +579,8 @@ Often known as "tag" or "card" readers within the community.
     TT21100, components/touchscreen/tt21100, esp32-s3-korvo-2-lcd.png
     LVGL widget, components/binary_sensor/lvgl, lvgl_c_bns.png
 
-### Presence Detection
+Presence Detection
+******************
 
 .. imgtable::
 
@@ -570,7 +591,8 @@ Often known as "tag" or "card" readers within the community.
     LD2450, components/sensor/ld2450, ld2450.png
     Seeed Studio MR24HPC1 mmWave, components/seeed_mr24hpc1, seeed-mr24hpc1.jpg
 
-### Miscellaneous
+Miscellaneous
+*************
 
 .. imgtable::
 

@@ -64,7 +64,8 @@ Once everything is hooked up and flashed, enable `esp32_touch:` `setup_mode: tru
 
 ------------
 
-### Normal state
+Normal state
+************
 
 ![Wet state](../images/leak-detector-m5stickC_dry.jpg)
 *Wet state*
@@ -290,4 +291,4 @@ Enjoy your locally-controlled leak detector with push notification!
 - [/components/display/index]({{< ref "/components/display/index" >}})
 - [/components/display/st7735]({{< ref "/components/display/st7735" >}})
 - [/components/binary_sensor/esp32_touch]({{< ref "/components/binary_sensor/esp32_touch" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/leak-detector-m5stickC.md)

@@ -91,4 +91,4 @@ This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issue
 - [index]({{< ref "index/" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`time_based/time_based_cover.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/time_based.md)

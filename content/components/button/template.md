@@ -25,4 +25,4 @@ button:
 
 - [/automations/index]({{< ref "/automations/index" >}})
 - [/components/button/index]({{< ref "/components/button/index" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/button/template.md)

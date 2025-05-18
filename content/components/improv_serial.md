@@ -48,4 +48,4 @@ improv_serial:
 - [esp32_improv]({{< ref "esp32_improv/" >}})
 - [Improv Wi-Fi](https://www.improv-wifi.com/)
 - :apiref:`improv_serial/improv_serial_component.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/improv_serial.md)

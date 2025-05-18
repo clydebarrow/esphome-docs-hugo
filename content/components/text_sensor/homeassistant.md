@@ -45,4 +45,4 @@ text_sensor:
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/text_sensor/homeassistant_text_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/homeassistant.md)

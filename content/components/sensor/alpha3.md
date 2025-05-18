@@ -47,7 +47,8 @@ sensor:
 
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **flow** (*Optional*): The estimated volume flow of the medium in `m³/h`.
@@ -89,4 +90,4 @@ The pump can only be connected to one device at a time. If you want to use the G
 
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
 - :apiref:`alpha3/alpha3.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/alpha3.md)

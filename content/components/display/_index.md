@@ -20,7 +20,8 @@ For graphical displays, which offer the greatest flexibility, there are two opti
 - [LVGL ]({{< relref "/components/lvgl/index" >}}) - Light and Versatile Graphics Library
 
 
-### Configuration variables:
+Configuration variables:
+************************
 
 All display components inherit these configuration variables.
 
@@ -614,4 +615,4 @@ For displays in 8 bit mode you will see distinct color blocks rather than a smoo
 - [Image Component]({{< ref "components/image#display-image" >}})
 - [Animation Component]({{< ref "components/animation#display-animation" >}})
 - [Online Image]({{< ref "components/online_image#online_image" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/index.md)

@@ -83,4 +83,4 @@ cycle.
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - [Sigma-Delta](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
 - :apiref:`sigma_delta_output/sigma_delta_output.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/sigma_delta_output.md)

@@ -37,4 +37,4 @@ switch:
 - [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
 - [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
 - [/components/output/index]({{< ref "/components/output/index" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/lvgl.md)

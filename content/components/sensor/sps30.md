@@ -137,4 +137,4 @@ on_...:
 - [ccs811]({{< ref "ccs811/" >}})
 - [sgp30]({{< ref "sgp30/" >}})
 - :apiref:`sps30/sps30.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/sps30.md)

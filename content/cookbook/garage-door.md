@@ -46,4 +46,4 @@ cover:
 - [/automations/index]({{< ref "/automations/index" >}})
 - [/components/switch/gpio]({{< ref "/components/switch/gpio" >}})
 - [/components/cover/template]({{< ref "/components/cover/template" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/garage-door.md)

@@ -46,7 +46,8 @@ Automations:
 ## BLE Sensor Automation
 
 
-### ``on_notify``
+`on_notify`
+*************
 
 This automation is triggered when the device/server sends a notify message for
 a characteristic. The config variable *notify* must be true or this will have
@@ -59,4 +60,4 @@ A variable `x` of type `std::string` is passed to the automation for use in lamb
 - [/components/sensor/ble_client]({{< ref "/components/sensor/ble_client" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ble_text_sensor/ble_text_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/ble_client.md)

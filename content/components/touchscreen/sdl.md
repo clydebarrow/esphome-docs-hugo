@@ -17,7 +17,8 @@ touchscreen:
   platform: sdl
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
 
@@ -28,4 +29,4 @@ touchscreen:
 
 - [SDL display]({{< ref "components/display/sdl#sdl" >}})
 - :apiref:`sdl/sdl_touchscreen.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/touchscreen/sdl.md)

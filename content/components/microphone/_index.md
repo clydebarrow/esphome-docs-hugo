@@ -122,4 +122,4 @@ This condition will check if the microphone is currently apply a software mute.
 
 ## See Also
 
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/microphone/index.md)

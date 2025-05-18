@@ -116,4 +116,4 @@ Configuration options:
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ufire_ise/ufire_ise.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/ufire_ise.md)

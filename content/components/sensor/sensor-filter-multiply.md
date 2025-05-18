@@ -3,7 +3,8 @@ description: ""
 title: ""
 ---
 
-### ``multiply``
+`multiply`
+************
 
 Multiplies each value by a templatable value.
 

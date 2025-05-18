@@ -55,4 +55,4 @@ with the [select-set_action]({{< ref "components/select/_index#select-set_action
 
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/select/template_select.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/select/template.md)

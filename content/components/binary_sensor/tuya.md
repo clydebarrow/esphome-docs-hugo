@@ -28,4 +28,4 @@ binary_sensor:
 - [/components/tuya]({{< ref "/components/tuya" >}})
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`tuya/binary_sensor/tuya_binary_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/tuya.md)

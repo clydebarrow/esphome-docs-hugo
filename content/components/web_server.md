@@ -144,7 +144,8 @@ Copy https://oi.esphome.io/v2/www.js to a V2 folder in your yaml folder.
 
 
 
-### Entity sorting
+Entity sorting
+**************
 
 Version `3` supports the sorting of the entities.
 You can set a `sorting_weight` on each entity.
@@ -167,7 +168,8 @@ sensor:
 
 ```
 
-### Entity grouping
+Entity grouping
+***************
 
 Version `3` of the `web_server` allows for grouping of entities in custom groups.
 Groups can be sorted by providing a `sorting_weight`. Groups with a smaller `sorting_weight` will be displayed first.
@@ -200,7 +202,8 @@ number:
 
 
 ```
-### Number in slider mode
+Number in slider mode
+*********************
 ![You can change the value by moving the slider.](/components/images/web_server/number-slider-popup.png)
 *You can change the value by moving the slider.*
 
@@ -225,7 +228,8 @@ You can do the same for the logs.
 
 
 
-### Sensor value graph
+Sensor value graph
+******************
 ![By clicking on any sensor it will expand a graph with the historical values for that sensor.](/components/images/web_server/sensor-history-graph.png)
 *By clicking on any sensor it will expand a graph with the historical values for that sensor.*
 
@@ -236,4 +240,4 @@ You can do the same for the logs.
 - [api-rest]({{< ref "web-api/_index#api-rest" >}})
 - :apiref:`web_server/web_server.h`
 - [prometheus]({{< ref "prometheus/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/web_server.md)

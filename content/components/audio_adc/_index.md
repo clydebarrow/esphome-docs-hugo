@@ -37,4 +37,4 @@ Configuration variables:
 
 ## See Also
 
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/audio_adc/index.md)

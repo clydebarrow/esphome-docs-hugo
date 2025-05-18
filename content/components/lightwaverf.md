@@ -72,4 +72,4 @@ Compatible receiver:
 ## See Also
 
 - [/components/light/index]({{< ref "/components/light/index" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/lightwaverf.md)

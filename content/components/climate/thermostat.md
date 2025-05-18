@@ -166,7 +166,8 @@ The thermostat controller uses the sensor to determine whether it should heat or
 - **humidity_sensor** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): If specified, this sensor is used to measure the current humidity.
   This is used for information only and does not influence temperature control.
 
-### Heating and Cooling Actions
+Heating and Cooling Actions
+***************************
 
 These are triggered when the climate control **action** is changed by the thermostat controller. Here,
 "action" takes on both meanings described above, as these are both climate actions *and* ESPHome
@@ -203,7 +204,8 @@ If only one of `cool_action`, `fan_only_action`, `heat_action`, and `dry_action`
 the controller will configure itself to operate in single-point mode and, as such, Home Assistant will
 display the single-point climate user interface for the device.
 
-### Heating and Cooling Modes
+Heating and Cooling Modes
+*************************
 
 These are triggered when the climate control **mode** is changed. Note the absence of "action" in the
 parameter name here -- these are still ESPHome [actions]({{< ref "automations/actions#config-action" >}}), however they are *not*
@@ -228,7 +230,8 @@ indication of the current climate mode.
 **The above actions are not to be used to activate cooling or heating devices!**
 See the previous section for those.
 
-### Fan Mode Actions
+Fan Mode Actions
+****************
 
 These are triggered when the climate control fan mode is changed. These are ESPHome [actions]({{< ref "automations/actions#config-action" >}}).
 These should be used to control the fan only, if available.
@@ -254,7 +257,8 @@ These should be used to control the fan only, if available.
 - **fan_mode_quiet_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to call when the fan
   should run at quiet speed.
 
-### Swing Mode Actions
+Swing Mode Actions
+******************
 
 These are triggered when the climate control swing mode is changed. These are ESPHome [actions]({{< ref "automations/actions#config-action" >}}).
 These should be used to control the fan only, if available.
@@ -270,7 +274,8 @@ These should be used to control the fan only, if available.
 
 ## Advanced Configuration/Behavior:
 
-### Set Point Options/Behavior
+Set Point Options/Behavior
+**************************
 
 - **set_point_minimum_differential** (*Optional*, float): For dual-point/dual-function systems, the minimum
   required temperature difference between the heat and cool set points. Defaults to 0.5 °C.
@@ -282,7 +287,8 @@ These should be used to control the fan only, if available.
   `supplemental_heating_action` will be called immediately.
 
 
-### Presets
+Presets
+*******
 
 Presets allow you to define a combination of set points, climate, fan, and swing modes that can be recalled from
 the front end (Home Assistant) as a single operation for quick and easy access. This can simplify the user
@@ -370,7 +376,8 @@ climate:
       - logger.log: Preset has been changed!
 
 ```
-### Default Preset
+Default Preset
+**************
 
 These configuration items determine default values the thermostat controller should use when it starts.
 
@@ -431,7 +438,8 @@ climate:
         mode: HEAT_COOL
 
 ```
-### Additional Actions/Behavior
+Additional Actions/Behavior
+***************************
 
 - **target_temperature_change_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to call when the
   thermostat's target temperature(s) is/are changed.
@@ -481,7 +489,8 @@ climate:
 Note that `min_temperature` and `max_temperature` from the base climate component are used to define
 the range of allowed temperature values in the thermostat component. See [/components/climate/index]({{< ref "/components/climate/index" >}}).
 
-### Hysteresis Values
+Hysteresis Values
+*****************
 
 - **cool_deadband** (*Optional*, float): The minimum temperature differential (temperature above the set point)
   before calling the cooling [action]({{< ref "automations/actions#config-action" >}}). Defaults to 0.5 °C.
@@ -510,4 +519,4 @@ Please see the [Bang-Bang ]({{< relref "bang_bang/" >}}) component's documentati
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
 - [Bang-Bang ]({{< relref "bang_bang/" >}})
 - [config-action]({{< ref "automations/actions#config-action" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/thermostat.md)

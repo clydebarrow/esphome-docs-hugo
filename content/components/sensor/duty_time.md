@@ -51,7 +51,8 @@ sensor:
 In addition to all basic [sensor automations]({{< ref "components/sensor/_index#sensor-automations" >}}), the component supports the automations below.
 
 
-### ``sensor.duty_time.start`` Action
+`sensor.duty_time.start` Action
+*********************************
 
 This action starts/resume time tracking. In lambdas, you may use the `start()` method.
 
@@ -64,7 +65,8 @@ on_...:
 
 ```
 
-### ``sensor.duty_time.stop`` Action
+`sensor.duty_time.stop` Action
+********************************
 
 This action suspends time tracking. Causes the sensor to be updated, including the `last_time` sensor. In lambdas, you may use the `stop()` method.
 
@@ -76,7 +78,8 @@ on_...:
 
 ```
 
-### ``sensor.duty_time.reset`` Action
+`sensor.duty_time.reset` Action
+*********************************
 
 This action resets the duty time counter. Causes a sensor update. Does not affect the `last_time` sensor. In lambdas, you may use the `reset()` method.
 
@@ -88,7 +91,8 @@ on_...:
 
 ```
 
-### ``sensor.duty_time.is_running`` / ``sensor.duty_time.is_not_running`` Condition
+`sensor.duty_time.is_running` / `sensor.duty_time.is_not_running` Condition
+*******************************************************************************
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the `duty_time` counter is currently running (or suspended). In lambdas, you may use the `is_running()` method.
 
@@ -109,4 +113,4 @@ on_...:
 - [automation]({{< ref "automations/_index#automation" >}})
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`duty_time/duty_time_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/duty_time.md)

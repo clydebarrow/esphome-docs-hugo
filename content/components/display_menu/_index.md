@@ -109,7 +109,8 @@ The component manages a hierarchy of menu items. The common configuration variab
 
 
 
-### Editing values
+Editing values
+**************
 
 Some of the menu items provide a way to edit values either by selecting from a list of options
 or changing a numeric one. Such items can be configured in two ways.
@@ -131,7 +132,8 @@ activating the switch iterates to the next value. The selection marker does not 
 (here it is used to signal whether rotating the knob navigates the menu or changes the value).
 The menu item of the `number` type can be only immediately editable in the `joystick` mode.
 
-### Label
+Label
+*****
 
 ```yaml
 items:
@@ -143,7 +145,8 @@ items:
 The menu item of the type `label` just displays a text. There is no configuration and
 no interaction is possible.
 
-### Menu
+Menu
+****
 
 ```yaml
 items:
@@ -177,7 +180,8 @@ Automations:
   when the menu level is not displayed anymore.
   See [display_menu-on_leave]({{< ref "components/display_menu/_index#display_menu-on_leave" >}}).
 
-### Back
+Back
+****
 
 ```yaml
 items:
@@ -189,7 +193,8 @@ The menu item of the type `back` closes the current menu level and goes up in
 the menu level hierarchy. The `on_leave` automation of the current level and
 `on_enter` one of the higher one are invoked. There is no configuration.
 
-### Select
+Select
+******
 
 ```yaml
 lcd_menu:
@@ -243,7 +248,8 @@ Automations:
   when the value is changed.
   See [display_menu-on_value]({{< ref "components/display_menu/_index#display_menu-on_value" >}}).
 
-### Number
+Number
+******
 
 ```yaml
 lcd_menu:
@@ -312,7 +318,8 @@ Automations:
   when the value is changed.
   See [display_menu-on_value]({{< ref "components/display_menu/_index#display_menu-on_value" >}}).
 
-### Switch
+Switch
+******
 
 ```yaml
 lcd_menu:
@@ -364,7 +371,8 @@ Automations:
   when the value is changed.
   See [display_menu-on_value]({{< ref "components/display_menu/_index#display_menu-on_value" >}}).
 
-### Command
+Command
+*******
 
 ```yaml
 items:
@@ -384,7 +392,8 @@ Automations:
   when the menu item is clicked.
   See [display_menu-on_value]({{< ref "components/display_menu/_index#display_menu-on_value" >}}).
 
-### Custom
+Custom
+******
 
 ```yaml
 lcd_menu:
@@ -432,7 +441,8 @@ Automations:
 ## Automations
 
 
-### ``on_enter``
+`on_enter`
+************
 
 This automation will be triggered when the menu level is entered, i.e. the component
 draws its items on the display. The `it` parameter points to a `MenuItem` class
@@ -453,7 +463,8 @@ lcd_menu:
 
 ```
 
-### ``on_leave``
+`on_leave`
+************
 
 This automation will be triggered when the menu level is exited, i.e. the component
 does not draw its items on the display anymore. The `it` parameter points to
@@ -474,7 +485,8 @@ lcd_menu:
 
 ```
 
-### ``on_value``
+`on_value`
+************
 
 This automation will be triggered when the value edited through the menu changed
 or a command was triggered.
@@ -492,7 +504,8 @@ lcd_menu:
 
 ```
 
-### ``on_next``
+`on_next`
+***********
 
 This automation will be triggered when the user requested to set the value to the next one.
 
@@ -509,7 +522,8 @@ lcd_menu:
 
 ```
 
-### ``on_prev``
+`on_prev`
+***********
 
 This automation will be triggered when the user requested to set the value to the previous one.
 
@@ -526,7 +540,8 @@ lcd_menu:
 
 ```
 
-### ``display_menu.up`` Action
+`display_menu.up` Action
+**************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for navigating up in a menu. The action
 is usually wired to an anticlockwise turn of a rotary encoder or to the upper
@@ -545,7 +560,8 @@ Configuration variables:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
 
-### ``display_menu.down`` Action
+`display_menu.down` Action
+****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for navigating down in a menu. The action
 is usually wired to a clockwise turn of a rotary encoder or to the lower
@@ -564,7 +580,8 @@ Configuration variables:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
 
-### ``display_menu.left`` Action
+`display_menu.left` Action
+****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) usually wired to the left button
 of the joystick. In the `joystick` mode it is used to set the previous
@@ -586,7 +603,8 @@ Configuration variables:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
 
-### ``display_menu.right`` Action
+`display_menu.right` Action
+*****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) usually wired to the right button
 of the joystick. In the `joystick` mode it is used to set the next
@@ -607,7 +625,8 @@ Configuration variables:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
 
-### ``display_menu.enter`` Action
+`display_menu.enter` Action
+*****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for triggering a selected menu item, resulting
 in an action depending on the type of the item - entering a submenu, starting/stopping
@@ -631,7 +650,8 @@ Configuration variables:
 
 .. display_menu-show_action:
 
-### ``display_menu.show`` Action
+`display_menu.show` Action
+****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for showing an inactive menu. The state
 of the menu remains unchanged, i.e. the menu level shown at the moment it was hidden
@@ -655,7 +675,8 @@ Configuration variables:
 
 .. display_menu-hide_action:
 
-### ``display_menu.hide`` Action
+`display_menu.hide` Action
+****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for hiding the menu. A hidden menu
 does not react to `draw()` and does not process navigation actions.
@@ -677,7 +698,8 @@ Configuration variables:
 
 .. display_menu-show_main_action:
 
-### ``display_menu.show_main`` Action
+`display_menu.show_main` Action
+*********************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for showing the root level of the menu.
 
@@ -697,7 +719,8 @@ Configuration variables:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to hide.
 
 
-### ``display_menu.is_active`` Condition
+`display_menu.is_active` Condition
+************************************
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given menu is active, i.e.
 shown on the display and processing navigation events.
@@ -714,4 +737,4 @@ on_press:
 
 - :apiref:`display_menu_base/display_menu_base.h`
 
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display_menu/index.md)

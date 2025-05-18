@@ -120,7 +120,8 @@ true                true              true            `(Δ△Δ)`
 =================== =============== ================= ==========
 
 
-### Display states of other sensors
+Display states of other sensors
+*******************************
 
 The following example display the sensor states of a MiFlora sensor on a pvvx display. The time is also synchronized.
 
@@ -179,7 +180,8 @@ display:
     }
 
 ```
-### Only synchronize the time once a day
+Only synchronize the time once a day
+************************************
 
 The following example will synchronized the time of the pvvx device once a day.
 
@@ -223,4 +225,4 @@ display:
 - [/components/sensor/xiaomi_ble]({{< ref "/components/sensor/xiaomi_ble" >}})
 - :apiref:`pvvx_mithermometer/display/pvvx_display.h`
 - [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by [pvvx](https://github.com/pvvx)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/pvvx_mithermometer.md)

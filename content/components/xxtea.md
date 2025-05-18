@@ -18,4 +18,4 @@ See the API docs for more information on how to use this component.
 
 - [index]({{< ref "index/" >}})
 - :apiref:`xxtea/xxtea.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/xxtea.md)

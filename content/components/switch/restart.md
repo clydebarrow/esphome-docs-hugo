@@ -29,4 +29,4 @@ through Home Assistant.
 - [/components/button/restart]({{< ref "/components/button/restart" >}})
 - [template]({{< ref "template/" >}})
 - :apiref:`restart/switch/restart_switch.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/restart.md)

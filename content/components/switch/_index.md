@@ -70,7 +70,8 @@ Configuration variables:
 - If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 
-### ``switch.toggle`` Action
+`switch.toggle` Action
+************************
 
 This action toggles a switch with the given ID when executed.
 
@@ -81,7 +82,8 @@ on_...:
 
 ```
 
-### ``switch.turn_on`` Action
+`switch.turn_on` Action
+*************************
 
 This action turns a switch with the given ID on when executed.
 
@@ -92,7 +94,8 @@ on_...:
 
 ```
 
-### ``switch.turn_off`` Action
+`switch.turn_off` Action
+**************************
 
 This action turns a switch with the given ID off when executed.
 
@@ -103,7 +106,8 @@ on_...:
 
 ```
 
-### ``switch.is_on`` / ``switch.is_off`` Condition
+`switch.is_on` / `switch.is_off` Condition
+**********************************************
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given switch is ON (or OFF).
 
@@ -117,7 +121,8 @@ on_...:
 
 ```
 
-### lambda calls
+lambda calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all switches to do some
 advanced stuff (see the full API Reference for more info).
@@ -154,7 +159,8 @@ advanced stuff (see the full API Reference for more info).
 
   ```
 
-### ``switch.on_turn_on`` / ``switch.on_turn_off`` Trigger
+`switch.on_turn_on` / `switch.on_turn_off` Trigger
+******************************************************
 
 This trigger is activated each time the switch is turned on. It becomes active
 right after the switch component has acknowledged the state (e.g. after it switched
@@ -173,4 +179,4 @@ switch:
 ## See Also
 
 - :apiref:`switch/switch.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/index.md)

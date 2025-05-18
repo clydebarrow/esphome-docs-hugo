@@ -40,4 +40,4 @@ Widget-specific actions (``lvgl.dropdown.update``, ``lvgl.roller.update``) will 
 - [/components/light/lvgl]({{< ref "/components/light/lvgl" >}})
 - [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
 - [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/select/lvgl.md)

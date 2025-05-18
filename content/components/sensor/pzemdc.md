@@ -60,7 +60,8 @@ sensor:
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 
-### ``pzemdc.reset_energy`` Action
+`pzemdc.reset_energy` Action
+******************************
 
 This action resets the total energy value of the pzemdc device with the given ID when executed.
 
@@ -77,4 +78,4 @@ on_...:
 - [pzem004t]({{< ref "pzem004t/" >}})
 - [pzemac]({{< ref "pzemac/" >}})
 - :apiref:`pzemdc/pzemdc.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/pzemdc.md)

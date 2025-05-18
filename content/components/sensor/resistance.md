@@ -71,4 +71,4 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 - [ntc]({{< ref "ntc/" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`resistance/resistance_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/resistance.md)

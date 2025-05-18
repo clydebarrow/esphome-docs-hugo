@@ -42,7 +42,8 @@ opentherm:
   out_pin: GPIOXX
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **in_pin** (**Required**, number): The pin of the OpenTherm hardware bridge which is usually labeled `out` on the
   board.
@@ -77,7 +78,8 @@ Automations
 
 See [on-the-fly-message-editing]({{< ref "components/opentherm#on-the-fly-message-editing" >}}) for details.
 
-### Note about sync mode
+Note about sync mode
+********************
 
 The use of some components (like Dallas temperature sensors) may result in lost frames and protocol warnings from
 OpenTherm. Since OpenTherm is resilient by design and transmits its messages in a constant loop, these dropped frames
@@ -102,7 +104,8 @@ to provide this input: using a Home Assistant sensor from which the setpoint can
 option is the most useful one, as it can be combined with the [/components/climate/pid]({{< ref "/components/climate/pid" >}}) component to create a
 thermostat that works as you would expect a thermostat to work. See [thermostat-pid-basic]({{< ref "components/opentherm#thermostat-pid-basic" >}}) for an example.
 
-### Numerical values
+Numerical values
+****************
 
 There are three ways to set a numerical value:
 
@@ -214,7 +217,8 @@ The following numerical values are available:
   * Supports `auto_min_value`
   * Supports `auto_max_value`
 
-### Switch
+Switch
+******
 
 
 Switches are available to allow manual toggling of any of the following seven status codes:
@@ -253,7 +257,8 @@ switch to turn off your central heating. In such a case, the flag will be set to
 setpoint is always larger than 0, so including a switch is the only way you can turn off central heating. (This also
 holds for cooling and CH2.)
 
-### Binary sensor
+Binary sensor
+*************
 
 The component can report boiler status on several binary sensors. The *Status* sensors are updated in each message
 cycle, while the others are only set during initialization, as they are unlikely to change without restarting the
@@ -286,7 +291,8 @@ boiler.
 - `air_pressure_fault`: Air pressure fault
 - `water_over_temp`: Water overtemperature
 
-### Sensor
+Sensor
+******
 
 The boiler can also report several numerical values, which are available through sensors. Your boiler may not support
 all of these values, in which case there won't be any value published to that sensor. The following sensors are
@@ -365,7 +371,8 @@ You can check the :apistruct:`OpenthermData <opentherm::OpenthermData>` for the 
 
 ## Examples
 
-### Minimal example with numeric input
+Minimal example with numeric input
+**********************************
 
 ```yaml
 # An extremely minimal configuration which only enables you to set the boiler's
@@ -383,7 +390,8 @@ number:
 
 ```
 
-### Basic PID thermostat
+Basic PID thermostat
+********************
 
 ```yaml
 # A basic thremostat for a boiler with a single central heating circuit and
@@ -472,4 +480,4 @@ climate:
   real-world use case for this component.
 - [Development repository](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
   before proposing them to ESPHome core.
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/opentherm.md)

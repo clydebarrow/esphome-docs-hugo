@@ -103,7 +103,8 @@ text_sensor:
   SML message is received. See [sml-on-data]({{< ref "components/sml#sml-on-data" >}}).
 
 
-### ``on_data`` Trigger
+`on_data` Trigger
+********************
 
 This automation will be triggered when a valid SML message is received. The variable `bytes` (of type
 `std::vector<uint8_t>`) contains the raw sml data including start/end sequence. The variable `valid`
@@ -213,4 +214,4 @@ sensor:
 ## See Also
 
 - :apiref:`sml/sml.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sml.md)

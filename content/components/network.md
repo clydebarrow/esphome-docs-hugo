@@ -30,4 +30,4 @@ Therefore, the address generation does not comply to `RFC7217 <https://datatrack
 
 - [/components/wifi]({{< ref "/components/wifi" >}})
 - [/components/ethernet]({{< ref "/components/ethernet" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/network.md)

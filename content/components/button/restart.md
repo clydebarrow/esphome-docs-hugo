@@ -27,4 +27,4 @@ button:
 - [/components/switch/restart]({{< ref "/components/switch/restart" >}})
 - [template]({{< ref "template/" >}})
 - :apiref:`restart/button/restart_button.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/button/restart.md)

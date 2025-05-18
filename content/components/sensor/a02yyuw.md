@@ -41,4 +41,4 @@ sensor:
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [uart]({{< ref "components/uart#uart" >}})
 - :apiref:`a02yyuw/a02yyuw.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/a02yyuw.md)

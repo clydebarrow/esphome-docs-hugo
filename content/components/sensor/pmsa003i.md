@@ -85,4 +85,4 @@ Standard vs environmental units from https://publiclab.org/questions/samr/04-07-
 - [/components/sensor/sds011]({{< ref "/components/sensor/sds011" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`pmsa003i/pmsa003i.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/pmsa003i.md)

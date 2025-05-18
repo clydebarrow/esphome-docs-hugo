@@ -52,4 +52,4 @@ binary_sensor:
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`analog_threshold/analog_threshold_binary_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/analog_threshold.md)

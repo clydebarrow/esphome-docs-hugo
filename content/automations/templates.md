@@ -108,4 +108,4 @@ using the lambda syntax as described/shown above.
 
 - [index]({{< ref "index/" >}})
 - [actions]({{< ref "actions/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/automations/templates.md)

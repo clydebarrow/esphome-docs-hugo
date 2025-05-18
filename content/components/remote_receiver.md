@@ -82,7 +82,8 @@ Multiple remote receivers can be configured as a list of dict definitions within
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Useful when multiple
   receivers are configured on a single device.
 
-### ESP32 IDF configuration variables:
+ESP32 IDF configuration variables:
+**********************************
 
 - **rmt_symbols** (*Optional*, int): If `use_dma` is enabled, `rmt_symbols` represents the size of the driver's
   internal DMA buffer. If DMA is not enabled, `rmt_symbols` determines the amount of RMT memory allocated to this
@@ -108,7 +109,8 @@ Multiple remote receivers can be configured as a list of dict definitions within
 - **use_dma** (*Optional*, boolean): Enable DMA on variants that support it. If enabled `rmt_symbols` controls
   the DMA buffer size and can be set to a large value.
 
-### ESP32 Arduino configuration variables:
+ESP32 Arduino configuration variables:
+**************************************
 
 - **rmt_channel** (*Optional*, int): The RMT channel to use. The following ESP32 variants have these channels available:
 
@@ -269,7 +271,8 @@ binary_sensor:
       command: 0x100BCBD
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **receiver_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The remote receiver to receive the remote code with. Required if
   multiple receivers configured.
@@ -583,4 +586,4 @@ rendering the hardware hack uncessary. This software passthrough mode can be use
 - [/components/rf_bridge]({{< ref "/components/rf_bridge" >}})
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - :apiref:`remote/remote_receiver.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/remote_receiver.md)

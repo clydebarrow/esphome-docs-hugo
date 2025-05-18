@@ -172,4 +172,4 @@ sensor:
 - [MultiSIBControl](http://www.multisibcontrol.net/)
 - [ioBroker.pylontech](https://github.com/PLCHome/ioBroker.pylontech/)
 - [uart]({{< ref "components/uart#uart" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/pylontech.md)

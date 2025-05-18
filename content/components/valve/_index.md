@@ -208,7 +208,8 @@ read-only, if you want to act on the valve, use the `make_call()` method as show
 
     ```
 
-### ``valve.on_open`` Trigger
+`valve.on_open` Trigger
+*************************
 
 This trigger is activated each time the valve reaches a fully open state.
 
@@ -221,7 +222,8 @@ valve:
 
 ```
 
-### ``valve.on_closed`` Trigger
+`valve.on_closed` Trigger
+***************************
 
 This trigger is activated each time the valve reaches a fully closed state.
 
@@ -236,4 +238,4 @@ valve:
 ## See Also
 
 - :apiref:`valve/valve.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/valve/index.md)

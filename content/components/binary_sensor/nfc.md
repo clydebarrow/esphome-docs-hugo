@@ -81,4 +81,4 @@ cards/tags to share the same message.
 - :apiref:`pn532/pn532.h`
 - :apiref:`pn7150/pn7150.h`
 - :apiref:`pn7160/pn7160.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/nfc.md)

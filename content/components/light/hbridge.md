@@ -44,4 +44,4 @@ As we are switching the H-bridge in software, the light may glitch every so ofte
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
 - :apiref:`hbridge/light/hbridge_light.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/hbridge.md)

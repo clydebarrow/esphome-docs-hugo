@@ -76,7 +76,8 @@ You can access the most recent state of the number in [lambdas]({{< ref "automat
 `id(number_id).state`.
 
 
-### ``on_value``
+`on_value`
+************
 
 This automation will be triggered when a new value is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the value from the trigger with `x`.
@@ -95,7 +96,8 @@ number:
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
 
-### ``on_value_range``
+`on_value_range`
+******************
 
 With this automation you can observe if a number value passes from outside
 a defined range of values to inside a range.
@@ -124,7 +126,8 @@ Configuration variables:
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
 
-### ``number.in_range`` Condition
+`number.in_range` Condition
+*****************************
 
 This condition passes if the state of the given number is inside a range.
 
@@ -149,7 +152,8 @@ Configuration variables:
 - **below** (*Optional*, float): The maximum for the condition.
 
 
-### ``number.set`` Action
+`number.set` Action
+*********************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a number state.
 
@@ -166,7 +170,8 @@ Configuration variables:
   The value to set the number to.
 
 
-### ``number.increment`` Action
+`number.increment` Action
+***************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for incrementing a number value by its
 step size (default: 1).
@@ -189,7 +194,8 @@ Configuration variables:
   Defaults to `true`.
 
 
-### ``number.decrement`` Action
+`number.decrement` Action
+***************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for decrementing a number value by its
 step size (default: 1).
@@ -212,7 +218,8 @@ Configuration variables:
   Defaults to `true`.
 
 
-### ``number.to_min`` Action
+`number.to_min` Action
+************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) seting a number to its minimum value, given
 a number component that has a minimum value defined for it.
@@ -230,7 +237,8 @@ Configuration variables:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
 
 
-### ``number.to_max`` Action
+`number.to_max` Action
+************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) seting a number to its maximum value (given
 a number component that has a maximum value defined for it.
@@ -248,7 +256,8 @@ Configuration variables:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
 
 
-### ``number.operation`` Action
+`number.operation` Action
+***************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) that can be used to perform an operation
 on a number component (set to minimum or maximum value, decrement, increment),
@@ -283,7 +292,8 @@ Configuration variables:
   number is exceeded.
 
 
-### lambda calls
+lambda calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all numbers to do some
 advanced stuff (see the full API Reference for more info).
@@ -313,4 +323,4 @@ advanced stuff (see the full API Reference for more info).
 
 - :apiref:`Number <number/number.h>`
 - :apiref:`NumberCall <number/number_call.h>`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/number/index.md)

@@ -241,4 +241,4 @@ Logging level can be set with the env var `ESPHOME_LOG_LEVEL` (default is `INFO`
 - [cli]({{< ref "cli/" >}})
 - [ESPHome index ]({{< relref "/index" >}})
 - [getting_started_hassio]({{< ref "getting_started_hassio/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/getting_started_command_line.md)

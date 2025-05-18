@@ -47,4 +47,4 @@ configured.
 - [/components/packet_transport/index]({{< ref "/components/packet_transport/index" >}})
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/packet_transport.md)

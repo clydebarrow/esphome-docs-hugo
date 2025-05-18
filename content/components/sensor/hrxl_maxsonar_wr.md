@@ -45,4 +45,4 @@ Advanced options:
 - [uart]({{< ref "components/uart#uart" >}})
 - [template]({{< ref "template/" >}})
 - :apiref:`hrxl_maxsonar_wr/hrxl_maxsonar_wr.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/hrxl_maxsonar_wr.md)

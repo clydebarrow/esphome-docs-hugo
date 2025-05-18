@@ -72,4 +72,4 @@ modbus:
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
 - [uart]({{< ref "components/uart#uart" >}})
 - :apiref:`modbus/modbus.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/modbus.md)

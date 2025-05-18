@@ -79,4 +79,4 @@ See [time/gps]({{< ref "time/gps" >}}) for config options for the GPS time sourc
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [TinyGPS++ library](http://arduiniana.org/libraries/tinygpsplus/)
 - :apiref:`gps/gps.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/gps.md)

@@ -25,4 +25,4 @@ button:
 
 - [template]({{< ref "template/" >}})
 - :apiref:`wake_on_lan/wake_on_lan.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/button/wake_on_lan.md)

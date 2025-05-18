@@ -75,7 +75,8 @@ to translate a logical x-y pixel coordinate to the address of the expected physi
 Determining the correct algorithm for the pixel mapper for your matrix will hopefully only require some graph paper and a little bit of math.
 
 
-### Default
+Default
+*******
 
 The default pixel mapper assumes that the led matrix is addressed starting with the top left LED, moving to the right, and
 then starting with the left-most row of the next row.
@@ -85,7 +86,8 @@ then starting with the left-most row of the next row.
 
 
 
-### BTF-Lighting 8x32 WS2812B Flexible LED Matrix
+BTF-Lighting 8x32 WS2812B Flexible LED Matrix
+*********************************************
 
 The following image illustrates the path the addressable strip takes through the common the BTF-Lighting 8x32 matrix.
 
@@ -138,4 +140,4 @@ display:
 - [/components/light/fastled]({{< ref "/components/light/fastled" >}})
 - [/components/light/neopixelbus]({{< ref "/components/light/neopixelbus" >}})
 - [/components/light/partition]({{< ref "/components/light/partition" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/addressable_light.md)

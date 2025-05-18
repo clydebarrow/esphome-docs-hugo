@@ -370,4 +370,4 @@ for more information.
   :apiref:`tcl112.h <tcl112/tcl112.h>`,
   :apiref:`yashima.h <yashima/yashima.h>`
   :apiref:`whirlpool.h <whirlpool/whirlpool.h>`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/climate_ir.md)

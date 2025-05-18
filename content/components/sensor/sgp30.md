@@ -109,4 +109,4 @@ Please note while the sensor is off, baseline values are valid for a maximum of 
 - [htu21d]({{< ref "htu21d/" >}})
 - [sht3xd]({{< ref "sht3xd/" >}})
 - :apiref:`sgp30/sgp30.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/sgp30.md)

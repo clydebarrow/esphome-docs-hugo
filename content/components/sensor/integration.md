@@ -55,4 +55,4 @@ on_...:
 - [total_daily_energy]({{< ref "total_daily_energy/" >}})
 - [/cookbook/power_meter]({{< ref "/cookbook/power_meter" >}})
 - :apiref:`integration/integration_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/integration.md)

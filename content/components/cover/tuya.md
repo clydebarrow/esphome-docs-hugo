@@ -76,4 +76,4 @@ In this condition, it will go into an error / uncalibrated state when it next tr
 - [/components/tuya]({{< ref "/components/tuya" >}})
 - [/components/cover/index]({{< ref "/components/cover/index" >}})
 - :apiref:`tuya/cover/tuya_cover.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/tuya.md)

@@ -64,7 +64,8 @@ Time and DateTime Options:
 You can access the most recent state as a `ESPTime` object by `id(datetime_id).state_as_esptime()`
 
 
-### ``on_value``
+`on_value`
+************
 
 This automation will be triggered when a new value is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the value as a ESPTime object from the trigger with `x`.
@@ -88,7 +89,8 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 ## Date Automation
 
 
-### ``datetime.date.set`` Action
+`datetime.date.set` Action
+****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime date state.
 The `date` provided can be in one of 3 formats:
@@ -124,7 +126,8 @@ Configuration variables:
 
 
 
-### lambda calls
+lambda calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all datetimes to do some
 advanced stuff (see the full API Reference for more info).
@@ -154,7 +157,8 @@ advanced stuff (see the full API Reference for more info).
 ## Time Automation
 
 
-### ``datetime.time.set`` Action
+`datetime.time.set` Action
+****************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime time state.
 The `time` provided can be in one of 3 formats:
@@ -189,7 +193,8 @@ Configuration variables:
 
 
 
-### lambda calls
+lambda calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all datetimes to do some
 advanced stuff (see the full API Reference for more info).
@@ -220,7 +225,8 @@ advanced stuff (see the full API Reference for more info).
 ## DateTime Automation
 
 
-### ``datetime.datetime.set`` Action
+`datetime.datetime.set` Action
+********************************
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime datetime state.
 The `datetime` provided can be in one of 3 formats:
@@ -258,7 +264,8 @@ Configuration variables:
 
 
 
-### Lambda calls
+Lambda calls
+************
 
 For more complex use cases, several methods are available for use on datetimes from within [lambdas]({{< ref "automations/templates#config-lambda" >}}). See the full API Reference for more information.
 
@@ -299,4 +306,4 @@ For more complex use cases, several methods are available for use on datetimes f
 - :apiref:`TimeCall <datetime/time_entity.h>`
 - :apiref:`DateTimeEntity <datetime/datetime_entity.h>`
 - :apiref:`DateTimeCall <datetime/datetime_entity.h>`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/datetime/index.md)

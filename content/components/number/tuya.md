@@ -100,4 +100,4 @@ Therefore there is also an option to store them on the ESPHome side and they wil
 
 - [/components/number/index]({{< ref "/components/number/index" >}})
 - :apiref:`tuya/number/tuya_number.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/number/tuya.md)

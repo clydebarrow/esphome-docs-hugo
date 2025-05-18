@@ -95,4 +95,4 @@ the switch is currently on or off:
 - [/components/switch/index]({{< ref "/components/switch/index" >}})
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`template/switch/template_switch.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/template.md)

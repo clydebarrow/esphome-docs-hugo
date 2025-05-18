@@ -17,7 +17,8 @@ At the current stage of implementation only DC motor is implemented.
       - address: 0x14
         id: test_motor
 
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this TB6612FNG component.
 - **address** (*Optional*, int): The I²C address of the driver.
@@ -116,4 +117,4 @@ on_...:
 
 - [i2c]({{< ref "components/i2c#i2c" >}})
 - [switch/gpio]({{< ref "switch/gpio" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/grove_tb6612fng.md)

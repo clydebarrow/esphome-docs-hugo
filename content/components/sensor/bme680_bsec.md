@@ -431,4 +431,4 @@ so that the process does not have to start from zero on device restart.
 - [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
 - [BSEC Arduino Library](https://github.com/BoschSensortec/BSEC-Arduino-library) by [Bosch Sensortec](https://www.bosch-sensortec.com/)
 - [Bosch Sensortec Community](https://community.bosch-sensortec.com/)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/bme680_bsec.md)

@@ -26,4 +26,4 @@ event:
 
 - [/automations/index]({{< ref "/automations/index" >}})
 - [/components/event/index]({{< ref "/components/event/index" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/event/template.md)

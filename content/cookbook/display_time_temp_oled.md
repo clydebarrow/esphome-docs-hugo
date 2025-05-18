@@ -27,7 +27,8 @@ Ensure your display handles 5V if you use that.
 {{< /warning >}}
 ## Software configuration
 
-### Getting Time
+Getting Time
+************
 
 Get the time from Home Assistant to sync the onboard real-time clock.
 
@@ -37,7 +38,8 @@ time:
     id: esptime
 
 ```
-### Getting Temperature
+Getting Temperature
+*******************
 
 Next, we want to get two temperature sensors imported from Home Assistant.
 
@@ -58,7 +60,8 @@ sensor:
     internal: true
 
 ```
-### Define the Fonts
+Define the Fonts
+****************
 
 - TrueType fonts are used. If you ever worked with fonts on microcontrollers you will love this!
 - Save font files in `/config/esphome` folder where your ESPHome configuration is stored.
@@ -80,7 +83,8 @@ font:
     size: 14
 
 ```
-### Display Definition
+Display Definition
+******************
 
 Now setup the communication to the display and start fill the screen with live data!
 
@@ -150,4 +154,4 @@ display:
 - [/components/display/ssd1306]({{< ref "/components/display/ssd1306" >}})
 - [/components/display/index]({{< ref "/components/display/index" >}})
 - [/components/sensor/homeassistant]({{< ref "/components/sensor/homeassistant" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/display_time_temp_oled.md)

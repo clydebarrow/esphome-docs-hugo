@@ -157,7 +157,8 @@ ESPHome is able to receive the extra protocols that can be decoded as well as ac
 
 
 
-### ``on_advanced_code_received`` Trigger
+`on_advanced_code_received` Trigger
+*************************************
 
 Similar to [rf_bridge-on_code_received]({{< ref "components/rf_bridge#rf_bridge-on_code_received" >}}), this trigger receives the codes after advanced sniffing is started.
 To use the code, use a [lambda]({{< ref "automations/templates#config-lambda" >}}) template, the code and the corresponding protocol and length
@@ -175,7 +176,8 @@ on_advanced_code_received:
 
 ```
 
-### ``rf_bridge.send_advanced_code`` Action
+`rf_bridge.send_advanced_code` Action
+***************************************
 
 Send an  RF code using this action in automations.
 
@@ -205,7 +207,8 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 {{< /note >}}
 
-### ``rf_bridge.start_advanced_sniffing`` Action
+`rf_bridge.start_advanced_sniffing` Action
+********************************************
 
 Tell the RF Bridge to listen for the advanced/extra protocols defined in the portisch firmware.
 The decoded codes with length and protocol will be returned to [rf_bridge-on_advanced_code_received]({{< ref "components/rf_bridge#rf_bridge-on_advanced_code_received" >}})
@@ -230,7 +233,8 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 {{< /note >}}
 
-### ``rf_bridge.stop_advanced_sniffing`` Action
+`rf_bridge.stop_advanced_sniffing` Action
+*******************************************
 
 Tell the RF Bridge to stop listening for the advanced/extra protocols defined in the portisch firmware.
 
@@ -253,7 +257,8 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 {{< /note >}}
 
-### ``rf_bridge.start_bucket_sniffing`` Action
+`rf_bridge.start_bucket_sniffing` Action
+******************************************
 
 Tell the RF Bridge to dump raw sniffing data. Useful for getting codes for unsupported protocols.
 The raw data will be available in the log and can later be used with [rf_bridge-send_raw_action]({{< ref "components/rf_bridge#rf_bridge-send_raw_action" >}}) action.
@@ -288,7 +293,8 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 {{< /note >}}
 
-### ``rf_bridge.beep`` Action
+`rf_bridge.beep` Action
+*************************
 
 Activate the internal buzzer to make a beep.
 
@@ -382,4 +388,4 @@ automation:
 - [/components/uart]({{< ref "/components/uart" >}})
 - [/components/remote_receiver]({{< ref "/components/remote_receiver" >}})
 - [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/rf_bridge.md)

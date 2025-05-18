@@ -192,4 +192,4 @@ on_...:
 - [sps30]({{< ref "sps30/" >}})
 - [sgp4x]({{< ref "sgp4x/" >}})
 - :apiref:`sen5x/sen5x.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/sen5x.md)

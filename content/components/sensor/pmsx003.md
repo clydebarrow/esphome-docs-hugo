@@ -82,4 +82,4 @@ sensor:
 - [/components/sensor/sds011]({{< ref "/components/sensor/sds011" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`pmsx003/pmsx003.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/pmsx003.md)

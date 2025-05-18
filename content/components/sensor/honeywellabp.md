@@ -56,4 +56,4 @@ datasheet indicates that the sensor does not measure temperature.
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`honeywellabp/honeywellabp.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/honeywellabp.md)

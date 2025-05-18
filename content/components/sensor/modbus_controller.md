@@ -128,4 +128,4 @@ sensor:
 - [/components/select/modbus_controller]({{< ref "/components/select/modbus_controller" >}})
 - [/components/text_sensor/modbus_controller]({{< ref "/components/text_sensor/modbus_controller" >}})
 - [EPEVER MPPT Solar Charge Controller (Tracer-AN Series)](https://devices.esphome.io/devices/epever_mptt_tracer_an)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/modbus_controller.md)

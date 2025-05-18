@@ -359,4 +359,4 @@ advanced stuff (see the full API Reference for more info).
 ## Full Fan Index
 
 - :apiref:`fan/fan_state.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/fan/index.md)

@@ -124,4 +124,4 @@ switch:
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [MH-Z19 library](https://github.com/nara256/mhz19_uart) by [@nara356](https://github.com/nara256)
 - :apiref:`mhz19/mhz19.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/mhz19.md)

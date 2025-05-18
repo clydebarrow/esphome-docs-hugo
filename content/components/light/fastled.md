@@ -48,7 +48,8 @@ Clockless FastLED lights differ from the
         rgb_order: BRG
         name: "FastLED WS2811 Light"
 
-### Configuration variables:
+Configuration variables:
+************************
 
 - **chipset** (**Required**, string): Set a chipset to use.
   See [fastled_clockless-chipsets]({{< ref "components/light/fastled#fastled_clockless-chipsets" >}}) for options.
@@ -64,7 +65,8 @@ Clockless FastLED lights differ from the
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 
-### Supported Chipsets
+Supported Chipsets
+******************
 
 - `NEOPIXEL`
 - `WS2811`
@@ -118,7 +120,8 @@ whereas the clockless lights only need a single pin.
         rgb_order: BRG
         name: "FastLED SPI Light"
 
-### Configuration variables:
+Configuration variables:
+************************
 
 - **chipset** (**Required**, string): Set a chipset to use. See [fastled_spi-chipsets]({{< ref "components/light/fastled#fastled_spi-chipsets" >}}) for options.
 - **data_pin** (**Required**, [config-pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the FastLED light.
@@ -137,7 +140,8 @@ whereas the clockless lights only need a single pin.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 
-### Supported Chipsets
+Supported Chipsets
+******************
 
 - `APA102`
 - `DOTSTAR`
@@ -155,4 +159,4 @@ whereas the clockless lights only need a single pin.
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`fastled_base/fastled_light.h`
 - [Arduino FastLED library](https://github.com/FastLED/FastLED)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/fastled.md)

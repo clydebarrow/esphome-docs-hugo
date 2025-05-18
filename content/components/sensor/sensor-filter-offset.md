@@ -3,7 +3,8 @@ description: ""
 title: ""
 ---
 
-### ``offset``
+`offset`
+**********
 
 Adds a value to each sensor value. The value may be a constant or a lambda returning a float.
 

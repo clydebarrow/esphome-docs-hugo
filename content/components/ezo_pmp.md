@@ -514,4 +514,4 @@ of the actions in YAML config.
 ## See Also
 
 - :apiref:`ezo_pmp/ezo_pmp.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/ezo_pmp.md)

@@ -113,4 +113,4 @@ The menu inherits the dimensions of the connected LCD display and uses the entir
 - [/components/sensor/rotary_encoder]({{< ref "/components/sensor/rotary_encoder" >}})
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`lcd_menu/lcd_menu.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display_menu/lcd_menu.md)

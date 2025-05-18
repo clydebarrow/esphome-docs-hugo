@@ -198,4 +198,4 @@ binary_sensor:
 
 - [microphone/index]({{< ref "microphone/index" >}})
 - :apiref:`voice_assistant/voice_assistant.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/voice_assistant.md)

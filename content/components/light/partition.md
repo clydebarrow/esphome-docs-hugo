@@ -118,4 +118,4 @@ See :ref:`light-addressable_set_action` for that.
 - [/components/light/fastled]({{< ref "/components/light/fastled" >}})
 - [/components/light/neopixelbus]({{< ref "/components/light/neopixelbus" >}})
 - :apiref:`partition/light_partition.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/partition.md)

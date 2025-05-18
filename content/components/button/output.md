@@ -40,4 +40,4 @@ in the :ref:`config-pin_schema`.
 
 - [/components/output/index]({{< ref "/components/output/index" >}})
 - :apiref:`output/button/output_button.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/button/output.md)

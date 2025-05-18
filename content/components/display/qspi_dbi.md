@@ -47,7 +47,8 @@ display:
 
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **model** (**Required**): One of
 
@@ -94,7 +95,8 @@ display:
 ## Example configurations
 
 
-### Lilygo T4-S3
+Lilygo T4-S3
+************
 
 ```yaml
 spi:
@@ -134,7 +136,8 @@ psram:
   speed: 80MHz
 
 ```
-### Lilygo T-Display S3 AMOLED
+Lilygo T-Display S3 AMOLED
+**************************
 
 ```yaml
 spi:
@@ -175,7 +178,8 @@ display:
 
 
 ```
-### JC4832W535 3.5" LCD Board
+JC4832W535 3.5" LCD Board
+*************************
 
 This rotates the display into landscape mode using software rotation.
 
@@ -224,4 +228,4 @@ touchscreen:
 
 - [index]({{< ref "index/" >}})
 - :apiref:`qspi_dbi/qspi_dbi.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/qspi_dbi.md)

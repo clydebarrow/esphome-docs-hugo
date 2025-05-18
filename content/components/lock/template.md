@@ -104,4 +104,4 @@ lock should become:
 - [/components/lock/index]({{< ref "/components/lock/index" >}})
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`template/lock/template_lock.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/lock/template.md)

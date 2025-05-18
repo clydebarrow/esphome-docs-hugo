@@ -129,4 +129,4 @@ a switch.
 - [/components/cover/template]({{< ref "/components/cover/template" >}})
 - [/cookbook/garage-door]({{< ref "/cookbook/garage-door" >}})
 - :apiref:`gpio/switch/gpio_switch.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/gpio.md)

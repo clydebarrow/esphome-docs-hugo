@@ -78,4 +78,4 @@ For that, you need to first manually put it into DOWNLOAD mode.
 ## See Also
 
 - [Guides ]({{< relref "/guides/index" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/devboard_as_flasher.md)

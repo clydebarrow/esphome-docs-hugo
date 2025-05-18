@@ -503,4 +503,4 @@ esp32_camera:
 ## See Also
 
 - :apiref:`esp32_camera/esp32_camera.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/esp32_camera.md)

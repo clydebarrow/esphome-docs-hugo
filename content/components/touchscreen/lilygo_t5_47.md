@@ -27,4 +27,4 @@ touchscreen:
 
 - [Touchscreen ]({{< relref "index/" >}})
 - :apiref:`lilygo_t5_47/touchscreen/lilygo_t5_47_touchscreen.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/touchscreen/lilygo_t5_47.md)

@@ -97,4 +97,4 @@ sensor:
 - [sht3xd]({{< ref "sht3xd/" >}})
 - [sht4x]({{< ref "sht4x/" >}})
 - :apiref:`sgp4x/sgp4x.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/sgp4x.md)

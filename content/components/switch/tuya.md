@@ -41,4 +41,4 @@ switch:
 
 - [/components/switch/index]({{< ref "/components/switch/index" >}})
 - :apiref:`tuya/switch/tuya_switch.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/tuya.md)

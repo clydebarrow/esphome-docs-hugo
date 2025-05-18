@@ -81,4 +81,4 @@ set ``pullup: false`` under your ``pin`` configuration.
 - [sht3xd]({{< ref "sht3xd/" >}})
 - :apiref:`dht/dht.h`
 - [Arduino DHTLib](https://playground.arduino.cc/Main/DHTLib)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/dht.md)

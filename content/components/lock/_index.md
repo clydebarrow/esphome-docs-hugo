@@ -46,7 +46,8 @@ Configuration variables:
 - If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 
-### ``lock.lock`` Action
+`lock.lock` Action
+*************************
 
 This action locks a lock with the given ID on when executed.
 
@@ -57,7 +58,8 @@ on_...:
 
 ```
 
-### ``lock.unlock`` Action
+`lock.unlock` Action
+**************************
 
 This action unlocks a lock with the given ID off when executed.
 
@@ -68,7 +70,8 @@ on_...:
 
 ```
 
-### ``lock.open`` Action
+`lock.open` Action
+************************
 
 This action opens (e.g. unlatch) a lock with the given ID off when executed.
 
@@ -79,7 +82,8 @@ on_...:
 
 ```
 
-### ``lock.is_locked`` / ``lock.is_unlocked`` Condition
+`lock.is_locked` / `lock.is_unlocked` Condition
+***************************************************
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given lock is LOCKED (or UNLOCKED).
 
@@ -93,7 +97,8 @@ on_...:
 
 ```
 
-### lambda calls
+lambda calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all locks to do some
 advanced stuff (see the full API Reference for more info).
@@ -127,7 +132,8 @@ advanced stuff (see the full API Reference for more info).
 
   ```
 
-### ``lock.on_lock`` / ``lock.on_unlock`` Trigger
+`lock.on_lock` / `lock.on_unlock` Trigger
+****************************************************************
 
 This trigger is activated each time the lock is locked/unlocked. It becomes active
 right after the lock component has acknowledged the state (e.g. after it LOCKED/UNLOCKED itself).
@@ -145,4 +151,4 @@ lock:
 ## See Also
 
 - :apiref:`lock/lock.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/lock/index.md)

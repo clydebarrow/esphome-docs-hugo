@@ -53,7 +53,8 @@ sensor:
 
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **model** (**Required**, string): The model of the INA2xx sensor. Options are `INA228`, `INA237`, `INA238`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Defaults to `0x40`.
@@ -102,7 +103,8 @@ sensor:
 
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **model** (**Required**, string): The model of the INA2xx sensor. Options are `INA229`, `INA239`.
 - **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The Chip Select (CS) pin.
@@ -176,4 +178,4 @@ To simplify the use of this function, you can use the following example to add a
 - [ina226]({{< ref "ina226/" >}})
 - [ina3221]({{< ref "ina3221/" >}})
 - :apiref:`ina2xx_base/ina2xx_base.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/ina2xx.md)

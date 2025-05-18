@@ -208,4 +208,4 @@ switch:
 - [index]({{< ref "index/" >}})
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`template/alarm_control_panel/template_alarm_control_panel.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/alarm_control_panel/template.md)

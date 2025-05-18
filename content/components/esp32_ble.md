@@ -94,4 +94,4 @@ The lambda equivalent for this is `id(ble_id).is_active()`.
 - [esp32_ble_server]({{< ref "esp32_ble_server/" >}})
 - [esp32_improv]({{< ref "esp32_improv/" >}})
 - :apiref:`esp32_ble/ble.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/esp32_ble.md)

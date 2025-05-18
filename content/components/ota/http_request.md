@@ -104,4 +104,4 @@ on_...:
 - [/components/ota/index]({{< ref "/components/ota/index" >}})
 - [/components/ota/esphome]({{< ref "/components/ota/esphome" >}})
 - [/components/safe_mode]({{< ref "/components/safe_mode" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/ota/http_request.md)

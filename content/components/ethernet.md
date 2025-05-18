@@ -318,4 +318,4 @@ ethernet:
 - [text_sensor/ethernet_info]({{< ref "text_sensor/ethernet_info" >}})
 - :apiref:`ethernet/ethernet_component.h`
 - [ESP32 Ethernet PHY connection info](https://pcbartists.com/design/embedded/esp32-ethernet-phy-schematic-design/)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/ethernet.md)

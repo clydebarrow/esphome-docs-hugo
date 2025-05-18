@@ -614,4 +614,4 @@ re-add the device in Home Assistant.
 
 - [ESPHome index ]({{< relref "/index" >}})
 - [Developer site](https://developers.esphome.io)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/faq.md)

@@ -58,13 +58,15 @@ speaker:
 - **timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): How long to wait after finishing playback before releasing the bus. Set to `never` to never stop the speaker due to a timeout. Defaults to `500ms`.
 - All other options from [Speaker Component]({{< ref "components/speaker/_index#config-speaker" >}}).
 
-### External DAC
+External DAC
+************
 
 - **i2s_dout_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use for the I²S DOUT (Data Out) signal.
 
 For best results, keep the wires as short as possible.
 
-### Internal DAC
+Internal DAC
+************
 
   .. note::
 
@@ -79,4 +81,4 @@ For best results, keep the wires as short as possible.
 ## See also
 
 - [index]({{< ref "index/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/speaker/i2s_audio.md)

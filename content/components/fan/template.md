@@ -32,4 +32,4 @@ The `template` fan platform lets you create a fan interface using only triggers.
 
 - [/components/fan/index]({{< ref "/components/fan/index" >}})
 - :apiref:`template/fan/template_fan.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/fan/template.md)

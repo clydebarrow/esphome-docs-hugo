@@ -96,4 +96,4 @@ display:
 
 - [index]({{< ref "index/" >}})
 - [/automations/actions]({{< ref "/automations/actions" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/mapping.md)

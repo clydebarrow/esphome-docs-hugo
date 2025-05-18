@@ -168,4 +168,4 @@ this method is no longer recommended, but documented here for reference purposes
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`neopixelbus/neopixelbus_light.h`
 - [NeoPixelBus library](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods)
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/neopixelbus.md)

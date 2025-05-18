@@ -55,7 +55,8 @@ Configuration variables:
 ## Automation:
 
 
-### ``on_state`` Trigger
+`on_state` Trigger
+********************
 
 This trigger is activated each time the alarm changes state.
 
@@ -68,7 +69,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_pending`` Trigger
+`on_pending` Trigger
+**********************
 
 This trigger is activated when the alarm changes to pending state.
 
@@ -81,7 +83,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_arming`` Trigger
+`on_arming` Trigger
+*********************
 
 This trigger is activated when the alarm changes to arming state.
 
@@ -94,7 +97,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_armed_home`` Trigger
+`on_armed_home` Trigger
+*************************
 
 This trigger is activated when the alarm changes to armed_home state.
 
@@ -107,7 +111,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_armed_night`` Trigger
+`on_armed_night` Trigger
+**************************
 
 This trigger is activated when the alarm changes to armed_night state.
 
@@ -120,7 +125,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_armed_away`` Trigger
+`on_armed_away` Trigger
+*************************
 
 This trigger is activated when the alarm changes to armed_away state.
 
@@ -133,7 +139,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_triggered`` Trigger
+`on_triggered` Trigger
+************************
 
 This trigger is activated when the alarm changes to triggered state.
 
@@ -146,7 +153,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_cleared`` Trigger
+`on_cleared` Trigger
+**********************
 
 This trigger is activated when the alarm changes from triggered back to either the previous armed state or disarmed.
 
@@ -159,7 +167,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_disarmed`` Trigger
+`on_disarmed` Trigger
+***********************
 
 This trigger is activated when the alarm changes from to disarmed.
 
@@ -172,7 +181,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_ready`` Trigger
+`on_ready` Trigger
+********************
 
 This trigger is activated when the logical 'and' of all the alarm sensors change state. This is useful for implementing "alarm ready" LEDs.
 Once this trigger is called, you can get the ready state by calling get_all_sensors_ready() in a lambda block.
@@ -187,7 +197,8 @@ alarm_control_panel:
 
 ```
 
-### ``on_chime`` Trigger
+`on_chime` Trigger
+********************
 
 This trigger is activated when a zone sensor marked with chime:true changes from closed to open. This is useful for implementing keypad chimes when a zone
 opens.
@@ -201,7 +212,8 @@ alarm_control_panel:
 
 ```
 
-### ``arm_away`` Action
+`arm_away` Action
+*******************
 
 This action arms the alarm in away mode. The `code` is required when *requires_code_to_arm* is *true*.
 
@@ -214,7 +226,8 @@ on_...:
 
 ```
 
-### ``arm_home`` Action
+`arm_home` Action
+*******************
 
 This action arms the alarm in home mode. The `code` is required when *requires_code_to_arm* is *true*.
 
@@ -227,7 +240,8 @@ on_...:
 
 ```
 
-### ``arm_night`` Action
+`arm_night` Action
+********************
 
 This action arms the alarm in night mode. The `code` is required when *requires_code_to_arm* is *true*.
 
@@ -240,7 +254,8 @@ on_...:
 
 ```
 
-### ``disarm`` Action
+`disarm` Action
+*****************
 
 This action disarms the alarm. The `code` is required when *codes* is not empty.
 
@@ -253,7 +268,8 @@ on_...:
 
 ```
 
-### ``pending`` Action
+`pending` Action
+******************
 
 This action puts the alarm in pending state (the state before triggered after *pending_time*).
 
@@ -264,7 +280,8 @@ on_...:
 
 ```
 
-### ``triggered`` Action
+`triggered` Action
+********************
 
 This action puts the alarm in triggered state.
 
@@ -275,7 +292,8 @@ on_...:
 
 ```
 
-### ``is_armed`` Condition
+`is_armed` Condition
+**********************
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the alarm control panel is armed.
 
@@ -288,7 +306,8 @@ on_...:
 
 ```
 
-### lambda calls
+lambda calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call the following methods:
 
@@ -313,4 +332,4 @@ bool all_sensors_ready = id(acp1).get_all_sensors_ready();
 
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - :apiref:`alarm_control_panel/alarm_control_panel.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/alarm_control_panel/index.md)

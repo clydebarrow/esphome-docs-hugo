@@ -22,7 +22,8 @@ You can use the ESP32 software or hardware serial to use this MR60BHA2, its defa
 seeed_mr60bha2:
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [config-id]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
@@ -39,7 +40,8 @@ binary_sensor:
       name: "Person Information"
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **has_target** (*Optional*): If true when target (person) is detected.
   All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
@@ -61,7 +63,8 @@ sensor:
       name: "Target number"
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **breath_rate** (*Optional*, float): Radar-detected respiratory rate during the first 60 seconds.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
@@ -79,4 +82,4 @@ sensor:
 - [Product Detail Page for Seeed Studio MR60BHA2 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6](https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html)
 - [Source of inspiration for implementation](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/)
 - :apiref:`seeed_mr60bha2/seeed_mr60bha2.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/seeed_mr60bha2.md)

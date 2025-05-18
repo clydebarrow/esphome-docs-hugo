@@ -152,4 +152,4 @@ substitutions:
 - [ESPHome index ]({{< relref "/index" >}})
 - [/guides/getting_started_command_line]({{< ref "/guides/getting_started_command_line" >}})
 - [/guides/faq]({{< ref "/guides/faq" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/substitutions.md)

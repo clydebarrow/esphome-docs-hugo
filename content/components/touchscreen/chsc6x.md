@@ -26,7 +26,8 @@ touchscreen:
   interrupt_pin: GPIO44
 
 ```
-### Configuration variables:
+Configuration variables:
+************************
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
 - **interrupt_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The touch detection pin.
@@ -34,7 +35,8 @@ touchscreen:
 - All other options from [Touchscreen]({{< ref "components/touchscreen/_index#config-touchscreen" >}}).
 
 
-### Sample config for the ESP32S3
+Sample config for the ESP32S3
+*****************************
 
 ```yaml
 i2c:
@@ -64,4 +66,4 @@ touchscreen:
 ## See Also
 
 - :apiref:`chsc6x/chsc6x_touchscreen.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/touchscreen/chsc6x.md)

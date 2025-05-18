@@ -39,4 +39,4 @@ supports speed settings.
 - [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
 - [/components/output/pca9685]({{< ref "/components/output/pca9685" >}})
 - :apiref:`fan/fan_state.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/fan/speed.md)

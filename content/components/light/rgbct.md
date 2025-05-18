@@ -56,4 +56,4 @@ light:
 - [/components/output/my9231]({{< ref "/components/output/my9231" >}})
 - [/components/output/sm16716]({{< ref "/components/output/sm16716" >}})
 - :apiref:`rgbct/rgbct_light_output.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/rgbct.md)

@@ -46,4 +46,4 @@ output:
 
 - [/components/output/index]({{< ref "/components/output/index" >}})
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/ble_client.md)

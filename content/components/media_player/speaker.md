@@ -191,4 +191,4 @@ If there is a noticeable delay before a pause command takes effect, reduce the b
 - [/components/speaker/mixer]({{< ref "/components/speaker/mixer" >}})
 - [/components/speaker/resampler]({{< ref "/components/speaker/resampler" >}})
 - [index]({{< ref "index/" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/media_player/speaker.md)

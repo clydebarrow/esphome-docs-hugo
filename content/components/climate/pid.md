@@ -430,4 +430,4 @@ Advanced options:
 - [Principles of PID](https://blog.opticontrols.com/archives/344)
 - :apiref:`pid/pid_climate.h`
 - :apiref:`PID Autotuner <pid/pid_autotuner.h>`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/pid.md)

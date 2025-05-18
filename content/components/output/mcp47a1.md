@@ -43,4 +43,4 @@ on_...:
 - [/components/output/mcp4725]({{< ref "/components/output/mcp4725" >}})
 - [/components/output/esp32_dac]({{< ref "/components/output/esp32_dac" >}})
 - [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/mcp47a1.md)

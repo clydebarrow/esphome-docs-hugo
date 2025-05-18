@@ -19,4 +19,4 @@ select:
 
 - [automation]({{< ref "automations/_index#automation" >}})
 - [/components/logger]({{< ref "/components/logger" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/select/logger.md)

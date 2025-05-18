@@ -56,4 +56,4 @@ If your Status LED is in an active-LOW mode (such as with the D1 Mini ESP8266 bo
 - [/components/light/binary]({{< ref "/components/light/binary" >}})
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - :apiref:`status_led/light/status_led_light.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/status_led.md)

@@ -77,7 +77,8 @@ To actually *control* the state of a component you need to send a POST request w
 `/light/livingroom_lights/turn_on`. Some components also optionally accept URL parameters to control
 some other aspects of a component, for example the brightness of a light.
 
-### Sensor
+Sensor
+******
 
 Sensors only support GET requests by sending a request to `/sensor/<id>`. For example sending
 a GET request to `/sensor/outside_temperature` could yield this payload:
@@ -95,7 +96,8 @@ a GET request to `/sensor/outside_temperature` could yield this payload:
 -  **state**: The text-based state of the sensor as a string.
 -  **value**: The floating point (filtered) value of the sensor.
 
-### Binary Sensor
+Binary Sensor
+*************
 
 Binary sensors have a similar payload and also only support GET requests. For example requesting
 the current state of a binary sensor using the URL `binary_sensor/living_room_status` could
@@ -114,7 +116,8 @@ result in following payload:
 -  **state**: The text-based state of the binary sensor as a string.
 -  **value**: The binary (`true`/`false`) state of the binary sensor.
 
-### Switch
+Switch
+******
 
 Switches have the exact same properties as a binary sensor in the state reporting aspect, but they
 additionally support setting states with the `turn_on`, `turn_off` and `toggle` methods.
@@ -123,7 +126,8 @@ Each of these is quite self explanatory. Creating a POST request to `/switch/deh
 would for example result in the component called "Dehumidifier" to be turned on. The server will respond
 with a 200 OK HTTP return code if the call succeeded.
 
-### Light
+Light
+*****
 
 Lights support quite a few more complicated options, like brightness or color. But first, to get
 the state of a light, send a GET request to `/light/<id>`, for example `light/living_room_lights`.
@@ -180,7 +184,8 @@ creating a POST request at `/light/<id>/turn_on?brightness=128&transition=2` wil
 
 -  **transition**: Transition to off in this duration in seconds.
 
-### Fan
+Fan
+***
 
 Fans are similar to switches as they can be turned on/off and toggled. In addition, if the
 underlying fan supports it, fans in the web server also support the speed settings "low",
@@ -210,7 +215,8 @@ and `/fan/<id>/toggle`. Turn on additionally supports these optional parameters:
 -  **speed_level**: The new speed level of the fan. Values as above.
 -  **oscillation**: The new oscillation setting of the fan. Values as above.
 
-### Cover
+Cover
+*****
 
 Covers are again similar to switches whose two possible states are `OPEN` and `CLOSED`.  They
 can however be in an intermediate position, anywhere between **0.0** (fully closed) to **1.0**
@@ -246,7 +252,8 @@ Creating a POST request to `/cover/front_window_blinds/set?position=0.1&tilt=0.3
 start moving the blinds towards an almost completely closed position and a new tilt
 angle.
 
-### Select
+Select
+******
 
 Selects can be set to an option and will return their current option. For example sending
 a GET request to `/select/house_mode` could yield this payload:
@@ -282,11 +289,13 @@ method is `set`. The following parameter can be used:
 
 For example POST `/select/house_mode/set?option=guest` will set the select to `guest`.
 
-### Button
+Button
+******
 
 A button can be `pressed` from the REST API by sending a POST request to `button/do_something/press`.
 
-### Number
+Number
+******
 
 Numbers can be set to a value within their minimum and maximum range and will return their current value. For example sending
 a GET request to `/number/desired_delay` could yield this payload:
@@ -307,7 +316,8 @@ method is `set`. The following parameter can be used:
 
 For example POST `/number/desired_delay/set?value=24` will set the number to 24.
 
-### Alarm Control Panel
+Alarm Control Panel
+*******************
 
 The current state of an Alarm Control Panel can be retrieved by a GET request to `alarm_control_panel/my_alarm`
 which may yield:
@@ -338,4 +348,4 @@ disarmed successfully. It only indicates that the command was received and proce
 - [/components/web_server]({{< ref "/components/web_server" >}})
 - [/components/prometheus]({{< ref "/components/prometheus" >}})
 - [/components/http_request]({{< ref "/components/http_request" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/web-api/index.md)

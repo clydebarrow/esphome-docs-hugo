@@ -165,4 +165,4 @@ sensor:
 ## See Also
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/havells_solar.md)

@@ -45,7 +45,8 @@ must be power-cycled.
 {{< /note >}}
 ## Updating the Password
 
-### Changing an Existing Password
+Changing an Existing Password
+*****************************
 
 Since the configured password is used for both compiling and uploading, the regular `esphome run <file>` command
 won't work. This issue can be worked around by executing the operations separately with an `on_boot` trigger:
@@ -66,11 +67,13 @@ The "id: my_ota" in the OTA block is important. This is referenced in the lambda
 After this trick has been used to change the password, the `on_boot` trigger may be removed and the old password
 replaced with the new password in the `ota:` section.
 
-### Adding a Password
+Adding a Password
+*****************
 
 If OTA is already enabled without a password, simply add a `password:` line to the existing `ota:` config block.
 
-### Removing a Password
+Removing a Password
+*******************
 
 -  If you know your password but want to remove it, enter an empty string: `id(my_ota).set_auth_password("");` instead of changing.
 -  If you no longer know your password and the web server has been activated:
@@ -85,4 +88,4 @@ If OTA is already enabled without a password, simply add a `password:` line to t
 - [/components/ota/index]({{< ref "/components/ota/index" >}})
 - [/components/ota/http_request]({{< ref "/components/ota/http_request" >}})
 - [/components/safe_mode]({{< ref "/components/safe_mode" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/ota/esphome.md)

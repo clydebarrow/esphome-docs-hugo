@@ -95,4 +95,4 @@ Configuration variables:
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [logger]({{< ref "logger/" >}})
 - :apiref:`debug/debug_component.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/debug.md)

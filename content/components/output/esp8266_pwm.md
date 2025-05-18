@@ -68,4 +68,4 @@ Configuration variables:
 - [/components/fan/speed]({{< ref "/components/fan/speed" >}})
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`esp8266_pwm/esp8266_pwm.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/esp8266_pwm.md)

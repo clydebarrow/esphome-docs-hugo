@@ -130,7 +130,8 @@ time:
           - switch.turn_off: esp_fishpond_pump
 
 ```
-### 2. Programming
+2. Programming
+**************
 
 Follow the standard way of uploading to your Sonoff Basic.
 
@@ -154,7 +155,8 @@ Both options USB and OTA are done by running the command:
 esphome <some-yaml-file> run
 
 ```
-### 3. Prepping and installing
+3. Prepping and installing
+**************************
 
 * Ensure power is switched off.
 * You can now add your water level sensor wiring to the PCB and have it extrude, SAFELY, next to your connector block.
@@ -188,7 +190,8 @@ Once the pump is running changing the position of the float in the float sensor 
 * Ensure you are using a proper and compliant waterproof box to house your electrical equipment (Sonoff Basic) in.
 * Ensure you plan to be able to remove the unit with minimal effort should you need to manually USB reflash it again in future.
 
-### 2.6. Home Assistant
+2.6. Home Assistant
+*******************
 
 You can now add your device to home assistant via the configurations page and under the Integrations option
 

@@ -73,4 +73,4 @@ i2c:
 - [hdc1080]({{< ref "hdc1080/" >}})
 - [htu21d]({{< ref "htu21d/" >}})
 - :apiref:`sht3xd/sht3xd.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/sht3xd.md)

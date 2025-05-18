@@ -42,4 +42,4 @@ The resolution of the reported uptime will be determined by the update interval.
 - [/components/sensor/uptime]({{< ref "/components/sensor/uptime" >}})
 - [text_sensor-filters]({{< ref "components/text_sensor/_index#text_sensor-filters" >}})
 - :apiref:`uptime/uptime_text_sensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/uptime.md)

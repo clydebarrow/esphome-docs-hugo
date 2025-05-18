@@ -42,4 +42,4 @@ You'll need to be in close proximity to your device to configure it again using 
 - [/components/button/factory_reset]({{< ref "/components/button/factory_reset" >}})
 - [template]({{< ref "template/" >}})
 - :apiref:`factory_reset/factory_reset_switch.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/factory_reset.md)

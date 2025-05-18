@@ -74,7 +74,8 @@ Example:
 ```
 See [nextion_binary_sensor_how_things_update]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_how_things_update" >}}) for additional information
 
-### Globals
+Globals
+*******
 The Nextion does not retain data on Nextion page changes. Additionally if a page is changed and the **nextion_component_name** does not exist on that page then
 nothing will be updated. To get around this the Nextion components can be changed to have a vscope of `global`. If this is set then the **nextion_component_name**
 should be prefixed with the page name (page0/page1).
@@ -126,7 +127,8 @@ This action can also be written in lambdas. See :ref:`nextion_binary_sensor_lamb
 
 {{< /note >}}
 
-### Lambda Calls
+Lambda Calls
+************
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access some
 more advanced functions (see the full :apiref:`nextion/binary_sensor/nextion_binarysensor.h` for more info).
@@ -197,4 +199,4 @@ printh FF FF FF
 - [/components/display/nextion]({{< ref "/components/display/nextion" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`nextion/binary_sensor/nextion_binarysensor.h`
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/nextion.md)

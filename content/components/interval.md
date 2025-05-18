@@ -20,7 +20,8 @@ interval:
 ```
 If a startup delay is configured, the first execution of the actions will not occur before at least that time after boot.
 
-### Configuration variables:
+Configuration variables:
+************************
 
 - **interval** (**Required**, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to execute the action with.
 - **startup_delay** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): An optional startup delay - defaults to zero.
@@ -31,4 +32,4 @@ If a startup delay is configured, the first execution of the actions will not oc
 - [index]({{< ref "index/" >}})
 - [/automations/actions]({{< ref "/automations/actions" >}})
 - [/automations/templates]({{< ref "/automations/templates" >}})
-- :ghedit:`Edit`
+- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/interval.md)

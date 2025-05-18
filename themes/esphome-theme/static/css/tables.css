@@ -1,0 +1,83 @@
+/* Table styling for ESPHome documentation */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.9em;
+  border: 1px solid #e0e0e0;
+}
+
+/* Basic cell styling */
+table td, 
+table th {
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+/* All table headers should have this styling */
+table th {
+  background-color: #00979d;
+  color: white;
+  font-weight: bold;
+}
+
+/* For Markdown tables where the first row contains th elements */
+table tr:first-child th {
+  background-color: #00979d;
+  color: white;
+  font-weight: bold;
+}
+
+/* Override code styling within table headers */
+table th code,
+table tr:first-child th code {
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+/* Style for code in table cells */
+table td code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Alternating row colors for better readability */
+table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* But header rows should always have the header background */
+table tr:nth-child(even) th {
+  background-color: #00979d;
+}
+
+/* Hover effect */
+table tr:hover td {
+  background-color: rgba(0, 151, 157, 0.05);
+}
+
+/* Style for centered tables */
+table th[align="center"],
+table td[align="center"] {
+  text-align: center;
+}
+
+/* Style for right-aligned tables */
+table th[align="right"],
+table td[align="right"] {
+  text-align: right;
+}
+
+/* Responsive tables for smaller screens */
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

@@ -49,12 +49,14 @@ esp32_improv:
 - **on_state** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when an Improv state change
   happens. See [improv-on_state]({{< ref "components/esp32_improv#improv-on_state" >}}).
 
+{{< anchor "improv-automations" >}}
 
 ## Improv Automations
 
 The ESP32 Improv component provides various [automations]({{< ref "automations/_index#automation" >}}) that can be used to provide feedback during
 the Improv provisioning process.
 
+{{< anchor "improv-on_start" >}}
 
 `on_start`
 ************
@@ -69,6 +71,7 @@ esp32_improv:
       - logger.log: "Improv awaiting authorization/authorized"
 
 ```
+{{< anchor "improv-on_provisioned" >}}
 
 `on_provisioned`
 ******************
@@ -82,6 +85,7 @@ esp32_improv:
       - logger.log: "Improv provisioned"
 
 ```
+{{< anchor "improv-on_provisioning" >}}
 
 `on_provisioning`
 *******************
@@ -95,6 +99,7 @@ esp32_improv:
       - logger.log: "Improv provisioning"
 
 ```
+{{< anchor "improv-on_stop" >}}
 
 `on_stop`
 ***********
@@ -108,6 +113,7 @@ esp32_improv:
       - logger.log: "Improv stopped"
 
 ```
+{{< anchor "improv-on_state" >}}
 
 `on_state`
 ************

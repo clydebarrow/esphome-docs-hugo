@@ -17,6 +17,7 @@ and can be put in different modes like `HEAT`, `COOL`, `HEAT_COOL` or `OFF`.
 Not all climate components support all possible features. Check the corresponding documentation page for details on what is supported.
 
 {{< /note >}}
+{{< anchor "config-climate" >}}
 
 ## Base Climate Configuration
 
@@ -128,6 +129,7 @@ MQTT options:
 
 ## Climate Automation
 
+{{< anchor "climate-control_action" >}}
 
 `climate.control` Action
 **************************
@@ -176,6 +178,7 @@ Configuration variables:
 - **swing_mode** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the swing mode
   of the climate device. One of `OFF`, `BOTH`, `VERTICAL`, `HORIZONTAL`.
 
+{{< anchor "climate-lambda_calls" >}}
 
 lambda calls
 ************
@@ -224,6 +227,7 @@ advanced stuff.
   call.perform();
 
   ```
+{{< anchor "climate-on_state_trigger" >}}
 
 `climate.on_state` Trigger
 ****************************
@@ -244,6 +248,7 @@ climate:
 
 
 ```
+{{< anchor "climate-on_control_trigger" >}}
 
 `climate.on_control` Trigger
 ******************************

@@ -22,6 +22,7 @@ Home Assistant event bus, you should use a :ref:`Home Assistant event <api-homea
 Home Assistant Core 2024.5 or higher is required for ESPHome event entities to work.
 
 {{< /note >}}
+{{< anchor "config-event" >}}
 
 ## Base Event Configuration
 
@@ -84,6 +85,7 @@ MQTT options:
 
 ## Event Automation
 
+{{< anchor "event-on_event" >}}
 
 `on_event`
 ************
@@ -119,6 +121,7 @@ Configuration variables:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the event.
 - **event_type** (**Required**, string): The type of event to trigger.
 
+{{< anchor "event-lambda_calls" >}}
 
 lambda Calls
 ************

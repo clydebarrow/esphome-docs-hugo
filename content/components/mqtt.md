@@ -106,6 +106,7 @@ Support for esp-idf is still experminental. Please report issues you have with m
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **publish_nan_as_none** (*Optional*, bool): Publish `None` instead of `NaN` to handle Unknown/Unavailable sensor states in Home Assistant. Defaults to `false`.
 
+{{< anchor "mqtt-message" >}}
 
 ## MQTTMessage
 
@@ -140,6 +141,7 @@ Configuration options:
    have a retain flag on or not. Defaults to `true`.
 
 
+{{< anchor "mqtt-device_discovery" >}}
 
 ## MQTT device discovery
 
@@ -191,6 +193,7 @@ JSON keys:
 -  **project_version** (*Optional*, string): `dashboard_import.package_import_url`.
 -  **api_encryption** (*Optional*, string): API encryption type.
 
+{{< anchor "mqtt-using_device_discovery_with_home_assistant" >}}
 
 ## Using device discovery with Home Assistant
 
@@ -218,6 +221,7 @@ mqtt:
   discover_ip: True # enable device discovery
 
 ```
+{{< anchor "mqtt-using_with_home_assistant_entities" >}}
 
 ## Using with Home Assistant MQTT entities
 
@@ -269,6 +273,7 @@ in the ESPHome MQTT component configuration will cause Home Assistant to include
 in the generated entity names (e.g. `sensor.uptime` becomes `sensor.<device name>_uptime`),
 making it easier to distinguish the entities in various entity lists.
 
+{{< anchor "mqtt-defaults" >}}
 
 ## Defaults
 
@@ -284,6 +289,7 @@ configuration. That way, you can use your existing wildcards like
 `home/+/#` together with ESPHome. All other features of ESPHome
 (like availability) should still work correctly.
 
+{{< anchor "mqtt-last_will_birth" >}}
 
 ## Last Will And Birth Messages
 
@@ -321,6 +327,7 @@ If the birth message and last will message have empty topics or topics
 that are different from each other, availability reporting will be
 disabled.
 
+{{< anchor "mqtt-ssl_fingerprints" >}}
 
 ## SSL Fingerprints
 
@@ -348,6 +355,7 @@ mqtt:
 
 
 ```
+{{< anchor "mqtt-tls-idf" >}}
 
 ## TLS with esp-idf (esp32)
 
@@ -409,6 +417,7 @@ mqtt:
     -----END CERTIFICATE-----
 
 ```
+{{< anchor "config-mqtt-component" >}}
 
 ## MQTT Component Base Configuration
 
@@ -465,6 +474,7 @@ When changing these options and you're using MQTT discovery, you will need to re
 This is because Home Assistant only discovers a device once in every Home Assistant start.
 
 {{< /warning >}}
+{{< anchor "mqtt-on_connect_disconnect" >}}
 
 ## ``on_connect`` / ``on_disconnect`` Trigger
 
@@ -479,6 +489,7 @@ mqtt:
     - switch.turn_off: switch1
 
 ```
+{{< anchor "mqtt-on_message" >}}
 
 ## ``on_message`` Trigger
 
@@ -538,6 +549,7 @@ This action can also be used in :ref:`lambdas <config-lambda>`:
     });
 
 {{< /note >}}
+{{< anchor "mqtt-on_json_message" >}}
 
 ## ``on_json_message`` Trigger
 
@@ -605,6 +617,7 @@ This action can also be used in :ref:`lambdas <config-lambda>`:
     });
 
 {{< /note >}}
+{{< anchor "mqtt-publish_action" >}}
 
 ## ``mqtt.publish`` Action
 
@@ -652,6 +665,7 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
     id(mqtt_client).publish("the/topic", "The Payload");
 
 {{< /note >}}
+{{< anchor "mqtt-publish_json_action" >}}
 
 ## ``mqtt.publish_json`` Action
 
@@ -752,6 +766,7 @@ on_...:
     - mqtt.enable:
 
 ```
+{{< anchor "mqtt-connected_condition" >}}
 
 ## ``mqtt.connected`` Condition
 

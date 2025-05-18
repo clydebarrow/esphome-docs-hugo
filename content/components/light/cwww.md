@@ -21,6 +21,7 @@ light:
     constant_brightness: true
 
 ```
+{{< anchor "cwww_mixing" >}}
 
 ## Mixing
 

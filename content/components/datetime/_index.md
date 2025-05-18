@@ -12,6 +12,7 @@ currently represents a date that can be set by the user/frontend.
 Requires Home Assistant 2024.4 or newer.
 
 {{< /note >}}
+{{< anchor "config-datetime" >}}
 
 ## Base Datetime Configuration
 
@@ -63,6 +64,7 @@ Time and DateTime Options:
 
 You can access the most recent state as a `ESPTime` object by `id(datetime_id).state_as_esptime()`
 
+{{< anchor "datetime-on_value" >}}
 
 `on_value`
 ************
@@ -88,6 +90,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 ## Date Automation
 
+{{< anchor "datetime-date_set_action" >}}
 
 `datetime.date.set` Action
 ****************************
@@ -125,6 +128,7 @@ Configuration variables:
 
 
 
+{{< anchor "datetime-lambda_calls" >}}
 
 lambda calls
 ************
@@ -156,6 +160,7 @@ advanced stuff (see the full API Reference for more info).
   ```
 ## Time Automation
 
+{{< anchor "datetime-time_set_action" >}}
 
 `datetime.time.set` Action
 ****************************
@@ -192,6 +197,7 @@ Configuration variables:
   The value to set the datetime to.
 
 
+{{< anchor "datetime-time-lambda_calls" >}}
 
 lambda calls
 ************
@@ -224,6 +230,7 @@ advanced stuff (see the full API Reference for more info).
   ```
 ## DateTime Automation
 
+{{< anchor "datetime-datetime_set_action" >}}
 
 `datetime.datetime.set` Action
 ********************************
@@ -263,6 +270,7 @@ Configuration variables:
   The value to set the datetime to.
 
 
+{{< anchor "datetime-datetime-lambda_calls" >}}
 
 Lambda calls
 ************

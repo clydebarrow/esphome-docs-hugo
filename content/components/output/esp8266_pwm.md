@@ -41,6 +41,7 @@ A hard reset fixes the problem - if you have this issue please power cycle the d
 should fix it.
 
 {{< /note >}}
+{{< anchor "output-esp8266_pwm-set_frequency_action" >}}
 
 ## ``output.esp8266_pwm.set_frequency`` Action
 

@@ -43,6 +43,7 @@ sensor:
   All known sensors currently configured to `0x28`. Defaults to `0x28`.
 
 
+{{< anchor "npi19-converting" >}}
 
 ## Converting units
 

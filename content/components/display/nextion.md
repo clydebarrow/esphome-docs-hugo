@@ -88,6 +88,7 @@ display:
   A higher value can help prevent buffer overflows but will result in slower interface updates.
   Range is `0-255ms`. Defaults to `0ms` (disabled).
 
+{{< anchor "display-nextion_lambda" >}}
 
 ## Rendering Lambda
 
@@ -130,9 +131,11 @@ Several methods are available for use within [lambdas]({{< ref "automations/temp
 simple display updates. There are too many to cover here; please see the :apiref:`nextion/nextion.h` for more detail.
 The list below calls out a few commonly-used methods:
 
+{{< anchor "nextion_upload_tft" >}}
 
 - `upload_tft`: Start the process to upload a new TFT file to the Nextion; see [nextion_upload_tft_file]({{< ref "components/display/nextion#nextion_upload_tft_file" >}}) below.
 
+{{< anchor "nextion_update_all_components" >}}
 
 - `update_all_components()`: All the components will publish their states.
 
@@ -140,6 +143,7 @@ The list below calls out a few commonly-used methods:
   id(nextion1).update_all_components();
 
   ```
+{{< anchor "update_components_by_prefix" >}}
 
 - `update_components_by_prefix(std::string page)`: This will send the current state of any **component_name**
   matching the prefix. Some settings like background color need to be resent on page change; this is a good hook to use
@@ -149,6 +153,7 @@ The list below calls out a few commonly-used methods:
   id(nextion1).update_components_by_prefix("page0.");
 
   ```
+{{< anchor "set_nextion_sensor_state" >}}
 
 - Set various sensor states (See [Queue Types]({{< ref "components/display/nextion#nextion_queue_types" >}}) below):
 
@@ -181,6 +186,7 @@ The example below demonstrates how to define a user-API so Home Assistant can se
                 id(nextion1).set_nextion_text_state(name,state);
 
 {{< /note >}}
+{{< anchor "nextion_queue_types" >}}
 
 **Queue Types**
 
@@ -194,6 +200,7 @@ The example below demonstrates how to define a user-API so Home Assistant can se
 | `NO_RESULT` | `5` |
 
 
+{{< anchor "display-nextion_automation" >}}
 
 ## Nextion Automations
 
@@ -202,9 +209,9 @@ Triggers
 
 Several [actions-trigger]({{< ref "automations/actions#actions-trigger" >}}) are available for use with your Nextion display.
 
+{{< anchor "nextion-on_setup" >}}
 
-`on_setup`
-^^^^^^^^^^^^
+### ``on_setup``
 
 This automation will be triggered when a connection is established with the Nextion display. This happens after boot
 and it may take some time (hundreds of milliseconds). It could be used to change some display element once start-up is
@@ -232,17 +239,17 @@ display:
             }
 
 ```
+{{< anchor "nextion-on_sleep" >}}
 
-`on_sleep`/`on_wake`
-^^^^^^^^^^^^^^^^^^^^^^^^
+### ``on_sleep``/``on_wake``
 
 These automations will be triggered upon sleep or upon wake (respectively). The Nextion does not accept commands or
 updates while in sleep mode; these triggers may be used to cope with this. For example, you could use them to
 [force an update]({{< ref "components/display/nextion#nextion_update_all_components" >}}), refreshing the display's content upon wake-up.
 
+{{< anchor "nextion-on_page" >}}
 
-`on_page`
-^^^^^^^^^^^
+### ``on_page``
 
 This automation is triggered when the page is changed on display. This includes both ESPHome-initiated and
 Nextion-initiated page changes. ESPHome initiates a page change by calling either the `goto_page("page_name")` or
@@ -276,9 +283,9 @@ Given the page ID, the appropriate components can be updated. Two strategies are
           }
 
   ```
+{{< anchor "nextion-on_touch" >}}
 
-`on_touch`
-^^^^^^^^^^^^
+### ``on_touch``
 
 This automation is triggered when a component is pressed or released on the Nextion display.
 
@@ -300,9 +307,9 @@ on_touch:
         ESP_LOGD("nextion.on_touch", "Event type: %s", touch_event ? "Press" : "Release");
 
 ```
+{{< anchor "nextion-on_buffer_overflow" >}}
 
-`on_buffer_overflow`
-^^^^^^^^^^^^^^^^^^^^^^
+### ``on_buffer_overflow``
 
 This automation is triggered when the Nextion display reports a serial buffer overflow. When this happens, the
 Nextion's buffer will continue to receive the new instructions, but all previous instructions are lost and the Nextion
@@ -321,9 +328,9 @@ on_buffer_overflow:
 Actions
 *******
 
+{{< anchor "nextion-set_brightness" >}}
 
-`display.nextion.set_brightness`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``display.nextion.set_brightness``
 
 You can use this [action<actions-action>]({{< ref "#action<actions-action>" >}}) to set the brightness of the Nextion's backlight.
 
@@ -343,6 +350,7 @@ on_...:
         brightness: 50%
 
 ```
+{{< anchor "nextion_upload_tft_file" >}}
 
 ## Uploading A TFT File
 

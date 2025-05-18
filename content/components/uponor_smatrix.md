@@ -17,6 +17,7 @@ The +/- terminals provide 5 volts and can be used to power your ESPHome device.
 
 The [UART Component]({{< ref "components/uart#uart" >}}) must be configured with a baud rate of 19200, 8 data bits, no parity, 1 stop bit.
 
+{{< anchor "uponor-gettingstarted" >}}
 
 ## Getting started
 

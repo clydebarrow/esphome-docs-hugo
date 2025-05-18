@@ -20,6 +20,7 @@ for `num_attempts` times (see below).
 safe_mode:
 
 ```
+{{< anchor "safe_mode-configuration_variables" >}}
 
 ## Configuration variables:
 

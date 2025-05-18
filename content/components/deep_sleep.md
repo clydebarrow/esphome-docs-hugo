@@ -67,6 +67,7 @@ Advanced features:
 Only one deep sleep component may be configured.
 
 {{< /note >}}
+{{< anchor "deep_sleep-esp32_wakeup_pin_mode" >}}
 
 ## ESP32 Wakeup Pin Mode
 
@@ -110,6 +111,7 @@ The following integers are the wakeup causes:
     - **11** - `ESP_SLEEP_WAKEUP_COCPU_TRAP_TRIG`: Wakeup caused by COCPU crash
     - **12** - `ESP_SLEEP_WAKEUP_BT`: Wakeup caused by BT (light sleep only)
 
+{{< anchor "deep_sleep-enter_action" >}}
 
 ## ``deep_sleep.enter`` Action
 
@@ -145,6 +147,7 @@ Configuration options:
 - **time_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the time component to use for the `until` option. Only on ESP32.
 
 
+{{< anchor "deep_sleep-prevent_action" >}}
 
 ## ``deep_sleep.prevent`` Action
 
@@ -189,6 +192,7 @@ wakes up again.
             - deep_sleep.enter: deep_sleep_1
 
 {{< /note >}}
+{{< anchor "deep_sleep-allow_action" >}}
 
 ## ``deep_sleep.allow`` Action
 

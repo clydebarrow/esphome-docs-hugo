@@ -79,6 +79,7 @@ pin_a:
   the knob is turned anticlockwise. See [sensor-rotary_encoder-triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
+{{< anchor "sensor-rotary_encoder-set_value_action" >}}
 
 ## ``sensor.rotary_encoder.set_value`` Action
 
@@ -111,6 +112,7 @@ Configuration options:
 - **value** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The value to set the internal counter to.
 
+{{< anchor "sensor-rotary_encoder-triggers" >}}
 
 ## ``on_clockwise`` and ``on_anticlockwise`` Triggers
 

@@ -10,6 +10,7 @@ available in ESPHome and is responsible for passing the touch events to
 `binary_sensors` with the `touchscreen` platform. It is also used by the LVGL component.
 
 
+{{< anchor "config-touchscreen" >}}
 
 ## Base Touchscreen Configuration
 
@@ -67,6 +68,7 @@ Configuration variables:
   when the touchscreen is no longer touched. See [touchscreen-on_release]({{< ref "components/touchscreen/_index#touchscreen-on_release" >}}).
 
 
+{{< anchor "touchscreen-touchpoint" >}}
 
 ## ``TouchPoint`` Argument Type
 
@@ -83,6 +85,7 @@ The integer members for the touch positions below are in relation to the display
 - `x_first` and `y_first` are the position of the touch when it was first detected.
 - `x_raw` and `y_raw` are for calibrating the touchscreen in relation of the display. This replaces the properties with the same name in the touchscreen classes.
 
+{{< anchor "touchscreen-calibration" >}}
 
 ## Calibration
 
@@ -190,6 +193,7 @@ To be exact, the component does the following
 - scales to the display dimensions
 
 
+{{< anchor "touchscreen-on_touch" >}}
 
 ## ``on_touch`` Trigger
 
@@ -200,6 +204,7 @@ NOTE: This has changed (from ESPHome 2023.11.6.) To receive continuous updates f
 
 This trigger provides two arguments named `touch` of type *touchpoint* and `touches` with a list of all touches.
 
+{{< anchor "touchscreen-on_update" >}}
 
 ## ``on_update`` Trigger
 
@@ -231,6 +236,7 @@ Be aware that you need to check the state flag every time to see if the touch is
 - state value 2 means the touch is still being detected but is moved on the screen.
 - state value 4 and higher means a touch release is detected.
 
+{{< anchor "touchscreen-on_release" >}}
 
 ## ``on_release`` Trigger
 
@@ -239,6 +245,7 @@ This automation will be triggered when all touches are released from the touchsc
 At this point of time it has no extra arguments.
 
 
+{{< anchor "touchscreen_binary_sensor" >}}
 
 ## Binary Sensor
 

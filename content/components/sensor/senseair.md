@@ -50,6 +50,7 @@ sensor:
 ``G+`` should be connected to power supply (supported voltage is 4.5 V to 5.25 V), ``G0`` to ``GND`` pin
 
 {{< /note >}}
+{{< anchor "senseair-background_calibration_action" >}}
 
 ## ``senseair.background_calibration`` Action
 
@@ -63,6 +64,7 @@ on_...:
     - senseair.background_calibration: my_senseair_id
 
 ```
+{{< anchor "senseair-background_calibration_result_action" >}}
 
 ## ``senseair.background_calibration_result`` Action
 
@@ -77,6 +79,7 @@ on_...:
     - senseair.background_calibration_result: my_senseair_id
 
 ```
+{{< anchor "senseair-abc_get_period_action" >}}
 
 ## ``senseair.abc_get_period`` Action
 
@@ -89,6 +92,7 @@ on_...:
     - senseair.abc_get_period: my_senseair_id
 
 ```
+{{< anchor "senseair-abc_enable_action" >}}
 
 ## ``senseair.abc_enable`` Action
 
@@ -101,6 +105,7 @@ on_...:
     - senseair.abc_enable: my_senseair_id
 
 ```
+{{< anchor "senseair-abc_disable_action" >}}
 
 ## ``senseair.abc_disable`` Action
 

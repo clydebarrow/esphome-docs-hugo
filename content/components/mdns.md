@@ -19,6 +19,7 @@ mdns:
   disabled: false
 
 ```
+{{< anchor "mdns-configuration_variables" >}}
 
 
 ## Services:
@@ -36,6 +37,7 @@ mdns:
         txt_key_1: txt_value_1
 
 ```
+{{< anchor "mdns-custom_services" >}}
 
 
 ## Configuration variables:

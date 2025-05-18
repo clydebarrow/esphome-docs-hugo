@@ -12,6 +12,7 @@ The `http_request` component lets you make HTTP/HTTPS requests. To do so, you ne
 http_request:
 
 ```
+{{< anchor "http_request-configuration_variables" >}}
 
 ## Configuration variables:
 
@@ -78,6 +79,7 @@ To maximize security, do not set ``verify_ssl`` to ``false`` *unless:*
 
 The `http_request` component supports a number of [actions]({{< ref "automations/actions#config-action" >}}) that can be used to send requests.
 
+{{< anchor "http_request-get_action" >}}
 
 `http_request.get` Action
 ***************************
@@ -113,6 +115,7 @@ on_...:
 - **on_response** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform after the request is received.
 - **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform if the request cannot be completed.
 
+{{< anchor "http_request-post_action" >}}
 
 `http_request.post` Action
 ****************************
@@ -138,6 +141,7 @@ on_...:
   See [http_request-examples]({{< ref "components/http_request#http_request-examples" >}}).
 - All other options from [http_request-get_action]({{< ref "components/http_request#http_request-get_action" >}}).
 
+{{< anchor "http_request-send_action" >}}
 
 `http_request.send` Action
 ****************************
@@ -159,6 +163,7 @@ on_...:
 - **method** (**Required**, string): HTTP method to use (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`).
 - All other options from [http_request-get_action]({{< ref "components/http_request#http_request-get_action" >}}) and [http_request-post_action]({{< ref "components/http_request#http_request-post_action" >}}).
 
+{{< anchor "http_request-on_response" >}}
 
 ## ``on_response`` Trigger
 
@@ -198,6 +203,7 @@ on_...
 
 
 ```
+{{< anchor "http_request-on_error" >}}
 
 ## ``on_error`` Trigger
 
@@ -207,6 +213,7 @@ completes, even if the response code is not 200. No information on the type of e
 are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}). See example usage above.
 
 
+{{< anchor "http_request-examples" >}}
 
 ## Examples
 

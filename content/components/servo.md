@@ -65,6 +65,7 @@ You can configure the ``min_level`` and ``max_level`` options to adjust the leve
 to match your servo (Experiment with these values).
 
 {{< /note >}}
+{{< anchor "servo-write_action" >}}
 
 ## ``servo.write`` Action
 
@@ -111,6 +112,7 @@ This action can also be expressed as a :ref:`lambda <config-lambda>`:
     id(my_servo).write(1.0);
 
 {{< /note >}}
+{{< anchor "servo-detach_action" >}}
 
 ## ``servo.detach`` Action
 
@@ -131,6 +133,7 @@ This action can also be expressed as a :ref:`lambda <config-lambda>`:
     id(my_servo).detach();
 
 {{< /note >}}
+{{< anchor "servo-ha-config" >}}
 
 ## Home Assistant Configuration
 

@@ -20,6 +20,7 @@ esp32:
     board: nodemcu-32s
 
 ```
+{{< anchor "esphome-configuration_variables" >}}
 
 ## Configuration variables:
 
@@ -79,6 +80,7 @@ Automations:
 - **on_loop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   on each `loop()` iteration. See [esphome-on_loop]({{< ref "components/esphome#esphome-on_loop" >}}).
 
+{{< anchor "esphome-on_boot" >}}
 
 ## ``on_boot``
 
@@ -109,6 +111,7 @@ Configuration variables:
 
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "esphome-on_shutdown" >}}
 
 ## ``on_shutdown``
 
@@ -139,6 +142,7 @@ Configuration variables:
 
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "esphome-on_loop" >}}
 
 ## ``on_loop``
 
@@ -152,6 +156,7 @@ esphome:
       # do something
 
 ```
+{{< anchor "esphome-platformio_options" >}}
 
 ## ``platformio_options``
 
@@ -170,6 +175,7 @@ esphome:
     board_build.f_flash: 80000000L
 
 ```
+{{< anchor "esphome-includes" >}}
 
 ## ``includes``
 
@@ -201,6 +207,7 @@ This option behaves differently depending on what the included file is pointing 
    AND compiled into the binary. This way implementation of classes and functions in header files can
    be provided.
 
+{{< anchor "esphome-libraries" >}}
 
 ## ``libraries``
 
@@ -234,6 +241,7 @@ By default, ESPHome does not include any libraries into the project. This means 
 Arduino, such as `Wire` or `EEPROM`, aren't available. If you need to use them, you should list them manually under
 this option. If they are used by another library, they should be listed before the library that uses them.
 
+{{< anchor "preferences-flash_write_interval" >}}
 
 ## Adjusting flash writes
 
@@ -262,6 +270,7 @@ however, be aware that this may lead to increased flash wearing and a shortened 
 
 For [ESP8266 ]({{< relref "/components/esp8266" >}}), `restore_from_flash` must also be set to `true` for states to be written to flash.
 
+{{< anchor "esphome-changing_node_name" >}}
 
 ## Changing ESPHome Node Name
 
@@ -301,6 +310,7 @@ wifi:
 The same procedure can be done for changing the static IP of a device.
 
 
+{{< anchor "esphome-mac_suffix" >}}
 
 ## Adding the MAC address as a suffix to the device name
 
@@ -316,6 +326,7 @@ upstream.
 
 
 {{< /note >}}
+{{< anchor "esphome-creators_project" >}}
 
 ## Project information
 
@@ -332,6 +343,7 @@ esphome:
     version: "1.0.0"
 
 ```
+{{< anchor "esphome-min_version" >}}
 
 ## Minimum ESPHome version
 

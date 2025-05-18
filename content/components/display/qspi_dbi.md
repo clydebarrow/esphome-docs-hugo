@@ -5,6 +5,7 @@ title: "Quad SPI Displays"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "qspi_dbi" >}}
 
 ## Models
 This display driver supports AMOLED and LCD displays with quad SPI interfaces, using the MIPI DBI interface.

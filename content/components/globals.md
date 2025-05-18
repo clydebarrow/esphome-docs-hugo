@@ -50,6 +50,7 @@ Configuration variables:
   can not be restored or if state restoration is not enabled. This needs to be wrapped in quotes! Defaults to
   the C++ default value for this type (for example `0` for integers).
 
+{{< anchor "globals-set_action" >}}
 
 ## ``globals.set`` Action
 

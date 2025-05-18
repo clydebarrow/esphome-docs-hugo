@@ -119,10 +119,9 @@ def convert_rst_to_md(rst_content, filename):
             continue
         
         # Handle RST anchors (.. _anchor:)
-        if re.match(r'^.. _[^:]+:$', line):
-            anchor_name = line.strip()[4:-1]  # Remove '.. _' and ':' from the line
-            # Don't replace the anchor
-            #md_lines.append(f'<a id="{anchor_name}"></a>')
+        if line.startswith('.. _') and line.endswith(':'):
+            anchor_name = line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
+            md_lines.append(f'{{{{< anchor "{anchor_name}" >}}}}')
             i += 1
             continue
 
@@ -133,14 +132,21 @@ def convert_rst_to_md(rst_content, filename):
             i = new_i
             continue
         
-        # Handle headers
+        # Handle equals-style headings (main headings)
         if i + 1 < len(lines) and re.match(r'^=+$', lines[i + 1]) and line:
             md_lines.append(f"# {line}")
             i += 2
             continue
         
+        # Handle dash-style headings (section headings)
         if i + 1 < len(lines) and re.match(r'^-+$', lines[i + 1]) and line:
             md_lines.append(f"## {line}")
+            i += 2
+            continue
+        
+        # Handle caret-style headings (subsection headings)
+        if i + 1 < len(lines) and re.match(r'^\^+$', lines[i + 1]) and line:
+            md_lines.append(f"### {line}")
             i += 2
             continue
         

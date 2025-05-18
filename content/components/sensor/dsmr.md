@@ -297,6 +297,7 @@ text_sensor:
 
 
 ```
+{{< anchor "sensor-dsmr-request_pin" >}}
 
 ## P1 Data Request pin
 
@@ -331,6 +332,7 @@ or a transistor-based circuit are not feasible options. Here's an example circui
 
 resistor instead of the 200 Ohm resistor.
 
+{{< anchor "sensor-dsmr-improving_reader_results" >}}
 
 ## Improving reader results
 

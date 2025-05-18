@@ -8,6 +8,7 @@ title: "Switch Component"
 The `switch` domain includes all platforms that should show up like a
 switch and can only be turned ON or OFF.
 
+{{< anchor "config-switch" >}}
 
 ## Base Switch Configuration
 
@@ -69,6 +70,7 @@ Configuration variables:
 - If MQTT enabled, All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 - If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
+{{< anchor "switch-toggle_action" >}}
 
 `switch.toggle` Action
 ************************
@@ -81,6 +83,7 @@ on_...:
     - switch.toggle: relay_1
 
 ```
+{{< anchor "switch-turn_on_action" >}}
 
 `switch.turn_on` Action
 *************************
@@ -93,6 +96,7 @@ on_...:
     - switch.turn_on: relay_1
 
 ```
+{{< anchor "switch-turn_off_action" >}}
 
 `switch.turn_off` Action
 **************************
@@ -105,6 +109,8 @@ on_...:
     - switch.turn_off: relay_1
 
 ```
+{{< anchor "switch-is_on_condition" >}}
+{{< anchor "switch-is_off_condition" >}}
 
 `switch.is_on` / `switch.is_off` Condition
 **********************************************
@@ -120,6 +126,7 @@ on_...:
       switch.is_on: my_switch
 
 ```
+{{< anchor "switch-lambda_calls" >}}
 
 lambda calls
 ************
@@ -158,6 +165,7 @@ advanced stuff (see the full API Reference for more info).
   id(my_switch).toggle();
 
   ```
+{{< anchor "switch-on_turn_on_off_trigger" >}}
 
 `switch.on_turn_on` / `switch.on_turn_off` Trigger
 ******************************************************

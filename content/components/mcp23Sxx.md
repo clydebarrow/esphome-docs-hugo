@@ -13,6 +13,7 @@ This series features exactly the same API as the MCP230xx I/O Expander (I²C).
 - [mcp23S08-label]({{< ref "components/mcp23sxx#mcp23S08-label" >}})
 - [mcp23S17-label]({{< ref "components/mcp23sxx#mcp23S17-label" >}})
 
+{{< anchor "mcp23S08-label" >}}
 
 ## MCP23S08 Component
 
@@ -72,6 +73,7 @@ Pin Configuration Variables:
 - All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
 
+{{< anchor "mcp23S17-label" >}}
 
 ## MCP23S17 Component
 

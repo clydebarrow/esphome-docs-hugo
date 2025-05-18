@@ -8,6 +8,7 @@ title: "Lambda Magic"
 Here are a couple recipes for various interesting things you can do with [Lambdas]({{< ref "automations/templates#config-lambda" >}}) in ESPHome.
 These don't require external components and demonstrate how powerful [Lambdas]({{< ref "automations/templates#config-lambda" >}}) can be.
 
+{{< anchor "lambda_magic_pages" >}}
 
 ## Display pages alternative
 
@@ -49,6 +50,7 @@ interval:
 
 
 ```
+{{< anchor "lambda_magic_udp_sender" >}}
 
 ## Send UDP commands
 
@@ -95,6 +97,7 @@ button:
 ```
 Tested on both `arduino` and `esp-idf` platforms.
 
+{{< anchor "lambda_magic_rf_queues" >}}
 
 ## Delaying Remote Transmissions
 
@@ -169,6 +172,7 @@ cover:
     open_duration: 27s
 
 ```
+{{< anchor "lambda_magic_1button_coover" >}}
 
 ## One Button Cover Control
 

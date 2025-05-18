@@ -5,6 +5,7 @@ title: "MIPI SPI Display Driver"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "mipi_spi" >}}
 
 ## Introduction
 
@@ -33,8 +34,7 @@ For custom displays, the driver can be configured with the correct pins and dime
 specified, or a custom init sequence can be provided. Displays with 8 bit parallel interfaces are supported by
 using an octal SPI bus, so references here to parallel and octal SPI are equivalent.
 
-Driver chips
-^^^^^^^^^^^^
+### Driver chips
 
 .. csv-table::
     :header: "Driver Chip", "Typical Dimensions"
@@ -54,8 +54,7 @@ Driver chips
     "ST7735", "128x160"
     "CUSTOM", "Customisable"
 
-Boards with integrated displays
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Boards with integrated displays
 
 .. csv-table::
     :header: "Model", "Manufacturer", "Product Description"
@@ -94,8 +93,7 @@ display:
     model: T_EMBED
 
 ```
-Configuration options
-^^^^^^^^^^^^^^^^^^^^^
+### Configuration options
 
 All [graphical display configuration<display-configuration>]({{< ref "#graphical display configuration<display-configuration>" >}}) options are available, plus the following. For integrated display boards
 most of the configuration will be set by default, but can be overridden if needed.
@@ -133,8 +131,7 @@ default, but can be overridden in the config if needed.
 
 - **color_depth** (*Optional*): The color depth of the display buffer, expressed in bits. Options are `16` (default) and `8`. 8 bit depth will result in only 256 possible colors and should be used only if the microcontroller has limited memory. The driver will convert the 8 bit color to the display chip's required format.
 
-Advanced options
-^^^^^^^^^^^^^^^^
+### Advanced options
 
 - **init_sequence** (*Optional*): Allows custom initialisation sequences to be added. See below for more information.
 - **pixel_mode** (*Optional*): Select the interface mode for the display driver. Options are `16bit` (default) and `18bit`. Most displays require 16 bit mode, and it is preferred unless the display requires 18 bit mode.

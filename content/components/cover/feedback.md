@@ -154,6 +154,7 @@ Additional options:
 
 ## Example Configurations
 
+{{< anchor "migrating_current_based" >}}
 
 Migrating Current-Based Cover
 *****************************

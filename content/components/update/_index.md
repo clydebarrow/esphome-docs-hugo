@@ -15,6 +15,7 @@ update:
   - platform: ...
 
 ```
+{{< anchor "config-update" >}}
 
 ## Configuration variables:
 

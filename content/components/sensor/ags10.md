@@ -45,6 +45,7 @@ sensor:
 
 ## Actions:
 
+{{< anchor "sensor-AGS10SetZeroPointAction" >}}
 
 ## ``ags10.set_zero_point`` Action
 
@@ -77,6 +78,7 @@ Configuration option:
 - **value** (*Optional*, int): nominated resistance value to set (unit: 0.1 kΩ).
 
 
+{{< anchor "sensor-AGS10NewI2cAddressAction" >}}
 
 ## ``ags10.new_i2c_address`` Action
 

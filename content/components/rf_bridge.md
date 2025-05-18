@@ -43,6 +43,7 @@ rf_bridge:
 - **on_code_received** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
   performed when a code is received. See [rf_bridge-on_code_received]({{< ref "components/rf_bridge#rf_bridge-on_code_received" >}}).
 
+{{< anchor "rf_bridge-on_code_received" >}}
 
 ## ``on_code_received`` Trigger
 
@@ -63,6 +64,7 @@ on_code_received:
 
 
 ```
+{{< anchor "rf_bridge-send_code_action" >}}
 
 ## ``rf_bridge.send_code`` Action
 
@@ -95,6 +97,7 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 
 {{< /note >}}
+{{< anchor "rf_bridge-send_raw_action" >}}
 
 ## ``rf_bridge.send_raw`` Action
 
@@ -125,6 +128,7 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 
 {{< /note >}}
+{{< anchor "rf_bridge-learn_action" >}}
 
 ## ``rf_bridge.learn`` Action
 
@@ -156,6 +160,7 @@ If you have flashed the secondary MCU with the [Portisch firmware](https://githu
 ESPHome is able to receive the extra protocols that can be decoded as well as activate the other modes supported.
 
 
+{{< anchor "rf_bridge-on_advanced_code_received" >}}
 
 `on_advanced_code_received` Trigger
 *************************************
@@ -175,6 +180,7 @@ on_advanced_code_received:
 
 
 ```
+{{< anchor "rf_bridge-send_advanced_code_action" >}}
 
 `rf_bridge.send_advanced_code` Action
 ***************************************
@@ -206,6 +212,7 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 
 {{< /note >}}
+{{< anchor "rf_bridge-start_advanced_sniffing_action" >}}
 
 `rf_bridge.start_advanced_sniffing` Action
 ********************************************
@@ -232,6 +239,7 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 
 {{< /note >}}
+{{< anchor "rf_bridge-stop_advanced_sniffing_action" >}}
 
 `rf_bridge.stop_advanced_sniffing` Action
 *******************************************
@@ -256,6 +264,7 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
     id(rf_bridge).stop_advanced_sniffing();
 
 {{< /note >}}
+{{< anchor "rf_bridge-start_bucket_sniffing_action" >}}
 
 `rf_bridge.start_bucket_sniffing` Action
 ******************************************
@@ -292,6 +301,7 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 
 
 {{< /note >}}
+{{< anchor "rf_bridge-beep_action" >}}
 
 `rf_bridge.beep` Action
 *************************

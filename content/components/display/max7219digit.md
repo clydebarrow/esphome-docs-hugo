@@ -67,10 +67,12 @@ display:
 - **chip_lines_style** (*Optional*): How are the lines in Multiline Mode connected? Possible values are `zigzag` and `snake`. Defaults to `snake`
 - **flip_x** (*Optional*, boolean): Flip the horizontal axis on the screen. Defaults to `false`.
 
+{{< anchor "display-max7219digit_actions" >}}
 
 ## Actions
 The following actions are replicas of the LAMBDA functions shown in the next section. 
 
+{{< anchor "display-max7219digit_actions_invert_on_off>" >}}
 
 # `MAX7219.invert_on` & `MAX7219.invert_off` Action
 
@@ -78,18 +80,21 @@ This action  `MAX7219.invert_on` will invert the display. So background pixels a
 off. `MAX7219.invert_off` sets the display back to normal. The background pixels are only set at the next update, the pixels drawn in
 the various function like print, line, etc. are directly influenced by the invert command.
 
+{{< anchor "display-max7219digit_actions_turn_on_off" >}}
 
 # `MAX7219.turn_on` & `MAX7219.turn_off` Action
 
 The display can be switched on and off "dynamically" with the actions `MAX7219.turn_on` & `MAX7219.turn_off`.
 
 
+{{< anchor "display-max7219digit_actions_reverse_off" >}}
 
 # `MAX7219.reverse_on` & `MAX7219.reverse_off` Action
 
 With this actions you can reverse the display direction from left to right to right to left.
 
 
+{{< anchor "display-max7219digit_actions_intensity" >}}
 
 # `MAX7219.intensity` Action
 
@@ -99,6 +104,7 @@ The intensity of the screen can be set "dynamically" within the lambda code with
   from `0`, least intense to `15` the brightest. Defaults to `15`.
 
 
+{{< anchor "display-max7219digit_lambda" >}}
 
 ## Rendering Lambda
 

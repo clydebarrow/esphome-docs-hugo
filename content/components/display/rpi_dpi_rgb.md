@@ -5,6 +5,7 @@ title: "RPI_DPI_RGB Display Driver"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "rpi_dpi_rgb" >}}
 
 ## Models
 This display driver supports displays with 16 bit parallel interfaces, often referred to as "RPI_DPI_RGB" type.

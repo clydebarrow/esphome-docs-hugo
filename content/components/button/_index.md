@@ -18,6 +18,7 @@ via the UI or automations.
 Home Assistant Core 2021.12 or higher is required for ESPHome button entities to work.
 
 {{< /note >}}
+{{< anchor "config-button" >}}
 
 ## Base Button Configuration
 
@@ -71,6 +72,7 @@ MQTT options:
 
 ## Button Automation
 
+{{< anchor "button-on_press" >}}
 
 `on_press`
 ************
@@ -88,6 +90,7 @@ button:
 ```
 Configuration variables: see [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "button-press_action" >}}
 
 `button.press` Action
 ***********************
@@ -109,6 +112,7 @@ Assistant. If you want to trigger an automation in Home Assistant, you should us
 :ref:`Home Assistant event <api-homeassistant_event_action>` instead.
 
 {{< /note >}}
+{{< anchor "button-lambda_calls" >}}
 
 lambda calls
 ************

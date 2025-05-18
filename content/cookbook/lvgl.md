@@ -15,6 +15,7 @@ Many of the examples below call service actions in Home Assistant; however, Home
 The examples below assume you've set up LVGL correctly with your display and its input device, and you have the knowledge to set up various components in ESPHome. Some examples use absolute positioning for a screen with dimensions of ``240x320px``; if your display's dimensions differ, you'll need to adjust them in order to obtain the expected results.
 
 {{< /note >}}
+{{< anchor "lvgl-cookbook-relay" >}}
 
 ## Local light switch
 
@@ -45,6 +46,7 @@ lvgl:
                 light.toggle: local_light
 
 ```
+{{< anchor "lvgl-cookbook-binent" >}}
 
 ## Remote light button
 
@@ -87,6 +89,7 @@ lvgl:
                       entity_id: light.remote_light
 
 ```
+{{< anchor "lvgl-cookbook-bright" >}}
 
 ## Light brightness slider
 
@@ -133,6 +136,7 @@ Note that Home Assistant expects an integer at the `brightness` parameter of the
 
 This is applicable to action calls like `fan.set_percentage` or `valve.set_valve_position`, too; the only difference is that `max_value` has to be `100`.
 
+{{< anchor "lvgl-cookbook-volume" >}}
 
 ## Media player volume slider
 
@@ -182,6 +186,7 @@ The `adv_hittest` option ensures that accidental touches to the screen won't cau
 Keep in mind that ``on_value`` is triggered *continuously* by the slider while it's being dragged. This generally has a negative effect on performance. For example, you shouldn't use this trigger to set the target temperature of a heat pump via Modbus, or set the position of motorized covers, because it will likely cause malfunctions. To mitigate this, consider using a universal widget trigger like ``on_release`` to get the ``x`` variable once after the interaction has completed.
 
 {{< /note >}}
+{{< anchor "lvgl-cookbook-gauge" >}}
 
 ## Semicircle gauge
 
@@ -279,6 +284,7 @@ lvgl:
 
     The `obj` used to hide the middle part of the meter indicator line has `radius` equal to half of the `width` and `height`. This results in a circle - which is actually a square with extra large rounded corners. 
 
+{{< anchor "lvgl-cookbook-thermometer" >}}
 
 ## Thermometer
 
@@ -429,6 +435,7 @@ lvgl:
 
     You can omit the `obj` used to hide the middle part of meter indicator line by using a bitmap `image` indicator as needle, were only the part hanging above the ticks scale is visible, the rest is transparent.
 
+{{< anchor "lvgl-cookbook-climate" >}}
 
 ## Climate control
 
@@ -498,6 +505,7 @@ lvgl:
                           text: "+"
 
 ```
+{{< anchor "lvgl-cookbook-cover" >}}
 
 ## Cover status and control
 
@@ -620,6 +628,7 @@ lvgl:
                         entity_id: cover.myroom
 
 ```
+{{< anchor "lvgl-cookbook-theme" >}}
 
 ## Theme and style definitions
 
@@ -724,6 +733,7 @@ lvgl:
 ```
 Note that style definitions can contain common properties too, like positioning and sizing.
 
+{{< anchor "lvgl-cookbook-navigator" >}}
 
 ## Page navigation footer
 
@@ -769,6 +779,7 @@ lvgl:
 ```
 For this example to appear correctly, use the theme and style options from [fonts]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) and LVGL's own library [above]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}).
 
+{{< anchor "lvgl-cookbook-statico" >}}
 
 ## API connection status icon
 
@@ -813,6 +824,7 @@ Of note:
 - The widget starts *hidden* at boot and it's only shown when triggered by connection with the API.
 - Alignment of the widget: since the *align* option is given, the *x* and *y* options are used to position the widget relative to the calculated position.
 
+{{< anchor "lvgl-cookbook-titlebar" >}}
 
 ## Title bar for each page
 
@@ -854,6 +866,7 @@ lvgl:
 ```
 For this example to work, use the theme and style options from [above]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}).
 
+{{< anchor "lvgl-cookbook-flex" >}}
 
 ## Flex layout positioning
 
@@ -978,6 +991,7 @@ lvgl:
 ```
 This saved you from a considerable amount of manual calculation of widget positioning which would otherwise be required to place them manually with `x` and `y`! You only need to determine a common width and height for your widgets to distribute them on the page as you prefer. ([lvgl-cookbook-icontext]({{< ref "cookbook/lvgl#lvgl-cookbook-icontext" >}}) below shows how to use custom icons.)
 
+{{< anchor "lvgl-cookbook-grid" >}}
 
 ## Grid layout positioning
 
@@ -1126,6 +1140,7 @@ lvgl:
 ```
 The big advantage here is that whenever you need to add, for example, an extra column of buttons for a new cover, you just simply append it to the `grid_columns` variable, and add the corresponding widgets as above. With `STRETCH` their sizes and positions will automatically be calculated to fill in the cells, while the parent's `pad_all`, `pad_row` and `pad_column` can help with spacing between them. See [lvgl-cookbook-weather]({{< ref "cookbook/lvgl#lvgl-cookbook-weather" >}}) further down this page for another example relying on **Grid**.
 
+{{< anchor "lvgl-cookbook-btlg" >}}
 
 ## ESPHome boot screen
 
@@ -1181,6 +1196,7 @@ lvgl:
             - lvgl.widget.hide: boot_screen
 
 ```
+{{< anchor "lvgl-cookbook-icontext" >}}
 
 ## MDI icons in text
 
@@ -1226,6 +1242,7 @@ lvgl:
     - To use the desired icon, prepend the copied codepoint with `\U000`. The Unicode character escape sequence has to start with capital `\U` and have exactly 8 hexadecimal digits.
     - To translate the escape sequence into the real glyph, make sure you enclose your strings in double quotes.    
 
+{{< anchor "lvgl-cookbook-ckboxmark" >}}
 
 ## Restore checkbox mark
 
@@ -1254,6 +1271,7 @@ lvgl:
 ```
 You could of course simply apply one of the built-in `montserrat_` packs, but that would not be beneficial on the binary size - it would uselessly include the entire set of glyphs in the flash.
 
+{{< anchor "lvgl-cookbook-iconstat" >}}
 
 ## Toggle state icon button
 
@@ -1323,6 +1341,7 @@ lvgl:
                       entity_id: light.remote_light
 
 ```
+{{< anchor "lvgl-cookbook-iconbatt" >}}
 
 ## Battery status icon
 
@@ -1403,6 +1422,7 @@ lvgl:
               text: "\U000F0091" # start with mdi-battery-unknown
 
 ```
+{{< anchor "lvgl-cookbook-animbatt" >}}
 
 ## Battery charging animation
 
@@ -1492,6 +1512,7 @@ lvgl:
     ```
     Use `x`, `y`, `align` widget properties for precise positioning.
 
+{{< anchor "lvgl-cookbook-clock" >}}
 
 ## An analog clock
 
@@ -1615,6 +1636,7 @@ script:
             return day_names[id(time_comp).now().day_of_week - 1];
 
 ```
+{{< anchor "lvgl-cookbook-keypad" >}}
 
 ## A numeric input keypad
 
@@ -1755,6 +1777,7 @@ Of note:
 - Changing the background color of the buttons in `pressed` state.
 - Use of the `key_code` configuration to send a different character to `key_collector` instead of the displayed symbol.
 
+{{< anchor "lvgl-cookbook-weather" >}}
 
 ## Weather forecast panel
 
@@ -2046,6 +2069,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
 ```
 The automations will be triggered to update the labels every time the corresponding entities change, and when the ESPHome comes alive - the reason you also need the [/components/binary_sensor/status]({{< ref "/components/binary_sensor/status" >}}). Note that you'll need to adjust the entity IDs corresponding to your ESPHome node depedning on how you [configured it to use its name<esphome-configuration_variables>]({{< ref "#configured it to use its name<esphome-configuration_variables>" >}}).
 
+{{< anchor "lvgl-cookbook-idlescreen" >}}
 
 ## Turn off screen when idle
 
@@ -2090,6 +2114,7 @@ number:
     mode: box
 
 ```
+{{< anchor "lvgl-cookbook-antiburn" >}}
 
 ## Prevent burn-in of LCD
 

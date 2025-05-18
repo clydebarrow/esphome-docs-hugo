@@ -167,6 +167,7 @@ When the module is in Measurement-Mode an automatic fan-cleaning procedure will 
 The Sen5x sensor has an automatic fan-cleaning which will accelerate the built-in fan to maximum speed for 10 seconds in order to blow out the dust accumulated inside the fan.
 The default automatic-cleaning interval is 168 hours (1 week) of uninterrupted use. Switching off the sensor resets this time counter.
 
+{{< anchor "start_autoclean_fan_action" >}}
 
 ## ``sen5x.start_fan_autoclean`` Action
 

@@ -65,6 +65,7 @@ MQTT options:
 - All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 
+{{< anchor "cover-open_action" >}}
 
 ## ``cover.open`` Action
 
@@ -86,6 +87,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "cover-close_action" >}}
 
 ## ``cover.close`` Action
 
@@ -107,6 +109,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "cover-stop_action" >}}
 
 ## ``cover.stop`` Action
 
@@ -128,6 +131,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "cover-toggle_action" >}}
 
 ## ``cover.toggle`` Action
 
@@ -151,6 +155,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "cover-control_action" >}}
 
 ## ``cover.control`` Action
 
@@ -189,6 +194,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "cover-lambda_calls" >}}
 
 ## Lambdas
 
@@ -221,6 +227,7 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
     }
 
     ```
+{{< anchor "cover-on_open_trigger" >}}
 
 `cover.on_open` Trigger
 *************************
@@ -235,6 +242,7 @@ cover:
       - logger.log: "Cover is Open!"
 
 ```
+{{< anchor "cover-on_closed_trigger" >}}
 
 `cover.on_closed` Trigger
 ***************************

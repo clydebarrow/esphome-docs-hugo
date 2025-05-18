@@ -10,6 +10,7 @@ automatically appear in the Home Assistant front-end and have several
 configuration options.
 
 
+{{< anchor "config-binary_sensor" >}}
 
 ## Base Binary Sensor Configuration
 
@@ -75,6 +76,7 @@ Advanced options:
 - If MQTT enabled, all other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 - If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
+{{< anchor "binary_sensor-filters" >}}
 
 ## Binary Sensor Filters
 
@@ -224,6 +226,7 @@ For example, a `press` is triggered in the first moment when the button on your 
 You can access the current state of the binary sensor in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
 `id(binary_sensor_id).state`.
 
+{{< anchor "binary_sensor-on_press" >}}
 
 `on_press`
 ************
@@ -242,6 +245,7 @@ binary_sensor:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "binary_sensor-on_release" >}}
 
 `on_release`
 **************
@@ -260,6 +264,7 @@ binary_sensor:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "binary_sensor-on_state" >}}
 
 `on_state`
 ************
@@ -279,6 +284,7 @@ binary_sensor:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "binary_sensor-on_click" >}}
 
 `on_click`
 ************
@@ -325,6 +331,7 @@ for more complex matching):
 
 
 {{< /note >}}
+{{< anchor "binary_sensor-on_double_click" >}}
 
 `on_double_click`
 *******************
@@ -350,6 +357,7 @@ Configuration variables:
 - **max_length** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the click should last. Defaults to `350ms`.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "binary_sensor-on_multi_click" >}}
 
 `on_multi_click`
 ******************
@@ -416,6 +424,8 @@ on_multi_click:
     - logger.log: "Single Short Clicked"
 
 ```
+{{< anchor "binary_sensor-is_on_condition" >}}
+{{< anchor "binary_sensor-is_off_condition" >}}
 
 `binary_sensor.is_on` / `binary_sensor.is_off` Condition
 ************************************************************
@@ -431,6 +441,7 @@ on_...:
       binary_sensor.is_on: my_binary_sensor
 
 ```
+{{< anchor "binary_sensor-lambda_calls" >}}
 
 lambda calls
 ************

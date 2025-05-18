@@ -46,8 +46,7 @@ the *CH1* diode is sensitive only to infrared light.
 *CH0 and CH1 typical spectral response*
 
 
-Ambient light illuminance calculation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Ambient light illuminance calculation
 
 Excerpt from the datasheet:
 
@@ -72,8 +71,7 @@ where:
 - `ALS_INT` is the integration time in ms/100
 
 
-ALS Gain levels
-^^^^^^^^^^^^^^^
+### ALS Gain levels
 
 The table lists gain values and corresponding illuminance range:
 
@@ -148,8 +146,7 @@ sensor:
 - **on_ps_low_threshold** (*Optional*): Actions to perform when the proximity sensor is triggered
   on object getting further away.
 
-Sensors
-^^^^^^^
+### Sensors
 This component offers five sensors for ALS-equipped devices and one sensor for PS-equipped devices.
 You can configure all or any subset of these sensors. Each configured sensor is reported separately
 on each `update_interval`. Each is an ESPHome [sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and may be configured

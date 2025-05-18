@@ -57,6 +57,7 @@ MQTT options:
 - All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 
+{{< anchor "valve-open_action" >}}
 
 ## ``valve.open`` Action
 
@@ -78,6 +79,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "valve-close_action" >}}
 
 ## ``valve.close`` Action
 
@@ -99,6 +101,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "valve-stop_action" >}}
 
 ## ``valve.stop`` Action
 
@@ -120,6 +123,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "valve-toggle_action" >}}
 
 ## ``valve.toggle`` Action
 
@@ -142,6 +146,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "valve-control_action" >}}
 
 ## ``valve.control`` Action
 
@@ -177,6 +182,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "valve-lambda_calls" >}}
 
 ## Lambdas
 
@@ -207,6 +213,7 @@ read-only, if you want to act on the valve, use the `make_call()` method as show
     }
 
     ```
+{{< anchor "valve-on_open_trigger" >}}
 
 `valve.on_open` Trigger
 *************************
@@ -221,6 +228,7 @@ valve:
       - logger.log: "Valve is Open!"
 
 ```
+{{< anchor "valve-on_closed_trigger" >}}
 
 `valve.on_closed` Trigger
 ***************************

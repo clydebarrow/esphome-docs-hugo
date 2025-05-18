@@ -21,6 +21,7 @@ update:
     source: http://example.com/manifest.json
 
 ```
+{{< anchor "update_http_request-configuration_variables" >}}
 
 ## Configuration variables:
 
@@ -29,6 +30,7 @@ update:
   Defaults to 6 hours.
 - All other options from [Update]({{< ref "components/update/_index#config-update" >}}).
 
+{{< anchor "update_http_request-manifest_format" >}}
 
 ## Update Manifest Format
 

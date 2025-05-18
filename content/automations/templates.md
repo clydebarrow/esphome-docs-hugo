@@ -70,6 +70,7 @@ at the generated C++ source file under ``<NODE_NAME>/src/main.cpp``.
       num_executions += 1;
 
     ```
+{{< anchor "config-templatable" >}}
 
 ## Templating Actions
 

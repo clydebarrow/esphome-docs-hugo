@@ -44,6 +44,7 @@ This is an **output component** and will not be visible from the frontend. Outpu
 components that can be attached to for example lights.
 
 {{< /warning >}}
+{{< anchor "output-template-on_write_action" >}}
 
 ## ``write_action`` Trigger
 

@@ -52,6 +52,7 @@ should be prefixed with the page name (page0/page1 or whatever you have changed 
 
 `component_name: page0.text0`
 
+{{< anchor "text_sensor-nextion-publish_action" >}}
 
 ## ``text_sensor.nextion.publish`` Action
 
@@ -94,6 +95,7 @@ Configuration variables:
 This action can also be written in lambdas. See :ref:`nextion_text_sensor_lambda_calls`
     
 {{< /note >}}
+{{< anchor "nextion_text_sensor_lambda_calls" >}}
 
 Lambda Calls
 ************
@@ -101,17 +103,21 @@ Lambda Calls
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full :apiref:`nextion/text_sensor/nextion_textsensor.h` for more info).
 
+{{< anchor "nextion_text_sensor_set_state" >}}
 
 - `set_state(bool value, bool publish, bool send_to_nextion)`: Set the state to **value**. Publish the new state to HASS. Send_to_Nextion is to publish the state to the Nextion.
 
+{{< anchor "nextion_text_sensor_update" >}}
 
 - `update()`: Poll from the Nextion
 
+{{< anchor "nextion_text_sensor_settings" >}}
 
 - `set_background_color(Color color)`: Sets the background color to **Color**
 - `set_foreground_color(Color color)`: Sets the background color to **Color**
 - `set_visible(bool visible)` : Sets visible or not. If set to false, no updates will be sent to the component
 
+{{< anchor "nextion_text_sensor_how_things_update" >}}
 
 ## How things Update
 A Nextion component with an integer value (.val) or Nextion variable will be automatically polled if **update_interval** is set.
@@ -135,6 +141,7 @@ No updates will be sent to the Nextion if it is sleeping. Once it wakes, the com
 
 
 {{< /note >}}
+{{< anchor "nextion_custom_text_sensor_protocol" >}}
 
 ## Nextion Custom Text Sensor Protocol
 All lines are required

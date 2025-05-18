@@ -213,6 +213,7 @@ examples that are ready for you to copy and paste!
     to expose this switch to the front end; please see* [sprinkler-controller-an_important_note_about_gpio_switches_and_control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}})
     *below for more detail.* May not be specified with *valve_switch_id*.
 
+{{< anchor "sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}}
 
 ## An Important Note about GPIO Switches and Control
 
@@ -262,9 +263,11 @@ In summary, to ensure that your sprinkler controller consistently operates as ex
 These simple configuration tweaks will help prevent any number of errors (human, automation, or otherwise) and may help
 to avert disaster!
 
+{{< anchor "sprinkler-controller-actions" >}}
 
 ## Controller Actions
 
+{{< anchor "sprinkler-controller-action_start_full_cycle" >}}
 
 `sprinkler.start_full_cycle` action
 *************************************
@@ -280,6 +283,7 @@ on_...:
     - sprinkler.start_full_cycle: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_start_from_queue" >}}
 
 `sprinkler.start_from_queue` action
 *************************************
@@ -301,6 +305,7 @@ on_...:
         id: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_start_single_valve" >}}
 
 `sprinkler.start_single_valve` action
 ***************************************
@@ -320,6 +325,7 @@ on_...:
         run_duration: 600s  # optional
 
 ```
+{{< anchor "sprinkler-controller-action_shutdown" >}}
 
 `sprinkler.shutdown` action
 *****************************
@@ -332,6 +338,7 @@ on_...:
     - sprinkler.shutdown: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_next_valve" >}}
 
 `sprinkler.next_valve` action
 *******************************
@@ -347,6 +354,7 @@ on_...:
     - sprinkler.next_valve: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_previous_valve" >}}
 
 `sprinkler.previous_valve` action
 ***********************************
@@ -362,6 +370,7 @@ on_...:
     - sprinkler.previous_valve: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_pause" >}}
 
 `sprinkler.pause` action
 **************************
@@ -375,6 +384,7 @@ on_...:
     - sprinkler.pause: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_resume" >}}
 
 `sprinkler.resume` action
 ***************************
@@ -388,6 +398,7 @@ on_...:
     - sprinkler.resume: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_resume_or_start_full_cycle" >}}
 
 `sprinkler.resume_or_start_full_cycle` action
 ***********************************************
@@ -401,6 +412,7 @@ on_...:
     - sprinkler.resume_or_start_full_cycle: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_queue_valve" >}}
 
 `sprinkler.queue_valve` action
 ********************************
@@ -422,6 +434,7 @@ on_...:
         run_duration: 900s
 
 ```
+{{< anchor "sprinkler-controller-action_clear_queued_valves" >}}
 
 `sprinkler.clear_queued_valves` action
 ****************************************
@@ -436,6 +449,7 @@ on_...:
         id: sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-action_set_multiplier" >}}
 
 `sprinkler.set_multiplier` action
 ***********************************
@@ -457,6 +471,7 @@ on_...:
         multiplier: 1.5
 
 ```
+{{< anchor "sprinkler-controller-action_set_repeat" >}}
 
 `sprinkler.set_repeat` action
 *******************************
@@ -473,6 +488,7 @@ on_...:
         repeat: 2  # would run three cycles
 
 ```
+{{< anchor "sprinkler-controller-action_set_divider" >}}
 
 `sprinkler.set_divider` action
 ********************************
@@ -496,6 +512,7 @@ on_...:
         divider: 2
 
 ```
+{{< anchor "sprinkler-controller-action_set_valve_run_duration" >}}
 
 `sprinkler.set_valve_run_duration` action
 *******************************************
@@ -523,6 +540,7 @@ on_...:
   valve's run duration will remain unaffected until the next time it is started.
 
 {{< /note >}}
+{{< anchor "sprinkler-controller-pump_and_distribution_valve_coordination" >}}
 
 ## Pump and Distribution Valve Coordination
 
@@ -602,6 +620,7 @@ with `valve_open_delay`.
 
 In any case, the examples in the next section illustrate how/where to add these options into your configuration.
 
+{{< anchor "sprinkler-controller-examples" >}}
 
 ## Controller Examples
 
@@ -930,6 +949,7 @@ communicate to ensure any given pump is activated and deactivated only as necess
 the controllers are operating simultaneously.
 
 {{< /note >}}
+{{< anchor "sprinkler-controller-sprinkler_controller_numbers" >}}
 
 Using the Sprinkler Controller's Numbers
 ****************************************
@@ -980,6 +1000,7 @@ sprinkler:
     ...
 
 ```
+{{< anchor "sprinkler-controller-sprinkler_controller_extending_switches" >}}
 
 Extending the Sprinkler Controller's Switches
 *********************************************
@@ -1027,6 +1048,7 @@ is too low (look for `on_value` or `on_value_range`), the sprinkler controller (
 be activated by calling one of the controller's start-up actions, such as `sprinkler.start_full_cycle`,
 `sprinkler.start_from_queue`, `sprinkler.start_single_valve`, or `sprinkler.resume_or_start_full_cycle`.
 
+{{< anchor "sprinkler-controller-sprinkler_controller_queue" >}}
 
 The Sprinkler Controller Queue
 ******************************
@@ -1097,6 +1119,7 @@ api:
         - sprinkler.shutdown: lawn_sprinkler_ctrlr
 
 ```
+{{< anchor "sprinkler-controller-sprinkler_controller_understanding_state" >}}
 
 ## Understanding the Sprinkler Controller's State
 
@@ -1127,6 +1150,7 @@ component's specific configuration details before you can use them.
 With these points in mind, let's discuss some of the methods which indicate the state of the sprinkler controller.
 We'll approach this from the angle of *"how do I..."*
 
+{{< anchor "sprinkler-controller-sprinkler_controller_understanding_state_how_do_i" >}}
 
 How Do I...
 ***********

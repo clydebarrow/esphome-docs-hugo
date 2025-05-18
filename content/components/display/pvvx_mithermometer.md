@@ -55,6 +55,7 @@ display:
   or to keep the existing display content (must overwrite explicitly, e.g., only on data change). Defaults to `true` if a lambda or pages are configured, false otherwise.
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
+{{< anchor "display-pvvx_mithermometer_lambda" >}}
 
 ## Rendering Lambda
 

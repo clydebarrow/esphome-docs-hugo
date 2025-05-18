@@ -5,6 +5,7 @@ title: "Alarm Control Panel Component"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "config-alarm_control_panel" >}}
 
 ## Base Alarm Control Panel Configuration
 
@@ -54,6 +55,7 @@ Configuration variables:
 
 ## Automation:
 
+{{< anchor "alarm_control_panel_on_state_trigger" >}}
 
 `on_state` Trigger
 ********************
@@ -68,6 +70,7 @@ alarm_control_panel:
       - logger.log: "Alarm Panel State Changed!"
 
 ```
+{{< anchor "alarm_control_panel_on_pending_trigger" >}}
 
 `on_pending` Trigger
 **********************
@@ -82,6 +85,7 @@ alarm_control_panel:
       - logger.log: "Alarm Pending!"
 
 ```
+{{< anchor "alarm_control_panel_on_arming_trigger" >}}
 
 `on_arming` Trigger
 *********************
@@ -96,6 +100,7 @@ alarm_control_panel:
       - logger.log: "Alarm Arming!"
 
 ```
+{{< anchor "alarm_control_panel_on_armed_home_trigger" >}}
 
 `on_armed_home` Trigger
 *************************
@@ -110,6 +115,7 @@ alarm_control_panel:
       - logger.log: "Alarm armed_home!"
 
 ```
+{{< anchor "alarm_control_panel_on_armed_night_trigger" >}}
 
 `on_armed_night` Trigger
 **************************
@@ -124,6 +130,7 @@ alarm_control_panel:
       - logger.log: "Alarm armed_night!"
 
 ```
+{{< anchor "alarm_control_panel_on_armed_away_trigger" >}}
 
 `on_armed_away` Trigger
 *************************
@@ -138,6 +145,7 @@ alarm_control_panel:
       - logger.log: "Alarm armed_away!"
 
 ```
+{{< anchor "alarm_control_panel_on_triggered_trigger" >}}
 
 `on_triggered` Trigger
 ************************
@@ -152,6 +160,7 @@ alarm_control_panel:
       - logger.log: "Alarm Triggered!"
 
 ```
+{{< anchor "alarm_control_panel_on_cleared_trigger" >}}
 
 `on_cleared` Trigger
 **********************
@@ -166,6 +175,7 @@ alarm_control_panel:
       - logger.log: "Alarm Cleared!"
 
 ```
+{{< anchor "alarm_control_panel_on_disarmed_trigger" >}}
 
 `on_disarmed` Trigger
 ***********************
@@ -180,6 +190,7 @@ alarm_control_panel:
       - logger.log: "Alarm Disarmed!"
 
 ```
+{{< anchor "alarm_control_panel_on_ready_trigger" >}}
 
 `on_ready` Trigger
 ********************
@@ -196,6 +207,7 @@ alarm_control_panel:
           ESP_LOGI("AlarmPanel", "Sensor ready change to: %s", ((id(acp1).get_all_sensors_ready()) ? (const char *) "True" : (const char *) "False"));
 
 ```
+{{< anchor "alarm_control_panel_on_chime_trigger" >}}
 
 `on_chime` Trigger
 ********************
@@ -211,6 +223,7 @@ alarm_control_panel:
       - logger.log: "Alarm Chime!"
 
 ```
+{{< anchor "alarm_control_panel_arm_away_action" >}}
 
 `arm_away` Action
 *******************
@@ -225,6 +238,7 @@ on_...:
         code: "1234"
 
 ```
+{{< anchor "alarm_control_panel_arm_home_action" >}}
 
 `arm_home` Action
 *******************
@@ -239,6 +253,7 @@ on_...:
         code: "1234"
 
 ```
+{{< anchor "alarm_control_panel_arm_night_action" >}}
 
 `arm_night` Action
 ********************
@@ -253,6 +268,7 @@ on_...:
         code: "1234"
 
 ```
+{{< anchor "alarm_control_panel_disarm_action" >}}
 
 `disarm` Action
 *****************
@@ -267,6 +283,7 @@ on_...:
         code: "1234"
 
 ```
+{{< anchor "alarm_control_panel_pending_action" >}}
 
 `pending` Action
 ******************
@@ -279,6 +296,7 @@ on_...:
     - alarm_control_panel.pending: acp1
 
 ```
+{{< anchor "alarm_control_panel_triggered_action" >}}
 
 `triggered` Action
 ********************
@@ -291,6 +309,7 @@ on_...:
     - alarm_control_panel.triggered: acp1
 
 ```
+{{< anchor "alarm_control_panel_is_armed_condition" >}}
 
 `is_armed` Condition
 **********************
@@ -305,6 +324,7 @@ on_...:
 
 
 ```
+{{< anchor "alarm_control_panel_lambda_calls" >}}
 
 lambda calls
 ************

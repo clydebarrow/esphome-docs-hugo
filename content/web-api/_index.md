@@ -24,6 +24,7 @@ While it's currently recommended to use ESPHome directly through Home Assistant,
 to integrate ESPHome with an external or self-built application you can use two available
 APIs: the real-time event source API and REST API.
 
+{{< anchor "api-event-source" >}}
 
 Event Source API
 ~~~~~~~~~~~~~~~~
@@ -56,6 +57,7 @@ states so that the client can catch up with reality.
 The payloads of these state events are also the same as the payloads of the REST API GET calls.
 I would recommend just opening the network debug panel of your web browser to see what's sent.
 
+{{< anchor "api-rest" >}}
 
 ## REST API
 

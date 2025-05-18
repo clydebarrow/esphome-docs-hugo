@@ -11,6 +11,7 @@ In ESPHome, it is configured in two parts:
 - [esp32-touch-component]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-component" >}})
 - [esp32-touch-binary-sensor]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-binary-sensor" >}})
 
+{{< anchor "esp32-touch-component" >}}
 
 ## Component/Hub
 
@@ -104,6 +105,7 @@ Waterproof configuration:
 For a more detailed explanation of the waterproof configuration, please see the
 [ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv420touch_pad_waterproof)
 
+{{< anchor "esp32-touch-binary-sensor" >}}
 
 ## Binary Sensor
 
@@ -169,6 +171,7 @@ One example of use is a wide area pressure sensor that integrates a number of sm
 of aluminium foil that sandwich paper, and connect one wire to a touch pin and the other to ground. Set up several sensors
 under a flexible object like a plastic mat, add the raw values, and apply a threshold.
 
+{{< anchor "esp32-touch-pad-pins" >}}
 
 ## Touch Pad Pins
 
@@ -180,6 +183,7 @@ Various pins on the ESP32, ESP32-S2 and ESP32-S3 can be used to detect touches. 
 | GPIO4, GPIO0, GPIO2, GPIO15, GPIO13, GPIO12, GPIO14, GPIO27, GPIO33, GPIO32 | GPIO1 - GPIO14 | GPIO1 - GPIO14 |
 
 
+{{< anchor "esp32-finding-thresholds" >}}
 
 ## Finding Thresholds
 
@@ -221,6 +225,7 @@ configuration. You may need to repeat this process a few times to fine-tune the 
 Finally, don't forget to disable the `setup_mode` option by setting it back to `false`; leaving it enabled will
 reduce the ESP's overall performance.
 
+{{< anchor "esp32-note-about-variants" >}}
 
 ## A Note About S2 and S3 Variants
 

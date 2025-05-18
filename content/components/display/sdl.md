@@ -5,6 +5,7 @@ title: "SDL2 Display on host platform"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "sdl" >}}
 
 ## Usage
 

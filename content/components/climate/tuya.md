@@ -111,6 +111,7 @@ If the device has different multipliers for current and target temperatures, **t
 
 - All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
+{{< anchor "active_state_detection" >}}
 
 ## Active state detection
 
@@ -123,6 +124,7 @@ If none of the above variables are set, the active state is inferred from the di
 - If **supports_heat** is `True` and the current temperature is more than 1 °C below the target temperature, the device is expected to be heating.
 - If **supports_cool** is `True` and the current temperature is more than 1 °C above the target temperature, the device is expected to be cooling.
 
+{{< anchor "temperature-multiplier" >}}
 
 ## Temperature multiplier
 

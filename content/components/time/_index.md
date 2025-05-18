@@ -8,6 +8,7 @@ title: "Time Component"
 The `time` component allows you to set up real time clock time sources for ESPHome.
 You can then get the current time in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
+{{< anchor "base_time_config" >}}
 
 ## Base Time Configuration
 
@@ -28,6 +29,7 @@ Configuration variables:
 - **on_time_sync** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run when the time source
   could be (re-)synchronized.. See [time-on_time_sync]({{< ref "components/time/_index#time-on_time_sync" >}}).
 
+{{< anchor "time-has_time_condition" >}}
 
 `time.has_time` Condition
 ***************************
@@ -50,6 +52,7 @@ lambda: |-
     }
 
 ```
+{{< anchor "time-on_time" >}}
 
 `on_time` Trigger
 *******************
@@ -185,6 +188,7 @@ despite allowing the use of similar `crontab` syntax. Similarly, triggers on day
 ("every 31st of the month") will be skipped when those dates do not exist.
 
 {{< /note >}}
+{{< anchor "time-on_time_sync" >}}
 
 `on_time_sync` Trigger
 ************************
@@ -263,6 +267,7 @@ make sure to check if ``.is_valid()`` evaluates to ``true`` before triggering an
 
 
 {{< /note >}}
+{{< anchor "strftime" >}}
 
 strftime
 ********

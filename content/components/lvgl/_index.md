@@ -193,6 +193,7 @@ A buffer size less than 100% can also be useful when PSRAM *is* available to *im
 RAM if possible, which will increase the speed of display redraws, since internal RAM is much faster to access than PSRAM.
 This may however reduce the internal RAM available for other components. A buffer size greater than 25% will be always allocated in PSRAM if available.
 
+{{< anchor "lvgl-multi-conf" >}}
 
 
 Multiple LVGL configurations
@@ -213,6 +214,7 @@ lvgl:
         - label:
             text: 'Hello World #2!'
 ```
+{{< anchor "lvgl-color" >}}
 
 Colors
 ******
@@ -229,6 +231,7 @@ label:
   color: !lambda return lv_color_hex(0xFF0000);
 
 ```
+{{< anchor "lvgl-opacity" >}}
 
 Opacity
 *******
@@ -242,6 +245,7 @@ Various parts of the widgets (like background, borders etc.) support opacity. It
 
 Default values depend on widget specifics.
 
+{{< anchor "lvgl-fonts" >}}
 
 Fonts
 *****
@@ -303,6 +307,7 @@ In addition to the above, the following special fonts are available from LVGL as
 - [simsun_16_cjk`: 16 px font with normal range + 1000 most common `CJK Radicals](https://en.wikipedia.org/wiki/CJK_Radicals_Supplement).
 - `dejavu_16_persian_hebrew`: 16 px font with normal range + Hebrew, Arabic, Persian letters and all their forms.
 
+{{< anchor "lvgl-styling" >}}
 
 Style properties
 ****************
@@ -319,8 +324,7 @@ LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/W
 
 You can adjust the appearance of widgets by changing their foreground, background, border color and/or font. Some widgets allow for more complex styling, effectively changing all or part of their appearance.
 
-Using Lambdas for Styling
-^^^^^^^^^^^^^^^^^^^^^^^^^
+### Using Lambdas for Styling
 
 Most LVGL style and widget properties can be set as either constant values or lambdas (which will be evaluated at run time).
 When using lambdas, the returned value must be of the type and within the range expected by the native LVGL library, which may not be the same
@@ -334,8 +338,7 @@ floating point, instead uses scaled integers. Properties with the following nati
 - **zoom** Zoom levels should be multiplied by 256 (valid range is 0 to 2560, corresponding to 0-10.0).
 - **percentage** To convert a fractional value to a percentage, use `lv_pct(value * 100)`
 
-Style properties
-^^^^^^^^^^^^^^^^
+### Style properties
 
 These style properties may be applied to any widget, though not all widgets use all of them.
 
@@ -392,6 +395,7 @@ These style properties may be applied to any widget, though not all widgets use 
 - **translate_x** (*Optional*, int16 or percentage): Movement of the widget with this value in horizontal direction.
 - **translate_y** (*Optional*, int16 or percentage): Movement of the widget with this value in vertical direction.
 
+{{< anchor "lvgl-theme" >}}
 
 Themes
 ******
@@ -499,6 +503,7 @@ on_...:
         border_color: 0x00FF00
 
 ```
+{{< anchor "lvgl-layouts" >}}
 
 Layouts
 *******
@@ -641,6 +646,7 @@ Values for use with `grid_column_align`, `grid_row_align`, `grid_cell_x_align`, 
 
     To visualize real, calculated sizes of transparent widgets you can temporarily set `outline_width: 1` on them.
 
+{{< anchor "lvgl-gradients" >}}
 
 Gradients
 *********
@@ -691,6 +697,7 @@ Widgets support [general or specific]({{< ref "components/lvgl/widgets#lvgl-auto
 Several actions are available for the LVGL component itself, these are outlined below. Note that if multiple LVGL instances are configured, an **lvgl_id** config entry will be required to specify which instance the action relates to. This is not required if there is only a single LVGL instance configured.
 
 
+{{< anchor "lvgl-redraw-action" >}}
 
 `lvgl.widget.redraw`
 **********************
@@ -709,6 +716,7 @@ on_...:
 
 
 ```
+{{< anchor "lvgl-refresh-action" >}}
 
 `lvgl.widget.refresh`
 ***********************
@@ -732,6 +740,7 @@ on_...:
 
 
 ```
+{{< anchor "lvgl-pause-action" >}}
 
 `lvgl.pause`
 **************
@@ -748,6 +757,7 @@ on_...:
         show_snow: true
 
 ```
+{{< anchor "lvgl-resume-action" >}}
 
 `lvgl.resume`
 ***************
@@ -778,6 +788,7 @@ on_...:
         disp_bg_image: cat_image
 
 ```
+{{< anchor "lvgl-page-next-previous-action" >}}
 
 `lvgl.page.next`, `lvgl.page.previous`
 ******************************************
@@ -801,6 +812,7 @@ on_...:
         time: 300ms
 
 ```
+{{< anchor "lvgl-page-show-action" >}}
 
 `lvgl.page.show`
 ******************
@@ -822,6 +834,7 @@ on_...:
     - lvgl.page.show: secret_page  # shorthand version
 
 ```
+{{< anchor "lvgl-widget-focus-action" >}}
 
 `lvgl.widget.focus`
 *********************
@@ -871,9 +884,11 @@ on_...:
 
 
 ```
+{{< anchor "lvgl-conditions" >}}
 
 ## Conditions
 
+{{< anchor "lvgl-is-idle-condition" >}}
 
 `lvgl.is_idle`
 ****************
@@ -897,6 +912,7 @@ on_...:
               transition_length: 3s
 
 ```
+{{< anchor "lvgl-is-paused-condition" >}}
 
 `lvgl.is_paused`
 ******************
@@ -937,6 +953,7 @@ on_...:
 
 Widget level [interaction triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) are available, plus a few for the LVGL component itself:
 
+{{< anchor "lvgl-on-idle-trigger" >}}
 
 `on_idle`
 ***********
@@ -962,12 +979,14 @@ lvgl:
 ```
 See [lvgl-cookbook-idlescreen]({{< ref "cookbook/lvgl#lvgl-cookbook-idlescreen" >}}) for an example which demonstrates how to implement screen saving with idle settings.
 
+{{< anchor "lvgl_on_pause_trigger" >}}
 
 `on_pause`
 ************
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered when LVGL is paused. This can be used to perform any desired actions when the screen is locked, such as turning off the display backlight.
 
+{{< anchor "lvgl_on_resume_trigger" >}}
 
 `on_resume`
 *************

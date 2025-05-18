@@ -254,6 +254,7 @@ remote_receiver:
           - ...
 
 ```
+{{< anchor "remote-receiver-binary-sensor" >}}
 
 ## Binary Sensor
 

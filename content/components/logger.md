@@ -56,6 +56,7 @@ Advanced settings:
    Note: Deassert typically means a TTL high level
    level since RTS/DTR are usually low active signals.
 
+{{< anchor "logger-hardware_uarts" >}}
 
 ## Hardware UARTs
 
@@ -82,6 +83,7 @@ Default UART GPIO Pins
 
 *Undefined* means that the logger component cannot use this harware UART at this time.
 
+{{< anchor "logger-default_hardware_interfaces" >}}
 
 ## Default Hardware Interfaces
 
@@ -101,6 +103,7 @@ the original ESP32 or ESP8266) continue to use USB-to-serial bridge ICs for comm
 | RP2040 | `USB_CDC` | N/A |
 
 
+{{< anchor "logger-log_levels" >}}
 
 ## Log Levels
 
@@ -139,6 +142,7 @@ Possible log levels are (sorted by severity):
     I²C, SPI or UART. Warning: May cause the device to slow down and have trouble staying
     connecting due to amount of generated messages. Color: white
 
+{{< anchor "logger-manual_tag_specific_levels" >}}
 
 ## Manual Tag-Specific Log Levels
 
@@ -169,6 +173,7 @@ purge all `DEBUG` log statements from the binary in order to conserve
 space. This however means that you cannot set tag-specific log levels
 that have a lower severity than the global log level.
 
+{{< anchor "logger-log_action" >}}
 
 ## ``logger.log`` Action
 
@@ -217,6 +222,7 @@ on_...:
 ```
 ## Logger Automation
 
+{{< anchor "logger-on_message" >}}
 
 `on_message`
 **************

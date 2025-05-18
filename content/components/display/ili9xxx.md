@@ -5,6 +5,7 @@ title: "ILI9xxx TFT LCD Series"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "ili9xxx" >}}
 
 ## Models
 With this display driver you can control the following displays:

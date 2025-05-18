@@ -63,6 +63,7 @@ uart:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for this UART hub if you need multiple UART hubs.
 - **debug** (*Optional*, mapping): Options for debugging communication on the UART hub, see [uart-debugging]({{< ref "components/uart#uart-debugging" >}}).
 
+{{< anchor "uart-hardware_uarts" >}}
 
 ## Hardware UARTs
 
@@ -85,6 +86,7 @@ use `tx_pin: GPIO2`. Any other combination of pins will result in use of a softw
 The Software UART is only available on the ESP8266. It is not available on ESP32 and variants.
 
 {{< /note >}}
+{{< anchor "uart-write_action" >}}
 
 ## ``uart.write`` Action
 
@@ -110,6 +112,7 @@ on_...:
       data: 'other data'
 
 ```
+{{< anchor "uart-debugging" >}}
 
 ## Debugging
 
@@ -177,6 +180,7 @@ In that case, either make sure that the debugger outputs less data per log line 
 `after.bytes` option to a lower value) or increase the logger buffer size using the logger
 `tx_buffer_size` option.
 
+{{< anchor "uart-runtime_change" >}}
 
 ## Changing at runtime
 

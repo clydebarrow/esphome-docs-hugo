@@ -83,6 +83,7 @@ Additional Considerations
 
 - We'll update our recommendations here as support is added/matures for newer microcontrollers.
 
+{{< anchor "faq-usb_installation" >}}
 
 ## How do I install ESPHome onto my device?
 
@@ -113,6 +114,7 @@ If you prefer the more manual way:
   - [esptool` `from the GitHub repository](https://github.com/espressif/esptool/releases). It's likely available
     as package for your OS or you can try installing it with `pip install esptool` (in case of Linux).
 
+{{< anchor "esphome-esptool" >}}
 
 ## What is ``esptool``?
 
@@ -146,6 +148,7 @@ This will install ("flash") your binary (ESPHome) onto your microcontroller.
 esptool --port /dev/ttyUSB0 write_flash 0x0 your_node_firmware.bin
 
 ```
+{{< anchor "faq-usb_troubleshooting" >}}
 
 ## I can't get installation over USB to work
 
@@ -262,6 +265,7 @@ That's no good. Here are some steps that resolve some problems:
   [ESPHome issue tracker](https://github.com/esphome/issues/issues). If not, you can create a new issue to describe your
   problem there. We will take a look at it as soon as we can. Thanks!
 
+{{< anchor "faq-bug_report" >}}
 
 ## How do I report an issue?
 
@@ -296,6 +300,7 @@ pip3 install -U esphome
 docker pull ghcr.io/esphome/esphome:stable
 
 ```
+{{< anchor "faq-beta" >}}
 
 ## How do I update to the latest beta release?
 
@@ -375,6 +380,7 @@ Sure! We are happy to help :) You can contact us here:
    feature requests.
 -  **If your inquiry is not regarding support**, you can [e-mail us](mailto:esphome@openhomefoundation.org).
 
+{{< anchor "wifi-problems" >}}
 
 ## My node keeps reconnecting randomly
 
@@ -489,6 +495,7 @@ services:
     restart: always
 
 ```
+{{< anchor "docker-reference-notes" >}}
 
 {{< note >}}
 By default, ESPHome uses mDNS to resolve device IPs on the network; this is used to determine online/offline state
@@ -514,6 +521,7 @@ pings to check the status of devices by setting ``"status_use_ping": true`` or, 
 See also https://github.com/esphome/issues/issues/641#issuecomment-534156628.
 
 {{< /note >}}
+{{< anchor "faq-notes_on_disabling_mdns" >}}
 
 ## Notes on disabling mDNS
 
@@ -555,6 +563,7 @@ Important: follow these [instructions](/components/esphome.html#changing-esphome
 `use_address` parameter when renaming a live device, as the connection to an existing device will only
 work with the old name until the name change is complete.
 
+{{< anchor "strapping-warnings" >}}
 
 ## Why am I getting a warning about strapping pins?
 

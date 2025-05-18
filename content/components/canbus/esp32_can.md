@@ -30,6 +30,7 @@ canbus:
   dropping the message (by default, this is set to the time it takes to send 10 CAN messages at the given bit rate).
 - All other options from [Canbus]({{< ref "components/canbus/_index#config-canbus" >}}).
 
+{{< anchor "esp32-can-bit-rate" >}}
 
 The following table lists the bit rates supported by the component for ESP32 variants:
 

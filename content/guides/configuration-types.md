@@ -8,6 +8,7 @@ title: "Configuration Types"
 ESPHome's configuration files have several configuration types. This
 page describes them.
 
+{{< anchor "config-id" >}}
 
 ## ID
 
@@ -35,6 +36,7 @@ These IDs are used only within ESPHome and are not translated to Home Assistant'
 
 
 {{< /note >}}
+{{< anchor "config-pin" >}}
 
 ## Pin
 
@@ -60,6 +62,7 @@ some_config_option:
   pin: D0
 
 ```
+{{< anchor "config-pin_schema" >}}
 
 ## Pin Schema
 
@@ -124,6 +127,7 @@ Advanced options:
   If you are *absolutely* sure that you are using a strapping pin for I/O in a way that will not cause problems,
   you can suppress the warning by setting this option to `true` in the pin configuration.
 
+{{< anchor "config-time" >}}
 
 ## Time
 

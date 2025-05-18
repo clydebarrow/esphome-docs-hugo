@@ -55,8 +55,7 @@ Configuration variables:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.  Required if you have
   multiple busses.
 
-Optional Boiler-specific Configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Optional Boiler-specific Configuration
 Some boilers require certain OpenTherm messages to be sent by thermostat on initialization in order to work
 correctly. You can use the following settings in hub configuration to make your particular boiler happy.
 
@@ -70,8 +69,7 @@ correctly. You can use the following settings in hub configuration to make your 
   configuration
 - **controller_id** (*Optional*, byte [0-255], OpenTherm message id `2` low byte): Controller ID code
 
-Automations
-^^^^^^^^^^^
+### Automations
 
 - **before_send** (**Optional**) An automation to perform on OpenTherm message before it is sent to the boiler.
 - **before_process_response** (**Optional**) An automation to perform on boiler response before it is processed.
@@ -334,6 +332,7 @@ available:
 - `otc_hc_ratio_ub`: OTC heat curve ratio upper bound
 - `otc_hc_ratio_lb`: OTC heat curve ratio lower bound
 
+{{< anchor "on-the-fly-message-editing" >}}
 
 ## On-the-fly Message Editing
 
@@ -389,6 +388,7 @@ number:
       name: "Boiler Control setpoint"
 
 ```
+{{< anchor "thermostat-pid-basic" >}}
 
 Basic PID thermostat
 ********************

@@ -53,6 +53,7 @@ binary_sensor:
 - **condition** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine the value of the binary sensor. `lambda` and `condition` may not both be present in the configuration.
 -  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
+{{< anchor "binary_sensor-template-publish_action" >}}
 
 ## ``binary_sensor.template.publish`` Action
 

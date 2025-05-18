@@ -70,6 +70,7 @@ Possible return values for the optional lambda:
   Used only when `has_position` is set to `true`.
 - All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
 
+{{< anchor "cover-template-publish_action" >}}
 
 ## ``cover.template.publish`` Action
 

@@ -13,6 +13,7 @@ The Microchip MCP230xx series of general purpose, parallel I/O expansion for I²
 - [mcp23016-label]({{< ref "components/mcp230xx#mcp23016-label" >}})
 - [mcp23017-label]({{< ref "components/mcp230xx#mcp23017-label" >}})
 
+{{< anchor "mcp23008-label" >}}
 
 ## MCP23008 Component
 
@@ -71,6 +72,7 @@ Pin configuration variables:
   should be treated as inverted. Defaults to `false`.
 - **mode** (*Optional*, string): A pin mode to set for the pin at. One of `INPUT` or `OUTPUT`.
 
+{{< anchor "mcp23016-label" >}}
 
 ## MCP23016 Component
 
@@ -127,6 +129,7 @@ Pin configuration variables:
 - All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
 
+{{< anchor "mcp23017-label" >}}
 
 ## MCP23017 Component
 

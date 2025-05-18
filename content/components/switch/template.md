@@ -49,6 +49,7 @@ Possible return values for the optional lambda:
   of hiding one of them when the switch is ON/OFF. Defaults to `false`.
 - All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
+{{< anchor "switch-template-publish_action" >}}
 
 ## ``switch.template.publish`` Action
 

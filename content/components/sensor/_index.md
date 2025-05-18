@@ -9,6 +9,7 @@ ESPHome has support for many different sensors. Each of them is a
 platform of the `sensor` domain and each sensor has several base
 configuration options.
 
+{{< anchor "config-sensor" >}}
 
 ## Base Sensor Configuration
 
@@ -105,6 +106,7 @@ reports temperature *and* humidity - put the ``filters`` option into each sensor
             # ...
 
 {{< /note >}}
+{{< anchor "sensor-filters" >}}
 
 ## Sensor Filters
 
@@ -467,6 +469,7 @@ Configuration variables:
 
 Multiplies each value by a templatable value.
 
+{{< anchor "sensor-filter-calibrate_linear" >}}
 
 
 
@@ -624,6 +627,7 @@ Configuration variables:
   published. With this parameter you can specify when the very first value is to be sent.
   Defaults to `1`.
 
+{{< anchor "sensor-filter-exponential_moving_average" >}}
 
 
 
@@ -819,12 +823,14 @@ filters:
 unit_of_measurement: "°F"
 
 ```
+{{< anchor "sensor-automations" >}}
 
 ## Sensor Automation
 
 You can access the most recent state of the sensor in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
 `id(sensor_id).state` and the most recent raw state using `id(sensor_id).raw_state`.
 
+{{< anchor "sensor-on_value" >}}
 
 `on_value`
 ************
@@ -846,6 +852,7 @@ sensor:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "sensor-on_value_range" >}}
 
 `on_value_range`
 ******************
@@ -883,6 +890,7 @@ Configuration variables:
 - **below** (*Optional*, float): The maximum for the trigger.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "sensor-on_raw_value" >}}
 
 `on_raw_value`
 ****************
@@ -904,6 +912,7 @@ sensor:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "sensor-in_range_condition" >}}
 
 `sensor.in_range` Condition
 *****************************
@@ -930,6 +939,7 @@ Configuration variables:
 - **above** (*Optional*, float): The minimum for the condition.
 - **below** (*Optional*, float): The maximum for the condition.
 
+{{< anchor "sensor-lambda_calls" >}}
 
 lambda calls
 ************

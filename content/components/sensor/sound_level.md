@@ -39,6 +39,7 @@ sensor:
 
   - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
+{{< anchor "sound_level-passive" >}}
 
 ## Passive Mode
 
@@ -49,18 +50,17 @@ Some devices do not support duplex audio, meaning they cannot output audio to a 
 
 
 {{< /warning >}}
+{{< anchor "sound_level-actions" >}}
 
 ## Sound Level Actions
 
 The following actions are available for use in automations:
 
-`sound_level.start` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``sound_level.start`` Action
 
 Starts measuring sound levels. Does nothing in passive mode.
 
-`sound_level.stop` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``sound_level.stop`` Action
 
 Stops measuring sound levels. Does nothing in passive mode.
 

@@ -41,6 +41,7 @@ linked to the uFire EC configuration.
 - **temperature_coefficient** (*Optional*, float): Set the temperature coefficient for the EC
   sensor. Defaults to `0.019`.
 
+{{< anchor "sensor-ufire_ec-calibrate_probe_action" >}}
 
 ## ``ufire_ec.calibrate_probe`` Action
 
@@ -68,6 +69,7 @@ Configuration options:
 - **solution** (**Required**, float): Solution reference EC value.
 - **temperature** (**Required**, float): Solution current temperature.
 
+{{< anchor "sensor-ufire_ec-reset_action" >}}
 
 ## ``ufire_ec.reset`` Action
 

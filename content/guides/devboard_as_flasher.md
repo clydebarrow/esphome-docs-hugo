@@ -4,6 +4,7 @@ title: "Using an ESP devboard as a USB-UART bridge"
 ---
 
 
+{{< anchor "devboard-as-flasher" >}}
 
 ESP development boards usually have an onboard USB interface,
 either built into the chip (e.g. ESP32-S Series) or via an onboard USB-UART bridge chip.
@@ -53,6 +54,7 @@ Once the connections are made, plug the flasher board into your computer via USB
 
 ## Making an ESP32-S Series devboard act like a USB-UART bridge
 
+{{< anchor "esp32s-usb-uart-bridge" >}}
 
 Users with ESP32-S2/S3 devboards can have a look at https://github.com/espressif/esp-usb-bridge instead.
 But be warned, it demands flashing your S2/S3 board using ESP-IDF to act like a USB_UART bridge first.

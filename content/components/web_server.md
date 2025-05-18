@@ -139,10 +139,12 @@ web_server:
 Copy https://oi.esphome.io/v2/www.js to a V2 folder in your yaml folder.
 
 
+{{< anchor "config-webserver-version-3-options" >}}
 
 ## Version 3 features
 
 
+{{< anchor "config-webserver-sorting" >}}
 
 Entity sorting
 **************
@@ -167,6 +169,7 @@ sensor:
 
 
 ```
+{{< anchor "config-webserver-grouping" >}}
 
 Entity grouping
 ***************

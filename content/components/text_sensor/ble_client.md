@@ -45,6 +45,7 @@ Automations:
 
 ## BLE Sensor Automation
 
+{{< anchor "ble_text_sensor-on_notify" >}}
 
 `on_notify`
 *************

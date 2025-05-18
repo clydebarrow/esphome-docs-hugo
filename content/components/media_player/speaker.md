@@ -57,6 +57,7 @@ media_player:
 - **on_volume** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the volume is changed.
 - All other options from [Media Player]({{< ref "components/media_player/_index#config-media_player" >}})
 
+{{< anchor "media_player-speaker-examples" >}}
 
 ## Example Configuration
 
@@ -140,9 +141,9 @@ switch:
 ```
 ## Automations
 
+{{< anchor "media_player-speaker-play_on_device_media_file" >}}
 
-`media_player.speaker.play_on_device_media_file` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.speaker.play_on_device_media_file`` Action
 
 This action will play a on-device media file.
 
@@ -163,6 +164,7 @@ Configuration variables:
 - **announcement** (*Optional*, boolean): Whether to play back the file as an announcement or media stream. Defaults to `false`.
 - **enqueue** (*Optional*, boolean): Whether to add the media file to the end of the pipeline's internal playlist. Defaults to `false`.
 
+{{< anchor "media_player-speaker-performance" >}}
 
 ## Performance
 
@@ -174,6 +176,7 @@ Increasing the buffer size may reduce stuttering, but do not set it to the entir
 
 Only set `task_stack_in_psram` to true if you have many components configured and your logs show that memory allocation failed. It is slower, especially if your PSRAM doesn't support `octal` mode.
 
+{{< anchor "media_player-speaker-troubleshooting" >}}
 
 ## Troubleshooting
 

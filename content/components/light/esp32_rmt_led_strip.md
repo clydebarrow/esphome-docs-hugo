@@ -82,6 +82,7 @@ Arduino configuration variables:
 
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
+{{< anchor "esp32-rmt-led-strip-manual_timings" >}}
 
 Manual Timings
 **************

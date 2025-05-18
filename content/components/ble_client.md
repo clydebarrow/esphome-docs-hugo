@@ -61,6 +61,7 @@ Automations:
 
 ## BLE Client Automation
 
+{{< anchor "ble_client-on_connect" >}}
 
 `on_connect`
 **************
@@ -77,6 +78,7 @@ ble_client:
             ESP_LOGD("ble_client_lambda", "Connected to BLE device");
 
 ```
+{{< anchor "ble_client-on_disconnect" >}}
 
 `on_disconnect`
 *****************
@@ -94,6 +96,7 @@ ble_client:
 
 
 ```
+{{< anchor "ble_client-on_passkey_request" >}}
 
 `on_passkey_request`
 **********************
@@ -111,6 +114,7 @@ ble_client:
             passkey: 123456
 
 ```
+{{< anchor "ble_client-on_passkey_notification" >}}
 
 `on_passkey_notification`
 ***************************
@@ -128,6 +132,7 @@ ble_client:
             args: [ passkey ]
 
 ```
+{{< anchor "ble_client-on_numeric_comparison_request" >}}
 
 `on_numeric_comparison_request`
 *********************************
@@ -148,6 +153,7 @@ ble_client:
             accept: True
 
 ```
+{{< anchor "ble_client-connect_action" >}}
 
 ## ``ble_client.connect`` Action
 
@@ -189,12 +195,14 @@ Any actions after the `connect` action will proceed only after the connect succe
 fails the subsequent actions in the automation block will *not* be executed. This should be considered
 if scanning has been stopped - another mechanism may be required to restart it.
 
+{{< anchor "ble_client-disconnect_action" >}}
 
 ## ``ble_client.disconnect`` Action
 
 This action disconnects a device that was connected with the `ble_client.connect` action.
 Execution of the automation block sequence resumes after the disconnect has completed.
 
+{{< anchor "ble_client-ble_write_action" >}}
 
 ## ``ble_client.ble_write`` Action
 
@@ -237,6 +245,7 @@ Configuration variables:
 - **characteristic_uuid** (**Required**, UUID): UUID of the service's characteristic to write to.
 - **value** (**Required**, Array of bytes or [lambda]({{< ref "automations/templates#config-lambda" >}})): The value to be written.
 
+{{< anchor "ble_client-passkey_reply_action" >}}
 
 ## ``ble_client.passkey_reply`` Action
 
@@ -257,6 +266,7 @@ Configuration variables:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
 - **passkey** (**Required**, int): The 6-digit passkey.
 
+{{< anchor "ble_client-numeric_comparison_reply_action" >}}
 
 ## ``ble_client.numeric_comparison_reply`` Action
 
@@ -278,6 +288,7 @@ Configuration variables:
 - **accept** (**Required**, boolean): Should be `true` if the passkeys
   displayed on both BLE devices are matching.
 
+{{< anchor "ble_client-remove_bond_action" >}}
 
 ## ``ble_client.remove_bond`` Action
 

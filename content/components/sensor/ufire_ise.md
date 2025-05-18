@@ -38,6 +38,7 @@ be on the same board or external sensor linked to the uFire ISE pH configuration
 - **temperature** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   Can't be used together with `temperature_sensor`.
 
+{{< anchor "sensor-ufire_ise-calibrate_probe_high_action" >}}
 
 ## ``ufire_ise.calibrate_probe_high`` Action
 
@@ -64,6 +65,7 @@ Configuration options:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the ufire pH sensor.
 - **solution** (**Required**, float): Solution reference pH value.
 
+{{< anchor "sensor-ufire_ise-calibrate_probe_low_action" >}}
 
 ## ``ufire_ise.calibrate_probe_low`` Action
 
@@ -90,6 +92,7 @@ Configuration options:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the ufire pH sensor.
 - **solution** (**Required**, float): Solution reference pH value.
 
+{{< anchor "sensor-ufire_ise-reset_action" >}}
 
 ## ``ufire_ise.reset`` Action
 

@@ -45,6 +45,7 @@ esp32_ble_server:
 - **services** (*Optional*, list of [esp32_ble_server-service]({{< ref "components/esp32_ble_server#esp32_ble_server-service" >}})): A list of services to expose on the BLE GATT server.
 
 
+{{< anchor "esp32_ble_server-service" >}}
 
 ## Service Configuration
 
@@ -70,6 +71,7 @@ Configuration variables:
 - **characteristics** (*Optional*, list of [esp32_ble_server-characteristic]({{< ref "components/esp32_ble_server#esp32_ble_server-characteristic" >}})): A list of characteristics to expose in this service.
 
 
+{{< anchor "esp32_ble_server-characteristic" >}}
 
 ## Characteristic Configuration
 
@@ -112,6 +114,7 @@ Configuration variables:
 - **on_write** (*Optional*, [esp32_ble_server-characteristic-on_write]({{< ref "components/esp32_ble_server#esp32_ble_server-characteristic-on_write" >}})): An action to be performed when the characteristic is written to. The characteristic must have the `write` property. See [Automation]({{< ref "automations/_index#automation" >}}).
 
 
+{{< anchor "esp32_ble_server-descriptor" >}}
 
 ## Descriptor Configuration
 
@@ -137,6 +140,7 @@ Configuration variables:
 - **value** (**Required**, [esp32_ble_server-descriptor-set_value]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor-set_value" >}})): The value of the descriptor. [templatable]({{< ref "automations/templates#config-templatable" >}}) values are not allowed. In order to set the value of a descriptor dynamically, use the [esp32_ble_server-value]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) action.
 
 
+{{< anchor "esp32_ble_server-value" >}}
 
 ## Value Configuration
 
@@ -186,6 +190,7 @@ Configuration variables:
 - **string_encoding** (*Optional*, string): The encoding of the string. Only applicable if the type is [string`. The conversion is done in Python before compilation, so the encoding must be a valid `Python encoding](https://docs.python.org/3/library/codecs.html#standard-encodings). Defaults to `utf-8`.
 
 
+{{< anchor "esp32_ble_server-characteristic-on_write" >}}
 
 ## ``on_write`` Trigger
 
@@ -239,6 +244,7 @@ Configuration variables:
 - **id** (**Required**, string): The ID of the characteristic to notify the client about (must have the `notify` property).
 
 
+{{< anchor "esp32_ble_server-descriptor-set_value" >}}
 
 ## ``ble_server.descriptor.set_value`` Action
 

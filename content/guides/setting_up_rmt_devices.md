@@ -5,6 +5,7 @@ title: "Setting up IR Devices"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "remote-setting-up-infrared" >}}
 
 
 In this guide an infrared device will be set up with ESPHome. First, the remote code
@@ -81,6 +82,7 @@ button:
 Recompile again, when you power up the device the next time you will see a new button
 in the frontend. Click on it and you should see the remote signal being transmitted. Done!
 
+{{< anchor "remote-setting-up-rf" >}}
 
 # Setting up RF Devices
 

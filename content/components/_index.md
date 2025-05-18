@@ -11,6 +11,7 @@ title: "ESPHome Docs"
 
 This page is an index of all of the hardware components and platforms ESPHome currently supports.
 
+{{< anchor "devices" >}}
 
 ## Supported Microcontrollers
 
@@ -699,6 +700,7 @@ Miscellaneous
     LCD Menu, components/display_menu/lcd_menu, lcd_menu.png
     LVGL Graphics, components/lvgl/index, lvgl.png
 
+{{< anchor "display-hw" >}}
 
 ## Display Hardware Platforms
 
@@ -1028,6 +1030,7 @@ ESPHome to cellular networks. **Does not encompass Wi-Fi.**
     Sun, components/sun, weather-sunny.svg, dark-invert
     Tuya MCU, components/tuya, tuya.png
 
+{{< anchor "cookbook" >}}
 
 ## Cookbook
 

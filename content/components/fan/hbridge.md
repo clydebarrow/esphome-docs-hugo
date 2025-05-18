@@ -43,6 +43,7 @@ The `hbridge` fan platform allows you to use a compatible *h-bridge* (L298N, DRV
 - **preset_modes** (*Optional*): A list of preset modes for this fan. Preset modes can be used in automations (i.e. `on_preset_set`).
 - All other options from [Fan Component]({{< ref "components/fan/_index#config-fan" >}}).
 
+{{< anchor "fan-hbridge_brake_action" >}}
 
 ## ``fan.hbridge.brake`` Action
 

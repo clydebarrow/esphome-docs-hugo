@@ -89,6 +89,7 @@ Configuration variables:
 
   - All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
+{{< anchor "sim800l-on_sms_received" >}}
 
 ## ``on_sms_received`` Trigger
 
@@ -104,6 +105,7 @@ on_sms_received:
       id(sms_message).publish_state(message);
 
 ```
+{{< anchor "sim800l-on_incoming_call" >}}
 
 ## ``on_incoming_call`` Trigger
 
@@ -138,6 +140,7 @@ on_ussd_received:
 
 
 ```
+{{< anchor "sim800l-send_sms_action" >}}
 
 ## ``sim800l.send_sms`` Action
 
@@ -167,6 +170,7 @@ Configuration options:
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
 
 
+{{< anchor "sim800l-dial_action" >}}
 
 ## ``sim800l.dial`` Action
 

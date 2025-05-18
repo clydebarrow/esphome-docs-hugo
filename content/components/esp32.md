@@ -33,6 +33,7 @@ esp32:
 - **framework** (*Optional*): Options for the underlying framework used by ESPHome. See [esp32-arduino_framework]({{< ref "components/esp32#esp32-arduino_framework" >}})
   and [esp32-espidf_framework]({{< ref "components/esp32#esp32-espidf_framework" >}}).
 
+{{< anchor "esp32-arduino_framework" >}}
 
 ## Arduino framework
 
@@ -64,6 +65,7 @@ Configuration variables:
   [pioarduino/espressif32](https://github.com/pioarduino/platform-espressif32/releases) package to use.
 - **advanced** (*Optional*, mapping): See [esp32-advanced_configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
 
+{{< anchor "esp32-espidf_framework" >}}
 
 ## ESP-IDF framework
 
@@ -99,6 +101,7 @@ Configuration variables:
   to set in the ESP-IDF project.
 - **advanced** (*Optional*, mapping): See [esp32-advanced_configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
 
+{{< anchor "esp32-advanced_configuration" >}}
 
 ## Advanced Configuration
 

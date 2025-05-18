@@ -60,6 +60,7 @@ sensor:
 *Pins on the MH-Z19. Only the ones marked with a red circle need to be connected.*
 
 
+{{< anchor "mhz19-calibrate_zero_action" >}}
 
 ## ``mhz19.calibrate_zero`` Action
 
@@ -84,6 +85,7 @@ api:
         - mhz19.calibrate_zero: my_mhz19_id
 
 ```
+{{< anchor "mhz19-abc_enable_action" >}}
 
 ## ``mhz19.abc_enable`` Action
 
@@ -95,6 +97,7 @@ on_...:
     - mhz19.abc_enable: my_mhz19_id
 
 ```
+{{< anchor "mhz19-abc_disable_action" >}}
 
 ## ``mhz19.abc_disable`` Action
 

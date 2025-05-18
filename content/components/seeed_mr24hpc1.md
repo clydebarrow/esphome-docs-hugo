@@ -76,7 +76,9 @@ sensor:
       name: "Current Custom Mode"
 
 ```
+{{< anchor "seeed_mr24hpc1-spatial_static" >}}
 
+{{< anchor "seeed_mr24hpc1-spatial_mtion" >}}
 
 Configuration variables:
 ************************
@@ -109,7 +111,9 @@ Configuration variables:
 - **custom_mode_num** (*Optional*, int): The custom mode number that the radar is currently in. If it is not in custom mode, then the value is 0.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
+{{< anchor "seeed_mr24hpc1-open_function" >}}
 
+{{< anchor "seeed_mr24hpc1-standard_mode" >}}
 
 ## Switch
 
@@ -156,6 +160,7 @@ number:
       name: "Time For Entering No Person State (Custom Mode)"
 
 ```
+{{< anchor "seeed_mr24hpc1-custom_mode" >}}
 
 Configuration variables:
 ************************

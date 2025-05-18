@@ -204,6 +204,7 @@ want new features, please either create a new issue on the `GitHub issue
 tracker <https://github.com/esphome/issues/issues>`__ or find us on the
 [Discord chat](https://discord.gg/KhAMKrd) (also make sure to read the [FAQ ]({{< relref "faq/" >}})).
 
+{{< anchor "esphome-device-builder-docker" >}}
 
 ## Bonus: ESPHome Device Builder
 

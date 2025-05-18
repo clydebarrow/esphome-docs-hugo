@@ -95,6 +95,7 @@ Configuration variables:
   sensor. Defaults to `60s`.
 
 
+{{< anchor "bmp3xx-oversampling" >}}
 
 ## Oversampling Options
 

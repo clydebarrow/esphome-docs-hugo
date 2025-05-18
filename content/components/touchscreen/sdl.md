@@ -5,6 +5,7 @@ title: "SDL2 Touch Screen Emulator"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "sdl_touchscreen" >}}
 
 The `sdl` touchscreen platform allows emulating a touch screen by using the mouse with the `sdl` display driver.
 The `sdl` display component must be configured to use this.

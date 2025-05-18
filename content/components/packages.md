@@ -72,6 +72,7 @@ api:
     key: !secret api_encryption_key
 
 ```
+{{< anchor "config-git_packages" >}}
 
 ## Remote/Git Packages
 
@@ -165,6 +166,7 @@ switch:
     # ...
 
 ```
+{{< anchor "config-packages_extend" >}}
 
 ## Extend
 
@@ -192,6 +194,7 @@ sensor:
     update_interval: 10s
 
 ```
+{{< anchor "config-packages_remove" >}}
 
 ## Remove
 

@@ -101,6 +101,7 @@ ESP8266 has a more limited selection of pins that can be used; check the datashe
 Quad and octal modes requires a hardware interface, so `software` and `any` are not permitted values.
 
 ## Generic SPI device component:
+{{< anchor "spi_device" >}}
 
 Other components that depend on the SPI component will reference it, typically to communicate with specific
 peripheral devices. There is also a general-purpose SPI device component that can be used to communicate with hardware not

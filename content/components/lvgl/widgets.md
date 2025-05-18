@@ -57,6 +57,7 @@ Similarly to CSS, LVGL also supports ``min_width``, ``max_width``, ``min_height`
 - **theme** (*Optional*, list): A list of styles to apply to the widget and children. Same configuration option as at the main component.
 - **widgets** (*Optional*, list): A list of LVGL widgets to be drawn as children of this widget. Same configuration option as at the main component.
 
+{{< anchor "lvgl-widgetproperty-state" >}}
 
 - **state** (*Optional*, dict): Widgets or their (sub)parts can have have states, which support separate styling. These state styles inherit from the theme, but can be locally set or overridden within style definitions. Can be one of:
     - **checked** (*Optional*, boolean): Toggled or checked state.
@@ -84,6 +85,7 @@ The state itself can be can be changed by interacting with the widget, or throug
 
 See [lvgl-cookbook-cover]({{< ref "cookbook/lvgl#lvgl-cookbook-cover" >}}) for a cookbook example which demonstrates how to use styling and properties to show different states of a Home Assistant entity.
 
+{{< anchor "lvgl-widget-flags" >}}
 
 In addition to visual styling, each widget supports some boolean **flags** to influence the behavior:
 
@@ -116,6 +118,7 @@ In addition to visual styling, each widget supports some boolean **flags** to in
 LVGL only supports **integers** for numeric ``value``. Visualizer widgets can't display floats directly, but they allow scaling by 10s. Some examples in the :doc:`Cookbook </cookbook/lvgl>` cover how to do that.
 
 {{< /note >}}
+{{< anchor "lvgl-widget-parts" >}}
 
 ## Widget parts
 
@@ -156,6 +159,7 @@ specific to a widget are described in each section below. Some of these properti
 but also the `text` property of a label.
 
 
+{{< anchor "text-property" >}}
 
 ## Text property
 
@@ -206,6 +210,7 @@ on_...:
 
 
 ```
+{{< anchor "lvgl-widget-animimg" >}}
 
 ## ``animimg``
 
@@ -262,6 +267,7 @@ on_...:
 ```
 See [lvgl-cookbook-animbatt]({{< ref "cookbook/lvgl#lvgl-cookbook-animbatt" >}}) in the Cookbook for a more detailed example.
 
+{{< anchor "lvgl-widget-arc" >}}
 
 ## ``arc``
 
@@ -346,6 +352,7 @@ The `arc` can be also integrated as a [Sensor ]({{< relref "/components/sensor/l
 
 See [lvgl-cookbook-volume]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}}) and [lvgl-cookbook-bright]({{< ref "cookbook/lvgl#lvgl-cookbook-bright" >}}) for examples which demonstrate how to use a slider (or an arc) to control entities in Home Assistant.
 
+{{< anchor "lvgl-widget-bar" >}}
 
 ## ``bar``
 
@@ -402,6 +409,7 @@ on_...:
 ```
 The `bar` can be also integrated as [Sensor ]({{< relref "/components/sensor/lvgl" >}}) or [Number ]({{< relref "/components/number/lvgl" >}}) component.
 
+{{< anchor "lvgl-widget-button" >}}
 
 ## ``button``
 
@@ -464,6 +472,7 @@ The `button` can be also integrated as a [Switch ]({{< relref "/components/switc
 
 See [lvgl-cookbook-binent]({{< ref "cookbook/lvgl#lvgl-cookbook-binent" >}}) for an example which demonstrates how to use a checkable button to act on a Home Assistant service.
 
+{{< anchor "lvgl-widget-buttonmatrix" >}}
 
 ## ``buttonmatrix``
 
@@ -731,6 +740,7 @@ Where a list of points is required, this can be provided in the form of a list o
 
 
 ```
+{{< anchor "lvgl-widget-checkbox" >}}
 
 ## ``checkbox``
 
@@ -791,6 +801,7 @@ In case you configure ``default_font`` in the main section to a custom font, the
 {{< /note >}}
 The `checkbox` can be also integrated as a [Switch ]({{< relref "/components/switch/lvgl" >}}) component.
 
+{{< anchor "lvgl-widget-dropdown" >}}
 
 ## ``dropdown``
 
@@ -870,6 +881,7 @@ on_...:
 ```
 The `dropdown` can be also integrated as [Select ]({{< relref "/components/select/lvgl" >}}) component.
 
+{{< anchor "lvgl-widget-image" >}}
 
 ## ``image``
 
@@ -927,6 +939,7 @@ Currently ``RGB565`` type images are supported, with transparency using the opti
 
     `offset_x` and `offset_y` can be useful when the widget size is set to be smaller than the image source size. A "running image" effect can be created by animating these values.
 
+{{< anchor "lvgl-widget-keyboard" >}}
 
 ## ``keyboard``
 
@@ -993,6 +1006,7 @@ on_focus:
 The Keyboard widget in ESPHome doesn't support popovers or custom layouts.
 
 {{< /note >}}
+{{< anchor "lvgl-widget-label" >}}
 
 ## ``label``
 
@@ -1064,6 +1078,7 @@ on_...:
 ```
 The `label` can be also integrated as [Text Sensor ]({{< relref "/components/text_sensor/lvgl" >}}) or [Text ]({{< relref "/components/text/lvgl" >}}) component.
 
+{{< anchor "lvgl-widget-led" >}}
 
 ## ``led``
 
@@ -1113,6 +1128,7 @@ If configured as a light component, ``color`` and ``brightness`` are overridden 
 {{< /note >}}
 Check out [lvgl-cookbook-keypad]({{< ref "cookbook/lvgl#lvgl-cookbook-keypad" >}}) in the Cookbook for an example which demonstrates how to change the `led` styling properties from an automation.
 
+{{< anchor "lvgl-widget-line" >}}
 
 ## ``line``
 
@@ -1157,6 +1173,7 @@ The points list may be defined with constants in the form `x, y` or as a list of
     line_rounded: true
 
 ```
+{{< anchor "lvgl-widget-meter" >}}
 
 ## ``meter``
 
@@ -1274,6 +1291,7 @@ on_...:
 ```
 See [lvgl-cookbook-clock]({{< ref "cookbook/lvgl#lvgl-cookbook-clock" >}}), [lvgl-cookbook-thermometer]({{< ref "cookbook/lvgl#lvgl-cookbook-thermometer" >}}) and [lvgl-cookbook-gauge]({{< ref "cookbook/lvgl#lvgl-cookbook-gauge" >}}) in the Cookbook for examples which demonstrate how to effectively use this widget.
 
+{{< anchor "lvgl-widget-msgbox" >}}
 
 ## ``msgboxes``
 
@@ -1327,6 +1345,7 @@ lvgl:
 
     You can create your own more complex dialogs with a full-screen sized, half-opaque `obj` with any child widgets on it, and the `hidden` flag set to `true` by default. For non-modal dialogs, simply set the `clickable` flag to `false` on it.
 
+{{< anchor "lvgl-widget-obj" >}}
 
 ## ``obj``
 
@@ -1357,6 +1376,7 @@ The base object is just a simple, empty widget. By default, it's nothing more th
       - ...
 
 ```
+{{< anchor "lvgl-widget-qrcode" >}}
 
 ## ``qrcode``
 
@@ -1400,6 +1420,7 @@ on_...:
         text: home-assistant.io
 
 ```
+{{< anchor "lvgl-widget-roller" >}}
 
 ## ``roller``
 
@@ -1463,6 +1484,7 @@ on_...:
 ```
 The `roller` can be also integrated as [Select ]({{< relref "/components/select/lvgl" >}}) component.
 
+{{< anchor "lvgl-widget-slider" >}}
 
 ## ``slider``
 
@@ -1536,6 +1558,8 @@ The `slider` can be also integrated as [Sensor ]({{< relref "/components/sensor/
 
 See [lvgl-cookbook-volume]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}}) and [lvgl-cookbook-bright]({{< ref "cookbook/lvgl#lvgl-cookbook-bright" >}}) for examples which demonstrate how to use a slider to control entities in Home Assistant.
 
+{{< anchor "lvgl-widget-canvas" >}}
+{{< anchor "lvgl-widget-spinbox" >}}
 
 ## ``spinbox``
 
@@ -1612,6 +1636,7 @@ The `spinbox` can be also integrated as a [Sensor ]({{< relref "/components/sens
 
 See [lvgl-cookbook-climate]({{< ref "cookbook/lvgl#lvgl-cookbook-climate" >}}) for an example which demonstrates how to implement a thermostat control using the spinbox.
 
+{{< anchor "lvgl-widget-spinner" >}}
 
 ## ``spinner``
 
@@ -1661,6 +1686,7 @@ on_...:
         arc_color: 0x31de70
 
 ```
+{{< anchor "lvgl-widget-switch" >}}
 
 ## ``switch``
 
@@ -1703,6 +1729,7 @@ The `switch` can be also integrated as a [Switch ]({{< relref "/components/switc
 
 See [lvgl-cookbook-relay]({{< ref "cookbook/lvgl#lvgl-cookbook-relay" >}}) for an example which demonstrates how to use a switch to act on a local component.
 
+{{< anchor "lvgl-widget-tabview" >}}
 
 ## ``tabview``
 
@@ -1777,6 +1804,7 @@ on_...:
               - logger.log: "Dog tab is now showing"
 
 ```
+{{< anchor "lvgl-widget-textarea" >}}
 
 ## ``textarea``
 
@@ -1842,6 +1870,7 @@ on_...:
 ```
 The `textarea` can be also integrated as [Text Sensor ]({{< relref "/components/text_sensor/lvgl" >}}) or [Text ]({{< relref "/components/text/lvgl" >}}) component.
 
+{{< anchor "lvgl-widget-tileview" >}}
 
 ## ``tileview``
 
@@ -1908,9 +1937,11 @@ on_...:
             - logger.log: "Cat tile is now showing"
 
 ```
+{{< anchor "lvgl-automations" >}}
 
 ## Automations
 
+{{< anchor "lvgl-automation-actions" >}}
 
 Actions
 *******
@@ -1918,8 +1949,7 @@ Actions
 As outlined in the sections above, each widget type supports several of its own, unique actions.
 Several universal actions are also available for all widgets, these are outlined below.
 
-`lvgl.widget.update`
-^^^^^^^^^^^^^^^^^^^^^^
+### ``lvgl.widget.update``
 
 This powerful [flag]({{< ref "components/lvgl/widgets#lvgl-widget-flags" >}}) allows changing/updating any widget's common [style property]({{< ref "components/lvgl/_index#lvgl-styling" >}}), state (templatable) or [action]({{< ref "automations/actions#actions-action" >}}) on the fly.
 
@@ -1946,9 +1976,9 @@ on_...:
 ```
 Check out in the Cookbook [lvgl-cookbook-binent]({{< ref "cookbook/lvgl#lvgl-cookbook-binent" >}}) for an example which demonstrates how to use a template to update the state.
 
+{{< anchor "lvgl-automation-shorthands" >}}
 
-`lvgl.widget.hide`, `lvgl.widget.show`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``lvgl.widget.hide``, ``lvgl.widget.show``
 
 These [flag]({{< ref "components/lvgl/widgets#lvgl-widget-flags" >}}) are shorthands for toggling the `hidden` [actions]({{< ref "automations/actions#actions-action" >}}) of any widget.
 
@@ -1966,8 +1996,7 @@ on_...:
         - id: [my_button_1, my_button_2]
 
 ```
-`lvgl.widget.disable`, `lvgl.widget.enable`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``lvgl.widget.disable``, ``lvgl.widget.enable``
 
 These [actions]({{< ref "automations/actions#actions-action" >}}) are shorthands for toggling the `disabled` state of any widget (which controls the appearance of the corresponding *disabled* style set of the theme):
 
@@ -1987,6 +2016,7 @@ These [actions]({{< ref "automations/actions#actions-action" >}}) are shorthands
           - id: my_button_2
 
 ```
+{{< anchor "lvgl-automation-triggers" >}}
 
 Triggers
 ********

@@ -35,6 +35,7 @@ This example will generate a metric named `test1.sensor` with the value of the `
 - **sensor** (*Optional*, [sensors]({{< ref "components/statsd#sensors" >}})): A list of sensors to generate metrics for.
 - **binary_sensor** (*Optional*, [sensors]({{< ref "components/statsd#sensors" >}})): A list of binary sensors to generate metrics for.
 
+{{< anchor "sensors" >}}
 
 ## Sensor list
 

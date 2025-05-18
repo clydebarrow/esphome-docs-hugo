@@ -10,6 +10,7 @@ features such as colors, transitions and even effects.
 
 This component can restore its state on reboot/reset if configured to do so.
 
+{{< anchor "config-light" >}}
 
 ## Base Light Configuration
 
@@ -93,6 +94,7 @@ light:
 - If Webserver enabled and [version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}) is selected, all other options from
   [/components/web_server]({{< ref "/components/web_server" >}}).
 
+{{< anchor "light-state_config" >}}
 
 **Light state:**
 
@@ -140,6 +142,7 @@ explicitly set them to zero.
 
 ## Light Automations
 
+{{< anchor "light-toggle_action" >}}
 
 `light.toggle` Action
 ***********************
@@ -171,6 +174,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "light-turn_on_action" >}}
 
 `light.turn_on` Action
 ************************
@@ -252,6 +256,7 @@ result in color at 40% brightness and white at 60% brightness:
         white: 75%
 
 {{< /note >}}
+{{< anchor "light-turn_off_action" >}}
 
 `light.turn_off` Action
 *************************
@@ -285,6 +290,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     call.perform();
 
 {{< /note >}}
+{{< anchor "light-control_action" >}}
 
 `light.control` Action
 ************************
@@ -306,6 +312,7 @@ on_...:
 - **state** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), boolean): Change the ON/OFF state of the light.
 - All other options from [light state]({{< ref "components/light/_index#light-state_config" >}}).
 
+{{< anchor "light-dim_relative_action" >}}
 
 `light.dim_relative` Action
 *****************************
@@ -361,6 +368,7 @@ Example: dimming a light with a button press
                 - delay: 0.1s
 
 {{< /note >}}
+{{< anchor "light-addressable_set_action" >}}
 
 `light.addressable_set` Action
 ********************************
@@ -394,6 +402,8 @@ on_...:
 - **white** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The brightness to set the white channel
   to.
 
+{{< anchor "light-is_on_condition" >}}
+{{< anchor "light-is_off_condition" >}}
 
 `light.is_on` / `light.is_off` Condition
 ********************************************
@@ -411,6 +421,7 @@ on_...:
 
 
 ```
+{{< anchor "light-on_turn_on_off_trigger" >}}
 
 `light.on_turn_on` / `light.on_turn_off` Trigger
 ****************************************************
@@ -428,6 +439,7 @@ light:
     - logger.log: "Light Turned Off!"
 
 ```
+{{< anchor "light-on_state_trigger" >}}
 
 `light.on_state` Trigger
 **************************
@@ -445,6 +457,7 @@ light:
     - logger.log: "Light State Changed!"
 
 ```
+{{< anchor "light-effects" >}}
 
 ## Light Effects
 
@@ -987,6 +1000,7 @@ light:
 - **sequence** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The actions to perform in sequence until the effect is
   stopped.
 
+{{< anchor "e131-light-effect" >}}
 
 E1.31 Effect
 ************
@@ -1026,8 +1040,7 @@ LEDs, first 170 LEDs will be assigned to universe 1, while the remaining 19 LEDs
 It is possible to enable multiple light platforms to concurrently listen to the same universe, allowing the behavior
 to be replicated on multiple strips.
 
-E1.31 Component
-^^^^^^^^^^^^^^^
+### E1.31 Component
 
 The [e131-light-effect]({{< ref "components/light/_index#e131-light-effect" >}}) requires a component hub for the `e131` light effect.
 

@@ -55,6 +55,7 @@ Automations:
 
 Additional configuration is described in the [Display Menu]({{< ref "components/display_menu/_index#display_menu" >}}) component.
 
+{{< anchor "drawing_modes" >}}
 
 ## Drawing Modes
 

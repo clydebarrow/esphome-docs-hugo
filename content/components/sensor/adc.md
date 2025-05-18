@@ -58,6 +58,7 @@ get correct values:
 
 
 {{< /note >}}
+{{< anchor "adc-esp32_attenuation" >}}
 
 ## ESP32 Attenuation
 
@@ -74,6 +75,7 @@ Even though the measurements are calibrated, the range *limits* are variable amo
 
 
 {{< /note >}}
+{{< anchor "adc-esp32_pins" >}}
 
 ## ESP32 pins
 
@@ -91,6 +93,7 @@ Even though the measurements are calibrated, the range *limits* are variable amo
 
 
 
+{{< anchor "adc-raw" >}}
 
 ## Different ESP32-ADC behavior since 2021.11
 
@@ -110,6 +113,7 @@ filters:
 ```
 Note we don't recommend this method as it will change between chips, and newer ESP32 modules have different ranges (i.e. 0-8191); it is better to use the new calibrated voltages and update any existing filters accordingly.
 
+{{< anchor "adc-vcc" >}}
 
 ## Measuring VCC
 

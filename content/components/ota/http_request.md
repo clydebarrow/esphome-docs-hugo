@@ -25,6 +25,7 @@ ota:
 
 - All [automations]({{< ref "automations/_index#automation" >}}) supported by :doc:`/com[/components/ota/index]({{< ref "/components/ota/index" >}})
 
+{{< anchor "ota_http_request-flash_action" >}}
 
 ## ``ota.http_request.flash`` Action
 

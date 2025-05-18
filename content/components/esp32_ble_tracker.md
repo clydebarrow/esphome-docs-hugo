@@ -61,6 +61,7 @@ resized. Please flash the ESP32 via USB when adding this to your configuration. 
 you can use OTA updates again.
 
 {{< /note >}}
+{{< anchor "config-esp32_ble_tracker" >}}
 
 ## Configuration variables:
 
@@ -113,6 +114,7 @@ Automations:
 
 ## ESP32 Bluetooth Low Energy Tracker Automation
 
+{{< anchor "esp32_ble_tracker-on_ble_advertise" >}}
 
 `on_ble_advertise` Trigger
 ************************************************
@@ -150,6 +152,7 @@ Configuration variables:
 - **mac_address** (*Optional*, list of MAC Address): The MAC address to filter for this automation.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "esp32_ble_tracker-on_ble_manufacturer_data_advertise" >}}
 
 `on_ble_manufacturer_data_advertise` Trigger
 ************************************************
@@ -180,6 +183,7 @@ Configuration variables:
 - **manufacturer_id** (**Required**, string): 16 bit, 32 bit, or 128 bit BLE Manufacturer ID.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "esp32_ble_tracker-on_ble_service_data_advertise" >}}
 
 `on_ble_service_data_advertise` Trigger
 ************************************************

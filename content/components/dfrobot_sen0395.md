@@ -41,6 +41,7 @@ switch:
     name: Mmwave Active
 
 ```
+{{< anchor "dfrobot_sen0395-component" >}}
 
 ## Hub Component
 
@@ -68,9 +69,11 @@ Configuration variables:
 - **uart_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of[/components/uart]({{< ref "/components/uart" >}})uart` if you want
   to use multiple UART buses.
 
+{{< anchor "dfrobot_sen0395-binary_sensor" >}}
 
 ## Binary Sensor
 
+{{< anchor "dfrobot_sen0395-via_gpio" >}}
 
 Via GPIO
 ********
@@ -92,6 +95,7 @@ binary_sensor:
       mode: INPUT_PULLDOWN
 
 ```
+{{< anchor "dfrobot_sen0395-via_uart" >}}
 
 Via UART
 ********
@@ -116,6 +120,7 @@ Configuration variables:
   Required when multiple instances of the `dfrobot_sen0395` component are defined.
 - All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
+{{< anchor "dfrobot_sen0395-switch" >}}
 
 ## Switch
 
@@ -146,9 +151,11 @@ Configuration variables:
 
 - All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
+{{< anchor "dfrobot_sen0395-actions" >}}
 
 ## Actions
 
+{{< anchor "dfrobot_sen0395-action_settings" >}}
 
 `dfrobot_sen0395.settings` Action
 ***********************************

@@ -54,6 +54,7 @@ Automation triggers:
   as a `std::string` variable named `x`.
 - **on_custom** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Triggered when the result of `get_custom()` is ready.  The result is provided as a `std::string` variable named `x`.
 
+{{< anchor "ezo_lambda_calls" >}}
 
 ## Lambda calls
 

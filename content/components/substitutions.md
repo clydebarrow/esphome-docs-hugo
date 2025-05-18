@@ -39,6 +39,7 @@ something:
   test: ${bar_${foo}_value}
 
 ```
+{{< anchor "substitute-include-variables" >}}
 
 ## Substitute !include variables
 
@@ -75,6 +76,7 @@ binary_sensor:
         payload: double
 
 ```
+{{< anchor "command-line-substitutions" >}}
 
 ## Command line substitutions
 
@@ -111,6 +113,7 @@ Command line substitutions take precedence over those in your configuration file
 "template" configuration files (like `example.yaml` above) which can be used by multiple devices, leveraging
 substitutions which are provided on the command line.
 
+{{< anchor "YAML-insertion-operator" >}}
 
 ## Bonus: YAML insertion operator
 

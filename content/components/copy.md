@@ -123,6 +123,7 @@ Configuration variables:
 - **source_id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The select that should be mirrored.
 - All other options from [Select]({{< ref "components/select/_index#config-select" >}}).
 
+{{< anchor "copy-sensor" >}}
 
 ## Copy Sensor
 

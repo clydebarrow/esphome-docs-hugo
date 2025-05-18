@@ -73,6 +73,7 @@ wireguard:
 ```
 ## Configuration variables
 
+{{< anchor "wireguard-address" >}}
 
 - **address** (**Required**, IPv4 address): The local VPN address of the device.
 
@@ -136,6 +137,7 @@ wireguard:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
+{{< anchor "wireguard-static-routes" >}}
 
 ## Static routes and outgoing connections
 
@@ -196,13 +198,13 @@ through the VPN link any traffic. It is like having set the wireguard
 interface as the system default.
 
 {{< /note >}}
+{{< anchor "wireguard-sensors" >}}
 
 ## Sensors
 
 Here after the sensors available for this component.
 
-Status Binary Sensor
-^^^^^^^^^^^^^^^^^^^^
+### Status Binary Sensor
 
 This binary sensor tracks the connection status (*online*/*offline*) of the remote peer.
 
@@ -217,8 +219,7 @@ binary_sensor:
 All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
-Enabled Binary Sensor
-^^^^^^^^^^^^^^^^^^^^^
+### Enabled Binary Sensor
 
 This binary sensor tracks if |wireguard| is *enabled* or not.
 
@@ -233,8 +234,7 @@ binary_sensor:
 All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
-Latest Handshake Sensor
-^^^^^^^^^^^^^^^^^^^^^^^
+### Latest Handshake Sensor
 
 This sensor reports the *timestamp* of the latest completed handshake.
 
@@ -249,8 +249,7 @@ sensor:
 All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) can be added to the
 above configuration.
 
-Address Text Sensor
-^^^^^^^^^^^^^^^^^^^
+### Address Text Sensor
 
 This sensor exposes to the frontend the configured [address]({{< ref "components/wireguard#wireguard-address" >}}).
 
@@ -265,13 +264,13 @@ text_sensor:
 All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) can be added to the
 above configuration.
 
+{{< anchor "wireguard-actions" >}}
 
 ## Actions
 
 The following actions are available.
 
-`wireguard.disable`
-^^^^^^^^^^^^^^^^^^^^^
+### ``wireguard.disable``
 
 This action drops down the active VPN link (if any) and disables the component.
 
@@ -288,8 +287,7 @@ To disable |wireguard| since device boot you can execute this action
 in the :ref:`esphome-on_boot` step.
 
 {{< /note >}}
-`wireguard.enable`
-^^^^^^^^^^^^^^^^^^^^
+### ``wireguard.enable``
 
 This action enables the component and starts the connection to the remote peer.
 
@@ -301,13 +299,13 @@ on_...:
 ```
 The lambda equivalent is `id(wireguard_id).enable()`.
 
+{{< anchor "wireguard-conditions" >}}
 
 ## Conditions
 
 The following conditions are available.
 
-`wireguard.enabled`
-^^^^^^^^^^^^^^^^^^^^^
+### ``wireguard.enabled``
 
 This condition checks if |wireguard| is currently enabled or not.
 
@@ -323,8 +321,7 @@ on_...:
 ```
 The lambda equivalent is `id(wireguard_id).is_enabled()`.
 
-`wireguard.peer_online`
-^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``wireguard.peer_online``
 
 This condition checks if the remote peer is *online*.
 
@@ -340,6 +337,7 @@ on_...:
 ```
 The lambda equivalent is `id(wireguard_id).is_peer_up()`.
 
+{{< anchor "wireguard-installation" >}}
 
 ## Remote peer setup
 

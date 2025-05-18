@@ -92,6 +92,7 @@ Automation triggers:
 - **on_preset_set** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
   when the fan preset mode is changed. See [fan-on_preset_set_trigger]({{< ref "components/fan/_index#fan-on_preset_set_trigger" >}}).
 
+{{< anchor "fan-toggle_action" >}}
 
 ## ``fan.toggle`` Action
 
@@ -103,6 +104,7 @@ on_...:
     - fan.toggle: fan_1
 
 ```
+{{< anchor "fan-turn_off_action" >}}
 
 ## ``fan.turn_off`` Action
 
@@ -114,6 +116,7 @@ on_...:
     - fan.turn_off: fan_1
 
 ```
+{{< anchor "fan-turn_on_action" >}}
 
 ## ``fan.turn_on`` Action
 
@@ -138,6 +141,7 @@ Configuration options:
 - **direction** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   Set the direction of the fan. Can be either `forward` or `reverse`. Defaults to not changing the direction.
 
+{{< anchor "fan-cycle_speed_action" >}}
 
 ## ``fan.cycle_speed`` Action
 
@@ -158,6 +162,8 @@ Configuration options:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the fan.
 - **off_speed_cycle** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): Determines if the fan will cycle off after cycling though its highest speed. Can be `true` or `false`. If `false` fan will cycle to its lowest speed instead of turning off.  Defaults to `true`.
 
+{{< anchor "fan-is_on_condition" >}}
+{{< anchor "fan-is_off_condition" >}}
 
 ## ``fan.is_on`` / ``fan.is_off`` Condition
 
@@ -174,6 +180,7 @@ on_...:
     - script.execute: my_script
 
 ```
+{{< anchor "fan-on_state_trigger" >}}
 
 ## ``fan.on_state`` Trigger
 
@@ -190,6 +197,7 @@ fan:
         args: [ x->speed ]
 
 ```
+{{< anchor "fan-on_turn_on_off_trigger" >}}
 
 ## ``fan.on_turn_on`` / ``fan.on_turn_off`` Trigger
 
@@ -206,6 +214,7 @@ fan:
     - logger.log: "Fan Turned Off!"
 
 ```
+{{< anchor "fan-on_direction_set_trigger" >}}
 
 ## ``fan.on_direction_set`` Trigger
 
@@ -222,6 +231,7 @@ fan:
         args: [ x == 0 ? "FORWARD" : "REVERSE" ]
 
 ```
+{{< anchor "fan-on_oscillating_set_trigger" >}}
 
 ## ``fan.on_oscillating_set`` Trigger
 
@@ -238,6 +248,7 @@ fan:
         args: [ ONOFF(x) ]
 
 ```
+{{< anchor "fan-on_speed_set_trigger" >}}
 
 ## ``fan.on_speed_set`` Trigger
 
@@ -254,6 +265,7 @@ fan:
         args: [ x ]
 
 ```
+{{< anchor "fan-on_preset_set_trigger" >}}
 
 ## ``fan.on_preset_set`` Trigger
 

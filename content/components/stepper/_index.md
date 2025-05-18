@@ -15,6 +15,7 @@ This component will not show up in the Home Assistant front-end automatically be
 Home Assistant doesn't have support for steppers. Please see :ref:`stepper-ha-config`.
 
 {{< /note >}}
+{{< anchor "base_stepper_config" >}}
 
 ## Base Stepper Configuration
 
@@ -115,6 +116,7 @@ Configuration variables:
 
 - All other from [base_stepper_config]({{< ref "components/stepper/_index#base_stepper_config" >}}).
 
+{{< anchor "stepper-set_target_action" >}}
 
 ## ``stepper.set_target`` Action
 
@@ -161,6 +163,7 @@ position, first reset the current position and then set the target to the relati
             target: 150
 
 {{< /warning >}}
+{{< anchor "stepper-report_position_action" >}}
 
 ## ``stepper.report_position`` Action
 
@@ -199,6 +202,7 @@ Configuration variables:
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
 - **position** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The position to report in steps.
 
+{{< anchor "stepper-set_speed_action" >}}
 
 ## ``stepper.set_speed`` Action
 
@@ -217,6 +221,7 @@ Configuration variables:
 - **speed** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The speed
   in `steps/s` (steps per seconds) to drive the stepper at.
 
+{{< anchor "stepper-set_acceleration_action" >}}
 
 ## ``stepper.set_acceleration`` Action
 
@@ -235,6 +240,7 @@ Configuration variables:
 - **acceleration** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The acceleration
   in `steps/s^2` (steps per seconds squared) to use when starting to move.
 
+{{< anchor "stepper-set_deceleration_action" >}}
 
 ## ``stepper.set_deceleration`` Action
 
@@ -253,6 +259,7 @@ Configuration variables:
 - **deceleration** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The same as `acceleration`,
   but for when the motor is decelerating shortly before reaching the set position.
 
+{{< anchor "stepper-ha-config" >}}
 
 ## Home Assistant Configuration
 
@@ -278,6 +285,7 @@ stepper:
     id: my_stepper
 
 ```
+{{< anchor "stepper-lambda_calls" >}}
 
 ## lambda calls
 

@@ -64,6 +64,7 @@ Possible return values for the optional lambda:
   in the lambda in the `pos` variable. Requires `has_position` (above) to be set to `true`.
 - All other options from [Valve]({{< ref "components/valve/_index#config-valve" >}}).
 
+{{< anchor "valve-template-publish_action" >}}
 
 ## ``valve.template.publish`` Action
 

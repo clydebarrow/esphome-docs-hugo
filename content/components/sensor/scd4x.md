@@ -78,6 +78,7 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 
 ## Actions:
 
+{{< anchor "perform_forced_calibration_action" >}}
 
 ## ``perform_forced_calibration`` Action
 
@@ -108,6 +109,7 @@ api:
 
 
 ```
+{{< anchor "factory_reset_action" >}}
 
 ## ``factory_reset`` Action
 

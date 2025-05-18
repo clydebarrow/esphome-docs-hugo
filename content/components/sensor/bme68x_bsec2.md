@@ -50,8 +50,7 @@ bme68x_bsec2_i2c:
 
 
 ```
-Configuration variables:
-^^^^^^^^^^^^^^^^^^^^^^^^
+### Configuration variables:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Defaults to `0x76`. The sensor can
   also be configured to use `0x77`.
@@ -95,8 +94,7 @@ sensor:
       name: "BME68x Breath VOC Equivalent"
 
 ```
-Configuration variables:
-^^^^^^^^^^^^^^^^^^^^^^^^
+### Configuration variables:
 
 - **bme68x_bsec2_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `bme68x_bsec2_i2c` component sensors will refer
   to. Useful when multiple devices are present in your configuration.
@@ -154,8 +152,7 @@ text_sensor:
       name: "BME68x IAQ Accuracy"
 
 ```
-Configuration variables:
-^^^^^^^^^^^^^^^^^^^^^^^^
+### Configuration variables:
 
 - **bme68x_bsec2_id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `bme68x_bsec2_i2c` component the text sensor
   will refer to. Useful when multiple devices are present in your configuration.
@@ -243,6 +240,7 @@ The selected b-VOC gasses are as follows:
 .. _Acetone: https://en.wikipedia.org/wiki/Acetone
 .. _Carbon Monoxide: https://en.wikipedia.org/wiki/Carbon_monoxide
 
+{{< anchor "bsec2-calibration" >}}
 
 ## IAQ Accuracy and Calibration
 

@@ -69,6 +69,7 @@ Automations:
 
 ## Tuya Automation
 
+{{< anchor "tuya-on_datapoint_update" >}}
 
 `on_datapoint_update`
 ***********************

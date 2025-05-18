@@ -58,6 +58,7 @@ Only ``LOCK_STATE_LOCKED`` and ``LOCK_STATE_UNLOCKED`` are supported by the MQTT
   of hiding one of them when the lock is LOCKED/UNLOCKED. Defaults to `false`.
 - All other options from [Lock]({{< ref "components/lock/_index#config-lock" >}}).
 
+{{< anchor "lock-template-publish_action" >}}
 
 ## ``lock.template.publish`` Action
 

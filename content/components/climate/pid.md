@@ -106,6 +106,7 @@ climate:
 
 - All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
+{{< anchor "pid-setup" >}}
 
 ## PID Controller Setup
 
@@ -192,6 +193,7 @@ Since we expect the PID Controller to be at equilibrium while inside the deadban
 average the output over a longer range of samples, like 15 samples. This helps even further
 with temperature and controller stability.
 
+{{< anchor "pid-autotune" >}}
 
 ## Autotuning
 

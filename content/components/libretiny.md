@@ -147,6 +147,7 @@ uart:
 tuya:
 
 ```
+{{< anchor "advanced-options" >}}
 
 ## Advanced options
 

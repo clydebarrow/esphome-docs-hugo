@@ -9,6 +9,7 @@ Text sensors are a lot like normal [sensors ]({{< relref "/components/sensor/ind
 But where the "normal" sensors only represent sensors that output **numbers**, this
 component can represent any *text*.
 
+{{< anchor "config-text_sensor" >}}
 
 ## Base Text Sensor Configuration
 
@@ -55,6 +56,7 @@ Automations:
 - **on_raw_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when a new value is received that hasn't passed through any filters. See [text_sensor-on_raw_value]({{< ref "components/text_sensor/_index#text_sensor-on_raw_value" >}}).
 
+{{< anchor "text_sensor-filters" >}}
 
 ## Text Sensor Filters
 
@@ -190,6 +192,7 @@ filters:
 You can access the most recent state of the sensor in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
 `id(sensor_id).state`.
 
+{{< anchor "text_sensor-on_value" >}}
 
 `on_value`
 ************
@@ -209,6 +212,7 @@ text_sensor:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "text_sensor-on_raw_value" >}}
 
 `on_raw_value`
 ****************
@@ -228,6 +232,7 @@ text_sensor:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "text_sensor-state_condition" >}}
 
 ## ``text_sensor.state`` Condition
 
@@ -260,6 +265,7 @@ This condition can also be expressed in :ref:`lambdas <config-lambda>`:
     }
 
 {{< /note >}}
+{{< anchor "text_sensor-lambda_calls" >}}
 
 lambda calls
 ************

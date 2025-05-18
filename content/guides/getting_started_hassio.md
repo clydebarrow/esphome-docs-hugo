@@ -28,6 +28,7 @@ Note that there are two "parts" to ESPHome:
 The ESPHome Device Builder provides a simple web user interface (UI) which allows you to create, edit and install your
 device configurations onto your devices.
 
+{{< anchor "installing-esphome-device-builder" >}}
 
 ## Installing ESPHome Device Builder
 
@@ -67,6 +68,7 @@ If you didn't do so when prompted upon creating your first device, you'll need t
 immediately following installation so that your device can connect to your Wi-Fi network and subsequently communicate
 with Home Assistant.
 
+{{< anchor "esphome-interface" >}}
 
 ## Device Builder Interface
 
@@ -163,6 +165,7 @@ and reinstall your updated configuration onto the device.
 Note that you won't need to have the device connected to your system with a USB data cable again, as (once ESPHome is
 installed on your device) it can update the device ["over the air" ]({{< relref "/components/ota/index" >}}).
 
+{{< anchor "connecting-your-device-to-home-assistant" >}}
 
 ## Connecting your device to Home Assistant
 

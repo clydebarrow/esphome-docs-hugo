@@ -97,13 +97,13 @@ voice_assistant:
   This is called every **1 second** while there are timers on this device.
   The timers are available as `timers` which is a `std::vector` (array) of type :apistruct:`voice_assistant::Timer`.
 
+{{< anchor "voice_assistant-actions" >}}
 
 ## Voice Assistant Actions
 
 The following actions are available for use in automations:
 
-`voice_assistant.start` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``voice_assistant.start`` Action
 
 Listens for one voice command then stops.
 
@@ -116,16 +116,14 @@ Configuration variables:
 Call `voice_assistant.stop` to signal the end of the voice command if `silence_detection` is set to `false`.
 
 
-`voice_assistant.start_continuous` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``voice_assistant.start_continuous`` Action
 
 Start listening for voice commands. This will start listening again after
 the response audio has finished playing. Some errors will stop the cycle.
 Call `voice_assistant.stop` to stop the cycle.
 
 
-`voice_assistant.stop` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``voice_assistant.stop`` Action
 
 Stop listening for voice commands.
 
@@ -134,13 +132,11 @@ Stop listening for voice commands.
 
 The following conditions are available for use in automations:
 
-`voice_assistant.is_running` Condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``voice_assistant.is_running`` Condition
 
 Returns true if the voice assistant is currently running.
 
-`voice_assistant.connected` Condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``voice_assistant.connected`` Condition
 
 Returns true if the voice assistant is currently connected to Home Assistant.
 

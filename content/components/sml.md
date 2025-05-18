@@ -24,6 +24,7 @@ mature solution can be found `here
 <https://wiki.volkszaehler.org/hardware/controllers/ir-schreib-lesekopf-ttl-ausgang>`_ (in German).
 There are plenty of other examples and ready to buy solutions on the web.
 
+{{< anchor "sml-platform" >}}
 
 ## Component/Hub
 
@@ -102,6 +103,7 @@ text_sensor:
 - **on_data** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a
   SML message is received. See [sml-on-data]({{< ref "components/sml#sml-on-data" >}}).
 
+{{< anchor "sml-on-data" >}}
 
 `on_data` Trigger
 ********************

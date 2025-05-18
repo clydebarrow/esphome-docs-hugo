@@ -100,6 +100,7 @@ Configuration variables:
 - **security_level**: The integer representation of the currently configured security level of the reader. Higher security levels reduce the false acceptance rate (FAR) at the expense of increasing the false rejection rate (FRR). Range is 1 (lowest) to 5 (highest).
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
+{{< anchor "fingerprint_grow-sleep_mode" >}}
 
 ## Sleep Mode
 The sensor idle power consumption is roughly 20mA. If you plan to keep the device running continuously, it is wise to implement the Sleep Mode, which puts the sensor to sleep (power off) a few seconds after the last communication (configurable with `idle_period_to_sleep`). It can only be implemented along with the Touch Sensing Feature, since it uses the touch feedback to wake up the sensor.
@@ -123,6 +124,7 @@ This is a wiring example for the R503 and below you can find the respective conf
           inverted: true
       idle_period_to_sleep: 5s
 
+{{< anchor "fingerprint_grow-set_new_password" >}}
 
 ## Setting a New Password
 
@@ -146,6 +148,7 @@ fingerprint_grow:
 
 
 ```
+{{< anchor "fingerprint_grow-on_finger_scan_start" >}}
 
 ## ``on_finger_scan_start`` Trigger
 
@@ -160,6 +163,7 @@ on_finger_scan_start:
       count: 0
 
 ```
+{{< anchor "fingerprint_grow-on_finger_scan_invalid" >}}
 
 ## ``on_finger_scan_invalid`` Trigger
 
@@ -172,6 +176,7 @@ on_finger_scan_invalid:
       state: "Invalid finger"
 
 ```
+{{< anchor "fingerprint_grow-on_finger_scan_matched" >}}
 
 ## ``on_finger_scan_matched`` Trigger
 
@@ -200,6 +205,7 @@ on_finger_scan_matched:
             }
 
 ```
+{{< anchor "fingerprint_grow-on_finger_scan_unmatched" >}}
 
 ## ``on_finger_scan_unmatched`` Trigger
 
@@ -212,6 +218,7 @@ on_finger_scan_unmatched:
       state: "Unauthorized finger"
 
 ```
+{{< anchor "fingerprint_grow-on_finger_scan_misplaced" >}}
 
 ## ``on_finger_scan_misplaced`` Trigger
 
@@ -225,6 +232,7 @@ on_finger_scan_misplaced:
       state: "Misplaced finger"
 
 ```
+{{< anchor "fingerprint_grow-on_enrollment_scan" >}}
 
 ## ``on_enrollment_scan`` Trigger
 
@@ -238,6 +246,7 @@ on_enrollment_scan:
       state: !lambda 'return "Enrolling into slot " + to_string(finger_id) + ", scanned " + to_string(scan_num) + " time(s)";'
 
 ```
+{{< anchor "fingerprint_grow-on_enrollment_done" >}}
 
 ## ``on_enrollment_done`` Trigger
 
@@ -251,6 +260,7 @@ on_enrollment_done:
       state: !lambda 'return "Enrolled into slot " + to_string(finger_id);'
 
 ```
+{{< anchor "fingerprint_grow-on_enrollment_failed" >}}
 
 ## ``on_enrollment_failed`` Trigger
 
@@ -349,6 +359,7 @@ Configuration options:
 
 - **state** (**Required**, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): The state to set the LED.
 
+{{< anchor "fingerprint_grow-aura_led_control" >}}
 
 ## ``fingerprint_grow.aura_led_control`` Action
 

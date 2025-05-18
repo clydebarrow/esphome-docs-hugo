@@ -37,6 +37,7 @@ Configuration variables:
   the script.
 - **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform.
 
+{{< anchor "script-parameters" >}}
 
 ## Script Parameters
 
@@ -68,6 +69,7 @@ script:
       - light.turn_off: status_light
 
 ```
+{{< anchor "script-execute_action" >}}
 
 ## ``script.execute`` Action
 
@@ -91,6 +93,7 @@ on_...:
     - lambda: id(blink_light)->execute(1000);
 
 ```
+{{< anchor "script-stop_action" >}}
 
 ## ``script.stop`` Action
 
@@ -119,6 +122,7 @@ on_...:
 lambda: 'id(my_script).stop();'
 
 ```
+{{< anchor "script-wait_action" >}}
 
 ## ``script.wait`` Action
 
@@ -145,6 +149,7 @@ on_...:
 ```
 This can't be used in a lambda as it would block all functioning of the device. The script wouldn't even get to run.
 
+{{< anchor "script-is_running_condition" >}}
 
 ## ``script.is_running`` Condition
 

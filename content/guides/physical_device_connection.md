@@ -39,6 +39,7 @@ on CH340 as it's the most reliable and the cheapest one to use for flashing. Pro
 CP2102 or PL2303 are compatible with many devices, but using an external 3.3V supply might be
 necessary for them. 
 
+{{< anchor "esphome-phy-con-drv" >}}
 
 Plug in the board or the serial programmer into a free USB port and check if it has been properly detected
 by your computer. The firmware programming tools use a serial interface to communicate with your device. 
@@ -78,6 +79,7 @@ Some adapters can be switched between ``3.3V`` and ``5V`` for the data pins, but
 ESP needs to be put into programming mode or flash mode before the firmware can be uploaded. This is
 done by connecting `GPIO0` pin to `GND` while the chip is booting. 
 
+{{< anchor "esphome-phy-con-prg" >}}
 
 To put the ESP into programming mode:
 

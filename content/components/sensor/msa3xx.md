@@ -5,6 +5,7 @@ title: "MSA301 and MSA311 Sensors"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "msa3xx-component" >}}
 
 ## Component/Hub
 

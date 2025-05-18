@@ -13,6 +13,7 @@ can be set by the user/frontend.
 Home Assistant Core 2021.7 or higher is required for ESPHome number entities to work.
 
 {{< /note >}}
+{{< anchor "config-number" >}}
 
 ## Base Number Configuration
 
@@ -75,6 +76,7 @@ MQTT Options:
 You can access the most recent state of the number in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
 `id(number_id).state`.
 
+{{< anchor "number-on_value" >}}
 
 `on_value`
 ************
@@ -95,6 +97,7 @@ number:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "number-on_value_range" >}}
 
 `on_value_range`
 ******************
@@ -125,6 +128,7 @@ Configuration variables:
 - **below** (*Optional*, float): The maximum for the trigger.
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "number-in_range_condition" >}}
 
 `number.in_range` Condition
 *****************************
@@ -151,6 +155,7 @@ Configuration variables:
 - **above** (*Optional*, float): The minimum for the condition.
 - **below** (*Optional*, float): The maximum for the condition.
 
+{{< anchor "number-set_action" >}}
 
 `number.set` Action
 *********************
@@ -169,6 +174,7 @@ Configuration variables:
 - **value** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The value to set the number to.
 
+{{< anchor "number-increment_action" >}}
 
 `number.increment` Action
 ***************************
@@ -193,6 +199,7 @@ Configuration variables:
   work when the number component uses a minimum and maximum value.
   Defaults to `true`.
 
+{{< anchor "number-decrement_action" >}}
 
 `number.decrement` Action
 ***************************
@@ -217,6 +224,7 @@ Configuration variables:
   work when the number component uses a minimum and maximum value.
   Defaults to `true`.
 
+{{< anchor "number-to-min_action" >}}
 
 `number.to_min` Action
 ************************
@@ -236,6 +244,7 @@ Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
 
+{{< anchor "number-to-max_action" >}}
 
 `number.to_max` Action
 ************************
@@ -255,6 +264,7 @@ Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
 
+{{< anchor "number-operation_action" >}}
 
 `number.operation` Action
 ***************************
@@ -291,6 +301,7 @@ Configuration variables:
   wrap around the value when respectively the minimum or maximum value of the
   number is exceeded.
 
+{{< anchor "number-lambda_calls" >}}
 
 lambda calls
 ************

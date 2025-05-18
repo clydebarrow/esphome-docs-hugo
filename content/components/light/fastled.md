@@ -26,6 +26,7 @@ FastLED does **not** work with ESP-IDF.
 For addressable lights, you can use :doc:`esp32_rmt_led_strip` or for SPI LEDs see :doc:`spi_led_strip`..
 
 {{< /warning >}}
+{{< anchor "fastled-clockless" >}}
 
 ## Clockless
 
@@ -64,6 +65,7 @@ Configuration variables:
   16ms will limit the light to a refresh rate of about 60Hz. Defaults to the default value for the used chipset.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
+{{< anchor "fastled_clockless-chipsets" >}}
 
 Supported Chipsets
 ******************
@@ -94,6 +96,7 @@ Supported Chipsets
 - `UCS2903`
 - `SM16703`
 
+{{< anchor "fastled-spi" >}}
 
 ## SPI
 
@@ -139,6 +142,7 @@ Configuration variables:
 - **effects** (*Optional*, list): A list of [light effects]({{< ref "components/light/_index#light-effects" >}}) to use for this light.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
+{{< anchor "fastled_spi-chipsets" >}}
 
 Supported Chipsets
 ******************

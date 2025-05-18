@@ -33,6 +33,7 @@ wifi:
   password: !secret wifi_password
 
 ```
+{{< anchor "wifi-configuration_variables" >}}
 
 ## Configuration variables:
 
@@ -129,6 +130,7 @@ as long as no credentials are set in the config file, and firmware is uploaded w
 the flash (via OTA), the device will keep the saved credentials.
 
 
+{{< anchor "wifi-manual_ip" >}}
 
 ## Manual IPs
 
@@ -161,6 +163,7 @@ the OTA process will automatically choose that as the target for the upload.
 See also :ref:`esphome-changing_node_name`.
 
 {{< /note >}}
+{{< anchor "wifi-power_save_mode" >}}
 
 ## Power Save Mode
 
@@ -179,6 +182,7 @@ wifi:
   power_save_mode: none
 
 ```
+{{< anchor "wifi-networks" >}}
 
 ## Connecting to Multiple Networks
 
@@ -225,6 +229,7 @@ Configuration variables:
   the highest priority is chosen. If the connection fails, the priority is decreased by one.
   Defaults to `0`.
 
+{{< anchor "eap" >}}
 
 ## Enterprise Authentication
 
@@ -264,6 +269,7 @@ Configuration variables:
 - **ttls_phase_2** (*Optional*, string): The Phase 2 Authentication Method for EAP-TTLS.
   Can be `pap`, `eap`, `mschap`, `mschapv2` or `chap`, defaults to `mschapv2`.
 
+{{< anchor "wifi-on_connect_disconnect" >}}
 
 ## ``on_connect`` / ``on_disconnect`` Trigger
 
@@ -278,6 +284,7 @@ wifi:
     - switch.turn_off: switch1
 
 ```
+{{< anchor "wifi-on_disable" >}}
 
 ## ``wifi.disable`` Action
 
@@ -293,6 +300,7 @@ on_...:
 Be aware that if you disable WiFi, the API timeout will need to be disabled otherwise the device will reboot.
 
 {{< /note >}}
+{{< anchor "wifi-on_enable" >}}
 
 ## ``wifi.enable`` Action
 
@@ -308,6 +316,7 @@ on_...:
 The configuration option ``enable_on_boot`` can be set to ``false`` if you do not want wifi to be enabled on boot.
 
 {{< /note >}}
+{{< anchor "wifi-configure" >}}
 
 ## ``wifi.configure`` Action
 
@@ -336,6 +345,7 @@ Configuration variables:
 - **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a connection is established.
 - **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection fails.
 
+{{< anchor "wifi-connected_condition" >}}
 
 ## ``wifi.connected`` Condition
 
@@ -354,6 +364,7 @@ on_...:
 The lambda equivalent for this is `id(wifi_id).is_connected()`.
 
 
+{{< anchor "wifi-enabled_condition" >}}
 
 ## ``wifi.enabled`` Condition
 

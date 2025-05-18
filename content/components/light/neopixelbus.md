@@ -90,6 +90,7 @@ On ESP8266 it's highly recommended to connect the light strip to pin
 GPIO3 to reduce flickering.
 
 {{< /warning >}}
+{{< anchor "neopixelbus-methods" >}}
 
 ## Methods
 

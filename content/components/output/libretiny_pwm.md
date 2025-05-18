@@ -32,6 +32,7 @@ light:
   have more visual artifacts, but can represent much more colors. Defaults to `1000 Hz`.
 - All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
+{{< anchor "output-libretiny_pwm-set_frequency_action" >}}
 
 ## ``output.libretiny_pwm.set_frequency`` Action
 

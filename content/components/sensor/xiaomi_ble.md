@@ -534,6 +534,7 @@ All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) 
 - **battery_level**
 
 
+{{< anchor "obtaining_the_mac_address" >}}
 
 ## Obtaining the MAC address
 To find the MAC Address so that ESPHome can identify the device, you can create a simple configuration without any sensor entries:
@@ -554,6 +555,7 @@ After uploading, the ESP32 will immediately try to scan for BLE devices. When it
 
 It can sometimes take some time for the first BLE broadcast to be received. Once the device has been found, copy the address `XX:XX:XX:XX:XX:XX` into a new platform entry like shown in the example configurations.
 
+{{< anchor "obtaining_the_bindkey" >}}
 
 ## Obtaining the Bindkey
 

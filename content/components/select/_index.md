@@ -12,6 +12,7 @@ basically an option list that can be set by either yaml, hardware or the user/fr
 Home Assistant Core 2021.8 or higher is required for ESPHome select entities to work.
 
 {{< /note >}}
+{{< anchor "config-select" >}}
 
 ## Base Select Configuration
 
@@ -64,6 +65,7 @@ You can access the most recent state of the select in [lambdas]({{< ref "automat
 `id(select_id).state`.
 For more information on using lambdas with select, see [select-lambda_calls]({{< ref "components/select/_index#select-lambda_calls" >}}).
 
+{{< anchor "select-on_value" >}}
 
 `on_value`
 ************
@@ -84,6 +86,7 @@ select:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "select-set_action" >}}
 
 `select.set` Action
 *********************
@@ -105,6 +108,7 @@ Configuration variables:
 When a non-existing option value is used, a warning is logged and the state of
 the select is left as-is.
 
+{{< anchor "select-set_index_action" >}}
 
 `select.set_index` Action
 ***************************
@@ -126,6 +130,7 @@ Configuration variables:
 When a non-existing index value is used, a warning is logged and the state of
 the select is left as-is.
 
+{{< anchor "select-next_action" >}}
 
 `select.next` Action
 **********************
@@ -147,6 +152,7 @@ Configuration variables:
 - **cycle** (*Optional*, boolean): Whether or not to jump back to the first option
   of the select when the last option is currently selected. Defaults to `true`.
 
+{{< anchor "select-previous_action" >}}
 
 `select.previous` Action
 **************************
@@ -169,6 +175,7 @@ Configuration variables:
 - **cycle** (*Optional*, boolean): Whether or not to jump to the last option
   of the select when the first option is currently selected. Defaults to `true`.
 
+{{< anchor "select-first_action" >}}
 
 `select.first` Action
 ***********************
@@ -188,6 +195,7 @@ Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the select to set.
 
+{{< anchor "select-last_action" >}}
 
 `select.last` Action
 **********************
@@ -207,6 +215,7 @@ Configuration variables:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the select to set.
 
+{{< anchor "select-operation_action" >}}
 
 `select.operation` Action
 ***************************
@@ -242,6 +251,7 @@ Configuration variables:
   wrap around the options list when respectively the last or first option in
   the select is currently active.
 
+{{< anchor "select-lambda_calls" >}}
 
 lambda calls
 ************

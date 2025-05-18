@@ -68,6 +68,7 @@ Configuration variables:
   effect on `local`. See [external-components_refresh]({{< ref "components/external_components#external-components_refresh" >}}). for more info. Defaults to `1day`.
 
 
+{{< anchor "external-components_local" >}}
 
 ## Local
 
@@ -205,6 +206,7 @@ server using the `username` and `password` fields. This is most useful when comb
 security measure; your username and password will necessarily be stored in clear text within the
 `.esphome` directory.
 
+{{< anchor "external-components_refresh" >}}
 
 Refresh
 *******

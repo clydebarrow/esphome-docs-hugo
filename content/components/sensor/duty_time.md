@@ -50,6 +50,7 @@ sensor:
 
 In addition to all basic [sensor automations]({{< ref "components/sensor/_index#sensor-automations" >}}), the component supports the automations below.
 
+{{< anchor "sensor-duty_time-start_action" >}}
 
 `sensor.duty_time.start` Action
 *********************************
@@ -64,6 +65,7 @@ on_...:
 
 
 ```
+{{< anchor "sensor-duty_time-stop_action" >}}
 
 `sensor.duty_time.stop` Action
 ********************************
@@ -77,6 +79,7 @@ on_...:
 
 
 ```
+{{< anchor "sensor-duty_time-reset_action" >}}
 
 `sensor.duty_time.reset` Action
 *********************************
@@ -90,6 +93,8 @@ on_...:
 
 
 ```
+{{< anchor "sensor-duty_time-is_running_action" >}}
+{{< anchor "sensor-duty_time-is_not_running_action" >}}
 
 `sensor.duty_time.is_running` / `sensor.duty_time.is_not_running` Condition
 *******************************************************************************

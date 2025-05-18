@@ -5,6 +5,7 @@ title: "Display Menu"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "display_menu" >}}
 
 The component provides a menu primarily intended to be controlled either by a rotary encoder
 with a button or a five-button joystick controller. It allows to navigate a hierarchy of items
@@ -108,6 +109,7 @@ The component manages a hierarchy of menu items. The common configuration variab
   the `MenuItem` that is being drawn.
 
 
+{{< anchor "display_menu-edit_mode" >}}
 
 Editing values
 **************
@@ -440,6 +442,7 @@ Automations:
 
 ## Automations
 
+{{< anchor "display_menu-on_enter" >}}
 
 `on_enter`
 ************
@@ -462,6 +465,7 @@ lcd_menu:
           lambda: 'ESP_LOGI("display_menu", "enter: %s", it->get_text().c_str());'
 
 ```
+{{< anchor "display_menu-on_leave" >}}
 
 `on_leave`
 ************
@@ -484,6 +488,7 @@ lcd_menu:
           lambda: 'ESP_LOGI("display_menu", "leave: %s", it->get_text().c_str());'
 
 ```
+{{< anchor "display_menu-on_value" >}}
 
 `on_value`
 ************
@@ -503,6 +508,7 @@ lcd_menu:
           lambda: 'ESP_LOGI("display_menu", "select value: %s, %s", it->get_text().c_str(), it->get_value_text().c_str());'
 
 ```
+{{< anchor "display_menu-on_next" >}}
 
 `on_next`
 ***********
@@ -521,6 +527,7 @@ lcd_menu:
           lambda: 'some_state++;'
 
 ```
+{{< anchor "display_menu-on_prev" >}}
 
 `on_prev`
 ***********
@@ -539,6 +546,7 @@ lcd_menu:
           lambda: 'some_state--;'
 
 ```
+{{< anchor "display_menu-up_action" >}}
 
 `display_menu.up` Action
 **************************
@@ -559,6 +567,7 @@ Configuration variables:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
+{{< anchor "display_menu-down_action" >}}
 
 `display_menu.down` Action
 ****************************
@@ -579,6 +588,7 @@ Configuration variables:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
+{{< anchor "display_menu-left_action" >}}
 
 `display_menu.left` Action
 ****************************
@@ -602,6 +612,7 @@ Configuration variables:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
+{{< anchor "display_menu-right_action" >}}
 
 `display_menu.right` Action
 *****************************
@@ -624,6 +635,7 @@ Configuration variables:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to navigate.
 
+{{< anchor "display_menu-enter_action" >}}
 
 `display_menu.enter` Action
 *****************************
@@ -718,6 +730,7 @@ Configuration variables:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the menu to hide.
 
+{{< anchor "display_menu-is_active" >}}
 
 `display_menu.is_active` Condition
 ************************************

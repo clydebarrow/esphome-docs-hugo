@@ -69,6 +69,7 @@ Automations:
 - **on_notify** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
   perform when a notify message is received from the device. See [ble_sensor-on_notify]({{< ref "components/sensor/ble_client#ble_sensor-on_notify" >}}).
 
+{{< anchor "ble-sensor-lambda" >}}
 
 ## Raw Data Parsing Lambda
 
@@ -94,6 +95,7 @@ sensor:
 ```
 ## BLE Sensor Automation
 
+{{< anchor "ble_sensor-on_notify" >}}
 
 `on_notify`
 *************

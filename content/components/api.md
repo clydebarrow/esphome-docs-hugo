@@ -85,6 +85,7 @@ api:
 - **on_client_disconnected** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when a client
   disconnects from the API. See [api-on_client_disconnected_trigger]({{< ref "components/api#api-on_client_disconnected_trigger" >}}).
 
+{{< anchor "api-actions" >}}
 
 ## Actions
 
@@ -104,6 +105,7 @@ Then:
 #. Check the "Allow the device to perform Home Assistant actions" box
 #. Then click "submit".
 
+{{< anchor "api-homeassistant_event_action" >}}
 
 `homeassistant.event` Action
 ******************************
@@ -136,6 +138,7 @@ Configuration variables:
 - **variables** (*Optional*, mapping): Optional variables that can be used in the `data_template`.
   Values are [lambdas]({{< ref "automations/templates#config-lambda" >}}) and will be evaluated before sending the request.
 
+{{< anchor "api-homeassistant_action-action" >}}
 
 `homeassistant.action` Action
 ********************************
@@ -211,6 +214,7 @@ on_...:
         blue: '71'
 
 ```
+{{< anchor "api-homeassistant_tag_scanned_action" >}}
 
 `homeassistant.tag_scanned` Action
 ************************************
@@ -237,6 +241,7 @@ Configuration variables:
 
 ## Triggers
 
+{{< anchor "api-on_client_connected_trigger" >}}
 
 `on_client_connected` Trigger
 *******************************
@@ -257,6 +262,7 @@ api:
 
 
 ```
+{{< anchor "api-on_client_disconnected_trigger" >}}
 
 `on_client_disconnected` Trigger
 **********************************
@@ -274,6 +280,7 @@ api:
     - logger.log: "API client disconnected!"
 
 ```
+{{< anchor "api-connected_condition" >}}
 
 ## ``api.connected`` Condition
 
@@ -292,6 +299,7 @@ on_...:
 ```
 The lambda equivalent for this is `id(api_id).is_connected()`.
 
+{{< anchor "api-device-actions" >}}
 
 ## User-defined Actions
 

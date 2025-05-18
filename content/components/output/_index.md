@@ -10,6 +10,7 @@ ESPHome. These are grouped into two categories: `binary` outputs
 (that can only be ON/OFF) and `float` outputs (like PWM, can output
 any rational value between 0 and 1).
 
+{{< anchor "config-output" >}}
 
 ## Base Output Configuration
 
@@ -46,6 +47,7 @@ Float outputs only:
   Defaults to `false`.
 
 
+{{< anchor "output-turn_on_action" >}}
 
 `output.turn_on` Action
 *************************
@@ -66,6 +68,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     id(light_1).turn_on();
 
 {{< /note >}}
+{{< anchor "output-turn_off_action" >}}
 
 `output.turn_off` Action
 **************************
@@ -86,6 +89,7 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
     id(light_1).turn_off();
 
 {{< /note >}}
+{{< anchor "output-set_level_action" >}}
 
 `output.set_level` Action
 ***************************

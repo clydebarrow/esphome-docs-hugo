@@ -96,6 +96,7 @@ title: "ESPHome - Smart Home Made Simple"
         </div>
     </div>
 
+{{< anchor "what-is-esphome" >}}
 
 # What is ESPHome?
 
@@ -130,6 +131,7 @@ ESPHome takes care of the complex parts of firmware development, allowing you to
         </div>
     </div>
 
+{{< anchor "who-uses-esphome" >}}
 
 # Who Uses ESPHome?
 
@@ -186,6 +188,7 @@ ESPHome takes care of the complex parts of firmware development, allowing you to
         </div>
     </div>
 
+{{< anchor "getting-started" >}}
 
 # Getting Started
 
@@ -274,6 +277,7 @@ sensor:
     update_interval: 60s
 
 ```
+{{< anchor "using-with-home-assistant" >}}
 
 # Using with Home Assistant
 

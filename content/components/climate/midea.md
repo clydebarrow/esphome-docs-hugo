@@ -98,6 +98,7 @@ climate:
 
 ## Automations
 
+{{< anchor "midea_ac-power_on_action" >}}
 
 `midea_ac.power_on` Action
 ****************************
@@ -110,6 +111,7 @@ on_...:
     - midea_ac.power_on:
 
 ```
+{{< anchor "midea_ac-power_off_action" >}}
 
 `midea_ac.power_off` Action
 *****************************
@@ -122,6 +124,7 @@ on_...:
     - midea_ac.power_off:
 
 ```
+{{< anchor "midea_ac-power_toggle_action" >}}
 
 `midea_ac.power_toggle` Action
 ********************************
@@ -135,6 +138,7 @@ on_...:
 
 
 ```
+{{< anchor "midea_ac-follow_me_action" >}}
 
 `midea_ac.follow_me` Action
 *****************************
@@ -166,6 +170,7 @@ Configuration variables:
   Sets beep on update. Defaults to `false`.
 
 
+{{< anchor "midea_ac-display_toggle_action" >}}
 
 `midea_ac.display_toggle` Action
 **********************************
@@ -179,6 +184,7 @@ on_...:
 
 
 ```
+{{< anchor "midea_ac-swing_step_action" >}}
 
 `midea_ac.swing_step` Action
 ******************************
@@ -192,6 +198,7 @@ on_...:
 
 
 ```
+{{< anchor "midea_ac-beeper_on_action" >}}
 
 `midea_ac.beeper_on` Action
 *****************************
@@ -204,6 +211,7 @@ on_...:
     - midea_ac.beeper_on:
 
 ```
+{{< anchor "midea_ac-beeper_off_action" >}}
 
 `midea_ac.beeper_off` Action
 ******************************

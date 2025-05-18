@@ -3,6 +3,7 @@ description: "Animation"
 title: "Animation"
 ---
 
+{{< anchor "display-animation" >}}
 
 
 Allows to use animated images on displays. Animation inherits all options from the image component.

@@ -99,6 +99,7 @@ climate:
 
 **Specific configuration variables:**
 
+{{< anchor "climate_ir_lg" >}}
 
 `climate_ir_lg` **Climate**:
 
@@ -118,6 +119,7 @@ climate:
     header_low: 9856us
 
 ```
+{{< anchor "daikin_brc" >}}
 
 `daikin_brc` **Climate**:
 
@@ -134,16 +136,19 @@ climate:
     use_fahrenheit: true
 
 ```
+{{< anchor "delonghi_ir" >}}
 
 `delonghi` **Climate**:
 
 The `delonghi` climate currently supports the protocol used by some Delonghi portable units, known working with Delonghi PAC WE 120HP.
 
+{{< anchor "daikin_arc" >}}
 
 `daikin_arc` **Climate**:
 
 The Daikin ARC remotes (`daikin_arc` climate, `daikin_arc417`, `daikin_arc480` protocols of [Arduino-HeatpumpIR<heatpumpir>]({{< ref "#Arduino-HeatpumpIR<heatpumpir>" >}})) are used by the japanese model of Daikin.
 
+{{< anchor "gree_ir" >}}
 
 `gree` **Climate**:
 
@@ -166,6 +171,7 @@ climate:
     model: yan
 
 ```
+{{< anchor "midea_ir" >}}
 
 `midea_ir` **Climate**:
 
@@ -187,6 +193,7 @@ climate:
 - See :ref:`Toshiba<toshiba>` below if you are looking for compatibility with Midea model MAP14HS1TBL or similar.
 
 {{< /note >}}
+{{< anchor "mitsubishi" >}}
 
 `mitsubishi` **Climate**:
 
@@ -228,6 +235,7 @@ climate:
     vertical_default: "down"
 
 ```
+{{< anchor "toshiba" >}}
 
 `toshiba` **Climate**:
 
@@ -255,6 +263,7 @@ climate:
   models, as well. (Midea acquired Toshiba's product line and re-branded it.)
 
 {{< /note >}}
+{{< anchor "whirlpool" >}}
 
 `whirlpool` **Climate**:
 
@@ -263,6 +272,7 @@ climate:
   - `DG11J1-3A`: Temperature range is from 18 to 32 (default)
   - `DG11J1-91`: Temperature range is from 16 to 30
 
+{{< anchor "whynter" >}}
 
 `whynter` **Climate**:
 
@@ -278,11 +288,13 @@ climate:
     supports_heat: true
 
 ```
+{{< anchor "zhlt01" >}}
 
 `zhlt01` **Climate**:
 
 The `zhlt01` climate and protocol, based on the ZH/LT-01 remote controller, is used with many locally branded airconditioners, like: Eurom, Chigo, Tristar, Tecnomaster, Elgin, Geant, Tekno, Topair, Proma, Sumikura, JBS, Turbo Air, Nakatomy, Celestial Air, Ager, Blueway, Airlux, etc.
 
+{{< anchor "ir-receiver_id" >}}
 
 ## Using a Receiver
 
@@ -316,6 +328,7 @@ climate:
     receiver_id: rcvr
 
 ```
+{{< anchor "heatpumpir" >}}
 
 ## Arduino-HeatpumpIR
 

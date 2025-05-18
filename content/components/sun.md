@@ -106,6 +106,7 @@ text_sensor:
   for more information. Defaults to `%X`.
 - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
+{{< anchor "sun-is_above_below_horizon-condition" >}}
 
 ## ``sun.is_above_horizon`` / ``sun.is_below_horizon`` Conditions
 

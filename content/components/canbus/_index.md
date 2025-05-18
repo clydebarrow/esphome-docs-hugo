@@ -49,6 +49,7 @@ canbus:
           ESP_LOGD("can id 500", "%s", &b[0] );
 
 ```
+{{< anchor "config-canbus" >}}
 
 **Configuration variables:**
 
@@ -87,11 +88,13 @@ canbus:
 - **on_frame** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a
   CAN frame is received. See [canbus-on-frame]({{< ref "components/canbus/_index#canbus-on-frame" >}}).
 
+{{< anchor "platforms-canbus" >}}
 
 ## Platforms
 
 ## Automations
 
+{{< anchor "canbus-on-frame" >}}
 
 `on_frame` Trigger
 ********************

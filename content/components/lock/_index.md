@@ -8,6 +8,7 @@ title: "Lock Component"
 The `lock` domain includes all platforms that should function like a lock
 with lock/unlock actions.
 
+{{< anchor "config-lock" >}}
 
 ## Base Lock Configuration
 
@@ -45,6 +46,7 @@ Configuration variables:
 - If MQTT enabled, All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 - If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
+{{< anchor "lock-lock_action" >}}
 
 `lock.lock` Action
 *************************
@@ -57,6 +59,7 @@ on_...:
     - lock.lock: deadbolt_1
 
 ```
+{{< anchor "lock-unlock_action" >}}
 
 `lock.unlock` Action
 **************************
@@ -69,6 +72,7 @@ on_...:
     - lock.unlock: deadbolt_1
 
 ```
+{{< anchor "lock-open_action" >}}
 
 `lock.open` Action
 ************************
@@ -81,6 +85,8 @@ on_...:
     - lock.open: doorlock_1
 
 ```
+{{< anchor "lock-is_locked_condition" >}}
+{{< anchor "lock-is_unlocked_condition" >}}
 
 `lock.is_locked` / `lock.is_unlocked` Condition
 ***************************************************
@@ -96,6 +102,7 @@ on_...:
       lock.is_locked: my_lock
 
 ```
+{{< anchor "lock-lambda_calls" >}}
 
 lambda calls
 ************
@@ -131,6 +138,7 @@ advanced stuff (see the full API Reference for more info).
   id(my_lock).open();
 
   ```
+{{< anchor "lock-on_lock_unlock_trigger" >}}
 
 `lock.on_lock` / `lock.on_unlock` Trigger
 ****************************************************************

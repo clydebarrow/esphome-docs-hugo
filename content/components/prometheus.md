@@ -76,6 +76,7 @@ This is useful if you want to have different metric names or IDs than those show
 You can relabel metric name or ID labels by adding a `relabel` block in the `prometheus` configuration,
 and then adding a block with `id` and/or `name` fields for each sensor whose labels your want to override.
 
+{{< anchor "prometheus-relabel" >}}
 
 `relabel`
 ***********

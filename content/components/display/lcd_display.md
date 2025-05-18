@@ -21,6 +21,7 @@ with ESPHome. This component is only for LCDs that display individual characters
 
     It is also possible to add eight user-defined characters.
 
+{{< anchor "lcd-pcf8574" >}}
 
 ## lcd_pcf8574 Component
 
@@ -62,6 +63,7 @@ If you're not seeing anything on the display, try turning the contrast potentiom
 PCF8574 board.
 
 {{< /note >}}
+{{< anchor "lcd-gpio" >}}
 
 ## lcd_gpio Component
 
@@ -112,6 +114,7 @@ pin of the board. You can use a potentiometer to make it adjustable.
 
 
 {{< /note >}}
+{{< anchor "display-lcd_lambda" >}}
 
 ## Rendering Lambda
 

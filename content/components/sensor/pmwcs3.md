@@ -45,6 +45,7 @@ sensor:
 - **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
+{{< anchor "sensor-PMWCS3AirCalibrationAction" >}}
 
 ## ``pmwcs3.air_calibration`` Action
 
@@ -68,6 +69,7 @@ Configuration option:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
 
+{{< anchor "sensor-PMWCS3WaterCalibrationAction" >}}
 
 ## ``pmwcs3.water_calibration`` Action
 
@@ -91,6 +93,7 @@ Configuration option:
 
 - **id** (**Required**, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
 
+{{< anchor "sensor-PMWCS3NewI2cAddressAction" >}}
 
 ## ``pmwcs3.new_i2c_address`` Action
 

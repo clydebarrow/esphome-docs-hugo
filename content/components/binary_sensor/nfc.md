@@ -5,6 +5,7 @@ title: "NFC Binary Sensor"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "nfc-platform" >}}
 
 The `nfc` binary sensor platform provides an easy way for you to determine if an NFC tag is presented to the reader.
 The tag may be identified in one of three ways:
@@ -41,6 +42,7 @@ binary_sensor:
   For example: `74-10-37-94`. May not be used with `ndef_contains` and/or `tag_id` (above).
 - All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
+{{< anchor "nfc-setting_up_tags" >}}
 
 ## Setting Up Tags
 

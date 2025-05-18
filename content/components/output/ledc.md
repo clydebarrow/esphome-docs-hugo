@@ -114,6 +114,7 @@ a long transition, e.g. turning slowly off.
 The ESP8266 for instance has *usually* a frequency of 1000Hz with a resolution of 10 bits.
 This means that there are only 4 steps between each value.
 
+{{< anchor "output-ledc-set_frequency_action" >}}
 
 ## ``output.ledc.set_frequency`` Action
 

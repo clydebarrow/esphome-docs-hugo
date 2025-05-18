@@ -5,6 +5,7 @@ title: "ESPHome OTA Updates"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "config-ota_esphome" >}}
 
 ESPHome's Over-The-Air (OTA) platform allows you to remotely install modified/updated firmware binaries onto your
 ESPHome devices over their network (Wi-Fi or Ethernet) interface.

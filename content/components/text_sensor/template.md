@@ -33,6 +33,7 @@ Possible return values for the lambda:
   text sensor. Set to `never` to disable updates. Defaults to `60s`.
 - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
+{{< anchor "text_sensor-template-publish_action" >}}
 
 ## ``text_sensor.template.publish`` Action
 

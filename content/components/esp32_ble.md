@@ -70,6 +70,7 @@ The configuration option ``enable_on_boot`` can be set to ``false`` if you do no
 
 
 {{< /note >}}
+{{< anchor "ble-enabled_condition" >}}
 
 ## ``ble.enabled`` Condition
 

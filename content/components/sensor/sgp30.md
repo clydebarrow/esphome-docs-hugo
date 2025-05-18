@@ -64,6 +64,7 @@ Advanced:
   - **humidity_source** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Give an external relative humidity sensor ID
     here. This can improve the sensor's internal calculations.
 
+{{< anchor "sgp30-calibrating" >}}
 
 ## Calibrating Baseline
 

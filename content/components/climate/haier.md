@@ -111,6 +111,7 @@ climate:
 
 ## Automations
 
+{{< anchor "haier-on_alarm_start" >}}
 
 `on_alarm_start` Trigger
 **************************
@@ -128,6 +129,7 @@ climate:
             args: [ 'code', 'message' ]
 
 ```
+{{< anchor "haier-on_alarm_end" >}}
 
 `on_alarm_end` Trigger
 ************************
@@ -145,6 +147,7 @@ climate:
             args: [ 'code', 'message' ]
 
 ```
+{{< anchor "haier-on_status_message" >}}
 
 `on_status_message` Trigger
 *****************************

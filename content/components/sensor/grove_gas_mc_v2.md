@@ -57,6 +57,7 @@ Advanced:
 - **address** (*Optional*, int): The [I²C]({{< ref "components/i2c#i2c" >}}) address of the sensor.
   Defaults to `0x08`
 
+{{< anchor "grove-gas-mc-v2-preheating" >}}
 
 ## Preheating
 

@@ -19,6 +19,7 @@ For graphical displays, which offer the greatest flexibility, there are two opti
 - ESPHome's [own rendering engine]({{< ref "components/display/_index#display-engine" >}})
 - [LVGL ]({{< relref "/components/lvgl/index" >}}) - Light and Versatile Graphics Library
 
+{{< anchor "display-configuration" >}}
 
 Configuration variables:
 ************************
@@ -38,6 +39,7 @@ All *graphical* displays also inherit these configuration variables.
 - **pages** (*Optional*, list): Pages configuration - see below.
 
 
+{{< anchor "display-engine" >}}
 
 ## Display Rendering Engine
 
@@ -193,6 +195,7 @@ display:
 ```
 You can view the full API documentation for the rendering engine in the "API Reference" in the See Also section.
 
+{{< anchor "display-static_text" >}}
 
 ## Drawing Static Text
 
@@ -369,11 +372,13 @@ For displaying external data on the display, for example data from your Home Ass
 you can use the :doc:`/components/text_sensor/mqtt_subscribe` (see the example there for more information).
 
 {{< /note >}}
+{{< anchor "display-strftime" >}}
 
 ## Displaying Time
 
 You can display current time using a time component. Please see the example [here]({{< ref "components/time/_index#strftime" >}}).
 
+{{< anchor "clipping" >}}
 
 ## Screen Clipping
 
@@ -426,6 +431,7 @@ class Rect {
 ```
 With `is_clipping();` tells you if clipping is activated.
 
+{{< anchor "config-color" >}}
 
 ## Color
 
@@ -475,6 +481,7 @@ Configuration variables:
 RGB displays use red, green, and blue, while grayscale displays may use white.
 
 
+{{< anchor "display-pages" >}}
 
 ## Display Pages
 
@@ -542,6 +549,7 @@ action:
           - component.update: my_display
 
 {{< /note >}}
+{{< anchor "display-is_displaying_page-condition" >}}
 
 **display.is_displaying_page**: This condition returns true while the specified page is being shown.
 
@@ -562,6 +570,7 @@ on_...:
         ...
 
 ```
+{{< anchor "display-on_page_change-trigger" >}}
 
 **on_page_change**: This automation will be triggered when the page that is shown changes.
 
@@ -582,6 +591,7 @@ display:
 
 Additionally the old page will be given as the variable `from` and the new one as the variable `to`.
 
+{{< anchor "troubleshooting" >}}
 
 ## Troubleshooting
 

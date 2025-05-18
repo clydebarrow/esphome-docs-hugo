@@ -61,6 +61,7 @@ switch:
 First, we have to give the dehumidifier `switch` an [config-id]({{< ref "guides/configuration-types#config-id" >}}) so that we can refer to it inside of our
 automation.
 
+{{< anchor "actions-trigger" >}}
 
 ## Triggers
 
@@ -84,6 +85,7 @@ on_press:
     - switch.toggle: dehumidifier1
 
 ```
+{{< anchor "actions-action" >}}
 
 ## Actions
 
@@ -152,9 +154,11 @@ Now that concludes the introduction to actions in ESPHome. They're a powerful to
 your device with an easy-to-use syntax. What follows below is an index of common actions which you're sure to find
 useful (and even essential) for building all sorts of automations.
 
+{{< anchor "common-actions" >}}
 
 ## Common Actions
 
+{{< anchor "delay_action" >}}
 
 `delay` Action
 ****************
@@ -177,6 +181,7 @@ This is a "smart" asynchronous delay - other code will still run in the backgrou
 the delay is happening. When using a lambda call, you should return the delay value in milliseconds.
 
 {{< /note >}}
+{{< anchor "if_action" >}}
 
 `if` Action
 *************
@@ -217,6 +222,7 @@ At least one of `condition`, `all` or `any` must be provided.
 - **else** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform if the condition evaluates to false.
   Defaults to doing nothing.
 
+{{< anchor "lambda_action" >}}
 
 `lambda` Action
 *****************
@@ -230,6 +236,7 @@ on_...:
         id(some_binary_sensor).publish_state(false);
 
 ```
+{{< anchor "repeat_action" >}}
 
 `repeat` Action
 *****************
@@ -253,6 +260,7 @@ Configuration variables:
 - **count** (**Required**, int): The number of times the action should be repeated.  The counter is available to lambdas using the reserved word "iteration".
 - **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to repeat.
 
+{{< anchor "wait_until_action" >}}
 
 `wait_until` Action
 *********************
@@ -288,6 +296,7 @@ Configuration variables:
 - **condition** (**Required**, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to wait to become true.
 - **timeout** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before timing out. Defaults to never timing out.
 
+{{< anchor "while_action" >}}
 
 `while` Action
 ****************
@@ -312,6 +321,7 @@ Configuration variables:
 - **condition** (**Required**, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine whether or not to execute.
 - **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform until the condition evaluates to false.
 
+{{< anchor "component-update_action" >}}
 
 `component.update` Action
 ***************************
@@ -330,6 +340,7 @@ on_...:
     - lambda: 'id(my_component).update();'
 
 ```
+{{< anchor "component-suspend_action" >}}
 
 `component.suspend` Action
 ****************************
@@ -353,6 +364,7 @@ on_...:
     - lambda: 'id(my_component).stop_poller();'
 
 ```
+{{< anchor "component-resume_action" >}}
 
 `component.resume` Action
 ***************************
@@ -385,11 +397,18 @@ on_...:
         update_interval: 15s
 
 ```
+{{< anchor "common_conditions" >}}
 
 ## Common Conditions
 
 "Conditions" provide a way for your device to take an action only when a specific (set of) condition(s) is satisfied.
 
+{{< anchor "and_condition" >}}
+{{< anchor "all_condition" >}}
+{{< anchor "or_condition" >}}
+{{< anchor "any_condition" >}}
+{{< anchor "xor_condition" >}}
+{{< anchor "not_condition" >}}
 
 `and` / `all` / `or` / `any` / `xor` / `not` Condition
 ******************************************************************
@@ -415,6 +434,7 @@ on_...:
           - binary_sensor.is_on: some_other_sensor
 
 ```
+{{< anchor "for_condition" >}}
 
 `for` Condition
 *****************
@@ -439,6 +459,7 @@ Configuration variables:
   The time for which the condition has to have been true.
 - **condition** (**Required**, [condition<config-condition>]({{< ref "#condition<config-condition>" >}})): The condition to check.
 
+{{< anchor "lambda_condition" >}}
 
 `lambda` Condition
 ********************
@@ -457,6 +478,7 @@ on_...:
         # ...
 
 ```
+{{< anchor "config-action" >}}
 
 ## All Actions
 
@@ -544,6 +566,7 @@ See also: [common-actions]({{< ref "automations/actions#common-actions" >}}).
 
 
 
+{{< anchor "config-condition" >}}
 
 ## All Conditions
 
@@ -584,9 +607,11 @@ See also: [common_conditions]({{< ref "automations/actions#common_conditions" >}
 
 
 
+{{< anchor "tips-and-tricks" >}}
 
 ## Tips and Tricks
 
+{{< anchor "automation-networkless" >}}
 
 Do Automations Work Without a Network Connection
 ************************************************
@@ -606,6 +631,7 @@ of the following components:
 Beware, however, that disabling the reboot timeout(s) effectively disables the reboot watchdog, so you will need to
 power-cycle the device if it proves to be/remain unreachable on the network.
 
+{{< anchor "timers-timeouts" >}}
 
 Timers and Timeouts
 *******************

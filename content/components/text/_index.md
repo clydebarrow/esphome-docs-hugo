@@ -13,6 +13,7 @@ can be set by the user/frontend.
 Home Assistant Core 2023.11 or higher is required for ESPHome text entities to work.
 
 {{< /note >}}
+{{< anchor "config-text" >}}
 
 ## Base Text Configuration
 
@@ -64,6 +65,7 @@ MQTT Options:
 You can access the most recent state of the text in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
 `id(text_id).state`.
 
+{{< anchor "text-on_value" >}}
 
 `on_value`
 ************
@@ -84,6 +86,7 @@ text:
 ```
 Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
+{{< anchor "text-set_action" >}}
 
 `text.set` Action
 *******************
@@ -102,6 +105,7 @@ Configuration variables:
 - **value** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The value to set the text to.
 
+{{< anchor "text-lambda_calls" >}}
 
 lambda calls
 ************

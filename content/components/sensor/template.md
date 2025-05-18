@@ -37,6 +37,7 @@ Possible return values for the lambda:
   sensor. Set to `never` to disable updates. Defaults to `60s`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
+{{< anchor "sensor-template-publish_action" >}}
 
 ## ``sensor.template.publish`` Action
 

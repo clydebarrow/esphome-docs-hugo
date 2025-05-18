@@ -286,6 +286,7 @@ Set Point Options/Behavior
   difference between the lower set point and the current temperature exceeds this value,
   `supplemental_heating_action` will be called immediately.
 
+{{< anchor "thermostat-preset" >}}
 
 Presets
 *******

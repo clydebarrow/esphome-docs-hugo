@@ -4,6 +4,7 @@ title: ""
 ---
 
 ## Generic I²C device component:
+{{< anchor "i2c_device" >}}
 
 General-purpose I²C device component that can be used to communicate with hardware not supported by a specific component. It allows selection of the I²C address. Reads and writes on the device can be performed with lambdas. For example:
 

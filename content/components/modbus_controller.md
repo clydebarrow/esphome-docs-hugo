@@ -58,6 +58,7 @@ See :doc:`logger` for more details
 - **update_interval** (*Optional*, [config-time]({{< ref "guides/configuration-types#config-time" >}})): The interval that the sensors should be checked.
   Defaults to 60 seconds.
 
+{{< anchor "modbus_controller-offline_skip_updates" >}}
 
 - **offline_skip_updates** (*Optional*, integer): When a slave doesn't respond to a command, it is
   marked as offline, you can specify how many updates will be skipped while it is offline. If using a bus with multiple
@@ -201,6 +202,7 @@ Check out the various Modbus components available at the bottom of the document 
 
 Below you find a few general tips about using Modbus in more advanced scenarios. Applicable component functionalities have links pointing here:
 
+{{< anchor "bitmasks" >}}
 
 ## Bitmasks
 
@@ -275,6 +277,7 @@ binary_sensor:
 
 
 ```
+{{< anchor "modbus_custom_command" >}}
 
 ## Using ``custom_command``
 
@@ -343,6 +346,7 @@ sensors:
     accuracy_decimals: 1
 
 ```
+{{< anchor "modbus_register_count" >}}
 
 ## Optimizing modbus communications
 
@@ -714,10 +718,13 @@ Then battery charge settings are sent.
           - multiply: 0.01
 
 {{< /note >}}
+{{< anchor "modbusseealso" >}}
 
+{{< anchor "modbus_controller-automations" >}}
 
 ## Automation
 
+{{< anchor "modbus_controller-on_command_sent" >}}
 
 `on_command_sent`
 *******************
@@ -734,6 +741,7 @@ modbus_controller:
         - number.increment: modbus_commands
 
 ```
+{{< anchor "modbus_controller-on_online" >}}
 
 `on_online`
 *******************
@@ -750,6 +758,7 @@ modbus_controller:
         - logger.log: "Controller back online!"
 
 ```
+{{< anchor "modbus_controller-on_offline" >}}
 
 `on_offline`
 *******************

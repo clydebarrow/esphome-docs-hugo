@@ -50,6 +50,7 @@ If ``binary_sensors`` is omitted then you're expected to trigger the alarm using
 :ref:`alarm_control_panel_pending_action` or :ref:`alarm_control_panel_triggered_action`.
 
 {{< /note >}}
+{{< anchor "template_alarm_control_panel-trigger_modes" >}}
 
 ## Trigger Modes
 
@@ -73,6 +74,7 @@ The `delayed_follower` trigger mode offers better protection if someone enters a
 entered the premises in a unusual manner. Likewise, if someone enters the premises though a door set to the `delayed` trigger mode, and then triggers the PIR, the alarm will stay in the `pending` state until either they disarm the alarm, or
 the pending timer expires.
 
+{{< anchor "template_alarm_control_panel-state_flow" >}}
 
 ## State Flow:
 

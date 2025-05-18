@@ -12,6 +12,7 @@ functionality.
 ESPHome media players require Home Assistant 2022.6 or newer.
 
 {{< /note >}}
+{{< anchor "config-media_player" >}}
 
 ## Base Media Player Configuration
 
@@ -43,6 +44,7 @@ Configuration variables:
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options. Set to `""` to remove the default entity category.
 
+{{< anchor "media_player-actions" >}}
 
 ## Media Player Actions
 
@@ -54,15 +56,15 @@ Configuration variables:
 **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): The media player to control. Defaults to the only one in YAML.
 
 
+{{< anchor "media_player-play" >}}
 
-`media_player.play` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.play`` Action
 
 This action will resume playing the media player.
 
+{{< anchor "media_player-play_media" >}}
 
-`media_player.play_media` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.play_media`` Action
 
 This action will start playing the specified media.
 
@@ -84,15 +86,15 @@ Configuration variables:
 
 **media_url** (**Required**, string): The media url to play.
 
+{{< anchor "media_player-pause" >}}
 
-`media_player.pause` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.pause`` Action
 
 This action pauses the current playback.
 
+{{< anchor "media_player-stop" >}}
 
-`media_player.stop` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.stop`` Action
 
 This action stops the current playback.
 
@@ -100,27 +102,27 @@ Configuration variables:
 
 **announcement** (*Optional*, boolean): Whether to target announcements or regular media files, if supported by the media player. Defaults to `false`.
 
+{{< anchor "media_player-toggle" >}}
 
-`media_player.toggle` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.toggle`` Action
 
 This action will pause or resume the current playback.
 
+{{< anchor "media_player-volume_up" >}}
 
-`media_player.volume_up` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.volume_up`` Action
 
 This action will increase the volume of the media player.
 
+{{< anchor "media_player-volume_down" >}}
 
-`media_player.volume_down` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.volume_down`` Action
 
 This action will decrease the volume of the media player.
 
+{{< anchor "media_player-volume_set" >}}
 
-`media_player.volume_set` Action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.volume_set`` Action
 
 This action will set the volume of the media player.
 
@@ -142,9 +144,9 @@ Configuration variables:
 
 **volume** (**Required**, percentage): The volume to set the media player to.
 
+{{< anchor "media_player-on_state_trigger" >}}
 
-`media_player.on_state` Trigger
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.on_state`` Trigger
 
 This trigger is activated each time the state of the media player is updated
 (for example, if the player is stop playing audio or received some command).
@@ -157,9 +159,9 @@ media_player:
       - logger.log: "State updated!"
 
 ```
+{{< anchor "media_player-on_play_trigger" >}}
 
-`media_player.on_play` Trigger
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.on_play`` Trigger
 
 This trigger is activated each time then the media player is started playing.
 
@@ -171,9 +173,9 @@ media_player:
       - logger.log: "Playback started!"
 
 ```
+{{< anchor "media_player-on_pause_trigger" >}}
 
-`media_player.on_pause` Trigger
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.on_pause`` Trigger
 
 This trigger is activated every time the media player pauses playback.
 
@@ -185,9 +187,9 @@ media_player:
       - logger.log: "Playback paused!"
 
 ```
+{{< anchor "media_player-on_idle_trigger" >}}
 
-`media_player.on_idle` Trigger
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.on_idle`` Trigger
 
 This trigger is activated every time the media player finishes playing.
 
@@ -199,9 +201,9 @@ media_player:
       - logger.log: "Playback finished!"
 
 ```
+{{< anchor "media_player-on_announcement_trigger" >}}
 
-`media_player.on_announcement` Trigger
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.on_announcement`` Trigger
 
 This trigger is activated every time the media player plays an announcement.
 
@@ -213,9 +215,9 @@ media_player:
       - logger.log: "Announcing!"
 
 ```
+{{< anchor "media_player-is_idle_condition" >}}
 
-`media_player.is_idle` Condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.is_idle`` Condition
 
 This condition checks if the media player is idle.
 
@@ -227,9 +229,9 @@ on_...:
       media_player.is_idle:
 
 ```
+{{< anchor "media_player-is_playing_condition" >}}
 
-`media_player.is_playing` Condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.is_playing`` Condition
 
 This condition checks if the media player is playing media.
 
@@ -241,9 +243,9 @@ on_...:
       media_player.is_playing:
 
 ```
+{{< anchor "media_player-is_paused_condition" >}}
 
-`media_player.is_paused` Condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.is_paused`` Condition
 
 This condition checks if the media player is paused.
 
@@ -255,9 +257,9 @@ on_...:
       media_player.is_paused:
 
 ```
+{{< anchor "media_player-is_announcing_condition" >}}
 
-`media_player.is_announcing` Condition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### ``media_player.is_announcing`` Condition
 
 This condition checks if the media player is playing an announcement.
 

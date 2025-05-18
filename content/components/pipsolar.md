@@ -301,6 +301,7 @@ All sensors are normal text sensors... so all text sensor variables are working 
 
   - **possible_values** (*Optional*, list): a list of possible values default: 00.0,48.0,49,50.0,51.0,52,53,54,55,56,57,58
 
+{{< anchor "pipsolaroutput_set_level_action" >}}
 
 ## ``output.pipsolar.set_level`` Action
 

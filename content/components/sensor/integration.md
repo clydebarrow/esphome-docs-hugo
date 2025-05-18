@@ -37,6 +37,7 @@ sensor:
   Warning: this option can wear out your flash. Defaults to `false`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
+{{< anchor "sensor-integration-reset_action" >}}
 
 ## ``sensor.integration.reset`` Action
 

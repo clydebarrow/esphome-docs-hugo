@@ -5,6 +5,7 @@ title: "Over-the-Air Updates"
 
 {{< seo description="" image="" >}}
 
+{{< anchor "config-ota" >}}
 
 ESPHome supports remotely updating a device "over-the-air" (OTA). Each update mechanism is a *platform* of the base
 `ota` component and will have its own configuration variables.
@@ -33,6 +34,7 @@ ota:
 -  **on_state_change** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when an OTA update state
    change happens. See [ota-on_state_change]({{< ref "components/ota/_index#ota-on_state_change" >}}).
 
+{{< anchor "ota-automations" >}}
 
 ## OTA Automations
 
@@ -45,6 +47,7 @@ update process. When using these automation triggers, note that:
   X cannot be used for providing OTA update feedback.
 - Your automation action(s) must not consume any significant amount of time; if they do, OTA updates may fail.
 
+{{< anchor "ota-on_begin" >}}
 
 `on_begin`
 ************
@@ -59,6 +62,7 @@ ota:
         - logger.log: "OTA start"
 
 ```
+{{< anchor "ota-on_progress" >}}
 
 `on_progress`
 ***************
@@ -76,6 +80,7 @@ ota:
             args: ["x"]
 
 ```
+{{< anchor "ota-on_end" >}}
 
 `on_end`
 **********
@@ -95,6 +100,7 @@ ota:
         - logger.log: "OTA end"
 
 ```
+{{< anchor "ota-on_error" >}}
 
 `on_error`
 ************
@@ -114,6 +120,7 @@ ota:
             args: ["x"]
 
 ```
+{{< anchor "ota-on_state_change" >}}
 
 `on_state_change`
 *******************

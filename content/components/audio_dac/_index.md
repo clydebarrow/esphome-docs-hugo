@@ -16,11 +16,13 @@ audio_dac:
 ```
 ## Platforms
 
+{{< anchor "config-audio_dac" >}}
 
 ## Configuration variables:
 
 - **id** (*Optional*, [config-id]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
+{{< anchor "automations-audio_dac" >}}
 
 ## Automations
 

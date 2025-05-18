@@ -73,6 +73,7 @@ like ``1122aaff``, or 128 bit long like ``11223344-5566-7788-99aa-bbccddeeff00``
    The default is 5 minutes.
 -  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
+{{< anchor "esp32_ble_tracker-setting_up_devices" >}}
 
 ## Setting Up Devices
 

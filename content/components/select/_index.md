@@ -366,4 +366,4 @@ select:
 
 - :apiref:`Select <select/select.h>`
 - :apiref:`SelectCall <select/select_call.h>`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/select/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/index.md)

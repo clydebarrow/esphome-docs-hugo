@@ -88,4 +88,4 @@ Removing a Password
 - [/components/ota/index]({{< ref "/components/ota/index" >}})
 - [/components/ota/http_request]({{< ref "/components/ota/http_request" >}})
 - [/components/safe_mode]({{< ref "/components/safe_mode" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/ota/esphome.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ota/esphome.md)

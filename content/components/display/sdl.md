@@ -95,4 +95,4 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 - [SDL binary sensor ]({{< relref "/components/binary_sensor/sdl" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`sdl/sdl_esphome.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/sdl.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/sdl.md)

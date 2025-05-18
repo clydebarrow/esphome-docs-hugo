@@ -480,4 +480,4 @@ climate:
   real-world use case for this component.
 - [Development repository](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
   before proposing them to ESPHome core.
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/opentherm.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/opentherm.md)

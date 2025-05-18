@@ -56,4 +56,4 @@ climate:
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
 - [/components/climate/index]({{< ref "/components/climate/index" >}})
 - :apiref:`anova/anova.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/anova.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/anova.md)

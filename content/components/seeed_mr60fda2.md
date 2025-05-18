@@ -103,4 +103,4 @@ Configuration variables:
 - [Product Detail Page for Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6](https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html)
 - [Source of inspiration for implementation](https://github.com/limengdu/MR60FDA2_ESPHome_external_components)
 - :apiref:`seeed_mr60fda2/seeed_mr60fda2.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/seeed_mr60fda2.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/seeed_mr60fda2.md)

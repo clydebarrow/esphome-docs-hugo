@@ -43,4 +43,4 @@ switch:
 
 - [/components/uart]({{< ref "/components/uart" >}})
 - :apiref:`uart/switch/uart_switch.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/uart.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/uart.md)

@@ -155,4 +155,4 @@ modbus_controller:
 - [pzem004t]({{< ref "pzem004t/" >}})
 - [pzemdc]({{< ref "pzemdc/" >}})
 - :apiref:`pzemac/pzemac.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/pzemac.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzemac.md)

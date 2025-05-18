@@ -54,4 +54,4 @@ HowTo by [NUT].
 
 - [/components/speaker/index]({{< ref "/components/speaker/index" >}})
 - [/components/speaker/i2s_audio]({{< ref "/components/speaker/i2s_audio" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/audio_clips_for_i2s.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/audio_clips_for_i2s.md)

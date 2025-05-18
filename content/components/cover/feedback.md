@@ -254,4 +254,4 @@ Most options can be left untouched, but some modifications are needed:
 - [index]({{< ref "index/" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`feedback/feedback_cover.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/feedback.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/feedback.md)

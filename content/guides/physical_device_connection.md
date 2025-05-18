@@ -344,4 +344,4 @@ require different parts and tools.
 - [ESPHome index ]({{< relref "/index" >}})
 - [getting_started_command_line]({{< ref "getting_started_command_line/" >}})
 - [getting_started_hassio]({{< ref "getting_started_hassio/" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/physical_device_connection.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/physical_device_connection.md)

@@ -272,4 +272,4 @@ climate:
 ## See Also
 
 - :apiref:`climate/climate.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/index.md)

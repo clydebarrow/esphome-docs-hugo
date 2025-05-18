@@ -68,4 +68,4 @@ For I²C multiplexing see [/components/tca9548a]({{< ref "/components/tca9548a" 
 - [/components/tca9548a]({{< ref "/components/tca9548a" >}})
 - [/components/i2c_device]({{< ref "/components/i2c_device" >}})
 - :apiref:`i2c/i2c.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/i2c.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/i2c.md)

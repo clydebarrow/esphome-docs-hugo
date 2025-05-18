@@ -199,4 +199,4 @@ printh FF FF FF
 - [/components/display/nextion]({{< ref "/components/display/nextion" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`nextion/binary_sensor/nextion_binarysensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/nextion.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/nextion.md)

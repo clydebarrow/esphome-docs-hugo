@@ -37,4 +37,4 @@ sensor:
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [uart]({{< ref "components/uart#uart" >}})
 - :apiref:`a01nyub/a01nyub.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/a01nyub.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/a01nyub.md)

@@ -64,4 +64,4 @@ select:
 
 - [/components/select/index]({{< ref "/components/select/index" >}})
 - :apiref:`tuya/select/tuya_select.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/select/tuya.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/tuya.md)

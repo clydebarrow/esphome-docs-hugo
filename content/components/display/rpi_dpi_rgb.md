@@ -203,4 +203,4 @@ display:
 
 - [index]({{< ref "index/" >}})
 - :apiref:`rpi_dpi_rgb/rpi_dpi_rgb.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/rpi_dpi_rgb.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/rpi_dpi_rgb.md)

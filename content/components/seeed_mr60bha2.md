@@ -82,4 +82,4 @@ Configuration variables:
 - [Product Detail Page for Seeed Studio MR60BHA2 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6](https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html)
 - [Source of inspiration for implementation](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/)
 - :apiref:`seeed_mr60bha2/seeed_mr60bha2.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/seeed_mr60bha2.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/seeed_mr60bha2.md)

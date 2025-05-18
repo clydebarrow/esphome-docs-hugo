@@ -203,4 +203,4 @@ printh FF FF FF
 - [/components/display/nextion]({{< ref "/components/display/nextion" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`nextion/sensor/nextion_sensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/nextion.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/nextion.md)

@@ -40,4 +40,4 @@ This will, for example, change the output of the sensor from:
 ## See Also
 
 - :apiref:`version/version_text_sensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/version.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/version.md)

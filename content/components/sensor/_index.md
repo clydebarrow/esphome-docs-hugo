@@ -965,4 +965,4 @@ advanced stuff (see the full API Reference for more info).
 ## See Also
 
 - :apiref:`sensor/sensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/index.md)

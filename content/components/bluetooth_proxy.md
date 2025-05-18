@@ -124,4 +124,4 @@ bluetooth_proxy:
 - [esp32_ble_tracker]({{< ref "esp32_ble_tracker/" >}})
 - :apiref:`bluetooth_proxy/bluetooth_proxy.h`
 - BTHome `<https://bthome.io/>`__
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/bluetooth_proxy.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/bluetooth_proxy.md)

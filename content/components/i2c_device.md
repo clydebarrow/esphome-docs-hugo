@@ -35,4 +35,4 @@ i2c_device:
 
 - [/components/i2c]({{< ref "/components/i2c" >}})
 - :apiref:`i2c_device/i2c_device.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/i2c_device.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/i2c_device.md)

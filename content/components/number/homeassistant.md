@@ -36,4 +36,4 @@ with the [number-set_action]({{< ref "components/number/_index#number-set_action
 
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/number/homeassistant_number.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/number/homeassistant.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/number/homeassistant.md)

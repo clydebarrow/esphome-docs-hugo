@@ -519,4 +519,4 @@ Please see the [Bang-Bang ]({{< relref "bang_bang/" >}}) component's documentati
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
 - [Bang-Bang ]({{< relref "bang_bang/" >}})
 - [config-action]({{< ref "automations/actions#config-action" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/thermostat.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/thermostat.md)

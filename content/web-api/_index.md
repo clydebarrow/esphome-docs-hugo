@@ -348,4 +348,4 @@ disarmed successfully. It only indicates that the command was received and proce
 - [/components/web_server]({{< ref "/components/web_server" >}})
 - [/components/prometheus]({{< ref "/components/prometheus" >}})
 - [/components/http_request]({{< ref "/components/http_request" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/web-api/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/web-api/index.md)

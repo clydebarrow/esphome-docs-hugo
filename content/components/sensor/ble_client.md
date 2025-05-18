@@ -124,4 +124,4 @@ Some common ones:
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ble_sensor/ble_sensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/ble_client.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ble_client.md)

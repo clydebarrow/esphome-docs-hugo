@@ -320,4 +320,4 @@ on_...:
 - [Haier Climate Switches ]({{< relref "/components/switch/haier" >}})
 - [/components/climate/index]({{< ref "/components/climate/index" >}})
 - :apiref:`haier/climate/haier_base.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/haier.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/haier.md)

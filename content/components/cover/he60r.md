@@ -100,4 +100,4 @@ binary_sensor:
 - [index]({{< ref "index/" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - [gpio-binary-sensor]({{< ref "components/binary_sensor/gpio#gpio-binary-sensor" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/he60r.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/he60r.md)

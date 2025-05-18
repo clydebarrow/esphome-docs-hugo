@@ -382,4 +382,4 @@ The lambda equivalent for this is `!id(wifi_id).is_disabled()`.
 - [/components/ethernet]({{< ref "/components/ethernet" >}})
 - [api]({{< ref "api/" >}})
 - :apiref:`wifi/wifi_component.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/wifi.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wifi.md)

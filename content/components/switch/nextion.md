@@ -169,4 +169,4 @@ printh FF FF FF
 - [/components/display/nextion]({{< ref "/components/display/nextion" >}})
 - [index]({{< ref "index/" >}})
 - :apiref:`nextion/switch/nextion_switch.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/nextion.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/nextion.md)

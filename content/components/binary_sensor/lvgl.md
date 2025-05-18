@@ -34,4 +34,4 @@ binary_sensor:
 - [/components/light/lvgl]({{< ref "/components/light/lvgl" >}})
 - [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
 - [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/lvgl.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/lvgl.md)

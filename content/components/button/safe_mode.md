@@ -31,4 +31,4 @@ This component requires [/components/safe_mode]({{< ref "/components/safe_mode" 
 - [/components/switch/safe_mode]({{< ref "/components/switch/safe_mode" >}})
 - [template]({{< ref "template/" >}})
 - :apiref:`safe_mode/safe_mode_button.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/button/safe_mode.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/safe_mode.md)

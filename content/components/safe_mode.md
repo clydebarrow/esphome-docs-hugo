@@ -47,4 +47,4 @@ and OTA component(s).
 - :apiref:`safe_mode/safe_mode.h`
 - [/components/button/safe_mode]({{< ref "/components/button/safe_mode" >}})
 - [/components/switch/safe_mode]({{< ref "/components/switch/safe_mode" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/safe_mode.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/safe_mode.md)

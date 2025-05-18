@@ -93,4 +93,4 @@ improv_serial:
 
 ## See Also
 
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/creators.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/creators.md)

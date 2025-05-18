@@ -71,4 +71,4 @@ Complete example: [Sonoff Dual Light Switch](https://devices.esphome.io/devices/
 
 - [/components/output/index]({{< ref "/components/output/index" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/template.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/template.md)

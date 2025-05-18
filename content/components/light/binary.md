@@ -31,4 +31,4 @@ The `binary` light platform creates a simple ON/OFF-only light from a
 - [/components/output/gpio]({{< ref "/components/output/gpio" >}})
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`binary/light/binary_light_output.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/binary.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/binary.md)

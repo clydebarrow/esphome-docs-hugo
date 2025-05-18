@@ -117,4 +117,4 @@ on_...:
 
 - [i2c]({{< ref "components/i2c#i2c" >}})
 - [switch/gpio]({{< ref "switch/gpio" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/grove_tb6612fng.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/grove_tb6612fng.md)

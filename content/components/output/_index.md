@@ -122,6 +122,6 @@ This action can also be expressed in :ref:`lambdas <config-lambda>`:
 - :apiref:`binary_output.h <output/binary_output.h>`,
   :apiref:`float_output.h <output/float_output.h>`
 
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/index.md)
 
 

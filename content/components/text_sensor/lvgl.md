@@ -39,4 +39,4 @@ Widget-specific actions (``lvgl.label.update``, ``lvgl.textarea.update``) will t
 - [/components/light/lvgl]({{< ref "/components/light/lvgl" >}})
 - [/components/select/lvgl]({{< ref "/components/select/lvgl" >}})
 - [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/lvgl.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/lvgl.md)

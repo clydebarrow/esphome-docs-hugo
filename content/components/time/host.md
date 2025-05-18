@@ -19,4 +19,4 @@ All options from [base_time_config]({{< ref "components/time/_index#base_time_co
 ## See Also
 
 - [/components/host]({{< ref "/components/host" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/time/host.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/time/host.md)

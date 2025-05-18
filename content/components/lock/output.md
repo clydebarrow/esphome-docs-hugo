@@ -30,4 +30,4 @@ The `output` lock platform allows you to use any output component as a lock.
 
 - [/components/output/index]({{< ref "/components/output/index" >}})
 - :apiref:`output/lock/output_lock.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/lock/output.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lock/output.md)

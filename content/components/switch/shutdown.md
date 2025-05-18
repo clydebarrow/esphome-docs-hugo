@@ -31,4 +31,4 @@ pressing the reset button or restarting the power supply.
 - [/components/button/shutdown]({{< ref "/components/button/shutdown" >}})
 - [template]({{< ref "template/" >}})
 - :apiref:`shutdown/shutdown_switch.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/shutdown.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/shutdown.md)

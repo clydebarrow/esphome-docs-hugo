@@ -240,4 +240,4 @@ Sensor value graph
 - [api-rest]({{< ref "web-api/_index#api-rest" >}})
 - :apiref:`web_server/web_server.h`
 - [prometheus]({{< ref "prometheus/" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/web_server.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/web_server.md)

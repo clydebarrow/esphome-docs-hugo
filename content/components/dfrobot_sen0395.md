@@ -249,4 +249,4 @@ Configuration variables:
 - [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
 - [config-id]({{< ref "guides/configuration-types#config-id" >}})
 - [DFRobot mmWave Radar Wiki page](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/dfrobot_sen0395.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/dfrobot_sen0395.md)

@@ -51,4 +51,4 @@ The `dht12` Temperature+Humidity sensor allows you to use your DHT12
 - [sht3xd]({{< ref "sht3xd/" >}})
 - :apiref:`dht12/dht12.h`
 - [DHT12 Library](https://github.com/dplasa/dht) by [Daniel Plasa](https://github.com/dplasa)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/dht12.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dht12.md)

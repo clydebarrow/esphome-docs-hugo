@@ -95,4 +95,4 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 - [index]({{< ref "index/" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`tormatic/tormatic_cover.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/cover/tormatic.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/tormatic.md)

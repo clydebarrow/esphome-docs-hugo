@@ -175,4 +175,4 @@ api:
 - [/components/output/ledc]({{< ref "/components/output/ledc" >}})
 - [/components/speaker/index]({{< ref "/components/speaker/index" >}})
 - :apiref:`rtttl/rtttl.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/rtttl.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/rtttl.md)

@@ -37,4 +37,4 @@ sensor:
 - [/components/sensor/packet_transport]({{< ref "/components/sensor/packet_transport" >}})
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`packet_transport/packet_transport.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/packet_transport/udp.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/packet_transport/udp.md)

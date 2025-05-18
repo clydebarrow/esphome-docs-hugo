@@ -988,4 +988,4 @@ This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) i
 - [/components/touchscreen/index]({{< ref "/components/touchscreen/index" >}})
 - [/components/sensor/rotary_encoder]({{< ref "/components/sensor/rotary_encoder" >}})
 - [LVGL docs](https://docs.lvgl.io/)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/lvgl/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/index.md)

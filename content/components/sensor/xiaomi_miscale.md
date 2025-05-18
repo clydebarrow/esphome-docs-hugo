@@ -108,4 +108,4 @@ sensor:
 - bodymiscale score integration for Home Assistant (bodymiscale custom component) `<https://github.com/dckiller51/bodymiscale>`__
 - bodymiscale Lovelace Card `<https://github.com/dckiller51/lovelace-body-miscale-card>`__
 
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/xiaomi_miscale.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/xiaomi_miscale.md)

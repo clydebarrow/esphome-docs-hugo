@@ -135,4 +135,4 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can trigg
 ## See Also
 
 - :apiref:`event/event.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/event/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/event/index.md)

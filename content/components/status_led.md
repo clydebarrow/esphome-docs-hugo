@@ -48,4 +48,4 @@ If your LED is in an active-LOW mode (when it's on if the output is enabled), us
 
 - [/components/light/status_led]({{< ref "/components/light/status_led" >}})
 - :apiref:`status_led/status_led.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/status_led.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/status_led.md)

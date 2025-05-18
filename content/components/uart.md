@@ -271,4 +271,4 @@ uart:
 - [/components/logger]({{< ref "/components/logger" >}})
 - [/components/packet_transport/uart]({{< ref "/components/packet_transport/uart" >}})
 - :apiref:`uart/uart.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/uart.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/uart.md)

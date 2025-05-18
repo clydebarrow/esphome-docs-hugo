@@ -636,4 +636,4 @@ action and then (in your automation) use the `script.is_running` condition to kn
 
 - [index]({{< ref "index/" >}})
 - [templates]({{< ref "templates/" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/automations/actions.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/automations/actions.md)

@@ -52,4 +52,4 @@ Example json log:
 - [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
 - [/components/text_sensor/index]({{< ref "/components/text_sensor/index" >}})
 - :apiref:`ble_scanner/ble_scanner.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/ble_scanner.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/ble_scanner.md)

@@ -59,4 +59,4 @@ Configuration variables:
 - [/components/fan/speed]({{< ref "/components/fan/speed" >}})
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`libretiny_pwm/libretiny_pwm.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/libretiny_pwm.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/libretiny_pwm.md)

@@ -312,4 +312,4 @@ on_...:
 - [index]({{< ref "index/" >}})
 - :apiref:`http_request/http_request.h`
 - [/components/json]({{< ref "/components/json" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/http_request.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/http_request.md)

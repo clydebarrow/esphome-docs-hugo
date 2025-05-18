@@ -46,4 +46,4 @@ text:
 
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/text/template_text.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text/template.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text/template.md)

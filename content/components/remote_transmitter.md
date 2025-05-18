@@ -1046,4 +1046,4 @@ See the full API Reference for more info.
 - [lambda_magic_rf_queues]({{< ref "cookbook/lambda_magic#lambda_magic_rf_queues" >}})
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - :apiref:`remote_transmitter/remote_transmitter.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/remote_transmitter.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/remote_transmitter.md)

@@ -113,4 +113,4 @@ text_sensor:
 ## See Also
 
 - :apiref:`teleinfo/teleinfo.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/teleinfo.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/teleinfo.md)

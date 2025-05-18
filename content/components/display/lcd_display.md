@@ -258,4 +258,4 @@ binary_sensor:
 - [Custom Character Generator](https://omerk.github.io/lcdchargen/)
 - [Arduino LiquidCrystal Library](https://www.arduino.cc/en/Reference/LiquidCrystal)
 - :apiref:`lcd_base/lcd_display.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/lcd_display.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/lcd_display.md)

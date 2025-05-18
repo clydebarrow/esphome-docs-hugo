@@ -26,4 +26,4 @@ text_sensor:
 
 - [/components/libretiny]({{< ref "/components/libretiny" >}})
 - :apiref:`libretiny/lt_component.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/text_sensor/libretiny.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/libretiny.md)

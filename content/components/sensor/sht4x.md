@@ -60,4 +60,4 @@ for more information about heater operation.
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [absolute_humidity]({{< ref "absolute_humidity/" >}})
 - :apiref:`sht4x/sht4x.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/sht4x.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sht4x.md)

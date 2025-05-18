@@ -78,4 +78,4 @@ on_...:
 - [pzem004t]({{< ref "pzem004t/" >}})
 - [pzemac]({{< ref "pzemac/" >}})
 - :apiref:`pzemdc/pzemdc.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/pzemdc.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzemdc.md)

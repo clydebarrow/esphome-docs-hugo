@@ -101,4 +101,4 @@ datetime:
 
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/datetime/template_date.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/datetime/template.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/datetime/template.md)

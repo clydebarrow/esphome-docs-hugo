@@ -154,4 +154,4 @@ display:
 - [/components/display/ssd1306]({{< ref "/components/display/ssd1306" >}})
 - [/components/display/index]({{< ref "/components/display/index" >}})
 - [/components/sensor/homeassistant]({{< ref "/components/sensor/homeassistant" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/display_time_temp_oled.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/display_time_temp_oled.md)

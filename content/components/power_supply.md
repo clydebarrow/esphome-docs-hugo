@@ -68,4 +68,4 @@ in between to protect the ESP board.
 
 - [output/index]({{< ref "output/index" >}})
 - :apiref:`power_supply/power_supply.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/power_supply.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/power_supply.md)

@@ -262,7 +262,7 @@ def convert_rst_to_md(rst_content, filename):
         processed_line = process_inline_markup(line)
         if ":ghedit:" in processed_line:
             processed_line = re.sub(r':ghedit:`([^`]+)`',
-                                    lambda m: f"[Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/{filename.replace('.rst', '.md')})",
+                                    lambda m: f"[Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/{filename.replace('.rst', '.md')})",
                                     processed_line)
 
 

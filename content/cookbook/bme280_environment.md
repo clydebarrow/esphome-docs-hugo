@@ -115,4 +115,4 @@ Therefore it is not possible to calculate altitude at the same time, and vice ve
 - [/components/sensor/absolute_humidity]({{< ref "/components/sensor/absolute_humidity" >}})
 - [/components/sensor/template]({{< ref "/components/sensor/template" >}})
 - [/components/sensor/bme280]({{< ref "/components/sensor/bme280" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/bme280_environment.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/bme280_environment.md)

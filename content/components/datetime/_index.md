@@ -306,4 +306,4 @@ For more complex use cases, several methods are available for use on datetimes f
 - :apiref:`TimeCall <datetime/time_entity.h>`
 - :apiref:`DateTimeEntity <datetime/datetime_entity.h>`
 - :apiref:`DateTimeCall <datetime/datetime_entity.h>`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/datetime/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/datetime/index.md)

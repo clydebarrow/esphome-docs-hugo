@@ -586,4 +586,4 @@ rendering the hardware hack uncessary. This software passthrough mode can be use
 - [/components/rf_bridge]({{< ref "/components/rf_bridge" >}})
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - :apiref:`remote/remote_receiver.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/remote_receiver.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/remote_receiver.md)

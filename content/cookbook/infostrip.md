@@ -147,4 +147,4 @@ automation:
 - [/components/light/fastled]({{< ref "/components/light/fastled" >}})
 - [/components/light/partition]({{< ref "/components/light/partition" >}})
 - [/components/sensor/mhz19]({{< ref "/components/sensor/mhz19" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/infostrip.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/infostrip.md)

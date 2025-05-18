@@ -74,4 +74,4 @@ the monochromatic light.
 - [/components/output/index]({{< ref "/components/output/index" >}})
 - [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}})
 - :apiref:`ac_dimmer/ac_dimmer.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/output/ac_dimmer.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/ac_dimmer.md)

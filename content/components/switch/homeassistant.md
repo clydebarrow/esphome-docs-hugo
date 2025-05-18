@@ -44,4 +44,4 @@ The following entity domains from Home Assistant are supported by this platform.
 
 - [automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/switch/homeassistant_switch.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/homeassistant.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/homeassistant.md)

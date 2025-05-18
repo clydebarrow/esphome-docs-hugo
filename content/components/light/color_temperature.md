@@ -47,4 +47,4 @@ light:
 - [/components/output/pca9685]({{< ref "/components/output/pca9685" >}})
 - [/components/output/tlc59208f]({{< ref "/components/output/tlc59208f" >}})
 - :apiref:`color_temperature/ct_light_output.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/color_temperature.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/color_temperature.md)

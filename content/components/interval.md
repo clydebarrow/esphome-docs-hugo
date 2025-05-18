@@ -32,4 +32,4 @@ Configuration variables:
 - [index]({{< ref "index/" >}})
 - [/automations/actions]({{< ref "/automations/actions" >}})
 - [/automations/templates]({{< ref "/automations/templates" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/interval.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/interval.md)

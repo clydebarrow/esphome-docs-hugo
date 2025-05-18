@@ -26,4 +26,4 @@ for Home Assistant.
 - [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
 - [/components/mqtt]({{< ref "/components/mqtt" >}})
 - :apiref:`status/status_binary_sensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/status.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/status.md)

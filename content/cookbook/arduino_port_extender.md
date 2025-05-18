@@ -317,4 +317,4 @@ sensor:
 ```
 ## See Also
 
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/arduino_port_extender.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/arduino_port_extender.md)

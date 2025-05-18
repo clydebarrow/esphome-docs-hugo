@@ -202,4 +202,4 @@ Pin configuration variables:
 - :apiref:`API Reference (MCP23008) <mcp23008/mcp23008.h>`
 - :apiref:`API Reference (MCP23016) <mcp23016/mcp23016.h>`
 - :apiref:`API Reference (MCP23017) <mcp23017/mcp23017.h>`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/mcp230xx.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mcp230xx.md)

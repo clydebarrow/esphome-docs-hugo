@@ -30,4 +30,4 @@ The `output` switch platform allows you to use any output component as a switch.
 
 - [/components/output/index]({{< ref "/components/output/index" >}})
 - :apiref:`output/switch/output_switch.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/output.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/output.md)

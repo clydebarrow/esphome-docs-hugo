@@ -181,4 +181,4 @@ In all other situations, the [thermostat ]({{< relref "thermostat/" >}}) compone
 
 - [/components/climate/index]({{< ref "/components/climate/index" >}})
 - :apiref:`bang_bang/bang_bang_climate.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/bang_bang.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/bang_bang.md)

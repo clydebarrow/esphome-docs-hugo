@@ -341,4 +341,4 @@ available in a newer version of ESPHome. This allows for a more friendly error m
 
 ## See Also
 
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/esphome.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esphome.md)

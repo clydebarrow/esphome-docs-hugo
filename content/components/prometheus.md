@@ -99,4 +99,4 @@ prometheus:
 - [/components/http_request]({{< ref "/components/http_request" >}})
 - :apiref:`prometheus/prometheus_handler.h`
 - [Prometheus](https://prometheus.io/)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/prometheus.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/prometheus.md)

@@ -786,4 +786,4 @@ This action can also be written in :ref:`lambdas <config-lambda>`:
 ## See Also
 
 - :apiref:`mqtt/mqtt_client.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/mqtt.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mqtt.md)

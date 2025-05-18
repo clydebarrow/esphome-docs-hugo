@@ -194,4 +194,4 @@ issue on the [GitHub issue tracker](https://github.com/esphome/issues/issues) or
 
 - [ESPHome index ]({{< relref "/index" >}})
 - [getting_started_command_line]({{< ref "getting_started_command_line/" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/getting_started_hassio.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/getting_started_hassio.md)

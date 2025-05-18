@@ -49,4 +49,4 @@ the binary only ever includes the code that you are actually using.
 - [/components/esp32]({{< ref "/components/esp32" >}})
 - [migrate_espeasy]({{< ref "migrate_espeasy/" >}})
 - [migrate_sonoff_tasmota]({{< ref "migrate_sonoff_tasmota/" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/guides/migrate_espurna.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/migrate_espurna.md)

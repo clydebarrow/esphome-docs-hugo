@@ -31,4 +31,4 @@ values, including 53.3°C which equates to a raw value of 128. Invalid measureme
 ## See Also
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/internal_temperature.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/internal_temperature.md)

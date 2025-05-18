@@ -388,4 +388,4 @@ automation:
 - [/components/uart]({{< ref "/components/uart" >}})
 - [/components/remote_receiver]({{< ref "/components/remote_receiver" >}})
 - [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/rf_bridge.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/rf_bridge.md)

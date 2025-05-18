@@ -238,4 +238,4 @@ valve:
 ## See Also
 
 - :apiref:`valve/valve.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/valve/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/valve/index.md)

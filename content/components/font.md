@@ -185,4 +185,4 @@ to install it using ``pip install "pillow==10.4.0"``.
 - [MDI cheatsheet](https://pictogrammers.com/library/mdi/)
 - [MDI font repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/)
 - [Google Fonts Glyphsets](https://github.com/googlefonts/glyphsets/blob/main/GLYPHSETS.md)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/font.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/font.md)

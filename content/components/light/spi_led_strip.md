@@ -54,4 +54,4 @@ APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso
 - [/components/output/my9231]({{< ref "/components/output/my9231" >}})
 - [/components/output/sm16716]({{< ref "/components/output/sm16716" >}})
 - :apiref:`rgb/rgb_light_output.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/spi_led_strip.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/spi_led_strip.md)

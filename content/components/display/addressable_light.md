@@ -140,4 +140,4 @@ display:
 - [/components/light/fastled]({{< ref "/components/light/fastled" >}})
 - [/components/light/neopixelbus]({{< ref "/components/light/neopixelbus" >}})
 - [/components/light/partition]({{< ref "/components/light/partition" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/addressable_light.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/addressable_light.md)

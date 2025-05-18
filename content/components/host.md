@@ -39,4 +39,4 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 - [SDL display]({{< ref "components/display/sdl#sdl" >}})
 - [esphome]({{< ref "esphome/" >}})
 - [/components/time/host]({{< ref "/components/time/host" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/host.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/host.md)

@@ -25,4 +25,4 @@ binary_sensor:
 ## See Also
 - [Host Platform ]({{< relref "/components/host" >}})
 - [SDL display]({{< ref "components/display/sdl#sdl" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/sdl.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/sdl.md)

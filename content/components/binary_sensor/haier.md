@@ -48,4 +48,4 @@ Additional sensors for Haier Climate device. **These sensors are supported only 
 ## See Also
 
 - [Haier Climate ]({{< relref "/components/climate/haier" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/binary_sensor/haier.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/haier.md)

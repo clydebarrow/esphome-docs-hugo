@@ -28,4 +28,4 @@ i2s_audio:
 - [microphone/i2s_audio]({{< ref "microphone/i2s_audio" >}})
 - [media_player/i2s_audio]({{< ref "media_player/i2s_audio" >}})
 - [speaker/i2s_audio]({{< ref "speaker/i2s_audio" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/i2s_audio.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/i2s_audio.md)

@@ -1260,4 +1260,4 @@ How Do I...
 
 - :apiref:`sprinkler/sprinkler.h`
 - :apiref:`switch/switch.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sprinkler.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sprinkler.md)

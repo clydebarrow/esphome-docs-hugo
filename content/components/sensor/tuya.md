@@ -42,4 +42,4 @@ sensor:
 - [/components/tuya]({{< ref "/components/tuya" >}})
 - [/components/sensor/index]({{< ref "/components/sensor/index" >}})
 - :apiref:`tuya/sensor/tuya_sensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/tuya.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/tuya.md)

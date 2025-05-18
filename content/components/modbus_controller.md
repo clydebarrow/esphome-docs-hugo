@@ -779,4 +779,4 @@ modbus_controller:
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
 - [EPEVER MPPT Solar Charge Controller (Tracer-AN Series)](https://devices.esphome.io/devices/epever_mptt_tracer_an)
 - [Genvex, Nibe, Alpha-Innotec heat recovery ventilation](https://devices.esphome.io/devices/Genvex-Nibe-AlphaInnotec-heat-recovery-ventilation)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/modbus_controller.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/modbus_controller.md)

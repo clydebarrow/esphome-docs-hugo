@@ -2162,4 +2162,4 @@ You can combine it with the previous example to turn off the backlight, so the u
 - [What is Image Sticking, Image Burn-in, an After Image, or a Ghost Image on an LCD?](https://www.philips.ca/c-f/XC000007486/what-is-image-sticking,-image-burn-in,-an-after-image,-or-a-ghost-image-on-an-lcd)
 - [Image persistence](https://en.wikipedia.org/wiki/Image_persistence)
 
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/lvgl.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/lvgl.md)

@@ -132,4 +132,4 @@ Configuration variables:
 ## See Also
 
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sun_gtil2.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sun_gtil2.md)

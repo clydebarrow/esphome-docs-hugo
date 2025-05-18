@@ -29,4 +29,4 @@ button:
 ## See Also
 
 - [Haier Climate ]({{< relref "/components/climate/haier" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/button/haier.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/haier.md)

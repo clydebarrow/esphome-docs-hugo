@@ -70,4 +70,4 @@ Additional sensors for Haier Climate device. **These sensors are supported only 
 
 - [Haier Climate ]({{< relref "/components/climate/haier" >}})
 - [sensor-filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/haier.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/haier.md)

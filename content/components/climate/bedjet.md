@@ -210,4 +210,4 @@ to do this automatically:
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
 - [/components/climate/index]({{< ref "/components/climate/index" >}})
 - :apiref:`bedjet/bedjet.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/climate/bedjet.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/bedjet.md)

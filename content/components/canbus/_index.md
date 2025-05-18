@@ -349,4 +349,4 @@ cover:
 ## See Also
 
 - :apiref:`canbus/canbus.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/canbus/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/canbus/index.md)

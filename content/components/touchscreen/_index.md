@@ -286,4 +286,4 @@ Configuration variables:
 - [GT911 ]({{< relref "/components/touchscreen/gt911" >}})
 - :apiref:`touchscreen/touchscreen.h`
 - :apiref:`touchscreen/binary_sensor/touchscreen_binary_sensor.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/touchscreen/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/touchscreen/index.md)

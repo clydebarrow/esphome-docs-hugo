@@ -285,4 +285,4 @@ on_...:
 ```
 ## See Also
 
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/media_player/index.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/media_player/index.md)

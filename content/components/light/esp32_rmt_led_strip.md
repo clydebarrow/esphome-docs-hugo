@@ -103,4 +103,4 @@ please consider adding support to the codebase and add it to the list above.
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - [/components/power_supply]({{< ref "/components/power_supply" >}})
 - :apiref:`esp32_rmt_led_strip/esp32_rmt_led_strip.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/light/esp32_rmt_led_strip.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/esp32_rmt_led_strip.md)

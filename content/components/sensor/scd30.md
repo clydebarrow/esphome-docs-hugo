@@ -103,4 +103,4 @@ number:
 - [hdc1080]({{< ref "hdc1080/" >}})
 - [htu21d]({{< ref "htu21d/" >}})
 - :apiref:`scd30/scd30.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/scd30.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/scd30.md)

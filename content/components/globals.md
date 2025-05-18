@@ -82,4 +82,4 @@ This action can also be written in lambdas:
 - [index]({{< ref "index/" >}})
 - [/automations/actions]({{< ref "/automations/actions" >}})
 - [/automations/templates]({{< ref "/automations/templates" >}})
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/globals.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/globals.md)

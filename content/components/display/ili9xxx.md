@@ -296,4 +296,4 @@ display:
 
 - [index]({{< ref "index/" >}})
 - :apiref:`ili9xxx/ili9xxx_display.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/display/ili9xxx.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/ili9xxx.md)

@@ -2064,4 +2064,4 @@ When used on a widget, it does not act specifically on that widget but can be us
 - [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
 - [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
 - [LVGL docs](https://docs.lvgl.io/)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/lvgl/widgets.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/widgets.md)

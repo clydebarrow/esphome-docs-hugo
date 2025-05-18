@@ -136,4 +136,4 @@ Configuration variables:
 - [/components/text_sensor/tuya]({{< ref "/components/text_sensor/tuya" >}})
 - [/components/number/tuya]({{< ref "/components/number/tuya" >}})
 - :apiref:`tuya/tuya.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/tuya.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/tuya.md)

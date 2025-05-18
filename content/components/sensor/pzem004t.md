@@ -79,4 +79,4 @@ Your ESP shall be powered by an external power supply and cannot be connected to
 - [pzemac]({{< ref "pzemac/" >}})
 - [pzemdc]({{< ref "pzemdc/" >}})
 - :apiref:`pzem004t/pzem004t.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/pzem004t.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzem004t.md)

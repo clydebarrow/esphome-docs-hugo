@@ -40,4 +40,4 @@ switch:
 
 - [/components/ble_client]({{< ref "/components/ble_client" >}})
 - :apiref:`ble_client/switch/ble_switch.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/switch/ble_client.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/ble_client.md)

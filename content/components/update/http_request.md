@@ -69,4 +69,4 @@ Note that there may be multiple `builds` specified within a single JSON file.
 - [/components/ota/http_request]({{< ref "/components/ota/http_request" >}})
 - [/components/ota/index]({{< ref "/components/ota/index" >}})
 - :apiref:`update/update_entity.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/update/http_request.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/update/http_request.md)

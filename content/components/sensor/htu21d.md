@@ -61,4 +61,4 @@ The heater may be enabled to help correct the reading; see the datasheet for mor
 - [sht3xd]({{< ref "sht3xd/" >}})
 - :apiref:`htu21d/htu21d.h`
 - [i2cdevlib](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg](https://github.com/jrowberg)
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/sensor/htu21d.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/htu21d.md)

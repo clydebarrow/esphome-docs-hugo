@@ -146,4 +146,4 @@ While you can in theory also do this with the home assistant [integration](https
 - [/components/sensor/total_daily_energy]({{< ref "/components/sensor/total_daily_energy" >}})
 - [/components/time/homeassistant]({{< ref "/components/time/homeassistant" >}})
 - [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/cookbook/power_meter.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/power_meter.md)

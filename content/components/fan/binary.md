@@ -36,4 +36,4 @@ The `binary` fan platform lets you represent any binary [output]({{< ref "compon
 - [/components/output/gpio]({{< ref "/components/output/gpio" >}})
 - [/components/fan/index]({{< ref "/components/fan/index" >}})
 - :apiref:`fan/fan_state.h`
-- [Edit this page on GitHub](https://github.com/esphome/esphome-docs/blob/current/content/components/fan/binary.md)
+- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/binary.md)

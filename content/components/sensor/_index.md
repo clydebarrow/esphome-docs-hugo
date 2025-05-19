@@ -695,7 +695,7 @@ Then enter these values in the calibration parameter:
 The filter determines coefficients for the `Steinhart-Hart`_ equation from the specified
 pairs of values which can also be specified directly as an alternative.
 
-.. _Steinhart-Hart: https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation
+[Steinhart-Hart](https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation)
 
 ```yaml
 - platform: template
@@ -764,7 +764,7 @@ Then enter these values in the calibration parameter:
 The filter determines coefficients for the `Steinhart-Hart`_ equation from the specified
 pairs of values which can also be specified directly as an alternative.
 
-.. _Steinhart-Hart: https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation
+[Steinhart-Hart](https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation)
 
 ```yaml
 - platform: template

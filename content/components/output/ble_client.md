@@ -16,22 +16,22 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
+{{< /warning >}}
 ```yaml
-```
 esp32_ble_tracker:
 
 ble_client:
-    - mac_address: XX:XX:XX:XX:XX:XX
-        id: itag_black
+  - mac_address: XX:XX:XX:XX:XX:XX
+    id: itag_black
 
 output:
-    - platform: ble_client
-        ble_client_id: itag_black
-        service_uuid: "10110000-5354-4F52-5A26-4249434B454C"
-        characteristic_uuid: "10110013-5354-4f52-5a26-4249434b454c"
-        require_response: false
+  - platform: ble_client
+    ble_client_id: itag_black
+    service_uuid: "10110000-5354-4F52-5A26-4249434B454C"
+    characteristic_uuid: "10110013-5354-4f52-5a26-4249434b454c"
+    require_response: false
 
-{{< /warning >}}
+```
 ## Configuration variables:
 
 - **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.

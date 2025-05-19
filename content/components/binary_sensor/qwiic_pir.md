@@ -10,7 +10,7 @@ sensors from SparkFun with ESPHome.
 
 {{< img src="qwiic_pir.jpg" alt="Image" caption="SparkFun Qwiic PIR sensor.(Credit: `Sparkfun <https://www.sparkfun.com/products/17374>`__, image cropped and compressed)" width="30.0%" class="center" >}}
 
-.. _Sparkfun: https://www.sparkfun.com/products/17374
+[Sparkfun](https://www.sparkfun.com/products/17374)
 
 The SparkFun Qwiic PIR Motion binary sensor uses PIR sensors to detect motion. It communicates over I²C. There are two models currently available. One uses the [Panasonic EKMC4607112K sensor](https://cdn.sparkfun.com/assets/7/2/a/4/3/EKMC460711xK_Spec.pdf), and the other uses the [Panasonic EKMB1107112 sensor](https://cdn.sparkfun.com/assets/c/e/8/7/5/EKMB110711x_Spec.pdf). 
 

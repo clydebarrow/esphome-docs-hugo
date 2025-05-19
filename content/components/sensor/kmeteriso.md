@@ -13,7 +13,7 @@ for this sensor to work.
 
 {{< img src="kmeteriso.jpg" alt="Image" caption="M5Stack KMeterISO temperature sensor." width="50.0%" class="center" >}}
 
-.. _M5Stack: https://docs.m5stack.com/en/unit/KMeterISO%20Unit
+[M5Stack](https://docs.m5stack.com/en/unit/KMeterISO%20Unit)
 
 ```yaml
 # Example configuration entry

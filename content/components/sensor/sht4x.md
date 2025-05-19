@@ -12,7 +12,7 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 
 {{< img src="sht4x-full.jpg" alt="Image" width="80.0%" class="center" >}}
 
-.. _Adafruit: https://www.adafruit.com/product/4885
+[Adafruit](https://www.adafruit.com/product/4885)
 
 ```yaml
 sensor:

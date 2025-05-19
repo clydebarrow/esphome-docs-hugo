@@ -17,17 +17,17 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
+{{< /warning >}}
 ```yaml
-```
 # Example configuration entry
 wifi:
-    # ...
+  # ...
 
 esp32_improv:
-    authorizer: binary_sensor_id
+  authorizer: binary_sensor_id
 
 
-{{< /warning >}}
+```
 ## Configuration variables:
 
 - **authorizer** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}){{< docref "binary_sensor/index" "binary sensor" >}}dex>` to authorize with.

@@ -12,7 +12,7 @@ sensors with ESPHome.
 
 {{< img src="sdp31.jpg" alt="Image" caption="SDP31 Differential Pressure Sensor.(Credit: `Sparkfun <https://www.sparkfun.com/products/17874>`__, image cropped and compressed)" width="30.0%" class="center" >}}
 
-.. _Sparkfun: https://www.sparkfun.com/products/17874
+[Sparkfun](https://www.sparkfun.com/products/17874)
 
 To use the sensor, set up an [I²C Bus]({{< ref "components/i2c#i2c" >}}) and connect the sensor to the specified pins.
 

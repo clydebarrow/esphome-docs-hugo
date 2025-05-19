@@ -32,19 +32,19 @@ need to do conversion again within the frontend if you use Fahrenheit.
 {{< warning >}}
 The Anova Nano is not currently supported as it uses a different BLE protocol.
 
+{{< /warning >}}
 ```yaml
-```
 ble_client:
-    - mac_address: XX:XX:XX:XX:XX:XX
-        id: my_anova
+  - mac_address: XX:XX:XX:XX:XX:XX
+    id: my_anova
 
 climate:
-    - platform: anova
-        name: "My Anova stick"
-        ble_client_id: my_anova
-        unit_of_measurement: c
+  - platform: anova
+    name: "My Anova stick"
+    ble_client_id: my_anova
+    unit_of_measurement: c
 
-{{< /warning >}}
+```
 ## Configuration variables:
 
 - **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the BLE Client.

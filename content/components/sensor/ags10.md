@@ -16,7 +16,7 @@ The sensor supports up to 15kHz operation, so you should specify up to `frequenc
 
 
 {{< /note >}}
-.. _ASAIR: http://www.aosong.com/en/products-86.html
+[ASAIR](http://www.aosong.com/en/products-86.html)
 
 {{< img src="ags10.jpg" alt="Image" caption="AGS10 VOC Sensor" width="30.0%" class="center" >}}
 

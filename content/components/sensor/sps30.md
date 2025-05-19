@@ -10,7 +10,7 @@ The `sps30` sensor platform allows you to use your Sensirion SPS30
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 This sensor supports both UART and I²C communication. However, at the moment only I²C communication is implemented.
 
-.. _Sparkfun: https://www.sparkfun.com/products/15103
+[Sparkfun](https://www.sparkfun.com/products/15103)
 
 {{< img src="sensirion-pm.png" alt="Image" width="50.0%" class="center" >}}
 

@@ -14,7 +14,7 @@ the newer SHTC3
 ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work.
 
-.. _SparkFun: https://www.sparkfun.com/products/15074
+[SparkFun](https://www.sparkfun.com/products/15074)
 
 {{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 

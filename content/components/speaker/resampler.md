@@ -18,15 +18,15 @@ Audio and voice components consume a significant amount of resources (RAM and CP
 configuration. In particular, Bluetooth/BLE components are known to cause issues when used in
 combination with Voice Assistant and/or other audio components.
 
+{{< /warning >}}
 ```yaml
-```
 # Example configuration entry
 speaker:
-    - platform: resampler
-        output_speaker: output_speaker_id
-        sample_rate: 48000
+  - platform: resampler
+    output_speaker: output_speaker_id
+    sample_rate: 48000
 
-{{< /warning >}}
+```
 ## Configuration variables:
 
 - **output_speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker/index" "speaker" >}}dex>` to output the resampled audio.

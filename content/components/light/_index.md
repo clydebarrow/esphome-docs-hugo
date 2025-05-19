@@ -1026,9 +1026,9 @@ The [E1.31 Effect]({{< ref "components/light/_index#e131-light-effect" >}}) requ
 
 ESPHome will listen on UDP port `5568`.
 
-.. _E1.31: https://www.doityourselfchristmas.com/wiki/index.php?title=E1.31_(Streaming-ACN)_Protocol
-.. _JINX: http://www.live-leds.de/jinx-v1-3-with-resizable-mainwindow-real-dmx-and-sacne1-31/
-.. _Hyperion.NG: https://github.com/hyperion-project/hyperion.ng
+[E1.31](https://www.doityourselfchristmas.com/wiki/index.php?title=E1.31_(Streaming-ACN)_Protocol)
+[JINX](http://www.live-leds.de/jinx-v1-3-with-resizable-mainwindow-real-dmx-and-sacne1-31/)
+[Hyperion.NG](https://github.com/hyperion-project/hyperion.ng)
 
 ## Adalight Effect
 
@@ -1063,8 +1063,8 @@ light:
 - **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}). Useful if
   you've configured multiple UARTs.
 
-.. _Adalight: https://learn.adafruit.com/adalight-diy-ambient-tv-lighting
-.. _Prismatik: https://github.com/psieg/Lightpack
+[Adalight](https://learn.adafruit.com/adalight-diy-ambient-tv-lighting)
+[Prismatik](https://github.com/psieg/Lightpack)
 
 ## WLED Effect
 
@@ -1107,10 +1107,10 @@ The following realtime protocols are supported:
 - DNRGB
 - WLED Notifier
 
-.. _UDP Realtime Control: https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control
-.. _WLED: https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control
-.. _Prismatik: https://github.com/psieg/Lightpack
-.. _LedFx: https://github.com/LedFx/LedFx
+[UDP Realtime Control](https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control)
+[WLED](https://github.com/Aircoookie/WLED/wiki/UDP-Realtime-Control)
+[Prismatik](https://github.com/psieg/Lightpack)
+[LedFx](https://github.com/LedFx/LedFx)
 
 ## See Also
 

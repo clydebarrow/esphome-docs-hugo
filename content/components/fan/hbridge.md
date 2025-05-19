@@ -9,7 +9,7 @@ The `hbridge` fan platform allows you to use a compatible *h-bridge* (L298N, DRV
 
 {{< img src="L298N_module.jpg" alt="Image" caption="L298N H-bridge module. Image by `kuongshun`_." width="50.0%" class="center" >}}
 
-.. _kuongshun: https://kuongshun.com/products/l298n-stepper-motor-driver-board-red
+[kuongshun](https://kuongshun.com/products/l298n-stepper-motor-driver-board-red)
 
 {{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
 

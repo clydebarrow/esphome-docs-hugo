@@ -11,7 +11,7 @@ The CO_2 measurement also works with the MH-Z16 and MH-Z14 sensors.
 
 {{< img src="mhz19-full.jpg" alt="Image" caption="MH-Z19 CO_2 and Temperature Sensor." width="50.0%" class="center" >}}
 
-.. _Revspace: https://revspace.nl/MHZ19
+[Revspace](https://revspace.nl/MHZ19)
 
 As the communication with the MH-Z19 is done using UART, you need
 to have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin` connected to the TX pin of the

@@ -9,7 +9,7 @@ The [sen5x` sensor platform allows you to use your Sensirion `SEN50](https://sen
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 This sensor supports both UART and I²C communication. Only I²C communication is implemented in this component.
 
-.. _Sensirion: https://sensirion.com/products/catalog/?filter_series=ceff880a-784d-4877-ae2c-79353c6a0428
+[Sensirion](https://sensirion.com/products/catalog/?filter_series=ceff880a-784d-4877-ae2c-79353c6a0428)
 
 {{< img src="sen54-web.png" alt="Image" width="100.0%" class="center" >}}
 

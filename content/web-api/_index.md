@@ -26,8 +26,7 @@ APIs: the real-time event source API and REST API.
 
 {{< anchor "api-event-source" >}}
 
-Event Source API
-~~~~~~~~~~~~~~~~
+#### Event Source API
 
 If you want to receive real-time updates for sensor state updates, it's recommended to use
 the Event Source Web API. With the URL `/events`, you can create an

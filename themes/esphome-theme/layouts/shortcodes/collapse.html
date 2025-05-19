@@ -5,7 +5,7 @@
     <span class="collapse-icon">+</span>
   </div>
   <div class="collapse-content">
-    {{ .Inner | markdownify }}
+    {{ .Inner | .Page.RenderString }}
   </div>
 </div>
 

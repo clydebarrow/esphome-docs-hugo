@@ -16,15 +16,15 @@ Audio and voice components consume a significant amount of resources (RAM, CPU) 
 configuration. In particular, Bluetooth/BLE components are known to cause issues when used in
 combination with Voice Assistant and/or other audio components.
 
+{{< /warning >}}
 ```yaml
-```
 # Example configuration entry
 speaker:
-    - platform: i2s_audio
-        dac_type: external
-        i2s_dout_pin: GPIOXX
+  - platform: i2s_audio
+    dac_type: external
+    i2s_dout_pin: GPIOXX
 
-{{< /warning >}}
+```
 ## Configuration variables:
 
 - **dac_type** (**Required**, enum):

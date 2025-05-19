@@ -16,30 +16,30 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
+{{< /warning >}}
 ```yaml
-```
 # Example configuration entry
 esp32_ble_tracker:
 
 sensor:
-    # RSSI based on MAC address
-    - platform: ble_rssi
-        mac_address: XX:XX:XX:XX:XX:XX
-        name: "BLE Google Home Mini RSSI value"
-    # RSSI based on Identity Resolving Key (IRK)
-    - platform: ble_rssi
-        irk: 1234567890abcdef1234567890abcdef
-        name: "BLE Tracker iPhone"
-    # RSSI based on Service UUID
-    - platform: ble_rssi
-        service_uuid: '11aa'
-        name: "BLE Test Service 16 bit RSSI value"
-    # RSSI based on iBeacon UUID
-    - platform: ble_rssi
-        ibeacon_uuid: '68586f1e-89c2-11eb-8dcd-0242ac130003'
-        name: "BLE Test Service iBeacon RSSI value"
+  # RSSI based on MAC address
+  - platform: ble_rssi
+    mac_address: XX:XX:XX:XX:XX:XX
+    name: "BLE Google Home Mini RSSI value"
+  # RSSI based on Identity Resolving Key (IRK)
+  - platform: ble_rssi
+    irk: 1234567890abcdef1234567890abcdef
+    name: "BLE Tracker iPhone"
+  # RSSI based on Service UUID
+  - platform: ble_rssi
+    service_uuid: '11aa'
+    name: "BLE Test Service 16 bit RSSI value"
+  # RSSI based on iBeacon UUID
+  - platform: ble_rssi
+    ibeacon_uuid: '68586f1e-89c2-11eb-8dcd-0242ac130003'
+    name: "BLE Test Service iBeacon RSSI value"
 
-{{< /warning >}}
+```
 {{< note >}}
 Service UUID can be 16 bit long, as in the example, but it can also be 32 bit long
 like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.

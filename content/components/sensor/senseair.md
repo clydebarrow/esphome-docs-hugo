@@ -10,7 +10,7 @@ The `senseair` sensor platform allows you to use SenseAir CO_2 sensor
 
 {{< img src="senseair_s8-full.jpg" alt="Image" caption="SenseAir S8 CO_2 Sensor." width="50.0%" class="center" >}}
 
-.. _website: https://senseair.com/products/size-counts/s8-residential/
+[website](https://senseair.com/products/size-counts/s8-residential/)
 
 As the communication with the SenseAir is done using UART, you need
 to have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin` connected to the TX pin of the

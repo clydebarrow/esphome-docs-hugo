@@ -210,8 +210,8 @@ def convert_rst_to_md(lines, filename):
             i += 2
             continue
 
-        # Handle caret-style headings (subsection headings)
-        if i + 1 < len(lines) and re.match(r'^\^+$', lines[i + 1]) and line:
+        # Handle caret and tilde-style headings (subsection headings)
+        if i + 1 < len(lines) and re.match(r'(^\^+|^~+)$', lines[i + 1]) and line:
             md_lines.append(f"#### {line}")
             i += 2
             continue
@@ -356,7 +356,7 @@ def convert_rst_to_md(lines, filename):
                     content_indent_level = current_indent
                 
                 # If the line is not indented enough, we've reached the end of the warning
-                if current_indent < warning_indent + 4 and current_line.strip() and not current_line.strip().startswith('..'):
+                if current_indent < warning_indent + 4 and current_line.strip():
                     break
                 
                 # Handle code blocks within warnings
@@ -569,7 +569,7 @@ def process_inline_markup(line):
     # Replace :ref: and :doc: with placeholders to avoid nested processing
     ref_matches = []
     doc_matches = []
-    
+
     # Find and store all :ref: patterns
     for match in re.finditer(r':ref:`([^`]+)`', processed_line):
         ref_content = match.group(1)
@@ -641,6 +641,7 @@ def process_inline_markup(line):
     
     # External links
     processed_line = re.sub(r'`([^<]+) <([^>]+)>`__*', r'[\1](\2)', processed_line)
+    processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
     
     return processed_line
 

@@ -26,8 +26,8 @@ Proximity sensors are the same sort of sensors that you find in phones and table
 the device up to your ear. They might be useful for automated turning on or off of displays and control panels. An
 example is the CoreS3 board from M5Stack that has an LTR-559ALS sensor integrated just under the screen.
 
-.. _Adafruit: http://www.adafruit.com/products/5610
-.. _Pimoroni: https://shop.pimoroni.com/products/ltr-559-light-proximity-sensor-breakout
+[Adafruit](http://www.adafruit.com/products/5610)
+[Pimoroni](https://shop.pimoroni.com/products/ltr-559-light-proximity-sensor-breakout)
 
 ## Ambient light sensing
 

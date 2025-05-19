@@ -27,7 +27,7 @@ This component will poll the needed polling commands in a loop. If there is a co
 There is a buffer to buffer up to 10 commands.
 
 .. |here| replace:: `here`
-.. _here: https://github.com/jblance/mpp-solar/tree/master/docs
+[here](https://github.com/jblance/mpp-solar/tree/master/docs)
 
 ```yaml
 # Example configuration entry
@@ -35,8 +35,7 @@ pipsolar:
   - id: inverter0
 
 ```
-Configuration variables:
-~~~~~~~~~~~~~~~~~~~~~~~~
+#### Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this pipsolar component.
 - **uart_id** (*Optional*): The uart Bus ID
@@ -61,8 +60,7 @@ sensor:
       name: inverter0_ac_output_active_power
 
 ```
-Configuration variables:
-~~~~~~~~~~~~~~~~~~~~~~~~
+#### Configuration variables:
 All sensors are normal sensors... so all sensor variables are working to.
 
 - **grid_rating_voltage** (*Optional*): grid rating voltage
@@ -126,8 +124,7 @@ binary_sensor:
       name: inverter0_configuration_status
 
 ```
-Configuration variables:
-~~~~~~~~~~~~~~~~~~~~~~~~
+#### Configuration variables:
 All sensors are normal binary sensors... so all binary sensor variables are working to.
 
 - **add_sbu_priority_version** (*Optional*): add sbu priority version
@@ -204,8 +201,7 @@ text_sensor:
     last_qpiri:
 
 ```
-Configuration variables:
-~~~~~~~~~~~~~~~~~~~~~~~~
+#### Configuration variables:
 All sensors are normal text sensors... so all text sensor variables are working to.
 
 - **device_mode** (*Optional*): device mode response
@@ -242,8 +238,7 @@ switch:
       name: inverter0_pv_power_balance
 
 ```
-Configuration variables:
-~~~~~~~~~~~~~~~~~~~~~~~~
+#### Configuration variables:
 All sensors are normal text sensors... so all text sensor variables are working to.
 
 - **output_source_priority_utility** (*Optional*): output source priority utility
@@ -267,8 +262,7 @@ output:
       id: inverter0_battery_recharge_voltage_out
 
 ```
-Configuration variables:
-~~~~~~~~~~~~~~~~~~~~~~~~
+#### Configuration variables:
 All sensors are normal text sensors... so all text sensor variables are working to.
 
 - **battery_recharge_voltage** (*Optional*): battery recharge voltage;

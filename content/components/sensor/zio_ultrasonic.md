@@ -12,7 +12,7 @@ sensors with ESPHome.
 
 {{< img src="zio_ultrasonic.jpg" alt="Image" caption="Zio Ultrasonic Distance Sensor.(Credit: `Sparkfun <https://www.sparkfun.com/products/17777>`__, image cropped and compressed)" width="30.0%" class="center" >}}
 
-.. _Sparkfun: https://www.sparkfun.com/products/17777
+[Sparkfun](https://www.sparkfun.com/products/17777)
 
 The Zio Ultrasonic Distance Sensor is an ultrasonic distance sensor based on the HC-SR04 sensor. Unlike the {{< docref "/components/sensor/ultrasonic" "Ultrasonic Distance Sensor component" >}}, measurements are read over the I²C bus.
 

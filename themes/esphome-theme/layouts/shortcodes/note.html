@@ -1,4 +1,4 @@
 <div class="admonition note">
   <p class="admonition-title">Note</p>
-  {{ .Inner | markdownify }}
+  {{ .Inner | .Page.RenderString }}
 </div>

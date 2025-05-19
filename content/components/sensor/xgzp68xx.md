@@ -16,7 +16,7 @@ reading. For example, if your sensor is reading -40Pa when the ports are disconn
 
 {{< img src="6897d.jpg" alt="Image" caption="XGZP6897D Differential Pressure Sensor.(Credit: `CFSensor <https://cfsensor.net/i2c-differential-pressure-sensor-xgzp6897d/>`__, image cropped and compressed)" width="30.0%" class="center" >}}
 
-.. _Sparkfun: https://www.sparkfun.com/products/17874
+[Sparkfun](https://www.sparkfun.com/products/17874)
 
 To use the sensor, set up an [I²C Bus]({{< ref "components/i2c#i2c" >}}) and connect the sensor to the specified pins.
 

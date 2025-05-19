@@ -18,11 +18,11 @@ a correlation between VOC and CO₂ in a human's exhaled breath.
 
 The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
-.. _BSEC license agreement: https://www.bosch-sensortec.com/media/boschsensortec/downloads/software/bme688_development_software/2023_04/license_terms_bme688_bme680_bsec.pdf
+[BSEC license agreement](https://www.bosch-sensortec.com/media/boschsensortec/downloads/software/bme688_development_software/2023_04/license_terms_bme688_bme680_bsec.pdf)
 
-.. _Adafruit: https://www.adafruit.com/product/3660
+[Adafruit](https://www.adafruit.com/product/3660)
 
-.. _Pimoroni: https://shop.pimoroni.com/products/bme680-breakout
+[Pimoroni](https://shop.pimoroni.com/products/bme680-breakout)
 
 {{< note >}}
 The BSEC2 library is only available for use after accepting its software license agreement. By enabling this
@@ -230,11 +230,11 @@ The selected b-VOC gasses are as follows:
 | `Carbon Monoxide`_ | 15 ppm         |
 +--------------------+----------------+
 
-.. _Ethane: https://en.wikipedia.org/wiki/Ethane
-.. _Isoprene: https://en.wikipedia.org/wiki/Isoprene
-.. _Ethanol: https://en.wikipedia.org/wiki/Ethanol
-.. _Acetone: https://en.wikipedia.org/wiki/Acetone
-.. _Carbon Monoxide: https://en.wikipedia.org/wiki/Carbon_monoxide
+[Ethane](https://en.wikipedia.org/wiki/Ethane)
+[Isoprene](https://en.wikipedia.org/wiki/Isoprene)
+[Ethanol](https://en.wikipedia.org/wiki/Ethanol)
+[Acetone](https://en.wikipedia.org/wiki/Acetone)
+[Carbon Monoxide](https://en.wikipedia.org/wiki/Carbon_monoxide)
 
 {{< anchor "bsec2-calibration" >}}
 

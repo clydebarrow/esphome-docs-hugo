@@ -15,7 +15,7 @@ Example sensors:
 
 {{< img src="htu31d.jpg" alt="Image" caption="HTU31D Temperature & Humidity Sensor. Image by `Adafruit`_." width="50.0%" class="center" >}}
 
-.. _Adafruit: https://www.adafruit.com/product/4832
+[Adafruit](https://www.adafruit.com/product/4832)
 
 {{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 

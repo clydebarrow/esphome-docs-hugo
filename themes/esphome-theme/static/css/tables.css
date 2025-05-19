@@ -1,11 +1,14 @@
 /* Table styling for ESPHome documentation */
 table {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   border-collapse: collapse;
   margin: 1.5em 0;
   font-size: 0.9em;
   border: 1px solid #e0e0e0;
+  table-layout: auto;
 }
+
 
 /* Basic cell styling */
 table td, 

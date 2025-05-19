@@ -1,0 +1,25 @@
+{{ $path := .Get 0 }}
+{{ $customText := .Get 1 }}
+{{ $anchor := "" }}
+
+{{ if findRE "#" $path 1 }}
+  {{ $parts := split $path "#" }}
+  {{ $path = index $parts 0 }}
+  {{ $anchor = index $parts 1 }}
+{{ end }}
+
+{{ $page := .Page.GetPage $path }}
+{{ if $page }}
+  {{ $displayText := $customText }}
+  {{ if not $displayText }}
+    {{ $displayText = $page.Title }}
+  {{ end }}
+  
+  {{ if $anchor }}
+    <a href="{{ $page.RelPermalink }}#{{ $anchor }}">{{ $displayText }}</a>
+  {{ else }}
+    <a href="{{ $page.RelPermalink }}">{{ $displayText }}</a>
+  {{ end }}
+{{ else }}
+  <span class="broken-link">{{ $path }} (broken link)</span>
+{{ end }}

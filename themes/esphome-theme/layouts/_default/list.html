@@ -8,16 +8,14 @@
         {{ .Content }}
         
         {{ if .Pages }}
-        <div class="section-list">
+        <h2>In this section</h2>
+        <ul class="section-list">
             {{ range .Pages }}
-            <div class="section-item">
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                {{ with .Description }}
-                <p>{{ . }}</p>
-                {{ end }}
-            </div>
+            <li class="section-item">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
             {{ end }}
-        </div>
+        </ul>
         {{ end }}
     </div>
 </div>

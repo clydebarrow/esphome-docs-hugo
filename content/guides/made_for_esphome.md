@@ -56,13 +56,11 @@ Note that these are **not** required for projects that only provide a physical/w
 
 After your project is approved, you may use these logos on your product and/or its packaging.
 
-.. raw:: html
-
-    <style>
-        .transparent-background img {
-            background: repeating-conic-gradient(#999 0% 25%, transparent 10% 50%) 50% / 10px 10px;
-        }
-    </style>
+<style>
+.transparent-background img {
+background: repeating-conic-gradient(#999 0% 25%, transparent 10% 50%) 50% / 10px 10px;
+}
+</style>
 
 {{< img src="made-for-esphome-black-on-white.svg" alt="Image" caption="Made with ESPHome black on white (`svg </_static/made-for-esphome-black-on-white.svg>`__, `png </_static/made-for-esphome-black-on-white.png>`__)" width="100%" class="center" >}}
 

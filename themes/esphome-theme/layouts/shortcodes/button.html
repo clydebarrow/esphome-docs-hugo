@@ -1,0 +1,7 @@
+{{- $href := .Get "href" -}}
+{{- $img := .Get "img" -}}
+{{- $alt := .Get "alt" | default "Button" -}}
+{{- $target := .Get "target" | default "_blank" -}}
+<a href="{{ $href }}" target="{{ $target }}">
+    <img src="{{ $img }}" alt="{{ $alt }}" />
+</a>

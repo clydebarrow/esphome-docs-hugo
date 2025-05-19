@@ -56,21 +56,19 @@ Advanced options:
 First, you'll need to set up the configuration for ESPHome. Just copy the configuration above and
 change the UUID to something unique. For example, you can copy this randomly generated UUID:
 
-.. raw:: html
-
-    <input type="text" id="ble-uuid" onclick="this.focus();this.select()" style="width: 240px;" readonly="readonly">
-    <script>
-      // https://stackoverflow.com/a/105074/8924614
-      function guid() {
-        function s4() {
-          return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
-        }
-        return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-      }
-      document.getElementById("ble-uuid").value = guid();
-    </script>
+<input type="text" id="ble-uuid" onclick="this.focus();this.select()" style="width: 240px;" readonly="readonly">
+<script>
+// https://stackoverflow.com/a/105074/8924614
+function guid() {
+function s4() {
+return Math.floor((1 + Math.random()) * 0x10000)
+.toString(16)
+.substring(1);
+}
+return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
+document.getElementById("ble-uuid").value = guid();
+</script>
 
 Then, just compile and flash the ESP32.
 

@@ -34,12 +34,7 @@ device configurations onto your devices.
 
 To install the ESPHome Device Builder in Home Assistant, click the following button:
 
-.. raw:: html
-
-    <a href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon" target="_blank">
-        <img src="https://my.home-assistant.io/badges/supervisor_addon.svg" alt="Open your Home Assistant instance and show the user interface of the ESPHome add-on." />
-    </a>
-
+{{< button href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon" img="https://my.home-assistant.io/badges/supervisor_addon.svg" alt="Open your Home Assistant instance and show the user interface of the ESPHome add-on." >}}
 This should open the ESPHome add-on page; once you're there, just click the INSTALL button:
 
 {{< img src="addon.png" alt="Image" width="75.0%" class="center" >}}
@@ -172,10 +167,7 @@ installed on your device) it can update the device {{< docref "/components/ota/i
 Once your configuration is installed on your device and it's connected to your Wi-Fi, Home Assistant will automatically
 discover it (assuming your network permits this) and offer to configure it:
 
-.. raw:: html
-
-    <a href="https://my.home-assistant.io/redirect/config_flow_start/?domain=esphome" target="_blank"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant instance and start setting up a new integration." /></a>
-
+{{< button href="https://my.home-assistant.io/redirect/config_flow_start/?domain=esphome" img="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant instance and start setting up a new integration." >}}
 Alternatively, you can manually add the device on the Home Assistant Integrations page. To do so, click on the "Add
 Integration" button (bottom right), search for "ESPHome" and enter the ESPHome device's host name. The host name is
 based on the name you've given to the device; if you named your device "living-room-lamp", its host name will be

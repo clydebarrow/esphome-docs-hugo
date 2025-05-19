@@ -10,5 +10,4 @@ that will only be used in raw HTML and thus not auto-included.
 {{< img src="hero.png" alt="Image" >}}
 {{< img src="logo.svg" alt="Image" >}}
 {{< img src="logo-docs.svg" alt="Image" >}}
-.. raw:: html
-    :file: ../images/logo-text.svg
+:file: ../images/logo-text.svg

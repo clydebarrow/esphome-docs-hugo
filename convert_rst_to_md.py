@@ -178,6 +178,13 @@ def convert_rst_to_md(lines, filename):
             i += 1
             continue
 
+        # Handle raw HTML blocks that might contain buttons
+        if line.strip().startswith('.. raw:: html'):
+            button_lines, new_i = process_raw_html_button(lines, i)
+            md_lines.extend(button_lines)
+            i = new_i
+            continue
+        
         # Handle list-table directive
         if line.strip().startswith('.. list-table::') or line.strip().startswith('..  list-table::'):
             table_lines, new_i = process_list_table(lines, i)
@@ -762,6 +769,47 @@ def process_list_table(lines, start_idx):
     md_table.append("")
     
     return md_table, idx
+
+def process_raw_html_button(lines, i):
+    """Process raw HTML button patterns and convert them to button shortcode."""
+    button_lines = []
+    raw_html_indent = len(lines[i]) - len(lines[i].lstrip())
+    
+    # Skip the ".. raw:: html" line
+    i += 1
+    
+    # Skip any blank lines
+    while i < len(lines) and not lines[i].strip():
+        i += 1
+    
+    # Collect HTML content
+    html_content = []
+    raw_html_content = []
+    while i < len(lines) and (not lines[i].strip() or lines[i].startswith(' ' * (raw_html_indent + 4))):
+        raw_html_content.append(lines[i].lstrip())
+        if lines[i].strip():
+            html_content.append(lines[i].strip())
+        i += 1
+    
+    # Join the HTML content
+    html = ' '.join(html_content)
+    
+    # Check if it's a button pattern
+    href_match = re.search(r'<a\s+href="([^"]+)"[^>]*>', html)
+    img_match = re.search(r'<img\s+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*/?>', html)
+    
+    if href_match and img_match:
+        href = href_match.group(1)
+        img = img_match.group(1)
+        alt = img_match.group(2)
+        
+        # Create button shortcode
+        button_lines.append(f'{{{{< button href="{href}" img="{img}" alt="{alt}" >}}}}')
+    else:
+        # If it's not a button pattern, just keep the raw HTML
+        button_lines.append('\n'.join(raw_html_content))
+    
+    return button_lines, i
 
 def process_image_directive(lines, i, is_figure=False):
     """Process an image or figure directive and convert it to a Hugo shortcode."""

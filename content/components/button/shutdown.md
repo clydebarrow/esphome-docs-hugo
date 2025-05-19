@@ -10,9 +10,7 @@ through Home Assistant. It does this by putting the node into deep sleep mode wi
 wakeup source selected. After enabling, the only way to startup the ESP again is by
 pressing the reset button or restarting the power supply.
 
-![.. code-block:: yaml](../images/shutdown-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="shutdown-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     button:

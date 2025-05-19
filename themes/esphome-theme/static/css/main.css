@@ -103,6 +103,10 @@ img {
   align-items: center;
 }
 
+.nav-logo img {
+  height: 30px;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -200,6 +204,9 @@ main {
   margin-bottom: 1.5em;
 }
 
+.sidebar-logo img {
+  height: 30px;
+}
 .sidebar-search {
   margin-bottom: 1.5em;
 }
@@ -331,7 +338,10 @@ main {
 
 .admonition {
   margin: 1.5em 0;
-  padding: 0 1em;
+  padding-top: 0.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
   border-radius: 4px;
   border-left: 4px solid;
 }

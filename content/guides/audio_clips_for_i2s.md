@@ -10,9 +10,7 @@ It is possible to create sound clips to include in your build to use with I²S s
 
 - Using [Audacity](https://github.com/audacity/audacity), convert audio to WAV, mono, 16kHz, Unsigned 8bit PCM
 
-![- Convert again, this time with `SOX <https://github.com/chirlu/sox>`__.](/guides/images/save_as_wav.png)
-*- Convert again, this time with `SOX <https://github.com/chirlu/sox>`__.*
-
+{{< img src="save_as_wav.png" alt="Audacity export dialog" caption="- Convert again, this time with `SOX <https://github.com/chirlu/sox>`__." height="200" class="center" >}}
 
 ```console
 sox startup.wav --bits 8 --encoding signed-integer --endian little startup_again.raw

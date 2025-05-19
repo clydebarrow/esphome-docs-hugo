@@ -11,9 +11,7 @@ strength of the currently connected [WiFi Access Point ]({{< relref "/components
 The sensor value is the ["Received signal strength indication"](https://en.wikipedia.org/wiki/Received_signal_strength_indication)
 measured in decibel-milliwatts (dBm). These values are always negative and the closer they are to zero, the better the signal is.
 
-![.. code-block:: yaml](../images/wifi_signal-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="wifi_signal-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

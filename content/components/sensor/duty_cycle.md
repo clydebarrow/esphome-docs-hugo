@@ -11,9 +11,7 @@ on a GPIO pin is HIGH or LOW.
 For example, you can measure if a status LED of a pool controller is permanently active
 (indicating that the pump is on) or blinking.
 
-![.. code-block:: yaml](../images/duty_cycle-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="duty_cycle-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

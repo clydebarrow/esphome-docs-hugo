@@ -7,9 +7,7 @@ title: "Template Fan"
 
 The `template` fan platform lets you create a fan interface using only triggers.
 
-![.. code-block:: yaml](../images/fan-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="fan-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     fan:

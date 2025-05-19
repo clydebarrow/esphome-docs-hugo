@@ -8,13 +8,9 @@ title: "RGB Light"
 The `rgb` light platform creates an RGB light from 3 [Output Component]({{< ref "components/output/_index#output" >}})
 (one for each color channel).
 
-![Example of an RGB LED strip that can be used with this component.](../images/rgb-strip.jpg)
-*Example of an RGB LED strip that can be used with this component.*
+{{< img src="rgb-strip.jpg" alt="Image" caption="Example of an RGB LED strip that can be used with this component." width="75.0%" class="center" >}}
 
-
-![.. code-block:: yaml](../images/rgb-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="rgb-ui.png" alt="Image" caption=".. code-block:: yaml" width="40.0%" class="center" >}}
 
     # Example configuration entry
     light:
@@ -61,8 +57,7 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 
 ## See Also
 
-![- :doc:`/components/output/index`](../images/rgb-detail.jpg)
-*- :doc:`/components/output/index`*
+{{< img src="rgb-detail.jpg" alt="Image" caption="- :doc:`/components/output/index`" width="75.0%" class="center" >}}
 
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - [/components/light/rgbw]({{< ref "/components/light/rgbw" >}})

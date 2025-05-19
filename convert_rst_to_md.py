@@ -16,6 +16,10 @@ from collections import defaultdict
 # Global anchor map to store all anchors and their document paths
 anchor_map = {}
 
+# Global variables for image tracking
+image_map = defaultdict(int)
+image_sources = {}
+
 def build_anchor_map(input_dir):
     """Scan all RST files and build a map of anchors to their document paths."""
     print("Building anchor map...")
@@ -380,36 +384,17 @@ def convert_rst_to_md(lines, filename):
         
         # Handle figures
         if line.strip().startswith('.. figure::'):
-            image_path = line.replace('.. figure::', '').strip()
-            
-            # Adjust image path for component files
-            if '/components/' in filename:
-                # Convert absolute path to relative
-                image_path = image_path.replace('/components/', '../')
-            elif image_path.startswith('images/'):
-                # Add parent directory prefix
-                image_path = '../' + image_path
-            
-            # Skip options
-            i += 1
-            while i < len(lines) and (not lines[i].strip() or lines[i].strip().startswith(':')):
-                i += 1
-            
-            # Get caption if present
-            caption = ""
-            if i < len(lines) and lines[i].strip():
-                caption = lines[i].strip()
-                i += 1
-            
-            # Add the image with caption if present
-            if caption:
-                md_lines.append(f"![{caption}]({image_path})")
-                md_lines.append(f"*{caption}*")
-                md_lines.append("")
-            else:
-                md_lines.append(f"![Image]({image_path})")
-                md_lines.append("")
-            
+            shortcode, new_i = process_image_directive(lines, i, is_figure=True)
+            md_lines.append(shortcode)
+            md_lines.append("")
+            i = new_i
+            continue
+        
+        # Handle image directives
+        if line.strip().startswith('.. image::'):
+            shortcode, new_i = process_image_directive(lines, i)
+            md_lines.append(shortcode)
+            i = new_i
             continue
         
         # Skip toctree
@@ -691,6 +676,68 @@ def process_list_table(lines, start_idx):
     
     return md_table, idx
 
+def process_image_directive(lines, i, is_figure=False):
+    """Process an image or figure directive and convert it to a Hugo shortcode."""
+    line = lines[i]
+    
+    if is_figure:
+        image_path = line.replace('.. figure::', '').strip()
+    else:
+        image_path = line.replace('.. image::', '').strip()
+    
+    # Extract the image filename
+    image_filename = os.path.basename(image_path)
+    
+    # Skip options
+    i += 1
+    
+    # Process options
+    alt_text = "Image"
+    caption = ""
+    width = ""
+    height = ""
+    align = ""
+    
+    while i < len(lines) and (not lines[i].strip() or lines[i].strip().startswith(':')):
+        option_line = lines[i].strip()
+        if option_line.startswith(':alt:'):
+            alt_text = option_line.replace(':alt:', '').strip()
+        elif option_line.startswith(':width:'):
+            width = option_line.replace(':width:', '').strip()
+        elif option_line.startswith(':height:'):
+            height = option_line.replace(':height:', '').strip()
+        elif option_line.startswith(':align:'):
+            align = option_line.replace(':align:', '').strip()
+        i += 1
+    
+    # Get caption if present (for figures)
+    if i < len(lines) and lines[i].strip() and is_figure:
+        caption = lines[i].strip()
+        i += 1
+        # Skip any blank lines after the caption
+        while i < len(lines) and not lines[i].strip():
+            i += 1
+    
+    # Escape quotes in alt text and caption
+    if alt_text:
+        alt_text = alt_text.replace('"', '\\"')
+    if caption:
+        caption = caption.replace('"', '\\"')
+    
+    # Create the shortcode
+    shortcode = f'{{{{< img src="{image_filename}" alt="{alt_text}"'
+    if caption:
+        shortcode += f' caption="{caption}"'
+    if width:
+        shortcode += f' width="{width}"'
+    if height:
+        shortcode += f' height="{height}"'
+    if align:
+        shortcode += f' class="{align}"'
+    shortcode += ' >}}'
+    
+    return shortcode, i
+
 def fix_doc_path(path):
     """Fix document paths to match Hugo's content structure."""
     # Remove .rst extension if present
@@ -719,6 +766,64 @@ def fix_doc_path(path):
         path = f"{path}/"
     
     return path
+
+def scan_image_references(input_dir):
+    """Scan all RST files for image references and track their usage."""
+    print("Scanning for image references...")
+    
+    # Regular expressions to match different types of image references
+    image_patterns = [
+        r'.. figure:: ([^\s]+)',  # Figure directive
+        r'.. image:: ([^\s]+)',   # Image directive
+        r'image:: ([^\s]+)',      # Image reference
+        r'src="([^"]+\.(png|jpg|jpeg|gif|svg))"',  # HTML img tag
+        r'!\[(.*?)\]\(([^)]+\.(png|jpg|jpeg|gif|svg))\)'  # Markdown image syntax
+    ]
+    
+    for root, _, files in os.walk(input_dir):
+        for file in files:
+            if file.endswith('.rst'):
+                rst_file = os.path.join(root, file)
+                rel_path = os.path.relpath(rst_file, input_dir)
+                
+                with open(rst_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Find all image references
+                for pattern in image_patterns:
+                    for match in re.finditer(pattern, content):
+                        image_path = match.group(1).strip()
+                        
+                        # Skip alignment options and other non-image paths
+                        if image_path in ['center', 'left', 'right']:
+                            continue
+                        
+                        # Skip URLs
+                        if image_path.startswith(('http://', 'https://')):
+                            continue
+                        
+                        # Normalize path
+                        if image_path.startswith('/'):
+                            # Absolute path within docs
+                            abs_image_path = os.path.join(input_dir, image_path.lstrip('/'))
+                            rel_image_path = image_path.lstrip('/')
+                        else:
+                            # Relative path
+                            abs_image_path = os.path.join(os.path.dirname(rst_file), image_path)
+                            rel_image_path = os.path.relpath(abs_image_path, input_dir)
+                        
+                        # Only count if the image file exists
+                        if os.path.exists(abs_image_path):
+                            image_filename = os.path.basename(image_path)
+                            image_map[image_filename] += 1
+                            image_sources[image_filename] = abs_image_path
+                            print(f"Found image: {image_filename} in {rel_path}")
+    
+    # Print statistics
+    print(f"Found {len(image_map)} unique images")
+    print(f"Images used more than once: {sum(1 for count in image_map.values() if count > 1)}")
+    
+    return image_map, image_sources
 
 def process_includes(lines, current_dir):
     """Process include directives in RST files."""
@@ -762,6 +867,7 @@ def process_includes(lines, current_dir):
     return processed_lines
 
 def process_file(rst_file, output_dir, input_dir):
+    output_dir = os.path.join(output_dir, "content")
     """Process a single RST file and convert it to Markdown."""
     try:
         print(f"\nProcessing file: {rst_file}")
@@ -825,30 +931,122 @@ def process_directory(input_dir, output_dir):
     
     print(f"Conversion complete. {success_count}/{total_count} files successfully converted to {output_dir}")
 
+def should_copy_file(source_path, target_path):
+    """
+    Determine if a file should be copied based on existence and modification time.
+    Returns True if the target doesn't exist or if the source is newer than the target.
+    """
+    if not os.path.exists(target_path):
+        return True
+    
+    # Check if source is newer than target
+    source_mtime = os.path.getmtime(source_path)
+    target_mtime = os.path.getmtime(target_path)
+    
+    return source_mtime > target_mtime
+
+def copy_images_to_output(output_dir, input_dir, image_map, image_sources):
+    """Copy images to the appropriate locations based on usage."""
+    print("Copying images to output directories...")
+    
+    # Create global images directory
+    global_images_dir = os.path.join(output_dir, 'static', 'images')
+    os.makedirs(global_images_dir, exist_ok=True)
+    
+    # Track which files have been copied to which component directories
+    component_image_map = {}
+    
+    # Copy images based on usage
+    for image_name, count in image_map.items():
+        source_path = image_sources[image_name]
+        
+        if count > 1:
+            # Used more than once - copy to global images folder
+            target_path = os.path.join(global_images_dir, image_name)
+            if should_copy_file(source_path, target_path):
+                shutil.copy2(source_path, target_path)
+                print(f"Copied {image_name} to global images folder")
+            else:
+                print(f"Skipped copying {image_name} to global images folder (unchanged)")
+        else:
+            # Used only once - copy to component-level images folder
+            # Find the RST file that references this image
+            for root, _, files in os.walk(input_dir):
+                for file in files:
+                    if file.endswith('.rst'):
+                        rst_file = os.path.join(root, file)
+                        with open(rst_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                            
+                        if image_name in content:
+                            # Get the relative path of the RST file
+                            rel_path = os.path.relpath(rst_file, input_dir)
+                            component_dir = os.path.dirname(rel_path)
+                            
+                            # Create component-level images directory in content
+                            component_content_dir = os.path.join(output_dir, 'content', component_dir)
+                            component_images_dir = os.path.join(component_content_dir, 'images')
+                            os.makedirs(component_images_dir, exist_ok=True)
+                            
+                            # Create component-level images directory in static
+                            component_static_dir = os.path.join(output_dir, 'static', component_dir)
+                            component_static_images_dir = os.path.join(component_static_dir, 'images')
+                            os.makedirs(component_static_images_dir, exist_ok=True)
+                            
+                            # Copy the image to both locations
+                            target_content_path = os.path.join(component_images_dir, image_name)
+                            target_static_path = os.path.join(component_static_images_dir, image_name)
+                            
+                            copied = False
+                            if should_copy_file(source_path, target_content_path):
+                                shutil.copy2(source_path, target_content_path)
+                                copied = True
+                            
+                            if should_copy_file(source_path, target_static_path):
+                                shutil.copy2(source_path, target_static_path)
+                                copied = True
+                                
+                            if copied:
+                                print(f"Copied {image_name} to {component_dir}/images folder")
+                            else:
+                                print(f"Skipped copying {image_name} to {component_dir}/images folder (unchanged)")
+                            
+                            # Track which component this image was copied to
+                            component_image_map[image_name] = component_dir
+                            break
+    
+    return component_image_map
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Convert Sphinx RST files to Hugo Markdown format')
     parser.add_argument('input_dir', help='Input directory containing RST files')
     parser.add_argument('output_dir', help='Output directory for Markdown files')
     parser.add_argument('--single', help='Process a single file (relative to input_dir)')
+    parser.add_argument('--no-images', action='store_true', help='Skip image processing')
     args = parser.parse_args()
     
-    if not os.path.isdir(args.input_dir):
-        print(f"Error: Input directory '{args.input_dir}' does not exist")
-        sys.exit(1)
-    
+    # Ensure output directory exists
     os.makedirs(args.output_dir, exist_ok=True)
+    os.makedirs(os.path.join(args.output_dir, 'content'), exist_ok=True)
+    os.makedirs(os.path.join(args.output_dir, 'static'), exist_ok=True)
     
     # Build the anchor map first
     build_anchor_map(args.input_dir)
     
+    # Scan for image references
+    image_map, image_sources = scan_image_references(args.input_dir)
+    
     if args.single:
         # Process a single file
         rst_file = os.path.join(args.input_dir, args.single)
-        if not os.path.isfile(rst_file):
-            print(f"Error: File '{rst_file}' does not exist")
-            sys.exit(1)
-        process_file(rst_file, args.output_dir, args.input_dir)
-        print(f"Converted {rst_file} to {args.output_dir}")
+        if os.path.exists(rst_file):
+            process_file(rst_file, args.output_dir, args.input_dir)
+        else:
+            print(f"Error: File {rst_file} not found")
     else:
         # Process all files in the directory
         process_directory(args.input_dir, args.output_dir)
+    
+    # Copy images to output directories
+    if not args.no_images:
+        copy_images_to_output(args.output_dir, args.input_dir, image_map, image_sources)

@@ -38,8 +38,7 @@ Note that you don't need to define the individual sensors just yet, as
 the scanning will happen even with no sensors configured.
 For example, you will see something like this:
 
-![See Also](../images/dallas-log.png)
-*See Also*
+{{< img src="dallas-log.png" alt="Image" caption="See Also" >}}
 
 --------
 

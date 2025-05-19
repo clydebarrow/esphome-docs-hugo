@@ -5,8 +5,7 @@ title: "Sonoff Fish Pond Pump"
 
 {{< seo description="" image="" >}}
 
-![The Sonoff range of products containing the ESP chips from Espressif has a myriad of uses and best of all, you can customize it, aka hackable.](../images/sonoff-fishpond.jpg)
-*The Sonoff range of products containing the ESP chips from Espressif has a myriad of uses and best of all, you can customize it, aka hackable.*
+{{< img src="sonoff-fishpond.jpg" alt="Image" caption="The Sonoff range of products containing the ESP chips from Espressif has a myriad of uses and best of all, you can customize it, aka hackable." width="75.0%" class="center" >}}
 
 This quick cookbook aims to provide a clear, simple working example.
 
@@ -135,9 +134,7 @@ time:
 
 Follow the standard way of uploading to your Sonoff Basic.
 
-![For USB uploads this generally includes:](../images/sonoff-fishpond-pump-1-programming.jpg)
-*For USB uploads this generally includes:*
-
+{{< img src="sonoff-fishpond-pump-1-programming.jpg" alt="Image" caption="For USB uploads this generally includes:" width="75.0%" class="center" >}}
 
 * Modifications (soldering) made on the PCB for USB UART / FTDI uploads.
 * The relevant USB UART / FTDI uploads device connected to you PC and to your Sonoff.
@@ -174,18 +171,11 @@ Connecting it
 
 Once the pump is running changing the position of the float in the float sensor will cause the Sonoff to stop the pump.
 
-![Wires connected for easier access to connect and disconnect water level sensor](../images/sonoff-fishpond-pump-gpio14.jpg)
-*Wires connected for easier access to connect and disconnect water level sensor*
+{{< img src="sonoff-fishpond-pump-gpio14.jpg" alt="Image" caption="Wires connected for easier access to connect and disconnect water level sensor" width="75.0%" class="center" >}}
 
+{{< img src="sonoff-fishpond-pump-and-sensor.jpg" alt="Image" caption="This needs to be submersed, pump (bio filter) and sensor connected in single housing (icecream tub)." width="75.0%" class="center" >}}
 
-
-![This needs to be submersed, pump (bio filter) and sensor connected in single housing (icecream tub).](../images/sonoff-fishpond-pump-and-sensor.jpg)
-*This needs to be submersed, pump (bio filter) and sensor connected in single housing (icecream tub).*
-
-
-![In this PVC housing the plates are secured using cabinet door magnets for easier access and maintenance.](../images/sonoff-fishpond-pump-installed.jpg)
-*In this PVC housing the plates are secured using cabinet door magnets for easier access and maintenance.*
-
+{{< img src="sonoff-fishpond-pump-installed.jpg" alt="Image" caption="In this PVC housing the plates are secured using cabinet door magnets for easier access and maintenance." width="75.0%" class="center" >}}
 
 * Ensure you are using a proper and compliant waterproof box to house your electrical equipment (Sonoff Basic) in.
 * Ensure you plan to be able to remove the unit with minimal effort should you need to manually USB reflash it again in future.

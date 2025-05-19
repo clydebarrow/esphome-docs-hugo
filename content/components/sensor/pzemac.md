@@ -25,9 +25,7 @@ Please note that metering chip inside of PZEM module is powered from AC side and
 
 
 {{< /warning >}}
-![PZEM-004T Version 3.](../images/pzem-ac.png)
-*PZEM-004T Version 3.*
-
+{{< img src="pzem-ac.png" alt="Image" caption="PZEM-004T Version 3." width="80.0%" class="center" >}}
 
 {{< warning >}}
 This page refers to version V3 of the PZEM004T.

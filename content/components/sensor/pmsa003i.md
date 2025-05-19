@@ -12,9 +12,7 @@ particulate matter sensor
 
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
-![.. _Adafruit: https://www.adafruit.com/product/4632](../images/pmsa003i-full.jpg)
-*.. _Adafruit: https://www.adafruit.com/product/4632*
-
+{{< img src="pmsa003i-full.jpg" alt="Image" caption=".. _Adafruit: https://www.adafruit.com/product/4632" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

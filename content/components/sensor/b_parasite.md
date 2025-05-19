@@ -9,9 +9,7 @@ title: "b-parasite"
 
 The `b_parasite` sensor platform tracks b-parasite's Bluetooth Low Energy (BLE) advertisement packets. These packets contain soil moisture, air temperature/humidity and battery voltage data. Some b-parasite versions have light sensors, in which case the ambient illuminance is also present in the BLE advertisement data.
 
-![.. code-block:: yaml](../images/b_parasite.jpg)
-*.. code-block:: yaml*
-
+{{< img src="b_parasite.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration.
 

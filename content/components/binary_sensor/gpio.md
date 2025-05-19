@@ -8,9 +8,7 @@ title: "GPIO Binary Sensor"
 The GPIO Binary Sensor platform allows you to use any input pin on your
 device as a binary sensor.
 
-![.. code-block:: yaml](../images/gpio-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="gpio-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     binary_sensor:

@@ -11,10 +11,7 @@ capacitive soil moisture and temperature sensor with ESPHome. The [I²C Bus]({{<
 your configuration for this sensor to work. Wiring scheme: red is 3.3V, black & shield is GND, green is SDA and white is SCL.
 2.2kOhm resistors are advised to pullup both SDA & SDA lines.
 
-![PMWCS3 Capacitive Soil Moisture and Temperature Sensor.](../images/pmwcs3.jpg)
-*PMWCS3 Capacitive Soil Moisture and Temperature Sensor.*
-
-
+{{< img src="pmwcs3.jpg" alt="Image" caption="PMWCS3 Capacitive Soil Moisture and Temperature Sensor." width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

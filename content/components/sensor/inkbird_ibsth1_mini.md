@@ -20,13 +20,9 @@ Only one sensor will work at a time.
 The external temperature sensor is not supported on the IBS-TH1 Mini or IBS-TH2
 
 {{< /note >}}
-![Inkbird IBS-TH1 Mini Temperature and Humidity Sensor over BLE.](../images/inkbird_isbth1_mini-full.jpg)
-*Inkbird IBS-TH1 Mini Temperature and Humidity Sensor over BLE.*
+{{< img src="inkbird_isbth1_mini-full.jpg" alt="Image" caption="Inkbird IBS-TH1 Mini Temperature and Humidity Sensor over BLE." width="80.0%" class="center" >}}
 
-
-![.. code-block:: yaml](../images/inkbird_isbth1_mini-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="inkbird_isbth1_mini-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     esp32_ble_tracker:

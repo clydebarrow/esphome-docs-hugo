@@ -7,9 +7,7 @@ title: "Generic Output Switch"
 
 The `output` switch platform allows you to use any output component as a switch.
 
-![.. code-block:: yaml](../images/output-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="output-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     output:

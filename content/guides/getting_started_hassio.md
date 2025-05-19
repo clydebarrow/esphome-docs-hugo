@@ -42,9 +42,7 @@ To install the ESPHome Device Builder in Home Assistant, click the following but
 
 This should open the ESPHome add-on page; once you're there, just click the INSTALL button:
 
-![Installation of the add-on may take a moment or two. Once done, click "Start" and then click "Open Web UI".](../images/addon.png)
-*Installation of the add-on may take a moment or two. Once done, click "Start" and then click "Open Web UI".*
-
+{{< img src="addon.png" alt="Image" caption="Installation of the add-on may take a moment or two. Once done, click \"Start\" and then click \"Open Web UI\"." width="75.0%" class="center" >}}
 
 {{< note >}}
 If you're running Home Assistant in a way that does not provide access to add-ons, you may
@@ -53,9 +51,7 @@ If you're running Home Assistant in a way that does not provide access to add-on
 {{< /note >}}
 The web UI will present a wizard which will walk you through creating your first configuration:
 
-![After creating your first configuration, you'll need to install it on your device.](../images/dashboard_empty.png)
-*After creating your first configuration, you'll need to install it on your device.*
-
+{{< img src="dashboard_empty.png" alt="Image" caption="After creating your first configuration, you'll need to install it on your device." width="95.0%" class="center" >}}
 
 {{< note >}}
 The initial installation of ESPHome onto a new device is often the most difficult and/or intimidating part -- at
@@ -74,8 +70,7 @@ with Home Assistant.
 
 Let's take a quick tour of the ESPHome Device Builder interface.
 
-![The main page displays a list of all configuration files for nodes you've created. For each file, there are a few](../images/dashboard_states.png)
-*The main page displays a list of all configuration files for nodes you've created. For each file, there are a few*
+{{< img src="dashboard_states.png" alt="Image" caption="The main page displays a list of all configuration files for nodes you've created. For each file, there are a few" width="95.0%" class="center" >}}
 
 actions you can perform:
 
@@ -123,8 +118,7 @@ switch:
 ```
 In Home Assistant, the example code above will look like this:
 
-![In the example above, we're simply adding a switch that's called "Living Room Dehumidifier" and is connected to the pin](/components/switch/images/gpio-ui.png)
-*In the example above, we're simply adding a switch that's called "Living Room Dehumidifier" and is connected to the pin*
+{{< img src="gpio-ui.png" alt="Image" caption="In the example above, we're simply adding a switch that's called \"Living Room Dehumidifier\" and is connected to the pin" width="75.0%" class="center" >}}
 
 `GPIO5`. This switch could really control anything -- lights or a tabletop fan, for example. Its name and function is
 arbitrary and should be set as is appropriate for your particular application.
@@ -148,8 +142,7 @@ binary_sensor:
 ```
 In Home Assistant, the example code above will look like this:
 
-![After adding this to your device's configuration file, be sure to click "SAVE" to save the changes you've made to your](/components/binary_sensor/images/gpio-ui.png)
-*After adding this to your device's configuration file, be sure to click "SAVE" to save the changes you've made to your*
+{{< img src="gpio-ui.png" alt="Image" caption="After adding this to your device's configuration file, be sure to click \"SAVE\" to save the changes you've made to your" width="75.0%" class="center" >}}
 
 configuration...and read on to the next section!
 

@@ -5,8 +5,7 @@ title: "Time & Temperature on OLED Display"
 
 {{< seo description="" image="" >}}
 
-![In this example I have used a :doc:`SSD1306 OLED Display over I²C </components/display/ssd1306>` to](../images/display_time_temp_oled_1.jpg)
-*In this example I have used a :doc:`SSD1306 OLED Display over I²C </components/display/ssd1306>` to*
+{{< img src="display_time_temp_oled_1.jpg" alt="Image" caption="In this example I have used a :doc:`SSD1306 OLED Display over I²C </components/display/ssd1306>` to" width="75.0%" class="left" >}}
 
 show current time and two different temperature values from Home Assistant.
 

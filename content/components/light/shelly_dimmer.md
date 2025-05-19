@@ -11,9 +11,7 @@ A detailed analysis of the Shelly Dimmer 2 hardware is given [here](https://gith
 Warning!!! At the time of writing there seems to be no way to revert back to the "stock firmware", because there seems to be no way to revert to firmware of the STM32 co-processor.
 
 
-![An example of a configuration of this component:](../../images/shellydimmer2.jpg)
-*An example of a configuration of this component:*
-
+{{< img src="shellydimmer2.jpg" alt="Image" caption="An example of a configuration of this component:" width="40.0%" class="center" >}}
 
 ```yaml
 logger:

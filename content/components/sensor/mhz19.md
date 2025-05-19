@@ -9,9 +9,7 @@ The `mhz19` sensor platform allows you to use MH-Z19 CO_2 and temperature sensor
 (`Revspace`_) with ESPHome.
 The CO_2 measurement also works with the MH-Z16 and MH-Z14 sensors.
 
-![MH-Z19 CO_2 and Temperature Sensor.](../images/mhz19-full.jpg)
-*MH-Z19 CO_2 and Temperature Sensor.*
-
+{{< img src="mhz19-full.jpg" alt="Image" caption="MH-Z19 CO_2 and Temperature Sensor." width="50.0%" class="center" >}}
 
 .. _Revspace: https://revspace.nl/MHZ19
 
@@ -56,9 +54,7 @@ sensor:
 
 - **warmup_time** (*Optional*, Time): The sensor has a warmup time and before that, it returns bougus readings (eg: 500ppm, 505ppm...). This setting discards readings until the warmup time happened (`NAN` is returned). The datasheet says preheating takes 1min, but empirical tests have shown it often takes more, so the 75s default should be enough to accomodate for that.
 
-![Pins on the MH-Z19. Only the ones marked with a red circle need to be connected.](../images/mhz19-pins.jpg)
-*Pins on the MH-Z19. Only the ones marked with a red circle need to be connected.*
-
+{{< img src="mhz19-pins.jpg" alt="Image" caption="Pins on the MH-Z19. Only the ones marked with a red circle need to be connected." width="80.0%" class="center" >}}
 
 {{< anchor "mhz19-calibrate_zero_action" >}}
 

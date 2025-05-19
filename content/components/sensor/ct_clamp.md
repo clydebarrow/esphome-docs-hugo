@@ -14,9 +14,7 @@ First, you need to set up a voltage sensor source ([ADC sensor ]({{< relref "adc
 Please also see [this guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
 as an introduction to the working principle of CT clamp sensors and how to hook them up to your device.
 
-![.. code-block:: yaml](../images/ct_clamp-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="ct_clamp-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

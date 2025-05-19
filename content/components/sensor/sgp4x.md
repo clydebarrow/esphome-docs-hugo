@@ -19,9 +19,7 @@ the front end at the update_interval, saving wifi power and network
 communication.
 
 {{< /note >}}
-![.. code-block:: yaml](../images/sgp40.jpg)
-*.. code-block:: yaml*
-
+{{< img src="sgp40.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

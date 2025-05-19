@@ -50,10 +50,7 @@ The default color depth is 16 bit (RGB565). 8 bit color is also supported, but t
 Use of 16 bit colors requires twice the amount of RAM as 8 bit, and may not be usable unless PSRAM is available.
 
 {{< /note >}}
-![ILI9341 display](../images/ili9341-full.jpg)
-*ILI9341 display*
-
-
+{{< img src="ili9341-full.jpg" alt="Image" caption="ILI9341 display" width="75.0%" class="center" >}}
 
 ```yaml
 # Example minimal configuration entry

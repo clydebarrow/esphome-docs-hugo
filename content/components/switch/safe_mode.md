@@ -9,9 +9,7 @@ The `safe_mode` switch allows you to remotely reboot your node into [/components
 
 This component requires [/components/safe_mode]({{< ref "/components/safe_mode" >}}) to be configured.
 
-![.. code-block:: yaml](../images/safemode-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="safemode-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     switch:

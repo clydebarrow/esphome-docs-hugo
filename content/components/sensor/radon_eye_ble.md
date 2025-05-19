@@ -47,8 +47,7 @@ provides a 24hr measurement and a 1 month measurement.
 If the 1 month isn't available, it will use
 the 24hr. If the 24hr isn't available either, it will not publish the value.
 
-![Configuration example:](../images/radon_eye_rd200.jpg)
-*Configuration example:*
+{{< img src="radon_eye_rd200.jpg" alt="Image" caption="Configuration example:" width="60.0%" class="center" >}}
 
 **********************
 

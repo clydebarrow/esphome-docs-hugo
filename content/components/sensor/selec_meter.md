@@ -9,9 +9,7 @@ The `selec_meter` sensor platform allows you to use Selec Modbus energy monitors
 ([website](https://www.selec.com/product-details/energy-meter-direct-operated-em2m))
 with ESPHome.
 
-![Selec EM2M Energy Monitor.](../images/selec_meter_em2m.jpg)
-*Selec EM2M Energy Monitor.*
-
+{{< img src="selec_meter_em2m.jpg" alt="Image" caption="Selec EM2M Energy Monitor." width="50.0%" class="center" >}}
 
 The communication with this component is done via a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using [UART Bus]({{< ref "components/uart#uart" >}}).
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set

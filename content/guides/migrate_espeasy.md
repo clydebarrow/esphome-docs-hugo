@@ -16,8 +16,7 @@ file. Then, generate and download the binary:
 - **Using the Home Assistant add-on/dashboard**: Just click the `COMPILE` button,
   wait for the compilation to end and press the `DOWNLOAD BINARY` button.
 
-![- **Using the command line**: run ``esphome compile livingroom.yaml`` (replacing](../images/download_binary.png)
-*- **Using the command line**: run ``esphome compile livingroom.yaml`` (replacing*
+{{< img src="download_binary.png" alt="Image" caption="- **Using the command line**: run ``esphome compile livingroom.yaml`` (replacing" >}}
 
   `livingroom.yaml` with your configuration file of course) and navigate to the
   `<NODE_NAME>/.pioenvs/<NODE_NAME>/` folder. There you will find a `firmware.bin` file,
@@ -28,8 +27,7 @@ file. Then, generate and download the binary:
 To upload the binary, navigate to the ESPEasy web interface and enter the
 "Tools " section.
 
-![Press "Load" under Firmware, then select the binary you previously downloaded and upload](../images/espeasy_ota.png)
-*Press "Load" under Firmware, then select the binary you previously downloaded and upload*
+{{< img src="espeasy_ota.png" alt="Image" caption="Press \"Load\" under Firmware, then select the binary you previously downloaded and upload" width="60.0%" class="center" >}}
 
 the binary. If everything succeeds, you should now have ESPHome on your node 🎉.
 

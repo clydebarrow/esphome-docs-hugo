@@ -8,9 +8,7 @@ title: "MAX7219 Digit Display"
 The `max7219` display platform allows you to use MAX7219 digit with ESPHome. Please note that this component
 is *only* for the digit "matrix" display, for the 7 segment display see [max7219]({{< ref "max7219/" >}}).
 
-![MAX7219 Digit Display.](../images/max7219digit.png)
-*MAX7219 Digit Display.*
-
+{{< img src="max7219digit.png" alt="Image" caption="MAX7219 Digit Display." width="75.0%" class="center" >}}
 
 As the communication with the MAX7219 Digit is done using SPI for this component, you need
 to have an [SPI Bus]({{< ref "components/spi#spi" >}}) in your configuration with both the **mosi_pin** set (miso_pin is not required).

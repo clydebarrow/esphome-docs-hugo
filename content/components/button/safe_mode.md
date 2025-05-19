@@ -10,9 +10,7 @@ where a misbehaving component is preventing Over-The-Air updates from completing
 
 This component requires [/components/safe_mode]({{< ref "/components/safe_mode" >}}) to be configured.
 
-![.. code-block:: yaml](../images/safemode-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="safemode-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     button:

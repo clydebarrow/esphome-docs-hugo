@@ -16,9 +16,7 @@ ready-made adapters or roll your own:
 - [Ihor Melnyk's OpenTherm Adapter](http://ihormelnyk.com/opentherm_adapter)
 - [Jiří Praus' OpenTherm Gateway Arduino Shield](https://www.tindie.com/products/jiripraus/opentherm-gateway-arduino-shield/)
 
-![DIYLESS Master OpenTherm Shield.](../images/opentherm-shield.png)
-*DIYLESS Master OpenTherm Shield.*
-
+{{< img src="opentherm-shield.png" alt="Image" caption="DIYLESS Master OpenTherm Shield." width="50.0%" class="center" >}}
 
 {{< note >}}
 This component acts only as an OpenTherm master (for example, a thermostat or controller) and not as a slave or

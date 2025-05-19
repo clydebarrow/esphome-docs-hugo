@@ -12,9 +12,7 @@ This sensor supports both UART and I²C communication. However, at the moment on
 
 .. _Sparkfun: https://www.sparkfun.com/products/15103
 
-![.. code-block:: yaml](../images/sensirion-pm.png)
-*.. code-block:: yaml*
-
+{{< img src="sensirion-pm.png" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
 
     # Example configuration entry
     sensor:
@@ -106,9 +104,7 @@ This sensor supports both UART and I²C communication. However, at the moment on
 The sensor has a 5 pin JST ZHR type connector, with a 1.5mm pitch. ([Matching connector housing](https://octopart.com/zhr-5-jst-279203), [datasheet](http://www.farnell.com/datasheets/1393424.pdf))
 To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) should be shorted to ground (pin no.4)
 
-![For better stability, the SDA and SCL lines require suitable pull-up resistors.](../images/sps30-wiring.png)
-*For better stability, the SDA and SCL lines require suitable pull-up resistors.*
-
+{{< img src="sps30-wiring.png" alt="Image" caption="For better stability, the SDA and SCL lines require suitable pull-up resistors." width="50.0%" class="center" >}}
 
 ## Automatic Cleaning:
 

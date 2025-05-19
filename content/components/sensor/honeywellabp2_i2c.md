@@ -11,9 +11,7 @@ The `honeywellabp2_i2c` sensor platform allows you to use your Honeywell ABP
 pressure and temperature sensors with ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work
 
-![Honeywell ABP Pressure and Temperature Sensor.](../images/honeywellabp.jpg)
-*Honeywell ABP Pressure and Temperature Sensor.*
-
+{{< img src="honeywellabp.jpg" alt="Image" caption="Honeywell ABP Pressure and Temperature Sensor." width="50.0%" class="center" >}}
 
 ```yaml
 sensor:

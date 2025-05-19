@@ -7,9 +7,7 @@ title: "Growatt Solar"
 
 The `Growatt Inverter` sensor platform allows you to use growatt inverter data reading on modbus with ESPHome.
 
-![Growatt Logo](../images/growatt.jpg)
-*Growatt Logo*
-
+{{< img src="growatt.jpg" alt="Image" caption="Growatt Logo" width="50.0%" class="center" >}}
 
 The communication with this component is done over a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using [UART Bus]({{< ref "components/uart#uart" >}}).
 You must therefore have a `uart:` and `modbus:` entry in your configuration with both the TX and RX pins set

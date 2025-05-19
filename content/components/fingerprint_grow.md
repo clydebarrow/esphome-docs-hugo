@@ -7,14 +7,9 @@ title: "Grow Fingerprint Reader"
 
 The `fingerprint_grow` component allows you to use your R307, R503, R503-RGB, ZFM-20, ... fingerprint sensors with ESPHome.
 
-![R307/ZFM-20 Optical Fingerprint Reader (`datasheet <https://cdn-shop.adafruit.com/datasheets/ZFM+user+manualV15.pdf>`__, `Adafruit <https://www.adafruit.com/product/751>`__). Image by `Adafruit <https://www.adafruit.com/product/751>`__.](../images/r307-full.jpg)
-*R307/ZFM-20 Optical Fingerprint Reader (`datasheet <https://cdn-shop.adafruit.com/datasheets/ZFM+user+manualV15.pdf>`__, `Adafruit <https://www.adafruit.com/product/751>`__). Image by `Adafruit <https://www.adafruit.com/product/751>`__.*
+{{< img src="r307-full.jpg" alt="Image" caption="R307/ZFM-20 Optical Fingerprint Reader (`datasheet <https://cdn-shop.adafruit.com/datasheets/ZFM+user+manualV15.pdf>`__, `Adafruit <https://www.adafruit.com/product/751>`__). Image by `Adafruit <https://www.adafruit.com/product/751>`__." width="50.0%" class="center" >}}
 
-
-![R503 Capacitive Fingerprint Reader with Bi-Color Aura LED (`datasheet <https://cdn-shop.adafruit.com/product-files/4651/4651_R503+fingerprint+module+user+manual.pdf>`__, `Adafruit <https://www.adafruit.com/product/4651>`__). Image by `Adafruit <https://www.adafruit.com/product/4651>`__.](../images/r503-full.jpg)
-*R503 Capacitive Fingerprint Reader with Bi-Color Aura LED (`datasheet <https://cdn-shop.adafruit.com/product-files/4651/4651_R503+fingerprint+module+user+manual.pdf>`__, `Adafruit <https://www.adafruit.com/product/4651>`__). Image by `Adafruit <https://www.adafruit.com/product/4651>`__.*
-
-
+{{< img src="r503-full.jpg" alt="Image" caption="R503 Capacitive Fingerprint Reader with Bi-Color Aura LED (`datasheet <https://cdn-shop.adafruit.com/product-files/4651/4651_R503+fingerprint+module+user+manual.pdf>`__, `Adafruit <https://www.adafruit.com/product/4651>`__). Image by `Adafruit <https://www.adafruit.com/product/4651>`__." width="50.0%" class="center" >}}
 
 ## Component/Hub
 
@@ -108,9 +103,7 @@ To implement this feature, you will need one more free GPIO pin to toggle the se
 
 This is a wiring example for the R503 and below you can find the respective configuration:
 
-![.. code-block:: yaml](../images/fingeprint_grow-sleep_mode_wiring.jpg)
-*.. code-block:: yaml*
-
+{{< img src="fingeprint_grow-sleep_mode_wiring.jpg" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
 
     uart:
       rx_pin: GPIOXX

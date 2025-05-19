@@ -18,9 +18,7 @@ the current position can be approximated.
 Additionally, open and close durations must be specified to allow ESPHome to approximate the
 current position of the cover.
 
-![.. code-block:: yaml](../images/more-info-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="more-info-ui.png" alt="Image" caption=".. code-block:: yaml" width="75.0%" class="center" >}}
 
     # Example configuration entry
     cover:

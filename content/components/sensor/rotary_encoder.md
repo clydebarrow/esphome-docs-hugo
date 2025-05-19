@@ -12,13 +12,11 @@ signals of the two pins go HIGH and LOW in turn. See
 [this Arduino article](https://playground.arduino.cc/Main/RotaryEncoders) to gain
 a better understanding of these sensors.
 
-![Example of a continuous rotary encoder. Pin ``+`` is connected to ``3.3V``,](../images/rotary_encoder.jpg)
-*Example of a continuous rotary encoder. Pin ``+`` is connected to ``3.3V``,*
+{{< img src="rotary_encoder.jpg" alt="Image" caption="Example of a continuous rotary encoder. Pin ``+`` is connected to ``3.3V``," width="75.0%" class="center" >}}
 
     `GND` is connected to `GND`, and `CLK` & `DT` are A & B.
 
-![To use rotary encoders in ESPHome, first identify the two pins encoding the step value.](/components/sensor/images/rotary_encoder-ui.png)
-*To use rotary encoders in ESPHome, first identify the two pins encoding the step value.*
+{{< img src="rotary_encoder-ui.png" alt="Image" caption="To use rotary encoders in ESPHome, first identify the two pins encoding the step value." width="75.0%" class="center" >}}
 
 These are often called `CLK` and `DT` as in above image. Note if the values this sensor
 outputs go in the wrong direction, you can just swap these two pins.

@@ -9,20 +9,12 @@ The `web_server` component creates a simple web server on the node that can be a
 through any browser and a simple [REST API]({{< ref "web-api/_index#api-rest" >}}). Please note that enabling this component
 will take up *a lot* of memory and may decrease stability, especially on ESP8266.
 
-![Web server version 1](/components/images/web_server.png)
-*Web server version 1*
+{{< img src="web_server.png" alt="Image" caption="Web server version 1" width="86.0%" class="center" >}}
 
+{{< img src="web_server-v2.png" alt="Image" caption="Web server version 2" width="86.0%" class="center" >}}
 
-![Web server version 2](/components/images/web_server-v2.png)
-*Web server version 2*
+{{< img src="web_server-v3.png" alt="Image" caption="Web server version 3" width="86.0%" class="center" >}}
 
-
-
-![Web server version 3](/components/images/web_server-v3.png)
-*Web server version 3*
-
-
-    
 To navigate to the web server in your browser, either use the IP address of the node or
 use `<node_name>.local/` (note the trailing forward slash) via mDNS.
 
@@ -207,35 +199,24 @@ number:
 ```
 Number in slider mode
 *********************
-![You can change the value by moving the slider.](/components/images/web_server/number-slider-popup.png)
-*You can change the value by moving the slider.*
+{{< img src="number-slider-popup.png" alt="Image" caption="You can change the value by moving the slider." width="100.0%" class="left" >}}
 
 If you wish to enter a precise number you can click and hold the current value. A popup input field will appear where you can enter a number and confirm your input by pressing the enter key.
 
-![Expand Controls and Logs](/components/images/web_server/number-slider-popup-input-field.png)
-*Expand Controls and Logs*
+{{< img src="number-slider-popup-input-field.png" alt="Image" caption="Expand Controls and Logs" width="100.0%" class="left" >}}
 
 ************************
-![By double-clicking on any group header you can expand the controls to fill up the whole screen.](/components/images/web_server/tab-header-expand-cloapsed.png)
-*By double-clicking on any group header you can expand the controls to fill up the whole screen.*
+{{< img src="tab-header-expand-cloapsed.png" alt="Image" caption="By double-clicking on any group header you can expand the controls to fill up the whole screen." width="100.0%" class="left" >}}
 
 You can do the same for the logs.
 
-![Expanded Controls](/components/images/web_server/tab-header-expand-controls-expanded.png)
-*Expanded Controls*
+{{< img src="tab-header-expand-controls-expanded.png" alt="Image" caption="Expanded Controls" width="100.0%" class="center" >}}
 
-
-
-![Expanded Logs](/components/images/web_server/tab-header-expand-logs-expanded.png)
-*Expanded Logs*
-
-
+{{< img src="tab-header-expand-logs-expanded.png" alt="Image" caption="Expanded Logs" width="100.0%" class="center" >}}
 
 Sensor value graph
 ******************
-![By clicking on any sensor it will expand a graph with the historical values for that sensor.](/components/images/web_server/sensor-history-graph.png)
-*By clicking on any sensor it will expand a graph with the historical values for that sensor.*
-
+{{< img src="sensor-history-graph.png" alt="Image" caption="By clicking on any sensor it will expand a graph with the historical values for that sensor." width="100.0%" class="left" >}}
 
 ## See Also
 

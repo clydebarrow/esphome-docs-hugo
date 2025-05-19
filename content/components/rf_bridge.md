@@ -16,9 +16,7 @@ If you are using the [logger]({{< ref "logger/" >}}) make sure you disable the u
 `baud_rate: 0` option.
 
 {{< /warning >}}
-![Sonoff RF Bridge 433, version R1 or R2 V1.0](../images/rf_bridge-full.jpg)
-*Sonoff RF Bridge 433, version R1 or R2 V1.0*
-
+{{< img src="rf_bridge-full.jpg" alt="Image" caption="Sonoff RF Bridge 433, version R1 or R2 V1.0" width="60.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

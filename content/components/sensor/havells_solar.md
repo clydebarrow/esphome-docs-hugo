@@ -9,9 +9,7 @@ The `Havells Inverter` sensor platform allows you to use Havells inverter data r
 ([website](https://www.havells.com/en/consumer/solar/solar-on-grid-inverter-and-solutions/solar-on-grid-inverter.html))
 with ESPHome.
 
-![Havells On Grid Solar Inverter.](../images/havellsgti5000d.jpg)
-*Havells On Grid Solar Inverter.*
-
+{{< img src="havellsgti5000d.jpg" alt="Image" caption="Havells On Grid Solar Inverter." width="50.0%" class="center" >}}
 
 The communication with this component is done via a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using [UART Bus]({{< ref "components/uart#uart" >}}).
 You must therefore have a `uart:` and `modbus:` entry in your configuration with both the TX and RX pins set

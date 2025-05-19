@@ -21,9 +21,7 @@ You'll need to be in close proximity to your device to configure it again using 
 
 
 {{< /note >}}
-![.. code-block:: yaml](../images/factory-rst-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="factory-rst-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     button:

@@ -19,9 +19,7 @@ which supports phase control dimming to your ESPHome project.
 There are several already made boards which are compatible with this component, such as the
 [RobotDyn dimmer](https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html).
 
-![RobotDyn Module. Image by `RobotDyn`_](../images/robotdyn_dimmer.jpg)
-*RobotDyn Module. Image by `RobotDyn`_*
-
+{{< img src="robotdyn_dimmer.jpg" alt="Image" caption="RobotDyn Module. Image by `RobotDyn`_" width="50.0%" class="center" >}}
 
 .. _RobotDyn: https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html
 

@@ -16,9 +16,7 @@ on several conditions like surface reflectance, field of view, temperature etc. 
 you can expect surfaces up to 60cm to work, after that you need to make sure the surface is reflecting
 well enough (see also section 5 of datasheet).
 
-![The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.](../images/vl53l0x.png)
-*The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.*
-
+{{< img src="vl53l0x.png" alt="Image" caption="The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work." width="100.0%" class="center" >}}
 
 - `VCC` connects to 3V3 (`3V3` will output 3.3V), or directly connect `VCC` to 3.3V
 - `GND` connects to ground
@@ -30,13 +28,9 @@ well enough (see also section 5 of datasheet).
 
 
 
-![VL53L0X Time Of Flight Distance Sensor.](../images/vl53l0x-full.jpg)
-*VL53L0X Time Of Flight Distance Sensor.*
+{{< img src="vl53l0x-full.jpg" alt="Image" caption="VL53L0X Time Of Flight Distance Sensor." width="50.0%" class="center" >}}
 
-
-![.. code-block:: yaml](../images/vl53l0x-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="vl53l0x-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Simple configuration entry example
     sensor:

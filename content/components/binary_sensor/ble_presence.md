@@ -15,9 +15,7 @@ configuration. Memory-intensive components such as [/components/voice_assistant]
 audio components are most likely to cause issues.
 
 {{< /warning >}}
-![.. code-block:: yaml](../images/esp32_ble-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="esp32_ble-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     esp32_ble_tracker:

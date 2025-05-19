@@ -18,9 +18,7 @@ of measurement, such as PPM (parts per million). If you have known baseline read
 for any of the gases, [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}) could be used to calibrate the raw readings.
 
 {{< /note >}}
-![Grove Multichannel Gas Sensor V2](/images/grove-gas-mc-v2.png)
-*Grove Multichannel Gas Sensor V2*
-
+{{< img src="grove-gas-mc-v2.png" alt="Image" caption="Grove Multichannel Gas Sensor V2" width="50.0%" class="center" >}}
 
 The communication with this sensor is done via [I²C Bus]({{< ref "components/i2c#i2c" >}}), so you need to have
 an `i2c:` section in your config for this integration to work.

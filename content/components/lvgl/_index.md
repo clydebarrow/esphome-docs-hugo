@@ -8,8 +8,7 @@ title: "LVGL Graphics"
 [LVGL](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
 embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8](https://docs.lvgl.io/8.4/).
 
-![Prerequisites](/components/lvgl/images/lvgl_main_screenshot.png)
-*Prerequisites*
+{{< img src="lvgl_main_screenshot.png" alt="Image" caption="Prerequisites" >}}
 
 -------------
 
@@ -292,9 +291,7 @@ The binary will only include any of the above if used in the configuration.
 
 You can display the embedded symbols among the text by their codepoint address preceded by `\u`. For example: `\uF00C`:
 
-![.. note::](/components/lvgl/images/lvgl_symbols.png)
-*.. note::*
-
+{{< img src="lvgl_symbols.png" alt="Image" caption=".. note::" class="center" >}}
 
     The `text_font` parameter affects the size of symbols, since all the built-in font arrays based on Montserrat include these symbols at the respective sizes. If you set `text_font` on a widget to a custom ESPHome font, these symbols will likely not display, unless you include them manually from a FontAwesome OpenType file.
 
@@ -314,8 +311,7 @@ Style properties
 
 LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
-![- *bounding box*: the box defined with ``width`` and ``height`` of the widgets (pixels or parent content area percentage; not drawn, just for calculations).](/components/lvgl/images/lvgl_boxmodel.png)
-*- *bounding box*: the box defined with ``width`` and ``height`` of the widgets (pixels or parent content area percentage; not drawn, just for calculations).*
+{{< img src="lvgl_boxmodel.png" alt="Image" caption="- *bounding box*: the box defined with ``width`` and ``height`` of the widgets (pixels or parent content area percentage; not drawn, just for calculations)." class="center" >}}
 
 - *border*: the border line, drawn on the inner side of the bounding box (pixels).
 - *outline*: the outline, drawn on the outer side of the bounding box (pixels).

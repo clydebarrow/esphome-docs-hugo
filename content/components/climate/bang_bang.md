@@ -46,9 +46,7 @@ There are three types of bang bang controllers this platform can represent:
 
 Do note that the actions are only called when the current temperature leaves the target temperature range.
 
-![.. code-block:: yaml](../images/climate-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="climate-ui.png" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
 
     # Example configuration entry
     climate:

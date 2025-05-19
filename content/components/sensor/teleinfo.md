@@ -11,9 +11,7 @@ The `teleinfo` component allows you to retrieve data from a
 French electrical counter using Teleinformation ([datasheet](https://www.enedis.fr/media/2035/download)). It works with Linky electrical
 counter but also legacy EDF electrical counter.
 
-![Linky electrical counter](../images/teleinfo-full.jpg)
-*Linky electrical counter*
-
+{{< img src="teleinfo-full.jpg" alt="Image" caption="Linky electrical counter" width="50.0%" class="center" >}}
 
 ..
 
@@ -29,15 +27,11 @@ mode or 1200bps in historical mode.  To find out which mode you are using,
 simply press -/+ buttons on the counter and look for `Standard mode` or
 `Historical mode` as below.
 
-![Linky electrical counter configured in standard mode.](../images/teleinfo-standard.jpg)
-*Linky electrical counter configured in standard mode.*
-
+{{< img src="teleinfo-standard.jpg" alt="Image" caption="Linky electrical counter configured in standard mode." width="50.0%" class="center" >}}
 
 ..
 
-![Linky electrical counter configured in historical mode.](../images/teleinfo-historical.jpg)
-*Linky electrical counter configured in historical mode.*
-
+{{< img src="teleinfo-historical.jpg" alt="Image" caption="Linky electrical counter configured in historical mode." width="50.0%" class="center" >}}
 
 ..
 

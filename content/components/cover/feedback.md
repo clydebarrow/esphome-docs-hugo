@@ -12,9 +12,7 @@ position is approximated with the time the cover has been moving in a direction.
 
 It supports *open*, *close*, *stop* and *toggle* actions. Tilt control is not supported.
 
-![.. code-block:: yaml](../images/more-info-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="more-info-ui.png" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
 
     # Example configuration entry
     cover:

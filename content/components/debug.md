@@ -10,9 +10,7 @@ a bunch of useful information like reset reason, free heap size, ESPHome version
 It also allows you to get the same information as a text sensor, and to monitor the state of the
 ESP heap memory (free space, maximum free block size and fragmentation level) and the main-loop timing.
 
-![Example debug component output.](../images/debug.png)
-*Example debug component output.*
-
+{{< img src="debug.png" alt="Image" caption="Example debug component output." class="center" >}}
 
 ```yaml
 # Example configuration entry

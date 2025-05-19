@@ -8,8 +8,7 @@ title: "Arduino Port Expander"
 With this sketch you can control pins of a remote Arduino board through ESPHome. The Arduino acts as a port
 expander, allowing you to use more pins than a standard ESP8266/ESP32 has.
 
-![The Arduino is connected to the ESP via I²C. Most Arduinos use the ``A4`` and ``A5`` pins for the I²C bus](../images/arduino_pro_mini.jpg)
-*The Arduino is connected to the ESP via I²C. Most Arduinos use the ``A4`` and ``A5`` pins for the I²C bus*
+{{< img src="arduino_pro_mini.jpg" alt="Image" caption="The Arduino is connected to the ESP via I²C. Most Arduinos use the ``A4`` and ``A5`` pins for the I²C bus" width="75.0%" class="center" >}}
 
 so those pins are not available to read from ESPHome.
 It is recommended to use a 3.3V I/O level Arduino, however using 5V Arduinos seems to work too. In the latter

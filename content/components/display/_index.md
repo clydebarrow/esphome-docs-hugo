@@ -69,9 +69,7 @@ this behavior by setting `auto_clear_enabled: false`.
 In the lambda, you can write code like in any [Templates]({{< ref "automations/templates#config-lambda" >}}) in ESPHome. Display
 lambdas are additionally passed a variable called `it` which represents the rendering engine object.
 
-![.. code-block:: yaml](../images/display_rendering_line.png)
-*.. code-block:: yaml*
-
+{{< img src="display_rendering_line.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
 
     display:
       - platform: ...
@@ -101,9 +99,7 @@ the rendering engine is always first specify the `x` coordinate and then the `y`
 
 Now that you know a bit more about ESPHome's coordinate system, let's draw some basic shapes like lines, rectangles, circles or even polygons:
 
-![.. code-block:: yaml](../images/display_rendering_shapes.png)
-*.. code-block:: yaml*
-
+{{< img src="display_rendering_shapes.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
 
     display:
       - platform: ...
@@ -160,9 +156,7 @@ display:
 ```
 For color displays (e.g. TFT displays), you can use the Color class.
 
-![.. code-block:: yaml](../images/display_rendering_colors.png)
-*.. code-block:: yaml*
-
+{{< img src="display_rendering_colors.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
 
     display:
       - platform: ...
@@ -254,9 +248,7 @@ display:
 
 
 ```
-![.. _display-printf:](../images/display_rendering_text.png)
-*.. _display-printf:*
-
+{{< img src="display_rendering_text.png" alt="Image" caption=".. _display-printf:" class="center" >}}
 
 ## Formatted Text
 
@@ -603,8 +595,7 @@ If you're experiencing issues with your color display, the `show_test_card: true
 - Together with that it will show the letters "**R**", "**G**" and "**B**" to validate the display geometry.
 - There will be a rectangle around the corners of the display with a marker at the 0,0 corner which should be at the top left of the screen.
 
-![When all points above are shown correctly then the display is working as expected.](../images/test_card.jpg)
-*When all points above are shown correctly then the display is working as expected.*
+{{< img src="test_card.jpg" alt="Image" caption="When all points above are shown correctly then the display is working as expected." width="50.0%" class="center" >}}
 
 To help the graphics display team determine the best way to help you, **a picture of the result of this option is very helpful.**
 

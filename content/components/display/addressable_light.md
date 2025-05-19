@@ -11,9 +11,7 @@ light that has been arranged in a display matrix.
 The display requires that an :apiclass:`AddressableLight <light::AddressableLight>` component, such as
 [/components/light/neopixelbus]({{< ref "/components/light/neopixelbus" >}}) or [/components/light/fastled]({{< ref "/components/light/fastled" >}}), be defined.
 
-![WS2812B Addressable Light Display](../images/addressable_light.jpg)
-*WS2812B Addressable Light Display*
-
+{{< img src="addressable_light.jpg" alt="Image" caption="WS2812B Addressable Light Display" width="75.0%" class="center" >}}
 
 ```yaml
 display:
@@ -81,20 +79,14 @@ Default
 The default pixel mapper assumes that the led matrix is addressed starting with the top left LED, moving to the right, and
 then starting with the left-most row of the next row.
 
-![Default pixel_mapper as used with a 4x4 led matrix](../images/addressable_light_pixel_map_default.png)
-*Default pixel_mapper as used with a 4x4 led matrix*
-
-
+{{< img src="addressable_light_pixel_map_default.png" alt="Image" caption="Default pixel_mapper as used with a 4x4 led matrix" width="75.0%" class="center" >}}
 
 BTF-Lighting 8x32 WS2812B Flexible LED Matrix
 *********************************************
 
 The following image illustrates the path the addressable strip takes through the common the BTF-Lighting 8x32 matrix.
 
-![LED layout for BTF-Lighting 8x32 WS2812B Flexible LED Matrix](../images/addressable_light_pixel_map_8x32.png)
-*LED layout for BTF-Lighting 8x32 WS2812B Flexible LED Matrix*
-
-
+{{< img src="addressable_light_pixel_map_8x32.png" alt="Image" caption="LED layout for BTF-Lighting 8x32 WS2812B Flexible LED Matrix" width="75.0%" class="center" >}}
 
 Below is a definition that includes a pixel_mapper suitable for these 8x32 matrices.
 

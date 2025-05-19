@@ -125,9 +125,7 @@ must be set to at least `debug`!).
 
 Your log output will show something like this:
 
-![OBIS information in the log of the `SML` component](../images/sml-log.png)
-*OBIS information in the log of the `SML` component*
-
+{{< img src="sml-log.png" alt="Image" caption="OBIS information in the log of the `SML` component" width="100.0%" class="center" >}}
 
 Each line represents a combination of the server id (in brackets), the OBIS code and the transmitted hex value
 (in square brackets).

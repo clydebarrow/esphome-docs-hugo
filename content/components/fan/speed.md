@@ -8,9 +8,7 @@ title: "Speed Fan"
 The `speed` fan platform lets you represent any float [Output Component]({{< ref "components/output/_index#output" >}}) as a fan that
 supports speed settings.
 
-![.. code-block:: yaml](../images/fan-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="fan-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     fan:

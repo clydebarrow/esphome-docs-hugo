@@ -12,15 +12,12 @@ The `modbus_controller` component creates a RS485 connection to either:
 
 To choose the role, set the `role` attribute of the [/components/modbus]({{< ref "/components/modbus" >}}) upon which this `modbus_controller` component relies. `client` is the default.
 
-![Hardware setup](/images/modbus.png)
-*Hardware setup*
+{{< img src="modbus.png" alt="Image" caption="Hardware setup" width="25%" class="center" >}}
 
 --------------
 You need an RS485 transceiver module:
 
-![See `How is this RS485 module working? <https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working>`__ on stackexchange for more details.](/images/rs485.jpg)
-*See `How is this RS485 module working? <https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working>`__ on stackexchange for more details.*
-
+{{< img src="rs485.jpg" alt="Image" caption="See `How is this RS485 module working? <https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working>`__ on stackexchange for more details." >}}
 
 The transceiver connects to the UART of the MCU. For ESP32, pin `16` to `TXD` and pin `17` to `RXD` are the default ones but any other pins can be used as well. `3.3V` to `VCC` and naturally `GND` to `GND`.
 

@@ -30,13 +30,9 @@ component in your configuration, you are explicitly agreeing to the terms of the
 that the license forbids distribution of any compiled firmware binaries that include this component.
 
 {{< /note >}}
-![BME680 Temperature, Pressure, Humidity & Gas Sensor.](../images/bme680-full.jpg)
-*BME680 Temperature, Pressure, Humidity & Gas Sensor.*
+{{< img src="bme680-full.jpg" alt="Image" caption="BME680 Temperature, Pressure, Humidity & Gas Sensor." width="50.0%" class="center" >}}
 
-
-![Example UI](../images/bme680-bsec-ui.png)
-*Example UI*
-
+{{< img src="bme680-bsec-ui.png" alt="Image" caption="Example UI" width="80.0%" class="center" >}}
 
 ```yaml
 # Minimal example configuration with common sensors

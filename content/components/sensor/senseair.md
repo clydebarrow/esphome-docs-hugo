@@ -8,9 +8,7 @@ title: "SenseAir CO_2 Sensor"
 The `senseair` sensor platform allows you to use SenseAir CO_2 sensor
 (`website`_) with ESPHome.
 
-![SenseAir S8 CO_2 Sensor.](../images/senseair_s8-full.jpg)
-*SenseAir S8 CO_2 Sensor.*
-
+{{< img src="senseair_s8-full.jpg" alt="Image" caption="SenseAir S8 CO_2 Sensor." width="50.0%" class="center" >}}
 
 .. _website: https://senseair.com/products/size-counts/s8-residential/
 
@@ -42,9 +40,7 @@ sensor:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for actions.
 
-![Pins on the SenseAir S8. Only the ones marked with a red circle need to be connected.](../images/senseair_s8-pins.jpg)
-*Pins on the SenseAir S8. Only the ones marked with a red circle need to be connected.*
-
+{{< img src="senseair_s8-pins.jpg" alt="Image" caption="Pins on the SenseAir S8. Only the ones marked with a red circle need to be connected." width="80.0%" class="center" >}}
 
 {{< note >}}
 `G+` should be connected to power supply (supported voltage is 4.5 V to 5.25 V), `G0` to `GND` pin

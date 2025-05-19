@@ -10,9 +10,7 @@ the Home Assistant frontend. A fan can be switched on or off, optionally
 has a speed between 1 and the maximum supported speed of the fan, and can have an
 oscillation and direction output.
 
-![.. _config-fan:](../images/fan-ui.png)
-*.. _config-fan:*
-
+{{< img src="fan-ui.png" alt="Image" caption=".. _config-fan:" class="center" >}}
 
 ## Base Fan Configuration
 

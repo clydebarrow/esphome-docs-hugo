@@ -11,9 +11,7 @@ required to be set up in your configuration for this sensor to work.
 It required also to have an temperature sensor in the liquid tank; this can
 be on the same board or external sensor linked to the uFire ISE pH configuration.
 
-![.. code-block:: yaml](../images/ufire_ise.png)
-*.. code-block:: yaml*
-
+{{< img src="ufire_ise.png" alt="Image" caption=".. code-block:: yaml" width="100.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

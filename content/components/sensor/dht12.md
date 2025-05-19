@@ -9,15 +9,11 @@ The `dht12` Temperature+Humidity sensor allows you to use your DHT12
 ([datasheet](http://www.robototehnika.ru/file/DHT12.pdf),
 `electrodragon`_) I²C-based sensor with ESPHome. This sensor is also called AM2320 by some sellers.
 
-![DHT12 Temperature & Humidity Sensor.](../images/dht12-full.jpg)
-*DHT12 Temperature & Humidity Sensor.*
-
+{{< img src="dht12-full.jpg" alt="Image" caption="DHT12 Temperature & Humidity Sensor." width="50.0%" class="center" >}}
 
 .. _electrodragon: http://www.electrodragon.com/product/dht12/
 
-![.. code-block:: yaml](../images/temperature-humidity.png)
-*.. code-block:: yaml*
-
+{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

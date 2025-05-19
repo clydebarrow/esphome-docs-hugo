@@ -16,9 +16,7 @@ Home Assistant doesn't have support for pumps. In order to control the pump from
 templates to offer access to the actions you need. Please see [Home Assistant Configuration]({{< ref "components/ezo_pmp#ezo-pmp-ha-config" >}}).
 
 {{< /note >}}
-![.. code-block:: yaml](../images/ezo-pmp.jpg)
-*.. code-block:: yaml*
-
+{{< img src="ezo-pmp.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     ezo_pmp:
       id: ezo_pmp

@@ -11,9 +11,7 @@ The `kmeteriso` sensor platform allows you to use your KMeterISO
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration
 for this sensor to work.
 
-![M5Stack KMeterISO temperature sensor.](../../images/kmeteriso.jpg)
-*M5Stack KMeterISO temperature sensor.*
-
+{{< img src="kmeteriso.jpg" alt="Image" caption="M5Stack KMeterISO temperature sensor." width="50.0%" class="center" >}}
 
 .. _M5Stack: https://docs.m5stack.com/en/unit/KMeterISO%20Unit
 

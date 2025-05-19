@@ -13,9 +13,7 @@ ADC in your device to measure a voltage on certain pins.
 - RP2040: GPIO26 through GPIO29 can be used.
 
 
-![.. code-block:: yaml](../images/adc-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="adc-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

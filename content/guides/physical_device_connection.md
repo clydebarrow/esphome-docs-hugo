@@ -113,9 +113,7 @@ is wrong or are uncomfortable with continuing, stop immediately.
 USB Port on Device
 ******************
 
-![A device with a USB port and a serial adapter built-in](/images/nodemcu_esp8266.jpg)
-*A device with a USB port and a serial adapter built-in*
-
+{{< img src="nodemcu_esp8266.jpg" alt="Image" caption="A device with a USB port and a serial adapter built-in" width="75.0%" class="center" >}}
 
 Development boards often come with a USB port built in. This USB port is
 connected to a serial adapter, so you don't need a separate serial adapter. You
@@ -130,9 +128,7 @@ by either soldering or using a breadboard, but you do not need anything else to
 Pre-soldered Programming Header
 *******************************
 
-![A device that comes with programming headers pre-installed](../images/programming-header-populated.jpg)
-*A device that comes with programming headers pre-installed*
-
+{{< img src="programming-header-populated.jpg" alt="Image" caption="A device that comes with programming headers pre-installed" width="75.0%" class="center" >}}
 
 In this situation, you'll need just [jumper wires]({{< ref "#jumper-wires" >}}) and a
 [USB to serial adapter]({{< ref "#usb-serial-adapter" >}}). You don't need to solder
@@ -141,9 +137,7 @@ anything, that's already been done by the factory.
 Unpopulated Programming Header
 ******************************
 
-![A device that has a spot for programming headers on the circuit board](../images/programming-header-unpopulated.jpg)
-*A device that has a spot for programming headers on the circuit board*
-
+{{< img src="programming-header-unpopulated.jpg" alt="Image" caption="A device that has a spot for programming headers on the circuit board" width="75.0%" class="center" >}}
 
 You can probably get away with [jumper wires]({{< ref "#jumper-wires" >}}) and a
 [USB to serial adapter]({{< ref "#usb-serial-adapter" >}}). You can place the male end
@@ -157,9 +151,7 @@ multimeter in continuity mode to figure it out (advanced topic).
 Solder-filled Programming Header
 ********************************
 
-![A set of programming headers that are filled with solder](../images/programming-header-filled.jpg)
-*A set of programming headers that are filled with solder*
-
+{{< img src="programming-header-filled.jpg" alt="Image" caption="A set of programming headers that are filled with solder" width="75.0%" class="center" >}}
 
 You'll need a USB to serial adapter, [jumper wires]({{< ref "#jumper-wires" >}}), a
 [solder]({{< ref "#solder" >}}), and probably [soldering iron]({{< ref "#soldering-iron" >}}) and
@@ -176,9 +168,7 @@ multimeter in continuity mode to figure it out (advanced topic).
 Module Only
 ***********
 
-![An ESP8266 module with programming wires soldered on](../images/module-only-programming.jpg)
-*An ESP8266 module with programming wires soldered on*
-
+{{< img src="module-only-programming.jpg" alt="From https://tasmota.github.io/docs/devices/SM-SO301/" caption="An ESP8266 module with programming wires soldered on" width="75.0%" class="center" >}}
 
 If the device has a module but no programming headers, things get a bit tricky.
 You'll need a [USB to serial adapter]({{< ref "#usb-serial-adapter" >}}), :ref:`jumper
@@ -194,9 +184,7 @@ modules here <https://tasmota.github.io/docs/Pinouts/>`_.
 Bare Chip
 *********
 
-![A bare ESP8266 IC with no programming header](../images/programming-bare-chip.jpg)
-*A bare ESP8266 IC with no programming header*
-
+{{< img src="programming-bare-chip.jpg" alt="From https://tasmota.github.io/docs/devices/Teckin-SP23/" caption="A bare ESP8266 IC with no programming header" width="75.0%" class="center" >}}
 
 This is an advanced topic and won't be covered in detail, but you have three options:
 

@@ -16,9 +16,7 @@ XMTZC01HM, XMTZC04HM, XMTZC02HM, XMTZC05HM
 
 Miscale (left) measures weight only. Miscale2 (right) measures weight and impedance.
 
-![.. code-block:: yaml](../images/xiaomi_miscale.jpg)
-*.. code-block:: yaml*
-
+{{< img src="xiaomi_miscale.jpg" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
 
     sensor:
       - platform: xiaomi_miscale

@@ -8,8 +8,7 @@ title: "IR Remote Climate"
 This climate component allows you to control compatible AC units by sending an infrared (IR)
 control signal, just as the unit's handheld remote controller would.
 
-![There is a growing list of compatible units. If your unit is not listed below you should](../images/climate-ui.png)
-*There is a growing list of compatible units. If your unit is not listed below you should*
+{{< img src="climate-ui.png" alt="Image" caption="There is a growing list of compatible units. If your unit is not listed below you should" width="40.0%" class="center" >}}
 
 submit a feature request (see FAQ).
 

@@ -66,18 +66,10 @@ After your project is approved, you may use these logos on your product and/or i
         }
     </style>
 
-![Made with ESPHome black on white (`svg </_static/made-for-esphome-black-on-white.svg>`__, `png </_static/made-for-esphome-black-on-white.png>`__)](/_static/made-for-esphome-black-on-white.svg)
-*Made with ESPHome black on white (`svg </_static/made-for-esphome-black-on-white.svg>`__, `png </_static/made-for-esphome-black-on-white.png>`__)*
+{{< img src="made-for-esphome-black-on-white.svg" alt="Image" caption="Made with ESPHome black on white (`svg </_static/made-for-esphome-black-on-white.svg>`__, `png </_static/made-for-esphome-black-on-white.png>`__)" width="100%" class="center" >}}
 
+{{< img src="made-for-esphome-white-on-black.svg" alt="Image" caption="Made with ESPHome white on black (`svg </_static/made-for-esphome-white-on-black.svg>`__, `png </_static/made-for-esphome-white-on-black.png>`__)" width="100%" class="center" >}}
 
-![Made with ESPHome white on black (`svg </_static/made-for-esphome-white-on-black.svg>`__, `png </_static/made-for-esphome-white-on-black.png>`__)](/_static/made-for-esphome-white-on-black.svg)
-*Made with ESPHome white on black (`svg </_static/made-for-esphome-white-on-black.svg>`__, `png </_static/made-for-esphome-white-on-black.png>`__)*
+{{< img src="made-for-esphome-black-on-transparent.svg" alt="Image" caption="Made with ESPHome black on transparent (`svg </_static/made-for-esphome-black-on-transparent.svg>`__, `png </_static/made-for-esphome-black-on-transparent.png>`__)" width="100%" class="center" >}}
 
-
-![Made with ESPHome black on transparent (`svg </_static/made-for-esphome-black-on-transparent.svg>`__, `png </_static/made-for-esphome-black-on-transparent.png>`__)](/_static/made-for-esphome-black-on-transparent.svg)
-*Made with ESPHome black on transparent (`svg </_static/made-for-esphome-black-on-transparent.svg>`__, `png </_static/made-for-esphome-black-on-transparent.png>`__)*
-
-
-![Made with ESPHome white on transparent (`svg </_static/made-for-esphome-white-on-transparent.svg>`__, `png </_static/made-for-esphome-white-on-transparent.png>`__)](/_static/made-for-esphome-white-on-transparent.svg)
-*Made with ESPHome white on transparent (`svg </_static/made-for-esphome-white-on-transparent.svg>`__, `png </_static/made-for-esphome-white-on-transparent.png>`__)*
-
+{{< img src="made-for-esphome-white-on-transparent.svg" alt="Image" caption="Made with ESPHome white on transparent (`svg </_static/made-for-esphome-white-on-transparent.svg>`__, `png </_static/made-for-esphome-white-on-transparent.png>`__)" width="100%" class="center" >}}

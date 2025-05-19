@@ -16,9 +16,7 @@ The DHT Temperature+Humidity sensor allows you to use your
 
 sensors with ESPHome.
 
-![DHT22 Temperature & Humidity Sensor.](../images/dht-full.jpg)
-*DHT22 Temperature & Humidity Sensor.*
-
+{{< img src="dht-full.jpg" alt="Image" caption="DHT22 Temperature & Humidity Sensor." width="50.0%" class="center" >}}
 
 .. _Adafruit: https://www.adafruit.com/product/385
 
@@ -26,9 +24,7 @@ The DHT22 and DHT11 require external pull up resistors on the data line. To do t
 a resistor with *about* 4.7kΩ (anything in the range from 1kΩ to 10kΩ probably works fine, but
 if you're having issues try the 4.7kΩ recommended by the manufacturer) between `DATA` and `3.3V`.
 
-![.. code-block:: yaml](../images/temperature-humidity.png)
-*.. code-block:: yaml*
-
+{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

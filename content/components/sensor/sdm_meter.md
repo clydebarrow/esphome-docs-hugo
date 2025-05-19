@@ -9,9 +9,7 @@ The `sdm_meter` sensor platform allows you to use Eastron SDM modbus energy moni
 ([website](http://www.eastrongroup.com/product_detail.php?id=170&menu1=&menu2=))
 with ESPHome.
 
-![SDM230M Energy Monitor.](../images/sdm220m-full.png)
-*SDM230M Energy Monitor.*
-
+{{< img src="sdm220m-full.png" alt="Image" caption="SDM230M Energy Monitor." width="50.0%" class="center" >}}
 
 The communication with this component is done via a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using the [UART Bus]({{< ref "components/uart#uart" >}}) 
 over RS485 wiring. You will need an RS485 to UART converter for communication.

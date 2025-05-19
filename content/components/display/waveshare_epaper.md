@@ -18,13 +18,9 @@ Similar modules sold by other vendors might also work but not have been tested y
 
 Currently, most displays managed by Esphome are single-color E-Ink displays; but Esphome also supports E-Ink displays capable of showing up to 7 colors.
 
-![Waveshare E-Paper 2.9 Inch E-Paper Display.](../images/waveshare_epaper-full.jpg)
-*Waveshare E-Paper 2.9 Inch E-Paper Display.*
+{{< img src="waveshare_epaper-full.jpg" alt="Image" caption="Waveshare E-Paper 2.9 Inch E-Paper Display." width="75.0%" class="center" >}}
 
-
-![Waveshare E-Paper 7.3 Inch ACeP 7-Color E-Paper Display.](../images/waveshare_epaper_7color_acep-full.jpg)
-*Waveshare E-Paper 7.3 Inch ACeP 7-Color E-Paper Display.*
-
+{{< img src="waveshare_epaper_7color_acep-full.jpg" alt="Image" caption="Waveshare E-Paper 7.3 Inch ACeP 7-Color E-Paper Display." width="75.0%" class="center" >}}
 
 The communication ESPHome has chosen to use for this integration is 4-wire [SPI Bus]({{< ref "components/spi#spi" >}}), as it's the most stable and high-speed. So you need to make sure your board is set to the 4-wire SPI mode and have an `spi:` section in your
 configuration.
@@ -49,9 +45,7 @@ configuration.
 `RESET` (Optional) Any GPIO              `reset_pin`
 ==================== ===================== =====================
 
-![.. code-block:: yaml](../images/waveshare_epaper-pins.jpg)
-*.. code-block:: yaml*
-
+{{< img src="waveshare_epaper-pins.jpg" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
 
     # Example configuration entry
     font:

@@ -13,15 +13,11 @@ Example sensors:
 
 - ([Adafruit](https://www.adafruit.com/product/1899))
 
-![HTU21D Temperature & Humidity Sensor.](../images/htu21d-full.jpg)
-*HTU21D Temperature & Humidity Sensor.*
-
+{{< img src="htu21d-full.jpg" alt="Image" caption="HTU21D Temperature & Humidity Sensor." width="50.0%" class="center" >}}
 
 .. _Adafruit: https://learn.adafruit.com/adafruit-htu21d-f-temperature-humidity-sensor/overview
 
-![.. code-block:: yaml](../images/temperature-humidity.png)
-*.. code-block:: yaml*
-
+{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

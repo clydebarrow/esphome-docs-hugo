@@ -23,9 +23,7 @@ We will refer to the devboard with functional USB_UART bridge chip as flasher bo
 Make sure you've read the [/guides/physical_device_connection]({{< ref "/guides/physical_device_connection" >}})
 for properly understanding the functionality of your flasher devboard.
 
-![Connection diagram for an ESP flash target](/guides/images/devboard-as-flasher.png)
-*Connection diagram for an ESP flash target*
-
+{{< img src="devboard-as-flasher.png" alt="Image" caption="Connection diagram for an ESP flash target" width="75.0%" class="center" >}}
 
 You need to make the following electrical connections:
 

@@ -7,8 +7,7 @@ title: "ESP32 Water Leak Detector (with notification)"
 
 Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water leak detector using ESPHome.  M5StickC was chosen as a platform due to the integrated Grove connector for clean connections and the fact it's well housed.  The built-in display is a bonus, but not strictly necessary.  Notifications are performed via HomeAssistant's 'alert' and 'notify' facilities, which send via Pushover to iOS & Android.
 
-![Things you'll need](../images/leak-detector-m5stickC_LeakDetected.gif)
-*Things you'll need*
+{{< img src="leak-detector-m5stickC_LeakDetected.gif" alt="Image" caption="Things you'll need" class="center" >}}
 
 ==================
 
@@ -18,19 +17,16 @@ Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water 
 - M5StickC ESP32 development kit
    [M5Stack Link](https://m5stack.com/collections/m5-core/products/stick-c)
 
-![-  Moisture sensor](../images/leak-detector-m5stickC-m5stickC.png)
-*-  Moisture sensor*
+{{< img src="leak-detector-m5stickC-m5stickC.png" alt="Image" caption="-  Moisture sensor" class="center" >}}
 
     This example uses a [Guardian Remote Sensor Probe](https://www.amazon.com/gp/product/B07G5BMD7L)
     which has a 6' cord.
 
-![- Grove connector pigtail](../images/leak-detector-m5stickC_probe.jpg)
-*- Grove connector pigtail*
+{{< img src="leak-detector-m5stickC_probe.jpg" alt="Image" caption="- Grove connector pigtail" class="center" >}}
 
     [Amazon Link](https://www.amazon.com/gp/product/B01CNZ9EEC)
 
-![- USB power supply with USB-C cable](../images/leak-detector-m5stickC_grove1.jpg)
-*- USB power supply with USB-C cable*
+{{< img src="leak-detector-m5stickC_grove1.jpg" alt="Image" caption="- USB power supply with USB-C cable" class="center" >}}
 
     (the M5StickC comes with the short black USB cable seen in the pictures)
 
@@ -40,16 +36,13 @@ Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water 
 
 Since the probe comes with an integrated 3.5mm male plug, a 3.5mm female jack has been connected to the Grove port to allow easy probe replacement in the future.  Orange connects to orange, blue connects to blue.  The pads on the opposite side of the probe are internally-connected identically to the front.  The two middle rings on the 3.5mm jack are unused.  There is no polarity -- simply connect one terminal (orange or blue) to Grove GND, and the other to Grove G33.
 
-![.. figure:: images/leak-detector-m5stickC_grove2.jpg](../images/leak-detector-m5stickC_pinout.jpg)
-*.. figure:: images/leak-detector-m5stickC_grove2.jpg*
+{{< img src="leak-detector-m5stickC_pinout.jpg" alt="Image" caption=".. figure:: images/leak-detector-m5stickC_grove2.jpg" class="center" >}}
 
     :align: center
 
 # Assembled Components
 
-![.. note::](../images/leak-detector-m5stickC_overview2.jpg)
-*.. note::*
-
+{{< img src="leak-detector-m5stickC_overview2.jpg" alt="Image" caption=".. note::" class="center" >}}
 
     Even though the M5StickC has a battery inside (which might be enough to cover short power outages), you'll need to keep
     the unit on USB power 24/7.
@@ -67,19 +60,15 @@ Once everything is hooked up and flashed, enable `esp32_touch:` `setup_mode: tru
 Normal state
 ************
 
-![Wet state](../images/leak-detector-m5stickC_dry.jpg)
-*Wet state*
+{{< img src="leak-detector-m5stickC_dry.jpg" alt="Image" caption="Wet state" class="center" >}}
 
 *********
 
-![Installed Project](../images/leak-detector-m5stickC_wet.jpg)
-*Installed Project*
+{{< img src="leak-detector-m5stickC_wet.jpg" alt="Image" caption="Installed Project" class="center" >}}
 
 *****************
 
-![Not shown: Probe is placed on the floor in the corner, out of the way, in the lowest part of the room](../images/leak-detector-m5stickC_overview1.jpg)
-*Not shown: Probe is placed on the floor in the corner, out of the way, in the lowest part of the room*
-
+{{< img src="leak-detector-m5stickC_overview1.jpg" alt="Image" caption="Not shown: Probe is placed on the floor in the corner, out of the way, in the lowest part of the room" class="center" >}}
 
 ------------
 
@@ -283,8 +272,7 @@ notify:
 ```
 Enjoy your locally-controlled leak detector with push notification!
 
-![See Also](../images/leak-detector-m5stickC-ha_interface.jpg)
-*See Also*
+{{< img src="leak-detector-m5stickC-ha_interface.jpg" alt="Image" caption="See Also" class="center" >}}
 
 ========
 

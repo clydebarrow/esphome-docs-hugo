@@ -71,9 +71,7 @@ sensor:
     type: azimuth
 
 ```
-![Configuration variables:](../images/sun-sensor-ui.png)
-*Configuration variables:*
-
+{{< img src="sun-sensor-ui.png" alt="Image" caption="Configuration variables:" width="80.0%" class="center" >}}
 
 - **type** (**Required**, string): The type of value to track. One of `elevation` and
   `azimuth`.
@@ -94,9 +92,7 @@ text_sensor:
     type: sunset
 
 ```
-![Configuration variables:](../images/sun-text_sensor-ui.png)
-*Configuration variables:*
-
+{{< img src="sun-text_sensor-ui.png" alt="Image" caption="Configuration variables:" width="80.0%" class="center" >}}
 
 - **type** (**Required**, string): The type of value to track. One of `sunrise` and
   `sunset`.

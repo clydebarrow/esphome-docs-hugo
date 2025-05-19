@@ -10,9 +10,7 @@ have any position feedback. The state of the cover is thus always an assumed one
 position is approximated with the time the cover has been moving in a direction. The state
 of the cover can be restored at node reboot.
 
-![.. code-block:: yaml](../images/more-info-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="more-info-ui.png" alt="Image" caption=".. code-block:: yaml" width="75.0%" class="center" >}}
 
     # Example configuration entry
     cover:

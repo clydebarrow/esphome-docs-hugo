@@ -13,9 +13,7 @@ Some ESP32 variants return a large amount of invalid temperature
 values, including 53.3°C which equates to a raw value of 128. Invalid measurements are ignored by this component.
 
 {{< /note >}}
-![.. code-block:: yaml](../images/internal_temperature-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="internal_temperature-ui.png" alt="Image" caption=".. code-block:: yaml" width="70.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

@@ -8,9 +8,7 @@ title: "Haier Climate Sensors"
 Additional sensors for Haier Climate device. **These sensors are supported only by the hOn protocol**.
 
 
-![.. code-block:: yaml](../images/haier-climate.jpg)
-*.. code-block:: yaml*
-
+{{< img src="haier-climate.jpg" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

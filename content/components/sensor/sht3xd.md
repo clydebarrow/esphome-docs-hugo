@@ -14,9 +14,7 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 .. _Adafruit: https://www.adafruit.com/product/2857
 .. _Sensirion: https://sensirion.com/products/catalog/SHT85/
 
-![.. code-block:: yaml](../images/temperature-humidity.png)
-*.. code-block:: yaml*
-
+{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     sensor:

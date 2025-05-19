@@ -24,9 +24,7 @@ to 2 amps, it will not work by powering from the same 3.3V power source of the E
 connect `TX` and `RX` lines directly without any level shifter.
 
 {{< /note >}}
-![.. code-block:: yaml](../images/sim800l-full.jpg)
-*.. code-block:: yaml*
-
+{{< img src="sim800l-full.jpg" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
 
     # Example configuration entry
     uart:

@@ -10,9 +10,7 @@ hardware found in [Sonoff D1 dimmer](https://itead.cc/product/sonoff-d1-smart-di
 remotes are also supported. Use this component to integrate Sonoff D1 dimmer into
 ESPHome / Home Assistant ecosystem.
 
-![Sonoff D1 dimmer front and back view. Image by `ITEAD <https://itead.cc/product/sonoff-d1-smart-dimmer-switch/>`__.](../images/sonoff_d1.jpg)
-*Sonoff D1 dimmer front and back view. Image by `ITEAD <https://itead.cc/product/sonoff-d1-smart-dimmer-switch/>`__.*
-
+{{< img src="sonoff_d1.jpg" alt="Image" caption="Sonoff D1 dimmer front and back view. Image by `ITEAD <https://itead.cc/product/sonoff-d1-smart-dimmer-switch/>`__." width="100.0%" class="center" >}}
 
 Sonoff D1 uses another MCU for light dimming and handling of radio commands.
 It's hooked up to ESP8266 via UART bus with default RX / TX pins being used on
@@ -22,12 +20,9 @@ translates between HA light commands and serial messages.
 
 To replace the stock firmware with ESPHome you will need to locate GPIO0 pin and serial port. Photos below should help.
 
-![Photo of GPIO 0, images by `klotzma <https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417>`__.](../images/sonoff_d1_gpio0.jpg)
-*Photo of GPIO 0, images by `klotzma <https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417>`__.*
+{{< img src="sonoff_d1_gpio0.jpg" alt="Image" caption="Photo of GPIO 0, images by `klotzma <https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417>`__." width="100.0%" class="center" >}}
 
-![Photo of serial port pins, images by  `klotzma <https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417>`__.](../images/sonoff_d1_serial.jpg)
-*Photo of serial port pins, images by  `klotzma <https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417>`__.*
-
+{{< img src="sonoff_d1_serial.jpg" alt="Image" caption="Photo of serial port pins, images by  `klotzma <https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417>`__." width="100.0%" class="center" >}}
 
 Before using this components make sure:
 

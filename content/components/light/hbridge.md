@@ -8,8 +8,7 @@ title: "H-bridge Light"
 The `hbridge` light platform creates a dual color brightness controlled light from two
 [Output Component]({{< ref "components/output/_index#output" >}}).
 
-![H-bridge lights are very common for Christmas lighting and they use 2 wires for a bunch of LEDs.](../images/hbridge-ui.png)
-*H-bridge lights are very common for Christmas lighting and they use 2 wires for a bunch of LEDs.*
+{{< img src="hbridge-ui.png" alt="Image" caption="H-bridge lights are very common for Christmas lighting and they use 2 wires for a bunch of LEDs." width="40.0%" class="center" >}}
 
 The pins are switched alternatively to allow two sets of lights to operate.
 

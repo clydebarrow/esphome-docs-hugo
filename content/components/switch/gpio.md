@@ -9,9 +9,7 @@ The `gpio` switch platform allows you to use any pin on your node as a
 switch. You can for example hook up a relay to a GPIO pin and use it
 through this platform.
 
-![.. code-block:: yaml](../images/gpio-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="gpio-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     switch:
@@ -66,9 +64,7 @@ switch:
     - switch.turn_off: relay
 
 ```
-![.. _switch-gpio-interlocking:](../images/gate-remote-ui.png)
-*.. _switch-gpio-interlocking:*
-
+{{< img src="gate-remote-ui.png" alt="Image" caption=".. _switch-gpio-interlocking:" class="center" >}}
 
 ## Interlocking
 

@@ -7,9 +7,7 @@ title: "H-bridge Switch"
 
 The `hbridge` switch platform allows you to drive an *h-bridge* controlled latching relay.
 
-![Omron G6CK-2117P relay module.](../images/hbridge-relay.png)
-*Omron G6CK-2117P relay module.*
-
+{{< img src="hbridge-relay.png" alt="Image" caption="Omron G6CK-2117P relay module." width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

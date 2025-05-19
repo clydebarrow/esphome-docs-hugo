@@ -20,9 +20,7 @@ HHCCJCY01
 
 MiFlora, Huahuacaocao, measures temperature, moisture, ambient light and nutrient levels in the soil.
 
-![Configuration example:](../images/xiaomi_hhccjcy01.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_hhccjcy01.jpg" alt="Image" caption="Configuration example:" width="60.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -50,9 +48,7 @@ GCLS002
 
 VegTrug Grow Care Garden, Takasho, suitable for outside, similar to the MiFlora.
 
-![Configuration example:](../images/xiaomi_gcls002.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_gcls002.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -73,9 +69,7 @@ HHCCPOT002
 
 FlowerPot, Huahuacaocao, RoPot, broadcasts moisture and conductivity
 
-![Configuration example:](../images/xiaomi_hhccpot002.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_hhccpot002.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -92,9 +86,7 @@ LYWSDCGQ
 
 Hygro thermometer, round body, segment LCD, broadcasts temperature, humidity and battery level. This device is also known as MJ_HT_V1. In HA's native Xiaomi BLE integration, the device info page shows it as "MJ_HT_V1 (LYWSDCGQ by Xiaomi)".
 
-![Configuration example:](../images/xiaomi_lywsdcgq.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_lywsdcgq.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -113,9 +105,7 @@ LYWSD02
 
 Hygro thermometer, rectangular body, e-ink display, broadcasts temperature, humidity and battery level.
 
-![- Battery Level, needs xiaomi firmware 1.1.2_0085](../images/xiaomi_lywsd02.jpg)
-*- Battery Level, needs xiaomi firmware 1.1.2_0085*
-
+{{< img src="xiaomi_lywsd02.jpg" alt="Image" caption="- Battery Level, needs xiaomi firmware 1.1.2_0085" width="30.0%" class="center" >}}
 
 Configuration example:
 
@@ -158,9 +148,7 @@ Cleargrass (Qingping): hygro thermometer, round body, e-ink display.
 
 New firmware requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})), and stopped broadcasting battery level.
 
-![Configuration example:](../images/xiaomi_cgg1.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_cgg1.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -186,9 +174,7 @@ LYWSD03MMC
 
 Hygro thermometer, small square body, segment LCD, encrypted, broadcasts temperature, humidity and battery status.
 
-![There are the following possibilities to operate this sensor:](../images/xiaomi_lywsd03mmc.jpg)
-*There are the following possibilities to operate this sensor:*
-
+{{< img src="xiaomi_lywsd03mmc.jpg" alt="Image" caption="There are the following possibilities to operate this sensor:" width="30.0%" class="center" >}}
 
 1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
 2. Device flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware
@@ -255,9 +241,7 @@ MHO-C303
 
 Hygro thermometer clock with alarm, rectangular body, e-ink display, broadcasts temperature, humidity and battery status. Not encrypted.
 
-![Similar to the LYWSD02, with additional clock features (alarm, pomodoro timer). Runs on two AAA batteries.](../images/xiaomi_mhoc303.jpg)
-*Similar to the LYWSD02, with additional clock features (alarm, pomodoro timer). Runs on two AAA batteries.*
-
+{{< img src="xiaomi_mhoc303.jpg" alt="Image" caption="Similar to the LYWSD02, with additional clock features (alarm, pomodoro timer). Runs on two AAA batteries." width="30.0%" class="center" >}}
 
 Configuration example:
 
@@ -278,9 +262,7 @@ MHO-C401
 
 Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
-![( MHO-C201 doesn't have BT )](../images/xiaomi_mhoc401.jpg)
-*( MHO-C201 doesn't have BT )*
-
+{{< img src="xiaomi_mhoc401.jpg" alt="Image" caption="( MHO-C201 doesn't have BT )" width="30.0%" class="center" >}}
 
 Similar to the LYWSD03MMC, there is custom firmware available for this device, so there are the following possibilities to operate this sensor:
 
@@ -327,9 +309,7 @@ CGD1
 
 Cleargrass (Qingping) alarm clock, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
-![Configuration example:](../images/xiaomi_cgd1.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_cgd1.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -350,9 +330,7 @@ CGDK2
 Cleargrass (Qingping) Temp & RH Lite, round body, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 The measurements are broadcast every 10-15 minutes.
 
-![Configuration example:](../images/xiaomi_cgdk2.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_cgdk2.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -372,9 +350,7 @@ JQJCY01YM
 
 Xiaomi (Honeywell) formaldehyde sensor, OLED display, broadcasts temperature, humidity, formaldehyde concentration (mg/m³) and battery status.
 
-![Configuration example:](../images/xiaomi_jqjcy01ym.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_jqjcy01ym.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -395,9 +371,7 @@ WX08ZM
 
 Mosquito Repellent Smart Version, broadcasts the tablet resource level, on/off state and battery level, implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
-![Configuration example:](../images/xiaomi_wx08zm.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_wx08zm.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -416,9 +390,7 @@ MUE4094RT
 
 Xiaomi Philips BLE night light, broadcasts motion detection (detected/clear, on/off), default timeout is 5s, implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
-![Configuration example:](../images/xiaomi_mue4094rt.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_mue4094rt.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -435,9 +407,7 @@ MJYD02YL-A
 
 Xiaomi Yeelight night light, in-shape replacement of MJYD02YL with BLE, broadcasts light on/off status, motion detection, idle time since last motion event and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})). Implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
-![Configuration example:](../images/xiaomi_mjyd02yla.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_mjyd02yla.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 sensor:
@@ -462,9 +432,7 @@ CGPR1
 
 Qingping motion & ambient light sensor. Broadcasts motion detection, idle time since last motion event, lux value and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
-![Configuration example:](../images/xiaomi_cgpr1.png)
-*Configuration example:*
-
+{{< img src="xiaomi_cgpr1.png" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 binary_sensor:
@@ -486,9 +454,7 @@ RTCGQ02LM - Mi Motion Sensor 2
 Motion & ambient light sensor. Broadcasts motion detection, light/dark and battery status. Also has a button that broadcasts when pressed.
 Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
-![Configuration example:](../images/xiaomi_rtcgq02lm.jpg)
-*Configuration example:*
-
+{{< img src="xiaomi_rtcgq02lm.jpg" alt="Image" caption="Configuration example:" width="30.0%" class="center" >}}
 
 ```yaml
 xiaomi_rtcgq02lm:
@@ -566,9 +532,7 @@ LYWSD03MMC/MHO-C401
 
 If the LYWSD03MMC or MHO-C401 sensor is operated with the Xiaomi stock firmware, you can use the [TeLink flasher application](https://atc1441.github.io/TelinkFlasher.html) to easily generate a new bind key and upload the key to the device without the need to flash a new firmware (see figure). For this, you load the flasher [webpage](https://atc1441.github.io/TelinkFlasher.html) with a [supported browser](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md) and connect the device by pressing "Connect". After the connection is established, you press the "Do Activation" button and the new key will be shown in the "Mi Bind Key" field. The key can be copied directly into the sensor YAML configuration.
 
-![Telink flasher application.](../images/telink_flasher.jpg)
-*Telink flasher application.*
-
+{{< img src="telink_flasher.jpg" alt="Image" caption="Telink flasher application." width="100.0%" class="center" >}}
 
 {{< warning >}}
 The new bind key will work with ESPHome, but the Mi Home app will not recognise the sensor anymore once the device has been activated by the TeLink flasher application. To use the sensor again with the Xiaomi Mi Home app, the device needs to be removed and then re-added inside the Mi Home app.

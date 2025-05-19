@@ -14,9 +14,7 @@ Since this sensor reads multiple times per second, [Sensor Filters]({{< ref "com
 
 To use the sensor, first set up an [UART Bus]({{< ref "components/uart#uart" >}}) with a baud rate of 9600 and connect the sensor to the specified pin.
 
-![A02YYUW Waterproof Ultrasonic Distance Sensor.](../images/a02yyuw-full.jpg)
-*A02YYUW Waterproof Ultrasonic Distance Sensor.*
-
+{{< img src="a02yyuw-full.jpg" alt="Image" caption="A02YYUW Waterproof Ultrasonic Distance Sensor." width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

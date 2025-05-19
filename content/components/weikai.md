@@ -22,9 +22,7 @@ It can also be used with evaluation board equipped with these chips, such as:
 - [WK2132 Chip Development Board](https://www.aliexpress.com/item/1005002018579265.html)
 - [DFROBOT Gravity: I²C to Dual UART Module](https://www.dfrobot.com/product-2001.html)
 
-![The features provided by the different WeiKai chips are described in the following table:](../images/DFR0627.jpg)
-*The features provided by the different WeiKai chips are described in the following table:*
-
+{{< img src="DFR0627.jpg" alt="Image" caption="The features provided by the different WeiKai chips are described in the following table:" class="center" >}}
 
 ### WeiKai chip's features
 

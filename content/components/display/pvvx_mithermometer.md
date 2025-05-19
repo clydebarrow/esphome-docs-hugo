@@ -7,9 +7,7 @@ title: "PVVX MiThermometer Display"
 
 The [pvvx_mithermometer` display platform allows you to use devices running the `ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
 
-![Xiaomi LYWSD03MMC.](/components/sensor/images/xiaomi_lywsd03mmc.jpg)
-*Xiaomi LYWSD03MMC.*
-
+{{< img src="xiaomi_lywsd03mmc.jpg" alt="Image" caption="Xiaomi LYWSD03MMC." width="75.0%" class="center" >}}
 
 The data to be displayed is transmitted as external data via BLE.
 To do this, a `ble_client` component must be set up.

@@ -36,9 +36,7 @@ in ESPHome for a [Supported Chipsets]({{< ref "components/light/fastled#fastled_
 Clockless FastLED lights differ from the
 [SPI]({{< ref "components/light/fastled#fastled-spi" >}}) in that they only have a single data wire to connect, and not separate data and clock wires.
 
-![.. code-block:: yaml](../images/fastled_clockless-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="fastled_clockless-ui.png" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
 
     # Example configuration entry
     light:
@@ -109,9 +107,7 @@ SPI FastLED lights differ from the
 [Clockless]({{< ref "components/light/fastled#fastled-clockless" >}}) in that they require two pins to be connected, one for a data and one for a clock signal
 whereas the clockless lights only need a single pin.
 
-![.. code-block:: yaml](../images/fastled_spi-ui.png)
-*.. code-block:: yaml*
-
+{{< img src="fastled_spi-ui.png" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
 
     # Example configuration entry
     light:

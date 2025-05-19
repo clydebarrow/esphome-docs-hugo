@@ -11,8 +11,7 @@ configured [WiFi ]({{< relref "wifi/" >}}) fails.
 After 1 minute of unsuccessful WiFi connection attempts, the ESP will start a WiFi hotspot
 (with the credentials from your configuration)
 
-![In this web interface, you can manually override the WiFi settings of the device (please note](../images/captive_portal-ui.png)
-*In this web interface, you can manually override the WiFi settings of the device (please note*
+{{< img src="captive_portal-ui.png" alt="Image" caption="In this web interface, you can manually override the WiFi settings of the device (please note" width="70.0%" class="center" >}}
 
 this will be overwritten by any subsequent serial upload so make sure to also update your YAML configuration).
 

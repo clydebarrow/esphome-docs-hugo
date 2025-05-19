@@ -23,9 +23,7 @@ Configure the AJ_SR04M for mode 1:
 Configure the AJ_SR04M for mode 2:
     - Add a 47k resistor to pad R19.
 
-![JSN-SR04T Waterproof Ultrasonic Range Finder Mode Select Pads.](../images/jsn-sr04t-v3-mode-select-pads.jpg)
-*JSN-SR04T Waterproof Ultrasonic Range Finder Mode Select Pads.*
-
+{{< img src="jsn-sr04t-v3-mode-select-pads.jpg" alt="Image" caption="JSN-SR04T Waterproof Ultrasonic Range Finder Mode Select Pads." width="50.0%" class="center" >}}
 
 In mode 1 the module continuously takes measurements approximately every 100mS and outputs the distance on the TX pin at 9600 baud.
 In this mode [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}) are highly recommended.
@@ -35,9 +33,7 @@ The module then outputs the distance on its TX pin. The frequency of the measure
 
 To use the sensor, first set up an [UART Bus]({{< ref "components/uart#uart" >}}) with a baud rate of 9600 and connect the sensor to the specified pin.
 
-![JSN-SR04T Waterproof Ultrasonic Range Finder.](../images/jsn-sr04t-v3.jpg)
-*JSN-SR04T Waterproof Ultrasonic Range Finder.*
-
+{{< img src="jsn-sr04t-v3.jpg" alt="Image" caption="JSN-SR04T Waterproof Ultrasonic Range Finder." width="70.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

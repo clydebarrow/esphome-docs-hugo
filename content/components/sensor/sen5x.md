@@ -11,9 +11,7 @@ This sensor supports both UART and I²C communication. Only I²C communication i
 
 .. _Sensirion: https://sensirion.com/products/catalog/?filter_series=ceff880a-784d-4877-ae2c-79353c6a0428
 
-![.. code-block:: yaml](../images/sen54-web.png)
-*.. code-block:: yaml*
-
+{{< img src="sen54-web.png" alt="Image" caption=".. code-block:: yaml" width="100.0%" class="center" >}}
 
     # Example configuration entry
     sensor:
@@ -146,9 +144,7 @@ The sensor needs about a minute "warm-up". The VOC and NOx gas index algorithm n
 
 The sensor has a JST GHR-06V-S 6 pin type connector, with a 1.25mm pitch. The cable needs this connector:
 
-![To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) must be shorted to ground (pin no.2). Pin 6 is not used.](../images/jst6pin.png)
-*To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) must be shorted to ground (pin no.2). Pin 6 is not used.*
-
+{{< img src="jst6pin.png" alt="Image" caption="To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) must be shorted to ground (pin no.2). Pin 6 is not used." width="50.0%" class="center" >}}
 
 For better stability, the SDA and SCL lines require suitable pull-up resistors.
 

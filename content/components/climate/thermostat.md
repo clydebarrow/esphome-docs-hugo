@@ -28,9 +28,7 @@ are configured -- more on this in a moment. Two parameters define the set points
 front-end user interface. The screenshot below illustrates a thermostat controller in dual-point mode, where two set points
 are available.
 
-![Dual-setpoint climate UI](../images/climate-ui.png)
-*Dual-setpoint climate UI*
-
+{{< img src="climate-ui.png" alt="Image" caption="Dual-setpoint climate UI" width="60.0%" class="center" >}}
 
 This component works by triggering a number of [All Actions]({{< ref "automations/actions#config-action" >}}) as required to keep the observed
 temperature above/below/within the target range as defined by the set point(s). In general, when the observed temperature

@@ -8,9 +8,7 @@ title: "DF-Player mini"
 The [dfplayer` (`datasheet](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)), component
 allows you to play sound and music stored in an SD card or USB flash drive.
 
-![DF-Player mini Module.](../images/dfplayer-full.jpg)
-*DF-Player mini Module.*
-
+{{< img src="dfplayer-full.jpg" alt="Image" caption="DF-Player mini Module." width="50.0%" class="center" >}}
 
 For this component to work you need to have set up a [UART Bus]({{< ref "components/uart#uart" >}}) in your configuration.
 

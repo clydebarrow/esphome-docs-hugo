@@ -12,13 +12,9 @@ voltage of a RuuviTag device with RAWv1 protocol every time the sensor sends
 out a BLE broadcast. RAWv2 protocol is supported too. Then tx power,
 movement count and measurement sequence number are also tracked.
 
-![RuuviTagSensor over BLE.](../images/ruuvitag-full.jpg)
-*RuuviTagSensor over BLE.*
+{{< img src="ruuvitag-full.jpg" alt="Image" caption="RuuviTagSensor over BLE." width="80.0%" class="center" >}}
 
-
-![.. code-block:: yaml](../images/ruuvitag-ui.jpg)
-*.. code-block:: yaml*
-
+{{< img src="ruuvitag-ui.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
 
     # Example configuration entry
     esp32_ble_tracker:

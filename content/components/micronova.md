@@ -25,8 +25,7 @@ Use this component at your own risk.
 
 Most MicroNova based pellet stoves have a serial output. In most cases this output has 4 pins: GND, 5v, 20V and DATA.
 
-![.. figure:: images/micronova_serial_layout.png](../images/micronova_serial.png)
-*.. figure:: images/micronova_serial_layout.png*
+{{< img src="micronova_serial.png" alt="Image" caption=".. figure:: images/micronova_serial_layout.png" width="50.0%" class="center" >}}
 
     :align: center
     :width: 50.0%
@@ -34,11 +33,7 @@ Most MicroNova based pellet stoves have a serial output. In most cases this outp
 You will have to build a simple circuit to interface with your stove. It is based on optocouplers for galvanic separation and logic
 level shifting between 5v and 3V3.
 
-![Optocoupler interface circuit (credit: philibertc)](../images/micronova_optocouplers.png)
-*Optocoupler interface circuit (credit: philibertc)*
-
-
-
+{{< img src="micronova_optocouplers.png" alt="Image" caption="Optocoupler interface circuit (credit: philibertc)" width="100.0%" class="center" >}}
 
 See the references below for all the details about te circuit.
 

@@ -8,7 +8,7 @@ title: "ESP32 Bluetooth Low Energy Tracker Hub"
 The `esp32_ble_tracker` component creates a global hub so that you can track bluetooth low energy devices
 using your ESP32 node.
 
-See [Setting Up Devices]({{< ref "components/binary_sensor/ble_presence#esp32_ble_tracker-setting_up_devices" >}}) for information on how you can determine
+See [Setting up devices]({{< ref "components/binary_sensor/ble_presence#esp32_ble_tracker-setting_up_devices" >}}) for information on how you can determine
 the MAC address of a device and track it using ESPHome.
 
 {{< warning >}}
@@ -246,7 +246,7 @@ Configuration variables:
 - **continuous** (*Optional*, boolean): Whether to start the scan in continuous mode. Defaults to `false`
 
 {{< note >}}
-This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 ```yaml
 ```
 esp32_ble_tracker:

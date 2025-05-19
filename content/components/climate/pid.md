@@ -56,10 +56,10 @@ climate:
   This is used for information only and does not influence temperature control.
 - **default_target_temperature** (**Required**, float): The default target temperature (setpoint)
   for the control algorithm. This can be dynamically set in the frontend later.
-- **heat_output** (*Optional*, [Base Output Configuration]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **heat_output** (*Optional*, [float output]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
   that increases the current temperature. At least one of `heat_output` and `cool_output` must
   be specified.
-- **cool_output** (*Optional*, [Base Output Configuration]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **cool_output** (*Optional*, [float output]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
   that decreases the current temperature. At least one of `heat_output` and `cool_output` must
   be specified.
 - **control_parameters** (**Required**): Control parameters of the PID controller.
@@ -104,7 +104,7 @@ climate:
     reached a state of equilibrium, so it advantageous to use a higher number of output samples
     like 10-30 samples. Defaults to `1` which is no sampling/averaging.
 
-- All other options from [Base Climate Configuration]({{< ref "components/climate/_index#config-climate" >}}).
+- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
 {{< anchor "pid-setup" >}}
 
@@ -112,8 +112,8 @@ climate:
 
 To set up a PID climate controller, you need a couple of components:
 
-- A [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) to read the current temperature (`sensor`).
-- At least one [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}) to drive for heating or cooling (or both).
+- A [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) to read the current temperature (`sensor`).
+- At least one [float output]({{< ref "components/output/_index#config-output" >}}) to drive for heating or cooling (or both).
   This could for example be a PWM output via {{< docref "/components/output/slow_pwm" >}} or {{< docref "/components/output/sigma_delta_output" >}} that drives a heating unit.
 
   Please note the output *must* be controllable with continuous value (not only ON/OFF, but any state
@@ -412,7 +412,7 @@ Configuration variables:
   - `KI` - The current factor for the integral term of the PID controller.
   - `KD` - The current factor for the differential term of the PID controller.
 
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Advanced options:
 

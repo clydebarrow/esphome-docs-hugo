@@ -40,7 +40,7 @@ switch:
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **foreground_pressed_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color when pressed
 - **visible** (*Optional*, boolean):  Visible or not
-- All other options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
@@ -88,10 +88,10 @@ on_...:
 Configuration options:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion switch.
-- **state** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The boolean state to publish.
-- **publish_state** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
+- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The boolean state to publish.
+- **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
   Default is true.
-- **send_to_nextion** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
+- **send_to_nextion** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
   display which will update component. Default is true.
 
 {{< note >}}
@@ -102,7 +102,7 @@ This action can also be written in lambdas. See [Lambda Calls]({{< ref "componen
 
 ## Lambda Calls
 
-From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full :apiref:`nextion/nextion_switch.h` for more info).
 
 {{< anchor "nextion_switch_set_state" >}}

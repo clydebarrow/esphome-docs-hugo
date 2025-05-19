@@ -32,7 +32,7 @@ energy and charge accumulation, and capability to utilize the temperature measur
 for shunt resistor temperature variance.
 
 ## Over I²C
-Use `ina2xx_i2c` component to connect INA228, INA237, or INA238 device over [I²C Bus]({{< ref "components/i2c#i2c" >}}) bus. 
+Use `ina2xx_i2c` component to connect INA228, INA237, or INA238 device over [I²C]({{< ref "components/i2c#i2c" >}}) bus. 
 
 ```yaml
 # Example configuration entry for I²C
@@ -77,12 +77,12 @@ sensor:
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
-- All other options from [I²C Bus]({{< ref "components/i2c#i2c" >}}) and [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [I²C device]({{< ref "components/i2c#i2c" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ## Over SPI
 
-Use `ina2xx_spi` component to connect INA229 or INA239 device over [SPI Bus]({{< ref "components/spi#spi" >}}) bus. 
+Use `ina2xx_spi` component to connect INA229 or INA239 device over [SPI]({{< ref "components/spi#spi" >}}) bus. 
 
 
 ```yaml
@@ -126,13 +126,13 @@ sensor:
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
-- All other options from [SPI Bus]({{< ref "components/spi#spi" >}}) and [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [SPI device]({{< ref "components/spi#spi" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ## Sensors
 The component offers nine sensors. You can configure all or any subset of the sensors. Each configured sensor 
 is reported  separately on each update_interval. The `name` option is required for each sensor configured; 
-all other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) are also supported. Shorthand notation can be used for the sensors like this:
+all other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) are also supported. Shorthand notation can be used for the sensors like this:
 `current: "Current"`.
 
 - **current** (*Optional*): Calculated current output, A

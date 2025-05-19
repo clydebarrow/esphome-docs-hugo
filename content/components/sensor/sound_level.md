@@ -33,11 +33,11 @@ sensor:
 - **passive** (**Required**, boolean). Whether passive mode is enabled. See [Passive Mode]({{< ref "components/sensor/sound_level#sound_level-passive" >}}).
 - **peak** (*Optional*): The information for the peak loudness sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **rms** (*Optional*): The information for the Root Mean Square loudness sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "sound_level-passive" >}}
 

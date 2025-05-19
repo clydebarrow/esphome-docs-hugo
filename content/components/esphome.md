@@ -212,7 +212,7 @@ This option behaves differently depending on what the included file is pointing 
 ## ``libraries``
 
 The `libraries` option allows you to include libraries in the PlatformIO project. These libraries will then be
-compiled into the resulting firmware and may be used by [Templates]({{< ref "automations/templates#config-lambda" >}}).
+compiled into the resulting firmware and may be used by [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
 ```yaml
 # Example configuration entry

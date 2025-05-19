@@ -22,7 +22,7 @@ binary_sensor:
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to periodically check.
-- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 ## Activating internal pullups
 
@@ -61,7 +61,7 @@ binary_sensor:
 ## Debouncing Values
 
 Some binary sensors are a bit unstable and quickly transition between the ON and OFF state while
-they're pressed. To fix this and debounce the signal, use the [Binary Sensor Filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}):
+they're pressed. To fix this and debounce the signal, use the [binary sensor filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}):
 
 ```yaml
 # Example configuration entry

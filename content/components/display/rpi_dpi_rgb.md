@@ -94,7 +94,7 @@ display:
 - **pclk_inverted** (*Optional*, bool): If the pclk is active negative (default is True)
 - **invert_colors** (*Optional*): With this boolean option you can invert the display colors. **Note** some of the displays have this option set automatically to true and can't be changed.
 - **rotation** (*Optional*): Rotate the display presentation in software. Choose one of `0°`, `90°`, `180°`, or `270°`.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 
 

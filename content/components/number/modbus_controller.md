@@ -39,7 +39,7 @@ When the Number is updated a modbus write command is created sent to the device.
 - **custom_command** (*Optional*, list of bytes): raw bytes for modbus command. This allows using non-standard commands. If `custom_command` is used `address` and `register_type` can't be used.
   custom data must contain all required bytes including the modbus device address. The crc is automatically calculated and appended to the command.
   See [Using ``custom_command``]({{< ref "components/modbus_controller#modbus_custom_command" >}}) how to use `custom_command`
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the new value of the sensor.
 
   Parameters passed into the lambda
@@ -55,7 +55,7 @@ When the Number is updated a modbus write command is created sent to the device.
   - `return NAN;` if the state should be considered invalid to indicate an error (advanced).
 
 
-- **write_lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): Lambda called before send.
+- **write_lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): Lambda called before send.
   Lambda is evaluated before the modbus write command is created.
 
   Parameters passed into the lambda
@@ -71,7 +71,7 @@ When the Number is updated a modbus write command is created sent to the device.
   - `return <anything>; and fill payload with data` if the payload is added from the lambda then these 16 bit words will be sent
   - `return {};` if you don't want write the command to the device (or do it from the lambda).
 
-- All other options from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
+- All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
 
 ## Example:
 

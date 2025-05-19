@@ -48,7 +48,7 @@ sensor:
 rssi options:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 characteristic options:
 
@@ -57,12 +57,12 @@ characteristic options:
 - **characteristic_uuid** (**Required**, UUID): UUID of the service's characteristic to query.
 - **descriptor_uuid** (*Optional*, UUID): UUID of the characteristic's descriptor to query.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID to use for code generation, and for reference by dependent components.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for converting a raw data
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for converting a raw data
   reading to a sensor value. See [Raw Data Parsing Lambda]({{< ref "components/sensor/ble_client#ble-sensor-lambda" >}}) for more information.
 - **notify** (*Optional*, boolean): Instruct the server to send notifications for this
   characteristic.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Automations:
 

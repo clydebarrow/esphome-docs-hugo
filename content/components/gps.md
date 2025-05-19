@@ -12,7 +12,7 @@ Any GPS module that uses the standardized NMEA communication protocol will work.
 
 .. _Adafruit: https://www.adafruit.com/product/746
 
-For this component to work you need to have set up a [UART Bus]({{< ref "components/uart#uart" >}})
+For this component to work you need to have set up a [UART bus]({{< ref "components/uart#uart" >}})
 in your configuration - only the RX pin should be necessary.
 
 ```yaml
@@ -44,31 +44,31 @@ See {{< docref "time/gps" >}} for config options for the GPS time source.
 ## Configuration variables:
 - **latitude** (*Optional*): Include the Latitude as a sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **longitude** (*Optional*): Include the Longitude as a sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **speed** (*Optional*): Include the measured speed as a sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **course** (*Optional*): Include the measured course as a sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **altitude** (*Optional*): Include the measured altitude as a sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **satellites** (*Optional*): Include the number of tracking satellites being used as a sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **hdop** (*Optional*): Include the measured HDOP (Horizontal Dilution Of Precision) as a sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval of sensor updates. Defaults to  `20s`.
 

@@ -36,7 +36,7 @@ text_sensor:
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **font_id** (*Optional*, int):  The font id for the component
 - **visible** (*Optional*, boolean):  Visible or not
-- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
@@ -84,10 +84,10 @@ on_...:
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion text sensor.
-- **state** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The string to publish.
-- **publish_state** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
+- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The string to publish.
+- **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
   Default is true.
-- **send_to_nextion** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
+- **send_to_nextion** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
   display which will update component. Default is true.
 
 {{< note >}}
@@ -98,7 +98,7 @@ This action can also be written in lambdas. See [Lambda Calls]({{< ref "componen
 
 ## Lambda Calls
 
-From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full :apiref:`nextion/text_sensor/nextion_textsensor.h` for more info).
 
 {{< anchor "nextion_text_sensor_set_state" >}}

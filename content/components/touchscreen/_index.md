@@ -89,7 +89,7 @@ The integer members for the touch positions below are in relation to the display
 ## Calibration
 
 For most touchscreen drivers the dimensions of the touchscreen are automatically set from the display driver to match the screen size.
-In some cases such as the [The ``xpt2046`` touchscreen platform allows using the resistive touch screen controllers]({{< ref "components/touchscreen/xpt2046#xpt2046-component" >}}) (a resistive touch screen) the reported values bear no relation to the actual screen size.
+In some cases such as the [XPT2046]({{< ref "components/touchscreen/xpt2046#xpt2046-component" >}}) (a resistive touch screen) the reported values bear no relation to the actual screen size.
 The `calibration` configuration can be used to manually calibrate the touchscreen.
 
 To match the point of the touch to the display coordinates the touch screen has to be calibrated.
@@ -278,7 +278,7 @@ binary_sensor:
   area for touch buttons. To allow the sensor to register touches outside the display area set this to `true`. 
   The calibration values as above should be set to the display bounds.
 
-- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 
 ## See Also

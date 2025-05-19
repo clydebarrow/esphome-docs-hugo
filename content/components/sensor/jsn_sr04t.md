@@ -48,10 +48,10 @@ sensor:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`. Not applicable in mode 1.
-- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this sensor.
+- **uart_id** (*Optional*, [UART bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this sensor.
   Use this if you want to use multiple UART buses at once.
 - **model** (*Optional*): Sensor model. Available options: `jsn_sr04t` (default) and `aj_sr04m`.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

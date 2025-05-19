@@ -49,8 +49,8 @@ display:
 
 - **dimensions** (**Required**, string): The dimensions of the display with `COLUMNSxROWS`. If you're not
   sure, power the display up and just count them.
-- **address** (*Optional*, int): The [I²C Bus]({{< ref "components/i2c#i2c" >}}) address of the PCF8574 chip, defaults to `0x3F`.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+- **address** (*Optional*, int): The [I²C]({{< ref "components/i2c#i2c" >}}) address of the PCF8574 chip, defaults to `0x3F`.
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [Rendering Lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
@@ -90,14 +90,14 @@ display:
 
 - **dimensions** (**Required**, string): The dimensions of the display with `COLUMNSxROWS`. If you're not
   sure, power the display on, turn contrast high up and just count them.
-- **data_pins** (**Required**, list of [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): A list of the data pins you
+- **data_pins** (**Required**, list of [pins]({{< ref "guides/configuration-types#config-pin_schema" >}})): A list of the data pins you
   have hooked up to the LCD. The list can either be 4 items long (operating in 4-bit mode with
   either the first 4 data pins connected or the last 4 data pins connected), or 8 items long (when you have
   connected all 8 data pins).
-- **enable_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `E` (`06`) hooked up to.
-- **rs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `RS` (`04`) hooked up to.
-- **rw_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Optionally set the pin you have `R/W` (`05`) hooked up to. You can also just permanently connect that pin to `GND`.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+- **enable_pin** (**Required**, [pin]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `E` (`06`) hooked up to.
+- **rs_pin** (**Required**, [pin]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have `RS` (`04`) hooked up to.
+- **rw_pin** (*Optional*, [pin]({{< ref "guides/configuration-types#config-pin_schema" >}})): Optionally set the pin you have `R/W` (`05`) hooked up to. You can also just permanently connect that pin to `GND`.
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [Rendering Lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
@@ -248,7 +248,7 @@ binary_sensor:
 - {{< docref "/components/switch/gpio" >}}
 - {{< docref "/components/binary_sensor/gpio" >}}
 - [LCD Menu]({{< ref "components/display_menu/lcd_menu#lcd_menu" >}})
-- [Display pages alternative]({{< ref "cookbook/lambda_magic#lambda_magic_pages" >}})
+- [Add pages to LCD display]({{< ref "cookbook/lambda_magic#lambda_magic_pages" >}})
 - {{< docref "/components/pcf8574" >}}
 - [HD44780U (LCD-II) datasheet](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)
 - [Charset cheatsheet](https://user-images.githubusercontent.com/1550668/173113487-9c98e866-8ee4-4a3c-a83f-61fe62057c5f.png)

@@ -28,14 +28,14 @@ sensor:
 ## Configuration variables:
 
 - **formaldehyde** (*Optional*): The information for the Formaldehyde sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the Temperature sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 - **humidity** (*Optional*): The information for the Humidity sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.

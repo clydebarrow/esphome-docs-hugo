@@ -35,7 +35,7 @@ output:
 - **type** (**Required**, string): The type of output. One of `binary` and `float`.
 - **write_action** (**Required**, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the state of the output is updated.
-- All other options from [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}).
+- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 See :apiclass:`output::BinaryOutput` and :apiclass:`output::FloatOutput`.
 

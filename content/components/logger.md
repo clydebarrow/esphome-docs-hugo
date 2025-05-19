@@ -11,7 +11,7 @@ configuration). By default, all logs with a severity `DEBUG` or higher will be s
 Increasing the log level severity (to e.g `INFO` or `WARN`) can help with the performance of the application and memory size.
 
 {{< note >}}
-The "severity" of a log message represents the importance of the message, i.e. how critical it is. The severity levels are defined in the [Log Levels]({{< ref "components/logger#logger-log_levels" >}}) section.
+The "severity" of a log message represents the importance of the message, i.e. how critical it is. The severity levels are defined in the [log levels]({{< ref "components/logger#logger-log_levels" >}}) section.
 
 ```yaml
 ```
@@ -41,7 +41,7 @@ Advanced settings:
    This prevents API disconnections when multiple threads attempt to log simultaneously.
    Set to `0` to disable the log buffer. Defaults to `768B`.
 -  **hardware_uart** (*Optional*, string): The Hardware UART to use for logging. The default varies depending on
-   the specific processor/chip and framework you are using. See the [Default Hardware Interfaces]({{< ref "components/logger#logger-default_hardware_interfaces" >}}).
+   the specific processor/chip and framework you are using. See the [table below]({{< ref "components/logger#logger-default_hardware_interfaces" >}}).
 -  **esp8266_store_log_strings_in_flash** (*Optional*, boolean): If set to false, disables storing
    log strings in the flash section of the device (uses more memory). Defaults to true.
 -  **on_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
@@ -193,10 +193,10 @@ on_...:
 ```
 Configuration options:
 
--  **format** (**Required**, string): The format for the message in [Formatted Text]({{< ref "components/display/_index#display-printf" >}}).
--  **args** (*Optional*, list of [Templates]({{< ref "automations/templates#config-lambda" >}})): The optional arguments for the
+-  **format** (**Required**, string): The format for the message in [printf-style]({{< ref "components/display/_index#display-printf" >}}).
+-  **args** (*Optional*, list of [lambda]({{< ref "automations/templates#config-lambda" >}})): The optional arguments for the
    format message.
--  **level** (*Optional*, string): The [Log Levels]({{< ref "components/logger#logger-log_levels" >}}) to print the message
+-  **level** (*Optional*, string): The [log level]({{< ref "components/logger#logger-log_levels" >}}) to print the message
    with. Defaults to `DEBUG`.
 -  **tag** (*Optional*, string): The tag (seen in front of the message in the logs) to print the message
    with. Defaults to `main`.
@@ -226,7 +226,7 @@ on_...:
 ## ``on_message``
 
 This automation will be triggered when a new message is added to the log.
-In [Templates]({{< ref "automations/templates#config-lambda" >}}) you can get the message, log level and tag from the trigger
+In [lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the message, log level and tag from the trigger
 using `message` (`const char *`), `level` (`int`) and `tag` (`const char *`).
 
 ```yaml
@@ -242,7 +242,7 @@ logger:
 
 ```
 {{< note >}}
-Logging will not work in the `on_message` trigger. You can't use the [``logger.log`` Action]({{< ref "components/logger#logger-log_action" >}}) action
+Logging will not work in the `on_message` trigger. You can't use the [logger.log]({{< ref "components/logger#logger-log_action" >}}) action
 and the `ESP_LOGx` logging macros in this automation.
 
 {{< /note >}}

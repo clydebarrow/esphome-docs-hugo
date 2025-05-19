@@ -56,7 +56,7 @@ this I/O expander might not work.
 ## Connecting via an SPI bus
 
 The `wk2132_spi`, `wk2212_spi`, `wk2204_spi`, `wk2168_spi` components allows
-you to connect the WeiKai chip with ESPHome via a [SPI Bus]({{< ref "components/spi#spi" >}}) bus.
+you to connect the WeiKai chip with ESPHome via a [SPI]({{< ref "components/spi#spi" >}}) bus.
 
 You can connect several of these modules to a single SPI controller circuit effectively expanding
 the number of hardware serial ports available. Each WeiKai chip needs to be selected
@@ -90,7 +90,7 @@ wk2168_spi:
 ## Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this WeiKai component.
-- **spi_id** (*Optional*, [SPI Bus]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple SPI buses.
 - **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin on the ESP that the chip select line
   of the chip is connected to.
@@ -113,7 +113,7 @@ wk2168_spi:
 ## Connecting via an I²C bus
 
 The `wk2132_i2c` `wk2212_i2c` `wk2204_i2c` `wk2168_i2c` components allows you
-to connect the WeiKai chip with ESPHome via an [I²C Bus]({{< ref "components/i2c#i2c" >}}) bus.
+to connect the WeiKai chip with ESPHome via an [I²C]({{< ref "components/i2c#i2c" >}}) bus.
 Up to four WeiKai chips can be connected to an I²C controller board, effectively expanding the
 available hardware serial ports. The base addresses of these boards are defined by the
 positions of two switches, A0 and A1, on the board.

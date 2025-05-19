@@ -216,7 +216,7 @@ binary_sensor:
       name: 'WireGuard Status'
 
 ```
-All options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
+All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
 #### Enabled Binary Sensor
@@ -231,7 +231,7 @@ binary_sensor:
       name: 'WireGuard Enabled'
 
 ```
-All options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
+All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
 #### Latest Handshake Sensor
@@ -246,12 +246,12 @@ sensor:
       name: 'WireGuard Latest Handshake'
 
 ```
-All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) can be added to the
+All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) can be added to the
 above configuration.
 
 #### Address Text Sensor
 
-This sensor exposes to the frontend the configured [- **address** (**Required**, IPv4 address): The local VPN address of the device.]({{< ref "components/wireguard#wireguard-address" >}}).
+This sensor exposes to the frontend the configured [address]({{< ref "components/wireguard#wireguard-address" >}}).
 
 ```yaml
 # Example configuration entry
@@ -261,7 +261,7 @@ text_sensor:
       name: 'WireGuard Address'
 
 ```
-All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) can be added to the
+All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) can be added to the
 above configuration.
 
 {{< anchor "wireguard-actions" >}}
@@ -367,7 +367,7 @@ These are the steps:
 1. go to the Home Assistant "Integrations" page
 2. click on the "Add Integration" button (bottom right corner)
 3. select "ESPHome" from the list
-4. insert the configured IP [- **address** (**Required**, IPv4 address): The local VPN address of the device.]({{< ref "components/wireguard#wireguard-address" >}})
+4. insert the configured IP [address]({{< ref "components/wireguard#wireguard-address" >}})
    as the host name
 
 The device should now be linked to your remote Home Assistant.
@@ -375,7 +375,7 @@ The device should now be linked to your remote Home Assistant.
 {{< note >}}
 If you have issues linking the ESP device try setting
 the `use_address` parameter of the {{< docref "wifi/" >}} to the value
-of the [- **address** (**Required**, IPv4 address): The local VPN address of the device.]({{< ref "components/wireguard#wireguard-address" >}}) configured here.
+of the [address]({{< ref "components/wireguard#wireguard-address" >}}) configured here.
 
 {{< /note >}}
 ## See Also

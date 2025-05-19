@@ -52,9 +52,9 @@ rtttl:
 ```
 ## Configuration variables:
 
-- **output** (**Exclusive**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for
+- **output** (**Exclusive**, [float output]({{< ref "components/output/_index#output" >}})): The id of the [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for
   this buzzer.
-- **speaker** (**Exclusive**, [I²S Audio Component]({{< ref "components/i2s_audio#i2s_audio" >}})): The id of the [ID]({{< ref "guides/configuration-types#config-id" >}}) to play the song on.
+- **speaker** (**Exclusive**, [speaker]({{< ref "components/i2s_audio#i2s_audio" >}})): The id of the [ID]({{< ref "guides/configuration-types#config-id" >}}) to play the song on.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **gain** (*Optional*, Percentage): With this value you can set the volume of the sound.
 - **on_finished_playback** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
@@ -74,7 +74,7 @@ on_...:
 ```
 Configuration options:
 
-- **rtttl** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The rtttl string.
+- **rtttl** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The rtttl string.
 
 You can find many rtttl strings online on the web, they must start with a name, then a colon: `:` symbol
 and more codes of the song itself. Tip: you can try playing with the values of d=16,o=6,b=95 and make the

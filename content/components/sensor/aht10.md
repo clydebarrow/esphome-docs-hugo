@@ -6,9 +6,9 @@ title: "AHT10 Temperature+Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The `aht10` Temperature+Humidity sensor allows you to use your AHT10
-([datasheet](http://www.aosong.com/userfiles/files/media/aht10%E8%A7%84%E6%A0%BC%E4%B9%A6v1_1%EF%BC%8820191015%EF%BC%89.pdf)), AHT20 ([datasheet](https://cdn-learn.adafruit.com/assets/assets/000/091/676/original/AHT20-datasheet-2020-4-16.pdf?1591047915)) or AHT30 ([datasheet](https://eleparts.co.kr/data/goods_attach/202306/good-pdf-12751003-1.pdf)) [I²C Bus]({{< ref "components/i2c#i2c" >}})-based sensor with ESPHome.
+([datasheet](http://www.aosong.com/userfiles/files/media/aht10%E8%A7%84%E6%A0%BC%E4%B9%A6v1_1%EF%BC%8820191015%EF%BC%89.pdf)), AHT20 ([datasheet](https://cdn-learn.adafruit.com/assets/assets/000/091/676/original/AHT20-datasheet-2020-4-16.pdf?1591047915)) or AHT30 ([datasheet](https://eleparts.co.kr/data/goods_attach/202306/good-pdf-12751003-1.pdf)) [I²C]({{< ref "components/i2c#i2c" >}})-based sensor with ESPHome.
 
-The DHT20 ([datasheet](https://cdn.sparkfun.com/assets/8/a/1/5/0/DHT20.pdf)) sensor has the packaging of the {{< docref "dht/" >}} series, but has the AHT20 inside and is speaking [I²C Bus]({{< ref "components/i2c#i2c" >}}) as well.
+The DHT20 ([datasheet](https://cdn.sparkfun.com/assets/8/a/1/5/0/DHT20.pdf)) sensor has the packaging of the {{< docref "dht/" >}} series, but has the AHT20 inside and is speaking [I²C]({{< ref "components/i2c#i2c" >}}) as well.
 
 {{< img src="aht10-full.jpg" alt="Image" caption="AHT10 Temperature & Humidity Sensor." width="50.0%" class="center" >}}
 
@@ -39,11 +39,11 @@ sensor:
 
 - **temperature** (**Required**): The information for the temperature sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (**Required**): The information for the humidity sensor
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 

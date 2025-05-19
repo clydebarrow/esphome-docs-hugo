@@ -39,7 +39,7 @@ globals:
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give the global variable an ID so that you can refer
-  to it later in [Templates]({{< ref "automations/templates#config-lambda" >}}).
+  to it later in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 - **type** (**Required**, string): The C++ type of the global variable, for example `bool` (for `true`/`false`),
   `int` (for integers), `float` (for decimal numbers), `int[50]` for an array of 50 integers, etc.
 - **restore_value** (*Optional*, boolean): Whether to try to restore the state on boot up.
@@ -54,7 +54,7 @@ Configuration variables:
 
 ## ``globals.set`` Action
 
-This [All Actions]({{< ref "automations/actions#config-action" >}}) allows you to change the value of a `global`
+This [Action]({{< ref "automations/actions#config-action" >}}) allows you to change the value of a `global`
 variable without having to use the lambda syntax.
 
 ```yaml
@@ -67,7 +67,7 @@ on_...:
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The [ID]({{< ref "guides/configuration-types#config-id" >}}) of the global variable to set.
-- **value** (**Required**, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The value to set the global
+- **value** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}})): The value to set the global
   variable to.
 
 {{< note >}}

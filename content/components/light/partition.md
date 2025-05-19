@@ -102,7 +102,7 @@ light:
   - **single_light_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of a single addressable or non-addressable light.
     If an addressable light is specified, it will be treated as a single light in the partition.
 
-- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 {{< note >}}
 Do *not* use this platform to control each LED on your addressable light - the light

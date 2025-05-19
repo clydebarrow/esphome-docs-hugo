@@ -28,7 +28,7 @@ sensor:
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

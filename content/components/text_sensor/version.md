@@ -20,7 +20,7 @@ text_sensor:
 ## Configuration variables:
 
 - **hide_timestamp** (*Optional*, boolean): Allows you to hide the compilation timestamp from the version string. Defaults to `false`.
-- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Disabling the compilation timestamp:
 

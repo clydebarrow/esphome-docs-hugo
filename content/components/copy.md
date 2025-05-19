@@ -24,7 +24,7 @@ binary_sensor:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The binary sensor that should be mirrored.
-- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 ## Copy Button
 
@@ -39,7 +39,7 @@ button:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The button that should be mirrored.
-- All other options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
+- All other options from [Button]({{< ref "components/button/_index#config-button" >}}).
 
 ## Copy Cover
 
@@ -54,7 +54,7 @@ cover:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The cover that should be mirrored.
-- All other options from [Base Cover Configuration]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
 
 ## Copy Fan
 
@@ -69,7 +69,7 @@ fan:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The fan that should be mirrored.
-- All other options from [Base Fan Configuration]({{< ref "components/fan/_index#config-fan" >}}).
+- All other options from [Fan]({{< ref "components/fan/_index#config-fan" >}}).
 
 ## Copy Lock
 
@@ -84,7 +84,7 @@ lock:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The lock that should be mirrored.
-- All other options from [Base Lock Configuration]({{< ref "components/lock/_index#config-lock" >}}).
+- All other options from [Lock]({{< ref "components/lock/_index#config-lock" >}}).
 
 ## Copy Number
 
@@ -99,7 +99,7 @@ number:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The number that should be mirrored.
-- All other options from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
+- All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
 
 ## Copy Select
 
@@ -114,7 +114,7 @@ select:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The select that should be mirrored.
-- All other options from [Base Select Configuration]({{< ref "components/select/_index#config-select" >}}).
+- All other options from [Select]({{< ref "components/select/_index#config-select" >}}).
 
 {{< anchor "copy-sensor" >}}
 
@@ -131,7 +131,7 @@ sensor:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor that should be mirrored.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Copy Switch
 
@@ -146,7 +146,7 @@ switch:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The switch that should be mirrored.
-- All other options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## Copy Text Sensor
 
@@ -161,7 +161,7 @@ text_sensor:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The text sensor that should be mirrored.
-- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Copy Text
 
@@ -176,7 +176,7 @@ text:
 ## Configuration variables:
 
 - **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The text that should be mirrored.
-- All other options from [Base Text Configuration]({{< ref "components/text/_index#config-text" >}}).
+- All other options from [Text]({{< ref "components/text/_index#config-text" >}}).
 
 ## See Also
 

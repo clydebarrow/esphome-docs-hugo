@@ -34,8 +34,8 @@ sensor:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
 - **temperature_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
-- **ec** (*Optional*, [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})): Set the EC sensor configuration. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **temperature** (*Optional*, [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **ec** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the EC sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **temperature** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **temperature_compensation** (*Optional*, float): Set the temperature compensation for the EC
   sensor. Defaults to `21.0`.
 - **temperature_coefficient** (*Optional*, float): Set the temperature coefficient for the EC

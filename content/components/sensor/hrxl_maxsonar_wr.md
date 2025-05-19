@@ -29,11 +29,11 @@ sensor:
 ```
 ## Configuration variables:
 
-- All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Advanced options:
 
-- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this sensor.
+- **uart_id** (*Optional*, [UART bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this sensor.
   Use this if you want to use multiple UART buses at once.
 
 

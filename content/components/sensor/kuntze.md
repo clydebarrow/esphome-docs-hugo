@@ -6,7 +6,7 @@ title: "Kuntze pool monitor"
 {{< seo description="" image="" >}}
 
 The `kuntze` component allows you to integrate the Kuntze water measurement
-instrument in ESPHome. It uses [UART Bus]({{< ref "components/uart#uart" >}}) (ModBUS) for communication.
+instrument in ESPHome. It uses [UART]({{< ref "components/uart#uart" >}}) (ModBUS) for communication.
 
 Once configured you can use sensors as described below for your projects.
 
@@ -63,13 +63,13 @@ Configuration variables:
 - **ec** (*Optional*): Measured EC value.
 - **oci** (*Optional*): Measured OCI value.
 
-All sensors are *Optional* and support all other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+All sensors are *Optional* and support all other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - [Logger Component]({{< ref "components/logger#logger" >}})
-- [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})
+- [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})
 - [Kuntze manuals](https://www.kuntze.com/en/downloads-2/)
 - [Communication protocol](https://www.kuntze.com/wp-content/uploads/2021/05/2019_Manual_Modbus-RTU_ENG.pdf)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/kuntze.md)

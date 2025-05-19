@@ -37,9 +37,9 @@ matrix_keypad:
 Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this device for use in lambdas.
-- **rows** (**Required**, list): A list of [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}) where the horrizontal
+- **rows** (**Required**, list): A list of [pins]({{< ref "guides/configuration-types#config-pin_schema" >}}) where the horrizontal
   matrix lines are connected, in order from top to bottom.  These pins need to be output capable.
-- **columns** (**Required**, list): A list of [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}) where the vertical
+- **columns** (**Required**, list): A list of [pins]({{< ref "guides/configuration-types#config-pin_schema" >}}) where the vertical
   matrix lines are connected, in order from left to right.  These pins need to be input capable
   with pullups enabled.  If there is no internal pullup, then an external one is required.
 - **keys** (*Optional*, string): The keys present on the matrix, from top left to bottom right,
@@ -73,7 +73,7 @@ Configuration variables:
 - **row** (*Optional*, integer): The row of the key.
 - **col** (*Optional*, integer): The column of the key.
 - **key** (*Optional*, string): The key from `keys` configuration entry above.
-- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 Either the `row` and `col` parameters, or the `key` parameter has to be provided.
 
@@ -86,11 +86,11 @@ Either the `row` and `col` parameters, or the `key` parameter has to be provided
 
 {{< note >}}
 Automatic handling of multiple keys (e.g. PIN code entry) is possible with the
-the [Key collector component]({{< ref "components/key_collector#key_collector" >}}) component.
+the [Key Collector]({{< ref "components/key_collector#key_collector" >}}) component.
 
 {{< /note >}}
 ## See Also
 
 - {{< docref "/components/key_collector" >}}
-- [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
+- [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/matrix_keypad.md)

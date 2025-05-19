@@ -32,11 +32,11 @@ sensor:
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): The information for the humidity sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x70`.

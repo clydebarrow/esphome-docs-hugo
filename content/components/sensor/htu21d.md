@@ -35,13 +35,13 @@ sensor:
 ## Configuration variables:
 
 - **temperature** (*Optional*): The information for the temperature sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): The information for the humidity sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **heater** (*Optional*): The information for the heater sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 

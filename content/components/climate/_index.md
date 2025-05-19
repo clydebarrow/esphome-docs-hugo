@@ -45,7 +45,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name of the climate device. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
 you want the climate to use that name, you can set `name: None`.
 
   {{< /note >}}
@@ -81,7 +81,7 @@ Advanced options:
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 MQTT options:
 
@@ -123,7 +123,7 @@ MQTT options:
   target humidity changes to.
 - **target_humidity_command_topic** (*Optional*, string): The topic to receive
   target humidity commands on.
-- All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 ## Climate Automation
 
@@ -131,7 +131,7 @@ MQTT options:
 
 ## ``climate.control`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting parameters for climate devices.
+This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting parameters for climate devices.
 
 ```yaml
 - climate.control:
@@ -143,7 +143,7 @@ This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for se
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the climate device to control.
-- **mode** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Put the climate device
+- **mode** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): Put the climate device
   in a specific mode. One of
 
   - `OFF` - The device is manually set to off, the device is inactive.
@@ -154,32 +154,32 @@ Configuration variables:
   - `FAN_ONLY` - The device only has the fan enabled, no heating or cooling is taking place.
   - `DRY` - The device is set to dry/humidity mode.
 
-- **target_temperature** (*Optional*, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set the
+- **target_temperature** (*Optional*, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the
   target temperature of a climate device.
-- **target_temperature_low** (*Optional*, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set the
+- **target_temperature_low** (*Optional*, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the
   lower target temperature of a climate device with a two-point target temperature.
-- **target_temperature_high** (*Optional*, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set the
+- **target_temperature_high** (*Optional*, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the
   higher target temperature of a climate device with a two-point target temperature.
-- **target_humidity** (*Optional*, float, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set the
+- **target_humidity** (*Optional*, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the
   target humidity of a climate device.
-- **preset** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set the preset
+- **preset** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the preset
   of the climate device. One of `ECO`, `AWAY`, `BOOST`, `COMFORT`, `HOME`, `SLEEP`,
   `ACTIVITY`.
-- **custom_preset** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set one of the
+- **custom_preset** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set one of the
   supported custom_presets of the climate device.
-- **fan_mode** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set the fan mode
+- **fan_mode** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the fan mode
   of the climate device. One of `ON`, `OFF`, `AUTO`, `LOW`, `MEDIUM`, `HIGH`, `MIDDLE`,
   `FOCUS`, `DIFFUSE`, `QUIET`.
-- **custom_fan_mode** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set one of the
+- **custom_fan_mode** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set one of the
   supported custom_fan_modes of the climate device.
-- **swing_mode** (*Optional*, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Set the swing mode
+- **swing_mode** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): Set the swing mode
   of the climate device. One of `OFF`, `BOTH`, `VERTICAL`, `HORIZONTAL`.
 
 {{< anchor "climate-lambda_calls" >}}
 
 ## lambda calls
 
-From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all binary sensors to do some
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all binary sensors to do some
 advanced stuff.
 
 - Attributes: All climate devices have read-only attributes to get the current state of the device.

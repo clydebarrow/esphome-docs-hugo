@@ -33,7 +33,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the select. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
 you want the select to use that name, you can set `name: None`.
 
   {{< /note >}}
@@ -48,7 +48,7 @@ you want the select to use that name, you can set `name: None`.
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 Automations:
 
@@ -57,11 +57,11 @@ Automations:
 
 MQTT Options:
 
-- All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 ## Select Automation
 
-You can access the most recent state of the select in [Templates]({{< ref "automations/templates#config-lambda" >}}) using
+You can access the most recent state of the select in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
 `id(select_id).state`.
 For more information on using lambdas with select, see [lambda calls]({{< ref "components/select/_index#select-lambda_calls" >}}).
 
@@ -69,7 +69,7 @@ For more information on using lambdas with select, see [lambda calls]({{< ref "c
 
 ## ``on_value``
 
-This automation will be triggered whenever a value is set/published, even if the value is the same as before. In [Templates]({{< ref "automations/templates#config-lambda" >}})
+This automation will be triggered whenever a value is set/published, even if the value is the same as before. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the value from the trigger with `x` and the index offset of the selected value with `i`.
 
 ```yaml
@@ -89,7 +89,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 ## ``select.set`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting the active option using an option value.
+This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting the active option using an option value.
 
 ```yaml
 - select.set:
@@ -100,7 +100,7 @@ This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for se
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the select to set.
-- **option** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
+- **option** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The option to set the select to.
 
 When a non-existing option value is used, a warning is logged and the state of
@@ -110,7 +110,7 @@ the select is left as-is.
 
 ## ``select.set_index`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting the active option using its index offset.
+This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting the active option using its index offset.
 
 ```yaml
 - select.set_index:
@@ -121,7 +121,7 @@ This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for se
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the select to set.
-- **index** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
+- **index** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The index offset of the option to be activated.
 
 When a non-existing index value is used, a warning is logged and the state of
@@ -131,7 +131,7 @@ the select is left as-is.
 
 ## ``select.next`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the next option in a select component.
+This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the next option in a select component.
 
 ```yaml
 - select.next:
@@ -152,7 +152,7 @@ Configuration variables:
 
 ## ``select.previous`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the previous option in
+This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the previous option in
 a select component.
 
 ```yaml
@@ -174,7 +174,7 @@ Configuration variables:
 
 ## ``select.first`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the first option in
+This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the first option in
 a select component.
 
 ```yaml
@@ -193,7 +193,7 @@ Configuration variables:
 
 ## ``select.last`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the last option in
+This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the last option in
 a select component.
 
 ```yaml
@@ -212,7 +212,7 @@ Configuration variables:
 
 ## ``select.operation`` Action
 
-This is an [All Actions]({{< ref "automations/actions#config-action" >}}) that can be used to change the active
+This is an [Action]({{< ref "automations/actions#config-action" >}}) that can be used to change the active
 option in a select component (first, last, previous or next), using a generic
 templatable action call.
 
@@ -233,12 +233,12 @@ templatable action call.
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the select to set.
-- **operation** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The
+- **operation** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The
   operation to perform. One of `FIRST`, `LAST`, `PREVIOUS` or
   `NEXT` (case insensitive). When writing a lambda for this field, then return
   one of the following enum values: `SELECT_OP_FIRST`, `SELECT_OP_LAST`,
   `SELECT_OP_PREVIOUS` or `SELECT_OP_NEXT`.
-- **cycle** (*Optional*, bool, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
+- **cycle** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   Can be used for options `NEXT` and `PREVIOUS` to specify whether or not to
   wrap around the options list when respectively the last or first option in
   the select is currently active.
@@ -247,7 +247,7 @@ Configuration variables:
 
 ## lambda calls
 
-From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all selects to do some
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all selects to do some
 advanced stuff (see the full API Reference for more info).
 
 - `.make_call()`: Create a call for changing the select state.

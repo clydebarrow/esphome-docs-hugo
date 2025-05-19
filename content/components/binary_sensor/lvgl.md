@@ -13,7 +13,7 @@ Supported widget is [``button``]({{< ref "components/lvgl/widgets#lvgl-widget-bu
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the binary sensor.
-- All other variables from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other variables from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 Example:
 
@@ -26,7 +26,7 @@ binary_sensor:
 ```
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [``button``]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}})
+- [Button widget]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}})
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}
 - {{< docref "/components/switch/lvgl" >}}

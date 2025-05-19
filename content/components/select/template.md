@@ -6,7 +6,7 @@ title: "Template Select"
 {{< seo description="" image="" >}}
 
 The `template` Select platform allows you to create a Select with templated values
-using [Templates]({{< ref "automations/templates#config-lambda" >}}).
+using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
 ```yaml
 # Example configuration entry
@@ -25,9 +25,9 @@ select:
 ## Configuration variables:
 
 - **options** (**Required**, list): The list of options this Select has.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the current option of the select.
-- **set_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
+- **set_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the Select option.
   The new option is available to lambdas in the `x` variable.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval on which to update the select
@@ -40,7 +40,7 @@ select:
 - **initial_option** (*Optional*, string): The option to set the option to on setup if not
   restored with `restore_value`.
   Cannot be used with `lambda`. Defaults to the first option in the `options` list.
-- All other options from [Base Select Configuration]({{< ref "components/select/_index#config-select" >}}).
+- All other options from [Select]({{< ref "components/select/_index#config-select" >}}).
 
 {{< note >}}
 If you don't set a `lambda` and `optimistic` is `false` (default), updates to the select component state will need to be taken care of as part of your `set_action` using `id(my_select).publish_state(x);` (in a lambda). Do not use [``select.set`` Action]({{< ref "components/select/_index#select-set_action" >}}) here, as this would generate a loop. Also, don't use `id(my_select).state = x` as this won't have the desired effect (e.g. HA won't update with the change).

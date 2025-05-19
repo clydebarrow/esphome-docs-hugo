@@ -30,7 +30,7 @@ binary_sensor:
 - **debounce_mode** (*Optional*, enum): How the component debounces the motion sensor's signal. Must be one of `HYBRID`, `NATIVE`, or `RAW`. See [Debounce Modes]({{< ref "components/binary_sensor/qwiic_pir#debounce-modes" >}}) for details. Defaults to `HYBRID`.
 - **debounce** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Only valid when using `NATIVE` debounce mode. Configures the debounce time on the sensor to reduce noise and false detections. Defaults to `1ms`.
 
--  All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+-  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "debounce-modes" >}}
 

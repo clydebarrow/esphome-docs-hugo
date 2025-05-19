@@ -36,7 +36,7 @@ From version 2024.7, default encoding is `ANSI`. Thus, all control characters ar
 - **custom_command** (*Optional*, list of bytes): raw bytes for modbus command. This allows using non-standard commands. If `custom_command` is used `address` and `register_type` can't be used.
   custom command must contain all required bytes including the modbus device address. The crc is automatically calculated and appended to the command.
   See [Using ``custom_command``]({{< ref "components/modbus_controller#modbus_custom_command" >}}) how to use `custom_command`
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the new value of the sensor. It is called after the encoding according to **raw_encode**.
 
   Parameters passed into the lambda
@@ -52,7 +52,7 @@ From version 2024.7, default encoding is `ANSI`. Thus, all control characters ar
   - `return {};` uses the parsed value for the state (same as `return x;`).
 
 - **offset** (*Optional*, int): Offset from start address in bytes (only required for uncommon response encodings). If more than one register is written in a command this value is used to find the start of this datapoint relative to start address. The component calculates the size of the range based on offset and size of the value type. The value for offset depends on the register type.
-- All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Example:
 

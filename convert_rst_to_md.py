@@ -546,7 +546,7 @@ def process_inline_markup(line):
             doc_path, anchor_text = anchor_map.get(ref_id, ("", ""))
             if not doc_path:
                 print(f"Warning: Could not find document path for anchor '{ref_id}'")
-            text = anchor_text or text
+            text = text or anchor_text
             if doc_path:
                 replacement = f"[{text}]({{{{< ref \"{doc_path}#{ref_id}\" >}}}})"
             else:

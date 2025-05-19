@@ -44,25 +44,25 @@ cover:
 ```
 ## Configuration variables:
 
-- **open_action** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
+- **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be opened.
 - **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to open up from the fully-closed state.
 - **open_endstop** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the open position is reached.
+  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the open position is reached.
 
-- **close_action** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
+- **close_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be closed.
 - **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to close from the fully-open state.
 - **close_endstop** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the closed position is reached.
+  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the closed position is reached.
 
-- **stop_action** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
+- **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to stop or an endstop is reached.
 - **max_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the cover should be opening
   or closing. Useful for protecting from dysfunctional endstops.
-- All other options from [Base Cover Configuration]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
 
 ## See Also
 

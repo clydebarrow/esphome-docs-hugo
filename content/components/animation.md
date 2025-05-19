@@ -53,7 +53,7 @@ interval:
   in your display code.
 - **resize** (*Optional*, string): If set, this will resize all the frames to fit inside the given dimensions `WIDTHxHEIGHT`
   and preserve the aspect ratio.
-- **type** (**Required**): Specifies how to encode image internally. See the [Images]({{< ref "components/image#display-image" >}}) for more information.
+- **type** (**Required**): Specifies how to encode image internally. See the [image component]({{< ref "components/image#display-image" >}}) for more information.
 
   - `BINARY`: Two colors, suitable for 1 color displays or 2 color image in color displays. Uses 1 bit
     per pixel, 8 pixels per byte. Only `chroma_key` transparency is available.
@@ -61,7 +61,7 @@ interval:
   - `RGB565`: Lossy RGB color stored. Uses 2 bytes per pixel, 3 with an alpha channel.
   - `RGB`: Full RGB color stored. Uses 3 bytes per pixel, 4 with an alpha channel.
 
-- **transparency** (*Optional*): If set the alpha channel of the input image will be taken into account. The possible values are `opaque` (default), `chroma_key` and `alpha_channel`. See discussion on transparency in the [Images]({{< ref "components/image#display-image" >}}).
+- **transparency** (*Optional*): If set the alpha channel of the input image will be taken into account. The possible values are `opaque` (default), `chroma_key` and `alpha_channel`. See discussion on transparency in the [image component]({{< ref "components/image#display-image" >}}).
 - **loop** (*Optional*): If you want to loop over a subset of your animation (e.g. a fire animation where the fire "starts", then "burns" and "dies") you can specify some frames to loop over.
 
   - **start_frame** (*Optional*, int): The frame to loop back to when `end_frame` is reached. Defaults to the first frame in the animation.

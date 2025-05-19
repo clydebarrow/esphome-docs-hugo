@@ -27,11 +27,11 @@ sensor:
 
 - **temperature** (*Optional*): Temperature.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): Relative Humidity.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **precision** (*Optional*, string): The measurement precision, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_max_duty** (*Optional*, float): The maximum duty cycle of the heater (limited to `0.05`). Default is `0.0`, i.e. heater off.

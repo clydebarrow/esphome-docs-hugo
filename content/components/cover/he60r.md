@@ -38,7 +38,7 @@ cover:
 
 - **open_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time required for the door to fully open from the closed position. Default 15s.
 - **close_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time required for the door to fully close from the open position. Default 15s.
-- All other options from [Base Cover Configuration]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
 
 The open and close duration serve to estimate the position to provide feedback during travel and for partial open/close
 requests. These can be adjusted according to your door's actual operation. Enabling DEBUG logging will report the

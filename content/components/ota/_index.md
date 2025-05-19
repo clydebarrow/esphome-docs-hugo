@@ -38,7 +38,7 @@ ota:
 
 ## OTA Automations
 
-The OTA component provides various [Automation]({{< ref "automations/_index#automation" >}}) that can be used to provide feedback during the OTA
+The OTA component provides various [automations]({{< ref "automations/_index#automation" >}}) that can be used to provide feedback during the OTA
 update process. When using these automation triggers, note that:
 
 - OTA updates block the main application loop while in progress. You won't be able to represent state changes using

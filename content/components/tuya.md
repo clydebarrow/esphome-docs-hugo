@@ -9,7 +9,7 @@ The `tuya` component creates a serial connection to the Tuya MCU for platforms t
 
 {{< img src="tuya.png" alt="Image" width="40%" class="center" >}}
 
-The `tuya` serial component requires a [UART Bus]({{< ref "components/uart#uart" >}}) to be configured.
+The `tuya` serial component requires a [UART bus]({{< ref "components/uart#uart" >}}) to be configured.
 Put the `tuya` component in the config and it will list the possible devices for you in the config log.
 
 ```yaml

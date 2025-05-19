@@ -10,7 +10,7 @@ allows you to play sound and music stored in an SD card or USB flash drive.
 
 {{< img src="dfplayer-full.jpg" alt="Image" caption="DF-Player mini Module." width="50.0%" class="center" >}}
 
-For this component to work you need to have set up a [UART Bus]({{< ref "components/uart#uart" >}}) in your configuration.
+For this component to work you need to have set up a [UART bus]({{< ref "components/uart#uart" >}}) in your configuration.
 
 ## Overview
 
@@ -86,9 +86,9 @@ on_...:
 ```
 Configuration options:
 
-- **file** (*Optional*, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The global track
+- **file** (*Optional*, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The global track
   number (from all tracks in the device). If not specified plays the first track.
-- **loop** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
+- **loop** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
   the same track. Defaults to `false`.
 
 ## ``dfplayer.play_mp3`` Action
@@ -119,7 +119,7 @@ on_...:
 ```
 Configuration options:
 
-- **file** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The file number
+- **file** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The file number
   inside the `mp3` folder to play.
 
 
@@ -154,10 +154,10 @@ on_...:
 ```
 Configuration options:
 
-- **folder** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The folder number.
-- **file** (*Optional*, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The file number
+- **folder** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The folder number.
+- **file** (*Optional*, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The file number
   inside the folder to play. Optional only if `loop` is not set.
-- **loop** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
+- **loop** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
   all files in the folder. Causes `file` to be ignored. Defaults to `false`.
 
 
@@ -186,7 +186,7 @@ on_...:
 ```
 Configuration options:
 
-- **volume** (**Required**, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The volume value.
+- **volume** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The volume value.
   Valid values goes from `0` to `30`.
 
 ## ``dfplayer.volume_up`` Action

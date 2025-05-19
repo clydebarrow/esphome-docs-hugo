@@ -7,7 +7,7 @@ title: "Speaker Audio Media Player"
 
 The `speaker` media player platform allows you to play on-device and online audio media via {{< docref "/components/speaker/index" "speaker components" >}}.
 
-This platform greatly benefits from having external PSRAM. See the [Performance]({{< ref "components/media_player/speaker#media_player-speaker-performance" >}}) for details.
+This platform greatly benefits from having external PSRAM. See the [performance section]({{< ref "components/media_player/speaker#media_player-speaker-performance" >}}) for details.
 
 It natively supports decoding `FLAC`, `MP3`, and `WAV` audio files. Home Assistant (since version 2024.10) can proxy any media it sends and transcode it to a specified format and sample rate to minimize the device's computational load.
 
@@ -55,7 +55,7 @@ media_player:
 - **on_mute** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when muted.
 - **on_unmute** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when unmuted.
 - **on_volume** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the volume is changed.
-- All other options from [Base Media Player Configuration]({{< ref "components/media_player/_index#config-media_player" >}})
+- All other options from [Media Player]({{< ref "components/media_player/_index#config-media_player" >}})
 
 {{< anchor "media_player-speaker-examples" >}}
 

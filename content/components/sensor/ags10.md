@@ -31,15 +31,15 @@ sensor:
 ## Configuration variables:
 
 - **tvoc** (**Required**): The information for the total Volatile Organic Compounds sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **address** (*Optional*, int): Manually specify the I²C address of
   the sensor. Defaults to `0x1A`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **version** (*Optional*): The firmware version of the sensor.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **resistance** (*Optional*): The initial value of the sensor resistance.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Actions:
 

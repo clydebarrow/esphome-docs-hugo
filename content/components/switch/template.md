@@ -35,11 +35,11 @@ Possible return values for the optional lambda:
 
 ## Configuration variables:
 
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated repeatedly to get the current state of the switch.
-- **turn_on_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
+- **turn_on_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests the switch to be turned on.
-- **turn_off_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
+- **turn_off_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests the switch to be turned off.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the template switch will immediately update the reported state.
@@ -47,7 +47,7 @@ Possible return values for the optional lambda:
 - **assumed_state** (*Optional*, boolean): Whether the true state of the switch is not known.
   This will make the Home Assistant frontend show buttons for both ON and OFF actions, instead
   of hiding one of them when the switch is ON/OFF. Defaults to `false`.
-- All other options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 {{< anchor "switch-template-publish_action" >}}
 
@@ -78,7 +78,7 @@ on_...:
 Configuration options:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template switch.
-- **state** (**Required**, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
+- **state** (**Required**, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 
 {{< note >}}

@@ -16,7 +16,7 @@ Supported widgets are [``spinbox``]({{< ref "components/lvgl/widgets#lvgl-widget
 - **animated** (*Optional*, boolean): Whether to set the value of the widget with an animation (if supported by the widget). Defaults to `true`.
 - **update_on_release** (*Optional*, boolean): By default the number will publish a new value each time the value of the associated widget changes. If this option is `true` then the value will only be published when touch is released.
 - **restore_value**: (*Optional*, bool) Restore the value of the number from non-volatile memory when the device is restarted. Defaults to `false`.
-- All other variables from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
+- All other variables from [Number]({{< ref "components/number/_index#config-number" >}}).
 
 Example:
 
@@ -33,10 +33,10 @@ Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.upda
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [``arc``]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}})
-- [``bar``]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}})
-- [``slider``]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})
-- [``spinbox``]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}})
+- [Arc widget]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}})
+- [Bar widget]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}})
+- [Slider widget]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})
+- [Spinbox widget]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}})
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/switch/lvgl" >}}

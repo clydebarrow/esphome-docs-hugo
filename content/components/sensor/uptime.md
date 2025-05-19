@@ -25,7 +25,7 @@ sensor:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The sensor reporting interval. Defaults to `60s`.
   Valid only with `type: seconds`.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

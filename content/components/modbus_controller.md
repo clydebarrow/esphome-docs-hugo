@@ -85,7 +85,7 @@ logger:
 
     Defaults to `U_WORD`.
 
-  - **read_lambda** (**Required**, [Templates]({{< ref "automations/templates#config-lambda" >}})):
+  - **read_lambda** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})):
     Lambda that returns the value of this register.
 
 Automations:
@@ -727,7 +727,7 @@ esphome:
 
 ## ``on_command_sent``
 
-This automation will be triggered when a command has been sent by the `modbus_controller`. In [Templates]({{< ref "automations/templates#config-lambda" >}})
+This automation will be triggered when a command has been sent by the `modbus_controller`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml
@@ -743,7 +743,7 @@ modbus_controller:
 
 ## ``on_online``
 
-This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In [Templates]({{< ref "automations/templates#config-lambda" >}})
+This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml
@@ -759,7 +759,7 @@ modbus_controller:
 
 ## ``on_offline``
 
-This automation will be triggered when a `modbus_controller` goes `offline` (See [Templates]({{< ref "automations/templates#config-lambda" >}})). In [- **offline_skip_updates** (*Optional*, integer): When a slave doesn't respond to a command, it is]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
+This automation will be triggered when a `modbus_controller` goes `offline` (See [Lambdas]({{< ref "automations/templates#config-lambda" >}})). In [offline_skip_updates]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml

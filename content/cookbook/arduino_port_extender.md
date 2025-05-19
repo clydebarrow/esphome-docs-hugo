@@ -93,7 +93,7 @@ binary_sensor:
           ...
 
 ```
-The listed `binary_sensors` supports all options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) like
+The listed `binary_sensors` supports all options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) like
 automations and filters.
 
 ## Sensor
@@ -133,7 +133,7 @@ sensor:
           - throttle: 2s
 
 ```
-The listed `sensors` supports all options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) like
+The listed `sensors` supports all options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) like
 automations and filters.
 
 {{< note >}}

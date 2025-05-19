@@ -43,9 +43,9 @@ display:
   by this option. One of `0°` (default), `90°`, `180°`, `270°`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to call the lambda to update the display.
   Defaults to `16ms`.
-- **pixel_mapper** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): A lambda that returns the integer address of the LED
+- **pixel_mapper** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): A lambda that returns the integer address of the LED
   given the supplied the `x` and `y` pixel coordinate. By default, a left-to-right direct pixel mapper is used.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   `it` will be an instance of :apiclass:`DisplayBuffer <display::DisplayBuffer>`.
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.

@@ -34,9 +34,9 @@ esp32_ble_server:
 ## Configuration variables:
 
 - **manufacturer** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The name of the manufacturer/firmware creator. Defaults to `ESPHome`.
-- **model** (*Optional*, [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}})): The model name of the device. Defaults to the project's name defined in the [Project information]({{< ref "components/esphome#esphome-creators_project" >}}) if present, otherwise to the friendly name of the `board` chosen in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}).
+- **model** (*Optional*, [core configuration]({{< ref "components/esphome#esphome-configuration_variables" >}})): The model name of the device. Defaults to the project's name defined in the [core configuration]({{< ref "components/esphome#esphome-creators_project" >}}) if present, otherwise to the friendly name of the `board` chosen in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}).
 - **appearance** (*Optional*, int): Sets the [appearance](https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/core/appearance_values.yaml) of the device (included in advertising data.) Defaults to `0`.
-- **firmware_version** (*Optional*, [Project information]({{< ref "components/esphome#esphome-creators_project" >}})): The firmware version of the device. Defaults to the project's version defined in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) if present, otherwise to the ESPHome version.
+- **firmware_version** (*Optional*, [core configuration]({{< ref "components/esphome#esphome-creators_project" >}})): The firmware version of the device. Defaults to the project's version defined in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) if present, otherwise to the ESPHome version.
 - **manufacturer_data** (*Optional*, list of bytes): The manufacturer-specific data to include in the advertising
   packet. Should be a list of bytes, where the first two are the little-endian representation of the 16-bit
   manufacturer ID as assigned by the Bluetooth SIG.
@@ -137,7 +137,7 @@ Configuration variables:
 
 - **id** (*Optional*, string): An ID to refer to this descriptor in automations.
 - **uuid** (**Required**, string, int): The UUID of the descriptor.
-- **value** (**Required**, [``ble_server.descriptor.set_value`` Action]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor-set_value" >}})): The value of the descriptor. [Templating Actions]({{< ref "automations/templates#config-templatable" >}}) values are not allowed. In order to set the value of a descriptor dynamically, use the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) action.
+- **value** (**Required**, [``ble_server.descriptor.set_value`` Action]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor-set_value" >}})): The value of the descriptor. [templatable]({{< ref "automations/templates#config-templatable" >}}) values are not allowed. In order to set the value of a descriptor dynamically, use the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) action.
 
 
 {{< anchor "esp32_ble_server-value" >}}
@@ -184,8 +184,8 @@ esp32_ble_server:
 ```
 Configuration variables:
 
-- **data** (**Required**, string, int, float, boolean, list of bytes, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The value of the characteristic or descriptor. For [Templating Actions]({{< ref "automations/templates#config-templatable" >}}) values, the lambda function must return a `std::vector<uint8_t>` (you may use the `bytebuffer::ByteBuffer` helper class to transform different data types into a byte array). The value is computed each time the characteristic is read.
-- **type** (*Optional*, string): The C++ type of the value. The available values are `uint8_t`, `uint16_t`, `uint32_t`, `uint64_t`, `int8_t`, `int16_t`, `int32_t`, `int64_t`, `float`, `double` and `string`. It must be defined if the value is not [Templating Actions]({{< ref "automations/templates#config-templatable" >}}).
+- **data** (**Required**, string, int, float, boolean, list of bytes, [templatable]({{< ref "automations/templates#config-templatable" >}})): The value of the characteristic or descriptor. For [templatable]({{< ref "automations/templates#config-templatable" >}}) values, the lambda function must return a `std::vector<uint8_t>` (you may use the `bytebuffer::ByteBuffer` helper class to transform different data types into a byte array). The value is computed each time the characteristic is read.
+- **type** (*Optional*, string): The C++ type of the value. The available values are `uint8_t`, `uint16_t`, `uint32_t`, `uint64_t`, `int8_t`, `int16_t`, `int32_t`, `int64_t`, `float`, `double` and `string`. It must be defined if the value is not [templatable]({{< ref "automations/templates#config-templatable" >}}).
 - **endianness** (*Optional*, string): The endianness of the value. Can be `BIG` or `LITTLE`. Defaults to `LITTLE`.
 - **string_encoding** (*Optional*, string): The encoding of the string. Only applicable if the type is [string`. The conversion is done in Python before compilation, so the encoding must be a valid `Python encoding](https://docs.python.org/3/library/codecs.html#standard-encodings). Defaults to `utf-8`.
 

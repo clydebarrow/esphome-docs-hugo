@@ -451,7 +451,7 @@ Configuration variables:
    level advertised in discovery for subscribing (only if discovery is enabled). Defaults to 0.
 -  **availability** (*Optional*): Manually set what should be sent to
    Home Assistant for showing entity availability. Default derived from
-   [Last Will And Birth Messages]({{< ref "components/mqtt#mqtt-last_will_birth" >}}).
+   [global birth/last will message]({{< ref "components/mqtt#mqtt-last_will_birth" >}}).
 -  **state_topic** (*Optional*, string): The topic to publish state
    updates to. Defaults to
    `<TOPIC_PREFIX>/<COMPONENT_TYPE>/<COMPONENT_NAME>/state`.
@@ -494,7 +494,7 @@ mqtt:
 ## ``on_message`` Trigger
 
 With this configuration option you can write complex automations whenever an MQTT
-message on a specific topic is received. To use the message content, use a [Templates]({{< ref "automations/templates#config-lambda" >}})
+message on a specific topic is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
 template, the message payload is available under the name `x` inside that lambda.
 
 ```yaml
@@ -534,7 +534,7 @@ mqtt:
 
 {{< /note >}}
 {{< note >}}
-This action can also be used in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```yaml
 mqtt:
@@ -554,7 +554,7 @@ id(mqtt_client).subscribe("the/topic", [=](const std::string &topic, const std::
 ## ``on_json_message`` Trigger
 
 With this configuration option you can write complex automations whenever a JSON-encoded MQTT
-message is received. To use the message content, use a [Templates]({{< ref "automations/templates#config-lambda" >}})
+message is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
 template, the decoded message payload is available under the name `x` inside that lambda.
 
 The [x` object is of type `JsonObject` by the `ArduinoJson](https://github.com/bblanchon/ArduinoJson)
@@ -602,7 +602,7 @@ trigger a compile failure. For example with the `delay` action.
 
 {{< /note >}}
 {{< note >}}
-This action can also be used in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```yaml
 mqtt:
@@ -641,18 +641,18 @@ on_...:
 ```
 Configuration options:
 
--  **topic** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
+-  **topic** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
    The MQTT topic to publish the message.
--  **payload** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The message content.
--  **qos** (*Optional*, int, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The `Quality of
+-  **payload** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The message content.
+-  **qos** (*Optional*, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The `Quality of
    Service <https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels>`__
    level of the topic. Defaults to 0.
--  **retain** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): If the published message should
+-  **retain** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): If the published message should
    have a retain flag on or not. Defaults to `false`.
 
 
 {{< note >}}
-This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```yaml
 mqtt:
@@ -691,9 +691,9 @@ on_...:
 ```
 Configuration options:
 
--  **topic** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})):
+-  **topic** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
    The MQTT topic to publish the message.
--  **payload** (**Required**, [Templates]({{< ref "automations/templates#config-lambda" >}})): The message content.
+-  **payload** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})): The message content.
 -  **qos** (*Optional*, int): The `Quality of
    Service <https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels>`__
    level of the topic. Defaults to 0.
@@ -702,7 +702,7 @@ Configuration options:
 
 
 {{< note >}}
-This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```yaml
 mqtt:
@@ -770,7 +770,7 @@ on_...:
 
 ## ``mqtt.connected`` Condition
 
-This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the MQTT client is currently connected to
+This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the MQTT client is currently connected to
 the MQTT broker.
 
 ```yaml
@@ -783,7 +783,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```yaml
 mqtt:

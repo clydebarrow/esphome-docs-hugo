@@ -6,7 +6,7 @@ title: "RGBWW Light"
 {{< seo description="" image="" >}}
 
 The `rgbww` light platform creates an RGBWW (cold white + warm white)
-light from 5 [Output Component]({{< ref "components/output/_index#output" >}}) (one for each channel). The cold and warm
+light from 5 [float output components]({{< ref "components/output/_index#output" >}}) (one for each channel). The cold and warm
 white channels can be controlled individually or together, see [Mixing]({{< ref "components/light/cwww#cwww_mixing" >}}) for more information.
 
 ```yaml
@@ -27,7 +27,7 @@ light:
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
 perceived intensity of different colors will generally vary. This can be done by using
-[Base Output Configuration]({{< ref "components/output/_index#config-output" >}}) on individual output channels:
+[max_power]({{< ref "components/output/_index#config-output" >}}) on individual output channels:
 
 
 ```yaml
@@ -61,7 +61,7 @@ time: `color_interlock`.
 Setting this option to `true` will result in the light having two color modes available, `RGB` and `COLD_WARM_WHITE`.
 When the `RGB` color mode is active, the white leds are turned off, and when the `COLD_WARM_WHITE` color mode is active,
 the RGB leds are turned off. Switching between these modes can be done from the Home Assistant interface, or by using
-the `color_mode` option of the [``light.turn_on`` Action]({{< ref "components/light/_index#light-turn_on_action" >}}).
+the `color_mode` option of the [light control actions]({{< ref "components/light/_index#light-turn_on_action" >}}).
 
 
 ## Configuration variables:
@@ -85,7 +85,7 @@ the `color_mode` option of the [``light.turn_on`` Action]({{< ref "components/li
   both channels at full brightness at once. Defaults to `false`.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
   time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
-- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also
 

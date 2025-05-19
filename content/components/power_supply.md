@@ -40,7 +40,7 @@ power_supply:
   until the delay has elapsed.) This is useful for power supplies that will never be turned off and avoids the need
   to specifically configure the power supply in a different component.
 
-See the [Base Output Configuration]({{< ref "components/output/_index#config-output" >}})
+See the [output component base configuration]({{< ref "components/output/_index#config-output" >}})
 for information on how to apply the power supply for a specific output.
 
 ## ATX Power Supplies

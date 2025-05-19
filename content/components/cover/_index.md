@@ -29,7 +29,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the cover. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
 you want the cover to use that name, you can set `name: None`.
 
   {{< /note >}}
@@ -49,7 +49,7 @@ Advanced options:
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 
 MQTT options:
@@ -62,14 +62,14 @@ MQTT options:
   cover tilt state changes to.
 - **tilt_command_topic** (*Optional*, string): The topic to receive
   cover tilt commands on.
-- All other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 
 {{< anchor "cover-open_action" >}}
 
 ## ``cover.open`` Action
 
-This [All Actions]({{< ref "automations/actions#config-action" >}}) opens the cover with the given ID when executed.
+This [action]({{< ref "automations/actions#config-action" >}}) opens the cover with the given ID when executed.
 
 ```yaml
 on_...:
@@ -78,7 +78,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(cover_1).make_call();
@@ -91,7 +91,7 @@ call.perform();
 
 ## ``cover.close`` Action
 
-This [All Actions]({{< ref "automations/actions#config-action" >}}) closes the cover with the given ID when executed.
+This [action]({{< ref "automations/actions#config-action" >}}) closes the cover with the given ID when executed.
 
 ```yaml
 on_...:
@@ -100,7 +100,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(cover_1).make_call();
@@ -113,7 +113,7 @@ call.perform();
 
 ## ``cover.stop`` Action
 
-This [All Actions]({{< ref "automations/actions#config-action" >}}) stops the cover with the given ID when executed.
+This [action]({{< ref "automations/actions#config-action" >}}) stops the cover with the given ID when executed.
 
 ```yaml
 on_...:
@@ -122,7 +122,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(cover_1).make_call();
@@ -135,7 +135,7 @@ call.perform();
 
 ## ``cover.toggle`` Action
 
-This [All Actions]({{< ref "automations/actions#config-action" >}}) toggles the cover with the given ID when executed,
+This [action]({{< ref "automations/actions#config-action" >}}) toggles the cover with the given ID when executed,
 cycling through the states close/stop/open/stop... This allows the cover to be controlled
 by a single push button.
 
@@ -146,7 +146,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(cover_1).make_call();
@@ -159,7 +159,7 @@ call.perform();
 
 ## ``cover.control`` Action
 
-This [All Actions]({{< ref "automations/actions#config-action" >}}) is a more generic version of the other cover actions and
+This [action]({{< ref "automations/actions#config-action" >}}) is a more generic version of the other cover actions and
 allows all cover attributes to be set.
 
 ```yaml
@@ -184,7 +184,7 @@ Configuration variables:
 - **tilt** (*Optional*, float): The tilt position to set. In range 0% - 100%.
 
 {{< note >}}
-This action can also be expressed in [Templates]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(cover_1).make_call();
@@ -198,7 +198,7 @@ call.perform();
 
 ## Lambdas
 
-From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can access the current state of the cover (note that these
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can access the current state of the cover (note that these
 fields are read-only, if you want to act on the cover, use the `make_call()` method as shown above).
 
 - `position`: Retrieve the current position of the cover, as a value between `0.0` (closed) and `1.0` (open).

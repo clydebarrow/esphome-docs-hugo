@@ -53,7 +53,7 @@ esp32_improv:
 
 ## Improv Automations
 
-The ESP32 Improv component provides various [Automation]({{< ref "automations/_index#automation" >}}) that can be used to provide feedback during
+The ESP32 Improv component provides various [automations]({{< ref "automations/_index#automation" >}}) that can be used to provide feedback during
 the Improv provisioning process.
 
 {{< anchor "improv-on_start" >}}

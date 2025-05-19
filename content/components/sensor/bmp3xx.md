@@ -7,12 +7,12 @@ title: "BMP388 / BMP390 Temperature+Pressure Sensor"
 
 The `bmp3xx` sensor platform allows you to use your BMP388 or BMP390 
 ([datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp390-ds002.pdf), [BMP390 product page](https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/)) temperature and pressure sensors with ESPHome. 
-Either [SPI Bus]({{< ref "components/spi#spi" >}}) bus or [I²C Bus]({{< ref "components/i2c#i2c" >}}) bus is required to be set up in your configuration for this sensor to work.
+Either [SPI]({{< ref "components/spi#spi" >}}) bus or [I²C]({{< ref "components/i2c#i2c" >}}) bus is required to be set up in your configuration for this sensor to work.
 
 {{< img src="bmp388.jpg" alt="Image" caption="BMP388/BMP390 Temperature and Pressure Sensor." width="50.0%" class="center" >}}
 
 ## Over I²C
-The `bmp3xx_i2c` component allows you to use the device over [I²C Bus]({{< ref "components/i2c#i2c" >}}) interface.
+The `bmp3xx_i2c` component allows you to use the device over [I²C]({{< ref "components/i2c#i2c" >}}) interface.
 
 ```yaml
 # Example configuration entry for I2C connection
@@ -36,13 +36,13 @@ sensor:
 
   - **oversampling** (*Optional*): The oversampling parameter for the temperature sensor.
     See [Oversampling Options]({{< ref "components/sensor/bmp3xx#bmp3xx-oversampling" >}}).
-  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pressure** (*Optional*): The information for the pressure sensor.
 
   - **oversampling** (*Optional*): The oversampling parameter for the temperature sensor.
     See [Oversampling Options]({{< ref "components/sensor/bmp3xx#bmp3xx-oversampling" >}}).
-  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **iir_filter** (*Optional*): Set up an Infinite Impulse Response filter to increase accuracy. One of
   `OFF`, `2x`, `4x`, `16x`, `32`, `64x`, `128x`. Defaults to `OFF`.
@@ -51,7 +51,7 @@ sensor:
 
 
 ## Over SPI
-The `bmp3xx_spi` component allows you to use the device over [SPI Bus]({{< ref "components/spi#spi" >}}) interface.
+The `bmp3xx_spi` component allows you to use the device over [SPI]({{< ref "components/spi#spi" >}}) interface.
 
 ```yaml
 # Example configuration entry for SPI connection
@@ -74,13 +74,13 @@ sensor:
 
   - **oversampling** (*Optional*): The oversampling parameter for the temperature sensor.
     See [Oversampling Options]({{< ref "components/sensor/bmp3xx#bmp3xx-oversampling" >}}).
-  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pressure** (*Optional*): The information for the pressure sensor.
 
   - **oversampling** (*Optional*): The oversampling parameter for the temperature sensor.
     See [Oversampling Options]({{< ref "components/sensor/bmp3xx#bmp3xx-oversampling" >}}).
-  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **iir_filter** (*Optional*): Set up an Infinite Impulse Response filter to increase accuracy. One of
   `OFF`, `2x`, `4x`, `16x`, `32`, `64x`, `128x`. Defaults to `OFF`.

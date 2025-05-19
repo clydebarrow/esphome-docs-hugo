@@ -37,7 +37,7 @@ registers.
 - **force_new_range** (*Optional*, boolean): If possible sensors with sequential addresses are
   grouped together and requested in one range. Setting this to `true` enforces the start of a new
   range at that address.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): Lambda to be evaluated every update interval
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): Lambda to be evaluated every update interval
   to get the current option of the select.
 
   Parameters passed into lambda
@@ -53,14 +53,14 @@ registers.
   - `return <std::string>;` The new option for this Select.
   - `return {};` Use default mapping (see `optionsmap`).
 
-- **write_lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): Lambda to be evaluated on every update
+- **write_lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): Lambda to be evaluated on every update
   of the Sensor, before the new value is written to the modbus registers.
 - **use_write_multiple** (*Optional*, boolean): By default the modbus command *Function Code 6 (Preset Single Registers)*
   is used for setting the holding register if only one register is set. If your device only supports *Function Code 16 (Preset Multiple Registers)* set this option to `true`.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the Modbus Select will immediately update the reported state. Defaults
   to `false`.
-- All other options from [Base Select Configuration]({{< ref "components/select/_index#config-select" >}}).
+- All other options from [Select]({{< ref "components/select/_index#config-select" >}}).
 
 ```yaml
 # example

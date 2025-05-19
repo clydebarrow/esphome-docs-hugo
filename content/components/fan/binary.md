@@ -25,10 +25,10 @@ fan:
 - **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
   binary output component to use for this fan.
 - **oscillation_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
-  [Output Component]({{< ref "components/output/_index#output" >}}) to use for the oscillation state of this fan. Default is empty.
+  [output]({{< ref "components/output/_index#output" >}}) to use for the oscillation state of this fan. Default is empty.
 - **direction_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
-  [Output Component]({{< ref "components/output/_index#output" >}}) to use for the direction state of the fan. Default is empty.
-- All other options from [Base Fan Configuration]({{< ref "components/fan/_index#config-fan" >}}).
+  [output]({{< ref "components/output/_index#output" >}}) to use for the direction state of the fan. Default is empty.
+- All other options from [Fan Component]({{< ref "components/fan/_index#config-fan" >}}).
 
 ## See Also
 

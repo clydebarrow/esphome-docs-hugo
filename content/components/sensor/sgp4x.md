@@ -46,7 +46,7 @@ sensor:
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
 
-  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **nox** (*Optional*): NOx Index. Only available with SGP41. If a SGP40 sensor is detected this sensor will be ignored
 
@@ -59,7 +59,7 @@ sensor:
     - **std_initial** (*Optional*): The initial estimate for standard deviation parameter has no impact for NOx. This parameter is still in place for consistency reasons with the VOC tuning parameters command. This parameter must always be set to 50.
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
-  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`
 - **store_baseline** (*Optional*, boolean): Stores and retrieves the baseline information for quicker startups. Defaults to `true`

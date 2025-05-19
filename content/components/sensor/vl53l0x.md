@@ -65,7 +65,7 @@ sensor:
 - **timing_budget** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set the timing budget the sensor will use for a single range measurement. 
   Range is from 20000us - 4294967295us, inclusive. The timing budget allows the user to trade off speed for accuracy.
   If not specified, the default timing budget is 33000us.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ```yaml

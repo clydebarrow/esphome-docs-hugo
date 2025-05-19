@@ -55,7 +55,7 @@ Configuration variables:
 - **state_change_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is switched. If a lambda is used the boolean `state` parameter holds the new status.
 - **turn_on_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is turned on. Can be used to control for example a switch or output component.
 - **turn_off_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is turned off. `turn_on_action` and `turn_off_action` must be configured together.
-- All options from [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}).
+- All options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 {{< note >}}
 - If `pin` is defined, the GPIO pin state is writen before any action is executed.

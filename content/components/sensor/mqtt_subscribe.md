@@ -26,7 +26,7 @@ sensor:
 
 - **topic** (**Required**, string): The MQTT topic to listen for numeric messages.
 - **qos** (*Optional*, int): The MQTT QoS to subscribe with. Defaults to `0`.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

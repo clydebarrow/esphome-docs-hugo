@@ -6,7 +6,7 @@ title: "Binary Light"
 {{< seo description="" image="" >}}
 
 The `binary` light platform creates a simple ON/OFF-only light from a
-[Output Component]({{< ref "components/output/_index#output" >}}).
+[binary output component]({{< ref "components/output/_index#output" >}}).
 
 {{< img src="binary-ui.png" alt="Image" width="40.0%" class="center" >}}
 
@@ -22,7 +22,7 @@ light:
 ## Configuration variables:
 
 - **output** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the binary [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.
-- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also
 

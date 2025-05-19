@@ -141,7 +141,7 @@ docker run --rm --privileged -v "${PWD}":/config --device=/dev/ttyUSB0 -it ghcr.
 
 ```
 {{< note >}}
-Alternatively, you can flash the binary using [What is ``esptool``?]({{< ref "guides/faq#esphome-esptool" >}}).
+Alternatively, you can flash the binary using [ESPHome Web or esptool]({{< ref "guides/faq#esphome-esptool" >}}).
 
 {{< /note >}}
 Now when you go to the Home Assistant **Integrations** screen (under **Configuration** panel), you

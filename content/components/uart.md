@@ -90,7 +90,7 @@ The Software UART is only available on the ESP8266. It is not available on ESP32
 
 ## ``uart.write`` Action
 
-This [All Actions]({{< ref "automations/actions#config-action" >}}) sends a defined UART signal to the given UART bus.
+This [Action]({{< ref "automations/actions#config-action" >}}) sends a defined UART signal to the given UART bus.
 
 ```yaml
 on_...:
@@ -153,7 +153,7 @@ uart:
   - **delimiter** (*Optional*, string or list of bytes): Trigger after the specified sequence of bytes is
     detected in the communication.
 
-- **sequence** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): Action(s) to perform for publishing debugging data.
+- **sequence** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Action(s) to perform for publishing debugging data.
   Defaults to an action that logs the bytes in hex format. The actions can make use of the following variables:
 
   - **direction**: `uart::UART_DIRECTION_RX` or `uart::UART_DIRECTION_TX`

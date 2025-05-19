@@ -27,7 +27,7 @@ To replace the stock firmware with ESPHome you will need to locate GPIO0 pin and
 Before using this components make sure:
 
 - board is configured to `esp8285`
-- [UART Bus]({{< ref "components/uart#uart" >}}) is configured with default RX / TX pins and 9600 baud rate
+- [UART bus]({{< ref "components/uart#uart" >}}) is configured with default RX / TX pins and 9600 baud rate
 - {{< docref "/components/logger" "logger" >}} to the serial port is disabled by setting `baud_rate` to `0`
 - in case you need light state restoration on power up, make sure `restore_from_flash` is set to `true` in the {{< docref "/components/esp8266" "ESP8266 platform" >}}
 
@@ -96,7 +96,7 @@ light:
 - **max_value** (*Optional*, int): The highest dimmer value allowed. Use this to hard-limit light
   intensity for your setup. For some bulbs this parameter might be also useful to prevent
   flickering at high brightness values. Defaults to 100.
-- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 
 ## See Also

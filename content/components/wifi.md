@@ -338,10 +338,10 @@ on_...:
 ```
 Configuration variables:
 
-- **ssid** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The name of the WiFi access point.
-- **password** (**Required**, string, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): The password of the WiFi access point. Leave empty for no password.
-- **save** (*Optional*, boolean, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): If set to `true`, the SSID and password will be saved in persistent memory. Defaults to `true`.
-- **timeout** (*Optional*, [Templating Actions]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The time to wait for the connection to be established. Defaults to 30 seconds.
+- **ssid** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The name of the WiFi access point.
+- **password** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The password of the WiFi access point. Leave empty for no password.
+- **save** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): If set to `true`, the SSID and password will be saved in persistent memory. Defaults to `true`.
+- **timeout** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The time to wait for the connection to be established. Defaults to 30 seconds.
 - **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a connection is established.
 - **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection fails.
 
@@ -349,7 +349,7 @@ Configuration variables:
 
 ## ``wifi.connected`` Condition
 
-This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the WiFi client is currently connected to a station.
+This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the WiFi client is currently connected to a station.
 
 ```yaml
 on_...:
@@ -368,7 +368,7 @@ The lambda equivalent for this is `id(wifi_id).is_connected()`.
 
 ## ``wifi.enabled`` Condition
 
-This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if WiFi is currently enabled or not.
+This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if WiFi is currently enabled or not.
 
 ```yaml
 on_...:

@@ -7,7 +7,7 @@ title: "Key collector component"
 
 The `key_collector` component collects key presses from components
 like [Matrix keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}),{{< docref "/components/wiegand" "Wiegand keypad" >}}`
-or LVGL [``keyboard``]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}}), [``buttonmatrix``]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
+or LVGL [Keyboard]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}}), [Button Matrix]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
 widgets. It allows you to process key sequences and treat them as one, for
 example to allow inputting of a PIN code or a passkey. The component outputs
 the result of the keypress sequence as a variable usable in automations.
@@ -111,6 +111,6 @@ on_...:
 
 - {{< docref "/components/matrix_keypad" >}}
 - {{< docref "/components/wiegand" >}}
-- [``buttonmatrix``]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
-- [``keyboard``]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
+- [LVGL Button Matrix widget]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
+- [LVGL Keyboard widget]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/key_collector.md)

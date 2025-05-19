@@ -35,7 +35,7 @@ text_sensor:
 - **notify** (*Optional*, boolean): Instruct the server to send notifications for this
   characteristic. Defaults to `false`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to poll the device. Defaults to `60s`.
-- All other options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 Automations:
 

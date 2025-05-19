@@ -11,7 +11,7 @@ or 433 MHz radio frequency (RF) signals.
 The component is split into two parts:
 
 - The remote receiver "hub", which defines the pin and a few additional settings, and...
-- Individual [Binary Sensor]({{< ref "components/remote_receiver#remote-receiver-binary-sensor" >}}) which will activate when their
+- Individual [remote receiver binary sensors]({{< ref "components/remote_receiver#remote-receiver-binary-sensor" >}}) which will activate when their
   respective signal is received.
 
 **See** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **and** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **for details.**
@@ -32,7 +32,7 @@ Multiple remote receivers can be configured as a list of dict definitions within
   Set to `all` to dump all available codecs:
 
   - **abbwelcome**: Decode and dump ABB-Welcome codes. Messages are sent via copper wires. See
-    [``remote_transmitter.transmit_abbwelcome`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more details.
+    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more details.
   - **aeha**: Decode and dump AEHA infrared codes.
   - **beo4**: Decode and dump B&O Beo4 infrared codes.
   - **byronsx**: Decode and dump Byron SX doorbell RF codes.
@@ -274,12 +274,12 @@ binary_sensor:
 
 - **receiver_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The remote receiver to receive the remote code with. Required if
   multiple receivers configured.
-- All other options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 Remote code selection (exactly one of these has to be included):
 
 - **abbwelcome**: Trigger on a decoded ABB-Welcome code with the given data, see the
-  [``remote_transmitter.transmit_abbwelcome`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more info.
+  [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_abbwelcome" >}}) for more info.
 
   - **source_address** (**Required**, int): The source address to trigger on.
   - **destination_address** (**Required**, int): The destination address to trigger on.
@@ -296,7 +296,7 @@ Remote code selection (exactly one of these has to be included):
 
   - **address** (**Required**, int): The address to trigger on, see dumper output for more info.
   - **data** (**Required**, 3-35 bytes list): The code to listen for, see
-    [``remote_transmitter.transmit_aeha`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_aeha" >}}) for more info. Usually you only need to copy this
+    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_aeha" >}}) for more info. Usually you only need to copy this
     directly from the dumper output.
 
 - **beo4**: Trigger on a decoded B&O Beo4 infrared remote code with the given data.
@@ -366,7 +366,7 @@ Remote code selection (exactly one of these has to be included):
 - **haier**: Trigger on a Haier remote code with the given code.
 
   - **code** (**Required**, 13-bytes list): The code to listen for, see
-    [``remote_transmitter.transmit_haier`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_haier" >}}) for more info. Usually you only need to copy
+    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_haier" >}}) for more info. Usually you only need to copy
     this directly from the dumper output.
 
 - **lg**: Trigger on a decoded LG remote code with the given data.
@@ -383,7 +383,7 @@ Remote code selection (exactly one of these has to be included):
 - **midea**: Trigger on a Midea remote code with the given code.
 
   - **code** (**Required**, 5-bytes list): The code to listen for, see
-    [``remote_transmitter.transmit_midea`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_midea" >}}) for more info. Usually you only need to copy
+    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_midea" >}}) for more info. Usually you only need to copy
     first 5 bytes directly from the dumper output.
 
 - **nec**: Trigger on a decoded NEC remote code with the given data.
@@ -411,7 +411,7 @@ Remote code selection (exactly one of these has to be included):
 - **pronto**: Trigger on a Pronto remote code with the given code.
 
   - **data** (**Required**, string): The code to listen for, see
-    [``remote_transmitter.transmit_raw`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
+    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
     directly from the dumper output.
   - **delta** (*Optional*, integer): This parameter allows you to manually specify the allowed difference
     between what Pronto code is specified, and what IR signal has been sent by the remote control.
@@ -419,7 +419,7 @@ Remote code selection (exactly one of these has to be included):
 - **raw**: Trigger on a raw remote code with the given code.
 
   - **code** (**Required**, list): The code to listen for, see
-    [``remote_transmitter.transmit_raw`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
+    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_raw" >}}) for more info. Usually you only need to copy this
     directly from the dumper output.
 
 - **rc5**: Trigger on a decoded RC5 remote code with the given data.
@@ -500,7 +500,7 @@ Remote code selection (exactly one of these has to be included):
 - **mirage**: Trigger on a Mirage remote code with the given code.
 
   - **code** (**Required**, 14-bytes list): The code to listen for, see
-    [``remote_transmitter.transmit_mirage`` **Action**]({{< ref "components/remote_transmitter#remote_transmitter-transmit_mirage" >}}) for more info. Usually you only need to copy
+    [transmitter description]({{< ref "components/remote_transmitter#remote_transmitter-transmit_mirage" >}}) for more info. Usually you only need to copy
     this directly from the dumper output.
 
 - **toto**: Trigger on a decoded Toto remote code with the given data.

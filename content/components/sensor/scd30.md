@@ -33,15 +33,15 @@ sensor:
 
 - **co2** (*Optional*): The information for the CO₂ sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the Temperature sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): The information for the Humidity sensor.
 
-  - All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature_offset** (*Optional*, float): Temperature and humidity
   offsets may occur when operating the sensor in end-customer

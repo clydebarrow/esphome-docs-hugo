@@ -6,7 +6,7 @@ title: "Template Text"
 {{< seo description="" image="" >}}
 
 The `template` text platform allows you to create a text with templated values
-using [Templates]({{< ref "automations/templates#config-lambda" >}}).
+using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
 ```yaml
 # Example configuration entry
@@ -23,9 +23,9 @@ text:
 
 - **min_length** (*Optional*, int): The minimum length this text can be. Defaults to `0`.
 - **max_length** (*Optional*, int): The maximum length this text can be. Defaults to `255`.
-- **lambda** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the current value of the text.
-- **set_action** (*Optional*, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should
+- **set_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the
   text value. The new value is available to lambdas in the `x` variable.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval on which to update the text
@@ -39,7 +39,7 @@ text:
   restored with `restore_value`.
   Cannot be used with `lambda`.
   Defaults to the empty string.
-- All other options from [Base Text Configuration]({{< ref "components/text/_index#config-text" >}}).
+- All other options from [Text]({{< ref "components/text/_index#config-text" >}}).
 
 
 ## See Also

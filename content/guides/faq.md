@@ -101,13 +101,13 @@ If you prefer the more manual way:
   - If you're using ESPHome's command line interface, the file is available in the
     `<CONFIG_DIR>/<NODE_NAME>/.pioenvs/<NODE_NAME>/firmware.bin` directory after the build completes.
 
-2. On some boards, you may need to force the microcontroller into its [To put the ESP into programming mode:]({{< ref "guides/physical_device_connection#esphome-phy-con-prg" >}}).
+2. On some boards, you may need to force the microcontroller into its [programming mode]({{< ref "guides/physical_device_connection#esphome-phy-con-prg" >}}).
    This often isn't necessary on most modern boards/devices, but it's worth trying if you're experiencing difficulties.
 3. Finally, to install a firmware file, you can use:
 
   - [ESPHome Web](https://web.esphome.io/), our web-based installer. This is the easiest approach but requires a
     browser that supports WebSerial, like Google Chrome or Microsoft Edge. Connect the board to your computer, make
-    sure it's detected as a [Plug in the board or the serial programmer into a free USB port and check if it has been properly detected]({{< ref "guides/physical_device_connection#esphome-phy-con-drv" >}}) and click **Connect**. If prompted, allow your
+    sure it's detected as a [serial port]({{< ref "guides/physical_device_connection#esphome-phy-con-drv" >}}) and click **Connect**. If prompted, allow your
     browser the requested permission in the pop-up box that appears. Next, select the serial device associated with
     your board, click **Install** and browse for/select the binary file you downloaded earlier (as above). Note that
     the file is processed locally and is **not** uploaded to any cloud service.
@@ -283,7 +283,7 @@ If you want the issue you're experiencing to be fixed quickly:
 - Provide a snippet of the code/configuration which triggers the issue; we'll likely want to try to reproduce it.
   Please read [How to create a Minimal, Complete, and Verifiable example](https://stackoverflow.com/help/mcve).
 - If it's a hardware communication issue (such as with an I²C or SPI device), try setting the
-  [Log Levels]({{< ref "components/logger#logger-log_levels" >}}) to `VERY_VERBOSE` as it may provide better insight into what is going on.
+  [log level]({{< ref "components/logger#logger-log_levels" >}}) to `VERY_VERBOSE` as it may provide better insight into what is going on.
 - Please describe what troubleshooting steps you've already tried as that may also help us track down the issue.
 
 You can find our issue tracker [on GitHub](https://github.com/esphome/issues/issues).
@@ -392,7 +392,7 @@ Here are some steps that may help mitigate the issue:
 
 - If you're using a hidden Wi-Fi network, make sure to enable `fast_connect` mode in your device's Wi-Fi
   configuration. Note that this may help with non-hidden networks, as well.
-- Give your ESPHome device a [Manual IPs]({{< ref "components/wifi#wifi-manual_ip" >}}).
+- Give your ESPHome device a [static IP]({{< ref "components/wifi#wifi-manual_ip" >}}).
 - Set the `power_save_mode` to `light` in your `wifi:` configuration. Note, however, that this may exacerbate the
   problem in some situations. See [Power Save Mode]({{< ref "components/wifi#wifi-power_save_mode" >}}).
 - The issue seems to happen with "cheap" boards more frequently -- especially the "cheap" NodeMCU boards from eBay
@@ -528,7 +528,7 @@ See also https://github.com/esphome/issues/issues/641#issuecomment-534156628.
 Some of ESPHome's functionality relies on {{< docref "/components/mdns" "mDNS" >}}, so, naturally, disabling it will cause these
 features to stop working.
 
-Generally speaking, disabling mDNS without setting a [Manual IPs]({{< ref "components/wifi#wifi-manual_ip" >}}) (or a static DHCP lease)
+Generally speaking, disabling mDNS without setting a [static IP address]({{< ref "components/wifi#wifi-manual_ip" >}}) (or a static DHCP lease)
 is bound to cause problems -- mDNS is used to determine the IP address of each ESPHome node.
 
 If you disable mDNS, expect the following repercussions:
@@ -540,7 +540,7 @@ If you disable mDNS, expect the following repercussions:
 - Because status detection in the [ESPHome Device Builder<installing-esphome-device-builder>]({{< ref "#ESPHome Device Builder<installing-esphome-device-builder>" >}}) uses mDNS by
   default, nodes with mDNS disabled will always appear as "offline". This does not affect any functionality; however,
   if you want to see the online/offline status of your nodes, you may configure the ESPHome Device Builder to ping each
-  node instead. See the [.. note::]({{< ref "guides/faq#docker-reference-notes" >}}) for more information.
+  node instead. See the [notes in the Docker Reference section]({{< ref "guides/faq#docker-reference-notes" >}}) for more information.
 
 ## Can configuration files be recovered from the device?
 

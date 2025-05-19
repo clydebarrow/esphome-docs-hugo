@@ -6,9 +6,9 @@ title: "MicroNova based pellet stove"
 {{< seo description="" image="" >}}
 
 The MicroNova component allows you to integrate a pellet stove with a MicroNova board in ESPHome.
-It uses [UART Bus]({{< ref "components/uart#uart" >}}) for communication.
+It uses [UART]({{< ref "components/uart#uart" >}}) for communication.
 
-The [UART Bus]({{< ref "components/uart#uart" >}}) must be configured with a baud rate 1200, 8 data bits, 2 stop bits, no parity, no flow control.
+The [UART]({{< ref "components/uart#uart" >}}) must be configured with a baud rate 1200, 8 data bits, 2 stop bits, no parity, no flow control.
 
 {{< warning >}}
 MicroNova bords come in various flavours. This code is only tested on an ExtraFlame Ketty Evo 2.0 stove. The protocol is not
@@ -77,7 +77,7 @@ Configuration variables:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **stove_state** (*Optional*): The current stove state.
-  All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Sensors
 
@@ -107,22 +107,22 @@ Configuration variables:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **room_temperature** (*Optional*): Sensor that reads the stoves ambient room temperature.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **fumes_temperature** (*Optional*): Fumes temperature.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **stove_power** (*Optional*): Current stove power.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **fan_speed** (*Optional*): Current fan speed. The raw value from the stove is multiplied by 10 + `fan_rpm_offset`.
 
   - **fan_rpm_offset** (*Optional*, integer): Offset the reported RPM value. Must be between 0 and 255. Defaults to 0.
-  - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **water_temperature** (*Optional*): Internal boiler water termperature.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **water_pressure** (*Optional*): Internal boiler water pressure.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **memory_address_sensor** (*Optional*): Can be any **memory_location** / **memory_address** you want to track. Usefull
   when you don't know where the parameter is for your stove is.
-  All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ## Numbers
@@ -142,9 +142,9 @@ Configuration variables:
 
 - **thermostat_temperature** (*Optional*): Number that holds the current stove thermostat value.
    - **step** (*Optional*): Temperature step. This value is used to multiply/devide the raw value when setting/reading the **thermostat_temperature**
-   - All other options from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
+   - All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
 - **power_level** (*Optional*): Number that sets/reads the requested stove power.
-  All options from [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}).
+  All options from [Number]({{< ref "components/number/_index#config-number" >}}).
 
 {{< note >}}
 Besides **memory_location** and **memory_address** you can specify a specific **memory_write_location** parameter.
@@ -169,7 +169,7 @@ Configuration variables:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **custom_button** (*Optional*): Write the hex value **memory_data** to a **memory_location** and **memory_address**
-  All options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
+  All options from [Button]({{< ref "components/button/_index#config-button" >}}).
 
 {{< note >}}
 Besides **memory_location** and **memory_address** you must specify a specific **memory_data** parameter.
@@ -191,7 +191,7 @@ Configuration variables:
 
 - **stove** (*Optional*): Turn the stove on or off. This switch will also reflect the current stove state.
   If the **stove_state** is "Off" the switch will be off, in all other states, the switch wil be on.
-  All options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
+  All options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 {{< note >}}
 Besides **memory_location** and **memory_address** you can specify specific **memory_data_on** and **memory_data_off** parameters.

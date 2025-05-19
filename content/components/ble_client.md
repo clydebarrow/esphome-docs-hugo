@@ -238,7 +238,7 @@ Configuration variables:
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
 - **service_uuid** (**Required**, UUID): UUID of the service to write to.
 - **characteristic_uuid** (**Required**, UUID): UUID of the service's characteristic to write to.
-- **value** (**Required**, Array of bytes or [Templates]({{< ref "automations/templates#config-lambda" >}})): The value to be written.
+- **value** (**Required**, Array of bytes or [lambda]({{< ref "automations/templates#config-lambda" >}})): The value to be written.
 
 {{< anchor "ble_client-passkey_reply_action" >}}
 

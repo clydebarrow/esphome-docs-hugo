@@ -76,7 +76,7 @@ sensor:
   to convert to temperature readings.
 - **calibration** (**Required**, float): The calibration parameters of the sensor - see above
   for more details.
-- All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Self-Heating
 

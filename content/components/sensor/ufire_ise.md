@@ -34,8 +34,8 @@ sensor:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
 - **temperature_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
-- **ph** (*Optional*, [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})): Set the pH sensor configuration. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **temperature** (*Optional*, [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **ph** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the pH sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **temperature** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   Can't be used together with `temperature_sensor`.
 
 {{< anchor "sensor-ufire_ise-calibrate_probe_high_action" >}}

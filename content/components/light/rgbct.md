@@ -6,7 +6,7 @@ title: "RGBCT Light"
 {{< seo description="" image="" >}}
 
 The `rgbct` light platform creates an RGBWT (color temperature + white brightness)
-light from 5 [Output Component]({{< ref "components/output/_index#output" >}}) (one for each channel).
+light from 5 [float output components]({{< ref "components/output/_index#output" >}}) (one for each channel).
 
 ```yaml
 # Example configuration entry
@@ -39,7 +39,7 @@ light:
   expressed in Kelvin.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
   time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
-- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also
 

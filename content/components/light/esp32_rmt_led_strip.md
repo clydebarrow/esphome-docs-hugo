@@ -78,7 +78,7 @@ light:
       "ESP32-S2", "0, 1, 2, 3"
       "ESP32-S3", "0, 1, 2, 3"
 
-- All other options from [Base Light Configuration]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 {{< anchor "esp32-rmt-led-strip-manual_timings" >}}
 

@@ -21,7 +21,7 @@ output:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to turn on and off.
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
-- All other options from [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}).
+- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 {{< warning >}}
 This is an **output component** and will not be visible from the frontend. Output components are intermediary

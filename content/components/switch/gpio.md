@@ -29,7 +29,7 @@ switch:
   to wait after other items in an interlock group have been disabled before re-activating.
   Useful for motors where immediately turning on in the other direction could cause problems.
 
-- All other options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## Active Low Switch
 

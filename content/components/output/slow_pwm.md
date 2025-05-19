@@ -39,7 +39,7 @@ output:
 - **restart_cycle_on_state_change** (*Optional*, boolean): Restart a timer of a cycle
   when new state is set. Defaults to `false`.
 
-- All other options from [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}).
+- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 
 {{< note >}}

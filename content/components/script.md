@@ -35,7 +35,7 @@ Configuration variables:
 - **parameters** (*Optional*, [Script Parameters]({{< ref "components/script#script-parameters" >}})): A script can define one or more parameters
   that must be provided in order to execute. All parameters defined here are mandatory and must be given when calling
   the script.
-- **then** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action to perform.
+- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform.
 
 {{< anchor "script-parameters" >}}
 
@@ -153,9 +153,9 @@ This can't be used in a lambda as it would block all functioning of the device. 
 
 ## ``script.is_running`` Condition
 
-This [All Conditions]({{< ref "automations/actions#config-condition" >}}) allows you to check if a given script is running. In case scripts are run in
+This [condition]({{< ref "automations/actions#config-condition" >}}) allows you to check if a given script is running. In case scripts are run in
 `parallel`, this condition only tells you if at least one script of the given id is running, not how many. Not
-designed for use with [``script.wait`` Action]({{< ref "components/script#script-wait_action" >}}); instead try [``while`` Action]({{< ref "automations/actions#while_action" >}}).
+designed for use with [script.wait]({{< ref "components/script#script-wait_action" >}}); instead try [while]({{< ref "automations/actions#while_action" >}}).
 
 ```yaml
 on_...:

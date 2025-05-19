@@ -91,7 +91,7 @@ climate:
 - **supports_heat** (*Optional*, boolean): Enables setting heating mode for this climate device. Defaults to `true`.
 - **receiver_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the remote_receiver if this platform supports
   receiver. see: [Using a Receiver]({{< ref "components/climate/climate_ir#ir-receiver_id" >}}).
-- All other options from [Base Climate Configuration]({{< ref "components/climate/_index#config-climate" >}}).
+- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
 **Advanced Options**
 

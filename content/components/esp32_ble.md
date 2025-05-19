@@ -15,14 +15,14 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
 audio components are most likely to cause issues.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration
 
 esp32_ble:
-  io_capability: keyboard_only
+    io_capability: keyboard_only
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **io_capability** (*Optional*, enum): The IO capability of this ESP32, used for securely connecting to other BLE devices. Defaults to `none`.

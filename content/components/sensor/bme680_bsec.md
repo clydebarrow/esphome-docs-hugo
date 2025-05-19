@@ -16,8 +16,8 @@ for CO₂ and Breath Volatile Organic Compounds (b-VOC) using a correlation betw
 
 {{< note >}}
 - The BSEC library is only available for use after accepting its software license agreement. By enabling this component,
-  you are explicitly agreeing to the terms of the `BSEC license agreement`_. You must not distribute any compiled firmware
-  binaries that include this component.
+    you are explicitly agreeing to the terms of the `BSEC license agreement`_. You must not distribute any compiled firmware
+    binaries that include this component.
 
 - We recommend using the newer [bme68x_bsec2 ]({{< relref "bme68x_bsec2/" >}}) component whenever possible.
 

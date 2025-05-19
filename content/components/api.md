@@ -24,12 +24,12 @@ A Python library that implements this protocol is [aioesphomeapi](https://github
 but will continue to support YAML with `services` and `homeassistant.service` for the foreseeable future.
 Documentation will only refer to **Actions**.
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 api:
 
-```
+{{< /note >}}
 ## Configuration variables:
 
 - **port** (*Optional*, int): The port to run the API server on. Defaults to `6053`.
@@ -68,10 +68,10 @@ api:
           document.getElementById("api-key").value = bytesArrToBase64(array);
         </script>
 
-    .. note::
+    {{< note >}}
+Support for configuring the encryption key on-the-fly will be implemented in a future release of Home Assistant.
 
-        Support for configuring the encryption key on-the-fly will be implemented in a future release of Home Assistant.
-
+    {{< /note >}}
 - **actions** (*Optional*, list): A list of user-defined actions. See [User-defined Actions]({{< ref "components/api#api-device-actions" >}}).
 - **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before rebooting when no
   client connects to the API. This is needed because sometimes the low level ESP functions report that

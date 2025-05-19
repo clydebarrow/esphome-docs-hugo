@@ -11,7 +11,7 @@ if the page is shown or not.
 
 {{< note >}}
 The Nextion can receive an integer but it can only send 3 bytes for a negative integer. The range if using the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) is:
-    -16777215 to 4294967295
+        -16777215 to 4294967295
 
 {{< /note >}}
 See [/components/display/nextion]({{< ref "/components/display/nextion" >}}) for setting up the display
@@ -74,12 +74,12 @@ Waveform Settings
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
-  .. note::
+  {{< note >}}
+`background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings<nextion_sensor_settings>]({{< ref "#Sensor Settings<nextion_sensor_settings>" >}}).
+A [- ``update_components_by_prefix(std::string page)``: This will send the current state of any **component_name**]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor Component]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
 
-      `background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings<nextion_sensor_settings>]({{< ref "#Sensor Settings<nextion_sensor_settings>" >}}).
-      A [- ``update_components_by_prefix(std::string page)``: This will send the current state of any **component_name**]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor Component]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
 
-
+  {{< /note >}}
 See [How things Update]({{< ref "components/sensor/nextion#nextion_sensor_how_things_update" >}}) for additional information
 
 Globals

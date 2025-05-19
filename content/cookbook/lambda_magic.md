@@ -187,58 +187,58 @@ might cause unexpected behaviour (eg: cover stopping halfway). This is because t
 feature is implemented using asynchronous automations. So every time an open/close command is sent a
 delayed relay off command is added and old ones are not removed.
 
-{{< /note >}}
 ```yaml
+```
 esp8266:
-  board: esp01_1m
+    board: esp01_1m
 
 binary_sensor:
 - platform: gpio
-  pin:
-    number: GPIO10
-    inverted: true
-  id: button
-  on_press:
-    then:
-      # logic for cycling through movements: open->stop->close->stop->...
-      - lambda: |
-          if (id(my_cover).current_operation == COVER_OPERATION_IDLE) {
-            // Cover is idle, check current state and either open or close cover.
-            if (id(my_cover).is_fully_closed()) {
-              id(my_cover).open();
-            } else {
-              id(my_cover).close();
-            }
-          } else {
-            // Cover is opening/closing. Stop it.
-            id(my_cover).stop();
-          }
+    pin:
+        number: GPIO10
+        inverted: true
+    id: button
+    on_press:
+        then:
+            # logic for cycling through movements: open->stop->close->stop->...
+            - lambda: |
+                    if (id(my_cover).current_operation == COVER_OPERATION_IDLE) {
+                        // Cover is idle, check current state and either open or close cover.
+                        if (id(my_cover).is_fully_closed()) {
+                            id(my_cover).open();
+                        } else {
+                            id(my_cover).close();
+                        }
+                    } else {
+                        // Cover is opening/closing. Stop it.
+                        id(my_cover).stop();
+                    }
 
 switch:
 - platform: gpio
-  pin: GPIO12
-  interlock: &interlock [open_cover, close_cover]
-  id: open_cover
+    pin: GPIO12
+    interlock: &interlock [open_cover, close_cover]
+    id: open_cover
 - platform: gpio
-  pin: GPIO5
-  interlock: *interlock
-  id: close_cover
+    pin: GPIO5
+    interlock: *interlock
+    id: close_cover
 
 cover:
 - platform: time_based
-  name: "Cover"
-  id: my_cover
-  open_action:
-    - switch.turn_on: open_cover
-  open_duration: 60s
-  close_action:
-    - switch.turn_on: close_cover
-  close_duration: 60s
-  stop_action:
-    - switch.turn_off: open_cover
-    - switch.turn_off: close_cover
+    name: "Cover"
+    id: my_cover
+    open_action:
+        - switch.turn_on: open_cover
+    open_duration: 60s
+    close_action:
+        - switch.turn_on: close_cover
+    close_duration: 60s
+    stop_action:
+        - switch.turn_off: open_cover
+        - switch.turn_off: close_cover
 
-```
+{{< /note >}}
 ## Update numeric values from text input
 
 Sometimes it may be more confortable to use a [/components/text/template]({{< ref "/components/text/template" >}}) to change some numeric values from the user interface.

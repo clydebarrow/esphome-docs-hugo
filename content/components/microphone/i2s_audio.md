@@ -16,22 +16,22 @@ Audio and voice components consume a significant amount of resources (RAM, CPU) 
 configuration. In particular, Bluetooth/BLE components are known to cause issues when used in
 combination with Voice Assistant and/or other audio components.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 microphone:
-  - platform: i2s_audio
-    id: external_mic
-    adc_type: external
-    i2s_din_pin: GPIOXX
+    - platform: i2s_audio
+        id: external_mic
+        adc_type: external
+        i2s_din_pin: GPIOXX
 
-  - platform: i2s_audio
-    id: adc_mic
-    adc_type: internal
-    adc_pin: GPIOXX
+    - platform: i2s_audio
+        id: adc_mic
+        adc_type: internal
+        adc_pin: GPIOXX
 
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **adc_type** (**Required**, enum):
@@ -56,16 +56,16 @@ microphone:
 - **i2s_din_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use for the I²S `DIN/SDIN` *(Data In)* signal, also referred to as `SD/SDATA` *(Serial Data)* or `ADCDAT` *(Analog to Digital Converter Data)*.
 - **pdm** (*Optional*, boolean): Set this to `true` if your external ADC uses PDM (Pulse Density Modulation) instead of I²S. Defaults to `false`.
 
-  .. note::
+  {{< note >}}
+PDM microphones are only supported on ESP32 and ESP32-S3.
 
-      PDM microphones are only supported on ESP32 and ESP32-S3.
-
+  {{< /note >}}
 ## Internal ADC
 
-  .. note::
+  {{< note >}}
+Internal ADC microphones are only supported by the legacy I²S driver on a regular ESP32, not the variants.
 
-      Internal ADC microphones are only supported by the legacy I²S driver on a regular ESP32, not the variants.
-
+  {{< /note >}}
 - **adc_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use for the ADC input.
 
 

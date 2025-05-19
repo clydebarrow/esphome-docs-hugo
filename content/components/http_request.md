@@ -69,12 +69,12 @@ To maximize security, do not set `verify_ssl` to `false` *unless:*
  - **ca_certificate_path** (*Optional*, file path): Path to a CA certificate bundle. Not required on MacOS (the inbuilt CA bundle is used and SSL enabled by default).
    On Linux this is required to enable SSL.
 
-    .. note::
+    {{< note >}}
+To use SSL on Linux you must have the `libssl-dev` package installed (e.g. `sudo apt install libssl-dev`).
+A typical value on Linux for `ca_certificate_path` would be `/etc/ssl/certs/ca-certificates.crt`.
 
-        To use SSL on Linux you must have the `libssl-dev` package installed (e.g. `sudo apt install libssl-dev`).
-        A typical value on Linux for `ca_certificate_path` would be `/etc/ssl/certs/ca-certificates.crt`.
 
-
+    {{< /note >}}
 ## HTTP Request Actions
 
 The `http_request` component supports a number of [All Actions]({{< ref "automations/actions#config-action" >}}) that can be used to send requests.
@@ -175,34 +175,34 @@ The following variables are available for use in [Templates]({{< ref "automation
 - `body` as `std::string` which contains the response body when `capture_response`
   (see [``http_request.get`` Action]({{< ref "components/http_request#http_request-get_action" >}})) is set to `true`.
 
-    .. note::
-
-        The `status_code` should be checked before using the `body` variable. A successful response will usually have
-        a status code of `200`. Server errors such as "not found" (404) or "internal server error" (500) will have an appropriate status code, and may contain an error message in the `body` variable.
+    {{< note >}}
+The `status_code` should be checked before using the `body` variable. A successful response will usually have
+a status code of `200`. Server errors such as "not found" (404) or "internal server error" (500) will have an appropriate status code, and may contain an error message in the `body` variable.
 
 ```yaml
-on_...
-  then:
-    - http_request.get:
-        url: https://esphome.io
-        collect_headers:
-          - Content-Type
-        on_response:
-          then:
-            - logger.log:
-                format: "Response status: %d, Duration: %u ms, Content-Type: %s"
-                args:
-                  - response->status_code
-                  - response->duration_ms
-                  - response->get_response_header("Content-Type").c_str()
-            - lambda: |-
-                ESP_LOGD(TAG, "Response status: %d, Duration: %u ms, Content-Type: %s", response->status_code, response->duration_ms, response->get_response_header("Content-Type").c_str());
-        on_error:
-          then:
-            - logger.log: "Request failed!"
-
-
 ```
+    {{< /note >}}
+    on_...
+      then:
+        - http_request.get:
+            url: https://esphome.io
+            collect_headers:
+              - Content-Type
+            on_response:
+              then:
+                - logger.log:
+                    format: "Response status: %d, Duration: %u ms, Content-Type: %s"
+                    args:
+                      - response->status_code
+                      - response->duration_ms
+                      - response->get_response_header("Content-Type").c_str()
+                - lambda: |-
+                    ESP_LOGD(TAG, "Response status: %d, Duration: %u ms, Content-Type: %s", response->status_code, response->duration_ms, response->get_response_header("Content-Type").c_str());
+            on_error:
+              then:
+                - logger.log: "Request failed!"
+
+
 {{< anchor "http_request-on_error" >}}
 
 ## ``on_error`` Trigger

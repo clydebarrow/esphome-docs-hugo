@@ -32,11 +32,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the number. At least one of **id** and **name** must be specified.
 
-  .. note::
+  {{< note >}}
+If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+you want the number to use that name, you can set `name: None`.
 
-      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
-      you want the number to use that name, you can set `name: None`.
-
+  {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the number in the frontend.
 - **internal** (*Optional*, boolean): Mark this component as internal. Internal components will
   not be exposed to the frontend (like Home Assistant). Only specifying an `id` without

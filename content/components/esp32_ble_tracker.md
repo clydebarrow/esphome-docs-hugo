@@ -18,43 +18,43 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
 audio components are most likely to cause issues.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 esp32_ble_tracker:
-  max_connections: 3
+    max_connections: 3
 
 binary_sensor:
-  - platform: ble_presence
-    mac_address: XX:XX:XX:XX:XX:XX
-    name: "ESP32 BLE Presence Google Home Mini"
+    - platform: ble_presence
+        mac_address: XX:XX:XX:XX:XX:XX
+        name: "ESP32 BLE Presence Google Home Mini"
 
 sensor:
-  - platform: ble_rssi
-    mac_address: XX:XX:XX:XX:XX:XX
-    name: "BLE Google Home Mini RSSI value"
-  - platform: xiaomi_hhccjcy01
-    mac_address: XX:XX:XX:XX:XX:XX
-    temperature:
-      name: "Xiaomi MiFlora Temperature"
-    moisture:
-      name: "Xiaomi MiFlora Moisture"
-    illuminance:
-      name: "Xiaomi MiFlora Illuminance"
-    conductivity:
-      name: "Xiaomi MiFlora Soil Conductivity"
-    battery_level:
-      name: "Xiaomi MiFlora Battery Level"
-  - platform: xiaomi_lywsdcgq
-    mac_address: XX:XX:XX:XX:XX:XX
-    temperature:
-      name: "Xiaomi MiJia Temperature"
-    humidity:
-      name: "Xiaomi MiJia Humidity"
-    battery_level:
-      name: "Xiaomi MiJia Battery Level"
+    - platform: ble_rssi
+        mac_address: XX:XX:XX:XX:XX:XX
+        name: "BLE Google Home Mini RSSI value"
+    - platform: xiaomi_hhccjcy01
+        mac_address: XX:XX:XX:XX:XX:XX
+        temperature:
+            name: "Xiaomi MiFlora Temperature"
+        moisture:
+            name: "Xiaomi MiFlora Moisture"
+        illuminance:
+            name: "Xiaomi MiFlora Illuminance"
+        conductivity:
+            name: "Xiaomi MiFlora Soil Conductivity"
+        battery_level:
+            name: "Xiaomi MiFlora Battery Level"
+    - platform: xiaomi_lywsdcgq
+        mac_address: XX:XX:XX:XX:XX:XX
+        temperature:
+            name: "Xiaomi MiJia Temperature"
+        humidity:
+            name: "Xiaomi MiJia Humidity"
+        battery_level:
+            name: "Xiaomi MiJia Battery Level"
 
-```
+{{< /warning >}}
 {{< note >}}
 The first time this component is enabled for an ESP32, the code partition needs to be
 resized. Please flash the ESP32 via USB when adding this to your configuration. After that,
@@ -252,16 +252,16 @@ Configuration variables:
 
 {{< note >}}
 This action can also be written in [Templates]({{< ref "automations/templates#config-lambda" >}}):
-{{< /note >}}
 ```yaml
-esp32_ble_tracker:
-  id: ble_tracker_id
-
 ```
+esp32_ble_tracker:
+    id: ble_tracker_id
+
 ```cpp
+```
 id(ble_tracker_id).start_scan()
 
-```
+{{< /note >}}
 `esp32_ble_tracker.stop_scan` Action
 ************************************************
 

@@ -59,7 +59,7 @@ not specify them. However your Micronova boad may require you to specify alterna
 switch or number accepts these parameters:
 
 - **memory_location** (*Optional*): The memory location where the parameter must be read. For most stoves this is 0x00 for RAM
-  or 0x20 for EPROM.
+    or 0x20 for EPROM.
 - **memory_address** (*Optional*): The address where the parameter is stored.
 
 

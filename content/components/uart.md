@@ -41,15 +41,15 @@ explicity check the parity. Most likely you will need to flip the `parity` flag 
 {{< note >}}
 UART implementation for the host platform does not use TX and RX pins but port names.
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 uart:
-  tx_pin: GPIOXX
-  rx_pin: GPIOXX
-  baud_rate: 9600
+    tx_pin: GPIOXX
+    rx_pin: GPIOXX
+    baud_rate: 9600
 
-```
+{{< /note >}}
 ## Configuration variables:
 
 - **baud_rate** (**Required**, int): The baud rate of the UART bus.

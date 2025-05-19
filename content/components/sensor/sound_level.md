@@ -14,18 +14,18 @@ Audio and voice components consume a significant amount of resources (RAM, CPU) 
 configuration. In particular, Bluetooth/BLE components are known to cause issues when used in
 combination with Voice Assistant and/or other audio components.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 sensor:
-  - platform: sound_level
-    passive: true
-    peak:
-      name: "Peak Loudness"
-    rms:
-      name: "Average Loudness"
+    - platform: sound_level
+        passive: true
+        peak:
+            name: "Peak Loudness"
+        rms:
+            name: "Average Loudness"
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr[microphone ]({{< relref "/components/microphone/index" >}})to use for input. Multiple channels may be selected.

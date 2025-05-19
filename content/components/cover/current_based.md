@@ -26,37 +26,37 @@ Depending on the cover and motor type, obstacles can physically damage the cover
 Verify your setup to ensure the current consumption will increase enough to be detectable before causing
 any physical damage. Use it at your own risk.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 cover:
-  - platform: current_based
-    name: "Current Based Cover"
+    - platform: current_based
+        name: "Current Based Cover"
 
-    open_sensor: open_current_sensor
-    open_moving_current_threshold: 0.5
-    open_obstacle_current_threshold: 0.8
-    open_duration: 12s
-    open_action:
-      - switch.turn_on: open_cover_switch
+        open_sensor: open_current_sensor
+        open_moving_current_threshold: 0.5
+        open_obstacle_current_threshold: 0.8
+        open_duration: 12s
+        open_action:
+            - switch.turn_on: open_cover_switch
 
-    close_sensor: close_current_sensor
-    close_moving_current_threshold: 0.5
-    close_obstacle_current_threshold: 0.8
-    close_duration: 10s
-    close_action:
-      - switch.turn_on: close_cover_switch
+        close_sensor: close_current_sensor
+        close_moving_current_threshold: 0.5
+        close_obstacle_current_threshold: 0.8
+        close_duration: 10s
+        close_action:
+            - switch.turn_on: close_cover_switch
 
-    stop_action:
-      - switch.turn_off: close_cover_switch
-      - switch.turn_off: open_cover_switch
+        stop_action:
+            - switch.turn_off: close_cover_switch
+            - switch.turn_off: open_cover_switch
 
-    obstacle_rollback: 30%
-    start_sensing_delay: 0.8s
+        obstacle_rollback: 30%
+        start_sensing_delay: 0.8s
 
 
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **open_sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The open current sensor.

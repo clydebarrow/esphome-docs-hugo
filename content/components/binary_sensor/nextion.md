@@ -51,12 +51,12 @@ binary_sensor:
 The Nextion will send a **page_id** and **component_id** when the *Send Component ID* check box is selected for the component. To enable
 this native event **page_id** and **component_id** are required. No [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}}) is required. If **page_id** and **component_id** are set then the component will only react to touch events from the Nextion. Setting **component_name** will allow setting options like foreground color.
 
-  .. note::
+  {{< note >}}
+`background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [- ``set_background_color(Color color)``: Sets the background color to **Color**]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_settings" >}}).
+A [- ``update_components_by_prefix(std::string page)``: This will send the current state of any **component_name**]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor Component]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
 
-      `background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [- ``set_background_color(Color color)``: Sets the background color to **Color**]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_settings" >}}).
-      A [- ``update_components_by_prefix(std::string page)``: This will send the current state of any **component_name**]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor Component]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
 
-
+  {{< /note >}}
 Example:
 
 ```yaml

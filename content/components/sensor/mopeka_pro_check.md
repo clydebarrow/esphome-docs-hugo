@@ -14,10 +14,10 @@ to control handling of poor quality readings and reporting reading quality issue
 
 {{< warning >}}
 This sensor component only supports the following sensors:
-  + Mopeka Pro Check devices
-  + Mopeka Pro Plus devices
-  + Mopeka Pro Check Universal Sensor
-  + Lippert Propane Tank Sensor, part number 2021130655
+    + Mopeka Pro Check devices
+    + Mopeka Pro Plus devices
+    + Mopeka Pro Check Universal Sensor
+    + Lippert Propane Tank Sensor, part number 2021130655
 
 Sensors are calibrated for propane only.
 

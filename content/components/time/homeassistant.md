@@ -13,14 +13,14 @@ Although you might not plan to *export* states from the node and you do not need
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
 [Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 time:
-  - platform: homeassistant
-    id: homeassistant_time
+    - platform: homeassistant
+        id: homeassistant_time
 
-```
+{{< /note >}}
 ## Configuration variables
 
 - All options from [Base Time Configuration]({{< ref "components/time/_index#base_time_config" >}}).

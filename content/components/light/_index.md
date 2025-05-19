@@ -36,11 +36,11 @@ light:
   specified.
 - **name** (*Optional*, string): The name of the light. At least one of **id** and **name** must be specified.
 
-  .. note::
+  {{< note >}}
+If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and you want the light
+to use that name, you can set `name: None`.
 
-      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and you want the light
-      to use that name, you can set `name: None`.
-
+  {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the light in the frontend.
 - **effects** (*Optional*, list): A list of [Light Effects]({{< ref "components/light/_index#light-effects" >}}) to use for this light.
 - **gamma_correct** (*Optional*, float): Apply a `gamma correction factor
@@ -902,36 +902,36 @@ Available variables in the lambda:
 - **initial_run** - A bool which is true on the first execution of the lambda. Useful to reset static variables when
   restarting an effect.
 
-  .. note::
-
-      ESPColor has been migrated to Color. See :apistruct:`Color <Color>` for more information.
+  {{< note >}}
+ESPColor has been migrated to Color. See :apistruct:`Color <Color>` for more information.
 
 ```yaml
-light:
-- platform: ...
-  effects:
-    - addressable_lambda:
-        name: "My Custom Effect"
-        update_interval: 16ms
-        lambda: |-
-          // it.size() - Number of LEDs
-          // it[num] - Access the LED at index num.
-          // Set the LED at num to the given r, g, b values
-          // it[num] = Color(r, g, b);
-          // Get the color at index num (Color instance)
-          // it[num].get();
-
-          // Example: Simple color wipe
-          for (int i = it.size() - 1; i > 0; i--) {
-            it[i] = it[i - 1].get();
-          }
-          it[0] = Color::random_color();
-
-          // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
-          it.range(0, 50) = Color::BLACK;
-          it.all().fade_to_black(10);
-
 ```
+  {{< /note >}}
+    light:
+    - platform: ...
+      effects:
+        - addressable_lambda:
+            name: "My Custom Effect"
+            update_interval: 16ms
+            lambda: |-
+              // it.size() - Number of LEDs
+              // it[num] - Access the LED at index num.
+              // Set the LED at num to the given r, g, b values
+              // it[num] = Color(r, g, b);
+              // Get the color at index num (Color instance)
+              // it[num].get();
+
+              // Example: Simple color wipe
+              for (int i = it.size() - 1; i > 0; i--) {
+                it[i] = it[i - 1].get();
+              }
+              it[0] = Color::random_color();
+
+              // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
+              it.range(0, 50) = Color::BLACK;
+              it.all().fade_to_black(10);
+
 ```yaml
 light:
 - platform: ...

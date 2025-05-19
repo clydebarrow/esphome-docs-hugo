@@ -16,17 +16,17 @@ lights), see these outputs:
 - ESP32: [ledc]({{< ref "ledc/" >}})
 - ESP8266: [esp8266_pwm]({{< ref "esp8266_pwm/" >}})
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 output:
-  - platform: slow_pwm
-    pin: GPIOXX
-    id: my_slow_pwm
-    period: 15s
+    - platform: slow_pwm
+        pin: GPIOXX
+        id: my_slow_pwm
+        period: 15s
 
 
-```
+{{< /note >}}
 ## Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.

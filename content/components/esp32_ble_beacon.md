@@ -16,14 +16,14 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
 audio components are most likely to cause issues.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 esp32_ble_beacon:
-  type: iBeacon
-  uuid: 'c29ce823-e67a-4e71-bff2-abaa32e77a98'
+    type: iBeacon
+    uuid: 'c29ce823-e67a-4e71-bff2-abaa32e77a98'
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **type** (**Required**): The type of beacon to create, currently only supports `iBeacon`.

@@ -95,8 +95,8 @@ first time, try flipping the wires connected to those pins before trying again.
 
 {{< warning >}}
 .. image:: /images/high-voltage-warning.svg
-  :alt: High voltage warning symbol
-  :height: 50
+    :alt: High voltage warning symbol
+    :height: 50
 
 **Do not connect your device to mains electricity while following this
 guide.** If your device is open and plugged directly into the wall, you'll

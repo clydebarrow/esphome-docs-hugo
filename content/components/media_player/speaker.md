@@ -24,15 +24,15 @@ Audio and voice components consume a significant amount of resources (RAM, CPU) 
 configuration. In particular, Bluetooth/BLE components are known to cause issues when used in
 combination with Voice Assistant and/or other audio components.
 
-{{< /warning >}}
 ```yaml
+```
 # Example minimal configuration entry
 media_player:
-  - platform: speaker
-    announcement_pipeline:
-      speaker: announcment_spk_id
+    - platform: speaker
+        announcement_pipeline:
+            speaker: announcment_spk_id
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **announcement_pipeline** (**Required**, Pipeline Schema): Configuration settings for the announcement pipeline.

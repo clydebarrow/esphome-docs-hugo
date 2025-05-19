@@ -19,14 +19,14 @@ The component is split into two parts:
 This component performs best with an ESP32 or variant; they have a dedicated hardware peripheral which ensures
 accurate signal timing.
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 remote_transmitter:
-  pin: GPIOXX
-  carrier_duty_percent: 50%
+    pin: GPIOXX
+    carrier_duty_percent: 50%
 
-```
+{{< /note >}}
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to transmit the remote signal on.
@@ -252,15 +252,15 @@ This [All Actions]({{< ref "automations/actions#config-action" >}}) sends a Cana
 The CanalSat and CanalSatLD protocols use a higher carrier frequency (56kHz) and are very similar.
 Depending on the hardware used they may interfere with each other when enabled simultaneously.
 
-{{< /note >}}
 ```yaml
-on_...:
-  - remote_transmitter.transmit_canalsat:
-      device: 0x25
-      address: 0x00
-      command: 0x02
-
 ```
+on_...:
+    - remote_transmitter.transmit_canalsat:
+            device: 0x25
+            address: 0x00
+            command: 0x02
+
+{{< /note >}}
 Configuration variables:
 
 - **device** (**Required**, int): The device to send to, see dumper output for more details.
@@ -280,15 +280,15 @@ This [All Actions]({{< ref "automations/actions#config-action" >}}) sends a Cana
 The CanalSat and CanalSatLD protocols use a higher carrier frequency (56kHz) and are very similar.
 Depending on the hardware used they may interfere with each other when enabled simultaneously.
 
-{{< /note >}}
 ```yaml
-on_...:
-  - remote_transmitter.transmit_canalsatld:
-      device: 0x25
-      address: 0x00
-      command: 0x02
-
 ```
+on_...:
+    - remote_transmitter.transmit_canalsatld:
+            device: 0x25
+            address: 0x00
+            command: 0x02
+
+{{< /note >}}
 Configuration variables:
 
 - **device** (**Required**, int): The device to send to, see dumper output for more details.
@@ -564,15 +564,15 @@ reverse the order of the address and command bits when moving to 2021.12 or abov
 does not automatically generate parity bits or pad values to 2 bytes. For example, to send command `0x0`, you
 need to use `0xFF00` (`0x00` being the command and `0xFF` being the logical inverse).
 
-{{< /note >}}
 ```yaml
-on_...:
-  - remote_transmitter.transmit_nec:
-      address: 0x1234
-      command: 0x78AB
-      command_repeats: 1
-
 ```
+on_...:
+    - remote_transmitter.transmit_nec:
+            address: 0x1234
+            command: 0x78AB
+            command_repeats: 1
+
+{{< /note >}}
 Configuration variables:
 
 - **address** (**Required**, int): The 16-bit address to send, see dumper output for more details.
@@ -975,14 +975,14 @@ This [All Actions]({{< ref "automations/actions#config-action" >}}) sends a Tosh
 {{< note >}}
 This action transmits codes using the new(er) Toshiba AC protocol and likely will not work with older units.
 
-{{< /note >}}
 ```yaml
-on_...:
-  - remote_transmitter.transmit_toshiba_ac:
-      rc_code_1: 0xB24DBF4040BF
-      rc_code_2: 0xD5660001003C
-
 ```
+on_...:
+    - remote_transmitter.transmit_toshiba_ac:
+            rc_code_1: 0xB24DBF4040BF
+            rc_code_2: 0xD5660001003C
+
+{{< /note >}}
 Configuration variables:
 
 - **rc_code_1** (**Required**, int): The remote control code to send, see dumper output for more details.

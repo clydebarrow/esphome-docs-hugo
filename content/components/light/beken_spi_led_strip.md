@@ -10,17 +10,17 @@ This is a component using the Beken SPI DMA interface to drive addressable LED s
 {{< warning >}}
 Only works on pin P16, which is not available on many tuya modules.
 
-{{< /warning >}}
 ```yaml
-light:
-  - platform: beken_spi_led_strip
-    rgb_order: GRB
-    pin: P16
-    num_leds: 30
-    chipset: ws2812
-    name: "My Light"
-
 ```
+light:
+    - platform: beken_spi_led_strip
+        rgb_order: GRB
+        pin: P16
+        num_leds: 30
+        chipset: ws2812
+        name: "My Light"
+
+{{< /warning >}}
 ## Configuration variables
 
 - **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the light.

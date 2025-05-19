@@ -15,22 +15,22 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
 audio components are most likely to cause issues.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration
 
 esp32_ble_server:
-  manufacturer: "Orange"
-  manufacturer_data: [0x4C, 0, 0x23, 77, 0xF0 ]
-  on_connect:
-    - lambda: |-
-        ESP_LOGD("BLE", "Connection from %d", id);
-  on_disconnect:
-    - lambda: |-
-        ESP_LOGD("BLE", "Disconnection from %d", id);
+    manufacturer: "Orange"
+    manufacturer_data: [0x4C, 0, 0x23, 77, 0xF0 ]
+    on_connect:
+        - lambda: |-
+                ESP_LOGD("BLE", "Connection from %d", id);
+    on_disconnect:
+        - lambda: |-
+                ESP_LOGD("BLE", "Disconnection from %d", id);
 
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **manufacturer** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The name of the manufacturer/firmware creator. Defaults to `ESPHome`.

@@ -10,18 +10,18 @@ is HIGH. For example this can be used to measure PWM signals to transmit some
 value over a simple protocol. The unit of measurement for this sensor is seconds.
 
 {{< note >}}
-This component is intended for measurements in the microsecond to seconds range! 
+This component is intended for measurements in the microsecond to seconds range!
 The largest period this component can measure is just over 70 minutes.
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 sensor:
-  - platform: pulse_width
-    pin: D0
-    name: Pulse Width Sensor
+    - platform: pulse_width
+        pin: D0
+        name: Pulse Width Sensor
 
-```
+{{< /note >}}
 ## Configuration variables:
 
 - **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to observe for the

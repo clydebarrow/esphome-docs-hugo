@@ -184,27 +184,27 @@ GPIO16 on this board (and possibly other boards below) is connected to onboard P
 Using this GPIO for other purposes (eg as a button) will trigger the watchdog.
 Further information on pin notes can be found here: https://github.com/raphaelbs/esp32-cam-ai-thinker/blob/master/docs/esp32cam-pin-notes.md
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 esp32_camera:
-  external_clock:
-    pin: GPIO0
-    frequency: 20MHz
-  i2c_pins:
-    sda: GPIO26
-    scl: GPIO27
-  data_pins: [GPIO5, GPIO18, GPIO19, GPIO21, GPIO36, GPIO39, GPIO34, GPIO35]
-  vsync_pin: GPIO25
-  href_pin: GPIO23
-  pixel_clock_pin: GPIO22
-  power_down_pin: GPIO32
+    external_clock:
+        pin: GPIO0
+        frequency: 20MHz
+    i2c_pins:
+        sda: GPIO26
+        scl: GPIO27
+    data_pins: [GPIO5, GPIO18, GPIO19, GPIO21, GPIO36, GPIO39, GPIO34, GPIO35]
+    vsync_pin: GPIO25
+    href_pin: GPIO23
+    pixel_clock_pin: GPIO22
+    power_down_pin: GPIO32
 
-  # Image settings
-  name: My Camera
-  # ...
+    # Image settings
+    name: My Camera
+    # ...
 
-```
+{{< /warning >}}
 **M5Stack Camera**:
 
 {{< warning >}}
@@ -215,27 +215,27 @@ the camera unit can still heat up considerably for some boards.
 If the camera is not recognized after a reboot and the unit feels warm, try waiting for
 it to cool down and check again - if that still doesn't work try enabling the test pattern.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 esp32_camera:
-  external_clock:
-    pin: GPIO27
-    frequency: 20MHz
-  i2c_pins:
-    sda: GPIO25
-    scl: GPIO23
-  data_pins: [GPIO17, GPIO35, GPIO34, GPIO5, GPIO39, GPIO18, GPIO36, GPIO19]
-  vsync_pin: GPIO22
-  href_pin: GPIO26
-  pixel_clock_pin: GPIO21
-  reset_pin: GPIO15
+    external_clock:
+        pin: GPIO27
+        frequency: 20MHz
+    i2c_pins:
+        sda: GPIO25
+        scl: GPIO23
+    data_pins: [GPIO17, GPIO35, GPIO34, GPIO5, GPIO39, GPIO18, GPIO36, GPIO19]
+    vsync_pin: GPIO22
+    href_pin: GPIO26
+    pixel_clock_pin: GPIO21
+    reset_pin: GPIO15
 
-  # Image settings
-  name: My Camera
-  # ...
+    # Image settings
+    name: My Camera
+    # ...
 
-```
+{{< /warning >}}
 **M5Stack Timer Camera X/F**:
 
 ```yaml

@@ -74,8 +74,8 @@ If you encounter any issues with Homebrew installation, please check the
 for additional information.
 
 {{< note >}}
-Homebrew may not always provide the latest version immediately. Updating Homebrew will 
-automatically update ESPHome. If this is ok for you, Homebrew is the easiest way to 
+Homebrew may not always provide the latest version immediately. Updating Homebrew will
+automatically update ESPHome. If this is ok for you, Homebrew is the easiest way to
 install ESPHome.
 
 {{< /note >}}

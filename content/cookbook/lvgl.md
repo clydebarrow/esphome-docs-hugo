@@ -281,7 +281,7 @@ lvgl:
 
 ```
 {{< tip >}}
-The `obj` used to hide the middle part of the meter indicator line has `radius` equal to half of the `width` and `height`. This results in a circle - which is actually a square with extra large rounded corners. 
+The `obj` used to hide the middle part of the meter indicator line has `radius` equal to half of the `width` and `height`. This results in a circle - which is actually a square with extra large rounded corners.
 
 {{< /tip >}}
 {{< anchor "lvgl-cookbook-thermometer" >}}
@@ -1239,7 +1239,7 @@ Follow these steps to choose your MDI icons:
 - To lookup your icons, use the [Pictogrammers](https://pictogrammers.com/library/mdi/) site. Click on the desired icon and note its codepoint (it's the hexadecimal number near the download options).
 - To get the TrueType font with all the icons in it, head on to the [Pictogrammers GitHub repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/) and from a recent version folder, download the `materialdesignicons-webfont.ttf` file and place it in your ESPHome config directory under a folder named `fonts` (to match the example above).
 - To use the desired icon, prepend the copied codepoint with `\U000`. The Unicode character escape sequence has to start with capital `\U` and have exactly 8 hexadecimal digits.
-- To translate the escape sequence into the real glyph, make sure you enclose your strings in double quotes.    
+- To translate the escape sequence into the real glyph, make sure you enclose your strings in double quotes.
 
 {{< /tip >}}
 {{< anchor "lvgl-cookbook-ckboxmark" >}}

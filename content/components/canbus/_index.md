@@ -107,41 +107,41 @@ from the CAN frame are passed to the automation for use in lambdas.
 {{< note >}}
 Messages this node sends to the same ID will not show up as received messages.
 
-{{< /note >}}
 ```yaml
-canbus:
-  - platform: ...
-    on_frame:
-    - can_id: 43  # the received can_id
-      then:
-        - if:
-            condition:
-              lambda: 'return (x.size() > 0) ? x[0] == 0x11 : false;'
-            then:
-              light.toggle: light1
-    - can_id:      0b00000000000000000000001000000
-      can_id_mask: 0b11111000000000011111111000000
-      use_extended_id: true
-      remote_transmission_request: false
-      then:
-        - lambda: |-
-            auto pdo_id = can_id >> 14;
-            switch (pdo_id)
-            {
-              case 117:
-                ESP_LOGD("canbus", "exhaust_fan_duty");
-                break;
-              case 118:
-                ESP_LOGD("canbus", "supply_fan_duty");
-                break;
-              case 119:
-                ESP_LOGD("canbus", "supply_fan_flow");
-                break;
-              // to be continued...
-            }
-
-
 ```
+canbus:
+    - platform: ...
+        on_frame:
+        - can_id: 43  # the received can_id
+            then:
+                - if:
+                        condition:
+                            lambda: 'return (x.size() > 0) ? x[0] == 0x11 : false;'
+                        then:
+                            light.toggle: light1
+        - can_id:      0b00000000000000000000001000000
+            can_id_mask: 0b11111000000000011111111000000
+            use_extended_id: true
+            remote_transmission_request: false
+            then:
+                - lambda: |-
+                        auto pdo_id = can_id >> 14;
+                        switch (pdo_id)
+                        {
+                            case 117:
+                                ESP_LOGD("canbus", "exhaust_fan_duty");
+                                break;
+                            case 118:
+                                ESP_LOGD("canbus", "supply_fan_duty");
+                                break;
+                            case 119:
+                                ESP_LOGD("canbus", "supply_fan_flow");
+                                break;
+                            // to be continued...
+                        }
+
+
+{{< /note >}}
 **Configuration variables:**
 
 - **can_id** (**Required**, int): The CAN ID which, when received, will trigger this automation.

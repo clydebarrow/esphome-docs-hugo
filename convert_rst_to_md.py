@@ -195,17 +195,19 @@ def convert_rst_to_md(lines, filename):
             continue
         
         # Handle notes
-        if line.startswith('.. note::'):
-            md_lines.append("{{< note >}}")
+        if line.strip().startswith('.. note::'):
+            # Get the indentation level of the note directive
+            note_indent = len(line) - len(line.lstrip())
+            md_lines.append(" " * note_indent + "{{< note >}}")
             
             # Skip the blank line
             i += 2
             
             # Add note content
             note_content = []
-            indent_level = 0
+            content_indent_level = 0
             
-            while i < len(lines) and (lines[i].startswith('    ') or not lines[i].strip()):
+            while i < len(lines):
                 current_line = lines[i]
                 
                 # Empty line
@@ -216,8 +218,14 @@ def convert_rst_to_md(lines, filename):
                 
                 # Determine indentation level
                 current_indent = len(current_line) - len(current_line.lstrip())
-                if indent_level == 0:
-                    indent_level = current_indent
+                
+                # If this is the first content line, set the base indentation level
+                if content_indent_level == 0:
+                    content_indent_level = current_indent
+                
+                # If the line is not indented enough, we've reached the end of the note
+                if current_indent < note_indent + 4 and current_line.strip() and not current_line.strip().startswith('..'):
+                    break
                 
                 # Handle code blocks within notes
                 if current_line.strip().startswith('.. code-block::'):
@@ -230,19 +238,21 @@ def convert_rst_to_md(lines, filename):
                         i += 1
                     
                     # Add code content
-                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > indent_level):
+                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > content_indent_level):
                         code_line = lines[i]
-                        # Remove the extra indentation
-                        code_line = code_line[indent_level + 4:]  # 4 spaces for code block indentation
+                        # Remove the extra indentation but preserve indentation relative to the note
+                        extra_indent = current_indent - content_indent_level
+                        code_line = " " * extra_indent + code_line[content_indent_level + 4:]  # 4 spaces for code block indentation
                         note_content.append(code_line)
                         i += 1
                     
                     note_content.append('```')
                     continue
                 
-                # Regular content - remove the base indentation
-                if current_indent >= indent_level:
-                    processed_line = current_line[indent_level:]
+                # Regular content - remove the base indentation but preserve indentation relative to the note
+                if current_indent >= content_indent_level:
+                    extra_indent = max(0, current_indent - content_indent_level)
+                    processed_line = " " * extra_indent + current_line[content_indent_level:].rstrip()
                     # Process inline markup
                     processed_line = process_inline_markup(processed_line)
                     note_content.append(processed_line)
@@ -254,21 +264,23 @@ def convert_rst_to_md(lines, filename):
             
             # Add the processed note content
             md_lines.extend(note_content)
-            md_lines.append("{{< /note >}}")
+            md_lines.append(" " * note_indent + "{{< /note >}}")
             continue
         
         # Handle warnings
-        if line.startswith('.. warning::'):
-            md_lines.append("{{< warning >}}")
+        if line.strip().startswith('.. warning::'):
+            # Get the indentation level of the warning directive
+            warning_indent = len(line) - len(line.lstrip())
+            md_lines.append(" " * warning_indent + "{{< warning >}}")
             
             # Skip the blank line
             i += 2
             
             # Add warning content
             warning_content = []
-            indent_level = 0
+            content_indent_level = 0
             
-            while i < len(lines) and (lines[i].startswith('    ') or not lines[i].strip()):
+            while i < len(lines):
                 current_line = lines[i]
                 
                 # Empty line
@@ -279,8 +291,14 @@ def convert_rst_to_md(lines, filename):
                 
                 # Determine indentation level
                 current_indent = len(current_line) - len(current_line.lstrip())
-                if indent_level == 0:
-                    indent_level = current_indent
+                
+                # If this is the first content line, set the base indentation level
+                if content_indent_level == 0:
+                    content_indent_level = current_indent
+                
+                # If the line is not indented enough, we've reached the end of the warning
+                if current_indent < warning_indent + 4 and current_line.strip() and not current_line.strip().startswith('..'):
+                    break
                 
                 # Handle code blocks within warnings
                 if current_line.strip().startswith('.. code-block::'):
@@ -293,19 +311,21 @@ def convert_rst_to_md(lines, filename):
                         i += 1
                     
                     # Add code content
-                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > indent_level):
+                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > content_indent_level):
                         code_line = lines[i]
-                        # Remove the extra indentation
-                        code_line = code_line[indent_level + 4:]  # 4 spaces for code block indentation
+                        # Remove the extra indentation but preserve indentation relative to the warning
+                        extra_indent = current_indent - content_indent_level
+                        code_line = " " * extra_indent + code_line[content_indent_level + 4:]  # 4 spaces for code block indentation
                         warning_content.append(code_line)
                         i += 1
                     
                     warning_content.append('```')
                     continue
                 
-                # Regular content - remove the base indentation
-                if current_indent >= indent_level:
-                    processed_line = current_line[indent_level:]
+                # Regular content - remove the base indentation but preserve indentation relative to the warning
+                if current_indent >= content_indent_level:
+                    extra_indent = max(0, current_indent - content_indent_level)
+                    processed_line = " " * extra_indent + current_line[content_indent_level:].rstrip()
                     # Process inline markup
                     processed_line = process_inline_markup(processed_line)
                     warning_content.append(processed_line)
@@ -317,21 +337,23 @@ def convert_rst_to_md(lines, filename):
             
             # Add the processed warning content
             md_lines.extend(warning_content)
-            md_lines.append("{{< /warning >}}")
+            md_lines.append(" " * warning_indent + "{{< /warning >}}")
             continue
         
         # Handle tips
-        if line.startswith('.. tip::'):
-            md_lines.append("{{< tip >}}")
+        if line.strip().startswith('.. tip::'):
+            # Get the indentation level of the tip directive
+            tip_indent = len(line) - len(line.lstrip())
+            md_lines.append(" " * tip_indent + "{{< tip >}}")
             
             # Skip the blank line
             i += 2
             
             # Add tip content
             tip_content = []
-            indent_level = 0
+            content_indent_level = 0
             
-            while i < len(lines) and (lines[i].startswith('    ') or not lines[i].strip()):
+            while i < len(lines):
                 current_line = lines[i]
                 
                 # Empty line
@@ -342,8 +364,14 @@ def convert_rst_to_md(lines, filename):
                 
                 # Determine indentation level
                 current_indent = len(current_line) - len(current_line.lstrip())
-                if indent_level == 0:
-                    indent_level = current_indent
+                
+                # If this is the first content line, set the base indentation level
+                if content_indent_level == 0:
+                    content_indent_level = current_indent
+                
+                # If the line is not indented enough, we've reached the end of the tip
+                if current_indent < tip_indent + 4 and current_line.strip() and not current_line.strip().startswith('..'):
+                    break
                 
                 # Handle code blocks within tips
                 if current_line.strip().startswith('.. code-block::'):
@@ -356,19 +384,21 @@ def convert_rst_to_md(lines, filename):
                         i += 1
                     
                     # Add code content
-                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > indent_level):
+                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > content_indent_level):
                         code_line = lines[i]
-                        # Remove the extra indentation
-                        code_line = code_line[indent_level + 4:]  # 4 spaces for code block indentation
+                        # Remove the extra indentation but preserve indentation relative to the tip
+                        extra_indent = current_indent - content_indent_level
+                        code_line = " " * extra_indent + code_line[content_indent_level + 4:]  # 4 spaces for code block indentation
                         tip_content.append(code_line)
                         i += 1
                     
                     tip_content.append('```')
                     continue
                 
-                # Regular content - remove the base indentation
-                if current_indent >= indent_level:
-                    processed_line = current_line[indent_level:]
+                # Regular content - remove the base indentation but preserve indentation relative to the tip
+                if current_indent >= content_indent_level:
+                    extra_indent = max(0, current_indent - content_indent_level)
+                    processed_line = " " * extra_indent + current_line[content_indent_level:].rstrip()
                     # Process inline markup
                     processed_line = process_inline_markup(processed_line)
                     tip_content.append(processed_line)
@@ -380,7 +410,7 @@ def convert_rst_to_md(lines, filename):
             
             # Add the processed tip content
             md_lines.extend(tip_content)
-            md_lines.append("{{< /tip >}}")
+            md_lines.append(" " * tip_indent + "{{< /tip >}}")
             continue
         
         # Handle figures

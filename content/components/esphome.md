@@ -122,16 +122,16 @@ too many WiFi/MQTT connection attempts, Over-The-Air updates being applied or th
 It's not guaranteed that all components are in a connected state when this automation is triggered. For
 example, the MQTT client may have already disconnected. For use-cases that require specific shutdown ordering, look at the `priority` parameter.
 
-{{< /note >}}
 ```yaml
-esphome:
-  # ...
-  on_shutdown:
-    - priority: 700
-      then:
-        - switch.turn_off: switch_1
-
 ```
+esphome:
+    # ...
+    on_shutdown:
+        - priority: 700
+            then:
+                - switch.turn_off: switch_1
+
+{{< /note >}}
 Configuration variables:
 
 - **priority** (*Optional*, float): The priority to execute your custom shutdown code. A higher value

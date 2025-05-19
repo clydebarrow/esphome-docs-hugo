@@ -13,15 +13,15 @@ Although you might not plan to *export* states from the node and you do not need
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
 [Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 sensor:
-  - platform: homeassistant
-    name: "Temperature Sensor From Home Assistant"
-    entity_id: sensor.temperature_sensor
+    - platform: homeassistant
+        name: "Temperature Sensor From Home Assistant"
+        entity_id: sensor.temperature_sensor
 
-```
+{{< /note >}}
 Entity state attributes can also be imported:
 
 ```yaml

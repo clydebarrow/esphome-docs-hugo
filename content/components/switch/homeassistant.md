@@ -13,15 +13,15 @@ Although you might not plan to *export* states from the node and you do not need
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
 [Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 switch:
-  - platform: homeassistant
-    id: my_cool_switch_from_ha
-    entity_id: switch.my_cool_switch
+    - platform: homeassistant
+        id: my_cool_switch_from_ha
+        entity_id: switch.my_cool_switch
 
-```
+{{< /note >}}
 ## Configuration variables:
 
 - **entity_id** (**Required**, string): The entity ID to import / control from Home Assistant.

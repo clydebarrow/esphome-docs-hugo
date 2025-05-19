@@ -35,17 +35,17 @@ If you **must** use a software UART, note that baud rates greater than 9600 are 
 
 In short, avoid using software UARTs with Nextion displays.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 display:
-  - platform: nextion
-    id: nextion1
-    lambda: |-
-      it.set_component_value("gauge", 50);
-      it.set_component_text("textview", "Hello World!");
+    - platform: nextion
+        id: nextion1
+        lambda: |-
+            it.set_component_value("gauge", 50);
+            it.set_component_text("textview", "Hello World!");
 
-```
+{{< /warning >}}
 ## Configuration variables:
 
 - **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this display. Specify this

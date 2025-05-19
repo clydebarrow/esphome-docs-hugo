@@ -279,13 +279,13 @@ For this, you can use the tool [BitBucket Converter](https://bbconv.hrbl.pl/)
 There seems to be an overflow problem in Portisch firmware and after a short while, the bucket sniffing stops.
 You should re-call the action to reset and start sniffing again.
 
-{{< /note >}}
 ```yaml
-on_...:
-  then:
-    - rf_bridge.start_bucket_sniffing
-
 ```
+on_...:
+    then:
+        - rf_bridge.start_bucket_sniffing
+
+{{< /note >}}
 Configuration options:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.

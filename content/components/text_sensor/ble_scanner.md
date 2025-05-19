@@ -22,16 +22,16 @@ The BLE software stack on the ESP32 consumes a significant amount of RAM on the 
 configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
 audio components are most likely to cause issues.
 
-{{< /warning >}}
 ```yaml
+```
 # Example configuration entry
 esp32_ble_tracker:
 
 text_sensor:
-  - platform: ble_scanner
-    name: "BLE Devices Scanner"
+    - platform: ble_scanner
+        name: "BLE Devices Scanner"
 
-```
+{{< /warning >}}
 Example json log:
 
 ```json

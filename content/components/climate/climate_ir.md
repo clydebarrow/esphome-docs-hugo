@@ -222,19 +222,19 @@ climate:
 {{< note >}}
 - This climate IR component is also known to work with some Stiebel Eltron Units. It has been tested with Stiebel Eltron IR-Remote `KM07F` and unit `ACW 25 i`
 
-{{< /note >}}
 ```yaml
+```
 # Example configuration entry
 climate:
-  - platform: mitsubishi
-    name: "Heatpump"
-    set_fan_mode: "quiet_4levels"
-    supports_dry: "true"
-    supports_fan_only: "true"
-    horizontal_default: "left"
-    vertical_default: "down"
+    - platform: mitsubishi
+        name: "Heatpump"
+        set_fan_mode: "quiet_4levels"
+        supports_dry: "true"
+        supports_fan_only: "true"
+        horizontal_default: "left"
+        vertical_default: "down"
 
-```
+{{< /note >}}
 {{< anchor "toshiba" >}}
 
 `toshiba` **Climate**:
@@ -247,20 +247,20 @@ climate:
 
 {{< note >}}
 - While they are identified as separate models here, the `RAC-PT1411HWRU-C` and `RAC-PT1411HWRU-F` are
-  in fact the same physical model/unit. They are separated here only because different IR codes are used
-  depending on the desired unit of measurement. This only affects how temperature is displayed on the unit itself.
+    in fact the same physical model/unit. They are separated here only because different IR codes are used
+    depending on the desired unit of measurement. This only affects how temperature is displayed on the unit itself.
 
 - The `RAC-PT1411HWRU` model supports a feature Toshiba calls "Comfort Sense". The handheld remote control
-  has a built-in temperature sensor and it will periodically transmit the temperature from this sensor to the
-  AC unit. If a `sensor` is provided in the configuration with this model, the sensor's temperature will be
-  transmitted to the `RAC-PT1411HWRU` in the same manner as the original remote controller. How often the
-  temperature is transmitted is determined by the `update_interval` assigned to the `sensor`. Note that
-  `update_interval` must be less than seven minutes or the `RAC-PT1411HWRU` will revert to using its own
-  internal temperature sensor; a value of 30 seconds seems to work well. See [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-  for more information.
+    has a built-in temperature sensor and it will periodically transmit the temperature from this sensor to the
+    AC unit. If a `sensor` is provided in the configuration with this model, the sensor's temperature will be
+    transmitted to the `RAC-PT1411HWRU` in the same manner as the original remote controller. How often the
+    temperature is transmitted is determined by the `update_interval` assigned to the `sensor`. Note that
+    `update_interval` must be less than seven minutes or the `RAC-PT1411HWRU` will revert to using its own
+    internal temperature sensor; a value of 30 seconds seems to work well. See [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+    for more information.
 
 - This climate IR component is also known to work with Midea model MAP14HS1TBL and may work with other similar
-  models, as well. (Midea acquired Toshiba's product line and re-branded it.)
+    models, as well. (Midea acquired Toshiba's product line and re-branded it.)
 
 {{< /note >}}
 {{< anchor "whirlpool" >}}

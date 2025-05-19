@@ -79,10 +79,10 @@ improv_serial:
   credentials and they must be set by the user via either the `ap` + `captive_portal` or
   the `esp32_improv` / `improv_serial` components.
 - `dashboard_import`
-    .. note::
+    {{< note >}}
+The [Project information]({{< ref "components/esphome#esphome-creators_project" >}}) above is required for adoption to work in the Dashboard.
 
-        The [Project information]({{< ref "components/esphome#esphome-creators_project" >}}) above is required for adoption to work in the Dashboard.
-
+    {{< /note >}}
     - `package_import_url` - This should point to the public repository containing
       the configuration for the device so that the user's ESPHome dashboard can autodetect this device and
       create a minimal YAML using [Remote/Git Packages]({{< ref "components/packages#config-git_packages" >}}).

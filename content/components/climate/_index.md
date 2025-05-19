@@ -44,11 +44,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name of the climate device. At least one of **id** and **name** must be specified.
 
-  .. note::
+  {{< note >}}
+If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+you want the climate to use that name, you can set `name: None`.
 
-      If you have a [Configuration variables:]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
-      you want the climate to use that name, you can set `name: None`.
-
+  {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the climate device in the frontend.
 - **visual** (*Optional*): Visual settings for the climate device - these do not
   affect operation and are solely for controlling how the climate device shows up in the

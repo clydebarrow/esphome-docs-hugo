@@ -53,15 +53,14 @@ light:
   receivers and transmitters. On variants other than  `ESP32` and `ESP32-S2` only half the symbol memory is
   available to transmitters. Each symbol is 32 bits and contains two values.
 
-  .. csv-table::
-      :header: "ESP32 Variant", "Memory Size", "Block Size"
+| ESP32 | 512 symbols | 64 symbols |
+| --- | --- | --- |
+| ESP32-C3 | 192 symbols | 48 symbols |
+| ESP32-C6 | 192 symbols | 48 symbols |
+| ESP32-H2 | 192 symbols | 48 symbols |
+| ESP32-S2 | 256 symbols | 64 symbols |
+| ESP32-S3 | 384 symbols | 48 symbols |
 
-      "ESP32", "512 symbols", "64 symbols"
-      "ESP32-C3", "192 symbols", "48 symbols"
-      "ESP32-C6", "192 symbols", "48 symbols"
-      "ESP32-H2", "192 symbols", "48 symbols"
-      "ESP32-S2", "256 symbols", "64 symbols"
-      "ESP32-S3", "384 symbols", "48 symbols"
 
 - **use_dma** (*Optional*, boolean): Enable DMA on variants that support it. If enabled `rmt_symbols` controls
   the DMA buffer size and can be set to a large value.
@@ -70,13 +69,12 @@ light:
 
 - **rmt_channel** (**Required**, int): The RMT channel to use. Each LED strip needs to use a unique channel.
 
-  .. csv-table::
-      :header: "ESP32 Variant", "Channels"
+| ESP32 | "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7" |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ESP32-C3 | "0 | 1" |  |  |  |  |  |  |
+| ESP32-S2 | "0 | 1 | 2 | 3" |  |  |  |  |
+| ESP32-S3 | "0 | 1 | 2 | 3" |  |  |  |  |
 
-      "ESP32", "0, 1, 2, 3, 4, 5, 6, 7"
-      "ESP32-C3", "0, 1"
-      "ESP32-S2", "0, 1, 2, 3"
-      "ESP32-S3", "0, 1, 2, 3"
 
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 

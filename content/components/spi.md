@@ -146,13 +146,14 @@ spi_device:
 SPI devices operate in one of four modes as per the table below. The choice of mode is dictated by the requirements
 of the specific peripheral chip.
 
-.. csv-table:: Supported Modes
-    :header: "Mode", "Clock Idle Polarity", "Clock Phase", "Data shifted on", "Data sampled on"
+### Supported Modes
 
-    "0", "low", "leading", "/CS activation and falling CLK", "rising CLK"
-    "1", "low", "trailing", "rising CLK", "falling CLK"
-    "2", "high", "leading", "/CS activation and rising CLK", "falling CLK"
-    "3", "high", "trailing", "falling CLK", "rising CLK"
+| 0 | low | leading | /CS activation and falling CLK | rising CLK |
+| --- | --- | --- | --- | --- |
+| 1 | low | trailing | rising CLK | falling CLK |
+| 2 | high | leading | /CS activation and rising CLK | falling CLK |
+| 3 | high | trailing | falling CLK | rising CLK |
+
 
 
 

@@ -191,6 +191,13 @@ def convert_rst_to_md(lines, filename):
             md_lines.extend(table_lines)
             i = new_i
             continue
+            
+        # Handle csv-table directive
+        if line.strip().startswith('.. csv-table::'):
+            table_lines, new_i = process_csv_table(lines, i)
+            md_lines.extend(table_lines)
+            i = new_i
+            continue
         
         # Handle equals-style headings (main headings)
         if i + 1 < len(lines) and re.match(r'^=+$', lines[i + 1]) and line:
@@ -771,6 +778,159 @@ def process_list_table(lines, start_idx):
     
     return md_table, idx
 
+def process_csv_table(lines, start_idx):
+    """Process a csv-table directive and convert it to a Markdown table."""
+    # Extract table title and options
+    title = ""
+    header_rows = 0
+    width = ""
+    align = ""
+    delimiter = ","
+    
+    current_line = lines[start_idx].strip()
+    if current_line.startswith('.. csv-table::'):
+        title = current_line.replace('.. csv-table::', '').strip()
+    
+    # Process table options
+    idx = start_idx + 1
+    while idx < len(lines) and lines[idx].strip().startswith(':'):
+        option_line = lines[idx].strip()
+        if option_line.startswith(':header:'):
+            try:
+                header_rows = int(option_line.split(':', 2)[2].strip())
+            except (ValueError, IndexError):
+                pass
+        elif option_line.startswith(':width:'):
+            width = option_line.split(':', 2)[2].strip()
+        elif option_line.startswith(':align:'):
+            align = option_line.split(':', 2)[2].strip()
+        elif option_line.startswith(':delim:'):
+            delimiter = option_line.split(':', 2)[2].strip()
+            # Handle special delimiter cases
+            if delimiter == 'tab':
+                delimiter = '\t'
+            elif delimiter == 'space':
+                delimiter = ' '
+        elif option_line.startswith(':file:'):
+            # Handle CSV file inclusion
+            csv_file = option_line.split(':', 2)[2].strip()
+            # This would need to be implemented to read from the file
+            # For now, we'll just print a warning
+            print(f"Warning: CSV file inclusion not yet supported: {csv_file}")
+        idx += 1
+    
+    # Skip any blank lines
+    while idx < len(lines) and not lines[idx].strip():
+        idx += 1
+    
+    # Process table rows
+    table_data = []
+    
+    while idx < len(lines):
+        line = lines[idx].strip()
+        
+        # End of table when we hit a non-indented line after a blank line
+        if not line:
+            if idx + 1 < len(lines) and not lines[idx + 1].startswith('    '):
+                break
+            idx += 1
+            continue
+        
+        # End of table when we hit a line that doesn't start with whitespace
+        if not lines[idx].startswith('    '):
+            break
+        
+        # Process CSV line
+        # Remove leading whitespace but keep the rest of the line intact
+        csv_line = lines[idx][4:].rstrip('\n')
+        
+        # Split by delimiter, respecting quotes
+        import csv
+        from io import StringIO
+        
+        try:
+            reader = csv.reader(StringIO(csv_line), delimiter=delimiter)
+            row = next(reader)
+            # Improved quote stripping from values - handle both single and double quotes
+            # and make sure to strip from both beginning and end of each cell
+            processed_row = []
+            for cell in row:
+                # First strip whitespace
+                cell = cell.strip()
+                # Then strip quotes if they exist at both beginning and end
+                if (cell.startswith('"') and cell.endswith('"')) or (cell.startswith("'") and cell.endswith("'")):
+                    cell = cell[1:-1]
+                processed_row.append(cell)
+            table_data.append(processed_row)
+        except Exception as e:
+            print(f"Warning: Error parsing CSV line: {csv_line} - {e}")
+            table_data.append([csv_line])
+        
+        idx += 1
+    
+    # Generate Markdown table
+    md_table = []
+    
+    # Add title if present and not empty
+    if title and title.strip():
+        # Remove any leading colon from the title
+        if title.startswith(':'):
+            title = title[1:].strip()
+        md_table.append(f"### {title}")
+        md_table.append("")
+    
+    # Ensure all rows have the same number of columns
+    if table_data:
+        max_cols = max(len(row) for row in table_data)
+        for row in table_data:
+            while len(row) < max_cols:
+                row.append("")
+        
+        # Create the table header and separator
+        if header_rows > 0 and len(table_data) > 0:
+            # Add header row
+            header_row = table_data[0]
+            md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in header_row) + " |")
+            
+            # Add alignment to the separator row if specified
+            if align == "center":
+                md_table.append("| " + " | ".join([":---:"] * len(header_row)) + " |")
+            elif align == "right":
+                md_table.append("| " + " | ".join(["---:"] * len(header_row)) + " |")
+            elif align == "left":
+                md_table.append("| " + " | ".join([":---"] * len(header_row)) + " |")
+            else:
+                md_table.append("| " + " | ".join(["---"] * len(header_row)) + " |")
+            
+            # Add data rows
+            for row in table_data[header_rows:]:
+                md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in row) + " |")
+        else:
+            # No header specified, but we still need to add a separator after the first row
+            if table_data:
+                # Add first row
+                first_row = table_data[0]
+                md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in first_row) + " |")
+                
+                # Add separator row
+                if align == "center":
+                    md_table.append("| " + " | ".join([":---:"] * len(first_row)) + " |")
+                elif align == "right":
+                    md_table.append("| " + " | ".join(["---:"] * len(first_row)) + " |")
+                elif align == "left":
+                    md_table.append("| " + " | ".join([":---"] * len(first_row)) + " |")
+                else:
+                    md_table.append("| " + " | ".join(["---"] * len(first_row)) + " |")
+                
+                # Add remaining data rows
+                for row in table_data[1:]:
+                    md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in row) + " |")
+    
+    # Add a blank line after the table
+    md_table.append("")
+    
+    return md_table, idx
+
 def process_raw_html_button(lines, i):
     """Process raw HTML button patterns and convert them to button shortcode."""
     button_lines = []
@@ -839,11 +999,11 @@ def process_image_directive(lines, i, is_figure=False):
         if option_line.startswith(':alt:'):
             alt_text = option_line.replace(':alt:', '').strip()
         elif option_line.startswith(':width:'):
-            width = option_line.replace(':width:', '').strip()
+            width = option_line.split(':', 2)[2].strip()
         elif option_line.startswith(':height:'):
-            height = option_line.replace(':height:', '').strip()
+            height = option_line.split(':', 2)[2].strip()
         elif option_line.startswith(':align:'):
-            align = option_line.replace(':align:', '').strip()
+            align = option_line.split(':', 2)[2].strip()
         i += 1
     
     # Get caption if present (for figures)

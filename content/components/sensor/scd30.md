@@ -9,24 +9,26 @@ The `scd30` sensor platform allows you to use your Sensirion SCD30 CO₂
 ([datasheet](https://sensirion.com/media/documents/4EAF6AF8/61652C3C/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)) sensors with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
-{{< img src="scd30.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="scd30.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: scd30
-        co2:
-          name: "Workshop CO2"
-          accuracy_decimals: 1
-        temperature:
-          name: "Workshop Temperature"
-          accuracy_decimals: 2
-        humidity:
-          name: "Workshop Humidity"
-          accuracy_decimals: 1
-        temperature_offset: 1.5 °C
-        address: 0x61
-        update_interval: 5s
+```yaml
+# Example configuration entry
+sensor:
+  - platform: scd30
+    co2:
+      name: "Workshop CO2"
+      accuracy_decimals: 1
+    temperature:
+      name: "Workshop Temperature"
+      accuracy_decimals: 2
+    humidity:
+      name: "Workshop Humidity"
+      accuracy_decimals: 1
+    temperature_offset: 1.5 °C
+    address: 0x61
+    update_interval: 5s
 
+```
 ## Configuration variables:
 
 - **co2** (*Optional*): The information for the CO₂ sensor.

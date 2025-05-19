@@ -8,15 +8,17 @@ title: "GPIO Binary Sensor"
 The GPIO Binary Sensor platform allows you to use any input pin on your
 device as a binary sensor.
 
-{{< img src="gpio-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="gpio-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    binary_sensor:
-      - platform: gpio
-        pin: D2
-        name: "Living Room Window"
-        device_class: window
+```yaml
+# Example configuration entry
+binary_sensor:
+  - platform: gpio
+    pin: D2
+    name: "Living Room Window"
+    device_class: window
 
+```
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to periodically check.

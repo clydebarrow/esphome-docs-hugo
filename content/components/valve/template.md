@@ -8,27 +8,29 @@ title: "Template Valve"
 The `template` valve platform allows you to create simple valves out of just a few actions and a value lambda. Once
 defined, it will automatically appear in Home Assistant as a valve and can be controlled through the frontend.
 
-{{< img src="valve-ui.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
+{{< img src="valve-ui.png" alt="Image" class="center" >}}
 
-    # Example configuration entry
-    valve:
-      - platform: template
-        name: "Template Valve"
-        lambda: |-
-          if (id(top_end_stop).state) {
-            return VALVE_OPEN;
-          } else {
-            return VALVE_CLOSED;
-          }
-        open_action:
-          - switch.turn_on: open_valve_switch
-        close_action:
-          - switch.turn_on: close_valve_switch
-        stop_action:
-          - switch.turn_on: stop_valve_switch
-        optimistic: true
+```yaml
+# Example configuration entry
+valve:
+  - platform: template
+    name: "Template Valve"
+    lambda: |-
+      if (id(top_end_stop).state) {
+        return VALVE_OPEN;
+      } else {
+        return VALVE_CLOSED;
+      }
+    open_action:
+      - switch.turn_on: open_valve_switch
+    close_action:
+      - switch.turn_on: close_valve_switch
+    stop_action:
+      - switch.turn_on: stop_valve_switch
+    optimistic: true
 
 
+```
 Possible return values for the optional lambda:
 
  - `return VALVE_OPEN;` if the valve should be reported as OPEN.

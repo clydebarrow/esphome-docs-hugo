@@ -149,8 +149,9 @@ should see the ESPHome device show up in the discovered section (although this c
 Alternatively, you can manually add the device by clicking **CONFIGURE** on the ESPHome integration
 and entering `<NODE_NAME>.local` as the host.
 
-{{< img src="gpio-ui.png" alt="Image" caption="After the first upload, you will probably never need to use the USB" class="center" >}}
+{{< img src="gpio-ui.png" alt="Image" class="center" >}}
 
+After the first upload, you will probably never need to use the USB
 cable again, as all features of ESPHome are enabled remotely as well.
 No more opening hidden boxes stowed in places hard to reach. Yay!
 
@@ -187,9 +188,9 @@ esphome run livingroom.yaml
 docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome run livingroom.yaml
 
 ```
-{{< img src="gpio-ui.png" alt="Image" caption="Where To Go Next" >}}
+{{< img src="gpio-ui.png" alt="Image" >}}
 
-----------------
+## Where To Go Next
 
 Great 🎉! You've now successfully set up your first ESPHome project
 and uploaded your first ESPHome custom firmware to your node. You've
@@ -232,9 +233,9 @@ After that, you will be able to access the ESPHome Device Builder at `localhost:
 
 Logging level can be set with the env var `ESPHOME_LOG_LEVEL` (default is `INFO`).
 
-{{< img src="dashboard_states.png" alt="Image" caption="See Also" >}}
+{{< img src="dashboard_states.png" alt="Image" >}}
 
---------
+## See Also
 
 - [cli]({{< ref "cli/" >}})
 - [ESPHome index ]({{< relref "/index" >}})

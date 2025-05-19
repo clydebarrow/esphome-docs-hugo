@@ -22,23 +22,25 @@ The external temperature sensor is not supported on the IBS-TH1 Mini or IBS-TH2
 {{< /note >}}
 {{< img src="inkbird_isbth1_mini-full.jpg" alt="Image" caption="Inkbird IBS-TH1 Mini Temperature and Humidity Sensor over BLE." width="80.0%" class="center" >}}
 
-{{< img src="inkbird_isbth1_mini-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="inkbird_isbth1_mini-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    esp32_ble_tracker:
+```yaml
+# Example configuration entry
+esp32_ble_tracker:
 
-    sensor:
-      - platform: inkbird_ibsth1_mini
-        mac_address: XX:XX:XX:XX:XX:XX
-        temperature:
-          name: "Inkbird IBS-TH1 Temperature"
-        external_temperature:
-          name: "Inkburd IBS-TH1 External Temperature"
-        humidity:
-          name: "Inkbird IBS-TH1 Humidity"
-        battery_level:
-          name: "Inkbird IBS-TH1 Battery Level"
+sensor:
+  - platform: inkbird_ibsth1_mini
+    mac_address: XX:XX:XX:XX:XX:XX
+    temperature:
+      name: "Inkbird IBS-TH1 Temperature"
+    external_temperature:
+      name: "Inkburd IBS-TH1 External Temperature"
+    humidity:
+      name: "Inkbird IBS-TH1 Humidity"
+    battery_level:
+      name: "Inkbird IBS-TH1 Battery Level"
 
+```
 ## Configuration variables:
 
 - **mac_address** (**Required**, MAC Address): The MAC address of the Inkbird IBS-TH1 device.

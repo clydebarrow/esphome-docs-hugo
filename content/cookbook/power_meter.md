@@ -11,17 +11,19 @@ The simple idea therefore is: Why don't we just abuse that functionality to make
 
 Hooking it all up is quite easy: Just buy a suitable photoresistor (make sure the wave length approximately matches the one from your power meter). Then connect it using a simple variable resistor divider (see [this article](https://blog.udemy.com/arduino-ldr/) for inspiration). And... that should already be it :)
 
-{{< img src="power_meter-header.jpg" alt="Image" caption=".. note::" width="80.0%" class="center" >}}
+{{< img src="power_meter-header.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    Some energy meters have an exposed [S0 port](https://en.wikipedia.org/wiki/S_interface) (which essentially just is a switch that closes), if that is the case the photodiode can be replaced with the following connection.
+{{< note >}}
+Some energy meters have an exposed [S0 port](https://en.wikipedia.org/wiki/S_interface) (which essentially just is a switch that closes), if that is the case the photodiode can be replaced with the following connection.
 
-    ```
-    S0 ------------ VCC
-    S0 --+-- 10k -- GND
-    .    |
-    .    +--------- GPIO12
+```yaml
+S0 ------------ VCC
+S0 --+-- 10k -- GND
+.    |
+.    +--------- GPIO12
+```
 
-    ```
+{{< /note >}}
 For ESPHome, you can then use the [pulse meter sensor ]({{< relref "/components/sensor/pulse_meter" >}}) using below configuration:
 
 ```yaml

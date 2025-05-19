@@ -15,31 +15,33 @@ configuration. Memory-intensive components such as [/components/voice_assistant]
 audio components are most likely to cause issues.
 
 {{< /warning >}}
-{{< img src="esp32_ble-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="esp32_ble-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    esp32_ble_tracker:
+```yaml
+# Example configuration entry
+esp32_ble_tracker:
 
-    binary_sensor:
-      # Presence based on MAC address
-      - platform: ble_presence
-        mac_address: XX:XX:XX:XX:XX:XX
-        name: "ESP32 BLE Tracker Google Home Mini"
-        min_rssi: -80dB
-      # Presence based on Identity Resolving Key (IRK)
-      - platform: ble_presence
-        irk: 1234567890abcdef1234567890abcdef
-        name: "ESP32 BLE Tracker iPhone"
-      # Presence based on BLE Service UUID
-      - platform: ble_presence
-        service_uuid: '11aa'
-        name: "ESP32 BLE Tracker Test Service 16 bit"
-        timeout: 45s
-      # Presence based on iBeacon UUID
-      - platform: ble_presence
-        ibeacon_uuid: '68586f1e-89c2-11eb-8dcd-0242ac130003'
-        name: "ESP32 BLE Tracker Test Service iBeacon"
+binary_sensor:
+  # Presence based on MAC address
+  - platform: ble_presence
+    mac_address: XX:XX:XX:XX:XX:XX
+    name: "ESP32 BLE Tracker Google Home Mini"
+    min_rssi: -80dB
+  # Presence based on Identity Resolving Key (IRK)
+  - platform: ble_presence
+    irk: 1234567890abcdef1234567890abcdef
+    name: "ESP32 BLE Tracker iPhone"
+  # Presence based on BLE Service UUID
+  - platform: ble_presence
+    service_uuid: '11aa'
+    name: "ESP32 BLE Tracker Test Service 16 bit"
+    timeout: 45s
+  # Presence based on iBeacon UUID
+  - platform: ble_presence
+    ibeacon_uuid: '68586f1e-89c2-11eb-8dcd-0242ac130003'
+    name: "ESP32 BLE Tracker Test Service iBeacon"
 
+```
 {{< note >}}
 Service UUID can be 16 bit long, as in the example, but it can also be 32 bit long
 like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.

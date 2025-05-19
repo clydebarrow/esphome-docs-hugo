@@ -10,13 +10,15 @@ where a misbehaving component is preventing Over-The-Air updates from completing
 
 This component requires [/components/safe_mode]({{< ref "/components/safe_mode" >}}) to be configured.
 
-{{< img src="safemode-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="safemode-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    button:
-      - platform: safe_mode
-        name: "Living Room Restart (Safe Mode)"
+```yaml
+# Example configuration entry
+button:
+  - platform: safe_mode
+    name: "Living Room Restart (Safe Mode)"
 
+```
 ## Configuration variables:
 
 - All options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).

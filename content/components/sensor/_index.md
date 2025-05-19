@@ -192,7 +192,9 @@ or connect the values exactly using multiple linear equations. You need to suppl
 values. When using `least_squares` and more than two values are given a linear solution will be
 calculated and may not represent each value exactly.
 
-{{< img src="sensor_filter_calibrate_linear.png" alt="Image" caption=".. _sensor-filter-calibrate_polynomial:" width="50.0%" class="center" >}}
+{{< img src="sensor_filter_calibrate_linear.png" alt="Image" width="50.0%" class="center" >}}
+
+{{< anchor "sensor-filter-calibrate_polynomial" >}}
 
 `calibrate_polynomial`
 ************************

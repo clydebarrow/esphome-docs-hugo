@@ -11,19 +11,21 @@ configuration for this sensor to work. It requires also to have a temperature
 sensor in the liquid tank; this can be on the same board or an external sensor
 linked to the uFire EC configuration.
 
-{{< img src="ufire_ec.png" alt="Image" caption=".. code-block:: yaml" width="100.0%" class="center" >}}
+{{< img src="ufire_ec.png" alt="Image" width="100.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: ufire_ec
-        id: ufire_ec_board
-        temperature:
-          id: temperature_liquit
-          name: Temperature
-        ec:
-          name: EC
+```yaml
+# Example configuration entry
+sensor:
+  - platform: ufire_ec
+    id: ufire_ec_board
+    temperature:
+      id: temperature_liquit
+      name: Temperature
+    ec:
+      name: EC
 
 
+```
 ## Configuration variables:
 
 - **address** (*Optional*, int): Specify the I²C address of the sensor. Defaults to `0x3C`.

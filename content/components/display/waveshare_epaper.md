@@ -45,29 +45,31 @@ configuration.
 `RESET` (Optional) Any GPIO              `reset_pin`
 ==================== ===================== =====================
 
-{{< img src="waveshare_epaper-pins.jpg" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
+{{< img src="waveshare_epaper-pins.jpg" alt="Image" width="60.0%" class="center" >}}
 
-    # Example configuration entry
-    font:
-      - file: 'fonts/Comic Sans MS.ttf'
-        id: font1
-        size: 8
+```yaml
+# Example configuration entry
+font:
+  - file: 'fonts/Comic Sans MS.ttf'
+    id: font1
+    size: 8
 
-    spi:
-      clk_pin: D0
-      mosi_pin: D1
+spi:
+  clk_pin: D0
+  mosi_pin: D1
 
-    display:
-      - platform: waveshare_epaper
-        cs_pin: D2
-        dc_pin: D3
-        busy_pin: D4
-        reset_pin: D5
-        model: 2.90in
-        full_update_every: 30
-        lambda: |-
-          it.print(0, 0, id(font1), "Hello World!");
+display:
+  - platform: waveshare_epaper
+    cs_pin: D2
+    dc_pin: D3
+    busy_pin: D4
+    reset_pin: D5
+    model: 2.90in
+    full_update_every: 30
+    lambda: |-
+      it.print(0, 0, id(font1), "Hello World!");
 
+```
 For the 7-color display, colors can be defined like this in the lambda function:
 
 ```yaml

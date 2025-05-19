@@ -431,10 +431,17 @@ footer {
 }
 
 .footer-logo {
-  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  height: 100px;
 }
 
 .footer-links {
+  justify-content: right;
   display: flex;
   flex-wrap: wrap;
   gap: 3em;

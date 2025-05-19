@@ -10,8 +10,9 @@ With some simple math it is possible to either determine the height of the senso
 This guide can be applied to any sensor measuring temperature and pressure at the same time, like the
 [/components/sensor/bme680]({{< ref "/components/sensor/bme680" >}}), or [/components/sensor/bmp280]({{< ref "/components/sensor/bmp280" >}}).
 
-{{< img src="bme280-header.jpg" alt="Image" caption="The first step is to connect the sensor as described :doc:`here </components/sensor/bme280>`." width="75.0%" class="center" >}}
+{{< img src="bme280-header.jpg" alt="Image" width="75.0%" class="center" >}}
 
+The first step is to connect the sensor as described [here ]({{< relref "/components/sensor/bme280" >}}).
 After validating the sensor is working, we can proceed and add some formulas.
 In the example below, modify `platform: bme280` as appropriate for your hardware (either `bme280_i2c` or `bme280_spi`). See [/components/sensor/bme280]({{< ref "/components/sensor/bme280" >}}) for specific details.
 

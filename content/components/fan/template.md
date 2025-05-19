@@ -7,17 +7,19 @@ title: "Template Fan"
 
 The `template` fan platform lets you create a fan interface using only triggers.
 
-{{< img src="fan-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    fan:
-      - platform: template
-        name: "Virtual Fan"
-        on_state:
-          - do something
-        on_speed_set:
-          - do something
+```yaml
+# Example configuration entry
+fan:
+  - platform: template
+    name: "Virtual Fan"
+    on_state:
+      - do something
+    on_speed_set:
+      - do something
 
+```
 ## Configuration variables:
 
 - **has_direction** (*Optional*, boolean): Indicates if there should be a control for direction.  Default is `false`.

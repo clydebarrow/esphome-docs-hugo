@@ -11,19 +11,21 @@ required to be set up in your configuration for this sensor to work.
 It required also to have an temperature sensor in the liquid tank; this can
 be on the same board or external sensor linked to the uFire ISE pH configuration.
 
-{{< img src="ufire_ise.png" alt="Image" caption=".. code-block:: yaml" width="100.0%" class="center" >}}
+{{< img src="ufire_ise.png" alt="Image" width="100.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: ufire_ise
-        id: ufire_ise_board
-        temperature:
-          id: temperature_liquid
-          name: Temperature
-        ph:
-          name: pH
+```yaml
+# Example configuration entry
+sensor:
+  - platform: ufire_ise
+    id: ufire_ise_board
+    temperature:
+      id: temperature_liquid
+      name: Temperature
+    ph:
+      name: pH
 
 
+```
 ## Configuration variables:
 
 - **address** (*Optional*, int): Specify the I²C address of the sensor. Defaults to `0x3f`.

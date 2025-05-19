@@ -10,15 +10,17 @@ The `monochromatic` light platform creates a simple brightness-only light from a
 
 {{< img src="monochromatic-strip.jpg" alt="Image" caption="Example of a brightness-only LED strip that can be used with this component." width="75.0%" class="center" >}}
 
-{{< img src="kitchen-lights.png" alt="Image" caption=".. code-block:: yaml" width="40.0%" class="center" >}}
+{{< img src="kitchen-lights.png" alt="Image" width="40.0%" class="center" >}}
 
-    # Example configuration entry
-    light:
-      - platform: monochromatic
-        name: "Kitchen Lights"
-        output: output_component1
+```yaml
+# Example configuration entry
+light:
+  - platform: monochromatic
+    name: "Kitchen Lights"
+    output: output_component1
 
 
+```
 ## Configuration variables:
 
 - **output** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.
@@ -26,8 +28,9 @@ The `monochromatic` light platform creates a simple brightness-only light from a
 
 ## See Also
 
-{{< img src="monochromatic-detail.jpg" alt="Image" caption="- :doc:`/components/output/index`" width="75.0%" class="center" >}}
+{{< img src="monochromatic-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
+- [/components/output/index]({{< ref "/components/output/index" >}})
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - [/components/light/binary]({{< ref "/components/light/binary" >}})
 - [/components/power_supply]({{< ref "/components/power_supply" >}})

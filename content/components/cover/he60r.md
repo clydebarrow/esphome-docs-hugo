@@ -5,8 +5,9 @@ title: "HE60R Garage Door Opener"
 
 {{< seo description="" image="" >}}
 
-{{< img src="he60r.jpg" alt="Image" caption="The ``he60r`` cover platform allows you to control a HomEntry HE60R" class="right" >}}
+{{< img src="he60r.jpg" alt="Image" class="right" >}}
 
+The `he60r` cover platform allows you to control a HomEntry HE60R
 garage door opener. These units were made by Chamberlain and sold through Bunnings. It is *likely* that this
 component will also work with other older Chamberlain garage door openers. It is not currently compatible with
 newer Chamberlain units that use the Security+ 2.0 protocol.
@@ -52,7 +53,9 @@ the ESP32 via USB from 5V. This circuit also includes a manual control button co
 Any microcontroller board supported by ESPHome should be suitable for this application.
 
 
-{{< img src="he60r-sch.jpg" alt="Image" caption="Note that this circuit inverts the TX line. A configuration for this would look something like:" >}}
+{{< img src="he60r-sch.jpg" alt="Image" >}}
+
+Note that this circuit inverts the TX line. A configuration for this would look something like:
 
 ```yaml
 # Example configuration entry

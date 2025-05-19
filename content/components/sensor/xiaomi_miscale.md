@@ -16,16 +16,18 @@ XMTZC01HM, XMTZC04HM, XMTZC02HM, XMTZC05HM
 
 Miscale (left) measures weight only. Miscale2 (right) measures weight and impedance.
 
-{{< img src="xiaomi_miscale.jpg" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
+{{< img src="xiaomi_miscale.jpg" alt="Image" width="60.0%" class="center" >}}
 
-    sensor:
-      - platform: xiaomi_miscale
-        mac_address: XX:XX:XX:XX:XX:XX
-        weight:
-          name: "Xiaomi Mi Scale Weight"
-        impedance:
-          name: "Xiaomi Mi Scale Impedance"
+```yaml
+sensor:
+  - platform: xiaomi_miscale
+    mac_address: XX:XX:XX:XX:XX:XX
+    weight:
+      name: "Xiaomi Mi Scale Weight"
+    impedance:
+      name: "Xiaomi Mi Scale Impedance"
 
+```
 ## Configuration variables:
 
 - **mac_address** (**Required**, MAC Address): The MAC address of the scale.

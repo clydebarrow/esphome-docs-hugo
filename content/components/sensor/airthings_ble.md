@@ -39,8 +39,9 @@ Airthings Wave Plus Sensor
 
 AirThings Wave Plus tracks radon (24h and long term), airborne chemicals, CO2, temperature, atmospheric pressure and humidity.
 
-{{< img src="airthings_wave_plus.jpg" alt="Image" caption="Configuration example:" width="60.0%" class="center" >}}
+{{< img src="airthings_wave_plus.jpg" alt="Image" width="60.0%" class="center" >}}
 
+Configuration example:
 **********************
 
 
@@ -82,7 +83,9 @@ Airthings Wave Mini Sensor
 
 AirThings Wave Mini tracks airborne chemicals, temperature, pressure and humidity.
 
-{{< img src="airthings_wave_mini.jpg" alt="Image" caption="Configuration example:" width="60.0%" class="center" >}}
+{{< img src="airthings_wave_mini.jpg" alt="Image" width="60.0%" class="center" >}}
+
+Configuration example:
 
 ```yaml
 sensor:

@@ -8,20 +8,22 @@ title: "Generic Output Button"
 The `output` button platform allows you to use any output component as a button. This can for example be used to
 momentarily set a GPIO pin using a button.
 
-{{< img src="generic-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="generic-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    output:
-      - platform: gpio
-        pin: GPIOXX
-        id: output1
+```yaml
+# Example configuration entry
+output:
+  - platform: gpio
+    pin: GPIOXX
+    id: output1
 
-    button:
-      - platform: output
-        name: "Generic Output"
-        output: output1
-        duration: 500ms
+button:
+  - platform: output
+    name: "Generic Output"
+    output: output1
+    duration: 500ms
 
+```
 ## Configuration variables:
 
 - **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.

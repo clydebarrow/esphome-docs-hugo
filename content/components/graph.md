@@ -10,7 +10,9 @@ memory at the time the sensor updates and will be lost when the device reboots.
 
 Examples:
 
-{{< img src="display_rendering_graph.png" alt="Image" caption="Graph component with options for grids, border and line-types." class="center" >}}
+{{< img src="display_rendering_graph.png" alt="Image" class="center" >}}
+
+Graph component with options for grids, border and line-types.
 
 ```yaml
 graph:

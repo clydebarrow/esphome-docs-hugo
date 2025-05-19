@@ -20,6 +20,7 @@ anchor_map = {}
 image_map = defaultdict(int)
 image_sources = {}
 
+
 def build_anchor_map(input_dir):
     """Scan all RST files and build a map of anchors to their document paths."""
     print("Building anchor map...")
@@ -698,7 +699,7 @@ def process_image_directive(lines, i, is_figure=False):
     height = ""
     align = ""
     
-    while i < len(lines) and (not lines[i].strip() or lines[i].strip().startswith(':')):
+    while i < len(lines) and (not lines[i].strip() or lines[i].startswith('  ') and lines[i].strip().startswith(':')):
         option_line = lines[i].strip()
         if option_line.startswith(':alt:'):
             alt_text = option_line.replace(':alt:', '').strip()
@@ -711,12 +712,13 @@ def process_image_directive(lines, i, is_figure=False):
         i += 1
     
     # Get caption if present (for figures)
-    if i < len(lines) and lines[i].strip() and is_figure:
-        caption = lines[i].strip()
+    while i < len(lines) and lines[i].startswith('  ') and is_figure:
+        caption += lines[i].strip()
         i += 1
-        # Skip any blank lines after the caption
-        while i < len(lines) and not lines[i].strip():
-            i += 1
+
+    # Skip any blank lines after the caption
+    while i < len(lines) and not lines[i].strip():
+        i += 1
     
     # Escape quotes in alt text and caption
     if alt_text:

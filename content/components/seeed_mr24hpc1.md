@@ -411,9 +411,9 @@ Then replace all instances of `{$DEVICE}` with your device name
 
 The result:
 
-{{< img src="seeed-mr24hpc1-card.png" alt="Image" caption="See Also" class="center" >}}
+{{< img src="seeed-mr24hpc1-card.png" alt="Image" class="center" >}}
 
---------
+## See Also
 
 - [Official Using Documents for Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite](https://wiki.seeedstudio.com/Radar_MR24HPC1/)
 - [Official Using Documents for Seeed Studio mmWave Human Detection Sensor Kit](https://wiki.seeedstudio.com/mmwave_human_detection_kit/)

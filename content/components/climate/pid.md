@@ -153,8 +153,9 @@ deadband_parameters:
 In this example the deadband is between `20.0°C - 21.5°C`. The PID controller will limit any output
 variation inside this deadband. How it limits depends on how you set the `Deadband Multipliers`_.
 
-{{< img src="deadband1.png" alt="Image" caption="Deadband Multipliers" >}}
+{{< img src="deadband1.png" alt="Image" >}}
 
+Deadband Multipliers
 ********************
 
 Deadband Multipliers tell the controller how to operate when inside of the deadband.
@@ -184,8 +185,9 @@ deadband_parameters:
   deadband_output_averaging_samples: 15   # average the output over 15 samples within the deadband
 
 ```
-{{< img src="deadband2.png" alt="Image" caption="Deadband Output Averaging Samples" >}}
+{{< img src="deadband2.png" alt="Image" >}}
 
+Deadband Output Averaging Samples
 *********************************
 Since we expect the PID Controller to be at equilibrium while inside the deadband, we can
 average the output over a longer range of samples, like 15 samples. This helps even further

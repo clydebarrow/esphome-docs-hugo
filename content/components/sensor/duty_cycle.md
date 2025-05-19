@@ -11,14 +11,16 @@ on a GPIO pin is HIGH or LOW.
 For example, you can measure if a status LED of a pool controller is permanently active
 (indicating that the pump is on) or blinking.
 
-{{< img src="duty_cycle-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="duty_cycle-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: duty_cycle
-        pin: D0
-        name: Duty Cycle Sensor
+```yaml
+# Example configuration entry
+sensor:
+  - platform: duty_cycle
+    pin: D0
+    name: Duty Cycle Sensor
 
+```
 ## Configuration variables:
 
 - **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to observe for the duty

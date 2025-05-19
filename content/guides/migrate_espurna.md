@@ -17,8 +17,9 @@ file. Then, generate and download the binary:
   button, wait for the compilation to end and press the `DOWNLOAD BINARY`
   button.
 
-{{< img src="download_binary.png" alt="Image" caption="- **Using the command line**: run ``esphome compile livingroom.yaml`` (replacing" >}}
+{{< img src="download_binary.png" alt="Image" >}}
 
+- **Using the command line**: run `esphome compile livingroom.yaml` (replacing
   `livingroom.yaml` with your configuration file of course) and navigate to the
   `<NODE_NAME>/.pioenvs/<NODE_NAME>/` folder. There you will find a `firmware.bin` file,
   this is the binary you will upload.
@@ -28,8 +29,9 @@ file. Then, generate and download the binary:
 To upload the binary, navigate to the ESPurna web interface and enter the
 "General " section.
 
-{{< img src="espurna_ota.png" alt="Image" caption="In the \"Upgrade\" section, choose the binary you previously downloaded and press \"Upgrade\"." width="80.0%" class="center" >}}
+{{< img src="espurna_ota.png" alt="Image" width="80.0%" class="center" >}}
 
+In the "Upgrade" section, choose the binary you previously downloaded and press "Upgrade".
 If everything succeeds, you should now have ESPHome on your node 🎉
 
 {{< note >}}
@@ -37,7 +39,9 @@ with ESPHome, you in most cases won't need to worry about the available flash si
 the binary only ever includes the code that you are actually using.
 
 {{< /note >}}
-{{< img src="espurna_upload.png" alt="Image" caption="Happy Hacking!" width="90.0%" class="center" >}}
+{{< img src="espurna_upload.png" alt="Image" width="90.0%" class="center" >}}
+
+Happy Hacking!
 
 ## See Also
 

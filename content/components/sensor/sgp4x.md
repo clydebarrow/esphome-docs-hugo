@@ -19,17 +19,19 @@ the front end at the update_interval, saving wifi power and network
 communication.
 
 {{< /note >}}
-{{< img src="sgp40.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="sgp40.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: sgp4x
-        voc:
-          name: "VOC Index"
-        nox:
-          name: "NOx Index"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: sgp4x
+    voc:
+      name: "VOC Index"
+    nox:
+      name: "NOx Index"
 
 
+```
 ## Configuration variables:
 
 - **voc** (*Optional*): VOC Index

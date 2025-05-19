@@ -8,8 +8,9 @@ title: "Installing ESPHome Manually"
 
 Download Python from [the official site](https://www.python.org/downloads/).
 
-{{< img src="python-win-installer.png" alt="Python installer window with arrows pointing to \"Add Python to PATH\" and \"Install Now\"" caption="Make sure you check \"Add Python to PATH\", and go all the way through the" width="75.0%" class="center" >}}
+{{< img src="python-win-installer.png" alt="Python installer window with arrows pointing to \"Add Python to PATH\" and \"Install Now\"" width="75.0%" class="center" >}}
 
+Make sure you check "Add Python to PATH", and go all the way through the
 installer.
 
 Log out and back in, or restart your computer. Whichever is easiest.

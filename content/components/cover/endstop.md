@@ -18,28 +18,30 @@ the current position can be approximated.
 Additionally, open and close durations must be specified to allow ESPHome to approximate the
 current position of the cover.
 
-{{< img src="more-info-ui.png" alt="Image" caption=".. code-block:: yaml" width="75.0%" class="center" >}}
+{{< img src="more-info-ui.png" alt="Image" width="75.0%" class="center" >}}
 
-    # Example configuration entry
-    cover:
-      - platform: endstop
-        name: "Endstop Cover"
+```yaml
+# Example configuration entry
+cover:
+  - platform: endstop
+    name: "Endstop Cover"
 
-        open_action:
-          - switch.turn_on: open_cover_switch
-        open_duration: 2.1min
-        open_endstop: open_endstop_binary_sensor
+    open_action:
+      - switch.turn_on: open_cover_switch
+    open_duration: 2.1min
+    open_endstop: open_endstop_binary_sensor
 
-        close_action:
-          - switch.turn_on: close_cover_switch
-        close_duration: 2min
-        close_endstop: close_endstop_binary_sensor
+    close_action:
+      - switch.turn_on: close_cover_switch
+    close_duration: 2min
+    close_endstop: close_endstop_binary_sensor
 
-        stop_action:
-          - switch.turn_off: open_cover_switch
-          - switch.turn_off: close_cover_switch
+    stop_action:
+      - switch.turn_off: open_cover_switch
+      - switch.turn_off: close_cover_switch
 
 
+```
 ## Configuration variables:
 
 - **open_action** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should

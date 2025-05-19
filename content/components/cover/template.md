@@ -9,27 +9,29 @@ The `template` cover platform allows you to create simple covers out of just a f
 actions and a value lambda. Once defined, it will automatically appear in Home Assistant
 as a cover and can be controlled through the frontend.
 
-{{< img src="cover-ui.png" alt="Image" caption=".. code-block:: yaml" width="75.0%" class="center" >}}
+{{< img src="cover-ui.png" alt="Image" width="75.0%" class="center" >}}
 
-    # Example configuration entry
-    cover:
-      - platform: template
-        name: "Template Cover"
-        lambda: |-
-          if (id(top_end_stop).state) {
-            return COVER_OPEN;
-          } else {
-            return COVER_CLOSED;
-          }
-        open_action:
-          - switch.turn_on: open_cover_switch
-        close_action:
-          - switch.turn_on: close_cover_switch
-        stop_action:
-          - switch.turn_on: stop_cover_switch
-        optimistic: true
+```yaml
+# Example configuration entry
+cover:
+  - platform: template
+    name: "Template Cover"
+    lambda: |-
+      if (id(top_end_stop).state) {
+        return COVER_OPEN;
+      } else {
+        return COVER_CLOSED;
+      }
+    open_action:
+      - switch.turn_on: open_cover_switch
+    close_action:
+      - switch.turn_on: close_cover_switch
+    stop_action:
+      - switch.turn_on: stop_cover_switch
+    optimistic: true
 
 
+```
 Possible return values for the optional lambda:
 
  - `return COVER_OPEN;` / `return 1.0f;` if the cover should be reported as OPEN.

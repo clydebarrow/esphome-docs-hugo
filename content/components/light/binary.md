@@ -8,15 +8,17 @@ title: "Binary Light"
 The `binary` light platform creates a simple ON/OFF-only light from a
 [Output Component]({{< ref "components/output/_index#output" >}}).
 
-{{< img src="binary-ui.png" alt="Image" caption=".. code-block:: yaml" width="40.0%" class="center" >}}
+{{< img src="binary-ui.png" alt="Image" width="40.0%" class="center" >}}
 
-    # Example configuration entry
-    light:
-      - platform: binary
-        name: "Desk Lamp"
-        output: light_output
+```yaml
+# Example configuration entry
+light:
+  - platform: binary
+    name: "Desk Lamp"
+    output: light_output
 
 
+```
 ## Configuration variables:
 
 - **output** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the binary [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.

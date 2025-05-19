@@ -166,9 +166,9 @@ Configuration variables:
 
   - All options from [Base Text Sensor Configuration]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
-{{< img src="bme680-bsec-ui.png" alt="Image" caption="Advanced configuration" width="80.0%" class="center" >}}
+{{< img src="bme680-bsec-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-----------------------
+## Advanced configuration
 
 The following configuration shows all the available sensors and optional settings for the component. It also includes an example of filtering to guard against
 outliers, limit the number of updates sent to home assistant and reduce storage requirements in other systems such as influxdb used to store historical data.

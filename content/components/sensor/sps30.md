@@ -12,44 +12,46 @@ This sensor supports both UART and I²C communication. However, at the moment on
 
 .. _Sparkfun: https://www.sparkfun.com/products/15103
 
-{{< img src="sensirion-pm.png" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
+{{< img src="sensirion-pm.png" alt="Image" width="50.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: sps30
-        pm_1_0:
-          name: "Workshop PM <1µm Weight concentration"
-          id: "workshop_PM_1_0"
-        pm_2_5:
-          name: "Workshop PM <2.5µm Weight concentration"
-          id: "workshop_PM_2_5"
-        pm_4_0:
-          name: "Workshop PM <4µm Weight concentration"
-          id: "workshop_PM_4_0"
-        pm_10_0:
-          name: "Workshop PM <10µm Weight concentration"
-          id: "workshop_PM_10_0"
-        pmc_0_5:
-          name: "Workshop PM <0.5µm Number concentration"
-          id: "workshop_PMC_0_5"
-        pmc_1_0:
-          name: "Workshop PM <1µm Number concentration"
-          id: "workshop_PMC_1_0"
-        pmc_2_5:
-          name: "Workshop PM <2.5µm Number concentration"
-          id: "workshop_PMC_2_5"
-        pmc_4_0:
-          name: "Workshop PM <4µm Number concentration"
-          id: "workshop_PMC_4_0"
-        pmc_10_0:
-          name: "Workshop PM <10µm Number concentration"
-          id: "workshop_PMC_10_0"
-        pm_size:
-          name: "Typical Particle size"
-          id: "pm_size"
-        address: 0x69
-        update_interval: 10s
+```yaml
+# Example configuration entry
+sensor:
+  - platform: sps30
+    pm_1_0:
+      name: "Workshop PM <1µm Weight concentration"
+      id: "workshop_PM_1_0"
+    pm_2_5:
+      name: "Workshop PM <2.5µm Weight concentration"
+      id: "workshop_PM_2_5"
+    pm_4_0:
+      name: "Workshop PM <4µm Weight concentration"
+      id: "workshop_PM_4_0"
+    pm_10_0:
+      name: "Workshop PM <10µm Weight concentration"
+      id: "workshop_PM_10_0"
+    pmc_0_5:
+      name: "Workshop PM <0.5µm Number concentration"
+      id: "workshop_PMC_0_5"
+    pmc_1_0:
+      name: "Workshop PM <1µm Number concentration"
+      id: "workshop_PMC_1_0"
+    pmc_2_5:
+      name: "Workshop PM <2.5µm Number concentration"
+      id: "workshop_PMC_2_5"
+    pmc_4_0:
+      name: "Workshop PM <4µm Number concentration"
+      id: "workshop_PMC_4_0"
+    pmc_10_0:
+      name: "Workshop PM <10µm Number concentration"
+      id: "workshop_PMC_10_0"
+    pm_size:
+      name: "Typical Particle size"
+      id: "pm_size"
+    address: 0x69
+    update_interval: 10s
 
+```
 ## Configuration variables:
 
 - **pm_1_0** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 1μm. Readings in µg/m³.
@@ -104,7 +106,9 @@ This sensor supports both UART and I²C communication. However, at the moment on
 The sensor has a 5 pin JST ZHR type connector, with a 1.5mm pitch. ([Matching connector housing](https://octopart.com/zhr-5-jst-279203), [datasheet](http://www.farnell.com/datasheets/1393424.pdf))
 To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) should be shorted to ground (pin no.4)
 
-{{< img src="sps30-wiring.png" alt="Image" caption="For better stability, the SDA and SCL lines require suitable pull-up resistors." width="50.0%" class="center" >}}
+{{< img src="sps30-wiring.png" alt="Image" width="50.0%" class="center" >}}
+
+For better stability, the SDA and SCL lines require suitable pull-up resistors.
 
 ## Automatic Cleaning:
 

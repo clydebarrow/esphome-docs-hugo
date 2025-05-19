@@ -9,16 +9,18 @@ The `lcd_pcf8574` and `lcd_gpio` display components allow you to use HD44780-com
 with ESPHome. This component is only for LCDs that display individual characters on a screen
 (usually 8-40 columns and 2-4 rows), and not for LCDs that can control each pixel individually.
 
-{{< img src="lcd-hello_world.jpg" alt="Image" caption=".. note::" width="60.0%" class="center" >}}
+{{< img src="lcd-hello_world.jpg" alt="Image" width="60.0%" class="center" >}}
 
-    Multiple versions of the display exist, supporting different character sets:
+{{< note >}}
+Multiple versions of the display exist, supporting different character sets:
 
-    - HD44780UA00 English-Japanese which includes katakana characters, some Greek letters and mathematical symbols
-    - HD44780UA02 English-European which includes Greek, Cyrillic and Western European characters (with some diacritics)
-    - HD44780UBxx custom, manufacturer-specific character sets
+- HD44780UA00 English-Japanese which includes katakana characters, some Greek letters and mathematical symbols
+- HD44780UA02 English-European which includes Greek, Cyrillic and Western European characters (with some diacritics)
+- HD44780UBxx custom, manufacturer-specific character sets
 
-    It is also possible to add eight user-defined characters.
+It is also possible to add eight user-defined characters.
 
+{{< /note >}}
 {{< anchor "lcd-pcf8574" >}}
 
 ## lcd_pcf8574 Component

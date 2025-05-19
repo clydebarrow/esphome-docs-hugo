@@ -11,15 +11,17 @@ The `sts3x` sensor platform Temperature sensor allows you to use your Sensirion 
 ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work.
 
-{{< img src="temperature.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="temperature.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: sts3x
-        name: "Living Room Temperature"
-        address: 0x4A
-        update_interval: 60s
+```yaml
+# Example configuration entry
+sensor:
+  - platform: sts3x
+    name: "Living Room Temperature"
+    address: 0x4A
+    update_interval: 60s
 
+```
 ## Configuration variables:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.

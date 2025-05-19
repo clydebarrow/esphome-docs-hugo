@@ -24,23 +24,25 @@ to 2 amps, it will not work by powering from the same 3.3V power source of the E
 connect `TX` and `RX` lines directly without any level shifter.
 
 {{< /note >}}
-{{< img src="sim800l-full.jpg" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
+{{< img src="sim800l-full.jpg" alt="Image" width="60.0%" class="center" >}}
 
-    # Example configuration entry
-    uart:
-      baud_rate: 9600
-      tx_pin: TX
-      rx_pin: RX
+```yaml
+# Example configuration entry
+uart:
+  baud_rate: 9600
+  tx_pin: TX
+  rx_pin: RX
 
-    sim800l:
-      on_sms_received:
-        - logger.log:
-            format: "Received '%s' from %s"
-            args: [ 'message.c_str()', 'sender.c_str()' ]
+sim800l:
+  on_sms_received:
+    - logger.log:
+        format: "Received '%s' from %s"
+        args: [ 'message.c_str()', 'sender.c_str()' ]
 
-    logger:
-      baud_rate: 0 # disable uart logger on esp 8266
+logger:
+  baud_rate: 0 # disable uart logger on esp 8266
 
+```
 Configuration variables:
 
 - **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.

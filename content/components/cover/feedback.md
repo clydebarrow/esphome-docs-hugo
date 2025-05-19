@@ -12,29 +12,31 @@ position is approximated with the time the cover has been moving in a direction.
 
 It supports *open*, *close*, *stop* and *toggle* actions. Tilt control is not supported.
 
-{{< img src="more-info-ui.png" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
+{{< img src="more-info-ui.png" alt="Image" width="50.0%" class="center" >}}
 
-    # Example configuration entry
-    cover:
-      - platform: feedback
-        name: "Gate"
+```yaml
+# Example configuration entry
+cover:
+  - platform: feedback
+    name: "Gate"
 
-        open_action:
-          - switch.turn_on: open_cover_switch
-        open_duration: 2.1min
-        open_endstop: open_endstop_binary_sensor
-        open_sensor: open_movement_binary_sensor
+    open_action:
+      - switch.turn_on: open_cover_switch
+    open_duration: 2.1min
+    open_endstop: open_endstop_binary_sensor
+    open_sensor: open_movement_binary_sensor
 
-        close_action:
-          - switch.turn_on: close_cover_switch
-        close_duration: 2min
-        close_endstop: close_endstop_binary_sensor
-        close_sensor: close_movement_binary_sensor
+    close_action:
+      - switch.turn_on: close_cover_switch
+    close_duration: 2min
+    close_endstop: close_endstop_binary_sensor
+    close_sensor: close_movement_binary_sensor
 
-        stop_action:
-          - switch.turn_off: open_cover_switch
-          - switch.turn_off: close_cover_switch
+    stop_action:
+      - switch.turn_off: open_cover_switch
+      - switch.turn_off: close_cover_switch
 
+```
 ## Use Cases
 
 It is a versatile cover that can accommodate for a number of DIY setups, or monitoring an externally controlled cover:

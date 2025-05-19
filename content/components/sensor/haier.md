@@ -8,35 +8,37 @@ title: "Haier Climate Sensors"
 Additional sensors for Haier Climate device. **These sensors are supported only by the hOn protocol**.
 
 
-{{< img src="haier-climate.jpg" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
+{{< img src="haier-climate.jpg" alt="Image" width="50.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: haier
-        haier_id: haier_ac
-        outdoor_temperature:
-          name: Haier outdoor temperature
-        humidity:
-          name: Haier Indoor Humidity
-        compressor_current:
-          name: Haier Compressor Current
-        compressor_frequency:
-          name: Haier Compressor Frequency
-        expansion_valve_open_degree:
-          name: Haier Expansion Valve Open Degree
-        indoor_coil_temperature:
-          name: Haier Indoor Coil Temperature
-        outdoor_coil_temperature:
-          name: Haier Outdoor Coil Temperature
-        outdoor_defrost_temperature:
-          name: Haier Outdoor Defrost Temperature
-        outdoor_in_air_temperature:
-          name: Haier Outdoor In Air Temperature
-        outdoor_out_air_temperature:
-          name: Haier Outdoor Out Air Temperature
-        power:
-          name: Haier Power
+```yaml
+# Example configuration entry
+sensor:
+  - platform: haier
+    haier_id: haier_ac
+    outdoor_temperature:
+      name: Haier outdoor temperature
+    humidity:
+      name: Haier Indoor Humidity
+    compressor_current:
+      name: Haier Compressor Current
+    compressor_frequency:
+      name: Haier Compressor Frequency
+    expansion_valve_open_degree:
+      name: Haier Expansion Valve Open Degree
+    indoor_coil_temperature:
+      name: Haier Indoor Coil Temperature
+    outdoor_coil_temperature:
+      name: Haier Outdoor Coil Temperature
+    outdoor_defrost_temperature:
+      name: Haier Outdoor Defrost Temperature
+    outdoor_in_air_temperature:
+      name: Haier Outdoor In Air Temperature
+    outdoor_out_air_temperature:
+      name: Haier Outdoor Out Air Temperature
+    power:
+      name: Haier Power
 
+```
 ## Configuration variables:
 
 - **haier_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of haier climate component

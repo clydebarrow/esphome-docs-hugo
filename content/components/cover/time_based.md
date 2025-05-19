@@ -10,26 +10,28 @@ have any position feedback. The state of the cover is thus always an assumed one
 position is approximated with the time the cover has been moving in a direction. The state
 of the cover can be restored at node reboot.
 
-{{< img src="more-info-ui.png" alt="Image" caption=".. code-block:: yaml" width="75.0%" class="center" >}}
+{{< img src="more-info-ui.png" alt="Image" width="75.0%" class="center" >}}
 
-    # Example configuration entry
-    cover:
-      - platform: time_based
-        name: "Time-Based Cover"
+```yaml
+# Example configuration entry
+cover:
+  - platform: time_based
+    name: "Time-Based Cover"
 
-        open_action:
-          - switch.turn_on: open_cover_switch
-        open_duration: 2.1min
+    open_action:
+      - switch.turn_on: open_cover_switch
+    open_duration: 2.1min
 
-        close_action:
-          - switch.turn_on: close_cover_switch
-        close_duration: 2min
+    close_action:
+      - switch.turn_on: close_cover_switch
+    close_duration: 2min
 
-        stop_action:
-          - switch.turn_off: open_cover_switch
-          - switch.turn_off: close_cover_switch
+    stop_action:
+      - switch.turn_off: open_cover_switch
+      - switch.turn_off: close_cover_switch
 
 
+```
 ## Configuration variables:
 
 - **open_action** (**Required**, [All Actions]({{< ref "automations/actions#config-action" >}})): The action that should

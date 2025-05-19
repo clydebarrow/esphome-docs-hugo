@@ -14,20 +14,22 @@ First, you need to set up a voltage sensor source ([ADC sensor ]({{< relref "adc
 Please also see [this guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
 as an introduction to the working principle of CT clamp sensors and how to hook them up to your device.
 
-{{< img src="ct_clamp-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="ct_clamp-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: ct_clamp
-        sensor: adc_sensor
-        name: "Measured Current"
-        update_interval: 60s
+```yaml
+# Example configuration entry
+sensor:
+  - platform: ct_clamp
+    sensor: adc_sensor
+    name: "Measured Current"
+    update_interval: 60s
 
-      # Example source sensor
-      - platform: adc
-        pin: A0
-        id: adc_sensor
+  # Example source sensor
+  - platform: adc
+    pin: A0
+    id: adc_sensor
 
+```
 ## Configuration variables:
 
 - **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The source sensor to measure voltage values from.

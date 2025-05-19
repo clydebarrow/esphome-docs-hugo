@@ -46,21 +46,23 @@ There are three types of bang bang controllers this platform can represent:
 
 Do note that the actions are only called when the current temperature leaves the target temperature range.
 
-{{< img src="climate-ui.png" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
+{{< img src="climate-ui.png" alt="Image" width="60.0%" class="center" >}}
 
-    # Example configuration entry
-    climate:
-      - platform: bang_bang
-        name: "Bang Bang Climate Controller"
-        sensor: my_temperature_sensor
-        default_target_temperature_low: 20 °C
-        default_target_temperature_high: 22 °C
+```yaml
+# Example configuration entry
+climate:
+  - platform: bang_bang
+    name: "Bang Bang Climate Controller"
+    sensor: my_temperature_sensor
+    default_target_temperature_low: 20 °C
+    default_target_temperature_high: 22 °C
 
-        heat_action:
-          - switch.turn_on: heater
-        idle_action:
-          - switch.turn_off: heater
+    heat_action:
+      - switch.turn_on: heater
+    idle_action:
+      - switch.turn_off: heater
 
+```
 ## Configuration variables:
 
 - **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor that is used to measure the current temperature.

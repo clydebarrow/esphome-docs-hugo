@@ -10,9 +10,9 @@ protocol. These devices are mainly produced by Resol, often also found under dif
 Kioto, Wagner etc. The component currently supports natively the models in the table below
 but any device can be added via lambda by knowing [its packet structure](https://danielwippermann.github.io/resol-vbus).
 
-{{< img src="resol_deltasol_bs_plus.jpg" alt="Image" caption="Supported Models" class="center" >}}
+{{< img src="resol_deltasol_bs_plus.jpg" alt="Image" class="center" >}}
 
-----------------
+## Supported Models
 
 The following table shows the currently supported models of Vbus devices.
 
@@ -46,9 +46,13 @@ To connect to this and read data from the bus a level shifting is needed as the 
 would damage the MCU). For our read-only purposes it's
 sufficient to adapt the level appropriately to 3.3V using a circuit like below:
 
-{{< img src="resol_vbus_adapter_schematic.png" alt="Image" caption="An electrically isolated version using an opto-coupler:" class="center" >}}
+{{< img src="resol_vbus_adapter_schematic.png" alt="Image" class="center" >}}
 
-{{< img src="vbus_serial_optocoupler.png" alt="Image" caption="Another approach, with PCB design ready to be manufactured `can be found here <https://github.com/FatBeard/vbus-arduino-library/tree/master/pcb>`__." class="center" >}}
+An electrically isolated version using an opto-coupler:
+
+{{< img src="vbus_serial_optocoupler.png" alt="Image" class="center" >}}
+
+Another approach, with PCB design ready to be manufactured [can be found here](https://github.com/FatBeard/vbus-arduino-library/tree/master/pcb).
 
 {{< warning >}}
 Do not connect the GND pin of your module with the ground of Resol unit as that may damage the output port of it.

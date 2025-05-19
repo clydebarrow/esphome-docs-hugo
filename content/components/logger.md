@@ -155,7 +155,9 @@ client spams too much. In the following example, we'd first see that the
 tag of the MQTT client is `mqtt.client` (before the first colon) and
 the tag for MQTT components is `mqtt.component`.
 
-{{< img src="logger-manual_log_level.png" alt="Image" caption="Next, we can manually set the log levels in the configuration like this:" >}}
+{{< img src="logger-manual_log_level.png" alt="Image" >}}
+
+Next, we can manually set the log levels in the configuration like this:
 
 ```yaml
 logger:

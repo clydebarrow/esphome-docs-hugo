@@ -11,20 +11,22 @@ each LED is individually addressable. This component requires an SPI interface t
 This component has been tested with APA102 LEDs and the P9813 LED driver. It should also work with HD107 and SK9822 type
 LEDs, or any others with a similar interface - SPI, 8 bits per colour and BGR ordering.
 
-{{< img src="apa102.jpg" alt="Image" caption=".. code-block:: yaml" width="75.0%" class="center" >}}
+{{< img src="apa102.jpg" alt="Image" width="75.0%" class="center" >}}
 
-    # Example configuration entry
-    spi:
-      mosi_pin: GPIO06
-      clk_pin: GPIO07
+```yaml
+# Example configuration entry
+spi:
+  mosi_pin: GPIO06
+  clk_pin: GPIO07
 
-    light:
-      - platform: spi_led_strip
-        num_leds: 30
-        id: rgb_led
-        name: "RGB LED Strip"
-        data_rate: 1MHz
+light:
+  - platform: spi_led_strip
+    num_leds: 30
+    id: rgb_led
+    name: "RGB LED Strip"
+    data_rate: 1MHz
 
+```
 ## Color Correction
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
@@ -42,8 +44,9 @@ APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso
 
 ## See Also
 
-{{< img src="rgb-detail.jpg" alt="Image" caption="- :doc:`/components/light/index`" width="75.0%" class="center" >}}
+{{< img src="rgb-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
+- [/components/light/index]({{< ref "/components/light/index" >}})
 - [/components/output/ledc]({{< ref "/components/output/ledc" >}})
 - [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
 - [/components/output/pca9685]({{< ref "/components/output/pca9685" >}})

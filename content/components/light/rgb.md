@@ -10,17 +10,19 @@ The `rgb` light platform creates an RGB light from 3 [Output Component]({{< ref 
 
 {{< img src="rgb-strip.jpg" alt="Image" caption="Example of an RGB LED strip that can be used with this component." width="75.0%" class="center" >}}
 
-{{< img src="rgb-ui.png" alt="Image" caption=".. code-block:: yaml" width="40.0%" class="center" >}}
+{{< img src="rgb-ui.png" alt="Image" width="40.0%" class="center" >}}
 
-    # Example configuration entry
-    light:
-      - platform: rgb
-        name: "Living Room Lights"
-        red: output_component1
-        green: output_component2
-        blue: output_component3
+```yaml
+# Example configuration entry
+light:
+  - platform: rgb
+    name: "Living Room Lights"
+    red: output_component1
+    green: output_component2
+    blue: output_component3
 
 
+```
 ## Color Correction
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
@@ -57,8 +59,9 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 
 ## See Also
 
-{{< img src="rgb-detail.jpg" alt="Image" caption="- :doc:`/components/output/index`" width="75.0%" class="center" >}}
+{{< img src="rgb-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
+- [/components/output/index]({{< ref "/components/output/index" >}})
 - [/components/light/index]({{< ref "/components/light/index" >}})
 - [/components/light/rgbw]({{< ref "/components/light/rgbw" >}})
 - [/components/light/rgbww]({{< ref "/components/light/rgbww" >}})

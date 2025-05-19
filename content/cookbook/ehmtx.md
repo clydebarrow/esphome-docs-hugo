@@ -7,9 +7,9 @@ title: "ehmtx a matrix status display"
 
 Based on a cheap 8x32 RGB matrix you can build flexible status displays for all kind of informations. It is expandable with sensors etc.
 
-{{< img src="ehmtx.jpg" alt="Image" caption="Introduction" width="40%" class="center" >}}
+{{< img src="ehmtx.jpg" alt="Image" width="40%" class="center" >}}
 
-------------
+## Introduction
 
 Based a on a 8x32 RGB flexible matrix it displays a clock, the date and up to 16 other screens provided by home assistant. 
 Each screen (value/text) can be associated with a 8x8 bit RGB icon or gif animation (see installation). 

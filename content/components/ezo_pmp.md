@@ -16,13 +16,15 @@ Home Assistant doesn't have support for pumps. In order to control the pump from
 templates to offer access to the actions you need. Please see [Home Assistant Configuration]({{< ref "components/ezo_pmp#ezo-pmp-ha-config" >}}).
 
 {{< /note >}}
-{{< img src="ezo-pmp.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="ezo-pmp.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    ezo_pmp:
-      id: ezo_pmp
-      address: 103  # Default Address for the EZO-PMP.
-      update_interval: 60s
+```yaml
+ezo_pmp:
+  id: ezo_pmp
+  address: 103  # Default Address for the EZO-PMP.
+  update_interval: 60s
 
+```
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the pump so that you can control it.

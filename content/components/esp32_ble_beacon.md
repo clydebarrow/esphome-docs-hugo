@@ -83,9 +83,9 @@ For using these beacons to track the location of your phone, you will need to us
 know when I'm home or away. Another nice Android app is [Beacon MQTT](https://turbo-lab.github.io/android-beacon-mqtt/).
 It can work with multiple beacons simultaneously.
 
-{{< img src="esp32_ble_beacon-ibeacon.png" alt="Image" caption="See Also" width="75.0%" class="center" >}}
+{{< img src="esp32_ble_beacon-ibeacon.png" alt="Image" width="75.0%" class="center" >}}
 
---------
+## See Also
 
 - [esp32_ble_tracker]({{< ref "esp32_ble_tracker/" >}})
 - [binary_sensor/ble_presence]({{< ref "binary_sensor/ble_presence" >}})

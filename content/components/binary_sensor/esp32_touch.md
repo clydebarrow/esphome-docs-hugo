@@ -117,17 +117,19 @@ you can add individual touch pads as binary sensors. When a touch is detected on
 sensor will report an `ON` state. And, of course, if no touch is detected, the binary sensor will report
 an `OFF` state.
 
-{{< img src="esp32_touch-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="esp32_touch-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    esp32_touch:
+```yaml
+# Example configuration entry
+esp32_touch:
 
-    binary_sensor:
-      - platform: esp32_touch
-        name: "ESP32 Touch Pad"
-        pin: GPIOXX
-        threshold: 1000
+binary_sensor:
+  - platform: esp32_touch
+    name: "ESP32 Touch Pad"
+    pin: GPIOXX
+    threshold: 1000
 
+```
 Configuration variables:
 ************************
 
@@ -215,8 +217,9 @@ Touching the sensor's pins/pads should result in a (significant) change in the v
 different amounts of force applied to the touch pad; a pattern should emerge, revealing a value that falls between
 "touched" and "not touched" which the binary sensor will then use to differentiate between the two states.
 
-{{< img src="esp32_touch-finding_thresholds.png" alt="Image" caption="Once you've determined an appropriate value, update the threshold parameter in your configuration and test the updated" class="center" >}}
+{{< img src="esp32_touch-finding_thresholds.png" alt="Image" class="center" >}}
 
+Once you've determined an appropriate value, update the threshold parameter in your configuration and test the updated
 configuration. You may need to repeat this process a few times to fine-tune the behavior and get it just right.
 
 Finally, don't forget to disable the `setup_mode` option by setting it back to `false`; leaving it enabled will

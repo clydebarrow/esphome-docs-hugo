@@ -17,19 +17,21 @@ Example sensors:
 
 .. _Adafruit: https://learn.adafruit.com/adafruit-htu21d-f-temperature-humidity-sensor/overview
 
-{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: htu21d
-        model: htu21d
-        temperature:
-          name: "Temperature"
-        humidity:
-          name: "Humidity"
-        heater:
-          name: "Heater"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: htu21d
+    model: htu21d
+    temperature:
+      name: "Temperature"
+    humidity:
+      name: "Humidity"
+    heater:
+      name: "Heater"
 
+```
 ## Configuration variables:
 
 - **temperature** (*Optional*): The information for the temperature sensor.

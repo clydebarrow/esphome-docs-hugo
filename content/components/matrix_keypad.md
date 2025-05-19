@@ -9,9 +9,9 @@ The `matrix_keypad` component allows you to integrate pads which
 have the keys connected at the intersection points of the rows and columns
 of a matrix.
 
-{{< img src="matrix_keypad.jpg" alt="Image" caption="Component" class="center" >}}
+{{< img src="matrix_keypad.jpg" alt="Image" class="center" >}}
 
----------
+## Component
 
 ```yaml
 # Example configuration entry

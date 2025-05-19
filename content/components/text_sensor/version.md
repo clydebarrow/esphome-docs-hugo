@@ -8,13 +8,15 @@ title: "Version Text Sensor"
 The `version` text sensor platform exposes the ESPHome version the firmware
 was compiled against as a text sensor.
 
-{{< img src="version-ui.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
+{{< img src="version-ui.png" alt="Image" class="center" >}}
 
-    # Example configuration entry
-    text_sensor:
-      - platform: version
-        name: "ESPHome Version"
+```yaml
+# Example configuration entry
+text_sensor:
+  - platform: version
+    name: "ESPHome Version"
 
+```
 ## Configuration variables:
 
 - **hide_timestamp** (*Optional*, boolean): Allows you to hide the compilation timestamp from the version string. Defaults to `false`.

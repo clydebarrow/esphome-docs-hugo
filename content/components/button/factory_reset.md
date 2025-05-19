@@ -21,13 +21,15 @@ You'll need to be in close proximity to your device to configure it again using 
 
 
 {{< /note >}}
-{{< img src="factory-rst-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="factory-rst-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    button:
-      - platform: factory_reset
-        name: Restart with Factory Default Settings
+```yaml
+# Example configuration entry
+button:
+  - platform: factory_reset
+    name: Restart with Factory Default Settings
 
+```
 ## Configuration variables:
 
 - All options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).

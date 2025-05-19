@@ -11,26 +11,28 @@ required to be set up in your configuration for this sensor to work.
 All embedded solutions from EZO can be found [here](https://atlas-scientific.com/embedded-solutions/).
 If a certain command is not supported directly, it can be executed with the `send_custom()` method call.
 
-{{< img src="ezo-ph-circuit.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="ezo-ph-circuit.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
+```yaml
+# Example configuration entry
+sensor:
 
-      - platform: ezo
-        id: ph_ezo
-        address: 99
-        unit_of_measurement: "pH"
-        update_interval: 10s
+  - platform: ezo
+    id: ph_ezo
+    address: 99
+    unit_of_measurement: "pH"
+    update_interval: 10s
 
-      - platform: ezo
-        id: rtd_ezo
-        name: "RTD Temperature"
-        address: 102
-        accuracy_decimals: 2
-        unit_of_measurement: "°C"
-        update_interval: 10s
+  - platform: ezo
+    id: rtd_ezo
+    name: "RTD Temperature"
+    address: 102
+    accuracy_decimals: 2
+    unit_of_measurement: "°C"
+    update_interval: 10s
 
 
+```
 ## Configuration variables:
 
 - **address** (**Required**, int): Specify the I²C address of the sensor.

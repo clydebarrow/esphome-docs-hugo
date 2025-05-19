@@ -8,9 +8,9 @@ title: "LVGL Graphics"
 [LVGL](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
 embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8](https://docs.lvgl.io/8.4/).
 
-{{< img src="lvgl_main_screenshot.png" alt="Image" caption="Prerequisites" >}}
+{{< img src="lvgl_main_screenshot.png" alt="Image" >}}
 
--------------
+## Prerequisites
 
 To use LVGL with a [Display Hardware Platforms]({{< ref "components/_index#display-hw" >}}) in ESPHome, you'll need an ESP32 or RP2040. PSRAM is not a strict requirement but it is generally recommended, especially for large color displays.
 
@@ -291,12 +291,14 @@ The binary will only include any of the above if used in the configuration.
 
 You can display the embedded symbols among the text by their codepoint address preceded by `\u`. For example: `\uF00C`:
 
-{{< img src="lvgl_symbols.png" alt="Image" caption=".. note::" class="center" >}}
+{{< img src="lvgl_symbols.png" alt="Image" class="center" >}}
 
-    The `text_font` parameter affects the size of symbols, since all the built-in font arrays based on Montserrat include these symbols at the respective sizes. If you set `text_font` on a widget to a custom ESPHome font, these symbols will likely not display, unless you include them manually from a FontAwesome OpenType file.
+{{< note >}}
+The `text_font` parameter affects the size of symbols, since all the built-in font arrays based on Montserrat include these symbols at the respective sizes. If you set `text_font` on a widget to a custom ESPHome font, these symbols will likely not display, unless you include them manually from a FontAwesome OpenType file.
 
-    For escape sequences to work, you have to put them in strings enclosed in double quotes.
+For escape sequences to work, you have to put them in strings enclosed in double quotes.
 
+{{< /note >}}
 In addition to the above, the following special fonts are available from LVGL as built-in:
 
 - `unscii_8`: 8 px pixel perfect font with only ASCII characters.
@@ -311,8 +313,9 @@ Style properties
 
 LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
-{{< img src="lvgl_boxmodel.png" alt="Image" caption="- *bounding box*: the box defined with ``width`` and ``height`` of the widgets (pixels or parent content area percentage; not drawn, just for calculations)." class="center" >}}
+{{< img src="lvgl_boxmodel.png" alt="Image" class="center" >}}
 
+- *bounding box*: the box defined with `width` and `height` of the widgets (pixels or parent content area percentage; not drawn, just for calculations).
 - *border*: the border line, drawn on the inner side of the bounding box (pixels).
 - *outline*: the outline, drawn on the outer side of the bounding box (pixels).
 - *padding*: space to keep between the border of the widget and its content or children (*I don't want my children too close to my sides, so keep this space*).

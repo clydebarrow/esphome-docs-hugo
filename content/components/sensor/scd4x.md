@@ -9,19 +9,21 @@ The `scd4x` sensor platform  allows you to use your Sensirion SCD4X CO₂
 ([datasheet](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
-{{< img src="scd4x.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="scd4x.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: scd4x
-        co2:
-          name: "Workshop CO2"
-        temperature:
-          name: "Workshop Temperature"
-        humidity:
-          name: "Workshop Humidity"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: scd4x
+    co2:
+      name: "Workshop CO2"
+    temperature:
+      name: "Workshop Temperature"
+    humidity:
+      name: "Workshop Humidity"
 
 
+```
 ## Configuration variables:
 
 - **co2** (*Optional*): The information for the CO₂ sensor.

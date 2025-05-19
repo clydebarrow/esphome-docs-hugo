@@ -13,17 +13,19 @@ The `dht12` Temperature+Humidity sensor allows you to use your DHT12
 
 .. _electrodragon: http://www.electrodragon.com/product/dht12/
 
-{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: dht12
-        temperature:
-          name: "Living Room Temperature"
-        humidity:
-          name: "Living Room Humidity"
-        update_interval: 60s
+```yaml
+# Example configuration entry
+sensor:
+  - platform: dht12
+    temperature:
+      name: "Living Room Temperature"
+    humidity:
+      name: "Living Room Humidity"
+    update_interval: 60s
 
+```
 ## Configuration variables:
 
 - **temperature** (**Required**): The information for the temperature sensor.

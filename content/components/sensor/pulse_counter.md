@@ -12,14 +12,16 @@ On the ESP32, this sensor is even highly accurate because it's using the hardwar
 peripheral <https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html>`__
 on the ESP32. However, due to the use of the pulse counter peripheral, a maximum of 8 channels can be used!
 
-{{< img src="pulse-counter.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="pulse-counter.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: pulse_counter
-        pin: GPIOXX
-        name: "Pulse Counter"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: pulse_counter
+    pin: GPIOXX
+    name: "Pulse Counter"
 
+```
 ## Configuration variables
 
 - **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to count pulses on.

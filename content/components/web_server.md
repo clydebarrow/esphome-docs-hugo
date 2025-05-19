@@ -199,15 +199,18 @@ number:
 ```
 Number in slider mode
 *********************
-{{< img src="number-slider-popup.png" alt="Image" caption="You can change the value by moving the slider." width="100.0%" class="left" >}}
+{{< img src="number-slider-popup.png" alt="Image" width="100.0%" class="left" >}}
 
+You can change the value by moving the slider.
 If you wish to enter a precise number you can click and hold the current value. A popup input field will appear where you can enter a number and confirm your input by pressing the enter key.
 
-{{< img src="number-slider-popup-input-field.png" alt="Image" caption="Expand Controls and Logs" width="100.0%" class="left" >}}
+{{< img src="number-slider-popup-input-field.png" alt="Image" width="100.0%" class="left" >}}
 
+Expand Controls and Logs
 ************************
-{{< img src="tab-header-expand-cloapsed.png" alt="Image" caption="By double-clicking on any group header you can expand the controls to fill up the whole screen." width="100.0%" class="left" >}}
+{{< img src="tab-header-expand-cloapsed.png" alt="Image" width="100.0%" class="left" >}}
 
+By double-clicking on any group header you can expand the controls to fill up the whole screen.
 You can do the same for the logs.
 
 {{< img src="tab-header-expand-controls-expanded.png" alt="Image" caption="Expanded Controls" width="100.0%" class="center" >}}
@@ -216,7 +219,9 @@ You can do the same for the logs.
 
 Sensor value graph
 ******************
-{{< img src="sensor-history-graph.png" alt="Image" caption="By clicking on any sensor it will expand a graph with the historical values for that sensor." width="100.0%" class="left" >}}
+{{< img src="sensor-history-graph.png" alt="Image" width="100.0%" class="left" >}}
+
+By clicking on any sensor it will expand a graph with the historical values for that sensor.
 
 ## See Also
 

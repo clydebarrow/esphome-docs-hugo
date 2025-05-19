@@ -16,16 +16,18 @@ required to be set up in your configuration for this sensor to work.
 
 .. _SparkFun: https://www.sparkfun.com/products/15074
 
-{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: shtcx
-        temperature:
-          name: "Temperature"
-        humidity:
-          name: "Humidity"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: shtcx
+    temperature:
+      name: "Temperature"
+    humidity:
+      name: "Humidity"
 
+```
 ## Configuration variables:
 
 - **temperature** (*Optional*): The information for the temperature sensor.

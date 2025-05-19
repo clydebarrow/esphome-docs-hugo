@@ -38,9 +38,9 @@ Note that you don't need to define the individual sensors just yet, as
 the scanning will happen even with no sensors configured.
 For example, you will see something like this:
 
-{{< img src="dallas-log.png" alt="Image" caption="See Also" >}}
+{{< img src="dallas-log.png" alt="Image" >}}
 
---------
+## See Also
 
 - :apiref:`one_wire/one_wire_bus.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/one_wire.md)

@@ -11,18 +11,20 @@ The `hbridge` fan platform allows you to use a compatible *h-bridge* (L298N, DRV
 
 .. _kuongshun: https://kuongshun.com/products/l298n-stepper-motor-driver-board-red
 
-{{< img src="fan-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    fan:
-      - platform: hbridge
-        id: my_fan
-        name: "Living Room Fan"
-        pin_a: motor_forward_pin
-        pin_b: motor_reverse_pin
-        # enable_pin: motor_enable
-        decay_mode: slow   # slow decay mode (coasting) or fast decay (braking).
+```yaml
+# Example configuration entry
+fan:
+  - platform: hbridge
+    id: my_fan
+    name: "Living Room Fan"
+    pin_a: motor_forward_pin
+    pin_b: motor_reverse_pin
+    # enable_pin: motor_enable
+    decay_mode: slow   # slow decay mode (coasting) or fast decay (braking).
 
+```
 ## Configuration variables:
 
 - **pin_a** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the

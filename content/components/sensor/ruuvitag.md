@@ -14,37 +14,39 @@ movement count and measurement sequence number are also tracked.
 
 {{< img src="ruuvitag-full.jpg" alt="Image" caption="RuuviTagSensor over BLE." width="80.0%" class="center" >}}
 
-{{< img src="ruuvitag-ui.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="ruuvitag-ui.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    esp32_ble_tracker:
+```yaml
+# Example configuration entry
+esp32_ble_tracker:
 
-    sensor:
-    - platform: ruuvitag
-      mac_address: XX:XX:XX:XX:XX:XX
-      humidity:
-        name: "RuuviTag Humidity"
-      temperature:
-        name: "RuuviTag Temperature"
-      pressure:
-        name: "RuuviTag Pressure"
-      acceleration:
-        name: "RuuviTag Acceleration"
-      acceleration_x:
-        name: "RuuviTag Acceleration X"
-      acceleration_y:
-        name: "RuuviTag Acceleration Y"
-      acceleration_z:
-        name: "RuuviTag Acceleration Z"
-      battery_voltage:
-        name: "RuuviTag Battery Voltage"
-      tx_power:
-        name: "RuuviTag TX Power"
-      movement_counter:
-        name: "RuuviTag Movement Counter"
-      measurement_sequence_number:
-        name: "RuuviTag Measurement Sequence Number"
+sensor:
+- platform: ruuvitag
+  mac_address: XX:XX:XX:XX:XX:XX
+  humidity:
+    name: "RuuviTag Humidity"
+  temperature:
+    name: "RuuviTag Temperature"
+  pressure:
+    name: "RuuviTag Pressure"
+  acceleration:
+    name: "RuuviTag Acceleration"
+  acceleration_x:
+    name: "RuuviTag Acceleration X"
+  acceleration_y:
+    name: "RuuviTag Acceleration Y"
+  acceleration_z:
+    name: "RuuviTag Acceleration Z"
+  battery_voltage:
+    name: "RuuviTag Battery Voltage"
+  tx_power:
+    name: "RuuviTag TX Power"
+  movement_counter:
+    name: "RuuviTag Movement Counter"
+  measurement_sequence_number:
+    name: "RuuviTag Measurement Sequence Number"
 
+```
 ## Configuration variables:
 
 - **mac_address** (**Required**, MAC Address): The MAC address of the RuuviTag

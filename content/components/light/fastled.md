@@ -36,17 +36,19 @@ in ESPHome for a [Supported Chipsets]({{< ref "components/light/fastled#fastled_
 Clockless FastLED lights differ from the
 [SPI]({{< ref "components/light/fastled#fastled-spi" >}}) in that they only have a single data wire to connect, and not separate data and clock wires.
 
-{{< img src="fastled_clockless-ui.png" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
+{{< img src="fastled_clockless-ui.png" alt="Image" width="60.0%" class="center" >}}
 
-    # Example configuration entry
-    light:
-      - platform: fastled_clockless
-        chipset: WS2811
-        pin: GPIOXX
-        num_leds: 60
-        rgb_order: BRG
-        name: "FastLED WS2811 Light"
+```yaml
+# Example configuration entry
+light:
+  - platform: fastled_clockless
+    chipset: WS2811
+    pin: GPIOXX
+    num_leds: 60
+    rgb_order: BRG
+    name: "FastLED WS2811 Light"
 
+```
 Configuration variables:
 ************************
 
@@ -107,18 +109,20 @@ SPI FastLED lights differ from the
 [Clockless]({{< ref "components/light/fastled#fastled-clockless" >}}) in that they require two pins to be connected, one for a data and one for a clock signal
 whereas the clockless lights only need a single pin.
 
-{{< img src="fastled_spi-ui.png" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
+{{< img src="fastled_spi-ui.png" alt="Image" width="60.0%" class="center" >}}
 
-    # Example configuration entry
-    light:
-      - platform: fastled_spi
-        chipset: WS2801
-        data_pin: GPIOXX
-        clock_pin: GPIOXX
-        num_leds: 60
-        rgb_order: BRG
-        name: "FastLED SPI Light"
+```yaml
+# Example configuration entry
+light:
+  - platform: fastled_spi
+    chipset: WS2801
+    data_pin: GPIOXX
+    clock_pin: GPIOXX
+    num_leds: 60
+    rgb_order: BRG
+    name: "FastLED SPI Light"
 
+```
 Configuration variables:
 ************************
 

@@ -20,14 +20,16 @@ Please make sure that nothing is connected to pins `GPIO36` and `GPIO39` if this
 component is enabled, as those pins are used for the internal low-noise amplifier used
 by the hall sensor.
 
-{{< img src="esp32_hall-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="esp32_hall-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: esp32_hall
-        name: "ESP32 Hall Sensor"
-        update_interval: 60s
+```yaml
+# Example configuration entry
+sensor:
+  - platform: esp32_hall
+    name: "ESP32 Hall Sensor"
+    update_interval: 60s
 
+```
 ## Configuration variables:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval

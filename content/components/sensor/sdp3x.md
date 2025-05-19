@@ -10,9 +10,7 @@ The SDP3x Differential Pressure sensor allows you to use your SDP3x
 [sparkfun](https://www.sparkfun.com/products/17874)) or SDP800 Series ([datasheet](https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf))
 sensors with ESPHome.
 
-{{< img src="sdp31.jpg" alt="Image" caption="SDP31 Differential Pressure Sensor." width="30.0%" class="center" >}}
-
-    (Credit: [Sparkfun](https://www.sparkfun.com/products/17874), image cropped and compressed)
+{{< img src="sdp31.jpg" alt="Image" caption="SDP31 Differential Pressure Sensor.(Credit: `Sparkfun <https://www.sparkfun.com/products/17874>`__, image cropped and compressed)" width="30.0%" class="center" >}}
 
 .. _Sparkfun: https://www.sparkfun.com/products/17874
 

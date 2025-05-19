@@ -11,9 +11,9 @@ with ESPHome.
 
 The BMS communicates via [UART Bus]({{< ref "components/uart#uart" >}}).
 
-{{< img src="daly_bms_example.png" alt="Image" caption="Component/Hub" width="100.0%" class="center" >}}
+{{< img src="daly_bms_example.png" alt="Image" width="100.0%" class="center" >}}
 
--------------
+## Component/Hub
 
 ```yaml
 # Example configuration entry

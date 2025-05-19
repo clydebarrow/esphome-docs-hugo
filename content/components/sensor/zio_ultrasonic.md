@@ -10,9 +10,7 @@ The Zio Ultrasonic Distance sensor allows you to use your compatible
 [sparkfun](https://www.sparkfun.com/products/17777))
 sensors with ESPHome. 
 
-{{< img src="zio_ultrasonic.jpg" alt="Image" caption="Zio Ultrasonic Distance Sensor." width="30.0%" class="center" >}}
-
-    (Credit: [Sparkfun](https://www.sparkfun.com/products/17777), image cropped and compressed)
+{{< img src="zio_ultrasonic.jpg" alt="Image" caption="Zio Ultrasonic Distance Sensor.(Credit: `Sparkfun <https://www.sparkfun.com/products/17777>`__, image cropped and compressed)" width="30.0%" class="center" >}}
 
 .. _Sparkfun: https://www.sparkfun.com/products/17777
 

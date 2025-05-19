@@ -103,20 +103,22 @@ To implement this feature, you will need one more free GPIO pin to toggle the se
 
 This is a wiring example for the R503 and below you can find the respective configuration:
 
-{{< img src="fingeprint_grow-sleep_mode_wiring.jpg" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
+{{< img src="fingeprint_grow-sleep_mode_wiring.jpg" alt="Image" width="50.0%" class="center" >}}
 
-    uart:
-      rx_pin: GPIOXX
-      tx_pin: GPIOXX
-      baud_rate: 57600
+```yaml
+uart:
+  rx_pin: GPIOXX
+  tx_pin: GPIOXX
+  baud_rate: 57600
 
-    fingerprint_grow:
-      sensing_pin: GPIOXX
-      sensor_power_pin:
-          number: GPIOXX
-          inverted: true
-      idle_period_to_sleep: 5s
+fingerprint_grow:
+  sensing_pin: GPIOXX
+  sensor_power_pin:
+      number: GPIOXX
+      inverted: true
+  idle_period_to_sleep: 5s
 
+```
 {{< anchor "fingerprint_grow-set_new_password" >}}
 
 ## Setting a New Password

@@ -17,16 +17,18 @@ Example sensors:
 
 .. _Adafruit: https://www.adafruit.com/product/4832
 
-{{< img src="temperature-humidity.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: htu31d
-        temperature:
-          name: "Temperature"
-        humidity:
-          name: "Humidity"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: htu31d
+    temperature:
+      name: "Temperature"
+    humidity:
+      name: "Humidity"
 
+```
 ## Configuration variables:
 
 - **temperature** (*Optional*): The information for the temperature sensor.

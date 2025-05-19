@@ -9,27 +9,29 @@ title: "b-parasite"
 
 The `b_parasite` sensor platform tracks b-parasite's Bluetooth Low Energy (BLE) advertisement packets. These packets contain soil moisture, air temperature/humidity and battery voltage data. Some b-parasite versions have light sensors, in which case the ambient illuminance is also present in the BLE advertisement data.
 
-{{< img src="b_parasite.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="b_parasite.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration.
+```yaml
+# Example configuration.
 
-    # Required.
-    esp32_ble_tracker:
+# Required.
+esp32_ble_tracker:
 
-    sensor:
-      - platform: b_parasite
-        mac_address: XX:XX:XX:XX:XX:XX
-        humidity:
-          name: 'b-parasite Air Humidity'
-        temperature:
-          name: 'b-parasite Air Temperature'
-        moisture:
-          name: 'b-parasite Soil Moisture'
-        battery_voltage:
-          name: 'b-parasite Battery Voltage'
-        illuminance:
-          name: 'b-parasite Illuminance'
+sensor:
+  - platform: b_parasite
+    mac_address: XX:XX:XX:XX:XX:XX
+    humidity:
+      name: 'b-parasite Air Humidity'
+    temperature:
+      name: 'b-parasite Air Temperature'
+    moisture:
+      name: 'b-parasite Soil Moisture'
+    battery_voltage:
+      name: 'b-parasite Battery Voltage'
+    illuminance:
+      name: 'b-parasite Illuminance'
 
+```
 ## Configuration variables
 
 - **mac_address** (**Required**): The MAC address of the device.

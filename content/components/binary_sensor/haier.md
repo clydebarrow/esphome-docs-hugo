@@ -8,25 +8,27 @@ title: "Haier Climate Binary Sensors"
 Additional sensors for Haier Climate device. **These sensors are supported only by the hOn protocol**.
 
 
-{{< img src="haier-climate.jpg" alt="Image" caption=".. code-block:: yaml" width="50.0%" class="center" >}}
+{{< img src="haier-climate.jpg" alt="Image" width="50.0%" class="center" >}}
 
-    # Example configuration entry
-    binary_sensor:
-      - platform: haier
-        haier_id: haier_ac
-        compressor_status:
-          name: Haier Outdoor Compressor Status
-        defrost_status:
-          name: Haier Defrost Status
-        four_way_valve_status:
-          name: Haier Four Way Valve Status
-        indoor_electric_heating_status:
-          name: Haier Indoor Electric Heating Status
-        indoor_fan_status:
-          name: Haier Indoor Fan Status
-        outdoor_fan_status:
-          name: Haier Outdoor Fan Status
+```yaml
+# Example configuration entry
+binary_sensor:
+  - platform: haier
+    haier_id: haier_ac
+    compressor_status:
+      name: Haier Outdoor Compressor Status
+    defrost_status:
+      name: Haier Defrost Status
+    four_way_valve_status:
+      name: Haier Four Way Valve Status
+    indoor_electric_heating_status:
+      name: Haier Indoor Electric Heating Status
+    indoor_fan_status:
+      name: Haier Indoor Fan Status
+    outdoor_fan_status:
+      name: Haier Outdoor Fan Status
 
+```
 ## Configuration variables:
 
 - **haier_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of haier climate component

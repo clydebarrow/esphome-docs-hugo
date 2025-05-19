@@ -8,11 +8,13 @@ title: "Demo Component"
 The `demo` component can be used for testing to generate sample instances of many
 different components (sensors, lights, ...)
 
-{{< img src="demo-ui.png" alt="Image" caption=".. code-block:: yaml" width="70.0%" class="center" >}}
+{{< img src="demo-ui.png" alt="Image" width="70.0%" class="center" >}}
 
-    # Example configuration entry
-    demo:
+```yaml
+# Example configuration entry
+demo:
 
+```
 ## Configuration variables:
 
 This component has no configuration variables

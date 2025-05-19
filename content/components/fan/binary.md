@@ -7,17 +7,19 @@ title: "Binary Fan"
 
 The `binary` fan platform lets you represent any binary [Output Component]({{< ref "components/output/_index#output" >}}) as a fan.
 
-{{< img src="fan-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    fan:
-      - platform: binary
-        output: fan_output
-        name: "Living Room Fan"
+```yaml
+# Example configuration entry
+fan:
+  - platform: binary
+    output: fan_output
+    name: "Living Room Fan"
 
 
 
 
+```
 ## Configuration variables:
 
 - **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the

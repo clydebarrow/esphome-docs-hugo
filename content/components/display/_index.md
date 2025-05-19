@@ -69,17 +69,19 @@ this behavior by setting `auto_clear_enabled: false`.
 In the lambda, you can write code like in any [Templates]({{< ref "automations/templates#config-lambda" >}}) in ESPHome. Display
 lambdas are additionally passed a variable called `it` which represents the rendering engine object.
 
-{{< img src="display_rendering_line.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
+{{< img src="display_rendering_line.png" alt="Image" class="center" >}}
 
-    display:
-      - platform: ...
-        # ...
-        lambda: |-
-          // Write your display rendering code here
+```yaml
+display:
+  - platform: ...
+    # ...
+    lambda: |-
+      // Write your display rendering code here
 
-          // For example, draw a line from [x=0,y=0] to [x=50,y=50]
-          it.line(0, 0, 50, 50);
+      // For example, draw a line from [x=0,y=0] to [x=50,y=50]
+      it.line(0, 0, 50, 50);
 
+```
 {{< note >}}
 Lambdas are essentially just a lightly modified version of C++. So don't forget to end each line
 with a semicolon (`;`). Otherwise you will be greeted by a long error message at the compilation stage.
@@ -99,44 +101,46 @@ the rendering engine is always first specify the `x` coordinate and then the `y`
 
 Now that you know a bit more about ESPHome's coordinate system, let's draw some basic shapes like lines, rectangles, circles or even polygons:
 
-{{< img src="display_rendering_shapes.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
+{{< img src="display_rendering_shapes.png" alt="Image" class="center" >}}
 
-    display:
-      - platform: ...
-        # ...
-        lambda: |-
-          // Draw a line from [0,0] to [100,50]
-          it.line(0, 0, 100, 50);
-          // Draw the outline of a rectangle with the top left at [5,20], a width of 30 and a height of 42
-          it.rectangle(5, 20, 30, 42);
-          // Draw the same rectangle a few pixels apart, but this time filled
-          it.filled_rectangle(40, 40, 30, 42);
+```yaml
+display:
+  - platform: ...
+    # ...
+    lambda: |-
+      // Draw a line from [0,0] to [100,50]
+      it.line(0, 0, 100, 50);
+      // Draw the outline of a rectangle with the top left at [5,20], a width of 30 and a height of 42
+      it.rectangle(5, 20, 30, 42);
+      // Draw the same rectangle a few pixels apart, but this time filled
+      it.filled_rectangle(40, 40, 30, 42);
 
-          // Circles! Let's draw one with the center at [20,40] and a radius of 10
-          it.circle(20, 40, 10);
-          // ... and the same thing filled again
-          it.filled_circle(20, 75, 10);
+      // Circles! Let's draw one with the center at [20,40] and a radius of 10
+      it.circle(20, 40, 10);
+      // ... and the same thing filled again
+      it.filled_circle(20, 75, 10);
 
-          // Ring and half-ring. First draw the circle with a hole in it
-          // at [75,75] with inner raduis of 20 and outer of 30
-          it.filled_ring(75, 75, 30, 20);
-          // and a "gauge": half-ring that is partially filled.
-          // Same position and size but 80% filled left to right
-          it.filled_gauge(75, 75, 30, 20, 80);
+      // Ring and half-ring. First draw the circle with a hole in it
+      // at [75,75] with inner raduis of 20 and outer of 30
+      it.filled_ring(75, 75, 30, 20);
+      // and a "gauge": half-ring that is partially filled.
+      // Same position and size but 80% filled left to right
+      it.filled_gauge(75, 75, 30, 20, 80);
 
-          // Triangles... Let's draw the outline of a triangle from the [x,y] coordinates of its three points
-          // [25,5], [100,5], [80,25]
-          it.triangle(25, 5, 100, 5, 80, 25);
-          // and a filled triangle !
-          it.filled_triangle(115, 5, 95, 25, 125, 70);
+      // Triangles... Let's draw the outline of a triangle from the [x,y] coordinates of its three points
+      // [25,5], [100,5], [80,25]
+      it.triangle(25, 5, 100, 5, 80, 25);
+      // and a filled triangle !
+      it.filled_triangle(115, 5, 95, 25, 125, 70);
 
-          // Regular Polygons? Let's draw a filled, pointy-topped hexagon inscribed in a circle
-          // centered on [170,45] with a radius of 20
-          it.filled_regular_polygon(170, 45, 20, EDGES_HEXAGON);
-          // and the outline of flat-topped octagon around it!
-          it.regular_polygon(170, 45, 40, EDGES_OCTAGON, VARIATION_FLAT_TOP);
-          // Need to rotate the polygon, or retrieve the coordinates of its vertices? Check the API!
+      // Regular Polygons? Let's draw a filled, pointy-topped hexagon inscribed in a circle
+      // centered on [170,45] with a radius of 20
+      it.filled_regular_polygon(170, 45, 20, EDGES_HEXAGON);
+      // and the outline of flat-topped octagon around it!
+      it.regular_polygon(170, 45, 40, EDGES_OCTAGON, VARIATION_FLAT_TOP);
+      // Need to rotate the polygon, or retrieve the coordinates of its vertices? Check the API!
 
+```
 All the above methods can optionally also be called with an argument at the end which specifies in which
 color to draw. For monochrome displays, only `COLOR_ON` (the default if color is not given) and `COLOR_OFF` are supported.
 
@@ -156,23 +160,25 @@ display:
 ```
 For color displays (e.g. TFT displays), you can use the Color class.
 
-{{< img src="display_rendering_colors.png" alt="Image" caption=".. code-block:: yaml" class="center" >}}
+{{< img src="display_rendering_colors.png" alt="Image" class="center" >}}
 
-    display:
-      - platform: ...
-        # ...
-        lambda: |-
-          auto black = Color(0, 0, 0);
-          auto red = Color(255, 0, 0);
-          auto green = Color(0, 255, 0);
-          auto blue = Color(0, 0, 255);
-          auto white = Color(255, 255, 255);
-          it.filled_circle(20, 32, 15, black);
-          it.filled_circle(40, 32, 15, red);
-          it.filled_circle(60, 32, 15, green);
-          it.filled_circle(80, 32, 15, blue);
-          it.filled_circle(100, 32, 15, white);
+```yaml
+display:
+  - platform: ...
+    # ...
+    lambda: |-
+      auto black = Color(0, 0, 0);
+      auto red = Color(255, 0, 0);
+      auto green = Color(0, 255, 0);
+      auto blue = Color(0, 0, 255);
+      auto white = Color(255, 255, 255);
+      it.filled_circle(20, 32, 15, black);
+      it.filled_circle(40, 32, 15, red);
+      it.filled_circle(60, 32, 15, green);
+      it.filled_circle(80, 32, 15, blue);
+      it.filled_circle(100, 32, 15, white);
 
+```
 Additionally, you have access to two helper methods which will fetch the width and height of the display:
 
 ```yaml
@@ -248,7 +254,9 @@ display:
 
 
 ```
-{{< img src="display_rendering_text.png" alt="Image" caption=".. _display-printf:" class="center" >}}
+{{< img src="display_rendering_text.png" alt="Image" class="center" >}}
+
+{{< anchor "display-printf" >}}
 
 ## Formatted Text
 
@@ -595,8 +603,9 @@ If you're experiencing issues with your color display, the `show_test_card: true
 - Together with that it will show the letters "**R**", "**G**" and "**B**" to validate the display geometry.
 - There will be a rectangle around the corners of the display with a marker at the 0,0 corner which should be at the top left of the screen.
 
-{{< img src="test_card.jpg" alt="Image" caption="When all points above are shown correctly then the display is working as expected." width="50.0%" class="center" >}}
+{{< img src="test_card.jpg" alt="Image" width="50.0%" class="center" >}}
 
+When all points above are shown correctly then the display is working as expected.
 To help the graphics display team determine the best way to help you, **a picture of the result of this option is very helpful.**
 
 Should you [create an issue](https://github.com/esphome/issues/issues) in GitHub regarding your display, please

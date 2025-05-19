@@ -11,52 +11,54 @@ This sensor supports both UART and I²C communication. Only I²C communication i
 
 .. _Sensirion: https://sensirion.com/products/catalog/?filter_series=ceff880a-784d-4877-ae2c-79353c6a0428
 
-{{< img src="sen54-web.png" alt="Image" caption=".. code-block:: yaml" width="100.0%" class="center" >}}
+{{< img src="sen54-web.png" alt="Image" width="100.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: sen5x
-        id: sen54
-        pm_1_0:
-          name: " PM <1µm Weight concentration"
-          id: pm_1_0
-          accuracy_decimals: 1
-        pm_2_5:
-          name: " PM <2.5µm Weight concentration"
-          id: pm_2_5
-          accuracy_decimals: 1
-        pm_4_0:
-          name: " PM <4µm Weight concentration"
-          id: pm_4_0
-          accuracy_decimals: 1
-        pm_10_0:
-          name: " PM <10µm Weight concentration"
-          id: pm_10_0
-          accuracy_decimals: 1
-        temperature:
-          name: "Temperature"
-          accuracy_decimals: 1
-        humidity:
-          name: "Humidity"
-          accuracy_decimals: 0
-        voc:
-          name: "VOC"
-          algorithm_tuning:
-            index_offset: 100
-            learning_time_offset_hours: 12
-            learning_time_gain_hours: 12
-            gating_max_duration_minutes: 180
-            std_initial: 50
-            gain_factor: 230
-        temperature_compensation:
-          offset: 0
-          normalized_offset_slope: 0
-          time_constant: 0
-        acceleration_mode: low
-        store_baseline: true
-        address: 0x69
-        update_interval: 10s
+```yaml
+# Example configuration entry
+sensor:
+  - platform: sen5x
+    id: sen54
+    pm_1_0:
+      name: " PM <1µm Weight concentration"
+      id: pm_1_0
+      accuracy_decimals: 1
+    pm_2_5:
+      name: " PM <2.5µm Weight concentration"
+      id: pm_2_5
+      accuracy_decimals: 1
+    pm_4_0:
+      name: " PM <4µm Weight concentration"
+      id: pm_4_0
+      accuracy_decimals: 1
+    pm_10_0:
+      name: " PM <10µm Weight concentration"
+      id: pm_10_0
+      accuracy_decimals: 1
+    temperature:
+      name: "Temperature"
+      accuracy_decimals: 1
+    humidity:
+      name: "Humidity"
+      accuracy_decimals: 0
+    voc:
+      name: "VOC"
+      algorithm_tuning:
+        index_offset: 100
+        learning_time_offset_hours: 12
+        learning_time_gain_hours: 12
+        gating_max_duration_minutes: 180
+        std_initial: 50
+        gain_factor: 230
+    temperature_compensation:
+      offset: 0
+      normalized_offset_slope: 0
+      time_constant: 0
+    acceleration_mode: low
+    store_baseline: true
+    address: 0x69
+    update_interval: 10s
 
+```
 ## Configuration variables:
 
 - **pm_1_0** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 1μm. Readings in µg/m³.
@@ -144,7 +146,9 @@ The sensor needs about a minute "warm-up". The VOC and NOx gas index algorithm n
 
 The sensor has a JST GHR-06V-S 6 pin type connector, with a 1.25mm pitch. The cable needs this connector:
 
-{{< img src="jst6pin.png" alt="Image" caption="To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) must be shorted to ground (pin no.2). Pin 6 is not used." width="50.0%" class="center" >}}
+{{< img src="jst6pin.png" alt="Image" width="50.0%" class="center" >}}
+
+To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) must be shorted to ground (pin no.2). Pin 6 is not used.
 
 For better stability, the SDA and SCL lines require suitable pull-up resistors.
 

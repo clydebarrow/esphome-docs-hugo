@@ -9,13 +9,15 @@ The `safe_mode` switch allows you to remotely reboot your node into [/components
 
 This component requires [/components/safe_mode]({{< ref "/components/safe_mode" >}}) to be configured.
 
-{{< img src="safemode-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="safemode-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    switch:
-      - platform: safe_mode
-        name: "Living Room Restart (Safe Mode)"
+```yaml
+# Example configuration entry
+switch:
+  - platform: safe_mode
+    name: "Living Room Restart (Safe Mode)"
 
+```
 ## Configuration variables:
 
 - All options from [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}).

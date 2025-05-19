@@ -21,15 +21,17 @@ timeout option which specifies how long to wait for values.
 
 {{< img src="ultrasonic-full.jpg" alt="Image" caption="HC-SR04 Ultrasonic Distance Sensor." width="50.0%" class="center" >}}
 
-{{< img src="ultrasonic-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="ultrasonic-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: ultrasonic
-        trigger_pin: D1
-        echo_pin: D2
-        name: "Ultrasonic Sensor"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: ultrasonic
+    trigger_pin: D1
+    echo_pin: D2
+    name: "Ultrasonic Sensor"
 
+```
 ## Configuration variables:
 
 - **trigger_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The output pin to

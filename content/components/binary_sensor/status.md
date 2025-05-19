@@ -8,13 +8,15 @@ title: "Status Binary Sensor"
 The Status Binary Sensor exposes the node state (if it's connected to via MQTT/native API)
 for Home Assistant.
 
-{{< img src="status-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="status-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    binary_sensor:
-      - platform: status
-        name: "Living Room Status"
+```yaml
+# Example configuration entry
+binary_sensor:
+  - platform: status
+    name: "Living Room Status"
 
+```
 ## Configuration variables:
 
 - All options from [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}). (Inverted mode is not supported)

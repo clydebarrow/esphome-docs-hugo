@@ -7,22 +7,24 @@ title: "HHCCJCY10 Xiaomi MiFlora (Pink version)"
 
 MiFlora, tuya (pink) version, measures temperature, moisture, ambient light and nutrient levels in the soil.
 
-{{< img src="xiaomi_hhccjcy10.jpg" alt="Image" caption=".. code-block:: yaml" width="60.0%" class="center" >}}
+{{< img src="xiaomi_hhccjcy10.jpg" alt="Image" width="60.0%" class="center" >}}
 
-    sensor:
-      - platform: xiaomi_hhccjcy10
-        mac_address: XX:XX:XX:XX:XX:XX
-        temperature:
-          name: "Xiaomi HHCCJCY10 Temperature"
-        moisture:
-          name: "Xiaomi HHCCJCY10 Moisture"
-        illuminance:
-          name: "Xiaomi HHCCJCY10 Illuminance"
-        conductivity:
-          name: "Xiaomi HHCCJCY10 Soil Conductivity"
-        battery_level:
-          name: "Xiaomi HHCCJCY10 Battery Level"
+```yaml
+sensor:
+  - platform: xiaomi_hhccjcy10
+    mac_address: XX:XX:XX:XX:XX:XX
+    temperature:
+      name: "Xiaomi HHCCJCY10 Temperature"
+    moisture:
+      name: "Xiaomi HHCCJCY10 Moisture"
+    illuminance:
+      name: "Xiaomi HHCCJCY10 Illuminance"
+    conductivity:
+      name: "Xiaomi HHCCJCY10 Soil Conductivity"
+    battery_level:
+      name: "Xiaomi HHCCJCY10 Battery Level"
 
+```
 ## Configuration variables:
 
 - **mac_address** (**Required**, string): The MAC address of the device.

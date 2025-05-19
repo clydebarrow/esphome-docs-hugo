@@ -7,18 +7,20 @@ title: "Generic Output Switch"
 
 The `output` switch platform allows you to use any output component as a switch.
 
-{{< img src="output-ui.png" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="output-ui.png" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    output:
-      - platform: gpio
-        pin: GPIOXX
-        id: 'generic_out'
-    switch:
-      - platform: output
-        name: "Generic Output"
-        output: 'generic_out'
+```yaml
+# Example configuration entry
+output:
+  - platform: gpio
+    pin: GPIOXX
+    id: 'generic_out'
+switch:
+  - platform: output
+    name: "Generic Output"
+    output: 'generic_out'
 
+```
 ## Configuration variables:
 
 - **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.

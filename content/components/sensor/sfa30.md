@@ -10,19 +10,21 @@ The `sfa30` sensor platform  allows you to use your Sensirion SFA30 Formaldehyde
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 This sensor supports both UART and I²C communication. However, at the moment only I²C communication is implemented.
 
-{{< img src="sfa30.jpg" alt="Image" caption=".. code-block:: yaml" width="80.0%" class="center" >}}
+{{< img src="sfa30.jpg" alt="Image" width="80.0%" class="center" >}}
 
-    # Example configuration entry
-    sensor:
-      - platform: sfa30
-        formaldehyde:
-          name: "Formaldehyde"
-        temperature:
-          name: "Temperature"
-        humidity:
-          name: "Humidity"
+```yaml
+# Example configuration entry
+sensor:
+  - platform: sfa30
+    formaldehyde:
+      name: "Formaldehyde"
+    temperature:
+      name: "Temperature"
+    humidity:
+      name: "Humidity"
 
 
+```
 ## Configuration variables:
 
 - **formaldehyde** (*Optional*): The information for the Formaldehyde sensor.

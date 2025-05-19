@@ -6,7 +6,7 @@ title: "Light Partition"
 {{< seo description="" image="" >}}
 
 The `partition` light platform allows you to combine multiple addressable light segments
-(like [rgb]({{< ref "rgb/" >}}) or [neopixelbus]({{< ref "neopixelbus/" >}})) and/or individual lights (like [fastled]({{< ref "fastled/" >}})) into a single addressable light.
+(like {{< docref "rgb/" >}} or {{< docref "neopixelbus/" >}}) and/or individual lights (like {{< docref "fastled/" >}}) into a single addressable light.
 This platform also allows splitting up an addressable light into multiple segments, so that
 segments can be individually controlled.
 
@@ -114,8 +114,8 @@ See [``light.addressable_set`` Action]({{< ref "components/light/_index#light-ad
 {{< /note >}}
 ## See Also
 
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [/components/light/fastled]({{< ref "/components/light/fastled" >}})
-- [/components/light/neopixelbus]({{< ref "/components/light/neopixelbus" >}})
+- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light/fastled" >}}
+- {{< docref "/components/light/neopixelbus" >}}
 - :apiref:`partition/light_partition.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/partition.md)

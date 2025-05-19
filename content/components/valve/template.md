@@ -111,8 +111,8 @@ id(my_template_valve).publish_state();
 {{< /note >}}
 ## See Also
 
-- [/components/valve/index]({{< ref "/components/valve/index" >}})
+- {{< docref "/components/valve/index" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
-- [/cookbook/garage-door]({{< ref "/cookbook/garage-door" >}})
+- {{< docref "/cookbook/garage-door" >}}
 - :apiref:`template/valve/template_valve.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/valve/template.md)

@@ -26,7 +26,7 @@ cover:
 
 ```
 What's happening here? First, we define a binary sensor (notably with `id: top_end_stop`) and then a
-[template cover ]({{< relref "/components/cover/template" >}}). (If you're new to Home Assistant, a 'cover' is something like a
+{{< docref "/components/cover/template" "template cover" >}}. (If you're new to Home Assistant, a 'cover' is something like a
 window blind, a roller shutter, or a garage door.) The *state* of the template cover is controlled by a template, or
 "lambda". In lambdas, you're just writing C++ code and therefore the name lambda is used instead of Home Assistant's
 "template" lingo to avoid confusion. Regardless, don't let lambdas scare you just because you saw "C++" -- writing
@@ -107,6 +107,6 @@ using the lambda syntax as described/shown above.
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [actions]({{< ref "actions/" >}})
+- {{< docref "index/" >}}
+- {{< docref "actions/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/automations/templates.md)

@@ -16,7 +16,7 @@ To use LVGL with a [Display Hardware Platforms]({{< ref "components/_index#displ
 
 The graphic display should be configured with `auto_clear_enabled: false` and should not have any `lambda` set. The LVGL component will take care of the display rendering. For most displays, the `update_interval` should be set to `never`, but note that some displays such as OLED and ePaper will need the update interval set to a suitable value.
 
-For interactivity, a [Binary Sensors ]({{< relref "/components/binary_sensor/index" >}}) (capacitive highly preferred), a [/components/sensor/rotary_encoder]({{< ref "/components/sensor/rotary_encoder" >}}) or a custom keypad made up from discrete [Touchscreen ]({{< relref "/components/touchscreen/index" >}}) can be used.
+For interactivity, a {{< docref "/components/binary_sensor/index" "Binary Sensors" >}} (capacitive highly preferred), a {{< docref "/components/sensor/rotary_encoder" >}} or a custom keypad made up from discrete {{< docref "/components/touchscreen/index" "Touchscreen" >}} can be used.
 
 Check out the detailed examples in [LVGL: Tips and Tricks]({{< ref "cookbook/lvgl#lvgl-cookbook" >}}) which demonstrate a number of ways you can integrate your environment with LVGL and ESPHome.
 
@@ -52,7 +52,7 @@ Now read on to learn more about the configuration options and how to customize y
 
 ## Basics
 
-In LVGL, graphical elements like buttons, labels, sliders, etc. are called widgets or objects. See [/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}}) for a complete list of widgets supported within ESPHome. Not all LVGL widgets are implemented, just those commonly used to support home automation needs/tasks.
+In LVGL, graphical elements like buttons, labels, sliders, etc. are called widgets or objects. See {{< docref "/components/lvgl/widgets" >}} for a complete list of widgets supported within ESPHome. Not all LVGL widgets are implemented, just those commonly used to support home automation needs/tasks.
 
 Every widget has a parent object where it is created. For example, if a label is created on a button, the button is the parent of the label. Complex widgets internally consist of several smaller/simpler widgets; these are known as parts, each of which can have separate properties from the main widget.
 
@@ -64,12 +64,12 @@ Some widgets integrate also as native ESPHome components:
 
 | LVGL Widget | ESPHome component |
 | --- | --- |
-| `button` | [Binary Sensor ]({{< relref "/components/binary_sensor/lvgl" >}}), [Switch ]({{< relref "/components/switch/lvgl" >}}) |
-| `switch`, `checkbox` | [Switch ]({{< relref "/components/switch/lvgl" >}}) |
-| `slider`, `arc`, `spinbox` | [Sensor ]({{< relref "/components/sensor/lvgl" >}}), [Number ]({{< relref "/components/number/lvgl" >}}) |
-| `dropdown`,  `roller` | [Select ]({{< relref "/components/select/lvgl" >}}) |
-| `label`, `textarea` | [Text Sensor ]({{< relref "/components/text_sensor/lvgl" >}}), [Text ]({{< relref "/components/text/lvgl" >}}) |
-| `led` | [Light ]({{< relref "/components/light/lvgl" >}}) |
+| `button` | {{< docref "/components/binary_sensor/lvgl" "Binary Sensor" >}}, {{< docref "/components/switch/lvgl" "Switch" >}} |
+| `switch`, `checkbox` | {{< docref "/components/switch/lvgl" "Switch" >}} |
+| `slider`, `arc`, `spinbox` | {{< docref "/components/sensor/lvgl" "Sensor" >}}, {{< docref "/components/number/lvgl" "Number" >}} |
+| `dropdown`,  `roller` | {{< docref "/components/select/lvgl" "Select" >}} |
+| `label`, `textarea` | {{< docref "/components/text_sensor/lvgl" "Text Sensor" >}}, {{< docref "/components/text/lvgl" "Text" >}} |
+| `led` | {{< docref "/components/light/lvgl" "Light" >}} |
 
 
 These are useful with [Home Assistant automations](https://www.home-assistant.io/docs/automation/) interacting directly with the widgets.
@@ -90,28 +90,28 @@ The following configuration variables apply to the main `lvgl` component, in ord
     - **long_press_time** (*Optional*, [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the touchscreen, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`.
     - **long_press_repeat_time** (*Optional*, [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the touchscreen, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`.
 - **encoders** (*Optional*, list): A list of rotary encoders interacting with the LVGL widgets on the display.
-    - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the [common properties ]({{< relref "/components/lvgl/widgets" >}}) of the widgets for more information on groups.
+    - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the {{< docref "/components/lvgl/widgets" "common properties" >}} of the widgets for more information on groups.
     - **initial_focus** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): An optional ID for a widget to be given focus on startup (especially useful if there is only one focusable widget.)
-    - **enter_button** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `ENTER` key.
-    - **sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [/components/sensor/rotary_encoder]({{< ref "/components/sensor/rotary_encoder" >}})oder`; or a list with buttons for left/right interaction with the widgets:
-        - **left_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `LEFT` key.
-        - **right_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `RIGHT` key.
+    - **enter_button** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
+    - **sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/sensor/rotary_encoder" >}}oder`; or a list with buttons for left/right interaction with the widgets:
+        - **left_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
+        - **right_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
     - **long_press_time** (*Optional*, [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the rotary encoder, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`. Can be disabled with `never`.
     - **long_press_repeat_time** (*Optional*, [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the rotary encoder, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`. Can be disabled with `never`.
 - **keypads** (*Optional*, list): A list of keypads interacting with the LVGL widgets on the display.
-    - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the [common properties ]({{< relref "/components/lvgl/widgets" >}}) of the widgets for more information on groups.
-    - **up** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `UP` key.
-    - **down** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `DOWN` key.
-    - **right** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `RIGHT` key.
-    - **left** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `LEFT` key.
-    - **esc** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `ESC` key.
-    - **del** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `DEL` key.
-    - **backspace** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `BACKSPACE` key.
-    - **enter** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `ENTER` key.
-    - **next** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `NEXT` key.
-    - **prev** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `PREV` key.
-    - **home** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `HOME` key.
-    - **end** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [Binary Sensor ]({{< relref "/components/binary_sensor/index" >}})dex>`, to be used as `END` key.
+    - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the {{< docref "/components/lvgl/widgets" "common properties" >}} of the widgets for more information on groups.
+    - **up** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `UP` key.
+    - **down** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `DOWN` key.
+    - **right** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
+    - **left** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
+    - **esc** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ESC` key.
+    - **del** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `DEL` key.
+    - **backspace** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `BACKSPACE` key.
+    - **enter** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
+    - **next** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `NEXT` key.
+    - **prev** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `PREV` key.
+    - **home** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `HOME` key.
+    - **end** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `END` key.
     - **long_press_time** (*Optional*, [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the keypad, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`. Can be disabled with `never`.
     - **long_press_repeat_time** (*Optional*, [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the keypad, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`. Can be disabled with `never`.
 
@@ -145,16 +145,16 @@ When using an encoder input device the navigation works as follows:
 - **style_definitions** (*Optional*, list): A batch of style definitions to use in LVGL widget's `styles` configuration. See [Themes]({{< ref "components/lvgl/_index#lvgl-theme" >}}) for more details.
 - **gradients** (*Optional*, list): A list of gradient definitions to use in *bg_grad* styles. See [Gradients]({{< ref "components/lvgl/_index#lvgl-gradients" >}}) for more details.
 - **theme** (*Optional*, list): A list of styles to be applied to all widgets. See [Themes]({{< ref "components/lvgl/_index#lvgl-theme" >}}) for more details.
-- **widgets** (*Optional*, list): A list of [/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}}) to be drawn on the root display. May not be used if `pages` (below) is configured.
+- **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the root display. May not be used if `pages` (below) is configured.
 - **pages** (*Optional*, list): A list of page IDs. Each page acts as a parent for widgets placed on it. May not be used with `widgets` (above). Options for each page:
     - **skip** (*Optional*, boolean): Option to skip this page when navigating between them with [``lvgl.page.next``, ``lvgl.page.previous``]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}).
     - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
-    - **widgets** (*Optional*, list): A list of [/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}}) to be drawn on the page.
+    - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the page.
     - All other options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) to be applied to this page.
 - **page_wrap** (*Optional*, boolean): Wrap from the last to the first page when navigating between them with [``lvgl.page.next``, ``lvgl.page.previous``]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}). Defaults to `true`.
 - **top_layer** (*Optional*, list): A special kind of *Always on Top* page, which acts as a parent for widgets placed on it. It's shown above all the pages, which may be useful for widgets which always need to be visible.
     - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
-    - **widgets** (*Optional*, list): A list of [/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}}) to be drawn on the page.
+    - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the page.
     - All other options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) to be applied to this page.
 - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
 - All other options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) to be applied to all widgets directly.
@@ -677,11 +677,11 @@ A gradient is a sequence of colors which can be applied to an object using the `
 ```
 ## Widgets
 
-LVGL supports a list of [/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}}) which can be used to draw interactive objects on the screen.
+LVGL supports a list of {{< docref "/components/lvgl/widgets" >}} which can be used to draw interactive objects on the screen.
 
 ## Actions
 
-Widgets support [Actions]({{< ref "components/lvgl/widgets#lvgl-automation-actions" >}}) actions - see the :doc:`/components/lvgl/widgets`[/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}})
+Widgets support [Actions]({{< ref "components/lvgl/widgets#lvgl-automation-actions" >}}) actions - see the :doc:`/components/lvgl/widgets`{{< docref "/components/lvgl/widgets" >}}
 
 Several actions are available for the LVGL component itself, these are outlined below. Note that if multiple LVGL instances are configured, an **lvgl_id** config entry will be required to specify which instance the action relates to. This is not required if there is only a single LVGL instance configured.
 
@@ -976,9 +976,9 @@ This [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) 
 
 ## See Also
 
-- [LVGL Examples in the Cookbook ]({{< relref "/cookbook/lvgl" >}})
-- [/components/display/index]({{< ref "/components/display/index" >}})
-- [/components/touchscreen/index]({{< ref "/components/touchscreen/index" >}})
-- [/components/sensor/rotary_encoder]({{< ref "/components/sensor/rotary_encoder" >}})
+- {{< docref "/cookbook/lvgl" "LVGL Examples in the Cookbook" >}}
+- {{< docref "/components/display/index" >}}
+- {{< docref "/components/touchscreen/index" >}}
+- {{< docref "/components/sensor/rotary_encoder" >}}
 - [LVGL docs](https://docs.lvgl.io/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/index.md)

@@ -296,11 +296,11 @@ on_...:
 ## See Also
 
 - [haier-esphome](https://github.com/paveldn/haier-esphome)
-- [Haier Climate Sensors ]({{< relref "/components/sensor/haier" >}})
-- [Haier Climate Binary Sensors ]({{< relref "/components/binary_sensor/haier" >}})
-- [Haier Climate Text Sensors ]({{< relref "/components/text_sensor/haier" >}})
-- [Haier Climate Buttons ]({{< relref "/components/button/haier" >}})
-- [Haier Climate Switches ]({{< relref "/components/switch/haier" >}})
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
+- {{< docref "/components/sensor/haier" "Haier Climate Sensors" >}}
+- {{< docref "/components/binary_sensor/haier" "Haier Climate Binary Sensors" >}}
+- {{< docref "/components/text_sensor/haier" "Haier Climate Text Sensors" >}}
+- {{< docref "/components/button/haier" "Haier Climate Buttons" >}}
+- {{< docref "/components/switch/haier" "Haier Climate Switches" >}}
+- {{< docref "/components/climate/index" >}}
 - :apiref:`haier/climate/haier_base.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/haier.md)

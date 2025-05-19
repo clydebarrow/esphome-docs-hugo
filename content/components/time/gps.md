@@ -4,7 +4,7 @@ title: "GPS Time Source"
 ---
 
 
-You first need to set up the [GPS ]({{< relref "/components/gps" >}}) component.
+You first need to set up the {{< docref "/components/gps" "GPS" >}} component.
 
 ```yaml
 # Example configuration entry

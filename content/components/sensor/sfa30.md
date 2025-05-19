@@ -48,6 +48,6 @@ sensor:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
+- {{< docref "absolute_humidity/" >}}
 - :apiref:`sfa30/sfa30.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sfa30.md)

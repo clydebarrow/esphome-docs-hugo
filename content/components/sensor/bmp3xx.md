@@ -107,10 +107,10 @@ configure this amount. Possible oversampling values:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [bme280]({{< ref "bme280/" >}})
-- [bmp280]({{< ref "bmp280/" >}})
-- [bme680]({{< ref "bme680/" >}})
-- [bmp085]({{< ref "bmp085/" >}})
+- {{< docref "bme280/" >}}
+- {{< docref "bmp280/" >}}
+- {{< docref "bme680/" >}}
+- {{< docref "bmp085/" >}}
 - :apiref:`bmp3xx_base/bmp3xx_base.h`
 - [BMP3 sensor API](https://github.com/BoschSensortec/BMP3-Sensor-API)
 - [BMP388/BMP390 Library](https://github.com/MartinL1/BMP388_DEV) by  Martin Lindupp

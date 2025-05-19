@@ -6,7 +6,7 @@ title: "LVGL Light"
 {{< seo description="" image="" >}}
 
 The `lvgl` light platform creates a light from an LVGL widget
-and requires [LVGL ]({{< relref "/components/lvgl/index" >}}) to be configured.
+and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
 Supported widget is [``led``]({{< ref "components/lvgl/widgets#lvgl-widget-led" >}}). A single light supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome light component.
 
@@ -30,13 +30,13 @@ To have linear brightness control, `gamma_correct` of the light is set by defaul
 
 {{< /note >}}
 ## See Also
-- [LVGL Main component ]({{< relref "/components/lvgl/index" >}})
+- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
 - [``led``]({{< ref "components/lvgl/widgets#lvgl-widget-led" >}})
-- [/components/binary_sensor/lvgl]({{< ref "/components/binary_sensor/lvgl" >}})
-- [/components/sensor/lvgl]({{< ref "/components/sensor/lvgl" >}})
-- [/components/number/lvgl]({{< ref "/components/number/lvgl" >}})
-- [/components/switch/lvgl]({{< ref "/components/switch/lvgl" >}})
-- [/components/select/lvgl]({{< ref "/components/select/lvgl" >}})
-- [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
-- [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
+- {{< docref "/components/binary_sensor/lvgl" >}}
+- {{< docref "/components/sensor/lvgl" >}}
+- {{< docref "/components/number/lvgl" >}}
+- {{< docref "/components/switch/lvgl" >}}
+- {{< docref "/components/select/lvgl" >}}
+- {{< docref "/components/text/lvgl" >}}
+- {{< docref "/components/text_sensor/lvgl" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/lvgl.md)

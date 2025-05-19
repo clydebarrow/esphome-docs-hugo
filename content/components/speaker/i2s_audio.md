@@ -5,7 +5,7 @@ title: "I²S Audio Speaker"
 
 {{< seo description="" image="" >}}
 
-The `i2s_audio` speaker platform allows you to receive audio via the the [/components/i2s_audio]({{< ref "/components/i2s_audio" >}}).
+The `i2s_audio` speaker platform allows you to receive audio via the the {{< docref "/components/i2s_audio" >}}.
 
 This platform only works on ESP32 based chips.
 
@@ -78,5 +78,5 @@ Internal DAC speakers are only supported by the legacy I²S driver on a regular 
 
 ## See also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/speaker/i2s_audio.md)

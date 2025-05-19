@@ -28,6 +28,6 @@ lock:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
+- {{< docref "/components/output/index" >}}
 - :apiref:`output/lock/output_lock.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lock/output.md)

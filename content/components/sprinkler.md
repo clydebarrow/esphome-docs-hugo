@@ -136,10 +136,10 @@ examples that are ready for you to copy and paste!
   used in ESPHome). Typically this is expected to provide a resolution of approximately 16 milliseconds, however
   this may vary somewhat depending on your exact configuration. Regardless, it should provide more-than-sufficient
   precision to operate any such valve.
-- **multiplier_number** (*Optional*, *string*): The name of the [number ]({{< relref "/components/number/index" >}}) component that
+- **multiplier_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component that
   should be presented to the front end (Home Assistant) to enable control of the sprinkler controller's `multiplier`
   value. See [Using the Sprinkler Controller's Numbers]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_numbers" >}}) below for more detail.
-- **repeat_number** (*Optional*, *string*): The name of the [number ]({{< relref "/components/number/index" >}}) component that
+- **repeat_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component that
   should be presented to the front end (Home Assistant) to enable control of the sprinkler controller's `repeat`
   value. May not be used with `repeat`. See [Using the Sprinkler Controller's Numbers]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_numbers" >}}) below for more
   detail.
@@ -164,23 +164,23 @@ examples that are ready for you to copy and paste!
     turned off, the `sprinkler.shutdown` action is called (see below).
   - **pump_switch_id** (*Optional*, [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})): This is the [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})
     component to be used to control the valve's pump or upstream electric valve. Typically this would be a
-    [GPIO switch ]({{< relref "switch/gpio" >}}) wired to control a relay or other switching device which in turn would
+    {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay or other switching device which in turn would
     activate the respective pump/valve. *It is not recommended to expose this switch to the front end; please
     see* [An Important Note about GPIO Switches and Control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}}) *below for more detail.*
     May not be specified with *pump_off_switch_id* or *pump_on_switch_id*.
   - **pump_off_switch_id** (*Optional*, [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})): This is the [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})
     component to be used to *turn off* the valve's pump or upstream electric *latching* valve. Typically this
-    would be a [GPIO switch ]({{< relref "switch/gpio" >}}) wired to control a relay or other switching device which in turn
+    would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay or other switching device which in turn
     would *switch off* the respective pump/valve. *It is not recommended to expose this switch to the front end; please
     see* [An Important Note about GPIO Switches and Control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}}) *below for more detail.*
     May not be specified with *pump_switch_id*.
   - **pump_on_switch_id** (*Optional*, [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})): This is the [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})
     component to be used to *turn on* the valve's pump or upstream electric *latching* valve. Typically this
-    would be a [GPIO switch ]({{< relref "switch/gpio" >}}) wired to control a relay or other switching device which in turn
+    would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay or other switching device which in turn
     would *switch on* the respective pump/valve. *It is not recommended to expose this switch to the front end; please
     see* [An Important Note about GPIO Switches and Control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}}) *below for more detail.*
     May not be specified with *pump_switch_id*.
-  - **run_duration_number** (*Optional*, *string*): The name of the [number ]({{< relref "/components/number/index" >}}) component
+  - **run_duration_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component
     that should be presented to the front end (Home Assistant) to enable control of the valve's `run_duration` value.
     May not be used with `run_duration`. See [Using the Sprinkler Controller's Numbers]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_numbers" >}}) below for more
     detail. **Pro tip:** Want times in minutes? Add `unit_of_measurement: min` to the number configuration. See
@@ -192,19 +192,19 @@ examples that are ready for you to copy and paste!
     used with `run_duration_number`.
   - **valve_switch_id** (**Required**, [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})): This is the [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})
     component to be used to control the valve that operates the given section or zone of the sprinkler
-    system. Typically this would be a [GPIO switch ]({{< relref "switch/gpio" >}}) wired to control a relay
+    system. Typically this would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay
     or other switching device which in turn would activate the respective valve. *It is not recommended
     to expose this switch to the front end; please see* [An Important Note about GPIO Switches and Control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}})
     *below for more detail.* May not be specified with *valve_off_switch_id* or *valve_on_switch_id*.
   - **valve_off_switch_id** (**Required**, [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})): This is the [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})
     component to be used to *turn off* the *latching* valve that operates the given section or zone of the
-    sprinkler system. Typically this would be a [GPIO switch ]({{< relref "switch/gpio" >}}) wired to control a relay
+    sprinkler system. Typically this would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay
     or other switching device which in turn would *switch off* the respective valve. *It is not recommended
     to expose this switch to the front end; please see* [An Important Note about GPIO Switches and Control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}})
     *below for more detail.* May not be specified with *valve_switch_id*.
   - **valve_on_switch_id** (**Required**, [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})): This is the [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}})
     component to be used to *turn on* the *latching* valve that operates the given section or zone of the
-    sprinkler system. Typically this would be a [GPIO switch ]({{< relref "switch/gpio" >}}) wired to control a relay
+    sprinkler system. Typically this would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay
     or other switching device which in turn would *switch on* the respective valve. *It is not recommended
     to expose this switch to the front end; please see* [An Important Note about GPIO Switches and Control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}})
     *below for more detail.* May not be specified with *valve_switch_id*.
@@ -217,28 +217,28 @@ The savvy and/or seasoned ESPHome user will quickly realize that `pump_switch_id
 `pump_on_switch_id`, `valve_switch_id`, `valve_off_switch_id` and `valve_on_switch_id` (as described above)
 are really just pointers to other (GPIO) switches elsewhere in the ESPHome yaml configuration.
 
-It might seem reasonable to assume that these [GPIO switches ]({{< relref "switch/gpio" >}}) may be used to switch the various
+It might seem reasonable to assume that these {{< docref "switch/gpio" "GPIO switches" >}} may be used to switch the various
 sprinkler zones on and off, however, this is **not** the case. It's important to note that the sprinkler controller
 provides a switch for each configured zone -- ultimately, this switch is to be used to switch any given zone on or
-off, **not** the [GPIO switch ]({{< relref "switch/gpio" >}}) the zone is configured with.
+off, **not** the {{< docref "switch/gpio" "GPIO switch" >}} the zone is configured with.
 
-Keep in mind that a [GPIO switch ]({{< relref "switch/gpio" >}}) directly controls the state of the GPIO pin it is associated
+Keep in mind that a {{< docref "switch/gpio" "GPIO switch" >}} directly controls the state of the GPIO pin it is associated
 with. While it's technically feasible to "override" this behavior, it might not always be desirable. For example,
 if you *wanted* to control the state of the switch/pin manually during testing of your system/configuration, this
 would make doing so impossible (or at least more difficult than necessary), presenting other complications. Ultimately,
 flexibility is key, as we've learned from any number of conversations on the ESPHome Discord server.
 
-As mentioned in the introduction, the sprinkler controller automates control of the [GPIO switches ]({{< relref "switch/gpio" >}})
+As mentioned in the introduction, the sprinkler controller automates control of the {{< docref "switch/gpio" "GPIO switches" >}}
 you provide it with -- it does not "override" control of these switches or alter how they behave beyond simply
 switching them on or off as required based on the configured scheduling.
 
-So why not just use the [GPIO switch ]({{< relref "switch/gpio" >}}) to control the various sprinkler zones directly? As it relates
+So why not just use the {{< docref "switch/gpio" "GPIO switch" >}} to control the various sprinkler zones directly? As it relates
 to the sprinkler controller itself, the primary reason relates to *state* -- that is, we need to be able to ensure
-that the [GPIO switch ]({{< relref "switch/gpio" >}}) state(s) are kept consistent with the configuration of the sprinkler
+that the {{< docref "switch/gpio" "GPIO switch" >}} state(s) are kept consistent with the configuration of the sprinkler
 controller. While it's less important for systems that simply consist of one valve per zone, it becomes very important
 for systems with some additional complexity. Consider the example of a system with a pump and multiple distribution
 valves attached to said pump; the controller in this case is configured to switch the pump off three seconds *before*
-switching off any given distribution valve. If you suddenly manually switch off a [GPIO switch ]({{< relref "switch/gpio" >}})
+switching off any given distribution valve. If you suddenly manually switch off a {{< docref "switch/gpio" "GPIO switch" >}}
 connected to one of these distribution valves, what happens to the pump? What should the sprinkler controller do? Should
 it switch the distribution valve back on?...or maybe just switch the pump off, too? In either case, based on its
 configuration, the pump was supposed be shut down before the valve, but you just went and turned off the valve. The pump
@@ -248,13 +248,13 @@ more than ensuring that any given valve is switched off after *some* duration an
 In summary, to ensure that your sprinkler controller consistently operates as expected:
 
 - Only use the switches provided by the sprinkler controller component to switch any given sprinkler zone on or off.
-- Do not use the [GPIO switches ]({{< relref "switch/gpio" >}}) you have in your configuration to control sprinkler zones/valves
+- Do not use the {{< docref "switch/gpio" "GPIO switches" >}} you have in your configuration to control sprinkler zones/valves
   outside of initial testing of your device configuration.
-- To help prevent accidents, it's probably best if the [GPIO switches ]({{< relref "switch/gpio" >}}) for each sprinkler zone are
+- To help prevent accidents, it's probably best if the {{< docref "switch/gpio" "GPIO switches" >}} for each sprinkler zone are
   **not** exposed to the front end. This can be accomplished in two ways:
 
-  - Do not provide a `name:` parameter to your [GPIO switches ]({{< relref "switch/gpio" >}}), or
-  - Add `internal: true` to each of your [GPIO switch ]({{< relref "switch/gpio" >}}) configurations
+  - Do not provide a `name:` parameter to your {{< docref "switch/gpio" "GPIO switches" >}}, or
+  - Add `internal: true` to each of your {{< docref "switch/gpio" "GPIO switch" >}} configurations
 
 These simple configuration tweaks will help prevent any number of errors (human, automation, or otherwise) and may help
 to avert disaster!
@@ -744,10 +744,10 @@ switch:
 ## Single Controller, Three Latching Valves, Single Latching Pump
 
 This example is similar to the previous example, however it illustrates how a "latching" or "pulsed"
-valve can be configured. This type of valve requires two [GPIO switches ]({{< relref "switch/gpio" >}}) to
+valve can be configured. This type of valve requires two {{< docref "switch/gpio" "GPIO switches" >}} to
 operate -- one to switch the valve on and one to switch the valve off. To switch on the valve, the
-"on" [GPIO switch ]({{< relref "switch/gpio" >}}) is switched on for the configured duration and then switched
-off. To switch the valve off, the "off" [GPIO switch ]({{< relref "switch/gpio" >}}) is switched on for the
+"on" {{< docref "switch/gpio" "GPIO switch" >}} is switched on for the configured duration and then switched
+off. To switch the valve off, the "off" {{< docref "switch/gpio" "GPIO switch" >}} is switched on for the
 configured duration and then switched off.
 
 Note that, while this example illustrates a configuration that uses exclusively latching valves,
@@ -927,7 +927,7 @@ the controllers are operating simultaneously.
 
 ## Using the Sprinkler Controller's Numbers
 
-The sprinkler controller can leverage ESPHome's/Home Assistant's [number ]({{< relref "/components/number/index" >}}) component to
+The sprinkler controller can leverage ESPHome's/Home Assistant's {{< docref "/components/number/index" "number" >}} component to
 make valve run durations easily adjustable from the front end (Home Assistant).
 
 ```yaml
@@ -938,13 +938,13 @@ sprinkler:
     ...
 
 ```
-An added benefit of using [number ]({{< relref "/components/number/index" >}}) components is that modified valve run durations,
+An added benefit of using {{< docref "/components/number/index" "number" >}} components is that modified valve run durations,
 multiplier and repeat values can persist across resets/reboots of the ESP device. If this is your desired behavior, you
-should configure the [number ]({{< relref "/components/number/index" >}}) components within your sprinkler controller configuration.
+should configure the {{< docref "/components/number/index" "number" >}} components within your sprinkler controller configuration.
 
-The sprinkler controller's implementation of the [number ]({{< relref "/components/number/index" >}}) component is based on
-ESPHome's [/components/number/index]({{< ref "/components/number/index" >}}), supporting all of its [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}) in
-addition to a subset of the [Template Number Component's ]({{< relref "/components/number/template" >}}) configuration variables,
+The sprinkler controller's implementation of the {{< docref "/components/number/index" "number" >}} component is based on
+ESPHome's {{< docref "/components/number/index" >}}, supporting all of its [Base Number Configuration]({{< ref "components/number/_index#config-number" >}}) in
+addition to a subset of the {{< docref "/components/number/template" "Template Number Component's" >}} configuration variables,
 including:
 
 - `initial_value` (Defaults to 900 for valves, 1 for multiplier, 0 for repeat)
@@ -1095,7 +1095,7 @@ api:
 
 A number of people have asked about how to determine the sprinkler controller's state. This section aims to outline how
 to use the sprinkler controller's :apiref:`API <sprinkler/sprinkler.h>` to determine what it is doing, generally with
-the goal of indicating this on some form of [display ]({{< relref "/components/display/index" >}}) hardware. Note that this
+the goal of indicating this on some form of {{< docref "/components/display/index" "display" >}} hardware. Note that this
 discussion largely revolves around C++ code (as is used in ESPHome lambdas).
 
 Many of the methods used to determine the sprinkler controller's state return a type of value known as an `optional`.
@@ -1113,8 +1113,8 @@ If you are curious, a general reference for the `optional` type may be found
   template.)
 
 The examples that follow illustrate use of the the sprinkler controller's methods within a
-[display ]({{< relref "/components/display/index" >}}) lambda. The examples are intended to illustrate a pattern and (for sake of
-brevity) *are not complete*; at very least you'll need to fill out the [display ]({{< relref "/components/display/index" >}})
+{{< docref "/components/display/index" "display" >}} lambda. The examples are intended to illustrate a pattern and (for sake of
+brevity) *are not complete*; at very least you'll need to fill out the {{< docref "/components/display/index" "display" >}}
 component's specific configuration details before you can use them.
 
 With these points in mind, let's discuss some of the methods which indicate the state of the sprinkler controller.

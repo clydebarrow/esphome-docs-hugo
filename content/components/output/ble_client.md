@@ -7,13 +7,13 @@ title: "BLE Client Binary Output"
 
 The `ble_client` component is a output that can write a binary value to service characteristics of BLE devices.
 
-For more information on BLE services and characteristics, see [/components/ble_client]({{< ref "/components/ble_client" >}}).
+For more information on BLE services and characteristics, see {{< docref "/components/ble_client" >}}.
 
 {{< warning >}}
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -44,6 +44,6 @@ output:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/ble_client]({{< ref "/components/ble_client" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/ble_client" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/ble_client.md)

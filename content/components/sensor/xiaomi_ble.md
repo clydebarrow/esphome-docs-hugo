@@ -5,11 +5,11 @@ title: "Xiaomi Mijia BLE Sensors"
 
 {{< seo description="" image="" >}}
 
-The `xiaomi_ble` sensor platform lets you track the output of Xiaomi Bluetooth Low Energy devices using the [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}). This component will track, for example, the temperature, humidity, moisture, conductivity, illuminance, formaldehyde, mosquito tablet and battery level of the device every time the sensor sends out a BLE broadcast. Contrary to other implementations, `xiaomi_ble` listens passively to advertisement packets and does not pair with the device. Hence ESPHome has no impact on battery life. Thus, if you only use such sensors, you can safely set `scan_parameters.active: false` in `esp32_ble_tracker` configuration, to save from spamming your RF environment with useless scan requests.
+The `xiaomi_ble` sensor platform lets you track the output of Xiaomi Bluetooth Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}. This component will track, for example, the temperature, humidity, moisture, conductivity, illuminance, formaldehyde, mosquito tablet and battery level of the device every time the sensor sends out a BLE broadcast. Contrary to other implementations, `xiaomi_ble` listens passively to advertisement packets and does not pair with the device. Hence ESPHome has no impact on battery life. Thus, if you only use such sensors, you can safely set `scan_parameters.active: false` in `esp32_ble_tracker` configuration, to save from spamming your RF environment with useless scan requests.
 
 
 {{< note >}}
-You may alternatively use ESPHome's [/components/bluetooth_proxy]({{< ref "/components/bluetooth_proxy" >}}) component to forward sensor data to Home Assistant and have Mija devices configured using its own Mija BLE component. This should work for the devices flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware, as well as the regular, stock firmware.
+You may alternatively use ESPHome's {{< docref "/components/bluetooth_proxy" >}} component to forward sensor data to Home Assistant and have Mija devices configured using its own Mija BLE component. This should work for the devices flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware, as well as the regular, stock firmware.
 
 
 {{< /note >}}
@@ -585,7 +585,7 @@ The `bind_key` is the 32 digits "value" item in the above output which needs to 
 ## Improving reception performance
 
 Use a board with an Ethernet connection to the network, to offload ESP32's radio module from WiFi traffic, this gains performance on Bluetooth side.
-To maximize the chances of catching advertisements of the sensors, you can set `interval` equal to `window` in [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}) scan parameter settings:
+To maximize the chances of catching advertisements of the sensors, you can set `interval` equal to `window` in {{< docref "/components/esp32_ble_tracker" >}} scan parameter settings:
 
 ```yaml
 esp32_ble_tracker:
@@ -605,12 +605,12 @@ You should at least protect your sensors with a custom pairing PIN code. Choose 
 
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-- [/components/display/pvvx_mithermometer]({{< ref "/components/display/pvvx_mithermometer" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/display/pvvx_mithermometer" >}}
 - :apiref:`xiaomi_lywsd03mmc/xiaomi_ble.h`
-- [/components/ethernet]({{< ref "/components/ethernet" >}})
-- [/components/bluetooth_proxy]({{< ref "/components/bluetooth_proxy" >}})
+- {{< docref "/components/ethernet" >}}
+- {{< docref "/components/bluetooth_proxy" >}}
 - Passive BLE monitor integration for Home Assistant (ble_monitor custom component) `<https://github.com/custom-components/ble_monitor>`__
   by [@Magalex2x14](https://github.com/Magalex2x14) and [@Ernst79](https://github.com/Ernst79)
 - Custom firmware (PVVX) for the Xiaomi Thermometer LYWSD03MMC `<https://github.com/pvvx/ATC_MiThermometer>`__

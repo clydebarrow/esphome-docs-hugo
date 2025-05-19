@@ -187,5 +187,5 @@ You can adjust the `repeat:` settings accordingly.
 {{< /note >}}
 ## See Also
 
-- [/components/remote_receiver]({{< ref "/components/remote_receiver" >}})
-- [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})
+- {{< docref "/components/remote_receiver" >}}
+- {{< docref "/components/remote_transmitter" >}}

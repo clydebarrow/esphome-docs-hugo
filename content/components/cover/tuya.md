@@ -8,7 +8,7 @@ title: "Tuya Cover"
 The `tuya` cover platform creates a simple position-only cover from a
 tuya serial component.
 
-This requires the [/components/tuya]({{< ref "/components/tuya" >}}) component to be set up before you can use this platform.
+This requires the {{< docref "/components/tuya" >}} component to be set up before you can use this platform.
 
 Here is an example output for a Tuya M515EGWT (motor for chain roller blinds):
 
@@ -73,7 +73,7 @@ In this condition, it will go into an error / uncalibrated state when it next tr
 
 ## See Also
 
-- [/components/tuya]({{< ref "/components/tuya" >}})
-- [/components/cover/index]({{< ref "/components/cover/index" >}})
+- {{< docref "/components/tuya" >}}
+- {{< docref "/components/cover/index" >}}
 - :apiref:`tuya/cover/tuya_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/tuya.md)

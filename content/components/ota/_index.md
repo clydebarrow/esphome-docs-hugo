@@ -144,10 +144,10 @@ ota:
 
 In addition to OTA updates, ESPHome also supports a "safe mode" to help with recovery if/when updates don't work as
 expected. This is automatically enabled by the `ota` component, but it may be disabled if desired. See
-[/components/safe_mode]({{< ref "/components/safe_mode" >}}) for details.
+{{< docref "/components/safe_mode" >}} for details.
 
 ## See Also
 
 - :apiref:`ota/ota_component.h`
-- [/components/safe_mode]({{< ref "/components/safe_mode" >}})
+- {{< docref "/components/safe_mode" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ota/index.md)

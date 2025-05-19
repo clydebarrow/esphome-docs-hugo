@@ -109,7 +109,7 @@ The menu inherits the dimensions of the connected LCD display and uses the entir
 - [lcd_pcf8574 Component]({{< ref "components/display/lcd_display#lcd-pcf8574" >}})
 - [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}})
 - [The component provides a menu primarily intended to be controlled either by a rotary encoder]({{< ref "components/display_menu/_index#display_menu" >}})
-- [/components/sensor/rotary_encoder]({{< ref "/components/sensor/rotary_encoder" >}})
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
+- {{< docref "/components/sensor/rotary_encoder" >}}
+- {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`lcd_menu/lcd_menu.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display_menu/lcd_menu.md)

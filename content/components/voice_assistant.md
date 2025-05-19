@@ -30,11 +30,11 @@ voice_assistant:
   microphone: mic_id
 
 ```
-- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr[microphone ]({{< relref "/components/microphone/index" >}})to use for input.
-- **micro_wake_word** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):[micro_wake_word ]({{< relref "/components/micro_wake_word" >}})ord>` component used for wake word detection. Configuring this allows Home Assistant to change which wake word model is enabled.
-- **speaker** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):[speaker ]({{< relref "/components/speaker/index" >}})dex>` to use to output the response.
+- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr{{< docref "/components/microphone/index" "microphone" >}}to use for input.
+- **micro_wake_word** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/micro_wake_word" "micro_wake_word" >}}ord>` component used for wake word detection. Configuring this allows Home Assistant to change which wake word model is enabled.
+- **speaker** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker/index" "speaker" >}}dex>` to use to output the response.
   Cannot be used with `media_player` below.
-- **media_player** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):[media_player ]({{< relref "/components/media_player/index" >}})dex>` to use
+- **media_player** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/media_player/index" "media_player" >}}dex>` to use
   to output the response. Cannot be used with `speaker` above.
 - **use_wake_word** (*Optional*, boolean): Enable wake word on the assist pipeline. Defaults to `false`.
 - **conversation_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): How long to wait before resetting the `conversation_id`
@@ -111,7 +111,7 @@ Configuration variables:
 
 - **silence_detection** (*Optional*, boolean): Enable silence detection. Defaults to `true`.
 - **wake_word** (*Optional*, string): The wake word that was used to trigger the voice assistant
-  when using on-device wake word such as [/components/micro_wake_word]({{< ref "/components/micro_wake_word" >}}).
+  when using on-device wake word such as {{< docref "/components/micro_wake_word" >}}.
 
 Call `voice_assistant.stop` to signal the end of the voice command if `silence_detection` is set to `false`.
 
@@ -147,7 +147,7 @@ See our [example YAML files on GitHub](https://github.com/esphome/firmware/blob/
 
 ## Push to Talk
 
-Here is an example offering Push to Talk with a [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}}).
+Here is an example offering Push to Talk with a {{< docref "/components/binary_sensor/index" >}}.
 
 ```yaml
 voice_assistant:
@@ -192,6 +192,6 @@ binary_sensor:
 ```
 ## See Also
 
-- [microphone/index]({{< ref "microphone/index" >}})
+- {{< docref "microphone/index" >}}
 - :apiref:`voice_assistant/voice_assistant.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/voice_assistant.md)

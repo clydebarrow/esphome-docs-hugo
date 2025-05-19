@@ -8,13 +8,13 @@ title: "Sim800L Component"
 ## Component/Hub
 
 The `SIM800L` Component provides the ability to dial, answer calls, send/receive SMS text messages and
-send/receive USSD codes. The device must be connected via a [UART bus ]({{< relref "/components/uart" >}})
+send/receive USSD codes. The device must be connected via a {{< docref "/components/uart" "UART bus" >}}
 supporting both receiving and transmitting line. The UART bus must be configured at the same speed
 of the module which is by default 9600bps. The required connection wires are `+VCC`, `GND`,
 `RX` and `TX`.
 
 {{< warning >}}
-If you are using the [logger]({{< ref "logger/" >}}) make sure you are not using the same pins for `TX` and `RX` or
+If you are using the {{< docref "logger/" >}} make sure you are not using the same pins for `TX` and `RX` or
 otherwise disable the UART logging with the `baud_rate: 0` option.
 
 {{< /warning >}}
@@ -333,5 +333,5 @@ switch:
 ## See Also
 
 - :apiref:`sim800l/sim800l.h`
-- [/components/uart]({{< ref "/components/uart" >}})
+- {{< docref "/components/uart" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sim800l.md)

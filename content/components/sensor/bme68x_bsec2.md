@@ -256,8 +256,8 @@ saved to flash so that the process does not have to start from scratch on device
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [bme680]({{< ref "bme680/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "bme680/" >}}
 - :apiref:`bme68x_bsec2_i2c/bme68x_bsec2_i2c.h`
 - [BME680 datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
 - [BME688 datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)

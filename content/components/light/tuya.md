@@ -16,7 +16,7 @@ The dimmer switch I got would hang if the logger was configured to use the seria
 which meant it was bricked until I cut it open.
 
 {{< /warning >}}
-This requires the [/components/tuya]({{< ref "/components/tuya" >}}) component to be set up before you can use this platform.
+This requires the {{< docref "/components/tuya" >}} component to be set up before you can use this platform.
 
 Here is an example output for a Tuya dimmer:
 
@@ -88,7 +88,7 @@ Therefore the `gamma_correct` setting default is `1.0` and the
 {{< /note >}}
 ## See Also
 
-- [/components/tuya]({{< ref "/components/tuya" >}})
-- [/components/light/index]({{< ref "/components/light/index" >}})
+- {{< docref "/components/tuya" >}}
+- {{< docref "/components/light/index" >}}
 - :apiref:`tuya/light/tuya_light.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/tuya.md)

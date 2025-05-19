@@ -95,8 +95,8 @@ id(template_bin).publish_state(true);
 {{< /note >}}
 ## See Also
 
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
-- [/components/sensor/template]({{< ref "/components/sensor/template" >}})
+- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/sensor/template" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/binary_sensor/template_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/template.md)

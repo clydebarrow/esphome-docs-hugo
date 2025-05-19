@@ -12,7 +12,7 @@ controller board to the display board.
 {{< note >}}
 You need to open your inverter to apply this modification. Use at your own risk! If you want to connect your
 inverter via the (more limited) external RS232 interface you should use the
-[Modbus ]({{< relref "/components/modbus_controller" >}}) component instead.
+{{< docref "/components/modbus_controller" "Modbus" >}} component instead.
 
 {{< /note >}}
 {{< img src="sun_gtil2_controller_board.png" alt="Image" caption="Pinout of the inverter's controller board" width="50.0%" class="center" >}}

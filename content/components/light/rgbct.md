@@ -43,17 +43,17 @@ light:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [/components/light/rgb]({{< ref "/components/light/rgb" >}})
-- [/components/light/rgbw]({{< ref "/components/light/rgbw" >}})
-- [/components/light/rgbww]({{< ref "/components/light/rgbww" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- [/components/output/pca9685]({{< ref "/components/output/pca9685" >}})
-- [/components/output/tlc59208f]({{< ref "/components/output/tlc59208f" >}})
-- [/components/output/my9231]({{< ref "/components/output/my9231" >}})
-- [/components/output/sm16716]({{< ref "/components/output/sm16716" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light/rgb" >}}
+- {{< docref "/components/light/rgbw" >}}
+- {{< docref "/components/light/rgbww" >}}
+- {{< docref "/components/power_supply" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/output/esp8266_pwm" >}}
+- {{< docref "/components/output/pca9685" >}}
+- {{< docref "/components/output/tlc59208f" >}}
+- {{< docref "/components/output/my9231" >}}
+- {{< docref "/components/output/sm16716" >}}
 - :apiref:`rgbct/rgbct_light_output.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/rgbct.md)

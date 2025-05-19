@@ -55,7 +55,7 @@ Here is another example output for a Tuya ME-81H thermostat:
 ## Configuration variables:
 
 - **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Some Tuya devices support obtaining local time from ESPHome.
-  Specify the ID of the [time/index]({{< ref "time/index" >}}) which will be used.
+  Specify the ID of the {{< docref "time/index" >}} which will be used.
 
 - **status_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Some Tuya devices support WiFi status reporting ONLY through gpio pin.
   Specify the pin reported in the config dump or leave empty otherwise.
@@ -127,13 +127,13 @@ Configuration variables:
 
 ## See Also
 
-- [/components/fan/tuya]({{< ref "/components/fan/tuya" >}})
-- [/components/light/tuya]({{< ref "/components/light/tuya" >}})
-- [/components/switch/tuya]({{< ref "/components/switch/tuya" >}})
-- [/components/climate/tuya]({{< ref "/components/climate/tuya" >}})
-- [/components/binary_sensor/tuya]({{< ref "/components/binary_sensor/tuya" >}})
-- [/components/sensor/tuya]({{< ref "/components/sensor/tuya" >}})
-- [/components/text_sensor/tuya]({{< ref "/components/text_sensor/tuya" >}})
-- [/components/number/tuya]({{< ref "/components/number/tuya" >}})
+- {{< docref "/components/fan/tuya" >}}
+- {{< docref "/components/light/tuya" >}}
+- {{< docref "/components/switch/tuya" >}}
+- {{< docref "/components/climate/tuya" >}}
+- {{< docref "/components/binary_sensor/tuya" >}}
+- {{< docref "/components/sensor/tuya" >}}
+- {{< docref "/components/text_sensor/tuya" >}}
+- {{< docref "/components/number/tuya" >}}
 - :apiref:`tuya/tuya.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/tuya.md)

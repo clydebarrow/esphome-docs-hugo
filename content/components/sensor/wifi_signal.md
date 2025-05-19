@@ -6,7 +6,7 @@ title: "WiFi Signal Sensor"
 {{< seo description="" image="" >}}
 
 The `wifi_signal` sensor platform allows you to read the signal
-strength of the currently connected [WiFi Access Point ]({{< relref "/components/wifi" >}}).
+strength of the currently connected {{< docref "/components/wifi" "WiFi Access Point" >}}.
 
 The sensor value is the ["Received signal strength indication"](https://en.wikipedia.org/wiki/Received_signal_strength_indication)
 measured in decibel-milliwatts (dBm). These values are always negative and the closer they are to zero, the better the signal is.
@@ -56,7 +56,7 @@ if the device is acting as an access point without any station mode connection.
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [/components/wifi]({{< ref "/components/wifi" >}})
-- [/components/text_sensor/wifi_info]({{< ref "/components/text_sensor/wifi_info" >}})
+- {{< docref "/components/wifi" >}}
+- {{< docref "/components/text_sensor/wifi_info" >}}
 - :apiref:`wifi_signal/wifi_signal_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/wifi_signal.md)

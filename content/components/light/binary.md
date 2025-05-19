@@ -26,9 +26,9 @@ light:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [/components/output/gpio]({{< ref "/components/output/gpio" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output/gpio" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`binary/light/binary_light_output.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/binary.md)

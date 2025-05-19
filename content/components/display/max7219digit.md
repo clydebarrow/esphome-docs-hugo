@@ -6,7 +6,7 @@ title: "MAX7219 Digit Display"
 {{< seo description="" image="" >}}
 
 The `max7219` display platform allows you to use MAX7219 digit with ESPHome. Please note that this component
-is *only* for the digit "matrix" display, for the 7 segment display see [max7219]({{< ref "max7219/" >}}).
+is *only* for the digit "matrix" display, for the 7 segment display see {{< docref "max7219/" >}}.
 
 {{< img src="max7219digit.png" alt="Image" caption="MAX7219 Digit Display." width="75.0%" class="center" >}}
 
@@ -233,7 +233,7 @@ Please see [Formatted Text]({{< ref "components/display/_index#display-printf" >
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - :apiref:`max7219/max7219.h`
 - [MAX7219 Library](https://github.com/nickgammon/MAX7219) by [Nick Gammon](https://github.com/nickgammon)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/max7219digit.md)

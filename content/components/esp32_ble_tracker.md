@@ -15,7 +15,7 @@ the MAC address of a device and track it using ESPHome.
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -95,8 +95,8 @@ you can use OTA updates again.
   connection slots to avoid memory issues. Defaults to `3`.
   This can only be adjusted when using the `esp-idf` framework up to a maximum of `9`.
   This value cannot exceed the total number of `connection_slots` for the
-  [bluetooth_proxy]({{< ref "bluetooth_proxy/" >}}) component combined with the total
-  configured [ble_client]({{< ref "ble_client/" >}}) instances.
+  {{< docref "bluetooth_proxy/" >}} component combined with the total
+  configured {{< docref "ble_client/" >}} instances.
 
 Automations:
 
@@ -292,16 +292,16 @@ api:
 ```
 ## See Also
 
-- [text_sensor/ble_scanner]({{< ref "text_sensor/ble_scanner" >}})
-- [sensor/ble_rssi]({{< ref "sensor/ble_rssi" >}})
-- [sensor/b_parasite]({{< ref "sensor/b_parasite" >}})
-- [sensor/xiaomi_ble]({{< ref "sensor/xiaomi_ble" >}})
-- [sensor/xiaomi_miscale]({{< ref "sensor/xiaomi_miscale" >}})
-- [sensor/inkbird_ibsth1_mini]({{< ref "sensor/inkbird_ibsth1_mini" >}})
-- [sensor/mopeka_pro_check]({{< ref "sensor/mopeka_pro_check" >}})
-- [sensor/ruuvitag]({{< ref "sensor/ruuvitag" >}})
-- [ble_client]({{< ref "ble_client/" >}})
-- [bluetooth_proxy]({{< ref "bluetooth_proxy/" >}})
+- {{< docref "text_sensor/ble_scanner" >}}
+- {{< docref "sensor/ble_rssi" >}}
+- {{< docref "sensor/b_parasite" >}}
+- {{< docref "sensor/xiaomi_ble" >}}
+- {{< docref "sensor/xiaomi_miscale" >}}
+- {{< docref "sensor/inkbird_ibsth1_mini" >}}
+- {{< docref "sensor/mopeka_pro_check" >}}
+- {{< docref "sensor/ruuvitag" >}}
+- {{< docref "ble_client/" >}}
+- {{< docref "bluetooth_proxy/" >}}
 - :apiref:`esp32_ble_tracker/esp32_ble_tracker.h`
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble_tracker.md)

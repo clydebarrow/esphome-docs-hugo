@@ -508,7 +508,7 @@ display:
 ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/components/touchscreen/ektf2232]({{< ref "/components/touchscreen/ektf2232" >}})
+- {{< docref "index/" >}}
+- {{< docref "/components/touchscreen/ektf2232" >}}
 - [Arduino Inkplate 6 library](https://github.com/e-radionicacom/Inkplate-6-Arduino-library) by [E-radionica.com](https://e-radionica.com/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/inkplate6.md)

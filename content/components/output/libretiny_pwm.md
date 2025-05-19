@@ -54,10 +54,10 @@ Configuration variables:
 
 ## See Also
 
-- [/components/libretiny]({{< ref "/components/libretiny" >}})
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}})
-- [/components/fan/speed]({{< ref "/components/fan/speed" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/libretiny" >}}
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/light/monochromatic" >}}
+- {{< docref "/components/fan/speed" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`libretiny_pwm/libretiny_pwm.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/libretiny_pwm.md)

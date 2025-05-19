@@ -37,6 +37,6 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 ## See Also
 
 - [Usage]({{< ref "components/display/sdl#sdl" >}})
-- [esphome]({{< ref "esphome/" >}})
-- [/components/time/host]({{< ref "/components/time/host" >}})
+- {{< docref "esphome/" >}}
+- {{< docref "/components/time/host" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/host.md)

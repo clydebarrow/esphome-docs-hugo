@@ -57,7 +57,7 @@ text_sensor:
 
 ## See Also
 
-- [/components/wifi]({{< ref "/components/wifi" >}})
-- [/components/sensor/wifi_signal]({{< ref "/components/sensor/wifi_signal" >}})
+- {{< docref "/components/wifi" >}}
+- {{< docref "/components/sensor/wifi_signal" >}}
 - :apiref:`wifi_info/wifi_info_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/wifi_info.md)

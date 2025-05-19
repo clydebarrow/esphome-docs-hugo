@@ -90,11 +90,11 @@ sensor:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [dht]({{< ref "dht/" >}})
-- [dht12]({{< ref "dht12/" >}})
-- [hdc1080]({{< ref "hdc1080/" >}})
-- [htu21d]({{< ref "htu21d/" >}})
-- [sht3xd]({{< ref "sht3xd/" >}})
-- [sht4x]({{< ref "sht4x/" >}})
+- {{< docref "dht/" >}}
+- {{< docref "dht12/" >}}
+- {{< docref "hdc1080/" >}}
+- {{< docref "htu21d/" >}}
+- {{< docref "sht3xd/" >}}
+- {{< docref "sht4x/" >}}
 - :apiref:`sgp4x/sgp4x.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sgp4x.md)

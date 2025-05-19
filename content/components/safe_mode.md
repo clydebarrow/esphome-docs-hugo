@@ -11,8 +11,8 @@ be invoked; in this mode, all components are disabled except serial logging, net
 component(s). In most cases, this will temporarily mitigate the issue, allowing you a chance to correct it, perhaps by
 uploading a new binary.
 
-You can also force the invocation of safe mode by configuring a dedicated [button]({{< relref "/components/button/safe_mode" >}})
-or [switch]({{< relref "/components/switch/safe_mode" >}}) component and/or by repeatedly pressing the reset button on the board
+You can also force the invocation of safe mode by configuring a dedicated {{< docref "/components/button/safe_mode" "button" >}}
+or {{< docref "/components/switch/safe_mode" "switch" >}} component and/or by repeatedly pressing the reset button on the board
 for `num_attempts` times (see below).
 
 ```yaml
@@ -24,7 +24,7 @@ safe_mode:
 
 ## Configuration variables:
 
--  **disabled** (*Optional*, boolean): Set to `true` to disable safe_mode. [/components/ota/index]({{< ref "/components/ota/index" >}}) automatically
+-  **disabled** (*Optional*, boolean): Set to `true` to disable safe_mode. {{< docref "/components/ota/index" >}} automatically
    sets up safe mode; this allows disabling it if/when it is not wanted.
 -  **boot_is_good_after** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time after which the boot is considered successful.
    Defaults to `1min`.
@@ -46,6 +46,6 @@ and OTA component(s).
 ## See Also
 
 - :apiref:`safe_mode/safe_mode.h`
-- [/components/button/safe_mode]({{< ref "/components/button/safe_mode" >}})
-- [/components/switch/safe_mode]({{< ref "/components/switch/safe_mode" >}})
+- {{< docref "/components/button/safe_mode" >}}
+- {{< docref "/components/switch/safe_mode" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/safe_mode.md)

@@ -42,11 +42,11 @@ sensor:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [dht]({{< ref "dht/" >}})
-- [hdc1080]({{< ref "hdc1080/" >}})
-- [htu21d]({{< ref "htu21d/" >}})
-- [sht3xd]({{< ref "sht3xd/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "dht/" >}}
+- {{< docref "hdc1080/" >}}
+- {{< docref "htu21d/" >}}
+- {{< docref "sht3xd/" >}}
 - :apiref:`dht12/dht12.h`
 - [DHT12 Library](https://github.com/dplasa/dht) by [Daniel Plasa](https://github.com/dplasa)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dht12.md)

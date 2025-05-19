@@ -33,10 +33,10 @@ fan:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/fan/index]({{< ref "/components/fan/index" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- [/components/output/pca9685]({{< ref "/components/output/pca9685" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/fan/index" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/output/esp8266_pwm" >}}
+- {{< docref "/components/output/pca9685" >}}
 - :apiref:`fan/fan_state.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/speed.md)

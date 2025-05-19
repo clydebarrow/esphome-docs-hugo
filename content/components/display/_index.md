@@ -8,16 +8,16 @@ title: "Display Component"
 The `display` component houses ESPHome's powerful rendering and display
 engine. Fundamentally, there are these types of displays:
 
-- Character displays like [7-Segment displays ]({{< relref "max7219/" >}}) or
-  [LCD displays ]({{< relref "lcd_display/" >}}).
-- Serial displays like [nextion]({{< ref "nextion/" >}}) that have their own processors for graphics rendering.
-- Graphical displays with fully addressable pixels, like [E-Paper ]({{< relref "waveshare_epaper/" >}}),
-  [TFT ]({{< relref "ili9xxx/" >}}) or [OLED ]({{< relref "ssd1306/" >}}) displays.
+- Character displays like {{< docref "max7219/" "7-Segment displays" >}} or
+  {{< docref "lcd_display/" "LCD displays" >}}.
+- Serial displays like {{< docref "nextion/" >}} that have their own processors for graphics rendering.
+- Graphical displays with fully addressable pixels, like {{< docref "waveshare_epaper/" "E-Paper" >}},
+  {{< docref "ili9xxx/" "TFT" >}} or {{< docref "ssd1306/" "OLED" >}} displays.
 
 For graphical displays, which offer the greatest flexibility, there are two options for displaying content:
 
 - ESPHome's [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}})
-- [LVGL ]({{< relref "/components/lvgl/index" >}}) - Light and Versatile Graphics Library
+- {{< docref "/components/lvgl/index" "LVGL" >}} - Light and Versatile Graphics Library
 
 {{< anchor "display-configuration" >}}
 
@@ -368,7 +368,7 @@ display:
 ```
 {{< note >}}
 For displaying external data on the display, for example data from your Home Assistant instance,
-you can use the [/components/text_sensor/mqtt_subscribe]({{< ref "/components/text_sensor/mqtt_subscribe" >}}) (see the example there for more information).
+you can use the {{< docref "/components/text_sensor/mqtt_subscribe" >}} (see the example there for more information).
 
 {{< /note >}}
 {{< anchor "display-strftime" >}}
@@ -617,7 +617,7 @@ For displays in 8 bit mode you will see distinct color blocks rather than a smoo
 ## See Also
 
 - :apiref:`display/display_buffer.h`
-- [LVGL ]({{< relref "/components/lvgl/index" >}})
+- {{< docref "/components/lvgl/index" "LVGL" >}}
 - [Font Renderer Component]({{< ref "components/font#display-fonts" >}})
 - [Graph Component]({{< ref "components/graph#display-graphs" >}})
 - [QR Code Component]({{< ref "components/qr_code#display-qrcode" >}})

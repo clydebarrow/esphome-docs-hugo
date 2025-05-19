@@ -9,7 +9,7 @@ The `ble_client` component is a text sensor platform that can
 query BLE devices for specific values of service characteristics.
 
 For more information on BLE services and characteristics, see
-[/components/ble_client]({{< ref "/components/ble_client" >}}).
+{{< docref "/components/ble_client" >}}.
 
 ```yaml
 esp32_ble_tracker:
@@ -56,8 +56,8 @@ A variable `x` of type `std::string` is passed to the automation for use in lamb
 
 ## See Also
 
-- [/components/ble_client]({{< ref "/components/ble_client" >}})
-- [/components/sensor/ble_client]({{< ref "/components/sensor/ble_client" >}})
+- {{< docref "/components/ble_client" >}}
+- {{< docref "/components/sensor/ble_client" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ble_text_sensor/ble_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/ble_client.md)

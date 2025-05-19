@@ -6,7 +6,7 @@ title: "Home Assistant Text Sensor"
 {{< seo description="" image="" >}}
 
 The `homeassistant` text sensor platform allows you to create sensors that import
-states from your Home Assistant instance using the [native API ]({{< relref "/components/api" >}}).
+states from your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.
 
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node

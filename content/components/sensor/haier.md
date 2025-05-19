@@ -68,6 +68,6 @@ sensor:
 
 ## See Also
 
-- [Haier Climate ]({{< relref "/components/climate/haier" >}})
+- {{< docref "/components/climate/haier" "Haier Climate" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/haier.md)

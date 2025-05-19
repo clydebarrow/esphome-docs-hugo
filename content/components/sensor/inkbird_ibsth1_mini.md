@@ -6,7 +6,7 @@ title: "Inkbird IBS-TH1, IBS-TH1 Mini, and IBS-TH2 BLE Sensor"
 {{< seo description="" image="" >}}
 
 The `inkbird_ibsth1_mini` sensor platform lets you track the output of Inkbird IBS-TH1, IBS-TH1 Mini, and IBS-TH2 Bluetooth
-Low Energy devices using the [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}). This component will track the
+Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}. This component will track the
 temperature, external temperature (non mini only), humidity and the battery level of the IBS-TH1 device every time the
 sensor sends out a BLE broadcast. Note that contrary to other implementations, ESPHome can track as
 many IBS-TH1/TH2 devices at once as you want.
@@ -95,9 +95,9 @@ ESPHome therefore has no impact on the battery life of the device.
 {{< /note >}}
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/sensor/index" >}}
+- {{< docref "absolute_humidity/" >}}
 - :apiref:`inkbird_ibsth1_mini/inkbird_ibsth1_mini.h`
 - [OpenMQTTGateway](https://github.com/1technophile/OpenMQTTGateway) by [@1technophile](https://github.com/1technophile)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/inkbird_ibsth1_mini.md)

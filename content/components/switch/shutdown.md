@@ -25,10 +25,10 @@ switch:
 
 ## See Also
 
-- [restart]({{< ref "restart/" >}})
-- [safe_mode]({{< ref "safe_mode/" >}})
-- [factory_reset]({{< ref "factory_reset/" >}})
-- [/components/button/shutdown]({{< ref "/components/button/shutdown" >}})
-- [template]({{< ref "template/" >}})
+- {{< docref "restart/" >}}
+- {{< docref "safe_mode/" >}}
+- {{< docref "factory_reset/" >}}
+- {{< docref "/components/button/shutdown" >}}
+- {{< docref "template/" >}}
 - :apiref:`shutdown/shutdown_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/shutdown.md)

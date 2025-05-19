@@ -7,7 +7,7 @@ title: "Mopeka Pro Check BLE Sensor"
 
 The `mopeka_pro_check` sensor platform lets you track the output of Mopeka Pro
 Check LP, Mopeka Pro Plus, Mopeka Pro Universal or Lippert Propane Tank Sensors,   Bluetooth Low
-Energy devices using the [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}). This component
+Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}. This component
 will track the tank level, distance, temperature, battery percentage, and sensor reading quality of a
 device every time the sensor sends out a BLE broadcast.  There are additional configuration options
 to control handling of poor quality readings and reporting reading quality issues.
@@ -21,7 +21,7 @@ This sensor component only supports the following sensors:
 
 Sensors are calibrated for propane only.
 
-See [/components/sensor/mopeka_std_check]({{< ref "/components/sensor/mopeka_std_check" >}}) for original Mopeka Check sensors support.
+See {{< docref "/components/sensor/mopeka_std_check" >}} for original Mopeka Check sensors support.
 
 {{< /warning >}}
 {{< img src="mopeka_pro_check.jpg" alt="Image" caption="Mopeka Pro Check LP over BLE." class="center" >}}
@@ -172,8 +172,8 @@ ESPHome therefore has no impact on the battery life of the device.
 {{< /note >}}
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/sensor/index" >}}
 - :apiref:`mopeka_pro_check/mopeka_pro_check.h`
 - `Mopeka  <https://www.mopekaiot.com/shop>`
 - [Lippert](https://store.lci1.com/lippert-propane-tank-sensor-2021130655)

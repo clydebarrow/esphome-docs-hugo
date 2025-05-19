@@ -8,7 +8,7 @@ title: "ESP8266 Software PWM Output"
 The ESP8266 Software PWM platform allows you to use a software PWM on
 the pins GPIO0-GPIO16 on your ESP8266. Note that this is a software PWM,
 so there can be some flickering during periods of high WiFi activity. Hardware PWMs
-like the one on the ESP32 (see [ledc]({{< ref "ledc/" >}})) are preferred.
+like the one on the ESP32 (see {{< docref "ledc/" >}}) are preferred.
 
 ```yaml
 # Example configuration entry
@@ -63,10 +63,10 @@ Configuration variables:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}})
-- [/components/fan/speed]({{< ref "/components/fan/speed" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/light/monochromatic" >}}
+- {{< docref "/components/fan/speed" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`esp8266_pwm/esp8266_pwm.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/esp8266_pwm.md)

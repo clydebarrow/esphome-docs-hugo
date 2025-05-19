@@ -5,14 +5,14 @@ title: "BLE Component"
 
 {{< seo description="" image="" >}}
 
-The `esp32_ble` component in ESPHome sets up the Bluetooth LE stack on the device so that a [esp32_ble_server]({{< ref "esp32_ble_server/" >}})
+The `esp32_ble` component in ESPHome sets up the Bluetooth LE stack on the device so that a {{< docref "esp32_ble_server/" >}}
 can run.
 
 {{< warning >}}
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -92,7 +92,7 @@ The lambda equivalent for this is `id(ble_id).is_active()`.
 
 ## See Also
 
-- [esp32_ble_server]({{< ref "esp32_ble_server/" >}})
-- [esp32_improv]({{< ref "esp32_improv/" >}})
+- {{< docref "esp32_ble_server/" >}}
+- {{< docref "esp32_improv/" >}}
 - :apiref:`esp32_ble/ble.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble.md)

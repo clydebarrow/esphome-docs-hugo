@@ -101,8 +101,8 @@ id(template_lock1).publish_state(lock::LOCK_STATE_LOCKED);
 {{< /note >}}
 ## See Also
 
-- [/automations/index]({{< ref "/automations/index" >}})
-- [/components/lock/index]({{< ref "/components/lock/index" >}})
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
+- {{< docref "/automations/index" >}}
+- {{< docref "/components/lock/index" >}}
+- {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`template/lock/template_lock.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lock/template.md)

@@ -7,7 +7,7 @@ title: "Tuya Climate"
 
 The `tuya` climate platform creates a climate device from a tuya component.
 
-Tuya climate requires a [/components/tuya]({{< ref "/components/tuya" >}}) to be configured.
+Tuya climate requires a {{< docref "/components/tuya" >}} to be configured.
 
 ```text
 [11:45:14][C][tuya:041]: Tuya:
@@ -29,7 +29,7 @@ On this controller (BAC-002-ELW), the data points are:
 - 3 represents the current temperature.
 - 4 represents the schedule mode but is not yet available to be used in ESPHome.
 - 5 represents the ECO mode switch.
-- 6 represents the child lock switch. (use the [/components/switch/tuya]({{< ref "/components/switch/tuya" >}}) component to control this)
+- 6 represents the child lock switch. (use the {{< docref "/components/switch/tuya" >}} component to control this)
 - 102 represents the HVAC mode (heating, cooling, fan-only, etc.).
 - 103 represents the fan speed (auto, low, medium, high, etc.).
 
@@ -133,7 +133,7 @@ integers for data reporting and to get a .5 temperature you need to divide by 2 
 
 ## See Also
 
-- [/components/tuya]({{< ref "/components/tuya" >}})
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
+- {{< docref "/components/tuya" >}}
+- {{< docref "/components/climate/index" >}}
 - :apiref:`tuya/climate/tuya_climate.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/tuya.md)

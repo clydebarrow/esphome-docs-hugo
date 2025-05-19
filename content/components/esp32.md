@@ -124,9 +124,9 @@ Some notes about the pins on the original ESP32:
   it's not desired. You can, however, still use the strapping pins as output pins.
 - `GPIO34` to `GPIO39`: These pins **cannot** be used as outputs (yes, even though GPIO stands for "general purpose
   input/**output**"...).
-- `GPIO32` to `GPIO39`: These pins can be used with the [/components/sensor/adc]({{< ref "/components/sensor/adc" >}}) to measure voltages.
+- `GPIO32` to `GPIO39`: These pins can be used with the {{< docref "/components/sensor/adc" >}} to measure voltages.
 - `GPIO2`: On the `esp32dev` board, this pin is connected to the blue LED. It also supports the
-  [touch pad binary sensor ]({{< relref "/components/binary_sensor/esp32_touch" >}}) (in addition to a few other pins).
+  {{< docref "/components/binary_sensor/esp32_touch" "touch pad binary sensor" >}} (in addition to a few other pins).
 
 ```yaml
 # Example configuration entry
@@ -138,5 +138,5 @@ binary_sensor:
 ```
 ## See Also
 
-- [esphome]({{< ref "esphome/" >}})
+- {{< docref "esphome/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32.md)

@@ -13,7 +13,7 @@ instructions for setting up this platform.
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -68,7 +68,7 @@ like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.
 
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/sensor/index" >}}
 - :apiref:`ble_rssi/ble_rssi_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ble_rssi.md)

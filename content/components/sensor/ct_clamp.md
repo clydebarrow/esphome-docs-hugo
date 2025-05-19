@@ -6,10 +6,10 @@ title: "CT Clamp Current Sensor"
 {{< seo description="" image="" >}}
 
 The Current Transformer Clamp (`ct_clamp`) sensor allows you to hook up a CT Clamp to an analog
-voltage sensor (like the [ADC sensor ]({{< relref "adc/" >}})) and convert the readings to measured single phase AC current.
+voltage sensor (like the {{< docref "adc/" "ADC sensor" >}}) and convert the readings to measured single phase AC current.
 
-First, you need to set up a voltage sensor source ([ADC sensor ]({{< relref "adc/" >}}), but for example also
-[ADS1115 ]({{< relref "ads1115/" >}})) and pass it to the CT clamp sensor with the `sensor` option.
+First, you need to set up a voltage sensor source ({{< docref "adc/" "ADC sensor" >}}, but for example also
+{{< docref "ads1115/" "ADS1115" >}}) and pass it to the CT clamp sensor with the `sensor` option.
 
 Please also see [this guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
 as an introduction to the working principle of CT clamp sensors and how to hook them up to your device.
@@ -70,7 +70,7 @@ Recompile and upload, now your CT clamp sensor is calibrated!
 
 - [EMonLib](https://github.com/openenergymonitor/EmonLib)
 - [CT Clamp Guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
-- [adc]({{< ref "adc/" >}})
-- [ads1115]({{< ref "ads1115/" >}})
+- {{< docref "adc/" >}}
+- {{< docref "ads1115/" >}}
 - :apiref:`sensor/ct_clamp_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ct_clamp.md)

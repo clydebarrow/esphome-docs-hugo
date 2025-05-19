@@ -5,7 +5,7 @@ title: "I²S Audio Microphone"
 
 {{< seo description="" image="" >}}
 
-The `i2s_audio` microphone platform allows you to receive audio via the the [/components/i2s_audio]({{< ref "/components/i2s_audio" >}}).
+The `i2s_audio` microphone platform allows you to receive audio via the the {{< docref "/components/i2s_audio" >}}.
 
 This platform only works on ESP32 based chips.
 
@@ -94,5 +94,5 @@ microphone:
 ```
 ## See also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/microphone/i2s_audio.md)

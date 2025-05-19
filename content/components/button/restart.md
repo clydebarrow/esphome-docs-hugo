@@ -21,10 +21,10 @@ button:
 
 ## See Also
 
-- [shutdown]({{< ref "shutdown/" >}})
-- [safe_mode]({{< ref "safe_mode/" >}})
-- [factory_reset]({{< ref "factory_reset/" >}})
-- [/components/switch/restart]({{< ref "/components/switch/restart" >}})
-- [template]({{< ref "template/" >}})
+- {{< docref "shutdown/" >}}
+- {{< docref "safe_mode/" >}}
+- {{< docref "factory_reset/" >}}
+- {{< docref "/components/switch/restart" >}}
+- {{< docref "template/" >}}
 - :apiref:`restart/button/restart_button.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/restart.md)

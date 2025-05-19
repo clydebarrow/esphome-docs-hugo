@@ -196,6 +196,6 @@ display:
 ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - :apiref:`rpi_dpi_rgb/rpi_dpi_rgb.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/rpi_dpi_rgb.md)

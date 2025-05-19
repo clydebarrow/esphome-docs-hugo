@@ -6,7 +6,7 @@ title: "Pulse Meter Sensor"
 {{< seo description="" image="" >}}
 
 The pulse meter sensor allows you to count the number and frequency of pulses on any pin. It is intended to be a drop-in replacement
-for the [pulse counter component ]({{< relref "/components/sensor/pulse_counter" >}}).
+for the {{< docref "/components/sensor/pulse_counter" "pulse counter component" >}}.
 Rather than counting pulses over a fixed time interval, the pulse meter sensor measures the time between pulses. The precise manner in which this is done depends on the `internal_filter_mode` option. This leads to a higher resolution, especially for low pulse rates, as the pulse counter sensor is limited by the number of pulses within a time interval.
 
 Here's a comparison of the two sensors.  The pulse meter is the smoother line.  Both are set to an update interval of 10 seconds (using the `update_interval` and the `throttle_average` option respectively):
@@ -100,9 +100,9 @@ This value is the raw count of pulses, and not the value you see after the filte
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [/components/sensor/pulse_counter]({{< ref "/components/sensor/pulse_counter" >}})
-- [/components/sensor/total_daily_energy]({{< ref "/components/sensor/total_daily_energy" >}})
-- [/cookbook/power_meter]({{< ref "/cookbook/power_meter" >}})
+- {{< docref "/components/sensor/pulse_counter" >}}
+- {{< docref "/components/sensor/total_daily_energy" >}}
+- {{< docref "/cookbook/power_meter" >}}
 - [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
 - :apiref:`pulse_meter/pulse_meter_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pulse_meter.md)

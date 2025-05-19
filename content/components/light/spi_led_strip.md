@@ -46,12 +46,12 @@ APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso
 
 {{< img src="rgb-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- [/components/output/pca9685]({{< ref "/components/output/pca9685" >}})
-- [/components/output/tlc59208f]({{< ref "/components/output/tlc59208f" >}})
-- [/components/output/my9231]({{< ref "/components/output/my9231" >}})
-- [/components/output/sm16716]({{< ref "/components/output/sm16716" >}})
+- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/output/esp8266_pwm" >}}
+- {{< docref "/components/output/pca9685" >}}
+- {{< docref "/components/output/tlc59208f" >}}
+- {{< docref "/components/output/my9231" >}}
+- {{< docref "/components/output/sm16716" >}}
 - :apiref:`rgb/rgb_light_output.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/spi_led_strip.md)

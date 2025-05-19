@@ -14,7 +14,7 @@ The Nextion can receive an integer but it can only send 3 bytes for a negative i
         -16777215 to 4294967295
 
 {{< /note >}}
-See [/components/display/nextion]({{< ref "/components/display/nextion" >}}) for setting up the display
+See {{< docref "/components/display/nextion" >}} for setting up the display
 
 ```yaml
 # Example configuration entry
@@ -204,7 +204,7 @@ printh FF FF FF
 
 ## See Also
 
-- [/components/display/nextion]({{< ref "/components/display/nextion" >}})
-- [index]({{< ref "index/" >}})
+- {{< docref "/components/display/nextion" >}}
+- {{< docref "index/" >}}
 - :apiref:`nextion/sensor/nextion_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/nextion.md)

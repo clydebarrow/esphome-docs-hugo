@@ -78,7 +78,7 @@ to use that name, you can set `name: None`.
 - **color_correct** (*Optional*, list of float): Apply a color correction to each color channel. This defines the
   maximum brightness of each channel. For example `[100%, 50%, 100%]` would set the green channel to be at most at
   50% brightness.
-- **power_supply** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):[/components/power_supply]({{< ref "/components/power_supply" >}})pply` to connect to this light. When
+- **power_supply** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/power_supply" >}}pply` to connect to this light. When
   the light is turned on, the power supply will automatically be switched on too.
 
 **Advanced options:**
@@ -92,7 +92,7 @@ to use that name, you can set `name: None`.
   to `""` to remove the default entity category.
 - If MQTT enabled, all other options from [MQTT Component Base Configuration]({{< ref "components/mqtt#config-mqtt-component" >}}).
 - If Webserver enabled and [Version 3 features]({{< ref "components/web_server#config-webserver-version-3-options" >}}) is selected, all other options from
-  [/components/web_server]({{< ref "/components/web_server" >}}).
+  {{< docref "/components/web_server" >}}.
 
 {{< anchor "light-state_config" >}}
 

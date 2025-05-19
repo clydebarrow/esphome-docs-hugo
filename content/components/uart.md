@@ -71,7 +71,7 @@ Whenever possible, ESPHome will use the hardware UART unit on the ESP8266 for fa
 When the hardware UARTs are all occupied, ESPHome will fall back to a software implementation that may not
 be accurate at higher baud rates.
 
-`UART0` is (by default) used by the [logger component ]({{< relref "/components/logger" >}}), using `tx_pin: GPIO1` and
+`UART0` is (by default) used by the {{< docref "/components/logger" "logger component" >}}, using `tx_pin: GPIO1` and
 `rx_pin: GPIO3`. If you configure a UART that overlaps with these pins, you can share the hardware with the
 logger and leave others available. If you have configured the logger to use a different hardware UART, the pins
 used for hardware sharing change accordingly.
@@ -272,7 +272,7 @@ uart:
 ```
 ## See Also
 
-- [/components/logger]({{< ref "/components/logger" >}})
-- [/components/packet_transport/uart]({{< ref "/components/packet_transport/uart" >}})
+- {{< docref "/components/logger" >}}
+- {{< docref "/components/packet_transport/uart" >}}
 - :apiref:`uart/uart.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/uart.md)

@@ -13,8 +13,8 @@ heating element through a relay where a fast PWM update cycle would not be appro
 This is for **slow** PWM output. For fast-switching PWM outputs (for example,
 lights), see these outputs:
 
-- ESP32: [ledc]({{< ref "ledc/" >}})
-- ESP8266: [esp8266_pwm]({{< ref "esp8266_pwm/" >}})
+- ESP32: {{< docref "ledc/" >}}
+- ESP8266: {{< docref "esp8266_pwm/" >}}
 
 ```yaml
 ```
@@ -66,7 +66,7 @@ output:
 ```
 {{< note >}}
 If the duty cycle is not constrained to a maximum value, the
-[/components/output/sigma_delta_output]({{< ref "/components/output/sigma_delta_output" >}}) component offers faster updates and
+{{< docref "/components/output/sigma_delta_output" >}} component offers faster updates and
 greater control over the switching frequency. This is better for loads that
 need some time to fully change between on and off, like eletric thermal
 actuator heads or fans.
@@ -74,12 +74,12 @@ actuator heads or fans.
 {{< /note >}}
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/output/sigma_delta_output]({{< ref "/components/output/sigma_delta_output" >}})
-- [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}})
-- [/components/fan/speed]({{< ref "/components/fan/speed" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output/esp8266_pwm" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/output/sigma_delta_output" >}}
+- {{< docref "/components/light/monochromatic" >}}
+- {{< docref "/components/fan/speed" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`slow_pwm/slow_pwm_output.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/slow_pwm.md)

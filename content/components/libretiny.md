@@ -95,14 +95,14 @@ The `Pin functions` table outlines all GPIOs available on the chosen board.
 
 Some notes about the pins on BK72xx:
 
-- `TX2 (P0)` and `RX2 (P1)` are used for the default [/components/logger]({{< ref "/components/logger" >}}) UART port.
-- `TX1 (P11)` and `RX1 (P10)` are used for flashing firmware, as well as for [/components/tuya]({{< ref "/components/tuya" >}}).
-- `ADC3 (P23)` is the only [/components/sensor/adc]({{< ref "/components/sensor/adc" >}}) available on BK7231.
+- `TX2 (P0)` and `RX2 (P1)` are used for the default {{< docref "/components/logger" >}} UART port.
+- `TX1 (P11)` and `RX1 (P10)` are used for flashing firmware, as well as for {{< docref "/components/tuya" >}}.
+- `ADC3 (P23)` is the only {{< docref "/components/sensor/adc" >}} available on BK7231.
 
 Some notes about the pins on RTL8710BN/BX:
 
 - `TX2 (PA30)` and `RX2 (PA29)` are used for flashing the firmware,
-  as well as the default [/components/logger]({{< ref "/components/logger" >}}) UART port.
+  as well as the default {{< docref "/components/logger" >}} UART port.
 - `TX2 (PA30)` is additionally used to determine the boot mode on startup (similar to ESP32).
   Pulling it LOW on startup will enter "download mode".
 
@@ -194,7 +194,7 @@ bk72xx:
 
 - **uart_port** (*Optional*, int): Choose the default UART port of the framework.
   This affects LibreTiny logging messages, **as well as the default port for**
-  [ESPHome logger ]({{< relref "/components/logger" >}}) (e.g. if you don't specify any other).
+  {{< docref "/components/logger" "ESPHome logger" >}} (e.g. if you don't specify any other).
   One of 0, 1, 2. The default value is chip-specific and is chosen by LibreTiny appropriately.
 
 - **gpio_recover** (*Optional*, boolean): Disable JTAG/SWD debugging peripherals. This may be needed
@@ -206,9 +206,9 @@ bk72xx:
 
 ## See Also
 
-- [esphome]({{< ref "esphome/" >}})
-- [/components/output/libretiny_pwm]({{< ref "/components/output/libretiny_pwm" >}})
-- [/components/text_sensor/libretiny]({{< ref "/components/text_sensor/libretiny" >}})
+- {{< docref "esphome/" >}}
+- {{< docref "/components/output/libretiny_pwm" >}}
+- {{< docref "/components/text_sensor/libretiny" >}}
 - [LibreTiny Documentation](https://docs.libretiny.eu/) (external)
-- [/components/tuya]({{< ref "/components/tuya" >}})
+- {{< docref "/components/tuya" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/libretiny.md)

@@ -8,13 +8,13 @@ title: "Improv via BLE"
 The [esp32_improv` component in ESPHome implements the open `Improv standard](https://www.improv-wifi.com/)
 for configuring Wi-Fi on an ESP32 device by using Bluetooth Low Energy (BLE) to receive the credentials.
 
-The `esp32_improv` component will automatically set up the [BLE Server ]({{< relref "esp32_ble/" >}}).
+The `esp32_improv` component will automatically set up the {{< docref "esp32_ble/" "BLE Server" >}}.
 
 {{< warning >}}
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -30,11 +30,11 @@ esp32_improv:
 {{< /warning >}}
 ## Configuration variables:
 
-- **authorizer** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})[binary sensor ]({{< relref "binary_sensor/index" >}})dex>` to authorize with.
+- **authorizer** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}){{< docref "binary_sensor/index" "binary sensor" >}}dex>` to authorize with.
   Also accepts `none` to skip authorization.
 - **authorized_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time until authorization times out and needs
   to be re-authorized. Defaults to `1min`.
-- **status_indicator** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}}))[output ]({{< relref "output/index" >}})dex>` to display feedback to the user.
+- **status_indicator** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})){{< docref "output/index" "output" >}}dex>` to display feedback to the user.
 - **identify_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to identify for. Defaults to `10s`.
 - **wifi_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before starting the Improv service
   after Wi-Fi is no longer connected. Defaults to `1min`.
@@ -157,9 +157,9 @@ The `status_indicator` has the following patterns:
 
 ## See Also
 
-- [wifi]({{< ref "wifi/" >}})
-- [improv_serial]({{< ref "improv_serial/" >}})
-- [captive_portal]({{< ref "captive_portal/" >}})
+- {{< docref "wifi/" >}}
+- {{< docref "improv_serial/" >}}
+- {{< docref "captive_portal/" >}}
 - [Improv Wi-Fi](https://www.improv-wifi.com/)
 - :apiref:`esp32_improv/esp32_improv_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_improv.md)

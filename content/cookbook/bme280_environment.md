@@ -5,16 +5,16 @@ title: "BME280 Environment"
 
 {{< seo description="" image="" >}}
 
-The [/components/sensor/bme280]({{< ref "/components/sensor/bme280" >}}) is a simple temperature, humidity, and pressure sensor with communication over [SPI Bus]({{< ref "components/spi#spi" >}}) or [I²C Bus]({{< ref "components/i2c#i2c" >}}).
+The {{< docref "/components/sensor/bme280" >}} is a simple temperature, humidity, and pressure sensor with communication over [SPI Bus]({{< ref "components/spi#spi" >}}) or [I²C Bus]({{< ref "components/i2c#i2c" >}}).
 With some simple math it is possible to either determine the height of the sensor, or the current pressure at sea level.
 This guide can be applied to any sensor measuring temperature and pressure at the same time, like the
-[/components/sensor/bme680]({{< ref "/components/sensor/bme680" >}}), or [/components/sensor/bmp280]({{< ref "/components/sensor/bmp280" >}}).
+{{< docref "/components/sensor/bme680" >}}, or {{< docref "/components/sensor/bmp280" >}}.
 
 {{< img src="bme280-header.jpg" alt="Image" width="75.0%" class="center" >}}
 
-The first step is to connect the sensor as described [here ]({{< relref "/components/sensor/bme280" >}}).
+The first step is to connect the sensor as described {{< docref "/components/sensor/bme280" "here" >}}.
 After validating the sensor is working, we can proceed and add some formulas.
-In the example below, modify `platform: bme280` as appropriate for your hardware (either `bme280_i2c` or `bme280_spi`). See [/components/sensor/bme280]({{< ref "/components/sensor/bme280" >}}) for specific details.
+In the example below, modify `platform: bme280` as appropriate for your hardware (either `bme280_i2c` or `bme280_spi`). See {{< docref "/components/sensor/bme280" >}} for specific details.
 
 ```yaml
 sensor:
@@ -57,12 +57,12 @@ sensor:
 
 The first block `sensor` starts with the normal bme280 sensor components `temperature`, `pressure`,
 and `humidity` with each their own id.
-After the bme280 sensor, a [/components/sensor/template]({{< ref "/components/sensor/template" >}}) is defined to calculate the altitude in a lambda.
+After the bme280 sensor, a {{< docref "/components/sensor/template" >}} is defined to calculate the altitude in a lambda.
 The variable `STANDARD_SEA_LEVEL_PRESSURE` (in hPa), should be filled in for your location.
 The formula derived from [here](https://github.com/finitespace/BME280/blob/master/src/EnvironmentCalculations.cpp),
 converts the currently measured pressure to the altitudes in meters including temperature compensation.
 
-The second block uses the [/components/sensor/absolute_humidity]({{< ref "/components/sensor/absolute_humidity" >}}) component which
+The second block uses the {{< docref "/components/sensor/absolute_humidity" >}} component which
 converts the currently measured temperature and relative humidity to absolute humidity (grams/m^3).
 
 {{< note >}}
@@ -112,7 +112,7 @@ Therefore it is not possible to calculate altitude at the same time, and vice ve
 
 ## See Also
 
-- [/components/sensor/absolute_humidity]({{< ref "/components/sensor/absolute_humidity" >}})
-- [/components/sensor/template]({{< ref "/components/sensor/template" >}})
-- [/components/sensor/bme280]({{< ref "/components/sensor/bme280" >}})
+- {{< docref "/components/sensor/absolute_humidity" >}}
+- {{< docref "/components/sensor/template" >}}
+- {{< docref "/components/sensor/bme280" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/bme280_environment.md)

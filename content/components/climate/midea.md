@@ -68,9 +68,9 @@ climate:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of[../uart]({{< ref "../uart" >}})uart` if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of{{< docref "../uart" >}}uart` if you want
   to use multiple UART buses.
-- **transmitter_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Defined and used automatically when u[../remote_transmitter]({{< ref "../remote_transmitter" >}})tter` component for IR commands transmit.
+- **transmitter_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Defined and used automatically when u{{< docref "../remote_transmitter" >}}tter` component for IR commands transmit.
 - **period** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Minimal period between requests to the appliance. Defaults to `1s`.
 - **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Request response timeout until next request attempt. Defaults to `2s`.
 - **num_attempts** (*Optional*, int): Number of request attempts between 1 and 5 inclusive. Defaults to `3`.
@@ -170,7 +170,7 @@ Configuration variables:
 
 ## ``midea_ac.display_toggle`` Action
 
-This action toggle ac screen. Works via UART if supported or [../remote_transmitter]({{< ref "../remote_transmitter" >}}).
+This action toggle ac screen. Works via UART if supported or {{< docref "../remote_transmitter" >}}.
 
 ```yaml
 on_...:
@@ -183,7 +183,7 @@ on_...:
 
 ## ``midea_ac.swing_step`` Action
 
-This action adjust the louver by one step. [../remote_transmitter]({{< ref "../remote_transmitter" >}}) required.
+This action adjust the louver by one step. {{< docref "../remote_transmitter" >}} required.
 
 ```yaml
 on_...:
@@ -220,7 +220,7 @@ on_...:
 ## Additional control options using IR commands
 
 It is possible to use the FollowMe function and some other features available only through IR commands.
-Below is an example of how to send FollowMe commands with the values of your sensor using the [../remote_transmitter]({{< ref "../remote_transmitter" >}})
+Below is an example of how to send FollowMe commands with the values of your sensor using the {{< docref "../remote_transmitter" >}}
 component, as well as control the light of the LED display.
 
 ```yaml
@@ -284,6 +284,6 @@ Special thanks to the project [IRremoteESP8266](https://github.com/crankyoldgit/
 
 ## See Also
 
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
+- {{< docref "/components/climate/index" >}}
 - :apiref:`climate/midea_ac.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/midea.md)

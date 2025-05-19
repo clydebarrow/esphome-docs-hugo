@@ -41,6 +41,6 @@ Advanced options:
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [UART Bus]({{< ref "components/uart#uart" >}})
-- [template]({{< ref "template/" >}})
+- {{< docref "template/" >}}
 - :apiref:`hrxl_maxsonar_wr/hrxl_maxsonar_wr.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/hrxl_maxsonar_wr.md)

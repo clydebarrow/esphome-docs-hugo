@@ -9,7 +9,7 @@ The `nextion` text sensor platform supports text strings. It can be a component 
 It is best to set the components vscope to global in the Nextion Editor. This way the component will be available
 if the page is shown or not.
 
-See [/components/display/nextion]({{< ref "/components/display/nextion" >}}) for setting up the display
+See {{< docref "/components/display/nextion" >}} for setting up the display
 
 ```yaml
 # Example configuration entry
@@ -165,7 +165,7 @@ printh FF FF FF
 
 ## See Also
 
-- [/components/display/nextion]({{< ref "/components/display/nextion" >}})
-- [index]({{< ref "index/" >}})
+- {{< docref "/components/display/nextion" >}}
+- {{< docref "index/" >}}
 - :apiref:`nextion/text_sensor/nextion_textsensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/nextion.md)

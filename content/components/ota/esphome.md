@@ -15,7 +15,7 @@ This platform is used by both the ESPHome dashboard as well as the command line 
 
 In addition to OTA updates, ESPHome also supports a "safe mode" to help with recovery if/when updates don't work as
 expected. This is automatically enabled by this component, but it may be disabled if desired. See
-[/components/safe_mode]({{< ref "/components/safe_mode" >}}) for details.
+{{< docref "/components/safe_mode" >}} for details.
 
 ```yaml
 # Example configuration entry
@@ -36,7 +36,7 @@ ota:
 -  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 -  **version** (*Optional*, int): Version of OTA protocol to use. Version 2 is more stable. To downgrade to legacy
    ESPHome, the device should be updated with OTA version 1 first. Defaults to `2`.
--  All [Automation]({{< ref "automations/_index#automation" >}}) supported by :doc:`/com[/components/ota/index]({{< ref "/components/ota/index" >}})
+-  All [Automation]({{< ref "automations/_index#automation" >}}) supported by :doc:`/com{{< docref "/components/ota/index" >}}
 
 {{< note >}}
 After a serial upload, ESP8266 modules must be reset before OTA updates will work. If you attempt to perform an OTA
@@ -83,7 +83,7 @@ If OTA is already enabled without a password, simply add a `password:` line to t
 ## See Also
 
 - :apiref:`ota/ota_component.h`
-- [/components/ota/index]({{< ref "/components/ota/index" >}})
-- [/components/ota/http_request]({{< ref "/components/ota/http_request" >}})
-- [/components/safe_mode]({{< ref "/components/safe_mode" >}})
+- {{< docref "/components/ota/index" >}}
+- {{< docref "/components/ota/http_request" >}}
+- {{< docref "/components/safe_mode" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ota/esphome.md)

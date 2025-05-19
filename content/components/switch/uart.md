@@ -6,7 +6,7 @@ title: "UART Switch"
 {{< seo description="" image="" >}}
 
 The `uart` switch platform allows you to send a pre-defined sequence of bytes on a
-[UART bus ]({{< relref "/components/uart" >}}) when triggered.
+{{< docref "/components/uart" "UART bus" >}} when triggered.
 
 ```yaml
 # Example configuration entry
@@ -41,6 +41,6 @@ switch:
 
 ## See Also
 
-- [/components/uart]({{< ref "/components/uart" >}})
+- {{< docref "/components/uart" >}}
 - :apiref:`uart/switch/uart_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/uart.md)

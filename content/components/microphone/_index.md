@@ -26,7 +26,7 @@ A microphone source configuration is used by components to ensure that it receiv
 
 Configuration variables:
 
-- **microphone** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):[microphone ]({{< relref "/components/microphone/index" >}})dex>` to use for input.
+- **microphone** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/microphone/index" "microphone" >}}dex>` to use for input.
 - **bits_per_sample** (*Optional*, int): The bits per sample to use as input to the component.
   May be restricted by the component to a specific value.
 - **channels** (*Optional*, list): A list of 0-indexed channel numbers enabling them to use as

@@ -23,7 +23,7 @@ status_led:
 
 ```
 {{< note >}}
-If your device has a single LED that needs to be shared use  [status_led light platform ]({{< relref "/components/light/status_led" >}}) instead.
+If your device has a single LED that needs to be shared use  {{< docref "/components/light/status_led" "status_led light platform" >}} instead.
 
 {{< /note >}}
 ## Configuration variables:
@@ -46,6 +46,6 @@ status_led:
 {{< /note >}}
 ## See Also
 
-- [/components/light/status_led]({{< ref "/components/light/status_led" >}})
+- {{< docref "/components/light/status_led" >}}
 - :apiref:`status_led/status_led.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/status_led.md)

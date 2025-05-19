@@ -148,7 +148,7 @@ the specified range. In the first example, this range is defined as "any value a
 range refers to any (humidity) value 50% or below.
 
 Finally, for the cases where the "pure" YAML automations just don't quite reach far enough, ESPHome has another
-extremely powerful tool to offer: [templates]({{< ref "templates/" >}}).
+extremely powerful tool to offer: {{< docref "templates/" >}}.
 
 Now that concludes the introduction to actions in ESPHome. They're a powerful tool to automate almost everything on
 your device with an easy-to-use syntax. What follows below is an index of common actions which you're sure to find
@@ -611,9 +611,9 @@ helps in the event that there is an issue in the device's network stack preventi
 network. You can adjust this behavior (or even disable automatic rebooting) using the `reboot_timeout` option in any
 of the following components:
 
-- [/components/wifi]({{< ref "/components/wifi" >}})
-- [/components/api]({{< ref "/components/api" >}})
-- [/components/mqtt]({{< ref "/components/mqtt" >}})
+- {{< docref "/components/wifi" >}}
+- {{< docref "/components/api" >}}
+- {{< docref "/components/mqtt" >}}
 
 Beware, however, that disabling the reboot timeout(s) effectively disables the reboot watchdog, so you will need to
 power-cycle the device if it proves to be/remain unreachable on the network.
@@ -646,6 +646,6 @@ action and then (in your automation) use the `script.is_running` condition to kn
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [templates]({{< ref "templates/" >}})
+- {{< docref "index/" >}}
+- {{< docref "templates/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/automations/actions.md)

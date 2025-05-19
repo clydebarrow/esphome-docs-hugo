@@ -10,8 +10,8 @@ the device (when on error/warning state) or as binary light (when on OK state).
 This is useful for devices with only one LED available.
 You can also use a binary [Output Component]({{< ref "components/output/_index#output" >}}).
 
-It provides the combined functionality of [status_led component ]({{< relref "/components/status_led" >}}) and a
-[binary light component ]({{< relref "/components/light/binary" >}}) over a single shared GPIO led.
+It provides the combined functionality of {{< docref "/components/status_led" "status_led component" >}} and a
+{{< docref "/components/light/binary" "binary light component" >}} over a single shared GPIO led.
 
 When the device is on error/warning state, the function of `status_led` will take precedence and control the blinking of the LED.
 When the device is in OK state, the LED will be restored to the state of the `binary light` function and can be controlled as such.
@@ -52,8 +52,8 @@ pin:
 {{< /note >}}
 ## See Also
 
-- [/components/status_led]({{< ref "/components/status_led" >}})
-- [/components/light/binary]({{< ref "/components/light/binary" >}})
-- [/components/light/index]({{< ref "/components/light/index" >}})
+- {{< docref "/components/status_led" >}}
+- {{< docref "/components/light/binary" >}}
+- {{< docref "/components/light/index" >}}
 - :apiref:`status_led/light/status_led_light.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/status_led.md)

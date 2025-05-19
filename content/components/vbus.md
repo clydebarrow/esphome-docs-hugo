@@ -39,7 +39,7 @@ then that model should work with your unit.
 
 ## Hardware Connection
 
-The device must be connected via a [UART bus ]({{< relref "/components/uart" >}}) supporting the receiving line only. The UART bus
+The device must be connected via a {{< docref "/components/uart" "UART bus" >}} supporting the receiving line only. The UART bus
 must be configured at the same speed of the module which is by default 9600bps. The controller outputs data every second.
 
 To connect to this and read data from the bus a level shifting is needed as the voltage is around 8V (direct connection
@@ -71,7 +71,7 @@ vbus:
 
 ```
 {{< warning >}}
-If you are using the [logger]({{< ref "logger/" >}}) make sure you are not using the same pins for it or otherwise disable the UART
+If you are using the {{< docref "logger/" >}} make sure you are not using the same pins for it or otherwise disable the UART
 logging with the `baud_rate: 0` option.
 
 {{< /warning >}}
@@ -278,9 +278,9 @@ binary_sensor:
 ```
 ## See Also
 
-- [/components/uart]({{< ref "/components/uart" >}})
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+- {{< docref "/components/uart" >}}
+- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/sensor/index" >}}
 - [Resol manuals](https://www.resol.de/en/dokumente)
 - [VBus protocol](https://danielwippermann.github.io/resol-vbus)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/vbus.md)

@@ -42,12 +42,12 @@ sensor:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [htu21d]({{< ref "htu21d/" >}})
-- [dht]({{< ref "dht/" >}})
-- [dht12]({{< ref "dht12/" >}})
-- [hdc1080]({{< ref "hdc1080/" >}})
-- [sht3xd]({{< ref "sht3xd/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "htu21d/" >}}
+- {{< docref "dht/" >}}
+- {{< docref "dht12/" >}}
+- {{< docref "hdc1080/" >}}
+- {{< docref "sht3xd/" >}}
 - :apiref:`htu31d/htu31d.h`
 - [i2cdevlib](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg](https://github.com/jrowberg)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/htu31d.md)

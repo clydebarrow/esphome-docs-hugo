@@ -39,7 +39,7 @@ output:
 {{< /note >}}
 ## Configuration variables:
 
-- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of[output component ]({{< relref "/components/output/index" >}})dex>`
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of{{< docref "/components/output/index" "output component" >}}dex>`
   to use for this servo.
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of this servo so that it can be controlled.
 

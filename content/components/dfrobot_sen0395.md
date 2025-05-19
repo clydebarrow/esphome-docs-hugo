@@ -12,7 +12,7 @@ the lights on when you enter a room, keep them on as long as you are there (with
 sensor) and turn them off almost immediately after you leave the room.
 
 It is possible to use this sensor with only a single GPIO pin; however, if you wish to change its settings,
-a [/components/uart]({{< ref "/components/uart" >}}) component (and its requisite GPIO pins) is required in your device's configuration.
+a {{< docref "/components/uart" >}} component (and its requisite GPIO pins) is required in your device's configuration.
 
 {{< img src="dfrobot_sen0395-full.jpg" alt="Image" caption="DFRobot mmWave Radar / presence detection sensor" width="75%" class="center" >}}
 
@@ -44,11 +44,11 @@ switch:
 ## Hub Component
 
 You only need to have the hub component (`dfrobot_sen0395:` entry) defined if you want to change the sensor's
-settings or read its state via the UART. A [/components/binary_sensor/gpio]({{< ref "/components/binary_sensor/gpio" >}}) alone is sufficient if you only want
+settings or read its state via the UART. A {{< docref "/components/binary_sensor/gpio" >}} alone is sufficient if you only want
 to determine presence/occupancy. When you define `dfrobot_sen0395:` you'll need to have a `uart:` entry in
 your configuration with both the TX and RX pins defined and the baud rate must be set to `115200`.
 
-Multiple instances of this component may be defined if multiple [/components/uart]({{< ref "/components/uart" >}}) components are available:
+Multiple instances of this component may be defined if multiple {{< docref "/components/uart" >}} components are available:
 
 ```yaml
 dfrobot_sen0395:
@@ -63,7 +63,7 @@ dfrobot_sen0395:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Necessary if you want
   to define multiple instances of this component.
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of[/components/uart]({{< ref "/components/uart" >}})uart` if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of{{< docref "/components/uart" >}}uart` if you want
   to use multiple UART buses.
 
 {{< anchor "dfrobot_sen0395-binary_sensor" >}}
@@ -74,7 +74,7 @@ dfrobot_sen0395:
 
 ## Via GPIO
 
-To determine presence, you can simply use a [/components/binary_sensor/gpio]({{< ref "/components/binary_sensor/gpio" >}}) and connect a single GPIO pin
+To determine presence, you can simply use a {{< docref "/components/binary_sensor/gpio" >}} and connect a single GPIO pin
 from your processor to the IO2 pin of the mmWave radar. Using a dedicated GPIO pin may offer an advantage since
 it may wake the processor from sleep.
 
@@ -99,7 +99,7 @@ Connecting the sensor via the serial connection (UART) allows both changing its 
 Note, however, that the UART peripheral cannot wake the processor; if you plan on sleeping the processor, you'll likely
 still need to use the [Via GPIO]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-via_gpio" >}}) approach described above (in addition to the UART).
 
-First, setup a [/components/uart]({{< ref "/components/uart" >}}) and [Hub Component]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-component" >}}) and then use its binary sensor platform
+First, setup a {{< docref "/components/uart" >}} and [Hub Component]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-component" >}}) and then use its binary sensor platform
 to create individual binary sensors for each presence sensor.
 
 ```yaml

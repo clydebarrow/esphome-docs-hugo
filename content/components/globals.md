@@ -80,7 +80,7 @@ id(my_global_var) = 10;
 {{< /note >}}
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/automations/actions]({{< ref "/automations/actions" >}})
-- [/automations/templates]({{< ref "/automations/templates" >}})
+- {{< docref "index/" >}}
+- {{< docref "/automations/actions" >}}
+- {{< docref "/automations/templates" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/globals.md)

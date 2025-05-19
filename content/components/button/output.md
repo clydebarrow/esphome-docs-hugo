@@ -31,13 +31,13 @@ button:
 - All other options from [Base Button Configuration]({{< ref "components/button/_index#config-button" >}}).
 
 {{< note >}}
-When used with a [/components/output/gpio]({{< ref "/components/output/gpio" >}}), the pin will be low by default and pulled high when the button is
+When used with a {{< docref "/components/output/gpio" >}}, the pin will be low by default and pulled high when the button is
 pressed. To invert this behaviour and have the pin pulled low when the button is pressed, set the `inverted` option
 in the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}).
 
 {{< /note >}}
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
+- {{< docref "/components/output/index" >}}
 - :apiref:`output/button/output_button.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/output.md)

@@ -72,11 +72,11 @@ set `pullup: false` under your `pin` configuration.
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [dht12]({{< ref "dht12/" >}})
-- [hdc1080]({{< ref "hdc1080/" >}})
-- [htu21d]({{< ref "htu21d/" >}})
-- [sht3xd]({{< ref "sht3xd/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "dht12/" >}}
+- {{< docref "hdc1080/" >}}
+- {{< docref "htu21d/" >}}
+- {{< docref "sht3xd/" >}}
 - :apiref:`dht/dht.h`
 - [Arduino DHTLib](https://playground.arduino.cc/Main/DHTLib)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dht.md)

@@ -92,7 +92,7 @@ id(light_1).turn_off();
 ## ``output.set_level`` Action
 
 This action sets the float output to the given level when executed. Note: This only
-works with floating point outputs like [/components/output/slow_pwm]({{< ref "/components/output/slow_pwm" >}}), [/components/output/sigma_delta_output]({{< ref "/components/output/sigma_delta_output" >}}), [/components/output/ledc]({{< ref "/components/output/ledc" >}}), [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}}).
+works with floating point outputs like {{< docref "/components/output/slow_pwm" >}}, {{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/ledc" >}}, {{< docref "/components/output/esp8266_pwm" >}}.
 
 ```yaml
 on_...:
@@ -113,13 +113,13 @@ id(light_1).set_level(0.5);
 {{< /note >}}
 ## Full Output Index
 
-- [/components/switch/output]({{< ref "/components/switch/output" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
-- [/components/light/binary]({{< ref "/components/light/binary" >}})
-- [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}})
-- [/components/light/rgb]({{< ref "/components/light/rgb" >}})
-- [/components/fan/binary]({{< ref "/components/fan/binary" >}})
-- [/components/fan/speed]({{< ref "/components/fan/speed" >}})
+- {{< docref "/components/switch/output" >}}
+- {{< docref "/components/power_supply" >}}
+- {{< docref "/components/light/binary" >}}
+- {{< docref "/components/light/monochromatic" >}}
+- {{< docref "/components/light/rgb" >}}
+- {{< docref "/components/fan/binary" >}}
+- {{< docref "/components/fan/speed" >}}
 - :apiref:`binary_output.h <output/binary_output.h>`,
   :apiref:`float_output.h <output/float_output.h>`
 

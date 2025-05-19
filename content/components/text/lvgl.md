@@ -5,7 +5,7 @@ title: "LVGL Text"
 
 {{< seo description="" image="" >}}
 
-The `lvgl` text platform creates an editable text component from an LVGL textual widget and requires [LVGL ]({{< relref "/components/lvgl/index" >}}) to be configured.
+The `lvgl` text platform creates an editable text component from an LVGL textual widget and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
 Supported widgets are [``textarea``]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}) and [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}). A single text supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome text component.
 
@@ -28,14 +28,14 @@ Widget-specific actions (`lvgl.label.update`, `lvgl.textarea.update`) will trigg
 
 {{< /note >}}
 ## See Also
-- [LVGL Main component ]({{< relref "/components/lvgl/index" >}})
+- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
 - [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}})
 - [``textarea``]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}})
-- [/components/binary_sensor/lvgl]({{< ref "/components/binary_sensor/lvgl" >}})
-- [/components/sensor/lvgl]({{< ref "/components/sensor/lvgl" >}})
-- [/components/number/lvgl]({{< ref "/components/number/lvgl" >}})
-- [/components/switch/lvgl]({{< ref "/components/switch/lvgl" >}})
-- [/components/light/lvgl]({{< ref "/components/light/lvgl" >}})
-- [/components/select/lvgl]({{< ref "/components/select/lvgl" >}})
-- [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
+- {{< docref "/components/binary_sensor/lvgl" >}}
+- {{< docref "/components/sensor/lvgl" >}}
+- {{< docref "/components/number/lvgl" >}}
+- {{< docref "/components/switch/lvgl" >}}
+- {{< docref "/components/light/lvgl" >}}
+- {{< docref "/components/select/lvgl" >}}
+- {{< docref "/components/text_sensor/lvgl" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text/lvgl.md)

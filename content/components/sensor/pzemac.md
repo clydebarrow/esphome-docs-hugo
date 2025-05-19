@@ -29,7 +29,7 @@ Please note that metering chip inside of PZEM module is powered from AC side and
 
 {{< warning >}}
 This page refers to version V3 of the PZEM004T.
-For using the older V1 variant of this sensor please see [pzem004t ]({{< relref "pzem004t/" >}}).
+For using the older V1 variant of this sensor please see {{< docref "pzem004t/" "pzem004t" >}}.
 
 {{< /warning >}}
 The communication with this component is done via a [Modbus Component]({{< ref "components/modbus#modbus" >}}) using [UART Bus]({{< ref "components/uart#uart" >}}).
@@ -150,7 +150,7 @@ modbus_controller:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [pzem004t]({{< ref "pzem004t/" >}})
-- [pzemdc]({{< ref "pzemdc/" >}})
+- {{< docref "pzem004t/" >}}
+- {{< docref "pzemdc/" >}}
 - :apiref:`pzemac/pzemac.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzemac.md)

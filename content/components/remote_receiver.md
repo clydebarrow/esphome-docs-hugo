@@ -577,11 +577,11 @@ remote_receiver:
 {{< /note >}}
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})
+- {{< docref "index/" >}}
+- {{< docref "/components/remote_transmitter" >}}
 - [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}})
 - [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}})
-- [/components/rf_bridge]({{< ref "/components/rf_bridge" >}})
+- {{< docref "/components/rf_bridge" >}}
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - :apiref:`remote/remote_receiver.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/remote_receiver.md)

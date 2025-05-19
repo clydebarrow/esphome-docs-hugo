@@ -41,7 +41,7 @@ you want the switch to use that name, you can set `name: None`.
   **NOTE** : Not all components consider **restore_mode**. Check the documentation of the specific component to understand how
   this feature works for a particular component or device.
   For restoring on ESP8266s, also see `restore_from_flash` in the
-  [esp8266 section ]({{< relref "/components/esp8266" >}}).
+  {{< docref "/components/esp8266" "esp8266 section" >}}.
 
     - `RESTORE_DEFAULT_OFF` - Attempt to restore state and default to OFF if not possible to restore.
     - `RESTORE_DEFAULT_ON` - Attempt to restore state and default to ON.

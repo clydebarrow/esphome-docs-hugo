@@ -248,7 +248,7 @@ and the `ESP_LOGx` logging macros in this automation.
 {{< /note >}}
 ## See Also
 
-- [/components/uart]({{< ref "/components/uart" >}})
-- [/components/select/logger]({{< ref "/components/select/logger" >}})
+- {{< docref "/components/uart" >}}
+- {{< docref "/components/select/logger" >}}
 - :apiref:`logger/logger.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/logger.md)

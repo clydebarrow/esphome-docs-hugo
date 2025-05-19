@@ -39,7 +39,7 @@ In addition to retrieving GPS position data, the module can also be used as a
 time platform to get the current date and time via the very accurate GPS clocks
 without a network connection.
 
-See [time/gps]({{< ref "time/gps" >}}) for config options for the GPS time source.
+See {{< docref "time/gps" >}} for config options for the GPS time source.
 
 ## Configuration variables:
 - **latitude** (*Optional*): Include the Latitude as a sensor

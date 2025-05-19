@@ -8,7 +8,7 @@ title: "Nextion Binary Sensor Component"
 The `nextion` binary sensor platform supports the many switched components in the Nextion as well as integer variables (>0 == true). It can be a component or variable in the Nextion display.
 It is best to set the components vscope to global in the Nextion Editor. This way the component will be available if the page is shown or not.
 
-See [/components/display/nextion]({{< ref "/components/display/nextion" >}}) for setting up the display
+See {{< docref "/components/display/nextion" >}} for setting up the display
 
 ```yaml
 # Example configuration entry
@@ -201,7 +201,7 @@ printh FF FF FF
 
 ## See Also
 
-- [/components/display/nextion]({{< ref "/components/display/nextion" >}})
-- [index]({{< ref "index/" >}})
+- {{< docref "/components/display/nextion" >}}
+- {{< docref "index/" >}}
 - :apiref:`nextion/binary_sensor/nextion_binarysensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/nextion.md)

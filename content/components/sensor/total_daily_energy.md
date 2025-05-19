@@ -6,7 +6,7 @@ title: "Total Daily Energy Sensor"
 {{< seo description="" image="" >}}
 
 The `total_daily_energy` sensor is a helper sensor that can use the power value of
-other sensors like the [ATM90E32 ]({{< relref "atm90e32/" >}}), [CSE7766 ]({{< relref "cse7766/" >}}), [HLW8012 ]({{< relref "hlw8012/" >}}), etc and integrate
+other sensors like the {{< docref "atm90e32/" "ATM90E32" >}}, {{< docref "cse7766/" "CSE7766" >}}, {{< docref "hlw8012/" "HLW8012" >}}, etc and integrate
 it over time.
 
 So this component allows you to convert readings in `W` or `kW` to readings of the total
@@ -51,7 +51,7 @@ time:
 
 ## Converting from W to kW
 
-Some sensors such as the [HLW8012 ]({{< relref "hlw8012/" >}}) expose their power sensor with a unit of measurement of
+Some sensors such as the {{< docref "hlw8012/" "HLW8012" >}} expose their power sensor with a unit of measurement of
 `W`. To have your readings in `kW`, use a filter:
 
 ```yaml
@@ -69,7 +69,7 @@ sensor:
 ```
 ## Lifetime instead of Daily
 
-For a more-generic version of this component which does not reset every midnight, see [integration]({{< ref "integration/" >}}), which can provide device-lifetime values instead of daily values with the following example settings:
+For a more-generic version of this component which does not reset every midnight, see {{< docref "integration/" >}}, which can provide device-lifetime values instead of daily values with the following example settings:
 
 ```yaml
 # Example configuration entry
@@ -86,12 +86,12 @@ sensor:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [hlw8012]({{< ref "hlw8012/" >}})
-- [cse7766]({{< ref "cse7766/" >}})
-- [integration]({{< ref "integration/" >}})
-- [/components/sensor/pulse_counter]({{< ref "/components/sensor/pulse_counter" >}})
-- [/components/sensor/pulse_meter]({{< ref "/components/sensor/pulse_meter" >}})
-- [/components/time/homeassistant]({{< ref "/components/time/homeassistant" >}})
-- [/cookbook/power_meter]({{< ref "/cookbook/power_meter" >}})
+- {{< docref "hlw8012/" >}}
+- {{< docref "cse7766/" >}}
+- {{< docref "integration/" >}}
+- {{< docref "/components/sensor/pulse_counter" >}}
+- {{< docref "/components/sensor/pulse_meter" >}}
+- {{< docref "/components/time/homeassistant" >}}
+- {{< docref "/cookbook/power_meter" >}}
 - :apiref:`total_daily_energy/total_daily_energy.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/total_daily_energy.md)

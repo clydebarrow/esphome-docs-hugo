@@ -77,7 +77,7 @@ api:
 ## Remote/Git Packages
 
 Packages can also be loaded from a Git repository by utilizing the correct configuration syntax.
-[/components/substitutions]({{< ref "/components/substitutions" >}}) can be used inside the remote packages which allows users to override
+{{< docref "/components/substitutions" >}} can be used inside the remote packages which allows users to override
 them locally with their own substitution value.
 
 {{< note >}}
@@ -220,7 +220,7 @@ captive_portal: !remove
 ```
 ## See Also
 
-- [ESPHome index ]({{< relref "/index" >}})
-- [/guides/getting_started_command_line]({{< ref "/guides/getting_started_command_line" >}})
-- [/guides/faq]({{< ref "/guides/faq" >}})
+- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/guides/getting_started_command_line" >}}
+- {{< docref "/guides/faq" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/packages.md)

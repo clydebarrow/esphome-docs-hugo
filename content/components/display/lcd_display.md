@@ -244,12 +244,12 @@ binary_sensor:
 ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/components/switch/gpio]({{< ref "/components/switch/gpio" >}})
-- [/components/binary_sensor/gpio]({{< ref "/components/binary_sensor/gpio" >}})
+- {{< docref "index/" >}}
+- {{< docref "/components/switch/gpio" >}}
+- {{< docref "/components/binary_sensor/gpio" >}}
 - [LCD Menu]({{< ref "components/display_menu/lcd_menu#lcd_menu" >}})
 - [Display pages alternative]({{< ref "cookbook/lambda_magic#lambda_magic_pages" >}})
-- [/components/pcf8574]({{< ref "/components/pcf8574" >}})
+- {{< docref "/components/pcf8574" >}}
 - [HD44780U (LCD-II) datasheet](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)
 - [Charset cheatsheet](https://user-images.githubusercontent.com/1550668/173113487-9c98e866-8ee4-4a3c-a83f-61fe62057c5f.png)
 - [Custom Character Generator](https://omerk.github.io/lcdchargen/)

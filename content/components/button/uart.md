@@ -6,7 +6,7 @@ title: "UART Button"
 {{< seo description="" image="" >}}
 
 The `uart` button platform allows you to send a pre-defined sequence of bytes on a
-[UART bus ]({{< relref "/components/uart" >}}) when triggered.
+{{< docref "/components/uart" "UART bus" >}} when triggered.
 
 ```yaml
 # Example configuration entry
@@ -28,6 +28,6 @@ button:
 
 ## See Also
 
-- [/components/uart]({{< ref "/components/uart" >}})
+- {{< docref "/components/uart" >}}
 - :apiref:`uart/button/uart_button.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/uart.md)

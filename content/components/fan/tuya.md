@@ -10,7 +10,7 @@ tuya component.
 
 {{< img src="tuyafan.jpg" alt="Image" caption="A Tuya based fan controller wall plate." width="40%" class="center" >}}
 
-The Tuya fan requires a [/components/tuya]({{< ref "/components/tuya" >}}) to be configured.
+The Tuya fan requires a {{< docref "/components/tuya" >}} to be configured.
 
 Here is an example output for a Tuya fan controller:
 
@@ -28,7 +28,7 @@ On this controller, the data points are:
 
 - 1 represents the fan on/off state.
 - 3 represents the speed setting.
-- 9 represents the additional light switch. (use the [/components/light/tuya]({{< ref "/components/light/tuya" >}}) component to control this)
+- 9 represents the additional light switch. (use the {{< docref "/components/light/tuya" >}} component to control this)
 - 6 & 7 are unknown and don't seem to affect the state.
 
 Based on this, you can create the fan as follows:
@@ -60,7 +60,7 @@ over the serial bus.
 {{< /note >}}
 ## See Also
 
-- [/components/tuya]({{< ref "/components/tuya" >}})
-- [/components/fan/index]({{< ref "/components/fan/index" >}})
+- {{< docref "/components/tuya" >}}
+- {{< docref "/components/fan/index" >}}
 - :apiref:`tuya/fan/tuya_fan.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/tuya.md)

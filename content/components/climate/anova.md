@@ -23,7 +23,7 @@ This platform uses the BLE peripheral on an ESP32, so you also need to enable
 this component. Please see the BLE Client docs for how to discover the MAC
 address of your Anova device.
 You cannot use the Anova app over BLE whilst this component is connected, you
-should disconnect it first. To setup a (dis-)connect switch, see [/components/switch/ble_client]({{< ref "/components/switch/ble_client" >}}).
+should disconnect it first. To setup a (dis-)connect switch, see {{< docref "/components/switch/ble_client" >}}.
 
 You need to specify unit_of_measurement as 'c' or 'f'. This ensures the stick's display
 uses the unit you intend. All values within ESPHome are converted to Celsius so you may
@@ -53,7 +53,7 @@ climate:
 
 ## See Also
 
-- [/components/ble_client]({{< ref "/components/ble_client" >}})
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
+- {{< docref "/components/ble_client" >}}
+- {{< docref "/components/climate/index" >}}
 - :apiref:`anova/anova.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/anova.md)

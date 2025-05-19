@@ -5,7 +5,7 @@ title: "Home Assistant Time Source"
 
 
 The preferred way to get time in ESPHome is using Home Assistant.
-With the `homeassistant` time platform, the [native API ]({{< relref "/components/api" >}}) connection
+With the `homeassistant` time platform, the {{< docref "/components/api" "native API" >}} connection
 to Home Assistant will be used to periodically synchronize the current time.
 
 {{< note >}}

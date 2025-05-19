@@ -9,7 +9,7 @@ installation, which requires connecting your ESP device to a computer using a
 data cable.
 
 **You only need to do this once per device.** Once you've flashed ESPHome on a
-device, you can use [/components/ota/index]({{< ref "/components/ota/index" >}}) to upload new
+device, you can use {{< docref "/components/ota/index" >}} to upload new
 versions or configuration changes wirelessly.
 
 ESPHome runs on a wide variety of devices, so it's hard to list any specific
@@ -26,7 +26,7 @@ requires you do something different to connect your computer to the ESP in
 order to flash it.
 
 You only need to physically connect to it once. Once you've flashed your device
-and connected it to your WiFi, you can use [/components/ota/index]({{< ref "/components/ota/index" >}}) to
+and connected it to your WiFi, you can use {{< docref "/components/ota/index" >}} to
 install software remotely.
 
 Programming a ESP-based device is done by connecting the serial port on the
@@ -118,7 +118,7 @@ Development boards often come with a USB port built in. This USB port is
 connected to a serial adapter, so you don't need a separate serial adapter. You
 can use just a [USB data cable]({{< ref "#usb-cable" >}}) to connect it to your computer to
 program it. Additionally, a development board can also be used to flash other ESPs.
-[Read more here. ]({{< relref "/guides/devboard_as_flasher" >}})
+{{< docref "/guides/devboard_as_flasher" "Read more here." >}}
 
 This isn't likely to be very useful without connecting additional sensors to it
 by either soldering or using a breadboard, but you do not need anything else to
@@ -226,7 +226,7 @@ require different parts and tools.
         <https://tasmota.github.io/docs/Getting-Started/#needed-hardware>`_.
 
         Any ESP development board with functioning USB_UART bridge chip can also be used instead.
-        [Read instructions here. ]({{< relref "/guides/devboard_as_flasher" >}})
+        {{< docref "/guides/devboard_as_flasher" "Read instructions here." >}}
       - $3 to $10
       - .. image:: /guides/images/usb-serial-adapter.jpg
             :alt: From https://tasmota.github.io/docs/Getting-Started/
@@ -325,7 +325,7 @@ require different parts and tools.
 
 ## See Also
 
-- [ESPHome index ]({{< relref "/index" >}})
-- [getting_started_command_line]({{< ref "getting_started_command_line/" >}})
-- [getting_started_hassio]({{< ref "getting_started_hassio/" >}})
+- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "getting_started_command_line/" >}}
+- {{< docref "getting_started_hassio/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/physical_device_connection.md)

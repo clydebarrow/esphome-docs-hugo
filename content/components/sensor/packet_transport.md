@@ -43,8 +43,8 @@ configured.
 
 ## See Also
 
-- [/components/packet_transport/index]({{< ref "/components/packet_transport/index" >}})
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
-- [/components/udp]({{< ref "/components/udp" >}})
+- {{< docref "/components/packet_transport/index" >}}
+- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/udp" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/packet_transport.md)

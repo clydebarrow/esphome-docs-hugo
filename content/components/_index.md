@@ -498,7 +498,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 
 
 Looking for a sensor that outputs its values as an analog voltage? Have a look at the
-[ADC Sensor ]({{< relref "/components/sensor/adc" >}}) together with a formula like in the `TEMT6000
+{{< docref "/components/sensor/adc" "ADC Sensor" >}} together with a formula like in the `TEMT6000
 configuration <https://devices.esphome.io/devices/temt6000>`__.
 
 
@@ -804,8 +804,8 @@ Components specifically for interacting with Home Assistant.
     Tuya Dimmer, components/light/tuya, tuya.png
 
 **Looking for WS2811 and similar individually addressable lights?** For the ESP32 and its variants, we recommend the
-[light/spi_led_strip]({{< ref "light/spi_led_strip" >}}) or [light/esp32_rmt_led_strip]({{< ref "light/esp32_rmt_led_strip" >}}); for other processors, have a look at the
-[FastLED Light ]({{< relref "light/fastled" >}}).
+{{< docref "light/spi_led_strip" >}} or {{< docref "light/esp32_rmt_led_strip" >}}; for other processors, have a look at the
+{{< docref "light/fastled" "FastLED Light" >}}.
 
 ## Lock Components
 

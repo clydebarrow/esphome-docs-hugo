@@ -6,7 +6,7 @@ title: "Update Core"
 {{< seo description="" image="" >}}
 
 The `update` component allows your ESPHome devices to install updates from a remote source; instead of
-["pushing" an update to your device ]({{< relref "/components/ota/index" >}}), the device can retrieve an update and
+{{< docref "/components/ota/index" ""pushing" an update to your device" >}}, the device can retrieve an update and
 install it on its own.
 
 ```yaml

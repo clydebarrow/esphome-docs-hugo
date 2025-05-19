@@ -47,7 +47,7 @@ you could type `GPIO16` or just `16`.
 
 Most boards however have aliases for certain pins. For example the NodeMCU
 ESP8266 uses pin names `D0` through `D8` as aliases for the internal GPIO
-pin numbers. Each board (defined in [ESPHome section ]({{< relref "/components/esphome" >}}))
+pin numbers. Each board (defined in {{< docref "/components/esphome" "ESPHome section" >}})
 has their own aliases and so not all of them are supported yet. For example,
 for the `D0` (as printed on the PCB silkscreen) pin on the NodeMCU ESP8266
 has the internal GPIO name `GPIO16`, but also has an alias `D0`. So using
@@ -162,7 +162,7 @@ some_config_option:
 ```
 ## See Also
 
-- [ESPHome index ]({{< relref "/index" >}})
-- [getting_started_command_line]({{< ref "getting_started_command_line/" >}})
-- [faq]({{< ref "faq/" >}})
+- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "getting_started_command_line/" >}}
+- {{< docref "faq/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/configuration-types.md)

@@ -61,14 +61,14 @@ modbus:
 - **role** (*Optional*, string): The role of this component, `client` or `server`. Defaults to `client`.
 
 ## See Also
-- [/components/modbus_controller]({{< ref "/components/modbus_controller" >}})
-- [/components/sensor/modbus_controller]({{< ref "/components/sensor/modbus_controller" >}})
-- [/components/binary_sensor/modbus_controller]({{< ref "/components/binary_sensor/modbus_controller" >}})
-- [/components/output/modbus_controller]({{< ref "/components/output/modbus_controller" >}})
-- [/components/switch/modbus_controller]({{< ref "/components/switch/modbus_controller" >}})
-- [/components/number/modbus_controller]({{< ref "/components/number/modbus_controller" >}})
-- [/components/select/modbus_controller]({{< ref "/components/select/modbus_controller" >}})
-- [/components/text_sensor/modbus_controller]({{< ref "/components/text_sensor/modbus_controller" >}})
+- {{< docref "/components/modbus_controller" >}}
+- {{< docref "/components/sensor/modbus_controller" >}}
+- {{< docref "/components/binary_sensor/modbus_controller" >}}
+- {{< docref "/components/output/modbus_controller" >}}
+- {{< docref "/components/switch/modbus_controller" >}}
+- {{< docref "/components/number/modbus_controller" >}}
+- {{< docref "/components/select/modbus_controller" >}}
+- {{< docref "/components/text_sensor/modbus_controller" >}}
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - :apiref:`modbus/modbus.h`

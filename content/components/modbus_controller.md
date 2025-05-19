@@ -10,7 +10,7 @@ The `modbus_controller` component creates a RS485 connection to either:
 - control a Modbus server (slave) device, letting your ESPHome node to act as a Modbus client (master). You can access the coils, inputs, holding, read registers from your devices as sensors, switches, selects, numbers or various other ESPHome components and present them to your favorite Home Automation system. You can even write them as binary or float ouptputs from ESPHome.
 - let your ESPHome node act as a Modbus server, allowing a ModBUS client to read data (like sensor values) from your ESPHome node.
 
-To choose the role, set the `role` attribute of the [/components/modbus]({{< ref "/components/modbus" >}}) upon which this `modbus_controller` component relies. `client` is the default.
+To choose the role, set the `role` attribute of the {{< docref "/components/modbus" >}} upon which this `modbus_controller` component relies. `client` is the default.
 
 {{< img src="modbus.png" alt="Image" width="25%" class="center" >}}
 
@@ -34,7 +34,7 @@ The disadvantage of using the hardware UART is that you can't use serial logging
 
 Serial logging can be disabled by setting `baud_rate: 0`.
 
-See [logger]({{< ref "logger/" >}}) for more details
+See {{< docref "logger/" >}} for more details
 
 ```yaml
 logger:
@@ -773,14 +773,14 @@ modbus_controller:
 ```
 ## See Also
 
-- [/components/modbus]({{< ref "/components/modbus" >}})
-- [/components/sensor/modbus_controller]({{< ref "/components/sensor/modbus_controller" >}})
-- [/components/binary_sensor/modbus_controller]({{< ref "/components/binary_sensor/modbus_controller" >}})
-- [/components/output/modbus_controller]({{< ref "/components/output/modbus_controller" >}})
-- [/components/switch/modbus_controller]({{< ref "/components/switch/modbus_controller" >}})
-- [/components/number/modbus_controller]({{< ref "/components/number/modbus_controller" >}})
-- [/components/select/modbus_controller]({{< ref "/components/select/modbus_controller" >}})
-- [/components/text_sensor/modbus_controller]({{< ref "/components/text_sensor/modbus_controller" >}})
+- {{< docref "/components/modbus" >}}
+- {{< docref "/components/sensor/modbus_controller" >}}
+- {{< docref "/components/binary_sensor/modbus_controller" >}}
+- {{< docref "/components/output/modbus_controller" >}}
+- {{< docref "/components/switch/modbus_controller" >}}
+- {{< docref "/components/number/modbus_controller" >}}
+- {{< docref "/components/select/modbus_controller" >}}
+- {{< docref "/components/text_sensor/modbus_controller" >}}
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
 - [EPEVER MPPT Solar Charge Controller (Tracer-AN Series)](https://devices.esphome.io/devices/epever_mptt_tracer_an)
 - [Genvex, Nibe, Alpha-Innotec heat recovery ventilation](https://devices.esphome.io/devices/Genvex-Nibe-AlphaInnotec-heat-recovery-ventilation)

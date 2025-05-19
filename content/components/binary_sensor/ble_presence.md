@@ -11,7 +11,7 @@ The `ble_presence` binary sensor platform lets you track the presence of a Bluet
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 {{< /warning >}}
@@ -120,16 +120,16 @@ Alternatively you can:
 
 -  Create an iBeacon and track it based on its iBeacon UUID. You can also optionally specify
    major and minor numbers to match if additional filtering is required. ESPHome offers this
-   functionality via the [ESP32 Bluetooth Low Energy Beacon ]({{< relref "/components/esp32_ble_beacon" >}})
+   functionality via the {{< docref "/components/esp32_ble_beacon" "ESP32 Bluetooth Low Energy Beacon" >}}
    component. Several iOS and Android applications, including the open source Home Assistant
    mobile application also provide means to create iBeacons.
 
 
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/esp32_ble_beacon]({{< ref "/components/esp32_ble_beacon" >}})
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/esp32_ble_beacon" >}}
+- {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`ble_presence/ble_presence.h`
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/ble_presence.md)

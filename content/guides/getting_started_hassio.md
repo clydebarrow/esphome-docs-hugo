@@ -61,7 +61,7 @@ After creating your first configuration, you'll need to install it on your devic
 The initial installation of ESPHome onto a new device is often the most difficult and/or intimidating part -- at
 least until you've done it a few times.
 
-If you haven't done this before, please see [physical_device_connection]({{< ref "physical_device_connection/" >}}).
+If you haven't done this before, please see {{< docref "physical_device_connection/" >}}.
 
 {{< /note >}}
 If you didn't do so when prompted upon creating your first device, you'll need to enter your Wi-Fi network credentials
@@ -106,13 +106,13 @@ with a username and password and also disable "Protection Mode" (please assess t
 Finally, to access the logs from a device through an SSH client, you can log in and use a command like
 `docker exec -it addon_15ef4d2f_esphome esphome logs /config/esphome/bedroom-light.yaml`.
 
-See [getting_started_command_line]({{< ref "getting_started_command_line/" >}}) for more detail.
+See {{< docref "getting_started_command_line/" >}} for more detail.
 
 {{< /note >}}
 ## Adding Features
 
 After stepping through the wizard, you should have a device configuration (YAML) file. In the ESPHome Device Builder,
-click on "EDIT" to open that file and add a [GPIO switch]({{< relref "/components/switch/gpio" >}}) to the configuration like this:
+click on "EDIT" to open that file and add a {{< docref "/components/switch/gpio" "GPIO switch" >}} to the configuration like this:
 
 ```yaml
 switch:
@@ -131,7 +131,7 @@ arbitrary and should be set as is appropriate for your particular application.
 
 ## Adding A Binary Sensor
 
-Next, let's add a [binary sensor which will monitor a GPIO pin ]({{< relref "/components/binary_sensor/gpio" >}}) to determine and
+Next, let's add a {{< docref "/components/binary_sensor/gpio" "binary sensor which will monitor a GPIO pin" >}} to determine and
 report its state.
 
 ```yaml
@@ -163,7 +163,7 @@ Each time you modify a device's configuration file, you need to update the devic
 and reinstall your updated configuration onto the device.
 
 Note that you won't need to have the device connected to your system with a USB data cable again, as (once ESPHome is
-installed on your device) it can update the device ["over the air" ]({{< relref "/components/ota/index" >}}).
+installed on your device) it can update the device {{< docref "/components/ota/index" ""over the air"" >}}.
 
 {{< anchor "connecting-your-device-to-home-assistant" >}}
 
@@ -188,13 +188,13 @@ You can repeat this process for each ESPHome device.
 Great! 🎉 You've successfully set up your first ESPHome project and installed your first ESPHome custom firmware to your
 device. You've also learned how to enable some basic components via the configuration file.
 
-Now is a great time to go take a look at the [Components Index ]({{< relref "/index" >}}). Hopefully you'll find all the hardware
+Now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}. Hopefully you'll find all the hardware
 components you need there. If you're having any problems or want to request new features, please either create a new
 issue on the [GitHub issue tracker](https://github.com/esphome/issues/issues) or find us on the
-[Discord chat](https://discord.gg/KhAMKrd). Be sure to read the [FAQ ]({{< relref "faq/" >}}), as well!
+[Discord chat](https://discord.gg/KhAMKrd). Be sure to read the {{< docref "faq/" "FAQ" >}}, as well!
 
 ## See Also
 
-- [ESPHome index ]({{< relref "/index" >}})
-- [getting_started_command_line]({{< ref "getting_started_command_line/" >}})
+- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "getting_started_command_line/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/getting_started_hassio.md)

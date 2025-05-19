@@ -20,7 +20,7 @@ and will not change anything already flashed onto it - it's purely a way to use 
 
 We will refer to the devboard with functional USB_UART bridge chip as flasher board for this guide.
 
-Make sure you've read the [/guides/physical_device_connection]({{< ref "/guides/physical_device_connection" >}})
+Make sure you've read the {{< docref "/guides/physical_device_connection" >}}
 for properly understanding the functionality of your flasher devboard.
 
 {{< img src="devboard-as-flasher.png" alt="Image" caption="Connection diagram for an ESP flash target" width="75.0%" class="center" >}}
@@ -77,5 +77,5 @@ For that, you need to first manually put it into DOWNLOAD mode.
 {{< /note >}}
 ## See Also
 
-- [Guides ]({{< relref "/guides/index" >}})
+- {{< docref "/guides/index" "Guides" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/devboard_as_flasher.md)

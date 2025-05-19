@@ -6,7 +6,7 @@ title: "ESP32 DAC"
 {{< seo description="" image="" >}}
 
 The ESP32 DAC platform allows you to output analog voltages using the 8-bit digital-to-analog
-converter of the ESP32. Unlike the [/components/output/ledc]({{< ref "/components/output/ledc" >}}), which can simulate an analog
+converter of the ESP32. Unlike the {{< docref "/components/output/ledc" >}}, which can simulate an analog
 signal by using a fast switching frequency, the hardware DAC can output a *real* analog signal with
 no need for additional filtering.
 
@@ -49,7 +49,7 @@ light:
 ## Use Cases
 
 - Generating a specific (and dynamic) reference voltage for an external sensor or ADC, such as the
-  [/components/sensor/ads1115]({{< ref "/components/sensor/ads1115" >}})
+  {{< docref "/components/sensor/ads1115" >}}
 - Controlling the bias of a transistor
 - Driving a bar graph or large amount of LEDs using an analog-controlled LED driver like the LM3914
   ([datasheet](https://www.ti.com/lit/ds/symlink/lm3914.pdf)); this can allow you to make tank
@@ -58,11 +58,11 @@ light:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}})
-- [/components/fan/speed]({{< ref "/components/fan/speed" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/output/esp8266_pwm" >}}
+- {{< docref "/components/light/monochromatic" >}}
+- {{< docref "/components/fan/speed" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`esp32_dac/esp32_dac.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/esp32_dac.md)

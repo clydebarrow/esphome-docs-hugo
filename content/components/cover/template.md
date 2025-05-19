@@ -120,8 +120,8 @@ id(template_cov).publish_state();
 {{< /note >}}
 ## See Also
 
-- [/components/cover/index]({{< ref "/components/cover/index" >}})
+- {{< docref "/components/cover/index" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
-- [/cookbook/garage-door]({{< ref "/cookbook/garage-door" >}})
+- {{< docref "/cookbook/garage-door" >}}
 - :apiref:`template/cover/template_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/template.md)

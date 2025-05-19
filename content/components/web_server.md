@@ -223,5 +223,5 @@ By clicking on any sensor it will expand a graph with the historical values for 
 - [Event Source API]({{< ref "web-api/_index#api-event-source" >}})
 - [REST API]({{< ref "web-api/_index#api-rest" >}})
 - :apiref:`web_server/web_server.h`
-- [prometheus]({{< ref "prometheus/" >}})
+- {{< docref "prometheus/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/web_server.md)

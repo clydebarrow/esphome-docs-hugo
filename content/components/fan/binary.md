@@ -32,8 +32,8 @@ fan:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/output/gpio]({{< ref "/components/output/gpio" >}})
-- [/components/fan/index]({{< ref "/components/fan/index" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output/gpio" >}}
+- {{< docref "/components/fan/index" >}}
 - :apiref:`fan/fan_state.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/binary.md)

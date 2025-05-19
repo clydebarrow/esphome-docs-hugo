@@ -285,7 +285,7 @@ log file and the baud rate will automatically be decreased.
 
 - [I²C Bus]({{< ref "components/i2c#i2c" >}})
 - [SPI Bus]({{< ref "components/spi#spi" >}})
-- [switch/gpio]({{< ref "switch/gpio" >}})
-- [binary_sensor/gpio]({{< ref "binary_sensor/gpio" >}})
+- {{< docref "switch/gpio" >}}
+- {{< docref "binary_sensor/gpio" >}}
 - :apiref:`weika/weika.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/weikai.md)

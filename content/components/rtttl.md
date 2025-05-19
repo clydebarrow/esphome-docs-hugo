@@ -17,8 +17,8 @@ It's important that your buzzer is a **passive** one, if it beeps when you feed 
 a passive one and this library will not work properly.
 
 The tone generator needs a PWM capable output to work with, currently only the
-[ESP8266 Software PWM Output]({{< relref "output/esp8266_pwm" >}}) and
-[ESP32 LEDC Output ]({{< relref "output/ledc" >}}) are supported.
+{{< docref "output/esp8266_pwm" "ESP8266 Software PWM Output" >}} and
+{{< docref "output/ledc" "ESP32 LEDC Output" >}} are supported.
 
 ```yaml
 # Example configuration entry
@@ -35,7 +35,7 @@ rtttl:
 ```
 ## Overview Using the I2S speaker
 
-The tone generator can instead be used with a [Speaker ]({{< relref "/components/speaker/index" >}}) to output the audio.
+The tone generator can instead be used with a {{< docref "/components/speaker/index" "Speaker" >}} to output the audio.
 
 ```yaml
 # Example configuration entry
@@ -168,8 +168,8 @@ api:
 
 ```
 ## See Also
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/speaker/index]({{< ref "/components/speaker/index" >}})
+- {{< docref "/components/output/esp8266_pwm" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/speaker/index" >}}
 - :apiref:`rtttl/rtttl.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/rtttl.md)

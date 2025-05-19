@@ -5,7 +5,7 @@ title: "Exposure Notification Listener"
 
 {{< seo description="" image="" >}}
 
-The `exposure_notifications` component uses the [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}) to discover
+The `exposure_notifications` component uses the {{< docref "/components/esp32_ble_tracker" >}} to discover
 nearby COVID-19 exposure notification bluetooth messages sent by phones running the
 [Google/Apple Exposure Notification service](https://www.google.com/covid19/exposurenotifications/).
 
@@ -74,6 +74,6 @@ exposure_notifications:
 ```
 ## See Also
 
-- [esp32_ble_tracker]({{< ref "esp32_ble_tracker/" >}})
+- {{< docref "esp32_ble_tracker/" >}}
 - :apiref:`exposure_notifications/exposure_notifications.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/exposure_notifications.md)

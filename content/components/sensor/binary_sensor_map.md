@@ -5,7 +5,7 @@ title: "Binary Sensor Map"
 
 {{< seo description="" image="" >}}
 
-The `binary_sensor_map` sensor platform allows you to map multiple [binary sensor ]({{< relref "/components/binary_sensor/index" >}})
+The `binary_sensor_map` sensor platform allows you to map multiple {{< docref "/components/binary_sensor/index" "binary sensor" >}}
 to an individual value. Depending on the state of each binary sensor, its associated configured parameters, and this sensor's mapping type,
 the `binary_sensor_map` publishes a single numerical value.
 
@@ -19,7 +19,7 @@ When using the `BAYESIAN` type, add your binary sensors as `observations` to the
 If you use the `GROUP` or `SUM` type, add your binary sensors as `channels`.
 The maximum amount of observations/channels supported is 64.
 
-- [BAYESIAN` This type replicates Home Assistant's `Bayesian sensor](https://www.home-assistant.io/integrations/bayesian/). Based on the observation states, this sensor returns the Bayesian probability of a particular event occurring. The configured `prior:` probability is the likelihood that the Bayesian event is true, ignoring all external influences. Every observation has its own `prob_given_true` and `prob_given_false` parameters. The `prob_given_true:` value is the probability that the observation's binary sensor is `ON` when the Bayesian event is `true`. The `prob_given_false:` value is the probability that the observation's binary sensor is `ON` when the Bayesian event is `false`. Use an [/components/binary_sensor/analog_threshold]({{< ref "/components/binary_sensor/analog_threshold" >}}) to convert this sensor's probability to a binary `ON` or `OFF` by setting an appropriate threshold.
+- [BAYESIAN` This type replicates Home Assistant's `Bayesian sensor](https://www.home-assistant.io/integrations/bayesian/). Based on the observation states, this sensor returns the Bayesian probability of a particular event occurring. The configured `prior:` probability is the likelihood that the Bayesian event is true, ignoring all external influences. Every observation has its own `prob_given_true` and `prob_given_false` parameters. The `prob_given_true:` value is the probability that the observation's binary sensor is `ON` when the Bayesian event is `true`. The `prob_given_false:` value is the probability that the observation's binary sensor is `ON` when the Bayesian event is `false`. Use an {{< docref "/components/binary_sensor/analog_threshold" >}} to convert this sensor's probability to a binary `ON` or `OFF` by setting an appropriate threshold.
 
 ```yaml
 # Example configuration entry
@@ -123,13 +123,13 @@ binary_sensor:
 - **type** (**Required**, string): The sensor type. Should be one of: `BAYESIAN`, `GROUP`, or `SUM`.
 - **channels** (**Required for GROUP or SUM types**): A list of channels that are mapped to certain values.
 
-  - **binary_sensor** (**Required**): The id of the [binary sensor ]({{< relref "/components/binary_sensor/index" >}})
+  - **binary_sensor** (**Required**): The id of the {{< docref "/components/binary_sensor/index" "binary sensor" >}}
     to add as a channel for this sensor.
   - **value** (**Required**): The value this channel should report when its binary sensor is active.
 - **prior** (**Required for BAYESIAN type**, float between 0 and 1): The prior probability of the event.
 - **observations** (**Required for BAYESIAN type**): A list of observations that influence the Bayesian probability of the event.
 
-  - **binary_sensor** (**Required**): The id of the [binary sensor ]({{< relref "/components/binary_sensor/index" >}})
+  - **binary_sensor** (**Required**): The id of the {{< docref "/components/binary_sensor/index" "binary sensor" >}}
     to add as an observation.
   - **prob_given_true** (**Required**, float between 0 and 1): Assuming the event is true, the probability this observation is on.
   - **prob_given_false** (**Required**, float between 0 and 1): Assuming the event is false, the probability this observation is on.
@@ -138,8 +138,8 @@ binary_sensor:
 
 ## See Also
 
-- [/components/binary_sensor/mpr121]({{< ref "/components/binary_sensor/mpr121" >}})
-- [/components/binary_sensor/analog_threshold]({{< ref "/components/binary_sensor/analog_threshold" >}})
+- {{< docref "/components/binary_sensor/mpr121" >}}
+- {{< docref "/components/binary_sensor/analog_threshold" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`binary_sensor_map/binary_sensor_map.h`
 - [Bayesian sensor in Home Assistant](https://www.home-assistant.io/integrations/bayesian/)

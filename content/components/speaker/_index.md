@@ -20,7 +20,7 @@ speaker:
 ```
 Configuration variables:
 
-- **audio_dac** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):[audio DAC ]({{< relref "/components/audio_dac/index" >}})dex>` to use for volume control.
+- **audio_dac** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/audio_dac/index" "audio DAC" >}}dex>` to use for volume control.
 
 {{< anchor "speaker-actions" >}}
 
@@ -154,6 +154,6 @@ Configuration variables:
 
 ## See Also
 
-- [/guides/audio_clips_for_i2s]({{< ref "/guides/audio_clips_for_i2s" >}})
-- [/components/speaker/i2s_audio]({{< ref "/components/speaker/i2s_audio" >}})
+- {{< docref "/guides/audio_clips_for_i2s" >}}
+- {{< docref "/components/speaker/i2s_audio" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/speaker/index.md)

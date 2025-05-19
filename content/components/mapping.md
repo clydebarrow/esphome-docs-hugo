@@ -41,7 +41,7 @@ Mapping to a class
 
 You can also map to a class. This is useful when you want to map to a more complex type, such as an image or a color. There are several types of class specifiers you can use:
 
-- `image`: Maps to an image as defined in the [/components/image]({{< ref "/components/image" >}}) component. The values should each be an image ID.
+- `image`: Maps to an image as defined in the {{< docref "/components/image" >}} component. The values should each be an image ID.
 - `color`: Maps to a predefined [Color]({{< ref "components/display/_index#config-color" >}}). The values should each be a color ID.
 - The name of a C++ class defined by ESPHome, e.g. `Component`. The values should each be a ID of that class.
 
@@ -94,6 +94,6 @@ display:
 ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/automations/actions]({{< ref "/automations/actions" >}})
+- {{< docref "index/" >}}
+- {{< docref "/automations/actions" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mapping.md)

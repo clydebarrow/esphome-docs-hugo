@@ -6,7 +6,7 @@ title: "Home Assistant Switch"
 {{< seo description="" image="" >}}
 
 The `homeassistant` Switch platform allows you to create Switch that **import**
-states and allow **control** via your Home Assistant instance using the [native API ]({{< relref "/components/api" >}}).
+states and allow **control** via your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.
 
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node

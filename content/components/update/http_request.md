@@ -10,8 +10,8 @@ This platform allows you to manage the deployment of updates to your ESPHome dev
 
 To use it, the following components are required in your device's configuration:
 
-- [/components/http_request]({{< ref "/components/http_request" >}})
-- [/components/ota/http_request]({{< ref "/components/ota/http_request" >}})
+- {{< docref "/components/http_request" >}}
+- {{< docref "/components/ota/http_request" >}}
 
 ```yaml
 # Example configuration entry
@@ -67,8 +67,8 @@ Note that there may be multiple `builds` specified within a single JSON file.
 
 ## See Also
 
-- [http_request]({{< ref "http_request/" >}})
-- [/components/ota/http_request]({{< ref "/components/ota/http_request" >}})
-- [/components/ota/index]({{< ref "/components/ota/index" >}})
+- {{< docref "http_request/" >}}
+- {{< docref "/components/ota/http_request" >}}
+- {{< docref "/components/ota/index" >}}
 - :apiref:`update/update_entity.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/update/http_request.md)

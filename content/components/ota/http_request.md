@@ -13,7 +13,7 @@ download and installation of the new firmware. Once complete, the device is rebo
 Since the device functions as an HTTP(S) client, it can be on a foreign network or behind a firewall. This mechanism
 is primarily useful with either standalone or MQTT-only devices.
 
-To use this platform, the [http_request]({{< ref "http_request/" >}}) component must be present in your configuration.
+To use this platform, the {{< docref "http_request/" >}} component must be present in your configuration.
 
 ```yaml
 # Example configuration entry
@@ -23,7 +23,7 @@ ota:
 ```
 ## Configuration variables:
 
-- All [Automation]({{< ref "automations/_index#automation" >}}) supported by :doc:`/com[/components/ota/index]({{< ref "/components/ota/index" >}})
+- All [Automation]({{< ref "automations/_index#automation" >}}) supported by :doc:`/com{{< docref "/components/ota/index" >}}
 
 {{< anchor "ota_http_request-flash_action" >}}
 
@@ -102,7 +102,7 @@ on_...:
 ## See Also
 
 - :apiref:`ota/ota_component.h`
-- [/components/ota/index]({{< ref "/components/ota/index" >}})
-- [/components/ota/esphome]({{< ref "/components/ota/esphome" >}})
-- [/components/safe_mode]({{< ref "/components/safe_mode" >}})
+- {{< docref "/components/ota/index" >}}
+- {{< docref "/components/ota/esphome" >}}
+- {{< docref "/components/safe_mode" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ota/http_request.md)

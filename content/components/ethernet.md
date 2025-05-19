@@ -139,7 +139,7 @@ information and wiring details refer to the link in the *See also* section.
 
 {{< /note >}}
 {{< note >}}
-SPI based chips do *not* use [spi]({{< ref "spi/" >}}). This means that SPI pins can't be shared with other devices.
+SPI based chips do *not* use {{< docref "spi/" >}}. This means that SPI pins can't be shared with other devices.
 
 {{< /note >}}
 ## Configuration examples
@@ -311,8 +311,8 @@ ethernet:
 ```
 ## See Also
 
-- [network]({{< ref "network/" >}})
-- [text_sensor/ethernet_info]({{< ref "text_sensor/ethernet_info" >}})
+- {{< docref "network/" >}}
+- {{< docref "text_sensor/ethernet_info" >}}
 - :apiref:`ethernet/ethernet_component.h`
 - [ESP32 Ethernet PHY connection info](https://pcbartists.com/design/embedded/esp32-ethernet-phy-schematic-design/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ethernet.md)

@@ -96,8 +96,8 @@ cover:
 ## Use with Shelly 2.5
 
 The Shelly 2.5 is the perfect hardware for this platform. It features two outputs with current monitoring
-(thanks to an embedded [ADE7953 ]({{< relref "/components/sensor/ade7953" >}})) in a very small form factor (39mm x 36mm x 17 mm).
-It also features an [NTC temperature sensor ]({{< relref "/components/sensor/ntc" >}}).
+(thanks to an embedded {{< docref "/components/sensor/ade7953" "ADE7953" >}}) in a very small form factor (39mm x 36mm x 17 mm).
+It also features an {{< docref "/components/sensor/ntc" "NTC temperature sensor" >}}.
 
 {{< img src="shelly2.5.png" alt="Image" width="30.0%" class="center" >}}
 
@@ -106,7 +106,7 @@ It is strongly recommended to monitor the device temperature using the NTC tempe
 This safety feature is also present in the original firmware.
 
 {{< warning >}}
-The ADE7953 IRQ line is connected to the GPIO16. The `irq_pin` parameter for the [ADE7953 ]({{< relref "/components/sensor/ade7953" >}}) MUST be
+The ADE7953 IRQ line is connected to the GPIO16. The `irq_pin` parameter for the {{< docref "/components/sensor/ade7953" "ADE7953" >}} MUST be
 set to GPIO16 to prevent device overheat (>70ºC idling).
 
 {{< /warning >}}
@@ -245,9 +245,9 @@ status_led:
 ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/components/cover/template]({{< ref "/components/cover/template" >}})
-- [/components/sensor/ade7953]({{< ref "/components/sensor/ade7953" >}})
+- {{< docref "index/" >}}
+- {{< docref "/components/cover/template" >}}
+- {{< docref "/components/sensor/ade7953" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`current_based/current_based_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/current_based.md)

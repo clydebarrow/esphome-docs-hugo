@@ -8,14 +8,14 @@ title: "NeoPixelBus Light"
 {{< warning >}}
 NeoPixelBus does **not** work with ESP-IDF.
 
-For clockless lights, you can use [spi_led_strip]({{< ref "spi_led_strip/" >}}), and for SPI LEDs see [esp32_rmt_led_strip]({{< ref "esp32_rmt_led_strip/" >}}).
+For clockless lights, you can use {{< docref "spi_led_strip/" >}}, and for SPI LEDs see {{< docref "esp32_rmt_led_strip/" >}}.
 
 
 {{< /warning >}}
 The `neopixelbus` light platform allows you to create RGB lights
 in ESPHome for individually addressable lights like NeoPixel or WS2812.
 
-It is very similar to the [fastled]({{< ref "fastled/" >}}) platform.
+It is very similar to the {{< docref "fastled/" >}} platform.
 In fact, most addressable lights are supported through both light platforms. The
 difference is that they use different libraries: while the fastled platform uses
 the [FastLED](https://github.com/FastLED/FastLED) library, this component uses
@@ -164,9 +164,9 @@ this method is no longer recommended, but documented here for reference purposes
 
 ## See Also
 
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [/components/light/fastled]({{< ref "/components/light/fastled" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light/fastled" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`neopixelbus/neopixelbus_light.h`
 - [NeoPixelBus library](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/neopixelbus.md)

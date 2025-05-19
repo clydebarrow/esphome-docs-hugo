@@ -40,5 +40,5 @@ sensor:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+- {{< docref "/components/sensor/index" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/iaqcore.md)

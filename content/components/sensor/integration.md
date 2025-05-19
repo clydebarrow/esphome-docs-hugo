@@ -9,7 +9,7 @@ The `integration` sensor is a helper sensor that can integrate values from other
 time. This can for example be useful to integrate the values of a water flow sensor (in m^3/s) over
 time (result is in m^3).
 
-This component can be considered a more-generic version of the [total_daily_energy]({{< ref "total_daily_energy/" >}}).
+This component can be considered a more-generic version of the {{< docref "total_daily_energy/" >}}.
 
 ```yaml
 # Example configuration entry
@@ -53,7 +53,7 @@ on_...:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [total_daily_energy]({{< ref "total_daily_energy/" >}})
-- [/cookbook/power_meter]({{< ref "/cookbook/power_meter" >}})
+- {{< docref "total_daily_energy/" >}}
+- {{< docref "/cookbook/power_meter" >}}
 - :apiref:`integration/integration_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/integration.md)

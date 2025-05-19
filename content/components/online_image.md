@@ -24,7 +24,7 @@ Current supported formats:
 This component requires a fair amount of RAM; both for downloading the image, and for storing the decoded image. It might work on devices without PSRAM, but there is no guarantee.
 
 {{< /warning >}}
-This component has a dependency to [/components/http_request]({{< ref "/components/http_request" >}}); the configuration options you set to the `http_request` component will also apply here.
+This component has a dependency to {{< docref "/components/http_request" >}}; the configuration options you set to the `http_request` component will also apply here.
 
 ```yaml
 online_image:
@@ -45,7 +45,7 @@ online_image:
   - `PNG`: The image on the server is encoded in PNG format.
 - **resize** (*Optional*, string): If set, this will resize the image to fit inside the given dimensions `WIDTHxHEIGHT`
   and preserve the aspect ratio.
-- **placeholder** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID o[Image ]({{< relref "/components/image" >}})age>` to display while the downloaded image is not yet ready.
+- **placeholder** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID o{{< docref "/components/image" "Image" >}}age>` to display while the downloaded image is not yet ready.
   This placeholder image will **not** be resized; regardless of the `resize` option value for the `online_image`.
 - **type** (*Required*): Specifies how to encode image internally.
 
@@ -137,9 +137,9 @@ display:
 
 ```
 By default `online_image` is configured to not automatically update/download the image; in order to do the initial download, you can either:
- - Add a `component.update <image_id>` in the `on_connect:` action on the [/components/wifi]({{< ref "/components/wifi" >}}) component.
+ - Add a `component.update <image_id>` in the `on_connect:` action on the {{< docref "/components/wifi" >}} component.
  - Explicitly set an `update_interval`.
- - Call `component.update <image_id>` in an [/components/interval]({{< ref "/components/interval" >}}) block.
+ - Call `component.update <image_id>` in an {{< docref "/components/interval" >}} block.
  - Call `component.update <image_id>` where you need the image to be downloaded/updated.
 
 ```yaml
@@ -151,6 +151,6 @@ wifi:
 ## See Also
 
 - :apiref:`online_image/online_image.h`
-- [Image Component ]({{< relref "image/" >}})
-- [Animation Component ]({{< relref "animation/" >}})
+- {{< docref "image/" "Image Component" >}}
+- {{< docref "animation/" "Animation Component" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/online_image.md)

@@ -120,7 +120,7 @@ Another important resource is [JSONLint](https://jsonlint.com/). It will help yo
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - :apiref:`http_request/http_request.h`
 - :apiref:`json/json_util.h`
 - `ArduinoJson <https://arduinojson.org/>`

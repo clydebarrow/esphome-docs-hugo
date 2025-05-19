@@ -35,9 +35,9 @@ sensor:
 ## See Also
 
 - [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}})
-- [/components/uart]({{< ref "/components/uart" >}})
-- [/components/binary_sensor/packet_transport]({{< ref "/components/binary_sensor/packet_transport" >}})
-- [/components/sensor/packet_transport]({{< ref "/components/sensor/packet_transport" >}})
+- {{< docref "/components/uart" >}}
+- {{< docref "/components/binary_sensor/packet_transport" >}}
+- {{< docref "/components/sensor/packet_transport" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`packet_transport/packet_transport.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/packet_transport/uart.md)

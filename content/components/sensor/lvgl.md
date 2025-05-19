@@ -6,7 +6,7 @@ title: "LVGL Sensor"
 {{< seo description="" image="" >}}
 
 The `lvgl` sensor platform creates a sensor component from an LVGL widget
-and requires [LVGL ]({{< relref "/components/lvgl/index" >}}) to be configured.
+and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
 Supported widgets are [``spinbox``]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}}), [``slider``]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}), [``bar``]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}}) and [``arc``]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}). A single sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome sensor.
 
@@ -29,16 +29,16 @@ Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.upda
 
 {{< /note >}}
 ## See Also
-- [LVGL Main component ]({{< relref "/components/lvgl/index" >}})
+- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
 - [``arc``]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}})
 - [``bar``]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}})
 - [``slider``]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})
 - [``spinbox``]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}})
-- [/components/binary_sensor/lvgl]({{< ref "/components/binary_sensor/lvgl" >}})
-- [/components/switch/lvgl]({{< ref "/components/switch/lvgl" >}})
-- [/components/select/lvgl]({{< ref "/components/select/lvgl" >}})
-- [/components/light/lvgl]({{< ref "/components/light/lvgl" >}})
-- [/components/number/lvgl]({{< ref "/components/number/lvgl" >}})
-- [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
-- [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
+- {{< docref "/components/binary_sensor/lvgl" >}}
+- {{< docref "/components/switch/lvgl" >}}
+- {{< docref "/components/select/lvgl" >}}
+- {{< docref "/components/light/lvgl" >}}
+- {{< docref "/components/number/lvgl" >}}
+- {{< docref "/components/text/lvgl" >}}
+- {{< docref "/components/text_sensor/lvgl" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/lvgl.md)

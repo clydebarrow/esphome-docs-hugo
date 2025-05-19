@@ -6,7 +6,7 @@ title: "Hydreon Rain Sensor Binary Sensor"
 {{< seo description="" image="" >}}
 
 The `hydreon_rgxx` binary sensor platform gives access to information provided by a Hydreon Rain Sensor.
-For this sensor to work, a [/components/sensor/hydreon_rgxx]({{< ref "/components/sensor/hydreon_rgxx" >}}) must be set up.
+For this sensor to work, a {{< docref "/components/sensor/hydreon_rgxx" >}} must be set up.
 
 ```yaml
 # Example RG-9 entry
@@ -45,6 +45,6 @@ binary_sensor:
 
 ## See Also
 
-- [/components/sensor/hydreon_rgxx]({{< ref "/components/sensor/hydreon_rgxx" >}})
-- [index]({{< ref "index/" >}})
+- {{< docref "/components/sensor/hydreon_rgxx" >}}
+- {{< docref "index/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/hydreon_rgxx.md)

@@ -55,10 +55,10 @@ on_...:
 ```
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/fan/index]({{< ref "/components/fan/index" >}})
-- [/components/output/ledc]({{< ref "/components/output/ledc" >}})
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/fan/index" >}}
+- {{< docref "/components/output/ledc" >}}
+- {{< docref "/components/output/esp8266_pwm" >}}
 - :apiref:`fan/fan_state.h`
 - [Adafruit's excellent H-bridge tutorial](https://learn.adafruit.com/improve-brushed-dc-motor-performance)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/hbridge.md)

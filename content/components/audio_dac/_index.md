@@ -6,7 +6,7 @@ title: "Audio DAC Core"
 {{< seo description="" image="" >}}
 
 The `audio_dac` component allows your ESPHome devices to use audio DAC hardware components, allowing the playback of
-audio via the microcontroller from a range of sources via [/components/media_player/index]({{< ref "/components/media_player/index" >}}).
+audio via the microcontroller from a range of sources via {{< docref "/components/media_player/index" >}}.
 
 ```yaml
 # Example configuration entry

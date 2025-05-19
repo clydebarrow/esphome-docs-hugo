@@ -6,7 +6,7 @@ title: "Tuya Switch"
 {{< seo description="" image="" >}}
 
 The `tuya` switch platform creates a sensor from a tuya serial component
-and requires [/components/tuya]({{< ref "/components/tuya" >}}) to be configured.
+and requires {{< docref "/components/tuya" >}} to be configured.
 
 ```text
 [13:46:01][C][tuya:023]: Tuya:
@@ -39,6 +39,6 @@ switch:
 
 ## See Also
 
-- [/components/switch/index]({{< ref "/components/switch/index" >}})
+- {{< docref "/components/switch/index" >}}
 - :apiref:`tuya/switch/tuya_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/tuya.md)

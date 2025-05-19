@@ -81,7 +81,7 @@ using an octal SPI bus, so references here to parallel and octal SPI are equival
 
 ## SPI Bus
 
-An [/components/spi]({{< ref "/components/spi" >}}) is used to communicate with the display driver chip. The driver supports single bit SPI, quad SPI and octal SPI. The SPI
+An {{< docref "/components/spi" >}} is used to communicate with the display driver chip. The driver supports single bit SPI, quad SPI and octal SPI. The SPI
 bus must be configured separately, and must be of the correct type for the display driver chip.
 
 ## Configuration
@@ -184,15 +184,15 @@ dimensions:
 
 Many displays have an integrated backlight, which may need to be turned on for the display to show. This backlight is not controlled
 by the driver, but can be controlled by a separate GPIO pin. Depending on the display, the backlight may be active high or active low, and may
-be able to be dimmed using a [/components/output/ledc]({{< ref "/components/output/ledc" >}}) with a [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}}). AMOLED displays do not have a backlight but
+be able to be dimmed using a {{< docref "/components/output/ledc" >}} with a {{< docref "/components/light/monochromatic" >}}. AMOLED displays do not have a backlight but
 their brightness can be set using the `brightness` option. This may also be controlled by a lambda API call.
 
 ## Touchscreens
 
-A touchscreen, if present, must be configured separately. See the [/components/touchscreen/index]({{< ref "/components/touchscreen/index" >}}) documentation for more information.
+A touchscreen, if present, must be configured separately. See the {{< docref "/components/touchscreen/index" >}} documentation for more information.
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - :apiref:`mipi_spi/mipi_spi.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/mipi_spi.md)

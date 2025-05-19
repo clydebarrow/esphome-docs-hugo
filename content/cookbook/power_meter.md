@@ -24,7 +24,7 @@ S0 --+-- 10k -- GND
 ```
 
 {{< /note >}}
-For ESPHome, you can then use the [pulse meter sensor ]({{< relref "/components/sensor/pulse_meter" >}}) using below configuration:
+For ESPHome, you can then use the {{< docref "/components/sensor/pulse_meter" "pulse meter sensor" >}} using below configuration:
 
 ```yaml
 sensor:
@@ -115,7 +115,7 @@ api:
 ```
 ## Tracking Total Daily Energy
 
-Additionally you can also calculate the total daily energy generated, for which you can use the [Total Daily Energy ]({{< relref "/components/sensor/total_daily_energy" >}}) using below configuration:
+Additionally you can also calculate the total daily energy generated, for which you can use the {{< docref "/components/sensor/total_daily_energy" "Total Daily Energy" >}} using below configuration:
 
 ```yaml
 sensor:
@@ -141,9 +141,9 @@ While you can in theory also do this with the home assistant [integration](https
 
 ## See Also
 
-- [/components/sensor/pulse_counter]({{< ref "/components/sensor/pulse_counter" >}})
-- [/components/sensor/pulse_meter]({{< ref "/components/sensor/pulse_meter" >}})
-- [/components/sensor/total_daily_energy]({{< ref "/components/sensor/total_daily_energy" >}})
-- [/components/time/homeassistant]({{< ref "/components/time/homeassistant" >}})
+- {{< docref "/components/sensor/pulse_counter" >}}
+- {{< docref "/components/sensor/pulse_meter" >}}
+- {{< docref "/components/sensor/total_daily_energy" >}}
+- {{< docref "/components/time/homeassistant" >}}
 - [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/power_meter.md)

@@ -73,8 +73,8 @@ improv_serial:
 
 - `name_add_mac_suffix` - [Adding the MAC address as a suffix to the device name]({{< ref "components/esphome#esphome-mac_suffix" >}})
 - `project` - [Project information]({{< ref "components/esphome#esphome-creators_project" >}})
-- `esp32_improv` - [/components/esp32_improv]({{< ref "/components/esp32_improv" >}})
-- `captive_portal` - [/components/captive_portal]({{< ref "/components/captive_portal" >}})
+- `esp32_improv` - {{< docref "/components/esp32_improv" >}}
+- `captive_portal` - {{< docref "/components/captive_portal" >}}
 - `wifi` -> `ap` allows you to flash a device that will not contain any
   credentials and they must be set by the user via either the `ap` + `captive_portal` or
   the `esp32_improv` / `improv_serial` components.
@@ -89,7 +89,7 @@ The [Project information]({{< ref "components/esphome#esphome-creators_project" 
     - `import_full_config` - This signals if ESPHome should download the entire YAML file as the user's config
       YAML instead of referencing the package. Set this to `true` if you are creating a tutorial to let users
       easily tweak the whole configuration or be able to uncomment follow-up tutorial steps.
-- `improv_serial` - [/components/improv_serial]({{< ref "/components/improv_serial" >}})
+- `improv_serial` - {{< docref "/components/improv_serial" >}}
 
 ## See Also
 

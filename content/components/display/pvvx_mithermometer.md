@@ -43,7 +43,7 @@ display:
 ## Configuration variables:
 
 - **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
-- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID [/components/time/index]({{< ref "/components/time/index" >}})ndex`. If set, the time will be synchronized with every connection.
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID {{< docref "/components/time/index" >}}ndex`. If set, the time will be synchronized with every connection.
 - **disconnect_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time the BLE connection is maintained before being disconnected again. Defaults to `5s`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to transmit the display data. Defaults to `60s`.
 - **validity_period** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time periode for which the pvvx device should display the information. Defaults to `5min`.
@@ -217,9 +217,9 @@ display:
 ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/components/ble_client]({{< ref "/components/ble_client" >}})
-- [/components/sensor/xiaomi_ble]({{< ref "/components/sensor/xiaomi_ble" >}})
+- {{< docref "index/" >}}
+- {{< docref "/components/ble_client" >}}
+- {{< docref "/components/sensor/xiaomi_ble" >}}
 - :apiref:`pvvx_mithermometer/display/pvvx_display.h`
 - [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by [pvvx](https://github.com/pvvx)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/pvvx_mithermometer.md)

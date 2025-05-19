@@ -16,7 +16,7 @@ After reboot all states, parameters and variables will be reinitialized with the
 **USE WITH GREAT CAUTION!** All credentials, global variables, counters and saved states stored in non-volatile memory will be lost with no chance of recovering them.
 Even raw reading of flash memory with `esptool` will not help, since data is physically erased from flash memory.
 
-For devices configured using [captive portal ]({{< relref "/components/captive_portal" >}}), this will reset WiFi settings as well, thus making such devices offline.
+For devices configured using {{< docref "/components/captive_portal" "captive portal" >}}, this will reset WiFi settings as well, thus making such devices offline.
 You'll need to be in close proximity to your device to configure it again using a built-in WiFi access point and captive portal.
 
 
@@ -36,10 +36,10 @@ switch:
 
 ## See Also
 
-- [shutdown]({{< ref "shutdown/" >}})
-- [restart]({{< ref "restart/" >}})
-- [safe_mode]({{< ref "safe_mode/" >}})
-- [/components/button/factory_reset]({{< ref "/components/button/factory_reset" >}})
-- [template]({{< ref "template/" >}})
+- {{< docref "shutdown/" >}}
+- {{< docref "restart/" >}}
+- {{< docref "safe_mode/" >}}
+- {{< docref "/components/button/factory_reset" >}}
+- {{< docref "template/" >}}
 - :apiref:`factory_reset/factory_reset_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/factory_reset.md)

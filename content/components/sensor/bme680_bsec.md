@@ -19,7 +19,7 @@ for CO₂ and Breath Volatile Organic Compounds (b-VOC) using a correlation betw
     you are explicitly agreeing to the terms of the `BSEC license agreement`_. You must not distribute any compiled firmware
     binaries that include this component.
 
-- We recommend using the newer [bme68x_bsec2 ]({{< relref "bme68x_bsec2/" >}}) component whenever possible.
+- We recommend using the newer {{< docref "bme68x_bsec2/" "bme68x_bsec2" >}} component whenever possible.
 
 {{< /note >}}
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
@@ -422,8 +422,8 @@ so that the process does not have to start from zero on device restart.
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [bme680]({{< ref "bme680/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "bme680/" >}}
 - :apiref:`bme680_bsec/bme680_bsec.h`
 - [BME680 Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
 - [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)

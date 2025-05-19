@@ -20,7 +20,7 @@ ESPHome.
 {{< warning >}}
 This page refers to version V1 of the PZEM-004T, which has been out of stock for a while.
 The PZEM-004, however, is still working (and selling) with this protocol and does not use modbus.
-For using the newer V3 variant of this sensor please see [pzemac ]({{< relref "pzemac/" >}}).
+For using the newer V3 variant of this sensor please see {{< docref "pzemac/" "pzemac" >}}.
 
 {{< /warning >}}
 The communication with this component is done via a [UART Bus]({{< ref "components/uart#uart" >}}).
@@ -76,7 +76,7 @@ Your ESP shall be powered by an external power supply and cannot be connected to
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [pzemac]({{< ref "pzemac/" >}})
-- [pzemdc]({{< ref "pzemdc/" >}})
+- {{< docref "pzemac/" >}}
+- {{< docref "pzemdc/" >}}
 - :apiref:`pzem004t/pzem004t.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzem004t.md)

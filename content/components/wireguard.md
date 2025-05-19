@@ -24,12 +24,12 @@ If you don't have it please read the section [Remote peer setup]({{< ref "compon
 {{< warning >}}
 This component requires the system clock to be synchronized.
 
-See [time/index]({{< ref "time/index" >}}) to setup a time source
+See {{< docref "time/index" >}} to setup a time source
 and **do not use** `homeassistant` time-platform if
 Home Assistant is on the remote peer because the time
 synchronization is a prerequisite to establish the VPN link.
 
-The [time/sntp]({{< ref "time/sntp" >}}) is a valid time-platform choice.
+The {{< docref "time/sntp" >}} is a valid time-platform choice.
 
 {{< /warning >}}
 A VPN tunnel can be created to a **single** remote peer
@@ -78,13 +78,13 @@ wireguard:
 - **address** (**Required**, IPv4 address): The local VPN address of the device.
 
   If you intend to upload firmwares through the VPN link you probably need
-  to copy this value to the `use_address` parameter of the [wifi]({{< ref "wifi/" >}}).
+  to copy this value to the `use_address` parameter of the {{< docref "wifi/" >}}.
 
 - **netmask** (*Optional*, IPv4 address): The netmask for the configured address.
   Default to `255.255.255.255`.
 
   See section [Static routes and outgoing connections]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
-  expected to transit through the VPN link (e.g. with [mqtt]({{< ref "mqtt/" >}}) to a
+  expected to transit through the VPN link (e.g. with {{< docref "mqtt/" >}} to a
   remote MQTT broker).
 
 - **private_key** (**Required**, string): The private key of the device.
@@ -113,7 +113,7 @@ wireguard:
   The device own `address/32` is always added by default to this list.
 
   See section [Static routes and outgoing connections]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
-  expected to transit through the VPN link (e.g. with [mqtt]({{< ref "mqtt/" >}}) to a
+  expected to transit through the VPN link (e.g. with {{< docref "mqtt/" >}} to a
   remote MQTT broker).
 
 - **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait
@@ -126,7 +126,7 @@ wireguard:
 
   This can be used to delay the initialization of components that use the
   VPN tunnel as long as the VPN isn't ready. For example if you are using
-  [mqtt]({{< ref "mqtt/" >}}) to reach a remote broker you may experience boot freeze just
+  {{< docref "mqtt/" >}} to reach a remote broker you may experience boot freeze just
   after the setup of MQTT because it waits for the broker to be reachable,
   but the connection cannot be established until the VPN link is
   active too. To bypass such deadlock set this parameter to `true` in
@@ -374,14 +374,14 @@ The device should now be linked to your remote Home Assistant.
 
 {{< note >}}
 If you have issues linking the ESP device try setting
-the `use_address` parameter of the [wifi]({{< ref "wifi/" >}}) to the value
+the `use_address` parameter of the {{< docref "wifi/" >}} to the value
 of the [- **address** (**Required**, IPv4 address): The local VPN address of the device.]({{< ref "components/wireguard#wireguard-address" >}}) configured here.
 
 {{< /note >}}
 ## See Also
 
-- [time/index]({{< ref "time/index" >}})
-- [time/sntp]({{< ref "time/sntp" >}})
+- {{< docref "time/index" >}}
+- {{< docref "time/sntp" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - |wireguard|_ official website
 - `Home Assistant Community Add-on: WireGuard

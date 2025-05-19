@@ -59,8 +59,8 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [mhz19]({{< ref "mhz19/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "mhz19/" >}}
 - [CO2mon-esp firmware](https://github.com/Anonym-tsk/co2mon-esp) by [@anonym-tsk](https://github.com/Anonym-tsk)
 - [Some information about hacking MT8060](https://habr.com/ru/company/dadget/blog/394333/)
 - [CO2MeterHacking project](https://revspace.nl/CO2MeterHacking)

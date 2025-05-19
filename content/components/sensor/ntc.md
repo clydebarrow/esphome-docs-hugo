@@ -9,7 +9,7 @@ The `ntc` platform is a helper sensor that allows you to convert resistance read
 from a NTC thermistor to temperature readings.
 
 First, you need to get resistance readings from the sensor - you can set this up with the
-[adc ]({{< relref "adc/" >}}) and [resistance ]({{< relref "resistance/" >}}) sensors.
+{{< docref "adc/" "adc" >}} and {{< docref "resistance/" "resistance" >}} sensors.
 
 This platform will then convert the resistance values to temperature readings.
 It also requires calibration parameters for this conversion. There are two
@@ -116,8 +116,8 @@ interval:
 ```
 ## See Also
 
-- [adc]({{< ref "adc/" >}})
-- [resistance]({{< ref "resistance/" >}})
+- {{< docref "adc/" >}}
+- {{< docref "resistance/" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`ntc/ntc.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ntc.md)

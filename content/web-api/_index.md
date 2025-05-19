@@ -15,7 +15,7 @@ not something like configuring the node, as that would quickly blow up the requi
 memory size.
 
 First up, to use the web server enable it using `App.init_web_server()` directly from code
-or using the [Web Server Section ]({{< relref "/components/web_server" >}}) in ESPHome.
+or using the {{< docref "/components/web_server" "Web Server Section" >}} in ESPHome.
 Then, navigate to the front end interface with the IP of the node or alternatively using
 mDNS with `<name>.local/`. So for example to navigate to the web server of a node called
 `livingroom`, you would enter `livingroom.local/` in your browser.
@@ -335,7 +335,7 @@ disarmed successfully. It only indicates that the command was received and proce
 
 ## See Also
 
-- [/components/web_server]({{< ref "/components/web_server" >}})
-- [/components/prometheus]({{< ref "/components/prometheus" >}})
-- [/components/http_request]({{< ref "/components/http_request" >}})
+- {{< docref "/components/web_server" >}}
+- {{< docref "/components/prometheus" >}}
+- {{< docref "/components/http_request" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/web-api/index.md)

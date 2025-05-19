@@ -5,7 +5,7 @@ title: "LVGL: Tips and Tricks"
 
 {{< seo description="" image="" >}}
 
-Here are a couple recipes for various interesting things you can do with [/components/lvgl/index]({{< ref "/components/lvgl/index" >}}) in ESPHome.
+Here are a couple recipes for various interesting things you can do with {{< docref "/components/lvgl/index" >}} in ESPHome.
 
 {{< note >}}
 Many of the examples below call service actions in Home Assistant; however, Home Assistant does not allow such action calls by default. For each ESPHome device which will call actions, you must explicitly enable this setting in Home Assistant. This may be done when the device is initially adopted or by using the `Configure` option in the "devices" list of the ESPHome integration.
@@ -1785,7 +1785,7 @@ Another example relying on the **Grid** layout can be a weather panel showing th
 
 {{< img src="lvgl_cook_weather.png" alt="Image" class="center" >}}
 
-All the information displayed here could be retrieved to local `platform: homeassistant` sensors as desribed in several examples in this Cookbook, however, this time we take a different approach. Instead of pulling the data by ESPHome, we'll be pushing it from Home Assistant, to native [/components/text/lvgl]({{< ref "/components/text/lvgl" >}}) components.
+All the information displayed here could be retrieved to local `platform: homeassistant` sensors as desribed in several examples in this Cookbook, however, this time we take a different approach. Instead of pulling the data by ESPHome, we'll be pushing it from Home Assistant, to native {{< docref "/components/text/lvgl" >}} components.
 
 The weather condition icons we use are from MDI. We import just the ones corresponding to the weather conditions supported by the Weather integration in Home Assistant. For all the other labels you can use any [Fonts]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) of your choice.
 
@@ -2067,7 +2067,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
         value: "{{states('sensor.outdoor_temperature') | round(1)}} °C"
 
 ```
-The automations will be triggered to update the labels every time the corresponding entities change, and when the ESPHome comes alive - the reason you also need the [/components/binary_sensor/status]({{< ref "/components/binary_sensor/status" >}}). Note that you'll need to adjust the entity IDs corresponding to your ESPHome node depedning on how you [configured it to use its name<esphome-configuration_variables>]({{< ref "#configured it to use its name<esphome-configuration_variables>" >}}).
+The automations will be triggered to update the labels every time the corresponding entities change, and when the ESPHome comes alive - the reason you also need the {{< docref "/components/binary_sensor/status" >}}. Note that you'll need to adjust the entity IDs corresponding to your ESPHome node depedning on how you [configured it to use its name<esphome-configuration_variables>]({{< ref "#configured it to use its name<esphome-configuration_variables>" >}}).
 
 {{< anchor "lvgl-cookbook-idlescreen" >}}
 
@@ -2180,7 +2180,7 @@ You can combine it with the previous example to turn off the backlight, so the u
 
 ## See Also
 
-- [/components/lvgl/index]({{< ref "/components/lvgl/index" >}})
+- {{< docref "/components/lvgl/index" >}}
 - [Templates]({{< ref "automations/templates#config-lambda" >}})
 - [Automation]({{< ref "automations/_index#automation" >}})
 - [Key collector component]({{< ref "components/key_collector#key_collector" >}})

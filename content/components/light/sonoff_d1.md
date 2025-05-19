@@ -28,8 +28,8 @@ Before using this components make sure:
 
 - board is configured to `esp8285`
 - [UART Bus]({{< ref "components/uart#uart" >}}) is configured with default RX / TX pins and 9600 baud rate
-- [logger ]({{< relref "/components/logger" >}}) to the serial port is disabled by setting `baud_rate` to `0`
-- in case you need light state restoration on power up, make sure `restore_from_flash` is set to `true` in the [ESP8266 platform ]({{< relref "/components/esp8266" >}})
+- {{< docref "/components/logger" "logger" >}} to the serial port is disabled by setting `baud_rate` to `0`
+- in case you need light state restoration on power up, make sure `restore_from_flash` is set to `true` in the {{< docref "/components/esp8266" "ESP8266 platform" >}}
 
 
 This component is useless for devices other than Sonoff D1 dimmer.
@@ -101,8 +101,8 @@ light:
 
 ## See Also
 
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [/components/uart]({{< ref "/components/uart" >}})
-- [/components/logger]({{< ref "/components/logger" >}})
-- [/components/esp8266]({{< ref "/components/esp8266" >}})
+- {{< docref "/components/light/index" >}}
+- {{< docref "/components/uart" >}}
+- {{< docref "/components/logger" >}}
+- {{< docref "/components/esp8266" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/sonoff_d1.md)

@@ -7,7 +7,7 @@ title: "Time & Temperature on OLED Display"
 
 {{< img src="display_time_temp_oled_1.jpg" alt="Image" width="75.0%" class="left" >}}
 
-In this example I have used a [SSD1306 OLED Display over I²C ]({{< relref "/components/display/ssd1306" >}}) to
+In this example I have used a {{< docref "/components/display/ssd1306" "SSD1306 OLED Display over I²C" >}} to
 show current time and two different temperature values from Home Assistant.
 
 ESPHome has support for several different types of displays. The display used here is 1.3" with 128x64 monochrome pixels (`SH1106 128x64`).
@@ -147,7 +147,7 @@ display:
 ```
 ## See Also
 
-- [/components/display/ssd1306]({{< ref "/components/display/ssd1306" >}})
-- [/components/display/index]({{< ref "/components/display/index" >}})
-- [/components/sensor/homeassistant]({{< ref "/components/sensor/homeassistant" >}})
+- {{< docref "/components/display/ssd1306" >}}
+- {{< docref "/components/display/index" >}}
+- {{< docref "/components/sensor/homeassistant" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/display_time_temp_oled.md)

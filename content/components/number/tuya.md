@@ -6,9 +6,9 @@ title: "Tuya Number"
 {{< seo description="" image="" >}}
 
 The `tuya` number platform allows you to create a number that controls
-a tuya serial component. This platform requires [/components/tuya]({{< ref "/components/tuya" >}}) to be configured.
+a tuya serial component. This platform requires {{< docref "/components/tuya" >}} to be configured.
 
-When [/components/tuya]({{< ref "/components/tuya" >}}) has been properly configured, it will output a list of
+When {{< docref "/components/tuya" >}} has been properly configured, it will output a list of
 valid data points to the log after start-up.
 
 ```text
@@ -98,6 +98,6 @@ Therefore there is also an option to store them on the ESPHome side and they wil
 
 ## See Also
 
-- [/components/number/index]({{< ref "/components/number/index" >}})
+- {{< docref "/components/number/index" >}}
 - :apiref:`tuya/number/tuya_number.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/number/tuya.md)

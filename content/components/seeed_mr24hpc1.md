@@ -27,7 +27,7 @@ seeed_mr24hpc1:
 
 - **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for [seeed_mr24hpc1]({{< ref "seeed_mr24hpc1/" >}})hpc1` component if you need multiple components.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for {{< docref "seeed_mr24hpc1/" >}}hpc1` component if you need multiple components.
 
 ## Binary Sensor
 

@@ -43,9 +43,9 @@ improv_serial:
 ```
 ## See Also
 
-- [wifi]({{< ref "wifi/" >}})
-- [captive_portal]({{< ref "captive_portal/" >}})
-- [esp32_improv]({{< ref "esp32_improv/" >}})
+- {{< docref "wifi/" >}}
+- {{< docref "captive_portal/" >}}
+- {{< docref "esp32_improv/" >}}
 - [Improv Wi-Fi](https://www.improv-wifi.com/)
 - :apiref:`improv_serial/improv_serial_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/improv_serial.md)

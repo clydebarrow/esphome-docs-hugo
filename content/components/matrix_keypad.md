@@ -91,6 +91,6 @@ the [Key collector component]({{< ref "components/key_collector#key_collector" >
 {{< /note >}}
 ## See Also
 
-- [/components/key_collector]({{< ref "/components/key_collector" >}})
+- {{< docref "/components/key_collector" >}}
 - [Base Binary Sensor Configuration]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/matrix_keypad.md)

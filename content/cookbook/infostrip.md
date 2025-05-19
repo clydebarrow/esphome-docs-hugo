@@ -83,7 +83,7 @@ light:
 
 ```
 {{< warning >}}
-Consider the warning in [/components/light/partition]({{< ref "/components/light/partition" >}}) regarging the increased memory usage.
+Consider the warning in {{< docref "/components/light/partition" >}} regarging the increased memory usage.
 
 {{< /warning >}}
 ## Home Assistant configuration
@@ -139,7 +139,7 @@ automation:
 
 ## See Also
 
-- [/components/light/fastled]({{< ref "/components/light/fastled" >}})
-- [/components/light/partition]({{< ref "/components/light/partition" >}})
-- [/components/sensor/mhz19]({{< ref "/components/sensor/mhz19" >}})
+- {{< docref "/components/light/fastled" >}}
+- {{< docref "/components/light/partition" >}}
+- {{< docref "/components/sensor/mhz19" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/infostrip.md)

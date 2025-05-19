@@ -23,6 +23,6 @@ button:
 
 ## See Also
 
-- [template]({{< ref "template/" >}})
+- {{< docref "template/" >}}
 - :apiref:`wake_on_lan/wake_on_lan.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/wake_on_lan.md)

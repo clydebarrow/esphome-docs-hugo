@@ -62,13 +62,13 @@ submit a feature request (see FAQ).
 | library                               |                     |                      |
 +---------------------------------------+---------------------+----------------------+
 
-This component requires that you have configured a [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}}).
+This component requires that you have configured a {{< docref "/components/remote_transmitter" >}}.
 
 Due to the unidirectional nature of IR remote controllers, this component cannot determine the
 actual state of the device and will assume the state of the device is the latest state requested.
 The assumed state can be restored at boot.
 
-However, when receiver is supported, you can optionally add a [/components/remote_receiver]({{< ref "/components/remote_receiver" >}})
+However, when receiver is supported, you can optionally add a {{< docref "/components/remote_receiver" >}}
 component so the climate state will be tracked when it is operated with the original remote
 controller unit.
 
@@ -256,7 +256,7 @@ climate:
     transmitted to the `RAC-PT1411HWRU` in the same manner as the original remote controller. How often the
     temperature is transmitted is determined by the `update_interval` assigned to the `sensor`. Note that
     `update_interval` must be less than seven minutes or the `RAC-PT1411HWRU` will revert to using its own
-    internal temperature sensor; a value of 30 seconds seems to work well. See [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+    internal temperature sensor; a value of 30 seconds seems to work well. See {{< docref "/components/sensor/index" >}}
     for more information.
 
 - This climate IR component is also known to work with Midea model MAP14HS1TBL and may work with other similar
@@ -303,7 +303,7 @@ This is only supported with select climate devices, see "Supports receiver" in t
 
 {{< /note >}}
 Optionally, some platforms can listen to data the climate device sends over infrared to update their state (
-for example what mode the device is in). By setting up a [remote_receiver ]({{< relref "/components/remote_receiver" >}})
+for example what mode the device is in). By setting up a {{< docref "/components/remote_receiver" "remote_receiver" >}}
 and passing its ID to the climate platform you can enable this mode.
 
 When using a receiver it is recommended to put the IR receiver as close as possible to the equipment's
@@ -361,16 +361,16 @@ AC unit. If a `sensor` is provided in the configuration with this model, the sen
 transmitted to the `greeyac` device in the same manner as the original remote controller. How often the
 temperature is transmitted is determined by the `update_interval` assigned to the `sensor`. Note that
 `update_interval` must be less than 10 minutes or the `greeyac` device will revert to using its own
-internal temperature sensor; a value of 2 minutes seems to work well. See [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+internal temperature sensor; a value of 2 minutes seems to work well. See {{< docref "/components/sensor/index" >}}
 for more information.
 
 {{< /note >}}
 ## See Also
 
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
-- [/components/remote_receiver]({{< ref "/components/remote_receiver" >}})
-- [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/remote_receiver" >}}
+- {{< docref "/components/remote_transmitter" >}}
+- {{< docref "/components/sensor/index" >}}
 - :apiref:`ballu.h <ballu/ballu.h>`,
   :apiref:`climate_ir_lg.h <climate_ir_lg/climate_ir_lg.h>`
   :apiref:`coolix.h <coolix/coolix.h>`,

@@ -18,8 +18,8 @@ There are a number of requirements your project must meet. These may vary based 
 Wi-Fi is quite common but requires configuration of the SSID and passphrase.
 As such, for easy end-user provisioning, your configuration must include:
 
-- `esp32_improv` as described in [/components/esp32_improv]({{< ref "/components/esp32_improv" >}})
-- `improv_serial` as described in [/components/improv_serial]({{< ref "/components/improv_serial" >}}), if a USB connection is available (recommended)
+- `esp32_improv` as described in {{< docref "/components/esp32_improv" >}}
+- `improv_serial` as described in {{< docref "/components/improv_serial" >}}, if a USB connection is available (recommended)
 
 Note that these are **not** required for projects that only provide a physical/wired Ethernet port for connectivity.
 
@@ -33,7 +33,7 @@ Note that these are **not** required for projects that only provide a physical/w
   [Remove]({{< ref "components/packages#config-packages_remove" >}}) and/or [Extend]({{< ref "components/packages#config-packages_extend" >}}) configuration variables should they choose to
   "take control"
 - Your project supports adoption via the `dashboard_import` feature of ESPHome (see
-  [Sharing ]({{< relref "/guides/creators" >}})). In particular:
+  {{< docref "/guides/creators" "Sharing" >}}). In particular:
 
     - There are **no** references to secrets or passwords
     - Network configuration must assume defaults (no static IPs or DNS configured)

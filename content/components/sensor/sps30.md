@@ -133,9 +133,9 @@ on_...:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [sds011]({{< ref "sds011/" >}})
-- [pmsx003]({{< ref "pmsx003/" >}})
-- [ccs811]({{< ref "ccs811/" >}})
-- [sgp30]({{< ref "sgp30/" >}})
+- {{< docref "sds011/" >}}
+- {{< docref "pmsx003/" >}}
+- {{< docref "ccs811/" >}}
+- {{< docref "sgp30/" >}}
 - :apiref:`sps30/sps30.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sps30.md)

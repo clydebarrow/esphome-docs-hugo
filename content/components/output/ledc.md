@@ -134,11 +134,11 @@ Configuration variables:
 
 ## See Also
 
-- [/components/output/index]({{< ref "/components/output/index" >}})
-- [/components/output/esp8266_pwm]({{< ref "/components/output/esp8266_pwm" >}})
-- [/components/light/monochromatic]({{< ref "/components/light/monochromatic" >}})
-- [/components/fan/speed]({{< ref "/components/fan/speed" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output/esp8266_pwm" >}}
+- {{< docref "/components/light/monochromatic" >}}
+- {{< docref "/components/fan/speed" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`ledc/ledc_output.h`
 - [esp-idf LEDC API docs](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/ledc.md)

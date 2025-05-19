@@ -92,7 +92,7 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 ## See Also
 
 - [The ``sdl`` touchscreen platform allows emulating a touch screen by using the mouse with the ``sdl`` display driver.]({{< ref "components/touchscreen/sdl#sdl_touchscreen" >}})
-- [SDL binary sensor ]({{< relref "/components/binary_sensor/sdl" >}})
-- [index]({{< ref "index/" >}})
+- {{< docref "/components/binary_sensor/sdl" "SDL binary sensor" >}}
+- {{< docref "index/" >}}
 - :apiref:`sdl/sdl_esphome.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/sdl.md)

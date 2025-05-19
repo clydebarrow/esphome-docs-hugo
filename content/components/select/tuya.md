@@ -6,7 +6,7 @@ title: "Tuya Select"
 {{< seo description="" image="" >}}
 
 The `tuya` select platform creates a select from a tuya serial component
-and requires [/components/tuya]({{< ref "/components/tuya" >}}) to be configured.
+and requires {{< docref "/components/tuya" >}} to be configured.
 
 ```text
 [08:51:09][C][tuya:032]: Tuya:
@@ -62,6 +62,6 @@ select:
 
 ## See Also
 
-- [/components/select/index]({{< ref "/components/select/index" >}})
+- {{< docref "/components/select/index" >}}
 - :apiref:`tuya/select/tuya_select.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/tuya.md)

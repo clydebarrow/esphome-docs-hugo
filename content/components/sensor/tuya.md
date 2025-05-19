@@ -6,7 +6,7 @@ title: "Tuya Sensor"
 {{< seo description="" image="" >}}
 
 The `tuya` sensor platform creates a sensor from a tuya component
-and requires [/components/tuya]({{< ref "/components/tuya" >}}) to be configured.
+and requires {{< docref "/components/tuya" >}} to be configured.
 
 ```text
 [13:46:01][C][tuya:023]: Tuya:
@@ -39,7 +39,7 @@ sensor:
 
 ## See Also
 
-- [/components/tuya]({{< ref "/components/tuya" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+- {{< docref "/components/tuya" >}}
+- {{< docref "/components/sensor/index" >}}
 - :apiref:`tuya/sensor/tuya_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/tuya.md)

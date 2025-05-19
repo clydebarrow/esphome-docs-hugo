@@ -5,13 +5,13 @@ title: "Speaker Audio Media Player"
 
 {{< seo description="" image="" >}}
 
-The `speaker` media player platform allows you to play on-device and online audio media via [speaker components ]({{< relref "/components/speaker/index" >}}).
+The `speaker` media player platform allows you to play on-device and online audio media via {{< docref "/components/speaker/index" "speaker components" >}}.
 
 This platform greatly benefits from having external PSRAM. See the [Performance]({{< ref "components/media_player/speaker#media_player-speaker-performance" >}}) for details.
 
 It natively supports decoding `FLAC`, `MP3`, and `WAV` audio files. Home Assistant (since version 2024.10) can proxy any media it sends and transcode it to a specified format and sample rate to minimize the device's computational load.
 
-It supports two different audio pipelines: announcement and media. Each audio pipeline must output to a unique speaker. Use a [mixer speaker ]({{< relref "/components/speaker/mixer" >}}) component to create two different speakers that output to a single audio speaker.
+It supports two different audio pipelines: announcement and media. Each audio pipeline must output to a unique speaker. Use a {{< docref "/components/speaker/mixer" "mixer speaker" >}} component to create two different speakers that output to a single audio speaker.
 
 On-device files built directly into the firmware are played without a network connection. Encode on-device files with the configured sample rate, 1 or 2 channels, and 16 bits per sample.
 
@@ -37,7 +37,7 @@ media_player:
 
 - **announcement_pipeline** (**Required**, Pipeline Schema): Configuration settings for the announcement pipeline.
 
-  - **speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):[speaker ]({{< relref "/components/speaker/index" >}})dex>` to output the audio.
+  - **speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker/index" "speaker" >}}dex>` to output the audio.
   - **format** (*Optional*, enum): The audio format Home Asssistant will transcode audio to before sending it to the device. One of `FLAC`, `MP3`, `WAV`, or `NONE`. `NONE` disables transcoding in Home Assistant. Defaults to `FLAC`.
   - **sample_rate** (*Optional*, positive integer): Sample rate for the transcoded audio. Should be supported by the configured `speaker` component. Defaults to the speaker's sample rate.
   - **num_channels** (*Optional*, positive integer): Number of channels for the transcoded audio. Must be either `1` or `2`. Defaults to the speaker's number of channels.
@@ -61,7 +61,7 @@ media_player:
 
 ## Example Configuration
 
-This example outputs audio to an  [I²S Audio Speaker ]({{< relref "/components/speaker/i2s_audio" >}}) configured with a 48000 Hz sample rate. It uses a `mixer` speaker component to handle combining the two different pipelines, and it uses `resampler` speaker components to ensure the source speakers uses the same sample rate.
+This example outputs audio to an  {{< docref "/components/speaker/i2s_audio" "I²S Audio Speaker" >}} configured with a 48000 Hz sample rate. It uses a `mixer` speaker component to handle combining the two different pipelines, and it uses `resampler` speaker components to ensure the source speakers uses the same sample rate.
 
 It adds a switch for playing an on-device file for an alarm notification. Any playing media is ducked while the alarm is activated. After the alarm is turned off, the media ducking will gradually stop.
 
@@ -190,8 +190,8 @@ If there is a noticeable delay before a pause command takes effect, reduce the b
 
 ## See also
 
-- [/components/speaker/index]({{< ref "/components/speaker/index" >}})
-- [/components/speaker/mixer]({{< ref "/components/speaker/mixer" >}})
-- [/components/speaker/resampler]({{< ref "/components/speaker/resampler" >}})
-- [index]({{< ref "index/" >}})
+- {{< docref "/components/speaker/index" >}}
+- {{< docref "/components/speaker/mixer" >}}
+- {{< docref "/components/speaker/resampler" >}}
+- {{< docref "index/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/media_player/speaker.md)

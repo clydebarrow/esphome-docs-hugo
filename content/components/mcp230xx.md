@@ -194,8 +194,8 @@ binary_sensor:
 ## See Also
 
 - [I²C Bus]({{< ref "components/i2c#i2c" >}})
-- [switch/gpio]({{< ref "switch/gpio" >}})
-- [binary_sensor/gpio]({{< ref "binary_sensor/gpio" >}})
+- {{< docref "switch/gpio" >}}
+- {{< docref "binary_sensor/gpio" >}}
 - :apiref:`API Reference (MCP23008) <mcp23008/mcp23008.h>`
 - :apiref:`API Reference (MCP23016) <mcp23016/mcp23016.h>`
 - :apiref:`API Reference (MCP23017) <mcp23017/mcp23017.h>`

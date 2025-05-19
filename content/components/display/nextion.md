@@ -352,7 +352,7 @@ on_...:
 This will use the file specified for `tft_url` to update ("OTA") the Nextion.
 
 Once completed, both ESPHome and the Nextion will reboot. ESPHome will be unresponsive during the upload process and no
-logging or other [automations]({{< relref "/automations/index" >}}) will occur. This process uses the same protocol as the
+logging or other {{< docref "/automations/index" "automations" >}} will occur. This process uses the same protocol as the
 [Nextion Editor](https://nextion.tech/nextion-editor/) and only transfers required portions of the TFT file.
 
 {{< warning >}}
@@ -366,7 +366,7 @@ should switch to an ESP32 or supported variant which has more available [Hardwar
 You can use Home Assistant itself or any other web server to host the TFT file. When using HTTPS (generally
 recommended), you may notice reduced upload speeds as the encryption consumes more resources on the microcontroller.
 
-We suggest using a [/components/button/template]({{< ref "/components/button/template" >}}) to trigger this process. For example:
+We suggest using a {{< docref "/components/button/template" >}} to trigger this process. For example:
 
 ```yaml
 button:
@@ -397,7 +397,7 @@ updates are sent. To work around this, after the Nextion wakes up, all component
 Nextion.
 
 {{< /note >}}
-With the exception of the [../binary_sensor/nextion]({{< ref "../binary_sensor/nextion" >}}) that has the `page_id`/`component_id` options configured,
+With the exception of the {{< docref "../binary_sensor/nextion" >}} that has the `page_id`/`component_id` options configured,
 the example below illustrates:
 
  - Polling the Nextion for updates
@@ -422,12 +422,12 @@ the individual components (linked below) for more detail.
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [../binary_sensor/nextion]({{< ref "../binary_sensor/nextion" >}})
-- [../sensor/nextion]({{< ref "../sensor/nextion" >}})
-- [../switch/nextion]({{< ref "../switch/nextion" >}})
-- [../text_sensor/nextion]({{< ref "../text_sensor/nextion" >}})
-- [../uart]({{< ref "../uart" >}})
+- {{< docref "index/" >}}
+- {{< docref "../binary_sensor/nextion" >}}
+- {{< docref "../sensor/nextion" >}}
+- {{< docref "../switch/nextion" >}}
+- {{< docref "../text_sensor/nextion" >}}
+- {{< docref "../uart" >}}
 - :apiref:`nextion/nextion.h`
 - [Simple Nextion Library](https://github.com/bborncr/nextion) by [Bentley Born](https://github.com/bborncr)
 - [Official Nextion Library](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead](https://www.itead.cc/)

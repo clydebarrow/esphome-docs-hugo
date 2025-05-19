@@ -284,11 +284,11 @@ binary_sensor:
 ## See Also
 
 - [Binary Sensor Filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}})
-- [Inkplate 6 Plus ]({{< relref "/components/display/inkplate6" >}})
-- [EKTF2232 ]({{< relref "/components/touchscreen/ektf2232" >}})
-- [XPT2046 ]({{< relref "/components/touchscreen/xpt2046" >}})
-- [TT21100 ]({{< relref "/components/touchscreen/tt21100" >}})
-- [GT911 ]({{< relref "/components/touchscreen/gt911" >}})
+- {{< docref "/components/display/inkplate6" "Inkplate 6 Plus" >}}
+- {{< docref "/components/touchscreen/ektf2232" "EKTF2232" >}}
+- {{< docref "/components/touchscreen/xpt2046" "XPT2046" >}}
+- {{< docref "/components/touchscreen/tt21100" "TT21100" >}}
+- {{< docref "/components/touchscreen/gt911" "GT911" >}}
 - :apiref:`touchscreen/touchscreen.h`
 - :apiref:`touchscreen/binary_sensor/touchscreen_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/touchscreen/index.md)

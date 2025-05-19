@@ -6,7 +6,7 @@ title: "Captive Portal"
 {{< seo description="" image="" >}}
 
 The captive portal component in ESPHome is a fallback mechanism for when connecting to the
-configured [WiFi ]({{< relref "wifi/" >}}) fails.
+configured {{< docref "wifi/" "WiFi" >}} fails.
 
 After 1 minute of unsuccessful WiFi connection attempts, the ESP will start a WiFi hotspot
 (with the credentials from your configuration)
@@ -39,8 +39,8 @@ No configuration variables.
 
 ## See Also
 
-- [wifi]({{< ref "wifi/" >}})
-- [improv_serial]({{< ref "improv_serial/" >}})
-- [esp32_improv]({{< ref "esp32_improv/" >}})
+- {{< docref "wifi/" >}}
+- {{< docref "improv_serial/" >}}
+- {{< docref "esp32_improv/" >}}
 - :apiref:`captive_portal/captive_portal.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/captive_portal.md)

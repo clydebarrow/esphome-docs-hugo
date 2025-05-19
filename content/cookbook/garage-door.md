@@ -43,7 +43,7 @@ cover:
 ```
 ## See Also
 
-- [/automations/index]({{< ref "/automations/index" >}})
-- [/components/switch/gpio]({{< ref "/components/switch/gpio" >}})
-- [/components/cover/template]({{< ref "/components/cover/template" >}})
+- {{< docref "/automations/index" >}}
+- {{< docref "/components/switch/gpio" >}}
+- {{< docref "/components/cover/template" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/garage-door.md)

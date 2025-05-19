@@ -124,8 +124,8 @@ light:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [template]({{< ref "template/" >}})
+- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/light/index" >}}
+- {{< docref "template/" >}}
 - :apiref:`m5stack_8angle/m5stack_8angle.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/m5stack_8angle.md)

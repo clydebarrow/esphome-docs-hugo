@@ -66,7 +66,7 @@ cover:
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`endstop/endstop_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/endstop.md)

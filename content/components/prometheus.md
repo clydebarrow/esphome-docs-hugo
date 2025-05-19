@@ -6,7 +6,7 @@ title: "Prometheus Component"
 {{< seo description="" image="" >}}
 
 The `prometheus` component enables an HTTP endpoint for the
-[web_server]({{< ref "web_server/" >}}) in order to integrate a [Prometheus](https://prometheus.io/) installation.
+{{< docref "web_server/" >}} in order to integrate a [Prometheus](https://prometheus.io/) installation.
 
 This can be used to scrape data directly into your Prometheus-based monitoring and alerting-system,
 without the need of any other software.
@@ -94,9 +94,9 @@ prometheus:
 ```
 ## See Also
 
-- [/components/web_server]({{< ref "/components/web_server" >}})
+- {{< docref "/components/web_server" >}}
 - [REST API]({{< ref "web-api/_index#api-rest" >}})
-- [/components/http_request]({{< ref "/components/http_request" >}})
+- {{< docref "/components/http_request" >}}
 - :apiref:`prometheus/prometheus_handler.h`
 - [Prometheus](https://prometheus.io/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/prometheus.md)

@@ -52,11 +52,11 @@ The heater may be enabled to help correct the reading; see the datasheet for mor
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [dht]({{< ref "dht/" >}})
-- [dht12]({{< ref "dht12/" >}})
-- [hdc1080]({{< ref "hdc1080/" >}})
-- [sht3xd]({{< ref "sht3xd/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "dht/" >}}
+- {{< docref "dht12/" >}}
+- {{< docref "hdc1080/" >}}
+- {{< docref "sht3xd/" >}}
 - :apiref:`htu21d/htu21d.h`
 - [i2cdevlib](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg](https://github.com/jrowberg)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/htu21d.md)

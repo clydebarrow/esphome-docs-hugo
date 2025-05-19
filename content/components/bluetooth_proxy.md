@@ -24,12 +24,12 @@ do *periodic disconnections and reconnections* will permit using more than 3 of 
 Passively broadcasted sensor data (that is advertised by certain devices without active connections) is received
 separately from these, and is not limited to a specific number.
 
-The [esp32]({{< ref "esp32/" >}}) component should be configured to use the `esp-idf` framework, as the `arduino` framework
+The {{< docref "esp32/" >}} component should be configured to use the `esp-idf` framework, as the `arduino` framework
 uses significantly more memory and performs poorly with the Bluetooth proxy enabled. When switching from
 `arduino` to `esp-idf`, make sure to update the device with a serial cable as the partition table is
-different between the two frameworks as [/components/ota/index]({{< ref "/components/ota/index" >}}) updates will not change the partition table.
+different between the two frameworks as {{< docref "/components/ota/index" >}} updates will not change the partition table.
 
-The [web_server]({{< ref "web_server/" >}}) component should be disabled as the device is likely
+The {{< docref "web_server/" >}} component should be disabled as the device is likely
 to run out of memory and will malfunction when both components are enabled simultaneously.
 
 Not all devices are supported and ESPHome does not decode or keep a list. To find out if your device is supported,
@@ -49,14 +49,14 @@ bluetooth_proxy:
   the `esp-idf` framework up to a maximum of `9`. It is recommended not to exceed `5`
   connection slots to avoid memory issues. Defaults to `3`.
   The value must not exceed the total configured `max_connections`
-  for [esp32_ble_tracker]({{< ref "esp32_ble_tracker/" >}}).
+  for {{< docref "esp32_ble_tracker/" >}}.
 
-The Bluetooth proxy depends on [esp32_ble_tracker]({{< ref "esp32_ble_tracker/" >}}) so make sure to add that to your configuration.
+The Bluetooth proxy depends on {{< docref "esp32_ble_tracker/" >}} so make sure to add that to your configuration.
 
 ## Improving reception performance
 
 Use a board with an Ethernet connection to the network, to offload ESP32's radio module from WiFi traffic, this gains performance on Bluetooth side.
-To maximize the chances of catching advertisements of the sensors, you can set `interval` equal to `window` in [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}) scan parameter settings:
+To maximize the chances of catching advertisements of the sensors, you can set `interval` equal to `window` in {{< docref "/components/esp32_ble_tracker" >}} scan parameter settings:
 
 ```yaml
 esp32_ble_tracker:
@@ -121,7 +121,7 @@ bluetooth_proxy:
 ```
 ## See Also
 
-- [esp32_ble_tracker]({{< ref "esp32_ble_tracker/" >}})
+- {{< docref "esp32_ble_tracker/" >}}
 - :apiref:`bluetooth_proxy/bluetooth_proxy.h`
 - BTHome `<https://bthome.io/>`__
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/bluetooth_proxy.md)

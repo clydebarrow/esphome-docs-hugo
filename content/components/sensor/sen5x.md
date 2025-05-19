@@ -185,12 +185,12 @@ on_...:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [sds011]({{< ref "sds011/" >}})
-- [pmsx003]({{< ref "pmsx003/" >}})
-- [ccs811]({{< ref "ccs811/" >}})
-- [scd4x]({{< ref "scd4x/" >}})
-- [sps30]({{< ref "sps30/" >}})
-- [sgp4x]({{< ref "sgp4x/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "sds011/" >}}
+- {{< docref "pmsx003/" >}}
+- {{< docref "ccs811/" >}}
+- {{< docref "scd4x/" >}}
+- {{< docref "sps30/" >}}
+- {{< docref "sgp4x/" >}}
 - :apiref:`sen5x/sen5x.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sen5x.md)

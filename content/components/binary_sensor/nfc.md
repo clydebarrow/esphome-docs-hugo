@@ -14,7 +14,7 @@ The tag may be identified in one of three ways:
 - By a given NDEF tag "name", or...
 - By a given string contained in the tag's NDEF message/data
 
-Note that this platform is currently supported by the [PN716x ]({{< relref "../pn7160" >}}) and [PN7150 ]({{< relref "../pn7150" >}}) only;
+Note that this platform is currently supported by the {{< docref "../pn7160" "PN716x" >}} and {{< docref "../pn7150" "PN7150" >}} only;
 one of these components must be present in your device's configuration in order to use it.
 
 ```yaml
@@ -51,7 +51,7 @@ prepared using the Home Assistant Companion app) or (part of) a string that is c
 
 To obtain a tag's UID:
 
-- Set up a simple NFC component (such as the [PN716x ]({{< relref "../pn7160" >}}), [PN7150 ]({{< relref "../pn7150" >}}) or [PN532 ]({{< relref "pn532/" >}}))
+- Set up a simple NFC component (such as the {{< docref "../pn7160" "PN716x" >}}, {{< docref "../pn7150" "PN7150" >}} or {{< docref "pn532/" "PN532" >}})
   configuration without any binary sensors.
 - Approach the NFC reader with an NFC tag. When the tag is sufficiently close to the reader, you'll see a message in the
   ESPHome device's logs similar to this:
@@ -76,10 +76,10 @@ cards/tags to share the same message.
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [pn532]({{< ref "pn532/" >}})
-- [../pn7150]({{< ref "../pn7150" >}})
-- [../pn7160]({{< ref "../pn7160" >}})
+- {{< docref "index/" >}}
+- {{< docref "pn532/" >}}
+- {{< docref "../pn7150" >}}
+- {{< docref "../pn7160" >}}
 - :apiref:`pn532/pn532.h`
 - :apiref:`pn7150/pn7150.h`
 - :apiref:`pn7160/pn7160.h`

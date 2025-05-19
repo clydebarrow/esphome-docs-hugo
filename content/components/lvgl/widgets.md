@@ -51,7 +51,7 @@ Similarly to CSS, LVGL also supports `min_width`, `max_width`, `min_height` and 
 
 {{< img src="lvgl_align.png" alt="Image" class="center" >}}
 
-- **group** (*Optional*, string): The name of the group of widgets which will interact with a  [/components/sensor/rotary_encoder]({{< ref "/components/sensor/rotary_encoder" >}}). In every group there is always one focused widget which receives the encoder actions. You need to associate an input device with a group. An input device can send key events to only one group but a group can receive data from more than one input device. If no group is specified for a widget or an encoder, an unnamed default group will be assigned, so in most cases where only one encoder is used it will not be necessary to explicitly specify a group.
+- **group** (*Optional*, string): The name of the group of widgets which will interact with a  {{< docref "/components/sensor/rotary_encoder" >}}. In every group there is always one focused widget which receives the encoder actions. You need to associate an input device with a group. An input device can send key events to only one group but a group can receive data from more than one input device. If no group is specified for a widget or an encoder, an unnamed default group will be assigned, so in most cases where only one encoder is used it will not be necessary to explicitly specify a group.
 - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
 - **styles** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of a *style definition* from the main component configuration to override the theme styles.
 - **theme** (*Optional*, list): A list of styles to apply to the widget and children. Same configuration option as at the main component.
@@ -115,7 +115,7 @@ In addition to visual styling, each widget supports some boolean **flags** to in
 - **widget_1**, **widget_2** (*Optional*, boolean): custom flags, free to use by widget.
 
 {{< note >}}
-LVGL only supports **integers** for numeric `value`. Visualizer widgets can't display floats directly, but they allow scaling by 10s. Some examples in the [Cookbook ]({{< relref "/cookbook/lvgl" >}}) cover how to do that.
+LVGL only supports **integers** for numeric `value`. Visualizer widgets can't display floats directly, but they allow scaling by 10s. Some examples in the {{< docref "/cookbook/lvgl" "Cookbook" >}} cover how to do that.
 
 {{< /note >}}
 {{< anchor "lvgl-widget-parts" >}}
@@ -348,7 +348,7 @@ on_...:
 The `on_value` and `on_change` triggers are sent as the arc knob is dragged or changed with keys. The event is sent *continuously* while the arc knob is being dragged; this generally has a negative effect on performance. To mitigate this, consider using a [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) like `on_release`, to get the `x` variable once after the interaction has completed.
 
 {{< /note >}}
-The `arc` can be also integrated as a [Sensor ]({{< relref "/components/sensor/lvgl" >}}) or [Number ]({{< relref "/components/number/lvgl" >}}) component.
+The `arc` can be also integrated as a {{< docref "/components/sensor/lvgl" "Sensor" >}} or {{< docref "/components/number/lvgl" "Number" >}} component.
 
 See [Media player volume slider]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}}) and [Light brightness slider]({{< ref "cookbook/lvgl#lvgl-cookbook-bright" >}}) for examples which demonstrate how to use a slider (or an arc) to control entities in Home Assistant.
 
@@ -407,7 +407,7 @@ on_...:
         value: 55
 
 ```
-The `bar` can be also integrated as [Sensor ]({{< relref "/components/sensor/lvgl" >}}) or [Number ]({{< relref "/components/number/lvgl" >}}) component.
+The `bar` can be also integrated as {{< docref "/components/sensor/lvgl" "Sensor" >}} or {{< docref "/components/number/lvgl" "Number" >}} component.
 
 {{< anchor "lvgl-widget-button" >}}
 
@@ -468,7 +468,7 @@ To have a button with a text label on it, add a child [``label``]({{< ref "compo
             args: [ x ]
 
 ```
-The `button` can be also integrated as a [Switch ]({{< relref "/components/switch/lvgl" >}}) or as a [Binary Sensor ]({{< relref "/components/binary_sensor/lvgl" >}}) component.
+The `button` can be also integrated as a {{< docref "/components/switch/lvgl" "Switch" >}} or as a {{< docref "/components/binary_sensor/lvgl" "Binary Sensor" >}} component.
 
 See [Remote light button]({{< ref "cookbook/lvgl#lvgl-cookbook-binent" >}}) for an example which demonstrates how to use a checkable button to act on a Home Assistant service.
 
@@ -799,7 +799,7 @@ on_...:
 In case you configure `default_font` in the main section to a custom font, the checkmark will not be shown correctly when the checkbox is in the checked state. See [Restore checkbox mark]({{< ref "cookbook/lvgl#lvgl-cookbook-ckboxmark" >}}) for how to easily resolve this.
 
 {{< /note >}}
-The `checkbox` can be also integrated as a [Switch ]({{< relref "/components/switch/lvgl" >}}) component.
+The `checkbox` can be also integrated as a {{< docref "/components/switch/lvgl" "Switch" >}} component.
 
 {{< anchor "lvgl-widget-dropdown" >}}
 
@@ -879,7 +879,7 @@ on_...:
           args: [ x ]
 
 ```
-The `dropdown` can be also integrated as [Select ]({{< relref "/components/select/lvgl" >}}) component.
+The `dropdown` can be also integrated as {{< docref "/components/select/lvgl" "Select" >}} component.
 
 {{< anchor "lvgl-widget-image" >}}
 
@@ -1076,7 +1076,7 @@ on_...:
           args: [ 'id(wifi_signal_db).get_state()' ]
 
 ```
-The `label` can be also integrated as [Text Sensor ]({{< relref "/components/text_sensor/lvgl" >}}) or [Text ]({{< relref "/components/text/lvgl" >}}) component.
+The `label` can be also integrated as {{< docref "/components/text_sensor/lvgl" "Text Sensor" >}} or {{< docref "/components/text/lvgl" "Text" >}} component.
 
 {{< anchor "lvgl-widget-led" >}}
 
@@ -1120,7 +1120,7 @@ on_...:
         color: 0x00FF00
 
 ```
-The `led` can be also integrated as [Light ]({{< relref "/components/light/lvgl" >}}) component.
+The `led` can be also integrated as {{< docref "/components/light/lvgl" "Light" >}} component.
 
 {{< note >}}
 If configured as a light component, `color` and `brightness` are overridden by the light at startup, according to its `restore_mode` setting.
@@ -1482,7 +1482,7 @@ on_...:
           args: [x, text.c_str()]
 
 ```
-The `roller` can be also integrated as [Select ]({{< relref "/components/select/lvgl" >}}) component.
+The `roller` can be also integrated as {{< docref "/components/select/lvgl" "Select" >}} component.
 
 {{< anchor "lvgl-widget-slider" >}}
 
@@ -1554,7 +1554,7 @@ on_...:
 The `on_value` trigger is sent as the slider is dragged or changed with keys. The event is sent *continuously* while the slider is being dragged; this generally has a negative effect on performance. To mitigate this, consider using a [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) like `on_release`, to get the `x` variable once after the interaction has completed.
 
 {{< /note >}}
-The `slider` can be also integrated as [Sensor ]({{< relref "/components/sensor/lvgl" >}}) or [Number ]({{< relref "/components/number/lvgl" >}}) component.
+The `slider` can be also integrated as {{< docref "/components/sensor/lvgl" "Sensor" >}} or {{< docref "/components/number/lvgl" "Number" >}} component.
 
 See [Media player volume slider]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}}) and [Light brightness slider]({{< ref "cookbook/lvgl#lvgl-cookbook-bright" >}}) for examples which demonstrate how to use a slider to control entities in Home Assistant.
 
@@ -1632,7 +1632,7 @@ on_...:
             args: [ x ]
 
 ```
-The `spinbox` can be also integrated as a [Sensor ]({{< relref "/components/sensor/lvgl" >}}) or [Number ]({{< relref "/components/number/lvgl" >}}) component.
+The `spinbox` can be also integrated as a {{< docref "/components/sensor/lvgl" "Sensor" >}} or {{< docref "/components/number/lvgl" "Number" >}} component.
 
 See [Climate control]({{< ref "cookbook/lvgl#lvgl-cookbook-climate" >}}) for an example which demonstrates how to implement a thermostat control using the spinbox.
 
@@ -1725,7 +1725,7 @@ The switch looks like a little slider and can be used to turn something on and o
             args: [ x ]
 
 ```
-The `switch` can be also integrated as a [Switch ]({{< relref "/components/switch/lvgl" >}}) component.
+The `switch` can be also integrated as a {{< docref "/components/switch/lvgl" "Switch" >}} component.
 
 See [Local light switch]({{< ref "cookbook/lvgl#lvgl-cookbook-relay" >}}) for an example which demonstrates how to use a switch to act on a local component.
 
@@ -1746,7 +1746,7 @@ The tabs are indexed (zero-based) in the order they appear in the configuration 
 - **tabs** (**Required**, list): A list with (any number of) tabs to be added to tabview.
     - **name** (**Required**): The text to be shown on the button corresponding to the tab.
     - **id** (*Optional*): An ID for the tab itself.
-    - **widgets** (**Required**, list): A list of [/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}}) to be drawn on the tab, as children.
+    - **widgets** (**Required**, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the tab, as children.
 - **tab_style** (*Optional*): Style settings for the tabs.
     - **items** (*Optional*, dict): Settings for the items *part*, the buttons all use the text and typical background style properties except translations and transformations.
 
@@ -1868,7 +1868,7 @@ on_...:
             args: [ text.c_str() ]
 
 ```
-The `textarea` can be also integrated as [Text Sensor ]({{< relref "/components/text_sensor/lvgl" >}}) or [Text ]({{< relref "/components/text/lvgl" >}}) component.
+The `textarea` can be also integrated as {{< docref "/components/text_sensor/lvgl" "Text Sensor" >}} or {{< docref "/components/text/lvgl" "Text" >}} component.
 
 {{< anchor "lvgl-widget-tileview" >}}
 
@@ -1885,7 +1885,7 @@ If the tileview is screen sized, the user interface resembles what you may have 
     - **row** (**Required**): Horizontal position of the tile in the tileview grid.
     - **dir** (*Optional*): Enable moving to adjacent tiles in the given direction by swiping/dragging. One (or multiple as YAML list) of `LEFT`, `RIGHT`, `TOP`, `BOTTOM`, `HOR`, `VER`, `ALL`. Defaults to `ALL`.
     - **id** (*Optional*): A tile ID to be used with the `lvgl.tileview.select` action.
-    - **widgets** (*Optional*, list): A list of [/components/lvgl/widgets]({{< ref "/components/lvgl/widgets" >}}) to be drawn on the tile, as children.
+    - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the tile, as children.
 
 **Actions:**
 
@@ -2081,14 +2081,14 @@ When used on a widget, it does not act specifically on that widget but can be us
 
 ## See Also
 
-- [LVGL Main component ]({{< relref "/components/lvgl/index" >}})
-- [/components/binary_sensor/lvgl]({{< ref "/components/binary_sensor/lvgl" >}})
-- [/components/sensor/lvgl]({{< ref "/components/sensor/lvgl" >}})
-- [/components/number/lvgl]({{< ref "/components/number/lvgl" >}})
-- [/components/switch/lvgl]({{< ref "/components/switch/lvgl" >}})
-- [/components/select/lvgl]({{< ref "/components/select/lvgl" >}})
-- [/components/light/lvgl]({{< ref "/components/light/lvgl" >}})
-- [/components/text/lvgl]({{< ref "/components/text/lvgl" >}})
-- [/components/text_sensor/lvgl]({{< ref "/components/text_sensor/lvgl" >}})
+- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
+- {{< docref "/components/binary_sensor/lvgl" >}}
+- {{< docref "/components/sensor/lvgl" >}}
+- {{< docref "/components/number/lvgl" >}}
+- {{< docref "/components/switch/lvgl" >}}
+- {{< docref "/components/select/lvgl" >}}
+- {{< docref "/components/light/lvgl" >}}
+- {{< docref "/components/text/lvgl" >}}
+- {{< docref "/components/text_sensor/lvgl" >}}
 - [LVGL docs](https://docs.lvgl.io/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/widgets.md)

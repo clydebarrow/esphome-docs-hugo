@@ -195,7 +195,7 @@ This works on SKU:DFR0654. For more information see: [manufacturer's website](ht
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [ads1115]({{< ref "ads1115/" >}})
-- [max6675]({{< ref "max6675/" >}})
+- {{< docref "ads1115/" >}}
+- {{< docref "max6675/" >}}
 - :apiref:`adc/adc_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/adc.md)

@@ -9,7 +9,7 @@ The `ble_scanner` text sensor platform lets you track reachable BLE devices.
 
 See the [Configuration variables:]({{< ref "components/esp32_ble_tracker#config-esp32_ble_tracker" >}}) for instructions for setting up scan parameters.
 
-The sensor platform is similar to [/components/sensor/ble_rssi]({{< ref "/components/sensor/ble_rssi" >}}) but in contrast to that platform, this text
+The sensor platform is similar to {{< docref "/components/sensor/ble_rssi" >}} but in contrast to that platform, this text
 sensor sends out all raw BLE scan information and does not filter devices.
 
 The data this sensor publishes is intended to be processed by the remote (for example an MQTT client) and sends
@@ -19,7 +19,7 @@ the data in JSON format.
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -49,7 +49,7 @@ Example json log:
 
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/text_sensor/index]({{< ref "/components/text_sensor/index" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/text_sensor/index" >}}
 - :apiref:`ble_scanner/ble_scanner.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/ble_scanner.md)

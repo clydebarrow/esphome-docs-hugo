@@ -8,11 +8,11 @@ title: "RF Bridge Component"
 The `RF Bridge` Component provides the ability to send and receive 433MHz remote codes using the
 embedded EFM8BB1 microcontroller. This component implements the communication protocol
 that the original `efm8bb1` firmware implements. The device is connected via the
-[UART bus ]({{< relref "/components/uart" >}}). The uart bus must be configured at the same speed of the module
+{{< docref "/components/uart" "UART bus" >}}. The uart bus must be configured at the same speed of the module
 which is 19200bps.
 
 {{< warning >}}
-If you are using the [logger]({{< ref "logger/" >}}) make sure you disable the uart logging with the
+If you are using the {{< docref "logger/" >}} make sure you disable the uart logging with the
 `baud_rate: 0` option.
 
 {{< /warning >}}
@@ -387,7 +387,7 @@ automation:
 - :apiref:`rf_bridge/rf_bridge.h`
 - [Delaying Remote Transmissions]({{< ref "cookbook/lambda_magic#lambda_magic_rf_queues" >}})
 - [RF-Bridge-EFM8BB1](https://github.com/Portisch/RF-Bridge-EFM8BB1) by [Portisch](https://github.com/Portisch)
-- [/components/uart]({{< ref "/components/uart" >}})
-- [/components/remote_receiver]({{< ref "/components/remote_receiver" >}})
-- [/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})
+- {{< docref "/components/uart" >}}
+- {{< docref "/components/remote_receiver" >}}
+- {{< docref "/components/remote_transmitter" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/rf_bridge.md)

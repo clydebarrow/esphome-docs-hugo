@@ -8,13 +8,13 @@ title: "BLE Client Switch"
 The `ble_client` component is a switch platform that is used to enable and disable a `ble_client`. This has
 several uses, such as minimizing battery usage or for allowing other clients (Eg phone apps) to connect to the device.
 
-For more information on BLE services and characteristics, see [/components/ble_client]({{< ref "/components/ble_client" >}}).
+For more information on BLE services and characteristics, see {{< docref "/components/ble_client" >}}.
 
 {{< warning >}}
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -38,6 +38,6 @@ switch:
 
 ## See Also
 
-- [/components/ble_client]({{< ref "/components/ble_client" >}})
+- {{< docref "/components/ble_client" >}}
 - :apiref:`ble_client/switch/ble_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/ble_client.md)

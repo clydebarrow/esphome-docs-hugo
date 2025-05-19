@@ -18,5 +18,5 @@ All options from [Base Time Configuration]({{< ref "components/time/_index#base_
 
 ## See Also
 
-- [/components/host]({{< ref "/components/host" >}})
+- {{< docref "/components/host" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/time/host.md)

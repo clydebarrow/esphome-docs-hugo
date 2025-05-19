@@ -23,7 +23,7 @@ Recommended
   - An update to the original ESP32 with a slightly modified set of hardware peripherals.
   - Has a built-in USB peripheral/interface (as opposed to relying on an external USB-to-serial chip)
   - Has instruction set extensions which make it a better fit for applications which require some form of machine
-    learning ([/components/micro_wake_word]({{< ref "/components/micro_wake_word" >}}), for example).
+    learning ({{< docref "/components/micro_wake_word" >}}, for example).
 
 - **ESP32-C3**
 
@@ -41,7 +41,7 @@ Not Recommended
   - It's over ten years old and is *quite lacking* in terms of built-in hardware peripherals.
   - Use an ESP32-C3 when you're thinking you need to use an ESP8266 because the ESP32(-Sx) is "too powerful" or
     "overkill".
-  - Does not meet the requirements of [/guides/made_for_esphome]({{< ref "/guides/made_for_esphome" >}}).
+  - Does not meet the requirements of {{< docref "/guides/made_for_esphome" >}}.
   - The original NodeMCU, D1-Mini and ESP-01 are examples of boards which utilize an ESP8266; note that there are
     (pin-compatible) versions of these boards available which instead utilize a more modern ESP32 or variant.
 
@@ -59,10 +59,10 @@ Additional Considerations
   - roughly 5x the amount of RAM.
 
     - Some components require more RAM than is available on the ESP8266 -- (large) displays and
-      [some sensors]({{< relref "/components/sensor/bme68x_bsec2" >}}) are known to regularly provoke issues/crashes on ESP8266s.
+      {{< docref "/components/sensor/bme68x_bsec2" "some sensors" >}} are known to regularly provoke issues/crashes on ESP8266s.
     - Workarounds are often available, but it's not reasonable to assume that a given workaround will work forever,
       especially if you *want* to update your devices regularly but depend on
-      [vendor-provided/maintained libraries for some functionality]({{< relref "/components/sensor/bme68x_bsec2" >}}).
+      {{< docref "/components/sensor/bme68x_bsec2" "vendor-provided/maintained libraries for some functionality" >}}.
 
   - significantly more flash memory.
 
@@ -230,7 +230,7 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
           payload: double
 
   ```
-- You can use [/components/substitutions]({{< ref "/components/substitutions" >}}) to build on the examples above and reduce repetition in your
+- You can use {{< docref "/components/substitutions" >}} to build on the examples above and reduce repetition in your
   configuration files.
 
 - If you want to see how ESPHome interprets your configuration, run:
@@ -247,7 +247,7 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
   ```
 - You can always find the source ESPHome generates in the `<NODE_NAME>/src/` directory.
 
-- You can view the full list of command line interface options here: [/guides/cli]({{< ref "/guides/cli" >}})
+- You can view the full list of command line interface options here: {{< docref "/guides/cli" >}}
 
 .. |secret| replace:: `!secret`
 .. _secret: https://www.home-assistant.io/docs/configuration/secrets/
@@ -359,10 +359,10 @@ This "pulls in" the contents of your Home Assistant `secrets.yaml` file from the
 
 ## Does ESPHome support [this device/feature]?
 
-If it's not in [the docs ]({{< relref "/index" >}}), it's not (officially) supported. However, we are always adding support for new
+If it's not in {{< docref "/index" "the docs" >}}, it's not (officially) supported. However, we are always adding support for new
 features.
 
-In some cases, community-provided [/components/external_components]({{< ref "/components/external_components" >}}) are available; keep in mind that these are not
+In some cases, community-provided {{< docref "/components/external_components" >}} are available; keep in mind that these are not
 officially supported by ESPHome, so, if you run into problems, you'll need to contact the developer of the external
 component you're using for help.
 
@@ -398,8 +398,8 @@ Here are some steps that may help mitigate the issue:
 - The issue seems to happen with "cheap" boards more frequently -- especially the "cheap" NodeMCU boards from eBay
   which sometimes have bad antennas.
 - ESPHome intentionally reboots after a configured duration in specific situations, such as when the
-  [API connection is lost ]({{< relref "/components/api" >}}), [Wi-Fi connection cannot be made ]({{< relref "/components/wifi" >}}) or
-  [MQTT connection is lost ]({{< relref "/components/mqtt" >}}). To disable this behavior, you'll need to explicitly set the
+  {{< docref "/components/api" "API connection is lost" >}}, {{< docref "/components/wifi" "Wi-Fi connection cannot be made" >}} or
+  {{< docref "/components/mqtt" "MQTT connection is lost" >}}. To disable this behavior, you'll need to explicitly set the
   `reboot_timeout` option to `0s` on the relevant components.
 - If you see `Error: Disconnecting <NODE_NAME>` in your logs, ESPHome is actively closing the native API client
   connection. You'll need to establish a serial connection with your device to determine the reason. If you see
@@ -525,7 +525,7 @@ See also https://github.com/esphome/issues/issues/641#issuecomment-534156628.
 
 ## Notes on disabling mDNS
 
-Some of ESPHome's functionality relies on [mDNS]({{< relref "/components/mdns" >}}), so, naturally, disabling it will cause these
+Some of ESPHome's functionality relies on {{< docref "/components/mdns" "mDNS" >}}, so, naturally, disabling it will cause these
 features to stop working.
 
 Generally speaking, disabling mDNS without setting a [Manual IPs]({{< ref "components/wifi#wifi-manual_ip" >}}) (or a static DHCP lease)
@@ -534,7 +534,7 @@ is bound to cause problems -- mDNS is used to determine the IP address of each E
 If you disable mDNS, expect the following repercussions:
 
 - You will not be able to use the node's hostname to ping, find it's IP address or otherwise connect to it.
-- Automatic discovery in Home Assistant when using the [native API ]({{< relref "/components/api" >}}) relies on mDNS broadcast
+- Automatic discovery in Home Assistant when using the {{< docref "/components/api" "native API" >}} relies on mDNS broadcast
   messages to detect the presence of new ESPHome nodes. If you need to use the native API with mDNS disabled, then you
   will have to use a static IP address and manually add the ESPHome component with its (static) IP address.
 - Because status detection in the [ESPHome Device Builder<installing-esphome-device-builder>]({{< ref "#ESPHome Device Builder<installing-esphome-device-builder>" >}}) uses mDNS by
@@ -593,7 +593,7 @@ If you are absolutely sure that your use of strapping pins is safe and you want 
 
 ## How can I test a pull request?
 
-By leveraging the [/components/external_components]({{< ref "/components/external_components" >}}) feature, it's possible to test most pull requests by simply
+By leveraging the {{< docref "/components/external_components" >}} feature, it's possible to test most pull requests by simply
 adding a few lines to your YAML! You need the number of the pull request as well as the component(s) that have been
 added or changed by the pull request (they are listed with the "integration:" labels on the GitHub page of the pull
 request). Then, if you add a block of code (similar to that shown below) to your YAML configuration, recompile and
@@ -615,12 +615,12 @@ label on GitHub.
 
 ## Why do entities appear as "unavailable" during deep sleep?
 
-The [Deep Sleep ]({{< relref "/components/deep_sleep" >}}) component needs to be present within your device's configuration when
+The {{< docref "/components/deep_sleep" "Deep Sleep" >}} component needs to be present within your device's configuration when
 the device is first added to Home Assistant. To prevent entities from appearing as "unavailable", you can remove and
 re-add the device in Home Assistant.
 
 ## See Also
 
-- [ESPHome index ]({{< relref "/index" >}})
+- {{< docref "/index" "ESPHome index" >}}
 - [Developer site](https://developers.esphome.io)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/faq.md)

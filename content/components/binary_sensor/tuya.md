@@ -6,7 +6,7 @@ title: "Tuya Binary Sensor"
 {{< seo description="" image="" >}}
 
 The `tuya` binary sensor platform creates a binary sensor from a
-tuya component and requires [/components/tuya]({{< ref "/components/tuya" >}}) to be configured.
+tuya component and requires {{< docref "/components/tuya" >}} to be configured.
 
 You can create the binary sensor as follows:
 
@@ -25,7 +25,7 @@ binary_sensor:
 
 ## See Also
 
-- [/components/tuya]({{< ref "/components/tuya" >}})
-- [/components/binary_sensor/index]({{< ref "/components/binary_sensor/index" >}})
+- {{< docref "/components/tuya" >}}
+- {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`tuya/binary_sensor/tuya_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/tuya.md)

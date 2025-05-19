@@ -6,7 +6,7 @@ title: "RuuviTag Open Source BLE Sensor"
 {{< seo description="" image="" >}}
 
 The `ruuvitag` sensor platform lets you track the output of RuuviTag
-Bluetooth Low Energy devices using the [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}).
+Bluetooth Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}.
 This component will track the temperature, humidity, acceleration and battery
 voltage of a RuuviTag device with RAWv1 protocol every time the sensor sends
 out a BLE broadcast. RAWv2 protocol is supported too. Then tx power,
@@ -138,9 +138,9 @@ ESPHome therefore has no impact on the battery life of the device.
 {{< /note >}}
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/sensor/index" >}}
+- {{< docref "absolute_humidity/" >}}
 - :apiref:`ruuvitag/ruuvitag.h`
 - [Ruuvi](https://ruuvi.com)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ruuvitag.md)

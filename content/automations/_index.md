@@ -16,8 +16,8 @@ When you want your ESPHome device to respond to its environment, you use an auto
 This page serves as an index which will walk to through the process of using ESPHome automations--actions, triggers,
 templates, and more--to customize your ESPHome device just how you like it.
 
-- [actions]({{< ref "actions/" >}})
-- [templates]({{< ref "templates/" >}})
-- [/components/globals]({{< ref "/components/globals" >}})
-- [/components/script]({{< ref "/components/script" >}})
-- [/components/interval]({{< ref "/components/interval" >}})
+- {{< docref "actions/" >}}
+- {{< docref "templates/" >}}
+- {{< docref "/components/globals" >}}
+- {{< docref "/components/script" >}}
+- {{< docref "/components/interval" >}}

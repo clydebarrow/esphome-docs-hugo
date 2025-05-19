@@ -28,6 +28,6 @@ Therefore, the address generation does not comply to [RFC7217](https://datatrack
 {{< /note >}}
 ## See Also
 
-- [/components/wifi]({{< ref "/components/wifi" >}})
-- [/components/ethernet]({{< ref "/components/ethernet" >}})
+- {{< docref "/components/wifi" >}}
+- {{< docref "/components/ethernet" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/network.md)

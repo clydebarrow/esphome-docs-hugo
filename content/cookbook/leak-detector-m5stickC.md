@@ -54,7 +54,7 @@ the unit on USB power 24/7.
 {{< /note >}}
 # Display Font
 
-You'll need to place the [OpenSans-Regular](https://fonts.google.com/specimen/Open+Sans) font (or another of your choosing) alongside your ESPHome yaml file.  See - [/components/display/index]({{< ref "/components/display/index" >}}).
+You'll need to place the [OpenSans-Regular](https://fonts.google.com/specimen/Open+Sans) font (or another of your choosing) alongside your ESPHome yaml file.  See - {{< docref "/components/display/index" >}}.
 
 # Calibration & Testing
 
@@ -282,7 +282,7 @@ Enjoy your locally-controlled leak detector with push notification!
 
 # See Also
 
-- [/components/display/index]({{< ref "/components/display/index" >}})
-- [/components/display/st7735]({{< ref "/components/display/st7735" >}})
-- [/components/binary_sensor/esp32_touch]({{< ref "/components/binary_sensor/esp32_touch" >}})
+- {{< docref "/components/display/index" >}}
+- {{< docref "/components/display/st7735" >}}
+- {{< docref "/components/binary_sensor/esp32_touch" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/leak-detector-m5stickC.md)

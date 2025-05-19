@@ -124,9 +124,9 @@ a switch.
 
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/components/output/gpio]({{< ref "/components/output/gpio" >}})
-- [/components/cover/template]({{< ref "/components/cover/template" >}})
-- [/cookbook/garage-door]({{< ref "/cookbook/garage-door" >}})
+- {{< docref "index/" >}}
+- {{< docref "/components/output/gpio" >}}
+- {{< docref "/components/cover/template" >}}
+- {{< docref "/cookbook/garage-door" >}}
 - :apiref:`gpio/switch/gpio_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/gpio.md)

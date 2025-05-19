@@ -206,7 +206,7 @@ on_...:
 ```
 ## See Also
 
-- [switch/shutdown]({{< ref "switch/shutdown" >}})
+- {{< docref "switch/shutdown" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`deep_sleep/deep_sleep_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/deep_sleep.md)

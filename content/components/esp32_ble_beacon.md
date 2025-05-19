@@ -13,7 +13,7 @@ can then be received by devices like smartphones and can then be used to track a
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 ```yaml
@@ -87,8 +87,8 @@ It can work with multiple beacons simultaneously.
 
 ## See Also
 
-- [esp32_ble_tracker]({{< ref "esp32_ble_tracker/" >}})
-- [binary_sensor/ble_presence]({{< ref "binary_sensor/ble_presence" >}})
+- {{< docref "esp32_ble_tracker/" >}}
+- {{< docref "binary_sensor/ble_presence" >}}
 - :apiref:`esp32_ble_beacon/esp32_ble_beacon.h`
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble_beacon.md)

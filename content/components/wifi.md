@@ -124,7 +124,7 @@ wifi:
 ```
 ## User Entered Credentials
 
-Some components such as [esp32_improv]({{< ref "esp32_improv/" >}}), [improv_serial]({{< ref "improv_serial/" >}}) and [captive_portal]({{< ref "captive_portal/" >}})
+Some components such as {{< docref "esp32_improv/" >}}, {{< docref "improv_serial/" >}} and {{< docref "captive_portal/" >}}
 enable the user to send and save Wi-Fi credentials to the device. Beginning in 2022.11.0,
 as long as no credentials are set in the config file, and firmware is uploaded without erasing
 the flash (via OTA), the device will keep the saved credentials.
@@ -155,7 +155,7 @@ wifi:
 After putting a manual IP in your configuration, the ESP will no longer need to negotiate
 a dynamic IP address with the router, thus improving the time until connection.
 
-Additionally, this can help with [/components/ota/index]({{< ref "/components/ota/index" >}}) if for example the
+Additionally, this can help with {{< docref "/components/ota/index" >}} if for example the
 network doesn't allow for `.local` addresses. When a manual IP is in your configuration,
 the OTA process will automatically choose that as the target for the upload.
 
@@ -386,11 +386,11 @@ The lambda equivalent for this is `!id(wifi_id).is_disabled()`.
 
 ## See Also
 
-- [captive_portal]({{< ref "captive_portal/" >}})
-- [text_sensor/wifi_info]({{< ref "text_sensor/wifi_info" >}})
-- [sensor/wifi_signal]({{< ref "sensor/wifi_signal" >}})
-- [network]({{< ref "network/" >}})
-- [/components/ethernet]({{< ref "/components/ethernet" >}})
-- [api]({{< ref "api/" >}})
+- {{< docref "captive_portal/" >}}
+- {{< docref "text_sensor/wifi_info" >}}
+- {{< docref "sensor/wifi_signal" >}}
+- {{< docref "network/" >}}
+- {{< docref "/components/ethernet" >}}
+- {{< docref "api/" >}}
 - :apiref:`wifi/wifi_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wifi.md)

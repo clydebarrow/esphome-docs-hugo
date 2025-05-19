@@ -1036,11 +1036,11 @@ See the full API Reference for more info.
   ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
-- [/components/remote_receiver]({{< ref "/components/remote_receiver" >}})
+- {{< docref "index/" >}}
+- {{< docref "/components/remote_receiver" >}}
 - [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}})
 - [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}})
-- [/components/rf_bridge]({{< ref "/components/rf_bridge" >}})
+- {{< docref "/components/rf_bridge" >}}
 - [Delaying Remote Transmissions]({{< ref "cookbook/lambda_magic#lambda_magic_rf_queues" >}})
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - :apiref:`remote_transmitter/remote_transmitter.h`

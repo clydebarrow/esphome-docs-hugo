@@ -152,7 +152,7 @@ To hide these base files from the dashboard, you can
 {{< /tip >}}
 ## See Also
 
-- [ESPHome index ]({{< relref "/index" >}})
-- [/guides/getting_started_command_line]({{< ref "/guides/getting_started_command_line" >}})
-- [/guides/faq]({{< ref "/guides/faq" >}})
+- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/guides/getting_started_command_line" >}}
+- {{< docref "/guides/faq" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/substitutions.md)

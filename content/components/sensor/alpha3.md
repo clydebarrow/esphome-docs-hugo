@@ -15,7 +15,7 @@ This component supports the following metrics:
 - speed (RPM)
 
 This component uses the BLE peripheral on an ESP32, so you also need to enable
-this component. Please see the [/components/ble_client]({{< ref "/components/ble_client" >}}) docs for how to discover the MAC
+this component. Please see the {{< docref "/components/ble_client" >}} docs for how to discover the MAC
 address of your Alpha3 pump, or you can find the list of paired MAC addresses in
 the list of paried Bluetooth devices on your smartphone after using the GO Remote app.
 
@@ -87,6 +87,6 @@ The pump can only be connected to one device at a time. If you want to use the G
 {{< /note >}}
 ## See Also
 
-- [/components/ble_client]({{< ref "/components/ble_client" >}})
+- {{< docref "/components/ble_client" >}}
 - :apiref:`alpha3/alpha3.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/alpha3.md)

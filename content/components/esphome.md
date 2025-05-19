@@ -116,7 +116,7 @@ Configuration variables:
 ## ``on_shutdown``
 
 This automation will be triggered when the ESP is about to shut down. Shutting down is usually caused by
-too many WiFi/MQTT connection attempts, Over-The-Air updates being applied or through the [deep_sleep]({{< ref "deep_sleep/" >}}).
+too many WiFi/MQTT connection attempts, Over-The-Air updates being applied or through the {{< docref "deep_sleep/" >}}.
 
 {{< note >}}
 It's not guaranteed that all components are in a connected state when this automation is triggered. For
@@ -268,14 +268,14 @@ results in fewer flash writes, preserving the flash health.
 This behavior can be modified by setting `flash_write_interval` to `0s` to commit the changes to flash as soon as possible,
 however, be aware that this may lead to increased flash wearing and a shortened device lifespan!
 
-For [ESP8266 ]({{< relref "/components/esp8266" >}}), `restore_from_flash` must also be set to `true` for states to be written to flash.
+For {{< docref "/components/esp8266" "ESP8266" >}}, `restore_from_flash` must also be set to `true` for states to be written to flash.
 
 {{< anchor "esphome-changing_node_name" >}}
 
 ## Changing ESPHome Node Name
 
 Trying to change the name of a node or its address in the network?
-You can do so with the `use_address` option of the [WiFi configuration ]({{< relref "wifi/" >}}).
+You can do so with the `use_address` option of the {{< docref "wifi/" "WiFi configuration" >}}.
 
 Change the device name or address in your YAML to the new value and additionally
 set `use_address` to point to the old address like so:
@@ -314,7 +314,7 @@ The same procedure can be done for changing the static IP of a device.
 
 ## Adding the MAC address as a suffix to the device name
 
-Using `name_add_mac_suffix` allows [creators ]({{< relref "/guides/creators" >}}) to
+Using `name_add_mac_suffix` allows {{< docref "/guides/creators" "creators" >}} to
 provision multiple devices at the factory with a single firmware and still
 have unique identification for customer installs.
 

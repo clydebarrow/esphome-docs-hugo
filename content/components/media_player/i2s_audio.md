@@ -6,7 +6,7 @@ title: "I²S Audio Media Player"
 {{< seo description="" image="" >}}
 
 The `i2s_audio` media player platform allows you to play media from webservers and web streams
-via the [/components/i2s_audio]({{< ref "/components/i2s_audio" >}}). This platform only works on ESP32 based chips.
+via the {{< docref "/components/i2s_audio" >}}. This platform only works on ESP32 based chips.
 
 ```yaml
 # Example configuration entry
@@ -49,5 +49,5 @@ For best results, keep the wires as short as possible.
 
 ## See also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/media_player/i2s_audio.md)

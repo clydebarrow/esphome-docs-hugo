@@ -73,7 +73,7 @@ on_...:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [pzem004t]({{< ref "pzem004t/" >}})
-- [pzemac]({{< ref "pzemac/" >}})
+- {{< docref "pzem004t/" >}}
+- {{< docref "pzemac/" >}}
 - :apiref:`pzemdc/pzemdc.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzemdc.md)

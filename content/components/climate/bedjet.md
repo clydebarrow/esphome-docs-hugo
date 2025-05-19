@@ -17,7 +17,7 @@ This component supports the following functionality:
 - Show the current status of the BedJet
 
 This component uses the BLE peripheral on an ESP32, so you also need to enable
-this component. Please see the [/components/ble_client]({{< ref "/components/ble_client" >}}) docs for how to discover the MAC
+this component. Please see the {{< docref "/components/ble_client" >}} docs for how to discover the MAC
 address of your BedJet device.
 
 ## Component/Hub
@@ -41,7 +41,7 @@ bedjet:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the BLE Client.
-- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID [/components/time/index]({{< ref "/components/time/index" >}})ndex` which
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/time/index" >}}ndex` which
   can be used to set the time on the BedJet device.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to dispatch status
   changes to child components. Defaults to `5s`. Each child component can decide whether to
@@ -177,7 +177,7 @@ Only one client can be connected to the BedJet BLE service at a time, so you can
 use the BedJet mobile app to monitor or control the BedJet device while this component
 is connected. To use the mobile app, you should disconnect the ESP client first.
 
-To set up a (dis-)connect switch, see [/components/switch/ble_client]({{< ref "/components/switch/ble_client" >}}).
+To set up a (dis-)connect switch, see {{< docref "/components/switch/ble_client" >}}.
 
 {{< /note >}}
 {{< note >}}
@@ -202,7 +202,7 @@ ota:
 {{< /note >}}
 ## See Also
 
-- [/components/ble_client]({{< ref "/components/ble_client" >}})
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
+- {{< docref "/components/ble_client" >}}
+- {{< docref "/components/climate/index" >}}
 - :apiref:`bedjet/bedjet.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/bedjet.md)

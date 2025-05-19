@@ -114,7 +114,7 @@ To set up a PID climate controller, you need a couple of components:
 
 - A [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}) to read the current temperature (`sensor`).
 - At least one [Base Output Configuration]({{< ref "components/output/_index#config-output" >}}) to drive for heating or cooling (or both).
-  This could for example be a PWM output via [/components/output/slow_pwm]({{< ref "/components/output/slow_pwm" >}}) or [/components/output/sigma_delta_output]({{< ref "/components/output/sigma_delta_output" >}}) that drives a heating unit.
+  This could for example be a PWM output via {{< docref "/components/output/slow_pwm" >}} or {{< docref "/components/output/sigma_delta_output" >}} that drives a heating unit.
 
   Please note the output *must* be controllable with continuous value (not only ON/OFF, but any state
   in between for example 50% heating power).
@@ -123,7 +123,7 @@ To set up a PID climate controller, you need a couple of components:
 The sensor should have a short update interval. The PID update frequency is tied to the update
 interval of the sensor. Set a short `update_interval` like `5s` on the sensor.
 
-We recommend putting a filter on the sensor (see filters in [/components/sensor/index]({{< ref "/components/sensor/index" >}})) and
+We recommend putting a filter on the sensor (see filters in {{< docref "/components/sensor/index" >}}) and
 using `output_averaging_samples` to calm the PID sensor from a noisy input sensor.
 
 {{< /note >}}
@@ -218,7 +218,7 @@ To autotune the control parameters:
         kd: 0.0
 
   ```
-2. Create a [template button ]({{< relref "/components/button/template" >}}) to start autotuning later:
+2. Create a {{< docref "/components/button/template" "template button" >}} to start autotuning later:
 
   ```yaml
   button:
@@ -424,9 +424,9 @@ Advanced options:
   controllers', Transactions of the ASME, 64, 759-768
 - Åström, K. J. and T. Hägglund (1984a), 'Automatic tuning of simple regulators',
   Proceedings of IFAC 9th World Congress, Budapest, 1867-1872
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
-- [/components/output/sigma_delta_output]({{< ref "/components/output/sigma_delta_output" >}})
-- [/components/output/slow_pwm]({{< ref "/components/output/slow_pwm" >}})
+- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/output/sigma_delta_output" >}}
+- {{< docref "/components/output/slow_pwm" >}}
 - [Principles of PID](https://blog.opticontrols.com/archives/344)
 - :apiref:`pid/pid_climate.h`
 - :apiref:`PID Autotuner <pid/pid_autotuner.h>`

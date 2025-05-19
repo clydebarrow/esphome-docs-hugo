@@ -13,7 +13,7 @@ connections to them for use by other components.
 The BLE software stack on the ESP32 consumes a significant amount of RAM on the device.
 
 **Crashes are likely to occur** if you include too many additional components in your device's
-configuration. Memory-intensive components such as [/components/voice_assistant]({{< ref "/components/voice_assistant" >}}) and other
+configuration. Memory-intensive components such as {{< docref "/components/voice_assistant" >}} and other
 audio components are most likely to cause issues.
 
 {{< /warning >}}
@@ -24,7 +24,7 @@ connect more devices, use additional ESP32 boards.
 This component supports devices that require a 6 digit PIN code for authentication.
 
 Currently, devices connected with the client cannot be supported by other components based on
-[/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}) as they listen to advertisements which are only sent by devices
+{{< docref "/components/esp32_ble_tracker" >}} as they listen to advertisements which are only sent by devices
 without an active connection.
 
 {{< /note >}}
@@ -43,7 +43,7 @@ ble_client:
 ## Configuration variables:
 
 - **mac_address** (**Required**, MAC Address): The MAC address of the BLE device to connect to.
-- **auto_connect** (*Optional*, boolean): If true the device will be automatically connected when found by the [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}). Defaults to true.
+- **auto_connect** (*Optional*, boolean): If true the device will be automatically connected when found by the {{< docref "/components/esp32_ble_tracker" >}}. Defaults to true.
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID to use for code generation, and for reference by dependent components.
 
 Automations:
@@ -358,12 +358,12 @@ characteristics and descriptors also provide a small 2-byte
 ## Setting Up Devices
 
 Whilst the component can connect to most BLE devices, useful functionality
-is only obtained through dependent components, such as [/components/sensor/ble_client]({{< ref "/components/sensor/ble_client" >}}).
+is only obtained through dependent components, such as {{< docref "/components/sensor/ble_client" >}}.
 See the documentation for these components for details on setting up
 specific devices.
 
 In order to use the `ble_client` component, you need to enable the
-[/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}) component. This will also allow you to discover
+{{< docref "/components/esp32_ble_tracker" >}} component. This will also allow you to discover
 the MAC address of the device.
 
 When you have discovered the MAC address of the device, you can add it
@@ -415,7 +415,7 @@ display them in the log:
 ```
 The discovered services can then be used to enable and configure other
 ESPHome components, for example Service UUID 0xFFE0 is used for iTag style
-keychain button events, used by the [/components/sensor/ble_client]({{< ref "/components/sensor/ble_client" >}}) component.
+keychain button events, used by the {{< docref "/components/sensor/ble_client" >}} component.
 
 ## Passkey examples
 
@@ -490,7 +490,7 @@ ble_client:
 ```
 ## See Also
 
-- [/components/sensor/ble_client]({{< ref "/components/sensor/ble_client" >}})
+- {{< docref "/components/sensor/ble_client" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`ble_client/ble_client.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ble_client.md)

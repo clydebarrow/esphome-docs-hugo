@@ -69,5 +69,5 @@ but check the logs to see which key code you get and use the corresponding chara
 {{< /note >}}
 ## See Also
 
-- [/components/key_collector]({{< ref "/components/key_collector" >}})
+- {{< docref "/components/key_collector" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wiegand.md)

@@ -6,7 +6,7 @@ title: "Home Assistant Sensor"
 {{< seo description="" image="" >}}
 
 The `homeassistant` sensor platform allows you to create sensors that import
-states from your Home Assistant instance using the [native API ]({{< relref "/components/api" >}}).
+states from your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.
 
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node
@@ -35,7 +35,7 @@ sensor:
 ```
 {{< note >}}
 This component is only for numeral states. If you want to import arbitrary text states
-from Home Assistant, use the [Home Assistant Text Sensor ]({{< relref "/components/text_sensor/homeassistant" >}}).
+from Home Assistant, use the {{< docref "/components/text_sensor/homeassistant" "Home Assistant Text Sensor" >}}.
 
 
 {{< /note >}}

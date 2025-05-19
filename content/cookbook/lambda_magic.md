@@ -101,8 +101,8 @@ Tested on both `arduino` and `esp-idf` platforms.
 
 ## Delaying Remote Transmissions
 
-The solution below handles the problem of RF frames being sent out by [/components/rf_bridge]({{< ref "/components/rf_bridge" >}}) (or
-[/components/remote_transmitter]({{< ref "/components/remote_transmitter" >}})) too quickly one after another when operating radio controlled
+The solution below handles the problem of RF frames being sent out by {{< docref "/components/rf_bridge" >}} (or
+{{< docref "/components/remote_transmitter" >}}) too quickly one after another when operating radio controlled
 covers. The cover motors seem to need at least 600-700ms of silence between the individual code transmissions
 to be able to recognize them.
 
@@ -179,7 +179,7 @@ cover:
 The configuration below shows how with a single button you can control the motion of a motorized cover
 by cycling between: open->stop->close->stop->...
 
-In this example a [/components/cover/time_based]({{< ref "/components/cover/time_based" >}}) is used with the GPIO configuration of a Sonoff Dual R2.
+In this example a {{< docref "/components/cover/time_based" >}} is used with the GPIO configuration of a Sonoff Dual R2.
 
 {{< note >}}
 Controlling the cover to quickly (sending new open/close commands within a minute of previous commands)
@@ -241,7 +241,7 @@ cover:
 {{< /note >}}
 ## Update numeric values from text input
 
-Sometimes it may be more confortable to use a [/components/text/template]({{< ref "/components/text/template" >}}) to change some numeric values from the user interface.
+Sometimes it may be more confortable to use a {{< docref "/components/text/template" >}} to change some numeric values from the user interface.
 ESPHome has some nice [helper functions](https://github.com/esphome/esphome/blob/dev/esphome/core/helpers.h) among which
 theres's one to convert text to numbers.
 

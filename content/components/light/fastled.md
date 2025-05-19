@@ -6,7 +6,7 @@ title: "FastLED Light"
 {{< seo description="" image="" >}}
 
 {{< warning >}}
-FastLED does **not** work as expected with Arduino 3 or newer for ESP8266. For now, you can either downgrade the arduino version or use [neopixelbus]({{< ref "neopixelbus/" >}}).
+FastLED does **not** work as expected with Arduino 3 or newer for ESP8266. For now, you can either downgrade the arduino version or use {{< docref "neopixelbus/" >}}.
 
 ```yaml
 esp8266:
@@ -23,7 +23,7 @@ See these related issues:
 {{< warning >}}
 FastLED does **not** work with ESP-IDF.
 
-For addressable lights, you can use [spi_led_strip]({{< ref "spi_led_strip/" >}}) or for SPI LEDs see [esp32_rmt_led_strip]({{< ref "esp32_rmt_led_strip/" >}})..
+For addressable lights, you can use {{< docref "spi_led_strip/" >}} or for SPI LEDs see {{< docref "esp32_rmt_led_strip/" >}}..
 
 {{< /warning >}}
 {{< anchor "fastled-clockless" >}}
@@ -101,7 +101,7 @@ light:
 The `fastled_spi` light platform allows you to create RGB lights
 in ESPHome for a [Supported Chipsets]({{< ref "components/light/fastled#fastled_spi-chipsets" >}}).
 
-See [/components/light/spi_led_strip]({{< ref "/components/light/spi_led_strip" >}}) for an alternative component that works on ESP-IDF (and Arduino.)
+See {{< docref "/components/light/spi_led_strip" >}} for an alternative component that works on ESP-IDF (and Arduino.)
 
 SPI FastLED lights differ from the
 [Clockless]({{< ref "components/light/fastled#fastled-clockless" >}}) in that they require two pins to be connected, one for a data and one for a clock signal
@@ -154,9 +154,9 @@ light:
 
 ## See Also
 
-- [/components/light/index]({{< ref "/components/light/index" >}})
-- [/components/light/spi_led_strip]({{< ref "/components/light/spi_led_strip" >}})
-- [/components/power_supply]({{< ref "/components/power_supply" >}})
+- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light/spi_led_strip" >}}
+- {{< docref "/components/power_supply" >}}
 - :apiref:`fastled_base/fastled_light.h`
 - [Arduino FastLED library](https://github.com/FastLED/FastLED)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/fastled.md)

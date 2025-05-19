@@ -574,11 +574,12 @@ def process_inline_markup(line):
             doc_path = doc_path.rstrip(">")
             # Fix the path for Hugo content structure
             doc_path = fix_doc_path(doc_path)
-            replacement = f"[{text}]({{{{< relref \"{doc_path}\" >}}}})"
+            # Use the docref shortcode with custom text
+            replacement = f"{{{{< docref \"{doc_path}\" \"{text.strip()}\" >}}}}"
         else:
             # Simple document references
             doc_path = fix_doc_path(content)
-            replacement = f"[{content}]({{{{< ref \"{doc_path}\" >}}}})"
+            replacement = f"{{{{< docref \"{doc_path}\" >}}}}"
         
         processed_line = processed_line.replace(placeholder, replacement)
     

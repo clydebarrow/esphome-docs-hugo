@@ -6,10 +6,10 @@ title: "Thermostat Climate Controller"
 {{< seo description="" image="" >}}
 
 The `thermostat` climate platform allows you to control a climate control system in much the same manner as a
-physical thermostat. Its operation is similar to the [Bang-Bang ]({{< relref "bang_bang/" >}}) controller; a sensor measures a value
+physical thermostat. Its operation is similar to the {{< docref "bang_bang/" "Bang-Bang" >}} controller; a sensor measures a value
 (the air temperature) and the controller will try to keep this value within a range defined by the set point(s). To do this,
 the controller can activate devices like a heating unit and/or a cooling unit to change the value observed by the sensor.
-When configured for both heating and cooling, it is essentially two [Bang-Bang ]({{< relref "bang_bang/" >}}) controllers in one; it
+When configured for both heating and cooling, it is essentially two {{< docref "bang_bang/" "Bang-Bang" >}} controllers in one; it
 differs, however, in that interaction with the thermostat component is nearly identical to that of a real thermostat.
 
 This component can operate in one of two ways:
@@ -478,7 +478,7 @@ climate:
   any given fan mode must be active before it may be changed.
 
 Note that `min_temperature` and `max_temperature` from the base climate component are used to define
-the range of allowed temperature values in the thermostat component. See [/components/climate/index]({{< ref "/components/climate/index" >}}).
+the range of allowed temperature values in the thermostat component. See {{< docref "/components/climate/index" >}}.
 
 ## Hysteresis Values
 
@@ -496,17 +496,17 @@ the range of allowed temperature values in the thermostat component. See [/compo
     For example, controlling humidity is also possible with this platform.
 - `min_temperature` and `max_temperature` from the base climate component are used the define the range of
     adjustability and the defaults will probably not make sense for control of things like humidity. See
-    [/components/climate/index]({{< ref "/components/climate/index" >}}).
+    {{< docref "/components/climate/index" >}}.
 
 {{< /note >}}
 ## Bang-Bang vs. Thermostat
 
-Please see the [Bang-Bang ]({{< relref "bang_bang/" >}}) component's documentation for a detailed comparison of these two components.
+Please see the {{< docref "bang_bang/" "Bang-Bang" >}} component's documentation for a detailed comparison of these two components.
 
 ## See Also
 
-- [/components/climate/index]({{< ref "/components/climate/index" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
-- [Bang-Bang ]({{< relref "bang_bang/" >}})
+- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/sensor/index" >}}
+- {{< docref "bang_bang/" "Bang-Bang" >}}
 - [All Actions]({{< ref "automations/actions#config-action" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/thermostat.md)

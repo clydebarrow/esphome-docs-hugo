@@ -110,7 +110,7 @@ text_sensor:
 ```
 ## See Also
 
-- [/components/text_sensor/index]({{< ref "/components/text_sensor/index" >}})
+- {{< docref "/components/text_sensor/index" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/text_sensor/template_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/template.md)

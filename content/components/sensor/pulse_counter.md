@@ -45,7 +45,7 @@ sensor:
 - All other options from [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< note >}}
-See [integration sensor ]({{< relref "/components/sensor/integration" >}}) for summing up pulse counter
+See {{< docref "/components/sensor/integration" "integration sensor" >}} for summing up pulse counter
 values over time.
 
 {{< /note >}}
@@ -154,8 +154,8 @@ circuiting the wire by mistake.
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [/components/sensor/pulse_meter]({{< ref "/components/sensor/pulse_meter" >}})
-- [rotary_encoder]({{< ref "rotary_encoder/" >}})
+- {{< docref "/components/sensor/pulse_meter" >}}
+- {{< docref "rotary_encoder/" >}}
 - [esp-idf Pulse Counter API](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html).
 - :apiref:`pulse_counter/pulse_counter_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pulse_counter.md)

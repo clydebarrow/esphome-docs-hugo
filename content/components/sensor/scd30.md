@@ -97,10 +97,10 @@ number:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [absolute_humidity]({{< ref "absolute_humidity/" >}})
-- [dht]({{< ref "dht/" >}})
-- [dht12]({{< ref "dht12/" >}})
-- [hdc1080]({{< ref "hdc1080/" >}})
-- [htu21d]({{< ref "htu21d/" >}})
+- {{< docref "absolute_humidity/" >}}
+- {{< docref "dht/" >}}
+- {{< docref "dht12/" >}}
+- {{< docref "hdc1080/" >}}
+- {{< docref "htu21d/" >}}
 - :apiref:`scd30/scd30.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/scd30.md)

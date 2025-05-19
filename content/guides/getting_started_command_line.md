@@ -11,7 +11,7 @@ basic “node” in a few simple steps.
 
 ## Installation
 
-See [installing_esphome]({{< ref "installing_esphome/" >}}).
+See {{< docref "installing_esphome/" >}}.
 
 If you're familiar with Docker, you can use that instead!
 Note that on macOS Docker [can not pass USB devices through](https://github.com/moby/hyperkit/issues/149).
@@ -66,7 +66,7 @@ better:
 
 ## Connecting the ESP Device
 
-Follow the instructions in [physical_device_connection]({{< ref "physical_device_connection/" >}}) to connect to your
+Follow the instructions in {{< docref "physical_device_connection/" >}} to connect to your
 ESP device.
 
 {{< note >}}
@@ -197,18 +197,18 @@ and uploaded your first ESPHome custom firmware to your node. You've
 also learned how to enable some basic components via the configuration
 file.
 
-So now is a great time to go take a look at the [Components Index ]({{< relref "/index" >}}).
+So now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}.
 Hopefully you'll find all sensors/outputs/etc. you'll need in there. If you're having any problems or
 want new features, please either create a new issue on the `GitHub issue
 tracker <https://github.com/esphome/issues/issues>`__ or find us on the
-[Discord chat](https://discord.gg/KhAMKrd) (also make sure to read the [FAQ ]({{< relref "faq/" >}})).
+[Discord chat](https://discord.gg/KhAMKrd) (also make sure to read the {{< docref "faq/" "FAQ" >}}).
 
 {{< anchor "esphome-device-builder-docker" >}}
 
 ## Bonus: ESPHome Device Builder
 
 The ESPHome Device Builder allows you to easily manage your nodes from a nice web interface. It was primarily designed
-as a [Home Assistant add-on ]({{< relref "getting_started_hassio/" >}}), but can run in docker independently from Home Assistant.
+as a {{< docref "getting_started_hassio/" "Home Assistant add-on" >}}, but can run in docker independently from Home Assistant.
 
 To start the ESPHome Device Builder, simply start ESPHome with the following command (with `config/` pointing to a
 directory where you want to store your configurations):
@@ -237,7 +237,7 @@ Logging level can be set with the env var `ESPHOME_LOG_LEVEL` (default is `INFO`
 
 ## See Also
 
-- [cli]({{< ref "cli/" >}})
-- [ESPHome index ]({{< relref "/index" >}})
-- [getting_started_hassio]({{< ref "getting_started_hassio/" >}})
+- {{< docref "cli/" >}}
+- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "getting_started_hassio/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/getting_started_command_line.md)

@@ -7,13 +7,13 @@ title: "Mopeka Standard Check BLE Sensor"
 
 The `mopeka_std_check` sensor platform lets you track the output of Mopeka
 Standard Check LP Bluetooth Low Energy devices using the
-[/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}}). This component will track the tank level,
+{{< docref "/components/esp32_ble_tracker" >}}. This component will track the tank level,
 distance, temperature, and battery percentage of a Mopeka Standard Check LP BLE
 device every time the sensor sends out a BLE broadcast.
 
 {{< warning >}}
 This sensor component only supports the Mopeka Standard Check devices.
-See [/components/sensor/mopeka_pro_check]({{< ref "/components/sensor/mopeka_pro_check" >}}) for Mopeka Pro Check sensors support.
+See {{< docref "/components/sensor/mopeka_pro_check" >}} for Mopeka Pro Check sensors support.
 
 {{< /warning >}}
 {{< img src="mopeka_std_check.jpg" alt="Image" caption="Mopeka Std Check LP over BLE." class="center" >}}
@@ -136,7 +136,7 @@ ESPHome therefore has no impact on the battery life of the device.
 {{< /note >}}
 ## See Also
 
-- [/components/esp32_ble_tracker]({{< ref "/components/esp32_ble_tracker" >}})
-- [/components/sensor/index]({{< ref "/components/sensor/index" >}})
+- {{< docref "/components/esp32_ble_tracker" >}}
+- {{< docref "/components/sensor/index" >}}
 - :apiref:`mopeka_std_check/mopeka_std_check.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/mopeka_std_check.md)

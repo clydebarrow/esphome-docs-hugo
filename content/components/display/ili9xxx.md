@@ -41,7 +41,7 @@ beyond the basic SPI connections, and a reasonable amount of RAM, it is not well
 
 {{< note >}}
 PSRAM is not automatically enabled on the ESP32 (this changed with the 2025.2 release.) If PSRAM is available, you
-should enable it with the [PSRAM configuration ]({{< relref "/components/psram" >}}).
+should enable it with the {{< docref "/components/psram" "PSRAM configuration" >}}.
 Use of 16 bit colors requires twice the amount of RAM as 8 bit, and may not be usable unless PSRAM is available.
 
 {{< /note >}}
@@ -288,6 +288,6 @@ display:
 ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - :apiref:`ili9xxx/ili9xxx_display.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/ili9xxx.md)

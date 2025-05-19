@@ -45,8 +45,8 @@ Happy Hacking!
 
 ## See Also
 
-- [/components/esp8266]({{< ref "/components/esp8266" >}})
-- [/components/esp32]({{< ref "/components/esp32" >}})
-- [migrate_espeasy]({{< ref "migrate_espeasy/" >}})
-- [migrate_sonoff_tasmota]({{< ref "migrate_sonoff_tasmota/" >}})
+- {{< docref "/components/esp8266" >}}
+- {{< docref "/components/esp32" >}}
+- {{< docref "migrate_espeasy/" >}}
+- {{< docref "migrate_sonoff_tasmota/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/migrate_espurna.md)

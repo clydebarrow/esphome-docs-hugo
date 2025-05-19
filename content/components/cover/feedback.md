@@ -45,7 +45,7 @@ It is a versatile cover that can accommodate for a number of DIY setups, or moni
 
 Simplest case, when no sensors are available. The state is thus assumed.
 
-It is a drop-in replacement of [/components/cover/time_based]({{< ref "/components/cover/time_based" >}})
+It is a drop-in replacement of {{< docref "/components/cover/time_based" >}}
 
 ## Endstop Sensors
 
@@ -57,7 +57,7 @@ The extension also handles the case where the cover has builtin endstops, which 
 the component's logic. In this case, when the cover is fully closed (either if timed based or sensor based) the
 `stop_action` is not triggered.
 
-It is a drop-in replacement of [/components/cover/endstop]({{< ref "/components/cover/endstop" >}}).
+It is a drop-in replacement of {{< docref "/components/cover/endstop" >}}.
 
 ## Movement Sensors
 
@@ -71,7 +71,7 @@ When the movement stops (with no stop action being requested) it is assumed that
 the builtin endstops, and so the close/open state (according to current direction) was reached.
 This function is activated setting `infer_endstop` to True.
 
-It can be used to replace a [/components/cover/current_based]({{< ref "/components/cover/current_based" >}}), with some modifications in the yaml. See [Migrating Current-Based Cover]({{< ref "components/cover/feedback#migrating_current_based" >}})
+It can be used to replace a {{< docref "/components/cover/current_based" >}}, with some modifications in the yaml. See [Migrating Current-Based Cover]({{< ref "components/cover/feedback#migrating_current_based" >}})
 
 ## Safety Features
 
@@ -158,7 +158,7 @@ Additional options:
 Most options can be left untouched, but some modifications are needed:
 
 
-1. All current sensing related options must be moved to auxiliary [/components/binary_sensor/analog_threshold]({{< ref "/components/binary_sensor/analog_threshold" >}}),
+1. All current sensing related options must be moved to auxiliary {{< docref "/components/binary_sensor/analog_threshold" >}},
    to convert current readings to binary sensors, using the corresponding thresholds and delays.
 
    If there where any open/close obstacle current threshold defined, a separate binary sensor with that threshold should be defined.
@@ -248,7 +248,7 @@ Most options can be left untouched, but some modifications are needed:
   ```
 ## See Also
 
-- [index]({{< ref "index/" >}})
+- {{< docref "index/" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`feedback/feedback_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/feedback.md)

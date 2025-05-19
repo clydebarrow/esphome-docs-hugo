@@ -1,6 +1,6 @@
 ---
-description: ""
-title: ""
+description: "Script Component"
+title: "Script Component"
 ---
 
 ## Script Component

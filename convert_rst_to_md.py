@@ -19,7 +19,53 @@ anchor_map = {}
 # Global variables for image tracking
 image_map = defaultdict(int)
 image_sources = {}
+included_files = set()
 
+def find_included_files(file_path):
+    """
+    Parse a file for include directives and return a list of included files.
+
+    Args:
+        file_path: Path to the file to parse
+        base_dir: Base directory for resolving relative paths
+
+    Returns:
+        List of absolute paths to included files
+    """
+    included_files = []
+
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Look for .. include:: directives
+        include_pattern = r'^\s*\.\.\s+include::\s+(.+?)$'
+        matches = re.finditer(include_pattern, content, re.MULTILINE)
+
+        for match in matches:
+            included_path = match.group(1).strip()
+
+            # Handle relative paths
+            if not os.path.isabs(included_path):
+                included_path = os.path.normpath(os.path.join(os.path.dirname(file_path), included_path))
+
+            # Check if the file exists
+            if os.path.exists(included_path):
+                included_files.append(included_path)
+            else:
+                print(f"Warning: Included file not found: {included_path}")
+
+        return included_files
+
+    except Exception as e:
+        print(f"Error parsing includes in {file_path}: {e}")
+        return []
+
+def get_all_included_files(input_dir):
+    for root, _, files in os.walk(input_dir):
+        for file in files:
+            if file.endswith('.rst'):
+                included_files.update(set(find_included_files(os.path.join(root, file))))
 
 def build_anchor_map(input_dir):
     """Scan all RST files and build a map of anchors to their document paths."""
@@ -27,8 +73,8 @@ def build_anchor_map(input_dir):
     
     for root, _, files in os.walk(input_dir):
         for file in files:
-            if file.endswith('.rst'):
-                rst_file = os.path.join(root, file)
+            rst_file = os.path.join(root, file)
+            if not rst_file in included_files and file.endswith('.rst'):
                 rel_path = os.path.relpath(rst_file, input_dir)
                 doc_path = os.path.splitext(rel_path)[0]
                 
@@ -66,9 +112,9 @@ def convert_rst_to_md(lines, filename):
             explicit_title = line.replace('.. title::', '').strip()
             break
     
-    # Find title (first line with underline of = characters)
+    # Find title (first line with underline of = or - characters)
     for i in range(len(lines) - 1):
-        if re.match(r'^=+$', lines[i + 1]) and lines[i]:
+        if re.match(r'^[=-]+$', lines[i + 1]) and lines[i]:
             title = lines[i]
             break
     
@@ -466,7 +512,9 @@ def convert_rst_to_md(lines, filename):
     # Generate frontmatter
     frontmatter = []
     frontmatter.append('---')
-    
+
+    if "sensor-filter-" in filename:
+        frontmatter.append('draft: true')
     # Use description from SEO if available, otherwise use title
     description = seo.get('description', title)
     if not description:
@@ -482,6 +530,7 @@ def convert_rst_to_md(lines, filename):
     frontmatter.append(f'description: "{description}"')
     title = title.replace('"', '\\"')
     frontmatter.append(f'title: "{title}"')
+
     frontmatter.append('---')
     
     # Add Hugo shortcode for SEO
@@ -777,6 +826,47 @@ def process_image_directive(lines, i, is_figure=False):
     
     return shortcode, i
 
+def process_includes(lines, current_dir):
+    """Process include directives in RST files."""
+    processed_lines = []
+    i = 0
+    
+    while i < len(lines):
+        line = lines[i]
+        
+        # Check for include directive
+        include_match = re.match(r'^(\s*)\.\.[\s]+include::[\s]+(.+\.rst)$', line)
+        if include_match:
+            indent = include_match.group(1)
+            include_file = include_match.group(2).strip()
+            
+            # Construct the full path to the included file
+            include_path = os.path.join(current_dir, include_file)
+            
+            if os.path.exists(include_path):
+                # Read the included file
+                with open(include_path, 'r', encoding='utf-8') as f:
+                    include_content = f.read()
+                
+                # Process the included content
+                include_lines = include_content.split('\n')
+                
+                # Add indentation to all lines from the included file
+                for include_line in include_lines:
+                    if include_line.strip():
+                        processed_lines.append(f"{indent}{include_line}")
+                    else:
+                        processed_lines.append("")
+            else:
+                # If the file doesn't exist, just keep the include directive as a comment
+                processed_lines.append(f"{indent}<!-- Include not found: {include_file} -->")
+        else:
+            processed_lines.append(line)
+        
+        i += 1
+    
+    return processed_lines
+
 def fix_doc_path(path):
     """Fix document paths to match Hugo's content structure."""
     # Remove .rst extension if present
@@ -864,47 +954,6 @@ def scan_image_references(input_dir):
     
     return image_map, image_sources
 
-def process_includes(lines, current_dir):
-    """Process include directives in RST files."""
-    processed_lines = []
-    i = 0
-    
-    while i < len(lines):
-        line = lines[i]
-        
-        # Check for include directive
-        include_match = re.match(r'^(\s*)\.\.[\s]+include::[\s]+(.+\.rst)$', line)
-        if include_match:
-            indent = include_match.group(1)
-            include_file = include_match.group(2).strip()
-            
-            # Construct the full path to the included file
-            include_path = os.path.join(current_dir, include_file)
-            
-            if os.path.exists(include_path):
-                # Read the included file
-                with open(include_path, 'r', encoding='utf-8') as f:
-                    include_content = f.read()
-                
-                # Process the included content
-                include_lines = include_content.split('\n')
-                
-                # Add indentation to all lines from the included file
-                for include_line in include_lines:
-                    if include_line.strip():
-                        processed_lines.append(f"{indent}{include_line}")
-                    else:
-                        processed_lines.append("")
-            else:
-                # If the file doesn't exist, just keep the include directive as a comment
-                processed_lines.append(f"{indent}<!-- Include not found: {include_file} -->")
-        else:
-            processed_lines.append(line)
-        
-        i += 1
-    
-    return processed_lines
-
 def process_file(rst_file, output_dir, input_dir):
     output_dir = os.path.join(output_dir, "content")
     """Process a single RST file and convert it to Markdown."""
@@ -959,12 +1008,21 @@ def process_directory(input_dir, output_dir):
     """Process all RST files in a directory and its subdirectories."""
     success_count = 0
     total_count = 0
-    
+
     for root, _, files in os.walk(input_dir):
         for file in files:
             if file.endswith('.rst'):
-                total_count += 1
                 rst_file = os.path.join(root, file)
+                included_files.update(set(find_included_files(rst_file)))
+
+    for root, _, files in os.walk(input_dir):
+        for file in files:
+            rst_file = os.path.join(root, file)
+            if rst_file in included_files:
+                print("Skipping included file:", rst_file)
+            elif file.endswith('.rst'):
+                included_files.update(set(find_included_files(rst_file)))
+                total_count += 1
                 if process_file(rst_file, output_dir, input_dir):
                     success_count += 1
     
@@ -1070,6 +1128,7 @@ if __name__ == "__main__":
     os.makedirs(os.path.join(args.output_dir, 'static'), exist_ok=True)
     
     # Build the anchor map first
+    get_all_included_files(args.input_dir)
     build_anchor_map(args.input_dir)
     
     # Scan for image references

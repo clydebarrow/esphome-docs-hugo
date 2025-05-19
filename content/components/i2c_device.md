@@ -1,6 +1,6 @@
 ---
-description: ""
-title: ""
+description: "Generic I²C device component:"
+title: "Generic I²C device component:"
 ---
 
 ## Generic I²C device component:

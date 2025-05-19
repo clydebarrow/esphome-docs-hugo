@@ -1,6 +1,6 @@
 ---
-description: ""
-title: ""
+description: "Global Variables"
+title: "Global Variables"
 ---
 
 ## Global Variables

@@ -1,6 +1,6 @@
 ---
-description: ""
-title: ""
+description: "Mapping Component"
+title: "Mapping Component"
 ---
 
 ## Mapping Component

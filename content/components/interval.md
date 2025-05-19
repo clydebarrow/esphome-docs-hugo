@@ -1,6 +1,6 @@
 ---
-description: ""
-title: ""
+description: "Interval Component"
+title: "Interval Component"
 ---
 
 ## Interval Component

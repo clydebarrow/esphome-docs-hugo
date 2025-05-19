@@ -138,8 +138,7 @@ Copy https://oi.esphome.io/v2/www.js to a V2 folder in your yaml folder.
 
 {{< anchor "config-webserver-sorting" >}}
 
-Entity sorting
-**************
+## Entity sorting
 
 Version `3` supports the sorting of the entities.
 You can set a `sorting_weight` on each entity.
@@ -163,8 +162,7 @@ sensor:
 ```
 {{< anchor "config-webserver-grouping" >}}
 
-Entity grouping
-***************
+## Entity grouping
 
 Version `3` of the `web_server` allows for grouping of entities in custom groups.
 Groups can be sorted by providing a `sorting_weight`. Groups with a smaller `sorting_weight` will be displayed first.
@@ -197,8 +195,7 @@ number:
 
 
 ```
-Number in slider mode
-*********************
+## Number in slider mode
 {{< img src="number-slider-popup.png" alt="Image" width="100.0%" class="left" >}}
 
 You can change the value by moving the slider.
@@ -206,8 +203,7 @@ If you wish to enter a precise number you can click and hold the current value. 
 
 {{< img src="number-slider-popup-input-field.png" alt="Image" width="100.0%" class="left" >}}
 
-Expand Controls and Logs
-************************
+## Expand Controls and Logs
 {{< img src="tab-header-expand-cloapsed.png" alt="Image" width="100.0%" class="left" >}}
 
 By double-clicking on any group header you can expand the controls to fill up the whole screen.
@@ -217,8 +213,7 @@ You can do the same for the logs.
 
 {{< img src="tab-header-expand-logs-expanded.png" alt="Image" caption="Expanded Logs" width="100.0%" class="center" >}}
 
-Sensor value graph
-******************
+## Sensor value graph
 {{< img src="sensor-history-graph.png" alt="Image" width="100.0%" class="left" >}}
 
 By clicking on any sensor it will expand a graph with the historical values for that sensor.

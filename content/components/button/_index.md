@@ -74,8 +74,7 @@ MQTT options:
 
 {{< anchor "button-on_press" >}}
 
-`on_press`
-************
+## ``on_press``
 
 This automation will be triggered when the button is pressed.
 
@@ -92,8 +91,7 @@ Configuration variables: see [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "button-press_action" >}}
 
-`button.press` Action
-***********************
+## ``button.press`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for pressing a button in an Automation.
 
@@ -114,8 +112,7 @@ Assistant. If you want to trigger an automation in Home Assistant, you should us
 {{< /note >}}
 {{< anchor "button-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can press a button.
 

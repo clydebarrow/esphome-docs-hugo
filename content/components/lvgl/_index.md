@@ -177,8 +177,7 @@ lvgl:
 See [Page navigation footer]({{< ref "cookbook/lvgl#lvgl-cookbook-navigator" >}}) in the Cookbook for an example which demonstrates how to implement a page navigation bar at the bottom of the screen.
 
 
-Choosing a buffer size
-**********************
+## Choosing a buffer size
 
 The `buffer_size` option is a percentage of the display size. For example, if you have a 320x240 display, the buffer size is `320 * 240 * 2` bytes (for RGB565) = `153600` bytes. If you set the buffer size to `50%`,
 then the buffer will be `76800` bytes. If you set it to `25%`, then the buffer will be `38400` bytes. The default value is `100%`.
@@ -195,8 +194,7 @@ This may however reduce the internal RAM available for other components. A buffe
 {{< anchor "lvgl-multi-conf" >}}
 
 
-Multiple LVGL configurations
-****************************
+## Multiple LVGL configurations
 
 If you have multiple displays configured, and wish to have different content displayed on each display, you can configure multiple LVGL configurations. For example:
 
@@ -215,8 +213,7 @@ lvgl:
 ```
 {{< anchor "lvgl-color" >}}
 
-Colors
-******
+## Colors
 
 Colors can be specified anywhere in the LVGL configuration either by referencing a preconfigured [Color]({{< ref "components/display/_index#config-color" >}}) ID or by representing the color in the common hexadecimal notation. For example, `0xFF0000` would be red.
 
@@ -232,8 +229,7 @@ label:
 ```
 {{< anchor "lvgl-opacity" >}}
 
-Opacity
-*******
+## Opacity
 
 Various parts of the widgets (like background, borders etc.) support opacity. It can be specified in one of several ways:
 
@@ -246,8 +242,7 @@ Default values depend on widget specifics.
 
 {{< anchor "lvgl-fonts" >}}
 
-Fonts
-*****
+## Fonts
 
 Two font choices are available:
 
@@ -308,8 +303,7 @@ In addition to the above, the following special fonts are available from LVGL as
 
 {{< anchor "lvgl-styling" >}}
 
-Style properties
-****************
+## Style properties
 
 LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
@@ -323,7 +317,7 @@ LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/W
 
 You can adjust the appearance of widgets by changing their foreground, background, border color and/or font. Some widgets allow for more complex styling, effectively changing all or part of their appearance.
 
-### Using Lambdas for Styling
+#### Using Lambdas for Styling
 
 Most LVGL style and widget properties can be set as either constant values or lambdas (which will be evaluated at run time).
 When using lambdas, the returned value must be of the type and within the range expected by the native LVGL library, which may not be the same
@@ -337,7 +331,7 @@ floating point, instead uses scaled integers. Properties with the following nati
 - **zoom** Zoom levels should be multiplied by 256 (valid range is 0 to 2560, corresponding to 0-10.0).
 - **percentage** To convert a fractional value to a percentage, use `lv_pct(value * 100)`
 
-### Style properties
+#### Style properties
 
 These style properties may be applied to any widget, though not all widgets use all of them.
 
@@ -396,8 +390,7 @@ These style properties may be applied to any widget, though not all widgets use 
 
 {{< anchor "lvgl-theme" >}}
 
-Themes
-******
+## Themes
 
 You can configure a global theme for all widgets of a given type at the top level with the `theme:` configuration variable. In the example below, all the `arc`, `slider` and `button` widgets will, by default, use the styles and properties defined here. A combination of styles and [- **state** (*Optional*, dict): Widgets or their (sub)parts can have have states, which support separate styling. These state styles inherit from the theme, but can be locally set or overridden within style definitions. Can be one of:]({{< ref "components/lvgl/widgets#lvgl-widgetproperty-state" >}}) can be chosen for every widget.
 
@@ -476,8 +469,7 @@ Feel free to experiment to discover inheritance and precedence of the styles bas
 
 [Theme and style definitions]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) The Cookbook contains an example which demonstrates how to implement a gradient style for your widgets.
 
-`lvgl.style.update`
-*********************
+## ``lvgl.style.update``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) allows changing/updating the properties of a style at run time. This can be used to
 implement dynamic themes, e.g. light/dark mode, or to change the appearance of widgets based on user interaction.
@@ -504,8 +496,7 @@ on_...:
 ```
 {{< anchor "lvgl-layouts" >}}
 
-Layouts
-*******
+## Layouts
 
 Layouts aim to position widgets automatically, eliminating the need to specify `x` and `y` coordinates to position each widget. This is a great way to simplify your configuration as it allows you to omit alignment options.
 
@@ -537,32 +528,32 @@ It can arrange items into rows or columns (tracks), handle wrapping, adjust spac
 
 **Configuration variables:**
 
-    - **flex_flow** (*Optional*, string): Select the arrangement of the children widgets:
-        - `ROW`: place the children in a row without wrapping.
-        - `COLUMN`: place the children in a column without wrapping.
-        - `ROW_WRAP`: place the children in a row with wrapping (default).
-        - `COLUMN_WRAP`: place the children in a column with wrapping.
-        - `ROW_REVERSE`: place the children in a row without wrapping but in reversed order.
-        - `COLUMN_REVERSE`: place the children in a column without wrapping but in reversed order.
-        - `ROW_WRAP_REVERSE`: place the children in a row with wrapping but in reversed order.
-        - `COLUMN_WRAP_REVERSE`: place the children in a column with wrapping but in reversed order.
+- **flex_flow** (*Optional*, string): Select the arrangement of the children widgets:
+    - `ROW`: place the children in a row without wrapping.
+    - `COLUMN`: place the children in a column without wrapping.
+    - `ROW_WRAP`: place the children in a row with wrapping (default).
+    - `COLUMN_WRAP`: place the children in a column with wrapping.
+    - `ROW_REVERSE`: place the children in a row without wrapping but in reversed order.
+    - `COLUMN_REVERSE`: place the children in a column without wrapping but in reversed order.
+    - `ROW_WRAP_REVERSE`: place the children in a row with wrapping but in reversed order.
+    - `COLUMN_WRAP_REVERSE`: place the children in a column with wrapping but in reversed order.
 
-    - **flex_align_main** (*Optional*, string): Determines how to distribute the items in their track on the *main* axis. For example, flush the items to the right on with `flex_flow: ROW_WRAP` (known as *justify-content* in CSS). Possible options below.
-    - **flex_align_cross** (*Optional*, string): Determines how to distribute the items in their track on the *cross* axis. For example, if the items have different height place them to the bottom of the track (known as *align-items* in CSS). Possible options below.
-    - **flex_align_track** (*Optional*, string): Determines how to distribute the tracks (known as *align-content* in CSS). Possible options below.
+- **flex_align_main** (*Optional*, string): Determines how to distribute the items in their track on the *main* axis. For example, flush the items to the right on with `flex_flow: ROW_WRAP` (known as *justify-content* in CSS). Possible options below.
+- **flex_align_cross** (*Optional*, string): Determines how to distribute the items in their track on the *cross* axis. For example, if the items have different height place them to the bottom of the track (known as *align-items* in CSS). Possible options below.
+- **flex_align_track** (*Optional*, string): Determines how to distribute the tracks (known as *align-content* in CSS). Possible options below.
 
-    Values for use with  `flex_align_main`, `flex_align_cross`, `flex_align_track`:
+Values for use with  `flex_align_main`, `flex_align_cross`, `flex_align_track`:
 
-        - `START`: means left horizontally and top vertically (default).
-        - `END`: means right horizontally and bottom vertically.
-        - `CENTER`: simply center.
-        - `SPACE_EVENLY`: items are distributed so that the spacing between any two items (and the space to the edges) is equal. Does not apply to `flex_align_track`.
-        - `SPACE_AROUND`: items are evenly distributed in the track with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies. Does not apply to `flex_align_track`.
-        - `SPACE_BETWEEN`: items are evenly distributed in the track: first item is on the start line, last item on the end line. Does not apply to `flex_align_track`.
+- `START`: means left horizontally and top vertically (default).
+- `END`: means right horizontally and bottom vertically.
+- `CENTER`: simply center.
+- `SPACE_EVENLY`: items are distributed so that the spacing between any two items (and the space to the edges) is equal. Does not apply to `flex_align_track`.
+- `SPACE_AROUND`: items are evenly distributed in the track with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies. Does not apply to `flex_align_track`.
+- `SPACE_BETWEEN`: items are evenly distributed in the track: first item is on the start line, last item on the end line. Does not apply to `flex_align_track`.
 
-    - **pad_row** (*Optional*, int16): Set the padding between the rows, in pixels.
-    - **pad_column** (*Optional*, int16): Set the padding between the columns, in pixels.
-    - **flex_grow** (*Optional*, int16): Can be used to make one or more children fill the available space on the track. When one or more children have `flex_grow` set, the available space will be distributed proportionally to the grow values. Defaults to `0`, which disables growing.
+- **pad_row** (*Optional*, int16): Set the padding between the rows, in pixels.
+- **pad_column** (*Optional*, int16): Set the padding between the columns, in pixels.
+- **flex_grow** (*Optional*, int16): Can be used to make one or more children fill the available space on the track. When one or more children have `flex_grow` set, the available space will be distributed proportionally to the grow values. Defaults to `0`, which disables growing.
 
 ```yaml
 # Example flex layout
@@ -594,21 +585,21 @@ It can arrange items into a 2D "table" that has rows or columns (tracks). The it
 
 **Configuration variables:**
 
-    - **grid_rows** (**Required**): The number of rows in the grid, expressed a list of values in pixels, `CONTENT` or `FR(n)` (free units, where `n` is a proportional integer value).
-    - **grid_columns** (**Required**): The number of columns in the grid, expressed a list of values in pixels, `CONTENT` or `FR(n)` (free units, where `n` is a proportional integer value).
-    - **grid_row_align** (*Optional*, string): How to align the row. Works only when `grid_rows` is given in pixels. Possible options below.
-    - **grid_column_align** (*Optional*, string): How to align the column. Works only when `grid_columns` is given in pixels. Possible options below.
-    - **pad_row** (*Optional*, int16): Set the padding between the rows, in pixels.
-    - **pad_column** (*Optional*, int16): Set the padding between the columns, in pixels.
+- **grid_rows** (**Required**): The number of rows in the grid, expressed a list of values in pixels, `CONTENT` or `FR(n)` (free units, where `n` is a proportional integer value).
+- **grid_columns** (**Required**): The number of columns in the grid, expressed a list of values in pixels, `CONTENT` or `FR(n)` (free units, where `n` is a proportional integer value).
+- **grid_row_align** (*Optional*, string): How to align the row. Works only when `grid_rows` is given in pixels. Possible options below.
+- **grid_column_align** (*Optional*, string): How to align the column. Works only when `grid_columns` is given in pixels. Possible options below.
+- **pad_row** (*Optional*, int16): Set the padding between the rows, in pixels.
+- **pad_column** (*Optional*, int16): Set the padding between the columns, in pixels.
 
 In a grid layout, *all the widgets placed on the grid* will get some additional configuration variables to help with placement:
 
-    - **grid_cell_row_pos** (**Required**, int16): Position of the widget, in which row to appear (0 based count).
-    - **grid_cell_column_pos** (**Required**, int16): Position of the widget, in which column to appear (0 based count).
-    - **grid_cell_x_align** (*Optional*, string): How to align the widget horizontally within the cell. Can also be applied through [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}). Possible options below.
-    - **grid_cell_y_align** (*Optional*, string): How to align the widget vertically within the cell. Can also be applied through [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}). Possible options below.
-    - **grid_cell_row_span**  (*Optional*, int16): How many rows to span across the widget. Defaults to `1`.
-    - **grid_cell_column_span** (*Optional*, int16): How many columns to span across the widget. . Defaults to `1`.
+- **grid_cell_row_pos** (**Required**, int16): Position of the widget, in which row to appear (0 based count).
+- **grid_cell_column_pos** (**Required**, int16): Position of the widget, in which column to appear (0 based count).
+- **grid_cell_x_align** (*Optional*, string): How to align the widget horizontally within the cell. Can also be applied through [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}). Possible options below.
+- **grid_cell_y_align** (*Optional*, string): How to align the widget vertically within the cell. Can also be applied through [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}). Possible options below.
+- **grid_cell_row_span**  (*Optional*, int16): How many rows to span across the widget. Defaults to `1`.
+- **grid_cell_column_span** (*Optional*, int16): How many columns to span across the widget. . Defaults to `1`.
 
     {{< note >}}
 These `grid_cell_` variables apply to widget configuations!
@@ -616,13 +607,13 @@ These `grid_cell_` variables apply to widget configuations!
     {{< /note >}}
 Values for use with `grid_column_align`, `grid_row_align`, `grid_cell_x_align`, `grid_cell_y_align`:
 
-        - `START`: means left horizontally and top vertically (default).
-        - `END`: means right horizontally and bottom vertically.
-        - `CENTER`: simply center.
-        - `STRETCH`: stretch the widget to the cell in the respective direction. Does not apply to `grid_column_align`, `grid_row_align`.
-        - `SPACE_EVENLY`: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
-        - `SPACE_AROUND`: items are evenly distributed in the track with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
-        - `SPACE_BETWEEN`: items are evenly distributed in the track: first item is on the start line, last item on the end line.
+- `START`: means left horizontally and top vertically (default).
+- `END`: means right horizontally and bottom vertically.
+- `CENTER`: simply center.
+- `STRETCH`: stretch the widget to the cell in the respective direction. Does not apply to `grid_column_align`, `grid_row_align`.
+- `SPACE_EVENLY`: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+- `SPACE_AROUND`: items are evenly distributed in the track with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
+- `SPACE_BETWEEN`: items are evenly distributed in the track: first item is on the start line, last item on the end line.
 
 ```yaml
 # Example grid layout
@@ -647,8 +638,7 @@ To visualize real, calculated sizes of transparent widgets you can temporarily s
 {{< /tip >}}
 {{< anchor "lvgl-gradients" >}}
 
-Gradients
-*********
+## Gradients
 
 A gradient is a sequence of colors which can be applied to an object using the `bg_grad` style option. Gradients are defined in the *gradients* section of the LVGL configuration by providing two or more color stop points.
  Each entry has the following options:
@@ -698,8 +688,7 @@ Several actions are available for the LVGL component itself, these are outlined 
 
 {{< anchor "lvgl-redraw-action" >}}
 
-`lvgl.widget.redraw`
-**********************
+## ``lvgl.widget.redraw``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) redraws the entire screen, or optionally only selected widgets. It does not change
 any widget properties. It is mostly useful to redraw the screen after resuming LVGL from the paused state.
@@ -717,8 +706,7 @@ on_...:
 ```
 {{< anchor "lvgl-refresh-action" >}}
 
-`lvgl.widget.refresh`
-***********************
+## ``lvgl.widget.refresh``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) re-evaluates all properties specified with lambdas in the specified widget's configuration. This offers
 an alternative technique to using the `lvgl.widget.update` action, which updates specified properties.
@@ -741,8 +729,7 @@ on_...:
 ```
 {{< anchor "lvgl-pause-action" >}}
 
-`lvgl.pause`
-**************
+## ``lvgl.pause``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) pauses the activity of LVGL, including rendering.
 
@@ -758,8 +745,7 @@ on_...:
 ```
 {{< anchor "lvgl-resume-action" >}}
 
-`lvgl.resume`
-***************
+## ``lvgl.resume``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) resumes the activity of LVGL, including rendering.
 
@@ -772,8 +758,7 @@ on_...:
 
 
 ```
-`lvgl.update`
-***************
+## ``lvgl.update``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) allows changing/updating the `disp_bg_color` or `disp_bg_image` configuration variables of the main component, making it possible to change the background color or wallpaper at any time.
 
@@ -789,8 +774,7 @@ on_...:
 ```
 {{< anchor "lvgl-page-next-previous-action" >}}
 
-`lvgl.page.next`, `lvgl.page.previous`
-******************************************
+## ``lvgl.page.next``, ``lvgl.page.previous``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) changes the page to the next/previous based on the configuration (pages with their `skip` option enabled are...skipped). Page changes will wrap around at the end.
 
@@ -813,8 +797,7 @@ on_...:
 ```
 {{< anchor "lvgl-page-show-action" >}}
 
-`lvgl.page.show`
-******************
+## ``lvgl.page.show``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) shows a specific page (including pages with their `skip` option enabled).
 
@@ -835,8 +818,7 @@ on_...:
 ```
 {{< anchor "lvgl-widget-focus-action" >}}
 
-`lvgl.widget.focus`
-*********************
+## ``lvgl.widget.focus``
 
 This [Actions]({{< ref "automations/actions#actions-action" >}}) moves the input focus to the nominated widget. Used mainly with encoder inputs
 to select a specific widget to receive input events. It may also allow the focus to be frozen on that widget,
@@ -889,8 +871,7 @@ on_...:
 
 {{< anchor "lvgl-is-idle-condition" >}}
 
-`lvgl.is_idle`
-****************
+## ``lvgl.is_idle``
 
 This [Common Conditions]({{< ref "automations/actions#common_conditions" >}}) checks if the amount of time specified has passed since the last touch event.
 
@@ -913,8 +894,7 @@ on_...:
 ```
 {{< anchor "lvgl-is-paused-condition" >}}
 
-`lvgl.is_paused`
-******************
+## ``lvgl.is_paused``
 
 This [Common Conditions]({{< ref "automations/actions#common_conditions" >}}) checks if LVGL is in the paused state or not.
 
@@ -930,8 +910,7 @@ on_...:
           - lvgl.resume:
 
 ```
-`lvgl.page.is_showing`
-************************
+## ``lvgl.page.is_showing``
 
 This [Common Conditions]({{< ref "automations/actions#common_conditions" >}}) checks if the nominated page is the one currently showing.
 
@@ -954,8 +933,7 @@ Widget level [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-trigger
 
 {{< anchor "lvgl-on-idle-trigger" >}}
 
-`on_idle`
-***********
+## ``on_idle``
 
 LVGL has a notion of screen inactivity -- i.e. the time since the last user interaction with the screen is tracked. This can, for example, be used to dim the display backlight or turn it off after a moment of inactivity (like a screen saver). Every use of an input device (touchscreen, rotary encoder) counts as an activity and resets the inactivity counter.
 
@@ -980,21 +958,18 @@ See [Turn off screen when idle]({{< ref "cookbook/lvgl#lvgl-cookbook-idlescreen"
 
 {{< anchor "lvgl_on_pause_trigger" >}}
 
-`on_pause`
-************
+## ``on_pause``
 
 This [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered when LVGL is paused. This can be used to perform any desired actions when the screen is locked, such as turning off the display backlight.
 
 {{< anchor "lvgl_on_resume_trigger" >}}
 
-`on_resume`
-*************
+## ``on_resume``
 
 This [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered when LVGL is resumed. This can be used to perform any desired actions when the screen is unlocked, such as turning on the display backlight.
 
 
-`on_boot`
-*************
+## ``on_boot``
 
 This [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered after LVGL has been setup. It is also available on any widget, but the timing is the same.
 

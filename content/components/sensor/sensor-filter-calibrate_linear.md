@@ -3,8 +3,7 @@ description: ""
 title: ""
 ---
 
-`calibrate_linear`
-********************
+## ``calibrate_linear``
 
 Calibrate your sensor values by using values you measured with an accurate "truth" source.
 

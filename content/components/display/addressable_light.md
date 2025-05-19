@@ -73,16 +73,14 @@ to translate a logical x-y pixel coordinate to the address of the expected physi
 Determining the correct algorithm for the pixel mapper for your matrix will hopefully only require some graph paper and a little bit of math.
 
 
-Default
-*******
+## Default
 
 The default pixel mapper assumes that the led matrix is addressed starting with the top left LED, moving to the right, and
 then starting with the left-most row of the next row.
 
 {{< img src="addressable_light_pixel_map_default.png" alt="Image" caption="Default pixel_mapper as used with a 4x4 led matrix" width="75.0%" class="center" >}}
 
-BTF-Lighting 8x32 WS2812B Flexible LED Matrix
-*********************************************
+## BTF-Lighting 8x32 WS2812B Flexible LED Matrix
 
 The following image illustrates the path the addressable strip takes through the common the BTF-Lighting 8x32 matrix.
 

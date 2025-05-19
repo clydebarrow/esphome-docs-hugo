@@ -48,8 +48,7 @@ you want the lock to use that name, you can set `name: None`.
 
 {{< anchor "lock-lock_action" >}}
 
-`lock.lock` Action
-*************************
+## ``lock.lock`` Action
 
 This action locks a lock with the given ID on when executed.
 
@@ -61,8 +60,7 @@ on_...:
 ```
 {{< anchor "lock-unlock_action" >}}
 
-`lock.unlock` Action
-**************************
+## ``lock.unlock`` Action
 
 This action unlocks a lock with the given ID off when executed.
 
@@ -74,8 +72,7 @@ on_...:
 ```
 {{< anchor "lock-open_action" >}}
 
-`lock.open` Action
-************************
+## ``lock.open`` Action
 
 This action opens (e.g. unlatch) a lock with the given ID off when executed.
 
@@ -88,8 +85,7 @@ on_...:
 {{< anchor "lock-is_locked_condition" >}}
 {{< anchor "lock-is_unlocked_condition" >}}
 
-`lock.is_locked` / `lock.is_unlocked` Condition
-***************************************************
+## ``lock.is_locked`` / ``lock.is_unlocked`` Condition
 
 This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the given lock is LOCKED (or UNLOCKED).
 
@@ -104,8 +100,7 @@ on_...:
 ```
 {{< anchor "lock-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all locks to do some
 advanced stuff (see the full API Reference for more info).
@@ -140,8 +135,7 @@ advanced stuff (see the full API Reference for more info).
   ```
 {{< anchor "lock-on_lock_unlock_trigger" >}}
 
-`lock.on_lock` / `lock.on_unlock` Trigger
-****************************************************************
+## ``lock.on_lock`` / ``lock.on_unlock`` Trigger
 
 This trigger is activated each time the lock is locked/unlocked. It becomes active
 right after the lock component has acknowledged the state (e.g. after it LOCKED/UNLOCKED itself).

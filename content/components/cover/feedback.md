@@ -41,15 +41,13 @@ cover:
 
 It is a versatile cover that can accommodate for a number of DIY setups, or monitoring an externally controlled cover:
 
-Time-Based
-**********
+## Time-Based
 
 Simplest case, when no sensors are available. The state is thus assumed.
 
 It is a drop-in replacement of [/components/cover/time_based]({{< ref "/components/cover/time_based" >}})
 
-Endstop Sensors
-***************
+## Endstop Sensors
 
 For cases where there are endstops at one or both ends of the cover to detect the fully-open and fully-closed states.
 When any of these endstops are reached, an actual state is read and updated and the cover optionally
@@ -61,8 +59,7 @@ the component's logic. In this case, when the cover is fully closed (either if t
 
 It is a drop-in replacement of [/components/cover/endstop]({{< ref "/components/cover/endstop" >}}).
 
-Movement Sensors
-****************
+## Movement Sensors
 
 If movement feedback is available, the cover no longer operates in *optimistic mode* (assuming that movement starts
 as soon as an action is triggered) and can also react to commands issued to cover from an external control and still
@@ -156,8 +153,7 @@ Additional options:
 
 {{< anchor "migrating_current_based" >}}
 
-Migrating Current-Based Cover
-*****************************
+## Migrating Current-Based Cover
 
 Most options can be left untouched, but some modifications are needed:
 

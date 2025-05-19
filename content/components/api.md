@@ -107,8 +107,7 @@ Then:
 
 {{< anchor "api-homeassistant_event_action" >}}
 
-`homeassistant.event` Action
-******************************
+## ``homeassistant.event`` Action
 
 {{< note >}}
 Be sure to [Actions]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
@@ -140,8 +139,7 @@ Configuration variables:
 
 {{< anchor "api-homeassistant_action-action" >}}
 
-`homeassistant.action` Action
-********************************
+## ``homeassistant.action`` Action
 
 {{< note >}}
 Be sure to [Actions]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
@@ -216,8 +214,7 @@ on_...:
 ```
 {{< anchor "api-homeassistant_tag_scanned_action" >}}
 
-`homeassistant.tag_scanned` Action
-************************************
+## ``homeassistant.tag_scanned`` Action
 
 {{< note >}}
 Be sure to [Actions]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
@@ -243,8 +240,7 @@ Configuration variables:
 
 {{< anchor "api-on_client_connected_trigger" >}}
 
-`on_client_connected` Trigger
-*******************************
+## ``on_client_connected`` Trigger
 
 This trigger is activated each time a client connects to the API. Two variables of
 type `std::string` are available for use by actions called from within this trigger:
@@ -264,8 +260,7 @@ api:
 ```
 {{< anchor "api-on_client_disconnected_trigger" >}}
 
-`on_client_disconnected` Trigger
-**********************************
+## ``on_client_disconnected`` Trigger
 
 This trigger is activated each time the API disconnects from the API. Two variables of
 type `std::string` are available for use by actions called from within this trigger:

@@ -49,26 +49,26 @@ Configuration variables:
 
 {{< anchor "microphone-capture" >}}
 
-### ``microphone.capture`` Action
+#### ``microphone.capture`` Action
 
 This action will start capturing audio data from the microphone. The data will be passed to any components listening
 and will be available in the `on_data` trigger.
 
 {{< anchor "microphone-stop_capture" >}}
 
-### ``microphone.stop_capture`` Action
+#### ``microphone.stop_capture`` Action
 
 This action will stop capturing audio data from the microphone.
 
 {{< anchor "microphone-mute" >}}
 
-### ``microphone.mute`` Action
+#### ``microphone.mute`` Action
 
 This action will apply a software mute to the audio data from the microphone before passing it to any listening components.
 
 {{< anchor "microphone-unmute" >}}
 
-### ``microphone.unmute`` Action
+#### ``microphone.unmute`` Action
 
 This action will disable applying a software mute initiated with `microphone.mute`.
 
@@ -79,7 +79,7 @@ This action will disable applying a software mute initiated with `microphone.mut
 
 {{< anchor "microphone-on_data" >}}
 
-### ``microphone.on_data`` Trigger
+#### ``microphone.on_data`` Trigger
 
 This trigger will fire when new data is received from the microphone.
 The data is available as a `std::vector<uint8_t>` in the variable `x`.
@@ -112,13 +112,13 @@ Configuration variables:
 
 {{< anchor "microphone-is_capturing" >}}
 
-### ``microphone.is_capturing`` Condition
+#### ``microphone.is_capturing`` Condition
 
 This condition will check if the microphone is currently capturing audio data.
 
 {{< anchor "microphone-is_muted" >}}
 
-### ``microphone.is_muted`` Condition
+#### ``microphone.is_muted`` Condition
 
 This condition will check if the microphone is currently apply a software mute.
 

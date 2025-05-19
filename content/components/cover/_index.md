@@ -229,8 +229,7 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
     ```
 {{< anchor "cover-on_open_trigger" >}}
 
-`cover.on_open` Trigger
-*************************
+## ``cover.on_open`` Trigger
 
 This trigger is activated each time the cover reaches a fully open state.
 
@@ -244,8 +243,7 @@ cover:
 ```
 {{< anchor "cover-on_closed_trigger" >}}
 
-`cover.on_closed` Trigger
-***************************
+## ``cover.on_closed`` Trigger
 
 This trigger is activated each time the cover reaches a fully closed state.
 

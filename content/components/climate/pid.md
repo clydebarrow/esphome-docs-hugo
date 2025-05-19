@@ -155,8 +155,7 @@ variation inside this deadband. How it limits depends on how you set the `Deadba
 
 {{< img src="deadband1.png" alt="Image" >}}
 
-Deadband Multipliers
-********************
+## Deadband Multipliers
 
 Deadband Multipliers tell the controller how to operate when inside of the deadband.
 
@@ -187,8 +186,7 @@ deadband_parameters:
 ```
 {{< img src="deadband2.png" alt="Image" >}}
 
-Deadband Output Averaging Samples
-*********************************
+## Deadband Output Averaging Samples
 Since we expect the PID Controller to be at equilibrium while inside the deadband, we can
 average the output over a longer range of samples, like 15 samples. This helps even further
 with temperature and controller stability.

@@ -129,8 +129,7 @@ MQTT options:
 
 {{< anchor "climate-control_action" >}}
 
-`climate.control` Action
-**************************
+## ``climate.control`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting parameters for climate devices.
 
@@ -178,8 +177,7 @@ Configuration variables:
 
 {{< anchor "climate-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all binary sensors to do some
 advanced stuff.
@@ -227,8 +225,7 @@ advanced stuff.
   ```
 {{< anchor "climate-on_state_trigger" >}}
 
-`climate.on_state` Trigger
-****************************
+## ``climate.on_state`` Trigger
 
 This trigger is activated each time the state of the climate device is updated
 (for example, if the current temperature measurement or the mode set by the users changes).
@@ -248,8 +245,7 @@ climate:
 ```
 {{< anchor "climate-on_control_trigger" >}}
 
-`climate.on_control` Trigger
-******************************
+## ``climate.on_control`` Trigger
 
 This trigger is activated each time a *control* input of the climate device
 is updated via a `ClimateCall` (which includes changes coming in from Home

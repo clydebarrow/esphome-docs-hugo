@@ -54,8 +54,7 @@ binary_sensor:
       inverted: false
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S08 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use
@@ -65,8 +64,7 @@ Configuration variables:
   Useful when the MCP23S08's power supply is greater than 3.3 volts. Note that these pins
   will require pull-up resistors (to 3.3 volts) when this mode is enabled.
 
-Pin Configuration Variables:
-****************************
+## Pin Configuration Variables:
 
 - **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S08 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
@@ -121,8 +119,7 @@ binary_sensor:
       inverted: false
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S17 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use.
@@ -132,8 +129,7 @@ Configuration variables:
   Useful when the MCP23S17's power supply is greater than 3.3 volts. Note that these pins
   will require pull-up resistors (to 3.3 volts) when this mode is enabled.
 
-Pin Configuration Variables:
-****************************
+## Pin Configuration Variables:
 
 - **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S17 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.

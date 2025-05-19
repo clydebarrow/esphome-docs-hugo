@@ -24,8 +24,7 @@ touchscreen:
   interrupt_pin: GPIO44
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
 - **interrupt_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The touch detection pin.
@@ -33,8 +32,7 @@ Configuration variables:
 - All other options from [Base Touchscreen Configuration]({{< ref "components/touchscreen/_index#config-touchscreen" >}}).
 
 
-Sample config for the ESP32S3
-*****************************
+## Sample config for the ESP32S3
 
 ```yaml
 i2c:

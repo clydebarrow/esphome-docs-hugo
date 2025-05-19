@@ -49,8 +49,7 @@ light:
     name: "FastLED WS2811 Light"
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **chipset** (**Required**, string): Set a chipset to use.
   See [Supported Chipsets]({{< ref "components/light/fastled#fastled_clockless-chipsets" >}}) for options.
@@ -67,8 +66,7 @@ Configuration variables:
 
 {{< anchor "fastled_clockless-chipsets" >}}
 
-Supported Chipsets
-******************
+## Supported Chipsets
 
 - `NEOPIXEL`
 - `WS2811`
@@ -123,8 +121,7 @@ light:
     name: "FastLED SPI Light"
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **chipset** (**Required**, string): Set a chipset to use. See [Supported Chipsets]({{< ref "components/light/fastled#fastled_spi-chipsets" >}}) for options.
 - **data_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the FastLED light.
@@ -144,8 +141,7 @@ Configuration variables:
 
 {{< anchor "fastled_spi-chipsets" >}}
 
-Supported Chipsets
-******************
+## Supported Chipsets
 
 - `APA102`
 - `DOTSTAR`

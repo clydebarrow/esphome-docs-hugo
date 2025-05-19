@@ -55,7 +55,7 @@ ethernet:
   - `W5500` (SPI)
   - `OPENETH` (QEMU, ESP-IDF only)
 
-### RMII configuration variables:
+#### RMII configuration variables:
 
 - **mdc_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The MDC pin of the board.
   Usually this is `GPIO23`.
@@ -79,7 +79,7 @@ ethernet:
 - **power_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin controlling the
   power/reset status of the Ethernet controller. Leave unspecified for no power pin (default).
 
-### SPI configuration variables:
+#### SPI configuration variables:
 
 - **clk_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The SPI clock pin.
 - **mosi_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The SPI MOSI pin.
@@ -111,7 +111,7 @@ or `polling_interval` can be set. If you set both, ESPHome will throw an error.
 If you are using a framework that does not support SPI-based ethernet modules without interrupt pin,
 `interrupt_pin` is **required** and you cannot set `polling_interval`.
 
-### Advanced common configuration variables:
+#### Advanced common configuration variables:
 
 - **manual_ip** (*Optional*): Manually configure the static IP of the node.
 

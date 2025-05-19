@@ -71,8 +71,7 @@ Internal ADC microphones are only supported by the legacy I²S driver on a regul
 
 ## Known Devices
 
-M5Stack Atom Echo
-*****************
+## M5Stack Atom Echo
 
 ```yaml
 microphone:
@@ -82,8 +81,7 @@ microphone:
     pdm: true
 
 ```
-RaspiAudio Muse Luxe
-********************
+## RaspiAudio Muse Luxe
 
 ```yaml
 microphone:

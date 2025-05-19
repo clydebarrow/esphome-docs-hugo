@@ -3,8 +3,7 @@ description: ""
 title: ""
 ---
 
-`sliding_window_moving_average`
-*********************************
+## ``sliding_window_moving_average``
 
 A [simple moving average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)
 over the last few values. It can be used to have a short update interval on the sensor but only push

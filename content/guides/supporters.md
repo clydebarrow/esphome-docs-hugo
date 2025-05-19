@@ -14,8 +14,7 @@ To help fund development of ESPHome, subscribe to [Home Assistant Cloud by Nabu 
 
 ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com/OttoWinter).
 
-Contributors
-************
+## Contributors
 
 (in alphabetical order)
 

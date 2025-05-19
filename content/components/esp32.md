@@ -47,8 +47,7 @@ esp32:
     type: arduino
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **version** (*Optional*, string): The base framework version number to use, from
   [ESP32 arduino releases](https://github.com/espressif/arduino-esp32/releases). Defaults to `recommended`.
@@ -80,8 +79,7 @@ esp32:
     type: esp-idf
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **version** (*Optional*, string): The base framework version number to use, from
   [ESP32 ESP-IDF releases](https://github.com/espressif/esp-idf/releases). Defaults to `recommended`.

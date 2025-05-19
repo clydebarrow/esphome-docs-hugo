@@ -448,8 +448,7 @@ E.g. for calling `fingerprint_grow.enroll` select the action `esphome.test_node_
 { "finger_id": 0, "num_scans": 2 }
 
 ```
-Sample code
-***********
+## Sample code
 
 ```yaml
 uart:

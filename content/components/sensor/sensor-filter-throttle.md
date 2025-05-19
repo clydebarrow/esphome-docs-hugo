@@ -3,8 +3,7 @@ description: ""
 title: ""
 ---
 
-`throttle`
-************
+## ``throttle``
 
 Throttle the incoming values. When this filter gets an incoming value,
 it checks if the last incoming value is at least `specified time period` old.

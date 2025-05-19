@@ -17,8 +17,7 @@ grove_tb6612fng:
     id: test_motor
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this TB6612FNG component.
 - **address** (*Optional*, int): The I²C address of the driver.

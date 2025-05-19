@@ -1943,13 +1943,12 @@ on_...:
 
 {{< anchor "lvgl-automation-actions" >}}
 
-Actions
-*******
+## Actions
 
 As outlined in the sections above, each widget type supports several of its own, unique actions.
 Several universal actions are also available for all widgets, these are outlined below.
 
-### ``lvgl.widget.update``
+#### ``lvgl.widget.update``
 
 This powerful [In addition to visual styling, each widget supports some boolean **flags** to influence the behavior:]({{< ref "components/lvgl/widgets#lvgl-widget-flags" >}}) allows changing/updating any widget's common [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}), state (templatable) or [Actions]({{< ref "automations/actions#actions-action" >}}) on the fly.
 
@@ -1978,7 +1977,7 @@ Check out in the Cookbook [Remote light button]({{< ref "cookbook/lvgl#lvgl-cook
 
 {{< anchor "lvgl-automation-shorthands" >}}
 
-### ``lvgl.widget.hide``, ``lvgl.widget.show``
+#### ``lvgl.widget.hide``, ``lvgl.widget.show``
 
 These [In addition to visual styling, each widget supports some boolean **flags** to influence the behavior:]({{< ref "components/lvgl/widgets#lvgl-widget-flags" >}}) are shorthands for toggling the `hidden` [Actions]({{< ref "automations/actions#actions-action" >}}) of any widget.
 
@@ -1996,7 +1995,7 @@ on_...:
         - id: [my_button_1, my_button_2]
 
 ```
-### ``lvgl.widget.disable``, ``lvgl.widget.enable``
+#### ``lvgl.widget.disable``, ``lvgl.widget.enable``
 
 These [Actions]({{< ref "automations/actions#actions-action" >}}) are shorthands for toggling the `disabled` state of any widget (which controls the appearance of the corresponding *disabled* style set of the theme):
 
@@ -2018,8 +2017,7 @@ These [Actions]({{< ref "automations/actions#actions-action" >}}) are shorthands
 ```
 {{< anchor "lvgl-automation-triggers" >}}
 
-Triggers
-********
+## Triggers
 
 Specific triggers like `on_value` and `on_change`` are available for certain widgets; they are described above in their respective section.
 Some universal triggers are also available for all of the widgets:
@@ -2075,8 +2073,7 @@ when the page becomes active or inactive respectively.
 
 
 ```
-`on_boot`
-*************
+## ``on_boot``
 
 This [Triggers]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered after LVGL has been setup. It is available on the `lvgl` component and any widget and can be used to perform any LVGL related setup that is not possible with static configuration.
 When used on a widget, it does not act specifically on that widget but can be used to keep actions related to that widget together with its configuration.

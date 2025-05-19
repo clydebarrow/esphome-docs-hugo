@@ -87,8 +87,7 @@ MQTT options:
 
 {{< anchor "event-on_event" >}}
 
-`on_event`
-************
+## ``on_event``
 
 This automation will be triggered when an event of the specified types is triggered.
 In [Templates]({{< ref "automations/templates#config-lambda" >}}) you can get the event type from the trigger with `event_type`.
@@ -105,8 +104,7 @@ event:
 ```
 Configuration variables: see [Automation]({{< ref "automations/_index#automation" >}}).
 
-`event.trigger` Action
-************************
+## ``event.trigger`` Action
 
 This action allows for the triggering of an event from within an automation.
 
@@ -123,8 +121,7 @@ Configuration variables:
 
 {{< anchor "event-lambda_calls" >}}
 
-lambda Calls
-************
+## lambda Calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can trigger an event.
 

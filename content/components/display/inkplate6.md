@@ -65,8 +65,7 @@ It just ignores the function call in that case.
 
 
 {{< /warning >}}
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **model** (*Optional*, enum): Specify the model. Defaults to `inkplate_6`.
@@ -114,8 +113,7 @@ Configuration variables:
   Defaults to GPIO27.
 
 
-Complete Inkplate 6 example
-***************************
+## Complete Inkplate 6 example
 
 The following is a complete example YAML configuration that does a few things beyond the usual
 Wi-Fi, API, and OTA configuration.
@@ -274,8 +272,7 @@ display:
 
 
 ```
-Inkplate 6 Plus Touchscreen
-***************************
+## Inkplate 6 Plus Touchscreen
 
 The Inkplate 6 Plus has a built in touchscreen supported by ESPHome. Note you need to enable pin 12 on the mcp23017 to enable the touchscreen
 Below is a config example with touchscreen power switch:
@@ -302,8 +299,7 @@ touchscreen:
           args: ['touch.x', 'touch.y']
 
 ```
-Inkplate 6 Plus Backlight
-***************************
+## Inkplate 6 Plus Backlight
 
 The Inkplate 6 Plus has a built in backlight supported by ESPHome.
 Below is a config example:
@@ -330,8 +326,7 @@ light:
     name: '${friendly_name} Backlight'
 
 ```
-Inkplate 6 v2
-***************************
+## Inkplate 6 v2
 
 The Inkplate 6 v2 has a slightly different configuration. The main difference is that it is using pca6416a instead of the mcp23017.
 Below is a config example:
@@ -376,8 +371,7 @@ display:
 
 
 ```
-Inkplate 5
-***************************
+## Inkplate 5
 
 The Inkplate 5 has nearly the same configuration as inkplate 6 v2.
 Below is a config example:
@@ -422,8 +416,7 @@ display:
 
 
 ```
-Inkplate 10
-***********
+## Inkplate 10
 
 The Inkplate 10 has a configuration similar to 5 and 6, except it has 2 expanders and the battery read MOSFET is not inverted. Also, some versions have an embedded RTC to aid in clock sync.
 Below is a config example:

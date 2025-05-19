@@ -83,8 +83,7 @@ filters:
   - lambda: return {"Hello World"};
 
 ```
-`to_upper`
-************
+## ``to_upper``
 
 Converts all characters within a string to uppercase (only the English alphabet is supported at this time).
 
@@ -96,8 +95,7 @@ Converts all characters within a string to uppercase (only the English alphabet 
     - to_upper:
 
 ```
-`to_lower`
-************
+## ``to_lower``
 
 Converts all characters within a string to lowercase (only the English alphabet is supported at this time).
 
@@ -109,8 +107,7 @@ Converts all characters within a string to lowercase (only the English alphabet 
     - to_lower:
 
 ```
-`append`
-**********
+## ``append``
 
 Adds a string to the end of the current string.
 
@@ -122,8 +119,7 @@ Adds a string to the end of the current string.
     - append: "_suffix"
 
 ```
-`prepend`
-***********
+## ``prepend``
 
 Adds a string to the start of the current string.
 
@@ -135,8 +131,7 @@ Adds a string to the start of the current string.
     - prepend: "prefix_"
 
 ```
-`substitute`
-**************
+## ``substitute``
 
 Search the current value of the text sensor for a string, and replace it with another string.
 
@@ -152,8 +147,7 @@ Search the current value of the text sensor for a string, and replace it with an
 ```
 The arguments are a list of substitutions, each in the form `TO_FIND -> REPLACEMENT`.
 
-`map`
-*******
+## ``map``
 
 Lookup the current value of the text sensor in a list, and return the matching item if found.
 Does not change the value of the text sensor if the current value wasn't found.
@@ -171,8 +165,7 @@ Does not change the value of the text sensor if the current value wasn't found.
 ```
 The arguments are a list of substitutions, each in the form `LOOKUP -> REPLACEMENT`.
 
-`lambda`
-**********
+## ``lambda``
 
 Perform a advanced operations on the text sensor value. The input string is `x` and
 the result of the lambda is used as the output (use `return`).
@@ -194,8 +187,7 @@ You can access the most recent state of the sensor in [Templates]({{< ref "autom
 
 {{< anchor "text_sensor-on_value" >}}
 
-`on_value`
-************
+## ``on_value``
 
 This automation will be triggered when a new value is published.
 In [Templates]({{< ref "automations/templates#config-lambda" >}}) you can get the value from the trigger with `x`.
@@ -214,8 +206,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "text_sensor-on_raw_value" >}}
 
-`on_raw_value`
-****************
+## ``on_raw_value``
 
 This automation will be triggered when a new value is received that hasn't passed
 through any filters. In [Templates]({{< ref "automations/templates#config-lambda" >}}) you can get the value from the trigger with `x`.
@@ -267,8 +258,7 @@ if (id(my_text_sensor).state == "Hello World") {
 {{< /note >}}
 {{< anchor "text_sensor-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all text sensors to do some
 advanced stuff (see the full API Reference for more info).

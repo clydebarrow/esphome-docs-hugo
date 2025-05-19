@@ -33,8 +33,7 @@ msa3xx:
 
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 The configuration is made up of three parts: The central component, acceleration sensors,
 text sensors with orientation information, and binary sensors for taps and movement detection.
@@ -80,8 +79,7 @@ binary_sensor:
 
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **tap** (*Optional*): Single tap detection.
 - **double_tap** (*Optional*): Double tap detection.
@@ -102,8 +100,7 @@ sensor:
     acceleration_z: Accel Z
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **acceleration_x** (*Optional*): X-axis acceleration, m/s².
 - **acceleration_y** (*Optional*): Y-axis acceleration, m/s².
@@ -121,8 +118,7 @@ text_sensor:
     orientation_z: Orientation Z
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **orientation_xy** (*Optional*): XY orientation. Can be one of `Portrait Upright`, 
   `Portrait Upside Down`, `Landscape Left`, `Landscape Right`.
@@ -130,8 +126,7 @@ Configuration variables:
 
 ## Automations
 
-`on_tap` trigger
-******************
+## ``on_tap`` trigger
 
 This automation will be triggered when single tap is detected.
 
@@ -145,8 +140,7 @@ msa3xx:
 
 
 ```
-`on_double_tap` trigger
-*************************
+## ``on_double_tap`` trigger
 
 This automation will be triggered when double tap is detected.
 
@@ -160,8 +154,7 @@ msa3xx:
 
 
 ```
-`on_active` trigger
-*********************
+## ``on_active`` trigger
 
 This automation will be triggered when device detects changes in motion.
 
@@ -175,8 +168,7 @@ msa3xx:
 
 
 ```
-`on_orientation` trigger
-**************************
+## ``on_orientation`` trigger
 
 This automation will be triggered when device orientation is changed with respect to the gravitation field vector `g`.
 
@@ -189,8 +181,7 @@ msa3xx:
         - logger.log: "Orientation change detected"
 
 ```
-Using both MSA301 and MSA311 at the same time
-*********************************************
+## Using both MSA301 and MSA311 at the same time
 
 Should you wish to use both sensors in the same configuration, you can do so by specifying ID for each sensor.
 

@@ -18,8 +18,7 @@ touchscreen:
   platform: sdl
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
 

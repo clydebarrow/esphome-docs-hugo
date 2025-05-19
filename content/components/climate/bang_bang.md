@@ -110,8 +110,7 @@ Now is a good time to ensure you understand exactly how a bang-bang controller s
 a clear understanding of this, be sure to check out the
 [Wikipedia article](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control).
 
-The Problem with Dual-Function Systems
-**************************************
+## The Problem with Dual-Function Systems
 
 If you are not attempting to operate a system that can both heat and cool, you'll likely want to skip to the next
 section about user interface.
@@ -149,8 +148,7 @@ at 21.5 °C. Again, it is essentially two bang-bang controllers in one.
 
 Behavioral differences aside, there is another important difference between these two components: user interface.
 
-User Interface
-**************
+## User Interface
 
 The interaction with this component via the Home Assistant user interface is also different than what is seen on most
 common residential thermostats. Generally speaking, most thermostats allow either one or two set points -- one of them
@@ -165,8 +163,7 @@ upper set point to 22 °C, then *the temperature will be brought as high as 22 �
 The behavior is not difficult to understand, but, as we've learned from many discussions on the Discord server, it
 departs from what most people seem to expect.
 
-Which is Right for Me?
-**********************
+## Which is Right for Me?
 
 It comes down to two points:
 

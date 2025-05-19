@@ -87,8 +87,7 @@ wk2168_spi:
         baud_rate: 19200
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this WeiKai component.
 - **spi_id** (*Optional*, [SPI Bus]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
@@ -162,8 +161,7 @@ wk2168_i2c:
         baud_rate: 19200
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this WeiKai component.
 - **address** (*Optional*): The I²C address of this component. Defaults to `0x10`.
@@ -224,8 +222,7 @@ switch:
       inverted: true
 
 ```
-Pin configuration variables:
-****************************
+## Pin configuration variables:
 
 - **wkxxxx_xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the `wkxxxx_xxx` component for the pin. For
   example `wk2212_i2c: wk2168_bridge_spi`
@@ -235,8 +232,7 @@ Pin configuration variables:
 
 ## Performance considerations:
 
-Bus speed
-*********
+## Bus speed
 
 Please be aware that the communication between the WeiKai chips and the processor occurs on an external bus,
 with a relatively low operating frequency. Therefore tasks such as checking the status of the chip's
@@ -266,8 +262,7 @@ i2c:
   frequency: 800kHz
 
 ```
-Maximum Baud rate
-*****************
+## Maximum Baud rate
 
 The maximum baud_rate is proportional to the crystal frequency. The following table
 gives the maximum baud_rate at usual system clock:

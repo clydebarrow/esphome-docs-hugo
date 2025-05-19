@@ -150,10 +150,16 @@ def convert_rst_to_md(lines, filename):
             md_lines.append(f"## {line}")
             i += 2
             continue
-        
+
+        # Handle star-style headings (section headings)
+        if i + 1 < len(lines) and re.match(r'^\*+$', lines[i + 1]) and line:
+            md_lines.append(f"## {line}")
+            i += 2
+            continue
+
         # Handle caret-style headings (subsection headings)
         if i + 1 < len(lines) and re.match(r'^\^+$', lines[i + 1]) and line:
-            md_lines.append(f"### {line}")
+            md_lines.append(f"#### {line}")
             i += 2
             continue
         

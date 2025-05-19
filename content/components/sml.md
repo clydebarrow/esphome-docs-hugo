@@ -105,8 +105,7 @@ text_sensor:
 
 {{< anchor "sml-on-data" >}}
 
-`on_data` Trigger
-********************
+## ``on_data`` Trigger
 
 This automation will be triggered when a valid SML message is received. The variable `bytes` (of type
 `std::vector<uint8_t>`) contains the raw sml data including start/end sequence. The variable `valid`

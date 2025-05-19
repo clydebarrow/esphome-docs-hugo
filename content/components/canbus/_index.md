@@ -96,8 +96,7 @@ canbus:
 
 {{< anchor "canbus-on-frame" >}}
 
-`on_frame` Trigger
-********************
+## ``on_frame`` Trigger
 
 This automation will be triggered when a CAN frame is received. The variables `x` (of type
 `std::vector<uint8_t>`) containing the frame data, `can_id` (of type `uint32_t`) containing the actual
@@ -151,8 +150,7 @@ canbus:
 - **remote_transmission_request** (*Optional*, boolean): Whether to run for CAN frames with the "remote
   transmission request" bit set or not set. Defaults to not checking (the automation will run for both cases).
 
-`canbus.send` Action
-**********************
+## ``canbus.send`` Action
 
 The CAN bus can transmit frames by means of the `canbus.send` action. There are several ways to use it:
 

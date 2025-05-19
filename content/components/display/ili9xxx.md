@@ -63,8 +63,7 @@ display:
     show_test_card: true
 
 ```
-Configuration variables:
-************************
+## Configuration variables:
 
 All [graphical display configuration<display-configuration>]({{< ref "#graphical display configuration<display-configuration>" >}}) options are available, plus the following.
 
@@ -132,8 +131,7 @@ To modify the SPI setting see [SPI Bus]({{< ref "components/spi#spi" >}}) . The 
 
 **Note:** The maximum achievable data rate will depend on the chip type (e.g. ESP32 vs ESP32-S3) the pins used (on ESP32 using the default SPI pins allows higher rates) and the connection type (on-board connections will support higher rates than long cables or DuPont wires.) If in doubt, start with a low speed and test higher rates to find what works. A MISO pin should preferably not be specified, as this will limit the maximum rate in some circumstances, and is not required if the SPI bus is used only for the display.
 
-Additional inititialisation sequences
-*************************************
+## Additional inititialisation sequences
 
 The `init_sequence` option allows additional configuration of the driver chip. Provided commands will be sent to the
 driver chip in addition to, and after the chosen model's pre-defined commands. It requires a list of byte sequences:
@@ -148,13 +146,11 @@ init_sequence:
 ```
 Each entry represents a single-byte command followed by zero or more data bytes.
 
-CUSTOM model
-************
+## CUSTOM model
 
 The `CUSTOM` model selection is provided for otherwise unsupported displays, and requires both `dimensions:` and `init_sequence:` to be specfied. There is no pre-defined init sequence.
 
-Configuration examples
-**********************
+## Configuration examples
 
 To use hardware rotation, use both `dimensions` and `transform`, e.g. this config will turn a landscape display with
 height 320 and width 480 into portrait. Note that the dimensions are those of the final display.

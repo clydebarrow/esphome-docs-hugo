@@ -59,8 +59,7 @@ sensor:
 
 {{< anchor "pzemdc-reset_energy_action" >}}
 
-`pzemdc.reset_energy` Action
-******************************
+## ``pzemdc.reset_energy`` Action
 
 This action resets the total energy value of the pzemdc device with the given ID when executed.
 

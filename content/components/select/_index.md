@@ -67,8 +67,7 @@ For more information on using lambdas with select, see [lambda calls]({{< ref "c
 
 {{< anchor "select-on_value" >}}
 
-`on_value`
-************
+## ``on_value``
 
 This automation will be triggered whenever a value is set/published, even if the value is the same as before. In [Templates]({{< ref "automations/templates#config-lambda" >}})
 you can get the value from the trigger with `x` and the index offset of the selected value with `i`.
@@ -88,8 +87,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "select-set_action" >}}
 
-`select.set` Action
-*********************
+## ``select.set`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting the active option using an option value.
 
@@ -110,8 +108,7 @@ the select is left as-is.
 
 {{< anchor "select-set_index_action" >}}
 
-`select.set_index` Action
-***************************
+## ``select.set_index`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting the active option using its index offset.
 
@@ -132,8 +129,7 @@ the select is left as-is.
 
 {{< anchor "select-next_action" >}}
 
-`select.next` Action
-**********************
+## ``select.next`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the next option in a select component.
 
@@ -154,8 +150,7 @@ Configuration variables:
 
 {{< anchor "select-previous_action" >}}
 
-`select.previous` Action
-**************************
+## ``select.previous`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the previous option in
 a select component.
@@ -177,8 +172,7 @@ Configuration variables:
 
 {{< anchor "select-first_action" >}}
 
-`select.first` Action
-***********************
+## ``select.first`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the first option in
 a select component.
@@ -197,8 +191,7 @@ Configuration variables:
 
 {{< anchor "select-last_action" >}}
 
-`select.last` Action
-**********************
+## ``select.last`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for selecting the last option in
 a select component.
@@ -217,8 +210,7 @@ Configuration variables:
 
 {{< anchor "select-operation_action" >}}
 
-`select.operation` Action
-***************************
+## ``select.operation`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) that can be used to change the active
 option in a select component (first, last, previous or next), using a generic
@@ -253,8 +245,7 @@ Configuration variables:
 
 {{< anchor "select-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all selects to do some
 advanced stuff (see the full API Reference for more info).

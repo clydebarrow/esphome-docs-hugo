@@ -61,8 +61,7 @@ sensor:
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **visible** (*Optional*, boolean):  Visible or not
 
-Waveform Settings
-*****************
+## Waveform Settings
 - **wave_channel_id** (*Optional*, int): The waveform ID in a range of 0-3
 - **wave_max_value** (*Optional*, int): The max value. Set `dis` to the height of the component in the Nextion editor
   and this to the max value that will be sent. This will set up the proper scaling.
@@ -82,8 +81,7 @@ A [- ``update_components_by_prefix(std::string page)``: This will send the curre
   {{< /note >}}
 See [How things Update]({{< ref "components/sensor/nextion#nextion_sensor_how_things_update" >}}) for additional information
 
-Globals
-*******
+## Globals
 The Nextion does not retain data on Nextion page changes. Additionally if a page is changed and the **component_name** does not exist on that page then
 nothing will be updated. To get around this the Nextion components can be changed to have a vscope of `global`. If this is set then the **component_name**
 should be prefixed with the page name (page0/page1 or whatever you have changed it to).
@@ -137,8 +135,7 @@ This action can also be written in lambdas. See [Lambda Calls]({{< ref "componen
 {{< /note >}}
 {{< anchor "nextion_sensor_lambda_calls" >}}
 
-Lambda Calls
-************
+## Lambda Calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full :apiref:`nextion/sensor/nextion_sensor.h` for more info).

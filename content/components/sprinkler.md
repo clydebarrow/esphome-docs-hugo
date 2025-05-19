@@ -265,8 +265,7 @@ to avert disaster!
 
 {{< anchor "sprinkler-controller-action_start_full_cycle" >}}
 
-`sprinkler.start_full_cycle` action
-*************************************
+## ``sprinkler.start_full_cycle`` action
 
 Starts a full cycle of the system. This enables the controller's "auto-advance" feature and disables
 the queue. The controller will iterate through all enabled valves/zones. They will each run for their
@@ -281,8 +280,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_start_from_queue" >}}
 
-`sprinkler.start_from_queue` action
-*************************************
+## ``sprinkler.start_from_queue`` action
 
 Starts the controller running valves from its queue. If no valves are in the queue, this action does
 nothing; otherwise, this disables the controller's "auto-advance" feature so that only queued
@@ -303,8 +301,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_start_single_valve" >}}
 
-`sprinkler.start_single_valve` action
-***************************************
+## ``sprinkler.start_single_valve`` action
 
 Starts a single valve. This disables the controller's "auto-advance" and queue features so that only this valve/zone
 will run. The valve will remain on for the specified duration or (if `run_duration` is not specified or is zero) for
@@ -323,8 +320,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_shutdown" >}}
 
-`sprinkler.shutdown` action
-*****************************
+## ``sprinkler.shutdown`` action
 
 Initiates a shutdown of all valves/the system, respecting any configured pump or valve stop delays.
 
@@ -336,8 +332,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_next_valve" >}}
 
-`sprinkler.next_valve` action
-*******************************
+## ``sprinkler.next_valve`` action
 
 Advances to the next valve (numerically). If `manual_selection_delay` is configured, the controller
 will wait before activating the selected valve. If no valve is active, the first valve (as they appear
@@ -352,8 +347,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_previous_valve" >}}
 
-`sprinkler.previous_valve` action
-***********************************
+## ``sprinkler.previous_valve`` action
 
 Advances to the previous valve (numerically). If `manual_selection_delay` is configured, the controller
 will wait before activating the selected valve. If no valve is active, the last valve (as they appear in
@@ -368,8 +362,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_pause" >}}
 
-`sprinkler.pause` action
-**************************
+## ``sprinkler.pause`` action
 
 Immediately turns off all valves, saving the active valve and the amount of time remaining so that
 the cycle may be resumed later on.
@@ -382,8 +375,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_resume" >}}
 
-`sprinkler.resume` action
-***************************
+## ``sprinkler.resume`` action
 
 Resumes a cycle placed on hold with `sprinkler.pause`. If there is no paused cycle, this action
 will do nothing.
@@ -396,8 +388,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_resume_or_start_full_cycle" >}}
 
-`sprinkler.resume_or_start_full_cycle` action
-***********************************************
+## ``sprinkler.resume_or_start_full_cycle`` action
 
 Resumes a cycle placed on hold with `sprinkler.pause`, but if no cycle was paused, starts a full
 cycle (equivalent to `sprinkler.start_full_cycle`).
@@ -410,8 +401,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_queue_valve" >}}
 
-`sprinkler.queue_valve` action
-********************************
+## ``sprinkler.queue_valve`` action
 
 Adds the specified valve into the controller's queue. When the queue is enabled, valves in the queue
 take precedence over valves scheduled as a part of a full cycle of the system (when auto-advance is
@@ -432,8 +422,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_clear_queued_valves" >}}
 
-`sprinkler.clear_queued_valves` action
-****************************************
+## ``sprinkler.clear_queued_valves`` action
 
 Removes all queued valves from the controller's queue. Please see [The Sprinkler Controller Queue]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_queue" >}})
 section below for more detail and examples.
@@ -447,8 +436,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_multiplier" >}}
 
-`sprinkler.set_multiplier` action
-***********************************
+## ``sprinkler.set_multiplier`` action
 
 Sets the multiplier value used to proportionally increase or decrease the run duration for all valves/zones.
 For seasonal changes, it's easier to use the multiplier to adjust the watering time instead of adjusting the
@@ -469,8 +457,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_repeat" >}}
 
-`sprinkler.set_repeat` action
-*******************************
+## ``sprinkler.set_repeat`` action
 
 Specifies the number of times full cycles should be repeated. **Note that the total number of cycles
 the controller will run is equal to the repeat value plus one.** For example, with a `repeat` value
@@ -486,8 +473,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_divider" >}}
 
-`sprinkler.set_divider` action
-********************************
+## ``sprinkler.set_divider`` action
 
 The divider value sets both the multiplier and repeat values as follows:
 
@@ -510,8 +496,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_valve_run_duration" >}}
 
-`sprinkler.set_valve_run_duration` action
-*******************************************
+## ``sprinkler.set_valve_run_duration`` action
 
 Sets the run duration for the specified valve. When the valve is activated, this value is multiplied
 by the multiplier value (see above) to determine the valve's actual run duration.
@@ -543,8 +528,7 @@ on_...:
 The sprinkler controller allows extensive flexibility relating to the switching of pumps and valves.
 Let's take a closer look at how to use these features to tune your system.
 
-Delayed Starting and/or Stopping of Pumps or Valves
-***************************************************
+## Delayed Starting and/or Stopping of Pumps or Valves
 
 For systems with pumps, it's generally a bad idea to run the pump with no distribution valves open.
 This causes pressure to build up and can even destroy the pump after some time. For systems with (a)
@@ -591,8 +575,7 @@ of each zone, as the controller must wait for a given zone (pump *and* valve) to
 it can be started again.
 
 {{< /note >}}
-Banging Pipes or Valves That Don't Consistently Close
-*****************************************************
+## Banging Pipes or Valves That Don't Consistently Close
 
 A common complaint people have with sprinkler systems is that of banging pipes. In other, less common situations,
 some systems suffer from valves that do not (fully/quickly) close. There are three controller options available to
@@ -620,8 +603,7 @@ In any case, the examples in the next section illustrate how/where to add these 
 
 ## Controller Examples
 
-Single Controller, Single Valve, No Pump
-****************************************
+## Single Controller, Single Valve, No Pump
 
 This first example illustrates a complete, single-valve system with no pump/upstream valve(s). It
 could be useful for controlling a single valve independent of any other sprinkler controllers. A pump
@@ -653,8 +635,7 @@ switch:
     pin: GPIOXX
 
 ```
-Single Controller, Three Valves, No Pump
-****************************************
+## Single Controller, Three Valves, No Pump
 
 This example illustrates a complete, simple three-valve system with no pump/upstream valve(s):
 
@@ -705,8 +686,7 @@ switch:
     pin: GPIOXX
 
 ```
-Single Controller, Three Valves, Single Pump
-********************************************
+## Single Controller, Three Valves, Single Pump
 
 This example illustrates a complete three-valve system with a single pump/upstream valve:
 
@@ -761,8 +741,7 @@ switch:
     pin: GPIOXX
 
 ```
-Single Controller, Three Latching Valves, Single Latching Pump
-**************************************************************
+## Single Controller, Three Latching Valves, Single Latching Pump
 
 This example is similar to the previous example, however it illustrates how a "latching" or "pulsed"
 valve can be configured. This type of valve requires two [GPIO switches ]({{< relref "switch/gpio" >}}) to
@@ -847,8 +826,7 @@ switch:
     pin: GPIOXX
 
 ```
-Dual Controller, Five Valves, Two Pumps
-***************************************
+## Dual Controller, Five Valves, Two Pumps
 
 This example illustrates a complete and more complex dual-controller system with a total of five
 valves (three on the first controller and two on the second controller) and two pumps/upstream
@@ -947,8 +925,7 @@ the controllers are operating simultaneously.
 {{< /note >}}
 {{< anchor "sprinkler-controller-sprinkler_controller_numbers" >}}
 
-Using the Sprinkler Controller's Numbers
-****************************************
+## Using the Sprinkler Controller's Numbers
 
 The sprinkler controller can leverage ESPHome's/Home Assistant's [number ]({{< relref "/components/number/index" >}}) component to
 make valve run durations easily adjustable from the front end (Home Assistant).
@@ -998,8 +975,7 @@ sprinkler:
 ```
 {{< anchor "sprinkler-controller-sprinkler_controller_extending_switches" >}}
 
-Extending the Sprinkler Controller's Switches
-*********************************************
+## Extending the Sprinkler Controller's Switches
 
 It is worth noting that each of the various switches in the sprinkler controller's configuration are standard
 ESPHome [Base Switch Configuration]({{< ref "components/switch/_index#config-switch" >}}) components. Their configuration may be extended in a manner similar to
@@ -1046,8 +1022,7 @@ be activated by calling one of the controller's start-up actions, such as `sprin
 
 {{< anchor "sprinkler-controller-sprinkler_controller_queue" >}}
 
-The Sprinkler Controller Queue
-******************************
+## The Sprinkler Controller Queue
 
 The queuing mechanism is an unusual feature for a sprinkler controller; it becomes useful as a result of the
 extreme flexibility of both ESPHome and Home Assistant. Given the extensive ecosystem of devices available today,
@@ -1077,8 +1052,7 @@ queue entry will be picked up *before* the next valve that would run as a part o
 behavior cannot be changed. It should also be noted that the queue has a hard-coded limit of 100 entries to limit
 memory use.
 
-Expose Sprinkler Controller Actions via user-API
-************************************************
+## Expose Sprinkler Controller Actions via user-API
 
 This configuration snippet illustrates how user-defined ESPHome API actions may be used to expose
 various sprinkler controller actions to the front end. This could be useful to change settings
@@ -1148,8 +1122,7 @@ We'll approach this from the angle of *"how do I..."*
 
 {{< anchor "sprinkler-controller-sprinkler_controller_understanding_state_how_do_i" >}}
 
-How Do I...
-***********
+## How Do I...
 
 - **...determine if the sprinkler controller is running?**
 

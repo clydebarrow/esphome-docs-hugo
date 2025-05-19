@@ -66,15 +66,15 @@ The `probability_cutoff` and `sliding_window_size` are provided by the JSON file
 
 ## Automations
 
-### ``micro_wake_word.start`` Action
+#### ``micro_wake_word.start`` Action
 
 Starts the wake word detection.
 
-### ``micro_wake_word.stop`` Action
+#### ``micro_wake_word.stop`` Action
 
 Stops the wake word detection.
 
-### ``micro_wake_word.enable_model`` Action
+#### ``micro_wake_word.enable_model`` Action
 
 ```yaml
 on_...:
@@ -84,7 +84,7 @@ on_...:
 ```
 Enables the specified model so it can be detected when the component is running.
 
-### ``micro_wake_word.disable_model`` Action
+#### ``micro_wake_word.disable_model`` Action
 
 ```yaml
 on_...:
@@ -96,11 +96,11 @@ Disables the specified model so it won't be detected when the component is runni
 
 ## Conditions
 
-### ``micro_wake_word.is_running`` Condition
+#### ``micro_wake_word.is_running`` Condition
 
 Checks if the component is running to detect wake words.
 
-### ``micro_wake_word.model_is_enabled`` Condition
+#### ``micro_wake_word.model_is_enabled`` Condition
 
 Checks if the given model is enabled.
 

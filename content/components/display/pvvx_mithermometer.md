@@ -119,8 +119,7 @@ true                true              true            `(Δ△Δ)`
 =================== =============== ================= ==========
 
 
-Display states of other sensors
-*******************************
+## Display states of other sensors
 
 The following example display the sensor states of a MiFlora sensor on a pvvx display. The time is also synchronized.
 
@@ -179,8 +178,7 @@ display:
     }
 
 ```
-Only synchronize the time once a day
-************************************
+## Only synchronize the time once a day
 
 The following example will synchronized the time of the pvvx device once a day.
 

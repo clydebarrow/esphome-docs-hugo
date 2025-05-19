@@ -66,8 +66,7 @@ You can access the most recent state as a `ESPTime` object by `id(datetime_id).s
 
 {{< anchor "datetime-on_value" >}}
 
-`on_value`
-************
+## ``on_value``
 
 This automation will be triggered when a new value is published. In [Templates]({{< ref "automations/templates#config-lambda" >}})
 you can get the value as a ESPTime object from the trigger with `x`.
@@ -92,8 +91,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "datetime-date_set_action" >}}
 
-`datetime.date.set` Action
-****************************
+## ``datetime.date.set`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting a datetime date state.
 The `date` provided can be in one of 3 formats:
@@ -130,8 +128,7 @@ Configuration variables:
 
 {{< anchor "datetime-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all datetimes to do some
 advanced stuff (see the full API Reference for more info).
@@ -162,8 +159,7 @@ advanced stuff (see the full API Reference for more info).
 
 {{< anchor "datetime-time_set_action" >}}
 
-`datetime.time.set` Action
-****************************
+## ``datetime.time.set`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting a datetime time state.
 The `time` provided can be in one of 3 formats:
@@ -199,8 +195,7 @@ Configuration variables:
 
 {{< anchor "datetime-time-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all datetimes to do some
 advanced stuff (see the full API Reference for more info).
@@ -232,8 +227,7 @@ advanced stuff (see the full API Reference for more info).
 
 {{< anchor "datetime-datetime_set_action" >}}
 
-`datetime.datetime.set` Action
-********************************
+## ``datetime.datetime.set`` Action
 
 This is an [All Actions]({{< ref "automations/actions#config-action" >}}) for setting a datetime datetime state.
 The `datetime` provided can be in one of 3 formats:
@@ -272,8 +266,7 @@ Configuration variables:
 
 {{< anchor "datetime-datetime-lambda_calls" >}}
 
-Lambda calls
-************
+## Lambda calls
 
 For more complex use cases, several methods are available for use on datetimes from within [Templates]({{< ref "automations/templates#config-lambda" >}}). See the full API Reference for more information.
 

@@ -135,8 +135,7 @@ image:
 ```
 This is roughly the code used to display the MAX7219 pictured in the image.
 
-Scrolling
-*********
+## Scrolling
 
 By default the MAX7219Digit display has scroll enabled. The parameters can be set in the YAML file.
 They can also be changed in the Lambda by adding the following command:
@@ -168,8 +167,7 @@ display:
 - The screen does not scroll if the text fits within the screen.
 - `printdigit("...")` and `printdigitf("...")` the alternative way of displaying text does not scroll
 
-Screen inversion
-****************
+## Screen inversion
 
 ```yaml
 display:
@@ -201,8 +199,7 @@ display:
 This code will only affect the line drawn on the screen. The line will wipe the pixels from top left to right bottom.
 The background is not affected.
 
-Screen intensity
-****************
+## Screen intensity
 
 The intensity of the screen can be set "dynamically" within the lambda code with the following command: it.intensity(`0` .. `15`).
 
@@ -214,8 +211,7 @@ display:
       it.intensity(10);
 
 ```
-Screen ON/OFF
-*************
+## Screen ON/OFF
 
 The display can be switched on and off "dynamically" within the lambda code with the following command: it.turn_on_off(true or false).
 

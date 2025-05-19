@@ -13,8 +13,7 @@ This ensures that your project is powered by ESPHome and guarantees a minimum le
 
 There are a number of requirements your project must meet. These may vary based on its design. They are:
 
-For projects which utilize Wi-Fi
-********************************
+## For projects which utilize Wi-Fi
 
 Wi-Fi is quite common but requires configuration of the SSID and passphrase.
 As such, for easy end-user provisioning, your configuration must include:
@@ -24,8 +23,7 @@ As such, for easy end-user provisioning, your configuration must include:
 
 Note that these are **not** required for projects that only provide a physical/wired Ethernet port for connectivity.
 
-For all projects
-****************
+## For all projects
 
 - Your project is powered by ESPHome (runs ESPHome as its firmware)
 - Your project is powered by an ESP32 or *supported* ESP32 variant such as the S2, S3, C3, etc.

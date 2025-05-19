@@ -113,13 +113,11 @@ binary_sensor:
           }
 
 ```
-`invert`
-**********
+## ``invert``
 
 Simple filter that just inverts every value from the binary sensor.
 
-`delayed_on`
-**************
+## ``delayed_on``
 
 (**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): When a signal ON is received,
 wait for the specified time period until publishing an ON state. If an OFF value is received
@@ -128,8 +126,7 @@ Only send an ON value if the binary sensor has stayed ON for at least the specif
 When using a lambda call, you should return the delay value in milliseconds.
 **Useful for debouncing push buttons**.
 
-`delayed_off`
-***************
+## ``delayed_off``
 
 (**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): When a signal OFF is received,
 wait for the specified time period until publishing an OFF state. If an ON value is received
@@ -138,8 +135,7 @@ Only send an OFF value if the binary sensor has stayed OFF for at least the spec
 When using a lambda call, you should return the delay value in milliseconds.
 **Useful for debouncing push buttons**.
 
-`delayed_on_off`
-******************
+## ``delayed_on_off``
 
 Only send an ON or OFF value if the binary sensor has stayed in the same state for at least the specified time period.
 
@@ -179,8 +175,7 @@ Configuration variables:
 When using a lambda call, you should return the delay value in milliseconds.
 
 
-`autorepeat`
-**************
+## ``autorepeat``
 
 A filter implementing the autorepeat behavior. The filter is parametrized by a list of timing descriptions.
 When a signal ON is received it is passed to the output and the first `delay` is started. When this
@@ -201,15 +196,13 @@ Configuration variables:
 - **time_off** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Interval to hold the output at OFF. Defaults to `100ms`.
 - **time_on** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Interval to hold the output at ON. Defaults to `900ms`.
 
-`lambda`
-**********
+## ``lambda``
 
 Specify any [Templates]({{< ref "automations/templates#config-lambda" >}}) for more complex filters. The input value from
 the binary sensor is `x` and you can return `true` for ON, `false` for OFF, and `{}` to stop
 the filter chain.
 
-`settle`
-**********
+## ``settle``
 
 (**Required**, time, [Templating Actions]({{< ref "automations/templates#config-templatable" >}})): When a signal is received, publish the state
 but wait for the received state to remain the same for specified time period before publishing any
@@ -228,8 +221,7 @@ You can access the current state of the binary sensor in [Templates]({{< ref "au
 
 {{< anchor "binary_sensor-on_press" >}}
 
-`on_press`
-************
+## ``on_press``
 
 This automation will be triggered when the button is first pressed down, or in other words on the leading
 edge of the signal.
@@ -247,8 +239,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "binary_sensor-on_release" >}}
 
-`on_release`
-**************
+## ``on_release``
 
 This automation will be triggered when a button press ends, or in other words on the falling
 edge of the signal.
@@ -266,8 +257,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "binary_sensor-on_state" >}}
 
-`on_state`
-************
+## ``on_state``
 
 This automation will be triggered when a new state is received (and thus combines `on_press`
 and `on_release` into one trigger). The new state will be given as the variable `x` as a boolean
@@ -286,8 +276,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "binary_sensor-on_click" >}}
 
-`on_click`
-************
+## ``on_click``
 
 This automation will be triggered when a button is pressed down for a time period of length
 `min_length` to `max_length`. Any click longer or shorter than this will not trigger the automation.
@@ -333,8 +322,7 @@ binary_sensor:
 {{< /note >}}
 {{< anchor "binary_sensor-on_double_click" >}}
 
-`on_double_click`
-*******************
+## ``on_double_click``
 
 This automation will be triggered when a button is pressed down twice, with the first click lasting between
 `min_length` and `max_length`. When a second leading edge then happens within `min_length` and
@@ -359,8 +347,7 @@ Configuration variables:
 
 {{< anchor "binary_sensor-on_multi_click" >}}
 
-`on_multi_click`
-******************
+## ``on_multi_click``
 
 This automation will be triggered when a button is pressed in a user-specified sequence.
 
@@ -427,8 +414,7 @@ on_multi_click:
 {{< anchor "binary_sensor-is_on_condition" >}}
 {{< anchor "binary_sensor-is_off_condition" >}}
 
-`binary_sensor.is_on` / `binary_sensor.is_off` Condition
-************************************************************
+## ``binary_sensor.is_on`` / ``binary_sensor.is_off`` Condition
 
 This [All Conditions]({{< ref "automations/actions#config-condition" >}}) checks if the given binary sensor is ON (or OFF).
 
@@ -443,8 +429,7 @@ on_...:
 ```
 {{< anchor "binary_sensor-lambda_calls" >}}
 
-lambda calls
-************
+## lambda calls
 
 From [Templates]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all binary sensors to do some
 advanced stuff.

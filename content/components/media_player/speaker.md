@@ -143,7 +143,7 @@ switch:
 
 {{< anchor "media_player-speaker-play_on_device_media_file" >}}
 
-#### ``media_player.speaker.play_on_device_media_file`` Action
+##### ``media_player.speaker.play_on_device_media_file`` Action
 
 This action will play a on-device media file.
 

@@ -235,7 +235,7 @@ main {
 
 .sidebar-nav a {
   display: block;
-  padding: 0.25em 0;
+  padding: 0;
 }
 
 .sidebar-nav a.active {
@@ -264,6 +264,62 @@ main {
 
 .sidebar-social i {
   margin-right: 0.5em;
+}
+
+/* Table of Contents in Sidebar */
+.page-toc {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.page-toc ul {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.toc-item {
+  margin-bottom: 0.25rem;
+}
+
+.toc-level-1 > a {
+  font-weight: 600;
+}
+
+.toc-level-2 > a {
+  font-weight: 500;
+}
+
+.toc-level-3 > a,
+.toc-level-4 > a,
+.toc-level-5 > a,
+.toc-level-6 > a {
+  font-weight: normal;
+}
+
+.page-toc a {
+  color: var(--text-color);
+  display: block;
+  padding: 0.2rem 0;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  padding-left: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.page-toc a:hover {
+  color: var(--primary-color);
+  border-left-color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Active TOC item */
+.page-toc a.active {
+  color: var(--primary-color);
+  border-left-color: var(--primary-color);
+  font-weight: 600;
 }
 
 /* Home page */
@@ -368,6 +424,18 @@ main {
 .admonition-title {
   font-weight: bold;
   margin: 0.5em 0;
+}
+
+.option {
+  padding-top: 0.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.option-title {
+  display: block;
+  padding-bottom: 1em;
 }
 
 .feature-grid {

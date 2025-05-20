@@ -36,7 +36,7 @@ remote_transmitter:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Useful when multiple
   transmitters are connected to a single device.
 
-## ESP32 IDF configuration variables:
+### ESP32 IDF configuration variables:
 
 - **rmt_symbols** (*Optional*, int): If `use_dma` is enabled, `rmt_symbols` represents the size of the driver's
   internal DMA buffer. If DMA is not enabled, `rmt_symbols` determines the amount of RMT memory allocated to this
@@ -58,7 +58,7 @@ remote_transmitter:
 - **eot_level** (*Optional*, boolean): Overrides the default end of transmit level. Defaults to `false` unless `pin`
   is set to inverted or open-drain.
 
-## ESP32 Arduino configuration variables:
+### ESP32 Arduino configuration variables:
 
 - **rmt_channel** (*Optional*, int): The RMT channel to use. The following ESP32 variants have these channels available:
 
@@ -126,7 +126,7 @@ to set the **times** to 10 and the **wait_time** to 0s.
 
 {{< anchor "remote_transmitter-transmit_abbwelcome" >}}
 
-## ``remote_transmitter.transmit_abbwelcome`` **Action**
+### ``remote_transmitter.transmit_abbwelcome`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a ABB-Welcome message to the intercom bus. The
 message type, addresses, address length and data can vary a lot between ABB-Welcome
@@ -174,7 +174,7 @@ A custom receiver and transmitter circuit is required.
 {{< /note >}}
 {{< anchor "remote_transmitter-transmit_aeha" >}}
 
-## ``remote_transmitter.transmit_aeha`` **Action**
+### ``remote_transmitter.transmit_aeha`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a AEHA code to a remote transmitter.
 
@@ -217,7 +217,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_byronsx" >}}
 
-## ``remote_transmitter.transmit_byronsx`` **Action**
+### ``remote_transmitter.transmit_byronsx`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Byron Doorbell RF protocol code to a remote transmitter.
 
@@ -236,7 +236,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_canalsat" >}}
 
-## ``remote_transmitter.transmit_canalsat`` **Action**
+### ``remote_transmitter.transmit_canalsat`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a CanalSat infrared remote code to a remote transmitter.
 
@@ -263,7 +263,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_canalsatld" >}}
 
-## ``remote_transmitter.transmit_canalsatld`` **Action**
+### ``remote_transmitter.transmit_canalsatld`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a CanalSatLD infrared remote code to a remote transmitter.
 
@@ -290,7 +290,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_coolix" >}}
 
-## ``remote_transmitter.transmit_coolix`` **Action**
+### ``remote_transmitter.transmit_coolix`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends one or two 24-bit Coolix infrared remote codes to a remote transmitter.
 
@@ -311,7 +311,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_dish" >}}
 
-## ``remote_transmitter.transmit_dish`` **Action**
+### ``remote_transmitter.transmit_dish`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Dish Network infrared remote code to a remote transmitter.
 
@@ -333,7 +333,7 @@ You can find a list of commands in the
 
 {{< anchor "remote_transmitter-transmit_dooya" >}}
 
-## ``remote_transmitter.transmit_dooya`` **Action**
+### ``remote_transmitter.transmit_dooya`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Dooya RF remote code to a remote transmitter.
 
@@ -357,7 +357,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_drayton" >}}
 
-## ``remote_transmitter.transmit_drayton`` **Action**
+### ``remote_transmitter.transmit_drayton`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Draton Digistat RF remote code to a remote transmitter.
 
@@ -409,7 +409,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_jvc" >}}
 
-## ``remote_transmitter.transmit_jvc`` **Action**
+### ``remote_transmitter.transmit_jvc`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a JVC infrared remote code to a remote transmitter.
 
@@ -426,7 +426,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_keeloq" >}}
 
-## ``remote_transmitter.transmit_keeloq`` **Action**
+### ``remote_transmitter.transmit_keeloq`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends KeeLoq RF remote code to a remote transmitter.
 
@@ -452,7 +452,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_haier" >}}
 
-## ``remote_transmitter.transmit_haier`` **Action**
+### ``remote_transmitter.transmit_haier`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a 104-bit Haier code to a remote transmitter. The 8-bit checksum is added
 automatically.
@@ -470,7 +470,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_lg" >}}
 
-## ``remote_transmitter.transmit_lg`` **Action**
+### ``remote_transmitter.transmit_lg`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends an LG infrared remote code to a remote transmitter.
 
@@ -489,7 +489,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_magiquest" >}}
 
-## ``remote_transmitter.transmit_magiquest`` **Action**
+### ``remote_transmitter.transmit_magiquest`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a MagiQuest wand code to a remote transmitter.
 
@@ -509,7 +509,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_midea" >}}
 
-## ``remote_transmitter.transmit_midea`` **Action**
+### ``remote_transmitter.transmit_midea`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a 40-bit Midea code to a remote transmitter. 8-bits of checksum added
 automatically.
@@ -532,7 +532,7 @@ Configuration variables:
   hex or integers.
 - All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
 
-## ``remote_transmitter.transmit_nec`` **Action**
+### ``remote_transmitter.transmit_nec`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends an NEC infrared remote code to a remote transmitter.
 
@@ -561,7 +561,7 @@ Configuration variables:
   Defaults to `1`.
 - All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
 
-## ``remote_transmitter.transmit_nexa`` **Action**
+### ``remote_transmitter.transmit_nexa`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) a Nexa RF remote code to a remote transmitter.
 
@@ -587,7 +587,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_panasonic" >}}
 
-## ``remote_transmitter.transmit_panasonic`` **Action**
+### ``remote_transmitter.transmit_panasonic`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Panasonic infrared remote code to a remote transmitter.
 
@@ -606,7 +606,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_pioneer" >}}
 
-## ``remote_transmitter.transmit_pioneer`` **Action**
+### ``remote_transmitter.transmit_pioneer`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Pioneer infrared remote code to a remote transmitter.
 
@@ -636,7 +636,7 @@ are largely shared among devices within a given class.
 
 {{< anchor "remote_transmitter-transmit_pronto" >}}
 
-## ``remote_transmitter.transmit_pronto`` **Action**
+### ``remote_transmitter.transmit_pronto`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a raw code to a remote transmitter specified in Pronto format.
 
@@ -654,7 +654,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_raw" >}}
 
-## ``remote_transmitter.transmit_raw`` **Action**
+### ``remote_transmitter.transmit_raw`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a raw code to a remote transmitter.
 
@@ -681,7 +681,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_rc5" >}}
 
-## ``remote_transmitter.transmit_rc5`` **Action**
+### ``remote_transmitter.transmit_rc5`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends an RC5 infrared remote code to a remote transmitter.
 
@@ -700,7 +700,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_rc6" >}}
 
-## ``remote_transmitter.transmit_rc6`` **Action**
+### ``remote_transmitter.transmit_rc6`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends an RC6 infrared remote code to a remote transmitter.
 
@@ -719,7 +719,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_rc_switch_raw" >}}
 
-## ``remote_transmitter.transmit_rc_switch_raw`` **Action**
+### ``remote_transmitter.transmit_rc_switch_raw`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a raw RC-Switch code to a
 remote transmitter.
@@ -740,7 +740,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_a" >}}
 
-## ``remote_transmitter.transmit_rc_switch_type_a`` **Action**
+### ``remote_transmitter.transmit_rc_switch_type_a`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a type A RC-Switch code to a
 remote transmitter.
@@ -765,7 +765,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_b" >}}
 
-## ``remote_transmitter.transmit_rc_switch_type_b`` **Action**
+### ``remote_transmitter.transmit_rc_switch_type_b`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a type B RC-Switch code to a
 remote transmitter.
@@ -790,7 +790,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_c" >}}
 
-## ``remote_transmitter.transmit_rc_switch_type_c`` **Action**
+### ``remote_transmitter.transmit_rc_switch_type_c`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a type C RC-Switch code to a
 remote transmitter.
@@ -817,7 +817,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_d" >}}
 
-## ``remote_transmitter.transmit_rc_switch_type_d`` **Action**
+### ``remote_transmitter.transmit_rc_switch_type_d`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a type D RC-Switch code to a
 remote transmitter.
@@ -842,7 +842,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_roomba" >}}
 
-## ``remote_transmitter.transmit_roomba`` **Action**
+### ``remote_transmitter.transmit_roomba`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Roomba infrared remote code to a remote transmitter.
 
@@ -869,7 +869,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_samsung" >}}
 
-## ``remote_transmitter.transmit_samsung`` **Action**
+### ``remote_transmitter.transmit_samsung`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Samsung infrared remote code to a remote transmitter.
 It transmits codes up to 64 bits in length in a single packet.
@@ -892,7 +892,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_samsung36" >}}
 
-## ``remote_transmitter.transmit_samsung36`` **Action**
+### ``remote_transmitter.transmit_samsung36`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Samsung36 infrared remote code to a remote transmitter.
 It transmits the `address` and `command` in two packets separated by a "space".
@@ -912,7 +912,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_sony" >}}
 
-## ``remote_transmitter.transmit_sony`` **Action**
+### ``remote_transmitter.transmit_sony`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) a Sony infrared remote code to a remote transmitter.
 
@@ -931,7 +931,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_toshiba_ac" >}}
 
-## ``remote_transmitter.transmit_toshiba_ac`` **Action**
+### ``remote_transmitter.transmit_toshiba_ac`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Toshiba AC infrared remote code to a remote transmitter.
 
@@ -955,7 +955,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_mirage" >}}
 
-## ``remote_transmitter.transmit_mirage`` **Action**
+### ``remote_transmitter.transmit_mirage`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a 112-bit Mirage code to a remote transmitter. 8-bits of checksum added
 automatically.
@@ -973,7 +973,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_toto" >}}
 
-## ``remote_transmitter.transmit_toto`` **Action**
+### ``remote_transmitter.transmit_toto`` **Action**
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a Toto infrared remote code to a remote transmitter.
 
@@ -1000,7 +1000,7 @@ Toto remotes repeat all codes three times at a 36ms interval. This behavior will
 {{< /note >}}
 {{< anchor "remote_transmitter-rc_switch-protocol" >}}
 
-## RC Switch Protocol
+### RC Switch Protocol
 
 All RC Switch `protocol` settings have these settings:
 
@@ -1015,7 +1015,7 @@ All RC Switch `protocol` settings have these settings:
   - **one** (*Optional*): The number of high/low pulses for a one bit, defaults to `[3, 1]`
   - **inverted** (*Optional*, boolean): If this protocol is inverted. Defaults to `false`.
 
-## Lambda calls
+### Lambda calls
 
 Actions may also be called from [lambdas]({{< ref "automations/templates#config-lambda" >}}). The `.transmit()` call can be populated with
 encoded data for a specific protocol by following the example below.

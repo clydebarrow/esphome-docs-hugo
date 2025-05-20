@@ -23,7 +23,7 @@ You can use the ESP32 software or hardware serial to use this MR24HPC1, its defa
 seeed_mr24hpc1:
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
@@ -40,7 +40,7 @@ binary_sensor:
       name: "Presence Information"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **has_target** (*Optional*): If true target detect either still or in movement.
   All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
@@ -72,7 +72,7 @@ sensor:
 
 {{< anchor "seeed_mr24hpc1-spatial_mtion" >}}
 
-## Configuration variables:
+### Configuration variables:
 
 - **custom_presence_of_detection** (*Optional*, float): Valid only for [underlying open functions]({{< ref "components/seeed_mr24hpc1#seeed_mr24hpc1-open_function" >}}).
   Radar detects human breath at a straight line distance, usually no more than 3 metres.
@@ -118,7 +118,7 @@ switch:
 
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **underlying_open_function** (*Optional*): Enable/disable **underlying open function**. When this switch is off, it indicates that it is currently in **standard mode**.
   Defaults to off (standard mode). Turning on this feature allows you to observe more information about the environment and is recommended to use it
@@ -152,7 +152,7 @@ number:
 ```
 {{< anchor "seeed_mr24hpc1-custom_mode" >}}
 
-## Configuration variables:
+### Configuration variables:
 
 - **sensitivity** (*Optional*, int): Valid only in [standard mode]({{< ref "components/seeed_mr24hpc1#seeed_mr24hpc1-standard_mode" >}}). Used to adjust the sensitivity of the radar.
   The sensitivity setting adjusts the detection distance of the sensor for human body in static state.
@@ -212,7 +212,7 @@ button:
       name: "End Of Custom Mode Settings"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **restart** (*Optional*): Restart the device. All options from [Button]({{< ref "components/button/_index#config-button" >}}).
 - **custom_set_end** (*Optional*): Valid only in [custom mode settings]({{< ref "components/seeed_mr24hpc1#seeed_mr24hpc1-custom_mode" >}}).
@@ -245,7 +245,7 @@ text_sensor:
       name: "Custom Mode Status"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **heart_beat** (*Optional*): Sensor operating status indicator.
   All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
@@ -282,7 +282,7 @@ select:
       name: "Motion Boundary"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **scene_mode** (*Optional*): Valid only in [standard mode]({{< ref "components/seeed_mr24hpc1#seeed_mr24hpc1-standard_mode" >}}). Used to select a preset scene in standard mode.
   The function of scene mode is to adjust the maximum detection range of the sensor to recognize human movements (Maximum detection distance of the sensor).

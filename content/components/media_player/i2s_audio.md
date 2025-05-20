@@ -27,7 +27,7 @@ media_player:
 
 - All other options from [Media Player]({{< ref "components/media_player/_index#config-media_player" >}})
 
-## External DAC
+### External DAC
 
 - **i2s_dout_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The GPIO pin to use for the I²S `DOUT/SDOUT` *(Data Out)* signal, also referred to as `SD/SDATA` *(Serial Data)* or `DACDAT` *(Digital to Analog Converter Data)*.
 - **mute_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use to mute the media player.
@@ -39,7 +39,7 @@ media_player:
 
 For best results, keep the wires as short as possible.
 
-## Internal DAC
+### Internal DAC
 
 - **mode** (**Required**, enum): The channel mode of the internal DAC.
 

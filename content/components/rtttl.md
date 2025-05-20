@@ -134,7 +134,7 @@ E.g. for calling `rtttl.play` select the service `esphome.test_esp8266_rtttl_pla
 song_str: 'scale_up:d=32,o=5,b=100:c,c#,d#,e,f#,g#,a#,b'
 
 ```
-## Sample code
+### Sample code
 
 ```yaml
 esphome:

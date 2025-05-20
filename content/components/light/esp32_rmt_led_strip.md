@@ -47,7 +47,7 @@ light:
   sending commands as quickly as changes are made to the lights.
 - **use_psram** (*Optional*, boolean): Set to `false` to force internal RAM allocation even if you have the the PSRAM component enabled. This can be useful if you're experiencing issues like flickering with your leds strip. Defaults to `true`.
 
-## IDF configuration variables:
+### IDF configuration variables:
 
 - **rmt_symbols** (*Optional*, int): The amount of RMT memory allocated to this component. Memory is shared by all
   receivers and transmitters. On variants other than  `ESP32` and `ESP32-S2` only half the symbol memory is
@@ -65,7 +65,7 @@ light:
 - **use_dma** (*Optional*, boolean): Enable DMA on variants that support it. If enabled `rmt_symbols` controls
   the DMA buffer size and can be set to a large value.
 
-## Arduino configuration variables:
+### Arduino configuration variables:
 
 - **rmt_channel** (**Required**, int): The RMT channel to use. Each LED strip needs to use a unique channel.
 
@@ -80,7 +80,7 @@ light:
 
 {{< anchor "esp32-rmt-led-strip-manual_timings" >}}
 
-## Manual Timings
+### Manual Timings
 
 These can be used if you know the timings and your chipset is not set above. If you have a new specific chipset,
 please consider adding support to the codebase and add it to the list above.

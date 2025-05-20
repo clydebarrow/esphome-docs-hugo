@@ -15,7 +15,7 @@ You may alternatively use ESPHome's {{< docref "/components/bluetooth_proxy" >}}
 {{< /note >}}
 ## Supported Devices
 
-## HHCCJCY01
+### HHCCJCY01
 
 MiFlora, Huahuacaocao, measures temperature, moisture, ambient light and nutrient levels in the soil.
 
@@ -44,7 +44,7 @@ Newer versions of HHCCJCY01 ship with firmware 3.2.1, and they
 [don't send the battery level data anymore](https://github.com/esphome/esphome/pull/1288#issuecomment-695809481).
 
 {{< /note >}}
-## GCLS002
+### GCLS002
 
 VegTrug Grow Care Garden, Takasho, suitable for outside, similar to the MiFlora.
 
@@ -66,7 +66,7 @@ sensor:
       name: "GCLS02 Illuminance"
 
 ```
-## HHCCPOT002
+### HHCCPOT002
 
 FlowerPot, Huahuacaocao, RoPot, broadcasts moisture and conductivity
 
@@ -84,7 +84,7 @@ sensor:
       name: "HHCCPOT002 Soil Conductivity"
 
 ```
-## LYWSDCGQ
+### LYWSDCGQ
 
 Hygro thermometer, round body, segment LCD, broadcasts temperature, humidity and battery level. This device is also known as MJ_HT_V1. In HA's native Xiaomi BLE integration, the device info page shows it as "MJ_HT_V1 (LYWSDCGQ by Xiaomi)".
 
@@ -104,7 +104,7 @@ sensor:
       name: "LYWSDCGQ Battery Level"
 
 ```
-## LYWSD02
+### LYWSD02
 
 Hygro thermometer, rectangular body, e-ink display, broadcasts temperature, humidity and battery level.
 
@@ -126,7 +126,7 @@ sensor:
       name: "LYWSD02 Battery Level"
 
 ```
-## LYWSD02MMC
+### LYWSD02MMC
 
 Hygro thermometer, rectangular body, e-ink display, broadcasts temperature, humidity and battery level. Encrypted.
 
@@ -145,7 +145,7 @@ sensor:
       name: "LYWSD02MMC Battery Level"
 
 ```
-## CGG1
+### CGG1
 
 Cleargrass (Qingping): hygro thermometer, round body, e-ink display.
 
@@ -174,7 +174,7 @@ sensor:
       name: "CGG1 (New) Humidity"
 
 ```
-## LYWSD03MMC
+### LYWSD03MMC
 
 Hygro thermometer, small square body, segment LCD, encrypted, broadcasts temperature, humidity and battery status.
 
@@ -242,7 +242,7 @@ sensor:
 
 
 ```
-## MHO-C303
+### MHO-C303
 
 Hygro thermometer clock with alarm, rectangular body, e-ink display, broadcasts temperature, humidity and battery status. Not encrypted.
 
@@ -264,7 +264,7 @@ sensor:
       name: "MHO-C303 Climate Battery Level"
 
 ```
-## MHO-C401
+### MHO-C401
 
 Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
@@ -312,7 +312,7 @@ sensor:
 
 
 ```
-## CGD1
+### CGD1
 
 Cleargrass (Qingping) alarm clock, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
@@ -333,7 +333,7 @@ sensor:
       name: "CGD1 Battery Level"
 
 ```
-## CGDK2
+### CGDK2
 
 Cleargrass (Qingping) Temp & RH Lite, round body, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 The measurements are broadcast every 10-15 minutes.
@@ -355,7 +355,7 @@ sensor:
       name: "CGDK2 Battery Level"
 
 ```
-## JQJCY01YM
+### JQJCY01YM
 
 Xiaomi (Honeywell) formaldehyde sensor, OLED display, broadcasts temperature, humidity, formaldehyde concentration (mg/m³) and battery status.
 
@@ -377,7 +377,7 @@ sensor:
       name: "JQJCY01YM Battery Level"
 
 ```
-## WX08ZM
+### WX08ZM
 
 Mosquito Repellent Smart Version, broadcasts the tablet resource level, on/off state and battery level, implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
@@ -397,7 +397,7 @@ binary_sensor:
       name: "WX08ZM Battery Level"
 
 ```
-## MUE4094RT
+### MUE4094RT
 
 Xiaomi Philips BLE night light, broadcasts motion detection (detected/clear, on/off), default timeout is 5s, implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
@@ -415,7 +415,7 @@ binary_sensor:
     timeout: "5s"
 
 ```
-## MJYD02YL-A
+### MJYD02YL-A
 
 Xiaomi Yeelight night light, in-shape replacement of MJYD02YL with BLE, broadcasts light on/off status, motion detection, idle time since last motion event and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})). Implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
@@ -441,7 +441,7 @@ binary_sensor:
       name: "MJYD02YL-A Illuminance"
 
 ```
-## CGPR1
+### CGPR1
 
 Qingping motion & ambient light sensor. Broadcasts motion detection, idle time since last motion event, lux value and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
 
@@ -463,7 +463,7 @@ binary_sensor:
       name: "CGPR1 Illuminance"
 
 ```
-## RTCGQ02LM - Mi Motion Sensor 2
+### RTCGQ02LM - Mi Motion Sensor 2
 
 Motion & ambient light sensor. Broadcasts motion detection, light/dark and battery status. Also has a button that broadcasts when pressed.
 Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
@@ -543,7 +543,7 @@ It can sometimes take some time for the first BLE broadcast to be received. Once
 
 To set up an encrypted device such as the LYWSD03MMC (with Xiaomi stock firmware) and CGD1, you first need to obtain the bind key. The `xiaomi_ble` sensor component is not able to automatically generate a bindkey so other workarounds are necessary.
 
-## LYWSD03MMC/MHO-C401
+### LYWSD03MMC/MHO-C401
 
 If the LYWSD03MMC or MHO-C401 sensor is operated with the Xiaomi stock firmware, you can use the [TeLink flasher application](https://atc1441.github.io/TelinkFlasher.html) to easily generate a new bind key and upload the key to the device without the need to flash a new firmware (see figure). For this, you load the flasher [webpage](https://atc1441.github.io/TelinkFlasher.html) with a [supported browser](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md) and connect the device by pressing "Connect". After the connection is established, you press the "Do Activation" button and the new key will be shown in the "Mi Bind Key" field. The key can be copied directly into the sensor YAML configuration.
 
@@ -553,13 +553,13 @@ If the LYWSD03MMC or MHO-C401 sensor is operated with the Xiaomi stock firmware,
 The new bind key will work with ESPHome, but the Mi Home app will not recognise the sensor anymore once the device has been activated by the TeLink flasher application. To use the sensor again with the Xiaomi Mi Home app, the device needs to be removed and then re-added inside the Mi Home app.
 
 {{< /warning >}}
-## CGDK2
+### CGDK2
 
 The method to obtain a new bind key for the CGDK2 sensor is similar to the method for the LYWSD03MMC sensor, except a modified version of the flasher application is used.
 
 For this, you load the [application](https://zaluthar.github.io/TelinkFlasher.html) with a [supported browser](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md) and connect the device by pressing "Connect". After the connection is established, you press the "Do Activation" button and the new key will be shown in the "Mi Bind Key" field. The key can be copied directly into the sensor YAML configuration.
 
-## Other encrypted devices
+### Other encrypted devices
 1.
 The easiest method (confirmed to work for LYWSD03MMC) is to use the [Telink flasher method](https://github.com/pvvx/ATC_MiThermometer). The accompanying `video
 <https://www.youtube.com/watch?v=NXKzFG61lNs>`_ shows how to wirelessly flash a LYWSD03MMC, or how to obtain the bind key of the stock firmware (watch till around 13:10). The custom firmware allows you to change several settings of the device, including the smiley and the advertising interval. Follow the instructions on the site using Telink Flasher - best results with a Bluetooth-enabled Android phone. Note that with `pvvx` default settings advertisment is set to `Custom` with no encryption. No need for `bind_key` in this case, you can just add the sensors to your ESPHome config as described above.

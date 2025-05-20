@@ -46,7 +46,7 @@ bme68x_bsec2_i2c:
 
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Defaults to `0x76`. The sensor can
   also be configured to use `0x77`.
@@ -90,7 +90,7 @@ sensor:
       name: "BME68x Breath VOC Equivalent"
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **bme68x_bsec2_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `bme68x_bsec2_i2c` component sensors will refer
   to. Useful when multiple devices are present in your configuration.
@@ -148,7 +148,7 @@ text_sensor:
       name: "BME68x IAQ Accuracy"
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **bme68x_bsec2_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `bme68x_bsec2_i2c` component the text sensor
   will refer to. Useful when multiple devices are present in your configuration.

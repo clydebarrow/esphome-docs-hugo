@@ -57,7 +57,7 @@ display:
         - XX        #b5
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **data_pins** (**Required**): A list of pins used for the databus. Specified in 3 groups:
 
@@ -105,7 +105,7 @@ requirements for the display.
 ## Example configurations
 
 
-## Waveshare ESP32-S3 Touch 4.3
+### Waveshare ESP32-S3 Touch 4.3
 
 ```yaml
 display:
@@ -153,7 +153,7 @@ display:
 
 
 ```
-## Makerfabs 4.3" 800x480 display
+### Makerfabs 4.3" 800x480 display
 
 ```yaml
 display:

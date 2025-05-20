@@ -165,7 +165,30 @@ def convert_rst_to_md(lines, filename):
         if line.startswith('.. title::'):
             i += 1
             continue
-        
+
+        if line.startswith('.. option::'):
+            text = line.replace('.. option::', '').strip()
+            i += 1
+            while i < len(lines) and not lines[i].strip():
+                i += 1
+            md_lines.append(f'{{{{< option "{text}" >}}}}')
+            while i < len(lines):
+                if not lines[i]:
+                    md_lines.append('')
+                    i += 1
+                    continue
+                if lines[i].startswith(' '):
+                    md_lines.append(lines[i].strip())
+                    i += 1
+                else:
+                    break
+            md_lines.append('{{< /option >}}')
+            continue
+
+        if line.startswith('.. program::'):
+            i += 1
+            continue
+
         # Skip title (we'll add it later with frontmatter)
         if line == title and i + 1 < len(lines) and re.match(r'^=+$', lines[i + 1]):
             i += 2
@@ -213,13 +236,13 @@ def convert_rst_to_md(lines, filename):
 
         # Handle star-style headings (section headings)
         if i + 1 < len(lines) and re.match(r'^\*+$', lines[i + 1]) and line:
-            md_lines.append(f"## {line}")
+            md_lines.append(f"### {line}")
             i += 2
             continue
 
         # Handle caret and tilde-style headings (subsection headings)
         if i + 1 < len(lines) and re.match(r'(^\^+|^~+)$', lines[i + 1]) and line:
-            md_lines.append(f"#### {line}")
+            md_lines.append(f"##### {line}")
             i += 2
             continue
         
@@ -527,8 +550,6 @@ def convert_rst_to_md(lines, filename):
     frontmatter = []
     frontmatter.append('---')
 
-    if "sensor-filter-" in filename:
-        frontmatter.append('draft: true')
     # Use description from SEO if available, otherwise use title
     description = seo.get('description', title)
     if not description:

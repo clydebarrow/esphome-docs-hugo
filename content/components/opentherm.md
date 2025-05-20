@@ -40,7 +40,7 @@ opentherm:
   out_pin: GPIOXX
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **in_pin** (**Required**, number): The pin of the OpenTherm hardware bridge which is usually labeled `out` on the
   board.
@@ -52,7 +52,7 @@ opentherm:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.  Required if you have
   multiple busses.
 
-#### Optional Boiler-specific Configuration
+##### Optional Boiler-specific Configuration
 Some boilers require certain OpenTherm messages to be sent by thermostat on initialization in order to work
 correctly. You can use the following settings in hub configuration to make your particular boiler happy.
 
@@ -66,14 +66,14 @@ correctly. You can use the following settings in hub configuration to make your 
   configuration
 - **controller_id** (*Optional*, byte [0-255], OpenTherm message id `2` low byte): Controller ID code
 
-#### Automations
+##### Automations
 
 - **before_send** (**Optional**) An automation to perform on OpenTherm message before it is sent to the boiler.
 - **before_process_response** (**Optional**) An automation to perform on boiler response before it is processed.
 
 See [On-the-fly Message Editing]({{< ref "components/opentherm#on-the-fly-message-editing" >}}) for details.
 
-## Note about sync mode
+### Note about sync mode
 
 The use of some components (like Dallas temperature sensors) may result in lost frames and protocol warnings from
 OpenTherm. Since OpenTherm is resilient by design and transmits its messages in a constant loop, these dropped frames
@@ -98,7 +98,7 @@ to provide this input: using a Home Assistant sensor from which the setpoint can
 option is the most useful one, as it can be combined with the {{< docref "/components/climate/pid" >}} component to create a
 thermostat that works as you would expect a thermostat to work. See [Basic PID thermostat]({{< ref "components/opentherm#thermostat-pid-basic" >}}) for an example.
 
-## Numerical values
+### Numerical values
 
 There are three ways to set a numerical value:
 
@@ -210,7 +210,7 @@ The following numerical values are available:
   * Supports `auto_min_value`
   * Supports `auto_max_value`
 
-## Switch
+### Switch
 
 
 Switches are available to allow manual toggling of any of the following seven status codes:
@@ -249,7 +249,7 @@ switch to turn off your central heating. In such a case, the flag will be set to
 setpoint is always larger than 0, so including a switch is the only way you can turn off central heating. (This also
 holds for cooling and CH2.)
 
-## Binary sensor
+### Binary sensor
 
 The component can report boiler status on several binary sensors. The *Status* sensors are updated in each message
 cycle, while the others are only set during initialization, as they are unlikely to change without restarting the
@@ -282,7 +282,7 @@ boiler.
 - `air_pressure_fault`: Air pressure fault
 - `water_over_temp`: Water overtemperature
 
-## Sensor
+### Sensor
 
 The boiler can also report several numerical values, which are available through sensors. Your boiler may not support
 all of these values, in which case there won't be any value published to that sensor. The following sensors are
@@ -362,7 +362,7 @@ You can check the :apistruct:`OpenthermData <opentherm::OpenthermData>` for the 
 
 ## Examples
 
-## Minimal example with numeric input
+### Minimal example with numeric input
 
 ```yaml
 # An extremely minimal configuration which only enables you to set the boiler's
@@ -381,7 +381,7 @@ number:
 ```
 {{< anchor "thermostat-pid-basic" >}}
 
-## Basic PID thermostat
+### Basic PID thermostat
 
 ```yaml
 # A basic thremostat for a boiler with a single central heating circuit and

@@ -100,7 +100,7 @@ climate:
 
 {{< anchor "midea_ac-power_on_action" >}}
 
-## ``midea_ac.power_on`` Action
+### ``midea_ac.power_on`` Action
 
 This action turn on power. The mode and preset will be restored to the last state before turned off.
 
@@ -112,7 +112,7 @@ on_...:
 ```
 {{< anchor "midea_ac-power_off_action" >}}
 
-## ``midea_ac.power_off`` Action
+### ``midea_ac.power_off`` Action
 
 This action turn off power.
 
@@ -124,7 +124,7 @@ on_...:
 ```
 {{< anchor "midea_ac-power_toggle_action" >}}
 
-## ``midea_ac.power_toggle`` Action
+### ``midea_ac.power_toggle`` Action
 
 This action toggle the power state. Identical to pressing the power button on the remote control.
 
@@ -137,7 +137,7 @@ on_...:
 ```
 {{< anchor "midea_ac-follow_me_action" >}}
 
-## ``midea_ac.follow_me`` Action
+### ``midea_ac.follow_me`` Action
 
 This action transmits an IR FollowMe command telling the air conditioner a more accurate
 room temperature value to be used instead of the internal indoor unit sensor.
@@ -168,7 +168,7 @@ Configuration variables:
 
 {{< anchor "midea_ac-display_toggle_action" >}}
 
-## ``midea_ac.display_toggle`` Action
+### ``midea_ac.display_toggle`` Action
 
 This action toggle ac screen. Works via UART if supported or {{< docref "../remote_transmitter" >}}.
 
@@ -181,7 +181,7 @@ on_...:
 ```
 {{< anchor "midea_ac-swing_step_action" >}}
 
-## ``midea_ac.swing_step`` Action
+### ``midea_ac.swing_step`` Action
 
 This action adjust the louver by one step. {{< docref "../remote_transmitter" >}} required.
 
@@ -194,7 +194,7 @@ on_...:
 ```
 {{< anchor "midea_ac-beeper_on_action" >}}
 
-## ``midea_ac.beeper_on`` Action
+### ``midea_ac.beeper_on`` Action
 
 This action turn on beeper feedback.
 
@@ -206,7 +206,7 @@ on_...:
 ```
 {{< anchor "midea_ac-beeper_off_action" >}}
 
-## ``midea_ac.beeper_off`` Action
+### ``midea_ac.beeper_off`` Action
 
 This action turn off beeper feedback.
 

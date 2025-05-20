@@ -160,7 +160,7 @@ useful (and even essential) for building all sorts of automations.
 
 {{< anchor "delay_action" >}}
 
-## ``delay`` Action
+### ``delay`` Action
 
 This action delays the execution of the next action in the action list by a specified
 time period.
@@ -182,7 +182,7 @@ the delay is happening. When using a lambda call, you should return the delay va
 {{< /note >}}
 {{< anchor "if_action" >}}
 
-## ``if`` Action
+### ``if`` Action
 
 This action first evaluates the `condition:` and then either
 executes the `then:` branch if the condition returns true or the `else:` branch if the condition returns false.
@@ -222,7 +222,7 @@ At least one of `condition`, `all` or `any` must be provided.
 
 {{< anchor "lambda_action" >}}
 
-## ``lambda`` Action
+### ``lambda`` Action
 
 This action executes an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}})).
 
@@ -235,7 +235,7 @@ on_...:
 ```
 {{< anchor "repeat_action" >}}
 
-## ``repeat`` Action
+### ``repeat`` Action
 
 This action allows you to repeat a block a given number of times.
 For example, the automation below will flash the light five times.
@@ -258,7 +258,7 @@ Configuration variables:
 
 {{< anchor "wait_until_action" >}}
 
-## ``wait_until`` Action
+### ``wait_until`` Action
 
 This action allows your automations to wait until a condition evaluates to true. (So this is just
 a shorthand way of writing a `while` action with an empty `then` block.)
@@ -293,7 +293,7 @@ Configuration variables:
 
 {{< anchor "while_action" >}}
 
-## ``while`` Action
+### ``while`` Action
 
 This action is similar to the [if]({{< ref "automations/actions#if_action" >}}) Action. The `while` action loops
 through a block as long as the given condition is true.
@@ -317,7 +317,7 @@ Configuration variables:
 
 {{< anchor "component-update_action" >}}
 
-## ``component.update`` Action
+### ``component.update`` Action
 
 Using this action you can manually call the `update()` method of a component.
 
@@ -335,7 +335,7 @@ on_...:
 ```
 {{< anchor "component-suspend_action" >}}
 
-## ``component.suspend`` Action
+### ``component.suspend`` Action
 
 Using this action you can manually call the `stop_poller()` method of a component.
 
@@ -358,7 +358,7 @@ on_...:
 ```
 {{< anchor "component-resume_action" >}}
 
-## ``component.resume`` Action
+### ``component.resume`` Action
 
 Using this action you can manually call the `start_poller()` method of a component.
 
@@ -401,7 +401,7 @@ on_...:
 {{< anchor "xor_condition" >}}
 {{< anchor "not_condition" >}}
 
-## ``and`` / ``all`` / ``or`` / ``any`` / ``xor`` / ``not`` Condition
+### ``and`` / ``all`` / ``or`` / ``any`` / ``xor`` / ``not`` Condition
 
 Check a combination of conditions. `all` is a synonym for `and`, and `any` is a synonym for `or`.
 `all` and `any` may also be used directly in place of `condition`.
@@ -426,7 +426,7 @@ on_...:
 ```
 {{< anchor "for_condition" >}}
 
-## ``for`` Condition
+### ``for`` Condition
 
 Allows you to check if a given condition has been true for at least a given amount of time.
 
@@ -450,7 +450,7 @@ Configuration variables:
 
 {{< anchor "lambda_condition" >}}
 
-## ``lambda`` Condition
+### ``lambda`` Condition
 
 This condition performs an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}}))
 and can be used to create conditional flow in actions.
@@ -601,7 +601,7 @@ See also: [Common Conditions]({{< ref "automations/actions#common_conditions" >}
 
 {{< anchor "automation-networkless" >}}
 
-## Do Automations Work Without a Network Connection
+### Do Automations Work Without a Network Connection
 
 This is a common question and the answer is **YES!** All automations you define in ESPHome are executed on the
 microcontroller itself and will continue to work even if the Wi-Fi network is down or the MQTT server is not reachable.
@@ -620,7 +620,7 @@ power-cycle the device if it proves to be/remain unreachable on the network.
 
 {{< anchor "timers-timeouts" >}}
 
-## Timers and Timeouts
+### Timers and Timeouts
 
 While ESPHome does not provide a construction for timers, you can easily implement them by
 combining `script` and `delay`. You can have an absolute timeout or sliding timeout by

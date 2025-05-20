@@ -37,7 +37,7 @@ sun_gtil2:
   uart_id: control_to_display
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this component.
 - **uart_id** (*Optional*): The UART Bus ID for receiving messages sent from the inverter's controller to the display.
@@ -74,7 +74,7 @@ sensor:
       internal: True
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **sun_gtil2_id** (*Optional*): Manually specify the ID of the sun_gtil2 instance if there are multiple.
 
@@ -110,7 +110,7 @@ text_sensor:
       internal: True
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **sun_gtil2_id** (*Optional*): Manually specify the ID of the sun_gtil2 instance if there are multiple.
 

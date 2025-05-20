@@ -110,7 +110,7 @@ topic not covered here, but does not pose any safety risk.
 is wrong or are uncomfortable with continuing, stop immediately.
 
 {{< /warning >}}
-## USB Port on Device
+### USB Port on Device
 
 {{< img src="nodemcu_esp8266.jpg" alt="Image" caption="A device with a USB port and a serial adapter built-in" width="75.0%" class="center" >}}
 
@@ -124,7 +124,7 @@ This isn't likely to be very useful without connecting additional sensors to it
 by either soldering or using a breadboard, but you do not need anything else to
 *just* flash ESPHome on it.
 
-## Pre-soldered Programming Header
+### Pre-soldered Programming Header
 
 {{< img src="programming-header-populated.jpg" alt="Image" caption="A device that comes with programming headers pre-installed" width="75.0%" class="center" >}}
 
@@ -132,7 +132,7 @@ In this situation, you'll need just [jumper wires]({{< ref "#jumper-wires" >}}) 
 [USB to serial adapter]({{< ref "#usb-serial-adapter" >}}). You don't need to solder
 anything, that's already been done by the factory.
 
-## Unpopulated Programming Header
+### Unpopulated Programming Header
 
 {{< img src="programming-header-unpopulated.jpg" alt="Image" caption="A device that has a spot for programming headers on the circuit board" width="75.0%" class="center" >}}
 
@@ -145,7 +145,7 @@ These headers sometimes have writing on the circuit board indicating what each
 pin is. If your header does not, either look it up on the internet, or use a
 multimeter in continuity mode to figure it out (advanced topic).
 
-## Solder-filled Programming Header
+### Solder-filled Programming Header
 
 {{< img src="programming-header-filled.jpg" alt="Image" caption="A set of programming headers that are filled with solder" width="75.0%" class="center" >}}
 
@@ -161,7 +161,7 @@ These headers sometimes have writing on the circuit board indicating what each
 pin is. If your header does not, either look it up on the internet, or use a
 multimeter in continuity mode to figure it out (advanced topic).
 
-## Module Only
+### Module Only
 
 {{< img src="module-only-programming.jpg" alt="From https://tasmota.github.io/docs/devices/SM-SO301/" caption="An ESP8266 module with programming wires soldered on" width="75.0%" class="center" >}}
 
@@ -176,7 +176,7 @@ module. You can find the correct places to solder the wires by looking up the
 module model number on the internet. You can find `one list of commonly used
 modules here <https://tasmota.github.io/docs/Pinouts/>`_.
 
-## Bare Chip
+### Bare Chip
 
 {{< img src="programming-bare-chip.jpg" alt="From https://tasmota.github.io/docs/devices/Teckin-SP23/" caption="A bare ESP8266 IC with no programming header" width="75.0%" class="center" >}}
 

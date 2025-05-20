@@ -67,7 +67,7 @@ You can access the most recent state of the text in [lambdas]({{< ref "automatio
 
 {{< anchor "text-on_value" >}}
 
-## ``on_value``
+### ``on_value``
 
 This automation will be triggered when a new value is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the value from the trigger with `x`.
@@ -87,7 +87,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "text-set_action" >}}
 
-## ``text.set`` Action
+### ``text.set`` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a text state.
 
@@ -105,7 +105,7 @@ Configuration variables:
 
 {{< anchor "text-lambda_calls" >}}
 
-## lambda calls
+### lambda calls
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call certain methods on all texts to do some
 advanced stuff (see the full API Reference for more info).

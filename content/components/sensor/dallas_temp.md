@@ -20,7 +20,7 @@ sensor:
     update_interval: 120s
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **address** (*Optional*, int): The address of the sensor. Required if there is more than one device on the bus.
 - **resolution** (*Optional*, int): An optional resolution from 9 to 12. Higher means more accurate.

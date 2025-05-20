@@ -22,13 +22,13 @@ one_wire:
     pin: GPIOXX
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **pin** (**Required**, number): The pin the sensor bus is connected to. Please note that 1-wire is a bi-directional bus so it requires both input and output from the pin.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.  Required if you have multiple busses.
 
 
-## Getting Sensor IDs
+### Getting Sensor IDs
 
 In order to find the addresses, simply start the firmware on your
 device with a configured one_wire hub and observe the log output.

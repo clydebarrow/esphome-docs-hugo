@@ -62,15 +62,15 @@ Once everything is hooked up and flashed, enable `esp32_touch:` `setup_mode: tru
 
 ------------
 
-## Normal state
+### Normal state
 
 {{< img src="leak-detector-m5stickC_dry.jpg" alt="Image" class="center" >}}
 
-## Wet state
+### Wet state
 
 {{< img src="leak-detector-m5stickC_wet.jpg" alt="Image" class="center" >}}
 
-## Installed Project
+### Installed Project
 
 {{< img src="leak-detector-m5stickC_overview1.jpg" alt="Image" class="center" >}}
 

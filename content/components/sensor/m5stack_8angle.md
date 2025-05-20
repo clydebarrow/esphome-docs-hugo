@@ -20,7 +20,7 @@ m5stack_8angle:
     id: m5stack_8angle_base
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **i2c_id** (*Optional*, [I²C Component]({{< ref "components/i2c#i2c" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you need
@@ -44,7 +44,7 @@ sensor:
     name: "Knob 2"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `10s`.
 - **bit_depth** (*Optional*, one of `12 bit` or `8 bit`) determines the precision of the analog readout, defaults to `8bit`.
@@ -63,7 +63,7 @@ binary_sensor:
     name: "Switch"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `10s`.
 - All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
@@ -82,7 +82,7 @@ light:
         - addressable_rainbow:
 
 ```
-## Configuration variables:
+### Configuration variables:
 - All options from [Light]({{< ref "components/light/_index#config-light" >}}).
    
 

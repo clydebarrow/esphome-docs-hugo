@@ -35,7 +35,7 @@ take note of the device MAC address, and use it when configuring a sensor below.
 
 ## Supported Devices
 
-## Radon Eye RD200 Sensor
+### Radon Eye RD200 Sensor
 
 Radon Eye RD200 tracks radon concentration over short periods (5 min interval) and longer periods
 (24h or month).
@@ -48,7 +48,7 @@ the 24hr. If the 24hr isn't available either, it will not publish the value.
 
 {{< img src="radon_eye_rd200.jpg" alt="Image" width="60.0%" class="center" >}}
 
-## Configuration example:
+### Configuration example:
 
 ```yaml
 esp32_ble_tracker:

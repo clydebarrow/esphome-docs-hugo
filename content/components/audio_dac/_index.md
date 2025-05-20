@@ -26,7 +26,7 @@ audio_dac:
 
 ## Automations
 
-#### ``audio_dac.mute_off`` Action
+##### ``audio_dac.mute_off`` Action
 
 This action unmutes the output of the DAC.
 
@@ -34,7 +34,7 @@ Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
 
-#### ``audio_dac.mute_on`` Action
+##### ``audio_dac.mute_on`` Action
 
 This action mutes the output of the DAC.
 
@@ -42,7 +42,7 @@ Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `audio_dac` platform.
 
-#### ``audio_dac.set_volume`` Action
+##### ``audio_dac.set_volume`` Action
 
 This action sets the output volume of the DAC.
 

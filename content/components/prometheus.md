@@ -78,7 +78,7 @@ and then adding a block with `id` and/or `name` fields for each sensor whose lab
 
 {{< anchor "prometheus-relabel" >}}
 
-## ``relabel``
+### ``relabel``
 
 Set the `id` and `name` label values of the Prometheus metric for the sensor with the specified ID.
 

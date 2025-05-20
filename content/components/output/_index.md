@@ -49,7 +49,7 @@ Float outputs only:
 
 {{< anchor "output-turn_on_action" >}}
 
-## ``output.turn_on`` Action
+### ``output.turn_on`` Action
 
 This action turns the output with the given ID on when executed.
 
@@ -69,7 +69,7 @@ id(light_1).turn_on();
 {{< /note >}}
 {{< anchor "output-turn_off_action" >}}
 
-## ``output.turn_off`` Action
+### ``output.turn_off`` Action
 
 This action turns the output with the given ID off when executed.
 
@@ -89,7 +89,7 @@ id(light_1).turn_off();
 {{< /note >}}
 {{< anchor "output-set_level_action" >}}
 
-## ``output.set_level`` Action
+### ``output.set_level`` Action
 
 This action sets the float output to the given level when executed. Note: This only
 works with floating point outputs like {{< docref "/components/output/slow_pwm" >}}, {{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/ledc" >}}, {{< docref "/components/output/esp8266_pwm" >}}.

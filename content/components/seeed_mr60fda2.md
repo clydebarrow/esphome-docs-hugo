@@ -19,7 +19,7 @@ You can use the ESP32 software or hardware (recommended) serial to use the MR60F
 seeed_mr60fda2:
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
@@ -38,7 +38,7 @@ binary_sensor:
       name: "Falling Detected"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **people_exist** (*Optional*): If true when target (person) is detected.
   All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
@@ -58,7 +58,7 @@ button:
       name: "Reset"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **factory_reset** (*Optional*): Restore all radar settings to factory parameters. 
   All options from [Button]({{< ref "components/button/_index#config-button" >}}).
@@ -81,7 +81,7 @@ select:
       name: "Set Sensitivity"
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **install_height** (*Optional*): Before using the MR60FDA2, please select the installation height of the radar according to the actual situation in order to obtain accurate identification results. The default is 3m.
   All options from [Select]({{< ref "components/select/_index#config-select" >}}).

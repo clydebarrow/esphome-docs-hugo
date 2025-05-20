@@ -14,7 +14,7 @@ You can then get the current time in [lambdas]({{< ref "automations/templates#co
 
 All time configuration schemas inherit these options.
 
-## Configuration variables:
+### Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the time for use in lambdas.
 - **timezone** (*Optional*, string): Manually tell ESPHome what time zone to use with `this format
@@ -30,7 +30,7 @@ All time configuration schemas inherit these options.
 
 {{< anchor "time-has_time_condition" >}}
 
-## ``time.has_time`` Condition
+### ``time.has_time`` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if time has been set and is valid.
 
@@ -52,7 +52,7 @@ lambda: |-
 ```
 {{< anchor "time-on_time" >}}
 
-## ``on_time`` Trigger
+### ``on_time`` Trigger
 
 This powerful automation can be used to run automations at specific intervals at
 specific times of day. The syntax is a subset of the [crontab](https://crontab.guru/) syntax.
@@ -187,7 +187,7 @@ despite allowing the use of similar `crontab` syntax. Similarly, triggers on day
 {{< /note >}}
 {{< anchor "time-on_time_sync" >}}
 
-## ``on_time_sync`` Trigger
+### ``on_time_sync`` Trigger
 
 This automation is triggered after a time source successfully retrieves the current time.
 See the [DS1307 configuration example]({{< ref "components/time/ds1307#ds1307-config_example" >}}) for a scenario
@@ -265,7 +265,7 @@ make sure to check if `.is_valid()` evaluates to `true` before triggering any ac
 {{< /note >}}
 {{< anchor "strftime" >}}
 
-## strftime
+### strftime
 
 The second way to use the time object is to directly transform it into a string like `2018-08-16 16:31`.
 This is directly done using C's [strftime](http://www.cplusplus.com/reference/ctime/strftime/) function which

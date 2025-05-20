@@ -1,38 +1,12 @@
 {{ $currentPage := . }}
 <div class="sidebar-content">
-    <div class="sidebar-logo">
-        <a href="{{ "/" | relURL }}">
-            <img src="{{ "images/logo.svg" | relURL }}" alt="ESPHome Logo" height="30">
-        </a>
-    </div>
-    
-    <div class="sidebar-search">
-        <input type="text" id="sidebar-search-input" placeholder="Search...">
-    </div>
-    
     <nav class="sidebar-nav">
-        {{ $currentSection := $currentPage.Section }}
-        
-        {{ if eq $currentSection "components" }}
-            <h3>Components</h3>
-            {{ partial "components-menu.html" . }}
-        {{ else if eq $currentSection "guides" }}
-            <h3>Guides</h3>
-            {{ partial "guides-menu.html" . }}
-        {{ else if eq $currentSection "automations" }}
-            <h3>Automations</h3>
-            {{ partial "automations-menu.html" . }}
-        {{ else if eq $currentSection "changelog" }}
-            <h3>Changelog</h3>
-            {{ partial "changelog-menu.html" . }}
-        {{ else }}
-            <h3>Documentation</h3>
-            <ul>
-                <li><a href="{{ "components/" | relURL }}" class="{{ if eq $currentSection "components" }}active{{ end }}">Components</a></li>
-                <li><a href="{{ "guides/" | relURL }}" class="{{ if eq $currentSection "guides" }}active{{ end }}">Guides</a></li>
-                <li><a href="{{ "automations/" | relURL }}" class="{{ if eq $currentSection "automations" }}active{{ end }}">Automations</a></li>
-                <li><a href="{{ "changelog/" | relURL }}" class="{{ if eq $currentSection "changelog" }}active{{ end }}">Changelog</a></li>
-            </ul>
+        <h3>On This Page</h3>
+        {{ if .Fragments.Headings }}
+        {{ $startLevel := 2 }}
+        {{ $endLevel := 3 }}
+        {{ $ordered := true }}
+        {{ .Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML }}
         {{ end }}
     </nav>
     

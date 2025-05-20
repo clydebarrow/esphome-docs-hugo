@@ -144,7 +144,7 @@ explicitly set them to zero.
 
 {{< anchor "light-toggle_action" >}}
 
-## ``light.toggle`` Action
+### ``light.toggle`` Action
 
 This action toggles a light with the given ID when executed.
 
@@ -175,7 +175,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "light-turn_on_action" >}}
 
-## ``light.turn_on`` Action
+### ``light.turn_on`` Action
 
 This action turns a light with the given ID on when executed.
 
@@ -256,7 +256,7 @@ result in color at 40% brightness and white at 60% brightness:
 {{< /note >}}
 {{< anchor "light-turn_off_action" >}}
 
-## ``light.turn_off`` Action
+### ``light.turn_off`` Action
 
 This action turns a light with the given ID off when executed.
 
@@ -289,7 +289,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "light-control_action" >}}
 
-## ``light.control`` Action
+### ``light.control`` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) is a generic call to change the state of a light - it is essentially just a
 combination of the turn_on and turn_off calls.
@@ -310,7 +310,7 @@ on_...:
 
 {{< anchor "light-dim_relative_action" >}}
 
-## ``light.dim_relative`` Action
+### ``light.dim_relative`` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to dim a light that supports brightness by a relative amount.
 
@@ -365,7 +365,7 @@ binary_sensor:
 {{< /note >}}
 {{< anchor "light-addressable_set_action" >}}
 
-## ``light.addressable_set`` Action
+### ``light.addressable_set`` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually set a range of LEDs on an addressable light to a specific
 color.
@@ -399,7 +399,7 @@ on_...:
 {{< anchor "light-is_on_condition" >}}
 {{< anchor "light-is_off_condition" >}}
 
-## ``light.is_on`` / ``light.is_off`` Condition
+### ``light.is_on`` / ``light.is_off`` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given light is ON or OFF. OFF means that the light is completely
 OFF, and ON means that the light is emitting at least a bit of light.
@@ -416,7 +416,7 @@ on_...:
 ```
 {{< anchor "light-on_turn_on_off_trigger" >}}
 
-## ``light.on_turn_on`` / ``light.on_turn_off`` Trigger
+### ``light.on_turn_on`` / ``light.on_turn_off`` Trigger
 
 This trigger is activated each time the light is turned on or off. It is consistent with the behavior of the
 `light.is_on` and `light.is_off` condition above.
@@ -433,7 +433,7 @@ light:
 ```
 {{< anchor "light-on_state_trigger" >}}
 
-## ``light.on_state`` Trigger
+### ``light.on_state`` Trigger
 
 This trigger is activated each time the set light state is changed. It is not triggered based on current state, but
 rather, it triggers on the set state which can differ from the current state due to transitions. For example, the
@@ -481,7 +481,7 @@ After setting a light effect, it is possible to reset the in-use effect back to 
 `effect` to `none` when it is being called through Home Assistant or directly on the device.
 
 {{< /note >}}
-## Pulse Effect
+### Pulse Effect
 
 This effect makes a pulsating light. The period can be defined by `update_interval`, the transition length with
 `transition_length`. `transition_length` should be set to less than `update_interval`, setting
@@ -525,7 +525,7 @@ light:
 - **min_brightness** (*Optional*, percentage): The minimum brightness value. Defaults to `0%`
 - **max_brightness** (*Optional*, percentage): The maximum brightness value. Defaults to `100%`
 
-## Random Effect
+### Random Effect
 
 This effect makes a transition (of length `transition_length`) to a randomly-chosen color and/or brightness (for
 monochromatic) every `update_interval`.
@@ -549,7 +549,7 @@ light:
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which a new color is selected and
   transitioned to.
 
-## Strobe Effect
+### Strobe Effect
 
 This effect cycles through a list of colors with specific durations.
 
@@ -600,7 +600,7 @@ light:
 
 See [light state]({{< ref "components/light/_index#light-state_config" >}}) for more information on the various color fields.
 
-## Flicker Effect
+### Flicker Effect
 
 This effect "hovers" around the active color of the light and flickers each color channel a bit.
 
@@ -624,7 +624,7 @@ light:
 - **intensity** (*Optional*, percentage): The intensity of the flickering, basically the maximum amplitude of the
   random offsets. Defaults to `1.5%`.
 
-## Lambda Effect
+### Lambda Effect
 
 This effect allows you to write completely custom light effects yourself using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
@@ -669,7 +669,7 @@ light:
 - **lambda** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})): The code to execute. `static` variables are especially
   useful.
 
-## Addressable Rainbow Effect
+### Addressable Rainbow Effect
 
 A light effect for individually-addressable LEDs that creates a moving rainbow over the whole LED strip using the HSV
 color wheel.
@@ -692,7 +692,7 @@ light:
 - **speed** (*Optional*, int): The speed of the effect, unitless. Defaults to `10`.
 - **width** (*Optional*, int): The "width" of a full-scale rainbow, unitless. Defaults to `50`.
 
-## Addressable Color Wipe Effect
+### Addressable Color Wipe Effect
 
 A light effect for individually-addressable LEDs that continuously introduces new colors at the beginning of the strip
 and shifts them forward every `add_led_interval`.
@@ -739,7 +739,7 @@ light:
   of the strip. Defaults to `100ms`.
 - **reverse** (*Optional*, boolean): Whether to reverse the direction of the color wipe. Defaults to `false`.
 
-## Addressable Scan Effect
+### Addressable Scan Effect
 
 Creates a single, fast-moving dot "sliding" back and forth on the LED strip. The color is chosen by the currently
 active light color.
@@ -763,7 +763,7 @@ light:
   Defaults to `100ms`.
 - **scan_width** (*Optional*, int): The number of LEDs to use. Defaults to `1`.
 
-## Addressable Twinkle Effect
+### Addressable Twinkle Effect
 
 Randomly chooses LEDs and brightens them for a moment, mimicking stars twinkling in the night sky. The color of the
 pixels is determined by the current light color.
@@ -788,7 +788,7 @@ light:
 - **progress_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which to progress the effect. This affects
   the duration of a twinkle animation. Defaults to `4ms`.
 
-## Addressable Random Twinkle Effect
+### Addressable Random Twinkle Effect
 
 A light effect similar to `addressable_twinkle`, but using random colors for each twinkle animation.
 
@@ -812,7 +812,7 @@ light:
 - **progress_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which to progress the effect. This affects
   the duration of a twinkle animation. Defaults to `4ms`.
 
-## Addressable Fireworks Effect
+### Addressable Fireworks Effect
 
 A light effect for individually-addressable LED strips that randomly sparks some fireworks at random positions
 and lets the sparkles cascade over the LED strip.
@@ -844,7 +844,7 @@ light:
   chosen so that the whole strip doesn't light up forever if the fade out rate is too low or that the firework
   sparks do not propagate for a long time. Defaults to `120`.
 
-## Addressable Flicker Effect
+### Addressable Flicker Effect
 
 An effect similar to the `flicker` effect, but for individually-addressable LED strips. This effect flickers each LED
 by its own random amount around the currently active light color.
@@ -869,7 +869,7 @@ light:
 - **intensity** (*Optional*, percentage): The intensity of the effect, basically how much the random values can offset
   the currently active light color. Defaults to `5%`.
 
-## Addressable Lambda Effect
+### Addressable Lambda Effect
 
 This effect allows you to access each LED individually in a custom light effect.
 
@@ -941,7 +941,7 @@ Examples of this API can be found
 [here](https://github.com/esphome/esphome/blob/dev/esphome/components/light/addressable_light_effect.h)
 (the built-in addressable light effects).
 
-## Automation Light Effect
+### Automation Light Effect
 
 In addition to the `lambda` and `addressable_lambda` light effects, effects can also be created with ESPHome's
 [Automation]({{< ref "automations/_index#automation" >}}) system with the `automation` effect type.
@@ -979,7 +979,7 @@ light:
 
 {{< anchor "e131-light-effect" >}}
 
-## E1.31 Effect
+### E1.31 Effect
 
 This effect enables controlling addressable lights by way of the UDP-based E1.31_ protocol.
 
@@ -1016,7 +1016,7 @@ LEDs, first 170 LEDs will be assigned to universe 1, while the remaining 19 LEDs
 It is possible to enable multiple light platforms to concurrently listen to the same universe, allowing the behavior
 to be replicated on multiple strips.
 
-#### E1.31 Component
+##### E1.31 Component
 
 The [E1.31 Effect]({{< ref "components/light/_index#e131-light-effect" >}}) requires a component hub for the `e131` light effect.
 
@@ -1030,7 +1030,7 @@ ESPHome will listen on UDP port `5568`.
 [JINX](http://www.live-leds.de/jinx-v1-3-with-resizable-mainwindow-real-dmx-and-sacne1-31/)
 [Hyperion.NG](https://github.com/hyperion-project/hyperion.ng)
 
-## Adalight Effect
+### Adalight Effect
 
 This effect enables controlling addressable lights using the serial Adalight_ protocol, allowing the creation of
 realtime ambient lighting effects.
@@ -1066,7 +1066,7 @@ light:
 [Adalight](https://learn.adafruit.com/adalight-diy-ambient-tv-lighting)
 [Prismatik](https://github.com/psieg/Lightpack)
 
-## WLED Effect
+### WLED Effect
 
 This effect enables controlling addressable lights using the `UDP Realtime Control`_ protocol used by WLED_, allowing
 creation of realtime ambient lighting effects.

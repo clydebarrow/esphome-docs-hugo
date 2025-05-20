@@ -51,7 +51,7 @@ pylontech:
 
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this Pylontech component.
 - **uart_id** (*Optional*): The uart Bus ID
@@ -75,7 +75,7 @@ sensor:
       name: "Battery1 State of Charge"
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **pylontech_id** (*Optional*): Manually specify the ID of the pylontech instance if there are multiple.
 - **battery** (**Required**): Which battery to monitor. 1 stands for the main battery, 2..16 for child batteries.
@@ -104,7 +104,7 @@ text_sensor:
 
 
 ```
-#### Configuration variables:
+##### Configuration variables:
 
 - **pylontech_id** (*Optional*): Manually specify the ID of the pylontech instance if there are multiple.
 - **battery** (**Required**): Which battery to monitor. 1 stands for the main battery, 2..16 for child batteries.

@@ -11,7 +11,7 @@ To get the body scores using your weight, height, age and gender see the custom_
 
 ## Supported Devices
 
-## XMTZC01HM, XMTZC04HM, XMTZC02HM, XMTZC05HM
+### XMTZC01HM, XMTZC04HM, XMTZC02HM, XMTZC05HM
 
 Miscale (left) measures weight only. Miscale2 (right) measures weight and impedance.
 
@@ -42,7 +42,7 @@ sensor:
 
   Useful in the example below if a person steps onto the scale without waiting for the complete measurement. Without setting the flag the impedance reading of the measurement before will be used for the currently measured person.
 
-## Configuration example with multiple users:
+### Configuration example with multiple users:
 
 You have to replace the numbers in the lambdas to determine your weight which is between X weight and X weight.
 

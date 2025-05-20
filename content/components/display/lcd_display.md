@@ -45,7 +45,7 @@ display:
       it.print("Hello World!");
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **dimensions** (**Required**, string): The dimensions of the display with `COLUMNSxROWS`. If you're not
   sure, power the display up and just count them.
@@ -86,7 +86,7 @@ display:
       it.print("Hello World!");
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **dimensions** (**Required**, string): The dimensions of the display with `COLUMNSxROWS`. If you're not
   sure, power the display on, turn contrast high up and just count them.

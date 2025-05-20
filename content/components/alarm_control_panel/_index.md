@@ -57,7 +57,7 @@ you want the switch to use that name, you can set `name: None`.
 
 {{< anchor "alarm_control_panel_on_state_trigger" >}}
 
-## ``on_state`` Trigger
+### ``on_state`` Trigger
 
 This trigger is activated each time the alarm changes state.
 
@@ -71,7 +71,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_pending_trigger" >}}
 
-## ``on_pending`` Trigger
+### ``on_pending`` Trigger
 
 This trigger is activated when the alarm changes to pending state.
 
@@ -85,7 +85,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_arming_trigger" >}}
 
-## ``on_arming`` Trigger
+### ``on_arming`` Trigger
 
 This trigger is activated when the alarm changes to arming state.
 
@@ -99,7 +99,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_armed_home_trigger" >}}
 
-## ``on_armed_home`` Trigger
+### ``on_armed_home`` Trigger
 
 This trigger is activated when the alarm changes to armed_home state.
 
@@ -113,7 +113,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_armed_night_trigger" >}}
 
-## ``on_armed_night`` Trigger
+### ``on_armed_night`` Trigger
 
 This trigger is activated when the alarm changes to armed_night state.
 
@@ -127,7 +127,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_armed_away_trigger" >}}
 
-## ``on_armed_away`` Trigger
+### ``on_armed_away`` Trigger
 
 This trigger is activated when the alarm changes to armed_away state.
 
@@ -141,7 +141,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_triggered_trigger" >}}
 
-## ``on_triggered`` Trigger
+### ``on_triggered`` Trigger
 
 This trigger is activated when the alarm changes to triggered state.
 
@@ -155,7 +155,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_cleared_trigger" >}}
 
-## ``on_cleared`` Trigger
+### ``on_cleared`` Trigger
 
 This trigger is activated when the alarm changes from triggered back to either the previous armed state or disarmed.
 
@@ -169,7 +169,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_disarmed_trigger" >}}
 
-## ``on_disarmed`` Trigger
+### ``on_disarmed`` Trigger
 
 This trigger is activated when the alarm changes from to disarmed.
 
@@ -183,7 +183,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_ready_trigger" >}}
 
-## ``on_ready`` Trigger
+### ``on_ready`` Trigger
 
 This trigger is activated when the logical 'and' of all the alarm sensors change state. This is useful for implementing "alarm ready" LEDs.
 Once this trigger is called, you can get the ready state by calling get_all_sensors_ready() in a lambda block.
@@ -199,7 +199,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_on_chime_trigger" >}}
 
-## ``on_chime`` Trigger
+### ``on_chime`` Trigger
 
 This trigger is activated when a zone sensor marked with chime:true changes from closed to open. This is useful for implementing keypad chimes when a zone
 opens.
@@ -214,7 +214,7 @@ alarm_control_panel:
 ```
 {{< anchor "alarm_control_panel_arm_away_action" >}}
 
-## ``arm_away`` Action
+### ``arm_away`` Action
 
 This action arms the alarm in away mode. The `code` is required when *requires_code_to_arm* is *true*.
 
@@ -228,7 +228,7 @@ on_...:
 ```
 {{< anchor "alarm_control_panel_arm_home_action" >}}
 
-## ``arm_home`` Action
+### ``arm_home`` Action
 
 This action arms the alarm in home mode. The `code` is required when *requires_code_to_arm* is *true*.
 
@@ -242,7 +242,7 @@ on_...:
 ```
 {{< anchor "alarm_control_panel_arm_night_action" >}}
 
-## ``arm_night`` Action
+### ``arm_night`` Action
 
 This action arms the alarm in night mode. The `code` is required when *requires_code_to_arm* is *true*.
 
@@ -256,7 +256,7 @@ on_...:
 ```
 {{< anchor "alarm_control_panel_disarm_action" >}}
 
-## ``disarm`` Action
+### ``disarm`` Action
 
 This action disarms the alarm. The `code` is required when *codes* is not empty.
 
@@ -270,7 +270,7 @@ on_...:
 ```
 {{< anchor "alarm_control_panel_pending_action" >}}
 
-## ``pending`` Action
+### ``pending`` Action
 
 This action puts the alarm in pending state (the state before triggered after *pending_time*).
 
@@ -282,7 +282,7 @@ on_...:
 ```
 {{< anchor "alarm_control_panel_triggered_action" >}}
 
-## ``triggered`` Action
+### ``triggered`` Action
 
 This action puts the alarm in triggered state.
 
@@ -294,7 +294,7 @@ on_...:
 ```
 {{< anchor "alarm_control_panel_is_armed_condition" >}}
 
-## ``is_armed`` Condition
+### ``is_armed`` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the alarm control panel is armed.
 
@@ -308,7 +308,7 @@ on_...:
 ```
 {{< anchor "alarm_control_panel_lambda_calls" >}}
 
-## lambda calls
+### lambda calls
 
 From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call the following methods:
 

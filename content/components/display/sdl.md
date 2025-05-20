@@ -29,7 +29,7 @@ display:
 
 
 ```
-## Configuration variables:
+### Configuration variables:
 
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.

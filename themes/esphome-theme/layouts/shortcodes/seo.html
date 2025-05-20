@@ -17,7 +17,7 @@
 {{ $description := .Get "description" }}
 {{ $image := .Get "image" }}
 
-{{ with $description }}
+{{ with $description | default .Page.Title }}
 <meta name="description" content="{{ . }}">
 {{ end }}
 

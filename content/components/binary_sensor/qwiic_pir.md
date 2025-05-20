@@ -34,7 +34,7 @@ binary_sensor:
 
 {{< anchor "debounce-modes" >}}
 
-## Debounce Modes
+### Debounce Modes
 
 There are three options for `debounce_mode`.
 

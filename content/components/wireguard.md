@@ -204,7 +204,7 @@ interface as the system default.
 
 Here after the sensors available for this component.
 
-#### Status Binary Sensor
+##### Status Binary Sensor
 
 This binary sensor tracks the connection status (*online*/*offline*) of the remote peer.
 
@@ -219,7 +219,7 @@ binary_sensor:
 All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
-#### Enabled Binary Sensor
+##### Enabled Binary Sensor
 
 This binary sensor tracks if |wireguard| is *enabled* or not.
 
@@ -234,7 +234,7 @@ binary_sensor:
 All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) can be added to the
 above configuration.
 
-#### Latest Handshake Sensor
+##### Latest Handshake Sensor
 
 This sensor reports the *timestamp* of the latest completed handshake.
 
@@ -249,7 +249,7 @@ sensor:
 All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) can be added to the
 above configuration.
 
-#### Address Text Sensor
+##### Address Text Sensor
 
 This sensor exposes to the frontend the configured [address]({{< ref "components/wireguard#wireguard-address" >}}).
 
@@ -270,7 +270,7 @@ above configuration.
 
 The following actions are available.
 
-#### ``wireguard.disable``
+##### ``wireguard.disable``
 
 This action drops down the active VPN link (if any) and disables the component.
 
@@ -287,7 +287,7 @@ To disable |wireguard| since device boot you can execute this action
 in the [``on_boot``]({{< ref "components/esphome#esphome-on_boot" >}}) step.
 
 {{< /note >}}
-#### ``wireguard.enable``
+##### ``wireguard.enable``
 
 This action enables the component and starts the connection to the remote peer.
 
@@ -305,7 +305,7 @@ The lambda equivalent is `id(wireguard_id).enable()`.
 
 The following conditions are available.
 
-#### ``wireguard.enabled``
+##### ``wireguard.enabled``
 
 This condition checks if |wireguard| is currently enabled or not.
 
@@ -321,7 +321,7 @@ on_...:
 ```
 The lambda equivalent is `id(wireguard_id).is_enabled()`.
 
-#### ``wireguard.peer_online``
+##### ``wireguard.peer_online``
 
 This condition checks if the remote peer is *online*.
 

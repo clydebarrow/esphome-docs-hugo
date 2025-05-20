@@ -21,7 +21,7 @@ For graphical displays, which offer the greatest flexibility, there are two opti
 
 {{< anchor "display-configuration" >}}
 
-## Configuration variables:
+### Configuration variables:
 
 All display components inherit these configuration variables.
 

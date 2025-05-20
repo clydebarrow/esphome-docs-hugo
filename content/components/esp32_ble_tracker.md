@@ -247,16 +247,16 @@ Configuration variables:
 
 {{< note >}}
 This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
+{{< /note >}}
 ```yaml
-```
 esp32_ble_tracker:
-    id: ble_tracker_id
+  id: ble_tracker_id
 
-```cpp
 ```
+```cpp
 id(ble_tracker_id).start_scan()
 
-{{< /note >}}
+```
 ### ``esp32_ble_tracker.stop_scan`` Action
 
 Stops the bluetooth scanning. It can be started again with the above start scan action.

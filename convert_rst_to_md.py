@@ -17,8 +17,19 @@ from collections import defaultdict
 anchor_map = {}
 
 # Global variables for image tracking
-image_map = defaultdict(int)
-image_sources = {}
+class ImageInfo:
+    def __init__(self, name, path, source):
+        self.name = name
+        self.path = path
+        self.source = source
+        self.count = 0
+
+    def increment(self):
+        self.count += 1
+
+
+
+image_map = {}
 included_files = set()
 
 def find_included_files(file_path):
@@ -344,9 +355,9 @@ def convert_rst_to_md(lines, filename):
                     content_indent_level = current_indent
                 
                 # If the line is not indented enough, we've reached the end of the note
-                if current_indent < note_indent + 4 and current_line.strip() and not current_line.strip().startswith('..'):
+                if current_indent < note_indent + 4 and current_line.strip():
                     break
-                
+
                 # Handle code blocks within notes
                 if current_line.strip().startswith('.. code-block::'):
                     language = current_line.replace('.. code-block::', '').strip() or 'yaml'
@@ -1171,9 +1182,8 @@ def scan_image_references(input_dir):
     ]
     
     # Initialize image tracking dictionaries
-    image_map = defaultdict(int)
-    image_sources = {}
-    
+    image_map = {}
+
     for root, _, files in os.walk(input_dir):
         for file in files:
             if file.endswith('.rst'):
@@ -1201,17 +1211,15 @@ def scan_image_references(input_dir):
                         if image_path.startswith('/'):
                             # Absolute path within docs
                             abs_image_path = os.path.join(input_dir, image_path.lstrip('/'))
-                            rel_image_path = image_path.lstrip('/')
                         else:
                             # Relative path
                             abs_image_path = os.path.join(os.path.dirname(rst_file), image_path)
-                            rel_image_path = os.path.relpath(abs_image_path, input_dir)
-                        
+
                         # Only count if the image file exists
                         if os.path.exists(abs_image_path):
                             image_filename = os.path.basename(image_path)
-                            image_map[image_filename] += 1
-                            image_sources[image_filename] = abs_image_path
+                            entry = image_map.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, rst_file))
+                            entry.increment()
                             print(f"Found image: {image_filename} in {rel_path}")
                 
                 # Find images in imgtable directives
@@ -1263,8 +1271,8 @@ def scan_image_references(input_dir):
                                 # Only count if the image file exists
                                 if os.path.exists(abs_image_path):
                                     image_filename = os.path.basename(image_path)
-                                    image_map[image_filename] += 1
-                                    image_sources[image_filename] = abs_image_path
+                                    entry = image_map.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, rst_file))
+                                    entry.increment()
                                     print(f"Found image in imgtable: {image_filename} in {rel_path}")
                                 else:
                                     print(f"Image not found: {image_path} in {abs_image_path}")
@@ -1275,9 +1283,10 @@ def scan_image_references(input_dir):
     
     # Print statistics
     print(f"Found {len(image_map)} unique images")
-    print(f"Images used more than once: {sum(1 for count in image_map.values() if count > 1)}")
+    multiple = [image for image in image_map.values() if image.count > 1]
+    print(f"Images used more than once: {len(multiple)}")
     
-    return image_map, image_sources
+    return image_map
 
 def process_file(rst_file, output_dir, input_dir):
     output_dir = os.path.join(output_dir, "content")
@@ -1367,7 +1376,7 @@ def should_copy_file(source_path, target_path):
     
     return source_mtime > target_mtime
 
-def copy_images_to_output(output_dir, input_dir, image_map, image_sources):
+def copy_images_to_output(output_dir, input_dir, image_map):
     """Copy images to the appropriate locations based on usage."""
     print("Copying images to output directories...")
     
@@ -1379,65 +1388,37 @@ def copy_images_to_output(output_dir, input_dir, image_map, image_sources):
     component_image_map = {}
     
     # Copy images based on usage
-    for image_name, count in image_map.items():
-        source_path = image_sources[image_name]
+    for image in image_map.values():
+        source_path = image.path
         
-        if count > 1:
+        if image.count > 1:
             # Used more than once - copy to global images folder
-            target_path = os.path.join(global_images_dir, image_name)
+            target_path = os.path.join(global_images_dir, image.name)
             if should_copy_file(source_path, target_path):
                 shutil.copy2(source_path, target_path)
-                print(f"Copied {image_name} to global images folder")
+                print(f"Copied {image.name} to global images folder")
             else:
-                print(f"Skipped copying {image_name} to global images folder (unchanged)")
+                print(f"Skipped copying {image.name} to global images folder (unchanged)")
         else:
             # Used only once - copy to component-level images folder
             # Find the RST file that references this image
-            for root, _, files in os.walk(input_dir):
-                for file in files:
-                    if file.endswith('.rst'):
-                        rst_file = os.path.join(root, file)
-                        with open(rst_file, 'r', encoding='utf-8') as f:
-                            content = f.read()
+            rel_path = os.path.relpath(image.source, input_dir)
+            component_dir = os.path.dirname(rel_path)
                             
-                        if image_name in content:
-                            # Get the relative path of the RST file
-                            rel_path = os.path.relpath(rst_file, input_dir)
-                            component_dir = os.path.dirname(rel_path)
+            # Create component-level images directory in content
+            component_content_dir = os.path.join(output_dir, 'content', component_dir)
+            component_images_dir = os.path.join(component_content_dir, 'images')
+            os.makedirs(component_images_dir, exist_ok=True)
                             
-                            # Create component-level images directory in content
-                            component_content_dir = os.path.join(output_dir, 'content', component_dir)
-                            component_images_dir = os.path.join(component_content_dir, 'images')
-                            os.makedirs(component_images_dir, exist_ok=True)
+            target_content_path = os.path.join(component_images_dir, image.name)
+
+            copied = False
+            if should_copy_file(source_path, target_content_path):
+                shutil.copy2(source_path, target_content_path)
+                print(f"Copied {image.name} to {component_dir}/images folder")
+            else:
+                print(f"Skipped copying {image.name} to {component_dir}/images folder (unchanged)")
                             
-                            # Create component-level images directory in static
-                            component_static_dir = os.path.join(output_dir, 'static', component_dir)
-                            component_static_images_dir = os.path.join(component_static_dir, 'images')
-                            os.makedirs(component_static_images_dir, exist_ok=True)
-                            
-                            # Copy the image to both locations
-                            target_content_path = os.path.join(component_images_dir, image_name)
-                            target_static_path = os.path.join(component_static_images_dir, image_name)
-                            
-                            copied = False
-                            if should_copy_file(source_path, target_content_path):
-                                shutil.copy2(source_path, target_content_path)
-                                copied = True
-                            
-                            if should_copy_file(source_path, target_static_path):
-                                shutil.copy2(source_path, target_static_path)
-                                copied = True
-                                
-                            if copied:
-                                print(f"Copied {image_name} to {component_dir}/images folder")
-                            else:
-                                print(f"Skipped copying {image_name} to {component_dir}/images folder (unchanged)")
-                            
-                            # Track which component this image was copied to
-                            component_image_map[image_name] = component_dir
-                            break
-    
-    return component_image_map
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Convert Sphinx RST files to Hugo Markdown format')
@@ -1457,7 +1438,7 @@ if __name__ == "__main__":
     build_anchor_map(args.input_dir)
     
     # Scan for image references
-    image_map, image_sources = scan_image_references(args.input_dir)
+    image_map = scan_image_references(args.input_dir)
     
     if args.single:
         # Process a single file
@@ -1472,4 +1453,4 @@ if __name__ == "__main__":
     
     # Copy images to output directories
     if not args.no_images:
-        copy_images_to_output(args.output_dir, args.input_dir, image_map, image_sources)
+        copy_images_to_output(args.output_dir, args.input_dir, image_map)

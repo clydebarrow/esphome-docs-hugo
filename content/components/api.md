@@ -24,12 +24,12 @@ A Python library that implements this protocol is [aioesphomeapi](https://github
 but will continue to support YAML with `services` and `homeassistant.service` for the foreseeable future.
 Documentation will only refer to **Actions**.
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 api:
 
-{{< /note >}}
+```
 ## Configuration variables:
 
 - **port** (*Optional*, int): The port to run the API server on. Defaults to `6053`.

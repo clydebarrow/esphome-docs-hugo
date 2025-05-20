@@ -746,26 +746,26 @@ on_...:
 The configuration option `enable_on_boot` can be set to `false` if you do not want MQTT to be enabled on boot.
 `mqtt.enable` can be useful for custom setups. For example, if the broker name is negotiated dynamically and saved in a global variable.
 
+{{< /note >}}
 ```yaml
-```
 mqtt:
-    id: mqtt_id
-    broker: ""
-    enable_on_boot: False
+  id: mqtt_id
+  broker: ""
+  enable_on_boot: False
 
 globals:
-    - id: broker_address
-        type: std::string
-        restore_value: yes
-        max_restore_data_length: 24
-        initial_value: '"192.168.1.2"'
+  - id: broker_address
+    type: std::string
+    restore_value: yes
+    max_restore_data_length: 24
+    initial_value: '"192.168.1.2"'
 
 on_...:
-    then:
-        - lambda: !lambda id(mqtt_id).set_broker_address(id(broker_address));
-        - mqtt.enable:
+  then:
+    - lambda: !lambda id(mqtt_id).set_broker_address(id(broker_address));
+    - mqtt.enable:
 
-{{< /note >}}
+```
 {{< anchor "mqtt-connected_condition" >}}
 
 ## ``mqtt.connected`` Condition

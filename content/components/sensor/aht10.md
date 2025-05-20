@@ -17,19 +17,19 @@ The DHT20 ([datasheet](https://cdn.sparkfun.com/assets/8/a/1/5/0/DHT20.pdf)) sen
 {{< note >}}
 When configured for humidity, the log *'Components should block for at most 20-30ms in loop().'* will be generated in verbose mode. This is due to technical specs of the sensor and can not be avoided.
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 sensor:
-    - platform: aht10
-        variant: AHT10
-        temperature:
-            name: "Living Room Temperature"
-        humidity:
-            name: "Living Room Humidity"
-        update_interval: 60s
+  - platform: aht10
+    variant: AHT10
+    temperature:
+      name: "Living Room Temperature"
+    humidity:
+      name: "Living Room Humidity"
+    update_interval: 60s
 
-{{< /note >}}
+```
 ## Configuration variables:
 
 - **variant** (*Optional*, enum): Set the variant of the device in use. Defaults to `AHT10`.

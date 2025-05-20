@@ -13,13 +13,13 @@ Increasing the log level severity (to e.g `INFO` or `WARN`) can help with the pe
 {{< note >}}
 The "severity" of a log message represents the importance of the message, i.e. how critical it is. The severity levels are defined in the [log levels]({{< ref "components/logger#logger-log_levels" >}}) section.
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 logger:
-    level: DEBUG
+  level: DEBUG
 
-{{< /note >}}
+```
 ## Configuration variables:
 
 -  **baud_rate** (*Optional*, int): The baud rate to use for the serial

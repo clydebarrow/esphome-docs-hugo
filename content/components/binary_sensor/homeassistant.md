@@ -13,15 +13,15 @@ Although you might not plan to *export* states from the node and you do not need
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
 [Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 binary_sensor:
-    - platform: homeassistant
-        name: "Input Boolean From Home Assistant"
-        entity_id: input_boolean.state_home
+  - platform: homeassistant
+    name: "Input Boolean From Home Assistant"
+    entity_id: input_boolean.state_home
 
-{{< /note >}}
+```
 With Home Assistant 2021.6 or newer, entity state attributes can also be imported.
 
 ```yaml

@@ -21,22 +21,22 @@ only operate in this frequency range.
 This component will not show up in the Home Assistant front-end automatically because
 Home Assistant doesn't have support for servos. Please see [Home Assistant Configuration]({{< ref "components/servo#servo-ha-config" >}}).
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 servo:
-    - id: my_servo
-        output: pwm_output
+  - id: my_servo
+    output: pwm_output
 
 # Example output platform
 # On ESP32, use ledc output
 output:
-    - platform: esp8266_pwm
-        id: pwm_output
-        pin: GPIOXX
-        frequency: 50 Hz
+  - platform: esp8266_pwm
+    id: pwm_output
+    pin: GPIOXX
+    frequency: 50 Hz
 
-{{< /note >}}
+```
 ## Configuration variables:
 
 - **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of{{< docref "/components/output/index" "output component" >}}dex>`

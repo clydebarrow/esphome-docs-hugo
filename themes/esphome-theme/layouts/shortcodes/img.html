@@ -32,7 +32,7 @@
 {{- $globalPath := printf "images/%s" $src -}}
 
 {{- $imagePath := "" -}}
-{{- if fileExists (printf "static/%s" $componentPath) -}}
+{{- if fileExists (printf "content/%s" $componentPath) -}}
   {{- $imagePath = $componentPath -}}
 {{- else if fileExists (printf "static/%s" $globalPath) -}}
   {{- $imagePath = $globalPath -}}

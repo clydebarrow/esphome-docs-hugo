@@ -222,19 +222,19 @@ climate:
 {{< note >}}
 - This climate IR component is also known to work with some Stiebel Eltron Units. It has been tested with Stiebel Eltron IR-Remote `KM07F` and unit `ACW 25 i`
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 climate:
-    - platform: mitsubishi
-        name: "Heatpump"
-        set_fan_mode: "quiet_4levels"
-        supports_dry: "true"
-        supports_fan_only: "true"
-        horizontal_default: "left"
-        vertical_default: "down"
+  - platform: mitsubishi
+    name: "Heatpump"
+    set_fan_mode: "quiet_4levels"
+    supports_dry: "true"
+    supports_fan_only: "true"
+    horizontal_default: "left"
+    vertical_default: "down"
 
-{{< /note >}}
+```
 {{< anchor "toshiba" >}}
 
 `toshiba` **Climate**:

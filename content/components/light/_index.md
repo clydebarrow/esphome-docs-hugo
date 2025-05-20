@@ -883,33 +883,33 @@ Available variables in the lambda:
   {{< note >}}
 ESPColor has been migrated to Color. See :apistruct:`Color <Color>` for more information.
 
-```yaml
-```
   {{< /note >}}
-    light:
-    - platform: ...
-      effects:
-        - addressable_lambda:
-            name: "My Custom Effect"
-            update_interval: 16ms
-            lambda: |-
-              // it.size() - Number of LEDs
-              // it[num] - Access the LED at index num.
-              // Set the LED at num to the given r, g, b values
-              // it[num] = Color(r, g, b);
-              // Get the color at index num (Color instance)
-              // it[num].get();
+```yaml
+light:
+- platform: ...
+  effects:
+    - addressable_lambda:
+        name: "My Custom Effect"
+        update_interval: 16ms
+        lambda: |-
+          // it.size() - Number of LEDs
+          // it[num] - Access the LED at index num.
+          // Set the LED at num to the given r, g, b values
+          // it[num] = Color(r, g, b);
+          // Get the color at index num (Color instance)
+          // it[num].get();
 
-              // Example: Simple color wipe
-              for (int i = it.size() - 1; i > 0; i--) {
-                it[i] = it[i - 1].get();
-              }
-              it[0] = Color::random_color();
+          // Example: Simple color wipe
+          for (int i = it.size() - 1; i > 0; i--) {
+            it[i] = it[i - 1].get();
+          }
+          it[0] = Color::random_color();
 
-              // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
-              it.range(0, 50) = Color::BLACK;
-              it.all().fade_to_black(10);
+          // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
+          it.range(0, 50) = Color::BLACK;
+          it.all().fade_to_black(10);
 
+```
 ```yaml
 light:
 - platform: ...

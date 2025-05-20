@@ -80,39 +80,39 @@ has 16 GPIOs and can be configured the same way than the other variants.
 {{< note >}}
 The 'INPUT_PULLUP' mode is not supported on this device.
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 mcp23016:
-    - id: 'mcp23016_hub'
-        address: 0x20
+  - id: 'mcp23016_hub'
+    address: 0x20
 
 # Individual outputs
 switch:
-    - platform: gpio
-        name: "MCP23016 Pin #0"
-        pin:
-            mcp23016: mcp23016_hub
-            # Use pin number 0
-            number: 0
-            mode:
-                output: true
-            inverted: false
+  - platform: gpio
+    name: "MCP23016 Pin #0"
+    pin:
+      mcp23016: mcp23016_hub
+      # Use pin number 0
+      number: 0
+      mode:
+        output: true
+      inverted: false
 
 # Individual inputs
 binary_sensor:
-    - platform: gpio
-        name: "MCP23016 Pin #1"
-        pin:
-            mcp23016: mcp23016_hub
-            # Use pin number 1
-            number: 1
-            mode:
-                input: true
-            inverted: false
+  - platform: gpio
+    name: "MCP23016 Pin #1"
+    pin:
+      mcp23016: mcp23016_hub
+      # Use pin number 1
+      number: 1
+      mode:
+        input: true
+      inverted: false
 
 
-{{< /note >}}
+```
 ### Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23016 component.

@@ -13,15 +13,15 @@ Although you might not plan to *export* states from the node and you do not need
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
 [Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
 
+{{< /note >}}
 ```yaml
-```
 # Example configuration entry
 number:
-    - platform: homeassistant
-        id: my_ha_number
-        entity_id: number.my_number
+  - platform: homeassistant
+    id: my_ha_number
+    entity_id: number.my_number
 
-{{< /note >}}
+```
 ## Configuration variables:
 
 - **entity_id** (**Required**, string): The Home Assistant entity ID of the number to synchronize with.

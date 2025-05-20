@@ -176,30 +176,30 @@ The following variables are available for use in [lambdas]({{< ref "automations/
 The `status_code` should be checked before using the `body` variable. A successful response will usually have
 a status code of `200`. Server errors such as "not found" (404) or "internal server error" (500) will have an appropriate status code, and may contain an error message in the `body` variable.
 
-```yaml
-```
     {{< /note >}}
-    on_...
-      then:
-        - http_request.get:
-            url: https://esphome.io
-            collect_headers:
-              - Content-Type
-            on_response:
-              then:
-                - logger.log:
-                    format: "Response status: %d, Duration: %u ms, Content-Type: %s"
-                    args:
-                      - response->status_code
-                      - response->duration_ms
-                      - response->get_response_header("Content-Type").c_str()
-                - lambda: |-
-                    ESP_LOGD(TAG, "Response status: %d, Duration: %u ms, Content-Type: %s", response->status_code, response->duration_ms, response->get_response_header("Content-Type").c_str());
-            on_error:
-              then:
-                - logger.log: "Request failed!"
+```yaml
+on_...
+  then:
+    - http_request.get:
+        url: https://esphome.io
+        collect_headers:
+          - Content-Type
+        on_response:
+          then:
+            - logger.log:
+                format: "Response status: %d, Duration: %u ms, Content-Type: %s"
+                args:
+                  - response->status_code
+                  - response->duration_ms
+                  - response->get_response_header("Content-Type").c_str()
+            - lambda: |-
+                ESP_LOGD(TAG, "Response status: %d, Duration: %u ms, Content-Type: %s", response->status_code, response->duration_ms, response->get_response_header("Content-Type").c_str());
+        on_error:
+          then:
+            - logger.log: "Request failed!"
 
 
+```
 {{< anchor "http_request-on_error" >}}
 
 ## ``on_error`` Trigger

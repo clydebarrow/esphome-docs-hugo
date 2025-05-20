@@ -84,35 +84,35 @@ them locally with their own substitution value.
 Remote packages cannot have `secret` lookups in them. They should instead make use of substitutions with an
 optional default in the packaged YAML, which the local device YAML can set using values from the local secrets.
 
+{{< /note >}}
 ```yaml
-```
 # Git repo examples as a mapping
 packages:
-    # shorthand form github://username/repository/[folder/]file-path.yml[@branch-or-tag]
-    remote_package_shorthand: github://esphome/non-existant-repo/file1.yml@main
+  # shorthand form github://username/repository/[folder/]file-path.yml[@branch-or-tag]
+  remote_package_shorthand: github://esphome/non-existant-repo/file1.yml@main
 
-    remote_package_files:
-        url: https://github.com/esphome/non-existant-repo
-        files: [file1.yml, file2.yml]  # optional; if not specified, all files will be included
-        ref: main  # optional
-        refresh: 1d  # optional
+  remote_package_files:
+    url: https://github.com/esphome/non-existant-repo
+    files: [file1.yml, file2.yml]  # optional; if not specified, all files will be included
+    ref: main  # optional
+    refresh: 1d  # optional
 
-    remote_package_files2:
-        url: https://github.com/esphome/non-existant-repo
-        files:
-            - path: file1.yml
-                vars:
-                    a: 1
-                    b: 2
-            - path: file1.yml #Same file can be specified multiple times with different vars.
-                vars:
-                    a: 3
-                    b: 4
-            - file2.yml
-        ref: main  # optional
-        refresh: 1d  # optional
+  remote_package_files2:
+    url: https://github.com/esphome/non-existant-repo
+    files:
+      - path: file1.yml
+        vars:
+          a: 1
+          b: 2
+      - path: file1.yml #Same file can be specified multiple times with different vars.
+        vars:
+          a: 3
+          b: 4
+      - file2.yml
+    ref: main  # optional
+    refresh: 1d  # optional
 
-{{< /note >}}
+```
 ## Configuration variables:
 
 For each package:

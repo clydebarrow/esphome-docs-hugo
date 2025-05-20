@@ -386,50 +386,50 @@ You can specify a `default_preset` and set `on_boot_restore_from` to `memory`. I
 the settings from last boot cannot be retrieved, for any reason, then the specified `default_preset`
 will be applied.
 
+{{< /note >}}
 ```yaml
-```
 # This climate controller, on first boot, will switch to "My Startup Preset". Subsequent boots would
 # restore to whatever mode it was in prior to the reboot
 climate:
-    - platform: thermostat
-        name: "From Memory Thermostat"
-        default_preset: My Startup Preset
-        on_boot_restore_from: memory
-        preset:
-            - name: My Startup Preset
-                default_target_temperature_low: 17
-                default_target_temperature_high: 26
-                fan_mode: OFF
-                swing_mode: OFF
-                mode: OFF
-            # Custom preset
-            - name: A custom preset
-                default_target_temperature_low: 21
-                default_target_temperature_high: 23
-                fan_mode: HIGH
-                mode: HEAT_COOL
+  - platform: thermostat
+    name: "From Memory Thermostat"
+    default_preset: My Startup Preset
+    on_boot_restore_from: memory
+    preset:
+      - name: My Startup Preset
+        default_target_temperature_low: 17
+        default_target_temperature_high: 26
+        fan_mode: OFF
+        swing_mode: OFF
+        mode: OFF
+      # Custom preset
+      - name: A custom preset
+        default_target_temperature_low: 21
+        default_target_temperature_high: 23
+        fan_mode: HIGH
+        mode: HEAT_COOL
 
 # This climate controller will always switch to "Every Start Preset"
 climate:
-    - platform: thermostat
-        name: "Default Preset Thermostat"
-        default_preset: Every Start Preset
-        on_boot_restore_from: default_preset
-        preset:
-            - name: Every Start Preset
-                default_target_temperature_low: 17
-                default_target_temperature_high: 26
-                fan_mode: OFF
-                swing_mode: OFF
-                mode: OFF
-            # Custom preset
-            - name: A custom preset
-                default_target_temperature_low: 21
-                default_target_temperature_high: 23
-                fan_mode: HIGH
-                mode: HEAT_COOL
+  - platform: thermostat
+    name: "Default Preset Thermostat"
+    default_preset: Every Start Preset
+    on_boot_restore_from: default_preset
+    preset:
+      - name: Every Start Preset
+        default_target_temperature_low: 17
+        default_target_temperature_high: 26
+        fan_mode: OFF
+        swing_mode: OFF
+        mode: OFF
+      # Custom preset
+      - name: A custom preset
+        default_target_temperature_low: 21
+        default_target_temperature_high: 23
+        fan_mode: HIGH
+        mode: HEAT_COOL
 
-{{< /note >}}
+```
 ### Additional Actions/Behavior
 
 - **target_temperature_change_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to call when the

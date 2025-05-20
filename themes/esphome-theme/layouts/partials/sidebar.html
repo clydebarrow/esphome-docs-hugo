@@ -8,6 +8,16 @@
         {{ $ordered := true }}
         {{ .Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML }}
         {{ end }}
+        {{ if .Pages }}
+        <h2>In this section</h2>
+        <ul class="section-list">
+            {{ range .Pages }}
+            <li class="section-item">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
     </nav>
     
     <div class="sidebar-contact">

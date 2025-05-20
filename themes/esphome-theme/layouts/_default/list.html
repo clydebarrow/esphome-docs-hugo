@@ -7,16 +7,6 @@
         <h1>{{ .Title }}</h1>
         {{ .Content }}
         
-        {{ if .Pages }}
-        <h2>In this section</h2>
-        <ul class="section-list">
-            {{ range .Pages }}
-            <li class="section-item">
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
-            {{ end }}
-        </ul>
-        {{ end }}
     </div>
 </div>
 {{ end }}

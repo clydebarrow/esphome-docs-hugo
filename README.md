@@ -32,14 +32,91 @@ The site uses a custom theme called `esphome-theme` which is designed to match t
 
 ## Shortcodes
 
-The following custom shortcodes are available:
+The following custom shortcodes are available for use in your Markdown content:
 
-- `{{</* imgtable */>}}` - For displaying image tables
-- `{{</* note */>}}` - For note admonitions
-- `{{</* warning */>}}` - For warning admonitions
-- `{{</* collapse */>}}` - For collapsible sections
-- `{{</* seo */>}}` - For SEO metadata
-- `{{</* code-block */>}}` - For code blocks with syntax highlighting
+### `anchor`
+Creates an HTML anchor point that can be linked to with fragment identifiers.
+```
+{{< anchor "my-anchor-id" >}}
+```
+
+### `button`
+Creates a button with an image that links to a URL.
+```
+{{< button href="https://example.com" img="/images/button.png" alt="Example Button" target="_self" >}}
+```
+
+### `code-block`
+Creates a syntax-highlighted code block with a language indicator and copy button.
+```
+{{< code-block "yaml" >}}
+name: example
+platform: gpio
+pin: D1
+{{< /code-block >}}
+```
+
+### `collapse`
+Creates a collapsible section with a title that can be clicked to show/hide content.
+```
+{{< collapse "Optional Configuration" >}}
+This content will be hidden by default and can be expanded by clicking the header.
+You can include any Markdown content here, including lists, code blocks, etc.
+{{< /collapse >}}
+```
+
+### `docref`
+Creates a link to another page in the documentation with proper handling of anchors.
+```
+{{< docref "components/sensor/dht" >}}                     <!-- Uses the target page title as link text -->
+{{< docref "components/sensor/dht" "DHT Sensor Guide" >}}  <!-- Uses custom text for the link -->
+{{< docref "components/sensor/dht#configuration" >}}       <!-- Links to a specific anchor on the page -->
+```
+
+### `img`
+Displays an image with optional caption, width, height, and CSS class.
+```
+{{< img src="example.jpg" alt="Example image" caption="This is an example" width="500" class="center" >}}
+```
+
+### `imgtable`
+Creates a component card with an image, title, and optional description that links to another page.
+```
+{{< imgtable "DHT Sensor" "/components/sensor/dht" "dht.png" "Temperature and humidity sensor" "sensor-icon" >}}
+```
+
+### `note`
+Creates a note admonition box to highlight important information.
+```
+{{< note >}}
+This is important information that the reader should pay attention to.
+You can include **Markdown** formatting within the note.
+{{< /note >}}
+```
+
+### `seo`
+Adds SEO metadata tags to the page for better search engine optimization and social media sharing.
+```
+{{< seo description="Detailed guide for setting up the DHT sensor with ESPHome" image="dht-sensor.jpg" >}}
+```
+
+### `tip`
+Creates a tip admonition box to highlight helpful advice or best practices.
+```
+{{< tip >}}
+For best results, place the sensor away from heat sources.
+You can include **Markdown** formatting within the tip.
+{{< /tip >}}
+```
+
+### `warning`
+Creates a warning admonition box to highlight important cautions or potential issues.
+```
+{{< warning >}}
+Incorrect wiring may damage your device. Double-check connections before powering on.
+You can include **Markdown** formatting within the warning.
+{{< /warning >}}
+```
 
 ## Conversion Scripts
 

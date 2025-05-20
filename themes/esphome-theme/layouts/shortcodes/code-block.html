@@ -1,3 +1,20 @@
+{{/*
+  CODE-BLOCK SHORTCODE
+  Creates a syntax-highlighted code block with a language indicator and copy button.
+  
+  Usage: 
+  {{< code-block "yaml" >}}
+  name: example
+  platform: gpio
+  pin: D1
+  {{< /code-block >}}
+  
+  Parameters:
+  1. language (required) - The programming language for syntax highlighting (e.g., "yaml", "cpp", "python")
+  
+  Content:
+  The content between the opening and closing shortcode tags is the code to be displayed.
+*/}}
 {{ $lang := .Get 0 }}
 {{ $code := .Inner }}
 

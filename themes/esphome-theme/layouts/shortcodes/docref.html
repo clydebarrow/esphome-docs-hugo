@@ -1,3 +1,20 @@
+{{/*
+  DOCREF SHORTCODE
+  Creates a link to another page in the documentation with proper handling of anchors.
+  
+  Usage: 
+  {{< docref "components/sensor/dht" >}}                     <!-- Uses the target page title as link text -->
+  {{< docref "components/sensor/dht" "DHT Sensor Guide" >}}  <!-- Uses custom text for the link -->
+  {{< docref "components/sensor/dht#configuration" >}}       <!-- Links to a specific anchor on the page -->
+  
+  Parameters:
+  1. path (required) - The path to the target page, can include an anchor with #
+  2. custom text (optional) - Custom text to use for the link (defaults to target page title)
+  
+  Notes:
+  - The path should be relative to the content directory
+  - If the target page doesn't exist, it will display a "broken link" message
+*/}}
 {{- $path := .Get 0 -}}
 {{- $customText := .Get 1 -}}
 {{- $anchor := "" -}}

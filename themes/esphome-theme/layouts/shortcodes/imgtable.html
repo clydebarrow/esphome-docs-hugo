@@ -1,3 +1,18 @@
+{{/* 
+  IMGTABLE SHORTCODE
+  Creates a component card with an image, title, and optional description that links to another page.
+  Commonly used for creating grids of components or features.
+  
+  Usage: 
+  {{< imgtable "DHT Sensor" "/components/sensor/dht" "dht.png" "Temperature and humidity sensor" "sensor-icon" >}}
+  
+  Parameters:
+  1. title (required) - The title text to display below the image
+  2. link (required) - The URL to link to when the card is clicked
+  3. image (required) - The image filename (will be looked up in the images directory)
+  4. description (optional) - Short description text to display below the title
+  5. class (optional) - CSS class to apply to the image
+*/}}
 {{ $title := .Get 0 }}
 {{ $link := .Get 1 }}
 {{ $image := .Get 2 }}

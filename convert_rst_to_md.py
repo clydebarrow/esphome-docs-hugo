@@ -185,6 +185,37 @@ def convert_rst_to_md(lines, filename):
             md_lines.append('{{< /option >}}')
             continue
 
+        # Handle imgtable directive
+        if line.strip() == '.. imgtable::':
+            i += 1
+            # Skip empty lines
+            while i < len(lines) and not lines[i].strip():
+                i += 1
+            
+            # Start the imgtable shortcode
+            md_lines.append('{{< imgtable >}}')
+            
+            # Process each entry (each line should be indented)
+            while i < len(lines):
+                current_line = lines[i].strip()
+                
+                # If we hit an empty line or a non-indented line, we're done with this imgtable
+                if not lines[i].startswith('    ') and current_line:
+                    break
+                
+                # Skip empty lines within the imgtable
+                if not current_line:
+                    i += 1
+                    continue
+                
+                # Process the entry - format is typically: Title, Link, Image, [Description]
+                md_lines.append(current_line)
+                i += 1
+            
+            # Close the imgtable shortcode
+            md_lines.append('{{< /imgtable >}}')
+            continue
+
         if line.startswith('.. program::'):
             i += 1
             continue
@@ -1139,6 +1170,10 @@ def scan_image_references(input_dir):
         r'!\[(.*?)\]\(([^)]+\.(png|jpg|jpeg|gif|svg))\)'  # Markdown image syntax
     ]
     
+    # Initialize image tracking dictionaries
+    image_map = defaultdict(int)
+    image_sources = {}
+    
     for root, _, files in os.walk(input_dir):
         for file in files:
             if file.endswith('.rst'):
@@ -1147,8 +1182,9 @@ def scan_image_references(input_dir):
                 
                 with open(rst_file, 'r', encoding='utf-8') as f:
                     content = f.read()
+                    lines = content.splitlines()
                 
-                # Find all image references
+                # Find all image references using regex patterns
                 for pattern in image_patterns:
                     for match in re.finditer(pattern, content):
                         image_path = match.group(1).strip()
@@ -1177,6 +1213,65 @@ def scan_image_references(input_dir):
                             image_map[image_filename] += 1
                             image_sources[image_filename] = abs_image_path
                             print(f"Found image: {image_filename} in {rel_path}")
+                
+                # Find images in imgtable directives
+                i = 0
+                while i < len(lines):
+                    line = lines[i].strip()
+                    
+                    # Check for imgtable directive
+                    if line == '.. imgtable::':
+                        i += 1
+                        # Skip empty lines
+                        while i < len(lines) and not lines[i].strip():
+                            i += 1
+                        
+                        # Process each entry in the imgtable
+                        while i < len(lines):
+                            current_line = lines[i].strip()
+                            
+                            # If we hit an empty line or a non-indented line, we're done with this imgtable
+                            if not lines[i].startswith('    ') and current_line:
+                                break
+                            
+                            # Skip empty lines within the imgtable
+                            if not current_line:
+                                i += 1
+                                continue
+                            
+                            # Process the entry - format is typically: Title, Link, Image, [Description]
+                            parts = [part.strip() for part in current_line.split(',')]
+                            if len(parts) >= 3:  # We need at least 3 parts (title, link, image)
+                                image_path = parts[2]
+                                
+                                # Skip URLs
+                                if image_path.startswith(('http://', 'https://')):
+                                    i += 1
+                                    continue
+                                
+                                # Normalize path
+                                if image_path.startswith('/'):
+                                    # Absolute path within docs
+                                    abs_image_path = os.path.join(input_dir, image_path.lstrip('/'))
+                                    rel_image_path = image_path.lstrip('/')
+                                else:
+                                    # Relative path
+                                    abs_image_path = os.path.join(os.path.dirname(rst_file), image_path)
+                                    if not os.path.exists(abs_image_path):
+                                        abs_image_path = os.path.join(input_dir, "images", image_path)
+
+                                # Only count if the image file exists
+                                if os.path.exists(abs_image_path):
+                                    image_filename = os.path.basename(image_path)
+                                    image_map[image_filename] += 1
+                                    image_sources[image_filename] = abs_image_path
+                                    print(f"Found image in imgtable: {image_filename} in {rel_path}")
+                                else:
+                                    print(f"Image not found: {image_path} in {abs_image_path}")
+                            
+                            i += 1
+                    else:
+                        i += 1
     
     # Print statistics
     print(f"Found {len(image_map)} unique images")

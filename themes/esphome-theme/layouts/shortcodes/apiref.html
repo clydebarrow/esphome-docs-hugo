@@ -1,0 +1,6 @@
+{{- $text := .Get 0 -}}
+{{- $path := .Get 1 -}}
+{{- $lastPathElement := index (last 1 (split $path "/")) 0 -}}
+{{- $processedPath := replace (replace $lastPathElement "_" "__") "." "_8" -}}
+{{- $baseUrl :=  .Site.Params.api_docs_url -}}
+<a href="{{ $baseUrl }}/{{ $processedPath }}">{{ $text }}</a>

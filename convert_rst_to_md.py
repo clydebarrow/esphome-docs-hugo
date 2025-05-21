@@ -120,7 +120,7 @@ def convert_rst_to_md(lines, filename):
     skip_build = False
     bullet_regex = re.compile(r'^(\s*)([-*+])\s+')
 
-    # Check for explicit title directive
+     # Check for explicit title directive
     for i, line in enumerate(lines):
         if line.startswith('.. title::'):
             explicit_title = line.replace('.. title::', '').strip()
@@ -689,12 +689,13 @@ def process_inline_markup(line):
     processed_line = re.sub(r'\*([^*]+)\*', r'*\1*', processed_line)
     
     # Pre-process the line to handle nested references
-    # Replace :ref: and :doc: with placeholders to avoid nested processing
+    # Replace :ref:, :doc:, and :apiref: with placeholders to avoid nested processing
     ref_matches = []
     doc_matches = []
+    apiref_matches = []
 
     # Find and store all :ref: patterns
-    for match in re.finditer(r':ref:`([^>`]+>)`', processed_line):
+    for match in re.finditer(r':ref:`([^>`]+)`', processed_line):
         ref_content = match.group(1)
         ref_matches.append((match.span(), ref_content))
     
@@ -703,6 +704,11 @@ def process_inline_markup(line):
         doc_content = match.group(1)
         doc_matches.append((match.span(), doc_content))
     
+    # Find and store all :apiref: patterns
+    for match in re.finditer(r':apiref:`([^`]+)`', processed_line):
+        apiref_content = match.group(1)
+        apiref_matches.append((match.span(), apiref_content))
+
     # Replace matches with placeholders, starting from the end to preserve positions
     for i, ((start, end), content) in enumerate(reversed(ref_matches)):
         placeholder = f"__REF_PLACEHOLDER_{i}__"
@@ -712,15 +718,18 @@ def process_inline_markup(line):
         placeholder = f"__DOC_PLACEHOLDER_{i}__"
         processed_line = processed_line[:start] + placeholder + processed_line[end:]
     
+    for i, ((start, end), content) in enumerate(reversed(apiref_matches)):
+        placeholder = f"__APIREF_PLACEHOLDER_{i}__"
+        processed_line = processed_line[:start] + placeholder + processed_line[end:]
+    
     # Process the placeholders
     for i, ((start, end), content) in enumerate(ref_matches):
         placeholder = f"__REF_PLACEHOLDER_{i}__"
-
+        
         # Handle references with text and ID
-        if "<" in content and ">" in content:
-            text, ref_id = content.split("<", 1)
+        if " <" in content and ">" in content:
+            text, ref_id = content.split(" <", 1)
             ref_id = ref_id.rstrip(">")
-            text = text.strip()
             
             # Look up the document path for this anchor
             doc_path, anchor_text = anchor_map.get(ref_id, ("", ""))
@@ -760,6 +769,21 @@ def process_inline_markup(line):
             # Simple document references
             doc_path = fix_doc_path(content)
             replacement = f"{{{{< docref \"{doc_path}\" >}}}}"
+        
+        processed_line = processed_line.replace(placeholder, replacement)
+    
+    for i, ((start, end), content) in enumerate(apiref_matches):
+        placeholder = f"__APIREF_PLACEHOLDER_{i}__"
+        
+        # Handle API references with text and path
+        if "<" in content and ">" in content:
+            text, api_path = content.split("<", 1)
+            api_path = api_path.rstrip(">")
+            # Use the apiref shortcode with custom text
+            replacement = f"{{{{< apiref \"{text.strip()}\" \"{api_path}\" >}}}}"
+        else:
+            # Simple API references - use the path as the text
+            replacement = f"{{{{< apiref \"{content}\" \"{content}\" >}}}}"
         
         processed_line = processed_line.replace(placeholder, replacement)
     

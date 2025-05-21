@@ -9,6 +9,7 @@
   --nav-height: 50px;
   --nav-transition-up: transform 0.3s ease;
   --nav-transition-down: transform 0.1s ease-out;
+  --max-page-width: 1500px;
 }
 
 * {
@@ -107,11 +108,14 @@ img {
 }
 
 .sticky-nav {
+  max-width: var(--max-page-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 2em;
-  max-width: 1800px;
+  padding-top: 0.5em;
+  padding-right: 2em;
+  padding-left: 3em;
+  padding-bottom: 0.5em;
   margin: 0 auto;
 }
 
@@ -189,7 +193,7 @@ img {
 
 /* Main content */
 main {
-  max-width: 1800px;
+  max-width: var(--max-page-width);
   margin: 0 auto;
   padding: 2em;
   margin-top: var(--nav-height); /* Add space for the fixed header */

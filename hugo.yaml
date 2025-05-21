@@ -40,7 +40,7 @@ markup:
     codeFences: true
     guessSyntax: false
     lineNos: false
-    style: monokai
+    style: monokailight
   goldmark:
     renderer:
       unsafe: true  # Allow HTML in markdown files

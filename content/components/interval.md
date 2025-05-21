@@ -32,3 +32,4 @@ If a startup delay is configured, the first execution of the actions will not oc
 - {{< docref "/automations/actions" >}}
 - {{< docref "/automations/templates" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/interval.md)
+

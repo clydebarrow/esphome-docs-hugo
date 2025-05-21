@@ -59,3 +59,4 @@ please consider adding support to the codebase and add it to the list above.
 - {{< docref "/components/light/index" >}}
 - {{< docref "/components/power_supply" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/rp2040_pio_led_strip.md)
+

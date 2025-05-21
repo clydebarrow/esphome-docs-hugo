@@ -225,3 +225,4 @@ By clicking on any sensor it will expand a graph with the historical values for 
 - :apiref:`web_server/web_server.h`
 - {{< docref "prometheus/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/web_server.md)
+

@@ -43,3 +43,4 @@ button:
 - {{< docref "template/" >}}
 - :apiref:`factory_reset/factory_reset_button.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/factory_reset.md)
+

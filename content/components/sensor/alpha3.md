@@ -90,3 +90,4 @@ The pump can only be connected to one device at a time. If you want to use the G
 - {{< docref "/components/ble_client" >}}
 - :apiref:`alpha3/alpha3.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/alpha3.md)
+

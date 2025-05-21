@@ -256,3 +256,4 @@ binary_sensor:
 - [Arduino LiquidCrystal Library](https://www.arduino.cc/en/Reference/LiquidCrystal)
 - :apiref:`lcd_base/lcd_display.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/lcd_display.md)
+

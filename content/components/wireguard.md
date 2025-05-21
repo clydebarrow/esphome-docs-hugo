@@ -380,3 +380,4 @@ of the [address]({{< ref "components/wireguard#wireguard-address" >}}) configure
   <https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662>`__
   (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wireguard.md)
+

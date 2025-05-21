@@ -5,3 +5,4 @@ title: "Xiaomi Miscale2 combined into Xiaomi Miscale"
 
 
 {{< docref "/components/sensor/xiaomi_miscale" >}}
+

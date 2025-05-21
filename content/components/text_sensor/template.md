@@ -21,9 +21,9 @@ text_sensor:
 ```
 Possible return values for the lambda:
 
- - `return {"STRING LITERAL"};` the new value for the sensor of type `std::string`. **Has to be** in
+- `return {"STRING LITERAL"};` the new value for the sensor of type `std::string`. **Has to be** in
    brackets `{}`!
- - `return {};` if you don't want to publish a new state (advanced).
+- `return {};` if you don't want to publish a new state (advanced).
 
 ## Configuration variables:
 
@@ -114,3 +114,4 @@ text_sensor:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/text_sensor/template_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/template.md)
+

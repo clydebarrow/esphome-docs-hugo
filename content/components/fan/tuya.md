@@ -64,3 +64,4 @@ over the serial bus.
 - {{< docref "/components/fan/index" >}}
 - :apiref:`tuya/fan/tuya_fan.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/tuya.md)
+

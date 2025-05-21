@@ -12,3 +12,4 @@ No programming or other software required.
 
 
    :file: ./installer.html
+

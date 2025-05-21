@@ -211,3 +211,4 @@ switch:
 - {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`template/alarm_control_panel/template_alarm_control_panel.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/alarm_control_panel/template.md)
+

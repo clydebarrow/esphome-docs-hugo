@@ -52,3 +52,4 @@ please feel free to do so 😺.
 - {{< docref "/components/esp32" >}}
 - :apiref:`esp32_hall/esp32_hall.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/esp32_hall.md)
+

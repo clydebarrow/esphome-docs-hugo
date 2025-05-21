@@ -144,3 +144,4 @@ binary_sensor:
 - :apiref:`binary_sensor_map/binary_sensor_map.h`
 - [Bayesian sensor in Home Assistant](https://www.home-assistant.io/integrations/bayesian/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/binary_sensor_map.md)
+

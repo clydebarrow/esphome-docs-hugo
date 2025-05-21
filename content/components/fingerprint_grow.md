@@ -520,3 +520,4 @@ api:
 - [Tutorial from Adafruit](https://learn.adafruit.com/adafruit-optical-fingerprint-sensor)
 - [Adafruit Fingerprint Sensor Library](https://github.com/adafruit/Adafruit-Fingerprint-Sensor-Library) by [Adafruit](https://www.adafruit.com/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fingerprint_grow.md)
+

@@ -41,3 +41,4 @@ Widget-specific actions (`lvgl.dropdown.update`, `lvgl.roller.update`) will trig
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/lvgl.md)
+

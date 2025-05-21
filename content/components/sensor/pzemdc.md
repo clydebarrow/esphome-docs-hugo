@@ -77,3 +77,4 @@ on_...:
 - {{< docref "pzemac/" >}}
 - :apiref:`pzemdc/pzemdc.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzemdc.md)
+

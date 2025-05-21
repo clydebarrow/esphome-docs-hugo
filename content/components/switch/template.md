@@ -29,9 +29,9 @@ switch:
 ```
 Possible return values for the optional lambda:
 
- - `return true;` if the switch should be reported as ON.
- - `return false;` if the switch should be reported as OFF.
- - `return {};` if the last state should be repeated.
+- `return true;` if the switch should be reported as ON.
+- `return false;` if the switch should be reported as OFF.
+- `return {};` if the last state should be repeated.
 
 ## Configuration variables:
 
@@ -97,3 +97,4 @@ id(template_swi).publish_state(false);
 - {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`template/switch/template_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/template.md)
+

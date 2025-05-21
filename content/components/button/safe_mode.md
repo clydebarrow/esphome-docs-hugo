@@ -32,3 +32,4 @@ button:
 - {{< docref "template/" >}}
 - :apiref:`safe_mode/safe_mode_button.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/safe_mode.md)
+

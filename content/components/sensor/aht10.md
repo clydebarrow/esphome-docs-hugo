@@ -56,3 +56,4 @@ sensor:
 - [AHT10 Library](https://github.com/Thinary/AHT10)  by [Thinary Electronic](https://github.com/Thinary)
 - [Unofficial Translated AHT10 Datasheet (en)](https://wiki.liutyi.info/download/attachments/30507639/Aosong_AHT10_en_draft_0c.pdf)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/aht10.md)
+

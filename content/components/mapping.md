@@ -17,17 +17,17 @@ mapping:
       clear-night: clear_night_img
       cloudy: cloudy_img
 
-```
-   # Using the mapping in an automation
-    text_sensor:
-     - id: forecast_text
-       platform: homeassistant
-       entity_id: weather.forecast_home
-       on_value:
-         lvgl.image.update:
-           id: weather_image
-           src: !lambda return id(weather_icon)[x];
+# Using the mapping in an automation
+text_sensor:
+ - id: forecast_text
+   platform: homeassistant
+   entity_id: weather.forecast_home
+   on_value:
+     lvgl.image.update:
+       id: weather_image
+       src: !lambda return id(weather_icon)[x];
 
+```
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give the mapping an ID so that you can refer
@@ -97,3 +97,4 @@ display:
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mapping.md)
+

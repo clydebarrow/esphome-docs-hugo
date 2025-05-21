@@ -307,12 +307,12 @@ advanced stuff (see the full API Reference for more info).
   call.set_value(42);
   call.perform();
 
-  ```
   Check the API reference for information on the methods that are available for
-  the `NumberCall` object. You can for example also use `call.number_to_min()`
-  to set the number to its minimum value or `call.number_increment(true)` to increment
+  the ``NumberCall`` object. You can for example also use ``call.number_to_min()``
+  to set the number to its minimum value or ``call.number_increment(true)`` to increment
   the number by its step size with the cycle feature enabled.
 
+  ```
 - `.state`: Retrieve the current value of the number. Is `NAN` if no value has been read or set.
 
   ```cpp
@@ -325,3 +325,4 @@ advanced stuff (see the full API Reference for more info).
 - :apiref:`Number <number/number.h>`
 - :apiref:`NumberCall <number/number_call.h>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/number/index.md)
+

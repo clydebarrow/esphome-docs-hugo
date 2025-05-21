@@ -25,9 +25,9 @@ sensor:
 ```
 Possible return values for the lambda:
 
- - `return <FLOATING_POINT_NUMBER>;` the new value for the sensor.
- - `return NAN;` if the state should be considered invalid to indicate an error (advanced).
- - `return {};` if you don't want to publish a new state (advanced).
+- `return <FLOATING_POINT_NUMBER>;` the new value for the sensor.
+- `return NAN;` if the state should be considered invalid to indicate an error (advanced).
+- `return {};` if you don't want to publish a new state (advanced).
 
 ## Configuration variables:
 
@@ -113,3 +113,4 @@ sensor:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/sensor/template_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/template.md)
+

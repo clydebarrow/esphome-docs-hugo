@@ -173,3 +173,4 @@ api:
 - {{< docref "/components/speaker/index" >}}
 - :apiref:`rtttl/rtttl.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/rtttl.md)
+

@@ -13,11 +13,11 @@ In order to calculate the resistance, the circuit needs to be set up in a
 [voltage divider circuit](https://learn.sparkfun.com/tutorials/voltage-dividers/all).
 This consists of three parts:
 
- - A voltage reference, usually this is connected to 3.3V (VCC). For example in the image
+- A voltage reference, usually this is connected to 3.3V (VCC). For example in the image
    below it is 5V (though on ESPs you should not use that voltage)
- - A reference resistor with constant resistance. For example below it is R₁ with a value
+- A reference resistor with constant resistance. For example below it is R₁ with a value
    of 5.6kOhm.
- - The variable resistor we wish the read the resistance of. Here R₂.
+- The variable resistor we wish the read the resistance of. Here R₂.
 
 There are two kinds of configurations for this circuit: Either the variable resistor
 is close to GND (DOWNSTREAM) or it is closer to VCC (UPSTREAM).
@@ -69,3 +69,4 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`resistance/resistance_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/resistance.md)
+

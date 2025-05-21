@@ -258,12 +258,12 @@ advanced stuff (see the full API Reference for more info).
   call.set_option("Happy");
   call.perform();
 
-  ```
   Check the API reference for information on the methods that are available for
-  the `SelectCall` object. You can for example also use `call.select_first()`
-  to select the first option or `call.select_next(true)` to select the next
+  the ``SelectCall`` object. You can for example also use ``call.select_first()``
+  to select the first option or ``call.select_next(true)`` to select the next
   option with the cycle feature enabled.
 
+  ```
 - `.state`: Retrieve the currently selected option of the select.
 
   ```cpp
@@ -271,8 +271,8 @@ advanced stuff (see the full API Reference for more info).
   auto state = id(my_select).state.c_str();
   ESP_LOGI("main", "Option of my select: %s", state);
 
-  ```
-  ```yaml
+  .. code-block:: yaml
+
   # Check if a specific option is selected
   - if:
       condition:
@@ -368,3 +368,4 @@ select:
 - :apiref:`Select <select/select.h>`
 - :apiref:`SelectCall <select/select_call.h>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/index.md)
+

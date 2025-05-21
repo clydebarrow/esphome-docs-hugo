@@ -236,10 +236,10 @@ Below are the methods to read current settings and modify them dynamically:
               id(my_uart).load_settings();
             }
 
-  ```
   Available methods for runtime changes:
 
-  ```cpp
+  .. code-block:: cpp
+
   // Set TX/RX pins
   id(my_uart).set_tx_pin(InternalGPIOPin *tx_pin);
   id(my_uart).set_rx_pin(InternalGPIOPin *rx_pin);
@@ -276,3 +276,4 @@ uart:
 - {{< docref "/components/packet_transport/uart" >}}
 - :apiref:`uart/uart.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/uart.md)
+

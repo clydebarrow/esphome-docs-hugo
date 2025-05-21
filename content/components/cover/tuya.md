@@ -77,3 +77,4 @@ In this condition, it will go into an error / uncalibrated state when it next tr
 - {{< docref "/components/cover/index" >}}
 - :apiref:`tuya/cover/tuya_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/tuya.md)
+

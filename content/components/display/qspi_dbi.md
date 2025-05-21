@@ -12,10 +12,10 @@ This display driver supports AMOLED and LCD displays with quad SPI interfaces, u
 
 This driver has been tested with the following displays:
 
-  - Lilygo T4-S3
-  - Lilygo T-Display S3 AMOLED
-  - JC4832W535 board
-  - JC3636W518 board
+- Lilygo T4-S3
+- Lilygo T-Display S3 AMOLED
+- JC4832W535 board
+- JC3636W518 board
 
 ## Usage
 This component requires an ESP32 and the use of
@@ -221,3 +221,4 @@ touchscreen:
 - {{< docref "index/" >}}
 - :apiref:`qspi_dbi/qspi_dbi.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/qspi_dbi.md)
+

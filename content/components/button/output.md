@@ -41,3 +41,4 @@ in the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}).
 - {{< docref "/components/output/index" >}}
 - :apiref:`output/button/output_button.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/output.md)
+

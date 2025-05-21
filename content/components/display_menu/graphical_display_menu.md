@@ -227,3 +227,4 @@ binary_sensor:
 - [Display Pages]({{< ref "components/display/_index#display-pages" >}})
 - :apiref:`graphical_display_menu/graphical_display_menu.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display_menu/graphical_display_menu.md)
+

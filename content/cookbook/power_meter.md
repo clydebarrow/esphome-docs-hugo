@@ -147,3 +147,4 @@ While you can in theory also do this with the home assistant [integration](https
 - {{< docref "/components/time/homeassistant" >}}
 - [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/power_meter.md)
+

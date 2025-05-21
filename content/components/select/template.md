@@ -56,3 +56,4 @@ with the [``select.set`` Action]({{< ref "components/select/_index#select-set_ac
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/select/template_select.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/template.md)
+

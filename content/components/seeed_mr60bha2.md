@@ -77,3 +77,4 @@ sensor:
 - [Source of inspiration for implementation](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/)
 - :apiref:`seeed_mr60bha2/seeed_mr60bha2.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/seeed_mr60bha2.md)
+

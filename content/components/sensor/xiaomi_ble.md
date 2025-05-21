@@ -186,9 +186,9 @@ There are the following possibilities to operate this sensor:
 2. Device flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware
 3. Device flashed with [ATC MiThermometer](https://github.com/atc1441/ATC_MiThermometer) custom firmware
 
-   - "Mi Like" advertisement (dummy bindkey required)
-   - "Custom" advertisement (no bindkey required)
-   - "pvvx" custom advertisement (no bindkey required, only PVVX firmware)
+- "Mi Like" advertisement (dummy bindkey required)
+- "Custom" advertisement (no bindkey required)
+- "pvvx" custom advertisement (no bindkey required, only PVVX firmware)
 
 Configuration example for Xiaomi stock firmware or ATC MiThermometer firmware set to "Mi Like" advertisement:
 
@@ -277,8 +277,8 @@ Similar to the LYWSD03MMC, there is custom firmware available for this device, s
 1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
 2. Device flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware
 
-   - "Mi Like" advertisement (dummy bindkey required)
-   - "pvvx" custom advertisement (no bindkey required, only PVVX firmware)
+- "Mi Like" advertisement (dummy bindkey required)
+- "pvvx" custom advertisement (no bindkey required, only PVVX firmware)
 
 Configuration example for Xiaomi stock firmware:
 
@@ -622,3 +622,4 @@ You should at least protect your sensors with a custom pairing PIN code. Choose 
 - Cloud Tokens Extractor: `<https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor>`__
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/xiaomi_ble.md)
+

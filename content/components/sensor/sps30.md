@@ -139,3 +139,4 @@ on_...:
 - {{< docref "sgp30/" >}}
 - :apiref:`sps30/sps30.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sps30.md)
+

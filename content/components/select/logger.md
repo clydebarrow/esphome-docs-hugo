@@ -20,3 +20,4 @@ select:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< docref "/components/logger" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/logger.md)
+

@@ -170,10 +170,10 @@ since this will be sending the real value to esphome.
 
 {{< /note >}}
 Using the above yaml example:
-  - "Current Humidity" will poll the Nextion for the `humidity.val` value and set the sensor accordingly.
-  - "Current Temperature" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) or use a lambda:
+- "Current Humidity" will poll the Nextion for the `humidity.val` value and set the sensor accordingly.
+- "Current Temperature" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) or use a lambda:
 
-    - [Lambda Calls]({{< ref "components/sensor/nextion#nextion_sensor_lambda_calls" >}}).
+- [Lambda Calls]({{< ref "components/sensor/nextion#nextion_sensor_lambda_calls" >}}).
 
 {{< note >}}
 No updates will be sent to the Nextion if it is sleeping. Once it wakes, the components will be updated. If a component is invisible, :code:`visible(false)`, then it won't update until it is set to be visible.
@@ -208,3 +208,4 @@ printh FF FF FF
 - {{< docref "index/" >}}
 - :apiref:`nextion/sensor/nextion_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/nextion.md)
+

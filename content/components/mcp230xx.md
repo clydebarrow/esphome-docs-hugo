@@ -200,3 +200,4 @@ binary_sensor:
 - :apiref:`API Reference (MCP23016) <mcp23016/mcp23016.h>`
 - :apiref:`API Reference (MCP23017) <mcp23017/mcp23017.h>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mcp230xx.md)
+

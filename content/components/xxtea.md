@@ -19,3 +19,4 @@ See the API docs for more information on how to use this component.
 - {{< docref "index/" >}}
 - :apiref:`xxtea/xxtea.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/xxtea.md)
+

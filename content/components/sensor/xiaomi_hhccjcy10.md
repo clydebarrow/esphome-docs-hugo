@@ -44,3 +44,4 @@ sensor:
 
 - {{< docref "ble_client/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/xiaomi_hhccjcy10.md)
+

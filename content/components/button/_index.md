@@ -127,3 +127,4 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can press
 
 - :apiref:`button/button.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/index.md)
+

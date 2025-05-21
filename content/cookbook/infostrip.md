@@ -143,3 +143,4 @@ automation:
 - {{< docref "/components/light/partition" >}}
 - {{< docref "/components/sensor/mhz19" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/infostrip.md)
+

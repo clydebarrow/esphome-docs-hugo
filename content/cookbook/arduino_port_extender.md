@@ -18,9 +18,9 @@ I²C bus.
 
 Currently it is supported:
 
-    - reading digital inputs
-    - reading analog inputs
-    - writing digital outputs
+- reading digital inputs
+- reading analog inputs
+- writing digital outputs
 
 The Arduino sketch can be retrieved from [here](https://gist.github.com/glmnet/49ca3d6a9742fc3649f4fbdeaa4cdf5d#file-arduino_port_expander_sketch-ino)
 you can rename it to `.ino` and use the Arduino IDE to program it.
@@ -318,3 +318,4 @@ sensor:
 ## See Also
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/arduino_port_extender.md)
+

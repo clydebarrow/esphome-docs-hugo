@@ -22,20 +22,20 @@ globals:
     max_restore_data_length: 24
     initial_value: '"Global value is"'
 
+# In an automation
+on_...:
+ then:
+   - lambda: |-
+       if (id(my_global_int) > 5) {
+         // global value is greater than 5
+         id(my_global_int) += 1;
+       } else {
+         id(my_global_int) += 10;
+       }
+
+       ESP_LOGD(TAG, "%s: %d", id(my_global_string).c_str(), id(my_global_int));
+
 ```
-   # In an automation
-   on_...:
-     then:
-       - lambda: |-
-           if (id(my_global_int) > 5) {
-             // global value is greater than 5
-             id(my_global_int) += 1;
-           } else {
-             id(my_global_int) += 10;
-           }
-
-           ESP_LOGD(TAG, "%s: %d", id(my_global_string).c_str(), id(my_global_int));
-
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give the global variable an ID so that you can refer
@@ -84,3 +84,4 @@ id(my_global_var) = 10;
 - {{< docref "/automations/actions" >}}
 - {{< docref "/automations/templates" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/globals.md)
+

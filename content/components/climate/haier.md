@@ -304,3 +304,4 @@ on_...:
 - {{< docref "/components/climate/index" >}}
 - :apiref:`haier/climate/haier_base.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/haier.md)
+

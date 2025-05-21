@@ -128,3 +128,4 @@ This condition will check if the microphone is currently apply a software mute.
 ## See Also
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/microphone/index.md)
+

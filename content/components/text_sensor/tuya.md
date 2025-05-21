@@ -29,3 +29,4 @@ text_sensor:
 - {{< docref "/components/text_sensor/index" >}}
 - :apiref:`tuya/text_sensor/tuya_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/tuya.md)
+

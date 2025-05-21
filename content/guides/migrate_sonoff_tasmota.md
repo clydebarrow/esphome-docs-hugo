@@ -78,10 +78,10 @@ the dimming functionality will work as usual and no more power cycles are requir
     Tasmota 8.2 introduced upgrading using gzipped binaries which are smaller in size and
     make the upgrade process easier. 
 
-    - If you are using Tasmota 8.2 or later (recommended) you probably will want to compress the firmware generated from ESPHome with `gzip` before uploading it.
+- If you are using Tasmota 8.2 or later (recommended) you probably will want to compress the firmware generated from ESPHome with `gzip` before uploading it.
     
-    - If you are using any version older than 8.2: first upload `tasmota-minimal.bin` from Tasmota repository. Then upload the firmware generated from ESPHome. 
-        - Alternatively, first upgrade Tasmota to the latest version. Then use the first (gzip, recommended) method.
+- If you are using any version older than 8.2: first upload `tasmota-minimal.bin` from Tasmota repository. Then upload the firmware generated from ESPHome. 
+- Alternatively, first upgrade Tasmota to the latest version. Then use the first (gzip, recommended) method.
     
     If you are using Tasmota 7.2+ it may be necessary to run the command `SetOption78 1` in the 
     Tasmota console and restart your device to be able to upgrade to esphome.
@@ -108,3 +108,4 @@ If you need to use the uncompressed image for any reason, just remove `&compress
 - {{< docref "migrate_espurna/" >}}
 - {{< docref "migrate_espeasy/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/migrate_sonoff_tasmota.md)
+

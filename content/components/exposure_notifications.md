@@ -31,8 +31,8 @@ exposure_notifications:
 
 An exposure notification payload contains:
 
-  - Rolling proximity identifier (RPI): A 16-byte long value used to identify a given device in a 10-minute window.
-  - Associated encrypted metadata (AEM): Additional encrypted metadata, like transmit power.
+- Rolling proximity identifier (RPI): A 16-byte long value used to identify a given device in a 10-minute window.
+- Associated encrypted metadata (AEM): Additional encrypted metadata, like transmit power.
 
 Because the GAEN framework is designed to prevent tracking an individual, this data can essentially
 only be used to check whether a device with enabled exposure notifications is nearby (and to limited degree
@@ -77,3 +77,4 @@ exposure_notifications:
 - {{< docref "esp32_ble_tracker/" >}}
 - :apiref:`exposure_notifications/exposure_notifications.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/exposure_notifications.md)
+

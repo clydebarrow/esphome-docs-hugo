@@ -28,9 +28,9 @@ binary_sensor:
 ```
 Possible return values of the lambda:
 
- - `return true;` if the binary sensor should be ON.
- - `return false;` if the binary sensor should be OFF.
- - `return {};` if the state is not known. The last known state will be maintained.
+- `return true;` if the binary sensor should be ON.
+- `return false;` if the binary sensor should be OFF.
+- `return {};` if the state is not known. The last known state will be maintained.
 
 As an alternative to using a lambda you may use ESPHome [condition expressions]({{< ref "automations/actions#config-condition" >}}):
 
@@ -100,3 +100,4 @@ id(template_bin).publish_state(true);
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/binary_sensor/template_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/template.md)
+

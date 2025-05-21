@@ -34,10 +34,10 @@ cover:
 ```
 Possible return values for the optional lambda:
 
- - `return COVER_OPEN;` / `return 1.0f;` if the cover should be reported as OPEN.
- - `return COVER_CLOSED;` / `return 0.0f` if the cover should be reported as CLOSED.
- - `return {};` if the last state should be repeated.
- - A value between `0.0f` and `1.0f` (inclusive) if `has_position` is set to `true`.
+- `return COVER_OPEN;` / `return 1.0f;` if the cover should be reported as OPEN.
+- `return COVER_CLOSED;` / `return 0.0f` if the cover should be reported as CLOSED.
+- `return {};` if the last state should be repeated.
+- A value between `0.0f` and `1.0f` (inclusive) if `has_position` is set to `true`.
 
 ## Configuration variables:
 
@@ -125,3 +125,4 @@ id(template_cov).publish_state();
 - {{< docref "/cookbook/garage-door" >}}
 - :apiref:`template/cover/template_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/template.md)
+

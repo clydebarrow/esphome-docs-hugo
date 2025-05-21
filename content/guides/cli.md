@@ -258,3 +258,4 @@ eval "$(register-python-argcomplete esphome)"
 
 ```
 For more information, see [argcomplete](https://kislyuk.github.io/argcomplete/) documentation.
+

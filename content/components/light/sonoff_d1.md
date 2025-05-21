@@ -106,3 +106,4 @@ light:
 - {{< docref "/components/logger" >}}
 - {{< docref "/components/esp8266" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/sonoff_d1.md)
+

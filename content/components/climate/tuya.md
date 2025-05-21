@@ -106,8 +106,8 @@ climate:
 
 If the device has different multipliers for current and target temperatures, **temperature_multiplier** can be replaced with both of:
 
-    - **current_temperature_multiplier** (*Optional*, float): A multiplier to modify the current temperature value.
-    - **target_temperature_multiplier** (*Optional*, float): A multiplier to modify the target temperature value.
+- **current_temperature_multiplier** (*Optional*, float): A multiplier to modify the current temperature value.
+- **target_temperature_multiplier** (*Optional*, float): A multiplier to modify the target temperature value.
 
 - All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
@@ -137,3 +137,4 @@ integers for data reporting and to get a .5 temperature you need to divide by 2 
 - {{< docref "/components/climate/index" >}}
 - :apiref:`tuya/climate/tuya_climate.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/tuya.md)
+

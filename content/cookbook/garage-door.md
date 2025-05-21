@@ -47,3 +47,4 @@ cover:
 - {{< docref "/components/switch/gpio" >}}
 - {{< docref "/components/cover/template" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/garage-door.md)
+

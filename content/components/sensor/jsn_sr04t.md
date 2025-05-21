@@ -10,18 +10,18 @@ with ESPHome to measure distances. This sensor can measure
 ranges between 25 centimeters and 600 centimeters with a resolution of 1 millimeter.
 
 Configure the JSN-SR04T for mode 1:
-    - **V1.0 and V2.0**: Add a 47k resistor to pad R27.
-    - **V3.0**: Short pad M1 or add 47k resistor to pad mode.
+- **V1.0 and V2.0**: Add a 47k resistor to pad R27.
+- **V3.0**: Short pad M1 or add 47k resistor to pad mode.
 
 Configure the JSN-SR04T for mode 2:
-    - **V1.0 and V2.0**: Add a 120k resistor to pad R27.
-    - **V3.0**: Short pad M2 or add 120k resistor to pad mode.
+- **V1.0 and V2.0**: Add a 120k resistor to pad R27.
+- **V3.0**: Short pad M2 or add 120k resistor to pad mode.
 
 Configure the AJ_SR04M for mode 1:
-    - Add a 120k resistor to pad R19.
+- Add a 120k resistor to pad R19.
 
 Configure the AJ_SR04M for mode 2:
-    - Add a 47k resistor to pad R19.
+- Add a 47k resistor to pad R19.
 
 {{< img src="jsn-sr04t-v3-mode-select-pads.jpg" alt="Image" caption="JSN-SR04T Waterproof Ultrasonic Range Finder Mode Select Pads." width="50.0%" class="center" >}}
 
@@ -59,3 +59,4 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`jsn_sr04t/jsn_sr04t.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/jsn_sr04t.md)
+

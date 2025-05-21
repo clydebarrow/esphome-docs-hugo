@@ -11,8 +11,8 @@ signal by using a fast switching frequency, the hardware DAC can output a *real*
 no need for additional filtering.
 
 The DAC spans across two pins, each on its own channel: 
-  - ESP32: GPIO25 (Channel 0) and GPIO26 (Channel 1).
-  - ESP32 S2: GPIO17 (Channel 0) and GPIO18 (Channel 1).
+- ESP32: GPIO25 (Channel 0) and GPIO26 (Channel 1).
+- ESP32 S2: GPIO17 (Channel 0) and GPIO18 (Channel 1).
 
 The output level is a percentage of the board supply voltage (VDD_A) - generally this will be 3.3 V.
 
@@ -66,3 +66,4 @@ light:
 - {{< docref "/components/power_supply" >}}
 - :apiref:`esp32_dac/esp32_dac.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/esp32_dac.md)
+

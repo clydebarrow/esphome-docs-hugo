@@ -212,3 +212,4 @@ bk72xx:
 - [LibreTiny Documentation](https://docs.libretiny.eu/) (external)
 - {{< docref "/components/tuya" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/libretiny.md)
+

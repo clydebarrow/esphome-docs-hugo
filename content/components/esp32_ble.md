@@ -96,3 +96,4 @@ The lambda equivalent for this is `id(ble_id).is_active()`.
 - {{< docref "esp32_improv/" >}}
 - :apiref:`esp32_ble/ble.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble.md)
+

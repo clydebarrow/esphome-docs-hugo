@@ -958,3 +958,4 @@ EHMTX a matrix status/text display, cookbook/ehmtx, ehmtx.jpg
 
 ESPHome depends on and welcomes contributions from our community. If you'd like to contribute, please see our
 [developer site](https://developers.esphome.io).
+

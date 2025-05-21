@@ -196,3 +196,4 @@ You can now add your device to home assistant via the configurations page and un
 
 - [Flashing Sonoff Basic](https://randomnerdtutorials.com/how-to-flash-a-custom-firmware-to-sonoff/).
 - [Adding ESPHome to Home Assistant](https://www.home-assistant.io/components/esphome/).
+

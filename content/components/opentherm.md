@@ -113,9 +113,9 @@ There are three ways to set a numerical value:
       id: setpoint_sensor
       entity_id: sensor.boiler_setpoint
 
-  ```
   This can be useful if you have an external thermostat-like device that provides the setpoint as a sensor.
 
+  ```
 - As a number:
 
   ```yaml
@@ -124,9 +124,9 @@ There are three ways to set a numerical value:
       t_set:
         name: Boiler Setpoint
 
-  ```
   This is useful if you want full control over your boiler and want to manually set all values.
 
+  ```
 - As an output:
 
   ```yaml
@@ -135,10 +135,10 @@ There are three ways to set a numerical value:
     t_set:
       id: setpoint
 
-  ```
   This is especially useful in combination with the PID Climate component:
 
-  ```yaml
+  .. code-block:: yaml
+
   climate:
     - platform: pid
       heat_output: setpoint
@@ -471,3 +471,4 @@ climate:
 - [Development repository](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
   before proposing them to ESPHome core.
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/opentherm.md)
+

@@ -92,3 +92,4 @@ This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issue
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`time_based/time_based_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/time_based.md)
+

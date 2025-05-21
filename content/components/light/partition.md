@@ -119,3 +119,4 @@ See [``light.addressable_set`` Action]({{< ref "components/light/_index#light-ad
 - {{< docref "/components/light/neopixelbus" >}}
 - :apiref:`partition/light_partition.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/partition.md)
+

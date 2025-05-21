@@ -245,3 +245,4 @@ to make some adjustments to your configuration to accommodate this behavior.
 - :apiref:`esp32_touch/esp32_touch.h`
 - [esp-idf Touch Sensor API](https://esp-idf.readthedocs.io/en/latest/api-reference/peripherals/touch_pad.html)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/esp32_touch.md)
+

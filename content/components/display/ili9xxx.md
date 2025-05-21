@@ -9,24 +9,24 @@ title: "ILI9xxx TFT LCD Series"
 
 ## Models
 With this display driver you can control the following displays:
-  - GC9A01A
-  - GC9D01N
-  - ILI9341
-  - ILI9342
-  - ILI9481
-  - ILI9481-18 (ILI9481 in 18 bit, i.e. 262K color, mode)
-  - ILI9486
-  - ILI9488
-  - ILI9488_A (alternative gamma configuration for ILI9488)
-  - M5STACK
-  - S3BOX
-  - S3BOX_LITE
-  - ST7735
-  - ST7796
-  - ST7789V
-  - TFT 2.4
-  - TFT 2.4R
-  - WAVESHARE_RES_3_5 (Waveshare Pico-ResTouch-LCD-3.5)
+- GC9A01A
+- GC9D01N
+- ILI9341
+- ILI9342
+- ILI9481
+- ILI9481-18 (ILI9481 in 18 bit, i.e. 262K color, mode)
+- ILI9486
+- ILI9488
+- ILI9488_A (alternative gamma configuration for ILI9488)
+- M5STACK
+- S3BOX
+- S3BOX_LITE
+- ST7735
+- ST7796
+- ST7789V
+- TFT 2.4
+- TFT 2.4R
+- WAVESHARE_RES_3_5 (Waveshare Pico-ResTouch-LCD-3.5)
 
 More display drivers will come in the future.
 
@@ -291,3 +291,4 @@ display:
 - {{< docref "index/" >}}
 - :apiref:`ili9xxx/ili9xxx_display.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/ili9xxx.md)
+

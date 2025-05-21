@@ -61,3 +61,4 @@ for more information about heater operation.
 - {{< docref "absolute_humidity/" >}}
 - :apiref:`sht4x/sht4x.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sht4x.md)
+

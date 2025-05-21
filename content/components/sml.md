@@ -214,3 +214,4 @@ sensor:
 
 - :apiref:`sml/sml.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sml.md)
+

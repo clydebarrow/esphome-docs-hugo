@@ -161,3 +161,4 @@ PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc``, then log out and back in.
 - {{< docref "getting_started_command_line/" >}}
 - [Developer site](https://developers.esphome.io)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/installing_esphome.md)
+

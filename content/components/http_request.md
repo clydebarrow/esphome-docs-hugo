@@ -66,7 +66,7 @@ To maximize security, do not set `verify_ssl` to `false` *unless:*
 {{< /warning >}}
 **For the host platform:**
 
- - **ca_certificate_path** (*Optional*, file path): Path to a CA certificate bundle. Not required on MacOS (the inbuilt CA bundle is used and SSL enabled by default).
+- **ca_certificate_path** (*Optional*, file path): Path to a CA certificate bundle. Not required on MacOS (the inbuilt CA bundle is used and SSL enabled by default).
    On Linux this is required to enable SSL.
 
     {{< note >}}
@@ -313,3 +313,4 @@ on_...:
 - :apiref:`http_request/http_request.h`
 - {{< docref "/components/json" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/http_request.md)
+

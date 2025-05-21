@@ -130,3 +130,4 @@ the post.
 - [FishFeeder](https://github.com/ColoMAX/fishfeeder) by :ghuser:`ColoMAX`
 - [ESPHome IKEA VINDRIKTNING](https://github.com/DzurisHome/ESPHome-IKEA-VINDRIKTNING) by :ghuser:`DzurisHome`
 - [ESPHome Refoss P11](https://github.com/DzurisHome/ESPHome-Refoss-P11) by :ghuser:`DzurisHome`
+

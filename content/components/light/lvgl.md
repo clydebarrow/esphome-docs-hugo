@@ -40,3 +40,4 @@ To have linear brightness control, `gamma_correct` of the light is set by defaul
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/lvgl.md)
+

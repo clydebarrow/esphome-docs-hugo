@@ -114,3 +114,4 @@ on_...:
 - [LVGL Button Matrix widget]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
 - [LVGL Keyboard widget]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/key_collector.md)
+

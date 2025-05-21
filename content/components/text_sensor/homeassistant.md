@@ -46,3 +46,4 @@ text_sensor:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`homeassistant/text_sensor/homeassistant_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/homeassistant.md)
+

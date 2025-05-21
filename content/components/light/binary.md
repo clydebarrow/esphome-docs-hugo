@@ -32,3 +32,4 @@ light:
 - {{< docref "/components/power_supply" >}}
 - :apiref:`binary/light/binary_light_output.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/binary.md)
+

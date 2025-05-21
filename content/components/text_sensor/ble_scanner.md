@@ -53,3 +53,4 @@ Example json log:
 - {{< docref "/components/text_sensor/index" >}}
 - :apiref:`ble_scanner/ble_scanner.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/ble_scanner.md)
+

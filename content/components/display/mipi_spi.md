@@ -194,3 +194,4 @@ A touchscreen, if present, must be configured separately. See the {{< docref "/c
 - {{< docref "index/" >}}
 - :apiref:`mipi_spi/mipi_spi.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/mipi_spi.md)
+

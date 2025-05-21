@@ -48,3 +48,4 @@ configured.
 - {{< docref "/components/sensor/index" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/packet_transport.md)
+

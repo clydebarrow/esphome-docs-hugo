@@ -203,17 +203,17 @@ require different parts and tools.
 | --- | --- | --- | --- |
 
         .. _usb-cable:
-    * - [USB to micro-USB/mini-USB/USB-C]({{< ref "#usb-cable" >}})
-      - If your target device has a USB port on it, you need the appropriate
+* - [USB to micro-USB/mini-USB/USB-C]({{< ref "#usb-cable" >}})
+- If your target device has a USB port on it, you need the appropriate
         data cable to connect to it. A power only USB cable that usually
         comes presupplied with powerbanks won't work.
-      - $3 to $10
-      - .. image:: /guides/images/usb-cable.jpg
+- $3 to $10
+- .. image:: /guides/images/usb-cable.jpg
             :alt: From https://www.stockvault.net/photo/271754/usb-cable
 
         .. _usb-serial-adapter:
-    * - [USB to serial adapter]({{< ref "#usb-serial-adapter" >}})
-      - Serial communication is a simple way of talking to other devices, like
+* - [USB to serial adapter]({{< ref "#usb-serial-adapter" >}})
+- Serial communication is a simple way of talking to other devices, like
         the ESP32/ESP8266 you're flashing. But your computer probably doesn't
         have this capability built-in. "Serial", "UART", "TTL", and "COM" are
         all more-or-less synonyms.
@@ -227,54 +227,54 @@ require different parts and tools.
 
         Any ESP development board with functioning USB_UART bridge chip can also be used instead.
         {{< docref "/guides/devboard_as_flasher" "Read instructions here." >}}
-      - $3 to $10
-      - .. image:: /guides/images/usb-serial-adapter.jpg
+- $3 to $10
+- .. image:: /guides/images/usb-serial-adapter.jpg
             :alt: From https://tasmota.github.io/docs/Getting-Started/
 
         .. _jumper-wires:
-    * - [Jumper wires]({{< ref "#jumper-wires" >}})
-      - Used to connect two things together electrically. The male end has metal
+* - [Jumper wires]({{< ref "#jumper-wires" >}})
+- Used to connect two things together electrically. The male end has metal
         protuding and is plugged into the female end of a wire or board.
         They come in varying lengths too, but for our purposes, any length will
         do.
-      - $3 to $8 for a pack
-      - .. image:: /guides/images/jumper-wires.jpg
+- $3 to $8 for a pack
+- .. image:: /guides/images/jumper-wires.jpg
             :alt: From https://www.flickr.com/photos/snazzyguy/8096512976
 
         .. _pcb-headers:
-    * - [Breakable headers]({{< ref "#pcb-headers" >}})
-      - Soldered to a PCB to provide a way to connect jumper wires. The distance
+* - [Breakable headers]({{< ref "#pcb-headers" >}})
+- Soldered to a PCB to provide a way to connect jumper wires. The distance
         between the metal pins is known as the pitch, and is usually 2.54mm for
         what we're doing.
 
         This sort of header can be cut to the correct length along the groves.
-      - $3 to $8 for a pack
-      - .. image:: /guides/images/breakable-header.jpg
+- $3 to $8 for a pack
+- .. image:: /guides/images/breakable-header.jpg
             :alt: From https://www.flickr.com/photos/snazzyguy/27120004896/
 
         .. _wire-snips:
-    * - [Wire snips, wire cutters, flush cutters]({{< ref "#wire-snips" >}})
-      - Used to cut wire. These can often be subsituted by a knife or scissors,
+* - [Wire snips, wire cutters, flush cutters]({{< ref "#wire-snips" >}})
+- Used to cut wire. These can often be subsituted by a knife or scissors,
         but be careful not to hurt yourself.
-      - $5 to $15
-      - .. image:: /guides/images/wire-cutters.jpg
+- $5 to $15
+- .. image:: /guides/images/wire-cutters.jpg
             :alt: From https://www.flickr.com/photos/snazzyguy/3932324106
 
         .. _wire-strippers:
-    * - [Wire strippers]({{< ref "#wire-strippers" >}})
-      - Used to remove the insulation from wires, leaving the conductive metal
+* - [Wire strippers]({{< ref "#wire-strippers" >}})
+- Used to remove the insulation from wires, leaving the conductive metal
         interior exposed. These can often be subsituted by a knife, scissors, or
         fingernails, but be careful not to hurt yourself.
 
         There are many different styles, not just that in the picture. You'll
         want something that works with fairly thin wire, about 20 AWG to 26 AWG.
-      - $5 to $15
-      - .. image:: /guides/images/strippers.jpg
+- $5 to $15
+- .. image:: /guides/images/strippers.jpg
             :alt: From https://www.flickr.com/photos/snazzyguy/3931542659
 
         .. _soldering-iron:
-    * - [Soldering iron]({{< ref "#soldering-iron" >}})
-      - Used to melt metal, called solder, to connect things together in an
+* - [Soldering iron]({{< ref "#soldering-iron" >}})
+- Used to melt metal, called solder, to connect things together in an
         electrically conductive way.
 
         You'll want something with temperature control. Other than that, there
@@ -285,16 +285,16 @@ require different parts and tools.
         following would serve you well, although be careful to buy from a
         reliable source:
 
-        - Hakko FX-888D
-        - KSGER T12
-        - TS100/TS80
-      - $60 to $120
-      - .. image:: /guides/images/soldering-iron.jpg
+- Hakko FX-888D
+- KSGER T12
+- TS100/TS80
+- $60 to $120
+- .. image:: /guides/images/soldering-iron.jpg
             :alt: From https://commons.wikimedia.org/wiki/File:Soldering_Station_Weller_2.jpeg
 
         .. _solder:
-    * - [Electronics solder]({{< ref "#solder" >}})
-      - Molten metal used to join things in an electrically conductive way.
+* - [Electronics solder]({{< ref "#solder" >}})
+- Molten metal used to join things in an electrically conductive way.
         There are two types, leaded and lead-free. Leaded melts at a lower
         temperature and is a little easier to work with, but is hazardous to the
         environment (but not to humans in this form).
@@ -305,13 +305,13 @@ require different parts and tools.
         You absolutely do not want plumbing solder, also known as "acid core" or
         "silver solder". It needs much higher temperatures than we can safely
         use here.
-      - $8 to $12
-      - .. image:: /guides/images/solder.jpg
+- $8 to $12
+- .. image:: /guides/images/solder.jpg
             :alt: From https://commons.wikimedia.org/wiki/File:Rosin_core_solder.JPG
 
         .. _soldering-flux:
-    * - [Electronics flux]({{< ref "#soldering-flux" >}})
-      - Used to clean the metal surfaces before soldering them together.
+* - [Electronics flux]({{< ref "#soldering-flux" >}})
+- Used to clean the metal surfaces before soldering them together.
         Sometimes the rosin core of the solder doesn't provide enough, so you'd
         want add some extra.
 
@@ -320,8 +320,8 @@ require different parts and tools.
 
         If you do buy it, you absolutely do not want plumber's flux. It will
         destroy your circuit boards.
-      - $8 to $12
-      - .. image:: /guides/images/flux.jpg
+- $8 to $12
+- .. image:: /guides/images/flux.jpg
 
 ## See Also
 
@@ -329,3 +329,4 @@ require different parts and tools.
 - {{< docref "getting_started_command_line/" >}}
 - {{< docref "getting_started_hassio/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/physical_device_connection.md)
+

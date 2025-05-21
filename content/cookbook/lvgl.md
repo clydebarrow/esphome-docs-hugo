@@ -2188,3 +2188,4 @@ You can combine it with the previous example to turn off the backlight, so the u
 - [Image persistence](https://en.wikipedia.org/wiki/Image_persistence)
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/lvgl.md)
+

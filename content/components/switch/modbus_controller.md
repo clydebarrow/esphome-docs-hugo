@@ -116,3 +116,4 @@ switch:
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - https://www.modbustools.com/modbus.html
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/modbus_controller.md)
+

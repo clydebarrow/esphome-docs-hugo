@@ -251,3 +251,4 @@ status_led:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`current_based/current_based_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/current_based.md)
+

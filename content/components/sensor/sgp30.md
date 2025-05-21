@@ -111,3 +111,4 @@ Please note while the sensor is off, baseline values are valid for a maximum of 
 - {{< docref "sht3xd/" >}}
 - :apiref:`sgp30/sgp30.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sgp30.md)
+

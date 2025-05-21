@@ -122,3 +122,4 @@ Configuration options:
 - [Temperature Compensation for Conductivity](https://www.aqion.de/site/112)
 - [PMWCS3 Library](https://github.com/tinovi/i2cArduino) by [@tinovi](https://github.com/tinovi)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pmwcs3.md)
+

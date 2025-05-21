@@ -197,13 +197,13 @@ esphome:
 ```
 This option behaves differently depending on what the included file is pointing at:
 
- - If the include string is written as <mylib> or "<mylib>", the line `#include <mylib>` is
+- If the include string is written as <mylib> or "<mylib>", the line `#include <mylib>` is
    added to the beginning of the `main.cpp` file.
- - If the include string is pointing at a directory, the entire directory tree is copied into the
+- If the include string is pointing at a directory, the entire directory tree is copied into the
    src/ folder.
- - If the include string points to a header file (.h, .hpp, .tcc), it is copied in the src/ folder
+- If the include string points to a header file (.h, .hpp, .tcc), it is copied in the src/ folder
    AND included in the `main.cpp` file. This way the lambda code can access it.
- - If the include string points to a regular source file (.c, .cpp), it is copied in the src/ folder
+- If the include string points to a regular source file (.c, .cpp), it is copied in the src/ folder
    AND compiled into the binary. This way implementation of classes and functions in header files can
    be provided.
 
@@ -354,3 +354,4 @@ available in a newer version of ESPHome. This allows for a more friendly error m
 ## See Also
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esphome.md)
+

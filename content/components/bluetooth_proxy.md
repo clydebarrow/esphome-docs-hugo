@@ -125,3 +125,4 @@ bluetooth_proxy:
 - :apiref:`bluetooth_proxy/bluetooth_proxy.h`
 - BTHome `<https://bthome.io/>`__
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/bluetooth_proxy.md)
+

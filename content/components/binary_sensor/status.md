@@ -27,3 +27,4 @@ binary_sensor:
 - {{< docref "/components/mqtt" >}}
 - :apiref:`status/status_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/status.md)
+

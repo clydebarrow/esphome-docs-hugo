@@ -160,3 +160,4 @@ may simply use the shorthand syntax for the sensor. For example: `ambient_light:
 - [LTR-559ALS datasheet](https://github.com/latonita/datasheets-storage/blob/main/sensors/ltr-559als-01_ds_v1.pdf)
 - :apiref:`ltr_als_ps/ltr_als_ps.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ltr_als_ps.md)
+

@@ -74,3 +74,4 @@ i2c:
 - {{< docref "htu21d/" >}}
 - :apiref:`sht3xd/sht3xd.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sht3xd.md)
+

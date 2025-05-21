@@ -195,3 +195,4 @@ If there is a noticeable delay before a pause command takes effect, reduce the b
 - {{< docref "/components/speaker/resampler" >}}
 - {{< docref "index/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/media_player/speaker.md)
+

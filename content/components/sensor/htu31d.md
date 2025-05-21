@@ -51,3 +51,4 @@ sensor:
 - :apiref:`htu31d/htu31d.h`
 - [i2cdevlib](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg](https://github.com/jrowberg)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/htu31d.md)
+

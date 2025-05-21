@@ -10,9 +10,9 @@ ESPHome's graphical rendering engine also has a powerful font drawer which integ
 These fonts can be used in ESPHome's [own rendering engine]({{< ref "components/display/_index#display-engine" >}}) or in the :doc:`LVGL Graphics </c{{< docref "/components/lvgl/index" "LVGL Graphics" >}}
 
 To use fonts you can either
- - Just grab a `.ttf`, `.otf`, `.woff`, `.pcf`, or `.bdf` file from somewhere on the internet and place it, for example, inside a `fonts` folder next to your configuration file.
- - Use the `gfonts://` short form to use Google Fonts directly.
- - Load a font from a URL directly on build.
+- Just grab a `.ttf`, `.otf`, `.woff`, `.pcf`, or `.bdf` file from somewhere on the internet and place it, for example, inside a `fonts` folder next to your configuration file.
+- Use the `gfonts://` short form to use Google Fonts directly.
+- Load a font from a URL directly on build.
 
 Next, create a `font:` section in your configuration:
 
@@ -186,3 +186,4 @@ to install it using `pip install "pillow==10.4.0"`.
 - [MDI font repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/)
 - [Google Fonts Glyphsets](https://github.com/googlefonts/glyphsets/blob/main/GLYPHSETS.md)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/font.md)
+

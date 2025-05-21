@@ -93,22 +93,22 @@ If you prefer the more manual way:
 
 1. You need to obtain the firmware file to install:
 
-  - If you're using the [ESPHome Device Builder<installing-esphome-device-builder>]({{< ref "#ESPHome Device Builder<installing-esphome-device-builder>" >}}), you can use its "Manual
+- If you're using the [ESPHome Device Builder<installing-esphome-device-builder>]({{< ref "#ESPHome Device Builder<installing-esphome-device-builder>" >}}), you can use its "Manual
     download" method: click "Install" in the overflow menu (vertical dots) and then select "Manual download".
-  - If you're using ESPHome's command line interface, the file is available in the
+- If you're using ESPHome's command line interface, the file is available in the
     `<CONFIG_DIR>/<NODE_NAME>/.pioenvs/<NODE_NAME>/firmware.bin` directory after the build completes.
 
 2. On some boards, you may need to force the microcontroller into its [programming mode]({{< ref "guides/physical_device_connection#esphome-phy-con-prg" >}}).
    This often isn't necessary on most modern boards/devices, but it's worth trying if you're experiencing difficulties.
 3. Finally, to install a firmware file, you can use:
 
-  - [ESPHome Web](https://web.esphome.io/), our web-based installer. This is the easiest approach but requires a
+- [ESPHome Web](https://web.esphome.io/), our web-based installer. This is the easiest approach but requires a
     browser that supports WebSerial, like Google Chrome or Microsoft Edge. Connect the board to your computer, make
     sure it's detected as a [serial port]({{< ref "guides/physical_device_connection#esphome-phy-con-drv" >}}) and click **Connect**. If prompted, allow your
     browser the requested permission in the pop-up box that appears. Next, select the serial device associated with
     your board, click **Install** and browse for/select the binary file you downloaded earlier (as above). Note that
     the file is processed locally and is **not** uploaded to any cloud service.
-  - [esptool` `from the GitHub repository](https://github.com/espressif/esptool/releases). It's likely available
+- [esptool` `from the GitHub repository](https://github.com/espressif/esptool/releases). It's likely available
     as package for your OS or you can try installing it with `pip install esptool` (in case of Linux).
 
 {{< anchor "esphome-esptool" >}}
@@ -207,10 +207,10 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
         vars:
           id: 2
 
-  ```
-  `on-multi-click.yaml`:
+  ``on-multi-click.yaml``:
 
-  ```yaml
+  .. code-block:: yaml
+
   - timing: !include click-single.yaml
     then:
       - mqtt.publish:
@@ -617,3 +617,4 @@ re-add the device in Home Assistant.
 - {{< docref "/index" "ESPHome index" >}}
 - [Developer site](https://developers.esphome.io)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/faq.md)
+

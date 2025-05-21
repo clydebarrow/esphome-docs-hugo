@@ -35,3 +35,4 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`duty_cycle/duty_cycle_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/duty_cycle.md)
+

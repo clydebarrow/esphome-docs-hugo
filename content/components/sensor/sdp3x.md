@@ -35,3 +35,4 @@ To use the sensor, set up an [I²C Bus]({{< ref "components/i2c#i2c" >}}) and co
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`sdp3x/sdp3x.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sdp3x.md)
+

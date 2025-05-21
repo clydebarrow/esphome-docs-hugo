@@ -13,8 +13,8 @@ These have a parallel interface but no SPI interface and require no configuratio
 
 This driver has been tested with the following displays:
 
-  - Waveshare ESP32-S3-Touch-LCD-4.3
-  - Makerfabs 4.3" display (Sunton)
+- Waveshare ESP32-S3-Touch-LCD-4.3
+- Makerfabs 4.3" display (Sunton)
 
 ## Usage
 This component requires an ESP32 (usually an ESP32-S3 because of the number of GPIO pins required) and the use of
@@ -199,3 +199,4 @@ display:
 - {{< docref "index/" >}}
 - :apiref:`rpi_dpi_rgb/rpi_dpi_rgb.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/rpi_dpi_rgb.md)
+

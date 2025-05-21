@@ -62,3 +62,4 @@ on_...:
 - :apiref:`fan/fan_state.h`
 - [Adafruit's excellent H-bridge tutorial](https://learn.adafruit.com/improve-brushed-dc-motor-performance)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/hbridge.md)
+

@@ -49,3 +49,4 @@ mdns:
   - **protocol** (**Required**, string): Protocol of service (_udp or _tcp).
   - **port** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), int): Port number of extra service.
   - **txt** (*Optional*, mapping): Additional text records to add to service. Values are [templatable]({{< ref "automations/templates#config-templatable" >}}).
+

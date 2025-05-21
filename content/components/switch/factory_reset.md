@@ -43,3 +43,4 @@ switch:
 - {{< docref "template/" >}}
 - :apiref:`factory_reset/factory_reset_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/factory_reset.md)
+

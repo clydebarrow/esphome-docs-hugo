@@ -66,3 +66,4 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 - [CO2MeterHacking project](https://revspace.nl/CO2MeterHacking)
 - :apiref:`zyaura/zyaura.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/zyaura.md)
+

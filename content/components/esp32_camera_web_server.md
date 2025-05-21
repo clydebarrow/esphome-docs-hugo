@@ -42,3 +42,4 @@ esp32_camera_web_server:
 
 - :apiref:`esp32_camera_web_server/camera_web_server.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_camera_web_server.md)
+

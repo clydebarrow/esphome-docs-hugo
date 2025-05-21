@@ -137,10 +137,10 @@ display:
 
 ```
 By default `online_image` is configured to not automatically update/download the image; in order to do the initial download, you can either:
- - Add a `component.update <image_id>` in the `on_connect:` action on the {{< docref "/components/wifi" >}} component.
- - Explicitly set an `update_interval`.
- - Call `component.update <image_id>` in an {{< docref "/components/interval" >}} block.
- - Call `component.update <image_id>` where you need the image to be downloaded/updated.
+- Add a `component.update <image_id>` in the `on_connect:` action on the {{< docref "/components/wifi" >}} component.
+- Explicitly set an `update_interval`.
+- Call `component.update <image_id>` in an {{< docref "/components/interval" >}} block.
+- Call `component.update <image_id>` where you need the image to be downloaded/updated.
 
 ```yaml
 wifi:
@@ -154,3 +154,4 @@ wifi:
 - {{< docref "image/" "Image Component" >}}
 - {{< docref "animation/" "Animation Component" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/online_image.md)
+

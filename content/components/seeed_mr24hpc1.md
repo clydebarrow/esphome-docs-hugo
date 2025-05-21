@@ -414,3 +414,4 @@ The result:
 - [Source of inspiration for implementation](https://github.com/limengdu/mmwave-kit-external-components/)
 - :apiref:`seeed_mr24hpc1/seeed_mr24hpc1.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/seeed_mr24hpc1.md)
+

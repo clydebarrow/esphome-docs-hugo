@@ -9,10 +9,10 @@ The `tormatic` cover platform allows you to control Tormatic and Novoferm
 garage door drives manufactured in 2016 onwards. The following models should
 be supported:
 
- * Tormatic Black 600, Black 800, Black 1000
- * Novoferm Novomatic 423
- * Novoferm Novomatic 563 S
- * Novoferm Novoport IV
+* Tormatic Black 600, Black 800, Black 1000
+* Novoferm Novomatic 423
+* Novoferm Novomatic 563 S
+* Novoferm Novoport IV
 
 {{< img src="tormatic.png" alt="Image" caption="Tormatic Black 600 Garage Door Drive" class="center" >}}
 
@@ -78,13 +78,13 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 
 ## Known Issues
 
- * Pausing an action twice (e.g. open - pause - open - pause) will result in the
+* Pausing an action twice (e.g. open - pause - open - pause) will result in the
    unit incorrectly remaining in 'opening' status for exactly 60 seconds. This
    is difficult to work around without making the protocol completely
    client-side authoritative, but this would mean we can no longer detect gate
    movements initiated by the physical button or an RF remote. An annoying but
    acceptable defect.
- * The position updates during gate movements are time-based approximations and
+* The position updates during gate movements are time-based approximations and
    don't account for acceleration and grace movements near the start and end of
    the action. The unit itself doesn't provide accurate position information.
 
@@ -94,3 +94,4 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`tormatic/tormatic_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/tormatic.md)
+

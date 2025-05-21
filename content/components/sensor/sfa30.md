@@ -51,3 +51,4 @@ sensor:
 - {{< docref "absolute_humidity/" >}}
 - :apiref:`sfa30/sfa30.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sfa30.md)
+

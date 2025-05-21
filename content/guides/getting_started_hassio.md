@@ -190,3 +190,4 @@ issue on the [GitHub issue tracker](https://github.com/esphome/issues/issues) or
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/getting_started_hassio.md)
+

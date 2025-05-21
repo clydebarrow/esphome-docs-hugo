@@ -23,3 +23,4 @@ This component has no configuration variables
 
 - :apiref:`demo/demo_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/demo.md)
+

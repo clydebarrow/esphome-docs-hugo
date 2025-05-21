@@ -538,3 +538,4 @@ of the actions in YAML config.
 
 - :apiref:`ezo_pmp/ezo_pmp.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ezo_pmp.md)
+

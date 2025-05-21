@@ -416,3 +416,4 @@ so that the process does not have to start from zero on device restart.
 - [BSEC Arduino Library](https://github.com/BoschSensortec/BSEC-Arduino-library) by [Bosch Sensortec](https://www.bosch-sensortec.com/)
 - [Bosch Sensortec Community](https://community.bosch-sensortec.com/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/bme680_bsec.md)
+

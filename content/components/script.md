@@ -181,3 +181,4 @@ lambda: |-
 - {{< docref "/automations/actions" >}}
 - {{< docref "/automations/templates" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/script.md)
+

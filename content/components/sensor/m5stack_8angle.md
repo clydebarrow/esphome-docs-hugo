@@ -129,3 +129,4 @@ light:
 - {{< docref "template/" >}}
 - :apiref:`m5stack_8angle/m5stack_8angle.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/m5stack_8angle.md)
+

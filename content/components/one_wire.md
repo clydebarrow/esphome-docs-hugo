@@ -43,3 +43,4 @@ For example, you will see something like this:
 - :apiref:`one_wire/one_wire_bus.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/one_wire.md)
 - [Guidelines for Reliable Long Line 1-Wire Networks](https://www.analog.com/en/technical-articles/guidelines-for-reliable-long-line-1wire-networks.html)
+

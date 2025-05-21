@@ -73,3 +73,4 @@ Compatible receiver:
 
 - {{< docref "/components/light/index" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lightwaverf.md)
+

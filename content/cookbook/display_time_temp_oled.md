@@ -151,3 +151,4 @@ display:
 - {{< docref "/components/display/index" >}}
 - {{< docref "/components/sensor/homeassistant" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/display_time_temp_oled.md)
+

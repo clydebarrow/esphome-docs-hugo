@@ -116,3 +116,4 @@ Therefore it is not possible to calculate altitude at the same time, and vice ve
 - {{< docref "/components/sensor/template" >}}
 - {{< docref "/components/sensor/bme280" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/bme280_environment.md)
+

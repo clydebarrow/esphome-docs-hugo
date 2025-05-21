@@ -31,12 +31,12 @@ lock:
 ```
 Possible return values for the optional lambda:
 
- - `return LOCK_STATE_LOCKED;` if the lock should be reported as LOCKED.
- - `return LOCK_STATE_UNLOCKED;` if the lock should be reported as UNLOCKED.
- - `return LOCK_STATE_JAMMED;` if the lock should be reported as JAMMED.
- - `return LOCK_STATE_LOCKING;` if the lock should be reported as LOCKING.
- - `return LOCK_STATE_UNLOCKING;` if the lock should be reported as UNLOCKING.
- - `return {};` if the last state should be repeated.
+- `return LOCK_STATE_LOCKED;` if the lock should be reported as LOCKED.
+- `return LOCK_STATE_UNLOCKED;` if the lock should be reported as UNLOCKED.
+- `return LOCK_STATE_JAMMED;` if the lock should be reported as JAMMED.
+- `return LOCK_STATE_LOCKING;` if the lock should be reported as LOCKING.
+- `return LOCK_STATE_UNLOCKING;` if the lock should be reported as UNLOCKING.
+- `return {};` if the last state should be repeated.
 
 {{< note >}}
 Only `LOCK_STATE_LOCKED` and `LOCK_STATE_UNLOCKED` are supported by the MQTT component in Home Assistant
@@ -106,3 +106,4 @@ id(template_lock1).publish_state(lock::LOCK_STATE_LOCKED);
 - {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`template/lock/template_lock.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lock/template.md)
+

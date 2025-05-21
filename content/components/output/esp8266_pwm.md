@@ -70,3 +70,4 @@ Configuration variables:
 - {{< docref "/components/power_supply" >}}
 - :apiref:`esp8266_pwm/esp8266_pwm.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/esp8266_pwm.md)
+

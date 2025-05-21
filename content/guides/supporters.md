@@ -2139,3 +2139,4 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Zynth-dev (@Zynth-dev)](https://github.com/Zynth-dev)
 
 *This page was last updated May 14, 2025.*
+

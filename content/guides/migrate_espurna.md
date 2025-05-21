@@ -50,3 +50,4 @@ Happy Hacking!
 - {{< docref "migrate_espeasy/" >}}
 - {{< docref "migrate_sonoff_tasmota/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/migrate_espurna.md)
+

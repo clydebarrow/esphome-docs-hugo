@@ -73,3 +73,4 @@ than 6 months.
 - [Grove Multichannel V2 Library](https://github.com/Seeed-Studio/Seeed_Arduino_MultiGas)
 - :apiref:`grove_gas_mc_v2/grove_gas_mc_v2.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/grove_gas_mc_v2.md)
+

@@ -75,3 +75,4 @@ If you prefer to only have a 3.3V power supply, special 3.3V CAN transceivers ar
 - {{< docref "index/" >}}
 - :apiref:`canbus/canbus.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/canbus/esp32_can.md)
+

@@ -170,3 +170,4 @@ The model JSON file contains the following fields that are all **required** unle
 - {{< docref "voice_assistant/" >}}
 - :apiref:`micro_wake_word/micro_wake_word.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/micro_wake_word.md)
+

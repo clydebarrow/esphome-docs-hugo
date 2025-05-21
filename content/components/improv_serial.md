@@ -49,3 +49,4 @@ improv_serial:
 - [Improv Wi-Fi](https://www.improv-wifi.com/)
 - :apiref:`improv_serial/improv_serial_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/improv_serial.md)
+

@@ -316,3 +316,4 @@ ethernet:
 - :apiref:`ethernet/ethernet_component.h`
 - [ESP32 Ethernet PHY connection info](https://pcbartists.com/design/embedded/esp32-ethernet-phy-schematic-design/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ethernet.md)
+

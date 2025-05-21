@@ -151,3 +151,4 @@ expected. This is automatically enabled by the `ota` component, but it may be di
 - :apiref:`ota/ota_component.h`
 - {{< docref "/components/safe_mode" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ota/index.md)
+

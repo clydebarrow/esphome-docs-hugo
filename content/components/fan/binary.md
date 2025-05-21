@@ -37,3 +37,4 @@ fan:
 - {{< docref "/components/fan/index" >}}
 - :apiref:`fan/fan_state.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/binary.md)
+

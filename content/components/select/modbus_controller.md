@@ -83,8 +83,8 @@ lambda: |-
 
 Possible return values for the lambda:
 
- - `return <int64_t>;` the value which should be written to the configured modbus registers. If there were data written to `payload` this value is ignored.
- - `return {};` Skip updating the register.
+- `return <int64_t>;` the value which should be written to the configured modbus registers. If there were data written to `payload` this value is ignored.
+- `return {};` Skip updating the register.
 
 ```yaml
 # example
@@ -140,3 +140,4 @@ select:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - https://www.modbustools.com/modbus.html
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/modbus_controller.md)
+

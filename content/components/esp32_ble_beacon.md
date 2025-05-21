@@ -90,3 +90,4 @@ It can work with multiple beacons simultaneously.
 - :apiref:`esp32_ble_beacon/esp32_ble_beacon.h`
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble_beacon.md)
+

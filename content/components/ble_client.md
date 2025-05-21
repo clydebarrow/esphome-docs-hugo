@@ -494,3 +494,4 @@ ble_client:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`ble_client/ble_client.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ble_client.md)
+

@@ -141,10 +141,10 @@ advanced stuff (see the full API Reference for more info).
   call.set_date("2024-02-25");
   call.perform();
 
-  ```
   Check the API reference for information on the methods that are available for
-  the `DateCall` object.
+  the ``DateCall`` object.
 
+  ```
 - `.year`: Retrieve the current year of the `date`. It will be `0` if no value has been set.
 - `.month`: Retrieve the current month of the `date`. It will be `0` if no value has been set.
 - `.day`: Retrieve the current day of the `date`. It will be `0` if no value has been set.
@@ -208,10 +208,10 @@ advanced stuff (see the full API Reference for more info).
   call.set_time("12:34:56");
   call.perform();
 
-  ```
   Check the API reference for information on the methods that are available for
-  the `TimeCall` object.
+  the ``TimeCall`` object.
 
+  ```
 - `.hour`: Retrieve the current hour of the `time`. It will be `0` if no value has been set.
 - `.minute`: Retrieve the current minute of the `time`. It will be `0` if no value has been set.
 - `.second`: Retrieve the current second of the `time`. It will be `0` if no value has been set.
@@ -278,10 +278,10 @@ For more complex use cases, several methods are available for use on datetimes f
   call.set_datetime("2024-12-31 12:34:56");
   call.perform();
 
-  ```
   Check the API reference for information on the methods that are available for
-  the `DateTimeCall` object.
+  the ``DateTimeCall`` object.
 
+  ```
 - `.year`: Retrieve the current year of the `datetime`. It will be `0` if no value has been set.
 - `.month`: Retrieve the current month of the `datetime`. It will be `0` if no value has been set.
 - `.day`: Retrieve the current day of the `datetime`. It will be `0` if no value has been set.
@@ -308,3 +308,4 @@ For more complex use cases, several methods are available for use on datetimes f
 - :apiref:`DateTimeEntity <datetime/datetime_entity.h>`
 - :apiref:`DateTimeCall <datetime/datetime_entity.h>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/datetime/index.md)
+

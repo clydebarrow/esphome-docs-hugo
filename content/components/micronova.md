@@ -202,3 +202,4 @@ turns on or off.
 - [philibertc / micronova_controller ](https://github.com/philibertc/micronova_controller/)
 - [eni23 / micronova-controller ](https://github.com/eni23/micronova-controller)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/micronova.md)
+

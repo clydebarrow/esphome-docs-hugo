@@ -100,3 +100,4 @@ prometheus:
 - :apiref:`prometheus/prometheus_handler.h`
 - [Prometheus](https://prometheus.io/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/prometheus.md)
+

@@ -50,3 +50,4 @@ sensor:
 - :apiref:`dht12/dht12.h`
 - [DHT12 Library](https://github.com/dplasa/dht) by [Daniel Plasa](https://github.com/dplasa)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dht12.md)
+

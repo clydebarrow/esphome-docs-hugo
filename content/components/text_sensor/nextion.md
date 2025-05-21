@@ -130,9 +130,9 @@ since this will be sending the real value to esphome.
 
 {{< /note >}}
 Using the above yaml example:
-  - "text0" will poll the Nextion for `text0.txt` value and set the state accordingly.
+- "text0" will poll the Nextion for `text0.txt` value and set the state accordingly.
 
-    - [Lambda Calls]({{< ref "components/text_sensor/nextion#nextion_text_sensor_lambda_calls" >}}).
+- [Lambda Calls]({{< ref "components/text_sensor/nextion#nextion_text_sensor_lambda_calls" >}}).
 
 {{< note >}}
 No updates will be sent to the Nextion if it is sleeping. Once it wakes, the components will be updated. If a component is invisible, :code:`visible(false)`, then it won't update until it is set to be visible.
@@ -169,3 +169,4 @@ printh FF FF FF
 - {{< docref "index/" >}}
 - :apiref:`nextion/text_sensor/nextion_textsensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/nextion.md)
+

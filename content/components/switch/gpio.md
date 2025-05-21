@@ -130,3 +130,4 @@ a switch.
 - {{< docref "/cookbook/garage-door" >}}
 - :apiref:`gpio/switch/gpio_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/gpio.md)
+

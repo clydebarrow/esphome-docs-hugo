@@ -64,3 +64,4 @@ modbus:
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - :apiref:`modbus/modbus.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/modbus.md)
+

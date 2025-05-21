@@ -80,3 +80,4 @@ set `pullup: false` under your `pin` configuration.
 - :apiref:`dht/dht.h`
 - [Arduino DHTLib](https://playground.arduino.cc/Main/DHTLib)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dht.md)
+

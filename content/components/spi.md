@@ -122,15 +122,15 @@ spi_device:
     spi_mode: 3
     bit_order: lsb_first
 
+on...:
+ then:
+   - lambda: !lambda |-
+       id(spidev).enable();
+       id(spidev).write_byte(0x4F);
+       id(spidev).disable();
+
+
 ```
-   on...:
-     then:
-       - lambda: !lambda |-
-           id(spidev).enable();
-           id(spidev).write_byte(0x4F);
-           id(spidev).disable();
-
-
 ## Configuration variables:
 
 - **data_rate** (*Optional*): Set the data rate of the controller. One of `80MHz`, `40MHz`, `20MHz`, `10MHz`,
@@ -161,3 +161,4 @@ of the specific peripheral chip.
 
 - :apiref:`spi/spi.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/spi.md)
+

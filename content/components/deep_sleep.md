@@ -97,19 +97,19 @@ sensor:
 
 ```
 The following integers are the wakeup causes:
-    - **0** - `ESP_SLEEP_WAKEUP_UNDEFINED`: In case of deep sleep, reset was not caused by exit from deep sleep
-    - **1** - `ESP_SLEEP_WAKEUP_ALL`: Not a wakeup cause, used to disable all wakeup sources with esp_sleep_disable_wakeup_source
-    - **2** - `ESP_SLEEP_WAKEUP_EXT0`: Wakeup caused by external signal using RTC_IO
-    - **3** - `ESP_SLEEP_WAKEUP_EXT1`: Wakeup caused by external signal using RTC_CNTL
-    - **4** - `ESP_SLEEP_WAKEUP_TIMER`: Wakeup caused by timer
-    - **5** - `ESP_SLEEP_WAKEUP_TOUCHPAD`: Wakeup caused by touchpad
-    - **6** - `ESP_SLEEP_WAKEUP_ULP`: Wakeup caused by ULP program
-    - **7** - `ESP_SLEEP_WAKEUP_GPIO`: Wakeup caused by GPIO (light sleep only on ESP32, S2 and S3)
-    - **8** - `ESP_SLEEP_WAKEUP_UART`: Wakeup caused by UART (light sleep only)
-    - **9** - `ESP_SLEEP_WAKEUP_WIFI`: Wakeup caused by WIFI (light sleep only)
-    - **10** - `ESP_SLEEP_WAKEUP_COCPU`: Wakeup caused by COCPU int
-    - **11** - `ESP_SLEEP_WAKEUP_COCPU_TRAP_TRIG`: Wakeup caused by COCPU crash
-    - **12** - `ESP_SLEEP_WAKEUP_BT`: Wakeup caused by BT (light sleep only)
+- **0** - `ESP_SLEEP_WAKEUP_UNDEFINED`: In case of deep sleep, reset was not caused by exit from deep sleep
+- **1** - `ESP_SLEEP_WAKEUP_ALL`: Not a wakeup cause, used to disable all wakeup sources with esp_sleep_disable_wakeup_source
+- **2** - `ESP_SLEEP_WAKEUP_EXT0`: Wakeup caused by external signal using RTC_IO
+- **3** - `ESP_SLEEP_WAKEUP_EXT1`: Wakeup caused by external signal using RTC_CNTL
+- **4** - `ESP_SLEEP_WAKEUP_TIMER`: Wakeup caused by timer
+- **5** - `ESP_SLEEP_WAKEUP_TOUCHPAD`: Wakeup caused by touchpad
+- **6** - `ESP_SLEEP_WAKEUP_ULP`: Wakeup caused by ULP program
+- **7** - `ESP_SLEEP_WAKEUP_GPIO`: Wakeup caused by GPIO (light sleep only on ESP32, S2 and S3)
+- **8** - `ESP_SLEEP_WAKEUP_UART`: Wakeup caused by UART (light sleep only)
+- **9** - `ESP_SLEEP_WAKEUP_WIFI`: Wakeup caused by WIFI (light sleep only)
+- **10** - `ESP_SLEEP_WAKEUP_COCPU`: Wakeup caused by COCPU int
+- **11** - `ESP_SLEEP_WAKEUP_COCPU_TRAP_TRIG`: Wakeup caused by COCPU crash
+- **12** - `ESP_SLEEP_WAKEUP_BT`: Wakeup caused by BT (light sleep only)
 
 {{< anchor "deep_sleep-enter_action" >}}
 
@@ -210,3 +210,4 @@ on_...:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`deep_sleep/deep_sleep_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/deep_sleep.md)
+

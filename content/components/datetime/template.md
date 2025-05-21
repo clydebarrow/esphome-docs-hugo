@@ -67,25 +67,25 @@ datetime:
       month: 12
       day: 4
 
-    ```
-  - For `type: time`:
+    - For ``type: time``:
 
-    - A string in the format `%H:%M:%S` , eg: `"12:34:56"`.
-    - An object including `hour`, `minute`, `second`.
+    - A string in the format ``%H:%M:%S`` , eg: ``"12:34:56"``.
+    - An object including ``hour``, ``minute``, ``second``.
 
-    ```yaml
+    .. code-block:: yaml
+
     initial_value:
       hour: 12
       minute: 34
       second: 56
 
-    ```
-  - For `type: datetime`:
+    - For ``type: datetime``:
 
-    - A string in the format `%Y-%m-%d %H:%M:%S` , eg: `"2023-12-04 12:34:56"`.
-    - An object including `year`, `month`, `day`, `hour`, `minute`, `second`.
+    - A string in the format ``%Y-%m-%d %H:%M:%S`` , eg: ``"2023-12-04 12:34:56"``.
+    - An object including ``year``, ``month``, ``day``, ``hour``, ``minute``, ``second``.
 
-    ```yaml
+    .. code-block:: yaml
+
     initial_value:
       year: 2023
       month: 12
@@ -102,3 +102,4 @@ datetime:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - :apiref:`template/datetime/template_date.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/datetime/template.md)
+

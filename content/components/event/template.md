@@ -27,3 +27,4 @@ event:
 - {{< docref "/automations/index" >}}
 - {{< docref "/components/event/index" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/event/template.md)
+

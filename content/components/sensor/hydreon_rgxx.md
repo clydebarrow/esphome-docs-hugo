@@ -11,8 +11,8 @@ These optical rain sensors use a UART connection at 3.3V. The [UART]({{< ref "co
 required to be set up in your configuration for this sensor to work.
 
 Supported firmware versions:
-  - RG-15: v1.000
-  - RG-9: v1.000, v1.100, v1.200
+- RG-15: v1.000
+- RG-9: v1.000, v1.100, v1.200
 
 Device FAQ: `<https://rainsensors.com/support/rg-9-rg-15-faq/>`__
 
@@ -111,3 +111,4 @@ sensor:
 - [RG-9 1.200 manual](https://rainsensors.com/wp-content/uploads/sites/3/2022/03/2022.02.17-rev-1.200-rg-9_instructions.pdf)
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/hydreon_rgxx.md)
+

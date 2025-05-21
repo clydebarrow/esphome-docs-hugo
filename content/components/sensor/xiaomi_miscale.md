@@ -107,3 +107,4 @@ sensor:
 - bodymiscale Lovelace Card `<https://github.com/dckiller51/lovelace-body-miscale-card>`__
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/xiaomi_miscale.md)
+

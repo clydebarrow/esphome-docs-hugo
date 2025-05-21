@@ -182,3 +182,4 @@ switch:
 
 - :apiref:`switch/switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/index.md)
+

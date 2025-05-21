@@ -126,3 +126,4 @@ Another important resource is [JSONLint](https://jsonlint.com/). It will help yo
 - `ArduinoJson <https://arduinojson.org/>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/json.md)
 
+

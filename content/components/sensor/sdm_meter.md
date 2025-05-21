@@ -108,3 +108,4 @@ sensor:
 - :apiref:`sdm220m/sdm220m.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sdm_meter.md)
 
+

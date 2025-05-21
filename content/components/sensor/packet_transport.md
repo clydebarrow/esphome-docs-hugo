@@ -48,3 +48,4 @@ configured.
 - {{< docref "/components/udp" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/packet_transport.md)
+

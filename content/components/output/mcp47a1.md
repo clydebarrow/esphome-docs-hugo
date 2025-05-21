@@ -44,3 +44,4 @@ on_...:
 - {{< docref "/components/output/esp32_dac" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/mcp47a1.md)
+

@@ -137,10 +137,10 @@ since this will be sending the real value to esphome.
 
 {{< /note >}}
 Using the above yaml example:
-  - "Radio 0 switch" will poll the Nextion for the `r0.val` value and set the state accordingly.
-  - "Is Darkmode Set" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}}) or use a lambda:
+- "Radio 0 switch" will poll the Nextion for the `r0.val` value and set the state accordingly.
+- "Is Darkmode Set" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}}) or use a lambda:
 
-   - [Lambda Calls]({{< ref "components/switch/nextion#nextion_switch_lambda_calls" >}}).
+- [Lambda Calls]({{< ref "components/switch/nextion#nextion_switch_lambda_calls" >}}).
 
 {{< note >}}
 No updates will be sent to the Nextion if it is sleeping. Once it wakes, the components will be updated. If a component is invisible, :code:`visible(false)`, then it won't update until it is set to be visible.
@@ -175,3 +175,4 @@ printh FF FF FF
 - {{< docref "index/" >}}
 - :apiref:`nextion/switch/nextion_switch.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/nextion.md)
+

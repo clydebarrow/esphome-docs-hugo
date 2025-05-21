@@ -87,3 +87,4 @@ If OTA is already enabled without a password, simply add a `password:` line to t
 - {{< docref "/components/ota/http_request" >}}
 - {{< docref "/components/safe_mode" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ota/esphome.md)
+

@@ -133,3 +133,4 @@ on_anticlockwise:
 - [Mechanical Input Library](https://github.com/jkDesignDE/MechInputs) by [Jochen Krapf](https://github.com/JK-de)
 - :apiref:`rotary_encoder/rotary_encoder.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/rotary_encoder.md)
+

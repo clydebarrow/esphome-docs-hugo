@@ -158,3 +158,4 @@ The BUSY pin on the `gdew0154m09`, the `Waveshare 7.30in-f` and the `Waveshare 7
 - :apiref:`waveshare_epaper/waveshare_epaper.h`
 - [Arduino Waveshare E-Paper library](https://github.com/soonuse/epd-library-arduino) by [Yehui (@soonuse)](https://github.com/soonuse)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/waveshare_epaper.md)
+

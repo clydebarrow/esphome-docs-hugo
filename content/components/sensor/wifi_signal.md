@@ -60,3 +60,4 @@ if the device is acting as an access point without any station mode connection.
 - {{< docref "/components/text_sensor/wifi_info" >}}
 - :apiref:`wifi_signal/wifi_signal_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/wifi_signal.md)
+

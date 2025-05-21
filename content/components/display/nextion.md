@@ -287,11 +287,11 @@ This automation is triggered when a component is pressed or released on the Next
 
 The following arguments will be available:
 
-  - `page_id`: Contains the ID (integer) of the page where the touch happened.
-  - `component_id`: Contains the ID (integer) of the component touched. **You must have "Send Component ID" enabled
+- `page_id`: Contains the ID (integer) of the page where the touch happened.
+- `component_id`: Contains the ID (integer) of the component touched. **You must have "Send Component ID" enabled
     for "Touch Press Event" and/or "Touch Release Event" for the UI element in your HMI configuration in the**
     [Nextion Editor](https://nextion.tech/nextion-editor/).
-  - `touch_event`: It will be `true` for a "press" event, or `false` for a "release" event.
+- `touch_event`: It will be `true` for a "press" event, or `false` for a "release" event.
 
 ```yaml
 on_touch:
@@ -400,8 +400,8 @@ Nextion.
 With the exception of the {{< docref "../binary_sensor/nextion" >}} that has the `page_id`/`component_id` options configured,
 the example below illustrates:
 
- - Polling the Nextion for updates
- - Dynamic updates sent from the Nextion to ESPHome
+- Polling the Nextion for updates
+- Dynamic updates sent from the Nextion to ESPHome
 
  ```yaml
  sensor:
@@ -432,3 +432,4 @@ the individual components (linked below) for more detail.
 - [Simple Nextion Library](https://github.com/bborncr/nextion) by [Bentley Born](https://github.com/bborncr)
 - [Official Nextion Library](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead](https://www.itead.cc/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/nextion.md)
+

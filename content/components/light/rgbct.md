@@ -57,3 +57,4 @@ light:
 - {{< docref "/components/output/sm16716" >}}
 - :apiref:`rgbct/rgbct_light_output.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/rgbct.md)
+

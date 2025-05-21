@@ -116,7 +116,11 @@ def convert_rst_to_md(lines, filename):
     title = ""
     explicit_title = ""
     seo = {}
-    
+    indent_stack = []
+    skip_build = False
+    bullet_regex = re.compile(r'^(\s*)([-*+])\s+')
+
+
     # Check for explicit title directive
     for i, line in enumerate(lines):
         if line.startswith('.. title::'):
@@ -171,7 +175,11 @@ def convert_rst_to_md(lines, filename):
 
     while i < len(lines):
         line = lines[i]
-        
+        if line and not line[0].isspace():
+            indent_stack = []
+
+        if "This is a dummy file" in line:
+            skip_build = True
         # Skip title directive
         if line.startswith('.. title::'):
             i += 1
@@ -311,12 +319,13 @@ def convert_rst_to_md(lines, filename):
             
             # Add code content
             while i < len(lines):
+                this_indent = min(len(lines[i]) - len(lines[i].lstrip()), code_indent)
                 if not lines[i].strip():  # Empty line
                     md_lines.append('')
                     i += 1
-                elif lines[i].startswith(' ' * code_indent):  # Line with correct indentation
+                elif this_indent != 0:
                     # Remove only the code block indentation, preserve any existing indentation
-                    md_lines.append(' ' * current_indent + lines[i][code_indent:])
+                    md_lines.append(' ' * current_indent + lines[i][this_indent:])
                     i += 1
                 else:  # Line without expected indentation - end of code block
                     break
@@ -592,7 +601,23 @@ def convert_rst_to_md(lines, filename):
                     continue
         
         # Process the line for inline markup
-        processed_line = process_inline_markup(line)
+        fixed_line = line
+        match = bullet_regex.match(line)
+        if match:
+            indent, bullet = match.groups()
+            indent_len = len(indent)
+            if not indent_stack and indent_len > 0:
+                fixed_line = line.lstrip()
+            elif indent_stack and indent_len > indent_stack[-1]:
+                indent_stack.append(indent_len)
+            else:
+                while indent_stack and indent_len < indent_stack[-1]:
+                    indent_stack.pop()
+                if not indent_stack:
+                    indent_stack.append(indent_len)
+
+
+        processed_line = process_inline_markup(fixed_line)
         if ":ghedit:" in processed_line:
             processed_line = re.sub(r':ghedit:`([^`]+)`',
                                     lambda m: f"[Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/{filename.replace('.rst', '.md')})",
@@ -621,7 +646,7 @@ def convert_rst_to_md(lines, filename):
     description = seo.get('description', title)
     if not description:
         description = title
-    
+
     # Avoid repeating "ESPHome" in the description if it's already in the title
     if title.startswith('ESPHome') and description.startswith('ESPHome'):
         description = description[len('ESPHome'):].strip()
@@ -632,9 +657,10 @@ def convert_rst_to_md(lines, filename):
     frontmatter.append(f'description: "{description}"')
     title = title.replace('"', '\\"')
     frontmatter.append(f'title: "{title}"')
+    if skip_build:
+        frontmatter.append('build: {render: never}')
 
     frontmatter.append('---')
-    
     # Add Hugo shortcode for SEO
     seo_shortcode = ""
     if seo:
@@ -643,7 +669,7 @@ def convert_rst_to_md(lines, filename):
     # Combine frontmatter and content
     frontmatter_yaml = "\n".join(frontmatter)
     md_content = "\n".join(md_lines)
-    final_content = f"{frontmatter_yaml}\n\n{seo_shortcode}{md_content}"
+    final_content = f"{frontmatter_yaml}\n\n{seo_shortcode}{md_content}\n"
     
     return final_content
 

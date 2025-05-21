@@ -2,11 +2,13 @@
 <div class="sidebar-content">
     <nav class="sidebar-nav">
         <h3>On This Page</h3>
+        {{ if .Fragments }}
         {{ if .Fragments.Headings }}
         {{ $startLevel := 2 }}
         {{ $endLevel := 3 }}
         {{ $ordered := true }}
         {{ .Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML }}
+        {{ end }}
         {{ end }}
         {{ if .Pages }}
         <h2>In this section</h2>

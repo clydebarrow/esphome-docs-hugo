@@ -33,3 +33,4 @@ fan:
 - {{< docref "/components/fan/index" >}}
 - :apiref:`template/fan/template_fan.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/template.md)
+

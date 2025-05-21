@@ -252,3 +252,4 @@ and the `ESP_LOGx` logging macros in this automation.
 - {{< docref "/components/select/logger" >}}
 - :apiref:`logger/logger.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/logger.md)
+

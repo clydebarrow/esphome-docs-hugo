@@ -47,3 +47,4 @@ output:
 - {{< docref "/components/output/index" >}}
 - {{< docref "/components/ble_client" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/ble_client.md)
+

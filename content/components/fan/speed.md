@@ -40,3 +40,4 @@ fan:
 - {{< docref "/components/output/pca9685" >}}
 - :apiref:`fan/fan_state.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/speed.md)
+

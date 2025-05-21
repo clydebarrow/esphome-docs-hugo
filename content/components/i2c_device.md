@@ -18,16 +18,16 @@ i2c_device:
   id: i2cdev
   address: 0x2C
 
+on...:
+ then:
+   - lambda: !lambda |-
+       id(i2cdev).write_byte(0x00, 0x12);
+       if (auto b = id(i2cdev).read_byte(0x01)) {
+         // TODO
+       }
+
+
 ```
-   on...:
-     then:
-       - lambda: !lambda |-
-           id(i2cdev).write_byte(0x00, 0x12);
-           if (auto b = id(i2cdev).read_byte(0x01)) {
-             // TODO
-           }
-
-
 ## Configuration variables:
 
 - **address** (**Required**, int): I²C address of the device.
@@ -37,3 +37,4 @@ i2c_device:
 - {{< docref "/components/i2c" >}}
 - :apiref:`i2c_device/i2c_device.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/i2c_device.md)
+

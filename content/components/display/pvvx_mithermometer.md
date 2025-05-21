@@ -221,3 +221,4 @@ display:
 - :apiref:`pvvx_mithermometer/display/pvvx_display.h`
 - [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by [pvvx](https://github.com/pvvx)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/pvvx_mithermometer.md)
+

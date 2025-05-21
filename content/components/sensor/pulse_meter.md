@@ -106,3 +106,4 @@ This value is the raw count of pulses, and not the value you see after the filte
 - [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
 - :apiref:`pulse_meter/pulse_meter_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pulse_meter.md)
+

@@ -33,9 +33,9 @@ valve:
 ```
 Possible return values for the optional lambda:
 
- - `return VALVE_OPEN;` if the valve should be reported as OPEN.
- - `return VALVE_CLOSED;` if the valve should be reported as CLOSED.
- - `return {};` if the last state should be repeated.
+- `return VALVE_OPEN;` if the valve should be reported as OPEN.
+- `return VALVE_CLOSED;` if the valve should be reported as CLOSED.
+- `return {};` if the last state should be repeated.
 
 ## Configuration variables:
 
@@ -116,3 +116,4 @@ id(my_template_valve).publish_state();
 - {{< docref "/cookbook/garage-door" >}}
 - :apiref:`template/valve/template_valve.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/valve/template.md)
+

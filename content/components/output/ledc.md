@@ -136,3 +136,4 @@ Configuration variables:
 - :apiref:`ledc/ledc_output.h`
 - [esp-idf LEDC API docs](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/ledc.md)
+

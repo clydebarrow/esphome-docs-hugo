@@ -76,5 +76,5 @@ exposure_notifications:
 
 - {{< docref "esp32_ble_tracker/" >}}
 - {{< apiref "exposure_notifications/exposure_notifications.h" "exposure_notifications/exposure_notifications.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/exposure_notifications.md)
+
 

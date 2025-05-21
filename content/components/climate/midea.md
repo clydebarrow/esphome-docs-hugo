@@ -286,5 +286,5 @@ Special thanks to the project [IRremoteESP8266](https://github.com/crankyoldgit/
 
 - {{< docref "/components/climate/index" >}}
 - {{< apiref "climate/midea_ac.h" "climate/midea_ac.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/midea.md)
+
 

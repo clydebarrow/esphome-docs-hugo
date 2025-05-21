@@ -113,5 +113,5 @@ on_...:
 - {{< docref "/components/wiegand" >}}
 - :ref:`LVGL Button Matrix widget <lvgl-widget-buttonmatrix>`
 - :ref:`LVGL Keyboard widget <lvgl-widget-keyboard>`
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/key_collector.md)
+
 

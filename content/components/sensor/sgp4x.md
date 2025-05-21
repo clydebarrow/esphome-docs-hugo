@@ -97,5 +97,5 @@ sensor:
 - {{< docref "sht3xd/" >}}
 - {{< docref "sht4x/" >}}
 - {{< apiref "sgp4x/sgp4x.h" "sgp4x/sgp4x.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sgp4x.md)
+
 

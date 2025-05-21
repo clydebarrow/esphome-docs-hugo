@@ -334,5 +334,5 @@ switch:
 
 - {{< apiref "sim800l/sim800l.h" "sim800l/sim800l.h" >}}
 - {{< docref "/components/uart" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sim800l.md)
+
 

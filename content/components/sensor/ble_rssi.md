@@ -71,5 +71,5 @@ like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.
 - {{< docref "/components/esp32_ble_tracker" >}}
 - {{< docref "/components/sensor/index" >}}
 - {{< apiref "ble_rssi/ble_rssi_sensor.h" "ble_rssi/ble_rssi_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ble_rssi.md)
+
 

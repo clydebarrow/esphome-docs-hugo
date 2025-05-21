@@ -39,5 +39,5 @@ Widget-specific actions (`lvgl.label.update`, `lvgl.textarea.update`) will trigg
 - {{< docref "/components/light/lvgl" >}}
 - {{< docref "/components/select/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/lvgl.md)
+
 

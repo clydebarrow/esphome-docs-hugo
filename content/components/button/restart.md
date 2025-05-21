@@ -27,5 +27,5 @@ button:
 - {{< docref "/components/switch/restart" >}}
 - {{< docref "template/" >}}
 - {{< apiref "restart/button/restart_button.h" "restart/button/restart_button.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/restart.md)
+
 

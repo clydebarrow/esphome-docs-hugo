@@ -93,5 +93,5 @@ the :ref:`Key Collector <key_collector>` component.
 
 - {{< docref "/components/key_collector" >}}
 - :ref:`Binary Sensor <config-binary_sensor>`
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/matrix_keypad.md)
+
 

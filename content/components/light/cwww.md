@@ -58,5 +58,5 @@ calculation assumes that both lights have the same illuminance, which might not 
 - {{< docref "/components/output/pca9685" >}}
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< apiref "cwww/cwww_light_output.h" "cwww/cwww_light_output.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/cwww.md)
+
 

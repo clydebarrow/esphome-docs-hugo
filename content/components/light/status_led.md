@@ -56,5 +56,5 @@ pin:
 - {{< docref "/components/light/binary" >}}
 - {{< docref "/components/light/index" >}}
 - {{< apiref "status_led/light/status_led_light.h" "status_led/light/status_led_light.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/status_led.md)
+
 

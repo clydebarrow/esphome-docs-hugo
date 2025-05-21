@@ -60,5 +60,5 @@ sensor:
 - [b-parasite on GitHub](https://github.com/rbaron/b-parasite)
 - {{< docref "/components/esp32_ble_tracker" >}}
 - {{< docref "absolute_humidity/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/b_parasite.md)
+
 

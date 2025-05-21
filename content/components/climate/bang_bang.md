@@ -178,5 +178,5 @@ In all other situations, the {{< docref "thermostat/" "thermostat" >}} component
 
 - {{< docref "/components/climate/index" >}}
 - {{< apiref "bang_bang/bang_bang_climate.h" "bang_bang/bang_bang_climate.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/bang_bang.md)
+
 

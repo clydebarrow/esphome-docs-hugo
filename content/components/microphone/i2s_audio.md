@@ -95,5 +95,5 @@ microphone:
 ## See also
 
 - {{< docref "index/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/microphone/i2s_audio.md)
+
 

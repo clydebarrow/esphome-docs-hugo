@@ -157,5 +157,5 @@ circuiting the wire by mistake.
 - {{< docref "rotary_encoder/" >}}
 - [esp-idf Pulse Counter API](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html).
 - {{< apiref "pulse_counter/pulse_counter_sensor.h" "pulse_counter/pulse_counter_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pulse_counter.md)
+
 

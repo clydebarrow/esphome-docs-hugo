@@ -220,5 +220,5 @@ touchscreen:
 
 - {{< docref "index/" >}}
 - {{< apiref "qspi_dbi/qspi_dbi.h" "qspi_dbi/qspi_dbi.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/qspi_dbi.md)
+
 

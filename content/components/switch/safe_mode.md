@@ -30,5 +30,5 @@ switch:
 - {{< docref "/components/button/safe_mode" >}}
 - {{< docref "template/" >}}
 - {{< apiref "safe_mode/safe_mode_switch.h" "safe_mode/safe_mode_switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/safe_mode.md)
+
 

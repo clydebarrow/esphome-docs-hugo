@@ -72,5 +72,5 @@ All sensors are *Optional* and support all other options from :ref:`Sensor <conf
 - :ref:`Sensor <config-sensor>`
 - [Kuntze manuals](https://www.kuntze.com/en/downloads-2/)
 - [Communication protocol](https://www.kuntze.com/wp-content/uploads/2021/05/2019_Manual_Modbus-RTU_ENG.pdf)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/kuntze.md)
+
 

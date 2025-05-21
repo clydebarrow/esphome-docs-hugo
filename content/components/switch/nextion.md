@@ -174,5 +174,5 @@ printh FF FF FF
 - {{< docref "/components/display/nextion" >}}
 - {{< docref "index/" >}}
 - {{< apiref "nextion/switch/nextion_switch.h" "nextion/switch/nextion_switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/nextion.md)
+
 

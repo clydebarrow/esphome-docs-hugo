@@ -61,5 +61,5 @@ There are three options for `debounce_mode`.
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< apiref "qwiic_pir/qwiic_pir.h" "qwiic_pir/qwiic_pir.h" >}}
 - [SparkFun Qwiic PIR Library](https://github.com/sparkfun/SparkFun_Qwiic_PIR_Arduino_Library) by [SparkFun](https://www.sparkfun.com/)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/qwiic_pir.md)
+
 

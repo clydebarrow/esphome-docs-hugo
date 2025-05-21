@@ -124,6 +124,6 @@ Another important resource is [JSONLint](https://jsonlint.com/). It will help yo
 - {{< apiref "http_request/http_request.h" "http_request/http_request.h" >}}
 - {{< apiref "json/json_util.h" "json/json_util.h" >}}
 - `ArduinoJson <https://arduinojson.org/>`
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/json.md)
+
 
 

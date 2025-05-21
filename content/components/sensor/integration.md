@@ -56,5 +56,5 @@ on_...:
 - {{< docref "total_daily_energy/" >}}
 - {{< docref "/cookbook/power_meter" >}}
 - {{< apiref "integration/integration_sensor.h" "integration/integration_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/integration.md)
+
 

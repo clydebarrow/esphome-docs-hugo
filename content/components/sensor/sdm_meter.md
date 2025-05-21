@@ -106,6 +106,6 @@ sensor:
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< apiref "sdm220m/sdm220m.h" "sdm220m/sdm220m.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sdm_meter.md)
+
 
 

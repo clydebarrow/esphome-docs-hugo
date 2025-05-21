@@ -98,5 +98,5 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< apiref "vl53l0x/vl53l0x_sensor.h" "vl53l0x/vl53l0x_sensor.h" >}}
 - [vl53l0x-arduino library](https://github.com/pololu/vl53l0x-arduino/) by [Pololu](https://github.com/pololu)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/vl53l0x.md)
+
 

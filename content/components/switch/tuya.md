@@ -41,5 +41,5 @@ switch:
 
 - {{< docref "/components/switch/index" >}}
 - {{< apiref "tuya/switch/tuya_switch.h" "tuya/switch/tuya_switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/tuya.md)
+
 

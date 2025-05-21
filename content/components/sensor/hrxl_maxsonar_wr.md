@@ -43,5 +43,5 @@ Advanced options:
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - {{< docref "template/" >}}
 - {{< apiref "hrxl_maxsonar_wr/hrxl_maxsonar_wr.h" "hrxl_maxsonar_wr/hrxl_maxsonar_wr.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/hrxl_maxsonar_wr.md)
+
 

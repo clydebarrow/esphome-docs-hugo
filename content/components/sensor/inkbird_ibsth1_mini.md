@@ -100,5 +100,5 @@ ESPHome therefore has no impact on the battery life of the device.
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "inkbird_ibsth1_mini/inkbird_ibsth1_mini.h" "inkbird_ibsth1_mini/inkbird_ibsth1_mini.h" >}}
 - [OpenMQTTGateway](https://github.com/1technophile/OpenMQTTGateway) by [@1technophile](https://github.com/1technophile)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/inkbird_ibsth1_mini.md)
+
 

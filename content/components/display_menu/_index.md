@@ -727,5 +727,5 @@ on_press:
 
 - {{< apiref "display_menu_base/display_menu_base.h" "display_menu_base/display_menu_base.h" >}}
 
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display_menu/index.md)
+
 

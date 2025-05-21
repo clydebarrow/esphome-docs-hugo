@@ -107,5 +107,5 @@ If you need to use the uncompressed image for any reason, just remove `&compress
 - {{< docref "/components/esp32" >}}
 - {{< docref "migrate_espurna/" >}}
 - {{< docref "migrate_espeasy/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/migrate_sonoff_tasmota.md)
+
 

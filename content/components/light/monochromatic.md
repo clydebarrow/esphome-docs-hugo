@@ -40,5 +40,5 @@ light:
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< docref "/components/output/my9231" >}}
 - {{< apiref "monochromatic/monochromatic_light_output.h" "monochromatic/monochromatic_light_output.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/monochromatic.md)
+
 

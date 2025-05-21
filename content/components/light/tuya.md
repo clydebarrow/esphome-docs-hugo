@@ -89,5 +89,5 @@ Therefore the `gamma_correct` setting default is `1.0` and the
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/light/index" >}}
 - {{< apiref "tuya/light/tuya_light.h" "tuya/light/tuya_light.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/tuya.md)
+
 

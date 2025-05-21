@@ -390,5 +390,5 @@ automation:
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/remote_receiver" >}}
 - {{< docref "/components/remote_transmitter" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/rf_bridge.md)
+
 

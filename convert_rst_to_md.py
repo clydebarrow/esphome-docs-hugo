@@ -621,9 +621,7 @@ def convert_rst_to_md(lines, filename):
 
         processed_line = process_inline_markup(fixed_line)
         if ":ghedit:" in processed_line:
-            processed_line = re.sub(r':ghedit:`([^`]+)`',
-                                    lambda m: f"[Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/{filename.replace('.rst', '.md')})",
-                                    processed_line)
+            processed_line = ""
 
 
     # Fix image paths in markdown content

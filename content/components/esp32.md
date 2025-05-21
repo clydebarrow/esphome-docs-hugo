@@ -139,5 +139,5 @@ binary_sensor:
 ## See Also
 
 - {{< docref "esphome/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32.md)
+
 

@@ -421,5 +421,5 @@ text_sensor:
 ## See Also
 
 - {{< apiref "dsmr/dsmr.h" "dsmr/dsmr.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dsmr.md)
+
 

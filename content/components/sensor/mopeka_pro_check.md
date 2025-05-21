@@ -177,5 +177,5 @@ ESPHome therefore has no impact on the battery life of the device.
 - {{< apiref "mopeka_pro_check/mopeka_pro_check.h" "mopeka_pro_check/mopeka_pro_check.h" >}}
 - `Mopeka  <https://www.mopekaiot.com/shop>`
 - [Lippert](https://store.lci1.com/lippert-propane-tank-sensor-2021130655)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/mopeka_pro_check.md)
+
 

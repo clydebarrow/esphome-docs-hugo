@@ -160,5 +160,5 @@ of the specific peripheral chip.
 ## See Also
 
 - {{< apiref "spi/spi.h" "spi/spi.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/spi.md)
+
 

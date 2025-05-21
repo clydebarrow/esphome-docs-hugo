@@ -226,5 +226,5 @@ binary_sensor:
 - [Font Renderer Component]({{< ref "components/font#display-fonts" >}})
 - [Display Pages]({{< ref "components/display/_index#display-pages" >}})
 - {{< apiref "graphical_display_menu/graphical_display_menu.h" "graphical_display_menu/graphical_display_menu.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display_menu/graphical_display_menu.md)
+
 

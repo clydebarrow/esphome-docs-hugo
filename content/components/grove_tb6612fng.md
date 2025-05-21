@@ -116,5 +116,5 @@ on_...:
 
 - [I²C Bus]({{< ref "components/i2c#i2c" >}})
 - {{< docref "switch/gpio" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/grove_tb6612fng.md)
+
 

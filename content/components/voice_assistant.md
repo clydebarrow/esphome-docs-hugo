@@ -194,5 +194,5 @@ binary_sensor:
 
 - {{< docref "microphone/index" >}}
 - {{< apiref "voice_assistant/voice_assistant.h" "voice_assistant/voice_assistant.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/voice_assistant.md)
+
 

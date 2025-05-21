@@ -69,5 +69,5 @@ Stops measuring sound levels. Does nothing in passive mode.
 - [Root Mean Square (Wikipedia)](https://en.wikipedia.org/wiki/Root_mean_square)
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< apiref "sound_level/sound_level.h" "sound_level/sound_level.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sound_level.md)
+
 

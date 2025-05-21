@@ -153,5 +153,5 @@ wifi:
 - {{< apiref "online_image/online_image.h" "online_image/online_image.h" >}}
 - {{< docref "image/" "Image Component" >}}
 - {{< docref "animation/" "Animation Component" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/online_image.md)
+
 

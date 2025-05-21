@@ -371,5 +371,5 @@ advanced stuff (see the full API Reference for more info).
 ## Full Fan Index
 
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/index.md)
+
 

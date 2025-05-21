@@ -173,5 +173,5 @@ sensor:
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "scd30/" >}}
 - {{< apiref "scd4x/scd4x.h" "scd4x/scd4x.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/scd4x.md)
+
 

@@ -96,5 +96,5 @@ display:
 
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mapping.md)
+
 

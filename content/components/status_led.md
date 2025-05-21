@@ -48,5 +48,5 @@ status_led:
 
 - {{< docref "/components/light/status_led" >}}
 - {{< apiref "status_led/status_led.h" "status_led/status_led.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/status_led.md)
+
 

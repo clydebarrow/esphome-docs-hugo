@@ -621,5 +621,5 @@ You should at least protect your sensors with a custom pairing PIN code. Choose 
 - Xiaomi LYWSD03MMC passive sensor readout `<https://github.com/ahpohl/xiaomi_lywsd03mmc>[__ by `@ahpohl](https://github.com/ahpohl)
 - Cloud Tokens Extractor: `<https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor>`__
 
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/xiaomi_ble.md)
+
 

@@ -460,5 +460,5 @@ advanced stuff.
 ## See Also
 
 - {{< apiref "binary_sensor/binary_sensor.h" "binary_sensor/binary_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/index.md)
+
 

@@ -48,5 +48,5 @@ display:
 ## See Also
 
 - {{< apiref "mqtt_subscribe/text_sensor/mqtt_subscribe_text_sensor.h" "mqtt_subscribe/text_sensor/mqtt_subscribe_text_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/mqtt_subscribe.md)
+
 

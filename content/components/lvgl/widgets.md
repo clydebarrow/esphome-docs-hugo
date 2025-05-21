@@ -2091,5 +2091,5 @@ When used on a widget, it does not act specifically on that widget but can be us
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
 - [LVGL docs](https://docs.lvgl.io/)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/widgets.md)
+
 

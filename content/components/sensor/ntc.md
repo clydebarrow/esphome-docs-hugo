@@ -120,5 +120,5 @@ interval:
 - {{< docref "resistance/" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< apiref "ntc/ntc.h" "ntc/ntc.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ntc.md)
+
 

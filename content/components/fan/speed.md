@@ -39,5 +39,5 @@ fan:
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/pca9685" >}}
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/speed.md)
+
 

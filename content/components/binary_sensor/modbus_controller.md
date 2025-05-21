@@ -67,5 +67,5 @@ binary_sensor:
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - https://www.modbustools.com/modbus.html
 - {{< apiclass ":modbus_controller::ModbusBinarySensor" ":modbus_controller::ModbusBinarySensor" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/modbus_controller.md)
+
 

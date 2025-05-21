@@ -30,5 +30,5 @@ switch:
 
 - {{< docref "/components/output/index" >}}
 - {{< apiref "output/switch/output_switch.h" "output/switch/output_switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/output.md)
+
 

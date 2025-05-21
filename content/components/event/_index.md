@@ -135,5 +135,5 @@ From :ref:`lambdas <config-lambda>`, you can trigger an event.
 ## See Also
 
 - {{< apiref "event/event.h" "event/event.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/event/index.md)
+
 

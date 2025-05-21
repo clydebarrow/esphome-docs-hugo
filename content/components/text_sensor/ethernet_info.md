@@ -47,5 +47,5 @@ text_sensor:
 
 - {{< docref "/components/ethernet" >}}
 - {{< apiref "ethernet_info/ethernet_info_text_sensor.h" "ethernet_info/ethernet_info_text_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/ethernet_info.md)
+
 

@@ -79,5 +79,5 @@ Internal DAC speakers are only supported by the legacy I²S driver on a regular 
 ## See also
 
 - {{< docref "index/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/speaker/i2s_audio.md)
+
 

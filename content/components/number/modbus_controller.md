@@ -110,5 +110,5 @@ number:
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 
 - https://www.modbustools.com/modbus.html
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/number/modbus_controller.md)
+
 

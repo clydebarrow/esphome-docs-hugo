@@ -30,5 +30,5 @@ lock:
 
 - {{< docref "/components/output/index" >}}
 - {{< apiref "output/lock/output_lock.h" "output/lock/output_lock.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lock/output.md)
+
 

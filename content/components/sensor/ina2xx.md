@@ -172,5 +172,5 @@ To simplify the use of this function, you can use the following example to add a
 - {{< docref "ina226/" >}}
 - {{< docref "ina3221/" >}}
 - {{< apiref "ina2xx_base/ina2xx_base.h" "ina2xx_base/ina2xx_base.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ina2xx.md)
+
 

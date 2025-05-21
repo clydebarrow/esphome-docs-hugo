@@ -156,5 +156,5 @@ Configuration variables:
 
 - {{< docref "/guides/audio_clips_for_i2s" >}}
 - {{< docref "/components/speaker/i2s_audio" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/speaker/index.md)
+
 

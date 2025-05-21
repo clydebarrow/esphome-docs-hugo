@@ -162,5 +162,5 @@ The `status_indicator` has the following patterns:
 - {{< docref "captive_portal/" >}}
 - [Improv Wi-Fi](https://www.improv-wifi.com/)
 - {{< apiref "esp32_improv/esp32_improv_component.h" "esp32_improv/esp32_improv_component.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_improv.md)
+
 

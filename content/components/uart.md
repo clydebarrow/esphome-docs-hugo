@@ -275,5 +275,5 @@ uart:
 - {{< docref "/components/logger" >}}
 - {{< docref "/components/packet_transport/uart" >}}
 - {{< apiref "uart/uart.h" "uart/uart.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/uart.md)
+
 

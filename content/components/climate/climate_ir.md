@@ -358,5 +358,5 @@ for more information.
   {{< apiref "tcl112.h" "tcl112/tcl112.h" >}},
   {{< apiref "yashima.h" "yashima/yashima.h" >}}
   {{< apiref "whirlpool.h" "whirlpool/whirlpool.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/climate_ir.md)
+
 

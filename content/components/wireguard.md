@@ -360,5 +360,5 @@ of the :ref:`address <wireguard-address>` configured here.
 - |wireguard|_ official website
 - [Home Assistant Community Add-on: WireGuard](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
   (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wireguard.md)
+
 

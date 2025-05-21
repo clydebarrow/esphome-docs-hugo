@@ -50,5 +50,5 @@ with the [`number.set` Action]({{< ref "components/number/_index#number-set_acti
 
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< apiref "template/number/template_number.h" "template/number/template_number.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/number/template.md)
+
 

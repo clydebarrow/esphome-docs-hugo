@@ -431,5 +431,5 @@ the individual components (linked below) for more detail.
 - {{< apiref "nextion/nextion.h" "nextion/nextion.h" >}}
 - [Simple Nextion Library](https://github.com/bborncr/nextion) by [Bentley Born](https://github.com/bborncr)
 - [Official Nextion Library](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead](https://www.itead.cc/)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/nextion.md)
+
 

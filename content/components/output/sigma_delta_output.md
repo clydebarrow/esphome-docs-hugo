@@ -81,5 +81,5 @@ cycle.
 - {{< docref "/components/power_supply" >}}
 - [Sigma-Delta](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
 - {{< apiref "sigma_delta_output/sigma_delta_output.h" "sigma_delta_output/sigma_delta_output.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/sigma_delta_output.md)
+
 

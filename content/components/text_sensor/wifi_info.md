@@ -60,5 +60,5 @@ text_sensor:
 - {{< docref "/components/wifi" >}}
 - {{< docref "/components/sensor/wifi_signal" >}}
 - {{< apiref "wifi_info/wifi_info_text_sensor.h" "wifi_info/wifi_info_text_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/wifi_info.md)
+
 

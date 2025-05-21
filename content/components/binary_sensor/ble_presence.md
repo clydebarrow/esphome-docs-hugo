@@ -131,5 +131,5 @@ Alternatively you can:
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< apiref "ble_presence/ble_presence.h" "ble_presence/ble_presence.h" >}}
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/ble_presence.md)
+
 

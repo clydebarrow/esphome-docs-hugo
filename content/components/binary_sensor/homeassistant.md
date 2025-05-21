@@ -44,5 +44,5 @@ binary_sensor:
 
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< apiref "homeassistant/binary_sensor/homeassistant_binary_sensor.h" "homeassistant/binary_sensor/homeassistant_binary_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/homeassistant.md)
+
 

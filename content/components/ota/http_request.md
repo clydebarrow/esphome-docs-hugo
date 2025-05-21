@@ -105,5 +105,5 @@ on_...:
 - {{< docref "/components/ota/index" >}}
 - {{< docref "/components/ota/esphome" >}}
 - {{< docref "/components/safe_mode" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ota/http_request.md)
+
 

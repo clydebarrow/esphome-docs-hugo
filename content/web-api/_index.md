@@ -337,5 +337,5 @@ disarmed successfully. It only indicates that the command was received and proce
 - {{< docref "/components/web_server" >}}
 - {{< docref "/components/prometheus" >}}
 - {{< docref "/components/http_request" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/web-api/index.md)
+
 

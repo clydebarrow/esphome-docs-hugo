@@ -291,5 +291,5 @@ binary_sensor:
 - {{< docref "/components/touchscreen/gt911" "GT911" >}}
 - {{< apiref "touchscreen/touchscreen.h" "touchscreen/touchscreen.h" >}}
 - {{< apiref "touchscreen/binary_sensor/touchscreen_binary_sensor.h" "touchscreen/binary_sensor/touchscreen_binary_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/touchscreen/index.md)
+
 

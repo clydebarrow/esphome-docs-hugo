@@ -119,5 +119,5 @@ binary_sensor:
 - {{< docref "/components/sensor/packet_transport" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< apiref "udp/udp_component.h" "udp/udp_component.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/udp.md)
+
 

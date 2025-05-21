@@ -37,5 +37,5 @@ update the time before SNTP synchronizes.
 {{< /warning >}}
 ## See Also
 
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/time/sntp.md)
+
 

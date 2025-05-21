@@ -125,5 +125,5 @@ on_...:
 ## See Also
 
 - {{< apiref "sun/sun.h" "sun/sun.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sun.md)
+
 

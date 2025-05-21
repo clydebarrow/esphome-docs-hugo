@@ -29,5 +29,5 @@ touchscreen:
 
 - :ref:`SDL display <sdl>`
 - {{< apiref "sdl/sdl_touchscreen.h" "sdl/sdl_touchscreen.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/touchscreen/sdl.md)
+
 

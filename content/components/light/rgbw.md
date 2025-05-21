@@ -86,5 +86,5 @@ the `color_mode` option of the :ref:`light control actions <light-turn_on_action
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
 - {{< apiref "rgbw/rgb_light_output.h" "rgbw/rgb_light_output.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/rgbw.md)
+
 

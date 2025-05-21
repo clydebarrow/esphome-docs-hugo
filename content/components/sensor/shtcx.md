@@ -53,5 +53,5 @@ sensor:
 - {{< docref "htu21d/" >}}
 - {{< docref "sht3xd/" >}}
 - {{< apiref "shtcx/shtcx.h" "shtcx/shtcx.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/shtcx.md)
+
 

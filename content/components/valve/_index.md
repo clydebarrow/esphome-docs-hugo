@@ -244,5 +244,5 @@ valve:
 ## See Also
 
 - {{< apiref "valve/valve.h" "valve/valve.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/valve/index.md)
+
 

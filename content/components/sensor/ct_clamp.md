@@ -73,5 +73,5 @@ Recompile and upload, now your CT clamp sensor is calibrated!
 - {{< docref "adc/" >}}
 - {{< docref "ads1115/" >}}
 - {{< apiref "sensor/ct_clamp_sensor.h" "sensor/ct_clamp_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ct_clamp.md)
+
 

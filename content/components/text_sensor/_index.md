@@ -281,5 +281,5 @@ advanced stuff (see the full API Reference for more info).
 ## See Also
 
 - {{< apiref "text_sensor/text_sensor.h" "text_sensor/text_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/index.md)
+
 

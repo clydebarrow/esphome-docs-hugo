@@ -47,5 +47,5 @@ binary_sensor:
 
 - {{< docref "/components/sensor/hydreon_rgxx" >}}
 - {{< docref "index/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/hydreon_rgxx.md)
+
 

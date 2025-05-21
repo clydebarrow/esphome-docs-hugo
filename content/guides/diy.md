@@ -10,7 +10,7 @@ external components, blog posts, videos and sample configurations. It should ser
 finding inspiration for new projects and finding other ESPHome-enthusiasts on the web.
 
 This page purposefully has little moderation. Found something great or have something to share?
-Great, create a pull request on GitHub adding the link to this file ([Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/diy.md))!
+
 The usual rules of don't be an asshole apply - don't put your link at the top of the list
 unless it's truly exceptional, etc.
 

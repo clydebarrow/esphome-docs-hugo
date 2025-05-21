@@ -82,5 +82,5 @@ sensor:
 - {{< docref "/components/sensor/sds011" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< apiref "pmsx003/pmsx003.h" "pmsx003/pmsx003.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pmsx003.md)
+
 

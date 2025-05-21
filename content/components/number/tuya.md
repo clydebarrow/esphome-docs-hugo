@@ -100,5 +100,5 @@ Therefore there is also an option to store them on the ESPHome side and they wil
 
 - {{< docref "/components/number/index" >}}
 - {{< apiref "tuya/number/tuya_number.h" "tuya/number/tuya_number.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/number/tuya.md)
+
 

@@ -165,5 +165,5 @@ servo:
 ## See Also
 
 - {{< apiref "servo/servo.h" "servo/servo.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/servo.md)
+
 

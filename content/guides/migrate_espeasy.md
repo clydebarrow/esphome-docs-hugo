@@ -46,5 +46,5 @@ Happy Hacking!
 - {{< docref "/components/esp32" >}}
 - {{< docref "migrate_espurna/" >}}
 - {{< docref "migrate_sonoff_tasmota/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/migrate_espeasy.md)
+
 

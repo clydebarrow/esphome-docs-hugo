@@ -50,5 +50,5 @@ For best results, keep the wires as short as possible.
 ## See also
 
 - {{< docref "index/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/media_player/i2s_audio.md)
+
 

@@ -108,5 +108,5 @@ Configuration options:
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< apiref "ags10/ags10.h" "ags10/ags10.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ags10.md)
+
 

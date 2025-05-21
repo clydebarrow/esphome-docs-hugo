@@ -63,5 +63,5 @@ modbus:
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - {{< apiref "modbus/modbus.h" "modbus/modbus.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/modbus.md)
+
 

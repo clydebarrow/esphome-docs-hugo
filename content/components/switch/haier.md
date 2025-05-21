@@ -36,5 +36,5 @@ switch:
 ## See Also
 
 - {{< docref "/components/climate/haier" "Haier Climate" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/haier.md)
+
 

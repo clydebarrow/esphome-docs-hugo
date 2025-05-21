@@ -39,5 +39,5 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - {{< apiref "a02yyuw/a02yyuw.h" "a02yyuw/a02yyuw.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/a02yyuw.md)
+
 

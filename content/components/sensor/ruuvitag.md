@@ -143,5 +143,5 @@ ESPHome therefore has no impact on the battery life of the device.
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "ruuvitag/ruuvitag.h" "ruuvitag/ruuvitag.h" >}}
 - [Ruuvi](https://ruuvi.com)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ruuvitag.md)
+
 

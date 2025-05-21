@@ -36,5 +36,5 @@ sensor:
 - [Arduino DallasTemperature library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
   by [Miles Burton](https://github.com/milesburton)
 - {{< apiref "dallas_temp/dallas_temp.h" "dallas_temp/dallas_temp.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dallas_temp.md)
+
 

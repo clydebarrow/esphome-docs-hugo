@@ -31,5 +31,5 @@ button:
 - {{< docref "/components/switch/shutdown" >}}
 - {{< docref "template/" >}}
 - {{< apiref "shutdown/shutdown_button.h" "shutdown/shutdown_button.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/shutdown.md)
+
 

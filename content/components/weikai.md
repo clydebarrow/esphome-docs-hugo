@@ -288,5 +288,5 @@ log file and the baud rate will automatically be decreased.
 - {{< docref "switch/gpio" >}}
 - {{< docref "binary_sensor/gpio" >}}
 - {{< apiref "weika/weika.h" "weika/weika.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/weikai.md)
+
 

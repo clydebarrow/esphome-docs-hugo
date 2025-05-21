@@ -798,5 +798,5 @@ if (id(mqtt_client)->is_connected()) {
 ## See Also
 
 - {{< apiref "mqtt/mqtt_client.h" "mqtt/mqtt_client.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mqtt.md)
+
 

@@ -112,5 +112,5 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< apiref "template/sensor/template_sensor.h" "template/sensor/template_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/template.md)
+
 

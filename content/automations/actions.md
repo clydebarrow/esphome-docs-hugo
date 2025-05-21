@@ -648,5 +648,5 @@ action and then (in your automation) use the `script.is_running` condition to kn
 
 - {{< docref "index/" >}}
 - {{< docref "templates/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/automations/actions.md)
+
 

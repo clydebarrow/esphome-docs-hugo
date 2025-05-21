@@ -35,5 +35,5 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - {{< apiref "a01nyub/a01nyub.h" "a01nyub/a01nyub.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/a01nyub.md)
+
 

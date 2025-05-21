@@ -1114,5 +1114,5 @@ The following realtime protocols are supported:
 
 - {{< apiref "light/light_state.h" "light/light_state.h" >}}
 - [WS2812FX library](https://github.com/kitesurfer1404/WS2812FX) by [@kitesurfer1404](https://github.com/kitesurfer1404)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/index.md)
+
 

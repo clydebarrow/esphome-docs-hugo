@@ -96,5 +96,5 @@ id(template_swi).publish_state(false);
 - {{< docref "/components/switch/index" >}}
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< apiref "template/switch/template_switch.h" "template/switch/template_switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/template.md)
+
 

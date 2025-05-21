@@ -193,5 +193,5 @@ on_...:
 - {{< docref "sps30/" >}}
 - {{< docref "sgp4x/" >}}
 - {{< apiref "sen5x/sen5x.h" "sen5x/sen5x.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sen5x.md)
+
 

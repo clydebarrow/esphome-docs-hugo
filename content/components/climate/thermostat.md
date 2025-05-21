@@ -509,5 +509,5 @@ Please see the {{< docref "bang_bang/" "Bang-Bang" >}} component's documentation
 - {{< docref "/components/sensor/index" >}}
 - {{< docref "bang_bang/" "Bang-Bang" >}}
 - [All Actions]({{< ref "automations/actions#config-action" >}})
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/thermostat.md)
+
 

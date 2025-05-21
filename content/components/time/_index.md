@@ -299,5 +299,5 @@ with the current time representation of that format option.
 ## See Also
 
 - {{< apiref "time/real_time_clock.h" "time/real_time_clock.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/time/index.md)
+
 

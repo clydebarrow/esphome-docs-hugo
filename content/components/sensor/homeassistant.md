@@ -60,5 +60,5 @@ are not inherited from the imported sensor so you need to set them manually.
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< apiref "homeassistant/sensor/homeassistant_sensor.h" "homeassistant/sensor/homeassistant_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/homeassistant.md)
+
 

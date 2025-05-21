@@ -93,5 +93,5 @@ Configuration variables:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "logger/" >}}
 - {{< apiref "debug/debug_component.h" "debug/debug_component.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/debug.md)
+
 

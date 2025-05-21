@@ -78,5 +78,5 @@ For that, you need to first manually put it into DOWNLOAD mode.
 ## See Also
 
 - {{< docref "/guides/index" "Guides" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/devboard_as_flasher.md)
+
 

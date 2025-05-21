@@ -114,5 +114,5 @@ on_...:
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< apiref "duty_time/duty_time_sensor.h" "duty_time/duty_time_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/duty_time.md)
+
 

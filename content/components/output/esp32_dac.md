@@ -65,5 +65,5 @@ light:
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "esp32_dac/esp32_dac.h" "esp32_dac/esp32_dac.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/esp32_dac.md)
+
 

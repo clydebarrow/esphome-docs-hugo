@@ -83,5 +83,5 @@ cards/tags to share the same message.
 - {{< apiref "pn532/pn532.h" "pn532/pn532.h" >}}
 - {{< apiref "pn7150/pn7150.h" "pn7150/pn7150.h" >}}
 - {{< apiref "pn7160/pn7160.h" "pn7160/pn7160.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/nfc.md)
+
 

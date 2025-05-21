@@ -153,5 +153,5 @@ modbus_controller:
 - {{< docref "pzem004t/" >}}
 - {{< docref "pzemdc/" >}}
 - {{< apiref "pzemac/pzemac.h" "pzemac/pzemac.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzemac.md)
+
 

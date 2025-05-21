@@ -65,5 +65,5 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 - [Some information about hacking MT8060](https://habr.com/ru/company/dadget/blog/394333/)
 - [CO2MeterHacking project](https://revspace.nl/CO2MeterHacking)
 - {{< apiref "zyaura/zyaura.h" "zyaura/zyaura.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/zyaura.md)
+
 

@@ -82,5 +82,5 @@ actuator heads or fans.
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "slow_pwm/slow_pwm_output.h" "slow_pwm/slow_pwm_output.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/slow_pwm.md)
+
 

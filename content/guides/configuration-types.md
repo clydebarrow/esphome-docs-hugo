@@ -164,5 +164,5 @@ some_config_option:
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - {{< docref "faq/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/configuration-types.md)
+
 

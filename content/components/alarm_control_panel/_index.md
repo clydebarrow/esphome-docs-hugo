@@ -333,5 +333,5 @@ bool all_sensors_ready = id(acp1).get_all_sensors_ready();
 
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< apiref "alarm_control_panel/alarm_control_panel.h" "alarm_control_panel/alarm_control_panel.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/alarm_control_panel/index.md)
+
 

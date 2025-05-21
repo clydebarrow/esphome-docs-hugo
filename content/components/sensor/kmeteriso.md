@@ -38,5 +38,5 @@ sensor:
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "kmeteriso/kmeteriso.h" "kmeteriso/kmeteriso.h" >}}
 - [M5Stack Unit code](https://github.com/m5stack/M5Unit-KMeterISO) by [M5Stack](https://m5stack.com/)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/kmeteriso.md)
+
 

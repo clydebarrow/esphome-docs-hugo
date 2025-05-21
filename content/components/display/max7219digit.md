@@ -236,5 +236,5 @@ Please see [Formatted Text]({{< ref "components/display/_index#display-printf" >
 - {{< docref "index/" >}}
 - {{< apiref "max7219/max7219.h" "max7219/max7219.h" >}}
 - [MAX7219 Library](https://github.com/nickgammon/MAX7219) by [Nick Gammon](https://github.com/nickgammon)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/max7219digit.md)
+
 

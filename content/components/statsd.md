@@ -45,5 +45,5 @@ This example will generate a metric named `test1.sensor` with the value of the `
 ## See Also
 
 - {{< apiref "statsd/statsd.h" "statsd/statsd.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/statsd.md)
+
 

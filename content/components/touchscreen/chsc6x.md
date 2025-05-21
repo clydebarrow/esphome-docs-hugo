@@ -62,5 +62,5 @@ touchscreen:
 ## See Also
 
 - {{< apiref "chsc6x/chsc6x_touchscreen.h" "chsc6x/chsc6x_touchscreen.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/touchscreen/chsc6x.md)
+
 

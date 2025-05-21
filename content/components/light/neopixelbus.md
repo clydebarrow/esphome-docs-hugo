@@ -169,5 +169,5 @@ this method is no longer recommended, but documented here for reference purposes
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "neopixelbus/neopixelbus_light.h" "neopixelbus/neopixelbus_light.h" >}}
 - [NeoPixelBus library](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/neopixelbus.md)
+
 

@@ -981,5 +981,5 @@ This :ref:`trigger <lvgl-automation-triggers>` is triggered after LVGL has been 
 - {{< docref "/components/touchscreen/index" >}}
 - {{< docref "/components/sensor/rotary_encoder" >}}
 - [LVGL docs](https://docs.lvgl.io/)
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/index.md)
+
 

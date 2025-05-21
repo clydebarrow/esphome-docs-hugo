@@ -376,5 +376,5 @@ never be removed. Features of native API (vs. MQTT):
 ## See Also
 
 - {{< apiref "api/api_server.h" "api/api_server.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/api.md)
+
 

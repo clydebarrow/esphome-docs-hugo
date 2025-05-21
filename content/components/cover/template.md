@@ -124,5 +124,5 @@ id(template_cov).publish_state();
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/cover/template_cover.h" "template/cover/template_cover.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/template.md)
+
 

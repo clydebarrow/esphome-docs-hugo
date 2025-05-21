@@ -136,5 +136,5 @@ integers for data reporting and to get a .5 temperature you need to divide by 2 
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/climate/index" >}}
 - {{< apiref "tuya/climate/tuya_climate.h" "tuya/climate/tuya_climate.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/tuya.md)
+
 

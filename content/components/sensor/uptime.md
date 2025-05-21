@@ -32,5 +32,5 @@ sensor:
 - {{< docref "/components/text_sensor/uptime" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< apiref "uptime/uptime_sensor.h" "uptime/uptime_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/uptime.md)
+
 

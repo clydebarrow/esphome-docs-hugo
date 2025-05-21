@@ -1253,5 +1253,5 @@ We'll approach this from the angle of *"how do I..."*
 
 - {{< apiref "sprinkler/sprinkler.h" "sprinkler/sprinkler.h" >}}
 - {{< apiref "switch/switch.h" "switch/switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sprinkler.md)
+
 

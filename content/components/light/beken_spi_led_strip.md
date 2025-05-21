@@ -54,5 +54,5 @@ light:
 - {{< docref "/components/light/index" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "beken_spi_led_strip/beken_spi_led_strip.h" "beken_spi_led_strip/beken_spi_led_strip.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/beken_spi_led_strip.md)
+
 

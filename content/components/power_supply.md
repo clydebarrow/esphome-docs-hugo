@@ -67,5 +67,5 @@ in between to protect the ESP board.
 
 - {{< docref "output/index" >}}
 - {{< apiref "power_supply/power_supply.h" "power_supply/power_supply.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/power_supply.md)
+
 

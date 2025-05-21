@@ -40,5 +40,5 @@ switch:
 
 - {{< docref "/components/ble_client" >}}
 - {{< apiref "ble_client/switch/ble_switch.h" "ble_client/switch/ble_switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/ble_client.md)
+
 

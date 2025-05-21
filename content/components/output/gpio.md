@@ -39,5 +39,5 @@ see the {{< docref "/components/switch/gpio" >}}.
 - {{< docref "/components/fan/binary" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "gpio/output/gpio_binary_output.h" "gpio/output/gpio_binary_output.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/gpio.md)
+
 

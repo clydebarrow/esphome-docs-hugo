@@ -37,5 +37,5 @@ switch:
 - {{< docref "/components/output/index" >}}
 - {{< docref "/components/switch/index" >}}
 - {{< apiref "hbridge/switch/hbridge_switch.h" "hbridge/switch/hbridge_switch.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/hbridge.md)
+
 

@@ -99,5 +99,5 @@ please consider adding support to the codebase and add it to the list above.
 - {{< docref "/components/light/index" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "esp32_rmt_led_strip/esp32_rmt_led_strip.h" "esp32_rmt_led_strip/esp32_rmt_led_strip.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/esp32_rmt_led_strip.md)
+
 

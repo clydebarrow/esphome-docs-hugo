@@ -114,5 +114,5 @@ configure this amount. Possible oversampling values:
 - {{< apiref "bmp3xx_base/bmp3xx_base.h" "bmp3xx_base/bmp3xx_base.h" >}}
 - [BMP3 sensor API](https://github.com/BoschSensortec/BMP3-Sensor-API)
 - [BMP388/BMP390 Library](https://github.com/MartinL1/BMP388_DEV) by  Martin Lindupp
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/bmp3xx.md)
+
 

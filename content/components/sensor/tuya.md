@@ -42,5 +42,5 @@ sensor:
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/sensor/index" >}}
 - {{< apiref "tuya/sensor/tuya_sensor.h" "tuya/sensor/tuya_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/tuya.md)
+
 

@@ -25,5 +25,5 @@ button:
 
 - {{< docref "/automations/index" >}}
 - {{< docref "/components/button/index" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/template.md)
+
 

@@ -56,5 +56,5 @@ climate:
 - {{< docref "/components/ble_client" >}}
 - {{< docref "/components/climate/index" >}}
 - {{< apiref "anova/anova.h" "anova/anova.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/anova.md)
+
 

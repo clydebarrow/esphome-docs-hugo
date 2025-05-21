@@ -176,5 +176,5 @@ sensor:
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/airthings_ble.md)
+
 

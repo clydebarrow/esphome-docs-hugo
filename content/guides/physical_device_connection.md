@@ -328,5 +328,5 @@ require different parts and tools.
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - {{< docref "getting_started_hassio/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/physical_device_connection.md)
+
 

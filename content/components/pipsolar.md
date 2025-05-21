@@ -318,5 +318,5 @@ Configuration options:
 ## See Also
 
 - [UART Bus]({{< ref "components/uart#uart" >}})
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/pipsolar.md)
+
 

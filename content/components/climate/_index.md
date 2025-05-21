@@ -271,5 +271,5 @@ climate:
 ## See Also
 
 - {{< apiref "climate/climate.h" "climate/climate.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/index.md)
+
 

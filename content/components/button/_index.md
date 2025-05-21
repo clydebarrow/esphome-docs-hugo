@@ -126,5 +126,5 @@ From :ref:`lambdas <config-lambda>`, you can press a button.
 ## See Also
 
 - {{< apiref "button/button.h" "button/button.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/index.md)
+
 

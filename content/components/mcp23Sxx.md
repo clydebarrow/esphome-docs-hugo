@@ -143,5 +143,5 @@ binary_sensor:
 - {{< docref "binary_sensor/gpio" >}}
 - {{< apiref "API Reference (MCP23S08)" "mcp23S08/mcp23S08.h" >}}
 - {{< apiref "API Reference (MCP23S17)" "mcp23S17/mcp23S17.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mcp23Sxx.md)
+
 

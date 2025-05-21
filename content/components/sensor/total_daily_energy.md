@@ -94,5 +94,5 @@ sensor:
 - {{< docref "/components/time/homeassistant" >}}
 - {{< docref "/cookbook/power_meter" >}}
 - {{< apiref "total_daily_energy/total_daily_energy.h" "total_daily_energy/total_daily_energy.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/total_daily_energy.md)
+
 

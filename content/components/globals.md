@@ -83,5 +83,5 @@ id(my_global_var) = 10;
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}
 - {{< docref "/automations/templates" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/globals.md)
+
 

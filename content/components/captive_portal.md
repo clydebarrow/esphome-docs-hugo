@@ -43,5 +43,5 @@ No configuration variables.
 - {{< docref "improv_serial/" >}}
 - {{< docref "esp32_improv/" >}}
 - {{< apiref "captive_portal/captive_portal.h" "captive_portal/captive_portal.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/captive_portal.md)
+
 

@@ -118,5 +118,5 @@ See [`light.addressable_set` Action]({{< ref "components/light/_index#light-addr
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/light/neopixelbus" >}}
 - {{< apiref "partition/light_partition.h" "partition/light_partition.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/partition.md)
+
 

@@ -392,5 +392,5 @@ The lambda equivalent for this is `!id(wifi_id).is_disabled()`.
 - {{< docref "/components/ethernet" >}}
 - {{< docref "api/" >}}
 - {{< apiref "wifi/wifi_component.h" "wifi/wifi_component.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wifi.md)
+
 

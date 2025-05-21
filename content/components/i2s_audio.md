@@ -28,5 +28,5 @@ i2s_audio:
 - {{< docref "microphone/i2s_audio" >}}
 - {{< docref "media_player/i2s_audio" >}}
 - {{< docref "speaker/i2s_audio" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/i2s_audio.md)
+
 

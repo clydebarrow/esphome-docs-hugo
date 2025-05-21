@@ -205,5 +205,5 @@ ota:
 - {{< docref "/components/ble_client" >}}
 - {{< docref "/components/climate/index" >}}
 - {{< apiref "bedjet/bedjet.h" "bedjet/bedjet.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/bedjet.md)
+
 

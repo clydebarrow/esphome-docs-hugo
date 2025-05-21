@@ -285,5 +285,5 @@ Enjoy your locally-controlled leak detector with push notification!
 - {{< docref "/components/display/index" >}}
 - {{< docref "/components/display/st7735" >}}
 - {{< docref "/components/binary_sensor/esp32_touch" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/leak-detector-m5stickC.md)
+
 

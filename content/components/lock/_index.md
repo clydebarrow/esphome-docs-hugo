@@ -153,5 +153,5 @@ lock:
 ## See Also
 
 - {{< apiref "lock/lock.h" "lock/lock.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lock/index.md)
+
 

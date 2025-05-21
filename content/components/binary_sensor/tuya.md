@@ -28,5 +28,5 @@ binary_sensor:
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< apiref "tuya/binary_sensor/tuya_binary_sensor.h" "tuya/binary_sensor/tuya_binary_sensor.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/tuya.md)
+
 

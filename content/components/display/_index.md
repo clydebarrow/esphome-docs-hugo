@@ -624,5 +624,5 @@ For displays in 8 bit mode you will see distinct color blocks rather than a smoo
 - :ref:`Image Component <display-image>`
 - :ref:`Animation Component <display-animation>`
 - :ref:`Online Image <online_image>`
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/index.md)
+
 

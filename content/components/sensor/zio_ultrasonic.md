@@ -37,5 +37,5 @@ sensor:
 - {{< docref "/components/sensor/ultrasonic" "Ultrasonic Sensor Component" >}}
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "template/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/zio_ultrasonic.md)
+
 

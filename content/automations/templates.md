@@ -109,5 +109,5 @@ using the lambda syntax as described/shown above.
 
 - {{< docref "index/" >}}
 - {{< docref "actions/" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/automations/templates.md)
+
 

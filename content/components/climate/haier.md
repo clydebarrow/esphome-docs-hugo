@@ -303,5 +303,5 @@ on_...:
 - {{< docref "/components/switch/haier" "Haier Climate Switches" >}}
 - {{< docref "/components/climate/index" >}}
 - {{< apiref "haier/climate/haier_base.h" "haier/climate/haier_base.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/haier.md)
+
 

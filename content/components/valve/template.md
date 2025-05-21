@@ -115,5 +115,5 @@ id(my_template_valve).publish_state();
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/valve/template_valve.h" "template/valve/template_valve.h" >}}
-- [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/valve/template.md)
+
 

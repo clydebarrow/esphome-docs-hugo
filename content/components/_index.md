@@ -5,9 +5,7 @@ title: "ESPHome Docs"
 
 {{< seo description="" image="" >}}
 
-:file: ../images/logo-docs.svg
-:class: hero-img
-
+{{< html_file file="images/logo-docs.svg" class="hero-img" >}}
 This page is an index of all of the hardware components and platforms ESPHome currently supports.
 
 {{< anchor "devices" >}}

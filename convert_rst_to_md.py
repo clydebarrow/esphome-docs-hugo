@@ -1252,10 +1252,26 @@ def process_raw_html_button(lines, i):
         
         # Create button shortcode
         button_lines.append(f'{{{{< button href="{href}" img="{img}" alt="{alt}" >}}}}')
-    else:
-        # If it's not a button pattern, just keep the raw HTML
-        button_lines.append('\n'.join(raw_html_content))
-    
+        return button_lines, i
+
+    file_match = None
+    class_match = None
+    for line in raw_html_content:
+        if not file_match:
+            file_match = re.search(r':file: (.+)', line.strip())
+        if not class_match:
+            class_match = re.search(r':class: (.+)', line.strip())
+
+    if file_match:
+        href = file_match.group(1)
+        href = href.replace('../', '', 1)
+        class_ = 'class="' + class_match.group(1) + '"' if class_match else ''
+        button_lines.append(f'{{{{< html_file file="{href}" {class_} >}}}}')
+        return button_lines, i
+
+
+    # If it's not a button pattern, just keep the raw HTML
+    button_lines.append('\n'.join(raw_html_content))
     return button_lines, i
 
 def process_image_directive(lines, i, is_figure=False):

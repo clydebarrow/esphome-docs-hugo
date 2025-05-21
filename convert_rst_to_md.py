@@ -694,7 +694,7 @@ def process_inline_markup(line):
     doc_matches = []
 
     # Find and store all :ref: patterns
-    for match in re.finditer(r':ref:`([^`]+)`', processed_line):
+    for match in re.finditer(r':ref:`([^>`]+>)`', processed_line):
         ref_content = match.group(1)
         ref_matches.append((match.span(), ref_content))
     
@@ -707,7 +707,7 @@ def process_inline_markup(line):
     for i, ((start, end), content) in enumerate(reversed(ref_matches)):
         placeholder = f"__REF_PLACEHOLDER_{i}__"
         processed_line = processed_line[:start] + placeholder + processed_line[end:]
-    
+
     for i, ((start, end), content) in enumerate(reversed(doc_matches)):
         placeholder = f"__DOC_PLACEHOLDER_{i}__"
         processed_line = processed_line[:start] + placeholder + processed_line[end:]
@@ -744,7 +744,7 @@ def process_inline_markup(line):
                 replacement = f"[{anchor_text}]({{{{< ref \"#{content}\" >}}}})"
         
         processed_line = processed_line.replace(placeholder, replacement)
-    
+
     for i, ((start, end), content) in enumerate(doc_matches):
         placeholder = f"__DOC_PLACEHOLDER_{i}__"
         
@@ -764,7 +764,7 @@ def process_inline_markup(line):
         processed_line = processed_line.replace(placeholder, replacement)
     
     # External links
-    processed_line = re.sub(r'`([^<]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
+    processed_line = re.sub(r'`\s*([^<]*[^< ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
     
     return processed_line

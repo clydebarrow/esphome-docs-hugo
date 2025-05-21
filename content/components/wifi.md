@@ -37,8 +37,7 @@ wifi:
 
 ## Configuration variables:
 
-- **ssid** (*Optional*, string): The name (or `service set
-  identifier <https://www.lifewire.com/definition-of-service-set-identifier-816547>`__)
+- **ssid** (*Optional*, string): The name (or [service set  identifier](https://www.lifewire.com/definition-of-service-set-identifier-816547))
   of the WiFi access point your device should connect to.
 - **password** (*Optional*, string): The password (or PSK) for your
   WiFi network. Leave empty for no password.
@@ -271,7 +270,7 @@ Configuration variables:
 
 {{< anchor "wifi-on_connect_disconnect" >}}
 
-## ``on_connect`` / ``on_disconnect`` Trigger
+## `on_connect` / `on_disconnect` Trigger
 
 This trigger is activated when a WiFi connection is established or dropped.
 
@@ -286,7 +285,7 @@ wifi:
 ```
 {{< anchor "wifi-on_disable" >}}
 
-## ``wifi.disable`` Action
+## `wifi.disable` Action
 
 This action turns off the WiFi interface on demand.
 
@@ -302,7 +301,7 @@ Be aware that if you disable WiFi, the API timeout will need to be disabled othe
 {{< /note >}}
 {{< anchor "wifi-on_enable" >}}
 
-## ``wifi.enable`` Action
+## `wifi.enable` Action
 
 This action turns on the WiFi interface on demand.
 
@@ -318,7 +317,7 @@ The configuration option `enable_on_boot` can be set to `false` if you do not wa
 {{< /note >}}
 {{< anchor "wifi-configure" >}}
 
-## ``wifi.configure`` Action
+## `wifi.configure` Action
 
 This action connects to an SSID and password, optionally saving it in persistent memory so that the next time the WiFi interface is enabled, it will connect to the stored access point.
 
@@ -347,7 +346,7 @@ Configuration variables:
 
 {{< anchor "wifi-connected_condition" >}}
 
-## ``wifi.connected`` Condition
+## `wifi.connected` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the WiFi client is currently connected to a station.
 
@@ -366,7 +365,7 @@ The lambda equivalent for this is `id(wifi_id).is_connected()`.
 
 {{< anchor "wifi-enabled_condition" >}}
 
-## ``wifi.enabled`` Condition
+## `wifi.enabled` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if WiFi is currently enabled or not.
 

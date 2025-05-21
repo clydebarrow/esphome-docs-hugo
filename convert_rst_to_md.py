@@ -120,7 +120,6 @@ def convert_rst_to_md(lines, filename):
     skip_build = False
     bullet_regex = re.compile(r'^(\s*)([-*+])\s+')
 
-
     # Check for explicit title directive
     for i, line in enumerate(lines):
         if line.startswith('.. title::'):
@@ -172,6 +171,9 @@ def convert_rst_to_md(lines, filename):
     # Skip SEO block
     if seo_start != -1 and seo_end != -1:
         i = seo_end
+
+    # Pre-process lines to handle split references
+    lines = process_multiline_references(lines)
 
     while i < len(lines):
         line = lines[i]
@@ -762,9 +764,36 @@ def process_inline_markup(line):
     
     # External links
     processed_line = re.sub(r'`([^<]+) <([^>]+)>`__*', r'[\1](\2)', processed_line)
-    processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
+    processed_line = re.sub(r'^\.\.\ _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
     
     return processed_line
+
+def process_multiline_references(lines):
+    """Process references that might be split across multiple lines."""
+    processed_lines = []
+    i = 0
+    
+    while i < len(lines):
+        current_line = lines[i]
+
+        # Check if this line might contain the start of a split reference
+        if '`' in current_line and '>' not in current_line and i + 1 < len(lines):
+            # Look ahead to see if the next line completes the reference
+            next_line = lines[i + 1]
+            if '>' in next_line and '`__' in next_line:
+                # This is a split reference, combine the lines
+                combined_line = current_line + next_line
+                # Process the combined line
+                processed_line = process_inline_markup(combined_line)
+                processed_lines.append(processed_line)
+                i += 2  # Skip the next line since we've processed it
+                continue
+        
+        # Normal line processing
+        processed_lines.append(process_inline_markup(current_line))
+        i += 1
+    
+    return processed_lines
 
 def process_list_table(lines, start_idx):
     """Process a list-table directive and convert it to a Markdown table."""

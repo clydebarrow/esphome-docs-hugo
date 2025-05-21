@@ -20,7 +20,7 @@ script:
 ```
 Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The :ref:`config-id` of the script. Use this to interact with the script
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The [ID]({{< ref "guides/configuration-types#config-id" >}}) of the script. Use this to interact with the script
   using the script actions.
 - **mode** (*Optional*, string): Controls what happens when a script is invoked while it is still running from one or
   more previous invocations. Default to `single`.
@@ -32,10 +32,10 @@ Configuration variables:
 
 - **max_runs** (*Optional*, int): Allows limiting the maximum number of runs when using script modes `queued` and
   `parallel`, use value `0` for unlimited runs. Defaults to `0`.
-- **parameters** (*Optional*, [Script Parameters]({{< ref "components/script#script-parameters" >}})): A script can define one or more parameters
+- **parameters** (*Optional*, :ref:`Script Parameters <script-parameters>`): A script can define one or more parameters
   that must be provided in order to execute. All parameters defined here are mandatory and must be given when calling
   the script.
-- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform.
+- **then** (**Required**, :ref:`Action <config-action>`): The action to perform.
 
 {{< anchor "script-parameters" >}}
 
@@ -153,9 +153,9 @@ This can't be used in a lambda as it would block all functioning of the device. 
 
 ## `script.is_running` Condition
 
-This [condition]({{< ref "automations/actions#config-condition" >}}) allows you to check if a given script is running. In case scripts are run in
+This :ref:`condition <config-condition>` allows you to check if a given script is running. In case scripts are run in
 `parallel`, this condition only tells you if at least one script of the given id is running, not how many. Not
-designed for use with [script.wait]({{< ref "components/script#script-wait_action" >}}); instead try [while]({{< ref "automations/actions#while_action" >}}).
+designed for use with :ref:`while <while_action>`; instead try :ref:`script.wait <script-wait_action>`.
 
 ```yaml
 on_...:

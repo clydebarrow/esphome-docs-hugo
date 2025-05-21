@@ -38,7 +38,7 @@ esp32_ble:
 - **name** (*Optional*, string): The name of the BLE device.
     - Defaults to the hostname of the device.
     - Must be 20 characters or less.
-    - Must be 13 characters or less when using `name_add_mac_suffix: true` - :ref:`esphome-mac_suffix`.
+    - Must be 13 characters or less when using `name_add_mac_suffix: true` - [Adding the MAC address as a suffix to the device name]({{< ref "components/esphome#esphome-mac_suffix" >}}).
 
 ## `ble.disable` Action
 
@@ -74,7 +74,7 @@ The configuration option `enable_on_boot` can be set to `false` if you do not wa
 
 ## `ble.enabled` Condition
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if BLE is currently enabled or not.
+This :ref:`Condition <config-condition>` checks if BLE is currently enabled or not.
 
 ```yaml
 on_...:
@@ -94,6 +94,6 @@ The lambda equivalent for this is `id(ble_id).is_active()`.
 
 - {{< docref "esp32_ble_server/" >}}
 - {{< docref "esp32_improv/" >}}
-- :apiref:`esp32_ble/ble.h`
+- {{< apiref "esp32_ble/ble.h" "esp32_ble/ble.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble.md)
 

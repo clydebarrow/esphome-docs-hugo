@@ -6,7 +6,7 @@ title: "uFire ISE pH sensor"
 {{< seo description="" image="" >}}
 
 The `ufire_ise` sensor platform allows you to use your uFire ISE pH sensor with
-ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
+ESPHome. The :ref:`I²C Bus <i2c>` is
 required to be set up in your configuration for this sensor to work.
 It required also to have an temperature sensor in the liquid tank; this can
 be on the same board or external sensor linked to the uFire ISE pH configuration.
@@ -29,13 +29,13 @@ sensor:
 ## Configuration variables:
 
 - **address** (*Optional*, int): Specify the I²C address of the sensor. Defaults to `0x3f`.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
-- **id** (*Optional*, :ref:`config-id`): Set the ID of this sensor for use in lambdas.
-- **temperature_sensor** (*Optional*, :ref:`config-id`): Set the ID of the temperature
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- **temperature_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
-- **ph** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the pH sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **temperature** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **ph** (*Optional*, :ref:`Sensor <config-sensor>`): Set the pH sensor configuration. All options from :ref:`Sensor <config-sensor>`.
+- **temperature** (*Optional*, :ref:`Sensor <config-sensor>`): Set the onboard temperature sensor configuration. All options from :ref:`Sensor <config-sensor>`.
   Can't be used together with `temperature_sensor`.
 
 {{< anchor "sensor-ufire_ise-calibrate_probe_high_action" >}}
@@ -62,7 +62,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the ufire pH sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the ufire pH sensor.
 - **solution** (**Required**, float): Solution reference pH value.
 
 {{< anchor "sensor-ufire_ise-calibrate_probe_low_action" >}}
@@ -89,7 +89,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the ufire pH sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the ufire pH sensor.
 - **solution** (**Required**, float): Solution reference pH value.
 
 {{< anchor "sensor-ufire_ise-reset_action" >}}
@@ -113,11 +113,11 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the ufire pH sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the ufire pH sensor.
 
 ## See Also
 
-- :ref:`sensor-filters`
-- :apiref:`ufire_ise/ufire_ise.h`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- {{< apiref "ufire_ise/ufire_ise.h" "ufire_ise/ufire_ise.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ufire_ise.md)
 

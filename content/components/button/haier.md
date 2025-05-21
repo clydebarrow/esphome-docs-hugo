@@ -20,11 +20,11 @@ button:
 ```
 ## Configuration variables:
 
-- **haier_id** (**Required**, :ref:`config-id`): The id of Haier climate component
+- **haier_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of Haier climate component
 - **self_cleaning** (*Optional*): A button that starts Haier climate self cleaning.
-  All options from [Button]({{< ref "components/button/_index#config-button" >}}).
+  All options from :ref:`Button <config-button>`.
 - **steri_cleaning** (*Optional*): A button that starts Haier climate 56°C Steri-Clean.
-  All options from [Button]({{< ref "components/button/_index#config-button" >}}).
+  All options from :ref:`Button <config-button>`.
 
 ## See Also
 

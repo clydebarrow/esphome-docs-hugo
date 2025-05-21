@@ -37,7 +37,7 @@ perceived intensity of different colors will generally vary. This can be done by
 
 - **num_leds** (*Optional*, int): The number of LEDs attached. The default is 1.
 - **data_rate** (*Optional*): Set the data rate of the SPI interface to the display. One of `80MHz`, `40MHz`, `20MHz`, `10MHz`, `5MHz`, `2MHz`, `1MHz` (default), `200kHz`, `75kHz` or `1kHz`.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from :ref:`Light <config-light>`.
 
 You may also need to configure an `output` GPIO pin to control power to the LEDs, depending on your hardware. The
 APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso` pin should not be specified.
@@ -53,6 +53,6 @@ APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
-- :apiref:`rgb/rgb_light_output.h`
+- {{< apiref "rgb/rgb_light_output.h" "rgb/rgb_light_output.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/spi_led_strip.md)
 

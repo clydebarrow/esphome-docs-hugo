@@ -19,12 +19,12 @@ text_sensor:
 ## Configuration variables:
 
 - **version** (*Optional*): Expose the version of LibreTiny core as a text sensor. All options from
-  [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  :ref:`Text Sensor <config-text_sensor>`.
 
 
 ## See Also
 
 - {{< docref "/components/libretiny" >}}
-- :apiref:`libretiny/lt_component.h`
+- {{< apiref "libretiny/lt_component.h" "libretiny/lt_component.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/libretiny.md)
 

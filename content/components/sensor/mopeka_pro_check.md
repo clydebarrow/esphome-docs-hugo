@@ -88,34 +88,34 @@ sensor:
 - **level** (*Optional*): The percentage of full for the tank sensor.  If
   read is ignored due to quality this sensor will not be updated.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **distance** (*Optional*): The raw distance/depth of the liquid for the sensor in mm.
   If read is ignored due to quality this sensor will not be updated.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **temperature** (*Optional*): The information for the temperature sensor.
   This temperature is on the sensor and is not calibrated to ambient temperature.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **battery_level** (*Optional*): The information for the battery percentage
   sensor.  Sensor uses a standard CR2032 battery.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **signal_quality** (*Optional*): The information for the read quality
   sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **ignored_reads** (*Optional*): A diagnostic sensor indicating the number
   of consecutive ignored reads.  This resets to zero each time the read is
   equal or greater than the configured ignored quality.  Only the distance
   and level sensors are not reported.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **minimum_signal_quality** (*Optional*, enum): Each report from the sensor
   indicates the quality or confidence in the distance the sensor calculated. Physical
@@ -174,7 +174,7 @@ ESPHome therefore has no impact on the battery life of the device.
 
 - {{< docref "/components/esp32_ble_tracker" >}}
 - {{< docref "/components/sensor/index" >}}
-- :apiref:`mopeka_pro_check/mopeka_pro_check.h`
+- {{< apiref "mopeka_pro_check/mopeka_pro_check.h" "mopeka_pro_check/mopeka_pro_check.h" >}}
 - `Mopeka  <https://www.mopekaiot.com/shop>`
 - [Lippert](https://store.lci1.com/lippert-propane-tank-sensor-2021130655)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/mopeka_pro_check.md)

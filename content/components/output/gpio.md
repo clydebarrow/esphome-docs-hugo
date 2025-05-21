@@ -19,9 +19,9 @@ output:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to turn on and off.
-- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
-- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The pin to turn on and off.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- All other options from :ref:`Output <config-output>`.
 
 {{< warning >}}
 This is an **output component** and will not be visible from the frontend. Output components are intermediary
@@ -38,6 +38,6 @@ see the {{< docref "/components/switch/gpio" >}}.
 - {{< docref "/components/light/binary" >}}
 - {{< docref "/components/fan/binary" >}}
 - {{< docref "/components/power_supply" >}}
-- :apiref:`gpio/output/gpio_binary_output.h`
+- {{< apiref "gpio/output/gpio_binary_output.h" "gpio/output/gpio_binary_output.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/gpio.md)
 

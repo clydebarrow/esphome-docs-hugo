@@ -44,7 +44,7 @@ light:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the UART hub.
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
 
 {{< note >}}
 Currently, only the first hardware UART of the ESP is supported, which has to be configured like this:
@@ -62,12 +62,12 @@ uart:
 - **min_brightness** (*Optional*, int): Minimum brightness value on a scale from 0..1000, the default is 0.
 - **max_brightness** (*Optional*, int): Maximum brightness value on a scale from 0..1000, the default is 1000.
 - **warmup_brightness** (*Optional*, int): Brightness threshold below which the dimmer switches on later in mains current cycle. [This might help with dimming LEDs](https://github.com/jamesturton/shelly-dimmer-stm32/pull/23). The value is from 0..1000 with an default of 0.
-- **nrst_pin** (*Optional*, :ref:`config-pin`): Pin connected with "NRST" of STM32. The  default is "GPIO5".
-- **boot0_pin** (*Optional*, :ref:`config-pin`): Pin connected with "BOOT0" of STM32. The  default is "GPIO4".
+- **nrst_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Pin connected with "NRST" of STM32. The  default is "GPIO5".
+- **boot0_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Pin connected with "BOOT0" of STM32. The  default is "GPIO4".
 - **current** (*Optional*): Sensor of the current in Amperes. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **voltage** (*Optional*): Sensor of the voltage in Volts. Only accurate if neutral is connected. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **power** (*Optional*): Sensor of the active power in Watts. Only accurate if neutral is connected. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  :ref:`Sensor <config-sensor>`.
+- **voltage** (*Optional*): Sensor of the voltage in Volts. Only accurate if neutral is connected. All options from :ref:`Sensor <config-sensor>`.
+- **power** (*Optional*): Sensor of the active power in Watts. Only accurate if neutral is connected. All options from :ref:`Sensor <config-sensor>`.
 - **firmware** (*Optional*):
 
   - **version** (*Optional*): Version string of the [firmware](https://github.com/jamesturton/shelly-dimmer-stm32) that will be expected on the microcontroller. The default is "51.6", another known-good firmware is "51.5".
@@ -87,12 +87,12 @@ firmware:
 There is no action required by the user to flash the STM32. There is no way to revert to stock firmware on the STM32 at the time of writing.
 
 {{< /note >}}
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from :ref:`Light <config-light>`.
 
 
 ## See Also
 
 - {{< docref "/components/light/index" >}}
-- :apiref:`shelly_dimmer/light/shelly_dimmer.h`
+- {{< apiref "shelly_dimmer/light/shelly_dimmer.h" "shelly_dimmer/light/shelly_dimmer.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/shelly_dimmer.md)
 

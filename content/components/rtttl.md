@@ -51,12 +51,12 @@ rtttl:
 ```
 ## Configuration variables:
 
-- **output** (**Exclusive**, :ref:`config-id`): The id of the [float output]({{< ref "components/output/_index#output" >}}) to use for
+- **output** (**Exclusive**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the :ref:`float output <output>` to use for
   this buzzer.
-- **speaker** (**Exclusive**, :ref:`config-id`): The id of the [speaker]({{< ref "components/i2s_audio#i2s_audio" >}}) to play the song on.
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+- **speaker** (**Exclusive**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the :ref:`speaker <i2s_audio>` to play the song on.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **gain** (*Optional*, Percentage): With this value you can set the volume of the sound.
-- **on_finished_playback** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
+- **on_finished_playback** (*Optional*, :ref:`Automation <automation>`): An action to be
   performed when playback is finished.
 
 Note: You can only use the **output** or **speaker** variable, not both at the same time.
@@ -73,7 +73,7 @@ on_...:
 ```
 Configuration options:
 
-- **rtttl** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The rtttl string.
+- **rtttl** (**Required**, string, :ref:`templatable <config-templatable>`): The rtttl string.
 
 You can find many rtttl strings online on the web, they must start with a name, then a colon: `:` symbol
 and more codes of the song itself. Tip: you can try playing with the values of d=16,o=6,b=95 and make the
@@ -92,7 +92,7 @@ on_...:
 ```
 ## All actions
 
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID of the rtttl if you have multiple components.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the rtttl if you have multiple components.
 
 ## `rtttl.is_playing` Condition
 
@@ -170,6 +170,6 @@ api:
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/speaker/index" >}}
-- :apiref:`rtttl/rtttl.h`
+- {{< apiref "rtttl/rtttl.h" "rtttl/rtttl.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/rtttl.md)
 

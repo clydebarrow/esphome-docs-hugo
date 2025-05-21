@@ -21,7 +21,7 @@ switch:
 ```
 ## Configuration variables:
 
-- All options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All options from :ref:`Switch <config-switch>`.
 
 ## See Also
 
@@ -30,6 +30,6 @@ switch:
 - {{< docref "factory_reset/" >}}
 - {{< docref "/components/button/shutdown" >}}
 - {{< docref "template/" >}}
-- :apiref:`shutdown/shutdown_switch.h`
+- {{< apiref "shutdown/shutdown_switch.h" "shutdown/shutdown_switch.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/shutdown.md)
 

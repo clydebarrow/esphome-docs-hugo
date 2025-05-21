@@ -9,7 +9,7 @@ The `daly_bms` sensor platform allows you to use a Daly Smart BMS
 ([more info](https://dalyelec.en.made-in-china.com/))
 with ESPHome.
 
-The BMS communicates via [UART]({{< ref "components/uart#uart" >}}).
+The BMS communicates via :ref:`UART <uart>`.
 
 {{< img src="daly_bms_example.png" alt="Image" width="100.0%" class="center" >}}
 
@@ -24,7 +24,7 @@ daly_bms:
 ```
 ### Configuration variables:
 
-- **update_interval** (*Optional*, :ref:`config-time`): Delay between data requests.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Delay between data requests.
 - **address** (*Optional*, int): Address to use, defaults to `0x80`.
 
 ## Sensor
@@ -77,52 +77,52 @@ sensor:
 ### Configuration variables:
 
 - **voltage** (*Optional*): Voltage of the battery pack connected to Daly BMS.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **current** (*Optional*): Current flowing trough the BMS (input or output from batttery).
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **battery_level** (*Optional*): Battery level in % (SoC).
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **max_cell_voltage** (*Optional*): The cell of the battery with the higher voltage.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **max_cell_voltage_number** (*Optional*): The cell number of the battery with the higher voltage.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **min_cell_voltage** (*Optional*): The cell of the battery with the lower voltage.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **min_cell_voltage_number** (*Optional*): The cell number of the battery with the lower voltage.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **max_temperature** (*Optional*): The higher temperature measured from the temperature sensors.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **max_temperature_probe_number** (*Optional*): The sensor number which has measured the higher temperature.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **min_temperature** (*Optional*): The lower temperature measured from the temperature sensors.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **min_temperature_probe_number** (*Optional*): The sensor number which has measured the lower temperature.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **remaining_capacity** (*Optional*): The capacity in Ah left in the battery.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **cells_number** (*Optional*): The number of cells in series in the battery pack.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **temperature_1** (*Optional*): The first temperature sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **temperature_2** (*Optional*): The second temperature sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **cell_1_voltage** (*Optional*): The voltage of cell number 1. Cell number can be from 1 to 16.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 ## Text Sensor
 
@@ -138,7 +138,7 @@ text_sensor:
 ### Configuration variables:
 
 - **status** (*Optional*): The BMS Status (Charging, Discharging, Stationary).
-  All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  All options from :ref:`Text Sensor <config-text_sensor>`.
 
 ## Binary Sensor
 
@@ -156,10 +156,10 @@ binary_sensor:
 ### Configuration variables:
 
 - **charging_mos_enabled** (*Optional*): The BMS charging MOS status to enable the recharge of the battery.
-  All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+  All options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 - **discharging_mos_enabled** (*Optional*): The BMS discharging mos status to enable the load.
-  All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+  All options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 
 ## Control BMS
@@ -308,7 +308,7 @@ uart:
 ```
 ## See Also
 
-- :ref:`sensor-filters`
-- :apiref:`daly_bms/daly_bms.h`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- {{< apiref "daly_bms/daly_bms.h" "daly_bms/daly_bms.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/daly_bms.md)
 

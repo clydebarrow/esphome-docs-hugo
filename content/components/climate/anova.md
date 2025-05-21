@@ -47,14 +47,14 @@ climate:
 ```
 ## Configuration variables:
 
-- **ble_client_id** (**Required**, :ref:`config-id`): The ID of the BLE Client.
+- **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the BLE Client.
 - **unit_of_measurement** (**Required**, string): Units to use on the device display. 'c' or 'f'.
-- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+- All other options from :ref:`Climate <config-climate>`.
 
 ## See Also
 
 - {{< docref "/components/ble_client" >}}
 - {{< docref "/components/climate/index" >}}
-- :apiref:`anova/anova.h`
+- {{< apiref "anova/anova.h" "anova/anova.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/anova.md)
 

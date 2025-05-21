@@ -14,7 +14,7 @@ triggered in Home Assistant via automations.
 {{< note >}}
 Events in ESPHome are designed to trigger an action in Home Assistant, and have a unidirectional flow from ESPHome to Home Assistant.
 Home Assistant event entities are different from events on event bus. If you just want to trigger an event on the
-Home Assistant event bus, you should use a [Home Assistant event]({{< ref "components/api#api-homeassistant_event_action" >}}) instead.
+Home Assistant event bus, you should use a :ref:`Home Assistant event <api-homeassistant_event_action>` instead.
 
 
 {{< /note >}}
@@ -47,11 +47,11 @@ Configuration variables:
 
 One of `id` or `name` is required.
 
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation. At least one of **id** and **name** must be specified.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the event. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+If you have a :ref:`friendly_name <esphome-configuration_variables>` set for your device and
 you want the event to use that name, you can set `name: None`.
 
   {{< /note >}}
@@ -73,15 +73,15 @@ you want the event to use that name, you can set `name: None`.
 
   See https://www.home-assistant.io/integrations/event/#device-class
   for a list of available options.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See :ref:`Webserver Version 3 <config-webserver-version-3-options>`.
 
 Automations:
 
-- **on_event** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when an event is triggered.
+- **on_event** (*Optional*, :ref:`Automation <automation>`): An automation to perform when an event is triggered.
 
 MQTT options:
 
-- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from :ref:`MQTT Component <config-mqtt-component>`.
 
 ## Event Automation
 
@@ -90,7 +90,7 @@ MQTT options:
 ### `on_event`
 
 This automation will be triggered when an event of the specified types is triggered.
-In [Lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the event type from the trigger with `event_type`.
+In :ref:`Lambdas <config-lambda>` you can get the event type from the trigger with `event_type`.
 
 ```yaml
 event:
@@ -102,7 +102,7 @@ event:
             ESP_LOGD("main", "Event %s triggered.", event_type.c_str());
 
 ```
-Configuration variables: see [Automation]({{< ref "automations/_index#automation" >}}).
+Configuration variables: see :ref:`Automation <automation>`.
 
 ### `event.trigger` Action
 
@@ -116,14 +116,14 @@ This action allows for the triggering of an event from within an automation.
 ```
 Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the event.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the event.
 - **event_type** (**Required**, string): The type of event to trigger.
 
 {{< anchor "event-lambda_calls" >}}
 
 ### lambda Calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can trigger an event.
+From :ref:`lambdas <config-lambda>`, you can trigger an event.
 
 - `trigger(std::string event_type)`: Trigger an event with the specified type.
 
@@ -134,6 +134,6 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can trigg
   ```
 ## See Also
 
-- :apiref:`event/event.h`
+- {{< apiref "event/event.h" "event/event.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/event/index.md)
 

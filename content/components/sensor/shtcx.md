@@ -11,7 +11,7 @@ The `shtcx` sensor platform Temperature+Humidity sensor allows you to use your S
 the newer SHTC3
 ([datasheet](https://sensirion.com/media/documents/643F9C8E/63A5A436/Datasheet_SHTC3.pdf),
 `SparkFun`_ ) sensors with
-ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
+ESPHome. The :ref:`I²C Bus <i2c>` is
 required to be set up in your configuration for this sensor to work.
 
 [SparkFun](https://www.sparkfun.com/products/15074)
@@ -32,26 +32,26 @@ sensor:
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): The information for the humidity sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x70`.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}
 - {{< docref "htu21d/" >}}
 - {{< docref "sht3xd/" >}}
-- :apiref:`shtcx/shtcx.h`
+- {{< apiref "shtcx/shtcx.h" "shtcx/shtcx.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/shtcx.md)
 

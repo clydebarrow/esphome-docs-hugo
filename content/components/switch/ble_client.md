@@ -33,12 +33,12 @@ switch:
 ```
 ## Configuration variables:
 
-- **ble_client_id** (**Required**, :ref:`config-id`): ID of the associated BLE client.
-- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
+- All other options from :ref:`Switch <config-switch>`.
 
 ## See Also
 
 - {{< docref "/components/ble_client" >}}
-- :apiref:`ble_client/switch/ble_switch.h`
+- {{< apiref "ble_client/switch/ble_switch.h" "ble_client/switch/ble_switch.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/ble_client.md)
 

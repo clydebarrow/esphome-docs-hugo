@@ -17,7 +17,7 @@ button:
 ```
 ## Configuration variables:
 
-- All options from [Button]({{< ref "components/button/_index#config-button" >}}).
+- All options from :ref:`Button <config-button>`.
 
 ## See Also
 
@@ -26,6 +26,6 @@ button:
 - {{< docref "factory_reset/" >}}
 - {{< docref "/components/switch/restart" >}}
 - {{< docref "template/" >}}
-- :apiref:`restart/button/restart_button.h`
+- {{< apiref "restart/button/restart_button.h" "restart/button/restart_button.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/restart.md)
 

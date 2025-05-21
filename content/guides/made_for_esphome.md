@@ -30,7 +30,7 @@ Note that these are **not** required for projects that only provide a physical/w
 - Your ESPHome configuration is open source, available for end users to modify/update
 - Users should be able to apply updates if your project sells ready-made devices
 - All components/platforms used must have an `id` specified so users can easily refer to,
-  :ref:`config-packages_extend` and/or :ref:`config-packages_remove` configuration variables should they choose to
+  [Remove]({{< ref "components/packages#config-packages_remove" >}}) and/or [Extend]({{< ref "components/packages#config-packages_extend" >}}) configuration variables should they choose to
   "take control"
 - Your project supports adoption via the `dashboard_import` feature of ESPHome (see
   {{< docref "/guides/creators" "Sharing" >}}). In particular:

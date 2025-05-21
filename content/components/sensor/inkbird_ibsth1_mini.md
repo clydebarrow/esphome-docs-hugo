@@ -46,19 +46,19 @@ sensor:
 - **mac_address** (**Required**, MAC Address): The MAC address of the Inkbird IBS-TH1 device.
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **external_temperature** (*Optional*): The information for the external temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): The information for the humidity sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **battery_level** (*Optional*): The information for the battery level sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 
 ## Setting Up Devices
@@ -98,7 +98,7 @@ ESPHome therefore has no impact on the battery life of the device.
 - {{< docref "/components/esp32_ble_tracker" >}}
 - {{< docref "/components/sensor/index" >}}
 - {{< docref "absolute_humidity/" >}}
-- :apiref:`inkbird_ibsth1_mini/inkbird_ibsth1_mini.h`
+- {{< apiref "inkbird_ibsth1_mini/inkbird_ibsth1_mini.h" "inkbird_ibsth1_mini/inkbird_ibsth1_mini.h" >}}
 - [OpenMQTTGateway](https://github.com/1technophile/OpenMQTTGateway) by [@1technophile](https://github.com/1technophile)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/inkbird_ibsth1_mini.md)
 

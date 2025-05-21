@@ -12,7 +12,7 @@ Any GPS module that uses the standardized NMEA communication protocol will work.
 
 [Adafruit](https://www.adafruit.com/product/746)
 
-For this component to work you need to have set up a [UART bus]({{< ref "components/uart#uart" >}})
+For this component to work you need to have set up a :ref:`UART bus <uart>`
 in your configuration - only the RX pin should be necessary.
 
 ```yaml
@@ -44,38 +44,38 @@ See {{< docref "time/gps" >}} for config options for the GPS time source.
 ## Configuration variables:
 - **latitude** (*Optional*): Include the Latitude as a sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **longitude** (*Optional*): Include the Longitude as a sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **speed** (*Optional*): Include the measured speed as a sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **course** (*Optional*): Include the measured course as a sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **altitude** (*Optional*): Include the measured altitude as a sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **satellites** (*Optional*): Include the number of tracking satellites being used as a sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **hdop** (*Optional*): Include the measured HDOP (Horizontal Dilution Of Precision) as a sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval of sensor updates. Defaults to  `20s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval of sensor updates. Defaults to  `20s`.
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [TinyGPS++ library](http://arduiniana.org/libraries/tinygpsplus/)
-- :apiref:`gps/gps.h`
+- {{< apiref "gps/gps.h" "gps/gps.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/gps.md)
 

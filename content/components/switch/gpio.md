@@ -21,19 +21,19 @@ switch:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
+- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The
   GPIO pin to use for the switch.
 - **interlock** (*Optional*, list): A list of other GPIO switches in an interlock group. See
-  :ref:`switch-gpio-interlocking`.
-- **interlock_wait_time** (*Optional*, :ref:`config-time`): For interlocking mode, set how long
+  [Interlocking]({{< ref "components/switch/gpio#switch-gpio-interlocking" >}}).
+- **interlock_wait_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): For interlocking mode, set how long
   to wait after other items in an interlock group have been disabled before re-activating.
   Useful for motors where immediately turning on in the other direction could cause problems.
 
-- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from :ref:`Switch <config-switch>`.
 
 ## Active Low Switch
 
-To create an active-low switch (one that is turned off by default), use the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}):
+To create an active-low switch (one that is turned off by default), use the :ref:`Pin Schema <config-pin_schema>`:
 
 ```yaml
 # Example configuration entry
@@ -128,6 +128,6 @@ a switch.
 - {{< docref "/components/output/gpio" >}}
 - {{< docref "/components/cover/template" >}}
 - {{< docref "/cookbook/garage-door" >}}
-- :apiref:`gpio/switch/gpio_switch.h`
+- {{< apiref "gpio/switch/gpio_switch.h" "gpio/switch/gpio_switch.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/gpio.md)
 

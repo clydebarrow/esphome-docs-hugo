@@ -6,7 +6,7 @@ title: "Binary Light"
 {{< seo description="" image="" >}}
 
 The `binary` light platform creates a simple ON/OFF-only light from a
-[binary output component]({{< ref "components/output/_index#output" >}}).
+:ref:`binary output component <output>`.
 
 {{< img src="binary-ui.png" alt="Image" width="40.0%" class="center" >}}
 
@@ -21,8 +21,8 @@ light:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, :ref:`config-id`): The id of the binary :ref:`output` to use for this light.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- **output** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the binary [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.
+- All other options from :ref:`Light <config-light>`.
 
 ## See Also
 
@@ -30,6 +30,6 @@ light:
 - {{< docref "/components/light/index" >}}
 - {{< docref "/components/output/gpio" >}}
 - {{< docref "/components/power_supply" >}}
-- :apiref:`binary/light/binary_light_output.h`
+- {{< apiref "binary/light/binary_light_output.h" "binary/light/binary_light_output.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/binary.md)
 

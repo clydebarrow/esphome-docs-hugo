@@ -29,14 +29,14 @@ speaker:
 ```
 ## Configuration variables:
 
-- **output_speaker** (**Required**, :ref:`config-id`): The {{< docref "/components/speaker/index" "speaker" >}} to output the resampled audio.
-- **buffer_duration** (*Optional*, :ref:`config-time`): The duration of the internal ring buffer. Larger values may reduce stuttering but use more memory. Defaults to `500ms`.
+- **output_speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker/index" "speaker" >}}dex>` to output the resampled audio.
+- **buffer_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of the internal ring buffer. Larger values may reduce stuttering but use more memory. Defaults to `500ms`.
 - **bits_per_sample** (*Optional*, positive integer): The audio sample bit depth after resampling. Defaults to the output speaker's bits per sample.
 - **sample_rate** (*Optional*, positive integer): Sample rate to convert to. Must be between `8000` and `48000`. Defaults to the output speaker's sample rate.
 - **filters** (*Optional*, positive integer): The number of windowed sinc interpolation filters to use. Must be between `2` and `1024`. Defaults to `16`.
 - **taps** (*Optional*, positive integer): The number of taps per windowed sinc interpolation filter. Must between `16` and `128` and divisible by 4. Defaults to `16`.
 - **task_stack_in_psram** (*Optional*, boolean): Only with `esp-idf`. Run the audio tasks in external memory. Defaults to `false`.
-- All other options from [Speaker Component]({{< ref "components/speaker/_index#config-speaker" >}}).
+- All other options from :ref:`Speaker Component <config-speaker>`.
 
 ## Improving quality
 

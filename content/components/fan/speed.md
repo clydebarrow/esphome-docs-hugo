@@ -5,7 +5,7 @@ title: "Speed Fan"
 
 {{< seo description="" image="" >}}
 
-The `speed` fan platform lets you represent any float :ref:`output` as a fan that
+The `speed` fan platform lets you represent any float [Output Component]({{< ref "components/output/_index#output" >}}) as a fan that
 supports speed settings.
 
 {{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
@@ -20,16 +20,16 @@ fan:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, :ref:`config-id`): The id of the [float output]({{< ref "components/output/_index#output" >}}) to use for this fan.
-- **oscillation_output** (*Optional*, :ref:`config-id`): The id of the
-  [output]({{< ref "components/output/_index#output" >}}) to use for the oscillation state of this fan. Default is empty.
-- **direction_output** (*Optional*, :ref:`config-id`): The id of the
-  [output]({{< ref "components/output/_index#output" >}}) to use for the direction state of the fan. Default is empty.
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the :ref:`float output <output>` to use for this fan.
+- **oscillation_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
+  :ref:`output <output>` to use for the oscillation state of this fan. Default is empty.
+- **direction_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
+  :ref:`output <output>` to use for the direction state of the fan. Default is empty.
 - **speed_count** (*Optional*, int): Set the number of supported discrete speed levels. The value is used
   to calculate the percentages for each speed. E.g. `2` means that you have 50% and 100% while `100`
   will allow 1% increments in the output. Defaults to `100`.
 - **preset_modes** (*Optional*): A list of preset modes for this fan. Preset modes can be used in automations (i.e. `on_preset_set`).
-- All other options from [Fan Component]({{< ref "components/fan/_index#config-fan" >}}).
+- All other options from :ref:`Fan Component <config-fan>`.
 
 ## See Also
 
@@ -38,6 +38,6 @@ fan:
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/pca9685" >}}
-- :apiref:`fan/fan_state.h`
+- {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/speed.md)
 

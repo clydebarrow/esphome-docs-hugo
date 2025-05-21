@@ -26,11 +26,11 @@ sensor:
 
 - **topic** (**Required**, string): The MQTT topic to listen for numeric messages.
 - **qos** (*Optional*, int): The MQTT QoS to subscribe with. Defaults to `0`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 ## See Also
 
-- :ref:`sensor-filters`
-- :apiref:`mqtt_subscribe/sensor/mqtt_subscribe_sensor.h`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- {{< apiref "mqtt_subscribe/sensor/mqtt_subscribe_sensor.h" "mqtt_subscribe/sensor/mqtt_subscribe_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/mqtt_subscribe.md)
 

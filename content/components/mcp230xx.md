@@ -9,9 +9,9 @@ The Microchip MCP230xx series of general purpose, parallel I/O expansion for I²
 
 **Supported Variants :**
 
-- :ref:`mcp23008-label`
-- :ref:`mcp23016-label`
-- :ref:`mcp23017-label`
+- [MCP23008 Component]({{< ref "components/mcp230xx#mcp23008-label" >}})
+- [MCP23016 Component]({{< ref "components/mcp230xx#mcp23016-label" >}})
+- [MCP23017 Component]({{< ref "components/mcp230xx#mcp23017-label" >}})
 
 {{< anchor "mcp23008-label" >}}
 
@@ -54,7 +54,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The id to use for this MCP23008 component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23008 component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x20`.
 - **open_drain_interrupt** (*Optional*, boolean): Configure the interrupt pin to open-drain mode.
@@ -63,7 +63,7 @@ binary_sensor:
 
 ### Pin configuration variables:
 
-- **mcp23xxx** (**Required**, :ref:`config-id`): The id of the MCP23008 component.
+- **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23008 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
 - **number** (**Required**, int): The pin number.
 - **inverted** (*Optional*, boolean): If all read and written values
@@ -115,14 +115,14 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The id to use for this MCP23016 component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23016 component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x20`.
 
 ### Pin configuration variables:
 
-- **mcp23xxx** (**Required**, :ref:`config-id`): The id of the MCP23016 component.
-- All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
+- **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23016 component.
+- All other options from :ref:`Pin Schema <config-pin_schema>`
 
 
 {{< anchor "mcp23017-label" >}}
@@ -132,7 +132,7 @@ binary_sensor:
 The MCP23017 component allows you to use MCP23017 I/O expanders
 ([datasheet](http://ww1.microchip.com/downloads/en/devicedoc/20001952c.pdf),
 [Adafruit](https://www.adafruit.com/product/732)) in ESPHome.
-It uses the [I²C Bus]({{< ref "components/i2c#i2c" >}}) for communication.
+It uses the :ref:`I²C Bus <i2c>` for communication.
 
 Once configured, you can use any of the 16 pins as
 pins for your projects. Within ESPHome they emulate a real internal GPIO pin
@@ -177,7 +177,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The id to use for this MCP23017 component.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23017 component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x20`.
 - **open_drain_interrupt** (*Optional*, boolean): Configure interrupt pins to open-drain mode.
@@ -186,18 +186,18 @@ binary_sensor:
 
 ### Pin configuration variables:
 
-- **mcp23xxx** (**Required**, :ref:`config-id`): The id of the MCP23017 component.
+- **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23017 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
-- All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
+- All other options from :ref:`Pin Schema <config-pin_schema>`
 
 
 ## See Also
 
-- :ref:`i2c`
+- [I²C Bus]({{< ref "components/i2c#i2c" >}})
 - {{< docref "switch/gpio" >}}
 - {{< docref "binary_sensor/gpio" >}}
-- :apiref:`API Reference (MCP23008) <mcp23008/mcp23008.h>`
-- :apiref:`API Reference (MCP23016) <mcp23016/mcp23016.h>`
-- :apiref:`API Reference (MCP23017) <mcp23017/mcp23017.h>`
+- {{< apiref "API Reference (MCP23008)" "mcp23008/mcp23008.h" >}}
+- {{< apiref "API Reference (MCP23016)" "mcp23016/mcp23016.h" >}}
+- {{< apiref "API Reference (MCP23017)" "mcp23017/mcp23017.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/mcp230xx.md)
 

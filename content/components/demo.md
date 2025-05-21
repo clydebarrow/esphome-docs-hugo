@@ -21,6 +21,6 @@ This component has no configuration variables
 
 ## See Also
 
-- :apiref:`demo/demo_sensor.h`
+- {{< apiref "demo/demo_sensor.h" "demo/demo_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/demo.md)
 

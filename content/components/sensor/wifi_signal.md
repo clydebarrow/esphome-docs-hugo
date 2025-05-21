@@ -21,7 +21,7 @@ sensor:
     update_interval: 60s
 
 ```
-To additionally display signal strength in percentage use the :ref:`copy-sensor` (it's not possible to add the same sensor twice, because it has a static `uniqueid` reported to Home Assistant):
+To additionally display signal strength in percentage use the [Copy Sensor]({{< ref "components/copy#copy-sensor" >}}) (it's not possible to add the same sensor twice, because it has a static `uniqueid` reported to Home Assistant):
 
 ```yaml
 # Example configuration entry with 2 sensors and filter
@@ -44,9 +44,9 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 {{< warning >}}
 Signal strength readings are only available when WiFi is in station mode. Readings are not valid
@@ -55,9 +55,9 @@ if the device is acting as an access point without any station mode connection.
 {{< /warning >}}
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "/components/wifi" >}}
 - {{< docref "/components/text_sensor/wifi_info" >}}
-- :apiref:`wifi_signal/wifi_signal_sensor.h`
+- {{< apiref "wifi_signal/wifi_signal_sensor.h" "wifi_signal/wifi_signal_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/wifi_signal.md)
 

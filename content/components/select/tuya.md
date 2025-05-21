@@ -57,12 +57,12 @@ select:
   all values have to be unique.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the Select will immediately update the reported state.
-- All other options from [Select]({{< ref "components/select/_index#config-select" >}}).
+- All other options from :ref:`Select <config-select>`.
 
 
 ## See Also
 
 - {{< docref "/components/select/index" >}}
-- :apiref:`tuya/select/tuya_select.h`
+- {{< apiref "tuya/select/tuya_select.h" "tuya/select/tuya_select.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/tuya.md)
 

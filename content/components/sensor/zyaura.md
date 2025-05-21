@@ -32,21 +32,21 @@ sensor:
 ```
 ## Configuration variables:
 
-- **clock_pin** (**Required**, :ref:`config-pin`): The pin where the clock bus is connected.
-- **data_pin** (**Required**, :ref:`config-pin`): The pin where the data bus is connected.
+- **clock_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the clock bus is connected.
+- **data_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the data bus is connected.
 - **co2** (*Optional*): The information for the CO2 sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): The information for the humidity sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 
@@ -58,12 +58,12 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 {{< /note >}}
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "mhz19/" >}}
 - [CO2mon-esp firmware](https://github.com/Anonym-tsk/co2mon-esp) by [@anonym-tsk](https://github.com/Anonym-tsk)
 - [Some information about hacking MT8060](https://habr.com/ru/company/dadget/blog/394333/)
 - [CO2MeterHacking project](https://revspace.nl/CO2MeterHacking)
-- :apiref:`zyaura/zyaura.h`
+- {{< apiref "zyaura/zyaura.h" "zyaura/zyaura.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/zyaura.md)
 

@@ -29,8 +29,8 @@ output:
 ```
 Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
-- **power_supply** (*Optional*, :ref:`config-id`): The :doc:`power
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **power_supply** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The :doc:`power
   supply </components/power_supply>` to connect to
   this output. When the output is enabled, the power supply will
   automatically be switched on too.
@@ -60,7 +60,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ```cpp
 id(light_1).turn_on();
@@ -80,7 +80,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ```cpp
 id(light_1).turn_off();
@@ -103,7 +103,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed in :ref:`lambdas <config-lambda>`:
 
 ```cpp
 // range is 0.0 (off) to 1.0 (on)
@@ -120,8 +120,8 @@ id(light_1).set_level(0.5);
 - {{< docref "/components/light/rgb" >}}
 - {{< docref "/components/fan/binary" >}}
 - {{< docref "/components/fan/speed" >}}
-- :apiref:`binary_output.h <output/binary_output.h>`,
-  :apiref:`float_output.h <output/float_output.h>`
+- {{< apiref "binary_output.h" "output/binary_output.h" >}},
+  {{< apiref "float_output.h" "output/float_output.h" >}}
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/index.md)
 

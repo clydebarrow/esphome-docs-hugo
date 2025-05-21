@@ -40,20 +40,20 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, :ref:`config-pin`): The pin where the DHT bus is connected.
+- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the DHT bus is connected.
 - **temperature** (**Required**): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (**Required**): The information for the humidity sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 
 - **model** (*Optional*, int): Manually specify the DHT model, can be
   one of `AUTO_DETECT`, `DHT11`, `DHT22`, `DHT22_TYPE2`, `AM2302`, `RHT03`, `SI7021`, `AM2120`
   and helps with some connection issues. Defaults to `AUTO_DETECT`.  Auto detection doesn't work for the SI7021 chip.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< note >}}
@@ -71,13 +71,13 @@ set `pullup: false` under your `pin` configuration.
 {{< /note >}}
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}
 - {{< docref "htu21d/" >}}
 - {{< docref "sht3xd/" >}}
-- :apiref:`dht/dht.h`
+- {{< apiref "dht/dht.h" "dht/dht.h" >}}
 - [Arduino DHTLib](https://playground.arduino.cc/Main/DHTLib)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dht.md)
 

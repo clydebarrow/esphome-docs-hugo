@@ -28,13 +28,13 @@ If your device has a single LED that needs to be shared use  {{< docref "/compon
 {{< /note >}}
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
+- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The
   GPIO pin to operate the status LED on.
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< note >}}
 If your LED is in an active-LOW mode (when it's on if the output is enabled), use the
-`inverted` option of the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}):
+`inverted` option of the :ref:`Pin Schema <config-pin_schema>`:
 
 ```yaml
 status_led:
@@ -47,6 +47,6 @@ status_led:
 ## See Also
 
 - {{< docref "/components/light/status_led" >}}
-- :apiref:`status_led/status_led.h`
+- {{< apiref "status_led/status_led.h" "status_led/status_led.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/status_led.md)
 

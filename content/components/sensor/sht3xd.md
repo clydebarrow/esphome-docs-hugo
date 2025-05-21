@@ -9,7 +9,7 @@ The `sht3xd` sensor platform Temperature+Humidity sensor allows you to use your 
 ([datasheet](https://cdn-shop.adafruit.com/product-files/2857/Sensirion_Humidity_SHT3x_Datasheet_digital-767294.pdf),
 [Adafruit`_ ) and SHT85 (`datasheet](https://sensirion.com/media/documents/4B40CEF3/640B2346/Sensirion_Humidity_Sensors_SHT85_Datasheet.pdf),
 `Sensirion`_ ) sensors with Esphome.
-The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
 
 [Adafruit](https://www.adafruit.com/product/2857)
 [Sensirion](https://sensirion.com/products/catalog/SHT85/)
@@ -32,15 +32,15 @@ sensor:
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): The information for the humidity sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x44`. For SHT3x, an alternate address can be `0x45` while SHT85 supports only address `0x44`
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **heater_enabled** (*Optional*, bool): Turn on/off heater at boot.
   This may help provide [more accurate readings in condensing conditions](https://forum.arduino.cc/t/atmospheric-sensors-in-condensing-conditions/412167),
@@ -66,12 +66,12 @@ i2c:
 ```
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}
 - {{< docref "htu21d/" >}}
-- :apiref:`sht3xd/sht3xd.h`
+- {{< apiref "sht3xd/sht3xd.h" "sht3xd/sht3xd.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sht3xd.md)
 

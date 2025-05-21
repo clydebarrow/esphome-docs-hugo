@@ -23,12 +23,12 @@ lock:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, :ref:`config-id`): The ID of the output component to use.
-- All other options from [Lock]({{< ref "components/lock/_index#config-lock" >}}).
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.
+- All other options from :ref:`Lock <config-lock>`.
 
 ## See Also
 
 - {{< docref "/components/output/index" >}}
-- :apiref:`output/lock/output_lock.h`
+- {{< apiref "output/lock/output_lock.h" "output/lock/output_lock.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lock/output.md)
 

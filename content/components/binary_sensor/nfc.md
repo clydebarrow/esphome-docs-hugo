@@ -40,7 +40,7 @@ binary_sensor:
   not be used with `ndef_contains` and/or `uid`.
 - **uid** (*Optional*, string): The unique ID of the NFC tag. This is a hyphen-separated list of hexadecimal values.
   For example: `74-10-37-94`. May not be used with `ndef_contains` and/or `tag_id` (above).
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 {{< anchor "nfc-setting_up_tags" >}}
 
@@ -80,8 +80,8 @@ cards/tags to share the same message.
 - {{< docref "pn532/" >}}
 - {{< docref "../pn7150" >}}
 - {{< docref "../pn7160" >}}
-- :apiref:`pn532/pn532.h`
-- :apiref:`pn7150/pn7150.h`
-- :apiref:`pn7160/pn7160.h`
+- {{< apiref "pn532/pn532.h" "pn532/pn532.h" >}}
+- {{< apiref "pn7150/pn7150.h" "pn7150/pn7150.h" >}}
+- {{< apiref "pn7160/pn7160.h" "pn7160/pn7160.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/nfc.md)
 

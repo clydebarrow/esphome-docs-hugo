@@ -5,7 +5,7 @@ title: "RGBW Light"
 
 {{< seo description="" image="" >}}
 
-The `rgbw` light platform creates an RGBW light from 4 [float output components]({{< ref "components/output/_index#output" >}}) (one for each channel).
+The `rgbw` light platform creates an RGBW light from 4 :ref:`float output components <output>` (one for each channel).
 
 ```yaml
 # Example configuration entry
@@ -22,7 +22,7 @@ light:
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
 perceived intensity of different colors will generally vary. This can be done by using
-[max_power]({{< ref "components/output/_index#config-output" >}}) on individual output channels:
+:ref:`max_power <config-output>` on individual output channels:
 
 ```yaml
 # Example configuration entry
@@ -57,17 +57,17 @@ time: `color_interlock`.
 Setting this option to `true` will result in the light having two color modes available, `RGB` and `WHITE`.
 When the `RGB` color mode is active, the white leds are turned off, and when the `WHITE` color mode is active,
 the RGB leds are turned off. Switching between these modes can be done from the Home Assistant interface, or by using
-the `color_mode` option of the [light control actions]({{< ref "components/light/_index#light-turn_on_action" >}}).
+the `color_mode` option of the :ref:`light control actions <light-turn_on_action>`.
 
 ## Configuration variables:
 
-- **red** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the red channel.
-- **green** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the green channel.
-- **blue** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the blue channel.
-- **white** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the white channel.
+- **red** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
+- **green** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
+- **blue** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
+- **white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the white channel.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See :ref:`rgbw_color_interlock` for more information. Defaults to `false`.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+  time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
+- All other options from :ref:`Light <config-light>`.
 
 ## See Also
 
@@ -85,6 +85,6 @@ the `color_mode` option of the [light control actions]({{< ref "components/light
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
-- :apiref:`rgbw/rgb_light_output.h`
+- {{< apiref "rgbw/rgb_light_output.h" "rgbw/rgb_light_output.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/rgbw.md)
 

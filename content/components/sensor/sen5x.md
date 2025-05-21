@@ -6,7 +6,7 @@ title: "Sen5x Series Environmental sensor"
 {{< seo description="" image="" >}}
 
 The [sen5x` sensor platform allows you to use your Sensirion `SEN50](https://sensirion.com/products/catalog/SEN50/), [SEN54](https://sensirion.com/products/catalog/SEN54/) and [SEN55](https://sensirion.com/products/catalog/SEN55/) Environmental sensor ([datasheet](https://sensirion.com/media/documents/6791EFA0/62A1F68F/Sensirion_Datasheet_Environmental_Node_SEN5x.pdf)) sensors with ESPHome.
-The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
 This sensor supports both UART and I²C communication. Only I²C communication is implemented in this component.
 
 [Sensirion](https://sensirion.com/products/catalog/?filter_series=ceff880a-784d-4877-ae2c-79353c6a0428)
@@ -63,29 +63,29 @@ sensor:
 
 - **pm_1_0** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 1μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **pm_2_5** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 2.5μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **pm_4_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 4μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **pm_10_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 10μm. Readings in µg/m³.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **auto_cleaning_interval** (*Optional*): Reads/Writes the interval in seconds of the periodic fan-cleaning.
 
 - **temperature** (*Optional*): Temperature.Note only available with Sen54 or Sen55. The sensor will be ignored on unsupported models.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): Relative Humidity. Note only available with Sen54 or Sen55. The sensor will be ignored on unsupported models.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **voc** (*Optional*): VOC Index. Note only available with Sen54 or Sen55. The sensor will be ignored on unsupported models.
 
@@ -98,7 +98,7 @@ sensor:
     - **std_initial** (*Optional*): Initial estimate for standard deviation. Lower value boosts events during initial learning period, but may result in larger device-todevice variations. Allowed values are in range 10..5000. The default value is 50.
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **nox** (*Optional*): NOx Index. Note: Only available with Sen55. The sensor will be ignored on unsupported models.
 
@@ -111,7 +111,7 @@ sensor:
     - **std_initial** (*Optional*): The initial estimate for standard deviation parameter has no impact for NOx. This parameter is still in place for consistency reasons with the VOC tuning parameters command. This parameter must always be set to 50.
     - **gain_factor** (*Optional*): Gain factor to amplify or to attenuate the VOC index output. Allowed values are in range 1..1000. The default value is 230.
 
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **store_baseline** (*Optional*, boolean): Stores and retrieves the baseline VOC and NOx information for quicker startups. Defaults to `true`
 - **temperature_compensation** (*Optional*): These parameters allow to compensate temperature effects of the design-in at customer side by applying a custom temperature offset to the ambient temperature.
@@ -171,7 +171,7 @@ The default automatic-cleaning interval is 168 hours (1 week) of uninterrupted u
 
 ## `sen5x.start_fan_autoclean` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) manually starts fan-cleaning.
+This :ref:`action <config-action>` manually starts fan-cleaning.
 
 ```yaml
 on_...:
@@ -184,7 +184,7 @@ on_...:
 ```
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "sds011/" >}}
 - {{< docref "pmsx003/" >}}
@@ -192,6 +192,6 @@ on_...:
 - {{< docref "scd4x/" >}}
 - {{< docref "sps30/" >}}
 - {{< docref "sgp4x/" >}}
-- :apiref:`sen5x/sen5x.h`
+- {{< apiref "sen5x/sen5x.h" "sen5x/sen5x.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sen5x.md)
 

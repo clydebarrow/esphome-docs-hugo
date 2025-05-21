@@ -53,20 +53,20 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, :ref:`config-id`): The sensor to read the voltage values from
+- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor to read the voltage values from
   to convert to resistance readings.
 - **configuration** (**Required**, string): The type of circuit, one of `DOWNSTREAM` or
   `UPSTREAM`.
 - **resistor** (**Required**, float): The value of the resistor with a constant value.
 
 - **reference_voltage** (*Optional*, float): The reference voltage. Defaults to `3.3V`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 ## See Also
 
 - {{< docref "adc/" >}}
 - {{< docref "ntc/" >}}
-- :ref:`sensor-filters`
-- :apiref:`resistance/resistance_sensor.h`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- {{< apiref "resistance/resistance_sensor.h" "resistance/resistance_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/resistance.md)
 

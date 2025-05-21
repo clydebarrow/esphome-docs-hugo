@@ -32,7 +32,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the datetime. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
+If you have a :ref:`friendly_name <esphome-configuration_variables>` set for your device and
 you want the datetime to use that name, you can set `name: None`.
 
   {{< /note >}}
@@ -47,17 +47,17 @@ you want the datetime to use that name, you can set `name: None`.
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- **time_id** (*Optional*, :ref:`config-id`): The ID of the time entity. Automatically set
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the time entity. Automatically set
   to the ID of a time component if only a single one is defined. Required if `on_time` is used.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See :ref:`Webserver Version 3 <config-webserver-version-3-options>`.
 
 MQTT Options:
 
-- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- All other options from :ref:`MQTT Component <config-mqtt-component>`.
 
 Time and DateTime Options:
 
-- **on_time** (*Optional*, :ref:`automation`): Automation to run when the current datetime or time matches the current state.
+- **on_time** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run when the current datetime or time matches the current state.
   Only valid on `time` or `datetime` types.  Use of `on_time` causes `time_id` to be required, `time_id` will be automatically assigned if a time source exists in the config, and will cause an invalid configuration if there is no {{< docref "/components/time/index" >}} configured.
 
 ## Automation
@@ -68,7 +68,7 @@ You can access the most recent state as a `ESPTime` object by `id(datetime_id).s
 
 ### `on_value`
 
-This automation will be triggered when a new value is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
+This automation will be triggered when a new value is published. In :ref:`Lambdas <config-lambda>`
 you can get the value as a ESPTime object from the trigger with `x`.
 
 ```yaml
@@ -85,7 +85,7 @@ datetime:
             }
 
 ```
-Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
+Configuration variables: See :ref:`Automation <automation>`.
 
 ## Date Automation
 
@@ -93,7 +93,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 ### `datetime.date.set` Action
 
-This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime date state.
+This is an :ref:`Action <config-action>` for setting a datetime date state.
 The `date` provided can be in one of 3 formats:
 
 ```yaml
@@ -120,8 +120,8 @@ The `date` provided can be in one of 3 formats:
 ```
 Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the datetime to set.
-- **date** (**Required**, string, date parts, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the datetime to set.
+- **date** (**Required**, string, date parts, :ref:`templatable <config-templatable>`):
   The value to set the datetime to.
 
 
@@ -130,7 +130,7 @@ Configuration variables:
 
 ### lambda calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all datetimes to do some
+From :ref:`lambdas <config-lambda>`, you can call several methods on all datetimes to do some
 advanced stuff (see the full API Reference for more info).
 
 - `.make_call()`: Make a call for updating the datetime value.
@@ -161,7 +161,7 @@ advanced stuff (see the full API Reference for more info).
 
 ### `datetime.time.set` Action
 
-This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime time state.
+This is an :ref:`Action <config-action>` for setting a datetime time state.
 The `time` provided can be in one of 3 formats:
 
 ```yaml
@@ -188,8 +188,8 @@ The `time` provided can be in one of 3 formats:
 ```
 Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the datetime to set.
-- **time** (**Required**, string, time parts, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the datetime to set.
+- **time** (**Required**, string, time parts, :ref:`templatable <config-templatable>`):
   The value to set the datetime to.
 
 
@@ -197,7 +197,7 @@ Configuration variables:
 
 ### lambda calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all datetimes to do some
+From :ref:`lambdas <config-lambda>`, you can call several methods on all datetimes to do some
 advanced stuff (see the full API Reference for more info).
 
 - `.make_call()`: Make a call for updating the datetime value.
@@ -229,7 +229,7 @@ advanced stuff (see the full API Reference for more info).
 
 ### `datetime.datetime.set` Action
 
-This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime datetime state.
+This is an :ref:`Action <config-action>` for setting a datetime datetime state.
 The `datetime` provided can be in one of 3 formats:
 
 ```yaml
@@ -259,8 +259,8 @@ The `datetime` provided can be in one of 3 formats:
 ```
 Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the datetime to set.
-- **datetime** (**Required**, string, datetime parts, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the datetime to set.
+- **datetime** (**Required**, string, datetime parts, :ref:`templatable <config-templatable>`):
   The value to set the datetime to.
 
 
@@ -268,7 +268,7 @@ Configuration variables:
 
 ### Lambda calls
 
-For more complex use cases, several methods are available for use on datetimes from within [lambdas]({{< ref "automations/templates#config-lambda" >}}). See the full API Reference for more information.
+For more complex use cases, several methods are available for use on datetimes from within :ref:`lambdas <config-lambda>`. See the full API Reference for more information.
 
 - `.make_call()`: Make a call for updating the datetime value.
 
@@ -300,12 +300,12 @@ For more complex use cases, several methods are available for use on datetimes f
   ```
 ## See Also
 
-- :apiref:`DateTimeBase <datetime/datetime_base.h>`
-- :apiref:`DateEntity <datetime/date_entity.h>`
-- :apiref:`DateCall <datetime/date_entity.h>`
-- :apiref:`TimeEntity <datetime/time_entity.h>`
-- :apiref:`TimeCall <datetime/time_entity.h>`
-- :apiref:`DateTimeEntity <datetime/datetime_entity.h>`
-- :apiref:`DateTimeCall <datetime/datetime_entity.h>`
+- {{< apiref "DateTimeBase" "datetime/datetime_base.h" >}}
+- {{< apiref "DateEntity" "datetime/date_entity.h" >}}
+- {{< apiref "DateCall" "datetime/date_entity.h" >}}
+- {{< apiref "TimeEntity" "datetime/time_entity.h" >}}
+- {{< apiref "TimeCall" "datetime/time_entity.h" >}}
+- {{< apiref "DateTimeEntity" "datetime/datetime_entity.h" >}}
+- {{< apiref "DateTimeCall" "datetime/datetime_entity.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/datetime/index.md)
 

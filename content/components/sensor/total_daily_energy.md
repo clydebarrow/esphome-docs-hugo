@@ -40,14 +40,14 @@ time:
 ```
 ## Configuration variables:
 
-- **power_id** (**Required**, :ref:`config-id`): The ID of the power sensor
+- **power_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the power sensor
   to integrate over time.
 - **restore** (*Optional*, boolean): Whether to store the intermediate result on the device so
   that the value can be restored upon power cycle or reboot.
   Defaults to `true`.
 - **method** (*Optional*, string): The method to use for calculating the total daily energy. One of
   `trapezoid`, `left` or `right`. Defaults to `right`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 ## Converting from W to kW
 
@@ -85,7 +85,7 @@ sensor:
 ```
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "hlw8012/" >}}
 - {{< docref "cse7766/" >}}
 - {{< docref "integration/" >}}
@@ -93,6 +93,6 @@ sensor:
 - {{< docref "/components/sensor/pulse_meter" >}}
 - {{< docref "/components/time/homeassistant" >}}
 - {{< docref "/cookbook/power_meter" >}}
-- :apiref:`total_daily_energy/total_daily_energy.h`
+- {{< apiref "total_daily_energy/total_daily_energy.h" "total_daily_energy/total_daily_energy.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/total_daily_energy.md)
 

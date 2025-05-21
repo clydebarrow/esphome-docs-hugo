@@ -71,7 +71,7 @@ When the movement stops (with no stop action being requested) it is assumed that
 the builtin endstops, and so the close/open state (according to current direction) was reached.
 This function is activated setting `infer_endstop` to True.
 
-It can be used to replace a {{< docref "/components/cover/current_based" >}}, with some modifications in the yaml. See :ref:`migrating_current_based`
+It can be used to replace a {{< docref "/components/cover/current_based" >}}, with some modifications in the yaml. See [Migrating Current-Based Cover]({{< ref "components/cover/feedback#migrating_current_based" >}})
 
 ## Safety Features
 
@@ -85,35 +85,35 @@ To protect the cover hardware from damage, some safety options are available:
 
 ## Configuration variables
 
-- **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **stop_action** (**Required**, :ref:`Action <config-action>`): The action that should
   be performed when the remote requests the cover to be closed or an endstop is reached.
 
 Open options:
 
-- **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **open_action** (**Required**, :ref:`Action <config-action>`): The action that should
   be performed when the remote requests the cover to be opened.
-- **open_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
+- **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to open up from the fully-closed state.
-- **open_endstop** (*Optional*, :ref:`config-id`): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the open position is reached.
-- **open_sensor** (*Optional*, :ref:`config-id`): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the cover is moving in the open direction.
-- **open_obstacle_sensor** (*Optional*, :ref:`config-id`): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when an obstacle that blocks the
+- **open_endstop** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+  :ref:`Binary Sensor <config-binary_sensor>` that turns on when the open position is reached.
+- **open_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+  :ref:`Binary Sensor <config-binary_sensor>` that turns on when the cover is moving in the open direction.
+- **open_obstacle_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+  :ref:`Binary Sensor <config-binary_sensor>` that turns on when an obstacle that blocks the
   open direction is detected.
 
 Close options:
 
-- **close_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **close_action** (**Required**, :ref:`Action <config-action>`): The action that should
   be performed when the remote requests the cover to be closed.
-- **close_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
+- **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to close from the fully-open state.
-- **close_endstop** (*Optional*, :ref:`config-id`): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the closed position is reached.
-- **close_sensor** (*Optional*, :ref:`config-id`): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the cover is moving in the close direction.
-- **close_obstacle_sensor** (*Optional*, :ref:`config-id`): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when an obstacle that blocks the
+- **close_endstop** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+  :ref:`Binary Sensor <config-binary_sensor>` that turns on when the closed position is reached.
+- **close_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+  :ref:`Binary Sensor <config-binary_sensor>` that turns on when the cover is moving in the close direction.
+- **close_obstacle_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+  :ref:`Binary Sensor <config-binary_sensor>` that turns on when an obstacle that blocks the
   close direction is detected.
 
 Additional options:
@@ -128,26 +128,26 @@ Additional options:
   This will make the Home Assistant frontend show buttons for both OPEN and CLOSE actions, instead
   of hiding or disabling one of them. Defaults to `true` if no sensor is available to known
   the actual state of the cover.
-- **max_duration** (*Optional*, :ref:`config-time`): The maximum duration the cover should be opening
+- **max_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the cover should be opening
   or closing. Useful for protecting from dysfunctional endstops.
   Requires internal, builtin or inferred endstops.
-- **direction_change_wait_time** (*Optional*, :ref:`config-time`): Stops cover and forces a wait time between changes in direction,
+- **direction_change_wait_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Stops cover and forces a wait time between changes in direction,
   and takes it into account when computing cover position (useful to protect motors).
   When this option is set (even at 0s) if an open/close action is invoked while the cover is moving in the opposite direction,
   then and intermediate stop action will be invoked to generate the delay.
-- **acceleration_wait_time** (*Optional*, :ref:`config-time`): Considers a wait time needed by the cover to actually
+- **acceleration_wait_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Considers a wait time needed by the cover to actually
   start moving after command is issued and takes it into account when computing cover position
   (useful for heavy covers with large inertia).
   Intended to not accumulate error when doing multiple partial open/close actions).
   The open/close duration includes one instance of this delay, as it is the total amount of time from
   issuing a command to reaching endstop.
   Defaults to `0s`.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to publish updated position information to the UI while the cover is moving.
   Defaults to `1s`.
 - **obstacle_rollback** (*Optional*, percentage): The percentage of rollback the cover will perform in case of
   obstacle detection while moving. Defaults to `10%`.
-- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from :ref:`Cover <config-cover>`.
 
 ## Example Configurations
 
@@ -249,7 +249,7 @@ Most options can be left untouched, but some modifications are needed:
 ## See Also
 
 - {{< docref "index/" >}}
-- :ref:`automation`
-- :apiref:`feedback/feedback_cover.h`
+- [Automation]({{< ref "automations/_index#automation" >}})
+- {{< apiref "feedback/feedback_cover.h" "feedback/feedback_cover.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/feedback.md)
 

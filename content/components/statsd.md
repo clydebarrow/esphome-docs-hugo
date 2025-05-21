@@ -32,18 +32,18 @@ This example will generate a metric named `test1.sensor` with the value of the `
 - **port** (*Optional*, uint16): The Port of your StatsD Server. Defaults to `8125`.
 - **prefix** (*Optional*, string): The prefix to automatically prepend every metric with.  Defaults to `""`.
 - **update_interval** (*Optional*, uint16): How often to send the metrics. Defaults to `10s`.
-- **sensor** (*Optional*, :ref:`sensors`): A list of sensors to generate metrics for.
-- **binary_sensor** (*Optional*, :ref:`sensors`): A list of binary sensors to generate metrics for.
+- **sensor** (*Optional*, [Sensor list]({{< ref "components/statsd#sensors" >}})): A list of sensors to generate metrics for.
+- **binary_sensor** (*Optional*, [Sensor list]({{< ref "components/statsd#sensors" >}})): A list of binary sensors to generate metrics for.
 
 {{< anchor "sensors" >}}
 
 ## Sensor list
 
-- **id** (**Required**, :ref:`config-id`): The ID of the sensor.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the sensor.
 - **name** (**Required**, name): The Name of the metric the sensor value is send as. (Prefix is added to this name).
 
 ## See Also
 
-- :apiref:`statsd/statsd.h`
+- {{< apiref "statsd/statsd.h" "statsd/statsd.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/statsd.md)
 

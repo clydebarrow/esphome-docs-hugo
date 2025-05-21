@@ -6,7 +6,7 @@ title: "Template Sensor"
 {{< seo description="" image="" >}}
 
 The `template` sensor platform allows you to create a sensor with templated values
-using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+using :ref:`lambdas <config-lambda>`.
 
 ```yaml
 # Example configuration entry
@@ -31,11 +31,11 @@ Possible return values for the lambda:
 
 ## Configuration variables:
 
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, :ref:`lambda <config-lambda>`):
   Lambda to be evaluated every update interval to get the new value of the sensor
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Set to `never` to disable updates. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 {{< anchor "sensor-template-publish_action" >}}
 
@@ -65,8 +65,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the template sensor.
-- **state** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template sensor.
+- **state** (**Required**, float, :ref:`templatable <config-templatable>`):
   The state to publish.
 
 {{< note >}}
@@ -109,8 +109,8 @@ sensor:
 ```
 ## See Also
 
-- :ref:`sensor-filters`
-- :ref:`automation`
-- :apiref:`template/sensor/template_sensor.h`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
+- {{< apiref "template/sensor/template_sensor.h" "template/sensor/template_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/template.md)
 

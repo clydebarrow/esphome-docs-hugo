@@ -13,7 +13,7 @@ sensors with ESPHome.
 
 The iAQ-Core sensor module is used to measure VOC levels and provide CO2 equivalent and TVOC equivalent predictions. The data is available via I²C bus.
 
-To use the sensor, first set up an [I²C Bus]({{< ref "components/i2c#i2c" >}}) and connect the sensor to the specified pins.
+To use the sensor, first set up an :ref:`I²C Bus <i2c>` and connect the sensor to the specified pins.
 
 ```yaml
 # Example configuration entry
@@ -31,15 +31,15 @@ sensor:
 
 - **i2c_id** (*Optional*, ID): The id of the I²C Bus.
 - **address** (*Optional*, int): Manually specifiy the I²C address of the sensor. Defaults to `0x5A`.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 - **co2** (*Optional*): The configuration for the CO2 sensor. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  :ref:`Sensor <config-sensor>`.
 - **tvoc** (*Optional*): The configuration for the TVOC sensor. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  :ref:`Sensor <config-sensor>`.
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "/components/sensor/index" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/iaqcore.md)
 

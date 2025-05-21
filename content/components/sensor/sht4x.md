@@ -8,7 +8,7 @@ title: "SHT4X Temperature and Humidity Sensor"
 The `sht4x` sensor platform  allows you to use your SHT4X temperature and humidity sensor
 ([datasheet](https://sensirion.com/media/documents/33FD6951/63E1087C/Datasheet_SHT4x_1.pdf), `Adafruit`_) with ESPHome.
 
-The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
 
 {{< img src="sht4x-full.jpg" alt="Image" width="80.0%" class="center" >}}
 
@@ -27,18 +27,18 @@ sensor:
 
 - **temperature** (*Optional*): Temperature.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): Relative Humidity.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **precision** (*Optional*, string): The measurement precision, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_max_duty** (*Optional*, float): The maximum duty cycle of the heater (limited to `0.05`). Default is `0.0`, i.e. heater off.
 - **heater_power** (*Optional*, string): The heater power, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_time** (*Optional*, string):  The length of time to run the heater, either `Long` (1000ms) or `Short` (100ms). Default is `Long`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Default is `0x44`.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
 ## Heater Configuration:
 
@@ -57,8 +57,8 @@ for more information about heater operation.
 
 - {{< docref "/components/sensor/sht3xd" >}}
 - {{< docref "/components/sensor/shtcx" >}}
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
-- :apiref:`sht4x/sht4x.h`
+- {{< apiref "sht4x/sht4x.h" "sht4x/sht4x.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sht4x.md)
 

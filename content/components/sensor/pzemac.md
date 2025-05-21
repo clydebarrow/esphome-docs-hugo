@@ -32,7 +32,7 @@ This page refers to version V3 of the PZEM004T.
 For using the older V1 variant of this sensor please see {{< docref "pzem004t/" "pzem004t" >}}.
 
 {{< /warning >}}
-The communication with this component is done via a [Modbus]({{< ref "components/modbus#modbus" >}}) using [UART]({{< ref "components/uart#uart" >}}).
+The communication with this component is done via a :ref:`UART <uart>` using :ref:`Modbus <modbus>`.
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 
@@ -65,22 +65,22 @@ sensor:
 ## Configuration variables:
 
 - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  :ref:`Sensor <config-sensor>`.
 - **energy** (*Optional*): Use the (active) energy value of the sensor in watt*hours. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  :ref:`Sensor <config-sensor>`.
 - **power** (*Optional*): Use the (active) power value of the sensor in watts. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  :ref:`Sensor <config-sensor>`.
 - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 - **frequency** (*Optional*): Use the frequency value of the sensor in hertz.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 - **power_factor** (*Optional*): Use the power factor value of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+  All options from :ref:`Sensor <config-sensor>`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
-- **modbus_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the Modbus hub.
+- **modbus_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the Modbus hub.
 
 {{< anchor "pzemac-reset_energy_action" >}}
 
@@ -149,9 +149,9 @@ modbus_controller:
 ```
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "pzem004t/" >}}
 - {{< docref "pzemdc/" >}}
-- :apiref:`pzemac/pzemac.h`
+- {{< apiref "pzemac/pzemac.h" "pzemac/pzemac.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pzemac.md)
 

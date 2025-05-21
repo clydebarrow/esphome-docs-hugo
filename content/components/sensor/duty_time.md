@@ -32,23 +32,23 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (*Optional*, :ref:`config-id`): The ID of the `binary_sensor` to track the duty time. *May not be
+- **sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `binary_sensor` to track the duty time. *May not be
   used with* `lambda`.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): Lambda that will be called in a loop to get the current
+- **lambda** (*Optional*, :ref:`lambda <config-lambda>`): Lambda that will be called in a loop to get the current
   state of the tracked object. *May not be used with* `sensor`.
 - **last_time** (*Optional*): Information of the last switch-on time sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 - **restore** (*Optional*, boolean): Whether to store the intermediate result on the device so that the value can be
   restored upon power cycle or reboot.
   Warning: this option can wear out your flash. Defaults to `false`.
-- **update_interval** (*Optional*, :ref:`config-time`): The update interval. Defaults to `60s`.
-- **id** (*Optional*, :ref:`config-id`): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The update interval. Defaults to `60s`.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from :ref:`Sensor <config-sensor>`.
 
 
 ## Automations
 
-In addition to all basic [sensor automations]({{< ref "components/sensor/_index#sensor-automations" >}}), the component supports the automations below.
+In addition to all basic :ref:`sensor automations <sensor-automations>`, the component supports the automations below.
 
 {{< anchor "sensor-duty_time-start_action" >}}
 
@@ -95,7 +95,7 @@ on_...:
 
 ### `sensor.duty_time.is_running` / `sensor.duty_time.is_not_running` Condition
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the `duty_time` counter is currently running (or suspended). In lambdas, you may use the `is_running()` method.
+This :ref:`Condition <config-condition>` checks if the `duty_time` counter is currently running (or suspended). In lambdas, you may use the `is_running()` method.
 
 ```yaml
 # In some trigger:
@@ -109,10 +109,10 @@ on_...:
 ```
 ## See Also
 
-- :ref:`config-sensor`
-- :ref:`config-lambda`
-- :ref:`automation`
+- [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})
+- [Templates]({{< ref "automations/templates#config-lambda" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 - {{< docref "/components/binary_sensor/index" >}}
-- :apiref:`duty_time/duty_time_sensor.h`
+- {{< apiref "duty_time/duty_time_sensor.h" "duty_time/duty_time_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/duty_time.md)
 

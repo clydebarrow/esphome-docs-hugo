@@ -29,17 +29,17 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
-- **period** (**Required**, :ref:`config-time`): The duration of each cycle. (i.e. a 10s
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **period** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of each cycle. (i.e. a 10s
   period at 50% duty would result in the pin being turned on for 5s, then off for 5s)
-- **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to pulse.
-- **state_change_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is switched. If a lambda is used the boolean `state` parameter holds the new status.
-- **turn_on_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is turned on. Can be used to control for example a switch or output component.
-- **turn_off_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is turned off. `turn_on_action` and `turn_off_action` must be configured together.
+- **pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The pin to pulse.
+- **state_change_action** (*Optional*, :ref:`Automation <automation>`): An automation to perform when the load is switched. If a lambda is used the boolean `state` parameter holds the new status.
+- **turn_on_action** (*Optional*, :ref:`Automation <automation>`): An automation to perform when the load is turned on. Can be used to control for example a switch or output component.
+- **turn_off_action** (*Optional*, :ref:`Automation <automation>`): An automation to perform when the load is turned off. `turn_on_action` and `turn_off_action` must be configured together.
 - **restart_cycle_on_state_change** (*Optional*, boolean): Restart a timer of a cycle
   when new state is set. Defaults to `false`.
 
-- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+- All other options from :ref:`Output <config-output>`.
 
 
 {{< note >}}
@@ -81,6 +81,6 @@ actuator heads or fans.
 - {{< docref "/components/light/monochromatic" >}}
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
-- :apiref:`slow_pwm/slow_pwm_output.h`
+- {{< apiref "slow_pwm/slow_pwm_output.h" "slow_pwm/slow_pwm_output.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/slow_pwm.md)
 

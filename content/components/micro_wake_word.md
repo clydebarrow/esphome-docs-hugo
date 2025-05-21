@@ -25,11 +25,11 @@ micro_wake_word:
 ```
 ## Configuration variables:
 
-- **microphone** (**Required**, :ref:`config-microphone-source`): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for audio input.
+- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr{{< docref "/components/microphone/index" "microphone" >}}to use for audio input.
 - **stop_after_detection** (*Optional*, boolean): Whether to stop the component after detecting a wake word. Defaults to `true`.
 - **models** (**Required**, list): The models to use. Only the first model is enabled by default on the first boot. Each model's enabled state is then saved/restored to/from the flash.
 
-  - **id** (*Optional*, :ref:`config-id`): The optional ID used for the model actions below.
+  - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The optional ID used for the model actions below.
   - **model** (**Required**, string): This can be one of:
 
         - A simple name of a model that exists in the official [ESPHome Models repository](https://github.com/esphome/micro-wake-word-models).
@@ -168,6 +168,6 @@ The model JSON file contains the following fields that are all **required** unle
 ## See Also
 
 - {{< docref "voice_assistant/" >}}
-- :apiref:`micro_wake_word/micro_wake_word.h`
+- {{< apiref "micro_wake_word/micro_wake_word.h" "micro_wake_word/micro_wake_word.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/micro_wake_word.md)
 

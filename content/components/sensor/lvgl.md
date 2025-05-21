@@ -8,12 +8,12 @@ title: "LVGL Sensor"
 The `lvgl` sensor platform creates a sensor component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are :ref:`lvgl-widget-arc`, :ref:`lvgl-widget-bar`, :ref:`lvgl-widget-slider` and :ref:`lvgl-widget-spinbox`. A single sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome sensor.
+Supported widgets are [`spinbox`]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}}), [`slider`]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}), [`bar`]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}}) and [`arc`]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}). A single sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome sensor.
 
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the sensor.
-- All other variables from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other variables from :ref:`Sensor <config-sensor>`.
 
 Example:
 
@@ -30,10 +30,10 @@ Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.upda
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [Arc widget]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}})
-- [Bar widget]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}})
-- [Slider widget]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})
-- [Spinbox widget]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}})
+- :ref:`Arc widget <lvgl-widget-arc>`
+- :ref:`Bar widget <lvgl-widget-bar>`
+- :ref:`Slider widget <lvgl-widget-slider>`
+- :ref:`Spinbox widget <lvgl-widget-spinbox>`
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/switch/lvgl" >}}
 - {{< docref "/components/select/lvgl" >}}

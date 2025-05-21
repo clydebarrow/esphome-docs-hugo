@@ -21,8 +21,8 @@ binary_sensor:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to periodically check.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The pin to periodically check.
+- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 ## Activating internal pullups
 
@@ -30,7 +30,7 @@ If you're hooking up a button without an external pullup or see lots of ON/OFF e
 in the log output all the time, this often means the GPIO pin is floating.
 
 For these cases you need to manually enable the pull-up (or pull-down) resistors on the ESP,
-you can do so with the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}).
+you can do so with the :ref:`Pin Schema <config-pin_schema>`.
 
 ```yaml
 binary_sensor:
@@ -45,7 +45,7 @@ binary_sensor:
 ```
 ## Inverting Values
 
-Use the `inverted` property of the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}) to invert the binary
+Use the `inverted` property of the :ref:`Pin Schema <config-pin_schema>` to invert the binary
 sensor:
 
 ```yaml
@@ -61,7 +61,7 @@ binary_sensor:
 ## Debouncing Values
 
 Some binary sensors are a bit unstable and quickly transition between the ON and OFF state while
-they're pressed. To fix this and debounce the signal, use the [binary sensor filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}}):
+they're pressed. To fix this and debounce the signal, use the :ref:`binary sensor filters <binary_sensor-filters>`:
 
 ```yaml
 # Example configuration entry
@@ -90,7 +90,7 @@ binary_sensor:
 ## See Also
 
 - {{< docref "/components/binary_sensor/index" >}}
-- :ref:`config-pin_schema`
-- :apiref:`gpio/binary_sensor/gpio_binary_sensor.h`
+- [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
+- {{< apiref "gpio/binary_sensor/gpio_binary_sensor.h" "gpio/binary_sensor/gpio_binary_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/gpio.md)
 

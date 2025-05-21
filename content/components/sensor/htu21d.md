@@ -6,7 +6,7 @@ title: "HTU21D | Si7021 | SHT21 Temperature & Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The HTU21D Temperature & Humidity component allows you to use HTU21D, Si7021 and SHT21 sensors with
-ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+ESPHome. The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
 
 
 Example sensors:
@@ -35,15 +35,15 @@ sensor:
 ## Configuration variables:
 
 - **temperature** (*Optional*): The information for the temperature sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): The information for the humidity sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **heater** (*Optional*): The information for the heater sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
 - **model** (*Optional*): Possible values are HTU21D, SI7021, SHT21. Defaults to HTU21D.
 
@@ -51,13 +51,13 @@ The heater may be enabled to help correct the reading; see the datasheet for mor
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}
 - {{< docref "sht3xd/" >}}
-- :apiref:`htu21d/htu21d.h`
+- {{< apiref "htu21d/htu21d.h" "htu21d/htu21d.h" >}}
 - [i2cdevlib](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg](https://github.com/jrowberg)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/htu21d.md)
 

@@ -22,12 +22,12 @@ sensor:
 ```
 ## Configuration variables
 
--  **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+-  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 -  **provider** (**Required**, string): The name of the provider node.
--  **remote_id** (*Optional*, :ref:`config-id`): The ID of the original sensor in the provider node. If not specified defaults to the ID configured with `id:`.
+-  **remote_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the original sensor in the provider node. If not specified defaults to the ID configured with `id:`.
 -  **name** (*Optional*, string): The name of the sensor.
 -  **internal** (*Optional*, boolean): Whether the sensor should be exposed via API (e.g. to Home Assistant.) Defaults to `true` if name is not set, required if name is provided.
--  All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+-  All other options from :ref:`Sensor <config-sensor>`.
 
 At least one of `id` and `remote_id` must be configured. 
 
@@ -46,6 +46,6 @@ configured.
 - {{< docref "/components/packet_transport/index" >}}
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< docref "/components/udp" >}}
-- :ref:`automation`
+- [Automation]({{< ref "automations/_index#automation" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/packet_transport.md)
 

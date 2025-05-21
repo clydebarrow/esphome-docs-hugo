@@ -70,7 +70,7 @@ light:
   - `P9813`
 
 - **method** (*Optional*, string): The method used to transmit the data. By default, ESPHome will try to use the best method
-  available for this chipset, ESP platform, and the given pin. See [methods]({{< ref "components/light/neopixelbus#neopixelbus-methods" >}}) for more information.
+  available for this chipset, ESP platform, and the given pin. See :ref:`methods <neopixelbus-methods>` for more information.
 
 - **invert** (*Optional*, boolean): Invert data output, for use with n-type transistors. Defaults to `no`.
 
@@ -79,11 +79,11 @@ light:
 Some chipsets have two data pins to connect, others only have one.
 If you have one line, only specify `pin`, otherwise specify both `clock_pin` and `data_pin`.
 
-- **pin** (**Required**, :ref:`config-pin`): The pin for the data line of the light.
-- **clock_pin** (**Required**, :ref:`config-pin`): The pin for the clock line of the light, for two-wire lights.
-- **data_pin** (**Required**, :ref:`config-pin`): The pin for the data line of the light, for two-wire lights.
+- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the light.
+- **clock_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the clock line of the light, for two-wire lights.
+- **data_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the light, for two-wire lights.
 
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from :ref:`Light <config-light>`.
 
 {{< warning >}}
 On ESP8266 it's highly recommended to connect the light strip to pin
@@ -167,7 +167,7 @@ this method is no longer recommended, but documented here for reference purposes
 - {{< docref "/components/light/index" >}}
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/power_supply" >}}
-- :apiref:`neopixelbus/neopixelbus_light.h`
+- {{< apiref "neopixelbus/neopixelbus_light.h" "neopixelbus/neopixelbus_light.h" >}}
 - [NeoPixelBus library](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/neopixelbus.md)
 

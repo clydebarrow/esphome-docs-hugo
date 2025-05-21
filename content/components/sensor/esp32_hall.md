@@ -32,9 +32,9 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 {{< warning >}}
 The values this sensor outputs were only calibrated with a few magnets and no real "truth" sensor.
@@ -47,9 +47,9 @@ please feel free to do so 😺.
 {{< /warning >}}
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "adc/" >}}
 - {{< docref "/components/esp32" >}}
-- :apiref:`esp32_hall/esp32_hall.h`
+- {{< apiref "esp32_hall/esp32_hall.h" "esp32_hall/esp32_hall.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/esp32_hall.md)
 

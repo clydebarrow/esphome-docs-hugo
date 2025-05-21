@@ -91,7 +91,7 @@ light:
 
   *For addressable segments:*
 
-  - **id** (**Required**, :ref:`config-id`): The ID of the addressable light to be controlled by this segment.
+  - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the addressable light to be controlled by this segment.
   - **from** (**Required**, int): The index of the first LED to address in the segment. Counting starts with 0,
     so first LED is 0.
   - **to** (**Required**, int): The index of the last LED to address in this segment.
@@ -99,17 +99,17 @@ light:
 
   *For single light segments:*
 
-  - **single_light_id** (**Required**, :ref:`config-id`): The ID of a single addressable or non-addressable light.
+  - **single_light_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of a single addressable or non-addressable light.
     If an addressable light is specified, it will be treated as a single light in the partition.
 
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from :ref:`Light <config-light>`.
 
 {{< note >}}
 Do *not* use this platform to control each LED on your addressable light - the light
 objects have a moderate overhead and if you try to create many lights you will run out
 of memory quickly.
 
-See :ref:`light-addressable_set_action` for that.
+See [`light.addressable_set` Action]({{< ref "components/light/_index#light-addressable_set_action" >}}) for that.
 
 {{< /note >}}
 ## See Also
@@ -117,6 +117,6 @@ See :ref:`light-addressable_set_action` for that.
 - {{< docref "/components/light/index" >}}
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/light/neopixelbus" >}}
-- :apiref:`partition/light_partition.h`
+- {{< apiref "partition/light_partition.h" "partition/light_partition.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/partition.md)
 

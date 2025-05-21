@@ -31,12 +31,12 @@ display:
 ```
 ### Configuration variables:
 
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See :ref:`display-engine` for more information.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to re-draw the screen. Defaults to `1s`.
+- **lambda** (*Optional*, :ref:`lambda <config-lambda>`): The lambda to use for rendering the content on the display.
+  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
 - **sdl_options** (*Optional*, string): Build arguments if required to specify include or library paths. Should not be required if SDL2 is properly installed.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See :ref:`display-pages`.
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 
 {{< note >}}
@@ -91,9 +91,9 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 
 ## See Also
 
-- [SDL touchscreen]({{< ref "components/touchscreen/sdl#sdl_touchscreen" >}})
+- :ref:`SDL touchscreen <sdl_touchscreen>`
 - {{< docref "/components/binary_sensor/sdl" "SDL binary sensor" >}}
 - {{< docref "index/" >}}
-- :apiref:`sdl/sdl_esphome.h`
+- {{< apiref "sdl/sdl_esphome.h" "sdl/sdl_esphome.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/sdl.md)
 

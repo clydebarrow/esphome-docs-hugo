@@ -16,7 +16,7 @@ Quality (IAQ) measurement derived from the gas resistance sensor's response to s
 (VOCs). The BSEC software also provides estimated values for CO₂ and Breath Volatile Organic Compounds (b-VOC) using
 a correlation between VOC and CO₂ in a human's exhaled breath.
 
-The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The :ref:`I²C <i2c>` is required to be set up in your configuration for this sensor to work.
 
 [BSEC license agreement](https://www.bosch-sensortec.com/media/boschsensortec/downloads/software/bme688_development_software/2023_04/license_terms_bme688_bme680_bsec.pdf)
 
@@ -64,9 +64,9 @@ bme68x_bsec2_i2c:
 - **temperature_offset** (*Optional*, float): Temperature offset if device is in enclosure and reads too high. This
   value is subtracted from the reading (for example, if the sensor reads 5°C higher than expected, set this to `5`)
   and also corrects the relative humidity readings. Defaults to `0`.
-- **state_save_interval** (*Optional*, :ref:`config-time`): The minimum interval at which to save the calibrated BSEC2
+- **state_save_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The minimum interval at which to save the calibrated BSEC2
   algorithm state to flash so that calibration doesn't have to start from scratch on device restart. Defaults to `6h`.
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation. Use this ID in the sensor
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Use this ID in the sensor
   section to refer to the correct BME68x sensor if you have more than one device. This will also be used to refer to
   the calibrated BSEC2 algorithm state saved to flash.
 
@@ -92,50 +92,50 @@ sensor:
 ```
 ##### Configuration variables:
 
-- **bme68x_bsec2_id** (*Optional*, :ref:`config-id`): The ID of the `bme68x_bsec2_i2c` component sensors will refer
+- **bme68x_bsec2_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `bme68x_bsec2_i2c` component sensors will refer
   to. Useful when multiple devices are present in your configuration.
 
 - **temperature** (*Optional*): Configuration for the temperature sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `LP` for low power
     consumption, sampling every 3 seconds or `ULP` for ultra-low power, sampling every 5 minutes.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **pressure** (*Optional*): Configuration for the pressure sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `LP` for low power
     consumption, sampling every 3 seconds or `ULP` for ultra-low power, sampling every 5 minutes.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): Configuration for the humidity sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `LP` for low power
     consumption, sampling every 3 seconds or `ULP` for ultra-low power, sampling every 5 minutes.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **gas_resistance** (*Optional*): Configuration for the gas sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **iaq** (*Optional*): Configuration for the IAQ sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **iaq_static** (*Optional*): Configuration for the IAQ static sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **iaq_accuracy** (*Optional*): Configuration for the numeric IAQ accuracy sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **co2_equivalent** (*Optional*): Configuration for the CO₂ equivalent sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **breath_voc_equivalent** (*Optional*): Configuration for the Breath VOC equivalent humidity sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 ## Text Sensor
 
@@ -150,12 +150,12 @@ text_sensor:
 ```
 ##### Configuration variables:
 
-- **bme68x_bsec2_id** (*Optional*, :ref:`config-id`): The ID of the `bme68x_bsec2_i2c` component the text sensor
+- **bme68x_bsec2_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `bme68x_bsec2_i2c` component the text sensor
   will refer to. Useful when multiple devices are present in your configuration.
 - **iaq_accuracy** (*Optional*): Configuration for the IAQ accuracy sensor. Shows: `Stabilizing`, `Uncertain`,
   `Calibrating`, `Calibrated`.
 
-  - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All other options from :ref:`Text Sensor <config-text_sensor>`.
 
 ## Index for Air Quality (IAQ) Measurement
 
@@ -241,10 +241,10 @@ saved to flash so that the process does not have to start from scratch on device
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "bme680/" >}}
-- :apiref:`bme68x_bsec2_i2c/bme68x_bsec2_i2c.h`
+- {{< apiref "bme68x_bsec2_i2c/bme68x_bsec2_i2c.h" "bme68x_bsec2_i2c/bme68x_bsec2_i2c.h" >}}
 - [BME680 datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
 - [BME688 datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)
 - [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)

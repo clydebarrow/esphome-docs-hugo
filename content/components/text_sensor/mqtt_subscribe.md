@@ -22,7 +22,7 @@ text_sensor:
 
 - **topic** (**Required**, string): The MQTT topic to listen for string data.
 - **qos** (*Optional*, int): The MQTT QoS to subscribe with. Defaults to `0`.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from :ref:`Text Sensor <config-text_sensor>`.
 
 ## Example Usage for Displays
 
@@ -47,6 +47,6 @@ display:
 ```
 ## See Also
 
-- :apiref:`mqtt_subscribe/text_sensor/mqtt_subscribe_text_sensor.h`
+- {{< apiref "mqtt_subscribe/text_sensor/mqtt_subscribe_text_sensor.h" "mqtt_subscribe/text_sensor/mqtt_subscribe_text_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/mqtt_subscribe.md)
 

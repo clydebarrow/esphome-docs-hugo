@@ -21,7 +21,7 @@ button:
 ```
 ## Configuration variables:
 
-- All options from [Button]({{< ref "components/button/_index#config-button" >}}).
+- All options from :ref:`Button <config-button>`.
 
 ## See Also
 
@@ -30,6 +30,6 @@ button:
 - {{< docref "factory_reset/" >}}
 - {{< docref "/components/switch/safe_mode" >}}
 - {{< docref "template/" >}}
-- :apiref:`safe_mode/safe_mode_button.h`
+- {{< apiref "safe_mode/safe_mode_button.h" "safe_mode/safe_mode_button.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/safe_mode.md)
 

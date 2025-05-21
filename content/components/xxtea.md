@@ -17,6 +17,6 @@ See the API docs for more information on how to use this component.
 ## See Also
 
 - {{< docref "index/" >}}
-- :apiref:`xxtea/xxtea.h`
+- {{< apiref "xxtea/xxtea.h" "xxtea/xxtea.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/xxtea.md)
 

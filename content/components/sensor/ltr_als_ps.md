@@ -10,7 +10,7 @@ title: "Lite-On Ambient Light & Proximity Sensors"
 {{< img src="ltr303-ui.png" alt="Image" caption="LTR-303 Sensor in Home Assistant UI." width="60.0%" class="center" >}}
 
 The `ltr_als_ps` sensor platform allows you to use a range of LiteOn ambient light and proximity sensors
-with ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+with ESPHome. The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
 
 The family of sensors includes:
 
@@ -111,21 +111,21 @@ sensor:
 
 ```
 ## Configuration variables:
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Default is `0x29`.
 - **type** (*Optional*, string): The type of the sensor. Valid values are `ALS_PS` *(default)* for
   integrated sensors, `ALS` for ambient light only or `PS` for proximity only devices.
 - **auto_mode** (*Optional*, boolean): Automatic gain and integration time selection. Defaults to True.
 - **gain** (*Optional*, string): The gain the device will use. Higher values are better in low-light conditions.
   Valid values are `1X` *(default)*, `2X`, `4X`, `8X`, `48X`, `96X`.
-- **integration_time** (*Optional*, :ref:`config-time`):
+- **integration_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})):
   The amount of time sensors are exposed. Longer means more accurate values.
   Valid values are: `50ms` *(default)*, `100ms`, `150ms`, `200ms`, `250ms`, `300ms`, `350ms`, `400ms`.
 - **glass_attenuation_factor** (*Optional*, float): The attenuation factor of glass if it's behind some glass
   or plastic facia.  Default is `1.0` means `100%` transmissivity. `2` means `50%` transmissivity etc.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval for checking the sensors.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval for checking the sensors.
   Defaults to `60s`.
-- **ps_cooldown** (*Optional*, :ref:`config-time`): The "cooldown" period after the proximity sensor is triggered.
+- **ps_cooldown** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The "cooldown" period after the proximity sensor is triggered.
   Helps to avoid multiple calls.  Defaults to `5s`.
 - **ps_gain** (*Optional*, string): The gain the device will use for proximity sensor. Higher values are better in low-light conditions.
   Valid values are `16X` *(default)*, `32X`, `64X`. Only for **LTR-659ALS**.
@@ -141,8 +141,8 @@ sensor:
 ##### Sensors
 This component offers five sensors for ALS-equipped devices and one sensor for PS-equipped devices.
 You can configure all or any subset of these sensors. Each configured sensor is reported separately
-on each `update_interval`. Each is an ESPHome [sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and may be configured
-accordingly; if you don't need to configure additional [sensor]({{< ref "components/sensor/_index#config-sensor" >}}) variables, you
+on each `update_interval`. Each is an ESPHome :ref:`sensor <config-sensor>` and may be configured
+accordingly; if you don't need to configure additional :ref:`sensor <config-sensor>` variables, you
 may simply use the shorthand syntax for the sensor. For example: `ambient_light: "Ambient light"`
 
 - **ambient_light** (*Optional*): Illuminance of ambient light, close to human eye spectre, lx.
@@ -158,6 +158,6 @@ may simply use the shorthand syntax for the sensor. For example: `ambient_light:
 - [LTR-303ALS datasheet](https://github.com/latonita/datasheets-storage/blob/main/sensors/LTR-303ALS-01_DS_V1.pdf)
 - Application note [LTR-303ALS & LTR-329ALS Appendix A](https://github.com/latonita/datasheets-storage/blob/main/sensors/LTR-303%20329_Appendix%20A%20Ver_1.0_22%20Feb%202013.pdf)
 - [LTR-559ALS datasheet](https://github.com/latonita/datasheets-storage/blob/main/sensors/ltr-559als-01_ds_v1.pdf)
-- :apiref:`ltr_als_ps/ltr_als_ps.h`
+- {{< apiref "ltr_als_ps/ltr_als_ps.h" "ltr_als_ps/ltr_als_ps.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ltr_als_ps.md)
 

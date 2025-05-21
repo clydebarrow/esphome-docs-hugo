@@ -6,7 +6,7 @@ title: "Template Datetime"
 {{< seo description="" image="" >}}
 
 The `template` datetime platform allows you to create a datetime with templated values
-using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+using :ref:`lambdas <config-lambda>`.
 
 ```yaml
 datetime:
@@ -41,12 +41,12 @@ datetime:
 ## Configuration variables:
 
 - **type** (**Required**, enum): The type of the datetime. Can be one of `date` or `time`.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, :ref:`lambda <config-lambda>`):
   Lambda to be evaluated every update interval to get the current value of the datetime.
-- **set_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **set_action** (*Optional*, :ref:`Action <config-action>`): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the
   dateime value. The new value is available to lambdas in the `x` variable.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval on which to update the datetime
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval on which to update the datetime
   by executing the `lambda`. Defaults to `60s`.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the template datetime will immediately update the reported state.
@@ -95,11 +95,11 @@ datetime:
       second: 56
 
     ```
-- All other options from [Datetime]({{< ref "components/datetime/_index#config-datetime" >}}).
+- All other options from :ref:`Datetime <config-datetime>`.
 
 ## See Also
 
-- :ref:`automation`
-- :apiref:`template/datetime/template_date.h`
+- [Automation]({{< ref "automations/_index#automation" >}})
+- {{< apiref "template/datetime/template_date.h" "template/datetime/template_date.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/datetime/template.md)
 

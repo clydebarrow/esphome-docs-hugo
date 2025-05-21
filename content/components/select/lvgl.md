@@ -8,13 +8,13 @@ title: "LVGL Select"
 The `lvgl` select platform creates a select from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are :ref:`lvgl-widget-dropdown` and :ref:`lvgl-widget-roller`. A single select supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome select component.
+Supported widgets are [`roller`]({{< ref "components/lvgl/widgets#lvgl-widget-roller" >}}) and [`dropdown`]({{< ref "components/lvgl/widgets#lvgl-widget-dropdown" >}}). A single select supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome select component.
 
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the select.
 - **restore_value**: (*Optional*, bool) Restore the value of the select from non-volatile memory when the device is restarted. Defaults to `false`.
-- All other variables from [Select]({{< ref "components/select/_index#config-select" >}}).
+- All other variables from :ref:`Select <config-select>`.
 
 Example:
 
@@ -31,8 +31,8 @@ Widget-specific actions (`lvgl.dropdown.update`, `lvgl.roller.update`) will trig
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [Roller widget]({{< ref "components/lvgl/widgets#lvgl-widget-roller" >}})
-- [Dropdown widget]({{< ref "components/lvgl/widgets#lvgl-widget-dropdown" >}})
+- :ref:`Roller widget <lvgl-widget-roller>`
+- :ref:`Dropdown widget <lvgl-widget-dropdown>`
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

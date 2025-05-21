@@ -16,10 +16,10 @@ http_request:
 
 ## Configuration variables:
 
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **follow_redirects** (*Optional*, boolean): Enable following HTTP redirects. Defaults to `true`.
 - **redirect_limit** (*Optional*, integer): Maximum amount of redirects to follow when enabled. Defaults to `3`.
-- **timeout** (*Optional*, :ref:`config-time`): Timeout for request. Defaults to `4.5s`.
+- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Timeout for request. Defaults to `4.5s`.
 - **useragent** (*Optional*, string): User-Agent header for requests. Defaults to
   `ESPHome/<version> (https://esphome.io)` where `<version>` is the version of ESPHome the device is running.
   For example: `ESPHome/2024.6.0 (https://esphome.io)`
@@ -28,7 +28,7 @@ http_request:
   bundle is included in the build. This certificate bundle includes the complete list of root certificates from
   Mozilla's NSS root certificate store. **May only be set to true when using the ESP-IDF framework; must be explicitly
   set to false when using the Arduino framework.**
-- **watchdog_timeout** (*Optional*, :ref:`config-time`): Change the watchdog timeout during connection/data transfer.
+- **watchdog_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Change the watchdog timeout during connection/data transfer.
   May be useful on slow connections or connections with high latency. **Do not change this value unless you are
   experiencing device reboots due to watchdog timeouts;** doing so may prevent the device from rebooting due to a
   legitimate problem. **Only available on ESP32 and RP2040**.
@@ -77,13 +77,13 @@ A typical value on Linux for `ca_certificate_path` would be `/etc/ssl/certs/ca-c
     {{< /note >}}
 ## HTTP Request Actions
 
-The `http_request` component supports a number of [actions]({{< ref "automations/actions#config-action" >}}) that can be used to send requests.
+The `http_request` component supports a number of :ref:`actions <config-action>` that can be used to send requests.
 
 {{< anchor "http_request-get_action" >}}
 
 ### `http_request.get` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) sends a GET request.
+This :ref:`action <config-action>` sends a GET request.
 
 ```yaml
 on_...:
@@ -104,21 +104,21 @@ on_...:
 ```
 **Configuration variables:**
 
-- **url** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): URL to which to send the request.
-- **request_headers** (*Optional*, mapping): Map of HTTP headers. Values are [templatable]({{< ref "automations/templates#config-templatable" >}}).
+- **url** (**Required**, string, :ref:`templatable <config-templatable>`): URL to which to send the request.
+- **request_headers** (*Optional*, mapping): Map of HTTP headers. Values are :ref:`templatable <config-templatable>`.
 - **collect_headers** (*Optional*, list of strings): List of the names of HTTP headers to collect from the response.
 - **capture_response** (*Optional*, boolean): when set to `true`, the response data will be captured and placed into
-  the `body` variable as a `std::string` for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}). Defaults to `false`.
+  the `body` variable as a `std::string` for use in :ref:`lambdas <config-lambda>`. Defaults to `false`.
 - **max_response_buffer_size** (*Optional*, integer): The maximum buffer size to be used to store the response.
   Defaults to `1 kB`.
-- **on_response** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform after the request is received.
-- **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform if the request cannot be completed.
+- **on_response** (*Optional*, :ref:`Automation <automation>`): An automation to perform after the request is received.
+- **on_error** (*Optional*, :ref:`Automation <automation>`): An automation to perform if the request cannot be completed.
 
 {{< anchor "http_request-post_action" >}}
 
 ### `http_request.post` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) sends a POST request.
+This :ref:`action <config-action>` sends a POST request.
 
 ```yaml
 on_...:
@@ -134,16 +134,16 @@ on_...:
 ```
 **Configuration variables:**
 
-- **body** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): A HTTP body string to send with request.
-- **json** (*Optional*, mapping): A HTTP body in JSON format. Values are [templatable]({{< ref "automations/templates#config-templatable" >}}).
-  See :ref:`http_request-examples`.
-- All other options from :ref:`http_request-get_action`.
+- **body** (*Optional*, string, :ref:`templatable <config-templatable>`): A HTTP body string to send with request.
+- **json** (*Optional*, mapping): A HTTP body in JSON format. Values are :ref:`templatable <config-templatable>`.
+  See [Examples]({{< ref "components/http_request#http_request-examples" >}}).
+- All other options from [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}).
 
 {{< anchor "http_request-send_action" >}}
 
 ### `http_request.send` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) sends a request.
+This :ref:`action <config-action>` sends a request.
 
 ```yaml
 on_...:
@@ -158,19 +158,19 @@ on_...:
 **Configuration variables:**
 
 - **method** (**Required**, string): HTTP method to use (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`).
-- All other options from :ref:`http_request-post_action` and :ref:`http_request-get_action`.
+- All other options from [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}) and [`http_request.post` Action]({{< ref "components/http_request#http_request-post_action" >}}).
 
 {{< anchor "http_request-on_response" >}}
 
 ## `on_response` Trigger
 
 This automation will be triggered when the HTTP request is complete.
-The following variables are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
+The following variables are available for use in :ref:`lambdas <config-lambda>`:
 
 - `response` as a pointer to `HttpContainer` object which contains `content_length`, `status_code` and `duration_ms``.
 - `std::string get_response_header(const std::string &header_name)` to read response headers (only headers with names specified in the `collect_headers` are available).
 - `body` as `std::string` which contains the response body when `capture_response`
-  (see :ref:`http_request-get_action`) is set to `true`.
+  (see [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}})) is set to `true`.
 
     {{< note >}}
 The `status_code` should be checked before using the `body` variable. A successful response will usually have
@@ -207,7 +207,7 @@ on_...
 This automation will be triggered when the HTTP request fails to complete. This may be e.g. when the network is not available,
 or the server is not reachable. This will *not* be triggered if the request
 completes, even if the response code is not 200. No information on the type of error is available and no variables
-are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}). See example usage above.
+are available for use in :ref:`lambdas <config-lambda>`. See example usage above.
 
 
 {{< anchor "http_request-examples" >}}
@@ -310,7 +310,7 @@ on_...:
 ## See Also
 
 - {{< docref "index/" >}}
-- :apiref:`http_request/http_request.h`
+- {{< apiref "http_request/http_request.h" "http_request/http_request.h" >}}
 - {{< docref "/components/json" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/http_request.md)
 

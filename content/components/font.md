@@ -7,7 +7,7 @@ title: "Font Renderer Component"
 
 ESPHome's graphical rendering engine also has a powerful font drawer which integrates seamlessly into the system. You have the option to use **any** OpenType/TrueType ([.ttf`, `.otf`, `.woff`) font file at **any** size, as well as fixed-size `PCF](https://en.wikipedia.org/wiki/Portable_Compiled_Format) and [BDF](https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format) bitmap fonts.
 
-These fonts can be used in ESPHome's [own rendering engine]({{< ref "components/display/_index#display-engine" >}}) or in the :doc:`LVGL Graphics </c{{< docref "/components/lvgl/index" "LVGL Graphics" >}}
+These fonts can be used in ESPHome's :ref:`own rendering engine <display-engine>` or in the {{< docref "/components/lvgl/index" "LVGL Graphics" >}} component.
 
 To use fonts you can either
 - Just grab a `.ttf`, `.otf`, `.woff`, `.pcf`, or `.bdf` file from somewhere on the internet and place it, for example, inside a `fonts` folder next to your configuration file.
@@ -126,7 +126,7 @@ display:
 
   - **url** (**Required**, string): The URL of the TrueType or bitmap font file.
 
-- **id** (**Required**, :ref:`config-id`): The ID with which you will be able to reference the font later
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID with which you will be able to reference the font later
   in your display code.
 - **size** (*Optional*, int): The desired size of the font. This will be the size (height) of the font in pixels
   when rendered. If you want to use the same font in different sizes, create two font objects.
@@ -179,8 +179,8 @@ to install it using `pip install "pillow==10.4.0"`.
 {{< /note >}}
 ## See Also
 
-- :apiref:`display/display_buffer.h`
-- :ref:`display-engine`
+- {{< apiref "display/display_buffer.h" "display/display_buffer.h" >}}
+- [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}})
 - {{< docref "/components/lvgl/index" >}}
 - [MDI cheatsheet](https://pictogrammers.com/library/mdi/)
 - [MDI font repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/)

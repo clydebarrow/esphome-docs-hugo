@@ -35,11 +35,11 @@ switch:
 ## Configuration variables:
 
 - **switch_datapoint** (**Required**, int): The datapoint id number of the switch.
-- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- All other options from :ref:`Switch <config-switch>`.
 
 ## See Also
 
 - {{< docref "/components/switch/index" >}}
-- :apiref:`tuya/switch/tuya_switch.h`
+- {{< apiref "tuya/switch/tuya_switch.h" "tuya/switch/tuya_switch.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/tuya.md)
 

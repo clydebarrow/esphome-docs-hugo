@@ -10,7 +10,7 @@ ESPHome create a binary for you and then upload that in the ESPEasy web interfac
 
 ## Getting Binary
 
-First follow the guides for the [different supported devices]({{< ref "components/_index#devices" >}}) and create a configuration
+First follow the guides for the :ref:`different supported devices <devices>` and create a configuration
 file. Then, generate and download the binary:
 
 - **Using the Home Assistant add-on/dashboard**: Just click the `COMPILE` button,

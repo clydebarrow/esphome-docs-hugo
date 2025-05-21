@@ -5,7 +5,7 @@ title: "RGB Light"
 
 {{< seo description="" image="" >}}
 
-The `rgb` light platform creates an RGB light from 3 [float output components]({{< ref "components/output/_index#output" >}})
+The `rgb` light platform creates an RGB light from 3 :ref:`float output components <output>`
 (one for each color channel).
 
 {{< img src="rgb-strip.jpg" alt="Image" caption="Example of an RGB LED strip that can be used with this component." width="75.0%" class="center" >}}
@@ -27,7 +27,7 @@ light:
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
 perceived intensity of different colors will generally vary. This can be done by using
-[max_power]({{< ref "components/output/_index#config-output" >}}) on individual output channels:
+:ref:`max_power <config-output>` on individual output channels:
 
 ```yaml
 # Example configuration entry
@@ -52,10 +52,10 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 {{< /note >}}
 ## Configuration variables:
 
-- **red** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the red channel.
-- **green** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the green channel.
-- **blue** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the blue channel.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- **red** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
+- **green** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
+- **blue** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
+- All other options from :ref:`Light <config-light>`.
 
 ## See Also
 
@@ -73,6 +73,6 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
-- :apiref:`rgb/rgb_light_output.h`
+- {{< apiref "rgb/rgb_light_output.h" "rgb/rgb_light_output.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/rgb.md)
 

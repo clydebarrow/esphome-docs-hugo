@@ -20,7 +20,7 @@ let you retrieve detailed power consumption or power production.
 There is plenty of example on the web.
 
 As the communication with the Teleinformation is done using UART, you need to
-have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin`
+have an :ref:`UART bus <uart>` in your configuration with the `rx_pin`
 connected to the output of the optocoupler component. Additionally, you need to
 set the baud rate to 9600bps if counter is configured to work in standard
 mode or 1200bps in historical mode.  To find out which mode you are using,
@@ -51,13 +51,13 @@ In teleinfo platform:
   With historical mode, baudrate of 1200 must be used whereas 9600 must be used in
   standard mode. Defaults to `false`.
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the :ref:`UART Component <uart>` if you want
   to use multiple UART buses.
 
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation or multiple hubs.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation or multiple hubs.
 
 ### Sensor
 
@@ -84,8 +84,8 @@ sensor:
 
 ```
 - **tag_name** (**Required**, string): Specify the tag you want to retrieve from the Teleinformation.
-- **teleinfo_id** (*Optional*, :ref:`config-id`): Specify the ID of used hub.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **teleinfo_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of used hub.
+- All other options from :ref:`Sensor <config-sensor>`.
 
 ### Text Sensor
 
@@ -98,12 +98,12 @@ text_sensor:
 
 ```
 - **tag_name** (**Required**, string): Specify the tag you want to retrieve from the Teleinformation.
-- **teleinfo_id** (*Optional*, :ref:`config-id`): Specify the ID of used hub.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- **teleinfo_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of used hub.
+- All other options from :ref:`Text Sensor <config-text_sensor>`.
 
 
 ## See Also
 
-- :apiref:`teleinfo/teleinfo.h`
+- {{< apiref "teleinfo/teleinfo.h" "teleinfo/teleinfo.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/teleinfo.md)
 

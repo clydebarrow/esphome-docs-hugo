@@ -36,24 +36,24 @@ binary_sensor:
 ```
 ## Configuration variables:
 
-- **nextion_id** (*Optional*, :ref:`config-id`): The ID of the Nextion display.
+- **nextion_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion display.
 - **component_name** (*Optional*, string): The name of the Nextion component.
 - **variable_name** (*Optional*, string): The name of the Nextion variable. Any value over `0` is considered to be **on**
 - **page_id** (*Optional*, string): The ID of the page the component is on. Use `0` for the default page.
 - **component_id** (*Optional*, string): The ID (the number, not name!) of the component to track.
-- **update_interval** (*Optional*, :ref:`config-time`): The duration to update the sensor. If using a :ref:`nextion_custom_binary_sensor_protocol` this should not be used
-- **background_color** (*Optional*, :ref:`config-color`):  The background color
-- **foreground_color** (*Optional*, :ref:`config-color`):  The foreground color
+- **update_interval** (*Optional*, [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}})): The duration to update the sensor. If using a [Time]({{< ref "guides/configuration-types#config-time" >}}) this should not be used
+- **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
+- **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **visible** (*Optional*, boolean):  Visible or not
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 **Touch Sensor:**
 The Nextion will send a **page_id** and **component_id** when the *Send Component ID* check box is selected for the component. To enable
-this native event **page_id** and **component_id** are required. No :ref:`nextion_custom_binary_sensor_protocol` is required. If **page_id** and **component_id** are set then the component will only react to touch events from the Nextion. Setting **component_name** will allow setting options like foreground color.
+this native event **page_id** and **component_id** are required. No [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}}) is required. If **page_id** and **component_id** are set then the component will only react to touch events from the Nextion. Setting **component_name** will allow setting options like foreground color.
 
   {{< note >}}
-`background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [Binary Sensor Settings]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_settings" >}}).
-A [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
+`background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. :ref:`Binary Sensor Settings <nextion_binary_sensor_settings>`.
+A :ref:`Nextion Sensor <nextion_sensor>` with a custom protocol sending the current page can be used to execute the API call :ref:`Update Components By Prefix <update_components_by_prefix>` to update all the components for that page
 
 
   {{< /note >}}
@@ -72,7 +72,7 @@ Example:
 
 
 ```
-See :ref:`nextion_binary_sensor_how_things_update` for additional information
+See [How things Update]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_how_things_update" >}}) for additional information
 
 ### Globals
 The Nextion does not retain data on Nextion page changes. Additionally if a page is changed and the **nextion_component_name** does not exist on that page then
@@ -115,23 +115,23 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, :ref:`config-id`): The ID of the Nextion switch.
-- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The boolean state to publish.
-- **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion switch.
+- **state** (**Required**, string, :ref:`templatable <config-templatable>`): The boolean state to publish.
+- **publish_state** (*Optional*, bool, :ref:`templatable <config-templatable>`): Publish new state to Home Assistant.
   Default is true.
-- **send_to_nextion** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
+- **send_to_nextion** (*Optional*, bool, :ref:`templatable <config-templatable>`): Publish new state to Nextion
   display which will update component. Default is true.
 
 {{< note >}}
-This action can also be written in lambdas. See :ref:`nextion_binary_sensor_lambda_calls`
+This action can also be written in lambdas. See [Lambda Calls]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_lambda_calls" >}})
 
 {{< /note >}}
 {{< anchor "nextion_binary_sensor_lambda_calls" >}}
 
 ### Lambda Calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access some
-more advanced functions (see the full :apiref:`nextion/binary_sensor/nextion_binarysensor.h` for more info).
+From :ref:`lambdas <config-lambda>`, you can call several methods to access some
+more advanced functions (see the full {{< apiref "nextion/binary_sensor/nextion_binarysensor.h" "nextion/binary_sensor/nextion_binarysensor.h" >}} for more info).
 
 {{< anchor "nextion_binary_sensor_set_state" >}}
 
@@ -154,7 +154,7 @@ more advanced functions (see the full :apiref:`nextion/binary_sensor/nextion_bin
 
 ## How things Update
 A Nextion component with an integer value (.val) or Nextion variable will be automatically polled if **update_interval** is set.
-To have the Nextion send the data you can use the :ref:`nextion_custom_binary_sensor_protocol` for this. Add the :ref:`nextion_custom_binary_sensor_protocol` to the
+To have the Nextion send the data you can use the [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}}) for this. Add the [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}}) to the
 component or function you want to trigger the send. Typically this is in *Touch Press Event* but some components, like a slider, should have it
 set in the *Touch Release Event* to capture all the changes. Since this is a custom protocol it can be sent from anywhere (timers/functions/components)
 in the Nextion.
@@ -169,9 +169,9 @@ but make sure you have both checked for a touch sensor.
 Using the above yaml example:
 - "mode" is a touch sensor and will trigger when a user presess the component with ID `8` in page `0`
 - "Radio 0 Binary Sensor" will poll the Nextion for the `r0.val` value and set the state accordingly.
-- "Is Darkmode Set" will NOT poll the Nextion. Either the Nextion will need to use the :ref:`nextion_custom_binary_sensor_protocol` or use a lambda:
+- "Is Darkmode Set" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}}) or use a lambda:
 
-- [Lambda Calls]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_lambda_calls" >}}).
+- :ref:`Lambda Calls <nextion_binary_sensor_lambda_calls>`.
 
 {{< note >}}
 No updates will be sent to the Nextion if it is sleeping. Once it wakes the components will be updated. If a component is invisible , :code:`visible(false)` , then it won't update until it is set to be visible.
@@ -203,6 +203,6 @@ printh FF FF FF
 
 - {{< docref "/components/display/nextion" >}}
 - {{< docref "index/" >}}
-- :apiref:`nextion/binary_sensor/nextion_binarysensor.h`
+- {{< apiref "nextion/binary_sensor/nextion_binarysensor.h" "nextion/binary_sensor/nextion_binarysensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/nextion.md)
 

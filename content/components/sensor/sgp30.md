@@ -7,7 +7,7 @@ title: "SGP30 CO₂ and Volatile Organic Compound Sensor"
 
 The `sgp30` sensor platform allows you to use your Sensirion SGP30 multi-pixel gas
 ([datasheet](https://sensirion.com/media/documents/984E0DD5/61644B8B/Sensirion_Gas_Sensors_Datasheet_SGP30.pdf)) sensors or the SVM30 breakout-boards  ([product page](https://sensirion.com/products/catalog/SVM30/)) with ESPHome.
-The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
 
 {{< img src="eco2-tvoc.png" alt="Image" width="80.0%" class="center" >}}
 
@@ -25,11 +25,11 @@ sensor:
 
 - **eco2** (*Optional*): The information for the CO₂eq. sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **tvoc** (*Optional*): The information for the total Volatile Organic Compounds sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **store_baseline** (*Optional*, boolean): Store the sensor baselines persistently when calculated or updated.
   Defaults to `true`.
@@ -37,12 +37,12 @@ sensor:
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x58`.
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 Advanced:
 
-- **baseline** (*Optional*): The block containing baselines for calibration purposes. See :ref:`sgp30-calibrating` for more info.
+- **baseline** (*Optional*): The block containing baselines for calibration purposes. See [Calibrating Baseline]({{< ref "components/sensor/sgp30#sgp30-calibrating" >}}) for more info.
 
   - **eco2_baseline** (**Required**, int): The eCO2 baseline for calibration purposes. After OTA, this value is used to calibrate the sensor.
 
@@ -50,18 +50,18 @@ Advanced:
 
 - **eco2_baseline** (*Optional*): The information for the CO₂eq. baseline value sensor. Baseline value is published in decimals.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **tvoc_baseline** (*Optional*): The information for the TVOC baseline value sensor. Baseline value is published in decimals.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **compensation** (*Optional*): The block containing sensors used for compensation. Both values must be supplied in order to be able to generate the absolute humidity to be reported to the sensor.
 
-  - **temperature_source** (*Optional*, :ref:`config-id`): Give an external temperature sensor ID
+  - **temperature_source** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give an external temperature sensor ID
     here. The data must be in Celsius. This can improve the sensor's internal calculations.
 
-  - **humidity_source** (*Optional*, :ref:`config-id`): Give an external relative humidity sensor ID
+  - **humidity_source** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give an external relative humidity sensor ID
     here. This can improve the sensor's internal calculations.
 
 {{< anchor "sgp30-calibrating" >}}
@@ -103,12 +103,12 @@ Please note while the sensor is off, baseline values are valid for a maximum of 
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}
 - {{< docref "htu21d/" >}}
 - {{< docref "sht3xd/" >}}
-- :apiref:`sgp30/sgp30.h`
+- {{< apiref "sgp30/sgp30.h" "sgp30/sgp30.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sgp30.md)
 

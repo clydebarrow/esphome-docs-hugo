@@ -14,7 +14,7 @@ The CO_2 measurement also works with the MH-Z16 and MH-Z14 sensors.
 [Revspace](https://revspace.nl/MHZ19)
 
 As the communication with the MH-Z19 is done using UART, you need
-to have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin` connected to the TX pin of the
+to have an :ref:`UART bus <uart>` in your configuration with the `rx_pin` connected to the TX pin of the
 MH-Z19 and the `tx_pin` connected to the RX Pin of the MH-Z19 (it's switched because the
 TX/RX labels are from the perspective of the MH-Z19). Additionally, you need to set the baud rate to 9600.
 
@@ -32,19 +32,19 @@ sensor:
 
 
 - **co2** (*Optional*): The CO_2 data from the sensor in parts per million (ppm).
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
 - **temperature** (*Optional*): The information for the temperature sensor. Please note that this is
   not officially documented in the datasheet and seems to be quite inaccurate.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the :ref:`UART Component <uart>` if you want
   to use multiple UART buses.
 
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for actions.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for actions.
 
 - **automatic_baseline_calibration** (*Optional*, boolean): MH-Z19 has automatic calibration procedure.
   The automatic calibration cycle is every 24 hours after powered on.
@@ -60,7 +60,7 @@ sensor:
 
 ## `mhz19.calibrate_zero` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) executes zero point calibration command on the sensor with the given ID.
+This :ref:`action <config-action>` executes zero point calibration command on the sensor with the given ID.
 
 If you want to execute zero point calibration, the MH-Z19 sensor must work in stable gas environment (400ppm)
 for over 20 minutes and you execute this function.
@@ -71,7 +71,7 @@ on_...:
     - mhz19.calibrate_zero: my_mhz19_id
 
 ```
-You can provide an [action]({{< ref "components/api#api-device-actions" >}}) to perform from Home Assistant
+You can provide an :ref:`action <api-device-actions>` to perform from Home Assistant
 
 ```yaml
 api:
@@ -85,7 +85,7 @@ api:
 
 ## `mhz19.abc_enable` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) enables automatic baseline calibration on the sensor with the given ID.
+This :ref:`action <config-action>` enables automatic baseline calibration on the sensor with the given ID.
 
 ```yaml
 on_...:
@@ -97,7 +97,7 @@ on_...:
 
 ## `mhz19.abc_disable` Action
 
-This [action]({{< ref "automations/actions#config-action" >}}) disables automatic baseline calibration on the sensor with the given ID.
+This :ref:`action <config-action>` disables automatic baseline calibration on the sensor with the given ID.
 
 ```yaml
 on_...:
@@ -120,8 +120,8 @@ switch:
 ```
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [MH-Z19 library](https://github.com/nara256/mhz19_uart) by [@nara356](https://github.com/nara256)
-- :apiref:`mhz19/mhz19.h`
+- {{< apiref "mhz19/mhz19.h" "mhz19/mhz19.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/mhz19.md)
 

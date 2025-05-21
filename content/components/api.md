@@ -70,18 +70,18 @@ document.getElementById("api-key").value = bytesArrToBase64(array);
 Support for configuring the encryption key on-the-fly will be implemented in a future release of Home Assistant.
 
     {{< /note >}}
-- **actions** (*Optional*, list): A list of user-defined actions. See :ref:`api-device-actions`.
-- **reboot_timeout** (*Optional*, :ref:`config-time`): The amount of time to wait before rebooting when no
+- **actions** (*Optional*, list): A list of user-defined actions. See [User-defined Actions]({{< ref "components/api#api-device-actions" >}}).
+- **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before rebooting when no
   client connects to the API. This is needed because sometimes the low level ESP functions report that
   the ESP is connected to the network, when in fact it is not - only a full reboot fixes it.
   Can be disabled by setting this to `0s`. Defaults to `15min`.
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **password** (*Optional*, **Deprecated**, string): The password to protect the API Server with. Defaults
   to no password. It is recommended to use the `encryption` -> `key` above instead of the the `password`.
-- **on_client_connected** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when a client
-  connects to the API. See :ref:`api-on_client_connected_trigger`.
-- **on_client_disconnected** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when a client
-  disconnects from the API. See :ref:`api-on_client_disconnected_trigger`.
+- **on_client_connected** (*Optional*, :ref:`Action <config-action>`): An automation to perform when a client
+  connects to the API. See [`on_client_connected` Trigger]({{< ref "components/api#api-on_client_connected_trigger" >}}).
+- **on_client_disconnected** (*Optional*, :ref:`Action <config-action>`): An automation to perform when a client
+  disconnects from the API. See [`on_client_disconnected` Trigger]({{< ref "components/api#api-on_client_disconnected_trigger" >}}).
 
 {{< anchor "api-actions" >}}
 
@@ -105,12 +105,12 @@ Then:
 ### `homeassistant.event` Action
 
 {{< note >}}
-Be sure to [follow the instructions above]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
+Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
 your device to perform actions.
 
 {{< /note >}}
 When using the native API with Home Assistant, you can create events in the Home Assistant event bus
-straight from ESPHome [Automations]({{< ref "automations/_index#automation" >}}).
+straight from ESPHome :ref:`Automations <automation>`.
 
 ```yaml
 # In some trigger
@@ -130,18 +130,18 @@ Configuration variables:
 - **data_template** (*Optional*, mapping): Optional template data to pass along with the event.
   This is evaluated on the Home Assistant side with Home Assistant's templating engine.
 - **variables** (*Optional*, mapping): Optional variables that can be used in the `data_template`.
-  Values are [lambdas]({{< ref "automations/templates#config-lambda" >}}) and will be evaluated before sending the request.
+  Values are :ref:`lambdas <config-lambda>` and will be evaluated before sending the request.
 
 {{< anchor "api-homeassistant_action-action" >}}
 
 ### `homeassistant.action` Action
 
 {{< note >}}
-Be sure to [follow the instructions above]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
+Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
 your device to perform actions.
 
 {{< /note >}}
-When using the native API with Home Assistant, you can perform Home Assistant actions straight from ESPHome [Automations]({{< ref "automations/_index#automation" >}}).
+When using the native API with Home Assistant, you can perform Home Assistant actions straight from ESPHome :ref:`Automations <automation>`.
 
 ```yaml
 # In some trigger
@@ -172,7 +172,7 @@ Configuration variables:
 - **data_template** (*Optional*, mapping): Optional template data to perform the action with.
   This is evaluated on the Home Assistant side with Home Assistant's templating engine.
 - **variables** (*Optional*, mapping): Optional variables that can be used in the `data_template`.
-  Values are [lambdas]({{< ref "automations/templates#config-lambda" >}}) and will be evaluated before sending the request.
+  Values are :ref:`lambdas <config-lambda>` and will be evaluated before sending the request.
 
 Data structures are not possible, but you can create a script in Home Assistant and call with all
 the parameters in plain format.
@@ -212,12 +212,12 @@ on_...:
 ### `homeassistant.tag_scanned` Action
 
 {{< note >}}
-Be sure to [follow the instructions above]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
+Be sure to :ref:`follow the instructions above <api-actions>` to tell Home Assistant to allow
 your device to make action calls.
 
 {{< /note >}}
 When using the native API with Home Assistant, you can push tag_scanned to Home Assistant
-straight from ESPHome [Automations]({{< ref "automations/_index#automation" >}}).
+straight from ESPHome :ref:`Automations <automation>`.
 
 ```yaml
 # In some trigger
@@ -229,7 +229,7 @@ on_...:
 Configuration variables:
 ````````````````````````
 
-- **tag** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), string): The id of the scanned tag
+- **tag** (**Required**, :ref:`templatable <config-templatable>`, string): The id of the scanned tag
 
 ## Triggers
 
@@ -274,7 +274,7 @@ api:
 
 ## `api.connected` Condition
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if at least one client is connected to the ESPHome
+This :ref:`Condition <config-condition>` checks if at least one client is connected to the ESPHome
 native API. Please note client not only includes Home Assistant, but also ESPHome's OTA log output
 if logs are shown remotely.
 
@@ -375,6 +375,6 @@ never be removed. Features of native API (vs. MQTT):
 
 ## See Also
 
-- :apiref:`api/api_server.h`
+- {{< apiref "api/api_server.h" "api/api_server.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/api.md)
 

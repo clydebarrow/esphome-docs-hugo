@@ -23,12 +23,12 @@ switch:
 ```
 ## Configuration variables:
 
-- **source_id** (**Required**, :ref:`config-id`): The source switch to observe.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The source switch to observe.
+- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 ## See Also
 
 - {{< docref "/components/binary_sensor/index" >}}
-- :apiref:`switch/binary_sensor/switch_binary_sensor.h`
+- {{< apiref "switch/binary_sensor/switch_binary_sensor.h" "switch/binary_sensor/switch_binary_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/switch.md)
 

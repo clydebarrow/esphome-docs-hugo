@@ -6,7 +6,7 @@ title: "Managed Updates via HTTP Request"
 {{< seo description="" image="" >}}
 
 This platform allows you to manage the deployment of updates to your ESPHome devices. It works by reading a
-[JSON manifest file]({{< ref "components/update/http_request#update_http_request-manifest_format" >}}) and using it to determine the presence of an update.
+:ref:`JSON manifest file <update_http_request-manifest_format>` and using it to determine the presence of an update.
 
 To use it, the following components are required in your device's configuration:
 
@@ -26,9 +26,9 @@ update:
 ## Configuration variables:
 
 - **source** (**Required**, string): The URL of the YAML manifest file containing the firmware metadata.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval at which to check for (**not install**) updates.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval at which to check for (**not install**) updates.
   Defaults to 6 hours.
-- All other options from [Update]({{< ref "components/update/_index#config-update" >}}).
+- All other options from :ref:`Update <config-update>`.
 
 {{< anchor "update_http_request-manifest_format" >}}
 
@@ -70,6 +70,6 @@ Note that there may be multiple `builds` specified within a single JSON file.
 - {{< docref "http_request/" >}}
 - {{< docref "/components/ota/http_request" >}}
 - {{< docref "/components/ota/index" >}}
-- :apiref:`update/update_entity.h`
+- {{< apiref "update/update_entity.h" "update/update_entity.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/update/http_request.md)
 

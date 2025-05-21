@@ -70,9 +70,9 @@ climate:
 - **switch_datapoint** (**Required**, int): The datapoint id number of the climate switch (device on/off).
 - **active_state** (*Optional*): Configuration for the Active State detection (or HVAC mode setting and reporting).
 
-    - **datapoint** (**Required**, int): The datapoint id number of the active state - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}).
-    - **heating_value** (*Optional*, int): The active state datapoint value when in heating mode. Defaults to `1` - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}).
-    - **cooling_value** (*Optional*, int): The active state datapoint value when in cooling mode - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}).
+    - **datapoint** (**Required**, int): The datapoint id number of the active state - :ref:`see below <active_state_detection>`.
+    - **heating_value** (*Optional*, int): The active state datapoint value when in heating mode. Defaults to `1` - :ref:`see below <active_state_detection>`.
+    - **cooling_value** (*Optional*, int): The active state datapoint value when in cooling mode - :ref:`see below <active_state_detection>`.
     - **drying_value** (*Optional*, int): The active state datapoint value when in drying mode.
     - **fanonly_value** (*Optional*, int): The active state datapoint value when in fan-only mode.
 - **preset** (*Optional*): Configuration for presets.
@@ -96,11 +96,11 @@ climate:
     - **medium_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `medium` speed.
     - **middle_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `middle` speed. (May set to device's `high` value if you have a `Turbo` option).
     - **high_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `high` speed. (Sometimes called `Turbo`).
-- **heating_state_pin** (*Optional*, :ref:`config-pin`): The input pin indicating that the device is heating - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}). Only used if **active_state_datapoint** is not configured.
-- **cooling_state_pin** (*Optional*, :ref:`config-pin`): The input pin indicating that the device is cooling - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}). Only used if **active_state_datapoint** is not configured.
+- **heating_state_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The input pin indicating that the device is heating - :ref:`see below <active_state_detection>`. Only used if **active_state_datapoint** is not configured.
+- **cooling_state_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The input pin indicating that the device is cooling - :ref:`see below <active_state_detection>`. Only used if **active_state_datapoint** is not configured.
 - **target_temperature_datapoint** (**Required**, int): The datapoint id number of the target temperature.
 - **current_temperature_datapoint** (**Required**, int): The datapoint id number of the current temperature.
-- **temperature_multiplier** (*Optional*, float): A multiplier to modify the incoming and outgoing temperature values - [see below]({{< ref "components/climate/tuya#temperature-multiplier" >}}).
+- **temperature_multiplier** (*Optional*, float): A multiplier to modify the incoming and outgoing temperature values - :ref:`see below <temperature-multiplier>`.
 
 - **reports_fahrenheit** (*Optional*, boolean): Set to `true` if the device reports temperatures in Fahrenheit. ESPHome expects all climate temperatures to be in Celcius, otherwise unexpected conversions will take place when it is published to Home Assistant. Defaults to `false`.
 
@@ -109,7 +109,7 @@ If the device has different multipliers for current and target temperatures, **t
 - **current_temperature_multiplier** (*Optional*, float): A multiplier to modify the current temperature value.
 - **target_temperature_multiplier** (*Optional*, float): A multiplier to modify the target temperature value.
 
-- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+- All other options from :ref:`Climate <config-climate>`.
 
 {{< anchor "active_state_detection" >}}
 
@@ -135,6 +135,6 @@ integers for data reporting and to get a .5 temperature you need to divide by 2 
 
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/climate/index" >}}
-- :apiref:`tuya/climate/tuya_climate.h`
+- {{< apiref "tuya/climate/tuya_climate.h" "tuya/climate/tuya_climate.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/tuya.md)
 

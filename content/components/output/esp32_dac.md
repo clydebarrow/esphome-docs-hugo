@@ -42,9 +42,9 @@ light:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to use DAC on. See above for valid pin numbers.
-- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
-- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The pin to use DAC on. See above for valid pin numbers.
+- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- All other options from :ref:`Output <config-output>`.
 
 ## Use Cases
 
@@ -64,6 +64,6 @@ light:
 - {{< docref "/components/light/monochromatic" >}}
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
-- :apiref:`esp32_dac/esp32_dac.h`
+- {{< apiref "esp32_dac/esp32_dac.h" "esp32_dac/esp32_dac.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/esp32_dac.md)
 

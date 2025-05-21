@@ -22,7 +22,7 @@ for CO₂ and Breath Volatile Organic Compounds (b-VOC) using a correlation betw
 - We recommend using the newer {{< docref "bme68x_bsec2/" "bme68x_bsec2" >}} component whenever possible.
 
 {{< /note >}}
-The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The :ref:`I²C <i2c>` is required to be set up in your configuration for this sensor to work.
 
 {{< img src="bme680-full.jpg" alt="Image" caption="BME680 Temperature, Pressure, Humidity & Gas Sensor." width="50.0%" class="center" >}}
 
@@ -107,51 +107,51 @@ Configuration variables:
   This controls the sampling rate for gas-dependent sensors and will govern the interval at which the sensor heater is operated.
   By default, this rate will also be used for temperature, pressure, and humidity sensors but these can be overridden on a per-sensor level if required.
 
-- **state_save_interval** (*Optional*, :ref:`config-time`): The minimum interval at which to save calibrated BSEC algorithm state to
+- **state_save_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The minimum interval at which to save calibrated BSEC algorithm state to
   flash so that calibration doesn't have to start from zero on device restart. Defaults to `6h`.
 
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation. Use this ID in the sensor section to refer to the correct BME680 if you have more than one device. This will also be used to refer to the calibrated BSEC algorithm state saved to flash.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Use this ID in the sensor section to refer to the correct BME680 if you have more than one device. This will also be used to refer to the calibrated BSEC algorithm state saved to flash.
 
 ## Sensor
 
 Configuration variables:
 
-- **bme680_bsec_id** (*Optional*, :ref:`config-id`): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
+- **bme680_bsec_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `lp` for low power consumption, sampling every 3 seconds or `ulp` for ultra-low power, sampling every 5 minutes.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **pressure** (*Optional*): The information for the pressure sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `lp` for low power consumption, sampling every 3 seconds or `ulp` for ultra-low power, sampling every 5 minutes.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **humidity** (*Optional*): The information for the humidity sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `lp` for low power consumption, sampling every 3 seconds or `ulp` for ultra-low power, sampling every 5 minutes.
-  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All other options from :ref:`Sensor <config-sensor>`.
 
 - **gas_resistance** (*Optional*): The information for the gas sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **iaq** (*Optional*): The information for the IAQ sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **iaq_accuracy** (*Optional*): The information for the numeric IAQ accuracy sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **co2_equivalent** (*Optional*): The information for the CO₂ equivalent sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **breath_voc_equivalent** (*Optional*): The information for the Breath VOC equivalent humidity sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 ## Text Sensor
 
@@ -159,12 +159,12 @@ Accuracy can be reported in text format.
 
 Configuration variables:
 
-- **bme680_bsec_id** (*Optional*, :ref:`config-id`): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
+- **bme680_bsec_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
 
 - **iaq_accuracy** (*Optional*): The information for the IAQ accuracy sensor. Shows: Stabilizing,
   Uncertain, Calibrating, Calibrated.
 
-  - All options from [TextSensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+  - All options from :ref:`TextSensor <config-text_sensor>`.
 
 {{< img src="bme680-bsec-ui.png" alt="Image" width="80.0%" class="center" >}}
 
@@ -173,7 +173,7 @@ Configuration variables:
 The following configuration shows all the available sensors and optional settings for the component. It also includes an example of filtering to guard against
 outliers, limit the number of updates sent to home assistant and reduce storage requirements in other systems such as influxdb used to store historical data.
 
-For each sensor, all other options from [TextSensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) are also available for filtering, automation and so on.
+For each sensor, all other options from :ref:`Sensor <config-sensor>` and :ref:`TextSensor <config-text_sensor>` are also available for filtering, automation and so on.
 
 ```yaml
 bme680_bsec:
@@ -407,10 +407,10 @@ so that the process does not have to start from zero on device restart.
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "bme680/" >}}
-- :apiref:`bme680_bsec/bme680_bsec.h`
+- {{< apiref "bme680_bsec/bme680_bsec.h" "bme680_bsec/bme680_bsec.h" >}}
 - [BME680 Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
 - [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
 - [BSEC Arduino Library](https://github.com/BoschSensortec/BSEC-Arduino-library) by [Bosch Sensortec](https://www.bosch-sensortec.com/)

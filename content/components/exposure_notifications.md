@@ -24,7 +24,7 @@ exposure_notifications:
 ```
 ## Configuration variables:
 
-- **on_exposure_notification** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation
+- **on_exposure_notification** (*Optional*, :ref:`Automation <automation>`): An automation
   to run when an exposure notification bluetooth message is received.
 
   A variable `x` of type :apistruct:`exposure_notifications::ExposureNotification` is passed to the automation.
@@ -75,6 +75,6 @@ exposure_notifications:
 ## See Also
 
 - {{< docref "esp32_ble_tracker/" >}}
-- :apiref:`exposure_notifications/exposure_notifications.h`
+- {{< apiref "exposure_notifications/exposure_notifications.h" "exposure_notifications/exposure_notifications.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/exposure_notifications.md)
 

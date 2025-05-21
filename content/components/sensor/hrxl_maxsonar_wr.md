@@ -29,19 +29,19 @@ sensor:
 ```
 ## Configuration variables:
 
-- All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All options from :ref:`Sensor <config-sensor>`.
 
 Advanced options:
 
-- **uart_id** (*Optional*, :ref:`config-id`): The ID of the [UART bus]({{< ref "components/uart#uart" >}}) you wish to use for this sensor.
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the :ref:`UART bus <uart>` you wish to use for this sensor.
   Use this if you want to use multiple UART buses at once.
 
 
 ## See Also
 
-- :ref:`sensor-filters`
-- :ref:`uart`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [UART Bus]({{< ref "components/uart#uart" >}})
 - {{< docref "template/" >}}
-- :apiref:`hrxl_maxsonar_wr/hrxl_maxsonar_wr.h`
+- {{< apiref "hrxl_maxsonar_wr/hrxl_maxsonar_wr.h" "hrxl_maxsonar_wr/hrxl_maxsonar_wr.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/hrxl_maxsonar_wr.md)
 

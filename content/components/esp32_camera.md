@@ -159,11 +159,11 @@ White Balance Setting:
 
 Automations:
 
-- **on_stream_start** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_stream_start** (*Optional*, :ref:`Automation <automation>`): An automation to perform
   when a stream starts.
-- **on_stream_stop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_stream_stop** (*Optional*, :ref:`Automation <automation>`): An automation to perform
   when a stream stops.
-- **on_image** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation called when image taken. Image is available as `image` variable of type :apistruct:`esp32_camera::CameraImageData`.
+- **on_image** (*Optional*, :ref:`Automation <automation>`): An automation called when image taken. Image is available as `image` variable of type :apistruct:`esp32_camera::CameraImageData`.
 
 Test Setting:
 
@@ -502,6 +502,6 @@ esp32_camera:
 ```
 ## See Also
 
-- :apiref:`esp32_camera/esp32_camera.h`
+- {{< apiref "esp32_camera/esp32_camera.h" "esp32_camera/esp32_camera.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_camera.md)
 

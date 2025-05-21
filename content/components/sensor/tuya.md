@@ -35,12 +35,12 @@ sensor:
 ## Configuration variables:
 
 - **sensor_datapoint** (**Required**, int): The datapoint id number of the sensor.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 ## See Also
 
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/sensor/index" >}}
-- :apiref:`tuya/sensor/tuya_sensor.h`
+- {{< apiref "tuya/sensor/tuya_sensor.h" "tuya/sensor/tuya_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/tuya.md)
 

@@ -19,11 +19,11 @@ button:
 ## Configuration variables:
 
 - **target_mac_address** (**Required**, MAC Address): The MAC Address of the target computer.
-- All other options from [Button]({{< ref "components/button/_index#config-button" >}}).
+- All other options from :ref:`Button <config-button>`.
 
 ## See Also
 
 - {{< docref "template/" >}}
-- :apiref:`wake_on_lan/wake_on_lan.h`
+- {{< apiref "wake_on_lan/wake_on_lan.h" "wake_on_lan/wake_on_lan.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/wake_on_lan.md)
 

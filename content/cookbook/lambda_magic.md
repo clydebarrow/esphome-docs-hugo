@@ -5,14 +5,14 @@ title: "Lambda Magic"
 
 {{< seo description="" image="" >}}
 
-Here are a couple recipes for various interesting things you can do with [Lambdas]({{< ref "automations/templates#config-lambda" >}}) in ESPHome.
-These don't require external components and demonstrate how powerful [Lambdas]({{< ref "automations/templates#config-lambda" >}}) can be.
+Here are a couple recipes for various interesting things you can do with :ref:`Lambdas <config-lambda>` in ESPHome.
+These don't require external components and demonstrate how powerful :ref:`Lambdas <config-lambda>` can be.
 
 {{< anchor "lambda_magic_pages" >}}
 
 ## Display pages alternative
 
-Some displays like :ref:`lcd-pcf8574` don't support pages natively, but you can easily implement them
+Some displays like [lcd_pcf8574 Component]({{< ref "components/display/lcd_display#lcd-pcf8574" >}}) don't support pages natively, but you can easily implement them
 using Lambdas:
 
 ```yaml
@@ -342,8 +342,8 @@ button:
 ```
 ## See Also
 
-- :ref:`config-lambda`
-- :ref:`automation`
+- [Templates]({{< ref "automations/templates#config-lambda" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/lambda_magic.md)
 

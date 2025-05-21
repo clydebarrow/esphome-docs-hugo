@@ -29,7 +29,7 @@ esp32_ble_beacon:
 - **type** (**Required**): The type of beacon to create, currently only supports `iBeacon`.
 - **uuid** (**Required**): The [universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)
   to identify the beacon.
-- **id** (*Optional*, :ref:`config-id`): Manually specify the ID for code generation.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for code generation.
 
 Advanced options:
 
@@ -38,10 +38,10 @@ Advanced options:
   the BLE receiver doesn't use it. Defaults to `10167`.
 - **minor** (*Optional*, int): The iBeacon minor identifier of this beacon. Usually used to
   identify beacons within an iBeacon group. Defaults to `61958`.
-- **min_interval** (*Optional*, :ref:`config-time`): The iBeacon minimum transmit interval in milliseconds from 20 to 10240.
+- **min_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The iBeacon minimum transmit interval in milliseconds from 20 to 10240.
   Setting this less than `max_interval` gives the BLE hardware a better chance to avoid
   collisions with other BLE transmissions. Defaults to the iBeacon specification's defined interval: `100ms`.
-- **max_interval** (*Optional*, :ref:`config-time`): The iBeacon maximum transmit interval in milliseconds from 20 to 10240.
+- **max_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The iBeacon maximum transmit interval in milliseconds from 20 to 10240.
   Setting this greater than `min_interval` gives the BLE hardware a better chance to avoid
   collisions with other BLE transmissions. Defaults to the iBeacon specification's defined interval: `100ms`.
 - **measured_power** (*Optional*, int): The RSSI of the iBeacon as measured 1 meter from the device.
@@ -87,7 +87,7 @@ It can work with multiple beacons simultaneously.
 
 - {{< docref "esp32_ble_tracker/" >}}
 - {{< docref "binary_sensor/ble_presence" >}}
-- :apiref:`esp32_ble_beacon/esp32_ble_beacon.h`
+- {{< apiref "esp32_ble_beacon/esp32_ble_beacon.h" "esp32_ble_beacon/esp32_ble_beacon.h" >}}
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble_beacon.md)
 

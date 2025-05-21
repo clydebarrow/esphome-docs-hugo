@@ -21,12 +21,12 @@ binary_sensor:
 ## Configuration variables:
 
 - **sensor_datapoint** (**Required**, int): The datapoint id number of the binary sensor.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 ## See Also
 
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/binary_sensor/index" >}}
-- :apiref:`tuya/binary_sensor/tuya_binary_sensor.h`
+- {{< apiref "tuya/binary_sensor/tuya_binary_sensor.h" "tuya/binary_sensor/tuya_binary_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/tuya.md)
 

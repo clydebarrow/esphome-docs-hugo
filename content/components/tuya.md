@@ -9,7 +9,7 @@ The `tuya` component creates a serial connection to the Tuya MCU for platforms t
 
 {{< img src="tuya.png" alt="Image" width="40%" class="center" >}}
 
-The `tuya` serial component requires a [UART bus]({{< ref "components/uart#uart" >}}) to be configured.
+The `tuya` serial component requires a :ref:`UART bus <uart>` to be configured.
 Put the `tuya` component in the config and it will list the possible devices for you in the config log.
 
 ```yaml
@@ -54,10 +54,10 @@ Here is another example output for a Tuya ME-81H thermostat:
 ```
 ## Configuration variables:
 
-- **time_id** (*Optional*, :ref:`config-id`): Some Tuya devices support obtaining local time from ESPHome.
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Some Tuya devices support obtaining local time from ESPHome.
   Specify the ID of the {{< docref "time/index" >}} which will be used.
 
-- **status_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Some Tuya devices support WiFi status reporting ONLY through gpio pin.
+- **status_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): Some Tuya devices support WiFi status reporting ONLY through gpio pin.
   Specify the pin reported in the config dump or leave empty otherwise.
   More about this [here](https://developer.tuya.com/en/docs/iot/tuya-cloud-universal-serial-port-access-protocol?id=K9hhi0xxtn9cb#title-6-Query%20working%20mode).
 
@@ -65,7 +65,7 @@ Here is another example output for a Tuya ME-81H thermostat:
 
 Automations:
 
-- **on_datapoint_update** (*Optional*): An automation to perform when a Tuya datapoint update is received. See :ref:`tuya-on_datapoint_update`.
+- **on_datapoint_update** (*Optional*): An automation to perform when a Tuya datapoint update is received. See [`on_datapoint_update`]({{< ref "components/tuya#tuya-on_datapoint_update" >}}).
 
 ## Tuya Automation
 
@@ -122,7 +122,7 @@ Configuration variables:
 
 - **sensor_datapoint** (**Required**, int): The datapoint id number of the sensor.
 - **datapoint_type** (**Required**, string): The datapoint type one of *raw*, *string*, *bool*, *int*, *uint*, *enum*, *bitmask* or *any*.
-- See [Automation]({{< ref "automations/_index#automation" >}}).
+- See :ref:`Automation <automation>`.
 
 
 ## See Also
@@ -135,6 +135,6 @@ Configuration variables:
 - {{< docref "/components/sensor/tuya" >}}
 - {{< docref "/components/text_sensor/tuya" >}}
 - {{< docref "/components/number/tuya" >}}
-- :apiref:`tuya/tuya.h`
+- {{< apiref "tuya/tuya.h" "tuya/tuya.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/tuya.md)
 

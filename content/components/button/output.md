@@ -26,19 +26,19 @@ button:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, :ref:`config-id`): The ID of the output component to use.
-- **duration** (**Required**, :ref:`config-time`): How long the output should be set when the button is pressed.
-- All other options from [Button]({{< ref "components/button/_index#config-button" >}}).
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.
+- **duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): How long the output should be set when the button is pressed.
+- All other options from :ref:`Button <config-button>`.
 
 {{< note >}}
 When used with a {{< docref "/components/output/gpio" >}}, the pin will be low by default and pulled high when the button is
 pressed. To invert this behaviour and have the pin pulled low when the button is pressed, set the `inverted` option
-in the :ref:`config-pin_schema`.
+in the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}).
 
 {{< /note >}}
 ## See Also
 
 - {{< docref "/components/output/index" >}}
-- :apiref:`output/button/output_button.h`
+- {{< apiref "output/button/output_button.h" "output/button/output_button.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/button/output.md)
 

@@ -96,14 +96,14 @@ using the lambda syntax as described/shown above.
 
 ## All Lambda Calls
 
-- [Sensor]({{< ref "components/sensor/_index#sensor-lambda_calls" >}})
-- [Binary Sensor]({{< ref "components/binary_sensor/_index#binary_sensor-lambda_calls" >}})
-- [Switch]({{< ref "components/switch/_index#switch-lambda_calls" >}})
-- [Display]({{< ref "components/display/_index#display-engine" >}})
-- [Cover]({{< ref "components/cover/_index#cover-lambda_calls" >}})
-- [Text Sensor]({{< ref "components/text_sensor/_index#text_sensor-lambda_calls" >}})
-- [Stepper]({{< ref "components/stepper/_index#stepper-lambda_calls" >}})
-- [Number]({{< ref "components/number/_index#number-lambda_calls" >}})
+- :ref:`Sensor <sensor-lambda_calls>`
+- :ref:`Binary Sensor <binary_sensor-lambda_calls>`
+- :ref:`Switch <switch-lambda_calls>`
+- :ref:`Display <display-engine>`
+- :ref:`Cover <cover-lambda_calls>`
+- :ref:`Text Sensor <text_sensor-lambda_calls>`
+- :ref:`Stepper <stepper-lambda_calls>`
+- :ref:`Number <number-lambda_calls>`
 
 ## See Also
 

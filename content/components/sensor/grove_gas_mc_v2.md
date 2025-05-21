@@ -14,12 +14,12 @@ Compounds (VOCs).
 The Grove Multichannel Gas Sensor V2 is a qualitative, not quantitative, sensor.
 This means values reported back are raw ADC values. Values are **not** in a common unit
 of measurement, such as PPM (parts per million). If you have known baseline readings
-for any of the gases, :ref:`sensor-filters` could be used to calibrate the raw readings.
+for any of the gases, [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}) could be used to calibrate the raw readings.
 
 {{< /note >}}
 {{< img src="grove-gas-mc-v2.png" alt="Image" caption="Grove Multichannel Gas Sensor V2" width="50.0%" class="center" >}}
 
-The communication with this sensor is done via [I²C Bus]({{< ref "components/i2c#i2c" >}}), so you need to have
+The communication with this sensor is done via :ref:`I²C Bus <i2c>`, so you need to have
 an `i2c:` section in your config for this integration to work.
 
 ```yaml
@@ -38,20 +38,20 @@ sensor:
 ## Configuration variables:
 
 - **nitrogen_dioxide** (**Required**): The Nitrogen Dioxide sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 - **ethanol** (**Required**): The Ethanol (C2H5OH) sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 - **carbon_monoxide** (**Required**): The Carbon Monoxide sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 - **tvoc** (**Required**): The Total Volatile Organic Compounds (TVOC) sensor data.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from :ref:`Sensor <config-sensor>`.
 
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 Advanced:
 
-- **address** (*Optional*, int): The [I²C]({{< ref "components/i2c#i2c" >}}) address of the sensor.
+- **address** (*Optional*, int): The :ref:`I²C <i2c>` address of the sensor.
   Defaults to `0x08`
 
 {{< anchor "grove-gas-mc-v2-preheating" >}}
@@ -68,8 +68,8 @@ than 6 months.
 
 ## See Also
 
-- :ref:`sensor-filters`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - [Grove Multichannel V2 Library](https://github.com/Seeed-Studio/Seeed_Arduino_MultiGas)
-- :apiref:`grove_gas_mc_v2/grove_gas_mc_v2.h`
+- {{< apiref "grove_gas_mc_v2/grove_gas_mc_v2.h" "grove_gas_mc_v2/grove_gas_mc_v2.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/grove_gas_mc_v2.md)
 

@@ -20,7 +20,7 @@ text_sensor:
 ## Configuration variables:
 
 - **hide_timestamp** (*Optional*, boolean): Allows you to hide the compilation timestamp from the version string. Defaults to `false`.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from :ref:`Text Sensor <config-text_sensor>`.
 
 ## Disabling the compilation timestamp:
 
@@ -39,6 +39,6 @@ This will, for example, change the output of the sensor from:
 
 ## See Also
 
-- :apiref:`version/version_text_sensor.h`
+- {{< apiref "version/version_text_sensor.h" "version/version_text_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/version.md)
 

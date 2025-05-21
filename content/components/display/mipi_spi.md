@@ -93,14 +93,14 @@ display:
 ```
 ##### Configuration options
 
-All [graphical display configuration]({{< ref "components/display/_index#display-configuration" >}}) options are available, plus the following. For integrated display boards
+All :ref:`graphical display configuration<display-configuration>` options are available, plus the following. For integrated display boards
 most of the configuration will be set by default, but can be overridden if needed.
 
 - **model** (**Required**): Chosen from the lists of supported chips and models above, or `CUSTOM` for custom displays.
 - **bus_mode** (*Optional*): Select the SPI bus mode for the display driver. Options are `single` (default), `quad` and `octal`.
-- **dc_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The DC pin. Not required or permitted for quad SPI.
-- **reset_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The RESET pin.
-- **cs_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The CS pin.
+- **dc_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The DC pin. Not required or permitted for quad SPI.
+- **reset_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The RESET pin.
+- **cs_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The CS pin.
 
 {{< note >}}
 A DC pin is required for single SPI and 8 bit parallel, the CS pin and RESET pin will only be needed if the specific board has those
@@ -108,7 +108,7 @@ pins wired to GPIOs. When using a board with integrated display, the pins will b
 default, but can be overridden in the config if needed.
 
 {{< /note >}}
-- **enable_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): An optional pin to enable the display, if required. A list of pins can be provided for displays that require multiple enable pins. A full pin configuration may be provided
+- **enable_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): An optional pin to enable the display, if required. A list of pins can be provided for displays that require multiple enable pins. A full pin configuration may be provided
   to set the pin mode and inverted property. By default the pin will be driven high to enable the display.
 - **brightness** (*Optional*, int): The initial brightness of the display, for AMOLED displays only. This should be a value from 0 to 255, and defaults to 0xD0.
 - **color_order** (*Optional*): Should be one of `bgr` (default) or `rgb`. This specifies the order of the color channels in the display panel. The default is `bgr` for most displays, but some displays may require `rgb`. It does not affect the color order of the display buffer, which is always RGB.
@@ -192,6 +192,6 @@ A touchscreen, if present, must be configured separately. See the {{< docref "/c
 ## See Also
 
 - {{< docref "index/" >}}
-- :apiref:`mipi_spi/mipi_spi.h`
+- {{< apiref "mipi_spi/mipi_spi.h" "mipi_spi/mipi_spi.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/mipi_spi.md)
 

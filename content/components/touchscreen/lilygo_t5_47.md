@@ -7,7 +7,7 @@ title: "Lilygo T5 4.7\" Touchscreen"
 
 The `liygo_t5_47` touchscreen platform allows using the touchscreen controller
 for the Lilygo T5 4.7" e-Paper Display with ESPHome.
-The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this touchscreen to work.
+The :ref:`I²C <i2c>` is required to be set up in your configuration for this touchscreen to work.
 
 ```yaml
 # Example configuration entry
@@ -19,13 +19,13 @@ touchscreen:
 ```
 ## Configuration variables:
 
-- **id** (*Optional*, :ref:`config-id`): Manually set the ID of this touchscreen.
-- **interrupt_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The touch detection pin. Must be `GPIO13`.
-- All other options from :ref:`config-touchscreen`.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
+- **interrupt_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The touch detection pin. Must be `GPIO13`.
+- All other options from [Base Touchscreen Configuration]({{< ref "components/touchscreen/_index#config-touchscreen" >}}).
 
 ## See Also
 
 - {{< docref "index/" "Touchscreen" >}}
-- :apiref:`lilygo_t5_47/touchscreen/lilygo_t5_47_touchscreen.h`
+- {{< apiref "lilygo_t5_47/touchscreen/lilygo_t5_47_touchscreen.h" "lilygo_t5_47/touchscreen/lilygo_t5_47_touchscreen.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/touchscreen/lilygo_t5_47.md)
 

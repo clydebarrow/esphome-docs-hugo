@@ -51,7 +51,7 @@ fan:
 - **direction_datapoint** (*Optional*, int): The datapoint id number of the direction
   switch. Supported by some ceiling fans.
 - **speed_count** (*Optional*, int): Set the number of supported discrete speed levels. Defaults to `3`.
-- All other options from [Fan]({{< ref "components/fan/_index#config-fan" >}}).
+- All other options from :ref:`Fan <config-fan>`.
 
 {{< note >}}
 The MCU on the Tuya dimmer handles the LEDs and they dont seem to be controllable
@@ -62,6 +62,6 @@ over the serial bus.
 
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/fan/index" >}}
-- :apiref:`tuya/fan/tuya_fan.h`
+- {{< apiref "tuya/fan/tuya_fan.h" "tuya/fan/tuya_fan.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/tuya.md)
 

@@ -23,12 +23,12 @@ switch:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, :ref:`config-id`): The ID of the output component to use.
-- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.
+- All other options from :ref:`Switch <config-switch>`.
 
 ## See Also
 
 - {{< docref "/components/output/index" >}}
-- :apiref:`output/switch/output_switch.h`
+- {{< apiref "output/switch/output_switch.h" "output/switch/output_switch.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/switch/output.md)
 

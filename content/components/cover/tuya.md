@@ -39,7 +39,7 @@ cover:
 - **max_value** (*Optional*, int): the highest position value, meaning cover opened. Defaults to 255.
 - **invert_position** (*Optional*, boolean): Sets the direction of travel to be inverted, if direction_datapoint is configured.
 - **invert_position_report** (*Optional*, boolean): Invert reported position percentages calculated from `min_value` and `max_value` i.e. 70% becomes 30%.  Defaults to false.
-- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from :ref:`Cover <config-cover>`.
 
 ## Supported devices
 
@@ -75,6 +75,6 @@ In this condition, it will go into an error / uncalibrated state when it next tr
 
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/cover/index" >}}
-- :apiref:`tuya/cover/tuya_cover.h`
+- {{< apiref "tuya/cover/tuya_cover.h" "tuya/cover/tuya_cover.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/tuya.md)
 

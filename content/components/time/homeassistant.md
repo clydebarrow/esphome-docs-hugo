@@ -11,7 +11,7 @@ to Home Assistant will be used to periodically synchronize the current time.
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
-:ref:`connecting-your-device-to-home-assistant`.
+[Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
 
 {{< /note >}}
 ```yaml
@@ -23,7 +23,7 @@ time:
 ```
 ## Configuration variables
 
-- All options from :ref:`base_time_config`.
+- All options from [Base Time Configuration]({{< ref "components/time/_index#base_time_config" >}}).
 
 
 ## See Also

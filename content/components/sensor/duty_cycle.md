@@ -23,16 +23,16 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to observe for the duty
+- **pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The pin to observe for the duty
   cycle.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
-- **id** (*Optional*, :ref:`config-id`): Set the ID of this sensor for use in lambdas.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- All other options from :ref:`Sensor <config-sensor>`.
 
 ## See Also
 
-- :ref:`sensor-filters`
-- :apiref:`duty_cycle/duty_cycle_sensor.h`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- {{< apiref "duty_cycle/duty_cycle_sensor.h" "duty_cycle/duty_cycle_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/duty_cycle.md)
 

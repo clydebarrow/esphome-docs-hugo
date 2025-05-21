@@ -36,10 +36,10 @@ matrix_keypad:
 ```
 Configuration variables:
 
-- **id** (*Optional*, :ref:`config-id`): Set the ID of this device for use in lambdas.
-- **rows** (**Required**, list): A list of [pins]({{< ref "guides/configuration-types#config-pin_schema" >}}) where the horrizontal
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this device for use in lambdas.
+- **rows** (**Required**, list): A list of :ref:`pins <config-pin_schema>` where the horrizontal
   matrix lines are connected, in order from top to bottom.  These pins need to be output capable.
-- **columns** (**Required**, list): A list of [pins]({{< ref "guides/configuration-types#config-pin_schema" >}}) where the vertical
+- **columns** (**Required**, list): A list of :ref:`pins <config-pin_schema>` where the vertical
   matrix lines are connected, in order from left to right.  These pins need to be input capable
   with pullups enabled.  If there is no internal pullup, then an external one is required.
 - **keys** (*Optional*, string): The keys present on the matrix, from top left to bottom right,
@@ -68,30 +68,30 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **keypad_id** (*Optional*, :ref:`config-id`): The ID of the keypad to process keypresses from.
-- **id** (*Optional*, :ref:`config-id`): Set the ID of this key for use in lambdas.
+- **keypad_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the keypad to process keypresses from.
+- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this key for use in lambdas.
 - **row** (*Optional*, integer): The row of the key.
 - **col** (*Optional*, integer): The column of the key.
 - **key** (*Optional*, string): The key from `keys` configuration entry above.
-- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
 
 Either the `row` and `col` parameters, or the `key` parameter has to be provided.
 
 
 ## Automations:
 
-- **on_key** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_key** (*Optional*, :ref:`Automation <automation>`): An automation to perform
   when a key has been pressed. The key is in a variable called `x`.
 
 
 {{< note >}}
 Automatic handling of multiple keys (e.g. PIN code entry) is possible with the
-the [Key Collector]({{< ref "components/key_collector#key_collector" >}}) component.
+the :ref:`Key Collector <key_collector>` component.
 
 {{< /note >}}
 ## See Also
 
 - {{< docref "/components/key_collector" >}}
-- [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
+- :ref:`Binary Sensor <config-binary_sensor>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/matrix_keypad.md)
 

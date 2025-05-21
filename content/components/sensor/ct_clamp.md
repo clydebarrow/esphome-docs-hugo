@@ -32,17 +32,17 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, :ref:`config-id`): The source sensor to measure voltage values from.
-- **sample_duration** (*Optional*, :ref:`config-time`): The time duration to sample the current clamp
+- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The source sensor to measure voltage values from.
+- **sample_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration to sample the current clamp
   with. Higher values can increase accuracy. Defaults to `200ms` which would be 10 whole cycles on a 50Hz system.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`. The **update_interval** for `ct_clamp` has to be greater than **sample_duration**.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from :ref:`Sensor <config-sensor>`.
 
 ## Calibration
 
 This sensor needs calibration to show correct values, for this you can use the
-[calibrate_linear]({{< ref "#sensor-filter-calibrate_linear" >}}) sensor filter. First, hook up a known
+:ref:`calibrate_linear <sensor-filter-calibrate_linear>` sensor filter. First, hook up a known
 current load like a lamp that uses a known amount of current.
 
 Then switch it on and see what value the CT clamp sensor reports. For example in the configuration below
@@ -72,6 +72,6 @@ Recompile and upload, now your CT clamp sensor is calibrated!
 - [CT Clamp Guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
 - {{< docref "adc/" >}}
 - {{< docref "ads1115/" >}}
-- :apiref:`sensor/ct_clamp_sensor.h`
+- {{< apiref "sensor/ct_clamp_sensor.h" "sensor/ct_clamp_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ct_clamp.md)
 

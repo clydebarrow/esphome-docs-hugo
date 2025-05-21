@@ -19,12 +19,12 @@ binary_sensor:
 ```
 ## Configuration variables:
 
-- All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}). (Inverted mode is not supported)
+- All options from :ref:`Binary Sensor <config-binary_sensor>`. (Inverted mode is not supported)
 
 ## See Also
 
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< docref "/components/mqtt" >}}
-- :apiref:`status/status_binary_sensor.h`
+- {{< apiref "status/status_binary_sensor.h" "status/status_binary_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/status.md)
 

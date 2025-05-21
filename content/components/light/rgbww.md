@@ -6,8 +6,8 @@ title: "RGBWW Light"
 {{< seo description="" image="" >}}
 
 The `rgbww` light platform creates an RGBWW (cold white + warm white)
-light from 5 [float output components]({{< ref "components/output/_index#output" >}}) (one for each channel). The cold and warm
-white channels can be controlled individually or together, see :ref:`cwww_mixing` for more information.
+light from 5 :ref:`float output components <output>` (one for each channel). The cold and warm
+white channels can be controlled individually or together, see [Mixing]({{< ref "components/light/cwww#cwww_mixing" >}}) for more information.
 
 ```yaml
 # Example configuration entry
@@ -27,7 +27,7 @@ light:
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
 perceived intensity of different colors will generally vary. This can be done by using
-[max_power]({{< ref "components/output/_index#config-output" >}}) on individual output channels:
+:ref:`max_power <config-output>` on individual output channels:
 
 
 ```yaml
@@ -61,17 +61,17 @@ time: `color_interlock`.
 Setting this option to `true` will result in the light having two color modes available, `RGB` and `COLD_WARM_WHITE`.
 When the `RGB` color mode is active, the white leds are turned off, and when the `COLD_WARM_WHITE` color mode is active,
 the RGB leds are turned off. Switching between these modes can be done from the Home Assistant interface, or by using
-the `color_mode` option of the [light control actions]({{< ref "components/light/_index#light-turn_on_action" >}}).
+the `color_mode` option of the :ref:`light control actions <light-turn_on_action>`.
 
 
 ## Configuration variables:
 
-- **red** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the red channel.
-- **green** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the green channel.
-- **blue** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the blue channel.
-- **cold_white** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the cold
+- **red** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
+- **green** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
+- **blue** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
+- **cold_white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the cold
   white channel.
-- **warm_white** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the warm
+- **warm_white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the warm
   white channel.
 - **cold_white_color_temperature** (*Optional*, float): The color temperature (in
   [mireds](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the cold white channel. Note that when the color interlock
@@ -84,8 +84,8 @@ the `color_mode` option of the [light control actions]({{< ref "components/light
   reduces the possible overall brightness but is necessary for some power supplies that are not able to run
   both channels at full brightness at once. Defaults to `false`.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See :ref:`rgbw_color_interlock` for more information. Defaults to `false`.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+  time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
+- All other options from :ref:`Light <config-light>`.
 
 ## See Also
 
@@ -100,6 +100,6 @@ the `color_mode` option of the [light control actions]({{< ref "components/light
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
-- :apiref:`rgbww/rgbww_light_output.h`
+- {{< apiref "rgbww/rgbww_light_output.h" "rgbww/rgbww_light_output.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/rgbww.md)
 

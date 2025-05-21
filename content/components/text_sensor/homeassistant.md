@@ -11,7 +11,7 @@ states from your Home Assistant instance using the {{< docref "/components/api" 
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
-:ref:`connecting-your-device-to-home-assistant`.
+[Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
 
 {{< /note >}}
 ```yaml
@@ -38,12 +38,12 @@ text_sensor:
 - **entity_id** (**Required**, string): The entity ID to import from Home Assistant.
 - **attribute** (*Optional*, string): The name of the state attribute to import from the
   specified entity. The entity state is used when this option is omitted.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from :ref:`Text Sensor <config-text_sensor>`.
 
 ## See Also
 
-- :ref:`sensor-filters`
-- :ref:`automation`
-- :apiref:`homeassistant/text_sensor/homeassistant_text_sensor.h`
+- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Automation]({{< ref "automations/_index#automation" >}})
+- {{< apiref "homeassistant/text_sensor/homeassistant_text_sensor.h" "homeassistant/text_sensor/homeassistant_text_sensor.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/homeassistant.md)
 

@@ -78,21 +78,21 @@ sensor:
 
 - **level** (*Optional*): The percentage of full for the tank sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **distance** (*Optional*): The raw distance/depth of the liquid for the sensor in mm.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **temperature** (*Optional*): The information for the temperature sensor.
   This temperature is on the sensor and is not calibrated to ambient temperature.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 - **battery_level** (*Optional*): The information for the battery percentage
   sensor.  Sensor uses a standard CR2032 battery.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from :ref:`Sensor <config-sensor>`.
 
 ## Tank Types
 
@@ -138,6 +138,6 @@ ESPHome therefore has no impact on the battery life of the device.
 
 - {{< docref "/components/esp32_ble_tracker" >}}
 - {{< docref "/components/sensor/index" >}}
-- :apiref:`mopeka_std_check/mopeka_std_check.h`
+- {{< apiref "mopeka_std_check/mopeka_std_check.h" "mopeka_std_check/mopeka_std_check.h" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/mopeka_std_check.md)
 

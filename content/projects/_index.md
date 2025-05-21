@@ -10,6 +10,4 @@ projects from this page. Connect your device to your PC, a few clicks in the bro
 and your ESPHome device is ready to do its magic - as a Bluetooth proxy or a media player.
 No programming or other software required.
 
-
-   :file: ./installer.html
-
+{{< html_file file="./installer.html"  >}}

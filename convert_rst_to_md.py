@@ -1258,7 +1258,7 @@ def process_raw_html_button(lines, i):
     # Collect HTML content
     html_content = []
     raw_html_content = []
-    while i < len(lines) and (not lines[i].strip() or lines[i].startswith(' ' * (raw_html_indent + 4))):
+    while i < len(lines) and (not lines[i].strip() or lines[i].startswith(' ' * (raw_html_indent + 3))):
         raw_html_content.append(lines[i].lstrip())
         if lines[i].strip():
             html_content.append(lines[i].strip())
@@ -1266,6 +1266,7 @@ def process_raw_html_button(lines, i):
     
     # Join the HTML content
     html = ' '.join(html_content)
+    print("Raw html: ", html)
     
     # Check if it's a button pattern
     href_match = re.search(r'<a\s+href="([^"]+)"[^>]*>', html)
@@ -1493,7 +1494,7 @@ def scan_image_references(input_dir):
                             image_filename = os.path.basename(image_path)
                             entry = image_map.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, rst_file))
                             entry.increment()
-                            print(f"Found image: {image_filename} in {rel_path}")
+                            #print(f"Found image: {image_filename} in {rel_path}")
                 
                 # Find images in imgtable directives
                 i = 0
@@ -1546,7 +1547,7 @@ def scan_image_references(input_dir):
                                     image_filename = os.path.basename(image_path)
                                     entry = image_map.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, rst_file))
                                     entry.increment()
-                                    print(f"Found image in imgtable: {image_filename} in {rel_path}")
+                                    #print(f"Found image in imgtable: {image_filename} in {rel_path}")
                                 else:
                                     print(f"Image not found: {image_path} in {abs_image_path}")
                             
@@ -1588,7 +1589,7 @@ def process_file(rst_file, output_dir, input_dir):
             f.write(md_content)
         
         print(f"Converted {rst_file} -> {output_path}")
-        print(f"Output file size: {len(md_content)} bytes")
+        #print(f"Output file size: {len(md_content)} bytes")
         
         return output_path
     except Exception as e:
@@ -1601,7 +1602,7 @@ def process_file(rst_file, output_dir, input_dir):
 def get_rst_content(input_dir, rst_file):
     with open(rst_file, 'r', encoding='utf-8') as f:
         rst_content = f.read()
-    print(f"File size: {len(rst_content)} bytes")
+    #print(f"File size: {len(rst_content)} bytes")
     # Get the relative path of the file
     rel_path = os.path.relpath(rst_file, input_dir)
     # Process includes before conversion

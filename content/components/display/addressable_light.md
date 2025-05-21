@@ -8,7 +8,7 @@ title: "Addressable Light"
 The `addressable_light` display platform allows to display text and graphics on an addressable
 light that has been arranged in a display matrix.
 
-The display requires that an :apiclass:`AddressableLight <light::AddressableLight>` component, such as
+The display requires that an {{< apiclass "AddressableLight" "light::AddressableLight" >}} component, such as
 {{< docref "/components/light/neopixelbus" >}} or {{< docref "/components/light/fastled" >}}, be defined.
 
 {{< img src="addressable_light.jpg" alt="Image" caption="WS2812B Addressable Light Display" width="75.0%" class="center" >}}
@@ -46,7 +46,7 @@ display:
 - **pixel_mapper** (*Optional*, :ref:`lambda <config-lambda>`): A lambda that returns the integer address of the LED
   given the supplied the `x` and `y` pixel coordinate. By default, a left-to-right direct pixel mapper is used.
 - **lambda** (*Optional*, :ref:`lambda <config-lambda>`): The lambda to use for rendering the content on the display.
-  `it` will be an instance of :apiclass:`DisplayBuffer <display::DisplayBuffer>`.
+  `it` will be an instance of {{< apiclass "DisplayBuffer" "display::DisplayBuffer" >}}.
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 

@@ -84,7 +84,7 @@ The type of `x` variable is depending on `datapoint_type` configuration variable
 - *uint*: `x` is `uint32_t`
 - *enum*: `x` is `uint8_t`
 - *bitmask*: `x` is `uint32_t`
-- *any*: `x` is :apistruct:`tuya::TuyaDatapoint`
+- *any*: `x` is {{< apistruct "tuya::TuyaDatapoint" "tuya::TuyaDatapoint" >}}
 
 ```yaml
 tuya:

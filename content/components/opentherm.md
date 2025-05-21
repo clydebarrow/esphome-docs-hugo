@@ -358,7 +358,7 @@ opentherm:
                 }
 
 ```
-You can check the :apistruct:`OpenthermData <opentherm::OpenthermData>` for the list of all available fields.
+You can check the {{< apistruct "OpenthermData" "opentherm::OpenthermData" >}} for the list of all available fields.
 
 ## Examples
 

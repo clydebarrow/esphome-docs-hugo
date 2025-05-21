@@ -27,7 +27,7 @@ exposure_notifications:
 - **on_exposure_notification** (*Optional*, :ref:`Automation <automation>`): An automation
   to run when an exposure notification bluetooth message is received.
 
-  A variable `x` of type :apistruct:`exposure_notifications::ExposureNotification` is passed to the automation.
+  A variable `x` of type {{< apistruct "exposure_notifications::ExposureNotification" "exposure_notifications::ExposureNotification" >}} is passed to the automation.
 
 An exposure notification payload contains:
 

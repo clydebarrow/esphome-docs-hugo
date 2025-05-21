@@ -135,68 +135,68 @@ to be used later.
 ## Automations:
 
 - **on_abbwelcome** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  ABB-Welcome code has been decoded. A variable `x` of type :apiclass:`remote_base::ABBWelcomeData`
+  ABB-Welcome code has been decoded. A variable `x` of type {{< apiclass "remote_base::ABBWelcomeData" "remote_base::ABBWelcomeData" >}}
   is passed to the automation for use in lambdas.
 - **on_aeha** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  AEHA remote code has been decoded. A variable `x` of type :apistruct:`remote_base::AEHAData`
+  AEHA remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::AEHAData" "remote_base::AEHAData" >}}
   is passed to the automation for use in lambdas.
 - **on_beo4** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  B&O Beo4 infrared remote code has been decoded. A variable `x` of type :apistruct:`remote_base::Beo4Data`
+  B&O Beo4 infrared remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::Beo4Data" "remote_base::Beo4Data" >}}
   is passed to the automation for use in lambdas.
 - **on_byronsx** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Byron SX doorbell RF code has been decoded. A variable `x` of type :apistruct:`remote_base::ByronSXData`
+  Byron SX doorbell RF code has been decoded. A variable `x` of type {{< apistruct "remote_base::ByronSXData" "remote_base::ByronSXData" >}}
   is passed to the automation for use in lambdas.
 - **on_canalsat** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  CanalSat remote code has been decoded. A variable `x` of type :apistruct:`remote_base::CanalSatData`
+  CanalSat remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::CanalSatData" "remote_base::CanalSatData" >}}
   is passed to the automation for use in lambdas.
 - **on_canalsatld** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  CanalSatLD remote code has been decoded. A variable `x` of type :apistruct:`remote_base::CanalSatLDData`
+  CanalSatLD remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::CanalSatLDData" "remote_base::CanalSatLDData" >}}
   is passed to the automation for use in lambdas.
 - **on_coolix** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Coolix remote code has been decoded. A variable `x` of type :apistruct:`remote_base::CoolixData`
+  Coolix remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::CoolixData" "remote_base::CoolixData" >}}
   is passed to the automation for use in lambdas.
 - **on_dish** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  dish network remote code has been decoded. A variable `x` of type :apistruct:`remote_base::DishData`
+  dish network remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::DishData" "remote_base::DishData" >}}
   is passed to the automation for use in lambdas.
   Beware that Dish remotes use a different carrier frequency (57.6kHz) that many receiver hardware don't decode.
 - **on_dooya** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Dooya RF remote code has been decoded. A variable `x` of type :apistruct:`remote_base::DooyaData`
+  Dooya RF remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::DooyaData" "remote_base::DooyaData" >}}
   is passed to the automation for use in lambdas.
 - **on_drayton** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Drayton Digistat RF code has been decoded. A variable `x` of type :apistruct:`remote_base::DraytonData`
+  Drayton Digistat RF code has been decoded. A variable `x` of type {{< apistruct "remote_base::DraytonData" "remote_base::DraytonData" >}}
   is passed to the automation for use in lambdas.
 - **on_gobox** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Go-Box remote code has been decoded. A variable `x` of type :apistruct:`remote_base::GoboxData`
+  Go-Box remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::GoboxData" "remote_base::GoboxData" >}}
   is passed to the automation for use in lambdas.
 - **on_jvc** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  JVC remote code has been decoded. A variable `x` of type :apistruct:`remote_base::JVCData`
+  JVC remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::JVCData" "remote_base::JVCData" >}}
   is passed to the automation for use in lambdas.
 - **on_keeloq** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  KeeLoq RF code has been decoded. A variable `x` of type :apistruct:`remote_base::KeeloqData`
+  KeeLoq RF code has been decoded. A variable `x` of type {{< apistruct "remote_base::KeeloqData" "remote_base::KeeloqData" >}}
   is passed to the automation for use in lambdas.
 - **on_haier** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Haier remote code has been decoded. A variable `x` of type :apistruct:`remote_base::HaierData`
+  Haier remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::HaierData" "remote_base::HaierData" >}}
   is passed to the automation for use in lambdas.
 - **on_lg** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  LG remote code has been decoded. A variable `x` of type :apistruct:`remote_base::LGData`
+  LG remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::LGData" "remote_base::LGData" >}}
   is passed to the automation for use in lambdas.
 - **on_magiquest** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  MagiQuest wand remote code has been decoded. A variable `x` of type :apistruct:`remote_base::MagiQuestData`
+  MagiQuest wand remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::MagiQuestData" "remote_base::MagiQuestData" >}}
   is passed to the automation for use in lambdas.
 - **on_midea** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Midea remote code has been decoded. A variable `x` of type :apiclass:`remote_base::MideaData`
+  Midea remote code has been decoded. A variable `x` of type {{< apiclass "remote_base::MideaData" "remote_base::MideaData" >}}
   is passed to the automation for use in lambdas.
 - **on_nec** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  NEC remote code has been decoded. A variable `x` of type :apistruct:`remote_base::NECData`
+  NEC remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::NECData" "remote_base::NECData" >}}
   is passed to the automation for use in lambdas.
 - **on_nexa** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Nexa RF code has been decoded. A variable `x` of type :apistruct:`remote_base::NexaData`
+  Nexa RF code has been decoded. A variable `x` of type {{< apistruct "remote_base::NexaData" "remote_base::NexaData" >}}
   is passed to the automation for use in lambdas.
 - **on_panasonic** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Panasonic remote code has been decoded. A variable `x` of type :apistruct:`remote_base::PanasonicData`
+  Panasonic remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::PanasonicData" "remote_base::PanasonicData" >}}
   is passed to the automation for use in lambdas.
 - **on_pioneer** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  pioneer remote code has been decoded. A variable `x` of type :apistruct:`remote_base::PioneerData`
+  pioneer remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::PioneerData" "remote_base::PioneerData" >}}
   is passed to the automation for use in lambdas.
 - **on_pronto** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
   Pronto remote code has been decoded. A variable `x` of type `std::string`
@@ -205,34 +205,34 @@ to be used later.
   raw remote code has been decoded. A variable `x` of type `std::vector<int>`
   is passed to the automation for use in lambdas.
 - **on_rc5** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  RC5 remote code has been decoded. A variable `x` of type :apistruct:`remote_base::RC5Data`
+  RC5 remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::RC5Data" "remote_base::RC5Data" >}}
   is passed to the automation for use in lambdas.
 - **on_rc6** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  RC6 remote code has been decoded. A variable `x` of type :apistruct:`remote_base::RC6Data`
+  RC6 remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::RC6Data" "remote_base::RC6Data" >}}
   is passed to the automation for use in lambdas.
 - **on_rc_switch** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  RCSwitch RF code has been decoded. A variable `x` of type :apistruct:`remote_base::RCSwitchData`
+  RCSwitch RF code has been decoded. A variable `x` of type {{< apistruct "remote_base::RCSwitchData" "remote_base::RCSwitchData" >}}
   is passed to the automation for use in lambdas.
 - **on_roomba** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Roomba remote code has been decoded. A variable `x` of type :apistruct:`remote_base::RoombaData`
+  Roomba remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::RoombaData" "remote_base::RoombaData" >}}
   is passed to the automation for use in lambdas.
 - **on_samsung** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Samsung remote code has been decoded. A variable `x` of type :apistruct:`remote_base::SamsungData`
+  Samsung remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::SamsungData" "remote_base::SamsungData" >}}
   is passed to the automation for use in lambdas.
 - **on_samsung36** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Samsung36 remote code has been decoded. A variable `x` of type :apistruct:`remote_base::Samsung36Data`
+  Samsung36 remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::Samsung36Data" "remote_base::Samsung36Data" >}}
   is passed to the automation for use in lambdas.
 - **on_sony** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Sony remote code has been decoded. A variable `x` of type :apistruct:`remote_base::SonyData`
+  Sony remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::SonyData" "remote_base::SonyData" >}}
   is passed to the automation for use in lambdas.
 - **on_toshiba_ac** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Toshiba AC remote code has been decoded. A variable `x` of type :apistruct:`remote_base::ToshibaAcData`
+  Toshiba AC remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::ToshibaAcData" "remote_base::ToshibaAcData" >}}
   is passed to the automation for use in lambdas.
 - **on_mirage** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Mirage remote code has been decoded. A variable `x` of type :apistruct:`remote_base::MirageData`
+  Mirage remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::MirageData" "remote_base::MirageData" >}}
   is passed to the automation for use in lambdas.
 - **on_toto** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a
-  Toto remote code has been decoded. A variable `x` of type :apistruct:`remote_base::TotoData`
+  Toto remote code has been decoded. A variable `x` of type {{< apistruct "remote_base::TotoData" "remote_base::TotoData" >}}
   is passed to the automation for use in lambdas.
 
 ```yaml

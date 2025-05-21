@@ -693,6 +693,8 @@ def process_inline_markup(line):
     ref_matches = []
     doc_matches = []
     apiref_matches = []
+    apistruct_matches = []
+    apiclass_matches = []
 
     # Find and store all :ref: patterns
     for match in re.finditer(r':ref:`([^>`]+)`', processed_line):
@@ -709,6 +711,14 @@ def process_inline_markup(line):
         apiref_content = match.group(1)
         apiref_matches.append((match.span(), apiref_content))
 
+    for match in re.finditer(r':apiclass:`([^`]+)`', processed_line):
+        apiclass_content = match.group(1)
+        apiclass_matches.append((match.span(), apiclass_content))
+
+    for match in re.finditer(r':apistruct:`([^`]+)`', processed_line):
+        apistruct_content = match.group(1)
+        apistruct_matches.append((match.span(), apistruct_content))
+
     # Replace matches with placeholders, starting from the end to preserve positions
     for i, ((start, end), content) in enumerate(reversed(ref_matches)):
         placeholder = f"__REF_PLACEHOLDER_{i}__"
@@ -721,7 +731,15 @@ def process_inline_markup(line):
     for i, ((start, end), content) in enumerate(reversed(apiref_matches)):
         placeholder = f"__APIREF_PLACEHOLDER_{i}__"
         processed_line = processed_line[:start] + placeholder + processed_line[end:]
-    
+
+    for i, ((start, end), content) in enumerate(reversed(apiclass_matches)):
+        placeholder = f"__APICLASS_PLACEHOLDER_{i}__"
+        processed_line = processed_line[:start] + placeholder + processed_line[end:]
+
+    for i, ((start, end), content) in enumerate(reversed(apistruct_matches)):
+        placeholder = f"__APISTRUCT_PLACEHOLDER_{i}__"
+        processed_line = processed_line[:start] + placeholder + processed_line[end:]
+
     # Process the placeholders
     for i, ((start, end), content) in enumerate(ref_matches):
         placeholder = f"__REF_PLACEHOLDER_{i}__"
@@ -771,27 +789,35 @@ def process_inline_markup(line):
             replacement = f"{{{{< docref \"{doc_path}\" >}}}}"
         
         processed_line = processed_line.replace(placeholder, replacement)
-    
-    for i, ((start, end), content) in enumerate(apiref_matches):
-        placeholder = f"__APIREF_PLACEHOLDER_{i}__"
-        
-        # Handle API references with text and path
-        if "<" in content and ">" in content:
-            text, api_path = content.split("<", 1)
-            api_path = api_path.rstrip(">")
-            # Use the apiref shortcode with custom text
-            replacement = f"{{{{< apiref \"{text.strip()}\" \"{api_path}\" >}}}}"
-        else:
-            # Simple API references - use the path as the text
-            replacement = f"{{{{< apiref \"{content}\" \"{content}\" >}}}}"
-        
-        processed_line = processed_line.replace(placeholder, replacement)
-    
+
+    processed_line = process_api(apiref_matches, processed_line, "apiref")
+    processed_line = process_api(apistruct_matches, processed_line, "apistruct")
+    processed_line = process_api(apiclass_matches, processed_line, "apiclass")
+
     # External links
     processed_line = re.sub(r'`\s*([^<]*[^< ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
     
     return processed_line
+
+
+def process_api(apiref_matches, processed_line, shortcode):
+    for i, ((start, end), content) in enumerate(apiref_matches):
+        placeholder = f"__{shortcode.upper()}_PLACEHOLDER_{i}__"
+
+        # Handle API references with text and path
+        if "<" in content and ">" in content:
+            text, api_path = content.split("<", 1)
+            api_path = api_path.rstrip(">")
+            # Use the apiref shortcode with custom text
+            replacement = f"{{{{< {shortcode} \"{text.strip()}\" \"{api_path}\" >}}}}"
+        else:
+            # Simple API references - use the path as the text
+            replacement = f"{{{{< {shortcode} \"{content}\" \"{content}\" >}}}}"
+
+        processed_line = processed_line.replace(placeholder, replacement)
+    return processed_line
+
 
 def process_multiline_references(lines):
     """Process references that might be split across multiple lines."""

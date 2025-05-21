@@ -37,7 +37,7 @@ output:
   when the state of the output is updated.
 - All other options from :ref:`Output <config-output>`.
 
-See :apiclass:`output::BinaryOutput` and :apiclass:`output::FloatOutput`.
+See {{< apiclass "output::FloatOutput" "output::FloatOutput" >}} and {{< apiclass "output::BinaryOutput" "output::BinaryOutput" >}}.
 
 {{< warning >}}
 This is an **output component** and will not be visible from the frontend. Output components are intermediary

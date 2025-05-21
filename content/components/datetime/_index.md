@@ -148,7 +148,7 @@ advanced stuff (see the full API Reference for more info).
 - `.year`: Retrieve the current year of the `date`. It will be `0` if no value has been set.
 - `.month`: Retrieve the current month of the `date`. It will be `0` if no value has been set.
 - `.day`: Retrieve the current day of the `date`. It will be `0` if no value has been set.
-- `.state_as_esptime()`: Retrieve the current value of the datetime as a :apistruct:`ESPTime` object.
+- `.state_as_esptime()`: Retrieve the current value of the datetime as a {{< apistruct "ESPTime" "ESPTime" >}} object.
 
   ```cpp
   // For example, create a custom log message when a value is received:
@@ -215,7 +215,7 @@ advanced stuff (see the full API Reference for more info).
 - `.hour`: Retrieve the current hour of the `time`. It will be `0` if no value has been set.
 - `.minute`: Retrieve the current minute of the `time`. It will be `0` if no value has been set.
 - `.second`: Retrieve the current second of the `time`. It will be `0` if no value has been set.
-- `.state_as_esptime()`: Retrieve the current value of the datetime as a :apistruct:`ESPTime` object.
+- `.state_as_esptime()`: Retrieve the current value of the datetime as a {{< apistruct "ESPTime" "ESPTime" >}} object.
 
   ```cpp
   // For example, create a custom log message when a value is received:
@@ -288,7 +288,7 @@ For more complex use cases, several methods are available for use on datetimes f
 - `.hour`: Retrieve the current hour of the `datetime`. It will be `0` if no value has been set.
 - `.minute`: Retrieve the current minute of the `datetime`. It will be `0` if no value has been set.
 - `.second`: Retrieve the current second of the `datetime`. It will be `0` if no value has been set.
-- `.state_as_esptime()`: Retrieve the current value of the datetime as a :apistruct:`ESPTime` object.
+- `.state_as_esptime()`: Retrieve the current value of the datetime as a {{< apistruct "ESPTime" "ESPTime" >}} object.
 
   ```cpp
   // For example, create a custom log message when a value is received:

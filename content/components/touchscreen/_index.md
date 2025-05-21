@@ -71,7 +71,7 @@ touchscreen:
 
 ## `TouchPoint` Argument Type
 
-Both the [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}) and [`on_touch` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}) have an argument of the type :apistruct:`touchscreen::TouchPoint` in a
+Both the [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}) and [`on_touch` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}) have an argument of the type :apistruct:`t{{< apistruct "touchscreen::TouchPoint" "touchscreen::TouchPoint" >}}
 list (`on_update`) or as an `optional` (`on_touch`).
 
 The integer members for the touch positions below are in relation to the display width and height:

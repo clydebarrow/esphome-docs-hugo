@@ -119,7 +119,7 @@ Automations:
 ### `on_ble_advertise` Trigger
 
 This automation will be triggered when a Bluetooth advertising is received. A variable `x` of type
-:apiclass:`esp32_ble_tracker::ESPBTDevice` is passed to the automation for use in lambdas.
+{{< apiclass "esp32_ble_tracker::ESPBTDevice" "esp32_ble_tracker::ESPBTDevice" >}} is passed to the automation for use in lambdas.
 
 ```yaml
 esp32_ble_tracker:

@@ -91,7 +91,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template valve.
+- **id** (**Required**, :ref:`config-id`): The ID of the template valve.
 - **state** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish. One of `OPEN`, `CLOSED`. If using a lambda, use `VALVE_OPEN` or `VALVE_CLOSED`.
 - **position** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), float):
@@ -112,7 +112,7 @@ id(my_template_valve).publish_state();
 ## See Also
 
 - {{< docref "/components/valve/index" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - {{< docref "/cookbook/garage-door" >}}
 - :apiref:`template/valve/template_valve.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/valve/template.md)

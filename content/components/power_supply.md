@@ -6,7 +6,7 @@ title: "Power Supply Component"
 {{< seo description="" image="" >}}
 
 The `power_supply` component allows you to have a high power mode for
-certain outputs. For example, if you're using an [ATX powersupply ](https://en.wikipedia.org/wiki/ATX) to power your LED strips,
+certain outputs. For example, if you're using an [ATX powersupply](https://en.wikipedia.org/wiki/ATX) to power your LED strips,
 you usually don't want to have the power supply on all the time while
 the output is not on. The power supply component can be attached to any
 [Output Component]({{< ref "components/output/_index#output" >}}) and
@@ -23,15 +23,15 @@ power_supply:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
+- **id** (**Required**, :ref:`config-id`): The id of the
   power supply so that it can be used by the outputs.
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
   GPIO pin to control the power supply on.
-- **enable_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time
+- **enable_time** (*Optional*, :ref:`config-time`): The time
   that the power supply needs for startup. The output component will
   wait for this period of time after turning on the PSU and before
   switching the output on. Defaults to `20ms`. Maximum of less than `5s`.
-- **keep_on_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time the
+- **keep_on_time** (*Optional*, :ref:`config-time`): The time the
   power supply should be kept enabled after the last output that used
   it has been switch off. Defaults to `10s`.
 - **enable_on_boot** (*Optional*, bool): If the power supply should be enabled when the power supply

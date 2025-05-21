@@ -59,7 +59,7 @@ The first block `sensor` starts with the normal bme280 sensor components `temper
 and `humidity` with each their own id.
 After the bme280 sensor, a {{< docref "/components/sensor/template" >}} is defined to calculate the altitude in a lambda.
 The variable `STANDARD_SEA_LEVEL_PRESSURE` (in hPa), should be filled in for your location.
-The formula derived from [here ](https://github.com/finitespace/BME280/blob/master/src/EnvironmentCalculations.cpp),
+The formula derived from [here](https://github.com/finitespace/BME280/blob/master/src/EnvironmentCalculations.cpp),
 converts the currently measured pressure to the altitudes in meters including temperature compensation.
 
 The second block uses the {{< docref "/components/sensor/absolute_humidity" >}} component which
@@ -107,8 +107,8 @@ Therefore it is not possible to calculate altitude at the same time, and vice ve
 {{< /note >}}
 ## Formula explanation
 
-- [Altitude calculation ](https://en.wikipedia.org/wiki/Atmospheric_pressure#Altitude_variation)
-- [Dew Point calculation ](https://carnotcycle.wordpress.com/2017/08/01/compute-dewpoint-temperature-from-rh-t/)
+- [Altitude calculation](https://en.wikipedia.org/wiki/Atmospheric_pressure#Altitude_variation)
+- [Dew Point calculation](https://carnotcycle.wordpress.com/2017/08/01/compute-dewpoint-temperature-from-rh-t/)
 
 ## See Also
 

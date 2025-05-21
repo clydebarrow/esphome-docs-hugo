@@ -30,7 +30,7 @@ select:
 - **set_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the Select option.
   The new option is available to lambdas in the `x` variable.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval on which to update the select
+- **update_interval** (*Optional*, :ref:`config-time`): The interval on which to update the select
   by executing the `lambda`. Defaults to `60s`.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the Template Select will immediately update the reported state.
@@ -43,17 +43,17 @@ select:
 - All other options from [Select]({{< ref "components/select/_index#config-select" >}}).
 
 {{< note >}}
-If you don't set a `lambda` and `optimistic` is `false` (default), updates to the select component state will need to be taken care of as part of your `set_action` using `id(my_select).publish_state(x);` (in a lambda). Do not use [`select.set` Action]({{< ref "components/select/_index#select-set_action" >}}) here, as this would generate a loop. Also, don't use `id(my_select).state = x` as this won't have the desired effect (e.g. HA won't update with the change).
+If you don't set a `lambda` and `optimistic` is `false` (default), updates to the select component state will need to be taken care of as part of your `set_action` using `id(my_select).publish_state(x);` (in a lambda). Do not use :ref:`select-set_action` here, as this would generate a loop. Also, don't use `id(my_select).state = x` as this won't have the desired effect (e.g. HA won't update with the change).
 
 {{< /note >}}
 ## `select.set` Action
 
 You can also set an option for the template select from elsewhere in your YAML file
-with the [`select.set` Action]({{< ref "components/select/_index#select-set_action" >}}).
+with the :ref:`select-set_action`.
 
 ## See Also
 
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`template/select/template_select.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/template.md)
 

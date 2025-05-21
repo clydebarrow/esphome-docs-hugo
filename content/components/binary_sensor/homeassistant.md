@@ -11,7 +11,7 @@ states from your Home Assistant instance using the {{< docref "/components/api" 
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
-[Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
+:ref:`connecting-your-device-to-home-assistant`.
 
 {{< /note >}}
 ```yaml
@@ -42,7 +42,7 @@ binary_sensor:
 
 ## See Also
 
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`homeassistant/binary_sensor/homeassistant_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/homeassistant.md)
 

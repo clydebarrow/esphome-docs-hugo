@@ -6,7 +6,7 @@ title: "SHT4X Temperature and Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The `sht4x` sensor platform  allows you to use your SHT4X temperature and humidity sensor
-([datasheet ](https://sensirion.com/media/documents/33FD6951/63E1087C/Datasheet_SHT4x_1.pdf), `Adafruit`_) with ESPHome.
+([datasheet](https://sensirion.com/media/documents/33FD6951/63E1087C/Datasheet_SHT4x_1.pdf), `Adafruit`_) with ESPHome.
 
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
@@ -38,7 +38,7 @@ sensor:
 - **heater_power** (*Optional*, string): The heater power, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_time** (*Optional*, string):  The length of time to run the heater, either `Long` (1000ms) or `Short` (100ms). Default is `Long`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Default is `0x44`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
 
 ## Heater Configuration:
 
@@ -50,14 +50,14 @@ The heater can be enabled by setting `heater_max_duty` up to a maximum duty cycl
 of `5%` (`0.05`). This runs the heater on a regular interval. While the heater
 is in operation the sensor disables measurements so no updates will be published.
 
-See the ([datasheet ](https://sensirion.com/media/documents/33FD6951/63E1087C/Datasheet_SHT4x_1.pdf))
+See the ([datasheet](https://sensirion.com/media/documents/33FD6951/63E1087C/Datasheet_SHT4x_1.pdf))
 for more information about heater operation.
 
 ## See Also
 
 - {{< docref "/components/sensor/sht3xd" >}}
 - {{< docref "/components/sensor/shtcx" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "absolute_humidity/" >}}
 - :apiref:`sht4x/sht4x.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sht4x.md)

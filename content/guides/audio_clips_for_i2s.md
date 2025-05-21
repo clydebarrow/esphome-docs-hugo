@@ -8,17 +8,17 @@ title: "Create audio clip files for use with I²S Speakers"
 
 It is possible to create sound clips to include in your build to use with I²S speakers. No need for a media player component!  
 
-- Using [Audacity ](https://github.com/audacity/audacity), convert audio to WAV, mono, 16kHz, Unsigned 8bit PCM
+- Using [Audacity](https://github.com/audacity/audacity), convert audio to WAV, mono, 16kHz, Unsigned 8bit PCM
 
 {{< img src="save_as_wav.png" alt="Audacity export dialog" height="200" class="center" >}}
 
-- Convert again, this time with [SOX ](https://github.com/chirlu/sox).
+- Convert again, this time with [SOX](https://github.com/chirlu/sox).
 
 ```console
 sox startup.wav --bits 8 --encoding signed-integer --endian little startup_again.raw
 
 ```
-- Now convert it into a hexadecimal string using [xxd ](https://github.com/ckormanyos/xxd) into a C++ file.
+- Now convert it into a hexadecimal string using [xxd](https://github.com/ckormanyos/xxd) into a C++ file.
 
 ```console
 xxd -i startup_again.raw startup.c

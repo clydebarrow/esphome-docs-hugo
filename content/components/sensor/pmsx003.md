@@ -6,7 +6,7 @@ title: "PMSX003 Particulate Matter Sensor"
 {{< seo description="" image="" >}}
 
 The `pmsx003` sensor platform allows you to use your Plantower PMS5003, PMS7003, ... laser based particulate matter sensors
-([datasheet ](http://www.aqmd.gov/docs/default-source/aq-spec/resources-page/plantower-pms5003-manual_v2-3.pdf))
+([datasheet](http://www.aqmd.gov/docs/default-source/aq-spec/resources-page/plantower-pms5003-manual_v2-3.pdf))
 sensors with ESPHome.
 
 As the communication with the PMSX003 is done using UART, you need
@@ -74,13 +74,13 @@ sensor:
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **update_interval** (*Optional*): Amount of time to wait between generating measurements. If this is longer than 30
   seconds, and if `tx_pin` is set in the UART configuration, the fan will be spun down between measurements. Default to `0s` (forward data as it's coming in from the sensor).
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
 
 ## See Also
 
 - {{< docref "/components/sensor/sds011" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`pmsx003/pmsx003.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pmsx003.md)
 

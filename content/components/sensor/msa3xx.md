@@ -10,7 +10,7 @@ title: "MSA301 and MSA311 Sensors"
 ## Component/Hub
 
 The `msa3xx` sensor platform allows you to use your MSA301 and MSA311 tri-axial, 
-low-g accelerometers ([datasheet ](https://cdn-shop.adafruit.com/product-files/5309/MSA311-V1.1-ENG.pdf)) 
+low-g accelerometers ([datasheet](https://cdn-shop.adafruit.com/product-files/5309/MSA311-V1.1-ENG.pdf)) 
 with ESPHome. The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 MSA301 and MSA311 are almost identical sensors. The only difference is the ADC resolution. MSA311 has fixed 
@@ -41,7 +41,7 @@ text sensors with orientation information, and binary sensors for taps and movem
 Base Configuration:
 
 - **type** (**Required**, string): Sensor type. Either `msa301` or `msa311`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval for updating acceleration sensors.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval for updating acceleration sensors.
   Defaults to `10s`.
 - **range** (*Optional*, string): The range of the sensor measurements. One of `2G`, `4G`, `8G`, `16G`. 
   Defaults to `2G` which means it picks up accelerations between `-2g` and `2g`.
@@ -209,7 +209,7 @@ binary_sensor:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`msa3xxx/msa3xxx.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/msa3xx.md)
 

@@ -6,7 +6,7 @@ title: "AMS iAQ-Core Indoor Air Quality Sensor"
 {{< seo description="" image="" >}}
 
 The AMS iAQ-Core sensor allows you to use your
-([datasheet ](https://www.sciosense.com/wp-content/uploads/documents/iaQ-Core-Datasheet.pdf))
+([datasheet](https://www.sciosense.com/wp-content/uploads/documents/iaQ-Core-Datasheet.pdf))
 sensors with ESPHome.
 
 {{< img src="iaqcore.jpg" alt="Image" caption="AMS iAQ-Core Indoor Air Quality Sensor." width="30.0%" class="center" >}}
@@ -31,7 +31,7 @@ sensor:
 
 - **i2c_id** (*Optional*, ID): The id of the I²C Bus.
 - **address** (*Optional*, int): Manually specifiy the I²C address of the sensor. Defaults to `0x5A`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
 - **co2** (*Optional*): The configuration for the CO2 sensor. All options from
   [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **tvoc** (*Optional*): The configuration for the TVOC sensor. All options from
@@ -39,7 +39,7 @@ sensor:
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "/components/sensor/index" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/iaqcore.md)
 

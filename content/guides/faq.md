@@ -26,7 +26,7 @@ support within ESPHome, here's what we suggest:
 
 - **ESP32-C3**
 
-  - Generally intended ([per Espressif ](https://www.espressif.com/en/news/ESP32_C3)) to replace the well-known ESP8266.
+  - Generally intended ([per Espressif](https://www.espressif.com/en/news/ESP32_C3)) to replace the well-known ESP8266.
   - Use if:
   
     - You're worried that the ESP32(-Sx) is "too powerful".
@@ -102,13 +102,13 @@ If you prefer the more manual way:
    This often isn't necessary on most modern boards/devices, but it's worth trying if you're experiencing difficulties.
 3. Finally, to install a firmware file, you can use:
 
-- [ESPHome Web ](https://web.esphome.io/), our web-based installer. This is the easiest approach but requires a
+- [ESPHome Web](https://web.esphome.io/), our web-based installer. This is the easiest approach but requires a
     browser that supports WebSerial, like Google Chrome or Microsoft Edge. Connect the board to your computer, make
     sure it's detected as a [serial port]({{< ref "guides/physical_device_connection#esphome-phy-con-drv" >}}) and click **Connect**. If prompted, allow your
     browser the requested permission in the pop-up box that appears. Next, select the serial device associated with
     your board, click **Install** and browse for/select the binary file you downloaded earlier (as above). Note that
     the file is processed locally and is **not** uploaded to any cloud service.
-- [esptool` `from the GitHub repository ](https://github.com/espressif/esptool/releases). It's likely available
+- [esptool` `from the GitHub repository](https://github.com/espressif/esptool/releases). It's likely available
     as package for your OS or you can try installing it with `pip install esptool` (in case of Linux).
 
 {{< anchor "esphome-esptool" >}}
@@ -180,11 +180,11 @@ transfer. Don't worry -- just try again, perhaps with a reduced baud rate for sa
 esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash 0x0 your_node_firmware.bin
 
 ```
-If you *still* can't get it to work, you might want to revisit [I can't get installation over USB to work]({{< ref "guides/faq#faq-usb_troubleshooting" >}}) above.
+If you *still* can't get it to work, you might want to revisit :ref:`faq-usb_troubleshooting` above.
 
 ## Tips for using ESPHome
 
-- ESPHome supports (most of) [Home Assistant's YAML configuration directives  ](https://www.home-assistant.io/docs/configuration/splitting_configuration/) like `!include` and `!secret`.
+- ESPHome supports (most of) [Home Assistant's YAML configuration directives](https://www.home-assistant.io/docs/configuration/splitting_configuration/) like `!include` and `!secret`.
   This allows you to store your secrets (for example, Wi-Fi passwords and API keys) in a file called `secrets.yaml`,
   as long as this file is in the same directory as your ESPHome configuration file.
 
@@ -251,10 +251,10 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
 
 That's no good. Here are some steps that resolve some problems:
 
-- **If you're having Wi-Fi problems**: See [My node keeps reconnecting randomly]({{< ref "guides/faq#wifi-problems" >}}).
+- **If you're having Wi-Fi problems**: See :ref:`wifi-problems`.
 - [Enable verbose logs]({{< ref "components/logger#logger-log_levels" >}}) in your ESPHome device's `logger:` section.
 - **Still seeing an error?** Check if there is a known issue in the
-  [ESPHome issue tracker ](https://github.com/esphome/issues/issues). If not, you can create a new issue to describe your
+  [ESPHome issue tracker](https://github.com/esphome/issues/issues). If not, you can create a new issue to describe your
   problem there. We will take a look at it as soon as we can. Thanks!
 
 {{< anchor "faq-bug_report" >}}
@@ -273,12 +273,12 @@ If you want the issue you're experiencing to be fixed quickly:
 - **Just writing "X doesn't work" or "X gives bug" is not helpful!!!** Seriously, how do you expect help given just
   that information?
 - Provide a snippet of the code/configuration which triggers the issue; we'll likely want to try to reproduce it.
-  Please read [How to create a Minimal, Complete, and Verifiable example ](https://stackoverflow.com/help/mcve).
+  Please read [How to create a Minimal, Complete, and Verifiable example](https://stackoverflow.com/help/mcve).
 - If it's a hardware communication issue (such as with an I²C or SPI device), try setting the
   [log level]({{< ref "components/logger#logger-log_levels" >}}) to `VERY_VERBOSE` as it may provide better insight into what is going on.
 - Please describe what troubleshooting steps you've already tried as that may also help us track down the issue.
 
-You can find our issue tracker [on GitHub ](https://github.com/esphome/issues/issues).
+You can find our issue tracker [on GitHub](https://github.com/esphome/issues/issues).
 
 ## How do I update to the latest version?
 
@@ -311,7 +311,7 @@ stable channel. You can help test ESPHome (and use new features) by installing t
   docker run [...] -it ghcr.io/esphome/esphome:beta run livingroom.yaml
 
   ```
-The beta documentation is available at [beta.esphome.io ](https://beta.esphome.io).
+The beta documentation is available at [beta.esphome.io](https://beta.esphome.io).
 
 ## How do I use the latest bleeding-edge version?
 
@@ -329,14 +329,14 @@ That aside, if you want to install the `dev` version of ESPHome:
   pip3 install https://github.com/esphome/esphome/archive/dev.zip
 
   ```
-- From docker, use the [ghcr.io/esphome/esphome:dev ](https://github.com/esphome/esphome/pkgs/container/esphome/)
+- From docker, use the [ghcr.io/esphome/esphome:dev](https://github.com/esphome/esphome/pkgs/container/esphome/)
   image.
 
   ```bash
   docker run [...] -it ghcr.io/esphome/esphome:dev livingroom.yaml compile
 
   ```
-The dev documentation is available at [next.esphome.io ](https://next.esphome.io/).
+The dev documentation is available at [next.esphome.io](https://next.esphome.io/).
 
 ## How do I use my Home Assistant `secrets.yaml` file?
 
@@ -359,18 +359,18 @@ officially supported by ESPHome, so, if you run into problems, you'll need to co
 component you're using for help.
 
 You can also create a feature request in our
-[ESPHome feature request tracker ](https://github.com/esphome/feature-requests/issues).
+[ESPHome feature request tracker](https://github.com/esphome/feature-requests/issues).
 
 ## I have a question... How can I contact you?
 
 Sure! We are happy to help :) You can contact us here:
 
--  [Discord ](https://discord.gg/KhAMKrd)
--  [Home Assistant Community Forums ](https://community.home-assistant.io/c/esphome)
--  ESPHome [issue ](https://github.com/esphome/issues/issues) and
-   [feature request ](https://github.com/esphome/feature-requests/issues) trackers. Preferably only for issues and
+-  [Discord](https://discord.gg/KhAMKrd)
+-  [Home Assistant Community Forums](https://community.home-assistant.io/c/esphome)
+-  ESPHome [issue](https://github.com/esphome/issues/issues) and
+   [feature request](https://github.com/esphome/feature-requests/issues) trackers. Preferably only for issues and
    feature requests.
--  **If your inquiry is not regarding support**, you can [e-mail us ](mailto:esphome@openhomefoundation.org).
+-  **If your inquiry is not regarding support**, you can [e-mail us](mailto:esphome@openhomefoundation.org).
 
 {{< anchor "wifi-problems" >}}
 
@@ -386,7 +386,7 @@ Here are some steps that may help mitigate the issue:
   configuration. Note that this may help with non-hidden networks, as well.
 - Give your ESPHome device a [static IP]({{< ref "components/wifi#wifi-manual_ip" >}}).
 - Set the `power_save_mode` to `light` in your `wifi:` configuration. Note, however, that this may exacerbate the
-  problem in some situations. See [Power Save Mode]({{< ref "components/wifi#wifi-power_save_mode" >}}).
+  problem in some situations. See :ref:`wifi-power_save_mode`.
 - The issue seems to happen with "cheap" boards more frequently -- especially the "cheap" NodeMCU boards from eBay
   which sometimes have bad antennas.
 - ESPHome intentionally reboots after a configured duration in specific situations, such as when the
@@ -494,7 +494,7 @@ By default, ESPHome uses mDNS to resolve device IPs on the network; this is used
 in the [ESPHome Device Builder]({{< ref "guides/getting_started_hassio#installing-esphome-device-builder" >}}). In order for this feature to work, you
 must use Docker's host networking mode.
 
-The [host networking driver ](https://docs.docker.com/network/drivers/host/) only works on Linux hosts; it is
+The [host networking driver](https://docs.docker.com/network/drivers/host/) only works on Linux hosts; it is
 available on Docker Desktop version 4.29 and later.
 
 If you don't want to use the host networking driver, you have to use an alternate method as described below.
@@ -544,14 +544,14 @@ Always back up your files!
 ## Why shouldn't I use underscores in my device name?
 
 The top level `name:` field in your `.yaml` configuration file defines the node name ("hostname") on the local
-network. According to [RFC1912 ](https://datatracker.ietf.org/doc/html/rfc1912), underscore (`_`) characters in
+network. According to [RFC1912](https://datatracker.ietf.org/doc/html/rfc1912), underscore (`_`) characters in
 hostnames are not valid. In practice, some DNS/DHCP setups may work correctly with underscores while others will not.
 If you're using static IP addresses, you're unlikely to encounter any issues. In some cases, initial setup may work,
 but connections might fail when Home Assistant restarts or if you change router hardware.
 
 We recommend using a hyphen (`-`) instead of underscore.
 
-Important: follow these [instructions ](/components/esphome.html#changing-esphome-node-name) to use the
+Important: follow these [instructions](/components/esphome.html#changing-esphome-node-name) to use the
 `use_address` parameter when renaming a live device, as the connection to an existing device will only
 work with the old name until the name change is complete.
 
@@ -614,6 +614,6 @@ re-add the device in Home Assistant.
 ## See Also
 
 - {{< docref "/index" "ESPHome index" >}}
-- [Developer site ](https://developers.esphome.io)
+- [Developer site](https://developers.esphome.io)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/faq.md)
 

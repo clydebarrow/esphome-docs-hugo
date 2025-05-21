@@ -6,7 +6,7 @@ title: "Selec Energy Monitor"
 {{< seo description="" image="" >}}
 
 The `selec_meter` sensor platform allows you to use Selec Modbus energy monitors
-([website ](https://www.selec.com/product-details/energy-meter-direct-operated-em2m))
+([website](https://www.selec.com/product-details/energy-meter-direct-operated-em2m))
 with ESPHome.
 
 {{< img src="selec_meter_em2m.jpg" alt="Image" caption="Selec EM2M Energy Monitor." width="50.0%" class="center" >}}
@@ -99,13 +99,13 @@ sensor:
   options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **maximum_demand_apparent_power** (*Optional*): Use the maximum demand apparent power value of the sensor in VA. All
   options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/selec_meter.md)
 

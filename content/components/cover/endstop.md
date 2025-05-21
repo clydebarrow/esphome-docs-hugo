@@ -46,28 +46,28 @@ cover:
 
 - **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be opened.
-- **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **open_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
   to open up from the fully-closed state.
-- **open_endstop** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+- **open_endstop** (**Required**, :ref:`config-id`): The ID of the
   [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the open position is reached.
 
 - **close_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be closed.
-- **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **close_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
   to close from the fully-open state.
-- **close_endstop** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
+- **close_endstop** (**Required**, :ref:`config-id`): The ID of the
   [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the closed position is reached.
 
 - **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to stop or an endstop is reached.
-- **max_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the cover should be opening
+- **max_duration** (*Optional*, :ref:`config-time`): The maximum duration the cover should be opening
   or closing. Useful for protecting from dysfunctional endstops.
 - All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
 
 ## See Also
 
 - {{< docref "index/" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`endstop/endstop_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/endstop.md)
 

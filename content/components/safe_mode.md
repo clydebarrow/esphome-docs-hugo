@@ -26,11 +26,11 @@ safe_mode:
 
 -  **disabled** (*Optional*, boolean): Set to `true` to disable safe_mode. {{< docref "/components/ota/index" >}} automatically
    sets up safe mode; this allows disabling it if/when it is not wanted.
--  **boot_is_good_after** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time after which the boot is considered successful.
+-  **boot_is_good_after** (*Optional*, :ref:`config-time`): The amount of time after which the boot is considered successful.
    Defaults to `1min`.
 -  **num_attempts** (*Optional*, int): The number of failed boot attempts which must occur before invoking safe mode.
    Defaults to `10`.
--  **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before rebooting when in safe mode.
+-  **reboot_timeout** (*Optional*, :ref:`config-time`): The amount of time to wait before rebooting when in safe mode.
    Defaults to `5min`.
 - **on_safe_mode** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed once when safe mode is invoked.
 

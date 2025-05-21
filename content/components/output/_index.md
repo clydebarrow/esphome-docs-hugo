@@ -29,8 +29,8 @@ output:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
-- **power_supply** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The :doc:`power
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
+- **power_supply** (*Optional*, :ref:`config-id`): The :doc:`power
   supply </components/power_supply>` to connect to
   this output. When the output is enabled, the power supply will
   automatically be switched on too.

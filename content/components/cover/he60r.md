@@ -13,7 +13,7 @@ component will also work with other older Chamberlain garage door openers. It is
 newer Chamberlain units that use the Security+ 2.0 protocol.
 
 This component makes use of the HE60R keypad communication interface. This is a single-wire half duplex serial
-connection and requires a [UART Bus]({{< ref "components/uart#uart" >}}) component to be configured. The uart **must** be set to 1200 baud, EVEN parity. See
+connection and requires a :ref:`uart` component to be configured. The uart **must** be set to 1200 baud, EVEN parity. See
 below for a sample hardware interface.
 
 ```yaml
@@ -36,8 +36,8 @@ cover:
 ```
 ## Configuration variables:
 
-- **open_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time required for the door to fully open from the closed position. Default 15s.
-- **close_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time required for the door to fully close from the open position. Default 15s.
+- **open_duration** (*Optional*, :ref:`config-time`): The time required for the door to fully open from the closed position. Default 15s.
+- **close_duration** (*Optional*, :ref:`config-time`): The time required for the door to fully close from the open position. Default 15s.
 - All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
 
 The open and close duration serve to estimate the position to provide feedback during travel and for partial open/close
@@ -98,7 +98,7 @@ binary_sensor:
 ## See Also
 
 - {{< docref "index/" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
-- [GPIO Binary Sensor]({{< ref "components/binary_sensor/gpio#gpio-binary-sensor" >}})
+- :ref:`automation`
+- :ref:`gpio-binary-sensor`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/he60r.md)
 

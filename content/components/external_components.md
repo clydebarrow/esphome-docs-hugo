@@ -9,7 +9,7 @@ You can easily import community or personal components using the external compon
 Bundled components can be overridden using this feature.
 
 If you want to create your own components/platforms for ESPHome, please see our
-[developer site ](https://developers.esphome.io).
+[developer site](https://developers.esphome.io).
 
 ```yaml
 external_components:
@@ -44,14 +44,14 @@ external_components:
 ```
 Configuration variables:
 
-- **source**: The location of the components you want to retrieve. See [Local]({{< ref "components/external_components#external-components_local" >}})
-  and [external-components_git]({{< ref "#external-components_git" >}}).
+- **source**: The location of the components you want to retrieve. See :ref:`external-components_local`
+  and :ref:`external-components_git`.
 
   - **type** (**Required**): Repository type. One of `local`, `git`.
 
   git options:
 
-  - **url** (**Required**, url): Git repository url. See [external-components_git]({{< ref "#external-components_git" >}}).
+  - **url** (**Required**, url): Git repository url. See :ref:`external-components_git`.
   - **ref** (*Optional*, string): Git ref (branch or tag). If not specified the default branch is used.
   - **username** (*Optional*, string): Username for the Git server, if one is required
   - **password** (*Optional*, string): Password for the Git server, if one is required
@@ -59,13 +59,13 @@ Configuration variables:
 
   local options:
 
-  - **path** (**Required**):  Path to use when using local components. See [Local]({{< ref "components/external_components#external-components_local" >}}).
+  - **path** (**Required**):  Path to use when using local components. See :ref:`external-components_local`.
 
 - **components** (*Optional*, list): The list of components to use from the external source.
   By default, all available components are used.
 
-- **refresh** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval the source will be checked. Has no
-  effect on `local`. See [Refresh]({{< ref "components/external_components#external-components_refresh" >}}). for more info. Defaults to `1day`.
+- **refresh** (*Optional*, :ref:`config-time`): The interval the source will be checked. Has no
+  effect on `local`. See :ref:`external-components_refresh`. for more info. Defaults to `1day`.
 
 
 {{< anchor "external-components_local" >}}

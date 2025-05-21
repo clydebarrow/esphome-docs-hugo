@@ -24,15 +24,15 @@ ota:
 ## Configuration variables:
 
 -  **on_begin** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when an OTA update is started.
-   See [`on_begin`]({{< ref "components/ota/_index#ota-on_begin" >}}).
+   See :ref:`ota-on_begin`.
 -  **on_progress** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed (approximately each second)
-   while an OTA update is in progress. See [`on_progress`]({{< ref "components/ota/_index#ota-on_progress" >}}).
+   while an OTA update is in progress. See :ref:`ota-on_progress`.
 -  **on_end** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed after a successful OTA update.
-   See [`on_end`]({{< ref "components/ota/_index#ota-on_end" >}}).
+   See :ref:`ota-on_end`.
 -  **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed after a failed OTA update.
-   See [`on_error`]({{< ref "components/ota/_index#ota-on_error" >}}).
+   See :ref:`ota-on_error`.
 -  **on_state_change** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when an OTA update state
-   change happens. See [`on_state_change`]({{< ref "components/ota/_index#ota-on_state_change" >}}).
+   change happens. See :ref:`ota-on_state_change`.
 
 {{< anchor "ota-automations" >}}
 
@@ -103,7 +103,7 @@ ota:
 
 This automation will be triggered when an OTA update has failed. You can get the internal error code with variable `x`.
 
-Just like for [`on_end`]({{< ref "components/ota/_index#ota-on_end" >}}), you can safely use an automation that takes some time to complete as the OTA update
+Just like for :ref:`ota-on_end`, you can safely use an automation that takes some time to complete as the OTA update
 process has already finished.
 
 ```yaml

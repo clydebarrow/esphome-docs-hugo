@@ -8,7 +8,7 @@ title: "VBus Component"
 The `VBus` Component provides status reading connectivity to solar heat energy collector controllers using VBus
 protocol. These devices are mainly produced by Resol, often also found under different brand names like Viessmann,
 Kioto, Wagner etc. The component currently supports natively the models in the table below
-but any device can be added via lambda by knowing [its packet structure ](https://danielwippermann.github.io/resol-vbus).
+but any device can be added via lambda by knowing [its packet structure](https://danielwippermann.github.io/resol-vbus).
 
 {{< img src="resol_deltasol_bs_plus.jpg" alt="Image" class="center" >}}
 
@@ -53,7 +53,7 @@ An electrically isolated version using an opto-coupler:
 
 {{< img src="vbus_serial_optocoupler.png" alt="Image" class="center" >}}
 
-Another approach, with PCB design ready to be manufactured [can be found here ](https://github.com/FatBeard/vbus-arduino-library/tree/master/pcb).
+Another approach, with PCB design ready to be manufactured [can be found here](https://github.com/FatBeard/vbus-arduino-library/tree/master/pcb).
 
 {{< warning >}}
 Do not connect the GND pin of your module with the ground of Resol unit as that may damage the output port of it.
@@ -78,7 +78,7 @@ logging with the `baud_rate: 0` option.
 {{< /warning >}}
 Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub used to connect to the device.
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the UART hub used to connect to the device.
 
 {{< note >}}
 Functionality of the sensors depends on the type of the device and the scheme arrangement of the hydraulic
@@ -234,7 +234,7 @@ Configuration variables:
 - **lambda** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})): Code to parse a value from the incoming data packets and return it.
   The data packet is in a `std::vector<uint8_t>` called `x`.
 
-To determine the correct values for the parameters above, visit [packet definitions list ](http://danielwippermann.github.io/resol-vbus/#/vsf). In the search field of the **Packets** table, enter the name of your device.
+To determine the correct values for the parameters above, visit [packet definitions list](http://danielwippermann.github.io/resol-vbus/#/vsf). In the search field of the **Packets** table, enter the name of your device.
 
 To extract the values with a [lambda]({{< ref "automations/templates#config-lambda" >}}), look in the packet structure by clicking the **Bytes** link in the table. Each value is placed at an `offset` within the packet.
 For `float` values, let's look at the temperature example: the value is stored as a `16`-bit value in `2` bytes little-endian format. Since it's always the second byte containing the upper byte, it needs to be shifted by `8` bits (multiplied by `256`) (e.g. `0x34, 0x12 -> 0x1234`). The result needs to be multiplied by the factor, which is `0.1`, to obtain the correct values: `((x[1] << 8) + x[0]) * 0.1f)`. The number within the square brackets is the `[offset]`.
@@ -282,7 +282,7 @@ binary_sensor:
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< docref "/components/sensor/index" >}}
-- [Resol manuals ](https://www.resol.de/en/dokumente)
-- [VBus protocol ](https://danielwippermann.github.io/resol-vbus)
+- [Resol manuals](https://www.resol.de/en/dokumente)
+- [VBus protocol](https://danielwippermann.github.io/resol-vbus)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/vbus.md)
 

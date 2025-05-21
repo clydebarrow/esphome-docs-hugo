@@ -26,11 +26,11 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to measure the voltage on.
-  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see [Measuring VCC]({{< ref "components/sensor/adc#adc-vcc" >}}).
+- **pin** (**Required**, :ref:`config-pin`): The pin to measure the voltage on.
+  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see :ref:`adc-vcc`.
 - **attenuation** (*Optional*): Only on ESP32. Specify the ADC
-  attenuation to use. See [ESP32 Attenuation]({{< ref "components/sensor/adc#adc-esp32_attenuation" >}}). Defaults to `0db`.
-- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See [Different ESP32-ADC behavior since 2021.11]({{< ref "components/sensor/adc#adc-raw" >}}). Defaults to `false`.
+  attenuation to use. See :ref:`adc-esp32_attenuation`. Defaults to `0db`.
+- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See :ref:`adc-raw`. Defaults to `false`.
 - **samples** (*Optional*): The amount of ADC readings to take per sensor update. On the ESP32 this value is ignored if `attenuation` is set to `auto`. Defaults to `1`.
 - **sampling_mode** (*Optional*): Sampling method to use when multiple samples are taken.
 
@@ -38,7 +38,7 @@ sensor:
   - `min` minimal value from all samples
   - `max` maximal value from all samples
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, :ref:`config-time`): The interval
   to check the sensor. Defaults to `60s`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
@@ -64,7 +64,7 @@ sensor:
 
 On the ESP32 the voltage measured with the ADC caps out at ~1.1V by default as the sensing range (attenuation of the ADC) is set to `0db` by default.
 Measuring higher voltages requires setting `attenuation` to one of the following values: `0db`, `2.5db`, `6db`, `12db`.
-There's more information [at the manufacturer's website ](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32/api-reference/peripherals/adc.html#_CPPv425adc1_config_channel_atten14adc1_channel_t11adc_atten_t).
+There's more information [at the manufacturer's website](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32/api-reference/peripherals/adc.html#_CPPv425adc1_config_channel_atten14adc1_channel_t11adc_atten_t).
 
 To simplify this, we provide the setting [attenuation: auto` for an automatic/seamless transition among scales. `Our implementation](https://github.com/esphome/esphome/blob/dev/esphome/components/adc/adc_sensor_esp32.cpp) combines all available ranges to allow the best resolution without having to compromise on a specific attenuation.
 
@@ -187,11 +187,11 @@ on GPIO34.
     - multiply: 2.0  # The voltage divider requires us to multiply by 2
 
 ```
-This works on SKU:DFR0654. For more information see: [manufacturer's website ](https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654).
+This works on SKU:DFR0654. For more information see: [manufacturer's website](https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654).
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "ads1115/" >}}
 - {{< docref "max6675/" >}}
 - :apiref:`adc/adc_sensor.h`

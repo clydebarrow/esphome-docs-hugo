@@ -28,7 +28,7 @@ text:
 - **set_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the
   text value. The new value is available to lambdas in the `x` variable.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval on which to update the text
+- **update_interval** (*Optional*, :ref:`config-time`): The interval on which to update the text
   by executing the `lambda`. Defaults to `60s`.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the template text will immediately update the reported state.
@@ -44,7 +44,7 @@ text:
 
 ## See Also
 
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`template/text/template_text.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text/template.md)
 

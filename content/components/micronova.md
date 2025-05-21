@@ -48,8 +48,8 @@ micronova:
 ```
 ##### Configuration variables:
 
-- **enable_rx_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Output pin to be used to switch the line between RX and TX.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval that the sensors should be checked.
+- **enable_rx_pin** (**Required**, :ref:`config-pin`): Output pin to be used to switch the line between RX and TX.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval that the sensors should be checked.
   Defaults to 60 seconds.
 
 {{< note >}}
@@ -198,8 +198,8 @@ turns on or off.
 {{< /note >}}
 ## See Also
 
-- [ridiculouslab micronova ](https://www.ridiculouslab.com/arguments/iot/stufa/micronova_en.php)
-- [philibertc / micronova_controller  ](https://github.com/philibertc/micronova_controller/)
-- [eni23 / micronova-controller  ](https://github.com/eni23/micronova-controller)
+- [ridiculouslab micronova](https://www.ridiculouslab.com/arguments/iot/stufa/micronova_en.php)
+- [philibertc / micronova_controller](https://github.com/philibertc/micronova_controller/)
+- [eni23 / micronova-controller](https://github.com/eni23/micronova-controller)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/micronova.md)
 

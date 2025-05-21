@@ -25,7 +25,7 @@ one_wire:
 ### Configuration variables:
 
 - **pin** (**Required**, number): The pin the sensor bus is connected to. Please note that 1-wire is a bi-directional bus so it requires both input and output from the pin.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.  Required if you have multiple busses.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.  Required if you have multiple busses.
 
 
 ### Getting Sensor IDs
@@ -42,5 +42,5 @@ For example, you will see something like this:
 
 - :apiref:`one_wire/one_wire_bus.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/one_wire.md)
-- [Guidelines for Reliable Long Line 1-Wire Networks ](https://www.analog.com/en/technical-articles/guidelines-for-reliable-long-line-1wire-networks.html)
+- [Guidelines for Reliable Long Line 1-Wire Networks](https://www.analog.com/en/technical-articles/guidelines-for-reliable-long-line-1wire-networks.html)
 

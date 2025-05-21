@@ -30,11 +30,11 @@ APIs: the real-time event source API and REST API.
 
 If you want to receive real-time updates for sensor state updates, it's recommended to use
 the Event Source Web API. With the URL `/events`, you can create an
-[Event Source ](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) that receives
+[Event Source](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) that receives
 real-time updates of states and the debug log using server-sent events.
 Event sources are easy to implement in many languages and already have many libraries
-available. For example [eventsource for node.js ](https://github.com/EventSource/eventsource)
-and [eventsource for python ](https://pypi.org/project/eventsource/1.1.1/).
+available. For example [eventsource for node.js](https://github.com/EventSource/eventsource)
+and [eventsource for python](https://pypi.org/project/eventsource/1.1.1/).
 
 Currently, there are three types of events sent: `ping`, `state` and `log`. The first one
 is repeatedly sent out to keep the connection alive. `log` events are sent every time a log

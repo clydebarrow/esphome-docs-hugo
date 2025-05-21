@@ -57,9 +57,9 @@ ethernet:
 
 ##### RMII configuration variables:
 
-- **mdc_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The MDC pin of the board.
+- **mdc_pin** (**Required**, :ref:`config-pin`): The MDC pin of the board.
   Usually this is `GPIO23`.
-- **mdio_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The MDIO pin of the board.
+- **mdio_pin** (**Required**, :ref:`config-pin`): The MDIO pin of the board.
   Usually this is `GPIO18`.
 - **clk_mode** (*Optional*, string): The clock mode of the data lines. See your board's
   datasheet for more details. Must be one of the following values:
@@ -81,18 +81,18 @@ ethernet:
 
 ##### SPI configuration variables:
 
-- **clk_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The SPI clock pin.
-- **mosi_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The SPI MOSI pin.
-- **miso_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The SPI MISO pin.
-- **cs_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The SPI chip select pin.
-- **interrupt_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The interrupt pin.
+- **clk_pin** (**Required**, :ref:`config-pin`): The SPI clock pin.
+- **mosi_pin** (**Required**, :ref:`config-pin`): The SPI MOSI pin.
+- **miso_pin** (**Required**, :ref:`config-pin`): The SPI MISO pin.
+- **cs_pin** (**Required**, :ref:`config-pin`): The SPI chip select pin.
+- **interrupt_pin** (*Optional*, :ref:`config-pin`): The interrupt pin.
   This variable is **required** for older frameworks. See below.
-- **reset_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The reset pin.
+- **reset_pin** (*Optional*, :ref:`config-pin`): The reset pin.
 - **clock_speed** (*Optional*, float): The SPI clock speed.
   Any frequency between `8MHz` and `80MHz` is allowed, but the nearest integer division
   of `80MHz` is used, i.e. `16MHz` (`80MHz` / 5) is used when `15MHz` is configured.
   Default: `26.67MHz`.
-- **polling_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): If `interrupt_pin` is not set,
+- **polling_interval** (*Optional*, :ref:`config-time`): If `interrupt_pin` is not set,
   set the time interval for periodic polling. Minimum is 1ms, Defaults to 10ms.
   Older frameworks may not support this variable. See below for details.
 
@@ -127,7 +127,7 @@ If you are using a framework that does not support SPI-based ethernet modules wi
 - **domain** (*Optional*, string): Set the domain of the node hostname used for uploading.
   For example, if it's set to `.local`, all uploads will be sent to `<HOSTNAME>.local`.
   Defaults to `.local`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 
 {{< note >}}
@@ -314,6 +314,6 @@ ethernet:
 - {{< docref "network/" >}}
 - {{< docref "text_sensor/ethernet_info" >}}
 - :apiref:`ethernet/ethernet_component.h`
-- [ESP32 Ethernet PHY connection info ](https://pcbartists.com/design/embedded/esp32-ethernet-phy-schematic-design/)
+- [ESP32 Ethernet PHY connection info](https://pcbartists.com/design/embedded/esp32-ethernet-phy-schematic-design/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/ethernet.md)
 

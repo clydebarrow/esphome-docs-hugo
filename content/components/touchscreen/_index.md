@@ -36,7 +36,7 @@ touchscreen:
 
 ```
 ### Configuration variables:
-- **display** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The display to use this touchscreen with.
+- **display** (**Required**, :ref:`config-id`): The display to use this touchscreen with.
 - **transform** (*Optional*): Transform the touchscreen presentation using hardware. All defaults are `false`.
 
     - **swap_xy** (*Optional*, boolean): If true, exchange the x and y axes.
@@ -44,12 +44,12 @@ touchscreen:
     - **mirror_y** (*Optional*, boolean): If true, mirror the y axis.
 
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The touchscreen polling interval - used only if an interrupt pin is not in use. Defaults to `50ms`.
-- **touch_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): A timeout for touchscreens that do not report the end of touch. The default varies depending on the touchscreen.
+- **update_interval** (*Optional*, :ref:`config-time`): The touchscreen polling interval - used only if an interrupt pin is not in use. Defaults to `50ms`.
+- **touch_timeout** (*Optional*, :ref:`config-time`): A timeout for touchscreens that do not report the end of touch. The default varies depending on the touchscreen.
 - **calibration** (*Optional*): Some touchscreens require calibration on a per-device basis.
 
     - **x_min** (**Required**, int): The raw value corresponding to the left
-      (or top if `swap_xy` is specified) edge of the touchscreen. See [Calibration]({{< ref "components/touchscreen/_index#touchscreen-calibration" >}})
+      (or top if `swap_xy` is specified) edge of the touchscreen. See :ref:`touchscreen-calibration`
       for the process to calibrate the touchscreen.
     - **x_max** (**Required**, int): The raw value corresponding to the right
       (or bottom if `swap_xy` is specified) edge of the touchscreen.
@@ -60,18 +60,18 @@ touchscreen:
 
 
 - **on_touch** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the touchscreen is touched. See [`on_touch` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}).
+  when the touchscreen is touched. See :ref:`touchscreen-on_touch`.
 - **on_update** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the touchscreen is touched. See [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}).
+  when the touchscreen is touched. See :ref:`touchscreen-on_update`.
 - **on_release** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the touchscreen is no longer touched. See [`on_release` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_release" >}}).
+  when the touchscreen is no longer touched. See :ref:`touchscreen-on_release`.
 
 
 {{< anchor "touchscreen-touchpoint" >}}
 
 ## `TouchPoint` Argument Type
 
-Both the [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}) and [`on_touch` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}) have an argument of the type :apistruct:`touchscreen::TouchPoint` in a
+Both the :ref:`touchscreen-on_touch` and :ref:`touchscreen-on_update` have an argument of the type :apistruct:`touchscreen::TouchPoint` in a
 list (`on_update`) or as an `optional` (`on_touch`).
 
 The integer members for the touch positions below are in relation to the display width and height:
@@ -98,7 +98,7 @@ as the `x_raw` and `y_raw` member variables. The goal of the calibration is to i
 to the edges of the screen.
 
 The calibration assumes a display oriented in a way that you will be using it, i.e. your
-[Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) component has to have the [0,0] logical coordinate at the top left.
+:ref:`display-engine` component has to have the [0,0] logical coordinate at the top left.
 
 ```yaml
 # Touchscreen
@@ -199,7 +199,7 @@ To be exact, the component does the following
 This automation will be triggered when the touchscreen initially detects a touch on the touchscreen; it will not be fired again until
 all touches (for multi-touch supported drivers) are released.
 
-NOTE: This has changed (from ESPHome 2023.11.6.) To receive continuous updates from touch drags, use [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}).
+NOTE: This has changed (from ESPHome 2023.11.6.) To receive continuous updates from touch drags, use :ref:`touchscreen-on_update`.
 
 This trigger provides two arguments named `touch` of type *touchpoint* and `touches` with a list of all touches.
 
@@ -211,7 +211,7 @@ This new automation will be triggered when the touchscreen detects an extra touc
 
 
 This trigger provides one argument named `touches` of type :apiref:`touchscreen::TouchPoints_t` which has a list of
- [`TouchPoint` Argument Type]({{< ref "components/touchscreen/_index#touchscreen-touchpoint" >}}).
+ :ref:`touchscreen-touchpoint`.
 
 This trigger may be useful to detect gestures such as swiping across the display.
 
@@ -265,14 +265,14 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **touchscreen_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the touchscreen.
+- **touchscreen_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the touchscreen.
 - **x_min** (**Required**, int): Left coordinate of the screen area to be detected as the virtual button.
 - **x_max** (**Required**, int): Right coordinate of the screen area to be detected as the virtual button.
 - **y_min** (**Required**, int): Top coordinate of the screen area to be detected as the virtual button.
 - **y_max** (**Required**, int): Bottom coordinate of the screen area to be detected as the virtual button.
-- **page_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Only trigger this binary sensor if the display is showing this page.
+- **page_id** (*Optional*, :ref:`config-id`): Only trigger this binary sensor if the display is showing this page.
   Cannot be used with `pages`.
-- **pages** (*Optional*, list of [ID]({{< ref "guides/configuration-types#config-id" >}})): Only trigger this binary sensor if the display is showing one of these pages.
+- **pages** (*Optional*, list of :ref:`config-id`): Only trigger this binary sensor if the display is showing one of these pages.
   Cannot be used with `page_id`.
 - **use_raw** (*Optional*, boolean): Some touch screens are larger than the underlying screen, and use this extra 
   area for touch buttons. To allow the sensor to register touches outside the display area set this to `true`. 

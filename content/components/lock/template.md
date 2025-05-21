@@ -86,7 +86,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template lock.
+- **id** (**Required**, :ref:`config-id`): The ID of the template lock.
 - **state** (**Required**, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 

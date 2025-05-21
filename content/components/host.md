@@ -6,7 +6,7 @@ title: "Host Platform"
 {{< seo description="" image="" >}}
 
 The `host` platform allows ESPHome configurations to be compiled and run on a desktop computer. This is known
-to work on MacOS and Linux. On Windows [WSL ](https://learn.microsoft.com/en-us/windows/wsl/install) (Windows Subsystem for Linux) can be used to create a Linux environment that will run ESPHome.
+to work on MacOS and Linux. On Windows [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (Windows Subsystem for Linux) can be used to create a Linux environment that will run ESPHome.
 
 The only configuration required is to optionally set a dummy MAC address that will be used to identify the
 configuration to Home Assistant (the native MAC address is not readily available.)

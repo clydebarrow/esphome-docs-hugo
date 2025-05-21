@@ -8,7 +8,7 @@ title: "EZO sensor circuits"
 The `ezo` sensor platform allows you to use your EZO sensor circuits with
 ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work.
-All embedded solutions from EZO can be found [here ](https://atlas-scientific.com/embedded-solutions/).
+All embedded solutions from EZO can be found [here](https://atlas-scientific.com/embedded-solutions/).
 If a certain command is not supported directly, it can be executed with the `send_custom()` method call.
 
 {{< img src="ezo-ph-circuit.png" alt="Image" width="80.0%" class="center" >}}
@@ -36,7 +36,7 @@ sensor:
 ## Configuration variables:
 
 - **address** (**Required**, int): Specify the I²C address of the sensor.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
@@ -183,7 +183,7 @@ with the information retrieved from the sensor. For more information on the comm
   ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`ezo/ezo.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ezo.md)
 

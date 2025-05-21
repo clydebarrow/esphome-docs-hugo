@@ -96,8 +96,8 @@ climate:
     - **medium_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `medium` speed.
     - **middle_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `middle` speed. (May set to device's `high` value if you have a `Turbo` option).
     - **high_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `high` speed. (Sometimes called `Turbo`).
-- **heating_state_pin** (*Optional*, [see below]({{< ref "components/climate/tuya#active_state_detection" >}})): The input pin indicating that the device is heating - [Pin]({{< ref "guides/configuration-types#config-pin" >}}). Only used if **active_state_datapoint** is not configured.
-- **cooling_state_pin** (*Optional*, [see below]({{< ref "components/climate/tuya#active_state_detection" >}})): The input pin indicating that the device is cooling - [Pin]({{< ref "guides/configuration-types#config-pin" >}}). Only used if **active_state_datapoint** is not configured.
+- **heating_state_pin** (*Optional*, :ref:`config-pin`): The input pin indicating that the device is heating - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}). Only used if **active_state_datapoint** is not configured.
+- **cooling_state_pin** (*Optional*, :ref:`config-pin`): The input pin indicating that the device is cooling - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}). Only used if **active_state_datapoint** is not configured.
 - **target_temperature_datapoint** (**Required**, int): The datapoint id number of the target temperature.
 - **current_temperature_datapoint** (**Required**, int): The datapoint id number of the current temperature.
 - **temperature_multiplier** (*Optional*, float): A multiplier to modify the incoming and outgoing temperature values - [see below]({{< ref "components/climate/tuya#temperature-multiplier" >}}).
@@ -117,7 +117,7 @@ If the device has different multipliers for current and target temperatures, **t
 
 Some Tuya climate devices don't have a data point for setting and reporting HVAC mode, they use a data point to report their active state (current action). In this case, you can just use the **active_state** configuration.
 
-If your device uses a data point for HVAC mode, but not for reporting the active state, it is possible to modify the hardware so that the relay outputs can be read by the ESP. Please refer to [this discussion ](https://github.com/klausahrenberg/WThermostatBeca/issues/17) for more details on the required modifications. You can then use the **heating_state_pin** and/or **cooling_state_pin** configuration variables to detect the current state.
+If your device uses a data point for HVAC mode, but not for reporting the active state, it is possible to modify the hardware so that the relay outputs can be read by the ESP. Please refer to [this discussion](https://github.com/klausahrenberg/WThermostatBeca/issues/17) for more details on the required modifications. You can then use the **heating_state_pin** and/or **cooling_state_pin** configuration variables to detect the current state.
 
 If none of the above variables are set, the active state is inferred from the difference between the current and target temperatures:
 

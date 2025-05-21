@@ -9,7 +9,7 @@ The `xiaomi_ble` sensor platform lets you track the output of Xiaomi Bluetooth L
 
 
 {{< note >}}
-You may alternatively use ESPHome's {{< docref "/components/bluetooth_proxy" >}} component to forward sensor data to Home Assistant and have Mija devices configured using its own Mija BLE component. This should work for the devices flashed with [PVVX MiThermometer ](https://github.com/pvvx/ATC_MiThermometer) custom firmware, as well as the regular, stock firmware.
+You may alternatively use ESPHome's {{< docref "/components/bluetooth_proxy" >}} component to forward sensor data to Home Assistant and have Mija devices configured using its own Mija BLE component. This should work for the devices flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware, as well as the regular, stock firmware.
 
 
 {{< /note >}}
@@ -41,7 +41,7 @@ sensor:
 ```
 {{< note >}}
 Newer versions of HHCCJCY01 ship with firmware 3.2.1, and they
-[don't send the battery level data anymore ](https://github.com/esphome/esphome/pull/1288#issuecomment-695809481).
+[don't send the battery level data anymore](https://github.com/esphome/esphome/pull/1288#issuecomment-695809481).
 
 {{< /note >}}
 ### GCLS002
@@ -149,7 +149,7 @@ sensor:
 
 Cleargrass (Qingping): hygro thermometer, round body, e-ink display.
 
-New firmware requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})), and stopped broadcasting battery level.
+New firmware requires a bindkey in order to decrypt the received data (see :ref:`obtaining_the_bindkey`), and stopped broadcasting battery level.
 
 {{< img src="xiaomi_cgg1.jpg" alt="Image" width="30.0%" class="center" >}}
 
@@ -182,9 +182,9 @@ Hygro thermometer, small square body, segment LCD, encrypted, broadcasts tempera
 
 There are the following possibilities to operate this sensor:
 
-1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
-2. Device flashed with [PVVX MiThermometer ](https://github.com/pvvx/ATC_MiThermometer) custom firmware
-3. Device flashed with [ATC MiThermometer ](https://github.com/atc1441/ATC_MiThermometer) custom firmware
+1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see :ref:`obtaining_the_bindkey`)
+2. Device flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware
+3. Device flashed with [ATC MiThermometer](https://github.com/atc1441/ATC_MiThermometer) custom firmware
 
 - "Mi Like" advertisement (dummy bindkey required)
 - "Custom" advertisement (no bindkey required)
@@ -266,7 +266,7 @@ sensor:
 ```
 ### MHO-C401
 
-Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see :ref:`obtaining_the_bindkey`).
 
 {{< img src="xiaomi_mhoc401.jpg" alt="Image" width="30.0%" class="center" >}}
 
@@ -274,8 +274,8 @@ Hygro thermometer, square body, e-ink display, encrypted, broadcasts temperature
 
 Similar to the LYWSD03MMC, there is custom firmware available for this device, so there are the following possibilities to operate this sensor:
 
-1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}}))
-2. Device flashed with [PVVX MiThermometer ](https://github.com/pvvx/ATC_MiThermometer) custom firmware
+1. Xiaomi stock firmware (requires a bindkey in order to decrypt the received data, see :ref:`obtaining_the_bindkey`)
+2. Device flashed with [PVVX MiThermometer](https://github.com/pvvx/ATC_MiThermometer) custom firmware
 
 - "Mi Like" advertisement (dummy bindkey required)
 - "pvvx" custom advertisement (no bindkey required, only PVVX firmware)
@@ -314,7 +314,7 @@ sensor:
 ```
 ### CGD1
 
-Cleargrass (Qingping) alarm clock, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Cleargrass (Qingping) alarm clock, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see :ref:`obtaining_the_bindkey`).
 
 {{< img src="xiaomi_cgd1.jpg" alt="Image" width="30.0%" class="center" >}}
 
@@ -335,7 +335,7 @@ sensor:
 ```
 ### CGDK2
 
-Cleargrass (Qingping) Temp & RH Lite, round body, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Cleargrass (Qingping) Temp & RH Lite, round body, segment LCD, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see :ref:`obtaining_the_bindkey`).
 The measurements are broadcast every 10-15 minutes.
 
 {{< img src="xiaomi_cgdk2.jpg" alt="Image" width="30.0%" class="center" >}}
@@ -417,7 +417,7 @@ binary_sensor:
 ```
 ### MJYD02YL-A
 
-Xiaomi Yeelight night light, in-shape replacement of MJYD02YL with BLE, broadcasts light on/off status, motion detection, idle time since last motion event and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})). Implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
+Xiaomi Yeelight night light, in-shape replacement of MJYD02YL with BLE, broadcasts light on/off status, motion detection, idle time since last motion event and battery status. Requires a bindkey in order to decrypt the received data (see :ref:`obtaining_the_bindkey`). Implemented as a hybrid sensor, needs both `sensor` and `binary_sensor` in config.
 
 {{< img src="xiaomi_mjyd02yla.jpg" alt="Image" width="30.0%" class="center" >}}
 
@@ -443,7 +443,7 @@ binary_sensor:
 ```
 ### CGPR1
 
-Qingping motion & ambient light sensor. Broadcasts motion detection, idle time since last motion event, lux value and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Qingping motion & ambient light sensor. Broadcasts motion detection, idle time since last motion event, lux value and battery status. Requires a bindkey in order to decrypt the received data (see :ref:`obtaining_the_bindkey`).
 
 {{< img src="xiaomi_cgpr1.png" alt="Image" width="30.0%" class="center" >}}
 
@@ -466,7 +466,7 @@ binary_sensor:
 ### RTCGQ02LM - Mi Motion Sensor 2
 
 Motion & ambient light sensor. Broadcasts motion detection, light/dark and battery status. Also has a button that broadcasts when pressed.
-Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey]({{< ref "components/sensor/xiaomi_ble#obtaining_the_bindkey" >}})).
+Requires a bindkey in order to decrypt the received data (see :ref:`obtaining_the_bindkey`).
 
 {{< img src="xiaomi_rtcgq02lm.jpg" alt="Image" width="30.0%" class="center" >}}
 
@@ -545,7 +545,7 @@ To set up an encrypted device such as the LYWSD03MMC (with Xiaomi stock firmware
 
 ### LYWSD03MMC/MHO-C401
 
-If the LYWSD03MMC or MHO-C401 sensor is operated with the Xiaomi stock firmware, you can use the [TeLink flasher application ](https://atc1441.github.io/TelinkFlasher.html) to easily generate a new bind key and upload the key to the device without the need to flash a new firmware (see figure). For this, you load the flasher [webpage ](https://atc1441.github.io/TelinkFlasher.html) with a [supported browser ](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md) and connect the device by pressing "Connect". After the connection is established, you press the "Do Activation" button and the new key will be shown in the "Mi Bind Key" field. The key can be copied directly into the sensor YAML configuration.
+If the LYWSD03MMC or MHO-C401 sensor is operated with the Xiaomi stock firmware, you can use the [TeLink flasher application](https://atc1441.github.io/TelinkFlasher.html) to easily generate a new bind key and upload the key to the device without the need to flash a new firmware (see figure). For this, you load the flasher [webpage](https://atc1441.github.io/TelinkFlasher.html) with a [supported browser](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md) and connect the device by pressing "Connect". After the connection is established, you press the "Do Activation" button and the new key will be shown in the "Mi Bind Key" field. The key can be copied directly into the sensor YAML configuration.
 
 {{< img src="telink_flasher.jpg" alt="Image" caption="Telink flasher application." width="100.0%" class="center" >}}
 
@@ -557,21 +557,21 @@ The new bind key will work with ESPHome, but the Mi Home app will not recognise 
 
 The method to obtain a new bind key for the CGDK2 sensor is similar to the method for the LYWSD03MMC sensor, except a modified version of the flasher application is used.
 
-For this, you load the [application ](https://zaluthar.github.io/TelinkFlasher.html) with a [supported browser ](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md) and connect the device by pressing "Connect". After the connection is established, you press the "Do Activation" button and the new key will be shown in the "Mi Bind Key" field. The key can be copied directly into the sensor YAML configuration.
+For this, you load the [application](https://zaluthar.github.io/TelinkFlasher.html) with a [supported browser](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md) and connect the device by pressing "Connect". After the connection is established, you press the "Do Activation" button and the new key will be shown in the "Mi Bind Key" field. The key can be copied directly into the sensor YAML configuration.
 
 ### Other encrypted devices
 1.
-The easiest method (confirmed to work for LYWSD03MMC) is to use the [Telink flasher method ](https://github.com/pvvx/ATC_MiThermometer). The accompanying `video
+The easiest method (confirmed to work for LYWSD03MMC) is to use the [Telink flasher method](https://github.com/pvvx/ATC_MiThermometer). The accompanying `video
 <https://www.youtube.com/watch?v=NXKzFG61lNs>`_ shows how to wirelessly flash a LYWSD03MMC, or how to obtain the bind key of the stock firmware (watch till around 13:10). The custom firmware allows you to change several settings of the device, including the smiley and the advertising interval. Follow the instructions on the site using Telink Flasher - best results with a Bluetooth-enabled Android phone. Note that with `pvvx` default settings advertisment is set to `Custom` with no encryption. No need for `bind_key` in this case, you can just add the sensors to your ESPHome config as described above.
 
 2.
 The other option is to use the original Mi Home app to add the sensor once. While adding the device, a new key is generated and uploaded into the Xiaomi cloud and to the device itself. Currently a chinese server needs to be selected as the rest of the world doesn't support most of these devices yet. Once generated, the key will not change again until the device is removed and re-added in the Xiaomi app.
 
 2a.
-The easiest method to retrieve the bindkey from the cloud is to use the [Cloud Tokens Extractor ](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor), written by one of Home Assistant users. If you prefer to not use the executable, read [here ](https://www.home-assistant.io/integrations/xiaomi_miio/#xiaomi-cloud-tokens-extractor).
+The easiest method to retrieve the bindkey from the cloud is to use the [Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor), written by one of Home Assistant users. If you prefer to not use the executable, read [here](https://www.home-assistant.io/integrations/xiaomi_miio/#xiaomi-cloud-tokens-extractor).
 
 2b.
-Another option is to use a SSL packet sniffer. It can be setup on either an Android phone or the iPhone. A good choice for Android is the [Remote PCAP ](https://play.google.com/store/apps/details?id=com.egorovandreyrm.pcapremote&hl=en) in combination with [Wireshark ](https://www.wireshark.org/). A tutorial on how to setup the Remote PCAP packet sniffer can be found [here ](https://egorovandreyrm.com/pcap-remote-tutorial/) and [here ](https://github.com/ahpohl/xiaomi_lywsd03mmc). Instructions how to obtain the key using an iPhone are [here ](https://github.com/custom-components/sensor.mitemp_bt/blob/master/faq.md#my-sensors-ble-advertisements-are-encrypted-how-can-i-get-the-key). Once the traffic between the Mi Home app and the Xiaomi servers has been recorded, the bind key will show in clear text:
+Another option is to use a SSL packet sniffer. It can be setup on either an Android phone or the iPhone. A good choice for Android is the [Remote PCAP](https://play.google.com/store/apps/details?id=com.egorovandreyrm.pcapremote&hl=en) in combination with [Wireshark](https://www.wireshark.org/). A tutorial on how to setup the Remote PCAP packet sniffer can be found [here](https://egorovandreyrm.com/pcap-remote-tutorial/) and [here](https://github.com/ahpohl/xiaomi_lywsd03mmc). Instructions how to obtain the key using an iPhone are [here](https://github.com/custom-components/sensor.mitemp_bt/blob/master/faq.md#my-sensors-ble-advertisements-are-encrypted-how-can-i-get-the-key). Once the traffic between the Mi Home app and the Xiaomi servers has been recorded, the bind key will show in clear text:
 
 ```yaml
 packet: POST /app/device/bltbind
@@ -612,13 +612,13 @@ You should at least protect your sensors with a custom pairing PIN code. Choose 
 - {{< docref "/components/ethernet" >}}
 - {{< docref "/components/bluetooth_proxy" >}}
 - Passive BLE monitor integration for Home Assistant (ble_monitor custom component) `<https://github.com/custom-components/ble_monitor>`__
-  by [@Magalex2x14 ](https://github.com/Magalex2x14) and [@Ernst79 ](https://github.com/Ernst79)
+  by [@Magalex2x14](https://github.com/Magalex2x14) and [@Ernst79](https://github.com/Ernst79)
 - Custom firmware (PVVX) for the Xiaomi Thermometer LYWSD03MMC `<https://github.com/pvvx/ATC_MiThermometer>`__
 - TeLink flasher application (PVVX) `<https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html>`__
 - Custom firmware (ATC) for the Xiaomi Thermometer LYWSD03MMC `<https://github.com/atc1441/ATC_MiThermometer>`__
 - TeLink flasher application (ATC) `<https://atc1441.github.io/TelinkFlasher.html>`__
 - TeLink flasher application modified for CGDK2 `<https://zaluthar.github.io/TelinkFlasher.html>`__
-- Xiaomi LYWSD03MMC passive sensor readout `<https://github.com/ahpohl/xiaomi_lywsd03mmc>[__ by `@ahpohl ](https://github.com/ahpohl)
+- Xiaomi LYWSD03MMC passive sensor readout `<https://github.com/ahpohl/xiaomi_lywsd03mmc>[__ by `@ahpohl](https://github.com/ahpohl)
 - Cloud Tokens Extractor: `<https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor>`__
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/xiaomi_ble.md)

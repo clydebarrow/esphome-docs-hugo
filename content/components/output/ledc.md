@@ -5,7 +5,7 @@ title: "ESP32 LEDC Output"
 
 {{< seo description="" image="" >}}
 
-The LEDC output component exposes a [LEDC PWMchannel ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
+The LEDC output component exposes a [LEDC PWMchannel](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 of the ESP32 as an output component.
 
 The frequency range of LEDC is from 10Hz to 40MHz - however, higher frequencies require a smaller
@@ -14,21 +14,21 @@ bit depth which means the output is not that accurate for frequencies above ~300
 
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to use LEDC on. Can only be GPIO0-GPIO33.
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **pin** (**Required**, :ref:`config-pin`): The pin to use LEDC on. Can only be GPIO0-GPIO33.
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
 - **frequency** (*Optional*, float): At which frequency to run the LEDC
   channel's timer. Defaults to 1000Hz.
 - All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 Advanced options:
 
-- **channel** (*Optional*, int): Manually set the [LEDC  channel ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html#configure-channel)
+- **channel** (*Optional*, int): Manually set the [LEDC  channel](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html#configure-channel)
   to use. Two adjacent channels share the same timer. Defaults to an automatic selection.
 
 Note: When configuring custom frequencies for two or more outputs, ensure that you manually specify
 channel 0, 2, 4, 6 for each output. This will prevent issues that arise from automatic selection,
 which chooses adjacent channels with shared timers. See
-[Issue #3114 ](https://github.com/esphome/issues/issues/3114) for more details.
+[Issue #3114](https://github.com/esphome/issues/issues/3114) for more details.
 
 - **phase_angle** (*Optional*, float): Set a phase angle to the other channel of this timer.
   Range 0-360°, defaults to 0°
@@ -120,7 +120,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the LEDC output to change.
+- **id** (**Required**, :ref:`config-id`): The ID of the LEDC output to change.
 - **frequency** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The frequency
   to set in hertz.
 
@@ -132,6 +132,6 @@ Configuration variables:
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - :apiref:`ledc/ledc_output.h`
-- [esp-idf LEDC API docs ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
+- [esp-idf LEDC API docs](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/ledc.md)
 

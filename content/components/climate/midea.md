@@ -10,16 +10,16 @@ The `midea` component creates a Midea air conditioner climate device.
 {{< note >}}
 This protocol also used by some vendors:
 
-        - [Electrolux ](https://www.electrolux.ru/)
-        - [Qlima ](https://www.qlima.com/)
-        - [Artel ](https://www.artelgroup.com/)
-        - [Carrier ](https://www.carrier.com/)
-        - [Comfee ](http://www.comfee-russia.ru/)
-        - [Inventor ](https://www.inventorairconditioner.com/)
-        - [Senville ](https://senville.com/)
+        - [Electrolux](https://www.electrolux.ru/)
+        - [Qlima](https://www.qlima.com/)
+        - [Artel](https://www.artelgroup.com/)
+        - [Carrier](https://www.carrier.com/)
+        - [Comfee](http://www.comfee-russia.ru/)
+        - [Inventor](https://www.inventorairconditioner.com/)
+        - [Senville](https://senville.com/)
         - and maybe others
 
-Control is possible with a custom dongle. Example of hardware implementation is [IoT Uni Dongle ](https://github.com/dudanov/iot-uni-dongle) or [Midea SLWF-01pro ](https://smartlight.me/smart-home-devices/wifi-devices/wifi-dongle-air-conditioners-midea-idea-electrolux-for-home-assistant) ([CloudFree ](https://cloudfree.shop/product/ductless-hvac-wi-fi-module/), [Tindie ](https://www.tindie.com/products/smartlightme/wifi-dongle-for-air-conditioners-midea-electrolux)).
+Control is possible with a custom dongle. Example of hardware implementation is [IoT Uni Dongle](https://github.com/dudanov/iot-uni-dongle) or [Midea SLWF-01pro](https://smartlight.me/smart-home-devices/wifi-devices/wifi-dongle-air-conditioners-midea-idea-electrolux-for-home-assistant) ([CloudFree](https://cloudfree.shop/product/ductless-hvac-wi-fi-module/), [Tindie](https://www.tindie.com/products/smartlightme/wifi-dongle-for-air-conditioners-midea-electrolux)).
 
 {{< /note >}}
 The Midea air conditioner requires the UART to be configured with `baud_rate: 9600`.  The hardware requires **5V logic levels** and does not appear to work with 3.3V logic levels. Use a logic level shifter if building your own dongle. 
@@ -68,11 +68,11 @@ climate:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of{{< docref "../uart" >}}uart` if you want
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the {{< docref "../uart" >}} if you want
   to use multiple UART buses.
-- **transmitter_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Defined and used automatically when u{{< docref "../remote_transmitter" >}}tter` component for IR commands transmit.
-- **period** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Minimal period between requests to the appliance. Defaults to `1s`.
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Request response timeout until next request attempt. Defaults to `2s`.
+- **transmitter_id** (*Optional*, :ref:`config-id`): Defined and used automatically when using {{< docref "../remote_transmitter" >}} component for IR commands transmit.
+- **period** (*Optional*, :ref:`config-time`): Minimal period between requests to the appliance. Defaults to `1s`.
+- **timeout** (*Optional*, :ref:`config-time`): Request response timeout until next request attempt. Defaults to `2s`.
 - **num_attempts** (*Optional*, int): Number of request attempts between 1 and 5 inclusive. Defaults to `3`.
 - **autoconf** (*Optional*, boolean): Get capabilities automatically. Allows you not to manually define most of the capabilities of the appliance.
   Defaults to `True`.
@@ -276,11 +276,11 @@ switch:
 
 Thanks to the following people for their contributions to reverse engineering the UART protocol and source code in the following repositories:
 
-* [Mac Zhou ](https://github.com/mac-zhou/midea-msmart)
-* [NeoAcheron ](https://github.com/NeoAcheron/midea-ac-py)
-* [Rene Klootwijk ](https://github.com/reneklootwijk/midea-uart)
+* [Mac Zhou](https://github.com/mac-zhou/midea-msmart)
+* [NeoAcheron](https://github.com/NeoAcheron/midea-ac-py)
+* [Rene Klootwijk](https://github.com/reneklootwijk/midea-uart)
 
-Special thanks to the project [IRremoteESP8266 ](https://github.com/crankyoldgit/IRremoteESP8266) for describing the IR protocol.
+Special thanks to the project [IRremoteESP8266](https://github.com/crankyoldgit/IRremoteESP8266) for describing the IR protocol.
 
 ## See Also
 

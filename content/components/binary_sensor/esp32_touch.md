@@ -8,8 +8,8 @@ title: "ESP32 Touch Pad"
 Capacitive touch detection is possible on ESP32, ESP32-S2 or ESP32-S3 processors.
 In ESPHome, it is configured in two parts:
 
-- [Component/Hub]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-component" >}})
-- [Binary Sensor]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-binary-sensor" >}})
+- :ref:`esp32-touch-component`
+- :ref:`esp32-touch-binary-sensor`
 
 {{< anchor "esp32-touch-component" >}}
 
@@ -31,7 +31,7 @@ esp32_touch:
    be displayed in the logs. Useful for finding out suitable thresholds for the binary sensors, but
    will spam the logs. See [setting up touch pads]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-binary-sensor" >}})
    for more information. Defaults to `false`.
--  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for code generation.
+-  **id** (*Optional*, :ref:`config-id`): Manually specify the ID for code generation.
 
 **Advanced options**
 
@@ -40,10 +40,10 @@ the sensors aren't behaving as expected.
 
 *All processors:*
 
-- **sleep_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set a time period
+- **sleep_duration** (*Optional*, :ref:`config-time`): Set a time period
   denoting the amount of time the touch peripheral should sleep between measurements. This can decrease
   power usage but make the sensor slower. Default is about 27 milliseconds.
-- **measurement_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set the conversion
+- **measurement_duration** (*Optional*, :ref:`config-time`): Set the conversion
   time for all touch pads. A longer conversion time means that more charge/discharge cycles of the touch pad
   can be performed, therefore increasing accuracy. Default is about 8ms, the maximum amount.
 - **low_voltage_reference** (*Optional*): The low voltage reference to use for the charge cycles. One of `0.5V`,
@@ -54,12 +54,12 @@ the sensors aren't behaving as expected.
   `0.5V`, `0V`. Default is `0V`.
 
 For a more detailed explanation of the parameters above, please see the
-[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/touch_pad.html#optimization-of-measurements)
+[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/touch_pad.html#optimization-of-measurements)
 
 *ESP32 only*
 
-- **iir_filter** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Optionally set up an
-  [Infinite Impulse Response ](https://en.wikipedia.org/wiki/Infinite_impulse_response)
+- **iir_filter** (*Optional*, :ref:`config-time`): Optionally set up an
+  [Infinite Impulse Response](https://en.wikipedia.org/wiki/Infinite_impulse_response)
   filter should be applied to all touch pads. This can increase the accuracy of the touch pads a lot, but higher values
   decrease the response time. A good value to start with is `10ms`. By default, the IIR filter is inactive.
 
@@ -81,7 +81,7 @@ Filter configuration:
   Must be one of `OFF`, `IIR_2`, `IIR_4` or `IIR_8`.
 
 For a more detailed explanation of the filter configuration, please see the
-[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv419touch_filter_config)
+[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv419touch_filter_config)
 
 Denoise configuration:
 
@@ -91,18 +91,18 @@ Denoise configuration:
   of `L0`, `L1`, `L2`, `L3`, `L4`, `L5`, `L6` or `L7`.
 
 For a more detailed explanation of the denoise configuration, please see the
-[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv417touch_pad_denoise)
+[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv417touch_pad_denoise)
 
 Waterproof configuration:
 
-- **waterproof_guard_ring** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Sets the touch channel to use for the guard pad. The guard
+- **waterproof_guard_ring** (*Optional*, :ref:`config-pin`): Sets the touch channel to use for the guard pad. The guard
   pad is used to detect the large area of water covering the touch panel.
 - **waterproof_shield_driver** (*Optional*): Shield channel drive capability configuration; the larger the
   parasitic capacitance on the shielding channel, the higher the drive capability needs to be set. Must be one of
   `L0`, `L1`, `L2`, `L3`, `L4`, `L5`, `L6` or `L7`.
 
 For a more detailed explanation of the waterproof configuration, please see the
-[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv420touch_pad_waterproof)
+[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv420touch_pad_waterproof)
 
 {{< anchor "esp32-touch-binary-sensor" >}}
 
@@ -131,13 +131,13 @@ binary_sensor:
 ```
 ### Configuration variables:
 
--  **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to detect touch
+-  **pin** (**Required**, :ref:`config-pin`): The pin to detect touch
    events on.
 -  **threshold** (**Required**, `int`): The threshold to use to detect touch events. See
-   [Finding Thresholds]({{< ref "components/binary_sensor/esp32_touch#esp32-finding-thresholds" >}}) below for help determining this value.
+   :ref:`esp32-finding-thresholds` below for help determining this value.
 -  **wakeup_threshold** (*Optional*, `int`): The threshold to use to detect touch events to wake-up from deep sleep.
-   See [Finding Thresholds]({{< ref "components/binary_sensor/esp32_touch#esp32-finding-thresholds" >}}) below for help determining this value. Touch pad sensors that should trigger a
-   wake-up from deep sleep must specify this value. The [Deep Sleep Component]({{< ref "components/deep_sleep#deep_sleep-component" >}}) must also be configured to enable
+   See :ref:`esp32-finding-thresholds` below for help determining this value. Touch pad sensors that should trigger a
+   wake-up from deep sleep must specify this value. The :ref:`deep_sleep-component` must also be configured to enable
    wake-up from a touch event. Note that no filter(s) is/are active during deep sleep.
 -  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
@@ -243,6 +243,6 @@ to make some adjustments to your configuration to accommodate this behavior.
 
 - {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`esp32_touch/esp32_touch.h`
-- [esp-idf Touch Sensor API ](https://esp-idf.readthedocs.io/en/latest/api-reference/peripherals/touch_pad.html)
+- [esp-idf Touch Sensor API](https://esp-idf.readthedocs.io/en/latest/api-reference/peripherals/touch_pad.html)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/esp32_touch.md)
 

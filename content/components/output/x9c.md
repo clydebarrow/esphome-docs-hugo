@@ -5,7 +5,7 @@ title: "X9C Potentiometer Output"
 
 {{< seo description="" image="" >}}
 
-The [x9c` output platform allows you to add an output that controls a `X9C digital potentiometer ](https://www.renesas.com/us/en/document/dst/x9c102-x9c103-x9c104-x9c503-datasheet).
+The [x9c` output platform allows you to add an output that controls a `X9C digital potentiometer](https://www.renesas.com/us/en/document/dst/x9c102-x9c103-x9c104-x9c503-datasheet).
 
 {{< img src="x9c.jpg" alt="Image" caption="X9C digital potentiometer" width="70.0%" class="center" >}}
 
@@ -33,7 +33,7 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
 - **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Chip Select pin
 - **inc_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Increment pin
 - **ud_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Up/Down pin

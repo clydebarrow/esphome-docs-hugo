@@ -6,7 +6,7 @@ title: "LibreTiny PWM Output"
 {{< seo description="" image="" >}}
 
 The LibreTiny PWM platform allows you to use a hardware PWM on BK72xx and RTL87xx chips.
-Refer to [LibreTiny/Boards ](https://docs.libretiny.eu/link/boards) to find your board
+Refer to [LibreTiny/Boards](https://docs.libretiny.eu/link/boards) to find your board
 and which PWM pins it supports.
 
 ```yaml
@@ -27,7 +27,7 @@ light:
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to use PWM on.
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
 - **frequency** (*Optional*, frequency): The frequency to run the PWM with. Lower frequencies
   have more visual artifacts, but can represent much more colors. Defaults to `1000 Hz`.
 - All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
@@ -48,7 +48,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the PWM output to change.
+- **id** (**Required**, :ref:`config-id`): The ID of the PWM output to change.
 - **frequency** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The frequency
   to set in hertz.
 

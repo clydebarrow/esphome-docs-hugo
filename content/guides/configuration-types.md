@@ -21,7 +21,7 @@ ID twice.
 
 Because ESPHome converts your configuration into C++ code and the
 IDs are in reality just C++ variable names, they must also adhere to
-C++'s naming conventions. [C++ Variablenames ](https://venus.cs.qc.cuny.edu/~krishna/cs111/lectures/D3_C++_Variables.pdf)
+C++'s naming conventions. [C++ Variablenames](https://venus.cs.qc.cuny.edu/~krishna/cs111/lectures/D3_C++_Variables.pdf)
 …
 
 -  … must start with a letter and can end with numbers.
@@ -121,7 +121,7 @@ Advanced options:
   by the chip on reset to configure initial operation, e.g. to enable bootstrap mode.
   Using such pins for I/O should be avoided and ESPHome will warn if I/O is configured on a strapping pin.
 
-  For more detail see [Why am I getting a warning about strapping pins?]({{< ref "guides/faq#strapping-warnings" >}}).
+  For more detail see :ref:`strapping-warnings`.
 
   If you are *absolutely* sure that you are using a strapping pin for I/O in a way that will not cause problems,
   you can suppress the warning by setting this option to `true` in the pin configuration.

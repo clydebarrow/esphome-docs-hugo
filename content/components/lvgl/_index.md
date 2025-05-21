@@ -5,8 +5,8 @@ title: "LVGL Graphics"
 
 {{< seo description="" image="" >}}
 
-[LVGL ](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
-embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8 ](https://docs.lvgl.io/8.4/).
+[LVGL](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
+embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8](https://docs.lvgl.io/8.4/).
 
 {{< img src="lvgl_main_screenshot.png" alt="Image" >}}
 
@@ -58,7 +58,7 @@ Every widget has a parent object where it is created. For example, if a label is
 
 Pages in ESPHome are implemented as LVGL screens, which are special objects which have no parent. There is always one active page on a display.
 
-Widgets can be assigned with an [automations]({{< ref "automations/_index#automation" >}}) so that they can be referenced in [ID]({{< ref "guides/configuration-types#config-id" >}}).
+Widgets can be assigned with an :ref:`config-id` so that they can be referenced in [automations]({{< ref "automations/_index#automation" >}}).
 
 Some widgets integrate also as native ESPHome components:
 
@@ -72,7 +72,7 @@ Some widgets integrate also as native ESPHome components:
 | `led` | {{< docref "/components/light/lvgl" "Light" >}} |
 
 
-These are useful with [Home Assistant automations ](https://www.home-assistant.io/docs/automation/) interacting directly with the widgets.
+These are useful with [Home Assistant automations](https://www.home-assistant.io/docs/automation/) interacting directly with the widgets.
 
 ## Main Configuration
 
@@ -84,34 +84,34 @@ The following configuration variables apply to the main `lvgl` component, in ord
 
 **Configuration variables:**
 
-- **displays** (*Optional*, list, [ID]({{< ref "guides/configuration-types#config-id" >}})): A list of display IDs where LVGL should perform rendering based on its configuration. This may be omitted if there is a single display configured, which will be used automatically.
+- **displays** (*Optional*, list, :ref:`config-id`): A list of display IDs where LVGL should perform rendering based on its configuration. This may be omitted if there is a single display configured, which will be used automatically.
 - **touchscreens** (*Optional*, list): A list of touchscreens interacting with the LVGL widgets on the display. If you configure a single touchscreen it will be used automatically, and this config entry will not be required.
-    - **touchscreen_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of a touchscreen configuration related to a display.
+    - **touchscreen_id** (**Required**, :ref:`config-id`): ID of a touchscreen configuration related to a display.
     - **long_press_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the touchscreen, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`.
     - **long_press_repeat_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the touchscreen, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`.
 - **encoders** (*Optional*, list): A list of rotary encoders interacting with the LVGL widgets on the display.
     - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the {{< docref "/components/lvgl/widgets" "common properties" >}} of the widgets for more information on groups.
-    - **initial_focus** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): An optional ID for a widget to be given focus on startup (especially useful if there is only one focusable widget.)
-    - **enter_button** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
-    - **sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/sensor/rotary_encoder" >}}oder`; or a list with buttons for left/right interaction with the widgets:
-        - **left_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
-        - **right_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
+    - **initial_focus** (*Optional*, :ref:`config-id`): An optional ID for a widget to be given focus on startup (especially useful if there is only one focusable widget.)
+    - **enter_button** (**Required**, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `ENTER` key.
+    - **sensor** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/sensor/rotary_encoder" >}}; or a list with buttons for left/right interaction with the widgets:
+        - **left_button** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `LEFT` key.
+        - **right_button** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `RIGHT` key.
     - **long_press_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the rotary encoder, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`. Can be disabled with `never`.
     - **long_press_repeat_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the rotary encoder, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`. Can be disabled with `never`.
 - **keypads** (*Optional*, list): A list of keypads interacting with the LVGL widgets on the display.
     - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the {{< docref "/components/lvgl/widgets" "common properties" >}} of the widgets for more information on groups.
-    - **up** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `UP` key.
-    - **down** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `DOWN` key.
-    - **right** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
-    - **left** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
-    - **esc** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ESC` key.
-    - **del** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `DEL` key.
-    - **backspace** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `BACKSPACE` key.
-    - **enter** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
-    - **next** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `NEXT` key.
-    - **prev** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `PREV` key.
-    - **home** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `HOME` key.
-    - **end** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `END` key.
+    - **up** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `UP` key.
+    - **down** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `DOWN` key.
+    - **right** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `RIGHT` key.
+    - **left** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `LEFT` key.
+    - **esc** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `ESC` key.
+    - **del** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `DEL` key.
+    - **backspace** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `BACKSPACE` key.
+    - **enter** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `ENTER` key.
+    - **next** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `NEXT` key.
+    - **prev** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `PREV` key.
+    - **home** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `HOME` key.
+    - **end** (*Optional*, :ref:`config-id`): The ID of a {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}, to be used as `END` key.
     - **long_press_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the keypad, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`. Can be disabled with `never`.
     - **long_press_repeat_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the keypad, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`. Can be disabled with `never`.
 
@@ -139,7 +139,7 @@ When using an encoder input device the navigation works as follows:
 - **log_level** (*Optional*, string): Set the logger level specifically for the messages of the LVGL library: `TRACE`, `INFO`, `WARN`, `ERROR`, `USER`, `NONE`. Defaults to `WARN`.
 - **byte_order** (*Optional*, int16): The byte order of the data LVGL outputs; either `big_endian` or `little_endian`. Defaults to `big_endian`.
 - **disp_bg_color** (*Optional*, [color]({{< ref "components/lvgl/_index#lvgl-color" >}})): Solid color used to fill the background. Can be changed at runtime with the `lvgl.update` action.
-- **disp_bg_image** (*Optional*, [`image`]({{< ref "components/lvgl/widgets#lvgl-widget-image" >}})):  The ID of an existing image configuration, to be used as background wallpaper. To change the image at runtime use the `lvgl.update` action. Also see [image]({{< ref "components/image#display-image" >}}) for a note regarding supported image formats. May also be set to `none` to clear the background image.`
+- **disp_bg_image** (*Optional*, [image]({{< ref "components/image#display-image" >}})):  The ID of an existing image configuration, to be used as background wallpaper. To change the image at runtime use the `lvgl.update` action. Also see :ref:`lvgl-widget-image` for a note regarding supported image formats. May also be set to `none` to clear the background image.`
 - **disp_bg_opa** (*Optional*, [opacity]({{< ref "components/lvgl/_index#lvgl-opacity" >}})): Opacity of the background image or color of the display.
 - **default_font** (*Optional*, ID): The ID of the [font]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) used by default to render the text or symbols. Defaults to LVGL's internal `montserrat_14` if not specified.
 - **style_definitions** (*Optional*, list): A batch of style definitions to use in LVGL widget's `styles` configuration. See [below]({{< ref "components/lvgl/_index#lvgl-theme" >}}) for more details.
@@ -147,17 +147,17 @@ When using an encoder input device the navigation works as follows:
 - **theme** (*Optional*, list): A list of styles to be applied to all widgets. See [below]({{< ref "components/lvgl/_index#lvgl-theme" >}}) for more details.
 - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the root display. May not be used if `pages` (below) is configured.
 - **pages** (*Optional*, list): A list of page IDs. Each page acts as a parent for widgets placed on it. May not be used with `widgets` (above). Options for each page:
-    - **skip** (*Optional*, boolean): Option to skip this page when navigating between them with [`lvgl.page.next`, `lvgl.page.previous`]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}).
-    - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
+    - **skip** (*Optional*, boolean): Option to skip this page when navigating between them with :ref:`lvgl-page-next-previous-action`.
+    - **layout** (*Optional*): See :ref:`lvgl-layouts` for details. Defaults to `NONE`.
     - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the page.
-    - All other options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) to be applied to this page.
-- **page_wrap** (*Optional*, boolean): Wrap from the last to the first page when navigating between them with [`lvgl.page.next`, `lvgl.page.previous`]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}). Defaults to `true`.
+    - All other options from :ref:`lvgl-styling` to be applied to this page.
+- **page_wrap** (*Optional*, boolean): Wrap from the last to the first page when navigating between them with :ref:`lvgl-page-next-previous-action`. Defaults to `true`.
 - **top_layer** (*Optional*, list): A special kind of *Always on Top* page, which acts as a parent for widgets placed on it. It's shown above all the pages, which may be useful for widgets which always need to be visible.
-    - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
+    - **layout** (*Optional*): See :ref:`lvgl-layouts` for details. Defaults to `NONE`.
     - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the page.
-    - All other options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) to be applied to this page.
-- **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
-- All other options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) to be applied to all widgets directly.
+    - All other options from :ref:`lvgl-styling` to be applied to this page.
+- **layout** (*Optional*): See :ref:`lvgl-layouts` for details. Defaults to `NONE`.
+- All other options from :ref:`lvgl-styling` to be applied to all widgets directly.
 
 **Example:**
 
@@ -174,7 +174,7 @@ lvgl:
             text: 'Hello World!'
 
 ```
-See [Page navigation footer]({{< ref "cookbook/lvgl#lvgl-cookbook-navigator" >}}) in the Cookbook for an example which demonstrates how to implement a page navigation bar at the bottom of the screen.
+See :ref:`lvgl-cookbook-navigator` in the Cookbook for an example which demonstrates how to implement a page navigation bar at the bottom of the screen.
 
 
 ### Choosing a buffer size
@@ -217,7 +217,7 @@ lvgl:
 
 Colors can be specified anywhere in the LVGL configuration either by referencing a preconfigured [ESPHome color]({{< ref "components/display/_index#config-color" >}}) ID or by representing the color in the common hexadecimal notation. For example, `0xFF0000` would be red.
 
-You may also use any of the [standard CSS color names ](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color), e.g. `springgreen`.
+You may also use any of the [standard CSS color names](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color), e.g. `springgreen`.
 
 When using a lambda to provide a color you should use the `lv_color_hex` function, for example:
 
@@ -254,11 +254,11 @@ You can use [fonts configured normally]({{< ref "components/font#display-fonts" 
 For best results, set `bpp: 4` to get the glyphs rendered with proper anti-aliasing.
 
 {{< /tip >}}
-Check out [Battery status icon]({{< ref "cookbook/lvgl#lvgl-cookbook-iconbatt" >}}), [Toggle state icon button]({{< ref "cookbook/lvgl#lvgl-cookbook-iconstat" >}}) and [MDI icons in text]({{< ref "cookbook/lvgl#lvgl-cookbook-icontext" >}}) in the Cookbook for examples which demonstrate how to use icons and text with TrueType/OpenType fonts.
+Check out :ref:`lvgl-cookbook-icontext`, :ref:`lvgl-cookbook-iconstat` and :ref:`lvgl-cookbook-iconbatt` in the Cookbook for examples which demonstrate how to use icons and text with TrueType/OpenType fonts.
 
 **Library fonts**
 
-The LVGL library offers by default prerendered sets with ASCII characters ([0x20-0x7F`), the degree symbol (`0xB0`), the bullet symbol (`0x2022`) from `Montserrat Medium ](https://fonts.google.com/specimen/Montserrat), and 60 symbols from [FontAwesome ](https://fontawesome.com/) (see below). You can use the IDs below when specifying the `text_font` parameter:
+The LVGL library offers by default prerendered sets with ASCII characters ([0x20-0x7F`), the degree symbol (`0xB0`), the bullet symbol (`0x2022`) from `Montserrat Medium](https://fonts.google.com/specimen/Montserrat), and 60 symbols from [FontAwesome](https://fontawesome.com/) (see below). You can use the IDs below when specifying the `text_font` parameter:
 
 - `montserrat_8`: 8px font
 - `montserrat_10`: 10px font
@@ -298,14 +298,14 @@ In addition to the above, the following special fonts are available from LVGL as
 
 - `unscii_8`: 8 px pixel perfect font with only ASCII characters.
 - `unscii_16`: 16 px pixel perfect font with only ASCII characters.
-- [simsun_16_cjk`: 16 px font with normal range + 1000 most common `CJK Radicals ](https://en.wikipedia.org/wiki/CJK_Radicals_Supplement).
+- [simsun_16_cjk`: 16 px font with normal range + 1000 most common `CJK Radicals](https://en.wikipedia.org/wiki/CJK_Radicals_Supplement).
 - `dejavu_16_persian_hebrew`: 16 px font with normal range + Hebrew, Arabic, Persian letters and all their forms.
 
 {{< anchor "lvgl-styling" >}}
 
 ### Style properties
 
-LVGL follows CSS's [border-box model ](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
+LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
 {{< img src="lvgl_boxmodel.png" alt="Image" class="center" >}}
 
@@ -467,7 +467,7 @@ So the precedence happens like this: state based styles override the locally spe
 
 Feel free to experiment to discover inheritance and precedence of the styles based on states between the nested widgets.
 
-[Theme and style definitions]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) The Cookbook contains an example which demonstrates how to implement a gradient style for your widgets.
+:ref:`lvgl-cookbook-theme` The Cookbook contains an example which demonstrates how to implement a gradient style for your widgets.
 
 ### `lvgl.style.update`
 
@@ -502,7 +502,7 @@ Layouts aim to position widgets automatically, eliminating the need to specify `
 
 The layout configuration options are applied to any parent widget or page, influencing the appearance of the children. The position and size calculated by the layout overwrites the *normal* `x`, `y`, `width`, and `height` settings of the children.
 
-Check out [Weather forecast panel]({{< ref "cookbook/lvgl#lvgl-cookbook-weather" >}}), [Grid layout positioning]({{< ref "cookbook/lvgl#lvgl-cookbook-grid" >}}) and [Flex layout positioning]({{< ref "cookbook/lvgl#lvgl-cookbook-flex" >}}) in the Cookbook for examples which demonstrate how to automate widget positioning, potentially reducing the size of your device's YAML configuration, and saving you from lots of manual calculations.
+Check out :ref:`lvgl-cookbook-flex`, :ref:`lvgl-cookbook-grid` and :ref:`lvgl-cookbook-weather` in the Cookbook for examples which demonstrate how to automate widget positioning, potentially reducing the size of your device's YAML configuration, and saving you from lots of manual calculations.
 
 The `hidden`, `ignore_layout` and `floating` [flags]({{< ref "components/lvgl/widgets#lvgl-widget-flags" >}}) can be used on widgets to ignore them in layout calculations.
 
@@ -514,7 +514,7 @@ The `hidden`, `ignore_layout` and `floating` [flags]({{< ref "components/lvgl/wi
 
 **Flex**
 
-The Flex layout in LVGL is a subset implementation of [CSS Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+The Flex layout in LVGL is a subset implementation of [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 It can arrange items into rows or columns (tracks), handle wrapping, adjust spacing between items and tracks and even handle growing the layout to make the item(s) fill the remaining space with respect to minimum/maximum width and height.
 
@@ -529,20 +529,20 @@ It can arrange items into rows or columns (tracks), handle wrapping, adjust spac
 **Configuration variables:**
 
 - **flex_flow** (*Optional*, string): Select the arrangement of the children widgets:
-    - `ROW`: place the children in a row without wrapping.
-    - `COLUMN`: place the children in a column without wrapping.
-    - `ROW_WRAP`: place the children in a row with wrapping (default).
-    - `COLUMN_WRAP`: place the children in a column with wrapping.
-    - `ROW_REVERSE`: place the children in a row without wrapping but in reversed order.
-    - `COLUMN_REVERSE`: place the children in a column without wrapping but in reversed order.
-    - `ROW_WRAP_REVERSE`: place the children in a row with wrapping but in reversed order.
-    - `COLUMN_WRAP_REVERSE`: place the children in a column with wrapping but in reversed order.
+- `ROW`: place the children in a row without wrapping.
+- `COLUMN`: place the children in a column without wrapping.
+- `ROW_WRAP`: place the children in a row with wrapping (default).
+- `COLUMN_WRAP`: place the children in a column with wrapping.
+- `ROW_REVERSE`: place the children in a row without wrapping but in reversed order.
+- `COLUMN_REVERSE`: place the children in a column without wrapping but in reversed order.
+- `ROW_WRAP_REVERSE`: place the children in a row with wrapping but in reversed order.
+- `COLUMN_WRAP_REVERSE`: place the children in a column with wrapping but in reversed order.
 
 - **flex_align_main** (*Optional*, string): Determines how to distribute the items in their track on the *main* axis. For example, flush the items to the right on with `flex_flow: ROW_WRAP` (known as *justify-content* in CSS). Possible options below.
 - **flex_align_cross** (*Optional*, string): Determines how to distribute the items in their track on the *cross* axis. For example, if the items have different height place them to the bottom of the track (known as *align-items* in CSS). Possible options below.
 - **flex_align_track** (*Optional*, string): Determines how to distribute the tracks (known as *align-content* in CSS). Possible options below.
 
-Values for use with  `flex_align_main`, `flex_align_cross`, `flex_align_track`:
+    Values for use with  `flex_align_main`, `flex_align_cross`, `flex_align_track`:
 
 - `START`: means left horizontally and top vertically (default).
 - `END`: means right horizontally and bottom vertically.
@@ -573,7 +573,7 @@ Values for use with  `flex_align_main`, `flex_align_cross`, `flex_align_track`:
 ```
 **Grid**
 
-The Grid layout in LVGL is a subset implementation of [CSS Grid ](https://css-tricks.com/snippets/css/complete-guide-grid//).
+The Grid layout in LVGL is a subset implementation of [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid//).
 
 It can arrange items into a 2D "table" that has rows or columns (tracks). The item(s) can span through multiple columns or rows. The track's size can be set in pixels, to the largest item of the track (`CONTENT`) or in "free units" to distribute the free space proportionally.
 
@@ -596,8 +596,8 @@ In a grid layout, *all the widgets placed on the grid* will get some additional 
 
 - **grid_cell_row_pos** (**Required**, int16): Position of the widget, in which row to appear (0 based count).
 - **grid_cell_column_pos** (**Required**, int16): Position of the widget, in which column to appear (0 based count).
-- **grid_cell_x_align** (*Optional*, string): How to align the widget horizontally within the cell. Can also be applied through [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}). Possible options below.
-- **grid_cell_y_align** (*Optional*, string): How to align the widget vertically within the cell. Can also be applied through [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}). Possible options below.
+- **grid_cell_x_align** (*Optional*, string): How to align the widget horizontally within the cell. Can also be applied through :ref:`lvgl-styling`. Possible options below.
+- **grid_cell_y_align** (*Optional*, string): How to align the widget vertically within the cell. Can also be applied through :ref:`lvgl-styling`. Possible options below.
 - **grid_cell_row_span**  (*Optional*, int16): How many rows to span across the widget. Defaults to `1`.
 - **grid_cell_column_span** (*Optional*, int16): How many columns to span across the widget. . Defaults to `1`.
 
@@ -643,7 +643,7 @@ To visualize real, calculated sizes of transparent widgets you can temporarily s
 A gradient is a sequence of colors which can be applied to an object using the `bg_grad` style option. Gradients are defined in the *gradients* section of the LVGL configuration by providing two or more color stop points.
  Each entry has the following options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID with which you will be able to reference the gradient later.
+- **id** (**Required**, :ref:`config-id`): The ID with which you will be able to reference the gradient later.
 - **direction** (*Optional*, string): The direction of the gradient. Possible options are `none` (the default) `hor` or `ver`.
 - **dither** (*Optional*, string): A dithering selection. Possible options are `none` (the default) `err_diff` or `ordered`.
 - **stops** (**Required**, list): A list of at least 2 color stop points. Each stop point has the following options:
@@ -733,7 +733,7 @@ on_...:
 
 This [action]({{< ref "automations/actions#actions-action" >}}) pauses the activity of LVGL, including rendering.
 
-- **show_snow** (*Optional*, boolean): When paused, display random colored pixels across the entire screen in order to minimize screen burn-in, to relief the tension put on each individual pixel. See [Prevent burn-in of LCD]({{< ref "cookbook/lvgl#lvgl-cookbook-antiburn" >}}) for an example which demonstrates how to use this.
+- **show_snow** (*Optional*, boolean): When paused, display random colored pixels across the entire screen in order to minimize screen burn-in, to relief the tension put on each individual pixel. See :ref:`lvgl-cookbook-antiburn` for an example which demonstrates how to use this.
 - **lvgl_id** (*Optional*): The ID of the LVGL instance to pause.
 
 ```yaml
@@ -954,7 +954,7 @@ lvgl:
         - lvgl.pause:
 
 ```
-See [Turn off screen when idle]({{< ref "cookbook/lvgl#lvgl-cookbook-idlescreen" >}}) for an example which demonstrates how to implement screen saving with idle settings.
+See :ref:`lvgl-cookbook-idlescreen` for an example which demonstrates how to implement screen saving with idle settings.
 
 {{< anchor "lvgl_on_pause_trigger" >}}
 
@@ -980,6 +980,6 @@ This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) i
 - {{< docref "/components/display/index" >}}
 - {{< docref "/components/touchscreen/index" >}}
 - {{< docref "/components/sensor/rotary_encoder" >}}
-- [LVGL docs ](https://docs.lvgl.io/)
+- [LVGL docs](https://docs.lvgl.io/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/index.md)
 

@@ -56,7 +56,7 @@ like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.
 - **service_uuid** (*Optional*, 16 bit, 32 bit, or 128 bit BLE Service UUID): The BLE
   Service UUID which can be tracked if the device randomizes the MAC address. Note that exactly one of
   `mac_address`, `irk`, `service_uuid` or `ibeacon_uuid` must be present.
-- **ibeacon_uuid** (*Optional*, string): The [universally unique identifier ](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+- **ibeacon_uuid** (*Optional*, string): The [universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)
   to identify the beacon that needs to be tracked. Note that exactly one of `mac_address`,
   `irk`, `service_uuid` or `ibeacon_uuid` must be present.
 - **ibeacon_major** (*Optional*, int): The iBeacon major identifier of the beacon that needs

@@ -6,7 +6,7 @@ title: "Eastron SDM Energy Monitor"
 {{< seo description="" image="" >}}
 
 The `sdm_meter` sensor platform allows you to use Eastron SDM modbus energy monitors
-([website ](http://www.eastrongroup.com/product_detail.php?id=170&menu1=&menu2=))
+([website](http://www.eastrongroup.com/product_detail.php?id=170&menu1=&menu2=))
 with ESPHome.
 
 {{< img src="sdm220m-full.png" alt="Image" caption="SDM230M Energy Monitor." width="50.0%" class="center" >}}
@@ -15,7 +15,7 @@ The communication with this component is done via a [Modbus protocol]({{< ref "c
 over RS485 wiring. You will need an RS485 to UART converter for communication.
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600bps. 
-! For the SDM230M, SDM120M Energy Monitor the default factory baud rate is 2400bps. You either need to change the code to 2400bps for these models or change the settings on your Energy Meter For more information search for your model: ([eastron's website ](https://www.eastroneurope.com/products/category/din-rail-mounted-metering)).
+! For the SDM230M, SDM120M Energy Monitor the default factory baud rate is 2400bps. You either need to change the code to 2400bps for these models or change the settings on your Energy Meter For more information search for your model: ([eastron's website](https://www.eastroneurope.com/products/category/din-rail-mounted-metering)).
 
 ```yaml
 # Example configuration entry
@@ -97,14 +97,14 @@ sensor:
   kilovolt amps reactive hours (kVArh). All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **export_reactive_energy** (*Optional*): Use the export reactive energy value of the sensor in
   kilovolt amps reactive hours (kVArh). All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`sdm220m/sdm220m.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sdm_meter.md)
 

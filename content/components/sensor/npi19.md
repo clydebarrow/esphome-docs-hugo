@@ -5,8 +5,8 @@ title: "NPI-19 Pressure Sensor"
 
 {{< seo description="" image="" >}}
 
-The [npi19` sensor platform allows you to use your NPI-19 (`datasheet ](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf),
-[product page ](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)) pressure sensors with ESPHome.
+The [npi19` sensor platform allows you to use your NPI-19 (`datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf),
+[product page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)) pressure sensors with ESPHome.
 
 {{< img src="npi19.jpg" alt="Image" caption="NPI-19 Pressure Sensor." width="50.0%" class="center" >}}
 
@@ -26,7 +26,7 @@ sensor:
 ```
 ## Configuration variables
 
-- **raw_pressure** (*Optional*): The information for the pressure sensor. See [Converting units]({{< ref "components/sensor/npi19#npi19-converting" >}}).
+- **raw_pressure** (*Optional*): The information for the pressure sensor. See :ref:`npi19-converting`.
 
  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
@@ -34,7 +34,7 @@ sensor:
 
  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **i2c_id** (*Optional*, [I²C Component]({{< ref "components/i2c#i2c" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}). Defaults to the default I²C bus.
+- **i2c_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [I²C Component]({{< ref "components/i2c#i2c" >}}). Defaults to the default I²C bus.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   All known sensors currently configured to `0x28`. Defaults to `0x28`.
@@ -48,7 +48,7 @@ The NPI-19 pressure sensor is not calibrated to units, you have to convert the m
 
 ### Estimated
 
-On page 1 of the [product application note ](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
+On page 1 of the [product application note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
 the value `1638` maps to approximately `10%` of the maximum value of the sensor (e.g. `0.5` psi for a `5` psi sensor);
 the value `14746` maps to approximately `90%` of the maximum value of the sensor (e.g. `4.5` psi for a `5`  psi sensor).
 Use `calibrate_linear` filter to map these sensor values:
@@ -88,9 +88,9 @@ compensation.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [NPI-19 Product Page ](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)
-- [NPI-19 Datasheet ](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf)
-- [NPI-19 Product Application Note ](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
+- :ref:`sensor-filters`
+- [NPI-19 Product Page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)
+- [NPI-19 Datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf)
+- [NPI-19 Product Application Note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/npi19.md)
 

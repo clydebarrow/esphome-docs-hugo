@@ -7,7 +7,7 @@ title: "Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit"
 
 ## Component/Hub
 
-The [seeed_mr60fda2` platform allows you to use Seeed Studio's MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (`Product Page ](https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html)) with ESPHome.
+The [seeed_mr60fda2` platform allows you to use Seeed Studio's MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (`Product Page](https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html)) with ESPHome.
 
 The [UART]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
 You can use the ESP32 software or hardware (recommended) serial to use the MR60FDA2; its default baud rate is 115200.
@@ -21,9 +21,9 @@ seeed_mr60fda2:
 ```
 ### Configuration variables:
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for {{< docref "seeed_mr60fda2/" >}}fda2` component if you need multiple components.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID for this {{< docref "seeed_mr60fda2/" >}} component if you need multiple components.
 
 ## Binary Sensor
 
@@ -92,9 +92,9 @@ select:
 
 ## See Also
 
-- [Official Using Documents for Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 ](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)
-- [Product Detail Page for Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 ](https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html)
-- [Source of inspiration for implementation ](https://github.com/limengdu/MR60FDA2_ESPHome_external_components)
+- [Official Using Documents for Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)
+- [Product Detail Page for Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6](https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html)
+- [Source of inspiration for implementation](https://github.com/limengdu/MR60FDA2_ESPHome_external_components)
 - :apiref:`seeed_mr60fda2/seeed_mr60fda2.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/seeed_mr60fda2.md)
 

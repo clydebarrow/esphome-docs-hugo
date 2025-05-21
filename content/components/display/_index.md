@@ -25,10 +25,10 @@ For graphical displays, which offer the greatest flexibility, there are two opti
 
 All display components inherit these configuration variables.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Required if there are multiple displays.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation. Required if there are multiple displays.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to re-draw the screen. Defaults to `1s`.
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+  See :ref:`display-engine` for more information.
 
 All *graphical* displays also inherit these configuration variables.
 
@@ -58,7 +58,7 @@ individually.
 
 {{< note >}}
 Display hardware is complex and sometimes doesn't behave as expected. If you're having trouble with your display,
-please see [Troubleshooting]({{< ref "components/display/_index#troubleshooting" >}}) below.
+please see :ref:`troubleshooting` below.
 
 {{< /note >}}
 So, first a few basics: When setting up a display platform in ESPHome there will be a configuration
@@ -286,7 +286,7 @@ stuff after it is encountered, it is magically replaced by the argument after th
 
 Every time you type a percent sign `%` in a printf format string, it will treat the following letters as a format tag
 until a so-called "specifier" is encountered (in this case `f`). You can read more about it
-[here ](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm),
+[here](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm),
 but for ESPHome there are really just a few things you need to know.
 
 Let's break `%.1f` down:
@@ -585,8 +585,8 @@ display:
             ESP_LOGD("display", "Page changed from 1 to 2");
 
 ```
-- **from** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing from this page. Defaults to all pages.
-- **to** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing to this page. Defaults to all pages.
+- **from** (*Optional*, :ref:`config-id`): A page id. If set the automation is only triggered if changing from this page. Defaults to all pages.
+- **to** (*Optional*, :ref:`config-id`): A page id. If set the automation is only triggered if changing to this page. Defaults to all pages.
 
 Additionally the old page will be given as the variable `from` and the new one as the variable `to`.
 
@@ -607,7 +607,7 @@ If you're experiencing issues with your color display, the `show_test_card: true
 When all points above are shown correctly then the display is working as expected.
 To help the graphics display team determine the best way to help you, **a picture of the result of this option is very helpful.**
 
-Should you [create an issue ](https://github.com/esphome/issues/issues) in GitHub regarding your display, please
+Should you [create an issue](https://github.com/esphome/issues/issues) in GitHub regarding your display, please
 be sure to **include a link to where you purchased the display** so that we can validate the configuration you've used.
 
 {{< note >}}

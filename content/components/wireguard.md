@@ -12,13 +12,13 @@ available for ESP32, ESP8266 and BK72xx microcontrollers *only*.
 
   Please note that *"WireGuard" and the "WireGuard" logo are
   registered trademarks of Jason A. Donenfeld.* See
-  ["WireGuard" Trademark Usage Policy ](https://www.wireguard.com/trademark-policy/)
+  ["WireGuard" Trademark Usage Policy](https://www.wireguard.com/trademark-policy/)
   for additional information.
 
 {{< warning >}}
 To successfully use this component you must have |wireguard| also
 on your remote host (already installed and ready to accept connections).
-If you don't have it please read the section [Remote peer setup]({{< ref "components/wireguard#wireguard-installation" >}}).
+If you don't have it please read the section :ref:`wireguard-installation`.
 
 {{< /warning >}}
 {{< warning >}}
@@ -83,7 +83,7 @@ wireguard:
 - **netmask** (*Optional*, IPv4 address): The netmask for the configured address.
   Default to `255.255.255.255`.
 
-  See section [Static routes and outgoing connections]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
+  See section :ref:`wireguard-static-routes` if outgoing connections are
   expected to transit through the VPN link (e.g. with {{< docref "mqtt/" >}} to a
   remote MQTT broker).
 
@@ -99,7 +99,7 @@ wireguard:
 - **peer_preshared_key** (*Optional*, string): The chosen pre-shared key between
   local device and remote peer.
 
-- **peer_persistent_keepalive** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of
+- **peer_persistent_keepalive** (*Optional*, :ref:`config-time`): The amount of
   time after which a *keepalive* packet is sent through the tunnel.
   By default this feature is disabled (`0s`).
 
@@ -112,11 +112,11 @@ wireguard:
 
   The device own `address/32` is always added by default to this list.
 
-  See section [Static routes and outgoing connections]({{< ref "components/wireguard#wireguard-static-routes" >}}) if outgoing connections are
+  See section :ref:`wireguard-static-routes` if outgoing connections are
   expected to transit through the VPN link (e.g. with {{< docref "mqtt/" >}} to a
   remote MQTT broker).
 
-- **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait
+- **reboot_timeout** (*Optional*, :ref:`config-time`): The amount of time to wait
   before rebooting the device when the remote peer is unreachable. Can be disabled
   by setting this to `0s`. Default to `15min`.
 
@@ -132,10 +132,10 @@ wireguard:
   active too. To bypass such deadlock set this parameter to `true` in
   order to not initialize MQTT until the remote peer is up.
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): How often to check
+- **update_interval** (*Optional*, :ref:`config-time`): How often to check
   the connection status and the latest handshake value. Default to `10s`.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 {{< anchor "wireguard-static-routes" >}}
 
@@ -158,31 +158,14 @@ Incoming connections are not affected by `netmask`.
 Let's explain with some examples:
 
 | address | netmask | allowed ips | working outgoing connections |
-| --- | --- | --- | --- |
-| 172.16.0.100 | *omitted* or | *omitted* or | **none**, |
-|  | 255.255.255.255 | any other value | no routes are created |
-|  | 255.255.255.0 | *omitted* |  |
-|  |  | ---------------------- |  |
-|  |  | - 172.16.0.0/24 | and any other network will |
-|  |  | - 192.168.0.0/24 |  |
-|  |  | - *any other* |  |
-|  |  | -   192.168.0.0/24 | **none** because |
-|  |  |  |  |
-|  |  |  |  |
-| 10.44.0.100 | 255.0.0.0 | *omitted* |  |
-|  |  | - 10.44.0.0/16 | only to the networks in |
-|  |  | - 10.10.0.0/16 | the allowed list because the |
-|  |  |  | netmask will route the whole |
-|  |  |  |  |
-|  |  |  | allows only those two |
-|  |  |  | subnets |
+|  |
+| 172.16.0.100 | *omitted* or<br>255.255.255.255 | *omitted* or<br>any other value | **none**,<br>no routes are created |
+|  | 255.255.255.0 | *omitted*<br>- 172.16.0.0/24<br>- 192.168.0.0/24<br>- *any other* | only to `172.16.0.0/24`<br>and any other network will<br>be outside `172.16.0.0/24` |
+|  |  | -   192.168.0.0/24 | **none** because<br>`192.168.0.0/24` is not<br>part of `172.16.0.0/24` |
+| 10.44.0.100 | 255.0.0.0 | *omitted* | to `10.0.0.0/8` network |
+|  |  | - 10.44.0.0/16<br>- 10.10.0.0/16 | only to the networks in<br>the allowed list because the<br>netmask will route the whole<br>`10.0.0.0/8` but wireguard<br>allows only those two<br>subnets |
 | any | 0.0.0.0 | *omitted* | **any** |
-|  |  | - 172.16.0.0/24 | to any network that is in |
-|  |  | - 10.44.0.0/16 | the list of allowed IPs |
-|  |  | - 10.10.0.0/16 | because the netmask will |
-|  |  |  | route any traffic but |
-|  |  |  | wireguard allows only its |
-|  |  |  | own list |
+|  |  | - 172.16.0.0/24<br>- 10.44.0.0/16<br>- 10.10.0.0/16 | to any network that is in<br>the list of allowed IPs<br>because the netmask will<br>route any traffic but<br>wireguard allows only its<br>own list |
 
 {{< note >}}
 Setting the `netmask` to `0.0.0.0` has the effect of routing
@@ -276,7 +259,7 @@ The lambda equivalent is `id(wireguard_id).disable()`.
 
 {{< note >}}
 To disable |wireguard| since device boot you can execute this action
-in the [`on_boot`]({{< ref "components/esphome#esphome-on_boot" >}}) step.
+in the :ref:`esphome-on_boot` step.
 
 {{< /note >}}
 ##### `wireguard.enable`
@@ -337,7 +320,7 @@ There are many different ways for installing and configuring
 |wireguard| on servers, home servers or general host. It depends
 on the platform and on the operating system in use.
 
-You can start reading the [official documentation ](https://www.wireguard.com/)
+You can start reading the [official documentation](https://www.wireguard.com/)
 to have an overview of what it is and on how to install it *system wide* for
 common operating systems. Read the thread at [Home Assistant Community Add-on: WireGuard](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
 if you intend to install it through Home Assistant. Plase note that securely
@@ -373,9 +356,9 @@ of the [address]({{< ref "components/wireguard#wireguard-address" >}}) configure
 
 - {{< docref "time/index" >}}
 - {{< docref "time/sntp" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - |wireguard|_ official website
-- [Home Assistant Community Add-on: WireGuard  ](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
-  (also on [GitHub ](https://github.com/hassio-addons/addon-wireguard))
+- [Home Assistant Community Add-on: WireGuard](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
+  (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wireguard.md)
 

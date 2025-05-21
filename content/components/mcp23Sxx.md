@@ -10,15 +10,15 @@ This series features exactly the same API as the MCP230xx I/O Expander (I²C).
 
 **Supported Variants :**
 
-- [MCP23S08 Component]({{< ref "components/mcp23sxx#mcp23S08-label" >}})
-- [MCP23S17 Component]({{< ref "components/mcp23sxx#mcp23S17-label" >}})
+- :ref:`mcp23S08-label`
+- :ref:`mcp23S17-label`
 
 {{< anchor "mcp23S08-label" >}}
 
 ## MCP23S08 Component
 
-The MCP23S08 component ([datasheet ](http://ww1.microchip.com/downloads/en/DeviceDoc/MCP23008-MCP23S08-Data-Sheet-20001919F.pdf),
-[Digi-Key ](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S08-E-P/MCP23S08-E-P-ND/735954)) has 8 GPIOs that can be configured independently.
+The MCP23S08 component ([datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MCP23008-MCP23S08-Data-Sheet-20001919F.pdf),
+[Digi-Key](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S08-E-P/MCP23S08-E-P-ND/735954)) has 8 GPIOs that can be configured independently.
 
 ```yaml
 # Example configuration entry
@@ -56,7 +56,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S08 component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this MCP23S08 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use
 - **deviceaddress** (*Optional*, int): The address of the chip.
   Defaults to `0`.
@@ -66,7 +66,7 @@ binary_sensor:
 
 ### Pin Configuration Variables:
 
-- **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S08 component.
+- **mcp23xxx** (**Required**, :ref:`config-id`): The id of the MCP23S08 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
 - All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
@@ -76,8 +76,8 @@ binary_sensor:
 ## MCP23S17 Component
 
 The MCP23S17 component allows you to use MCP23S17 I/O expanders
-([datasheet ](http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf),
-[Digi-Key ](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S17-E-SP/MCP23S17-E-SP-ND/894276)) in ESPHome.
+([datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf),
+[Digi-Key](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S17-E-SP/MCP23S17-E-SP-ND/894276)) in ESPHome.
 It uses the [SPI Bus]({{< ref "components/spi#spi" >}}) for communication.
 
 Once configured, you can use any of the 16 pins as
@@ -121,7 +121,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this MCP23S17 component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this MCP23S17 component.
 - **cs_pin** (**Required**, int): The SPI chip select pin to use.
 - **deviceaddress** (*Optional*, int): The address of the chip.
   Defaults to `0`.
@@ -131,14 +131,14 @@ binary_sensor:
 
 ### Pin Configuration Variables:
 
-- **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S17 component.
+- **mcp23xxx** (**Required**, :ref:`config-id`): The id of the MCP23S17 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
 - All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
 
 ## See Also
 
-- [SPI Bus]({{< ref "components/spi#spi" >}})
+- :ref:`spi`
 - {{< docref "switch/gpio" >}}
 - {{< docref "binary_sensor/gpio" >}}
 - :apiref:`API Reference (MCP23S08) <mcp23S08/mcp23S08.h>`

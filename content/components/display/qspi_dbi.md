@@ -59,11 +59,11 @@ display:
 - **reset_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The RESET pin.
 - **enable_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The display enable pin.
 - **brightness** (*Optional*, int): A brightness value in the range 0-255
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `5s`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to re-draw the screen. Defaults to `5s`.
 - **auto_clear_enabled** (*Optional*, boolean): Whether to automatically clear the display data before each lambda call,
   or to keep the existing display content (must overwrite explicitly, e.g., only on data change). Defaults to `true` if a lambda or pages are configured, false otherwise.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See :ref:`display-pages`.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 - **color_order** (*Optional*): Should be one of `rgb` (default) or `bgr`.
 - **dimensions** (**Required**): Dimensions of the screen, specified either as *width* **x** *height* (e.g `320x240`) or with separate config keys.
     - **height** (**Required**, int): Specifies height of display in pixels.
@@ -83,7 +83,7 @@ display:
 - **draw_from_origin** (*Optional*, boolean): When set, all partial display updates will start at the origin (0,0). Defaults to false.
 - **draw_rounding** (*Optional*, int): Caters for display chips that require partial drawing to be aligned to certain boundaries. Default is 2, must be a power of 2.
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+  See :ref:`display-engine` for more information.
 
 
 

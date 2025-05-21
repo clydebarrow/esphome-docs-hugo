@@ -41,7 +41,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **haier_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of haier climate component
+- **haier_id** (**Required**, :ref:`config-id`): The id of haier climate component
 - **outdoor_temperature** (*Optional*): Temperature sensor for outdoor temperature.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **humidity** (*Optional*): Sensor for indoor humidity. Make sure that your climate model supports this type of sensor.
@@ -69,6 +69,6 @@ sensor:
 ## See Also
 
 - {{< docref "/components/climate/haier" "Haier Climate" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/haier.md)
 

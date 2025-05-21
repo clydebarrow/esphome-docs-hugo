@@ -24,12 +24,12 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, :ref:`config-time`): The interval
   to check the sensor. Defaults to `60s`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/internal_temperature.md)
 

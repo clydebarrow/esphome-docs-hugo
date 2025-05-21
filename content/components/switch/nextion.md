@@ -31,20 +31,20 @@ switch:
 ```
 ## Configuration variables:
 
-- **nextion_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion display.
+- **nextion_id** (*Optional*, :ref:`config-id`): The ID of the Nextion display.
 - **component_name** (*Optional*, string): The name of the Nextion component.
 - **variable_name** (*Optional*, string): The name of the Nextion variable. Any value over `0` is considered to be **on**
-- **update_interval** (*Optional*, [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}})): The duration to update the sensor. If using a [Time]({{< ref "guides/configuration-types#config-time" >}}) this should not be used
-- **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
-- **background_pressed_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color when pressed
-- **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
-- **foreground_pressed_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color when pressed
+- **update_interval** (*Optional*, :ref:`config-time`): The duration to update the sensor. If using a :ref:`nextion_custom_switch_protocol` this should not be used
+- **background_color** (*Optional*, :ref:`config-color`):  The background color
+- **background_pressed_color** (*Optional*, :ref:`config-color`):  The background color when pressed
+- **foreground_color** (*Optional*, :ref:`config-color`):  The foreground color
+- **foreground_pressed_color** (*Optional*, :ref:`config-color`):  The foreground color when pressed
 - **visible** (*Optional*, boolean):  Visible or not
 - All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
-See [How things Update]({{< ref "components/switch/nextion#nextion_switch_how_things_update" >}}) for additional information
+See :ref:`nextion_switch_how_things_update` for additional information
 
 ### Globals
 The Nextion does not retain data on Nextion page changes. Additionally, if a page is changed and the **component_name** does not exist on that page then
@@ -87,7 +87,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion switch.
+- **id** (**Required**, :ref:`config-id`): The ID of the Nextion switch.
 - **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The boolean state to publish.
 - **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
   Default is true.
@@ -95,7 +95,7 @@ Configuration options:
   display which will update component. Default is true.
 
 {{< note >}}
-This action can also be written in lambdas. See [Lambda Calls]({{< ref "components/switch/nextion#nextion_switch_lambda_calls" >}})
+This action can also be written in lambdas. See :ref:`nextion_switch_lambda_calls`
 
 {{< /note >}}
 {{< anchor "nextion_switch_lambda_calls" >}}
@@ -126,7 +126,7 @@ some more advanced functions (see the full :apiref:`nextion/nextion_switch.h` fo
 
 ## How things Update
 A Nextion component with an integer value (.val) or Nextion variable will be automatically polled if **update_interval** is set.
-To have the Nextion send the data you can use the [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}}) for this. Add the [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}}) to the
+To have the Nextion send the data you can use the :ref:`nextion_custom_switch_protocol` for this. Add the :ref:`nextion_custom_switch_protocol` to the
 component or function you want to trigger the send. Typically this is in *Touch Press Event* but some components, like a slider, should have it
 set in the *Touch Release Event* to capture all the changes. Since this is a custom protocol it can be sent from anywhere (timers/functions/components)
 in the Nextion.
@@ -138,7 +138,7 @@ since this will be sending the real value to esphome.
 {{< /note >}}
 Using the above yaml example:
 - "Radio 0 switch" will poll the Nextion for the `r0.val` value and set the state accordingly.
-- "Is Darkmode Set" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}}) or use a lambda:
+- "Is Darkmode Set" will NOT poll the Nextion. Either the Nextion will need to use the :ref:`nextion_custom_switch_protocol` or use a lambda:
 
 - [Lambda Calls]({{< ref "components/switch/nextion#nextion_switch_lambda_calls" >}}).
 

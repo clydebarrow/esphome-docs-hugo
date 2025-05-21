@@ -59,19 +59,19 @@ cover:
 ```
 ## Configuration variables:
 
-- **open_sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The open current sensor.
+- **open_sensor** (**Required**, :ref:`config-id`): The open current sensor.
 - **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be opened.
-- **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **open_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
   to open up from the fully-closed state.
 - **open_moving_current_threshold** (**Required**, float): The amount of current in Amps the motor
   should drain to consider the cover is opening.
 - **open_obstacle_current_threshold** (**Required**, float): The amount of current in Amps the motor
   should drain to consider the cover is blocked during opening.
-- **close_sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The close current sensor.
+- **close_sensor** (**Required**, :ref:`config-id`): The close current sensor.
 - **close_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be closed.
-- **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **close_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
   to close from the fully-open state.
 - **close_moving_current_threshold** (**Required**, float): The amount of current in Amps the motor
   should drain to consider the cover is closing.
@@ -79,9 +79,9 @@ cover:
   should drain to consider the cover is blocked during closing.
 - **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed to stop the cover.
-- **max_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the cover should be opening
+- **max_duration** (*Optional*, :ref:`config-time`): The maximum duration the cover should be opening
   or closing. Useful for protecting from dysfunctional motor integrated endstops.
-- **start_sensing_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time the current sensing will be
+- **start_sensing_delay** (*Optional*, :ref:`config-time`): The amount of time the current sensing will be
   disabled when the movement starts. Motors can take some time before reaching their average consumption.
   Low values can cause an immediate stop because of the first current reading happening in the current-rising period.
   Defaults to `500ms`.
@@ -248,7 +248,7 @@ status_led:
 - {{< docref "index/" >}}
 - {{< docref "/components/cover/template" >}}
 - {{< docref "/components/sensor/ade7953" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`current_based/current_based_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/current_based.md)
 

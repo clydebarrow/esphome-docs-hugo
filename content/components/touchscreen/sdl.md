@@ -20,7 +20,7 @@ touchscreen:
 ```
 ### Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
+- **id** (*Optional*, :ref:`config-id`): Manually set the ID of this touchscreen.
 
 - All other options from [Touchscreen]({{< ref "components/touchscreen/_index#config-touchscreen" >}}).
 

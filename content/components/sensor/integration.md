@@ -27,7 +27,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the sensor to integrate over time.
+- **sensor** (**Required**, :ref:`config-id`): The ID of the sensor to integrate over time.
 - **time_unit** (**Required**, string): The time unit to integrate with, one of
   `ms`, `s`, `min`, `h` or `d`.
 - **integration_method** (*Optional*, string): The integration method to use. One of
@@ -52,7 +52,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "total_daily_energy/" >}}
 - {{< docref "/cookbook/power_meter" >}}
 - :apiref:`integration/integration_sensor.h`

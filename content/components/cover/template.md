@@ -98,7 +98,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template cover.
+- **id** (**Required**, :ref:`config-id`): The ID of the template cover.
 - **state** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish. One of `OPEN`, `CLOSED`. If using a lambda, use `COVER_OPEN` or `COVER_CLOSED`.
 - **position** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), float):
@@ -121,7 +121,7 @@ id(template_cov).publish_state();
 ## See Also
 
 - {{< docref "/components/cover/index" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - {{< docref "/cookbook/garage-door" >}}
 - :apiref:`template/cover/template_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/template.md)

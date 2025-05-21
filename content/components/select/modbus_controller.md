@@ -33,7 +33,7 @@ registers.
   [optimize modbus communications]({{< ref "components/modbus_controller#modbus_register_count" >}}). Overrides the defaults determined
   by `value_type`.
 - **skip_updates** (*Optional*, int): By default, all sensors of a modbus_controller are updated together. For data points that don't change very frequently, updates can be skipped. A value of 5 would only update this sensor range in every 5th update cycle. Note: The modbus_controller groups components by address ranges to reduce number of transactions. All components with the same starting address will be updated in one request. `skip_updates` applies for *all* components in the same range.
-- **register_count** (*Optional*, int): The number of consecutive registers this read request should span or skip in a single command. Default is 1. See [Optimizing modbus communications]({{< ref "components/modbus_controller#modbus_register_count" >}}) for more details.
+- **register_count** (*Optional*, int): The number of consecutive registers this read request should span or skip in a single command. Default is 1. See :ref:`modbus_register_count` for more details.
 - **force_new_range** (*Optional*, boolean): If possible sensors with sequential addresses are
   grouped together and requested in one range. Setting this to `true` enforces the start of a new
   range at that address.
@@ -137,7 +137,7 @@ select:
 - {{< docref "/components/switch/modbus_controller" >}}
 - {{< docref "/components/number/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - https://www.modbustools.com/modbus.html
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/select/modbus_controller.md)
 

@@ -23,7 +23,7 @@ switch:
 ```
 ## Configuration variables:
 
-- **source_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The source switch to observe.
+- **source_id** (**Required**, :ref:`config-id`): The source switch to observe.
 - All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 ## See Also

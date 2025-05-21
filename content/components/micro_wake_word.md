@@ -5,10 +5,10 @@ title: "Micro Wake Word"
 
 {{< seo description="" image="" >}}
 
-ESPHome implements an on-device wake word detection framework from [microWakeWord ](https://github.com/kahrendt/microWakeWord).
+ESPHome implements an on-device wake word detection framework from [microWakeWord](https://github.com/kahrendt/microWakeWord).
 This repository/library allows you to create a custom wake word for your ESPHome device.
 
-The training process is described on the [microWakeWord GitHub repository ](https://github.com/kahrendt/microWakeWord).
+The training process is described on the [microWakeWord GitHub repository](https://github.com/kahrendt/microWakeWord).
 
 
 ```yaml
@@ -25,14 +25,14 @@ micro_wake_word:
 ```
 ## Configuration variables:
 
-- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr{{< docref "/components/microphone/index" "microphone" >}}to use for audio input.
+- **microphone** (**Required**, :ref:`config-microphone-source`): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for audio input.
 - **stop_after_detection** (*Optional*, boolean): Whether to stop the component after detecting a wake word. Defaults to `true`.
 - **models** (**Required**, list): The models to use. Only the first model is enabled by default on the first boot. Each model's enabled state is then saved/restored to/from the flash.
 
-  - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The optional ID used for the model actions below.
+  - **id** (*Optional*, :ref:`config-id`): The optional ID used for the model actions below.
   - **model** (**Required**, string): This can be one of:
 
-        - A simple name of a model that exists in the official [ESPHome Models repository ](https://github.com/esphome/micro-wake-word-models).
+        - A simple name of a model that exists in the official [ESPHome Models repository](https://github.com/esphome/micro-wake-word-models).
           e.g. `okay_nabu`.
         - A github shorthand URL to a model JSON file.
           e.g. `github://esphome/micro-wake-word-models/models/okay_nabu.json@main`.

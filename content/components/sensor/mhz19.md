@@ -38,13 +38,13 @@ sensor:
   not officially documented in the datasheet and seems to be quite inaccurate.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for actions.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for actions.
 
 - **automatic_baseline_calibration** (*Optional*, boolean): MH-Z19 has automatic calibration procedure.
   The automatic calibration cycle is every 24 hours after powered on.
@@ -120,8 +120,8 @@ switch:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [MH-Z19 library ](https://github.com/nara256/mhz19_uart) by [@nara356 ](https://github.com/nara256)
+- :ref:`sensor-filters`
+- [MH-Z19 library](https://github.com/nara256/mhz19_uart) by [@nara356](https://github.com/nara256)
 - :apiref:`mhz19/mhz19.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/mhz19.md)
 

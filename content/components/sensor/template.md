@@ -33,7 +33,7 @@ Possible return values for the lambda:
 
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the new value of the sensor
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Set to `never` to disable updates. Defaults to `60s`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
@@ -65,7 +65,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template sensor.
+- **id** (**Required**, :ref:`config-id`): The ID of the template sensor.
 - **state** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 
@@ -109,8 +109,8 @@ sensor:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`sensor-filters`
+- :ref:`automation`
 - :apiref:`template/sensor/template_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/template.md)
 

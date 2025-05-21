@@ -29,8 +29,8 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
-- **period** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of each cycle. (i.e. a 10s
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
+- **period** (**Required**, :ref:`config-time`): The duration of each cycle. (i.e. a 10s
   period at 50% duty would result in the pin being turned on for 5s, then off for 5s)
 - **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to pulse.
 - **state_change_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is switched. If a lambda is used the boolean `state` parameter holds the new status.

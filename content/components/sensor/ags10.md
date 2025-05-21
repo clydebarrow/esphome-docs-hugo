@@ -6,7 +6,7 @@ title: "AGS10 Volatile Organic Compound (VOC) Sensor"
 {{< seo description="" image="" >}}
 
 The `ags10` sensor platform VOC sensor allows you to use your ASAIR AGS10
-([datasheet ](http://www.aosong.com/userfiles/files/Datasheet%20AGS10.pdf),
+([datasheet](http://www.aosong.com/userfiles/files/Datasheet%20AGS10.pdf),
 `ASAIR`_ ) sensors with
 ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work.
@@ -34,7 +34,7 @@ sensor:
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **address** (*Optional*, int): Manually specify the I²C address of
   the sensor. Defaults to `0x1A`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - **version** (*Optional*): The firmware version of the sensor.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
@@ -66,7 +66,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
+- **id** (**Required**, :ref:`config-id`): The ID of the AGS10 sensor.
 - **mode** (**Required**, enum): One of supported modes:
 
   - `FACTORY_DEFAULT` - reset to the factory zero-point
@@ -100,13 +100,13 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
+- **id** (**Required**, :ref:`config-id`): The ID of the AGS10 sensor.
 - **address** (**Required**, int): New I2C address.
 
   
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`ags10/ags10.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ags10.md)
 

@@ -31,7 +31,7 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
 - **type** (**Required**, string): The type of output. One of `binary` and `float`.
 - **write_action** (**Required**, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the state of the output is updated.
@@ -66,11 +66,11 @@ It is possible to access the state value inside Lambdas:
 
 
 ```
-Complete example: [Sonoff Dual Light Switch ](https://devices.esphome.io/devices/Sonoff-Dual-DIY-light).
+Complete example: [Sonoff Dual Light Switch](https://devices.esphome.io/devices/Sonoff-Dual-DIY-light).
 
 ## See Also
 
 - {{< docref "/components/output/index" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/template.md)
 

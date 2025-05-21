@@ -6,7 +6,7 @@ title: "PID Climate"
 {{< seo description="" image="" >}}
 
 The `pid` climate platform allows you to regulate a value with a
-[PID controller ](https://en.wikipedia.org/wiki/PID_controller).
+[PID controller](https://en.wikipedia.org/wiki/PID_controller).
 
 PID controllers are good at modulating an output signal to get a sensor reading to a specified
 setpoint. For example, it can be used to modulate the power of a heating unit to get the
@@ -27,7 +27,7 @@ classic thermostats.
 
 {{< /note >}}
 Explaining how PID controllers work in detail is out of scope of this documentation entry,
-but there's a nice article explaining the function principle [here ](https://blog.opticontrols.com/archives/344).
+but there's a nice article explaining the function principle [here](https://blog.opticontrols.com/archives/344).
 
 ```yaml
 # Example configuration entry
@@ -50,16 +50,16 @@ climate:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor that is used to measure the current
+- **sensor** (**Required**, :ref:`config-id`): The sensor that is used to measure the current
   temperature.
-- **humidity_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): If specified, this sensor is used to measure the current humidity.
+- **humidity_sensor** (*Optional*, :ref:`config-id`): If specified, this sensor is used to measure the current humidity.
   This is used for information only and does not influence temperature control.
 - **default_target_temperature** (**Required**, float): The default target temperature (setpoint)
   for the control algorithm. This can be dynamically set in the frontend later.
-- **heat_output** (*Optional*, [float output]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **heat_output** (*Optional*, :ref:`config-id`): The ID of a [float output]({{< ref "components/output/_index#config-output" >}})
   that increases the current temperature. At least one of `heat_output` and `cool_output` must
   be specified.
-- **cool_output** (*Optional*, [float output]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **cool_output** (*Optional*, :ref:`config-id`): The ID of a [float output]({{< ref "components/output/_index#config-output" >}})
   that decreases the current temperature. At least one of `heat_output` and `cool_output` must
   be specified.
 - **control_parameters** (**Required**): Control parameters of the PID controller.
@@ -333,7 +333,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the PID Climate to start autotuning for.
+- **id** (**Required**, :ref:`config-id`): ID of the PID Climate to start autotuning for.
 - **noiseband** (*Optional*, float): The noiseband of the process (=sensor) variable. The value
   of the PID controller must be able to reach this value. Defaults to `0.25`.
 - **positive_output** (*Optional*, float): The positive output power to drive the heat output at.
@@ -363,7 +363,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the PID Climate to start autotuning for.
+- **id** (**Required**, :ref:`config-id`): ID of the PID Climate to start autotuning for.
 - **kp** (**Required**, float): The factor for the proportional term of the PID controller.
 - **ki** (*Optional*, float): The factor for the integral term of the PID controller.
   Defaults to `0`.
@@ -383,7 +383,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the PID Climate being reset.
+- **id** (**Required**, :ref:`config-id`): ID of the PID Climate being reset.
 
 ## `pid` Sensor
 
@@ -416,7 +416,7 @@ Configuration variables:
 
 Advanced options:
 
-- **climate_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pid climate to get the values from.
+- **climate_id** (*Optional*, :ref:`config-id`): The ID of the pid climate to get the values from.
 
 ## See Also
 
@@ -427,7 +427,7 @@ Advanced options:
 - {{< docref "/components/climate/index" >}}
 - {{< docref "/components/output/sigma_delta_output" >}}
 - {{< docref "/components/output/slow_pwm" >}}
-- [Principles of PID ](https://blog.opticontrols.com/archives/344)
+- [Principles of PID](https://blog.opticontrols.com/archives/344)
 - :apiref:`pid/pid_climate.h`
 - :apiref:`PID Autotuner <pid/pid_autotuner.h>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/pid.md)

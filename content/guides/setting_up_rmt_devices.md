@@ -9,11 +9,11 @@ title: "Setting up IR Devices"
 
 
 In this guide an infrared device will be set up with ESPHome. First, the remote code
-will be captured with an IR receiver module (like [this one ](https://www.sparkfun.com/products/10266)).
+will be captured with an IR receiver module (like [this one](https://www.sparkfun.com/products/10266)).
 We will use ESPHome's dumping ability to output the decoded remote code directly.
 
 Then we will set up a new remote transmitter with an infrared LED (like
-[this one ](https://learn.sparkfun.com/tutorials/ir-communication/all)) to transmit the
+[this one](https://learn.sparkfun.com/tutorials/ir-communication/all)) to transmit the
 code when a button is pressed.
 
 First, connect the infrared receiver module to a pin on your board and set up a

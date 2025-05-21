@@ -12,9 +12,9 @@ manufacturer. A controller from manufacturer A can in principle be used to contr
 Since OpenTherm doesn't operate in a standard voltage range, special hardware is required. You can choose from several
 ready-made adapters or roll your own:
 
-- [DIYLESS Master OpenTherm Shield ](https://diyless.com/product/master-opentherm-shield)
-- [Ihor Melnyk's OpenTherm Adapter ](http://ihormelnyk.com/opentherm_adapter)
-- [Jiří Praus' OpenTherm Gateway Arduino Shield ](https://www.tindie.com/products/jiripraus/opentherm-gateway-arduino-shield/)
+- [DIYLESS Master OpenTherm Shield](https://diyless.com/product/master-opentherm-shield)
+- [Ihor Melnyk's OpenTherm Adapter](http://ihormelnyk.com/opentherm_adapter)
+- [Jiří Praus' OpenTherm Gateway Arduino Shield](https://www.tindie.com/products/jiripraus/opentherm-gateway-arduino-shield/)
 
 {{< img src="opentherm-shield.png" alt="Image" caption="DIYLESS Master OpenTherm Shield." width="50.0%" class="center" >}}
 
@@ -49,7 +49,7 @@ opentherm:
 - **sync_mode** (*Optional*, boolean, default **false**): Synchronous communication mode prevents other components
   from disabling interrupts while we are talking to the boiler. Enable if you experience a lot of random intermittent
   invalid response errors (very likely to happen while using Dallas temperature sensors).
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.  Required if you have
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.  Required if you have
   multiple busses.
 
 ##### Optional Boiler-specific Configuration
@@ -71,7 +71,7 @@ correctly. You can use the following settings in hub configuration to make your 
 - **before_send** (**Optional**) An automation to perform on OpenTherm message before it is sent to the boiler.
 - **before_process_response** (**Optional**) An automation to perform on boiler response before it is processed.
 
-See [On-the-fly Message Editing]({{< ref "components/opentherm#on-the-fly-message-editing" >}}) for details.
+See :ref:`on-the-fly-message-editing` for details.
 
 ### Note about sync mode
 
@@ -96,7 +96,7 @@ The most important function for a thermostat is to set the boiler temperature se
 to provide this input: using a Home Assistant sensor from which the setpoint can be read, using a
 {{< docref "/components/number/index" >}}, or defining an output to which other components can write. For most users, the last
 option is the most useful one, as it can be combined with the {{< docref "/components/climate/pid" >}} component to create a
-thermostat that works as you would expect a thermostat to work. See [Basic PID thermostat]({{< ref "components/opentherm#thermostat-pid-basic" >}}) for an example.
+thermostat that works as you would expect a thermostat to work. See :ref:`thermostat-pid-basic` for an example.
 
 ### Numerical values
 
@@ -329,7 +329,7 @@ available:
 ## On-the-fly Message Editing
 
 Some boilers use non-standard message ids and formats. For example,
-[it's known ](https://github.com/olegtarasov/esphome-opentherm/issues/11) that Daikin D2C boiler uses message id
+[it's known](https://github.com/olegtarasov/esphome-opentherm/issues/11) that Daikin D2C boiler uses message id
 `162` instead of `56` to set target DHW temperature. In order to accomodate all sorts of non-standard behavior, I
 introduced two automations that allow editing the low-level OpenTherm message:
 
@@ -466,9 +466,9 @@ climate:
 - :apiref:`API Reference: OpenthermNumber <opentherm/number/number.h>`
 - :apiref:`API Reference: OpenthermOutput <opentherm/output/output.h>`
 - :apiref:`API Reference: OpenthermSwitch <opentherm/switch/switch.h>`
-- [OpenTherm thermostat with ESPHome and Home Assistant ](https://olegtarasov.me/opentherm-thermostat-esphome/) —
+- [OpenTherm thermostat with ESPHome and Home Assistant](https://olegtarasov.me/opentherm-thermostat-esphome/) —
   real-world use case for this component.
-- [Development repository ](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
+- [Development repository](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
   before proposing them to ESPHome core.
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/opentherm.md)
 

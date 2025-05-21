@@ -6,12 +6,12 @@ title: "Nextion TFT LCD Display"
 {{< seo description="" image="" >}}
 
 The `nextion` display platform allows you to use Nextion LCD displays
-([datasheet ](https://nextion.itead.cc/resources/datasheets/), [iTead ](https://www.itead.cc/display/nextion.html))
+([datasheet](https://nextion.itead.cc/resources/datasheets/), [iTead](https://www.itead.cc/display/nextion.html))
 with ESPHome.
 
 {{< img src="nextion-full.jpg" alt="Image" caption="Nextion display" width="75.0%" class="center" >}}
 
-Communication with the Nextion display is done via a serial interface, so you'll need to have a [UART Bus]({{< ref "components/uart#uart" >}})
+Communication with the Nextion display is done via a serial interface, so you'll need to have a :ref:`uart`
 in your configuration with both `rx_pin` and `tx_pin` configured. These pins must then be connected to the
 respective pins on the display.
 
@@ -24,10 +24,10 @@ bkcmd=0       // Tells the Nextion to not send responses on commands. This is th
 
 ```
 This permits faster communication with the Nextion display and it is highly recommended when using
-[Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}).
+:ref:`uart-hardware_uarts`.
 
 {{< warning >}}
-**We highly recommend using only** [Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}) **with Nextion displays.**
+**We highly recommend using only** :ref:`uart-hardware_uarts` **with Nextion displays.**
 
 *Use of software UARTs is known to result in unpredictable/inconsistent behavior.*
 
@@ -48,15 +48,15 @@ display:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this display. Specify this
+- **uart_id** (*Optional*, :ref:`config-id`): The ID of the :ref:`uart` you wish to use for this display. Specify this
   when you have multiple UART configurations.
 - **brightness** (*Optional*, percentage): When specified, the display brightness will be set to this value at boot.
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the Nextion
-  display. See [Rendering Lambda]({{< ref "components/display/nextion#display-nextion_lambda" >}}) for more information. This is typically empty. The individual components
+  display. See :ref:`display-nextion_lambda` for more information. This is typically empty. The individual components
   for the Nextion will handle almost all functions needed for updating display elements.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to call the lambda to update the display.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to call the lambda to update the display.
   Defaults to `5s`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 - **tft_url** (*Optional*, string): The URL from which to download the TFT file for display firmware updates (Nextion
   OTA). See [Nextion Upload]({{< ref "components/display/nextion#nextion_upload_tft" >}}).
 - **touch_sleep_timeout** (*Optional*, int): Sets internal No-touch-then-sleep timer in seconds.
@@ -82,7 +82,7 @@ display:
   release). See [Nextion Automation]({{< ref "components/display/nextion#nextion-on_touch" >}}).
 - **on_buffer_overflow** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An action to be performed when the Nextion
   reports a buffer overflow. See [Nextion Automation]({{< ref "components/display/nextion#nextion-on_buffer_overflow" >}}).
-- **command_spacing** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Sets the minimum time between commands sent to the Nextion display.
+- **command_spacing** (*Optional*, :ref:`config-time`): Sets the minimum time between commands sent to the Nextion display.
   A higher value can help prevent buffer overflows but will result in slower interface updates.
   Range is `0-255ms`. Defaults to `0ms` (disabled).
 
@@ -93,7 +93,7 @@ display:
 Nextion displays have a dedicated processor built directly into the display to perform all rendering. ESPHome simply
 sends *instructions* to the display to tell it *how* to render something and/or *what* to render.
 
-First, you need to use the [Nextion Editor ](https://nextion.tech/nextion-editor/) to create a "TFT" display file and
+First, you need to use the [Nextion Editor](https://nextion.tech/nextion-editor/) to create a "TFT" display file and
 "install" it onto the display, typically via an SD card onto which you'll copy the "TFT" file and then insert into the
 display for installation/updating. Then, in the rendering `lambda`, you can use the various API calls to populate the
 display with data:
@@ -119,7 +119,7 @@ Although you can use the rendering lambda, most, if not all, updates to the Next
 individual Nextion components/platforms. **See Below**
 
 {{< /note >}}
-See [Displaying Time]({{< ref "components/display/_index#display-strftime" >}}) for a quick introduction to the `printf` formatting rules and [Formatted Text]({{< ref "components/display/_index#display-printf" >}}) for
+See :ref:`display-printf` for a quick introduction to the `printf` formatting rules and :ref:`display-strftime` for
 an introduction to `strftime` time formatting.
 
 ### Using Lambdas
@@ -130,7 +130,7 @@ The list below calls out a few commonly-used methods:
 
 {{< anchor "nextion_upload_tft" >}}
 
-- `upload_tft`: Start the process to upload a new TFT file to the Nextion; see [Uploading A TFT File]({{< ref "components/display/nextion#nextion_upload_tft_file" >}}) below.
+- `upload_tft`: Start the process to upload a new TFT file to the Nextion; see :ref:`nextion_upload_tft_file` below.
 
 {{< anchor "nextion_update_all_components" >}}
 
@@ -203,7 +203,7 @@ api:
 
 ### Triggers
 
-Several [Triggers]({{< ref "automations/actions#actions-trigger" >}}) are available for use with your Nextion display.
+Several :ref:`actions-trigger` are available for use with your Nextion display.
 
 {{< anchor "nextion-on_setup" >}}
 
@@ -290,7 +290,7 @@ The following arguments will be available:
 - `page_id`: Contains the ID (integer) of the page where the touch happened.
 - `component_id`: Contains the ID (integer) of the component touched. **You must have "Send Component ID" enabled
     for "Touch Press Event" and/or "Touch Release Event" for the UI element in your HMI configuration in the**
-    [Nextion Editor ](https://nextion.tech/nextion-editor/).
+    [Nextion Editor](https://nextion.tech/nextion-editor/).
 - `touch_event`: It will be `true` for a "press" event, or `false` for a "release" event.
 
 ```yaml
@@ -353,14 +353,14 @@ This will use the file specified for `tft_url` to update ("OTA") the Nextion.
 
 Once completed, both ESPHome and the Nextion will reboot. ESPHome will be unresponsive during the upload process and no
 logging or other {{< docref "/automations/index" "automations" >}} will occur. This process uses the same protocol as the
-[Nextion Editor ](https://nextion.tech/nextion-editor/) and only transfers required portions of the TFT file.
+[Nextion Editor](https://nextion.tech/nextion-editor/) and only transfers required portions of the TFT file.
 
 {{< warning >}}
 *Use of software UARTs is known to result in unpredictable/inconsistent behavior and will likely result in the
 update process failing.*
 
 If you experience problems with the update process and are using a software UART (for example, on the ESP8266), you
-should switch to an ESP32 or supported variant which has more available [Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}).
+should switch to an ESP32 or supported variant which has more available :ref:`uart-hardware_uarts`.
 
 {{< /warning >}}
 You can use Home Assistant itself or any other web server to host the TFT file. When using HTTPS (generally
@@ -429,7 +429,7 @@ the individual components (linked below) for more detail.
 - {{< docref "../text_sensor/nextion" >}}
 - {{< docref "../uart" >}}
 - :apiref:`nextion/nextion.h`
-- [Simple Nextion Library ](https://github.com/bborncr/nextion) by [Bentley Born ](https://github.com/bborncr)
-- [Official Nextion Library ](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead ](https://www.itead.cc/)
+- [Simple Nextion Library](https://github.com/bborncr/nextion) by [Bentley Born](https://github.com/bborncr)
+- [Official Nextion Library](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead](https://www.itead.cc/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/nextion.md)
 

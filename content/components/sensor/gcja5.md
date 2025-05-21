@@ -6,7 +6,7 @@ title: "Panasonic SN-GCJA5 Particulate Matter Sensor"
 {{< seo description="" image="" >}}
 
 The `gcja5` sensor platform allows you to use your Panasonic SN-GCJA5 laser based particulate matter sensor
-([datasheet ](https://na.industrial.panasonic.com/products/sensors/air-quality-gas-flow-sensors/lineup/laser-type-pm-sensor/series/123557/model/123559))
+([datasheet](https://na.industrial.panasonic.com/products/sensors/air-quality-gas-flow-sensors/lineup/laser-type-pm-sensor/series/123557/model/123559))
 sensors with ESPHome.
 
 As the communication with the GCJA5 is done using UART, you need
@@ -54,7 +54,7 @@ sensor:
 ## See Also
 
 - {{< docref "/components/sensor/gcja5" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`gcja5/gcja5.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/gcja5.md)
 

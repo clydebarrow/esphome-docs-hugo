@@ -6,7 +6,7 @@ title: "Havells Solar"
 {{< seo description="" image="" >}}
 
 The `Havells Inverter` sensor platform allows you to use Havells inverter data reading on modbus
-([website ](https://www.havells.com/en/consumer/solar/solar-on-grid-inverter-and-solutions/solar-on-grid-inverter.html))
+([website](https://www.havells.com/en/consumer/solar/solar-on-grid-inverter-and-solutions/solar-on-grid-inverter.html))
 with ESPHome.
 
 {{< img src="havellsgti5000d.jpg" alt="Image" caption="Havells On Grid Solar Inverter." width="50.0%" class="center" >}}
@@ -155,13 +155,13 @@ sensor:
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **dci_of_t** (*Optional*): Use the DCI of T value of the sensor.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/havells_solar.md)
 

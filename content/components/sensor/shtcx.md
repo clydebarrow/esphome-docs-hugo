@@ -6,10 +6,10 @@ title: "SHTCx Temperature+Humidity Sensors"
 {{< seo description="" image="" >}}
 
 The `shtcx` sensor platform Temperature+Humidity sensor allows you to use your Sensirion SHTC1
-([datasheet ](https://sensirion.com/media/documents/21BF77EA/63A5A411/Datasheet_SHTC1.pdf),
-[Sensirion STHC1 ](https://www.sensirion.com/en/environmental-sensors/humidity-sensors/digital-humidity-sensor-for-consumer-electronics-and-iot/)) and
+([datasheet](https://sensirion.com/media/documents/21BF77EA/63A5A411/Datasheet_SHTC1.pdf),
+[Sensirion STHC1](https://www.sensirion.com/en/environmental-sensors/humidity-sensors/digital-humidity-sensor-for-consumer-electronics-and-iot/)) and
 the newer SHTC3
-([datasheet ](https://sensirion.com/media/documents/643F9C8E/63A5A436/Datasheet_SHTC3.pdf),
+([datasheet](https://sensirion.com/media/documents/643F9C8E/63A5A436/Datasheet_SHTC3.pdf),
 `SparkFun`_ ) sensors with
 ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work.
@@ -40,12 +40,12 @@ sensor:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x70`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}

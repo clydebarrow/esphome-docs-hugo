@@ -36,11 +36,11 @@ cover:
 
 - **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be opened.
-- **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **open_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
   to open up from the fully-closed state.
 - **close_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote requests the cover to be closed.
-- **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **close_duration** (**Required**, :ref:`config-time`): The amount of time it takes the cover
   to close from the fully-open state.
 - **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed to stop the cover when the remote requests the cover to be stopped or
@@ -84,12 +84,12 @@ stop_action:
 
 ```
 Be aware that `get_last_operation` will only return the last opening or closing operation, but not the last idle operation.
-This issue is tracked [here ](https://github.com/esphome/issues/issues/4252#issuecomment-2132727377).
+This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issuecomment-2132727377).
 
 ## See Also
 
 - {{< docref "index/" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`time_based/time_based_cover.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/cover/time_based.md)
 

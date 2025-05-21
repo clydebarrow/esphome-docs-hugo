@@ -10,7 +10,7 @@ from a voltage sensor (such as the {{< docref "adc/" "ADC Sensor" >}}) into resi
 in Ω (ohm).
 
 In order to calculate the resistance, the circuit needs to be set up in a
-[voltage divider circuit ](https://learn.sparkfun.com/tutorials/voltage-dividers/all).
+[voltage divider circuit](https://learn.sparkfun.com/tutorials/voltage-dividers/all).
 This consists of three parts:
 
 - A voltage reference, usually this is connected to 3.3V (VCC). For example in the image
@@ -53,7 +53,7 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor to read the voltage values from
+- **sensor** (**Required**, :ref:`config-id`): The sensor to read the voltage values from
   to convert to resistance readings.
 - **configuration** (**Required**, string): The type of circuit, one of `DOWNSTREAM` or
   `UPSTREAM`.
@@ -66,7 +66,7 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 
 - {{< docref "adc/" >}}
 - {{< docref "ntc/" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`resistance/resistance_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/resistance.md)
 

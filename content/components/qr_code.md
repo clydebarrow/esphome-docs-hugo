@@ -15,7 +15,7 @@ qr_code:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID with which you will be able to reference the QR-code later
+- **id** (**Required**, :ref:`config-id`): The ID with which you will be able to reference the QR-code later
   in your display code.
 - **value** (**Required**, string): The string which you want to encode in the QR-code.
 - **ecc** (*Optional*, string): The error correction code level you want to use. Defaults to `LOW`. You can use one of the following values:

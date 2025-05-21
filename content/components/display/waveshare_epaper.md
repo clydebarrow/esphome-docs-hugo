@@ -6,13 +6,13 @@ title: "Waveshare E-Paper Display"
 {{< seo description="" image="" >}}
 
 The `waveshare_epaper` display platform allows you to use
-some E-Paper displays sold by [Waveshare ](https://www.waveshare.com/product/displays/e-paper.htm)
-with ESPHome. The 2.13" [TTGO module ](https://github.com/lewisxhe/TTGO-EPaper-Series) and the
-[Waveshare Cloud Module ](https://www.waveshare.com/wiki/2.13inch_e-Paper_Cloud_Module) with an ESP32
+some E-Paper displays sold by [Waveshare](https://www.waveshare.com/product/displays/e-paper.htm)
+with ESPHome. The 2.13" [TTGO module](https://github.com/lewisxhe/TTGO-EPaper-Series) and the
+[Waveshare Cloud Module](https://www.waveshare.com/wiki/2.13inch_e-Paper_Cloud_Module) with an ESP32
 on the board are supported as well. Depending on your specific revision of the TTGO board you might need to try out the `-b73` or `-b1`
 version (see below).
-The 1.54" [Good Display gdew0154m09 ](https://www.good-display.com/product/206.html)
-as used in the [M5Stack Core Ink ](https://shop.m5stack.com/products/m5stack-esp32-core-ink-development-kit1-54-elnk-display)
+The 1.54" [Good Display gdew0154m09](https://www.good-display.com/product/206.html)
+as used in the [M5Stack Core Ink](https://shop.m5stack.com/products/m5stack-esp32-core-ink-development-kit1-54-elnk-display)
 is also supported.
 Similar modules sold by other vendors might also work but not have been tested yet.
 
@@ -142,20 +142,20 @@ The BUSY pin on the `gdew0154m09`, the `Waveshare 7.30in-f` and the `Waveshare 7
   because artifacts accumulate. On the `1.54in`, `1.54inv2`, `2.13in`, `2.13inv2`, `2.90in`, `2.90inv2`,  `7.50inV2p` and `gdew029t5` models, you have the option to only
   do a full-redraw every x-th time using this option. Defaults to `30` on the described models and a full update for
   all other models.
-- **reset_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Duration for the display reset operation. Defaults to `200ms`.
+- **reset_duration** (*Optional*, :ref:`config-time`): Duration for the display reset operation. Defaults to `200ms`.
   Setting this value to `2ms` may resolve issues with newer e-Paper Driver modules (e.g. Rev 2.1).
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`, use `never` to only manually update the screen via `component.update`.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
-- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+  See :ref:`display-engine` for more information.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to re-draw the screen. Defaults to `1s`, use `never` to only manually update the screen via `component.update`.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See :ref:`display-pages`.
+- **spi_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [SPI Component]({{< ref "components/spi#spi" >}}) if you want
   to use multiple SPI buses.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 ## See Also
 
 - {{< docref "index/" >}}
 - :apiref:`waveshare_epaper/waveshare_epaper.h`
-- [Arduino Waveshare E-Paper library ](https://github.com/soonuse/epd-library-arduino) by [Yehui (@soonuse) ](https://github.com/soonuse)
+- [Arduino Waveshare E-Paper library](https://github.com/soonuse/epd-library-arduino) by [Yehui (@soonuse)](https://github.com/soonuse)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/waveshare_epaper.md)
 

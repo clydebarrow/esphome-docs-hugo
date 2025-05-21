@@ -17,7 +17,7 @@ The `ac_dimmer` component allows you to connect a dimmable light or other load
 which supports phase control dimming to your ESPHome project.
 
 There are several already made boards which are compatible with this component, such as the
-[RobotDyn dimmer ](https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html).
+[RobotDyn dimmer](https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html).
 
 {{< img src="robotdyn_dimmer.jpg" alt="Image" caption="RobotDyn Module. Image by `RobotDyn`_" width="50.0%" class="center" >}}
 
@@ -43,9 +43,9 @@ light:
 ```
 ## Configuration variables:
 
-- **gate_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin used to control the Triac or
+- **gate_pin** (**Required**, :ref:`config-pin`): The pin used to control the Triac or
   Mosfet.
-- **zero_cross_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin used to sense the AC
+- **zero_cross_pin** (**Required**, :ref:`config-pin`): The pin used to sense the AC
   Zero cross event, you can have several dimmers controlled with the same zero cross
   detector, in such case duplicate the `zero_cross_pin` config on each output.
 - **method** (*Optional*): Set the method for dimming, can be:
@@ -58,7 +58,7 @@ light:
 - **init_with_half_cycle** (*Optional*, boolean): Will send the first full half AC cycle
   Try to use this for dimmable LED lights, it might help turning on at low brightness
   levels. On Halogen lamps it might show at initial flicker. Defaults to `false`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 - All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 Dimming lights with phase control can be tricky, the minimum level your light turns on

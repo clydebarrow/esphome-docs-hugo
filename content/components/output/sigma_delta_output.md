@@ -4,7 +4,7 @@ title: "Sigma-Delta Output"
 ---
 
 
-This component uses [sigma-delta modulation ](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
+This component uses [sigma-delta modulation](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
 to output a floating-point value on a binary output. Unlike with {{< docref "/components/output/slow_pwm" >}},
 it is possible to update the output value with each update cycle, not just at the end of a longer period.
 
@@ -79,7 +79,7 @@ cycle.
 - {{< docref "/components/light/monochromatic" >}}
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
-- [Sigma-Delta ](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
+- [Sigma-Delta](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
 - :apiref:`sigma_delta_output/sigma_delta_output.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/sigma_delta_output.md)
 

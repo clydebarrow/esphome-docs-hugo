@@ -785,9 +785,7 @@ def process_multiline_references(lines):
                 # This is a split reference, combine the lines
                 combined_line = current_line + next_line
                 # Process the combined line
-                print(combined_line)
                 processed_line = process_inline_markup(combined_line)
-                print(processed_line)
                 processed_lines.append(processed_line)
                 i += 2  # Skip the next line since we've processed it
                 continue
@@ -1125,59 +1123,41 @@ def process_grid_table(lines, start_idx):
 def process_pipe_separated_table(table_lines, end_idx):
     """Process a grid table with | separators."""
     # Find header rows (rows with '=' characters)
-    header_rows = []
+    new_rows = []
+    data_rows = []
+    columns = 0
     for idx, line in enumerate(table_lines):
-        if '=' in line and all(c in '=+-| ' for c in line):
-            header_rows.append(idx-1)
-    
-    # Determine column positions based on separator rows
-    separator_rows = []
-    for idx, line in enumerate(table_lines):
-        if all(c in '=+-| ' for c in line):
-            separator_rows.append(idx)
-    
-    # Find column positions from separator rows
-    column_positions = []
-    for idx in separator_rows:
-        line = table_lines[idx]
-        for j, char in enumerate(line):
-            if char in '|+':
-                if j not in column_positions:
-                    column_positions.append(j)
-    
-    column_positions.sort()
-    
-    # Process each row
+        if '=' in line and all(c in '=+| ' for c in line):
+            new_rows.append("=")
+        elif '-' in line and all(c in '+-| ' for c in line):
+            new_rows.append("-")
+        else:
+            row = [process_inline_markup(x.strip()) for x in line.split('|')[1:-1]]
+            columns = max(len(row), columns)
+            new_rows.append(row)
+            data_rows.append(row)
+    column_widths = [max(len(x) for x in col) for col in zip(*data_rows)]
+
     markdown_rows = []
-    in_header = True
-    
-    for line_idx, line in enumerate(table_lines):
-        # Skip separator rows for Markdown output
-        if line_idx in separator_rows:
-            # If this is the separator after the header row, add a Markdown header separator
-            if in_header and line_idx > 0 and line_idx not in header_rows:
-                in_header = False
-                header_cells = []
-                for k in range(len(column_positions) - 1):
-                    header_cells.append('---')
-                markdown_rows.append('| ' + ' | '.join(header_cells) + ' |')
+    i = 0
+    while i < len(new_rows):
+        entry = new_rows[i]
+        if isinstance(entry, str) and entry == "=":
+            row = ['-' * i for i in column_widths]
+            markdown_rows.append("| " + " | ".join(row) + " |")
+            i += 1
             continue
-        
-        # Extract cells from the row
-        cells = []
-        for k in range(len(column_positions) - 1):
-            start_pos = column_positions[k] + 1
-            end_pos = column_positions[k + 1]
-            # Make sure we don't go out of bounds
-            if start_pos < len(line) and end_pos <= len(line):
-                cell_content = line[start_pos:end_pos].strip()
-            else:
-                cell_content = ""
-            cells.append(process_inline_markup(cell_content))
-        
-        # Add the row to Markdown output
-        markdown_rows.append('| ' + ' | '.join(cells) + ' |')
-    
+        if isinstance(entry, str) and entry == "-":
+            i += 1
+            continue
+        i += 1
+        while not isinstance(new_rows[i], str):
+            for idx, col in enumerate(new_rows[i]):
+                if col:
+                    entry[idx] = entry[idx] + "<br>" + col
+            i += 1
+        markdown_rows.append("| " + " | ".join(entry) + " |")
+
     return markdown_rows, end_idx
 
 def process_whitespace_aligned_table(table_lines, end_idx):
@@ -1298,8 +1278,7 @@ def process_raw_html_button(lines, i):
     
     # Join the HTML content
     html = ' '.join(html_content)
-    print("Raw html: ", html)
-    
+
     # Check if it's a button pattern
     href_match = re.search(r'<a\s+href="([^"]+)"[^>]*>', html)
     img_match = re.search(r'<img\s+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*/?>', html)

@@ -5,7 +5,7 @@ title: "LibreTiny Platform"
 
 {{< seo description="" image="" >}}
 
-This component contains platform-specific options for the [LibreTiny ](https://docs.libretiny.eu/) platform.
+This component contains platform-specific options for the [LibreTiny](https://docs.libretiny.eu/) platform.
 It provides support for the following microcontrollers, commonly used in Tuya devices, amongst others:
 
 - **BK72xx**: BK7231T, BK7231N
@@ -14,7 +14,7 @@ It provides support for the following microcontrollers, commonly used in Tuya de
 Since different microcontrollers are supported, you need to include the appropriate ESPHome component,
 depending on which processor your device has.
 
-Refer to [LibreTiny/Boards ](https://docs.libretiny.eu/link/boards) to find your board type.
+Refer to [LibreTiny/Boards](https://docs.libretiny.eu/link/boards) to find your board type.
 
 ```yaml
 # Example configuration entry for BK72xx
@@ -29,7 +29,7 @@ rtl87xx:
 ## Configuration variables:
 
 - **board** (**Required**, string): The PlatformIO board ID that should be used. Choose the appropriate board from
-  [this list ](https://registry.platformio.org/packages/platforms/kuba2k2/libretiny/boards)
+  [this list](https://registry.platformio.org/packages/platforms/kuba2k2/libretiny/boards)
   (the icon next to the name can be used to copy the board ID).
 
   **This affects CPU selection and some internal settings** - make sure to choose the right CPU.
@@ -38,7 +38,7 @@ rtl87xx:
 - **framework** (*Optional*): Options for the underlying framework used by ESPHome.
 
   - **version** (*Optional*, string): The LibreTiny version number to use, from
-    [LibreTiny platform releases ](https://github.com/kuba2k2/libretiny/releases). Defaults to `recommended`. Additional values
+    [LibreTiny platform releases](https://github.com/kuba2k2/libretiny/releases). Defaults to `recommended`. Additional values
 
     - `dev`: Use the latest commit from https://github.com/kuba2k2/libretiny, note this may break at any time
     - `latest`: Use the latest *release* from https://github.com/kuba2k2/libretiny/releases, even if it hasn't been recommended yet.
@@ -56,7 +56,7 @@ rtl87xx:
 {{< note >}}
 Support for the LibreTiny platform is still in development and there could be issues or missing components.
 
-Please report any issues on [LibreTiny GitHub ](https://github.com/kuba2k2/libretiny).
+Please report any issues on [LibreTiny GitHub](https://github.com/kuba2k2/libretiny).
 
 {{< /note >}}
 ## Getting Started
@@ -66,16 +66,16 @@ there aren't many resources on flashing and configuring them.
 
 Here are a few useful links:
 
-- [tuya-cloudcutter ](https://github.com/tuya-cloudcutter/tuya-cloudcutter) - flashing ESPHome Over-the-Air
+- [tuya-cloudcutter](https://github.com/tuya-cloudcutter/tuya-cloudcutter) - flashing ESPHome Over-the-Air
   to some devices compatible with Tuya/SmartLife apps (BK72xx only!)
 
-  - [Textual & video guide by digiblurDIY ](https://docs.libretiny.eu/link/cloudcutter-digiblur)
-  - [Video guide by LibreTiny ](https://docs.libretiny.eu/link/cloudcutter-video)
-  - [ESPHome-Kickstart ](https://docs.libretiny.eu/link/kickstart) - starter firmware to upload OTA with Cloudcutter
+  - [Textual & video guide by digiblurDIY](https://docs.libretiny.eu/link/cloudcutter-digiblur)
+  - [Video guide by LibreTiny](https://docs.libretiny.eu/link/cloudcutter-video)
+  - [ESPHome-Kickstart](https://docs.libretiny.eu/link/kickstart) - starter firmware to upload OTA with Cloudcutter
 
-- [Flashing BK72xx by UART ](https://docs.libretiny.eu/link/flashing-beken-72xx)
-- [Flashing RTL8710B by UART ](https://docs.libretiny.eu/link/flashing-realtek-ambz)
-- [UPK2ESPHome ](https://upk.libretiny.eu/) - generating ESPHome YAML automatically, from Cloudcutter profiles or Kickstart firmware (also BK72xx only)
+- [Flashing BK72xx by UART](https://docs.libretiny.eu/link/flashing-beken-72xx)
+- [Flashing RTL8710B by UART](https://docs.libretiny.eu/link/flashing-realtek-ambz)
+- [UPK2ESPHome](https://upk.libretiny.eu/) - generating ESPHome YAML automatically, from Cloudcutter profiles or Kickstart firmware (also BK72xx only)
 
 ## GPIO Pin Numbering
 
@@ -84,11 +84,11 @@ you don't have to worry about other kinds of pin numberings, yay!
 
 Additionally, you can use **pin function macros** to quickly access a GPIO tied to a particular peripheral,
 such as UART1 TX/RX or PWM0.
-See [LibreTiny/GPIO Access ](https://docs.libretiny.eu/link/gpio-access) to learn more.
+See [LibreTiny/GPIO Access](https://docs.libretiny.eu/link/gpio-access) to learn more.
 
 Most of the popular boards (often incorrectly called "chips"), that are usually shipped with Smart Home devices,
 are *supported by LibreTiny*, which means that a pinout drawing is available, with all GPIOs described.
-Visit [LibreTiny/Boards ](https://docs.libretiny.eu/link/boards) to find all supported boards.
+Visit [LibreTiny/Boards](https://docs.libretiny.eu/link/boards) to find all supported boards.
 
 The `Pin functions` table outlines all GPIOs available on the chosen board.
 *You can use any of the visible names* to access a particular GPIO.
@@ -177,7 +177,7 @@ bk72xx:
   `warn` (default), `error`, `fatal`, `none`.
 
 - **debug** (*Optional*, string or string list): Modules to enable LibreTiny debugging for.
-  Refer to [LibreTiny/Configuration ](https://docs.libretiny.eu/link/config-debug)
+  Refer to [LibreTiny/Configuration](https://docs.libretiny.eu/link/config-debug)
   for more information - some modules are enabled by default.
   One or more of `wifi`, `client`, `server`, `ssl`, `ota`, `fdb`,
   `mdns`, `lwip`, `lwip_assert`.
@@ -186,7 +186,7 @@ bk72xx:
 - **sdk_silent** (*Optional*, string): Define the SDK logging "silent mode".
   This disables messages from vendor SDKs, which makes UART output more readable, but can hide some error messages.
   *This affects the physical UART port only*.
-  Refer to [LibreTiny/Configuration ](https://docs.libretiny.eu/link/config-serial) for more information.
+  Refer to [LibreTiny/Configuration](https://docs.libretiny.eu/link/config-serial) for more information.
 
   - `all`: Disable all messages (default).
   - `auto`: Disable selectively, i.e. during Wi-Fi activation.
@@ -201,7 +201,7 @@ bk72xx:
   to free GPIOs that should be used for other functions. Defaults to `true`.
 
 - **options** (*Optional*, mapping): Custom options passed to LibreTiny platform.
-  Refer to [LibreTiny/Configuration ](https://docs.libretiny.eu/link/config) to see all options.
+  Refer to [LibreTiny/Configuration](https://docs.libretiny.eu/link/config) to see all options.
   *This takes precedence (overrides) all options described above*.
 
 ## See Also
@@ -209,7 +209,7 @@ bk72xx:
 - {{< docref "esphome/" >}}
 - {{< docref "/components/output/libretiny_pwm" >}}
 - {{< docref "/components/text_sensor/libretiny" >}}
-- [LibreTiny Documentation ](https://docs.libretiny.eu/) (external)
+- [LibreTiny Documentation](https://docs.libretiny.eu/) (external)
 - {{< docref "/components/tuya" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/libretiny.md)
 

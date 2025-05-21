@@ -7,7 +7,7 @@ title: "Peacefair PZEM-00X DC Energy Monitor"
 
 {{< note >}}
 This page is incomplete and could use some work. If you want to contribute, please see our
-[developer site ](https://developers.esphome.io). This page is missing:
+[developer site](https://developers.esphome.io). This page is missing:
 
     - Images/screenshots/example configs of this device being used in action.
 
@@ -52,7 +52,7 @@ sensor:
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **energy** (*Optional*): Use the energy value of the sensor in kWh.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
@@ -72,7 +72,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "pzem004t/" >}}
 - {{< docref "pzemac/" >}}
 - :apiref:`pzemdc/pzemdc.h`

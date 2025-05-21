@@ -16,16 +16,16 @@ All time configuration schemas inherit these options.
 
 ### Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the time for use in lambdas.
-- **timezone** (*Optional*, string): Manually tell ESPHome what time zone to use with [this format  ](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html)
-  (warning: the format is quite complicated, see [examples ](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv))
-  or the simpler [TZ database name ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in the form
+- **id** (*Optional*, :ref:`config-id`): Specify the ID of the time for use in lambdas.
+- **timezone** (*Optional*, string): Manually tell ESPHome what time zone to use with [this format](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html)
+  (warning: the format is quite complicated, see [examples](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv))
+  or the simpler [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in the form
   :code:`<Region>/<City>`. ESPHome tries to automatically infer the time zone string based on the time zone of the computer
   that is running ESPHome, but this might not always be accurate.
 - **on_time** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run at specific intervals using
-  a cron-like syntax. See [`on_time` Trigger]({{< ref "components/time/_index#time-on_time" >}}).
+  a cron-like syntax. See :ref:`time-on_time`.
 - **on_time_sync** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run when the time source
-  could be (re-)synchronized.. See [`on_time_sync` Trigger]({{< ref "components/time/_index#time-on_time_sync" >}}).
+  could be (re-)synchronized.. See :ref:`time-on_time_sync`.
 
 {{< anchor "time-has_time_condition" >}}
 
@@ -54,7 +54,7 @@ lambda: |-
 ### `on_time` Trigger
 
 This powerful automation can be used to run automations at specific intervals at
-specific times of day. The syntax is a subset of the [crontab ](https://crontab.guru/) syntax.
+specific times of day. The syntax is a subset of the [crontab](https://crontab.guru/) syntax.
 
 There are two ways to specify time intervals: Either with using the `seconds:`, `minutes:`, ...
 keys as seen below or using a cron alike expression like `* /5 * * * *`.
@@ -179,7 +179,7 @@ time:
 `on_time` does not re-schedule events for times that are skipped or duplicated due to local Daylight
 Saving Time or other local time-adjustments like leap seconds. In regions with Daylight Saving Time, this
 means that events located between 01:00 - 02:00 may trigger twice, and events scheduled between 02:00 - 03:00 may
-be skipped once a year. This differs from [cron ](https://man7.org/linux/man-pages/man8/cron.8.html) behavior
+be skipped once a year. This differs from [cron](https://man7.org/linux/man-pages/man8/cron.8.html) behavior
 despite allowing the use of similar `crontab` syntax. Similarly, triggers on days of the month that do not exist
 ("every 31st of the month") will be skipped when those dates do not exist.
 
@@ -255,7 +255,7 @@ make sure to check if `.is_valid()` evaluates to `true` before triggering any ac
 ### strftime
 
 The second way to use the time object is to directly transform it into a string like `2018-08-16 16:31`.
-This is directly done using C's [strftime ](http://www.cplusplus.com/reference/ctime/strftime/) function which
+This is directly done using C's [strftime](http://www.cplusplus.com/reference/ctime/strftime/) function which
 allows for a lot of flexibility.
 
 ```cpp

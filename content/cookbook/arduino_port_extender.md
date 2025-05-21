@@ -22,10 +22,10 @@ Currently it is supported:
 - reading analog inputs
 - writing digital outputs
 
-The Arduino sketch can be retrieved from [here ](https://gist.github.com/glmnet/49ca3d6a9742fc3649f4fbdeaa4cdf5d#file-arduino_port_expander_sketch-ino)
+The Arduino sketch can be retrieved from [here](https://gist.github.com/glmnet/49ca3d6a9742fc3649f4fbdeaa4cdf5d#file-arduino_port_expander_sketch-ino)
 you can rename it to `.ino` and use the Arduino IDE to program it.
 
-You need to download [arduino_port_expander.h ](https://gist.github.com/glmnet/49ca3d6a9742fc3649f4fbdeaa4cdf5d#file-arduino_port_expander-h)
+You need to download [arduino_port_expander.h](https://gist.github.com/glmnet/49ca3d6a9742fc3649f4fbdeaa4cdf5d#file-arduino_port_expander-h)
 and include the arduino_port_expander.h in the ESPHome configuration.
 
 ```yaml

@@ -48,19 +48,19 @@ display:
       separation at the end.
     - `STOP`: When text is over it waits the `scroll_dwell` time and scroll is set back to the start.
 
-- **scroll_speed** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set scroll speed. Defaults to `250ms`
-- **scroll_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set delay time before scroll starts. Defaults to `1s`.
-- **scroll_dwell** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Sets the wait time at the end of the scroll before starting
+- **scroll_speed** (*Optional*, :ref:`config-time`): Set scroll speed. Defaults to `250ms`
+- **scroll_delay** (*Optional*, :ref:`config-time`): Set delay time before scroll starts. Defaults to `1s`.
+- **scroll_dwell** (*Optional*, :ref:`config-time`): Sets the wait time at the end of the scroll before starting
   over. This is only used in mode `STOP`. Defaults to `1s`.
 - **reverse_enable** (*Optional*, boolean): For some displays the order of the displays is reversed ("DCBA"). This option will reverse the display to ("ABCD") again. Defaults to  `false`.
 - **intensity** (*Optional*, int): The intensity with which the MAX7219 should drive the outputs. Range is
   from `0`, least intense to `15` the brightest. Defaults to `15`.
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the
-  MAX7219. See [Rendering Lambda]({{< ref "components/display/max7219digit#display-max7219digit_lambda" >}}) for more information.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+  MAX7219. See :ref:`display-max7219digit_lambda` for more information.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to re-draw the screen. Defaults to `1s`.
+- **spi_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [SPI Component]({{< ref "components/spi#spi" >}}) if you want
   to use multiple SPI buses.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 - **num_chip_lines** (*Optional*, int): Number of lines if you want to use the displays in Multiline Mode. Defaults to `1` Example: https://github.com/esphome/esphome/pull/1622#issue-836179156
 - **chip_lines_style** (*Optional*): How are the lines in Multiline Mode connected? Possible values are `zigzag` and `snake`. Defaults to `snake`
 - **flip_x** (*Optional*, boolean): Flip the horizontal axis on the screen. Defaults to `false`.
@@ -106,7 +106,7 @@ The intensity of the screen can be set "dynamically" within the lambda code with
 
 ## Rendering Lambda
 
-The MAX7219 digit is based on the fully fledged [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}), as it has a concept of individual pixels 8 X 8
+The MAX7219 digit is based on the fully fledged :ref:`display-engine`, as it has a concept of individual pixels 8 X 8
 per max7219 chip. In the lambda you're passed a variable called `it` as with all other displays. Some "Special"
 commands have been added to the basic display set.
 
@@ -228,13 +228,13 @@ For a quick display some additional commands are embedded in the code with a rel
 display a single character. So not very space efficient. The format of the command is: `it.printdigit("1234");` or
 `it.printdigitf("%s","1234")`;
 
-Please see [Formatted Text]({{< ref "components/display/_index#display-printf" >}}) for a quick introduction into the `printf` formatting rules and
-[Displaying Time]({{< ref "components/display/_index#display-strftime" >}}) for an introduction into the `strftime` time formatting.
+Please see :ref:`display-printf` for a quick introduction into the `printf` formatting rules and
+:ref:`display-strftime` for an introduction into the `strftime` time formatting.
 
 ## See Also
 
 - {{< docref "index/" >}}
 - :apiref:`max7219/max7219.h`
-- [MAX7219 Library ](https://github.com/nickgammon/MAX7219) by [Nick Gammon ](https://github.com/nickgammon)
+- [MAX7219 Library](https://github.com/nickgammon/MAX7219) by [Nick Gammon](https://github.com/nickgammon)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/max7219digit.md)
 

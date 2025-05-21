@@ -16,8 +16,8 @@ In case your equipment has encryption you must get a 32 character long encryptio
 This component is passive, it does not transmit any data to your equipment, the equipment always transmits
 data which this component decodes and updates the configured sensors at the pace the data is received.
 
-- For official information about DSMR refer to: [DSMR Document ](https://www.netbeheernederland.nl/dossiers/slimme-meter-15)
-- For official information about the P1 port refer to: [P1 Companion Standard ](https://www.netbeheernederland.nl/_upload/Files/Slimme_meter_15_a727fce1f1.pdf)
+- For official information about DSMR refer to: [DSMR Document](https://www.netbeheernederland.nl/dossiers/slimme-meter-15)
+- For official information about the P1 port refer to: [P1 Companion Standard](https://www.netbeheernederland.nl/_upload/Files/Slimme_meter_15_a727fce1f1.pdf)
 
 ```yaml
 # Example configuration entry
@@ -47,17 +47,17 @@ Configuration variables:
   older DSMR versions as they do not provide a CRC. Defaults to `true`.
 - **max_telegram_length** (*Optional*, integer): The size of the buffer used for reading DSMR telegrams. Increase
   if you are reading from a smart meter that sends large telegrams. Defaults to `1500`.
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the UART hub.
 - **request_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin that can be used for controlling
   the P1 port's Data Request pin. Defaults to not using a Data Request pin.
   See [Using the P1 Data Request pin]({{< ref "components/sensor/dsmr#sensor-dsmr-request_pin" >}}).
-- **request_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The minimum time between two telegram readings.
+- **request_interval** (*Optional*, :ref:`config-time`): The minimum time between two telegram readings.
   Defaults to `0ms`, meaning that the pace at which the smart meter sends its data determines the update frequency.
   This works best in combination with a `request_pin`, but this option will work without one too.
-- **receive_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The timeout on incoming data while reading a telegram.
+- **receive_timeout** (*Optional*, :ref:`config-time`): The timeout on incoming data while reading a telegram.
   When no new data arrive within the given timeout, the device will consider the current telegram a loss and
   starts looking for the header of the next telegram. Defaults to `200ms`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the DSMR if you have multiple components.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID of the DSMR if you have multiple components.
 
 ## Sensor
 

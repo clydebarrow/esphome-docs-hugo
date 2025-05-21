@@ -37,7 +37,7 @@ pipsolar:
 ```
 ##### Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this pipsolar component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this pipsolar component.
 - **uart_id** (*Optional*): The uart Bus ID
 
 ## Sensor
@@ -311,12 +311,12 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output.
+- **id** (**Required**, :ref:`config-id`): The ID of the output.
 - **value** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The target level.
 
 
 ## See Also
 
-- [UART Bus]({{< ref "components/uart#uart" >}})
+- :ref:`uart`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/pipsolar.md)
 

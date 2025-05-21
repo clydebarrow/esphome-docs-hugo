@@ -81,7 +81,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template binary sensor.
+- **id** (**Required**, :ref:`config-id`): The ID of the template binary sensor.
 - **state** (**Required**, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 
@@ -97,7 +97,7 @@ id(template_bin).publish_state(true);
 
 - {{< docref "/components/binary_sensor/index" >}}
 - {{< docref "/components/sensor/template" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`template/binary_sensor/template_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/template.md)
 

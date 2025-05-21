@@ -32,13 +32,13 @@ sensor:
 
   - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for actions.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for actions.
 
 {{< img src="senseair_s8-pins.jpg" alt="Image" caption="Pins on the SenseAir S8. Only the ones marked with a red circle need to be connected." width="80.0%" class="center" >}}
 
@@ -115,7 +115,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`senseair/senseair.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/senseair.md)
 

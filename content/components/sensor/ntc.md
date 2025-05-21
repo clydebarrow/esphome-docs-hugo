@@ -16,7 +16,7 @@ It also requires calibration parameters for this conversion. There are two
 ways of obtaining these values: By looking at the datasheet or manual calculation.
 
 If you have the datasheet of the thermistor, you can look at its "B-constant" and
-reference temperature/resistance. For example [this product ](https://www.adafruit.com/product/372)
+reference temperature/resistance. For example [this product](https://www.adafruit.com/product/372)
 would have the following calibration configuration.
 
 ```yaml
@@ -72,7 +72,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor to read the resistance values from
+- **sensor** (**Required**, :ref:`config-id`): The sensor to read the resistance values from
   to convert to temperature readings.
 - **calibration** (**Required**, float): The calibration parameters of the sensor - see above
   for more details.
@@ -82,7 +82,7 @@ sensor:
 
 A constant voltage supply to the NTC sensor causes it to heat up and therefore creates unreliable temperature values.
 So it's recommended to only supply the NTC sensor (and voltage divider) during the actual measurement.
-More info [here ](https://learn.adafruit.com/thermistor/using-a-thermistor#self-heating-3-22).
+More info [here](https://learn.adafruit.com/thermistor/using-a-thermistor#self-heating-3-22).
 
 To do this, replace the 3.3V side of the voltage divider with a connection to a GPIO pin. This GPIO pin will
 be switched HIGH (3.3V) only during the measurement, thus preventing the sensor from heating up.
@@ -118,7 +118,7 @@ interval:
 
 - {{< docref "adc/" >}}
 - {{< docref "resistance/" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`ntc/ntc.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ntc.md)
 

@@ -7,7 +7,7 @@ title: "PMSA003I Particulate Matter Sensor"
 
 The `pmsa003i` sensor platform  allows you to use your Plantower PMSA003I
 particulate matter sensor
-([datasheet ](https://cdn-shop.adafruit.com/product-files/4632/4505_PMSA003I_series_data_manual_English_V2.6.pdf),
+([datasheet](https://cdn-shop.adafruit.com/product-files/4632/4505_PMSA003I_series_data_manual_English_V2.6.pdf),
 `Adafruit`_) with ESPHome.
 
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
@@ -63,7 +63,7 @@ sensor:
 - **standard_units** (*Optional*, boolean): `True` to use standard units or `False` to use  environmental units. Defaults to `True`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x12`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< note >}}
@@ -83,7 +83,7 @@ Standard vs environmental units from https://publiclab.org/questions/samr/04-07-
 
 - {{< docref "/components/sensor/pmsx003" >}}
 - {{< docref "/components/sensor/sds011" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`pmsa003i/pmsa003i.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pmsa003i.md)
 

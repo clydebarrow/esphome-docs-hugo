@@ -7,8 +7,8 @@ title: "Ultrasonic Distance Sensor"
 
 The ultrasonic distance sensor allows you to use simple ultrasonic
 sensors like the HC-SR04
-([datasheet ](https://www.electroschematics.com/wp-content/uploads/2013/07/HC-SR04-datasheet-version-2.pdf),
-[SparkFun ](https://www.sparkfun.com/products/13959)) with ESPHome
+([datasheet](https://www.electroschematics.com/wp-content/uploads/2013/07/HC-SR04-datasheet-version-2.pdf),
+[SparkFun](https://www.sparkfun.com/products/13959)) with ESPHome
 to measure distances. These sensors usually can't measure anything more
 than about two meters and may sometimes make some annoying clicking
 sounds.
@@ -38,7 +38,7 @@ sensor:
   periodically send the trigger pulse to.
 - **echo_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The input pin on which to
   wait for the echo.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
@@ -46,13 +46,13 @@ Advanced options:
 
 - **timeout** (*Optional*, float): The number of meters for the
   timeout. Most sensors can only sense up to 2 meters. Defaults to 2 meters.
-- **pulse_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration for which the trigger pin will be
+- **pulse_time** (*Optional*, :ref:`config-time`): The duration for which the trigger pin will be
   active. Defaults to `10us`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "template/" >}}
 - :apiref:`ultrasonic/ultrasonic_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ultrasonic.md)

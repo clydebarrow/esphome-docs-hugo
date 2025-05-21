@@ -29,7 +29,7 @@ Possible return values for the lambda:
 
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the new value of the text sensor
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   text sensor. Set to `never` to disable updates. Defaults to `60s`.
 - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
@@ -61,7 +61,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template text sensor.
+- **id** (**Required**, :ref:`config-id`): The ID of the template text sensor.
 - **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 
@@ -111,7 +111,7 @@ text_sensor:
 ## See Also
 
 - {{< docref "/components/text_sensor/index" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`automation`
 - :apiref:`template/text_sensor/template_text_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/text_sensor/template.md)
 

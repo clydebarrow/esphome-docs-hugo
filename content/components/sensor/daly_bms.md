@@ -6,7 +6,7 @@ title: "Daly BMS Sensor"
 {{< seo description="" image="" >}}
 
 The `daly_bms` sensor platform allows you to use a Daly Smart BMS
-([more info ](https://dalyelec.en.made-in-china.com/))
+([more info](https://dalyelec.en.made-in-china.com/))
 with ESPHome.
 
 The BMS communicates via [UART]({{< ref "components/uart#uart" >}}).
@@ -24,7 +24,7 @@ daly_bms:
 ```
 ### Configuration variables:
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Delay between data requests.
+- **update_interval** (*Optional*, :ref:`config-time`): Delay between data requests.
 - **address** (*Optional*, int): Address to use, defaults to `0x80`.
 
 ## Sensor
@@ -308,7 +308,7 @@ uart:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`daly_bms/daly_bms.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/daly_bms.md)
 

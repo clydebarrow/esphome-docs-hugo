@@ -5,7 +5,7 @@ title: "Improv via Serial"
 
 {{< seo description="" image="" >}}
 
-The [improv_serial` component in ESPHome implements the open `Improv standard ](https://www.improv-wifi.com/)
+The [improv_serial` component in ESPHome implements the open `Improv standard](https://www.improv-wifi.com/)
 for configuring Wi-Fi on an ESPHome device by using a serial connection to the device, eg. USB.
 
 The `improv_serial` component requires the serial `logger` to be configured.
@@ -46,7 +46,7 @@ improv_serial:
 - {{< docref "wifi/" >}}
 - {{< docref "captive_portal/" >}}
 - {{< docref "esp32_improv/" >}}
-- [Improv Wi-Fi ](https://www.improv-wifi.com/)
+- [Improv Wi-Fi](https://www.improv-wifi.com/)
 - :apiref:`improv_serial/improv_serial_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/improv_serial.md)
 

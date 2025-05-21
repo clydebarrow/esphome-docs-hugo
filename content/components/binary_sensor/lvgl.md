@@ -8,7 +8,7 @@ title: "LVGL Binary Sensor"
 The `lvgl` binary sensor platform creates a binary sensor from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widget is [`button`]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}}). A single binary sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome binary sensor component.
+Supported widget is :ref:`lvgl-widget-button`. A single binary sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome binary sensor component.
 
 ## Configuration variables:
 

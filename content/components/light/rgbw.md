@@ -61,12 +61,12 @@ the `color_mode` option of the [light control actions]({{< ref "components/light
 
 ## Configuration variables:
 
-- **red** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
-- **green** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
-- **blue** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
-- **white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the white channel.
+- **red** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the red channel.
+- **green** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the green channel.
+- **blue** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the blue channel.
+- **white** (**Required**, :ref:`config-id`): The id of the float :ref:`output` to use for the white channel.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
+  time as RGB leds. See :ref:`rgbw_color_interlock` for more information. Defaults to `false`.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also

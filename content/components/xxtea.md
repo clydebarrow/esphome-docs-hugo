@@ -7,7 +7,7 @@ title: "XXTEA Component"
 
 This component cannot be used directly in YAML, but can be used in lambdas to encrypt and decrypt data.
 
-The encryption used is [XXTEA ](https://en.wikipedia.org/wiki/XXTEA) which is fast and compact. XXTEA is known
+The encryption used is [XXTEA](https://en.wikipedia.org/wiki/XXTEA) which is fast and compact. XXTEA is known
 to be susceptible to a chosen-plaintext attack, so it should not be used where plain-text injection is possible.
 
 The algorithm has been modified from the original to use a 256 bit key instead of the original 128 bit key.

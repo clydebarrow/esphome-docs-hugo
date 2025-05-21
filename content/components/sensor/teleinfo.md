@@ -8,7 +8,7 @@ title: "Teleinformation from Linky electrical counter."
 ## Component/Hub
 
 The `teleinfo` component allows you to retrieve data from a
-French electrical counter using Teleinformation ([datasheet ](https://www.enedis.fr/media/2035/download)). It works with Linky electrical
+French electrical counter using Teleinformation ([datasheet](https://www.enedis.fr/media/2035/download)). It works with Linky electrical
 counter but also legacy EDF electrical counter.
 
 {{< img src="teleinfo-full.jpg" alt="Image" caption="Linky electrical counter" width="50.0%" class="center" >}}
@@ -51,13 +51,13 @@ In teleinfo platform:
   With historical mode, baudrate of 1200 must be used whereas 9600 must be used in
   standard mode. Defaults to `false`.
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation or multiple hubs.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation or multiple hubs.
 
 ### Sensor
 
@@ -84,7 +84,7 @@ sensor:
 
 ```
 - **tag_name** (**Required**, string): Specify the tag you want to retrieve from the Teleinformation.
-- **teleinfo_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of used hub.
+- **teleinfo_id** (*Optional*, :ref:`config-id`): Specify the ID of used hub.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ### Text Sensor
@@ -98,7 +98,7 @@ text_sensor:
 
 ```
 - **tag_name** (**Required**, string): Specify the tag you want to retrieve from the Teleinformation.
-- **teleinfo_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of used hub.
+- **teleinfo_id** (*Optional*, :ref:`config-id`): Specify the ID of used hub.
 - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 

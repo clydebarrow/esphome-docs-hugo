@@ -26,7 +26,7 @@ update:
 ## Configuration variables:
 
 - **source** (**Required**, string): The URL of the YAML manifest file containing the firmware metadata.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval at which to check for (**not install**) updates.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval at which to check for (**not install**) updates.
   Defaults to 6 hours.
 - All other options from [Update]({{< ref "components/update/_index#config-update" >}}).
 
@@ -34,7 +34,7 @@ update:
 
 ## Update Manifest Format
 
-This component expects the [ESP-Web-Tools manifest ](https://github.com/esphome/esp-web-tools) with an extension in
+This component expects the [ESP-Web-Tools manifest](https://github.com/esphome/esp-web-tools) with an extension in
 the `ota` block that is structured as follows:
 
 ```json

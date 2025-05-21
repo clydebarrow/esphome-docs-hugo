@@ -37,12 +37,12 @@ wifi:
 
 ## Configuration variables:
 
-- **ssid** (*Optional*, string): The name (or [service set  identifier ](https://www.lifewire.com/definition-of-service-set-identifier-816547))
+- **ssid** (*Optional*, string): The name (or [service set  identifier](https://www.lifewire.com/definition-of-service-set-identifier-816547))
   of the WiFi access point your device should connect to.
 - **password** (*Optional*, string): The password (or PSK) for your
   WiFi network. Leave empty for no password.
 - **networks** (*Optional*): Configure multiple WiFi networks to connect to, the best one
-  that is reachable will be connected to. See [Connecting to Multiple Networks]({{< ref "components/wifi#wifi-networks" >}}).
+  that is reachable will be connected to. See :ref:`wifi-networks`.
 - **manual_ip** (*Optional*): Manually configure the static IP of the node.
 
   - **static_ip** (**Required**, IPv4 address): The static IP of your node.
@@ -64,17 +64,17 @@ wifi:
     Defaults to 1.
   - **manual_ip** (*Optional*): Manually set the IP options for the AP. Same options as
     manual_ip for station mode.
-  - **ap_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time after which to enable the
+  - **ap_timeout** (*Optional*, :ref:`config-time`): The time after which to enable the
     configured fallback hotspot. Can be disabled by setting this to `0s`, which requires manually starting the AP by other means (eg: from a button press). Defaults to `1min`.
 
 - **domain** (*Optional*, string): Set the domain of the node hostname used for uploading.
   For example, if it's set to `.local`, all uploads will be sent to `<HOSTNAME>.local`.
   Defaults to `.local`.
-- **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before rebooting when no
+- **reboot_timeout** (*Optional*, :ref:`config-time`): The amount of time to wait before rebooting when no
   WiFi connection exists. Can be disabled by setting this to `0s`, but note that the low level IP stack currently
   seems to have issues with WiFi where a full reboot is required to get the interface back working. Defaults to `15min`. Does not apply when in access point mode.
 - **power_save_mode** (*Optional*, string): The power save mode for the WiFi interface.
-  See [Power Save Mode]({{< ref "components/wifi#wifi-power_save_mode" >}})
+  See :ref:`wifi-power_save_mode`
 
 - **output_power** (*Optional*, string): The amount of TX power for the WiFi interface from 8.5dB to 20.5dB. Default for ESP8266 is 20dB, 20.5dB might cause unexpected restarts.
 - **fast_connect** (*Optional*, boolean): If enabled, directly connects to WiFi network without doing a full scan
@@ -90,7 +90,7 @@ wifi:
 - **on_disconnect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection is dropped.
 - **enable_on_boot** (*Optional*, boolean): If enabled, the WiFi interface will be enabled on boot. Defaults to `true`.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 ## Access Point Mode
 
@@ -159,7 +159,7 @@ network doesn't allow for `.local` addresses. When a manual IP is in your config
 the OTA process will automatically choose that as the target for the upload.
 
 {{< note >}}
-See also [Changing ESPHome Node Name]({{< ref "components/esphome#esphome-changing_node_name" >}}).
+See also :ref:`esphome-changing_node_name`.
 
 {{< /note >}}
 {{< anchor "wifi-power_save_mode" >}}
@@ -217,7 +217,7 @@ Configuration variables:
   - **dns1** (*Optional*, IPv4 address): The main DNS server to use.
   - **dns2** (*Optional*, IPv4 address): The backup DNS server to use.
 
-- **eap** (*Optional*): See [Enterprise Authentication]({{< ref "components/wifi#eap" >}}).
+- **eap** (*Optional*): See :ref:`eap`.
 - **channel** (*Optional*, int): The channel of the network (1-14). If given, only connects to networks
   that are on this channel.
 - **bssid** (*Optional*, string): The connection's BSSID (MAC address). BSSIDs must consist of six
@@ -233,7 +233,7 @@ Configuration variables:
 ## Enterprise Authentication
 
 WPA2_EAP Enterprise Authentication is supported on ESP32s and ESP8266s.
-In order to configure this feature you must use the [Connecting to Multiple Networks]({{< ref "components/wifi#wifi-networks" >}}) style configuration.
+In order to configure this feature you must use the :ref:`wifi-networks` style configuration.
 The ESP32 is known to work with PEAP, EAP-TTLS, and the certificate based EAP-TLS.
 These are advanced settings and you will usually need to consult your enterprise network administrator.
 
@@ -340,7 +340,7 @@ Configuration variables:
 - **ssid** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The name of the WiFi access point.
 - **password** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The password of the WiFi access point. Leave empty for no password.
 - **save** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): If set to `true`, the SSID and password will be saved in persistent memory. Defaults to `true`.
-- **timeout** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The time to wait for the connection to be established. Defaults to 30 seconds.
+- **timeout** (*Optional*, :ref:`config-time`, [templatable]({{< ref "automations/templates#config-templatable" >}})): The time to wait for the connection to be established. Defaults to 30 seconds.
 - **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a connection is established.
 - **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection fails.
 

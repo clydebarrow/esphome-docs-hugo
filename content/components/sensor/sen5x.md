@@ -5,7 +5,7 @@ title: "Sen5x Series Environmental sensor"
 
 {{< seo description="" image="" >}}
 
-The [sen5x` sensor platform allows you to use your Sensirion `SEN50 ](https://sensirion.com/products/catalog/SEN50/), [SEN54 ](https://sensirion.com/products/catalog/SEN54/) and [SEN55 ](https://sensirion.com/products/catalog/SEN55/) Environmental sensor ([datasheet ](https://sensirion.com/media/documents/6791EFA0/62A1F68F/Sensirion_Datasheet_Environmental_Node_SEN5x.pdf)) sensors with ESPHome.
+The [sen5x` sensor platform allows you to use your Sensirion `SEN50](https://sensirion.com/products/catalog/SEN50/), [SEN54](https://sensirion.com/products/catalog/SEN54/) and [SEN55](https://sensirion.com/products/catalog/SEN55/) Environmental sensor ([datasheet](https://sensirion.com/media/documents/6791EFA0/62A1F68F/Sensirion_Datasheet_Environmental_Node_SEN5x.pdf)) sensors with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 This sensor supports both UART and I²C communication. Only I²C communication is implemented in this component.
 
@@ -89,7 +89,7 @@ sensor:
 
 - **voc** (*Optional*): VOC Index. Note only available with Sen54 or Sen55. The sensor will be ignored on unsupported models.
 
-  - **algorithm_tuning** (*Optional*): The VOC algorithm can be customized by tuning 6 different parameters. For more details see [Engineering Guidelines for SEN5x ](https://sensirion.com/media/documents/25AB572C/62B463AA/Sensirion_Engineering_Guidelines_SEN5x.pdf)
+  - **algorithm_tuning** (*Optional*): The VOC algorithm can be customized by tuning 6 different parameters. For more details see [Engineering Guidelines for SEN5x](https://sensirion.com/media/documents/25AB572C/62B463AA/Sensirion_Engineering_Guidelines_SEN5x.pdf)
 
     - **index_offset** (*Optional*): VOC index representing typical (average) conditions. Allowed values are in range 1..250. The default value is 100.
     - **learning_time_offset_hours** (*Optional*): Time constant to estimate the VOC algorithm offset from the history in hours. Past events will be forgotten after about twice the  learning time. Allowed values are in range 1..1000. The default value is 12 hour
@@ -102,7 +102,7 @@ sensor:
 
 - **nox** (*Optional*): NOx Index. Note: Only available with Sen55. The sensor will be ignored on unsupported models.
 
-  - **algorithm_tuning** (*Optional*): The NOx algorithm can be customized by tuning 5 different parameters.For more details see [Engineering Guidelines for SEN5x ](https://sensirion.com/media/documents/25AB572C/62B463AA/Sensirion_Engineering_Guidelines_SEN5x.pdf)
+  - **algorithm_tuning** (*Optional*): The NOx algorithm can be customized by tuning 5 different parameters.For more details see [Engineering Guidelines for SEN5x](https://sensirion.com/media/documents/25AB572C/62B463AA/Sensirion_Engineering_Guidelines_SEN5x.pdf)
 
     - **index_offset** (*Optional*): NOx index representing typical (average) conditions. Allowed values are in range 1..250. The default value is 100.
     - **learning_time_offset_hours** (*Optional*): Time constant to estimate the NOx algorithm offset from the history in hours. Past events will be forgotten after about twice the  learning time. Allowed values are in range 1..1000. The default value is 12 hour
@@ -121,7 +121,7 @@ sensor:
       T_Ambient_Compensated = T_Ambient + (slope*T_Ambient) + offset
 
   Where slope and offset are the values set with this command, smoothed with the specified time constant. The time constant is how fast the slope and offset are applied. After the specified value in seconds, 63% of the new slope and offset are applied.
-  More details about the tuning of these parameters are included in the application note [Temperature Acceleration and Compensation Instructions for SEN5x. ](https://sensirion.com/media/documents/9B9DE2A7/61E957EB/Sensirion_Temperature_Acceleration_and_Compensation_Instructions_SEN.pdf)
+  More details about the tuning of these parameters are included in the application note [Temperature Acceleration and Compensation Instructions for SEN5x.](https://sensirion.com/media/documents/9B9DE2A7/61E957EB/Sensirion_Temperature_Acceleration_and_Compensation_Instructions_SEN.pdf)
 
 
   - **offset** (*Optional*): Temperature offset [°C]. Defaults to `0`
@@ -184,7 +184,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "sds011/" >}}
 - {{< docref "pmsx003/" >}}

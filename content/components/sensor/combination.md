@@ -17,7 +17,7 @@ The source sensor states can be combined in several ways:
 
 - `KALMAN` filter: This type filters one or several
   sensors into one with a reduced error. If using a single sensor as data source,
-  it acts like a [sensor-filter-exponential_moving_average]({{< ref "components/sensor/_index#sensor-filter-exponential_moving_average" >}}) filter. With
+  it acts like a :ref:`sensor-filter-exponential_moving_average` filter. With
   multiple sensors, it combines their values based on their respective standard
   deviation.
 
@@ -75,7 +75,7 @@ sensor:
   `MOST_RECENTLY_UPDATED`, `RANGE`, or `SUM`.
 - **sources** (**Required**, list): A list of sensors to use as source.
   
-  - **source** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}) {{< docref "/components/sensor/index" >}}ndex`): The
+  - **source** (**Required**, :ref:`config-id` of a {{< docref "/components/sensor/index" >}}): The
     sensor id that is used as sample source.
   - **error** (**Required**, only for `KALMAN` type, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): 
     The standard deviation of the sensor's measurements. This works like the `process_std_dev` 
@@ -97,7 +97,7 @@ sensor:
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`combination/combination.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/combination.md)
 

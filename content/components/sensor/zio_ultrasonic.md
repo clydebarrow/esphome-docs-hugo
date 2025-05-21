@@ -6,11 +6,11 @@ title: "Zio Ultrasonic Distance Sensor"
 {{< seo description="" image="" >}}
 
 The Zio Ultrasonic Distance sensor allows you to use your compatible
-([datasheet ](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf),
-[sparkfun ](https://www.sparkfun.com/products/17777))
+([datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf),
+[sparkfun](https://www.sparkfun.com/products/17777))
 sensors with ESPHome. 
 
-{{< img src="zio_ultrasonic.jpg" alt="Image" caption="Zio Ultrasonic Distance Sensor. (Credit: [Sparkfun ](https://www.sparkfun.com/products/17777), image cropped and compressed)" width="30.0%" class="center" >}}
+{{< img src="zio_ultrasonic.jpg" alt="Image" caption="Zio Ultrasonic Distance Sensor. (Credit: [Sparkfun](https://www.sparkfun.com/products/17777), image cropped and compressed)" width="30.0%" class="center" >}}
 
 [Sparkfun](https://www.sparkfun.com/products/17777)
 
@@ -29,13 +29,13 @@ sensor:
 ## Configuration variables:
 
 - **address** (*Optional*, int): Manually specifiy the I²C address of the sensor. Defaults to `0x00`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 
 - {{< docref "/components/sensor/ultrasonic" "Ultrasonic Sensor Component" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "template/" >}}
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/zio_ultrasonic.md)
 

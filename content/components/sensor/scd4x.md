@@ -6,7 +6,7 @@ title: "SCD4X CO₂, Temperature and Relative Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The `scd4x` sensor platform  allows you to use your Sensirion SCD4X CO₂
-([datasheet ](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.
+([datasheet](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 {{< img src="scd4x.jpg" alt="Image" width="80.0%" class="center" >}}
@@ -63,17 +63,17 @@ sensor:
   - `low_power_periodic`: The sensor takes a new measurement every 30 seconds. Make sure `update_interval` is at least 30 seconds.
   - `single_shot`: A measurement is started in every update interval. A measurement takes 5 seconds. This mode is only available on scd41 and useful if low power consumption is required.
     The automatic self-calibration is optimized for single shot measurements performed every 5 minutes.
-    To reduce noise levels, you can can perform several single shot measurements in a row and average the output values using a [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}).
+    To reduce noise levels, you can can perform several single shot measurements in a row and average the output values using a :ref:`sensor-filters`.
   - `single_shot_rht_only`: A measurement is started in every update interval. A measurement takes 50 ms. Only humidity and temperature is measured. CO2 is reported as 0 ppm. This mode is only available on scd41 and useful if low power consumption is required.
 
 
-- **ambient_pressure_compensation_source** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set an external pressure sensor ID used for ambient pressure compensation.
+- **ambient_pressure_compensation_source** (*Optional*, :ref:`config-id`): Set an external pressure sensor ID used for ambient pressure compensation.
   The pressure sensor must report pressure in hPa. the correction is applied before updating the state of the co2 sensor.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x62`.
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Actions:
@@ -169,7 +169,7 @@ sensor:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "scd30/" >}}
 - :apiref:`scd4x/scd4x.h`

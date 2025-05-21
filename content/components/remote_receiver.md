@@ -14,7 +14,7 @@ The component is split into two parts:
 - Individual [remote receiver binary sensors]({{< ref "components/remote_receiver#remote-receiver-binary-sensor" >}}) which will activate when their
   respective signal is received.
 
-**See** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **and** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **for details.**
+**See** :ref:`remote-setting-up-infrared` **and** :ref:`remote-setting-up-rf` **for details.**
 
 ```yaml
 # Example configuration entry
@@ -27,7 +27,7 @@ Multiple remote receivers can be configured as a list of dict definitions within
 
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to receive the remote signal on.
+- **pin** (**Required**, :ref:`config-pin`): The pin to receive the remote signal on.
 - **dump** (*Optional*, list): Decode and dump these remote codes in the logs (at log.level=DEBUG).
   Set to `all` to dump all available codecs:
 
@@ -66,20 +66,20 @@ Multiple remote receivers can be configured as a list of dict definitions within
   - **mirage**: Decode and dump Mirage infrared codes.
   - **toto**: Decode and dump Toto infrared codes.
 
-- **tolerance** (*Optional*, int, [Time]({{< ref "guides/configuration-types#config-time" >}}) or mapping): The percentage or time that the remote signal lengths
+- **tolerance** (*Optional*, int, :ref:`config-time` or mapping): The percentage or time that the remote signal lengths
   can deviate in the decoding process.  Defaults to `25%`.
 
   - **type** (**Required**, enum): Set the type of the tolerance. Can be `percentage` or `time`.
-  - **value** (**Required**, int or [Time]({{< ref "guides/configuration-types#config-time" >}})): The percentage or time value. Allowed values are in range `0`
+  - **value** (**Required**, int or :ref:`config-time`): The percentage or time value. Allowed values are in range `0`
     to `100%` or `0` to `4294967295us`.
 
 - **buffer_size** (*Optional*, int): The size of the internal buffer for storing the remote codes. Defaults to `10kB`
   on the ESP32 and `1kB` on the ESP8266.
-- **filter** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Filter any pulses that are shorter than this. Useful for removing
+- **filter** (*Optional*, :ref:`config-time`): Filter any pulses that are shorter than this. Useful for removing
   glitches from noisy signals. Allowed values are in range `0` to `4294967295us`. Defaults to `50us`.
-- **idle** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time that a signal should remain stable/unchanged for it to
+- **idle** (*Optional*, :ref:`config-time`): The amount of time that a signal should remain stable/unchanged for it to
   be considered complete. Allowed values are in range `0` to `4294967295us`. Defaults to `10ms`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Useful when multiple
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation. Useful when multiple
   receivers are configured on a single device.
 
 ### ESP32 IDF configuration variables:
@@ -270,7 +270,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **receiver_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The remote receiver to receive the remote code with. Required if
+- **receiver_id** (*Optional*, :ref:`config-id`): The remote receiver to receive the remote code with. Required if
   multiple receivers configured.
 - All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
@@ -434,7 +434,7 @@ Remote code selection (exactly one of these has to be included):
 
   - **code** (**Required**, string): The remote code to listen for, copy this from the dumper output. To ignore a bit
     in the received data, use `x` at that place in the **code**.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see :ref:`remote_transmitter-rc_switch-protocol` for
     more info.
 
 - **rc_switch_type_a**: Trigger on a decoded RC Switch Type A remote code with the given data.
@@ -442,7 +442,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, string): The group, binary string.
   - **device** (**Required**, string): The device in the group, binary string.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see :ref:`remote_transmitter-rc_switch-protocol` for
     more info.
 
 - **rc_switch_type_b**: Trigger on a decoded RC Switch Type B remote code with the given data.
@@ -450,7 +450,7 @@ Remote code selection (exactly one of these has to be included):
   - **address** (**Required**, int): The address, int from 1 to 4.
   - **channel** (**Required**, int): The channel, int from 1 to 4.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see :ref:`remote_transmitter-rc_switch-protocol` for
     more info.
 
 - **rc_switch_type_c**: Trigger on a decoded RC Switch Type C remote code with the given data.
@@ -459,7 +459,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, int): The group. Range is 1 to 4.
   - **device** (**Required**, int): The device. Range is 1 to 4.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see :ref:`remote_transmitter-rc_switch-protocol` for
     more info.
 
 - **rc_switch_type_d**: Trigger on a decoded RC Switch Type D remote code with the given data.
@@ -467,7 +467,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, int): The group. Range is 1 to 4.
   - **device** (**Required**, int): The device. Range is 1 to 3.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}}) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see :ref:`remote_transmitter-rc_switch-protocol` for
     more info.
 
 - **roomba**: Trigger on a decoded Roomba remote code with the given data.
@@ -539,7 +539,7 @@ remote_receiver:
 {{< /note >}}
 {{< note >}}
 For the black Sonoff RF Bridge, you can bypass the EFM8BB1 microcontroller handling RF signals with
-[this hack ](https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-RF-Bridge---Direct-Hack)
+[this hack](https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-RF-Bridge---Direct-Hack)
 created by the GitHub user wildwiz. Then use this configuration for the remote receiver/transmitter hubs:
 
 ```yaml
@@ -552,7 +552,7 @@ remote_receiver:
             pin: 5
             carrier_duty_percent: 100%
 
-There's also a software ["hack" ](https://github.com/mightymos/RF-Bridge-OB38S003) that allows the radio chip to mirror all the voltages to the ESP to do the decoding,
+There's also a software ["hack"](https://github.com/mightymos/RF-Bridge-OB38S003) that allows the radio chip to mirror all the voltages to the ESP to do the decoding,
 rendering the hardware hack uncessary. This software passthrough mode can be used for the OB38S003 (white) and EFM8BB1 (black) sonoff RF bridge. Then use this configuration for the remote receiver/transmitter hubs:
 
 ```yaml
@@ -577,10 +577,10 @@ remote_receiver:
 
 - {{< docref "index/" >}}
 - {{< docref "/components/remote_transmitter" >}}
-- [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}})
-- [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}})
+- :ref:`remote-setting-up-infrared`
+- :ref:`remote-setting-up-rf`
 - {{< docref "/components/rf_bridge" >}}
-- [RCSwitch ](https://github.com/sui77/rc-switch) by [Suat Özgür ](https://github.com/sui77)
+- [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - :apiref:`remote/remote_receiver.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/remote_receiver.md)
 

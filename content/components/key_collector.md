@@ -6,7 +6,7 @@ title: "Key collector component"
 {{< seo description="" image="" >}}
 
 The `key_collector` component collects key presses from components
-like [Matrix keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}),{{< docref "/components/wiegand" "Wiegand keypad" >}}`
+like :ref:`matrix_keypad`, {{< docref "/components/wiegand" "Wiegand keypad" >}}
 or LVGL [Keyboard]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}}), [Button Matrix]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
 widgets. It allows you to process key sequences and treat them as one, for
 example to allow inputting of a PIN code or a passkey. The component outputs
@@ -45,8 +45,8 @@ key_collector:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this entry for use in lambdas.
-- **source_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the key input device.
+- **id** (*Optional*, :ref:`config-id`): Set the ID of this entry for use in lambdas.
+- **source_id** (*Optional*, :ref:`config-id`): The ID of the key input device.
 - **min_length** (*Optional*, integer): The minimal length of the desired key sequence. Below
   this, `on_result` automation will not trigger even if any of the `end_keys` was pressed.
 - **max_length** (*Optional*, integer): The maximum length of the desired key sequence, after 
@@ -58,7 +58,7 @@ Configuration variables:
 - **clear_keys** (*Optional*, string): Keys used to entirely clear the sequence, all the pressed keys.
 - **allowed_keys** (*Optional*, string): Keys allowed to be used. If not specified, then any otherwise 
   unused keys will be allowed.
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Timeout after which to cancel building the sequence and delete all the keys.
+- **timeout** (*Optional*, :ref:`config-time`): Timeout after which to cancel building the sequence and delete all the keys.
 - **enable_on_boot** (*Optional*, boolean): If enabled, this key collector will be enabled on boot. Defaults to `true`.
 
 At least one of `end_keys` or `max_length` have to be specified. The rest are optional.

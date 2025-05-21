@@ -58,7 +58,7 @@ switch:
      id: dehumidifier1
 
 ```
-First, we have to give the dehumidifier `switch` an [ID]({{< ref "guides/configuration-types#config-id" >}}) so that we can refer to it inside of our
+First, we have to give the dehumidifier `switch` an :ref:`config-id` so that we can refer to it inside of our
 automation.
 
 {{< anchor "actions-trigger" >}}
@@ -289,7 +289,7 @@ on_...:
 Configuration variables:
 
 - **condition** (**Required**, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to wait to become true.
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before timing out. Defaults to never timing out.
+- **timeout** (*Optional*, :ref:`config-time`): Time to wait before timing out. Defaults to never timing out.
 
 {{< anchor "while_action" >}}
 
@@ -444,7 +444,7 @@ on_...:
 ```
 Configuration variables:
 
-- **time** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **time** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), :ref:`config-time`):
   The time for which the condition has to have been true.
 - **condition** (**Required**, [condition]({{< ref "automations/actions#config-condition" >}})): The condition to check.
 
@@ -472,7 +472,7 @@ on_...:
 
 *See the respective component's page(s) for more detail.*
 
-See also: [Common Actions]({{< ref "automations/actions#common-actions" >}}).
+See also: :ref:`common-actions`.
 
 - **ags10:** `new_i2c_address`, `set_zero_point`
 - **alarm_control_panel:** `arm_away`, `arm_home`, `arm_night`, `chime`, `disarm`, `pending`, `ready`, `triggered`
@@ -560,7 +560,7 @@ See also: [Common Actions]({{< ref "automations/actions#common-actions" >}}).
 
 *See the respective component's page(s) for more detail.*
 
-See also: [Common Conditions]({{< ref "automations/actions#common_conditions" >}}).
+See also: :ref:`common_conditions`.
 
 - **alarm_control_panel:** `is_armed`, `ready`
 - **api:** `connected`

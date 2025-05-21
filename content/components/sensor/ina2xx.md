@@ -16,11 +16,11 @@ requred to be set up in your configuration for this sensor to work.
 
 | Product | Protocol | Description |  |
 | --- | --- | --- | --- |
-| [INA228 ](http://www.ti.com/lit/ds/symlink/ina228.pdf) | I²C       8 | 5-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |  |
-| [INA229 ](http://www.ti.com/lit/ds/symlink/ina229.pdf) | SPI       8 | 5-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |  |
-| [INA238 ](http://www.ti.com/lit/ds/symlink/ina238.pdf) | I²C       8 | 5-V, 16-Bit, High-Precision Power Monitor |  |
-| [INA239 ](http://www.ti.com/lit/ds/symlink/ina239.pdf) | SPI       8 | 5-V, 16-Bit, High-Precision Power Monitor |  |
-| [INA237 ](http://www.ti.com/lit/ds/symlink/ina237.pdf) | I²C       8 | 5-V, 16-Bit, Precision Power Monitor |  |
+| [INA228](http://www.ti.com/lit/ds/symlink/ina228.pdf)     I | ²C       85 | -V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |  |
+| [INA229](http://www.ti.com/lit/ds/symlink/ina229.pdf)     S | PI       85 | -V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |  |
+| [INA238](http://www.ti.com/lit/ds/symlink/ina238.pdf)     I | ²C       85 | -V, 16-Bit, High-Precision Power Monitor |  |
+| [INA239](http://www.ti.com/lit/ds/symlink/ina239.pdf)     S | PI       85 | -V, 16-Bit, High-Precision Power Monitor |  |
+| [INA237](http://www.ti.com/lit/ds/symlink/ina237.pdf)     I | ²C       85 | -V, 16-Bit, Precision Power Monitor |  |
 
 All devices can measure a selectable full-scale differential input of ±163.84 mV
 or ±40.96 mV across the shunt with common-mode voltage support from –0.3 V to +85 V.
@@ -58,23 +58,23 @@ sensor:
   calibrate the sensor. No default value.
 - **adc_range** (*Optional*, `0` or `1`): Selects the range for differential input across shunt
   resistor. `0` for ±163.84 mV, `1` for ±40.96 mV range. Defaults to `0`.
-- **adc_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time in microseconds to perform a single ADC conversion. 
+- **adc_time** (*Optional*, :ref:`config-time`): The time in microseconds to perform a single ADC conversion. 
   Defaults to `4120 us`. Valid values are `50 us`, `84 us`, `150 us`, `280 us`, `540 us`, 
   `1052 us`, `2074 us`, `4120 us`.
 
   Instead of one time for all ADC measurements, separate configuration of conversion times for shunt voltage, 
   bus voltage, and temperature measurements possible. Options are the same as for `adc_time`.
 
-  - **bus_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for bus voltage measurement.
-  - **shunt_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for shunt voltage measurement.
-  - **temperature** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for temperature measurement.
+  - **bus_voltage** (*Optional*, :ref:`config-time`): Conversion time for bus voltage measurement.
+  - **shunt_voltage** (*Optional*, :ref:`config-time`): Conversion time for shunt voltage measurement.
+  - **temperature** (*Optional*, :ref:`config-time`): Conversion time for temperature measurement.
 
 - **adc_averaging** (*Optional*, integer): Selects ADC sample averaging count. Defaults to `128`. 
   Valid values are `1`, `4`, `16`, `64`, `128`, `256`, `512`, `1024`.
 - **temperature_coefficient** (*Optional*, integer from `0` to `16383`): Temperature coefficient (ppm/°C) of the 
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
 - All other options from [I²C device]({{< ref "components/i2c#i2c" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
@@ -107,23 +107,23 @@ sensor:
   calibrate the sensor. No default value.
 - **adc_range** (*Optional*, `0` or `1`): Selects the range for differential input across shunt
   resistor. `0` for ±163.84 mV, `1` for ±40.96 mV range. Defaults to `0`.
-- **adc_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time in microseconds to perform a single ADC conversion. 
+- **adc_time** (*Optional*, :ref:`config-time`): The time in microseconds to perform a single ADC conversion. 
   Defaults to `4120 us`. Valid values are `50 us`, `84 us`, `150 us`, `280 us`, `540 us`, 
   `1052 us`, `2074 us`, `4120 us`.
 
   Instead of one time for all ADC measurements, separate configuration of conversion times for shunt voltage, 
   bus voltage, and temperature measurements possible. Options are the same as for `adc_time`.
 
-  - **bus_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for bus voltage measurement.
-  - **shunt_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for shunt voltage measurement.
-  - **temperature** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for temperature measurement.
+  - **bus_voltage** (*Optional*, :ref:`config-time`): Conversion time for bus voltage measurement.
+  - **shunt_voltage** (*Optional*, :ref:`config-time`): Conversion time for shunt voltage measurement.
+  - **temperature** (*Optional*, :ref:`config-time`): Conversion time for temperature measurement.
 
 - **adc_averaging** (*Optional*, integer): Selects ADC sample averaging count. Defaults to `128`. 
   Valid values are `1`, `4`, `16`, `64`, `128`, `256`, `512`, `1024`.
 - **temperature_coefficient** (*Optional*, integer from `0` to `16383`): Temperature coefficient (ppm/°C) of the 
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to `60s`.
 - All other options from [SPI device]({{< ref "components/spi#spi" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
@@ -167,7 +167,7 @@ To simplify the use of this function, you can use the following example to add a
   ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "ina219/" >}}
 - {{< docref "ina226/" >}}
 - {{< docref "ina3221/" >}}

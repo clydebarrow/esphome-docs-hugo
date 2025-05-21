@@ -6,8 +6,8 @@ title: "VL53L0X Time Of Flight Distance Sensor"
 {{< seo description="" image="" >}}
 
 The `vl53l0x` sensor platform allows you to use VL53L0X optical time of flight
-([datasheet ](https://www.st.com/resource/en/datasheet/vl53l0x.pdf),
-[ST ](https://www.st.com/en/imaging-and-photonics-solutions/vl53l0x.html)) with ESPHome
+([datasheet](https://www.st.com/resource/en/datasheet/vl53l0x.pdf),
+[ST](https://www.st.com/en/imaging-and-photonics-solutions/vl53l0x.html)) with ESPHome
 to measure distances. The sensor works optically by emitting short infrared pulses
 and measuring the time it takes the light to be reflected back
 
@@ -46,7 +46,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - **signal_rate_limit** (*Optional*, float): Set the return signal rate limit in units of MCPS
   (mega counts per second). This is the minimum signal amplitude detected by the sensor necessary
@@ -61,8 +61,8 @@ sensor:
 - **enable_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin connected to XSHUT
   on vl53l0x to enable/disable sensor. **Required** if not using address `0x29` which is the cause if you
   have multiple VL53L0X on the same i2c bus. In this case you have to assign a different pin to each VL53L0X.
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Sensor setup timeout. Default to `10ms`.
-- **timing_budget** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set the timing budget the sensor will use for a single range measurement. 
+- **timeout** (*Optional*, :ref:`config-time`): Sensor setup timeout. Default to `10ms`.
+- **timing_budget** (*Optional*, :ref:`config-time`): Set the timing budget the sensor will use for a single range measurement. 
   Range is from 20000us - 4294967295us, inclusive. The timing budget allows the user to trade off speed for accuracy.
   If not specified, the default timing budget is 33000us.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
@@ -95,8 +95,8 @@ sensor:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - :apiref:`vl53l0x/vl53l0x_sensor.h`
-- [vl53l0x-arduino library ](https://github.com/pololu/vl53l0x-arduino/) by [Pololu ](https://github.com/pololu)
+- [vl53l0x-arduino library](https://github.com/pololu/vl53l0x-arduino/) by [Pololu](https://github.com/pololu)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/vl53l0x.md)
 

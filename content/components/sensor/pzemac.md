@@ -7,17 +7,17 @@ title: "Peacefair PZEM-004T V3 Energy Monitor"
 
 {{< note >}}
 This page is incomplete and could use some work. If you want to contribute, please see our
-[developer site ](https://developers.esphome.io). This page is missing:
+[developer site](https://developers.esphome.io). This page is missing:
 
     - Images/screenshots/example configs of this device being used in action.
 
 {{< /note >}}
 The `pzemac` sensor platform allows you to use PZEM-004T V3 energy monitors
-([website ](https://innovatorsguru.com/pzem-004t-v3/),
-[datasheet ](https://innovatorsguru.com/wp-content/uploads/2019/06/PZEM-004T-V3.0-Datasheet-User-Manual.pdf))
+([website](https://innovatorsguru.com/pzem-004t-v3/),
+[datasheet](https://innovatorsguru.com/wp-content/uploads/2019/06/PZEM-004T-V3.0-Datasheet-User-Manual.pdf))
 with ESPHome.
 
-The sensor can be connected in various configurations - please see the [manufacturer's website ](https://innovatorsguru.com/pzem-004t-v3/)
+The sensor can be connected in various configurations - please see the [manufacturer's website](https://innovatorsguru.com/pzem-004t-v3/)
 for more information.
 
 {{< warning >}}
@@ -76,11 +76,11 @@ sensor:
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **power_factor** (*Optional*): Use the power factor value of the sensor.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
-- **modbus_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the Modbus hub.
+- **modbus_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the Modbus hub.
 
 {{< anchor "pzemac-reset_energy_action" >}}
 
@@ -149,7 +149,7 @@ modbus_controller:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "pzem004t/" >}}
 - {{< docref "pzemdc/" >}}
 - :apiref:`pzemac/pzemac.h`

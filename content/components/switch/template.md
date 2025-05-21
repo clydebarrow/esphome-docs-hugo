@@ -77,7 +77,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template switch.
+- **id** (**Required**, :ref:`config-id`): The ID of the template switch.
 - **state** (**Required**, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 

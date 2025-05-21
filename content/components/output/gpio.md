@@ -20,7 +20,7 @@ output:
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to turn on and off.
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
 - All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 {{< warning >}}

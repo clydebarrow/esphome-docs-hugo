@@ -60,7 +60,7 @@ like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.
 -  **service_uuid** (*Optional*, string): 16 bit, 32 bit, or 128 bit BLE Service UUID
    which can be tracked if the device randomizes the MAC address. Note that exactly one of
    `mac_address`, `irk`, `service_uuid` or `ibeacon_uuid` must be present.
--  **ibeacon_uuid** (*Optional*, string): The [universally unique identifier ](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+-  **ibeacon_uuid** (*Optional*, string): The [universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)
    to identify the beacon that needs to be tracked. Note that exactly one of `mac_address`,
    `irk`, `service_uuid` or `ibeacon_uuid` must be present.
 -  **ibeacon_major** (*Optional*, int): The iBeacon major identifier of the beacon that needs
@@ -69,7 +69,7 @@ like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.
 -  **ibeacon_minor** (*Optional*, int): The iBeacon minor identifier of the beacon that needs
    to be tracked. Usually used to identify beacons within an iBeacon group.
 -  **min_rssi** (*Optional*, int): at which minimum RSSI level would the component report the device be present.
--  **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The delay after last detecting the device before publishing not present state.
+-  **timeout** (*Optional*, :ref:`config-time`): The delay after last detecting the device before publishing not present state.
    The default is 5 minutes.
 -  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
@@ -98,7 +98,7 @@ boot-up. Then, when a BLE device is discovered, you should see messages like
 `Parse Result:` together with some information about their MAC address, address type,
 advertised name, Service UUIDs, iBeacon UUIDs, iBeacon major and minor identifiers,
 BLE manufacturer ID and data, RSSI, and other data useful for debugging purposes.
-You can find the official list of manufacturer IDs [here ](https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/company_identifiers/company_identifiers.yaml) to help find your device.
+You can find the official list of manufacturer IDs [here](https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/company_identifiers/company_identifiers.yaml) to help find your device.
 Note that this is useful only during set-up and a less verbose log level
 should be specified afterwards. If you don't see these messages, your device is unfortunately
 currently not supported.
@@ -114,7 +114,7 @@ described in the ESPresense project: https://espresense.com/beacons
 Alternatively you can:
 
 -  Create a BLE beacon, set a unique 16 bit, 32 bit or 128 bit Service UUID and track your device
-   based on that. Make sure you don't pick a [GATT Service UUID   ](https://www.bluetooth.com/specifications/gatt/services/), otherwise generic services
+   based on that. Make sure you don't pick a [GATT Service UUID](https://www.bluetooth.com/specifications/gatt/services/), otherwise generic services
    might give you incorrect tracking results.
 
 -  Create an iBeacon and track it based on its iBeacon UUID. You can also optionally specify
@@ -130,6 +130,6 @@ Alternatively you can:
 - {{< docref "/components/esp32_ble_beacon" >}}
 - {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`ble_presence/ble_presence.h`
-- [ESP32 BLE for Arduino ](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban ](https://github.com/nkolban).
+- [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/ble_presence.md)
 

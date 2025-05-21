@@ -90,7 +90,7 @@ binary_sensor:
 ## See Also
 
 - {{< docref "/components/binary_sensor/index" >}}
-- [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
+- :ref:`config-pin_schema`
 - :apiref:`gpio/binary_sensor/gpio_binary_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/gpio.md)
 

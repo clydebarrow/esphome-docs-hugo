@@ -32,16 +32,16 @@ display:
 ### Configuration variables:
 
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
-  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
+  See :ref:`display-engine` for more information.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to re-draw the screen. Defaults to `1s`.
 - **sdl_options** (*Optional*, string): Build arguments if required to specify include or library paths. Should not be required if SDL2 is properly installed.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See :ref:`display-pages`.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 
 {{< note >}}
 To build with this display you must have the
-[SDL2 ](https://wiki.libsdl.org/SDL2/Installation) package installed. The Sodium encryption library will
+[SDL2](https://wiki.libsdl.org/SDL2/Installation) package installed. The Sodium encryption library will
 also be required for any API calls. See below for installation hints.
 
 {{< /note >}}

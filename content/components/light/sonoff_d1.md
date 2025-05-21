@@ -6,11 +6,11 @@ title: "Sonoff D1 Dimmer"
 {{< seo description="" image="" >}}
 
 The `sonoff_d1` light platform creates a simple brightness-only light for the
-hardware found in [Sonoff D1 dimmer ](https://itead.cc/product/sonoff-d1-smart-dimmer-switch/). Installations with Sonoff RM433 433MHz radio
+hardware found in [Sonoff D1 dimmer](https://itead.cc/product/sonoff-d1-smart-dimmer-switch/). Installations with Sonoff RM433 433MHz radio
 remotes are also supported. Use this component to integrate Sonoff D1 dimmer into
 ESPHome / Home Assistant ecosystem.
 
-{{< img src="sonoff_d1.jpg" alt="Image" caption="Sonoff D1 dimmer front and back view. Image by [ITEAD ](https://itead.cc/product/sonoff-d1-smart-dimmer-switch/)." width="100.0%" class="center" >}}
+{{< img src="sonoff_d1.jpg" alt="Image" caption="Sonoff D1 dimmer front and back view. Image by [ITEAD](https://itead.cc/product/sonoff-d1-smart-dimmer-switch/)." width="100.0%" class="center" >}}
 
 Sonoff D1 uses another MCU for light dimming and handling of radio commands.
 It's hooked up to ESP8266 via UART bus with default RX / TX pins being used on
@@ -20,9 +20,9 @@ translates between HA light commands and serial messages.
 
 To replace the stock firmware with ESPHome you will need to locate GPIO0 pin and serial port. Photos below should help.
 
-{{< img src="sonoff_d1_gpio0.jpg" alt="Image" caption="Photo of GPIO 0, images by [klotzma ](https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417)." width="100.0%" class="center" >}}
+{{< img src="sonoff_d1_gpio0.jpg" alt="Image" caption="Photo of GPIO 0, images by [klotzma](https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417)." width="100.0%" class="center" >}}
 
-{{< img src="sonoff_d1_serial.jpg" alt="Image" caption="Photo of serial port pins, images by  [klotzma ](https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417)." width="100.0%" class="center" >}}
+{{< img src="sonoff_d1_serial.jpg" alt="Image" caption="Photo of serial port pins, images by  [klotzma](https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417)." width="100.0%" class="center" >}}
 
 Before using this components make sure:
 

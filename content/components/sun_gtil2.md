@@ -39,7 +39,7 @@ sun_gtil2:
 ```
 ##### Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this component.
 - **uart_id** (*Optional*): The UART Bus ID for receiving messages sent from the inverter's controller to the display.
 
 ## Sensor
@@ -122,6 +122,6 @@ text_sensor:
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sun_gtil2.md)
 

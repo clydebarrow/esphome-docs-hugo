@@ -12,7 +12,7 @@ These don't require external components and demonstrate how powerful [Lambdas]({
 
 ## Display pages alternative
 
-Some displays like [lcd_pcf8574 Component]({{< ref "components/display/lcd_display#lcd-pcf8574" >}}) don't support pages natively, but you can easily implement them
+Some displays like :ref:`lcd-pcf8574` don't support pages natively, but you can easily implement them
 using Lambdas:
 
 ```yaml
@@ -242,7 +242,7 @@ cover:
 ## Update numeric values from text input
 
 Sometimes it may be more confortable to use a {{< docref "/components/text/template" >}} to change some numeric values from the user interface.
-ESPHome has some nice [helper functions ](https://github.com/esphome/esphome/blob/dev/esphome/core/helpers.h) among which
+ESPHome has some nice [helper functions](https://github.com/esphome/esphome/blob/dev/esphome/core/helpers.h) among which
 theres's one to convert text to numbers.
 
 In the example below we have a text input and a template sensor which can be updated from the text input field. What the lambda
@@ -342,8 +342,8 @@ button:
 ```
 ## See Also
 
-- [Templates]({{< ref "automations/templates#config-lambda" >}})
-- [Automation]({{< ref "automations/_index#automation" >}})
+- :ref:`config-lambda`
+- :ref:`automation`
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/lambda_magic.md)
 

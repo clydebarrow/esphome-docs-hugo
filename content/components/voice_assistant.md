@@ -5,7 +5,7 @@ title: "Voice Assistant"
 
 {{< seo description="" image="" >}}
 
-ESPHome devices with a microphone are able to stream the audio to Home Assistant and be processed there by [assist ](https://www.home-assistant.io/voice_control/).
+ESPHome devices with a microphone are able to stream the audio to Home Assistant and be processed there by [assist](https://www.home-assistant.io/voice_control/).
 
 {{< note >}}
 Voice Assistant requires Home Assistant 2023.5 or later.
@@ -30,14 +30,14 @@ voice_assistant:
   microphone: mic_id
 
 ```
-- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr{{< docref "/components/microphone/index" "microphone" >}}to use for input.
-- **micro_wake_word** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/micro_wake_word" "micro_wake_word" >}}ord>` component used for wake word detection. Configuring this allows Home Assistant to change which wake word model is enabled.
-- **speaker** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker/index" "speaker" >}}dex>` to use to output the response.
+- **microphone** (**Required**, :ref:`config-microphone-source`): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input.
+- **micro_wake_word** (*Optional*, :ref:`config-id`): The {{< docref "/components/micro_wake_word" "micro_wake_word" >}} component used for wake word detection. Configuring this allows Home Assistant to change which wake word model is enabled.
+- **speaker** (*Optional*, :ref:`config-id`): The {{< docref "/components/speaker/index" "speaker" >}} to use to output the response.
   Cannot be used with `media_player` below.
-- **media_player** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/media_player/index" "media_player" >}}dex>` to use
+- **media_player** (*Optional*, :ref:`config-id`): The {{< docref "/components/media_player/index" "media_player" >}} to use
   to output the response. Cannot be used with `speaker` above.
 - **use_wake_word** (*Optional*, boolean): Enable wake word on the assist pipeline. Defaults to `false`.
-- **conversation_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): How long to wait before resetting the `conversation_id`
+- **conversation_timeout** (*Optional*, :ref:`config-time`): How long to wait before resetting the `conversation_id`
   sent to the voice assist pipeline, which contains the context of the current assist pipeline. Defaults to `300s`.
 - **on_intent_start** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when intent processing starts.
 - **on_intent_end** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when intent processing ends.
@@ -142,7 +142,7 @@ Returns true if the voice assistant is currently connected to Home Assistant.
 
 ## Wake word detection
 
-See our [example YAML files on GitHub ](https://github.com/esphome/firmware/blob/main/voice-assistant/m5stack-atom-echo.yaml) for continuous wake word detection.
+See our [example YAML files on GitHub](https://github.com/esphome/firmware/blob/main/voice-assistant/m5stack-atom-echo.yaml) for continuous wake word detection.
 
 
 ## Push to Talk

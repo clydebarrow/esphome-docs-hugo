@@ -11,7 +11,7 @@ voltage sensor (like the {{< docref "adc/" "ADC sensor" >}}) and convert the rea
 First, you need to set up a voltage sensor source ({{< docref "adc/" "ADC sensor" >}}, but for example also
 {{< docref "ads1115/" "ADS1115" >}}) and pass it to the CT clamp sensor with the `sensor` option.
 
-Please also see [this guide ](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
+Please also see [this guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
 as an introduction to the working principle of CT clamp sensors and how to hook them up to your device.
 
 {{< img src="ct_clamp-ui.png" alt="Image" width="80.0%" class="center" >}}
@@ -32,10 +32,10 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The source sensor to measure voltage values from.
-- **sample_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration to sample the current clamp
+- **sensor** (**Required**, :ref:`config-id`): The source sensor to measure voltage values from.
+- **sample_duration** (*Optional*, :ref:`config-time`): The time duration to sample the current clamp
   with. Higher values can increase accuracy. Defaults to `200ms` which would be 10 whole cycles on a 50Hz system.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, :ref:`config-time`): The interval
   to check the sensor. Defaults to `60s`. The **update_interval** for `ct_clamp` has to be greater than **sample_duration**.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
@@ -68,8 +68,8 @@ Recompile and upload, now your CT clamp sensor is calibrated!
 
 ## See Also
 
-- [EMonLib ](https://github.com/openenergymonitor/EmonLib)
-- [CT Clamp Guide ](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
+- [EMonLib](https://github.com/openenergymonitor/EmonLib)
+- [CT Clamp Guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction)
 - {{< docref "adc/" >}}
 - {{< docref "ads1115/" >}}
 - :apiref:`sensor/ct_clamp_sensor.h`

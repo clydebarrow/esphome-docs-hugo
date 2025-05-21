@@ -5,7 +5,7 @@ title: "Improv via BLE"
 
 {{< seo description="" image="" >}}
 
-The [esp32_improv` component in ESPHome implements the open `Improv standard ](https://www.improv-wifi.com/)
+The [esp32_improv` component in ESPHome implements the open `Improv standard](https://www.improv-wifi.com/)
 for configuring Wi-Fi on an ESP32 device by using Bluetooth Low Energy (BLE) to receive the credentials.
 
 The `esp32_improv` component will automatically set up the {{< docref "esp32_ble/" "BLE Server" >}}.
@@ -30,24 +30,24 @@ esp32_improv:
 ```
 ## Configuration variables:
 
-- **authorizer** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}){{< docref "binary_sensor/index" "binary sensor" >}}dex>` to authorize with.
+- **authorizer** (**Required**, :ref:`config-id`): A {{< docref "binary_sensor/index" "binary sensor" >}} to authorize with.
   Also accepts `none` to skip authorization.
-- **authorized_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time until authorization times out and needs
+- **authorized_duration** (*Optional*, :ref:`config-time`): The amount of time until authorization times out and needs
   to be re-authorized. Defaults to `1min`.
-- **status_indicator** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})){{< docref "output/index" "output" >}}dex>` to display feedback to the user.
-- **identify_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to identify for. Defaults to `10s`.
-- **wifi_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before starting the Improv service
+- **status_indicator** (*Optional*, :ref:`config-id`): An {{< docref "output/index" "output" >}} to display feedback to the user.
+- **identify_duration** (*Optional*, :ref:`config-time`): The amount of time to identify for. Defaults to `10s`.
+- **wifi_timeout** (*Optional*, :ref:`config-time`): The amount of time to wait before starting the Improv service
   after Wi-Fi is no longer connected. Defaults to `1min`.
 - **on_start** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when Improv is waiting for
-  authorization and/or upon authorization. See [`on_start`]({{< ref "components/esp32_improv#improv-on_start" >}}).
+  authorization and/or upon authorization. See :ref:`improv-on_start`.
 - **on_provisioned** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when provisioning has
-  completed. See [`on_provisioned`]({{< ref "components/esp32_improv#improv-on_provisioned" >}}).
+  completed. See :ref:`improv-on_provisioned`.
 - **on_provisioning** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the device begins the
-  provisioning process. See [`on_provisioning`]({{< ref "components/esp32_improv#improv-on_provisioning" >}}).
+  provisioning process. See :ref:`improv-on_provisioning`.
 - **on_stop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when Improv has stopped.
-  See [`on_stop`]({{< ref "components/esp32_improv#improv-on_stop" >}}).
+  See :ref:`improv-on_stop`.
 - **on_state** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when an Improv state change
-  happens. See [`on_state`]({{< ref "components/esp32_improv#improv-on_state" >}}).
+  happens. See :ref:`improv-on_state`.
 
 {{< anchor "improv-automations" >}}
 
@@ -160,7 +160,7 @@ The `status_indicator` has the following patterns:
 - {{< docref "wifi/" >}}
 - {{< docref "improv_serial/" >}}
 - {{< docref "captive_portal/" >}}
-- [Improv Wi-Fi ](https://www.improv-wifi.com/)
+- [Improv Wi-Fi](https://www.improv-wifi.com/)
 - :apiref:`esp32_improv/esp32_improv_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_improv.md)
 

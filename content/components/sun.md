@@ -23,7 +23,7 @@ time:
 - **latitude** (**Required**, float): The latitude for performing the calculation.
 - **longitude** (**Required**, float): The longitude for performing the calculation.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 Automation:
 
@@ -102,7 +102,7 @@ Configuration variables:
   `sunset`.
 - **elevation** (*Optional*, float): The elevation to calculate the next sunrise/sunset event
   for. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
-- **format** (*Optional*, string): The format to format the time value with, see [strftime]({{< ref "components/time/_index#strftime" >}})
+- **format** (*Optional*, string): The format to format the time value with, see :ref:`strftime`
   for more information. Defaults to `%X`.
 - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 

@@ -5,7 +5,7 @@ title: "DF-Player mini"
 
 {{< seo description="" image="" >}}
 
-The [dfplayer` (`datasheet ](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)), component
+The [dfplayer` (`datasheet](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)), component
 allows you to play sound and music stored in an SD card or USB flash drive.
 
 {{< img src="dfplayer-full.jpg" alt="Image" caption="DF-Player mini Module." width="50.0%" class="center" >}}
@@ -29,8 +29,8 @@ dfplayer:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the UART hub.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 - **on_finished_playback** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
   performed when playback is finished.
 
@@ -291,7 +291,7 @@ on_...:
 ```
 ## All actions
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the DFPlayer if you have multiple components.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID of the DFPlayer if you have multiple components.
 
 
 ## Test setup

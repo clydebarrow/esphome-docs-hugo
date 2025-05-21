@@ -15,12 +15,12 @@ the device manually by choosing "ESPHome" from the integration overview and ente
 "<NODE_NAME>.local" or the IP address of the unit in the "Host" field.
 
 The ESPHome native API is based on a custom TCP protocol using protocol buffers. You can find
-the protocol data structure definitions here: [api.proto ](https://github.com/esphome/esphome/blob/dev/esphome/components/api/api.proto)
-A Python library that implements this protocol is [aioesphomeapi ](https://github.com/esphome/aioesphomeapi).
+the protocol data structure definitions here: [api.proto](https://github.com/esphome/esphome/blob/dev/esphome/components/api/api.proto)
+A Python library that implements this protocol is [aioesphomeapi](https://github.com/esphome/aioesphomeapi).
 
 {{< note >}}
 **Actions** were previously called **Services**. ESPHome changed the name in line with
-[Home Assistant ](https://developers.home-assistant.io/blog/2024/07/16/service-actions/)
+[Home Assistant](https://developers.home-assistant.io/blog/2024/07/16/service-actions/)
 but will continue to support YAML with `services` and `homeassistant.service` for the foreseeable future.
 Documentation will only refer to **Actions**.
 
@@ -70,18 +70,18 @@ document.getElementById("api-key").value = bytesArrToBase64(array);
 Support for configuring the encryption key on-the-fly will be implemented in a future release of Home Assistant.
 
     {{< /note >}}
-- **actions** (*Optional*, list): A list of user-defined actions. See [User-defined Actions]({{< ref "components/api#api-device-actions" >}}).
-- **reboot_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before rebooting when no
+- **actions** (*Optional*, list): A list of user-defined actions. See :ref:`api-device-actions`.
+- **reboot_timeout** (*Optional*, :ref:`config-time`): The amount of time to wait before rebooting when no
   client connects to the API. This is needed because sometimes the low level ESP functions report that
   the ESP is connected to the network, when in fact it is not - only a full reboot fixes it.
   Can be disabled by setting this to `0s`. Defaults to `15min`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 - **password** (*Optional*, **Deprecated**, string): The password to protect the API Server with. Defaults
   to no password. It is recommended to use the `encryption` -> `key` above instead of the the `password`.
 - **on_client_connected** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when a client
-  connects to the API. See [`on_client_connected` Trigger]({{< ref "components/api#api-on_client_connected_trigger" >}}).
+  connects to the API. See :ref:`api-on_client_connected_trigger`.
 - **on_client_disconnected** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when a client
-  disconnects from the API. See [`on_client_disconnected` Trigger]({{< ref "components/api#api-on_client_disconnected_trigger" >}}).
+  disconnects from the API. See :ref:`api-on_client_disconnected_trigger`.
 
 {{< anchor "api-actions" >}}
 
@@ -166,7 +166,7 @@ on_...:
 Configuration variables:
 ````````````````````````
 
-- **action** (**Required**, string): The Home Assistant [Action ](https://www.home-assistant.io/docs/scripts/service-calls/)
+- **action** (**Required**, string): The Home Assistant [Action](https://www.home-assistant.io/docs/scripts/service-calls/)
   to perform.
 - **data** (*Optional*, mapping): Optional *static* data to perform the action with.
 - **data_template** (*Optional*, mapping): Optional template data to perform the action with.

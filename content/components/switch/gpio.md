@@ -24,8 +24,8 @@ switch:
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
   GPIO pin to use for the switch.
 - **interlock** (*Optional*, list): A list of other GPIO switches in an interlock group. See
-  [Interlocking]({{< ref "components/switch/gpio#switch-gpio-interlocking" >}}).
-- **interlock_wait_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): For interlocking mode, set how long
+  :ref:`switch-gpio-interlocking`.
+- **interlock_wait_time** (*Optional*, :ref:`config-time`): For interlocking mode, set how long
   to wait after other items in an interlock group have been disabled before re-activating.
   Useful for motors where immediately turning on in the other direction could cause problems.
 

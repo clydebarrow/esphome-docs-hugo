@@ -7,12 +7,12 @@ title: "DHT Temperature+Humidity Sensor"
 
 The DHT Temperature+Humidity sensor allows you to use your
 
-- DHT11 ([datasheet ](https://akizukidenshi.com/download/ds/aosong/DHT11.pdf), [Adafruit ](https://www.adafruit.com/product/386)),
-- DHT21/DHT22 ([datasheet ](https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf), [Adafruit ](https://www.adafruit.com/product/385)),
-- AMS2301/AM2302 ([datasheet ](https://cdn-shop.adafruit.com/datasheets/Digital+humidity+and+temperature+sensor+AM2302.pdf), [Adafruit ](https://www.adafruit.com/product/393)),
-- AM2120 ([datasheet ](https://www.micros.com.pl/mediaserver/UPAM2120_0004.pdf)),
-- RHT03 ([datasheet ](https://cdn.sparkfun.com/datasheets/Sensors/Weather/RHT03.pdf), [SparkFun ](https://cdn.sparkfun.com/datasheets/Sensors/Weather/RHT03.pdf)) and
-- SI7021 (one wire Sonoff version) ([datasheet ](https://cdn.sparkfun.com/assets/b/1/b/8/5/Si7021-A20.pdf), [SparkFun ](https://cdn.sparkfun.com/assets/b/1/b/8/5/Si7021-A20.pdf))
+- DHT11 ([datasheet](https://akizukidenshi.com/download/ds/aosong/DHT11.pdf), [Adafruit](https://www.adafruit.com/product/386)),
+- DHT21/DHT22 ([datasheet](https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf), [Adafruit](https://www.adafruit.com/product/385)),
+- AMS2301/AM2302 ([datasheet](https://cdn-shop.adafruit.com/datasheets/Digital+humidity+and+temperature+sensor+AM2302.pdf), [Adafruit](https://www.adafruit.com/product/393)),
+- AM2120 ([datasheet](https://www.micros.com.pl/mediaserver/UPAM2120_0004.pdf)),
+- RHT03 ([datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Weather/RHT03.pdf), [SparkFun](https://cdn.sparkfun.com/datasheets/Sensors/Weather/RHT03.pdf)) and
+- SI7021 (one wire Sonoff version) ([datasheet](https://cdn.sparkfun.com/assets/b/1/b/8/5/Si7021-A20.pdf), [SparkFun](https://cdn.sparkfun.com/assets/b/1/b/8/5/Si7021-A20.pdf))
 
 sensors with ESPHome.
 
@@ -40,7 +40,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the DHT bus is connected.
+- **pin** (**Required**, :ref:`config-pin`): The pin where the DHT bus is connected.
 - **temperature** (**Required**): The information for the temperature sensor.
 
   - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
@@ -53,7 +53,7 @@ sensor:
 - **model** (*Optional*, int): Manually specify the DHT model, can be
   one of `AUTO_DETECT`, `DHT11`, `DHT22`, `DHT22_TYPE2`, `AM2302`, `RHT03`, `SI7021`, `AM2120`
   and helps with some connection issues. Defaults to `AUTO_DETECT`.  Auto detection doesn't work for the SI7021 chip.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< note >}}
@@ -71,13 +71,13 @@ set `pullup: false` under your `pin` configuration.
 {{< /note >}}
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}
 - {{< docref "htu21d/" >}}
 - {{< docref "sht3xd/" >}}
 - :apiref:`dht/dht.h`
-- [Arduino DHTLib ](https://playground.arduino.cc/Main/DHTLib)
+- [Arduino DHTLib](https://playground.arduino.cc/Main/DHTLib)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/dht.md)
 

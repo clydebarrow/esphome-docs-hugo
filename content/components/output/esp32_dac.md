@@ -43,7 +43,7 @@ light:
 ## Configuration variables:
 
 - **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to use DAC on. See above for valid pin numbers.
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
+- **id** (**Required**, :ref:`config-id`): The id to use for this output component.
 - All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 ## Use Cases
@@ -52,7 +52,7 @@ light:
   {{< docref "/components/sensor/ads1115" >}}
 - Controlling the bias of a transistor
 - Driving a bar graph or large amount of LEDs using an analog-controlled LED driver like the LM3914
-  ([datasheet ](https://www.ti.com/lit/ds/symlink/lm3914.pdf)); this can allow you to make tank
+  ([datasheet](https://www.ti.com/lit/ds/symlink/lm3914.pdf)); this can allow you to make tank
   level indicators, temperature gauges, and so on from a single output pin
 - Generating 0-10 V for a dimmable light (operational amplifier required)
 

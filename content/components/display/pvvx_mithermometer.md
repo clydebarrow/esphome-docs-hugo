@@ -5,7 +5,7 @@ title: "PVVX MiThermometer Display"
 
 {{< seo description="" image="" >}}
 
-The [pvvx_mithermometer` display platform allows you to use devices running the `ATC_MiThermometer firmware ](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
+The [pvvx_mithermometer` display platform allows you to use devices running the `ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
 
 {{< img src="xiaomi_lywsd03mmc.jpg" alt="Image" caption="Xiaomi LYWSD03MMC." width="75.0%" class="center" >}}
 
@@ -17,7 +17,7 @@ After the data has been transmitted, the BLE connection is terminated in order t
 The pvvx firmware refreshes the screen periodically (can be set as minimum LCD refresh rate in the firmware configuration).
 By default, the internal sensor data and, if available and valid (`validity_period`), the external data are switched every 2.5 s.
 Further firmware configuration makes it possible to activate other display modes such as time and battery status.
-The firmware configuration can be changed via browser using [TelinkMiFlasher.html ](https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html).
+The firmware configuration can be changed via browser using [TelinkMiFlasher.html](https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html).
 
 ```yaml
 # Example configuration entry
@@ -42,16 +42,16 @@ display:
 ```
 ## Configuration variables:
 
-- **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the associated BLE client.
-- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID {{< docref "/components/time/index" >}}ndex`. If set, the time will be synchronized with every connection.
-- **disconnect_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time the BLE connection is maintained before being disconnected again. Defaults to `5s`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to transmit the display data. Defaults to `60s`.
-- **validity_period** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time periode for which the pvvx device should display the information. Defaults to `5min`.
+- **ble_client_id** (**Required**, :ref:`config-id`): ID of the associated BLE client.
+- **time_id** (*Optional*, :ref:`config-id`): ID of a {{< docref "/components/time/index" >}}. If set, the time will be synchronized with every connection.
+- **disconnect_delay** (*Optional*, :ref:`config-time`): The amount of time the BLE connection is maintained before being disconnected again. Defaults to `5s`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to transmit the display data. Defaults to `60s`.
+- **validity_period** (*Optional*, :ref:`config-time`): The time periode for which the pvvx device should display the information. Defaults to `5min`.
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use to define the information to be displayed.
-  See [Rendering Lambda]({{< ref "components/display/pvvx_mithermometer#display-pvvx_mithermometer_lambda" >}}) for more information.
+  See :ref:`display-pvvx_mithermometer_lambda` for more information.
 - **auto_clear_enabled** (*Optional*, boolean): Whether to automatically clear the display data before each lambda call,
   or to keep the existing display content (must overwrite explicitly, e.g., only on data change). Defaults to `true` if a lambda or pages are configured, false otherwise.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
 
 {{< anchor "display-pvvx_mithermometer_lambda" >}}
 
@@ -219,6 +219,6 @@ display:
 - {{< docref "/components/ble_client" >}}
 - {{< docref "/components/sensor/xiaomi_ble" >}}
 - :apiref:`pvvx_mithermometer/display/pvvx_display.h`
-- [ATC_MiThermometer firmware ](https://github.com/pvvx/ATC_MiThermometer) by [pvvx ](https://github.com/pvvx)
+- [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by [pvvx](https://github.com/pvvx)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/pvvx_mithermometer.md)
 

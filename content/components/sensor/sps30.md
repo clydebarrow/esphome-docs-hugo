@@ -6,7 +6,7 @@ title: "SPS30 Particulate Matter Sensor"
 {{< seo description="" image="" >}}
 
 The `sps30` sensor platform allows you to use your Sensirion SPS30
-([datasheet ](https://sensirion.com/media/documents/8600FF88/616542B5/Sensirion_PM_Sensors_Datasheet_SPS30.pdf)) sensors with ESPHome.
+([datasheet](https://sensirion.com/media/documents/8600FF88/616542B5/Sensirion_PM_Sensors_Datasheet_SPS30.pdf)) sensors with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 This sensor supports both UART and I²C communication. However, at the moment only I²C communication is implemented.
 
@@ -98,12 +98,12 @@ sensor:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x69`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Wiring:
 
-The sensor has a 5 pin JST ZHR type connector, with a 1.5mm pitch. ([Matching connector housing ](https://octopart.com/zhr-5-jst-279203), [datasheet ](http://www.farnell.com/datasheets/1393424.pdf))
+The sensor has a 5 pin JST ZHR type connector, with a 1.5mm pitch. ([Matching connector housing](https://octopart.com/zhr-5-jst-279203), [datasheet](http://www.farnell.com/datasheets/1393424.pdf))
 To force the sensor into I²C mode, the SEL pin (Interface Select pin no.5) should be shorted to ground (pin no.4)
 
 {{< img src="sps30-wiring.png" alt="Image" width="50.0%" class="center" >}}
@@ -132,7 +132,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- :ref:`sensor-filters`
 - {{< docref "sds011/" >}}
 - {{< docref "pmsx003/" >}}
 - {{< docref "ccs811/" >}}

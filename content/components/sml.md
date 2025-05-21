@@ -50,8 +50,8 @@ sml:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **id** (*Optional*, :ref:`config-id`): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
 
 ## Sensor
@@ -74,7 +74,7 @@ sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [SML platform]({{< ref "components/sml#sml-platform" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **sml_id** (*Optional*, :ref:`config-id`): The ID of the [SML platform]({{< ref "components/sml#sml-platform" >}})
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
@@ -93,7 +93,7 @@ text_sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [SML platform]({{< ref "components/sml#sml-platform" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **sml_id** (*Optional*, :ref:`config-id`): The ID of the [SML platform]({{< ref "components/sml#sml-platform" >}})
 - **format** (*Optional*, string): Override the automatic interpretation of the transmitted binary data value. Possible values (`int`, `uint`, `bool`, `hex`, `text`).
 - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
@@ -101,7 +101,7 @@ text_sensor:
 ## Automations:
 
 - **on_data** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a
-  SML message is received. See [`on_data` Trigger]({{< ref "components/sml#sml-on-data" >}}).
+  SML message is received. See :ref:`sml-on-data`.
 
 {{< anchor "sml-on-data" >}}
 
@@ -137,7 +137,7 @@ the fact that slightly wrong numbers may be reported to HomeAssistant. This is a
 in ESPHome and has nothing to do with the SML component.
 
 If you cannot live with this, you can use the `TextSensor` with an appropriate format to transmit the value as
-a string to HomeAssistant. On the HomeAssistant side you can define a [Template Sensor ](https://www.home-assistant.io/integrations/template/)
+a string to HomeAssistant. On the HomeAssistant side you can define a [Template Sensor](https://www.home-assistant.io/integrations/template/)
 to cast the value into the appropriate format and do some scaling.
 
 For ESPHome we have:
@@ -171,7 +171,7 @@ template:
 
 ```
 Usually the template sensor's value would turn to 0 if the ESP device is unavailable.
-This results in problems when using the sensor in combination with the [Utility Meter ](https://www.home-assistant.io/integrations/utility_meter/) integration.
+This results in problems when using the sensor in combination with the [Utility Meter](https://www.home-assistant.io/integrations/utility_meter/) integration.
 The state template provided above checks for the sensor's availability and keeps the
 current state in case of unavailability.
 

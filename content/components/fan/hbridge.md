@@ -27,11 +27,11 @@ fan:
 ```
 ## Configuration variables:
 
-- **pin_a** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
+- **pin_a** (**Required**, :ref:`config-id`): The id of the
   [float output]({{< ref "components/output/_index#output" >}}) connected to Pin A (alternatively IN1, etc.) of the h-bridge.
-- **pin_b** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
+- **pin_b** (**Required**, :ref:`config-id`): The id of the
   [float output]({{< ref "components/output/_index#output" >}}) connected to Pin B (alternatively IN2, etc.) of the h-bridge.
-- **enable_pin** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
+- **enable_pin** (*Optional*, :ref:`config-id`): The id of the
   [float output]({{< ref "components/output/_index#output" >}}) connected to the Enable pin of the h-bridge (if h-bridge uses enable).
 - **decay_mode** (*Optional*, string): The decay mode you want to use with
   the h-bridge. Either `slow` (coasting) or `fast` (braking). Defaults to `slow`.
@@ -60,6 +60,6 @@ on_...:
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - :apiref:`fan/fan_state.h`
-- [Adafruit's excellent H-bridge tutorial ](https://learn.adafruit.com/improve-brushed-dc-motor-performance)
+- [Adafruit's excellent H-bridge tutorial](https://learn.adafruit.com/improve-brushed-dc-motor-performance)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/hbridge.md)
 

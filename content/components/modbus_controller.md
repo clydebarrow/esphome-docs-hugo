@@ -19,7 +19,7 @@ You need an RS485 transceiver module:
 
 {{< img src="rs485.jpg" alt="Image" >}}
 
-See [How is this RS485 module working? ](https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working) on stackexchange for more details.
+See [How is this RS485 module working?](https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working) on stackexchange for more details.
 
 The transceiver connects to the UART of the MCU. For ESP32, pin `16` to `TXD` and pin `17` to `RXD` are the default ones but any other pins can be used as well. `3.3V` to `VCC` and naturally `GND` to `GND`.
 
@@ -45,16 +45,16 @@ logger:
 {{< /note >}}
 ## Configuration variables:
 
-- **modbus_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the `modbus` hub.
+- **modbus_id** (*Optional*, :ref:`config-id`): Manually specify the ID of the `modbus` hub.
 
-- **address** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The Modbus address of the slave device.
+- **address** (**Required**, :ref:`config-id`): The Modbus address of the slave device.
 
 - **allow_duplicate_commands** (*Optional*, boolean): Whether to allow duplicate commands in the queue. Defaults to `false`.
 
-- **command_throttle** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): minimum time in between 2 requests to the device. Default is `0ms`.
+- **command_throttle** (*Optional*, :ref:`config-time`): minimum time in between 2 requests to the device. Default is `0ms`.
   Some Modbus slave devices limit the rate of requests from the master, so this allows the interval between requests to be altered.
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval that the sensors should be checked.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval that the sensors should be checked.
   Defaults to 60 seconds.
 
 {{< anchor "modbus_controller-offline_skip_updates" >}}
@@ -90,9 +90,9 @@ logger:
 
 Automations:
 
-- **on_command_sent** (*Optional*, [`on_command_sent`]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})): An automation to perform when a modbus command has been sent. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_online** (*Optional*, [`on_online`]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})): An automation to perform when a modbus controller goes online. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_offline** (*Optional*, [`on_offline`]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})): An automation to perform when a modbus controller goes offline. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_command_sent** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a modbus command has been sent. See :ref:`modbus_controller-on_command_sent`
+- **on_online** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a modbus controller goes online. See :ref:`modbus_controller-on_online`
+- **on_offline** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a modbus controller goes offline. See :ref:`modbus_controller-on_offline`
 
 ## Example Client
 
@@ -197,7 +197,7 @@ sensor:
 
 
 ```
-Check out the various Modbus components available at the bottom of the document in the [.. _modbus_controller-automations:]({{< ref "components/modbus_controller#modbusseealso" >}}) section. They can be directly defined *(inline)* under the `modbus_controller` hub or as standalone components. Technically there is no difference between the *inline* and the standard definitions approach.
+Check out the various Modbus components available at the bottom of the document in the :ref:`modbusseealso` section. They can be directly defined *(inline)* under the `modbus_controller` hub or as standalone components. Technically there is no difference between the *inline* and the standard definitions approach.
 
 Below you find a few general tips about using Modbus in more advanced scenarios. Applicable component functionalities have links pointing here:
 
@@ -208,7 +208,7 @@ Below you find a few general tips about using Modbus in more advanced scenarios.
 Some devices use decimal values in read registers to show multiple binary states occupying only one register address. To decode them, you can use bitmasks according to the table below. The decimal value corresponding to a bit is always double of the previous one in the row. Multiple bits can be represented in a single register by making a sum of all the values corresponding to the bits.
 
 | Alarm  bit | Description | DEC value | HEX value |
-| --- | --- | --- | --- |
+| ---------- | ---------------- | --------- | --------- |
 | bit 0 | Binary Sensor 0 | 1 | 1 |
 | bit 1 | Binary Sensor 1 | 2 | 2 |
 | bit 2 | Binary Sensor 2 | 4 | 4 |
@@ -487,7 +487,7 @@ The response is mapped to the sensor based on `register_count` and offset in byt
 **Request**
 
 | data | description |
-| --- | --- |
+| --------- | -------------------------------------- |
 | 0x1  (01) | device address |
 | 0x4  (04) | function code 4 (Read Input Registers) |
 | 0x30 (48) | start address high byte |
@@ -502,7 +502,7 @@ The response is mapped to the sensor based on `register_count` and offset in byt
 **Response**
 
 | offset | data | value (type) | description |
-| --- | --- | --- | --- |
+| ------ | ---------- | ------------------ | ------------------------------------------ |
 | H | 0x1  (01) |  | device address |
 | H | 0x4  (04) |  | function code |
 | H | 0x12 (18) |  | byte count |
@@ -731,8 +731,8 @@ modbus_controller:
 - {{< docref "/components/number/modbus_controller" >}}
 - {{< docref "/components/select/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
-- [Modbus RTU Protocol Description ](https://www.modbustools.com/modbus.html)
-- [EPEVER MPPT Solar Charge Controller (Tracer-AN Series) ](https://devices.esphome.io/devices/epever_mptt_tracer_an)
-- [Genvex, Nibe, Alpha-Innotec heat recovery ventilation ](https://devices.esphome.io/devices/Genvex-Nibe-AlphaInnotec-heat-recovery-ventilation)
+- [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
+- [EPEVER MPPT Solar Charge Controller (Tracer-AN Series)](https://devices.esphome.io/devices/epever_mptt_tracer_an)
+- [Genvex, Nibe, Alpha-Innotec heat recovery ventilation](https://devices.esphome.io/devices/Genvex-Nibe-AlphaInnotec-heat-recovery-ventilation)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/modbus_controller.md)
 

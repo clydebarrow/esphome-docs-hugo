@@ -62,9 +62,9 @@ you want the number to use that name, you can set `name: None`.
 Automations:
 
 - **on_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a new value is published. See [``on_value``]({{< ref "components/number/_index#number-on_value" >}}).
+  when a new value is published. See [`on_value`]({{< ref "components/number/_index#number-on_value" >}}).
 - **on_value_range** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a published value transition from outside to a range to inside. See [``on_value_range``]({{< ref "components/number/_index#number-on_value_range" >}}).
+  when a published value transition from outside to a range to inside. See [`on_value_range`]({{< ref "components/number/_index#number-on_value_range" >}}).
 
 MQTT Options:
 
@@ -78,7 +78,7 @@ You can access the most recent state of the number in [lambdas]({{< ref "automat
 
 {{< anchor "number-on_value" >}}
 
-### ``on_value``
+### `on_value`
 
 This automation will be triggered when a new value is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the value from the trigger with `x`.
@@ -98,7 +98,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "number-on_value_range" >}}
 
-### ``on_value_range``
+### `on_value_range`
 
 With this automation you can observe if a number value passes from outside
 a defined range of values to inside a range.
@@ -128,7 +128,7 @@ Configuration variables:
 
 {{< anchor "number-in_range_condition" >}}
 
-### ``number.in_range`` Condition
+### `number.in_range` Condition
 
 This condition passes if the state of the given number is inside a range.
 
@@ -154,7 +154,7 @@ Configuration variables:
 
 {{< anchor "number-set_action" >}}
 
-### ``number.set`` Action
+### `number.set` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a number state.
 
@@ -172,7 +172,7 @@ Configuration variables:
 
 {{< anchor "number-increment_action" >}}
 
-### ``number.increment`` Action
+### `number.increment` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for incrementing a number value by its
 step size (default: 1).
@@ -196,7 +196,7 @@ Configuration variables:
 
 {{< anchor "number-decrement_action" >}}
 
-### ``number.decrement`` Action
+### `number.decrement` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for decrementing a number value by its
 step size (default: 1).
@@ -220,7 +220,7 @@ Configuration variables:
 
 {{< anchor "number-to-min_action" >}}
 
-### ``number.to_min`` Action
+### `number.to_min` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) seting a number to its minimum value, given
 a number component that has a minimum value defined for it.
@@ -239,7 +239,7 @@ Configuration variables:
 
 {{< anchor "number-to-max_action" >}}
 
-### ``number.to_max`` Action
+### `number.to_max` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) seting a number to its maximum value (given
 a number component that has a maximum value defined for it.
@@ -258,7 +258,7 @@ Configuration variables:
 
 {{< anchor "number-operation_action" >}}
 
-### ``number.operation`` Action
+### `number.operation` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) that can be used to perform an operation
 on a number component (set to minimum or maximum value, decrement, increment),
@@ -308,8 +308,8 @@ advanced stuff (see the full API Reference for more info).
   call.perform();
 
   Check the API reference for information on the methods that are available for
-  the ``NumberCall`` object. You can for example also use ``call.number_to_min()``
-  to set the number to its minimum value or ``call.number_increment(true)`` to increment
+  the `NumberCall` object. You can for example also use `call.number_to_min()`
+  to set the number to its minimum value or `call.number_increment(true)` to increment
   the number by its step size with the cycle feature enabled.
 
   ```

@@ -81,7 +81,7 @@ The `http_request` component supports a number of [actions]({{< ref "automations
 
 {{< anchor "http_request-get_action" >}}
 
-### ``http_request.get`` Action
+### `http_request.get` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a GET request.
 
@@ -116,7 +116,7 @@ on_...:
 
 {{< anchor "http_request-post_action" >}}
 
-### ``http_request.post`` Action
+### `http_request.post` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a POST request.
 
@@ -137,11 +137,11 @@ on_...:
 - **body** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): A HTTP body string to send with request.
 - **json** (*Optional*, mapping): A HTTP body in JSON format. Values are [templatable]({{< ref "automations/templates#config-templatable" >}}).
   See [Examples]({{< ref "components/http_request#http_request-examples" >}}).
-- All other options from [``http_request.get`` Action]({{< ref "components/http_request#http_request-get_action" >}}).
+- All other options from [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}).
 
 {{< anchor "http_request-send_action" >}}
 
-### ``http_request.send`` Action
+### `http_request.send` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) sends a request.
 
@@ -158,11 +158,11 @@ on_...:
 **Configuration variables:**
 
 - **method** (**Required**, string): HTTP method to use (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`).
-- All other options from [``http_request.get`` Action]({{< ref "components/http_request#http_request-get_action" >}}) and [``http_request.post`` Action]({{< ref "components/http_request#http_request-post_action" >}}).
+- All other options from [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}) and [`http_request.post` Action]({{< ref "components/http_request#http_request-post_action" >}}).
 
 {{< anchor "http_request-on_response" >}}
 
-## ``on_response`` Trigger
+## `on_response` Trigger
 
 This automation will be triggered when the HTTP request is complete.
 The following variables are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
@@ -170,7 +170,7 @@ The following variables are available for use in [lambdas]({{< ref "automations/
 - `response` as a pointer to `HttpContainer` object which contains `content_length`, `status_code` and `duration_ms``.
 - `std::string get_response_header(const std::string &header_name)` to read response headers (only headers with names specified in the `collect_headers` are available).
 - `body` as `std::string` which contains the response body when `capture_response`
-  (see [``http_request.get`` Action]({{< ref "components/http_request#http_request-get_action" >}})) is set to `true`.
+  (see [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}})) is set to `true`.
 
     {{< note >}}
 The `status_code` should be checked before using the `body` variable. A successful response will usually have
@@ -202,7 +202,7 @@ on_...
 ```
 {{< anchor "http_request-on_error" >}}
 
-## ``on_error`` Trigger
+## `on_error` Trigger
 
 This automation will be triggered when the HTTP request fails to complete. This may be e.g. when the network is not available,
 or the server is not reachable. This will *not* be triggered if the request
@@ -251,7 +251,7 @@ on_...:
 
 **Note:** use this syntax to send `boolean` or `numbers` in JSON.
 
-The JSON message will be constructed using the [ArduinoJson](https://github.com/bblanchon/ArduinoJson) library.
+The JSON message will be constructed using the [ArduinoJson ](https://github.com/bblanchon/ArduinoJson) library.
 In the `json` option you have access to a `root` object which represents the base object of the JSON message. You
 can assign values to keys by using the `root["KEY_NAME"] = VALUE;` syntax as shown below.
 

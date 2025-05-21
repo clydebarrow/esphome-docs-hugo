@@ -6,7 +6,7 @@ title: "PMWCS3 Capacitive Soil Moisture and Temperature Sensor"
 {{< seo description="" image="" >}}
 
 The `pmwcs3` sensor platform allows you to use your PMWCS3
-([informations](https://tinovi.com/wp-content/uploads/2020/01/PM-WCS-3-I2C.pdf))
+([informations ](https://tinovi.com/wp-content/uploads/2020/01/PM-WCS-3-I2C.pdf))
 capacitive soil moisture and temperature sensor with ESPHome. The [I²C bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in
 your configuration for this sensor to work. Wiring scheme: red is 3.3V, black & shield is GND, green is SDA and white is SCL.
 2.2kOhm resistors are advised to pullup both SDA & SDA lines.
@@ -44,7 +44,7 @@ sensor:
 
 {{< anchor "sensor-PMWCS3AirCalibrationAction" >}}
 
-## ``pmwcs3.air_calibration`` Action
+## `pmwcs3.air_calibration` Action
 
 The pmwcs3 probe can to be calibrated in dry/air conditions. 
 The air calibration is a 30s procedure.
@@ -68,7 +68,7 @@ Configuration option:
 
 {{< anchor "sensor-PMWCS3WaterCalibrationAction" >}}
 
-## ``pmwcs3.water_calibration`` Action
+## `pmwcs3.water_calibration` Action
 
 The pmwcs3 probe can to be also calibrated in water saturated conditions. Install the probe into a glass of water. 
 The water calibration is also a 30s procedure.
@@ -92,7 +92,7 @@ Configuration option:
 
 {{< anchor "sensor-PMWCS3NewI2cAddressAction" >}}
 
-## ``pmwcs3.new_i2c_address`` Action
+## `pmwcs3.new_i2c_address` Action
 
 A new I2C address can be set (for multi-probes cases for example)
 
@@ -119,7 +119,7 @@ Configuration options:
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`pmwcs3/pmwcs3.h`
-- [Temperature Compensation for Conductivity](https://www.aqion.de/site/112)
-- [PMWCS3 Library](https://github.com/tinovi/i2cArduino) by [@tinovi](https://github.com/tinovi)
+- [Temperature Compensation for Conductivity ](https://www.aqion.de/site/112)
+- [PMWCS3 Library ](https://github.com/tinovi/i2cArduino) by [@tinovi ](https://github.com/tinovi)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pmwcs3.md)
 

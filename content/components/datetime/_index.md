@@ -66,7 +66,7 @@ You can access the most recent state as a `ESPTime` object by `id(datetime_id).s
 
 {{< anchor "datetime-on_value" >}}
 
-### ``on_value``
+### `on_value`
 
 This automation will be triggered when a new value is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the value as a ESPTime object from the trigger with `x`.
@@ -91,7 +91,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "datetime-date_set_action" >}}
 
-### ``datetime.date.set`` Action
+### `datetime.date.set` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime date state.
 The `date` provided can be in one of 3 formats:
@@ -142,7 +142,7 @@ advanced stuff (see the full API Reference for more info).
   call.perform();
 
   Check the API reference for information on the methods that are available for
-  the ``DateCall`` object.
+  the `DateCall` object.
 
   ```
 - `.year`: Retrieve the current year of the `date`. It will be `0` if no value has been set.
@@ -159,7 +159,7 @@ advanced stuff (see the full API Reference for more info).
 
 {{< anchor "datetime-time_set_action" >}}
 
-### ``datetime.time.set`` Action
+### `datetime.time.set` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime time state.
 The `time` provided can be in one of 3 formats:
@@ -209,7 +209,7 @@ advanced stuff (see the full API Reference for more info).
   call.perform();
 
   Check the API reference for information on the methods that are available for
-  the ``TimeCall`` object.
+  the `TimeCall` object.
 
   ```
 - `.hour`: Retrieve the current hour of the `time`. It will be `0` if no value has been set.
@@ -227,7 +227,7 @@ advanced stuff (see the full API Reference for more info).
 
 {{< anchor "datetime-datetime_set_action" >}}
 
-### ``datetime.datetime.set`` Action
+### `datetime.datetime.set` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting a datetime datetime state.
 The `datetime` provided can be in one of 3 formats:
@@ -279,7 +279,7 @@ For more complex use cases, several methods are available for use on datetimes f
   call.perform();
 
   Check the API reference for information on the methods that are available for
-  the ``DateTimeCall`` object.
+  the `DateTimeCall` object.
 
   ```
 - `.year`: Retrieve the current year of the `datetime`. It will be `0` if no value has been set.

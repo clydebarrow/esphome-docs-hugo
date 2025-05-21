@@ -93,7 +93,7 @@ display:
 ```
 ##### Configuration options
 
-All [graphical display configuration<display-configuration>]({{< ref "#graphical display configuration<display-configuration>" >}}) options are available, plus the following. For integrated display boards
+All [graphical display configuration]({{< ref "components/display/_index#display-configuration" >}}) options are available, plus the following. For integrated display boards
 most of the configuration will be set by default, but can be overridden if needed.
 
 - **model** (**Required**): Chosen from the lists of supported chips and models above, or `CUSTOM` for custom displays.
@@ -161,7 +161,7 @@ If converting from other code, make sure the length byte, if present, is not cop
 
 The `CUSTOM` model selection is provided for otherwise unsupported displays, and requires both `dimensions:` and `init_sequence:` to be specfied. There is no pre-defined init sequence.
 
-### Using the ``transform`` options
+### Using the `transform` options
 
 In most cases, the `rotation` option will be sufficient to orient the display correctly. However, some displays may require additional transformations. The `transform` option allows for these transformations to be applied in any of 8 different
 combinations. It may be necessary to experiment with different combinations to achieve the desired result. When using the `transform` option, the `rotation` option should not be set unless the display does not support axis-swapping.

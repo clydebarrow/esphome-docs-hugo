@@ -6,9 +6,9 @@ title: "AHT10 Temperature+Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The `aht10` Temperature+Humidity sensor allows you to use your AHT10
-([datasheet](http://www.aosong.com/userfiles/files/media/aht10%E8%A7%84%E6%A0%BC%E4%B9%A6v1_1%EF%BC%8820191015%EF%BC%89.pdf)), AHT20 ([datasheet](https://cdn-learn.adafruit.com/assets/assets/000/091/676/original/AHT20-datasheet-2020-4-16.pdf?1591047915)) or AHT30 ([datasheet](https://eleparts.co.kr/data/goods_attach/202306/good-pdf-12751003-1.pdf)) [I²C]({{< ref "components/i2c#i2c" >}})-based sensor with ESPHome.
+([datasheet ](http://www.aosong.com/userfiles/files/media/aht10%E8%A7%84%E6%A0%BC%E4%B9%A6v1_1%EF%BC%8820191015%EF%BC%89.pdf)), AHT20 ([datasheet ](https://cdn-learn.adafruit.com/assets/assets/000/091/676/original/AHT20-datasheet-2020-4-16.pdf?1591047915)) or AHT30 ([datasheet ](https://eleparts.co.kr/data/goods_attach/202306/good-pdf-12751003-1.pdf)) [I²C]({{< ref "components/i2c#i2c" >}})-based sensor with ESPHome.
 
-The DHT20 ([datasheet](https://cdn.sparkfun.com/assets/8/a/1/5/0/DHT20.pdf)) sensor has the packaging of the {{< docref "dht/" >}} series, but has the AHT20 inside and is speaking [I²C]({{< ref "components/i2c#i2c" >}}) as well.
+The DHT20 ([datasheet ](https://cdn.sparkfun.com/assets/8/a/1/5/0/DHT20.pdf)) sensor has the packaging of the {{< docref "dht/" >}} series, but has the AHT20 inside and is speaking [I²C]({{< ref "components/i2c#i2c" >}}) as well.
 
 {{< img src="aht10-full.jpg" alt="Image" caption="AHT10 Temperature & Humidity Sensor." width="50.0%" class="center" >}}
 
@@ -53,7 +53,7 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - :apiref:`aht10/aht10.h`
-- [AHT10 Library](https://github.com/Thinary/AHT10)  by [Thinary Electronic](https://github.com/Thinary)
-- [Unofficial Translated AHT10 Datasheet (en)](https://wiki.liutyi.info/download/attachments/30507639/Aosong_AHT10_en_draft_0c.pdf)
+- [AHT10 Library ](https://github.com/Thinary/AHT10)  by [Thinary Electronic ](https://github.com/Thinary)
+- [Unofficial Translated AHT10 Datasheet (en) ](https://wiki.liutyi.info/download/attachments/30507639/Aosong_AHT10_en_draft_0c.pdf)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/aht10.md)
 

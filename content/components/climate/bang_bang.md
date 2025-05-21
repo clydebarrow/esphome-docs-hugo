@@ -6,7 +6,7 @@ title: "Bang Bang Climate Controller"
 {{< seo description="" image="" >}}
 
 The `bang_bang` climate platform allows you to regulate a value with a
-[bang-bang controller](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control) (also called hysteresis controller).
+[bang-bang controller ](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control) (also called hysteresis controller).
 
 {{< note >}}
 The {{< docref "thermostat/" "thermostat" >}} component behaves more like a common thermostat; it is
@@ -108,7 +108,7 @@ two key differences between the bang-bang component and the {{< docref "thermost
 
 Now is a good time to ensure you understand exactly how a bang-bang controller should behave; if you do not have
 a clear understanding of this, be sure to check out the
-[Wikipedia article](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control).
+[Wikipedia article ](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control).
 
 ### The Problem with Dual-Function Systems
 

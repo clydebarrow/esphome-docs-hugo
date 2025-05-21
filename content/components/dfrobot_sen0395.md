@@ -5,7 +5,7 @@ title: "DFRobot mmWave Radar"
 
 {{< seo description="" image="" >}}
 
-The [DFRobot mmWave Radar](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
+The [DFRobot mmWave Radar ](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
 (aka `SEN0395`) is a 24GHz radar which can be used for human presence detection. It can detect tiny movements
 and compared to a PIR sensor **it can detect presence continuously**. This can be useful, for example, to turn
 the lights on when you enter a room, keep them on as long as you are there (without waving your hands at the
@@ -150,7 +150,7 @@ switch:
 
 {{< anchor "dfrobot_sen0395-action_settings" >}}
 
-### ``dfrobot_sen0395.settings`` Action
+### `dfrobot_sen0395.settings` Action
 
 {{< warning >}}
 Each change to the configuration of the mmWave radar triggers a write to its internal flash/EEPROM.
@@ -228,7 +228,7 @@ Configuration variables:
 - **sensitivity** (*Optional*, int): Set the sensitivity of the sensor. Ranges from 0 to 9. Value is tempatable:
   Return 0-9. Returning -1 keeps the value unchanged.
 
-### ``dfrobot_sen0395.reset`` Action
+### `dfrobot_sen0395.reset` Action
 
 Restart the sensor.
 
@@ -246,6 +246,6 @@ Configuration variables:
 - [UART bus]({{< ref "components/uart#uart" >}})
 - [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
 - [ID]({{< ref "guides/configuration-types#config-id" >}})
-- [DFRobot mmWave Radar Wiki page](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
+- [DFRobot mmWave Radar Wiki page ](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/dfrobot_sen0395.md)
 

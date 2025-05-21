@@ -52,7 +52,7 @@ light:
   {{< docref "/components/sensor/ads1115" >}}
 - Controlling the bias of a transistor
 - Driving a bar graph or large amount of LEDs using an analog-controlled LED driver like the LM3914
-  ([datasheet](https://www.ti.com/lit/ds/symlink/lm3914.pdf)); this can allow you to make tank
+  ([datasheet ](https://www.ti.com/lit/ds/symlink/lm3914.pdf)); this can allow you to make tank
   level indicators, temperature gauges, and so on from a single output pin
 - Generating 0-10 V for a dimmable light (operational amplifier required)
 

@@ -51,9 +51,9 @@ If it's not showing up as a serial port, you might not have the required drivers
 installed. The model number you need is engraved on the chip connected to the USB port.
 ESPs and programmers usually ship with one of these UART chips:
 
-* CH34x: [driver](https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers)
-* CP2102: [driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
-* PL2303: [driver](https://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
+* CH34x: [driver ](https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers)
+* CP2102: [driver ](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+* PL2303: [driver ](https://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
 
 {{< /note >}}
 With the exception of the situation where you have a USB port, you need to make

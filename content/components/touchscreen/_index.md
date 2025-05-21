@@ -60,18 +60,18 @@ touchscreen:
 
 
 - **on_touch** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the touchscreen is touched. See [``on_touch`` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}).
+  when the touchscreen is touched. See [`on_touch` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}).
 - **on_update** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the touchscreen is touched. See [``on_update`` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}).
+  when the touchscreen is touched. See [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}).
 - **on_release** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the touchscreen is no longer touched. See [``on_release`` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_release" >}}).
+  when the touchscreen is no longer touched. See [`on_release` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_release" >}}).
 
 
 {{< anchor "touchscreen-touchpoint" >}}
 
-## ``TouchPoint`` Argument Type
+## `TouchPoint` Argument Type
 
-Both the [``on_update`` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}) and [``on_touch`` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}) have an argument of the type :apistruct:`touchscreen::TouchPoint` in a
+Both the [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}) and [`on_touch` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}) have an argument of the type :apistruct:`touchscreen::TouchPoint` in a
 list (`on_update`) or as an `optional` (`on_touch`).
 
 The integer members for the touch positions below are in relation to the display width and height:
@@ -194,24 +194,24 @@ To be exact, the component does the following
 
 {{< anchor "touchscreen-on_touch" >}}
 
-## ``on_touch`` Trigger
+## `on_touch` Trigger
 
 This automation will be triggered when the touchscreen initially detects a touch on the touchscreen; it will not be fired again until
 all touches (for multi-touch supported drivers) are released.
 
-NOTE: This has changed (from ESPHome 2023.11.6.) To receive continuous updates from touch drags, use [``on_update`` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}).
+NOTE: This has changed (from ESPHome 2023.11.6.) To receive continuous updates from touch drags, use [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}).
 
 This trigger provides two arguments named `touch` of type *touchpoint* and `touches` with a list of all touches.
 
 {{< anchor "touchscreen-on_update" >}}
 
-## ``on_update`` Trigger
+## `on_update` Trigger
 
 This new automation will be triggered when the touchscreen detects an extra touch or that a touch has moved around on the screen.
 
 
 This trigger provides one argument named `touches` of type :apiref:`touchscreen::TouchPoints_t` which has a list of
- [``TouchPoint`` Argument Type]({{< ref "components/touchscreen/_index#touchscreen-touchpoint" >}}).
+ [`TouchPoint` Argument Type]({{< ref "components/touchscreen/_index#touchscreen-touchpoint" >}}).
 
 This trigger may be useful to detect gestures such as swiping across the display.
 
@@ -237,7 +237,7 @@ Be aware that you need to check the state flag every time to see if the touch is
 
 {{< anchor "touchscreen-on_release" >}}
 
-## ``on_release`` Trigger
+## `on_release` Trigger
 
 This automation will be triggered when all touches are released from the touchscreen.
 

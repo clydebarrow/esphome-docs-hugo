@@ -286,7 +286,7 @@ stuff after it is encountered, it is magically replaced by the argument after th
 
 Every time you type a percent sign `%` in a printf format string, it will treat the following letters as a format tag
 until a so-called "specifier" is encountered (in this case `f`). You can read more about it
-[here](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm),
+[here ](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm),
 but for ESPHome there are really just a few things you need to know.
 
 Let's break `%.1f` down:
@@ -607,7 +607,7 @@ If you're experiencing issues with your color display, the `show_test_card: true
 When all points above are shown correctly then the display is working as expected.
 To help the graphics display team determine the best way to help you, **a picture of the result of this option is very helpful.**
 
-Should you [create an issue](https://github.com/esphome/issues/issues) in GitHub regarding your display, please
+Should you [create an issue ](https://github.com/esphome/issues/issues) in GitHub regarding your display, please
 be sure to **include a link to where you purchased the display** so that we can validate the configuration you've used.
 
 {{< note >}}

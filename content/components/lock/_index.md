@@ -34,9 +34,9 @@ you want the lock to use that name, you can set `name: None`.
   not be exposed to the frontend (like Home Assistant). Only specifying an `id` without
   a `name` will implicitly set this to true.
 - **on_lock** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the lock is locked. See [``lock.on_lock`` / ``lock.on_unlock`` Trigger]({{< ref "components/lock/_index#lock-on_lock_unlock_trigger" >}}).
+  when the lock is locked. See [`lock.on_lock` / `lock.on_unlock` Trigger]({{< ref "components/lock/_index#lock-on_lock_unlock_trigger" >}}).
 - **on_unlock** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform
-  when the lock is unlocked. See [``lock.on_lock`` / ``lock.on_unlock`` Trigger]({{< ref "components/lock/_index#lock-on_lock_unlock_trigger" >}})..
+  when the lock is unlocked. See [`lock.on_lock` / `lock.on_unlock` Trigger]({{< ref "components/lock/_index#lock-on_lock_unlock_trigger" >}})..
 - **disabled_by_default** (*Optional*, boolean): If true, then this entity should not be added to any client's frontend,
   (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI).
   Defaults to `false`.
@@ -48,7 +48,7 @@ you want the lock to use that name, you can set `name: None`.
 
 {{< anchor "lock-lock_action" >}}
 
-### ``lock.lock`` Action
+### `lock.lock` Action
 
 This action locks a lock with the given ID on when executed.
 
@@ -60,7 +60,7 @@ on_...:
 ```
 {{< anchor "lock-unlock_action" >}}
 
-### ``lock.unlock`` Action
+### `lock.unlock` Action
 
 This action unlocks a lock with the given ID off when executed.
 
@@ -72,7 +72,7 @@ on_...:
 ```
 {{< anchor "lock-open_action" >}}
 
-### ``lock.open`` Action
+### `lock.open` Action
 
 This action opens (e.g. unlatch) a lock with the given ID off when executed.
 
@@ -85,7 +85,7 @@ on_...:
 {{< anchor "lock-is_locked_condition" >}}
 {{< anchor "lock-is_unlocked_condition" >}}
 
-### ``lock.is_locked`` / ``lock.is_unlocked`` Condition
+### `lock.is_locked` / `lock.is_unlocked` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given lock is LOCKED (or UNLOCKED).
 
@@ -135,7 +135,7 @@ advanced stuff (see the full API Reference for more info).
   ```
 {{< anchor "lock-on_lock_unlock_trigger" >}}
 
-### ``lock.on_lock`` / ``lock.on_unlock`` Trigger
+### `lock.on_lock` / `lock.on_unlock` Trigger
 
 This trigger is activated each time the lock is locked/unlocked. It becomes active
 right after the lock component has acknowledged the state (e.g. after it LOCKED/UNLOCKED itself).

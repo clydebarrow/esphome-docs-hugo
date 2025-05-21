@@ -6,7 +6,7 @@ title: "SCD4X CO₂, Temperature and Relative Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The `scd4x` sensor platform  allows you to use your Sensirion SCD4X CO₂
-([datasheet](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.
+([datasheet ](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 {{< img src="scd4x.jpg" alt="Image" width="80.0%" class="center" >}}
@@ -80,7 +80,7 @@ sensor:
 
 {{< anchor "perform_forced_calibration_action" >}}
 
-## ``perform_forced_calibration`` Action
+## `perform_forced_calibration` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) manually calibrates the sensor to the provided value in ppm.
 Operate the SCD4x in the operation mode later used in normal sensor operation (periodic measurement, low power periodic measurement or single shot) for > 3 minutes in an environment with homogenous and constant CO2 concentration before performing a forced recalibration.
@@ -111,7 +111,7 @@ api:
 ```
 {{< anchor "factory_reset_action" >}}
 
-## ``factory_reset`` Action
+## `factory_reset` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) triggers a factory reset of the sensor. Calibration settings are restored from factory settings.
 

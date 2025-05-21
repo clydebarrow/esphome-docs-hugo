@@ -12,7 +12,7 @@ available for ESP32, ESP8266 and BK72xx microcontrollers *only*.
 
   Please note that *"WireGuard" and the "WireGuard" logo are
   registered trademarks of Jason A. Donenfeld.* See
-  ["WireGuard" Trademark Usage Policy](https://www.wireguard.com/trademark-policy/)
+  ["WireGuard" Trademark Usage Policy ](https://www.wireguard.com/trademark-policy/)
   for additional information.
 
 {{< warning >}}
@@ -161,19 +161,19 @@ Let's explain with some examples:
 | --- | --- | --- | --- |
 | 172.16.0.100 | *omitted* or | *omitted* or | **none**, |
 |  | 255.255.255.255 | any other value | no routes are created |
-|  | 255.255.255.0 | *omitted* | only to ``172.16.0.0/24`` |
-|  |  | ---------------------- | because ``192.168.0.0/24`` |
+|  | 255.255.255.0 | *omitted* |  |
+|  |  | ---------------------- |  |
 |  |  | - 172.16.0.0/24 | and any other network will |
-|  |  | - 192.168.0.0/24 | be outside ``172.16.0.0/24`` |
+|  |  | - 192.168.0.0/24 |  |
 |  |  | - *any other* |  |
 |  |  | -   192.168.0.0/24 | **none** because |
-|  |  |  | ``192.168.0.0/24`` is not |
-|  |  |  | part of ``172.16.0.0/24`` |
-| 10.44.0.100 | 255.0.0.0 | *omitted* | to ``10.0.0.0/8`` network |
+|  |  |  |  |
+|  |  |  |  |
+| 10.44.0.100 | 255.0.0.0 | *omitted* |  |
 |  |  | - 10.44.0.0/16 | only to the networks in |
 |  |  | - 10.10.0.0/16 | the allowed list because the |
 |  |  |  | netmask will route the whole |
-|  |  |  | ``10.0.0.0/8`` but wireguard |
+|  |  |  |  |
 |  |  |  | allows only those two |
 |  |  |  | subnets |
 | any | 0.0.0.0 | *omitted* | **any** |
@@ -262,7 +262,7 @@ above configuration.
 
 The following actions are available.
 
-##### ``wireguard.disable``
+##### `wireguard.disable`
 
 This action drops down the active VPN link (if any) and disables the component.
 
@@ -276,10 +276,10 @@ The lambda equivalent is `id(wireguard_id).disable()`.
 
 {{< note >}}
 To disable |wireguard| since device boot you can execute this action
-in the [``on_boot``]({{< ref "components/esphome#esphome-on_boot" >}}) step.
+in the [`on_boot`]({{< ref "components/esphome#esphome-on_boot" >}}) step.
 
 {{< /note >}}
-##### ``wireguard.enable``
+##### `wireguard.enable`
 
 This action enables the component and starts the connection to the remote peer.
 
@@ -297,7 +297,7 @@ The lambda equivalent is `id(wireguard_id).enable()`.
 
 The following conditions are available.
 
-##### ``wireguard.enabled``
+##### `wireguard.enabled`
 
 This condition checks if |wireguard| is currently enabled or not.
 
@@ -313,7 +313,7 @@ on_...:
 ```
 The lambda equivalent is `id(wireguard_id).is_enabled()`.
 
-##### ``wireguard.peer_online``
+##### `wireguard.peer_online`
 
 This condition checks if the remote peer is *online*.
 
@@ -337,10 +337,9 @@ There are many different ways for installing and configuring
 |wireguard| on servers, home servers or general host. It depends
 on the platform and on the operating system in use.
 
-You can start reading the [official documentation](https://www.wireguard.com/)
+You can start reading the [official documentation ](https://www.wireguard.com/)
 to have an overview of what it is and on how to install it *system wide* for
-common operating systems. Read the thread at `Home Assistant Community Add-on: WireGuard
-<https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662>`__
+common operating systems. Read the thread at [Home Assistant Community Add-on: WireGuard](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
 if you intend to install it through Home Assistant. Plase note that securely
 setting up a VPN requires some networking experience, you will need to open
 router ports and possibly use custom commands to redirect traffic.
@@ -376,8 +375,7 @@ of the [address]({{< ref "components/wireguard#wireguard-address" >}}) configure
 - {{< docref "time/sntp" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - |wireguard|_ official website
-- `Home Assistant Community Add-on: WireGuard
-  <https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662>`__
-  (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))
+- [Home Assistant Community Add-on: WireGuard  ](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
+  (also on [GitHub ](https://github.com/hassio-addons/addon-wireguard))
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/wireguard.md)
 

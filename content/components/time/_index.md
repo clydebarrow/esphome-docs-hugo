@@ -17,20 +17,19 @@ All time configuration schemas inherit these options.
 ### Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the time for use in lambdas.
-- **timezone** (*Optional*, string): Manually tell ESPHome what time zone to use with `this format
-  <https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html>`__
-  (warning: the format is quite complicated, see [examples](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv))
-  or the simpler [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in the form
+- **timezone** (*Optional*, string): Manually tell ESPHome what time zone to use with [this format  ](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html)
+  (warning: the format is quite complicated, see [examples ](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv))
+  or the simpler [TZ database name ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in the form
   :code:`<Region>/<City>`. ESPHome tries to automatically infer the time zone string based on the time zone of the computer
   that is running ESPHome, but this might not always be accurate.
 - **on_time** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run at specific intervals using
-  a cron-like syntax. See [``on_time`` Trigger]({{< ref "components/time/_index#time-on_time" >}}).
+  a cron-like syntax. See [`on_time` Trigger]({{< ref "components/time/_index#time-on_time" >}}).
 - **on_time_sync** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run when the time source
-  could be (re-)synchronized.. See [``on_time_sync`` Trigger]({{< ref "components/time/_index#time-on_time_sync" >}}).
+  could be (re-)synchronized.. See [`on_time_sync` Trigger]({{< ref "components/time/_index#time-on_time_sync" >}}).
 
 {{< anchor "time-has_time_condition" >}}
 
-### ``time.has_time`` Condition
+### `time.has_time` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if time has been set and is valid.
 
@@ -52,10 +51,10 @@ lambda: |-
 ```
 {{< anchor "time-on_time" >}}
 
-### ``on_time`` Trigger
+### `on_time` Trigger
 
 This powerful automation can be used to run automations at specific intervals at
-specific times of day. The syntax is a subset of the [crontab](https://crontab.guru/) syntax.
+specific times of day. The syntax is a subset of the [crontab ](https://crontab.guru/) syntax.
 
 There are two ways to specify time intervals: Either with using the `seconds:`, `minutes:`, ...
 keys as seen below or using a cron alike expression like `* /5 * * * *`.
@@ -180,14 +179,14 @@ time:
 `on_time` does not re-schedule events for times that are skipped or duplicated due to local Daylight
 Saving Time or other local time-adjustments like leap seconds. In regions with Daylight Saving Time, this
 means that events located between 01:00 - 02:00 may trigger twice, and events scheduled between 02:00 - 03:00 may
-be skipped once a year. This differs from [cron](https://man7.org/linux/man-pages/man8/cron.8.html) behavior
+be skipped once a year. This differs from [cron ](https://man7.org/linux/man-pages/man8/cron.8.html) behavior
 despite allowing the use of similar `crontab` syntax. Similarly, triggers on days of the month that do not exist
 ("every 31st of the month") will be skipped when those dates do not exist.
 
 {{< /note >}}
 {{< anchor "time-on_time_sync" >}}
 
-### ``on_time_sync`` Trigger
+### `on_time_sync` Trigger
 
 This automation is triggered after a time source successfully retrieves the current time.
 See the [DS1307 configuration example]({{< ref "components/time/ds1307#ds1307-config_example" >}}) for a scenario
@@ -229,20 +228,20 @@ created based on a given format. If you want to get the current time attributes,
 
 | **Name** | **Meaning** | **Range (inclusive)** | **Example** |  |
 | --- | --- | --- | --- | --- |
-| ``.second`` | Seconds after the minute | [0-60] (generally [0-59], | 42 |  |
+| `.second`          Se | conds after the minute                 [0 | -60] (generally [0-59],                42 |  |  |
 |  |  | extra range is to accommodate leap |  |  |
 |  |  | seconds.) |  |  |
-| ``.minute`` | Minutes after the hour | [0-59] | 31 |  |
-| ``.hour`` | Hours since midnight | [0-23] | 16 |  |
-| ``.day_of_week`` | Day of the week, sunday=1 | [1-7] | 7 (saturday) |  |
-| ``.day_of_month`` | Day of the month | [1-31] | 18 |  |
-| ``.day_of_year`` | Day of the year | [1-366] | 231 |  |
-| ``.month`` | Month, january=1 | [1-12] | 8 (august) |  |
-| ``.year`` | Year since 0 A.C. | [1970-∞[ | 2018 |  |
-| ``.is_dst`` | Is daylight savings time | false, true | true |  |
-| ``.timestamp`` | Unix epoch time (seconds since UTC | [-2147483648 - 2147483647] (negative | 1534606002 |  |
+| `.minute`          Mi | nutes after the hour                   [0 | -59]                                   31 |  |  |
+| `.hour`            Ho | urs since midnight                     [0 | -23]                                   16 |  |  |
+| `.day_of_week`     Da | y of the week, sunday=1                [1 | -7]                                    7 | (saturday) |  |
+| `.day_of_month`    Da | y of the month                         [1 | -31]                                   18 |  |  |
+| `.day_of_year`     Da | y of the year                          [1 | -366]                                  23 | 1 |  |
+| `.month`           Mo | nth, january=1                         [1 | -12]                                   8 | (august) |  |
+| `.year`            Ye | ar since 0 A.C.                        [1 | 970-∞[                                 20 | 18 |  |
+| `.is_dst`          Is | daylight savings time                 fa | lse, true                              tr | ue |  |
+| `.timestamp`       Un | ix epoch time (seconds since UTC       [- | 2147483648 - 2147483647] (negative     15 | 34606002 |  |
 |  | Midnight January 1, 1970) | values for time past January 19th 2038) |  |  |
-| ``.is_valid()`` | Basic check if the time is valid | false, true | true |  |
+| `.is_valid()`      Ba | sic check if the time is valid         fa | lse, true                              tr | ue |  |
 |  | (i.e. not January 1st 1970) |  |  |  |
 
 {{< note >}}
@@ -256,7 +255,7 @@ make sure to check if `.is_valid()` evaluates to `true` before triggering any ac
 ### strftime
 
 The second way to use the time object is to directly transform it into a string like `2018-08-16 16:31`.
-This is directly done using C's [strftime](http://www.cplusplus.com/reference/ctime/strftime/) function which
+This is directly done using C's [strftime ](http://www.cplusplus.com/reference/ctime/strftime/) function which
 allows for a lot of flexibility.
 
 ```cpp
@@ -270,32 +269,32 @@ with the current time representation of that format option.
 
 | **Directive** **Meaning** | **Example** |  |
 | --- | --- | --- |
-| ``%a``        Abbreviated **weekday** name | Sat |  |
-| ``%A``        Full **weekday** name | Saturday |  |
-| ``%w``        **Weekday** as decimal number, where 0 is Sunday and 6 | 6 |  |
+| `%a`        Abbreviated **weekday** name                                   Sa | t |  |
+| `%A`        Full **weekday** name                                          Sa | turday |  |
+| `%w`        **Weekday** as decimal number, where 0 is Sunday and 6         6 |  |  |
 | is Saturday |  |  |
-| ``%d``        **Day of month** as zero-padded decimal number | 01, 02, ..., 31 |  |
-| ``%b``        Abbreviated **month** name | Aug |  |
-| ``%B``        Full **month** name | August |  |
-| ``%m``        **Month** as zero-padded decimal number | 01, 02, ..., 12 |  |
-| ``%y``        **Year** without century as a zero-padded decimal number | 00, 01, ..., 99 |  |
-| ``%Y``        **Year** with century as a decimal number | 2018 |  |
-| ``%H``        **Hour** (24-hour clock) as a zero-padded decimal number | 00, 01, ..., 23 |  |
-| ``%I``        **Hour** (12-hour clock) as a zero-padded decimal number | 00, 01, ..., 12 |  |
-| ``%p``        **AM or PM** designation | AM, PM |  |
-| ``%M``        **Minute** as a zero-padded decimal number | 00, 01, ..., 59 |  |
-| ``%S``        **Second** as a zero-padded decimal number | 00, 01, ..., 59 |  |
-| ``%j``        **Day of year** as a zero-padded decimal number | 001, 002, ..., 366 |  |
-| ``%U``        **Week number of year** (Sunday as the first day of the week) | 00, 01, ..., 53 |  |
+| `%d`        **Day of month** as zero-padded decimal number                 01 | , 02, ..., 31 |  |
+| `%b`        Abbreviated **month** name                                     Au | g |  |
+| `%B`        Full **month** name                                            Au | gust |  |
+| `%m`        **Month** as zero-padded decimal number                        01 | , 02, ..., 12 |  |
+| `%y`        **Year** without century as a zero-padded decimal number       00 | , 01, ..., 99 |  |
+| `%Y`        **Year** with century as a decimal number                      20 | 18 |  |
+| `%H`        **Hour** (24-hour clock) as a zero-padded decimal number       00 | , 01, ..., 23 |  |
+| `%I`        **Hour** (12-hour clock) as a zero-padded decimal number       00 | , 01, ..., 12 |  |
+| `%p`        **AM or PM** designation                                       AM | , PM |  |
+| `%M`        **Minute** as a zero-padded decimal number                     00 | , 01, ..., 59 |  |
+| `%S`        **Second** as a zero-padded decimal number                     00 | , 01, ..., 59 |  |
+| `%j`        **Day of year** as a zero-padded decimal number                00 | 1, 002, ..., 366 |  |
+| `%U`        **Week number of year** (Sunday as the first day of the week)  00 | , 01, ..., 53 |  |
 | as a zero-padded decimal number. All days in a new year |  |  |
 | preceding the first Sunday are considered to be in week 0. |  |  |
-| ``%W``        **Week number of year** (Monday as the first day of the week) | 00, 01, ..., 53 |  |
+| `%W`        **Week number of year** (Monday as the first day of the week)  00 | , 01, ..., 53 |  |
 | as a zero-padded decimal number. All days in a new year |  |  |
 | preceding the first Monday are considered to be in week 0. |  |  |
-| ``%c``        **Date and time** representation | Sat Aug 18 16:31:42 2018 |  |
-| ``%x``        **Date** representation | 08/18/18 |  |
-| ``%X``        **Time** representation | 16:31:42 |  |
-| ``%%``        A literal ``%`` character | % |  |
+| `%c`        **Date and time** representation                               Sa | t Aug 18 16:31:42 2018 |  |
+| `%x`        **Date** representation                                        08 | /18/18 |  |
+| `%X`        **Time** representation                                        16 | :31:42 |  |
+| `%%`        A literal `%` character                                      % |  |  |
 
 ## See Also
 

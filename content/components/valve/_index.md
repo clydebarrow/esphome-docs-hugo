@@ -59,7 +59,7 @@ MQTT options:
 
 {{< anchor "valve-open_action" >}}
 
-## ``valve.open`` Action
+## `valve.open` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) opens the valve with the given ID when executed.
 
@@ -81,7 +81,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "valve-close_action" >}}
 
-## ``valve.close`` Action
+## `valve.close` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) closes the valve with the given ID when executed.
 
@@ -103,7 +103,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "valve-stop_action" >}}
 
-## ``valve.stop`` Action
+## `valve.stop` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) stops the valve with the given ID when executed.
 
@@ -125,7 +125,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "valve-toggle_action" >}}
 
-## ``valve.toggle`` Action
+## `valve.toggle` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) toggles the valve with the given ID when executed, cycling through the states
 close/stop/open/stop... This allows the valve to be controlled by a single push button.
@@ -148,7 +148,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "valve-control_action" >}}
 
-## ``valve.control`` Action
+## `valve.control` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) is a more generic version of the other valve actions and allows all valve attributes
 to be set.
@@ -215,7 +215,7 @@ read-only, if you want to act on the valve, use the `make_call()` method as show
     ```
 {{< anchor "valve-on_open_trigger" >}}
 
-### ``valve.on_open`` Trigger
+### `valve.on_open` Trigger
 
 This trigger is activated each time the valve reaches a fully open state.
 
@@ -229,7 +229,7 @@ valve:
 ```
 {{< anchor "valve-on_closed_trigger" >}}
 
-### ``valve.on_closed`` Trigger
+### `valve.on_closed` Trigger
 
 This trigger is activated each time the valve reaches a fully closed state.
 

@@ -8,7 +8,7 @@ title: "Teleinformation from Linky electrical counter."
 ## Component/Hub
 
 The `teleinfo` component allows you to retrieve data from a
-French electrical counter using Teleinformation ([datasheet](https://www.enedis.fr/media/2035/download)). It works with Linky electrical
+French electrical counter using Teleinformation ([datasheet ](https://www.enedis.fr/media/2035/download)). It works with Linky electrical
 counter but also legacy EDF electrical counter.
 
 {{< img src="teleinfo-full.jpg" alt="Image" caption="Linky electrical counter" width="50.0%" class="center" >}}

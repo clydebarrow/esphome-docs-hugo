@@ -67,10 +67,10 @@ datetime:
       month: 12
       day: 4
 
-    - For ``type: time``:
+    - For `type: time`:
 
-    - A string in the format ``%H:%M:%S`` , eg: ``"12:34:56"``.
-    - An object including ``hour``, ``minute``, ``second``.
+    - A string in the format `%H:%M:%S` , eg: `"12:34:56"`.
+    - An object including `hour`, `minute`, `second`.
 
     .. code-block:: yaml
 
@@ -79,10 +79,10 @@ datetime:
       minute: 34
       second: 56
 
-    - For ``type: datetime``:
+    - For `type: datetime`:
 
-    - A string in the format ``%Y-%m-%d %H:%M:%S`` , eg: ``"2023-12-04 12:34:56"``.
-    - An object including ``year``, ``month``, ``day``, ``hour``, ``minute``, ``second``.
+    - A string in the format `%Y-%m-%d %H:%M:%S` , eg: `"2023-12-04 12:34:56"`.
+    - An object including `year`, `month`, `day`, `hour`, `minute`, `second`.
 
     .. code-block:: yaml
 

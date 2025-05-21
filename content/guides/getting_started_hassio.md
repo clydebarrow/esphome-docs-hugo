@@ -14,7 +14,7 @@ This is generally the easiest way to get started with ESPHome.
 
 ESPHome allows you to create "configurations" which allow you to turn common microcontrollers into smart home devices.
 
-A device "configuration" consists of one or more [YAML files](https://en.wikipedia.org/wiki/YAML)  and, based on the
+A device "configuration" consists of one or more [YAML files ](https://en.wikipedia.org/wiki/YAML)  and, based on the
 content of the file(s), ESPHome creates custom firmware which you can then install directly onto your device. Hardware
 defined in the configuration--such as sensors, switches, lights, and so on--will automatically appear in Home
 Assistant's user interface.
@@ -43,7 +43,7 @@ Installation of the add-on may take a moment or two. Once done, click "Start" an
 
 {{< note >}}
 If you're running Home Assistant in a way that does not provide access to add-ons, you may
-[run the ESPHome Device Builder independently in Docker<esphome-device-builder-docker>]({{< ref "#run the ESPHome Device Builder independently in Docker<esphome-device-builder-docker>" >}}).
+[run the ESPHome Device Builder independently in Docker]({{< ref "guides/getting_started_command_line#esphome-device-builder-docker" >}}).
 
 {{< /note >}}
 The web UI will present a wizard which will walk you through creating your first configuration:
@@ -95,7 +95,7 @@ configuration for the "Bedroom Light" node in the picture above can be found in 
 {{< note >}}
 Home Assistant add-ons run as individual containers; this can make accessing your configuration files/logs a bit
 challenging. If you wish to do so, you'll need to install Home Assistant's
-[SSH add-on](https://www.home-assistant.io/common-tasks/os/#installing-and-using-the-ssh-add-on), configure it
+[SSH add-on ](https://www.home-assistant.io/common-tasks/os/#installing-and-using-the-ssh-add-on), configure it
 with a username and password and also disable "Protection Mode" (please assess the risks associated with doing so).
 
 Finally, to access the logs from a device through an SSH client, you can log in and use a command like
@@ -182,8 +182,8 @@ device. You've also learned how to enable some basic components via the configur
 
 Now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}. Hopefully you'll find all the hardware
 components you need there. If you're having any problems or want to request new features, please either create a new
-issue on the [GitHub issue tracker](https://github.com/esphome/issues/issues) or find us on the
-[Discord chat](https://discord.gg/KhAMKrd). Be sure to read the {{< docref "faq/" "FAQ" >}}, as well!
+issue on the [GitHub issue tracker ](https://github.com/esphome/issues/issues) or find us on the
+[Discord chat ](https://discord.gg/KhAMKrd). Be sure to read the {{< docref "faq/" "FAQ" >}}, as well!
 
 ## See Also
 

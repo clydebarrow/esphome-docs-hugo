@@ -6,8 +6,8 @@ title: "Atlas Scientific Peristaltic Pump"
 {{< seo description="" image="" >}}
 
 The `ezo_pmp` component allows you to use an Atlas Scientific Peristaltic Pump with ESPHome.
-Both the EZO-PMP ([datasheet](https://files.atlas-scientific.com/EZO_PMP_Datasheet.pdf))
-and EZO-PMP-L ([datasheet](https://files.atlas-scientific.com/EZO_PMP_L_Datasheet.pdf)) are supported.
+Both the EZO-PMP ([datasheet ](https://files.atlas-scientific.com/EZO_PMP_Datasheet.pdf))
+and EZO-PMP-L ([datasheet ](https://files.atlas-scientific.com/EZO_PMP_L_Datasheet.pdf)) are supported.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 {{< note >}}
@@ -40,7 +40,7 @@ only enable the sensors that you actually need.
 
 {{< anchor "ezo_pmp-current_volume_dosed_sensor" >}}
 
-## ``current_volume_dosed``
+## `current_volume_dosed`
 
 This sensor indicates the volume (in milliliters) that has been dosed in the currently running or last ran dosing command.
 
@@ -59,7 +59,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-total_volume_dosed_sensor" >}}
 
-## ``total_volume_dosed``
+## `total_volume_dosed`
 
 This sensor indicates total volume (in milliliters) that has been dosed since the last time the pump was turned on. Could be a
 negative number if the pump has been run in reverse.
@@ -79,7 +79,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-absolute_total_volume_dosed_sensor" >}}
 
-## ``absolute_total_volume_dosed``
+## `absolute_total_volume_dosed`
 
 This sensor indicates the absolute total volume (in milliliters) that has been dosed since the last time the pump was turned on.
 
@@ -98,7 +98,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-last_volume_requested_sensor" >}}
 
-## ``last_volume_requested``
+## `last_volume_requested`
 
 Indicates the total volume (in milliliters) that is being dosed (or was if the pump has already finished) by a dose Action. When
 using dosing actions that have a duration, the sensor will have the right calculation for total volume.
@@ -118,11 +118,11 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-max_flow_rate_sensor" >}}
 
-## ``max_flow_rate``
+## `max_flow_rate`
 
 The pump provides its own calculation of the maximum flow rate it can provide (in ml/minute). Dosing requests that exceed this rate
 will fail. When using the [Dose Continuously]({{< ref "components/ezo_pmp#ezo_pmp-dose_continuously_action" >}}) Action, this is the volume the pump will
-dose every minute. This value will get updated after the pump is calibrated (see [``ezo_pmp.set_calibration_volume`` Action]({{< ref "components/ezo_pmp#ezo_pmp-set_calibration_volume_action" >}})).
+dose every minute. This value will get updated after the pump is calibrated (see [`ezo_pmp.set_calibration_volume` Action]({{< ref "components/ezo_pmp#ezo_pmp-set_calibration_volume_action" >}})).
 
 ```yaml
 sensor:
@@ -139,7 +139,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-pump_voltage_sensor" >}}
 
-## ``pump_voltage``
+## `pump_voltage`
 
 The current voltage of the power supply that powers the pump. Not to be confused with the voltage that powers the electronics on the pump.
 
@@ -160,7 +160,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-pump_state_binary_sensor" >}}
 
-## ``pump_state``
+## `pump_state`
 
 Indicates if the pump is currently running or not.
 
@@ -179,7 +179,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-is_paused_binary_sensor" >}}
 
-## ``is_paused``
+## `is_paused`
 
 Indicates if a dosing action is currently paused.
 
@@ -201,7 +201,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-dosing_mode_text_sensor" >}}
 
-## ``dosing_mode``
+## `dosing_mode`
 
 Indicates the dosing mode the pump is currently running as. Can be any of `Volume`, `Volume/Time`, `Constant Flow Rate`, `Continuous`, `None`.
 
@@ -220,7 +220,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-calibration_status_text_sensor" >}}
 
-## ``calibration_status``
+## `calibration_status`
 
 Indicates calibration status of the pump. Can be any of `Fixed Volume`, `Volume/Time`, `Fixed Volume & Volume/Time` or `Uncalibrated`.
 
@@ -241,7 +241,7 @@ Configuration variables:
 
 {{< anchor "ezo_pmp-dose_continuously_action" >}}
 
-## ``ezo_pmp.dose_continuously`` Action
+## `ezo_pmp.dose_continuously` Action
 
 Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose continuously
 at the [Maximum Flow Rate]({{< ref "components/ezo_pmp#ezo_pmp-max_flow_rate_sensor" >}}). The pump will automatically stop after 20 days
@@ -261,7 +261,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-dose_volume_action" >}}
 
-## ``ezo_pmp.dose_volume`` Action
+## `ezo_pmp.dose_volume` Action
 
 Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific volume (in milliliters)
 at the [Maximum Flow Rate]({{< ref "components/ezo_pmp#ezo_pmp-max_flow_rate_sensor" >}}). If the volume is negative the pump will run backwards.
@@ -287,7 +287,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-dose_volume_over_time_action" >}}
 
-## ``ezo_pmp.dose_volume_over_time`` Action
+## `ezo_pmp.dose_volume_over_time` Action
 
 Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific `volume` (in milliliters)
 over the provided `duration` (in minutes). At the end of the time period the pump will have dosed the specified `volume`.
@@ -319,7 +319,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-dose_with_constant_flow_rate_action" >}}
 
-## ``ezo_pmp.dose_with_constant_flow_rate`` Action
+## `ezo_pmp.dose_with_constant_flow_rate` Action
 
 Use this action in an [automations]({{< ref "automations/_index#automation" >}}) to have the peristaltic pump dose an specific `volume` (in milliliters) every minute
 for the provided `duration` (in minutes). At the end of the time period the pump will have dosed the specified `volume` times the `duration`.
@@ -350,7 +350,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-pause_dosing_action" >}}
 
-## ``ezo_pmp.pause_dosing`` Action
+## `ezo_pmp.pause_dosing` Action
 
 Use this action to pause a Dosing command that was previously issued. To determine if the dosing is paused or not, you can use the [Is Paused]({{< ref "components/ezo_pmp#ezo_pmp-is_paused_binary_sensor" >}}) sensor.
 If the pump is currently paused, issuing this action again will unpause it.
@@ -368,7 +368,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-stop_dosing_action" >}}
 
-## ``ezo_pmp.stop_dosing`` Action
+## `ezo_pmp.stop_dosing` Action
 
 Use this action to stop the current Dosing command.
 
@@ -385,7 +385,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-clear_total_volume_dosed_action" >}}
 
-## ``ezo_pmp.clear_total_volume_dosed`` Action
+## `ezo_pmp.clear_total_volume_dosed` Action
 
 Clear the values of the [Total Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-total_volume_dosed_sensor" >}}), [Current Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-current_volume_dosed_sensor" >}})
 and [Absolute Total Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-absolute_total_volume_dosed_sensor" >}}) sensors.
@@ -403,10 +403,10 @@ Configuration options:
 
 {{< anchor "ezo_pmp-set_calibration_volume_action" >}}
 
-## ``ezo_pmp.set_calibration_volume`` Action
+## `ezo_pmp.set_calibration_volume` Action
 
 Use this action to calibrate the peristaltic pump. The EZO-PMP needs two forms of calibration: absolute volume and volume over time. You can check
-the calibration status by using the [Calibration Status<ezo_pmp-calibration_status_text_sensor>]({{< ref "#Calibration Status<ezo_pmp-calibration_status_text_sensor>" >}}) sensor. For the procedure on calibrating the pump
+the calibration status by using the [Calibration Status]({{< ref "components/ezo_pmp#ezo_pmp-calibration_status_text_sensor" >}}) sensor. For the procedure on calibrating the pump
 check the datasheet.
 
 ```yaml
@@ -431,10 +431,10 @@ Configuration options:
 
 {{< anchor "ezo_pmp-clear_calibration_action" >}}
 
-## ``ezo_pmp.clear_calibration`` Action
+## `ezo_pmp.clear_calibration` Action
 
 Clear the calibration values stored in the pump. You can check the calibration status by using the
-[Calibration Status<ezo_pmp-calibration_status_text_sensor>]({{< ref "#Calibration Status<ezo_pmp-calibration_status_text_sensor>" >}}) sensor.
+[Calibration Status]({{< ref "components/ezo_pmp#ezo_pmp-calibration_status_text_sensor" >}}) sensor.
 
 ```yaml
 on_...:
@@ -449,7 +449,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-find_action" >}}
 
-## ``ezo_pmp.find`` Action
+## `ezo_pmp.find` Action
 
 Use this action to make the LED on the Pump control board to blink for a minute. The pump will not respond to any other action while the LED is blinking.
 
@@ -466,7 +466,7 @@ Configuration options:
 
 {{< anchor "ezo_pmp-change_i2c_address_action" >}}
 
-## ``ezo_pmp.change_i2c_address`` Action
+## `ezo_pmp.change_i2c_address` Action
 
 Changes the i2c address of the pump to the provided value. After the address is changed you must upload a new version of the ESPHome firmware with the updated I2C
 address for the pump to work.

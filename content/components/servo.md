@@ -67,7 +67,7 @@ to match your servo (Experiment with these values).
 {{< /note >}}
 {{< anchor "servo-write_action" >}}
 
-## ``servo.write`` Action
+## `servo.write` Action
 
 To use your servo motor in [automations]({{< ref "automations/_index#automation" >}}) or templates, you can use this action to set the
 target level of the servo from -100% to 100%.
@@ -114,7 +114,7 @@ id(my_servo).write(1.0);
 {{< /note >}}
 {{< anchor "servo-detach_action" >}}
 
-## ``servo.detach`` Action
+## `servo.detach` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to disable the output on a servo motor -
 this will make the servo motor stop immediately and disable its active control.

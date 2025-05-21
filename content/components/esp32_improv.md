@@ -5,7 +5,7 @@ title: "Improv via BLE"
 
 {{< seo description="" image="" >}}
 
-The [esp32_improv` component in ESPHome implements the open `Improv standard](https://www.improv-wifi.com/)
+The [esp32_improv` component in ESPHome implements the open `Improv standard ](https://www.improv-wifi.com/)
 for configuring Wi-Fi on an ESP32 device by using Bluetooth Low Energy (BLE) to receive the credentials.
 
 The `esp32_improv` component will automatically set up the {{< docref "esp32_ble/" "BLE Server" >}}.
@@ -38,16 +38,16 @@ esp32_improv:
 - **identify_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to identify for. Defaults to `10s`.
 - **wifi_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before starting the Improv service
   after Wi-Fi is no longer connected. Defaults to `1min`.
-- **on_start** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when Improv is waiting for
-  authorization and/or upon authorization. See [``on_start``]({{< ref "components/esp32_improv#improv-on_start" >}}).
-- **on_provisioned** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when provisioning has
-  completed. See [``on_provisioned``]({{< ref "components/esp32_improv#improv-on_provisioned" >}}).
-- **on_provisioning** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when the device begins the
-  provisioning process. See [``on_provisioning``]({{< ref "components/esp32_improv#improv-on_provisioning" >}}).
-- **on_stop** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when Improv has stopped.
-  See [``on_stop``]({{< ref "components/esp32_improv#improv-on_stop" >}}).
-- **on_state** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when an Improv state change
-  happens. See [``on_state``]({{< ref "components/esp32_improv#improv-on_state" >}}).
+- **on_start** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when Improv is waiting for
+  authorization and/or upon authorization. See [`on_start`]({{< ref "components/esp32_improv#improv-on_start" >}}).
+- **on_provisioned** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when provisioning has
+  completed. See [`on_provisioned`]({{< ref "components/esp32_improv#improv-on_provisioned" >}}).
+- **on_provisioning** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the device begins the
+  provisioning process. See [`on_provisioning`]({{< ref "components/esp32_improv#improv-on_provisioning" >}}).
+- **on_stop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when Improv has stopped.
+  See [`on_stop`]({{< ref "components/esp32_improv#improv-on_stop" >}}).
+- **on_state** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when an Improv state change
+  happens. See [`on_state`]({{< ref "components/esp32_improv#improv-on_state" >}}).
 
 {{< anchor "improv-automations" >}}
 
@@ -58,7 +58,7 @@ the Improv provisioning process.
 
 {{< anchor "improv-on_start" >}}
 
-### ``on_start``
+### `on_start`
 
 This automation will be triggered when the device is waiting for authorization (usually by pressing a button on the
 device, if configured -- see `authorizer` above) and/or upon authorization.
@@ -72,7 +72,7 @@ esp32_improv:
 ```
 {{< anchor "improv-on_provisioned" >}}
 
-### ``on_provisioned``
+### `on_provisioned`
 
 This automation will be triggered when provisioning has completed.
 
@@ -85,7 +85,7 @@ esp32_improv:
 ```
 {{< anchor "improv-on_provisioning" >}}
 
-### ``on_provisioning``
+### `on_provisioning`
 
 This automation will be triggered when provisioning begins.
 
@@ -98,7 +98,7 @@ esp32_improv:
 ```
 {{< anchor "improv-on_stop" >}}
 
-### ``on_stop``
+### `on_stop`
 
 This automation will be triggered when Improv has stopped.
 
@@ -111,11 +111,11 @@ esp32_improv:
 ```
 {{< anchor "improv-on_state" >}}
 
-### ``on_state``
+### `on_state`
 
 This automation will be triggered on every state change.
 
-Two variables are available for use in [lambdas<config-lambda>]({{< ref "#lambdas<config-lambda>" >}}) within this automation. They are:
+Two variables are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}) within this automation. They are:
 
 - `state`, an `enum` named `improv::State`, having one of the following values:
 
@@ -160,7 +160,7 @@ The `status_indicator` has the following patterns:
 - {{< docref "wifi/" >}}
 - {{< docref "improv_serial/" >}}
 - {{< docref "captive_portal/" >}}
-- [Improv Wi-Fi](https://www.improv-wifi.com/)
+- [Improv Wi-Fi ](https://www.improv-wifi.com/)
 - :apiref:`esp32_improv/esp32_improv_component.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_improv.md)
 

@@ -51,7 +51,7 @@ Possible return values for the optional lambda:
 
 {{< anchor "switch-template-publish_action" >}}
 
-## ``switch.template.publish`` Action
+## `switch.template.publish` Action
 
 You can also publish a state to a template switch from elsewhere in your YAML file
 with the `switch.template.publish` action.

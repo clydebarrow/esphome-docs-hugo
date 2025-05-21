@@ -6,7 +6,7 @@ title: "A02YYUW Waterproof Ultrasonic Sensor"
 {{< seo description="" image="" >}}
 
 This sensor allows you to use A02YYUW waterproof ultrasonic sensor by DFRobot
-([datasheet](https://wiki.dfrobot.com/_A02YYUW_Waterproof_Ultrasonic_Sensor_SKU_SEN0311))
+([datasheet ](https://wiki.dfrobot.com/_A02YYUW_Waterproof_Ultrasonic_Sensor_SKU_SEN0311))
 with ESPHome to measure distances. This sensor can measure
 ranges between 3 centimeters and 450 centimeters with a resolution of 1 milimeter.
 
@@ -31,7 +31,7 @@ sensor:
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< note >}}
-[PWM and RS485](https://www.dypcn.com/uploads/A02-Datasheet.pdf) versions of the A02YYUW are not supported by this component.
+[PWM and RS485 ](https://www.dypcn.com/uploads/A02-Datasheet.pdf) versions of the A02YYUW are not supported by this component.
 
 {{< /note >}}
 ## See Also

@@ -71,7 +71,7 @@ script:
 ```
 {{< anchor "script-execute_action" >}}
 
-## ``script.execute`` Action
+## `script.execute` Action
 
 This action executes the script. The script **mode** dictates what will happen if the script was already running.
 
@@ -95,7 +95,7 @@ on_...:
 ```
 {{< anchor "script-stop_action" >}}
 
-## ``script.stop`` Action
+## `script.stop` Action
 
 This action allows you to stop a given script during execution. If the script is not running, it does nothing. This is
 useful if you want to stop a script that contains a `delay` action, `wait_until` action, or is inside a `while`
@@ -124,7 +124,7 @@ lambda: 'id(my_script).stop();'
 ```
 {{< anchor "script-wait_action" >}}
 
-## ``script.wait`` Action
+## `script.wait` Action
 
 This action suspends execution of the automation until a script has finished executing.
 
@@ -151,7 +151,7 @@ This can't be used in a lambda as it would block all functioning of the device. 
 
 {{< anchor "script-is_running_condition" >}}
 
-## ``script.is_running`` Condition
+## `script.is_running` Condition
 
 This [condition]({{< ref "automations/actions#config-condition" >}}) allows you to check if a given script is running. In case scripts are run in
 `parallel`, this condition only tells you if at least one script of the given id is running, not how many. Not

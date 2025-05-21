@@ -11,22 +11,22 @@ Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water 
 
 # Things you'll need
 
--  [M5Stick axp192 custom component](https://github.com/airy10/esphome-m5stickC)
+-  [M5Stick axp192 custom component ](https://github.com/airy10/esphome-m5stickC)
     This is needed to power up the display.  You don't need the st7735 display driver, as it is already included with ESPHome >1.16.0.
 
 - M5StickC ESP32 development kit
-   [M5Stack Link](https://m5stack.com/collections/m5-core/products/stick-c)
+   [M5Stack Link ](https://m5stack.com/collections/m5-core/products/stick-c)
 
 {{< img src="leak-detector-m5stickC-m5stickC.png" alt="Image" class="center" >}}
 
 -  Moisture sensor
-    This example uses a [Guardian Remote Sensor Probe](https://www.amazon.com/gp/product/B07G5BMD7L)
+    This example uses a [Guardian Remote Sensor Probe ](https://www.amazon.com/gp/product/B07G5BMD7L)
     which has a 6' cord.
 
 {{< img src="leak-detector-m5stickC_probe.jpg" alt="Image" class="center" >}}
 
 - Grove connector pigtail
-    [Amazon Link](https://www.amazon.com/gp/product/B01CNZ9EEC)
+    [Amazon Link ](https://www.amazon.com/gp/product/B01CNZ9EEC)
 
 {{< img src="leak-detector-m5stickC_grove1.jpg" alt="Image" class="center" >}}
 
@@ -54,7 +54,7 @@ the unit on USB power 24/7.
 {{< /note >}}
 # Display Font
 
-You'll need to place the [OpenSans-Regular](https://fonts.google.com/specimen/Open+Sans) font (or another of your choosing) alongside your ESPHome yaml file.  See - {{< docref "/components/display/index" >}}.
+You'll need to place the [OpenSans-Regular ](https://fonts.google.com/specimen/Open+Sans) font (or another of your choosing) alongside your ESPHome yaml file.  See - {{< docref "/components/display/index" >}}.
 
 # Calibration & Testing
 
@@ -247,7 +247,7 @@ display:
 # HomeAssistant configuration
 
 There are two sections: one for alert criteria, and another for notification via Pushover.
-See HomeAssistant's [Pushover integration docs](https://www.home-assistant.io/integrations/pushover/) for more details.
+See HomeAssistant's [Pushover integration docs ](https://www.home-assistant.io/integrations/pushover/) for more details.
 
 ```yaml
 alert:

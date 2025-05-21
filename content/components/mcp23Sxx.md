@@ -17,8 +17,8 @@ This series features exactly the same API as the MCP230xx I/O Expander (I²C).
 
 ## MCP23S08 Component
 
-The MCP23S08 component ([datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/MCP23008-MCP23S08-Data-Sheet-20001919F.pdf),
-[Digi-Key](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S08-E-P/MCP23S08-E-P-ND/735954)) has 8 GPIOs that can be configured independently.
+The MCP23S08 component ([datasheet ](http://ww1.microchip.com/downloads/en/DeviceDoc/MCP23008-MCP23S08-Data-Sheet-20001919F.pdf),
+[Digi-Key ](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S08-E-P/MCP23S08-E-P-ND/735954)) has 8 GPIOs that can be configured independently.
 
 ```yaml
 # Example configuration entry
@@ -76,8 +76,8 @@ binary_sensor:
 ## MCP23S17 Component
 
 The MCP23S17 component allows you to use MCP23S17 I/O expanders
-([datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf),
-[Digi-Key](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S17-E-SP/MCP23S17-E-SP-ND/894276)) in ESPHome.
+([datasheet ](http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf),
+[Digi-Key ](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S17-E-SP/MCP23S17-E-SP-ND/894276)) in ESPHome.
 It uses the [SPI Bus]({{< ref "components/spi#spi" >}}) for communication.
 
 Once configured, you can use any of the 16 pins as

@@ -60,7 +60,7 @@ modbus:
 - {{< docref "/components/number/modbus_controller" >}}
 - {{< docref "/components/select/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
-- [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
+- [Modbus RTU Protocol Description ](https://www.modbustools.com/modbus.html)
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - :apiref:`modbus/modbus.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/modbus.md)

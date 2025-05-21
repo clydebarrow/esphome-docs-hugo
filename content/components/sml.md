@@ -101,11 +101,11 @@ text_sensor:
 ## Automations:
 
 - **on_data** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a
-  SML message is received. See [``on_data`` Trigger]({{< ref "components/sml#sml-on-data" >}}).
+  SML message is received. See [`on_data` Trigger]({{< ref "components/sml#sml-on-data" >}}).
 
 {{< anchor "sml-on-data" >}}
 
-### ``on_data`` Trigger
+### `on_data` Trigger
 
 This automation will be triggered when a valid SML message is received. The variable `bytes` (of type
 `std::vector<uint8_t>`) contains the raw sml data including start/end sequence. The variable `valid`
@@ -137,7 +137,7 @@ the fact that slightly wrong numbers may be reported to HomeAssistant. This is a
 in ESPHome and has nothing to do with the SML component.
 
 If you cannot live with this, you can use the `TextSensor` with an appropriate format to transmit the value as
-a string to HomeAssistant. On the HomeAssistant side you can define a [Template Sensor](https://www.home-assistant.io/integrations/template/)
+a string to HomeAssistant. On the HomeAssistant side you can define a [Template Sensor ](https://www.home-assistant.io/integrations/template/)
 to cast the value into the appropriate format and do some scaling.
 
 For ESPHome we have:
@@ -171,7 +171,7 @@ template:
 
 ```
 Usually the template sensor's value would turn to 0 if the ESP device is unavailable.
-This results in problems when using the sensor in combination with the [Utility Meter](https://www.home-assistant.io/integrations/utility_meter/) integration.
+This results in problems when using the sensor in combination with the [Utility Meter ](https://www.home-assistant.io/integrations/utility_meter/) integration.
 The state template provided above checks for the sensor's availability and keeps the
 current state in case of unavailability.
 

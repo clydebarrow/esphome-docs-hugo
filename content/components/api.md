@@ -15,12 +15,12 @@ the device manually by choosing "ESPHome" from the integration overview and ente
 "<NODE_NAME>.local" or the IP address of the unit in the "Host" field.
 
 The ESPHome native API is based on a custom TCP protocol using protocol buffers. You can find
-the protocol data structure definitions here: [api.proto](https://github.com/esphome/esphome/blob/dev/esphome/components/api/api.proto)
-A Python library that implements this protocol is [aioesphomeapi](https://github.com/esphome/aioesphomeapi).
+the protocol data structure definitions here: [api.proto ](https://github.com/esphome/esphome/blob/dev/esphome/components/api/api.proto)
+A Python library that implements this protocol is [aioesphomeapi ](https://github.com/esphome/aioesphomeapi).
 
 {{< note >}}
 **Actions** were previously called **Services**. ESPHome changed the name in line with
-[Home Assistant](https://developers.home-assistant.io/blog/2024/07/16/service-actions/)
+[Home Assistant ](https://developers.home-assistant.io/blog/2024/07/16/service-actions/)
 but will continue to support YAML with `services` and `homeassistant.service` for the foreseeable future.
 Documentation will only refer to **Actions**.
 
@@ -79,9 +79,9 @@ Support for configuring the encryption key on-the-fly will be implemented in a f
 - **password** (*Optional*, **Deprecated**, string): The password to protect the API Server with. Defaults
   to no password. It is recommended to use the `encryption` -> `key` above instead of the the `password`.
 - **on_client_connected** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when a client
-  connects to the API. See [``on_client_connected`` Trigger]({{< ref "components/api#api-on_client_connected_trigger" >}}).
+  connects to the API. See [`on_client_connected` Trigger]({{< ref "components/api#api-on_client_connected_trigger" >}}).
 - **on_client_disconnected** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when a client
-  disconnects from the API. See [``on_client_disconnected`` Trigger]({{< ref "components/api#api-on_client_disconnected_trigger" >}}).
+  disconnects from the API. See [`on_client_disconnected` Trigger]({{< ref "components/api#api-on_client_disconnected_trigger" >}}).
 
 {{< anchor "api-actions" >}}
 
@@ -102,7 +102,7 @@ Then:
 
 {{< anchor "api-homeassistant_event_action" >}}
 
-### ``homeassistant.event`` Action
+### `homeassistant.event` Action
 
 {{< note >}}
 Be sure to [follow the instructions above]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
@@ -134,7 +134,7 @@ Configuration variables:
 
 {{< anchor "api-homeassistant_action-action" >}}
 
-### ``homeassistant.action`` Action
+### `homeassistant.action` Action
 
 {{< note >}}
 Be sure to [follow the instructions above]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
@@ -166,7 +166,7 @@ on_...:
 Configuration variables:
 ````````````````````````
 
-- **action** (**Required**, string): The Home Assistant [Action](https://www.home-assistant.io/docs/scripts/service-calls/)
+- **action** (**Required**, string): The Home Assistant [Action ](https://www.home-assistant.io/docs/scripts/service-calls/)
   to perform.
 - **data** (*Optional*, mapping): Optional *static* data to perform the action with.
 - **data_template** (*Optional*, mapping): Optional template data to perform the action with.
@@ -209,7 +209,7 @@ on_...:
 ```
 {{< anchor "api-homeassistant_tag_scanned_action" >}}
 
-### ``homeassistant.tag_scanned`` Action
+### `homeassistant.tag_scanned` Action
 
 {{< note >}}
 Be sure to [follow the instructions above]({{< ref "components/api#api-actions" >}}) to tell Home Assistant to allow
@@ -235,7 +235,7 @@ Configuration variables:
 
 {{< anchor "api-on_client_connected_trigger" >}}
 
-### ``on_client_connected`` Trigger
+### `on_client_connected` Trigger
 
 This trigger is activated each time a client connects to the API. Two variables of
 type `std::string` are available for use by actions called from within this trigger:
@@ -255,7 +255,7 @@ api:
 ```
 {{< anchor "api-on_client_disconnected_trigger" >}}
 
-### ``on_client_disconnected`` Trigger
+### `on_client_disconnected` Trigger
 
 This trigger is activated each time the API disconnects from the API. Two variables of
 type `std::string` are available for use by actions called from within this trigger:
@@ -272,7 +272,7 @@ api:
 ```
 {{< anchor "api-connected_condition" >}}
 
-## ``api.connected`` Condition
+## `api.connected` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if at least one client is connected to the ESPHome
 native API. Please note client not only includes Home Assistant, but also ESPHome's OTA log output

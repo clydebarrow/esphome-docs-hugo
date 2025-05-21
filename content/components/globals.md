@@ -52,7 +52,7 @@ Configuration variables:
 
 {{< anchor "globals-set_action" >}}
 
-## ``globals.set`` Action
+## `globals.set` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to change the value of a `global`
 variable without having to use the lambda syntax.

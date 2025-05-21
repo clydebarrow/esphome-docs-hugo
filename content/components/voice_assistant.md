@@ -5,7 +5,7 @@ title: "Voice Assistant"
 
 {{< seo description="" image="" >}}
 
-ESPHome devices with a microphone are able to stream the audio to Home Assistant and be processed there by [assist](https://www.home-assistant.io/voice_control/).
+ESPHome devices with a microphone are able to stream the audio to Home Assistant and be processed there by [assist ](https://www.home-assistant.io/voice_control/).
 
 {{< note >}}
 Voice Assistant requires Home Assistant 2023.5 or later.
@@ -103,7 +103,7 @@ voice_assistant:
 
 The following actions are available for use in automations:
 
-##### ``voice_assistant.start`` Action
+##### `voice_assistant.start` Action
 
 Listens for one voice command then stops.
 
@@ -116,14 +116,14 @@ Configuration variables:
 Call `voice_assistant.stop` to signal the end of the voice command if `silence_detection` is set to `false`.
 
 
-##### ``voice_assistant.start_continuous`` Action
+##### `voice_assistant.start_continuous` Action
 
 Start listening for voice commands. This will start listening again after
 the response audio has finished playing. Some errors will stop the cycle.
 Call `voice_assistant.stop` to stop the cycle.
 
 
-##### ``voice_assistant.stop`` Action
+##### `voice_assistant.stop` Action
 
 Stop listening for voice commands.
 
@@ -132,17 +132,17 @@ Stop listening for voice commands.
 
 The following conditions are available for use in automations:
 
-##### ``voice_assistant.is_running`` Condition
+##### `voice_assistant.is_running` Condition
 
 Returns true if the voice assistant is currently running.
 
-##### ``voice_assistant.connected`` Condition
+##### `voice_assistant.connected` Condition
 
 Returns true if the voice assistant is currently connected to Home Assistant.
 
 ## Wake word detection
 
-See our [example YAML files on GitHub](https://github.com/esphome/firmware/blob/main/voice-assistant/m5stack-atom-echo.yaml) for continuous wake word detection.
+See our [example YAML files on GitHub ](https://github.com/esphome/firmware/blob/main/voice-assistant/m5stack-atom-echo.yaml) for continuous wake word detection.
 
 
 ## Push to Talk

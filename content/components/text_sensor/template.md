@@ -35,7 +35,7 @@ Possible return values for the lambda:
 
 {{< anchor "text_sensor-template-publish_action" >}}
 
-## ``text_sensor.template.publish`` Action
+## `text_sensor.template.publish` Action
 
 You can also publish a state to a template text sensor from elsewhere in your YAML file
 with the `text_sensor.template.publish` action.

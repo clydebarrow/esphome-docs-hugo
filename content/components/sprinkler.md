@@ -146,7 +146,7 @@ examples that are ready for you to copy and paste!
 - **repeat** (*Optional*, int): The number of times a full cycle should be repeated. Defaults to 0. May not be used
   with `repeat_number`.
 - **next_prev_ignore_disabled** (*Optional*, boolean): Set to `true` to cause
-  [``sprinkler.previous_valve`` action]({{< ref "components/sprinkler#sprinkler-controller-action_previous_valve" >}}) and [``sprinkler.next_valve`` action]({{< ref "components/sprinkler#sprinkler-controller-action_next_valve" >}}) to skip
+  [`sprinkler.previous_valve` action]({{< ref "components/sprinkler#sprinkler-controller-action_previous_valve" >}}) and [`sprinkler.next_valve` action]({{< ref "components/sprinkler#sprinkler-controller-action_next_valve" >}}) to skip
   over valves that are not enabled. Defaults to `false`.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. While optional,
   this is necessary to identify the controller instance (particularly in cases where more than one is
@@ -265,7 +265,7 @@ to avert disaster!
 
 {{< anchor "sprinkler-controller-action_start_full_cycle" >}}
 
-### ``sprinkler.start_full_cycle`` action
+### `sprinkler.start_full_cycle` action
 
 Starts a full cycle of the system. This enables the controller's "auto-advance" feature and disables
 the queue. The controller will iterate through all enabled valves/zones. They will each run for their
@@ -280,7 +280,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_start_from_queue" >}}
 
-### ``sprinkler.start_from_queue`` action
+### `sprinkler.start_from_queue` action
 
 Starts the controller running valves from its queue. If no valves are in the queue, this action does
 nothing; otherwise, this disables the controller's "auto-advance" feature so that only queued
@@ -301,7 +301,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_start_single_valve" >}}
 
-### ``sprinkler.start_single_valve`` action
+### `sprinkler.start_single_valve` action
 
 Starts a single valve. This disables the controller's "auto-advance" and queue features so that only this valve/zone
 will run. The valve will remain on for the specified duration or (if `run_duration` is not specified or is zero) for
@@ -320,7 +320,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_shutdown" >}}
 
-### ``sprinkler.shutdown`` action
+### `sprinkler.shutdown` action
 
 Initiates a shutdown of all valves/the system, respecting any configured pump or valve stop delays.
 
@@ -332,7 +332,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_next_valve" >}}
 
-### ``sprinkler.next_valve`` action
+### `sprinkler.next_valve` action
 
 Advances to the next valve (numerically). If `manual_selection_delay` is configured, the controller
 will wait before activating the selected valve. If no valve is active, the first valve (as they appear
@@ -347,7 +347,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_previous_valve" >}}
 
-### ``sprinkler.previous_valve`` action
+### `sprinkler.previous_valve` action
 
 Advances to the previous valve (numerically). If `manual_selection_delay` is configured, the controller
 will wait before activating the selected valve. If no valve is active, the last valve (as they appear in
@@ -362,7 +362,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_pause" >}}
 
-### ``sprinkler.pause`` action
+### `sprinkler.pause` action
 
 Immediately turns off all valves, saving the active valve and the amount of time remaining so that
 the cycle may be resumed later on.
@@ -375,7 +375,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_resume" >}}
 
-### ``sprinkler.resume`` action
+### `sprinkler.resume` action
 
 Resumes a cycle placed on hold with `sprinkler.pause`. If there is no paused cycle, this action
 will do nothing.
@@ -388,7 +388,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_resume_or_start_full_cycle" >}}
 
-### ``sprinkler.resume_or_start_full_cycle`` action
+### `sprinkler.resume_or_start_full_cycle` action
 
 Resumes a cycle placed on hold with `sprinkler.pause`, but if no cycle was paused, starts a full
 cycle (equivalent to `sprinkler.start_full_cycle`).
@@ -401,7 +401,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_queue_valve" >}}
 
-### ``sprinkler.queue_valve`` action
+### `sprinkler.queue_valve` action
 
 Adds the specified valve into the controller's queue. When the queue is enabled, valves in the queue
 take precedence over valves scheduled as a part of a full cycle of the system (when auto-advance is
@@ -422,7 +422,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_clear_queued_valves" >}}
 
-### ``sprinkler.clear_queued_valves`` action
+### `sprinkler.clear_queued_valves` action
 
 Removes all queued valves from the controller's queue. Please see [The Sprinkler Controller Queue]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_queue" >}})
 section below for more detail and examples.
@@ -436,7 +436,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_multiplier" >}}
 
-### ``sprinkler.set_multiplier`` action
+### `sprinkler.set_multiplier` action
 
 Sets the multiplier value used to proportionally increase or decrease the run duration for all valves/zones.
 For seasonal changes, it's easier to use the multiplier to adjust the watering time instead of adjusting the
@@ -457,7 +457,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_repeat" >}}
 
-### ``sprinkler.set_repeat`` action
+### `sprinkler.set_repeat` action
 
 Specifies the number of times full cycles should be repeated. **Note that the total number of cycles
 the controller will run is equal to the repeat value plus one.** For example, with a `repeat` value
@@ -473,7 +473,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_divider" >}}
 
-### ``sprinkler.set_divider`` action
+### `sprinkler.set_divider` action
 
 The divider value sets both the multiplier and repeat values as follows:
 
@@ -496,7 +496,7 @@ on_...:
 ```
 {{< anchor "sprinkler-controller-action_set_valve_run_duration" >}}
 
-### ``sprinkler.set_valve_run_duration`` action
+### `sprinkler.set_valve_run_duration` action
 
 Sets the run duration for the specified valve. When the valve is activated, this value is multiplied
 by the multiplier value (see above) to determine the valve's actual run duration.
@@ -1100,7 +1100,7 @@ discussion largely revolves around C++ code (as is used in ESPHome lambdas).
 
 Many of the methods used to determine the sprinkler controller's state return a type of value known as an `optional`.
 If you are curious, a general reference for the `optional` type may be found
-[here](https://en.cppreference.com/w/cpp/utility/optional), but what is important for now is:
+[here ](https://en.cppreference.com/w/cpp/utility/optional), but what is important for now is:
 
 - The `optional` type *may* or *may not* contain a value
 

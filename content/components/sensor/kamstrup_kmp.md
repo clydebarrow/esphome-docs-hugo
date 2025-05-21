@@ -107,6 +107,6 @@ magnets.
 ## See Also
 
 - [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})
-- [DIY hardware with housing](https://github.com/cfeenstra1024/kamstrup-multical-hardware#readme) by [Chris Feenstra](https://github.com/cfeenstra1024)
+- [DIY hardware with housing ](https://github.com/cfeenstra1024/kamstrup-multical-hardware#readme) by [Chris Feenstra ](https://github.com/cfeenstra1024)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/kamstrup_kmp.md)
 

@@ -9,12 +9,12 @@ So an essential part of making your home smart is knowing how much power it uses
 
 The simple idea therefore is: Why don't we just abuse that functionality to make the power-meter IoT enabled? We just have to hook up a simple photoresistor in front of that aforementioned LED and track the number of pulses we receive. Then using ESPHome we can instantly have the power meter show up in Home Assistant 🎉
 
-Hooking it all up is quite easy: Just buy a suitable photoresistor (make sure the wave length approximately matches the one from your power meter). Then connect it using a simple variable resistor divider (see [this article](https://blog.udemy.com/arduino-ldr/) for inspiration). And... that should already be it :)
+Hooking it all up is quite easy: Just buy a suitable photoresistor (make sure the wave length approximately matches the one from your power meter). Then connect it using a simple variable resistor divider (see [this article ](https://blog.udemy.com/arduino-ldr/) for inspiration). And... that should already be it :)
 
 {{< img src="power_meter-header.jpg" alt="Image" width="80.0%" class="center" >}}
 
 {{< note >}}
-Some energy meters have an exposed [S0 port](https://en.wikipedia.org/wiki/S_interface) (which essentially just is a switch that closes), if that is the case the photodiode can be replaced with the following connection.
+Some energy meters have an exposed [S0 port ](https://en.wikipedia.org/wiki/S_interface) (which essentially just is a switch that closes), if that is the case the photodiode can be replaced with the following connection.
 
 ```yaml
 S0 ------------ VCC
@@ -137,7 +137,7 @@ time:
     id: homeassistant_time
 
 ```
-While you can in theory also do this with the home assistant [integration](https://www.home-assistant.io/integrations/integration/) integration, the benefit of this is that it continues to integrate the power during times home assistant is unable to work with values, i.e. during updates, restarts and so on.
+While you can in theory also do this with the home assistant [integration ](https://www.home-assistant.io/integrations/integration/) integration, the benefit of this is that it continues to integrate the power during times home assistant is unable to work with values, i.e. during updates, restarts and so on.
 
 ## See Also
 
@@ -145,6 +145,6 @@ While you can in theory also do this with the home assistant [integration](https
 - {{< docref "/components/sensor/pulse_meter" >}}
 - {{< docref "/components/sensor/total_daily_energy" >}}
 - {{< docref "/components/time/homeassistant" >}}
-- [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
+- [Home Assistant Glow 🌟 ](https://github.com/klaasnicolaas/home-assistant-glow/).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/cookbook/power_meter.md)
 

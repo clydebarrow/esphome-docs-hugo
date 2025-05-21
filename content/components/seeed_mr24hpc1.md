@@ -8,8 +8,8 @@ title: "Seeed Studio MR24HPC1 mmWave (Kit)"
 ## Component/Hub
 
 The `seeed_mr24hpc1` platform allows you to use Seeed Studio 24GHz mmWave Sensor -
-Human Static Presence Module Lite ([Product Page](https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html)) and
-Seeed Studio mmWave Human Detection Sensor Kit ([Product Page](https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html)) with ESPHome.
+Human Static Presence Module Lite ([Product Page ](https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html)) and
+Seeed Studio mmWave Human Detection Sensor Kit ([Product Page ](https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html)) with ESPHome.
 
 The [UART]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
 You can use the ESP32 software or hardware serial to use this MR24HPC1, its default baud rate is 115200.
@@ -407,11 +407,11 @@ The result:
 
 ## See Also
 
-- [Official Using Documents for Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite](https://wiki.seeedstudio.com/Radar_MR24HPC1/)
-- [Official Using Documents for Seeed Studio mmWave Human Detection Sensor Kit](https://wiki.seeedstudio.com/mmwave_human_detection_kit/)
-- [Product Detail Page for Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite](https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html)
-- [Product Detail Page for Seeed Studio mmWave Human Detection Sensor Kit](https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html)
-- [Source of inspiration for implementation](https://github.com/limengdu/mmwave-kit-external-components/)
+- [Official Using Documents for Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite ](https://wiki.seeedstudio.com/Radar_MR24HPC1/)
+- [Official Using Documents for Seeed Studio mmWave Human Detection Sensor Kit ](https://wiki.seeedstudio.com/mmwave_human_detection_kit/)
+- [Product Detail Page for Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite ](https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html)
+- [Product Detail Page for Seeed Studio mmWave Human Detection Sensor Kit ](https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html)
+- [Source of inspiration for implementation ](https://github.com/limengdu/mmwave-kit-external-components/)
 - :apiref:`seeed_mr24hpc1/seeed_mr24hpc1.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/seeed_mr24hpc1.md)
 

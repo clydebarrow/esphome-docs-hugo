@@ -113,7 +113,7 @@ The following integers are the wakeup causes:
 
 {{< anchor "deep_sleep-enter_action" >}}
 
-## ``deep_sleep.enter`` Action
+## `deep_sleep.enter` Action
 
 This action makes the given deep sleep component enter deep sleep immediately.
 
@@ -149,7 +149,7 @@ Configuration options:
 
 {{< anchor "deep_sleep-prevent_action" >}}
 
-## ``deep_sleep.prevent`` Action
+## `deep_sleep.prevent` Action
 
 This action prevents the given deep sleep component from entering deep sleep.
 Useful for keeping the ESP active during data transfer or OTA updating (See note below for more information).
@@ -194,7 +194,7 @@ mqtt:
 {{< /note >}}
 {{< anchor "deep_sleep-allow_action" >}}
 
-## ``deep_sleep.allow`` Action
+## `deep_sleep.allow` Action
 
 This action allows the given deep sleep component to enter deep sleep, after previously being prevented.
 

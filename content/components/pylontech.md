@@ -116,7 +116,7 @@ text_sensor:
 ## Energy Monitoring
 
 By combining {{< docref "/components/sensor/integration" "integration sensors" >}} and {{< docref "/components/sensor/template" "template sensors" >}}
-one can monitor the energy flowing into and out of all batteries combined, ready for [Homeassistant Energy Monitoring](https://www.home-assistant.io/docs/energy/battery/).
+one can monitor the energy flowing into and out of all batteries combined, ready for [Homeassistant Energy Monitoring ](https://www.home-assistant.io/docs/energy/battery/).
 
 ```yaml
 sensor:
@@ -160,10 +160,10 @@ sensor:
 ```
 ## See Also
 
-- [Pylontech-Battery-Monitoring](https://github.com/irekzielinski/Pylontech-Battery-Monitoring)
-- [nodered-pylontech-console-reader](https://github.com/juanhaywood/nodered-pylontech-console-reader)
-- [MultiSIBControl](http://www.multisibcontrol.net/)
-- [ioBroker.pylontech](https://github.com/PLCHome/ioBroker.pylontech/)
+- [Pylontech-Battery-Monitoring ](https://github.com/irekzielinski/Pylontech-Battery-Monitoring)
+- [nodered-pylontech-console-reader ](https://github.com/juanhaywood/nodered-pylontech-console-reader)
+- [MultiSIBControl ](http://www.multisibcontrol.net/)
+- [ioBroker.pylontech ](https://github.com/PLCHome/ioBroker.pylontech/)
 - [UART Bus]({{< ref "components/uart#uart" >}})
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/pylontech.md)
 

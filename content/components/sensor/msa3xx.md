@@ -10,7 +10,7 @@ title: "MSA301 and MSA311 Sensors"
 ## Component/Hub
 
 The `msa3xx` sensor platform allows you to use your MSA301 and MSA311 tri-axial, 
-low-g accelerometers ([datasheet](https://cdn-shop.adafruit.com/product-files/5309/MSA311-V1.1-ENG.pdf)) 
+low-g accelerometers ([datasheet ](https://cdn-shop.adafruit.com/product-files/5309/MSA311-V1.1-ENG.pdf)) 
 with ESPHome. The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 MSA301 and MSA311 are almost identical sensors. The only difference is the ADC resolution. MSA311 has fixed 
@@ -126,7 +126,7 @@ text_sensor:
 
 ## Automations
 
-### ``on_tap`` trigger
+### `on_tap` trigger
 
 This automation will be triggered when single tap is detected.
 
@@ -140,7 +140,7 @@ msa3xx:
 
 
 ```
-### ``on_double_tap`` trigger
+### `on_double_tap` trigger
 
 This automation will be triggered when double tap is detected.
 
@@ -154,7 +154,7 @@ msa3xx:
 
 
 ```
-### ``on_active`` trigger
+### `on_active` trigger
 
 This automation will be triggered when device detects changes in motion.
 
@@ -168,7 +168,7 @@ msa3xx:
 
 
 ```
-### ``on_orientation`` trigger
+### `on_orientation` trigger
 
 This automation will be triggered when device orientation is changed with respect to the gravitation field vector `g`.
 

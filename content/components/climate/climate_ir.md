@@ -15,28 +15,28 @@ submit a feature request (see FAQ).
 
 | Supported units | Platform name | Supports receiver |
 | --- | --- | --- |
-| Ballu | ``ballu`` | yes |
-| Coolix | ``coolix`` | yes |
-| Daikin | ``daikin`` | yes |
-| :ref:`Daikin ARC<daikin_arc>` | ``daikin_arc`` | yes |
-| :ref:`Daikin BRC<daikin_brc>` | ``daikin_brc`` | yes |
-| :ref:`Delonghi<delonghi_ir>` | ``delonghi`` | yes |
-| Emmeti | ``emmeti`` | yes |
-| Fujitsu General | ``fujitsu_general`` | yes |
-| :ref:`GREE<gree_ir>` | ``gree`` |  |
-| Hitachi | ``hitachi_ac344``, | yes |
-|  | ``hitachi_ac424`` |  |
-| :ref:`LG<climate_ir_lg>` | ``climate_ir_lg`` | yes |
-| :ref:`Midea<midea_ir>` | ``midea_ir`` | yes |
-| :ref:`Mitsubishi<mitsubishi>` | ``mitsubishi`` | yes |
-| Noblex | ``noblex`` | yes |
-| Electrolux, TCL, Fuego | ``tcl112`` | yes |
-| :ref:`Toshiba<toshiba>` | ``toshiba`` | yes |
-| :ref:`Whirlpool<whirlpool>` | ``whirlpool`` | yes |
-| Yashima | ``yashima`` |  |
-| :ref:`Whynter<whynter>` | ``whynter`` | yes |
-| :ref:`ZH/LT-01<zhlt01>` | ``zhlt01`` | yes |
-| :ref:`Arduino-HeatpumpIR<heatpumpir>` | ``heatpumpir`` |  |
+| Ballu | `ballu`           | |  |
+| Coolix | `coolix`          | |  |
+| Daikin | `daikin`          | |  |
+| [Daikin ARC]({{< ref "components/clima | e/climate_ir#daikin_a | c" >}})         | `dai |
+| [Daikin BRC]({{< ref "components/clima | e/climate_ir#daikin_b | c" >}})         | `dai |
+| [Delonghi]({{< ref "components/climate | climate_ir#delonghi_i | " >}})          | `del |
+| Emmeti | `emmeti`          | |  |
+| Fujitsu General | `fujitsu_general` | |  |
+| [GREE]({{< ref "components/climate/cli | ate_ir#gree_ir" >}}) | | `gre |
+| Hitachi | `hitachi_ac344`,  | |  |
+|  | `hitachi_ac424`   | |  |
+| [LG]({{< ref "components/climate/clima | e_ir#climate_ir_lg" > | })              | `cli |
+| [Midea]({{< ref "components/climate/cl | mate_ir#midea_ir" >}} | | `mid |
+| [Mitsubishi]({{< ref "components/clima | e/climate_ir#mitsubis | i" >}})         | `mit |
+| Noblex | `noblex`          | |  |
+| Electrolux, TCL, Fuego | `tcl112`          | |  |
+| [Toshiba]({{< ref "components/climate/ | limate_ir#toshiba" >} | )               | `tos |
+| [Whirlpool]({{< ref "components/climat | /climate_ir#whirlpool | >}})           | `whi |
+| Yashima | `yashima`         | |  |
+| [Whynter]({{< ref "components/climate/ | limate_ir#whynter" >} | )               | `why |
+| [ZH/LT-01]({{< ref "components/climate | climate_ir#zhlt01" >} | )               | `zhl |
+| [Arduino-HeatpumpIR]({{< ref "componen | s/climate/climate_ir# | eatpumpir" >}}) | `hea |
 | library |  |  |
 
 This component requires that you have configured a {{< docref "/components/remote_transmitter" >}}.
@@ -123,7 +123,7 @@ The `delonghi` climate currently supports the protocol used by some Delonghi por
 
 `daikin_arc` **Climate**:
 
-The Daikin ARC remotes (`daikin_arc` climate, `daikin_arc417`, `daikin_arc480` protocols of [Arduino-HeatpumpIR<heatpumpir>]({{< ref "#Arduino-HeatpumpIR<heatpumpir>" >}})) are used by the japanese model of Daikin.
+The Daikin ARC remotes (`daikin_arc` climate, `daikin_arc417`, `daikin_arc480` protocols of [Arduino-HeatpumpIR]({{< ref "components/climate/climate_ir#heatpumpir" >}})) are used by the japanese model of Daikin.
 
 {{< anchor "gree_ir" >}}
 
@@ -166,8 +166,8 @@ climate:
 
 ```
 {{< note >}}
-- See [Transmit Midea<remote_transmitter-transmit_midea>]({{< ref "#Transmit Midea<remote_transmitter-transmit_midea>" >}}) to send custom commands, including Follow Me mode.
-- See [Toshiba<toshiba>]({{< ref "#Toshiba<toshiba>" >}}) below if you are looking for compatibility with Midea model MAP14HS1TBL or similar.
+- See [Transmit Midea]({{< ref "components/remote_transmitter#remote_transmitter-transmit_midea" >}}) to send custom commands, including Follow Me mode.
+- See [Toshiba]({{< ref "components/climate/climate_ir#toshiba" >}}) below if you are looking for compatibility with Midea model MAP14HS1TBL or similar.
 
 {{< /note >}}
 {{< anchor "mitsubishi" >}}
@@ -309,7 +309,7 @@ climate:
 
 ## Arduino-HeatpumpIR
 
-The [heatpumpir` platform supports dozens of manufacturers and hundreds of AC units by utilising the `Arduino-HeatpumpIR library](https://github.com/ToniA/arduino-heatpumpir).
+The [heatpumpir` platform supports dozens of manufacturers and hundreds of AC units by utilising the `Arduino-HeatpumpIR library ](https://github.com/ToniA/arduino-heatpumpir).
 
 This platform compiles only under `arduino` framework or LibreTiny, and should only be used if your AC unit is not supported by any of the other (native) platforms from above. No support can be provided for Arduino-HeatpumpIR, because it is a third party library.
 

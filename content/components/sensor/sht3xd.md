@@ -6,8 +6,8 @@ title: "SHT3X-D Temperature+Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The `sht3xd` sensor platform Temperature+Humidity sensor allows you to use your Sensirion SHT31-D/SHT3x
-([datasheet](https://cdn-shop.adafruit.com/product-files/2857/Sensirion_Humidity_SHT3x_Datasheet_digital-767294.pdf),
-[Adafruit`_ ) and SHT85 (`datasheet](https://sensirion.com/media/documents/4B40CEF3/640B2346/Sensirion_Humidity_Sensors_SHT85_Datasheet.pdf),
+([datasheet ](https://cdn-shop.adafruit.com/product-files/2857/Sensirion_Humidity_SHT3x_Datasheet_digital-767294.pdf),
+[Adafruit`_ ) and SHT85 (`datasheet ](https://sensirion.com/media/documents/4B40CEF3/640B2346/Sensirion_Humidity_Sensors_SHT85_Datasheet.pdf),
 `Sensirion`_ ) sensors with Esphome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
@@ -43,7 +43,7 @@ sensor:
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **heater_enabled** (*Optional*, bool): Turn on/off heater at boot.
-  This may help provide [more accurate readings in condensing conditions](https://forum.arduino.cc/t/atmospheric-sensors-in-condensing-conditions/412167),
+  This may help provide [more accurate readings in condensing conditions ](https://forum.arduino.cc/t/atmospheric-sensors-in-condensing-conditions/412167),
   but can also increase temperature readings and decrease humidity readings as a side effect.
   Defaults to `false`.
 

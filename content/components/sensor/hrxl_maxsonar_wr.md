@@ -6,9 +6,9 @@ title: "HRXL/XL MaxSonar WR Series"
 {{< seo description="" image="" >}}
 
 This sensor allows you to use HRXL MaxSonar WR series ultrasonic sensors by MaxBotix
-([datasheet](https://www.maxbotix.com/documents/HRXL-MaxSonar-WR_Datasheet.pdf))
+([datasheet ](https://www.maxbotix.com/documents/HRXL-MaxSonar-WR_Datasheet.pdf))
 or the XL MaxSonar WR series
-([datasheet](https://www.maxbotix.com/documents/XL-MaxSonar-WR_Datasheet.pdf))
+([datasheet ](https://www.maxbotix.com/documents/XL-MaxSonar-WR_Datasheet.pdf))
 with ESPHome to measure distances. Depending on the model, these sensors can measure
 in a range between 30 centimeters and 10 meters.
 

@@ -6,12 +6,12 @@ title: "ESP32 Hall Sensor"
 {{< seo description="" image="" >}}
 
 The `esp32_hall` sensor platform allows you to use the integrated
-[hall effect sensor](https://en.wikipedia.org/wiki/Hall_effect_sensor) of the
+[hall effect sensor ](https://en.wikipedia.org/wiki/Hall_effect_sensor) of the
 ESP32 chip to measure the magnitude and direction of magnetic field around the
 chip (with quite poor accuracy).
 
 {{< warning >}}
-Espressif has [removed support](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/release-5.x/5.0/peripherals.html?highlight=hall_sensor_read#api-changes)
+Espressif has [removed support ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/release-5.x/5.0/peripherals.html?highlight=hall_sensor_read#api-changes)
 for the ESP32's Hall sensor in IDF 5; for this reason, support for this component is
 likely to be removed in a future release.
 

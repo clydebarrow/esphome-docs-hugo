@@ -56,17 +56,17 @@ Some devices do not support duplex audio, meaning they cannot output audio to a 
 
 The following actions are available for use in automations:
 
-##### ``sound_level.start`` Action
+##### `sound_level.start` Action
 
 Starts measuring sound levels. Does nothing in passive mode.
 
-##### ``sound_level.stop`` Action
+##### `sound_level.stop` Action
 
 Stops measuring sound levels. Does nothing in passive mode.
 
 ## See Also
 
-- [Root Mean Square (Wikipedia)](https://en.wikipedia.org/wiki/Root_mean_square)
+- [Root Mean Square (Wikipedia) ](https://en.wikipedia.org/wiki/Root_mean_square)
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`sound_level/sound_level.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/sound_level.md)

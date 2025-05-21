@@ -43,8 +43,7 @@ to use that name, you can set `name: None`.
   {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the light in the frontend.
 - **effects** (*Optional*, list): A list of [light effects]({{< ref "components/light/_index#light-effects" >}}) to use for this light.
-- **gamma_correct** (*Optional*, float): Apply a `gamma correction factor
-  <https://en.wikipedia.org/wiki/Gamma_correction>`__ to the light channels. Defaults to `2.8`.
+- **gamma_correct** (*Optional*, float): Apply a [gamma correction factor  ](https://en.wikipedia.org/wiki/Gamma_correction) to the light channels. Defaults to `2.8`.
 - **default_transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The default transition length to use when no
   transition length is set in the light call. Defaults to `1s`.
 - **flash_transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The transition length to use when flash is called.
@@ -67,11 +66,11 @@ to use that name, you can set `name: None`.
     - `ALWAYS_ON` - Always initialize the light as ON on bootup.
 
 - **on_turn_on** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when the light is turned on. See
-  [``light.on_turn_on`` / ``light.on_turn_off`` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
+  [`light.on_turn_on` / `light.on_turn_off` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
 - **on_turn_off** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when the light is turned off.
-  See [``light.on_turn_on`` / ``light.on_turn_off`` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
+  See [`light.on_turn_on` / `light.on_turn_off` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
 - **on_state** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when the light's set state is
-  changed. See [``light.on_state`` Trigger]({{< ref "components/light/_index#light-on_state_trigger" >}}).
+  changed. See [`light.on_state` Trigger]({{< ref "components/light/_index#light-on_state_trigger" >}}).
 
 **Additional configuration variables for addressable lights:**
 
@@ -87,8 +86,7 @@ to use that name, you can set `name: None`.
   frontend (like Home Assistant). Only specifying an `id` without a `name` will implicitly set this to true.
 - **disabled_by_default** (*Optional*, boolean): If true, then this entity should not be added to any client's frontend,
   (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI). Defaults to `false`.
-- **entity_category** (*Optional*, string): The category of the entity. See `this list
-  <https://developers.home-assistant.io/docs/core/entity/#generic-properties>`__ for a list of available options. Set
+- **entity_category** (*Optional*, string): The category of the entity. See [this list  ](https://developers.home-assistant.io/docs/core/entity/#generic-properties) for a list of available options. Set
   to `""` to remove the default entity category.
 - If MQTT enabled, all other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 - If Webserver enabled and [version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}) is selected, all other options from
@@ -144,7 +142,7 @@ explicitly set them to zero.
 
 {{< anchor "light-toggle_action" >}}
 
-### ``light.toggle`` Action
+### `light.toggle` Action
 
 This action toggles a light with the given ID when executed.
 
@@ -175,7 +173,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "light-turn_on_action" >}}
 
-### ``light.turn_on`` Action
+### `light.turn_on` Action
 
 This action turns a light with the given ID on when executed.
 
@@ -256,7 +254,7 @@ result in color at 40% brightness and white at 60% brightness:
 {{< /note >}}
 {{< anchor "light-turn_off_action" >}}
 
-### ``light.turn_off`` Action
+### `light.turn_off` Action
 
 This action turns a light with the given ID off when executed.
 
@@ -289,7 +287,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "light-control_action" >}}
 
-### ``light.control`` Action
+### `light.control` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) is a generic call to change the state of a light - it is essentially just a
 combination of the turn_on and turn_off calls.
@@ -310,7 +308,7 @@ on_...:
 
 {{< anchor "light-dim_relative_action" >}}
 
-### ``light.dim_relative`` Action
+### `light.dim_relative` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to dim a light that supports brightness by a relative amount.
 
@@ -365,7 +363,7 @@ binary_sensor:
 {{< /note >}}
 {{< anchor "light-addressable_set_action" >}}
 
-### ``light.addressable_set`` Action
+### `light.addressable_set` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually set a range of LEDs on an addressable light to a specific
 color.
@@ -399,7 +397,7 @@ on_...:
 {{< anchor "light-is_on_condition" >}}
 {{< anchor "light-is_off_condition" >}}
 
-### ``light.is_on`` / ``light.is_off`` Condition
+### `light.is_on` / `light.is_off` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given light is ON or OFF. OFF means that the light is completely
 OFF, and ON means that the light is emitting at least a bit of light.
@@ -416,7 +414,7 @@ on_...:
 ```
 {{< anchor "light-on_turn_on_off_trigger" >}}
 
-### ``light.on_turn_on`` / ``light.on_turn_off`` Trigger
+### `light.on_turn_on` / `light.on_turn_off` Trigger
 
 This trigger is activated each time the light is turned on or off. It is consistent with the behavior of the
 `light.is_on` and `light.is_off` condition above.
@@ -433,7 +431,7 @@ light:
 ```
 {{< anchor "light-on_state_trigger" >}}
 
-### ``light.on_state`` Trigger
+### `light.on_state` Trigger
 
 This trigger is activated each time the set light state is changed. It is not triggered based on current state, but
 rather, it triggers on the set state which can differ from the current state due to transitions. For example, the
@@ -591,7 +589,7 @@ light:
   - **green** (*Optional*, percentage): The green channel of the light, if applicable. Defaults to `100%`.
   - **blue** (*Optional*, percentage): The blue channel of the light, if applicable. Defaults to `100%`.
   - **white** (*Optional*, percentage): The white channel of the light, if applicable. Defaults to `100%`.
-  - **color_temperature** (*Optional*, float): The color temperature (in [mireds](https://en.wikipedia.org/wiki/Mired)
+  - **color_temperature** (*Optional*, float): The color temperature (in [mireds ](https://en.wikipedia.org/wiki/Mired)
     or Kelvin) of the light, if applicable.
   - **cold_white** (*Optional*, percentage): The cold white channel of the light, if applicable. Defaults to `100%`.
   - **warm_white** (*Optional*, percentage): The warm white channel of the light, if applicable. Defaults to `100%`.
@@ -938,7 +936,7 @@ light:
 
 ```
 Examples of this API can be found
-[here](https://github.com/esphome/esphome/blob/dev/esphome/components/light/addressable_light_effect.h)
+[here ](https://github.com/esphome/esphome/blob/dev/esphome/components/light/addressable_light_effect.h)
 (the built-in addressable light effects).
 
 ### Automation Light Effect
@@ -1115,6 +1113,6 @@ The following realtime protocols are supported:
 ## See Also
 
 - :apiref:`light/light_state.h`
-- [WS2812FX library](https://github.com/kitesurfer1404/WS2812FX) by [@kitesurfer1404](https://github.com/kitesurfer1404)
+- [WS2812FX library ](https://github.com/kitesurfer1404/WS2812FX) by [@kitesurfer1404 ](https://github.com/kitesurfer1404)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/index.md)
 

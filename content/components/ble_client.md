@@ -49,21 +49,21 @@ ble_client:
 Automations:
 
 - **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the client connects to a device. See [``on_connect``]({{< ref "components/ble_client#ble_client-on_connect" >}}).
+  when the client connects to a device. See [`on_connect`]({{< ref "components/ble_client#ble_client-on_connect" >}}).
 - **on_disconnect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the client disconnects from a device. See [``on_disconnect``]({{< ref "components/ble_client#ble_client-on_disconnect" >}}).
+  when the client disconnects from a device. See [`on_disconnect`]({{< ref "components/ble_client#ble_client-on_disconnect" >}}).
 - **on_passkey_request** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to enter
-  the passkey required by the other BLE device. See [``on_passkey_request``]({{< ref "components/ble_client#ble_client-on_passkey_request" >}}).
+  the passkey required by the other BLE device. See [`on_passkey_request`]({{< ref "components/ble_client#ble_client-on_passkey_request" >}}).
 - **on_passkey_notification** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
-  display the passkey to the user. See [``on_passkey_notification``]({{< ref "components/ble_client#ble_client-on_passkey_notification" >}}).
+  display the passkey to the user. See [`on_passkey_notification`]({{< ref "components/ble_client#ble_client-on_passkey_notification" >}}).
 - **on_numeric_comparison_request** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
-  compare the passkeys shown on the two BLE devices. See [``on_numeric_comparison_request``]({{< ref "components/ble_client#ble_client-on_numeric_comparison_request" >}}).
+  compare the passkeys shown on the two BLE devices. See [`on_numeric_comparison_request`]({{< ref "components/ble_client#ble_client-on_numeric_comparison_request" >}}).
 
 ## BLE Client Automation
 
 {{< anchor "ble_client-on_connect" >}}
 
-### ``on_connect``
+### `on_connect`
 
 This automation is triggered when the client connects to the BLE device.
 
@@ -79,7 +79,7 @@ ble_client:
 ```
 {{< anchor "ble_client-on_disconnect" >}}
 
-### ``on_disconnect``
+### `on_disconnect`
 
 This automation is triggered when the client disconnects from a BLE device.
 
@@ -96,7 +96,7 @@ ble_client:
 ```
 {{< anchor "ble_client-on_passkey_request" >}}
 
-### ``on_passkey_request``
+### `on_passkey_request`
 
 This automation is triggered when the BLE device requests a passkey for authentication.
 
@@ -113,7 +113,7 @@ ble_client:
 ```
 {{< anchor "ble_client-on_passkey_notification" >}}
 
-### ``on_passkey_notification``
+### `on_passkey_notification`
 
 This automation is triggered when a passkey is received from the BLE device.
 
@@ -130,7 +130,7 @@ ble_client:
 ```
 {{< anchor "ble_client-on_numeric_comparison_request" >}}
 
-### ``on_numeric_comparison_request``
+### `on_numeric_comparison_request`
 
 This automation is triggered when a numeric comparison is requested by the BLE device.
 
@@ -150,7 +150,7 @@ ble_client:
 ```
 {{< anchor "ble_client-connect_action" >}}
 
-## ``ble_client.connect`` Action
+## `ble_client.connect` Action
 
 This action is useful only for devices with `auto_connect: false` and allows a connection to be made from
 within an automation. Once connected other actions like `ble_write` can be used. This is useful where
@@ -192,14 +192,14 @@ if scanning has been stopped - another mechanism may be required to restart it.
 
 {{< anchor "ble_client-disconnect_action" >}}
 
-## ``ble_client.disconnect`` Action
+## `ble_client.disconnect` Action
 
 This action disconnects a device that was connected with the `ble_client.connect` action.
 Execution of the automation block sequence resumes after the disconnect has completed.
 
 {{< anchor "ble_client-ble_write_action" >}}
 
-## ``ble_client.ble_write`` Action
+## `ble_client.ble_write` Action
 
 This action triggers a write to a specified BLE characteristic. The write is attempted in
 a best-effort fashion and will only succeed if the `ble_client`'s  connection has been
@@ -242,7 +242,7 @@ Configuration variables:
 
 {{< anchor "ble_client-passkey_reply_action" >}}
 
-## ``ble_client.passkey_reply`` Action
+## `ble_client.passkey_reply` Action
 
 This action triggers an authentication attempt using the specified `passkey`.
 
@@ -263,7 +263,7 @@ Configuration variables:
 
 {{< anchor "ble_client-numeric_comparison_reply_action" >}}
 
-## ``ble_client.numeric_comparison_reply`` Action
+## `ble_client.numeric_comparison_reply` Action
 
 This action triggers an authentication attempt after a numeric comparison.
 
@@ -285,7 +285,7 @@ Configuration variables:
 
 {{< anchor "ble_client-remove_bond_action" >}}
 
-## ``ble_client.remove_bond`` Action
+## `ble_client.remove_bond` Action
 
 This action removes a device from the security database and manages
 unpairing.

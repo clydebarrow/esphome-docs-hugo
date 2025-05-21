@@ -54,12 +54,12 @@ the sensors aren't behaving as expected.
   `0.5V`, `0V`. Default is `0V`.
 
 For a more detailed explanation of the parameters above, please see the
-[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/touch_pad.html#optimization-of-measurements)
+[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/touch_pad.html#optimization-of-measurements)
 
 *ESP32 only*
 
 - **iir_filter** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Optionally set up an
-  [Infinite Impulse Response](https://en.wikipedia.org/wiki/Infinite_impulse_response)
+  [Infinite Impulse Response ](https://en.wikipedia.org/wiki/Infinite_impulse_response)
   filter should be applied to all touch pads. This can increase the accuracy of the touch pads a lot, but higher values
   decrease the response time. A good value to start with is `10ms`. By default, the IIR filter is inactive.
 
@@ -81,7 +81,7 @@ Filter configuration:
   Must be one of `OFF`, `IIR_2`, `IIR_4` or `IIR_8`.
 
 For a more detailed explanation of the filter configuration, please see the
-[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv419touch_filter_config)
+[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv419touch_filter_config)
 
 Denoise configuration:
 
@@ -91,7 +91,7 @@ Denoise configuration:
   of `L0`, `L1`, `L2`, `L3`, `L4`, `L5`, `L6` or `L7`.
 
 For a more detailed explanation of the denoise configuration, please see the
-[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv417touch_pad_denoise)
+[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv417touch_pad_denoise)
 
 Waterproof configuration:
 
@@ -102,7 +102,7 @@ Waterproof configuration:
   `L0`, `L1`, `L2`, `L3`, `L4`, `L5`, `L6` or `L7`.
 
 For a more detailed explanation of the waterproof configuration, please see the
-[ESP-IDF documentation.](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv420touch_pad_waterproof)
+[ESP-IDF documentation. ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/peripherals/touch_pad.html#_CPPv420touch_pad_waterproof)
 
 {{< anchor "esp32-touch-binary-sensor" >}}
 
@@ -243,6 +243,6 @@ to make some adjustments to your configuration to accommodate this behavior.
 
 - {{< docref "/components/binary_sensor/index" >}}
 - :apiref:`esp32_touch/esp32_touch.h`
-- [esp-idf Touch Sensor API](https://esp-idf.readthedocs.io/en/latest/api-reference/peripherals/touch_pad.html)
+- [esp-idf Touch Sensor API ](https://esp-idf.readthedocs.io/en/latest/api-reference/peripherals/touch_pad.html)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/binary_sensor/esp32_touch.md)
 

@@ -174,7 +174,7 @@ that have a lower severity than the global log level.
 
 {{< anchor "logger-log_action" >}}
 
-## ``logger.log`` Action
+## `logger.log` Action
 
 Print a formatted message to the logs.
 
@@ -201,7 +201,7 @@ Configuration options:
 -  **tag** (*Optional*, string): The tag (seen in front of the message in the logs) to print the message
    with. Defaults to `main`.
 
-## ``logger.set_level`` Action
+## `logger.set_level` Action
 
 Set the log level at runtime. The level can only be set to a level that is no less severe than the global log level.
 
@@ -223,7 +223,7 @@ on_...:
 
 {{< anchor "logger-on_message" >}}
 
-### ``on_message``
+### `on_message`
 
 This automation will be triggered when a new message is added to the log.
 In [lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the message, log level and tag from the trigger

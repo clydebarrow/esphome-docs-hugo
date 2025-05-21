@@ -25,10 +25,10 @@ light:
 - **color_temperature** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the color temperature. It returns a float from 0 to 1 in the mired scale. Hereby 0 corresponds to the cold white temperature and 1 to the warm white temperature.
 - **brightness** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the brightness. It returns a float from 0 to 1.
 - **cold_white_color_temperature** (**Required**, float): The coldest color temperature supported by this light. This
-  is the lowest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the highest value when
+  is the lowest value when expressed in [mireds ](https://en.wikipedia.org/wiki/Mired), or the highest value when
   expressed in Kelvin.
 - **warm_white_color_temperature** (**Required**, float): The warmest color temperature supported by this light. This
-  is the highest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the lowest value when
+  is the highest value when expressed in [mireds ](https://en.wikipedia.org/wiki/Mired), or the lowest value when
   expressed in Kelvin.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 

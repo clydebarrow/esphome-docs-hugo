@@ -5,7 +5,7 @@ title: "PVVX MiThermometer Display"
 
 {{< seo description="" image="" >}}
 
-The [pvvx_mithermometer` display platform allows you to use devices running the `ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
+The [pvvx_mithermometer` display platform allows you to use devices running the `ATC_MiThermometer firmware ](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
 
 {{< img src="xiaomi_lywsd03mmc.jpg" alt="Image" caption="Xiaomi LYWSD03MMC." width="75.0%" class="center" >}}
 
@@ -17,7 +17,7 @@ After the data has been transmitted, the BLE connection is terminated in order t
 The pvvx firmware refreshes the screen periodically (can be set as minimum LCD refresh rate in the firmware configuration).
 By default, the internal sensor data and, if available and valid (`validity_period`), the external data are switched every 2.5 s.
 Further firmware configuration makes it possible to activate other display modes such as time and battery status.
-The firmware configuration can be changed via browser using [TelinkMiFlasher.html](https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html).
+The firmware configuration can be changed via browser using [TelinkMiFlasher.html ](https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html).
 
 ```yaml
 # Example configuration entry
@@ -105,16 +105,16 @@ Possible values for the unit of the big number (`it.print_unit()`) are:
 
 The appearance of the smiley can be defined by combining the functions `it.print_happy()`, `it.print_sad()` and  `it.print_bracket(true)`:
 
-| ``print_bracket()`` | ``print_sad()`` `` | print_happy()`` | result |  |  |
+| `print_bracket()` `p | rint_sad()` `print | _happy()` result |  |  |  |
 | --- | --- | --- | --- | --- | --- |
 | false | false | false |  |  |  |
-| false | false | true | ``^_^` | ` |  |
-| false | true | false | ``-∧-` | ` |  |
-| false | true | true | ``Δ△Δ` | ` |  |
-| true | false | false | ``( | )`` |  |
-| true | false | true | ``(^_^ | )`` |  |
-| true | true | false | ``(-∧- | )`` |  |
-| true | true | true | ``(Δ△Δ | )`` |  |
+| false | false | true | `^_^` |  |  |
+| false | true | false | `-∧-` |  |  |
+| false | true | true | `Δ△Δ` |  |  |
+| true | false | false | `( | )` |  |
+| true | false | true | `(^_^ | )` |  |
+| true | true | false | `(-∧- | )` |  |
+| true | true | true | `(Δ△Δ | )` |  |
 
 
 ### Display states of other sensors
@@ -219,6 +219,6 @@ display:
 - {{< docref "/components/ble_client" >}}
 - {{< docref "/components/sensor/xiaomi_ble" >}}
 - :apiref:`pvvx_mithermometer/display/pvvx_display.h`
-- [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by [pvvx](https://github.com/pvvx)
+- [ATC_MiThermometer firmware ](https://github.com/pvvx/ATC_MiThermometer) by [pvvx ](https://github.com/pvvx)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/pvvx_mithermometer.md)
 

@@ -6,7 +6,7 @@ title: "Installing ESPHome Manually"
 
 ## Windows
 
-Download Python from [the official site](https://www.python.org/downloads/).
+Download Python from [the official site ](https://www.python.org/downloads/).
 
 {{< img src="python-win-installer.png" alt="Python installer window with arrows pointing to \"Add Python to PATH\" and \"Install Now\"" width="75.0%" class="center" >}}
 
@@ -56,7 +56,7 @@ ESPHome supports macOS. There are several ways to install ESPHome on macOS:
 
 **Homebrew**
 
-An easy way for installation is via [Homebrew](https://brew.sh/):
+An easy way for installation is via [Homebrew ](https://brew.sh/):
 
 ```console
 $ brew install esphome
@@ -70,7 +70,7 @@ Version: 2024.12.0
 
 ```
 If you encounter any issues with Homebrew installation, please check the
-[ESPHome Homebrew Formula](https://formulae.brew.sh/formula/esphome) page
+[ESPHome Homebrew Formula ](https://formulae.brew.sh/formula/esphome) page
 for additional information.
 
 {{< note >}}
@@ -87,7 +87,7 @@ highly recommended. If you are not familiar with Python virtual environments, Ho
 may be easier.
 
 You will require Python 3.9 or newer. While your Mac may have a version of Python installed it may not be up-to-date.
-Python can be installed from the [official site](https://www.python.org/downloads)
+Python can be installed from the [official site ](https://www.python.org/downloads)
 or with Homebrew. Once Python is installed, create and activate a virtual environment and install ESPHome with pip:
 
 ```console
@@ -102,7 +102,7 @@ Any time you want to use ESPHome, you will need to have activated the virtual en
 **Cloning the repository**
 
 For development purposes, we recommend cloning the repository. See our
-[developer site](https://developers.esphome.io) for more information on setting up a development environment.
+[developer site ](https://developers.esphome.io) for more information on setting up a development environment.
 
 ## Linux
 
@@ -159,6 +159,6 @@ PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc``, then log out and back in.
 
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
-- [Developer site](https://developers.esphome.io)
+- [Developer site ](https://developers.esphome.io)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/guides/installing_esphome.md)
 

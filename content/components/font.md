@@ -5,7 +5,7 @@ title: "Font Renderer Component"
 
 {{< seo description="" image="" >}}
 
-ESPHome's graphical rendering engine also has a powerful font drawer which integrates seamlessly into the system. You have the option to use **any** OpenType/TrueType ([.ttf`, `.otf`, `.woff`) font file at **any** size, as well as fixed-size `PCF](https://en.wikipedia.org/wiki/Portable_Compiled_Format) and [BDF](https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format) bitmap fonts.
+ESPHome's graphical rendering engine also has a powerful font drawer which integrates seamlessly into the system. You have the option to use **any** OpenType/TrueType ([.ttf`, `.otf`, `.woff`) font file at **any** size, as well as fixed-size `PCF ](https://en.wikipedia.org/wiki/Portable_Compiled_Format) and [BDF ](https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format) bitmap fonts.
 
 These fonts can be used in ESPHome's [own rendering engine]({{< ref "components/display/_index#display-engine" >}}) or in the :doc:`LVGL Graphics </c{{< docref "/components/lvgl/index" "LVGL Graphics" >}}
 
@@ -139,7 +139,7 @@ display:
   languages of Europe and the Americas with over 5 million speakers. Other options include
   `GF_Arabic_Core`, `GF_Cyrillic_Core`, `GF_Greek_Core`, their `Plus` variants, as well as
   `GF_Latin_African`, `GF_Latin_PriAfrican` and `GF_Latin_Vietnamese`.
-  See the [Google Fonts Glyphset documentation](https://github.com/googlefonts/glyphsets/blob/main/GLYPHSETS.md)
+  See the [Google Fonts Glyphset documentation ](https://github.com/googlefonts/glyphsets/blob/main/GLYPHSETS.md)
   for an extensive list of all possible sets, along with their names and the languages supported by
   each of those sets.  Note that `GF_Latin_Kernel` may need to be included for glyphs for basic
   characters such as numbers (0-9) and whitespace to be present.
@@ -182,8 +182,8 @@ to install it using `pip install "pillow==10.4.0"`.
 - :apiref:`display/display_buffer.h`
 - [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}})
 - {{< docref "/components/lvgl/index" >}}
-- [MDI cheatsheet](https://pictogrammers.com/library/mdi/)
-- [MDI font repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/)
-- [Google Fonts Glyphsets](https://github.com/googlefonts/glyphsets/blob/main/GLYPHSETS.md)
+- [MDI cheatsheet ](https://pictogrammers.com/library/mdi/)
+- [MDI font repository ](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/)
+- [Google Fonts Glyphsets ](https://github.com/googlefonts/glyphsets/blob/main/GLYPHSETS.md)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/font.md)
 

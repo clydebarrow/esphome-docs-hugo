@@ -6,10 +6,10 @@ title: "ZyAura CO2 & Temperature & Humidity Sensor"
 {{< seo description="" image="" >}}
 
 The ZyAura CO2 & Temperature & Humidity sensor allows you to use your
-[ZGm05(3)(U)](http://www.zyaura.com/products/ZGm05.asp)
-([MT8057](https://masterkit.ru/shop/1266110), [MT8057S](https://medgadgets.ru/shop/kit-mt8057.html)),
-[ZG1683R(U)](http://www.zyaura.com/products/ZG1683R.asp) ([MT8060](https://masterkit.ru/shop/1921398)),
-[ZG1583RUD](http://www.zyaura.com/products/ZG1583RUD.asp)
+[ZGm05(3)(U) ](http://www.zyaura.com/products/ZGm05.asp)
+([MT8057 ](https://masterkit.ru/shop/1266110), [MT8057S ](https://medgadgets.ru/shop/kit-mt8057.html)),
+[ZG1683R(U) ](http://www.zyaura.com/products/ZG1683R.asp) ([MT8060 ](https://masterkit.ru/shop/1921398)),
+[ZG1583RUD ](http://www.zyaura.com/products/ZG1583RUD.asp)
 monitors with ESPHome.
 
 {{< img src="zgm053-full.jpg" alt="Image" caption="ZyAura ZGm053U CO2 & Temperature Monitor." width="80.0%" class="center" >}}
@@ -61,9 +61,9 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "mhz19/" >}}
-- [CO2mon-esp firmware](https://github.com/Anonym-tsk/co2mon-esp) by [@anonym-tsk](https://github.com/Anonym-tsk)
-- [Some information about hacking MT8060](https://habr.com/ru/company/dadget/blog/394333/)
-- [CO2MeterHacking project](https://revspace.nl/CO2MeterHacking)
+- [CO2mon-esp firmware ](https://github.com/Anonym-tsk/co2mon-esp) by [@anonym-tsk ](https://github.com/Anonym-tsk)
+- [Some information about hacking MT8060 ](https://habr.com/ru/company/dadget/blog/394333/)
+- [CO2MeterHacking project ](https://revspace.nl/CO2MeterHacking)
 - :apiref:`zyaura/zyaura.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/zyaura.md)
 

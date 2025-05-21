@@ -48,9 +48,9 @@ Configuration variables:
 - **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **on_sms_received** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when an SMS is received. See [``on_sms_received`` Trigger]({{< ref "components/sim800l#sim800l-on_sms_received" >}}).
+  performed when an SMS is received. See [`on_sms_received` Trigger]({{< ref "components/sim800l#sim800l-on_sms_received" >}}).
 - **on_incoming_call** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when a call is received. See [``on_incoming_call`` Trigger]({{< ref "components/sim800l#sim800l-on_incoming_call" >}}).
+  performed when a call is received. See [`on_incoming_call` Trigger]({{< ref "components/sim800l#sim800l-on_incoming_call" >}}).
 - **on_call_connected** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
   performed when a call is connected, either because an outgoing call accepted is
   accepted or an incoming call answered.
@@ -91,7 +91,7 @@ Configuration variables:
 
 {{< anchor "sim800l-on_sms_received" >}}
 
-## ``on_sms_received`` Trigger
+## `on_sms_received` Trigger
 
 With this configuration option you can write complex automations whenever an SMS message
 is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
@@ -107,7 +107,7 @@ on_sms_received:
 ```
 {{< anchor "sim800l-on_incoming_call" >}}
 
-## ``on_incoming_call`` Trigger
+## `on_incoming_call` Trigger
 
 This automation triggers every time the SIM800L sends a RING / Caller ID message, this message
 is sent several times per call, presumably every time the phone "RINGs". The automation provides
@@ -129,7 +129,7 @@ on_incoming_call:
 
 
 ```
-## ``on_ussd_received`` Trigger
+## `on_ussd_received` Trigger
 
 With this configuration option you can write complex automations whenever the ussd code from network
 has been received.
@@ -142,7 +142,7 @@ on_ussd_received:
 ```
 {{< anchor "sim800l-send_sms_action" >}}
 
-## ``sim800l.send_sms`` Action
+## `sim800l.send_sms` Action
 
 Send a SMS message to a phone recipient using this action in automations.
 
@@ -172,7 +172,7 @@ Configuration options:
 
 {{< anchor "sim800l-dial_action" >}}
 
-## ``sim800l.dial`` Action
+## `sim800l.dial` Action
 
 Dial to a phone recipient using this action in automations.
 
@@ -189,7 +189,7 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
 
 
-## ``sim800l.connect`` Action
+## `sim800l.connect` Action
 
 Answers an incoming call.
 
@@ -200,7 +200,7 @@ on_...:
 
 
 ```
-## ``sim800l.disconnect`` Action
+## `sim800l.disconnect` Action
 
 Disconnects a call, either dialed in or received.
 
@@ -211,7 +211,7 @@ on_...:
 
 
 ```
-## ``sim800l.send_ussd`` Action
+## `sim800l.send_ussd` Action
 
 Sends a ussd code to the network.
 

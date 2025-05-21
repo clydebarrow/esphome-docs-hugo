@@ -10,7 +10,7 @@ from a voltage sensor (such as the {{< docref "adc/" "ADC Sensor" >}}) into resi
 in Ω (ohm).
 
 In order to calculate the resistance, the circuit needs to be set up in a
-[voltage divider circuit](https://learn.sparkfun.com/tutorials/voltage-dividers/all).
+[voltage divider circuit ](https://learn.sparkfun.com/tutorials/voltage-dividers/all).
 This consists of three parts:
 
 - A voltage reference, usually this is connected to 3.3V (VCC). For example in the image

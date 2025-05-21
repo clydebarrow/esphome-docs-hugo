@@ -8,8 +8,8 @@ title: "BME68x Temperature, Humidity, Pressure & Gas Sensor via BSEC2"
 ## Component/Hub
 
 The `bme68x_bsec2_i2c` sensor platform allows you to use your
-[BME680](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) and 
-[BME688](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)
+[BME680 ](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) and 
+[BME688 ](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)
 (`Adafruit`_, `Pimoroni`_) temperature, humidity, pressure and gas sensors with ESPHome via the Bosch Sensortec
 Environmental Cluster 2 (BSEC2) software library. The use of Bosch's proprietary algorithms provide an Index for Air
 Quality (IAQ) measurement derived from the gas resistance sensor's response to specific Volatile Organic Compounds
@@ -245,10 +245,10 @@ saved to flash so that the process does not have to start from scratch on device
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "bme680/" >}}
 - :apiref:`bme68x_bsec2_i2c/bme68x_bsec2_i2c.h`
-- [BME680 datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
-- [BME688 datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)
-- [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
-- [Bosch BSEC2 Library](https://github.com/boschsensortec/Bosch-BSEC2-Library) by [Bosch Sensortec](https://www.bosch-sensortec.com/)
-- [Bosch Sensortec Community](https://community.bosch-sensortec.com/)
+- [BME680 datasheet ](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
+- [BME688 datasheet ](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)
+- [BME680 VOC classification ](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
+- [Bosch BSEC2 Library ](https://github.com/boschsensortec/Bosch-BSEC2-Library) by [Bosch Sensortec ](https://www.bosch-sensortec.com/)
+- [Bosch Sensortec Community ](https://community.bosch-sensortec.com/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/bme68x_bsec2.md)
 

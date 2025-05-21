@@ -40,14 +40,14 @@ text_sensor:
 Automations:
 
 - **on_notify** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
-  perform when a notify message is received from the device. See [``on_notify``]({{< ref "components/text_sensor/ble_client#ble_text_sensor-on_notify" >}}).
+  perform when a notify message is received from the device. See [`on_notify`]({{< ref "components/text_sensor/ble_client#ble_text_sensor-on_notify" >}}).
 
 
 ## BLE Sensor Automation
 
 {{< anchor "ble_text_sensor-on_notify" >}}
 
-### ``on_notify``
+### `on_notify`
 
 This automation is triggered when the device/server sends a notify message for
 a characteristic. The config variable *notify* must be true or this will have

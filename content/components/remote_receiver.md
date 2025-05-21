@@ -539,7 +539,7 @@ remote_receiver:
 {{< /note >}}
 {{< note >}}
 For the black Sonoff RF Bridge, you can bypass the EFM8BB1 microcontroller handling RF signals with
-[this hack](https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-RF-Bridge---Direct-Hack)
+[this hack ](https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-RF-Bridge---Direct-Hack)
 created by the GitHub user wildwiz. Then use this configuration for the remote receiver/transmitter hubs:
 
 ```yaml
@@ -552,7 +552,7 @@ remote_receiver:
             pin: 5
             carrier_duty_percent: 100%
 
-There's also a software ["hack"](https://github.com/mightymos/RF-Bridge-OB38S003) that allows the radio chip to mirror all the voltages to the ESP to do the decoding,
+There's also a software ["hack" ](https://github.com/mightymos/RF-Bridge-OB38S003) that allows the radio chip to mirror all the voltages to the ESP to do the decoding,
 rendering the hardware hack uncessary. This software passthrough mode can be used for the OB38S003 (white) and EFM8BB1 (black) sonoff RF bridge. Then use this configuration for the remote receiver/transmitter hubs:
 
 ```yaml
@@ -580,7 +580,7 @@ remote_receiver:
 - [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}})
 - [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}})
 - {{< docref "/components/rf_bridge" >}}
-- [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
+- [RCSwitch ](https://github.com/sui77/rc-switch) by [Suat Özgür ](https://github.com/sui77)
 - :apiref:`remote/remote_receiver.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/remote_receiver.md)
 

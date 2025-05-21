@@ -5,8 +5,8 @@ title: "Honeywell HumidIcon (I2C HIH series) Temperature & Humidity Sensor"
 
 {{< seo description="" image="" >}}
 
-Honeywell HumidIcon (I2C HIH series) Temperature & Humidity sensors with ESPHome ([website](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/humidity-with-temperature-sensors),
-[datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/humidity-with-temperature-sensors/common/documents/sps-siot-humidity-sensors-line-guide-009034-7-en-ciid-54931.pdf?download=false)).
+Honeywell HumidIcon (I2C HIH series) Temperature & Humidity sensors with ESPHome ([website ](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/humidity-with-temperature-sensors),
+[datasheet ](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/humidity-with-temperature-sensors/common/documents/sps-siot-humidity-sensors-line-guide-009034-7-en-ciid-54931.pdf?download=false)).
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 Example sensors:

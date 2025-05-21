@@ -57,7 +57,7 @@ should be prefixed with the page name (page0/page1 or whatever you have changed 
 
 {{< anchor "switch-nextion-publish_action" >}}
 
-## ``switch.nextion.publish`` Action
+## `switch.nextion.publish` Action
 
 You can also publish a state to a Nextion switch from elsewhere in your YAML file
 with the `switch.nextion.publish` action.

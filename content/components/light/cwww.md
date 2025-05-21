@@ -36,9 +36,9 @@ calculation assumes that both lights have the same illuminance, which might not 
 
 - **cold_white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the cold white channel.
 - **warm_white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the warm white channel.
-- **cold_white_color_temperature** (*Optional*, float): The color temperature (in [mireds](https://en.wikipedia.org/wiki/Mired) or Kelvin)
+- **cold_white_color_temperature** (*Optional*, float): The color temperature (in [mireds ](https://en.wikipedia.org/wiki/Mired) or Kelvin)
   of the cold white channel. Note that this option is required to control the mixing from Home Assistant.
-- **warm_white_color_temperature** (*Optional*, float): The color temperature (in [mireds](https://en.wikipedia.org/wiki/Mired) or Kelvin)
+- **warm_white_color_temperature** (*Optional*, float): The color temperature (in [mireds ](https://en.wikipedia.org/wiki/Mired) or Kelvin)
   of the warm white channel. Note that this option is required to control the mixing from Home Assistant.
 - **constant_brightness** (*Optional*, boolean): When enabled, this will keep the overall brightness of the cold and warm white channels constant by limiting the combined output to 100% of a single channel. This reduces the possible overall brightness but is necessary for some power supplies that are not able to run both channels at full brightness at once. Defaults to `false`.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).

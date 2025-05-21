@@ -38,7 +38,7 @@ When the Number is updated a modbus write command is created sent to the device.
 - **offset** (*Optional*, int): Offset from start address in bytes (only required for uncommon response encodings). If more than one register is written in a command this value is used to find the start of this datapoint relative to start address. The component calculates the size of the range based on offset and size of the value type.
 - **custom_command** (*Optional*, list of bytes): raw bytes for modbus command. This allows using non-standard commands. If `custom_command` is used `address` and `register_type` can't be used.
   custom data must contain all required bytes including the modbus device address. The crc is automatically calculated and appended to the command.
-  See [Using ``custom_command``]({{< ref "components/modbus_controller#modbus_custom_command" >}}) how to use `custom_command`
+  See [Using `custom_command`]({{< ref "components/modbus_controller#modbus_custom_command" >}}) how to use `custom_command`
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the new value of the sensor.
 

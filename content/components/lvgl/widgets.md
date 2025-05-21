@@ -168,7 +168,7 @@ The text may be a Unicode string or other constant convertible to a string; if t
 standard escape sequences sucn as newline `\n` and Unicode codepoints will be translated.
 The text value may also be a lambda returning a `std::string` or may be
 specified with a `format` property utilising `printf` style formatting. There is also a `time_format` option
-which allows use of [strftime](http://www.cplusplus.com/reference/ctime/strftime/) formats.
+which allows use of [strftime ](http://www.cplusplus.com/reference/ctime/strftime/) formats.
 
 
 **Examples:**
@@ -212,7 +212,7 @@ on_...:
 ```
 {{< anchor "lvgl-widget-animimg" >}}
 
-## ``animimg``
+## `animimg`
 
 The animation image is similar to the normal `image` widget. The main difference is that instead of one source image, you set a list of multiple source images. You can also specify a duration and a repeat count.
 
@@ -269,7 +269,7 @@ See [Battery charging animation]({{< ref "cookbook/lvgl#lvgl-cookbook-animbatt" 
 
 {{< anchor "lvgl-widget-arc" >}}
 
-## ``arc``
+## `arc`
 
 The arc consists of a background and a foreground arc. The indicator foreground can be touch-adjusted with a knob.
 
@@ -354,7 +354,7 @@ See [Media player volume slider]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}
 
 {{< anchor "lvgl-widget-bar" >}}
 
-## ``bar``
+## `bar`
 
 The bar widget has a background and an indicator foreground on it. The size of the indicator is set according to the current `value` of the bar.
 
@@ -411,7 +411,7 @@ The `bar` can be also integrated as {{< docref "/components/sensor/lvgl" "Sensor
 
 {{< anchor "lvgl-widget-button" >}}
 
-## ``button``
+## `button`
 
 Simple push (momentary) or toggle (two-states) button.
 
@@ -442,7 +442,7 @@ A notable state is `checked` (boolean) which can have different styles applied.
     id: btn_id
 
 ```
-To have a button with a text label on it, add a child [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) widget to it:
+To have a button with a text label on it, add a child [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) widget to it:
 
 ```yaml
 # Example toggle button with text:
@@ -474,7 +474,7 @@ See [Remote light button]({{< ref "cookbook/lvgl#lvgl-cookbook-binent" >}}) for 
 
 {{< anchor "lvgl-widget-buttonmatrix" >}}
 
-## ``buttonmatrix``
+## `buttonmatrix`
 
 The button matrix widget is a lightweight way to display multiple buttons in rows and columns. It's lightweight because the buttons are not actually created but instead simply drawn on the fly. This reduces the memory footprint of each button from approximately 200 bytes (for both the button and its label widget) down to only eight bytes.
 
@@ -602,7 +602,7 @@ on_...:
 The Button Matrix widget supports the [A numeric input keypad]({{< ref "cookbook/lvgl#lvgl-cookbook-keypad" >}}) to collect the button presses as key press sequences for further automations. Check out [Key collector component]({{< ref "components/key_collector#key_collector" >}}) for an example.
 
 {{< /tip >}}
-## ``canvas``
+## `canvas`
 
 The canvas widget provides a surface for custom drawing operations. It allows you to draw shapes, text, images and perform pixel-level manipulations.
 All options are templatable.
@@ -742,7 +742,7 @@ Where a list of points is required, this can be provided in the form of a list o
 ```
 {{< anchor "lvgl-widget-checkbox" >}}
 
-## ``checkbox``
+## `checkbox`
 
 The checkbox widget is made internally from a *tick box* and a label. When the checkbox is clicked the tick box's `checked` state will be toggled.
 
@@ -803,7 +803,7 @@ The `checkbox` can be also integrated as a {{< docref "/components/switch/lvgl" 
 
 {{< anchor "lvgl-widget-dropdown" >}}
 
-## ``dropdown``
+## `dropdown`
 
 The dropdown widget allows the user to select one value from a list.
 
@@ -822,7 +822,7 @@ The Dropdown widget is built internally from a *button* part and a *list* part (
 - **selected_index** (*Optional*, int8): The index of the item you wish to be selected.
 - **selected_text** (*Optional*, string): The text of the item you wish to be selected.
 - **symbol** (*Optional*, dict): A symbol (typically an chevron) is shown in dropdown list. If `dir` of the drop-down list is `LEFT` the symbol will be shown on the left, otherwise on the right. Choose a different [symbol]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) from those built-in or from your own customized font.
-- Style options from [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) for the background of the button. Uses the typical background properties and [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) text properties for the text on it. `text_font` can be used to set the font of the button part, including the symbol.
+- Style options from [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) for the background of the button. Uses the typical background properties and [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) text properties for the text on it. `text_font` can be used to set the font of the button part, including the symbol.
 
 **Actions:**
 
@@ -883,7 +883,7 @@ The `dropdown` can be also integrated as {{< docref "/components/select/lvgl" "S
 
 {{< anchor "lvgl-widget-image" >}}
 
-## ``image``
+## `image`
 
 Images are the basic widgets used to display images.
 
@@ -941,13 +941,13 @@ Currently `RGB565` type images are supported, with transparency using the option
 {{< /tip >}}
 {{< anchor "lvgl-widget-keyboard" >}}
 
-## ``keyboard``
+## `keyboard`
 
-The keyboard widget is a special Button matrix with predefined keymaps and other features to show an on-screen keyboard usable to type text into a [``textarea``]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}).
+The keyboard widget is a special Button matrix with predefined keymaps and other features to show an on-screen keyboard usable to type text into a [`textarea`]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}).
 
 {{< img src="lvgl_keyboard.png" alt="Image" class="center" >}}
 
-For styling, the `keyboard` widget uses the same settings as [``buttonmatrix``]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}).
+For styling, the `keyboard` widget uses the same settings as [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}).
 
 **Configuration variables:**
 
@@ -1008,7 +1008,7 @@ The Keyboard widget in ESPHome doesn't support popovers or custom layouts.
 {{< /note >}}
 {{< anchor "lvgl-widget-label" >}}
 
-## ``label``
+## `label`
 
 A label is the basic widget type that is used to display text.
 
@@ -1080,7 +1080,7 @@ The `label` can be also integrated as {{< docref "/components/text_sensor/lvgl" 
 
 {{< anchor "lvgl-widget-led" >}}
 
-## ``led``
+## `led`
 
 The LED widgets are either circular or rectangular widgets whose brightness can be adjusted. As their brightness decreases, the colors become darker.
 
@@ -1130,7 +1130,7 @@ Check out [A numeric input keypad]({{< ref "cookbook/lvgl#lvgl-cookbook-keypad" 
 
 {{< anchor "lvgl-widget-line" >}}
 
-## ``line``
+## `line`
 
 The line widget is capable of drawing straight lines between a set of points.
 
@@ -1175,7 +1175,7 @@ The points list may be defined with constants in the form `x, y` or as a list of
 ```
 {{< anchor "lvgl-widget-meter" >}}
 
-## ``meter``
+## `meter`
 
 The meter widget can visualize data in very flexible ways. It can use arcs, needles, ticks, lines and/or labels.
 
@@ -1228,7 +1228,7 @@ The meter widget can visualize data in very flexible ways. It can use arcs, need
             - **length**: Tick line length in pixels or percentage. Defaults to `15%`.
             - **stride**: How many minor ticks to skip when adding major ticks. Defaults to `3`.
             - **width**: Tick line width in pixels. Defaults to `5`.
-        - Style options from [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) for the tick *lines* and *labels* using the [``line``]({{< ref "components/lvgl/widgets#lvgl-widget-line" >}}) and [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) text style properties.
+        - Style options from [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) for the tick *lines* and *labels* using the [`line`]({{< ref "components/lvgl/widgets#lvgl-widget-line" >}}) and [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) text style properties.
 - Style options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) for the background of the meter, using the typical background properties.
 - **ticks** (*Optional*, dict): Styling options for the ticks *part*, which will be applied to the tick lines and labels using standard *line* and *label* styles.
 - **indicator** (*Optional*, dict): Styling options for the indicator *part*, which will be applied to the needle line or image using standard *line* and *image* styles.
@@ -1293,7 +1293,7 @@ See [An analog clock]({{< ref "cookbook/lvgl#lvgl-cookbook-clock" >}}), [Thermom
 
 {{< anchor "lvgl-widget-msgbox" >}}
 
-## ``msgboxes``
+## `msgboxes`
 
 The message boxes act as pop-ups. They are built from a background container, a title, an optional close button, a text and optional buttons.
 
@@ -1310,7 +1310,7 @@ The text will be broken into multiple lines automatically and the height will be
         - Style options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}). Uses all the typical background properties and the text properties.
     - **buttons** (*Optional*, list): A list of buttons to show at the bottom of the message box:
         - **text** (*Optional*, [Text property]({{< ref "components/lvgl/widgets#text-property" >}})): Text to display on the button.
-        - See [``buttonmatrix``]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}) for other options for the buttons.
+        - See [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}) for other options for the buttons.
     - **button_style** (*Optional*, dict): A style to apply to the buttons. Uses all the typical style properties. Buttons cannot be individually styled since they are part of a `buttonmatrix`.
     - **close_button** (*Optional*, boolean): Controls the presence of the close button to the top right of the message box. Defaults to true
 
@@ -1347,7 +1347,7 @@ You can create your own more complex dialogs with a full-screen sized, half-opaq
 {{< /tip >}}
 {{< anchor "lvgl-widget-obj" >}}
 
-## ``obj``
+## `obj`
 
 The base object is just a simple, empty widget. By default, it's nothing more than a rounded rectangle:
 
@@ -1378,7 +1378,7 @@ You can use it as a parent container for other widgets. By default, it catches t
 ```
 {{< anchor "lvgl-widget-qrcode" >}}
 
-## ``qrcode``
+## `qrcode`
 
 Use this widget to generate and display a QR-code containing a string at run time.
 
@@ -1422,7 +1422,7 @@ on_...:
 ```
 {{< anchor "lvgl-widget-roller" >}}
 
-## ``roller``
+## `roller`
 
 Roller allows you to simply select one option from a list by scrolling.
 
@@ -1435,9 +1435,9 @@ Roller allows you to simply select one option from a list by scrolling.
 - **options** (**Required**, list): The list of available options in the roller.
 - **selected_index** (*Optional*, int8): The index of the item you wish to be selected.
 - **selected_text** (*Optional*, string): The text of the item you wish to be selected.
-- **selected** (*Optional*, list): Settings for the selected *part* to show the value. Supports a list of [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) and state-based styles to customize. The selected option in the middle. Besides the typical background properties it uses the [styles]({{< ref "components/lvgl/_index#lvgl-styling" >}}) text style properties to change the appearance of the text in the selected area.
+- **selected** (*Optional*, list): Settings for the selected *part* to show the value. Supports a list of [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) and state-based styles to customize. The selected option in the middle. Besides the typical background properties it uses the [styles]({{< ref "components/lvgl/_index#lvgl-styling" >}}) text style properties to change the appearance of the text in the selected area.
 - **visible_row_count** (*Optional*, int8): The number of visible rows.
-- Style options from [``label``]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}). The background of the roller uses all the typical background properties and [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) style properties. `text_line_space` adjusts the space between the options.
+- Style options from [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}). The background of the roller uses all the typical background properties and [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) style properties. `text_line_space` adjusts the space between the options.
 
 **Actions:**
 
@@ -1486,7 +1486,7 @@ The `roller` can be also integrated as {{< docref "/components/select/lvgl" "Sel
 
 {{< anchor "lvgl-widget-slider" >}}
 
-## ``slider``
+## `slider`
 
 The slider widget looks like a bar supplemented with a knob. The user can drag the knob to set a value. Just like bar, slider can be vertical or horizontal. The size of the indicator foreground and the knob position is set according to the current `value` of the slider.
 
@@ -1561,7 +1561,7 @@ See [Media player volume slider]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}
 {{< anchor "lvgl-widget-canvas" >}}
 {{< anchor "lvgl-widget-spinbox" >}}
 
-## ``spinbox``
+## `spinbox`
 
 The spinbox contains a numeric value (as text) which can be increased or decreased through actions. You can, for example, use buttons labeled with plus and minus to call actions which increase or decrease the value as required.
 
@@ -1638,7 +1638,7 @@ See [Climate control]({{< ref "cookbook/lvgl#lvgl-cookbook-climate" >}}) for an 
 
 {{< anchor "lvgl-widget-spinner" >}}
 
-## ``spinner``
+## `spinner`
 
 The Spinner widget is a spinning arc over a ring.
 
@@ -1688,7 +1688,7 @@ on_...:
 ```
 {{< anchor "lvgl-widget-switch" >}}
 
-## ``switch``
+## `switch`
 
 The switch looks like a little slider and can be used to turn something on and off.
 
@@ -1731,9 +1731,9 @@ See [Local light switch]({{< ref "cookbook/lvgl#lvgl-cookbook-relay" >}}) for an
 
 {{< anchor "lvgl-widget-tabview" >}}
 
-## ``tabview``
+## `tabview`
 
-The tab view object can be used to organize content in tabs. The tab buttons are internally generated with a [``buttonmatrix``]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}).
+The tab view object can be used to organize content in tabs. The tab buttons are internally generated with a [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}).
 
 {{< img src="lvgl_tabview.png" alt="Image" class="center" >}}
 
@@ -1806,7 +1806,7 @@ on_...:
 ```
 {{< anchor "lvgl-widget-textarea" >}}
 
-## ``textarea``
+## `textarea`
 
 The textarea is an extended label widget which displays a cursor and allows the user to input text. Long lines are wrapped and when the text becomes long enough the text area can be scrolled. It supports one line mode and password mode, where typed characters are replaced visually with bullets or asterisks.
 
@@ -1872,7 +1872,7 @@ The `textarea` can be also integrated as {{< docref "/components/text_sensor/lvg
 
 {{< anchor "lvgl-widget-tileview" >}}
 
-## ``tileview``
+## `tileview`
 
 The tileview is a container object whose elements, called tiles, can be arranged in grid form. A user can navigate between the tiles by dragging or swiping. Any direction can be disabled on the tiles individually to not allow moving from one tile to another.
 
@@ -1948,7 +1948,7 @@ on_...:
 As outlined in the sections above, each widget type supports several of its own, unique actions.
 Several universal actions are also available for all widgets, these are outlined below.
 
-##### ``lvgl.widget.update``
+##### `lvgl.widget.update`
 
 This powerful [flag]({{< ref "components/lvgl/widgets#lvgl-widget-flags" >}}) allows changing/updating any widget's common [style property]({{< ref "components/lvgl/_index#lvgl-styling" >}}), state (templatable) or [action]({{< ref "automations/actions#actions-action" >}}) on the fly.
 
@@ -1977,7 +1977,7 @@ Check out in the Cookbook [Remote light button]({{< ref "cookbook/lvgl#lvgl-cook
 
 {{< anchor "lvgl-automation-shorthands" >}}
 
-##### ``lvgl.widget.hide``, ``lvgl.widget.show``
+##### `lvgl.widget.hide`, `lvgl.widget.show`
 
 These [flag]({{< ref "components/lvgl/widgets#lvgl-widget-flags" >}}) are shorthands for toggling the `hidden` [actions]({{< ref "automations/actions#actions-action" >}}) of any widget.
 
@@ -1995,7 +1995,7 @@ on_...:
         - id: [my_button_1, my_button_2]
 
 ```
-##### ``lvgl.widget.disable``, ``lvgl.widget.enable``
+##### `lvgl.widget.disable`, `lvgl.widget.enable`
 
 These [actions]({{< ref "automations/actions#actions-action" >}}) are shorthands for toggling the `disabled` state of any widget (which controls the appearance of the corresponding *disabled* style set of the theme):
 
@@ -2046,7 +2046,7 @@ ESPHome implements as universal triggers the following interaction events genera
 
 These triggers can be applied directly to any widget in the LVGL configuration, *given that the widget itself supports generating such events*. For the widgets having a value, the triggers return the current value in variable `x`; this variable may be used in lambdas defined within those triggers.
 
-Each trigger also deliver an [event` parameter, which is a pointer to the LVGL C type `lv_event_t`. This may be used in lambdas defined within those triggers. Refer to the `LVGL documentation](https://docs.lvgl.io/8.4/overview/event.html/) for more information.
+Each trigger also deliver an [event` parameter, which is a pointer to the LVGL C type `lv_event_t`. This may be used in lambdas defined within those triggers. Refer to the `LVGL documentation ](https://docs.lvgl.io/8.4/overview/event.html/) for more information.
 
 There are additional triggers for pages - each page may have an `on_load` and `on_unload` trigger. These will be called
 when the page becomes active or inactive respectively.
@@ -2073,7 +2073,7 @@ when the page becomes active or inactive respectively.
 
 
 ```
-### ``on_boot``
+### `on_boot`
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered after LVGL has been setup. It is available on the `lvgl` component and any widget and can be used to perform any LVGL related setup that is not possible with static configuration.
 When used on a widget, it does not act specifically on that widget but can be used to keep actions related to that widget together with its configuration.
@@ -2090,6 +2090,6 @@ When used on a widget, it does not act specifically on that widget but can be us
 - {{< docref "/components/light/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
-- [LVGL docs](https://docs.lvgl.io/)
+- [LVGL docs ](https://docs.lvgl.io/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/widgets.md)
 

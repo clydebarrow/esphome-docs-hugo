@@ -242,7 +242,7 @@ cover:
 ## Update numeric values from text input
 
 Sometimes it may be more confortable to use a {{< docref "/components/text/template" >}} to change some numeric values from the user interface.
-ESPHome has some nice [helper functions](https://github.com/esphome/esphome/blob/dev/esphome/core/helpers.h) among which
+ESPHome has some nice [helper functions ](https://github.com/esphome/esphome/blob/dev/esphome/core/helpers.h) among which
 theres's one to convert text to numbers.
 
 In the example below we have a text input and a template sensor which can be updated from the text input field. What the lambda

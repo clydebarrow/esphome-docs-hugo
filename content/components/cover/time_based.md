@@ -84,7 +84,7 @@ stop_action:
 
 ```
 Be aware that `get_last_operation` will only return the last opening or closing operation, but not the last idle operation.
-This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issuecomment-2132727377).
+This issue is tracked [here ](https://github.com/esphome/issues/issues/4252#issuecomment-2132727377).
 
 ## See Also
 

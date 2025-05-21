@@ -23,16 +23,16 @@ ota:
 
 ## Configuration variables:
 
--  **on_begin** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when an OTA update is started.
-   See [``on_begin``]({{< ref "components/ota/_index#ota-on_begin" >}}).
--  **on_progress** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed (approximately each second)
-   while an OTA update is in progress. See [``on_progress``]({{< ref "components/ota/_index#ota-on_progress" >}}).
--  **on_end** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed after a successful OTA update.
-   See [``on_end``]({{< ref "components/ota/_index#ota-on_end" >}}).
--  **on_error** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed after a failed OTA update.
-   See [``on_error``]({{< ref "components/ota/_index#ota-on_error" >}}).
--  **on_state_change** (*Optional*, [Automation<automation>]({{< ref "#Automation<automation>" >}})): An action to be performed when an OTA update state
-   change happens. See [``on_state_change``]({{< ref "components/ota/_index#ota-on_state_change" >}}).
+-  **on_begin** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when an OTA update is started.
+   See [`on_begin`]({{< ref "components/ota/_index#ota-on_begin" >}}).
+-  **on_progress** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed (approximately each second)
+   while an OTA update is in progress. See [`on_progress`]({{< ref "components/ota/_index#ota-on_progress" >}}).
+-  **on_end** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed after a successful OTA update.
+   See [`on_end`]({{< ref "components/ota/_index#ota-on_end" >}}).
+-  **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed after a failed OTA update.
+   See [`on_error`]({{< ref "components/ota/_index#ota-on_error" >}}).
+-  **on_state_change** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when an OTA update state
+   change happens. See [`on_state_change`]({{< ref "components/ota/_index#ota-on_state_change" >}}).
 
 {{< anchor "ota-automations" >}}
 
@@ -49,7 +49,7 @@ update process. When using these automation triggers, note that:
 
 {{< anchor "ota-on_begin" >}}
 
-### ``on_begin``
+### `on_begin`
 
 This automation will be triggered when an OTA update is started.
 
@@ -63,7 +63,7 @@ ota:
 ```
 {{< anchor "ota-on_progress" >}}
 
-### ``on_progress``
+### `on_progress`
 
 Using this automation, it is possible to report on the OTA update progress. It will be triggered repeatedly during the
 OTA update. You can get the actual progress percentage (a value between 0 and 100) from the trigger with variable `x`.
@@ -80,7 +80,7 @@ ota:
 ```
 {{< anchor "ota-on_end" >}}
 
-### ``on_end``
+### `on_end`
 
 This automation will be triggered when an OTA update has completed successfully, immediately before the device is
 rebooted.
@@ -99,11 +99,11 @@ ota:
 ```
 {{< anchor "ota-on_error" >}}
 
-### ``on_error``
+### `on_error`
 
 This automation will be triggered when an OTA update has failed. You can get the internal error code with variable `x`.
 
-Just like for [``on_end``]({{< ref "components/ota/_index#ota-on_end" >}}), you can safely use an automation that takes some time to complete as the OTA update
+Just like for [`on_end`]({{< ref "components/ota/_index#ota-on_end" >}}), you can safely use an automation that takes some time to complete as the OTA update
 process has already finished.
 
 ```yaml
@@ -118,7 +118,7 @@ ota:
 ```
 {{< anchor "ota-on_state_change" >}}
 
-### ``on_state_change``
+### `on_state_change`
 
 This automation will be triggered on every state change. You can get the actual state with variable `state`, which
 will contain one of values for the `OTAState` enum. These values are:

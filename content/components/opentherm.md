@@ -12,9 +12,9 @@ manufacturer. A controller from manufacturer A can in principle be used to contr
 Since OpenTherm doesn't operate in a standard voltage range, special hardware is required. You can choose from several
 ready-made adapters or roll your own:
 
-- [DIYLESS Master OpenTherm Shield](https://diyless.com/product/master-opentherm-shield)
-- [Ihor Melnyk's OpenTherm Adapter](http://ihormelnyk.com/opentherm_adapter)
-- [Jiří Praus' OpenTherm Gateway Arduino Shield](https://www.tindie.com/products/jiripraus/opentherm-gateway-arduino-shield/)
+- [DIYLESS Master OpenTherm Shield ](https://diyless.com/product/master-opentherm-shield)
+- [Ihor Melnyk's OpenTherm Adapter ](http://ihormelnyk.com/opentherm_adapter)
+- [Jiří Praus' OpenTherm Gateway Arduino Shield ](https://www.tindie.com/products/jiripraus/opentherm-gateway-arduino-shield/)
 
 {{< img src="opentherm-shield.png" alt="Image" caption="DIYLESS Master OpenTherm Shield." width="50.0%" class="center" >}}
 
@@ -329,7 +329,7 @@ available:
 ## On-the-fly Message Editing
 
 Some boilers use non-standard message ids and formats. For example,
-[it's known](https://github.com/olegtarasov/esphome-opentherm/issues/11) that Daikin D2C boiler uses message id
+[it's known ](https://github.com/olegtarasov/esphome-opentherm/issues/11) that Daikin D2C boiler uses message id
 `162` instead of `56` to set target DHW temperature. In order to accomodate all sorts of non-standard behavior, I
 introduced two automations that allow editing the low-level OpenTherm message:
 
@@ -466,9 +466,9 @@ climate:
 - :apiref:`API Reference: OpenthermNumber <opentherm/number/number.h>`
 - :apiref:`API Reference: OpenthermOutput <opentherm/output/output.h>`
 - :apiref:`API Reference: OpenthermSwitch <opentherm/switch/switch.h>`
-- [OpenTherm thermostat with ESPHome and Home Assistant](https://olegtarasov.me/opentherm-thermostat-esphome/) —
+- [OpenTherm thermostat with ESPHome and Home Assistant ](https://olegtarasov.me/opentherm-thermostat-esphome/) —
   real-world use case for this component.
-- [Development repository](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
+- [Development repository ](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
   before proposing them to ESPHome core.
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/opentherm.md)
 

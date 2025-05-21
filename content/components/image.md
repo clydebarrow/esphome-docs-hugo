@@ -39,11 +39,11 @@ image:
 - **file** (**Required**, string):
 
   - **Local files**: The path (relative to where the .yaml file is) of the image file.
-  - **Material Design Icons**: Specify the [Material Design Icon](https://pictogrammers.com/library/mdi/)
+  - **Material Design Icons**: Specify the [Material Design Icon ](https://pictogrammers.com/library/mdi/)
     id in the format `mdi:icon-name`, and that icon will automatically be downloaded and added to the configuration.
-  - **Material Design Light Icons**: Specify the [Material Design Light Icon](https://pictogrammers.com/library/mdil/)
+  - **Material Design Light Icons**: Specify the [Material Design Light Icon ](https://pictogrammers.com/library/mdil/)
     id in the format `mdil:icon-name`, and that icon will automatically be downloaded and added to the configuration.
-  - **Memory Icons**: Specify the [Memory Icon](https://pictogrammers.com/library/memory/)
+  - **Memory Icons**: Specify the [Memory Icon ](https://pictogrammers.com/library/memory/)
     id in the format `memory:icon-name`, and that icon will automatically be downloaded and added to the configuration.
   - **Remote files**: The URL of the image file.
 
@@ -62,7 +62,7 @@ image:
 - **transparency** (*Optional*): If set the alpha channel of the input image will be taken into account. The possible values are `opaque` (default), `chroma_key` and `alpha_channel`.  Binary images do not support `alpha_channel`. See discussion on transparency below.
 - **invert_alpha** (*Optional*, boolean): Applicable to binary and grayscale only, this will invert the colors, i.e. make black white and vice versa. Useful for e-ink displays. Defaults to `false`.
 
-- **dither** (*Optional*): Specifies which dither method used to process the image, only used in GRAYSCALE and BINARY type image. Defaults to [NONE`. You can read more about it `here](https://pillow.readthedocs.io/en/stable/reference/Image.html?highlight=Dither#PIL.Image.Image.convert) and [here](https://en.wikipedia.org/wiki/Dither).
+- **dither** (*Optional*): Specifies which dither method used to process the image, only used in GRAYSCALE and BINARY type image. Defaults to [NONE`. You can read more about it `here ](https://pillow.readthedocs.io/en/stable/reference/Image.html?highlight=Dither#PIL.Image.Image.convert) and [here ](https://en.wikipedia.org/wiki/Dither).
 
   - `NONE`: Every pixel converts to its nearest color.
   - `FLOYDSTEINBERG`: Uses Floyd-Steinberg dither to approximate the original image luminosity levels.

@@ -6,8 +6,7 @@ title: "Rtttl Buzzer"
 {{< seo description="" image="" >}}
 
 The `rtttl`, component allows you to easily connect a passive piezo buzzer to your microcontroller
-and play monophonic songs. It accepts the Ring Tone Text Transfer Language, rtttl format (`Wikipedia
-<https://en.wikipedia.org/wiki/Ring_Tone_Transfer_Language>`__) which allows to store simple melodies.
+and play monophonic songs. It accepts the Ring Tone Text Transfer Language, rtttl format ([Wikipedia](https://en.wikipedia.org/wiki/Ring_Tone_Transfer_Language)) which allows to store simple melodies.
 
 {{< img src="buzzer.jpg" alt="Image" caption="Buzzer Module" width="50.0%" class="center" >}}
 
@@ -62,7 +61,7 @@ rtttl:
 
 Note: You can only use the **output** or **speaker** variable, not both at the same time.
 
-## ``rtttl.play`` Action
+## `rtttl.play` Action
 
 Plays an rtttl tone.
 
@@ -81,7 +80,7 @@ and more codes of the song itself. Tip: you can try playing with the values of d
 song play at a different pace or pitch, e.g. setting o=7 instead will cause the song to play on a higher pitch.
 
 
-## ``rtttl.stop`` Action
+## `rtttl.stop` Action
 
 Stops playback.
 
@@ -95,7 +94,7 @@ on_...:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the rtttl if you have multiple components.
 
-## ``rtttl.is_playing`` Condition
+## `rtttl.is_playing` Condition
 
 This Condition returns true while playback is active.
 

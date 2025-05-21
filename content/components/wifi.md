@@ -37,7 +37,7 @@ wifi:
 
 ## Configuration variables:
 
-- **ssid** (*Optional*, string): The name (or [service set  identifier](https://www.lifewire.com/definition-of-service-set-identifier-816547))
+- **ssid** (*Optional*, string): The name (or [service set  identifier ](https://www.lifewire.com/definition-of-service-set-identifier-816547))
   of the WiFi access point your device should connect to.
 - **password** (*Optional*, string): The password (or PSK) for your
   WiFi network. Leave empty for no password.

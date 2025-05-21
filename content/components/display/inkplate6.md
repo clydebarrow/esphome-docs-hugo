@@ -10,7 +10,7 @@ All-in-one e-paper display `Inkplate 5`, `Inkplate 6`, `Inkplate 10` and `Inkpla
 The Inkplate 5, 6, 10 and 6 Plus are powerful, Wi-Fi enabled ESP32 based six-inch e-paper displays -
 recycled from a Kindle e-reader. Its main feature is simplicity.
 
-Learn more at [Inkplate's documentation website](https://inkplate.readthedocs.io/en/stable/)
+Learn more at [Inkplate's documentation website ](https://inkplate.readthedocs.io/en/stable/)
 
 {{< img src="inkplate6.jpg" alt="Image" caption="Inkplate 6" width="75.0%" class="center" >}}
 
@@ -510,6 +510,6 @@ display:
 
 - {{< docref "index/" >}}
 - {{< docref "/components/touchscreen/ektf2232" >}}
-- [Arduino Inkplate 6 library](https://github.com/e-radionicacom/Inkplate-6-Arduino-library) by [E-radionica.com](https://e-radionica.com/)
+- [Arduino Inkplate 6 library ](https://github.com/e-radionicacom/Inkplate-6-Arduino-library) by [E-radionica.com ](https://e-radionica.com/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/inkplate6.md)
 

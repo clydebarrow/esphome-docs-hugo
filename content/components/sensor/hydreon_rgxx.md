@@ -5,7 +5,7 @@ title: "Hydreon Rain Sensor"
 
 {{< seo description="" image="" >}}
 
-The [hydreon_rgxx` sensor platform allows you to use rain sensors by Hydreon. Currently supported are the RG-9 and RG-15 sensors (`model comparison](https://rainsensors.com/products/model-comparison/)).
+The [hydreon_rgxx` sensor platform allows you to use rain sensors by Hydreon. Currently supported are the RG-9 and RG-15 sensors (`model comparison ](https://rainsensors.com/products/model-comparison/)).
 
 These optical rain sensors use a UART connection at 3.3V. The [UART]({{< ref "components/uart#uart" >}}) is
 required to be set up in your configuration for this sensor to work.
@@ -16,7 +16,7 @@ Supported firmware versions:
 
 Device FAQ: `<https://rainsensors.com/support/rg-9-rg-15-faq/>`__
 
-{{< img src="hydreon_rg9_full.jpg" alt="Image" caption="Hydreon RG-9 Rain Sensor. Image by [Hydreon](https://rainsensors.com/)." width="50.0%" class="center" >}}
+{{< img src="hydreon_rg9_full.jpg" alt="Image" caption="Hydreon RG-9 Rain Sensor. Image by [Hydreon ](https://rainsensors.com/)." width="50.0%" class="center" >}}
 
 ```yaml
 # Example RG-9 entry
@@ -66,7 +66,7 @@ sensor:
 - **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
 
-- **moisture** (*Optional*): Rain intensity level from 0-7 ([more detail](https://rainsensors.com/support/rg-9-rg-15-faq/#RG-9RValue)). Only on RG-9.
+- **moisture** (*Optional*): Rain intensity level from 0-7 ([more detail ](https://rainsensors.com/support/rg-9-rg-15-faq/#RG-9RValue)). Only on RG-9.
 
   - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
@@ -101,14 +101,14 @@ sensor:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "../binary_sensor/hydreon_rgxx" >}}
 
-- [Hydreon RG-9](https://rainsensors.com/products/rg-9/)
-- [Hydreon RG-15](https://rainsensors.com/products/rg-15/)
+- [Hydreon RG-9 ](https://rainsensors.com/products/rg-9/)
+- [Hydreon RG-15 ](https://rainsensors.com/products/rg-15/)
 
-- [RG-15 V1.000 manual](https://rainsensors.com/wp-content/uploads/sites/3/2020/07/rg-15_instructions_sw_1.000.pdf)
+- [RG-15 V1.000 manual ](https://rainsensors.com/wp-content/uploads/sites/3/2020/07/rg-15_instructions_sw_1.000.pdf)
 
-- [RG-9 1.000 manual](https://rainsensors.com/wp-content/uploads/sites/3/2021/03/2020.08.25-rg-9_instructions.pdf)
-- [RG-9 1.100 manual](https://rainsensors.com/wp-content/uploads/sites/3/2021/03/2021.03.11-rg-9_instructions.pdf)
-- [RG-9 1.200 manual](https://rainsensors.com/wp-content/uploads/sites/3/2022/03/2022.02.17-rev-1.200-rg-9_instructions.pdf)
+- [RG-9 1.000 manual ](https://rainsensors.com/wp-content/uploads/sites/3/2021/03/2020.08.25-rg-9_instructions.pdf)
+- [RG-9 1.100 manual ](https://rainsensors.com/wp-content/uploads/sites/3/2021/03/2021.03.11-rg-9_instructions.pdf)
+- [RG-9 1.200 manual ](https://rainsensors.com/wp-content/uploads/sites/3/2022/03/2022.02.17-rev-1.200-rg-9_instructions.pdf)
 
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/hydreon_rgxx.md)
 

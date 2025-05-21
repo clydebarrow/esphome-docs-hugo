@@ -59,19 +59,19 @@ Here is another example output for a Tuya ME-81H thermostat:
 
 - **status_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Some Tuya devices support WiFi status reporting ONLY through gpio pin.
   Specify the pin reported in the config dump or leave empty otherwise.
-  More about this [here](https://developer.tuya.com/en/docs/iot/tuya-cloud-universal-serial-port-access-protocol?id=K9hhi0xxtn9cb#title-6-Query%20working%20mode).
+  More about this [here ](https://developer.tuya.com/en/docs/iot/tuya-cloud-universal-serial-port-access-protocol?id=K9hhi0xxtn9cb#title-6-Query%20working%20mode).
 
 - **ignore_mcu_update_on_datapoints** (*Optional*, list): A list of datapoints to ignore MCU updates for.  Useful for certain broken/erratic hardware and debugging.
 
 Automations:
 
-- **on_datapoint_update** (*Optional*): An automation to perform when a Tuya datapoint update is received. See [``on_datapoint_update``]({{< ref "components/tuya#tuya-on_datapoint_update" >}}).
+- **on_datapoint_update** (*Optional*): An automation to perform when a Tuya datapoint update is received. See [`on_datapoint_update`]({{< ref "components/tuya#tuya-on_datapoint_update" >}}).
 
 ## Tuya Automation
 
 {{< anchor "tuya-on_datapoint_update" >}}
 
-### ``on_datapoint_update``
+### `on_datapoint_update`
 
 This automation will be triggered when a a Tuya datapoint update is received.
 A variable `x` is passed to the automation for use in lambdas.

@@ -53,7 +53,7 @@ canbus:
 
 **Configuration variables:**
 
-- **platform** (**Required**, [Platforms]({{< ref "components/canbus/_index#platforms-canbus" >}})): One of the supported CAN bus [platform<platforms-canbus>]({{< ref "#platform<platforms-canbus>" >}}).
+- **platform** (**Required**, [Platforms]({{< ref "components/canbus/_index#platforms-canbus" >}})): One of the supported CAN bus [platform]({{< ref "components/canbus/_index#platforms-canbus" >}}).
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **can_id** (**Required**, int): default *CAN ID* used for transmitting frames.
 - **use_extended_id** (*Optional*, boolean): Identifies the type of `can_id`:
@@ -86,7 +86,7 @@ canbus:
     - `1000KBPS`
 
 - **on_frame** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a
-  CAN frame is received. See [``on_frame`` Trigger]({{< ref "components/canbus/_index#canbus-on-frame" >}}).
+  CAN frame is received. See [`on_frame` Trigger]({{< ref "components/canbus/_index#canbus-on-frame" >}}).
 
 {{< anchor "platforms-canbus" >}}
 
@@ -96,7 +96,7 @@ canbus:
 
 {{< anchor "canbus-on-frame" >}}
 
-### ``on_frame`` Trigger
+### `on_frame` Trigger
 
 This automation will be triggered when a CAN frame is received. The variables `x` (of type
 `std::vector<uint8_t>`) containing the frame data, `can_id` (of type `uint32_t`) containing the actual
@@ -150,7 +150,7 @@ canbus:
 - **remote_transmission_request** (*Optional*, boolean): Whether to run for CAN frames with the "remote
   transmission request" bit set or not set. Defaults to not checking (the automation will run for both cases).
 
-### ``canbus.send`` Action
+### `canbus.send` Action
 
 The CAN bus can transmit frames by means of the `canbus.send` action. There are several ways to use it:
 

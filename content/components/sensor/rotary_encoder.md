@@ -9,7 +9,7 @@ The `rotary_encoder` sensor platform allows you to use any continuous-rotation
 rotary encoders with ESPHome. These devices usually have two pins with which
 they encode the rotation. Every time the knob of the rotary encoder is turned, the
 signals of the two pins go HIGH and LOW in turn. See
-[this Arduino article](https://playground.arduino.cc/Main/RotaryEncoders) to gain
+[this Arduino article ](https://playground.arduino.cc/Main/RotaryEncoders) to gain
 a better understanding of these sensors.
 
 {{< img src="rotary_encoder.jpg" alt="Image" caption="Example of a continuous rotary encoder. Pin `+` is connected to `3.3V`, `GND` is connected to `GND`, and `CLK` & `DT` are A & B." width="75.0%" class="center" >}}
@@ -71,14 +71,14 @@ pin_a:
     - `ALWAYS_ZERO` - Always initialize the counter with value zero (0).
 
 - **on_clockwise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Actions to be performed when
-  the knob is turned clockwise. See [``on_clockwise`` and ``on_anticlockwise`` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
+  the knob is turned clockwise. See [`on_clockwise` and `on_anticlockwise` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
 - **on_anticlockwise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Actions to be performed when
-  the knob is turned anticlockwise. See [``on_clockwise`` and ``on_anticlockwise`` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
+  the knob is turned anticlockwise. See [`on_clockwise` and `on_anticlockwise` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "sensor-rotary_encoder-set_value_action" >}}
 
-## ``sensor.rotary_encoder.set_value`` Action
+## `sensor.rotary_encoder.set_value` Action
 
 The internal state of the rotary encoder can be manually changed to any value with this action.
 After executing this action, rotating the encoder further will increase/decrease the state relative
@@ -111,7 +111,7 @@ Configuration options:
 
 {{< anchor "sensor-rotary_encoder-triggers" >}}
 
-## ``on_clockwise`` and ``on_anticlockwise`` Triggers
+## `on_clockwise` and `on_anticlockwise` Triggers
 
 With these configuration options, you can run automations based on the direction
 that the encoder has been turned, and not the value that it currently holds.
@@ -130,7 +130,7 @@ on_anticlockwise:
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "pulse_counter/" >}}
 - {{< docref "template/" >}}
-- [Mechanical Input Library](https://github.com/jkDesignDE/MechInputs) by [Jochen Krapf](https://github.com/JK-de)
+- [Mechanical Input Library ](https://github.com/jkDesignDE/MechInputs) by [Jochen Krapf ](https://github.com/JK-de)
 - :apiref:`rotary_encoder/rotary_encoder.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/rotary_encoder.md)
 

@@ -158,6 +158,6 @@ light:
 - {{< docref "/components/light/spi_led_strip" >}}
 - {{< docref "/components/power_supply" >}}
 - :apiref:`fastled_base/fastled_light.h`
-- [Arduino FastLED library](https://github.com/FastLED/FastLED)
+- [Arduino FastLED library ](https://github.com/FastLED/FastLED)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/fastled.md)
 

@@ -56,7 +56,7 @@ sun:
 
   - **elevation** (*Optional*, float): The elevation to cross. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
 
-## ``sun`` Sensor
+## `sun` Sensor
 
 Additionally, the sun component exposes its values over a sensor platform.
 
@@ -79,7 +79,7 @@ Configuration variables:
   `azimuth`.
 - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-## ``sun`` Text Sensor
+## `sun` Text Sensor
 
 Other properties like the next sunset time can be read out with the sun text_sensor platform.
 
@@ -108,7 +108,7 @@ Configuration variables:
 
 {{< anchor "sun-is_above_below_horizon-condition" >}}
 
-## ``sun.is_above_horizon`` / ``sun.is_below_horizon`` Conditions
+## `sun.is_above_horizon` / `sun.is_below_horizon` Conditions
 
 The `sun.is_above_horizon` and `sun.is_below_horizon` [conditions]({{< ref "automations/actions#config-condition" >}})
 allow you to check if the sun is currently above or below the horizon.

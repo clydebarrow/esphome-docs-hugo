@@ -128,7 +128,7 @@ sensor:
 
 ## See Also
 
-- [Protocol Analysis](https://github.com/kroimon/uponor-smatrix-analysis)
+- [Protocol Analysis ](https://github.com/kroimon/uponor-smatrix-analysis)
 - :apiref:`uponor_smatrix/uponor_smatrix.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/uponor_smatrix.md)
 

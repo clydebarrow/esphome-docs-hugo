@@ -74,7 +74,7 @@ sensor:
 **Only one** *component_name* **or** *variable_name* **can be set**
 
   {{< note >}}
-`background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings<nextion_sensor_settings>]({{< ref "#Sensor Settings<nextion_sensor_settings>" >}}).
+`background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings]({{< ref "components/sensor/nextion#nextion_sensor_settings" >}}).
 A [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
 
 
@@ -92,7 +92,7 @@ should be prefixed with the page name (page0/page1 or whatever you have changed 
 
 {{< anchor "sensor-nextion-publish_action" >}}
 
-## ``sensor.nextion.publish`` Action
+## `sensor.nextion.publish` Action
 
 You can also publish a state to a Nextion sensor from elsewhere in your YAML file
 with the `sensor.nextion.publish` action.

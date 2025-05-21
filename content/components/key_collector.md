@@ -81,7 +81,7 @@ accepted until an end key is pressed.
   if the timeout happens. The current sequence of pressed keys is placed in a `vector<uint8_t>` variable `x`
   and `start` holds the start key that activated this sequence or else `0`.
 
-## ``key_collector.enable`` Action
+## `key_collector.enable` Action
 
 This action activates a `key_collector`.  It will start accepting keys.
 If there is more than one key collector, you will need to provide the `id` of the one to enable.
@@ -92,7 +92,7 @@ on_...:
     - key_collector.enable:
 
 ```
-## ``key_collector.disable`` Action
+## `key_collector.disable` Action
 
 This action deactivates a `key_collector`.  It will stop accepting keys and will clear any already collected ones.
 If there is more than one key collector, you will need to provide the `id` of the one to disable.

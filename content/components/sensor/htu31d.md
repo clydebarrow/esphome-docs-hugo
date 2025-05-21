@@ -11,7 +11,7 @@ ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set 
 
 Example sensors:
 
-- ([Adafruit](https://www.adafruit.com/product/4832))
+- ([Adafruit ](https://www.adafruit.com/product/4832))
 
 {{< img src="htu31d.jpg" alt="Image" caption="HTU31D Temperature & Humidity Sensor. Image by `Adafruit`_." width="50.0%" class="center" >}}
 
@@ -49,6 +49,6 @@ sensor:
 - {{< docref "hdc1080/" >}}
 - {{< docref "sht3xd/" >}}
 - :apiref:`htu31d/htu31d.h`
-- [i2cdevlib](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg](https://github.com/jrowberg)
+- [i2cdevlib ](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg ](https://github.com/jrowberg)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/htu31d.md)
 

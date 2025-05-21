@@ -47,12 +47,12 @@ Advanced options:
   but you can customize this behavior using this option. Official docker image automatically use `/build` folder
   as default one in case it is mounted to it.
 - **platformio_options** (*Optional*, mapping): Additional options to pass over to PlatformIO in the
-  platformio.ini file. See [``platformio_options``]({{< ref "components/esphome#esphome-platformio_options" >}}).
+  platformio.ini file. See [`platformio_options`]({{< ref "components/esphome#esphome-platformio_options" >}}).
 - **includes** (*Optional*, list of files): A list of C/C++ files to include in the (auto-generated) `main` file.
   The paths in this list are relative to the directory where the YAML configuration file is located or `<...>` includes.
-  See [``includes``]({{< ref "components/esphome#esphome-includes" >}}).
+  See [`includes`]({{< ref "components/esphome#esphome-includes" >}}).
 - **libraries** (*Optional*, list of libraries): A list of libraries to include in the project. See
-  [``libraries``]({{< ref "components/esphome#esphome-libraries" >}}).
+  [`libraries`]({{< ref "components/esphome#esphome-libraries" >}}).
 - **comment** (*Optional*, string): Additional text information about this node. Only for display in UI.
 - **name_add_mac_suffix** (*Optional*, boolean): Appends the last 3 bytes of the mac address of the device to
   the name in the form `<name>-aabbcc`. Defaults to `false`.
@@ -74,15 +74,15 @@ Advanced options:
 Automations:
 
 - **on_boot** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the node starts. See [``on_boot``]({{< ref "components/esphome#esphome-on_boot" >}}).
+  when the node starts. See [`on_boot`]({{< ref "components/esphome#esphome-on_boot" >}}).
 - **on_shutdown** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  right before the node shuts down. See [``on_shutdown``]({{< ref "components/esphome#esphome-on_shutdown" >}}).
+  right before the node shuts down. See [`on_shutdown`]({{< ref "components/esphome#esphome-on_shutdown" >}}).
 - **on_loop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  on each `loop()` iteration. See [``on_loop``]({{< ref "components/esphome#esphome-on_loop" >}}).
+  on each `loop()` iteration. See [`on_loop`]({{< ref "components/esphome#esphome-on_loop" >}}).
 
 {{< anchor "esphome-on_boot" >}}
 
-## ``on_boot``
+## `on_boot`
 
 This automation will be triggered when the ESP boots up. By default, it is executed after everything else
 is already set up. You can however change this using the `priority` parameter.
@@ -113,7 +113,7 @@ Configuration variables:
 
 {{< anchor "esphome-on_shutdown" >}}
 
-## ``on_shutdown``
+## `on_shutdown`
 
 This automation will be triggered when the ESP is about to shut down. Shutting down is usually caused by
 too many WiFi/MQTT connection attempts, Over-The-Air updates being applied or through the {{< docref "deep_sleep/" >}}.
@@ -138,13 +138,13 @@ Configuration variables:
   means a high priority and in case of shutdown triggers that the code is executed **later**.
   Priority is used primarily for the initialization order of components. Shutdowns for these components are handled in *reverse* order, such that e.g. sensors (600) are shutdown before the hardware components (800) they depend on.
   Please note this is an ESPHome-internal value and any change will not be marked as a breaking change.
-  Defaults to `600`. For priority values refer to the list in the [``on_boot``]({{< ref "components/esphome#esphome-on_boot" >}}) section.
+  Defaults to `600`. For priority values refer to the list in the [`on_boot`]({{< ref "components/esphome#esphome-on_boot" >}}) section.
 
 - See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< anchor "esphome-on_loop" >}}
 
-## ``on_loop``
+## `on_loop`
 
 This automation will be triggered on every `loop()` iteration (usually around every 16 milliseconds).
 
@@ -158,7 +158,7 @@ esphome:
 ```
 {{< anchor "esphome-platformio_options" >}}
 
-## ``platformio_options``
+## `platformio_options`
 
 PlatformIO supports a number of options in its `platformio.ini` file. With the `platformio_options`
 parameter you can tell ESPHome what options to pass into the `env` section of the PlatformIO file
@@ -177,7 +177,7 @@ esphome:
 ```
 {{< anchor "esphome-includes" >}}
 
-## ``includes``
+## `includes`
 
 With `includes` you can include source files in the generated PlatformIO project.
 All files declared with this option are copied to the project each time it is compiled.
@@ -209,7 +209,7 @@ This option behaves differently depending on what the included file is pointing 
 
 {{< anchor "esphome-libraries" >}}
 
-## ``libraries``
+## `libraries`
 
 The `libraries` option allows you to include libraries in the PlatformIO project. These libraries will then be
 compiled into the resulting firmware and may be used by [lambdas]({{< ref "automations/templates#config-lambda" >}}).
@@ -229,10 +229,9 @@ esphome:
     - Improv=https://github.com/improv-wifi/sdk-cpp.git#v1.0.0
 
 ```
-The most common usage of this option is to include third-party libraries that are available in the `PlatformIO registry
-<https://platformio.org/lib>`__. They can be added by listing their name under this option. It is also possible to use
+The most common usage of this option is to include third-party libraries that are available in the [PlatformIO registry](https://platformio.org/lib). They can be added by listing their name under this option. It is also possible to use
 specific versions, or to fetch libraries from a file or git repository. ESPHome accepts the same syntax as the
-[lib_deps](https://docs.platformio.org/en/latest/projectconf/sections/env/options/library/lib_deps.html) option.
+[lib_deps ](https://docs.platformio.org/en/latest/projectconf/sections/env/options/library/lib_deps.html) option.
 
 Using `<name>=<source>` syntax, it is possible to override the version used for libraries that are automatically added
 by one of ESPHome's components. This can be useful during development to make ESPHome use a custom fork of a library.

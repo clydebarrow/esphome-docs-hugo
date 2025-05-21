@@ -5,8 +5,8 @@ title: "NPI-19 Pressure Sensor"
 
 {{< seo description="" image="" >}}
 
-The [npi19` sensor platform allows you to use your NPI-19 (`datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf),
-[product page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)) pressure sensors with ESPHome.
+The [npi19` sensor platform allows you to use your NPI-19 (`datasheet ](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf),
+[product page ](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)) pressure sensors with ESPHome.
 
 {{< img src="npi19.jpg" alt="Image" caption="NPI-19 Pressure Sensor." width="50.0%" class="center" >}}
 
@@ -48,7 +48,7 @@ The NPI-19 pressure sensor is not calibrated to units, you have to convert the m
 
 ### Estimated
 
-On page 1 of the [product application note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
+On page 1 of the [product application note ](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
 the value `1638` maps to approximately `10%` of the maximum value of the sensor (e.g. `0.5` psi for a `5` psi sensor);
 the value `14746` maps to approximately `90%` of the maximum value of the sensor (e.g. `4.5` psi for a `5`  psi sensor).
 Use `calibrate_linear` filter to map these sensor values:
@@ -89,8 +89,8 @@ compensation.
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [NPI-19 Product Page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)
-- [NPI-19 Datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf)
-- [NPI-19 Product Application Note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
+- [NPI-19 Product Page ](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)
+- [NPI-19 Datasheet ](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf)
+- [NPI-19 Product Application Note ](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/npi19.md)
 

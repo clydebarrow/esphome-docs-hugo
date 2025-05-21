@@ -14,7 +14,7 @@ basic “node” in a few simple steps.
 See {{< docref "installing_esphome/" >}}.
 
 If you're familiar with Docker, you can use that instead!
-Note that on macOS Docker [can not pass USB devices through](https://github.com/moby/hyperkit/issues/149).
+Note that on macOS Docker [can not pass USB devices through ](https://github.com/moby/hyperkit/issues/149).
 You will not be able to flash ESP devices through USB on Mac, all other features will work. Flashing with web dashboard is still possible.
 
 Our image supports AMD64, ARM and ARM64 (AARCH64), and can be downloaded with:
@@ -45,7 +45,7 @@ services:
 {{< note >}}
 If you are using NFS share to back your container's config volume, you may
 need to mount the volume with the `nolock` option, otherwise platformio may
-freeze on container startup as per [platformIO-core Issue 3089](https://github.com/platformio/platformio-core/issues/3089)
+freeze on container startup as per [platformIO-core Issue 3089 ](https://github.com/platformio/platformio-core/issues/3089)
 
 {{< /note >}}
 The project provides multiple docker tags; please pick the one that suits you
@@ -199,9 +199,8 @@ file.
 
 So now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}.
 Hopefully you'll find all sensors/outputs/etc. you'll need in there. If you're having any problems or
-want new features, please either create a new issue on the `GitHub issue
-tracker <https://github.com/esphome/issues/issues>`__ or find us on the
-[Discord chat](https://discord.gg/KhAMKrd) (also make sure to read the {{< docref "faq/" "FAQ" >}}).
+want new features, please either create a new issue on the [GitHub issuetracker ](https://github.com/esphome/issues/issues) or find us on the
+[Discord chat ](https://discord.gg/KhAMKrd) (also make sure to read the {{< docref "faq/" "FAQ" >}}).
 
 {{< anchor "esphome-device-builder-docker" >}}
 

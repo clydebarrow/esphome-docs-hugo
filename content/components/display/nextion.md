@@ -6,7 +6,7 @@ title: "Nextion TFT LCD Display"
 {{< seo description="" image="" >}}
 
 The `nextion` display platform allows you to use Nextion LCD displays
-([datasheet](https://nextion.itead.cc/resources/datasheets/), [iTead](https://www.itead.cc/display/nextion.html))
+([datasheet ](https://nextion.itead.cc/resources/datasheets/), [iTead ](https://www.itead.cc/display/nextion.html))
 with ESPHome.
 
 {{< img src="nextion-full.jpg" alt="Image" caption="Nextion display" width="75.0%" class="center" >}}
@@ -93,7 +93,7 @@ display:
 Nextion displays have a dedicated processor built directly into the display to perform all rendering. ESPHome simply
 sends *instructions* to the display to tell it *how* to render something and/or *what* to render.
 
-First, you need to use the [Nextion Editor](https://nextion.tech/nextion-editor/) to create a "TFT" display file and
+First, you need to use the [Nextion Editor ](https://nextion.tech/nextion-editor/) to create a "TFT" display file and
 "install" it onto the display, typically via an SD card onto which you'll copy the "TFT" file and then insert into the
 display for installation/updating. Then, in the rendering `lambda`, you can use the various API calls to populate the
 display with data:
@@ -207,7 +207,7 @@ Several [Triggers]({{< ref "automations/actions#actions-trigger" >}}) are availa
 
 {{< anchor "nextion-on_setup" >}}
 
-##### ``on_setup``
+##### `on_setup`
 
 This automation will be triggered when a connection is established with the Nextion display. This happens after boot
 and it may take some time (hundreds of milliseconds). It could be used to change some display element once start-up is
@@ -237,7 +237,7 @@ display:
 ```
 {{< anchor "nextion-on_sleep" >}}
 
-##### ``on_sleep``/``on_wake``
+##### `on_sleep`/`on_wake`
 
 These automations will be triggered upon sleep or upon wake (respectively). The Nextion does not accept commands or
 updates while in sleep mode; these triggers may be used to cope with this. For example, you could use them to
@@ -245,7 +245,7 @@ updates while in sleep mode; these triggers may be used to cope with this. For e
 
 {{< anchor "nextion-on_page" >}}
 
-##### ``on_page``
+##### `on_page`
 
 This automation is triggered when the page is changed on display. This includes both ESPHome-initiated and
 Nextion-initiated page changes. ESPHome initiates a page change by calling either the `goto_page("page_name")` or
@@ -281,7 +281,7 @@ Given the page ID, the appropriate components can be updated. Two strategies are
   ```
 {{< anchor "nextion-on_touch" >}}
 
-##### ``on_touch``
+##### `on_touch`
 
 This automation is triggered when a component is pressed or released on the Nextion display.
 
@@ -290,7 +290,7 @@ The following arguments will be available:
 - `page_id`: Contains the ID (integer) of the page where the touch happened.
 - `component_id`: Contains the ID (integer) of the component touched. **You must have "Send Component ID" enabled
     for "Touch Press Event" and/or "Touch Release Event" for the UI element in your HMI configuration in the**
-    [Nextion Editor](https://nextion.tech/nextion-editor/).
+    [Nextion Editor ](https://nextion.tech/nextion-editor/).
 - `touch_event`: It will be `true` for a "press" event, or `false` for a "release" event.
 
 ```yaml
@@ -305,7 +305,7 @@ on_touch:
 ```
 {{< anchor "nextion-on_buffer_overflow" >}}
 
-##### ``on_buffer_overflow``
+##### `on_buffer_overflow`
 
 This automation is triggered when the Nextion display reports a serial buffer overflow. When this happens, the
 Nextion's buffer will continue to receive the new instructions, but all previous instructions are lost and the Nextion
@@ -325,9 +325,9 @@ on_buffer_overflow:
 
 {{< anchor "nextion-set_brightness" >}}
 
-##### ``display.nextion.set_brightness``
+##### `display.nextion.set_brightness`
 
-You can use this [action<actions-action>]({{< ref "#action<actions-action>" >}}) to set the brightness of the Nextion's backlight.
+You can use this [action]({{< ref "automations/actions#actions-action" >}}) to set the brightness of the Nextion's backlight.
 
 ```yaml
 on_...:
@@ -353,7 +353,7 @@ This will use the file specified for `tft_url` to update ("OTA") the Nextion.
 
 Once completed, both ESPHome and the Nextion will reboot. ESPHome will be unresponsive during the upload process and no
 logging or other {{< docref "/automations/index" "automations" >}} will occur. This process uses the same protocol as the
-[Nextion Editor](https://nextion.tech/nextion-editor/) and only transfers required portions of the TFT file.
+[Nextion Editor ](https://nextion.tech/nextion-editor/) and only transfers required portions of the TFT file.
 
 {{< warning >}}
 *Use of software UARTs is known to result in unpredictable/inconsistent behavior and will likely result in the
@@ -429,7 +429,7 @@ the individual components (linked below) for more detail.
 - {{< docref "../text_sensor/nextion" >}}
 - {{< docref "../uart" >}}
 - :apiref:`nextion/nextion.h`
-- [Simple Nextion Library](https://github.com/bborncr/nextion) by [Bentley Born](https://github.com/bborncr)
-- [Official Nextion Library](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead](https://www.itead.cc/)
+- [Simple Nextion Library ](https://github.com/bborncr/nextion) by [Bentley Born ](https://github.com/bborncr)
+- [Official Nextion Library ](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead ](https://www.itead.cc/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/nextion.md)
 

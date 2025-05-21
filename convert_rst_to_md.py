@@ -715,11 +715,12 @@ def process_inline_markup(line):
     # Process the placeholders
     for i, ((start, end), content) in enumerate(ref_matches):
         placeholder = f"__REF_PLACEHOLDER_{i}__"
-        
+
         # Handle references with text and ID
-        if " <" in content and ">" in content:
-            text, ref_id = content.split(" <", 1)
+        if "<" in content and ">" in content:
+            text, ref_id = content.split("<", 1)
             ref_id = ref_id.rstrip(">")
+            text = text.strip()
             
             # Look up the document path for this anchor
             doc_path, anchor_text = anchor_map.get(ref_id, ("", ""))
@@ -763,8 +764,8 @@ def process_inline_markup(line):
         processed_line = processed_line.replace(placeholder, replacement)
     
     # External links
-    processed_line = re.sub(r'`([^<]+) <([^>]+)>`__*', r'[\1](\2)', processed_line)
-    processed_line = re.sub(r'^\.\.\ _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
+    processed_line = re.sub(r'`([^<]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
+    processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
     
     return processed_line
 
@@ -777,14 +778,16 @@ def process_multiline_references(lines):
         current_line = lines[i]
 
         # Check if this line might contain the start of a split reference
-        if '`' in current_line and '>' not in current_line and i + 1 < len(lines):
+        if current_line.count('`') % 2 == 1 and '>' not in current_line and i + 1 < len(lines):
             # Look ahead to see if the next line completes the reference
             next_line = lines[i + 1]
             if '>' in next_line and '`__' in next_line:
                 # This is a split reference, combine the lines
                 combined_line = current_line + next_line
                 # Process the combined line
+                print(combined_line)
                 processed_line = process_inline_markup(combined_line)
+                print(processed_line)
                 processed_lines.append(processed_line)
                 i += 2  # Skip the next line since we've processed it
                 continue
@@ -1170,7 +1173,7 @@ def process_pipe_separated_table(table_lines, end_idx):
                 cell_content = line[start_pos:end_pos].strip()
             else:
                 cell_content = ""
-            cells.append(cell_content)
+            cells.append(process_inline_markup(cell_content))
         
         # Add the row to Markdown output
         markdown_rows.append('| ' + ' | '.join(cells) + ' |')
@@ -1265,8 +1268,8 @@ def process_whitespace_aligned_table(table_lines, end_idx):
                 cell_content = line[start_pos:min(end_pos, len(line))].strip()
             else:
                 cell_content = ""
-            cells.append(cell_content)
-        
+            cells.append(process_inline_markup(cell_content))
+
         # Add the row to Markdown output
         markdown_rows.append('| ' + ' | '.join(cells) + ' |')
     

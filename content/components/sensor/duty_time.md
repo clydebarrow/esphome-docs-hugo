@@ -52,7 +52,7 @@ In addition to all basic [sensor automations]({{< ref "components/sensor/_index#
 
 {{< anchor "sensor-duty_time-start_action" >}}
 
-### ``sensor.duty_time.start`` Action
+### `sensor.duty_time.start` Action
 
 This action starts/resume time tracking. In lambdas, you may use the `start()` method.
 
@@ -66,7 +66,7 @@ on_...:
 ```
 {{< anchor "sensor-duty_time-stop_action" >}}
 
-### ``sensor.duty_time.stop`` Action
+### `sensor.duty_time.stop` Action
 
 This action suspends time tracking. Causes the sensor to be updated, including the `last_time` sensor. In lambdas, you may use the `stop()` method.
 
@@ -79,7 +79,7 @@ on_...:
 ```
 {{< anchor "sensor-duty_time-reset_action" >}}
 
-### ``sensor.duty_time.reset`` Action
+### `sensor.duty_time.reset` Action
 
 This action resets the duty time counter. Causes a sensor update. Does not affect the `last_time` sensor. In lambdas, you may use the `reset()` method.
 
@@ -93,7 +93,7 @@ on_...:
 {{< anchor "sensor-duty_time-is_running_action" >}}
 {{< anchor "sensor-duty_time-is_not_running_action" >}}
 
-### ``sensor.duty_time.is_running`` / ``sensor.duty_time.is_not_running`` Condition
+### `sensor.duty_time.is_running` / `sensor.duty_time.is_not_running` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the `duty_time` counter is currently running (or suspended). In lambdas, you may use the `is_running()` method.
 

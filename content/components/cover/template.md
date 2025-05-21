@@ -72,7 +72,7 @@ Possible return values for the optional lambda:
 
 {{< anchor "cover-template-publish_action" >}}
 
-## ``cover.template.publish`` Action
+## `cover.template.publish` Action
 
 You can also publish a state to a template cover from elsewhere in your YAML file
 with the `cover.template.publish` action.

@@ -117,7 +117,7 @@ If the device has different multipliers for current and target temperatures, **t
 
 Some Tuya climate devices don't have a data point for setting and reporting HVAC mode, they use a data point to report their active state (current action). In this case, you can just use the **active_state** configuration.
 
-If your device uses a data point for HVAC mode, but not for reporting the active state, it is possible to modify the hardware so that the relay outputs can be read by the ESP. Please refer to [this discussion](https://github.com/klausahrenberg/WThermostatBeca/issues/17) for more details on the required modifications. You can then use the **heating_state_pin** and/or **cooling_state_pin** configuration variables to detect the current state.
+If your device uses a data point for HVAC mode, but not for reporting the active state, it is possible to modify the hardware so that the relay outputs can be read by the ESP. Please refer to [this discussion ](https://github.com/klausahrenberg/WThermostatBeca/issues/17) for more details on the required modifications. You can then use the **heating_state_pin** and/or **cooling_state_pin** configuration variables to detect the current state.
 
 If none of the above variables are set, the active state is inferred from the difference between the current and target temperatures:
 

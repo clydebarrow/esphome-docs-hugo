@@ -64,7 +64,7 @@ you want the button to use that name, you can set `name: None`.
 Automations:
 
 - **on_press** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when the button is pressed. See [``on_press``]({{< ref "components/button/_index#button-on_press" >}}).
+  when the button is pressed. See [`on_press`]({{< ref "components/button/_index#button-on_press" >}}).
 
 MQTT options:
 
@@ -74,7 +74,7 @@ MQTT options:
 
 {{< anchor "button-on_press" >}}
 
-### ``on_press``
+### `on_press`
 
 This automation will be triggered when the button is pressed.
 
@@ -91,7 +91,7 @@ Configuration variables: see [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "button-press_action" >}}
 
-### ``button.press`` Action
+### `button.press` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for pressing a button in an Automation.
 

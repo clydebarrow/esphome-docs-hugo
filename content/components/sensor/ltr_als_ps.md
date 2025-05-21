@@ -71,15 +71,15 @@ The table lists gain values and corresponding illuminance range:
 
 | Gain | Illuminance range |  |
 | --- | --- | --- |
-| ``1X`` | 1 lux to 64k lux (default) |  |
-| ``2X`` | 0.5 lux to 32k lux |  |
-| ``4X`` | 0.25 lux to 16k lux |  |
-| ``8X`` | 0.125 lux to 8k lux |  |
-| ``48X`` | 0.02 lux to 1.3k lux |  |
-| ``96X`` | 0.01 lux to 600 lux |  |
+| `1X`    1 | lux to 64k lux (default) |  |
+| `2X`    0. | 5 lux to 32k lux |  |
+| `4X`    0. | 25 lux to 16k lux |  |
+| `8X`    0. | 125 lux to 8k lux |  |
+| `48X`   0. | 02 lux to 1.3k lux |  |
+| `96X`   0. | 01 lux to 600 lux |  |
 
 
-This Wikipedia [article](https://en.wikipedia.org/wiki/Lux) has a table of some lux values for comparison.
+This Wikipedia [article ](https://en.wikipedia.org/wiki/Lux) has a table of some lux values for comparison.
 
 ## Proximity sensing
 
@@ -155,9 +155,9 @@ may simply use the shorthand syntax for the sensor. For example: `ambient_light:
 
 ## See Also
 
-- [LTR-303ALS datasheet](https://github.com/latonita/datasheets-storage/blob/main/sensors/LTR-303ALS-01_DS_V1.pdf)
-- Application note [LTR-303ALS & LTR-329ALS Appendix A](https://github.com/latonita/datasheets-storage/blob/main/sensors/LTR-303%20329_Appendix%20A%20Ver_1.0_22%20Feb%202013.pdf)
-- [LTR-559ALS datasheet](https://github.com/latonita/datasheets-storage/blob/main/sensors/ltr-559als-01_ds_v1.pdf)
+- [LTR-303ALS datasheet ](https://github.com/latonita/datasheets-storage/blob/main/sensors/LTR-303ALS-01_DS_V1.pdf)
+- Application note [LTR-303ALS & LTR-329ALS Appendix A ](https://github.com/latonita/datasheets-storage/blob/main/sensors/LTR-303%20329_Appendix%20A%20Ver_1.0_22%20Feb%202013.pdf)
+- [LTR-559ALS datasheet ](https://github.com/latonita/datasheets-storage/blob/main/sensors/ltr-559als-01_ds_v1.pdf)
 - :apiref:`ltr_als_ps/ltr_als_ps.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/ltr_als_ps.md)
 

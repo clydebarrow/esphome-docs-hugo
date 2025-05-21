@@ -8,8 +8,7 @@ title: "Pulse Counter Sensor"
 The pulse counter sensor allows you to count the number of pulses and the frequency of a signal
 on any pin.
 
-On the ESP32, this sensor is even highly accurate because it's using the hardware `pulse counter
-peripheral <https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html>`__
+On the ESP32, this sensor is even highly accurate because it's using the hardware [pulse counterperipheral ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html)
 on the ESP32. However, due to the use of the pulse counter peripheral, a maximum of 8 channels can be used!
 
 {{< img src="pulse-counter.png" alt="Image" width="80.0%" class="center" >}}
@@ -156,7 +155,7 @@ circuiting the wire by mistake.
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - {{< docref "/components/sensor/pulse_meter" >}}
 - {{< docref "rotary_encoder/" >}}
-- [esp-idf Pulse Counter API](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html).
+- [esp-idf Pulse Counter API ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html).
 - :apiref:`pulse_counter/pulse_counter_sensor.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/pulse_counter.md)
 

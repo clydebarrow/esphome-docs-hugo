@@ -67,7 +67,7 @@ MQTT options:
 
 {{< anchor "cover-open_action" >}}
 
-## ``cover.open`` Action
+## `cover.open` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) opens the cover with the given ID when executed.
 
@@ -89,7 +89,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "cover-close_action" >}}
 
-## ``cover.close`` Action
+## `cover.close` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) closes the cover with the given ID when executed.
 
@@ -111,7 +111,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "cover-stop_action" >}}
 
-## ``cover.stop`` Action
+## `cover.stop` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) stops the cover with the given ID when executed.
 
@@ -133,7 +133,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "cover-toggle_action" >}}
 
-## ``cover.toggle`` Action
+## `cover.toggle` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) toggles the cover with the given ID when executed,
 cycling through the states close/stop/open/stop... This allows the cover to be controlled
@@ -157,7 +157,7 @@ call.perform();
 {{< /note >}}
 {{< anchor "cover-control_action" >}}
 
-## ``cover.control`` Action
+## `cover.control` Action
 
 This [action]({{< ref "automations/actions#config-action" >}}) is a more generic version of the other cover actions and
 allows all cover attributes to be set.
@@ -229,7 +229,7 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
     ```
 {{< anchor "cover-on_open_trigger" >}}
 
-### ``cover.on_open`` Trigger
+### `cover.on_open` Trigger
 
 This trigger is activated each time the cover reaches a fully open state.
 
@@ -243,7 +243,7 @@ cover:
 ```
 {{< anchor "cover-on_closed_trigger" >}}
 
-### ``cover.on_closed`` Trigger
+### `cover.on_closed` Trigger
 
 This trigger is activated each time the cover reaches a fully closed state.
 

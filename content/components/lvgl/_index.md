@@ -5,8 +5,8 @@ title: "LVGL Graphics"
 
 {{< seo description="" image="" >}}
 
-[LVGL](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
-embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8](https://docs.lvgl.io/8.4/).
+[LVGL ](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
+embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8 ](https://docs.lvgl.io/8.4/).
 
 {{< img src="lvgl_main_screenshot.png" alt="Image" >}}
 
@@ -72,7 +72,7 @@ Some widgets integrate also as native ESPHome components:
 | `led` | {{< docref "/components/light/lvgl" "Light" >}} |
 
 
-These are useful with [Home Assistant automations](https://www.home-assistant.io/docs/automation/) interacting directly with the widgets.
+These are useful with [Home Assistant automations ](https://www.home-assistant.io/docs/automation/) interacting directly with the widgets.
 
 ## Main Configuration
 
@@ -139,7 +139,7 @@ When using an encoder input device the navigation works as follows:
 - **log_level** (*Optional*, string): Set the logger level specifically for the messages of the LVGL library: `TRACE`, `INFO`, `WARN`, `ERROR`, `USER`, `NONE`. Defaults to `WARN`.
 - **byte_order** (*Optional*, int16): The byte order of the data LVGL outputs; either `big_endian` or `little_endian`. Defaults to `big_endian`.
 - **disp_bg_color** (*Optional*, [color]({{< ref "components/lvgl/_index#lvgl-color" >}})): Solid color used to fill the background. Can be changed at runtime with the `lvgl.update` action.
-- **disp_bg_image** (*Optional*, [``image``]({{< ref "components/lvgl/widgets#lvgl-widget-image" >}})):  The ID of an existing image configuration, to be used as background wallpaper. To change the image at runtime use the `lvgl.update` action. Also see [image]({{< ref "components/image#display-image" >}}) for a note regarding supported image formats. May also be set to `none` to clear the background image.`
+- **disp_bg_image** (*Optional*, [`image`]({{< ref "components/lvgl/widgets#lvgl-widget-image" >}})):  The ID of an existing image configuration, to be used as background wallpaper. To change the image at runtime use the `lvgl.update` action. Also see [image]({{< ref "components/image#display-image" >}}) for a note regarding supported image formats. May also be set to `none` to clear the background image.`
 - **disp_bg_opa** (*Optional*, [opacity]({{< ref "components/lvgl/_index#lvgl-opacity" >}})): Opacity of the background image or color of the display.
 - **default_font** (*Optional*, ID): The ID of the [font]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) used by default to render the text or symbols. Defaults to LVGL's internal `montserrat_14` if not specified.
 - **style_definitions** (*Optional*, list): A batch of style definitions to use in LVGL widget's `styles` configuration. See [below]({{< ref "components/lvgl/_index#lvgl-theme" >}}) for more details.
@@ -147,11 +147,11 @@ When using an encoder input device the navigation works as follows:
 - **theme** (*Optional*, list): A list of styles to be applied to all widgets. See [below]({{< ref "components/lvgl/_index#lvgl-theme" >}}) for more details.
 - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the root display. May not be used if `pages` (below) is configured.
 - **pages** (*Optional*, list): A list of page IDs. Each page acts as a parent for widgets placed on it. May not be used with `widgets` (above). Options for each page:
-    - **skip** (*Optional*, boolean): Option to skip this page when navigating between them with [``lvgl.page.next``, ``lvgl.page.previous``]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}).
+    - **skip** (*Optional*, boolean): Option to skip this page when navigating between them with [`lvgl.page.next`, `lvgl.page.previous`]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}).
     - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
     - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the page.
     - All other options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}) to be applied to this page.
-- **page_wrap** (*Optional*, boolean): Wrap from the last to the first page when navigating between them with [``lvgl.page.next``, ``lvgl.page.previous``]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}). Defaults to `true`.
+- **page_wrap** (*Optional*, boolean): Wrap from the last to the first page when navigating between them with [`lvgl.page.next`, `lvgl.page.previous`]({{< ref "components/lvgl/_index#lvgl-page-next-previous-action" >}}). Defaults to `true`.
 - **top_layer** (*Optional*, list): A special kind of *Always on Top* page, which acts as a parent for widgets placed on it. It's shown above all the pages, which may be useful for widgets which always need to be visible.
     - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
     - **widgets** (*Optional*, list): A list of {{< docref "/components/lvgl/widgets" >}} to be drawn on the page.
@@ -217,7 +217,7 @@ lvgl:
 
 Colors can be specified anywhere in the LVGL configuration either by referencing a preconfigured [ESPHome color]({{< ref "components/display/_index#config-color" >}}) ID or by representing the color in the common hexadecimal notation. For example, `0xFF0000` would be red.
 
-You may also use any of the [standard CSS color names](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color), e.g. `springgreen`.
+You may also use any of the [standard CSS color names ](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color), e.g. `springgreen`.
 
 When using a lambda to provide a color you should use the `lv_color_hex` function, for example:
 
@@ -248,7 +248,7 @@ Two font choices are available:
 
 **ESPHome fonts**
 
-You can use [fonts configured normally<display-fonts>]({{< ref "#fonts configured normally<display-fonts>" >}}), the glyphs will be rendered while building the binary. This has the advantage that you can define custom sets of glyphs of any size, with icons or diacritic characters of your choice, for any language, from any TrueType/OpenType font, allowing a more optimal flash space usage because you don't need to include all glyphs for all sizes you wish to use.
+You can use [fonts configured normally]({{< ref "components/font#display-fonts" >}}), the glyphs will be rendered while building the binary. This has the advantage that you can define custom sets of glyphs of any size, with icons or diacritic characters of your choice, for any language, from any TrueType/OpenType font, allowing a more optimal flash space usage because you don't need to include all glyphs for all sizes you wish to use.
 
 {{< tip >}}
 For best results, set `bpp: 4` to get the glyphs rendered with proper anti-aliasing.
@@ -258,7 +258,7 @@ Check out [Battery status icon]({{< ref "cookbook/lvgl#lvgl-cookbook-iconbatt" >
 
 **Library fonts**
 
-The LVGL library offers by default prerendered sets with ASCII characters ([0x20-0x7F`), the degree symbol (`0xB0`), the bullet symbol (`0x2022`) from `Montserrat Medium](https://fonts.google.com/specimen/Montserrat), and 60 symbols from [FontAwesome](https://fontawesome.com/) (see below). You can use the IDs below when specifying the `text_font` parameter:
+The LVGL library offers by default prerendered sets with ASCII characters ([0x20-0x7F`), the degree symbol (`0xB0`), the bullet symbol (`0x2022`) from `Montserrat Medium ](https://fonts.google.com/specimen/Montserrat), and 60 symbols from [FontAwesome ](https://fontawesome.com/) (see below). You can use the IDs below when specifying the `text_font` parameter:
 
 - `montserrat_8`: 8px font
 - `montserrat_10`: 10px font
@@ -298,14 +298,14 @@ In addition to the above, the following special fonts are available from LVGL as
 
 - `unscii_8`: 8 px pixel perfect font with only ASCII characters.
 - `unscii_16`: 16 px pixel perfect font with only ASCII characters.
-- [simsun_16_cjk`: 16 px font with normal range + 1000 most common `CJK Radicals](https://en.wikipedia.org/wiki/CJK_Radicals_Supplement).
+- [simsun_16_cjk`: 16 px font with normal range + 1000 most common `CJK Radicals ](https://en.wikipedia.org/wiki/CJK_Radicals_Supplement).
 - `dejavu_16_persian_hebrew`: 16 px font with normal range + Hebrew, Arabic, Persian letters and all their forms.
 
 {{< anchor "lvgl-styling" >}}
 
 ### Style properties
 
-LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
+LVGL follows CSS's [border-box model ](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
 {{< img src="lvgl_boxmodel.png" alt="Image" class="center" >}}
 
@@ -469,7 +469,7 @@ Feel free to experiment to discover inheritance and precedence of the styles bas
 
 [Theme and style definitions]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) The Cookbook contains an example which demonstrates how to implement a gradient style for your widgets.
 
-### ``lvgl.style.update``
+### `lvgl.style.update`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) allows changing/updating the properties of a style at run time. This can be used to
 implement dynamic themes, e.g. light/dark mode, or to change the appearance of widgets based on user interaction.
@@ -514,7 +514,7 @@ The `hidden`, `ignore_layout` and `floating` [flags]({{< ref "components/lvgl/wi
 
 **Flex**
 
-The Flex layout in LVGL is a subset implementation of [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+The Flex layout in LVGL is a subset implementation of [CSS Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 It can arrange items into rows or columns (tracks), handle wrapping, adjust spacing between items and tracks and even handle growing the layout to make the item(s) fill the remaining space with respect to minimum/maximum width and height.
 
@@ -573,7 +573,7 @@ Values for use with  `flex_align_main`, `flex_align_cross`, `flex_align_track`:
 ```
 **Grid**
 
-The Grid layout in LVGL is a subset implementation of [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid//).
+The Grid layout in LVGL is a subset implementation of [CSS Grid ](https://css-tricks.com/snippets/css/complete-guide-grid//).
 
 It can arrange items into a 2D "table" that has rows or columns (tracks). The item(s) can span through multiple columns or rows. The track's size can be set in pixels, to the largest item of the track (`CONTENT`) or in "free units" to distribute the free space proportionally.
 
@@ -681,14 +681,14 @@ LVGL supports a list of {{< docref "/components/lvgl/widgets" >}} which can be u
 
 ## Actions
 
-Widgets support [general or specific]({{< ref "components/lvgl/widgets#lvgl-automation-actions" >}}) actions - see the :doc:`/components/lvgl/widgets`{{< docref "/components/lvgl/widgets" >}}
+Widgets support [general or specific]({{< ref "components/lvgl/widgets#lvgl-automation-actions" >}}) actions - see the {{< docref "/components/lvgl/widgets" >}}{{< docref "/components/lvgl/widgets" >}}
 
 Several actions are available for the LVGL component itself, these are outlined below. Note that if multiple LVGL instances are configured, an **lvgl_id** config entry will be required to specify which instance the action relates to. This is not required if there is only a single LVGL instance configured.
 
 
 {{< anchor "lvgl-redraw-action" >}}
 
-### ``lvgl.widget.redraw``
+### `lvgl.widget.redraw`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) redraws the entire screen, or optionally only selected widgets. It does not change
 any widget properties. It is mostly useful to redraw the screen after resuming LVGL from the paused state.
@@ -706,7 +706,7 @@ on_...:
 ```
 {{< anchor "lvgl-refresh-action" >}}
 
-### ``lvgl.widget.refresh``
+### `lvgl.widget.refresh`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) re-evaluates all properties specified with lambdas in the specified widget's configuration. This offers
 an alternative technique to using the `lvgl.widget.update` action, which updates specified properties.
@@ -729,7 +729,7 @@ on_...:
 ```
 {{< anchor "lvgl-pause-action" >}}
 
-### ``lvgl.pause``
+### `lvgl.pause`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) pauses the activity of LVGL, including rendering.
 
@@ -745,7 +745,7 @@ on_...:
 ```
 {{< anchor "lvgl-resume-action" >}}
 
-### ``lvgl.resume``
+### `lvgl.resume`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) resumes the activity of LVGL, including rendering.
 
@@ -758,7 +758,7 @@ on_...:
 
 
 ```
-### ``lvgl.update``
+### `lvgl.update`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) allows changing/updating the `disp_bg_color` or `disp_bg_image` configuration variables of the main component, making it possible to change the background color or wallpaper at any time.
 
@@ -774,7 +774,7 @@ on_...:
 ```
 {{< anchor "lvgl-page-next-previous-action" >}}
 
-### ``lvgl.page.next``, ``lvgl.page.previous``
+### `lvgl.page.next`, `lvgl.page.previous`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) changes the page to the next/previous based on the configuration (pages with their `skip` option enabled are...skipped). Page changes will wrap around at the end.
 
@@ -797,7 +797,7 @@ on_...:
 ```
 {{< anchor "lvgl-page-show-action" >}}
 
-### ``lvgl.page.show``
+### `lvgl.page.show`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) shows a specific page (including pages with their `skip` option enabled).
 
@@ -818,7 +818,7 @@ on_...:
 ```
 {{< anchor "lvgl-widget-focus-action" >}}
 
-### ``lvgl.widget.focus``
+### `lvgl.widget.focus`
 
 This [action]({{< ref "automations/actions#actions-action" >}}) moves the input focus to the nominated widget. Used mainly with encoder inputs
 to select a specific widget to receive input events. It may also allow the focus to be frozen on that widget,
@@ -871,7 +871,7 @@ on_...:
 
 {{< anchor "lvgl-is-idle-condition" >}}
 
-### ``lvgl.is_idle``
+### `lvgl.is_idle`
 
 This [condition]({{< ref "automations/actions#common_conditions" >}}) checks if the amount of time specified has passed since the last touch event.
 
@@ -894,7 +894,7 @@ on_...:
 ```
 {{< anchor "lvgl-is-paused-condition" >}}
 
-### ``lvgl.is_paused``
+### `lvgl.is_paused`
 
 This [condition]({{< ref "automations/actions#common_conditions" >}}) checks if LVGL is in the paused state or not.
 
@@ -910,7 +910,7 @@ on_...:
           - lvgl.resume:
 
 ```
-### ``lvgl.page.is_showing``
+### `lvgl.page.is_showing`
 
 This [condition]({{< ref "automations/actions#common_conditions" >}}) checks if the nominated page is the one currently showing.
 
@@ -933,7 +933,7 @@ Widget level [interaction triggers]({{< ref "components/lvgl/widgets#lvgl-automa
 
 {{< anchor "lvgl-on-idle-trigger" >}}
 
-### ``on_idle``
+### `on_idle`
 
 LVGL has a notion of screen inactivity -- i.e. the time since the last user interaction with the screen is tracked. This can, for example, be used to dim the display backlight or turn it off after a moment of inactivity (like a screen saver). Every use of an input device (touchscreen, rotary encoder) counts as an activity and resets the inactivity counter.
 
@@ -958,18 +958,18 @@ See [Turn off screen when idle]({{< ref "cookbook/lvgl#lvgl-cookbook-idlescreen"
 
 {{< anchor "lvgl_on_pause_trigger" >}}
 
-### ``on_pause``
+### `on_pause`
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered when LVGL is paused. This can be used to perform any desired actions when the screen is locked, such as turning off the display backlight.
 
 {{< anchor "lvgl_on_resume_trigger" >}}
 
-### ``on_resume``
+### `on_resume`
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered when LVGL is resumed. This can be used to perform any desired actions when the screen is unlocked, such as turning on the display backlight.
 
 
-### ``on_boot``
+### `on_boot`
 
 This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) is triggered after LVGL has been setup. It is also available on any widget, but the timing is the same.
 
@@ -980,6 +980,6 @@ This [trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}}) i
 - {{< docref "/components/display/index" >}}
 - {{< docref "/components/touchscreen/index" >}}
 - {{< docref "/components/sensor/rotary_encoder" >}}
-- [LVGL docs](https://docs.lvgl.io/)
+- [LVGL docs ](https://docs.lvgl.io/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/lvgl/index.md)
 

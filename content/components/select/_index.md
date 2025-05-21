@@ -53,7 +53,7 @@ you want the select to use that name, you can set `name: None`.
 Automations:
 
 - **on_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a new value is published. See [``on_value``]({{< ref "components/select/_index#select-on_value" >}}).
+  when a new value is published. See [`on_value`]({{< ref "components/select/_index#select-on_value" >}}).
 
 MQTT Options:
 
@@ -67,7 +67,7 @@ For more information on using lambdas with select, see [lambda calls]({{< ref "c
 
 {{< anchor "select-on_value" >}}
 
-### ``on_value``
+### `on_value`
 
 This automation will be triggered whenever a value is set/published, even if the value is the same as before. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the value from the trigger with `x` and the index offset of the selected value with `i`.
@@ -87,7 +87,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "select-set_action" >}}
 
-### ``select.set`` Action
+### `select.set` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting the active option using an option value.
 
@@ -108,7 +108,7 @@ the select is left as-is.
 
 {{< anchor "select-set_index_action" >}}
 
-### ``select.set_index`` Action
+### `select.set_index` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for setting the active option using its index offset.
 
@@ -129,7 +129,7 @@ the select is left as-is.
 
 {{< anchor "select-next_action" >}}
 
-### ``select.next`` Action
+### `select.next` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the next option in a select component.
 
@@ -150,7 +150,7 @@ Configuration variables:
 
 {{< anchor "select-previous_action" >}}
 
-### ``select.previous`` Action
+### `select.previous` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the previous option in
 a select component.
@@ -172,7 +172,7 @@ Configuration variables:
 
 {{< anchor "select-first_action" >}}
 
-### ``select.first`` Action
+### `select.first` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the first option in
 a select component.
@@ -191,7 +191,7 @@ Configuration variables:
 
 {{< anchor "select-last_action" >}}
 
-### ``select.last`` Action
+### `select.last` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) for selecting the last option in
 a select component.
@@ -210,7 +210,7 @@ Configuration variables:
 
 {{< anchor "select-operation_action" >}}
 
-### ``select.operation`` Action
+### `select.operation` Action
 
 This is an [Action]({{< ref "automations/actions#config-action" >}}) that can be used to change the active
 option in a select component (first, last, previous or next), using a generic
@@ -259,8 +259,8 @@ advanced stuff (see the full API Reference for more info).
   call.perform();
 
   Check the API reference for information on the methods that are available for
-  the ``SelectCall`` object. You can for example also use ``call.select_first()``
-  to select the first option or ``call.select_next(true)`` to select the next
+  the `SelectCall` object. You can for example also use `call.select_first()`
+  to select the first option or `call.select_next(true)` to select the next
   option with the cycle feature enabled.
 
   ```

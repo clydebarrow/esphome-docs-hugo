@@ -40,7 +40,7 @@ esp32_ble:
     - Must be 20 characters or less.
     - Must be 13 characters or less when using `name_add_mac_suffix: true` - [Adding the MAC address as a suffix to the device name]({{< ref "components/esphome#esphome-mac_suffix" >}}).
 
-## ``ble.disable`` Action
+## `ble.disable` Action
 
 This action turns off the BLE interface on demand.
 
@@ -55,7 +55,7 @@ The configuration option `enable_on_boot` can be set to `false` if you do not wa
 
 
 {{< /note >}}
-## ``ble.enable`` Action
+## `ble.enable` Action
 
 This action turns on the BLE interface on demand.
 
@@ -72,7 +72,7 @@ The configuration option `enable_on_boot` can be set to `false` if you do not wa
 {{< /note >}}
 {{< anchor "ble-enabled_condition" >}}
 
-## ``ble.enabled`` Condition
+## `ble.enabled` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if BLE is currently enabled or not.
 

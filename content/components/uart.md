@@ -88,7 +88,7 @@ The Software UART is only available on the ESP8266. It is not available on ESP32
 {{< /note >}}
 {{< anchor "uart-write_action" >}}
 
-## ``uart.write`` Action
+## `uart.write` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) sends a defined UART signal to the given UART bus.
 

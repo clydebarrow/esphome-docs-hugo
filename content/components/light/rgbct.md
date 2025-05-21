@@ -32,10 +32,10 @@ light:
 - **white_brightness** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the brightness
   of the white leds.
 - **cold_white_color_temperature** (**Required**, float): The coldest color temperature supported by this light. This
-  is the lowest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the highest value when
+  is the lowest value when expressed in [mireds ](https://en.wikipedia.org/wiki/Mired), or the highest value when
   expressed in Kelvin.
 - **warm_white_color_temperature** (**Required**, float): The warmest color temperature supported by this light. This
-  is the highest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the lowest value when
+  is the highest value when expressed in [mireds ](https://en.wikipedia.org/wiki/Mired), or the lowest value when
   expressed in Kelvin.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
   time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.

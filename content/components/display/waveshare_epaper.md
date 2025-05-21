@@ -6,13 +6,13 @@ title: "Waveshare E-Paper Display"
 {{< seo description="" image="" >}}
 
 The `waveshare_epaper` display platform allows you to use
-some E-Paper displays sold by [Waveshare](https://www.waveshare.com/product/displays/e-paper.htm)
-with ESPHome. The 2.13" [TTGO module](https://github.com/lewisxhe/TTGO-EPaper-Series) and the
-[Waveshare Cloud Module](https://www.waveshare.com/wiki/2.13inch_e-Paper_Cloud_Module) with an ESP32
+some E-Paper displays sold by [Waveshare ](https://www.waveshare.com/product/displays/e-paper.htm)
+with ESPHome. The 2.13" [TTGO module ](https://github.com/lewisxhe/TTGO-EPaper-Series) and the
+[Waveshare Cloud Module ](https://www.waveshare.com/wiki/2.13inch_e-Paper_Cloud_Module) with an ESP32
 on the board are supported as well. Depending on your specific revision of the TTGO board you might need to try out the `-b73` or `-b1`
 version (see below).
-The 1.54" [Good Display gdew0154m09](https://www.good-display.com/product/206.html)
-as used in the [M5Stack Core Ink](https://shop.m5stack.com/products/m5stack-esp32-core-ink-development-kit1-54-elnk-display)
+The 1.54" [Good Display gdew0154m09 ](https://www.good-display.com/product/206.html)
+as used in the [M5Stack Core Ink ](https://shop.m5stack.com/products/m5stack-esp32-core-ink-development-kit1-54-elnk-display)
 is also supported.
 Similar modules sold by other vendors might also work but not have been tested yet.
 
@@ -27,14 +27,14 @@ configuration.
 
 | **E-Paper Pin** | **ESP Pin** | **ESPHome Option** |  |
 | --- | --- | --- | --- |
-| ``VCC`` | ``3.3V`` | N/A |  |
-| ``GND`` | ``GND`` | N/A |  |
-| ``CLK`` | Any GPIO | ``spi.clk_pin`` |  |
-| ``DIN`` | Any GPIO | ``spi.mosi_pin`` |  |
-| ``CS`` | Any GPIO | ``cs_pin`` |  |
-| ``DC`` | Any GPIO | ``dc_pin`` |  |
-| ``BUSY`` (Optional) | Any GPIO | ``busy_pin`` |  |
-| ``RESET`` (Optional) | Any GPIO | ``reset_pin`` |  |
+| `VCC`              `3 | .3V`              N/A |  |  |
+| `GND`              `G | ND`               N/A |  |  |
+| `CLK`              An | y GPIO              `s | pi.clk_pin` |  |
+| `DIN`              An | y GPIO              `s | pi.mosi_pin` |  |
+| `CS`               An | y GPIO              `c | s_pin` |  |
+| `DC`               An | y GPIO              `d | c_pin` |  |
+| `BUSY` (Optional)  An | y GPIO              `b | usy_pin` |  |
+| `RESET` (Optional) An | y GPIO              `r | eset_pin` |  |
 
 {{< img src="waveshare_epaper-pins.jpg" alt="Image" width="60.0%" class="center" >}}
 
@@ -156,6 +156,6 @@ The BUSY pin on the `gdew0154m09`, the `Waveshare 7.30in-f` and the `Waveshare 7
 
 - {{< docref "index/" >}}
 - :apiref:`waveshare_epaper/waveshare_epaper.h`
-- [Arduino Waveshare E-Paper library](https://github.com/soonuse/epd-library-arduino) by [Yehui (@soonuse)](https://github.com/soonuse)
+- [Arduino Waveshare E-Paper library ](https://github.com/soonuse/epd-library-arduino) by [Yehui (@soonuse) ](https://github.com/soonuse)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/waveshare_epaper.md)
 

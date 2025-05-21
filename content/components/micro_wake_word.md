@@ -5,10 +5,10 @@ title: "Micro Wake Word"
 
 {{< seo description="" image="" >}}
 
-ESPHome implements an on-device wake word detection framework from [microWakeWord](https://github.com/kahrendt/microWakeWord).
+ESPHome implements an on-device wake word detection framework from [microWakeWord ](https://github.com/kahrendt/microWakeWord).
 This repository/library allows you to create a custom wake word for your ESPHome device.
 
-The training process is described on the [microWakeWord GitHub repository](https://github.com/kahrendt/microWakeWord).
+The training process is described on the [microWakeWord GitHub repository ](https://github.com/kahrendt/microWakeWord).
 
 
 ```yaml
@@ -32,7 +32,7 @@ micro_wake_word:
   - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The optional ID used for the model actions below.
   - **model** (**Required**, string): This can be one of:
 
-        - A simple name of a model that exists in the official [ESPHome Models repository](https://github.com/esphome/micro-wake-word-models).
+        - A simple name of a model that exists in the official [ESPHome Models repository ](https://github.com/esphome/micro-wake-word-models).
           e.g. `okay_nabu`.
         - A github shorthand URL to a model JSON file.
           e.g. `github://esphome/micro-wake-word-models/models/okay_nabu.json@main`.
@@ -66,15 +66,15 @@ The `probability_cutoff` and `sliding_window_size` are provided by the JSON file
 
 ## Automations
 
-##### ``micro_wake_word.start`` Action
+##### `micro_wake_word.start` Action
 
 Starts the wake word detection.
 
-##### ``micro_wake_word.stop`` Action
+##### `micro_wake_word.stop` Action
 
 Stops the wake word detection.
 
-##### ``micro_wake_word.enable_model`` Action
+##### `micro_wake_word.enable_model` Action
 
 ```yaml
 on_...:
@@ -84,7 +84,7 @@ on_...:
 ```
 Enables the specified model so it can be detected when the component is running.
 
-##### ``micro_wake_word.disable_model`` Action
+##### `micro_wake_word.disable_model` Action
 
 ```yaml
 on_...:
@@ -96,11 +96,11 @@ Disables the specified model so it won't be detected when the component is runni
 
 ## Conditions
 
-##### ``micro_wake_word.is_running`` Condition
+##### `micro_wake_word.is_running` Condition
 
 Checks if the component is running to detect wake words.
 
-##### ``micro_wake_word.model_is_enabled`` Condition
+##### `micro_wake_word.model_is_enabled` Condition
 
 Checks if the given model is enabled.
 

@@ -89,7 +89,7 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call 
 
 
   ```
-## ``bedjet`` Climate
+## `bedjet` Climate
 
 The `climate` platform exposes the BedJet's climate-related functionality, including
 setting the mode and target temperature.
@@ -121,7 +121,7 @@ climate:
       reported as the climate entity's current temperature.
 - All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
-## ``bedjet`` Fan
+## `bedjet` Fan
 
 The `fan` platform exposes the BedJet's fan-related functionality, including
 on/off and speed control.
@@ -142,7 +142,7 @@ fan:
 - **bedjet_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
 - Other options from [Fan]({{< ref "components/fan/_index#config-fan" >}}).
 
-## ``bedjet`` Sensor
+## `bedjet` Sensor
 
 The `sensor` platform exposes the BedJet's various temperature readings as sensors.
 
@@ -187,7 +187,7 @@ configuration. If this occurs, see the previous note about adding disconnect swi
 and toggle those off while performing the installation. This will free up resources
 on the ESP and allow the installation to complete.
 
-Additionally, you may use an [Automation<automation>]({{< ref "#Automation<automation>" >}}) [ota.on_begin]({{< ref "components/ota/_index#ota-on_begin" >}})
+Additionally, you may use an [Automation]({{< ref "automations/_index#automation" >}}) [ota.on_begin]({{< ref "components/ota/_index#ota-on_begin" >}})
 to do this automatically:
 
 ```yaml

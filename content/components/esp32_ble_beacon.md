@@ -27,7 +27,7 @@ esp32_ble_beacon:
 ## Configuration variables:
 
 - **type** (**Required**): The type of beacon to create, currently only supports `iBeacon`.
-- **uuid** (**Required**): The [universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+- **uuid** (**Required**): The [universally unique identifier ](https://en.wikipedia.org/wiki/Universally_unique_identifier)
   to identify the beacon.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for code generation.
 
@@ -46,7 +46,7 @@ Advanced options:
   collisions with other BLE transmissions. Defaults to the iBeacon specification's defined interval: `100ms`.
 - **measured_power** (*Optional*, int): The RSSI of the iBeacon as measured 1 meter from the device.
   This is used to calibrate the ranging calculations in iOS. The procedure for setting this value can
-  be found in Apple's [Getting Started with iBeacon PDF](https://developer.apple.com/ibeacon/Getting-Started-with-iBeacon.pdf)
+  be found in Apple's [Getting Started with iBeacon PDF ](https://developer.apple.com/ibeacon/Getting-Started-with-iBeacon.pdf)
   under the heading *Calibrating iBeacon*. Between -128 to 0. Defaults to `-59`.
 - **tx_power** (*Optional*, int): The transmit power of the iBeacon in dBm.
   One of -12, -9, -6, -3, 0, 3, 6, 9. Defaults to `3dBm`.
@@ -74,11 +74,11 @@ Then, just compile and flash the ESP32.
 
 When everything is set up correctly, you should see a show up using your iBeacon scanner of choice. On iPhones,
 this should already work from the Bluetooth screen (not tested), on Android, you will need to use an app like
-["Beacon Scanner"](https://play.google.com/store/apps/details?id=com.bridou_n.beaconscanner) by Nicolas Bridoux.
+["Beacon Scanner" ](https://play.google.com/store/apps/details?id=com.bridou_n.beaconscanner) by Nicolas Bridoux.
 
 For using these beacons to track the location of your phone, you will need to use another app. For example, I used
-[this guide by the owntracks](https://owntracks.org/booklet/features/beacons/) app to let my Home Automation system
-know when I'm home or away. Another nice Android app is [Beacon MQTT](https://turbo-lab.github.io/android-beacon-mqtt/).
+[this guide by the owntracks ](https://owntracks.org/booklet/features/beacons/) app to let my Home Automation system
+know when I'm home or away. Another nice Android app is [Beacon MQTT ](https://turbo-lab.github.io/android-beacon-mqtt/).
 It can work with multiple beacons simultaneously.
 
 {{< img src="esp32_ble_beacon-ibeacon.png" alt="Image" width="75.0%" class="center" >}}
@@ -88,6 +88,6 @@ It can work with multiple beacons simultaneously.
 - {{< docref "esp32_ble_tracker/" >}}
 - {{< docref "binary_sensor/ble_presence" >}}
 - :apiref:`esp32_ble_beacon/esp32_ble_beacon.h`
-- [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
+- [ESP32 BLE for Arduino ](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban ](https://github.com/nkolban).
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/esp32_ble_beacon.md)
 

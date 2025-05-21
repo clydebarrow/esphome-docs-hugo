@@ -34,7 +34,7 @@ update:
 
 ## Update Manifest Format
 
-This component expects the [ESP-Web-Tools manifest](https://github.com/esphome/esp-web-tools) with an extension in
+This component expects the [ESP-Web-Tools manifest ](https://github.com/esphome/esp-web-tools) with an extension in
 the `ota` block that is structured as follows:
 
 ```json

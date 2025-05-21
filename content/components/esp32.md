@@ -16,7 +16,7 @@ esp32:
 ## Configuration variables:
 
 - **board** (**Required**, string): The PlatformIO board ID that should be used. Choose the appropriate board from
-  [this list](https://registry.platformio.org/platforms/platformio/espressif32/boards?version=5.3.0) (the icon next
+  [this list ](https://registry.platformio.org/platforms/platformio/espressif32/boards?version=5.3.0) (the icon next
   to the name can be used to copy the board ID). *This only affects pin aliases, flash size and some internal settings*;
   if unsure or you cannot find your exact board, using a generic board (from Espressif) such as `esp32dev` almost
   always works just fine.
@@ -50,7 +50,7 @@ esp32:
 ### Configuration variables:
 
 - **version** (*Optional*, string): The base framework version number to use, from
-  [ESP32 arduino releases](https://github.com/espressif/arduino-esp32/releases). Defaults to `recommended`.
+  [ESP32 arduino releases ](https://github.com/espressif/arduino-esp32/releases). Defaults to `recommended`.
   Additional values are:
 
   - `dev`: Use the latest commit from https://github.com/espressif/arduino-esp32, note this may break at any time
@@ -61,7 +61,7 @@ esp32:
 - **source** (*Optional*, string): The PlatformIO package or repository to use for framework. This can be used to use a
   custom or patched version of the framework.
 - **platform_version** (*Optional*, string): The version of the
-  [pioarduino/espressif32](https://github.com/pioarduino/platform-espressif32/releases) package to use.
+  [pioarduino/espressif32 ](https://github.com/pioarduino/platform-espressif32/releases) package to use.
 - **advanced** (*Optional*, mapping): See [Advanced Configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
 
 {{< anchor "esp32-espidf_framework" >}}
@@ -82,7 +82,7 @@ esp32:
 ### Configuration variables:
 
 - **version** (*Optional*, string): The base framework version number to use, from
-  [ESP32 ESP-IDF releases](https://github.com/espressif/esp-idf/releases). Defaults to `recommended`.
+  [ESP32 ESP-IDF releases ](https://github.com/espressif/esp-idf/releases). Defaults to `recommended`.
   Additional values are:
 
   - `dev`: Use the latest commit from https://github.com/espressif/esp-idf, note this may break at any time
@@ -93,9 +93,9 @@ esp32:
 - **source** (*Optional*, string): The PlatformIO package or repository to use for the framework. This can be used to
   use a custom or patched version of the framework.
 - **platform_version** (*Optional*, string): The version of the
-  [pioarduino/espressif32](https://github.com/pioarduino/platform-espressif32/releases/) package to use.
+  [pioarduino/espressif32 ](https://github.com/pioarduino/platform-espressif32/releases/) package to use.
 - **sdkconfig_options** (*Optional*, mapping): Custom sdkconfig
-  [compiler options](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/kconfig.html#compiler-options)
+  [compiler options ](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/kconfig.html#compiler-options)
   to set in the ESP-IDF project.
 - **advanced** (*Optional*, mapping): See [Advanced Configuration]({{< ref "components/esp32#esp32-advanced_configuration" >}}) below.
 

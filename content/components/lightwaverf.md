@@ -35,7 +35,7 @@ Note: To gather the RAW codes from the remote, setup the `read_pin` and observe 
 .. lightwaverf.send_raw:
 
 
-## ``lightwaverf.send_raw`` Action
+## `lightwaverf.send_raw` Action
 
 Send the raw data that has been captured via the dump system
 

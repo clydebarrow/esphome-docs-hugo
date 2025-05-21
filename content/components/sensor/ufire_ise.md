@@ -40,7 +40,7 @@ sensor:
 
 {{< anchor "sensor-ufire_ise-calibrate_probe_high_action" >}}
 
-## ``ufire_ise.calibrate_probe_high`` Action
+## `ufire_ise.calibrate_probe_high` Action
 
 The pH probe have to be calibrated. For this you need know the pH reference value and temperature
 of the calibration high solution.
@@ -67,7 +67,7 @@ Configuration options:
 
 {{< anchor "sensor-ufire_ise-calibrate_probe_low_action" >}}
 
-## ``ufire_ise.calibrate_probe_low`` Action
+## `ufire_ise.calibrate_probe_low` Action
 
 The pH probe have to be calibrated. For this you need know the pH reference value and temperature
 of the calibration low solution.
@@ -94,7 +94,7 @@ Configuration options:
 
 {{< anchor "sensor-ufire_ise-reset_action" >}}
 
-## ``ufire_ise.reset`` Action
+## `ufire_ise.reset` Action
 
 Reset the current calibration on the sensor.
 

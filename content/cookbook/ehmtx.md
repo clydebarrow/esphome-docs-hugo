@@ -18,12 +18,12 @@ The values/text can be updated or deleted from the display queue. Each screen ha
 ## ESPHome Configuration
 Documentation:
 
-- [Source for the component on github](https://github.com/lubeda/EsphoMaTrix)
-- [Discussion in the homeassistant community](https://community.home-assistant.io/t/esphomatrix-a-simple-clock-status-display/425325)
-- [Second discussion in the homeassistant community](https://community.home-assistant.io/t/a-simple-diy-status-display-with-an-8x32-rgb-led/379051)
-- [Optional notify component](https://github.com/lubeda/EHMTX_custom_component)
+- [Source for the component on github ](https://github.com/lubeda/EsphoMaTrix)
+- [Discussion in the homeassistant community ](https://community.home-assistant.io/t/esphomatrix-a-simple-clock-status-display/425325)
+- [Second discussion in the homeassistant community ](https://community.home-assistant.io/t/a-simple-diy-status-display-with-an-8x32-rgb-led/379051)
+- [Optional notify component ](https://github.com/lubeda/EHMTX_custom_component)
 
-[YAML configuration example for ESP32](https://github.com/lubeda/EsphoMaTrix/blob/main/UlanziTC001.yaml).
+[YAML configuration example for ESP32 ](https://github.com/lubeda/EsphoMaTrix/blob/main/UlanziTC001.yaml).
 
 Sample video:
 

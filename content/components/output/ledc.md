@@ -5,8 +5,7 @@ title: "ESP32 LEDC Output"
 
 {{< seo description="" image="" >}}
 
-The LEDC output component exposes a `LEDC PWM
-channel <https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html>`__
+The LEDC output component exposes a [LEDC PWMchannel ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 of the ESP32 as an output component.
 
 The frequency range of LEDC is from 10Hz to 40MHz - however, higher frequencies require a smaller
@@ -23,14 +22,13 @@ bit depth which means the output is not that accurate for frequencies above ~300
 
 Advanced options:
 
-- **channel** (*Optional*, int): Manually set the `LEDC
-  channel <https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html#configure-channel>`__
+- **channel** (*Optional*, int): Manually set the [LEDC  channel ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html#configure-channel)
   to use. Two adjacent channels share the same timer. Defaults to an automatic selection.
 
 Note: When configuring custom frequencies for two or more outputs, ensure that you manually specify
 channel 0, 2, 4, 6 for each output. This will prevent issues that arise from automatic selection,
 which chooses adjacent channels with shared timers. See
-[Issue #3114](https://github.com/esphome/issues/issues/3114) for more details.
+[Issue #3114 ](https://github.com/esphome/issues/issues/3114) for more details.
 
 - **phase_angle** (*Optional*, float): Set a phase angle to the other channel of this timer.
   Range 0-360°, defaults to 0°
@@ -108,7 +106,7 @@ This means that there are only 4 steps between each value.
 
 {{< anchor "output-ledc-set_frequency_action" >}}
 
-## ``output.ledc.set_frequency`` Action
+## `output.ledc.set_frequency` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually change the frequency of an LEDC
 channel at runtime. Use cases include controlling a passive buzzer (for pitch control).
@@ -134,6 +132,6 @@ Configuration variables:
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - :apiref:`ledc/ledc_output.h`
-- [esp-idf LEDC API docs](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
+- [esp-idf LEDC API docs ](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/output/ledc.md)
 

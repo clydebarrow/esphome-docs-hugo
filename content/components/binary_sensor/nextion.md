@@ -85,7 +85,7 @@ should be prefixed with the page name (page0/page1).
 
 {{< anchor "binary_sensor-nextion-publish_action" >}}
 
-## ``binary_sensor.nextion.publish`` Action
+## `binary_sensor.nextion.publish` Action
 
 You can also publish a state to a Nextion binary sensor from elsewhere in your YAML file
 with the `binary_sensor.nextion.publish` action.

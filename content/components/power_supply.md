@@ -6,8 +6,7 @@ title: "Power Supply Component"
 {{< seo description="" image="" >}}
 
 The `power_supply` component allows you to have a high power mode for
-certain outputs. For example, if you're using an `ATX power
-supply <https://en.wikipedia.org/wiki/ATX>`__ to power your LED strips,
+certain outputs. For example, if you're using an [ATX powersupply ](https://en.wikipedia.org/wiki/ATX) to power your LED strips,
 you usually don't want to have the power supply on all the time while
 the output is not on. The power supply component can be attached to any
 [Output Component]({{< ref "components/output/_index#output" >}}) and

@@ -43,7 +43,7 @@ fan:
 
 {{< anchor "fan-hbridge_brake_action" >}}
 
-## ``fan.hbridge.brake`` Action
+## `fan.hbridge.brake` Action
 
 Set all h-bridge pins high, shorting the fan/motor's windings and forcing the motor to actively stop.
 
@@ -60,6 +60,6 @@ on_...:
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - :apiref:`fan/fan_state.h`
-- [Adafruit's excellent H-bridge tutorial](https://learn.adafruit.com/improve-brushed-dc-motor-performance)
+- [Adafruit's excellent H-bridge tutorial ](https://learn.adafruit.com/improve-brushed-dc-motor-performance)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/fan/hbridge.md)
 

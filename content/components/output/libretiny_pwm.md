@@ -6,7 +6,7 @@ title: "LibreTiny PWM Output"
 {{< seo description="" image="" >}}
 
 The LibreTiny PWM platform allows you to use a hardware PWM on BK72xx and RTL87xx chips.
-Refer to [LibreTiny/Boards](https://docs.libretiny.eu/link/boards) to find your board
+Refer to [LibreTiny/Boards ](https://docs.libretiny.eu/link/boards) to find your board
 and which PWM pins it supports.
 
 ```yaml
@@ -34,7 +34,7 @@ light:
 
 {{< anchor "output-libretiny_pwm-set_frequency_action" >}}
 
-## ``output.libretiny_pwm.set_frequency`` Action
+## `output.libretiny_pwm.set_frequency` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually change the frequency of a LibreTiny PWM
 channel at runtime. Use cases include controlling a passive buzzer (for pitch control).

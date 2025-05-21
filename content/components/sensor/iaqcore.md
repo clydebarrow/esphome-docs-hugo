@@ -6,7 +6,7 @@ title: "AMS iAQ-Core Indoor Air Quality Sensor"
 {{< seo description="" image="" >}}
 
 The AMS iAQ-Core sensor allows you to use your
-([datasheet](https://www.sciosense.com/wp-content/uploads/documents/iaQ-Core-Datasheet.pdf))
+([datasheet ](https://www.sciosense.com/wp-content/uploads/documents/iaQ-Core-Datasheet.pdf))
 sensors with ESPHome.
 
 {{< img src="iaqcore.jpg" alt="Image" caption="AMS iAQ-Core Indoor Air Quality Sensor." width="30.0%" class="center" >}}

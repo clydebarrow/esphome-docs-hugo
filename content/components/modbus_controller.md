@@ -19,7 +19,7 @@ You need an RS485 transceiver module:
 
 {{< img src="rs485.jpg" alt="Image" >}}
 
-See [How is this RS485 module working?](https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working) on stackexchange for more details.
+See [How is this RS485 module working? ](https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working) on stackexchange for more details.
 
 The transceiver connects to the UART of the MCU. For ESP32, pin `16` to `TXD` and pin `17` to `RXD` are the default ones but any other pins can be used as well. `3.3V` to `VCC` and naturally `GND` to `GND`.
 
@@ -90,9 +90,9 @@ logger:
 
 Automations:
 
-- **on_command_sent** (*Optional*, [``on_command_sent``]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})): An automation to perform when a modbus command has been sent. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_online** (*Optional*, [``on_online``]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})): An automation to perform when a modbus controller goes online. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_offline** (*Optional*, [``on_offline``]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})): An automation to perform when a modbus controller goes offline. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_command_sent** (*Optional*, [`on_command_sent`]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})): An automation to perform when a modbus command has been sent. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_online** (*Optional*, [`on_online`]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})): An automation to perform when a modbus controller goes online. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_offline** (*Optional*, [`on_offline`]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})): An automation to perform when a modbus controller goes offline. See [Automation]({{< ref "automations/_index#automation" >}})
 
 ## Example Client
 
@@ -261,7 +261,7 @@ binary_sensor:
 ```
 {{< anchor "modbus_custom_command" >}}
 
-## Using ``custom_command``
+## Using `custom_command`
 
 `custom_command` can be used to create an arbitrary modbus command. Combined with a lambda any response can be handled.
 This example re-implements the command to read the registers 0x156 (Total active energy) and 0x158 Total (reactive energy) from a SDM-120.
@@ -675,7 +675,7 @@ esphome:
 
 {{< anchor "modbus_controller-on_command_sent" >}}
 
-### ``on_command_sent``
+### `on_command_sent`
 
 This automation will be triggered when a command has been sent by the `modbus_controller`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
@@ -691,7 +691,7 @@ modbus_controller:
 ```
 {{< anchor "modbus_controller-on_online" >}}
 
-### ``on_online``
+### `on_online`
 
 This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
@@ -707,7 +707,7 @@ modbus_controller:
 ```
 {{< anchor "modbus_controller-on_offline" >}}
 
-### ``on_offline``
+### `on_offline`
 
 This automation will be triggered when a `modbus_controller` goes `offline` (See [Lambdas]({{< ref "automations/templates#config-lambda" >}})). In [offline_skip_updates]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
 you can get the function code in `function_code` and the register address in `address`.
@@ -731,8 +731,8 @@ modbus_controller:
 - {{< docref "/components/number/modbus_controller" >}}
 - {{< docref "/components/select/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
-- [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
-- [EPEVER MPPT Solar Charge Controller (Tracer-AN Series)](https://devices.esphome.io/devices/epever_mptt_tracer_an)
-- [Genvex, Nibe, Alpha-Innotec heat recovery ventilation](https://devices.esphome.io/devices/Genvex-Nibe-AlphaInnotec-heat-recovery-ventilation)
+- [Modbus RTU Protocol Description ](https://www.modbustools.com/modbus.html)
+- [EPEVER MPPT Solar Charge Controller (Tracer-AN Series) ](https://devices.esphome.io/devices/epever_mptt_tracer_an)
+- [Genvex, Nibe, Alpha-Innotec heat recovery ventilation ](https://devices.esphome.io/devices/Genvex-Nibe-AlphaInnotec-heat-recovery-ventilation)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/modbus_controller.md)
 

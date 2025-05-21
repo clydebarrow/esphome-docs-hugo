@@ -7,8 +7,8 @@ title: "Stepper Component"
 
 The `stepper` component allows you to use stepper motors with ESPHome.
 Currently only the A4988 stepper driver
-([datasheet](https://www.pololu.com/file/0J450/a4988_DMOS_microstepping_driver_with_translator.pdf))
-and ULN2003 ([datasheet](http://www.ti.com/lit/ds/symlink/uln2003a.pdf)) are supported.
+([datasheet ](https://www.pololu.com/file/0J450/a4988_DMOS_microstepping_driver_with_translator.pdf))
+and ULN2003 ([datasheet ](http://www.ti.com/lit/ds/symlink/uln2003a.pdf)) are supported.
 
 {{< note >}}
 This component will not show up in the Home Assistant front-end automatically because
@@ -118,7 +118,7 @@ Configuration variables:
 
 {{< anchor "stepper-set_target_action" >}}
 
-## ``stepper.set_target`` Action
+## `stepper.set_target` Action
 
 To use your stepper motor in [automations]({{< ref "automations/_index#automation" >}}) or templates, you can use this action to set the target
 position (in steps). The stepper will always run towards the target position and stop once it has reached the target.
@@ -165,7 +165,7 @@ on_...:
 {{< /warning >}}
 {{< anchor "stepper-report_position_action" >}}
 
-## ``stepper.report_position`` Action
+## `stepper.report_position` Action
 
 All steppers start out with a target and current position of `0` on boot. However, if you for example want to home
 a stepper motor, it can be useful to **report** the stepper where it is currently at.
@@ -204,7 +204,7 @@ Configuration variables:
 
 {{< anchor "stepper-set_speed_action" >}}
 
-## ``stepper.set_speed`` Action
+## `stepper.set_speed` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to set the speed of a stepper at runtime.
 
@@ -223,7 +223,7 @@ Configuration variables:
 
 {{< anchor "stepper-set_acceleration_action" >}}
 
-## ``stepper.set_acceleration`` Action
+## `stepper.set_acceleration` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to set the acceleration of a stepper at runtime.
 
@@ -242,7 +242,7 @@ Configuration variables:
 
 {{< anchor "stepper-set_deceleration_action" >}}
 
-## ``stepper.set_deceleration`` Action
+## `stepper.set_deceleration` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to set the deceleration of a stepper at runtime.
 

@@ -23,7 +23,7 @@ light:
 - **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the light.
 - **num_leds** (**Required**, int): The number of LEDs in the strip.
 - **chipset** (**Required**, enum): The name of the chipset used; determines signal timing. Not required if
-  [specifying the timings manually<esp32-rmt-led-strip-manual_timings>]({{< ref "#specifying the timings manually<esp32-rmt-led-strip-manual_timings>" >}}).
+  [specifying the timings manually]({{< ref "components/light/esp32_rmt_led_strip#esp32-rmt-led-strip-manual_timings" >}}).
 
     - `WS2811`
     - `WS2812`

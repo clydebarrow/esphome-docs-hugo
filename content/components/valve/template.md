@@ -66,7 +66,7 @@ Possible return values for the optional lambda:
 
 {{< anchor "valve-template-publish_action" >}}
 
-## ``valve.template.publish`` Action
+## `valve.template.publish` Action
 
 You can also publish a state to a template valve from elsewhere in your YAML filewith the `valve.template.publish` action.
 

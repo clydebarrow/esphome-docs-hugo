@@ -77,11 +77,11 @@ you want the sensor to use that name, you can set `name: None`.
 Automations:
 
 - **on_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a new value is published. See [``on_value``]({{< ref "components/sensor/_index#sensor-on_value" >}}).
+  when a new value is published. See [`on_value`]({{< ref "components/sensor/_index#sensor-on_value" >}}).
 - **on_value_range** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a published value transition from outside to a range to inside. See [``on_value_range``]({{< ref "components/sensor/_index#sensor-on_value_range" >}}).
+  when a published value transition from outside to a range to inside. See [`on_value_range`]({{< ref "components/sensor/_index#sensor-on_value_range" >}}).
 - **on_raw_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
-  when a raw value is received that hasn't passed through any filters. See [``on_raw_value``]({{< ref "components/sensor/_index#sensor-on_raw_value" >}}).
+  when a raw value is received that hasn't passed through any filters. See [`on_raw_value`]({{< ref "components/sensor/_index#sensor-on_raw_value" >}}).
 
 MQTT Options:
 
@@ -155,7 +155,7 @@ filters:
   - lambda: return x * (9.0/5.0) + 32.0;
 
 ```
-### ``calibrate_linear``
+### `calibrate_linear`
 
 Calibrate your sensor values by using values you measured with an accurate "truth" source.
 
@@ -195,7 +195,7 @@ calculated and may not represent each value exactly.
 
 {{< anchor "sensor-filter-calibrate_polynomial" >}}
 
-### ``calibrate_polynomial``
+### `calibrate_polynomial`
 
 Calibrate your sensor values by fitting them to polynomial functions. This is similar to
 the `calibrate_linear` filter, but also allows for higher-order functions like quadratic polynomials.
@@ -220,7 +220,7 @@ degree with a least squares solver.
 
 
 
-### ``clamp``
+### `clamp`
 
 Limits the value to the range between `min_value` and `max_value`. By default, sensor values outside these bounds will be set to `min_value` or `max_value`, respectively. If `ignore_out_of_range` is true, then sensor values outside those bounds will be ignored. If `min_value` is not set, there is no lower bound; if `max_value` is not set there is no upper bound.
 
@@ -245,7 +245,7 @@ Configuration variables:
 
 
 ```
-### ``debounce``
+### `debounce`
 
 Only send values if the last incoming value is at least `specified time period`
 old. For example if two values come in at almost the same time, this filter will only output
@@ -254,7 +254,7 @@ values.
 
 
 
-### ``delta``
+### `delta`
 
 This filter stores the last value passed through this filter and only passes incoming values through
 if incoming value is sufficiently different from the previously passed one.
@@ -281,10 +281,9 @@ filters:
 
 
 ```
-### ``exponential_moving_average``
+### `exponential_moving_average`
 
-A simple `exponential moving average
-<https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average>`__ over the last few
+A simple [exponential moving average](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average) over the last few
 values. It can be used to have a short update interval on the sensor but only push
 out an average on a specific interval (thus increasing resolution).
 
@@ -300,7 +299,7 @@ Configuration variables:
 
 
 
-### ``filter_out``
+### `filter_out`
 
 (**Required**, number): Filter out specific values to be displayed, e.g., filtering out the value `85.0`
 
@@ -328,7 +327,7 @@ A list of values may be supplied, and values are templatable:
 
 
 ```
-### ``heartbeat``
+### `heartbeat`
 
 Send the value periodically with the specified time interval.
 If the sensor value changes during the interval the interval will not reset.
@@ -339,7 +338,7 @@ of the input values.
 
 
 
-### ``lambda``
+### `lambda`
 
 Perform a simple mathematical operation over the sensor values. The input value is `x` and
 the result of the lambda is used as the output (use `return`).
@@ -365,7 +364,7 @@ filters:
 
 
 ```
-### ``max``
+### `max`
 
 A moving maximum over the last few values. A large window size will make the filter slow to
 react to input changes.
@@ -387,9 +386,9 @@ Configuration variables:
 
 
 
-### ``median``
+### `median`
 
-A [simple moving median](https://en.wikipedia.org/wiki/Median_filter#Worked_1D_example)
+A [simple moving median ](https://en.wikipedia.org/wiki/Median_filter#Worked_1D_example)
 over the last few values. This can be used to filter outliers from the received sensor data. A large
 window size will make the filter slow to react to input changes.
 
@@ -421,7 +420,7 @@ Configuration variables:
 
 
 
-### ``min``
+### `min`
 
 A moving minimum over the last few values. A large window size will make the filter slow to
 react to input changes.
@@ -452,7 +451,7 @@ Configuration variables:
 
 
 
-### ``multiply``
+### `multiply`
 
 Multiplies each value by a templatable value.
 
@@ -460,7 +459,7 @@ Multiplies each value by a templatable value.
 
 
 
-### ``offset``
+### `offset`
 
 Adds a value to each sensor value. The value may be a constant or a lambda returning a float.
 
@@ -476,7 +475,7 @@ Adds a value to each sensor value. The value may be a constant or a lambda retur
 
 
 ```
-### ``or``
+### `or`
 
 Pass forward a value with the first child filter that returns. Below example
 will only pass forward values that are *either* at least 1s old or are if the absolute
@@ -493,9 +492,9 @@ filters:
 
 
 ```
-### ``quantile``
+### `quantile`
 
-A [simple moving quantile](https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/quantile.htm)
+A [simple moving quantile ](https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/quantile.htm)
 over the last few values. This can be used to filter outliers from the received sensor data. A large
 window size will make the filter slow to react to input changes.
 
@@ -529,7 +528,7 @@ Configuration variables:
 
 
 
-### ``round``
+### `round`
 
 Rounds the value to the given decimal places.
 
@@ -543,7 +542,7 @@ Rounds the value to the given decimal places.
 
 
 ```
-### ``round_to_multiple_of``
+### `round_to_multiple_of`
 
 Rounds the value to the nearest multiple. Takes a float greater than zero.
 
@@ -564,7 +563,7 @@ Rounds the value to the nearest multiple. Takes a float greater than zero.
 
 
 ```
-### ``skip_initial``
+### `skip_initial`
 
 A simple skip filter; `skip_initial: N` skips the first `N` sensor readings and passes on the
 rest. This can be used when the sensor needs a few readings to 'warm up'. After the initial
@@ -580,9 +579,9 @@ readings have been skipped, this filter does nothing.
 
 
 ```
-### ``sliding_window_moving_average``
+### `sliding_window_moving_average`
 
-A [simple moving average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)
+A [simple moving average ](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)
 over the last few values. It can be used to have a short update interval on the sensor but only push
 out an average on a specific interval (thus increasing resolution).
 
@@ -611,7 +610,7 @@ Configuration variables:
 
 
 
-### ``throttle``
+### `throttle`
 
 Throttle the incoming values. When this filter gets an incoming value,
 it checks if the last incoming value is at least `specified time period` old.
@@ -629,7 +628,7 @@ filters:
 
 
 ```
-### ``throttle_average``
+### `throttle_average`
 
 An average over the `specified time period`, potentially throttling incoming values. When this filter gets incoming values, it sums up all values and pushes out the average after the `specified time period` passed. There are two edge cases to consider within the `specified time period`:
 
@@ -642,7 +641,7 @@ In comparison to the `throttle` filter, it won't discard any values. In comparis
 
 
 
-### ``timeout``
+### `timeout`
 
 After the first value has been sent, if no subsequent value is published within the
 `specified time period`, send a templatable value which defaults to `NaN`.
@@ -660,7 +659,7 @@ filters:
 
 
 ```
-### ``to_ntc_resistance``
+### `to_ntc_resistance`
 
 Convert your sensor values available as temperature into corresponding
 resistance values using an NTC characteristic curve.
@@ -713,10 +712,10 @@ pairs of values which can also be specified directly as an alternative.
 
 ```
 To send the resistance value generated by this sensor to an output component, e.g. a
-digital potentiometer or a DAC, the sensor automation [``on_value``]({{< ref "components/sensor/_index#sensor-on_value" >}}) can be used.
+digital potentiometer or a DAC, the sensor automation [`on_value`]({{< ref "components/sensor/_index#sensor-on_value" >}}) can be used.
 This makes it possible, for example, to replace a physical NTC and thus make it `smart`.
 
-An output component can accept values in the range of `0..1` (see [``output.set_level`` Action]({{< ref "components/output/_index#output-set_level_action" >}})),
+An output component can accept values in the range of `0..1` (see [`output.set_level` Action]({{< ref "components/output/_index#output-set_level_action" >}})),
 so that scaling with the actual resistance value of the simulated NTC is required.
 
 ```yaml
@@ -729,7 +728,7 @@ on_value:
 
 
 ```
-### ``to_ntc_temperature``
+### `to_ntc_temperature`
 
 Convert your sensor values available as resistance values into corresponding
 temperatures using an NTC characteristic curve.
@@ -807,7 +806,7 @@ You can access the most recent state of the sensor in [lambdas]({{< ref "automat
 
 {{< anchor "sensor-on_value" >}}
 
-### ``on_value``
+### `on_value`
 
 This automation will be triggered when a new value that has passed through all filters
 is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the value from the trigger
@@ -828,7 +827,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "sensor-on_value_range" >}}
 
-### ``on_value_range``
+### `on_value_range`
 
 With this automation you can observe if a sensor value passes from outside
 a defined range of values to inside a range. For example you can have an
@@ -865,7 +864,7 @@ Configuration variables:
 
 {{< anchor "sensor-on_raw_value" >}}
 
-### ``on_raw_value``
+### `on_raw_value`
 
 This automation will be triggered when a new value is received that hasn't passed
 through any filters. In [Lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the value from the
@@ -886,7 +885,7 @@ Configuration variables: See [Automation]({{< ref "automations/_index#automation
 
 {{< anchor "sensor-in_range_condition" >}}
 
-### ``sensor.in_range`` Condition
+### `sensor.in_range` Condition
 
 This condition passes if the state of the given sensor is inside a range.
 

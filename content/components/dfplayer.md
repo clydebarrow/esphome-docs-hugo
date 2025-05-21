@@ -5,7 +5,7 @@ title: "DF-Player mini"
 
 {{< seo description="" image="" >}}
 
-The [dfplayer` (`datasheet](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)), component
+The [dfplayer` (`datasheet ](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)), component
 allows you to play sound and music stored in an SD card or USB flash drive.
 
 {{< img src="dfplayer-full.jpg" alt="Image" caption="DF-Player mini Module." width="50.0%" class="center" >}}
@@ -34,7 +34,7 @@ dfplayer:
 - **on_finished_playback** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
   performed when playback is finished.
 
-## ``dfplayer.is_playing`` Condition
+## `dfplayer.is_playing` Condition
 
 This Condition returns true while playback is active.
 
@@ -49,7 +49,7 @@ on_...:
 
 
 ```
-## ``dfplayer.play_next`` Action
+## `dfplayer.play_next` Action
 
 Starts playback of next track or skips to the next track.
 
@@ -59,7 +59,7 @@ on_...:
     - dfplayer.play_next:
 
 ```
-## ``dfplayer.play_previous`` Action
+## `dfplayer.play_previous` Action
 
 Plays the previously played track.
 
@@ -70,7 +70,7 @@ on_...:
 
 
 ```
-## ``dfplayer.play`` Action
+## `dfplayer.play` Action
 
 Plays a track.
 
@@ -91,7 +91,7 @@ Configuration options:
 - **loop** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): Repeats playing
   the same track. Defaults to `false`.
 
-## ``dfplayer.play_mp3`` Action
+## `dfplayer.play_mp3` Action
 
 Plays a track inside the folder `mp3`. Files inside the folder must be numbered from 1
 to 9999, like `0001.mp3`, `0002.mp3`, ... etc.
@@ -123,7 +123,7 @@ Configuration options:
   inside the `mp3` folder to play.
 
 
-## ``dfplayer.play_folder`` Action
+## `dfplayer.play_folder` Action
 
 Plays files inside numbered folders, folders must be numbered from 1 and with leading
 zeros. Like `01`, `02`, ... etc. Files inside the folders must be numbered with two
@@ -161,7 +161,7 @@ Configuration options:
   all files in the folder. Causes `file` to be ignored. Defaults to `false`.
 
 
-## ``dfplayer.set_device`` Action
+## `dfplayer.set_device` Action
 
 Changes the device in use. Valid values are `TF_CARD` and `USB`.
 
@@ -171,7 +171,7 @@ on_...:
     - dfplayer.set_device: TF_CARD
 
 ```
-## ``dfplayer.set_volume`` Action
+## `dfplayer.set_volume` Action
 
 Changes volume.
 
@@ -189,7 +189,7 @@ Configuration options:
 - **volume** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): The volume value.
   Valid values goes from `0` to `30`.
 
-## ``dfplayer.volume_up`` Action
+## `dfplayer.volume_up` Action
 
 Turn volume up.
 
@@ -199,7 +199,7 @@ on_...:
     - dfplayer.volume_up
 
 ```
-## ``dfplayer.volume_down`` Action
+## `dfplayer.volume_down` Action
 
 Turn volume down.
 
@@ -209,7 +209,7 @@ on_...:
     - dfplayer.volume_down
 
 ```
-## ``dfplayer.set_eq`` Action
+## `dfplayer.set_eq` Action
 
 Changes audio equalization preset.
 
@@ -227,7 +227,7 @@ Configuration options:
 - **eq_preset** (**Required**): Eq Preset value. Valid values are `NORMAL`, `POP`, `ROCK`, `JAZZ`,
   `CLASSIC` and `BASS`.
 
-## ``dfplayer.sleep`` Action
+## `dfplayer.sleep` Action
 
 Enters sleep mode. Playback is stopped and the action `dfplayer.set_device: TF_CARD` should be
 send for playback to be enabled again.
@@ -238,7 +238,7 @@ on_...:
     - dfplayer.sleep
 
 ```
-## ``dfplayer.reset`` Action
+## `dfplayer.reset` Action
 
 Module reset.
 
@@ -248,7 +248,7 @@ on_...:
     - dfplayer.reset
 
 ```
-## ``dfplayer.start`` Action
+## `dfplayer.start` Action
 
 Starts playing a track or resumes paused playback.
 
@@ -258,7 +258,7 @@ on_...:
     - dfplayer.start
 
 ```
-## ``dfplayer.pause`` Action
+## `dfplayer.pause` Action
 
 Pauses playback, playback can be resumed from the same position with `dfplayer.start`.
 
@@ -268,7 +268,7 @@ on_...:
     - dfplayer.pause
 
 ```
-## ``dfplayer.stop`` Action
+## `dfplayer.stop` Action
 
 Stops playback.
 
@@ -279,7 +279,7 @@ on_...:
 
 
 ```
-## ``dfplayer.random`` Action
+## `dfplayer.random` Action
 
 Randomly plays all tracks.
 

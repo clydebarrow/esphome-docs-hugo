@@ -126,7 +126,7 @@ at `update_interval`.
 {{< /note >}}
 **Security considerations**
 
-The encryption used is [XXTEA](https://en.wikipedia.org/wiki/XXTEA) which is fast and compact. Although XXTEA is known
+The encryption used is [XXTEA ](https://en.wikipedia.org/wiki/XXTEA) which is fast and compact. Although XXTEA is known
 to be susceptible to a chosen-plaintext attack, such an attack is not possible with this application, and it otherwise
 has no published weaknesses [#f1]_. The implementation used here has been modified slightly to use a 256 bit key which
 will strengthen security compared to the original 128 bit key.

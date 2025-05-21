@@ -6,7 +6,7 @@ title: "PID Climate"
 {{< seo description="" image="" >}}
 
 The `pid` climate platform allows you to regulate a value with a
-[PID controller](https://en.wikipedia.org/wiki/PID_controller).
+[PID controller ](https://en.wikipedia.org/wiki/PID_controller).
 
 PID controllers are good at modulating an output signal to get a sensor reading to a specified
 setpoint. For example, it can be used to modulate the power of a heating unit to get the
@@ -27,7 +27,7 @@ classic thermostats.
 
 {{< /note >}}
 Explaining how PID controllers work in detail is out of scope of this documentation entry,
-but there's a nice article explaining the function principle [here](https://blog.opticontrols.com/archives/344).
+but there's a nice article explaining the function principle [here ](https://blog.opticontrols.com/archives/344).
 
 ```yaml
 # Example configuration entry
@@ -314,7 +314,7 @@ If the calculated PID parameters are not good, you can try some of the alternati
 printed below the main control parameters in the log output.
 
 
-## ``climate.pid.autotune`` Action
+## `climate.pid.autotune` Action
 
 This action starts the autotune process of the PID controller.
 
@@ -346,7 +346,7 @@ cooling process during the autotune, in the cases when they are not changing the
 same rate, resulting in a not symmetrical oscillation. The autotune result will print a message when
 it's recommended to repeat the entire procedure with such parameters configured.
 
-## ``climate.pid.set_control_parameters`` Action
+## `climate.pid.set_control_parameters` Action
 
 This action sets new values for the control parameters of the PID controller. This can be
 used to manually tune the PID controller. Make sure to take update the values you want on
@@ -370,7 +370,7 @@ Configuration variables:
 - **kd** (*Optional*, float): The factor for the derivative term of the PID controller.
   Defaults to `0`.
 
-## ``climate.pid.reset_integral_term`` Action
+## `climate.pid.reset_integral_term` Action
 
 This action resets the integral term of the PID controller to 0. This might be necessary under certain
 conditions to avoid the control loop to overshoot (or undershoot) a target.
@@ -385,7 +385,7 @@ Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the PID Climate being reset.
 
-## ``pid`` Sensor
+## `pid` Sensor
 
 Additionally, the PID climate platform provides an optional sensor platform to monitor
 the calculated PID parameters to help finding good PID values.
@@ -427,7 +427,7 @@ Advanced options:
 - {{< docref "/components/climate/index" >}}
 - {{< docref "/components/output/sigma_delta_output" >}}
 - {{< docref "/components/output/slow_pwm" >}}
-- [Principles of PID](https://blog.opticontrols.com/archives/344)
+- [Principles of PID ](https://blog.opticontrols.com/archives/344)
 - :apiref:`pid/pid_climate.h`
 - :apiref:`PID Autotuner <pid/pid_autotuner.h>`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/climate/pid.md)

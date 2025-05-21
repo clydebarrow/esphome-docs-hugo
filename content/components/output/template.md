@@ -46,7 +46,7 @@ components that can be attached to for example lights.
 {{< /warning >}}
 {{< anchor "output-template-on_write_action" >}}
 
-## ``write_action`` Trigger
+## `write_action` Trigger
 
 When the state for this output is updated, the `write_action` is triggered.
 It is possible to access the state value inside Lambdas:
@@ -66,7 +66,7 @@ It is possible to access the state value inside Lambdas:
 
 
 ```
-Complete example: [Sonoff Dual Light Switch](https://devices.esphome.io/devices/Sonoff-Dual-DIY-light).
+Complete example: [Sonoff Dual Light Switch ](https://devices.esphome.io/devices/Sonoff-Dual-DIY-light).
 
 ## See Also
 

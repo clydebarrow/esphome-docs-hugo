@@ -60,7 +60,7 @@ Support for esp-idf is still experminental. Please report issues you have with m
   to use. Can be one of `none` or `device_name`. Defaults to `none` which
   does not generate object_id. `device_name` generator uses format `<device_name>_<friendly_name>`.
 - **use_abbreviations** (*Optional*, boolean): Whether to use
-  [Abbreviations](https://www.home-assistant.io/docs/mqtt/discovery/)
+  [Abbreviations ](https://www.home-assistant.io/docs/mqtt/discovery/)
   in discovery messages. Defaults to `true`.
 - **topic_prefix** (*Optional*, string): The prefix used for all MQTT
   messages. Should not contain trailing slash. Defaults to `<APP_NAME>`.
@@ -100,9 +100,9 @@ Support for esp-idf is still experminental. Please report issues you have with m
 - **on_disconnect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection
   to the broker is dropped.
 - **on_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when a message on a specific MQTT topic is received. See [``on_message`` Trigger]({{< ref "components/mqtt#mqtt-on_message" >}}).
+  performed when a message on a specific MQTT topic is received. See [`on_message` Trigger]({{< ref "components/mqtt#mqtt-on_message" >}}).
 - **on_json_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
-  performed when a JSON message on a specific MQTT topic is received. See [``on_json_message`` Trigger]({{< ref "components/mqtt#mqtt-on_json_message" >}}).
+  performed when a JSON message on a specific MQTT topic is received. See [`on_json_message` Trigger]({{< ref "components/mqtt#mqtt-on_json_message" >}}).
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **publish_nan_as_none** (*Optional*, bool): Publish `None` instead of `NaN` to handle Unknown/Unavailable sensor states in Home Assistant. Defaults to `false`.
 
@@ -134,8 +134,7 @@ Configuration options:
 -  **topic** (**Required**, string): The MQTT topic to publish the message.
 -  **payload** (**Required**, string): The message content. Will be filled by the actual payload with some
    options, like log_topic.
--  **qos** (*Optional*, int): The `Quality of
-   Service <https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels>`__
+-  **qos** (*Optional*, int): The [Quality of   Service ](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels)
    level of the topic. Defaults to 0.
 -  **retain** (*Optional*, boolean): If the published message should
    have a retain flag on or not. Defaults to `true`.
@@ -226,7 +225,7 @@ mqtt:
 ## Using with Home Assistant MQTT entities
 
 Using ESPHome with Home Assistant is easy, simply setup an MQTT
-broker (like [mosquitto](https://mosquitto.org/)) and point both your
+broker (like [mosquitto ](https://mosquitto.org/)) and point both your
 Home Assistant installation and ESPHome to that broker. Next, enable
 discovery in your Home Assistant configuration with the following:
 
@@ -293,8 +292,7 @@ configuration. That way, you can use your existing wildcards like
 
 ## Last Will And Birth Messages
 
-ESPHome uses the `last will
-testament <https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament>`__
+ESPHome uses the [last willtestament ](https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament)
 and birth message feature of MQTT to achieve availability reporting for
 Home Assistant. If the node is not connected to MQTT, Home Assistant
 will show all its entities as unavailable (a feature 😉).
@@ -476,7 +474,7 @@ This is because Home Assistant only discovers a device once in every Home Assist
 {{< /warning >}}
 {{< anchor "mqtt-on_connect_disconnect" >}}
 
-## ``on_connect`` / ``on_disconnect`` Trigger
+## `on_connect` / `on_disconnect` Trigger
 
 This trigger is activated when a connection to the MQTT broker is established or dropped.
 
@@ -491,7 +489,7 @@ mqtt:
 ```
 {{< anchor "mqtt-on_message" >}}
 
-## ``on_message`` Trigger
+## `on_message` Trigger
 
 With this configuration option you can write complex automations whenever an MQTT
 message on a specific topic is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
@@ -551,13 +549,13 @@ id(mqtt_client).subscribe("the/topic", [=](const std::string &topic, const std::
 {{< /note >}}
 {{< anchor "mqtt-on_json_message" >}}
 
-## ``on_json_message`` Trigger
+## `on_json_message` Trigger
 
 With this configuration option you can write complex automations whenever a JSON-encoded MQTT
 message is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
 template, the decoded message payload is available under the name `x` inside that lambda.
 
-The [x` object is of type `JsonObject` by the `ArduinoJson](https://github.com/bblanchon/ArduinoJson)
+The [x` object is of type `JsonObject` by the `ArduinoJson ](https://github.com/bblanchon/ArduinoJson)
 library, and you can use all of the methods of that library to access data.
 
 Basically, you can access elements by typing `x["THE_KEY"]` and save them into local variables.
@@ -619,7 +617,7 @@ id(mqtt_client).subscribe_json("the/topic", [=](const std::string &topic, JsonOb
 {{< /note >}}
 {{< anchor "mqtt-publish_action" >}}
 
-## ``mqtt.publish`` Action
+## `mqtt.publish` Action
 
 Publish an MQTT message on a topic using this action in automations.
 
@@ -667,11 +665,11 @@ id(mqtt_client).publish("the/topic", "The Payload");
 {{< /note >}}
 {{< anchor "mqtt-publish_json_action" >}}
 
-## ``mqtt.publish_json`` Action
+## `mqtt.publish_json` Action
 
 Publish a JSON-formatted MQTT message on a topic using this action in automations.
 
-The JSON message will be constructed using the [ArduinoJson](https://github.com/bblanchon/ArduinoJson) library.
+The JSON message will be constructed using the [ArduinoJson ](https://github.com/bblanchon/ArduinoJson) library.
 In the `payload` option you have access to a `root` object which will represents the base object
 of the JSON message. You can assign values to keys by using the `root["KEY_NAME"] = VALUE;` syntax
 as seen below.
@@ -694,8 +692,7 @@ Configuration options:
 -  **topic** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
    The MQTT topic to publish the message.
 -  **payload** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})): The message content.
--  **qos** (*Optional*, int): The `Quality of
-   Service <https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels>`__
+-  **qos** (*Optional*, int): The [Quality of   Service ](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels)
    level of the topic. Defaults to 0.
 -  **retain** (*Optional*, boolean): If the published message should
    have a retain flag on or not. Defaults to `false`.
@@ -717,7 +714,7 @@ id(mqtt_client).publish_json("the/topic", [=](JsonObject root) {
 ```
 
 {{< /note >}}
-## ``mqtt.disable`` Action
+## `mqtt.disable` Action
 
 This action turns off the MQTT component on demand.
 
@@ -732,7 +729,7 @@ The configuration option `enable_on_boot` can be set to `false` if you do not wa
 
 
 {{< /note >}}
-## ``mqtt.enable`` Action
+## `mqtt.enable` Action
 
 This action turns on the MQTT component on demand.
 
@@ -768,7 +765,7 @@ on_...:
 ```
 {{< anchor "mqtt-connected_condition" >}}
 
-## ``mqtt.connected`` Condition
+## `mqtt.connected` Condition
 
 This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the MQTT client is currently connected to
 the MQTT broker.

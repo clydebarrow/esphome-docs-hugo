@@ -43,7 +43,7 @@ sensor:
 
 {{< anchor "sensor-ufire_ec-calibrate_probe_action" >}}
 
-## ``ufire_ec.calibrate_probe`` Action
+## `ufire_ec.calibrate_probe` Action
 
 The EC probe have to be calibrated. For this you need know the EC reference value and temperature
 of the calibration solution.
@@ -71,7 +71,7 @@ Configuration options:
 
 {{< anchor "sensor-ufire_ec-reset_action" >}}
 
-## ``ufire_ec.reset`` Action
+## `ufire_ec.reset` Action
 
 Reset the current calibration on the sensor.
 

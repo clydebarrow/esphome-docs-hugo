@@ -5,7 +5,7 @@ title: "UDP Component"
 
 {{< seo description="" image="" >}}
 
-This component allows reception and transmission of data over a network using the [User Datagram Protocol (UDP)](https://en.wikipedia.org/wiki/User_Datagram_Protocol).
+This component allows reception and transmission of data over a network using the [User Datagram Protocol (UDP) ](https://en.wikipedia.org/wiki/User_Datagram_Protocol).
 In conjunction with the [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) it can be used to broadcast sensor data.
 
 ```yaml

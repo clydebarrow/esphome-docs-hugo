@@ -8,7 +8,7 @@ title: "BME680 Temperature+Pressure+Humidity+Gas Sensor via BSEC"
 ## Component/Hub
 
 The `bme680_bsec` sensor platform allows you to use your BME680
-([datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf),
+([datasheet ](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf),
 `Adafruit`_, `Pimoroni`_) temperature, pressure and humidity and gas sensors with ESPHome via the Bosch Sensortec Environmental Cluster (BSEC)
 software library. The use of Bosch's proprietary algorithms provide an Index for Air Quality (IAQ) measurement derived from the
 gas resistance sensor's response to specific Volatile Organic Compounds (VOC). The BSEC software also provides estimated values
@@ -411,9 +411,9 @@ so that the process does not have to start from zero on device restart.
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "bme680/" >}}
 - :apiref:`bme680_bsec/bme680_bsec.h`
-- [BME680 Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
-- [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
-- [BSEC Arduino Library](https://github.com/BoschSensortec/BSEC-Arduino-library) by [Bosch Sensortec](https://www.bosch-sensortec.com/)
-- [Bosch Sensortec Community](https://community.bosch-sensortec.com/)
+- [BME680 Datasheet ](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf)
+- [BME680 VOC classification ](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
+- [BSEC Arduino Library ](https://github.com/BoschSensortec/BSEC-Arduino-library) by [Bosch Sensortec ](https://www.bosch-sensortec.com/)
+- [Bosch Sensortec Community ](https://community.bosch-sensortec.com/)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/bme680_bsec.md)
 

@@ -109,7 +109,7 @@ Do *not* use this platform to control each LED on your addressable light - the l
 objects have a moderate overhead and if you try to create many lights you will run out
 of memory quickly.
 
-See [``light.addressable_set`` Action]({{< ref "components/light/_index#light-addressable_set_action" >}}) for that.
+See [`light.addressable_set` Action]({{< ref "components/light/_index#light-addressable_set_action" >}}) for that.
 
 {{< /note >}}
 ## See Also

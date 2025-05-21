@@ -26,7 +26,7 @@ audio_adc:
 
 ## Automations
 
-##### ``audio_adc.set_mic_gain`` Action
+##### `audio_adc.set_mic_gain` Action
 
 This action sets the (microphone) gain of the ADC.
 

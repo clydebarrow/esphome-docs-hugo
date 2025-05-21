@@ -6,7 +6,7 @@ title: "Daly BMS Sensor"
 {{< seo description="" image="" >}}
 
 The `daly_bms` sensor platform allows you to use a Daly Smart BMS
-([more info](https://dalyelec.en.made-in-china.com/))
+([more info ](https://dalyelec.en.made-in-china.com/))
 with ESPHome.
 
 The BMS communicates via [UART]({{< ref "components/uart#uart" >}}).

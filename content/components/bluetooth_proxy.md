@@ -15,7 +15,7 @@ Note that while this component is named `bluetooth_proxy`, only BLE devices (and
 are supported.
 
 If you're looking to create an ESPHome node that is just a Bluetooth Proxy, see
-our [Bluetooth Proxy installer](https://esphome.github.io/bluetooth-proxies/) website.
+our [Bluetooth Proxy installer ](https://esphome.github.io/bluetooth-proxies/) website.
 
 {{< warning >}}
 The Bluetooth proxy of ESPHome provides Home Assistant with a maximum number of 3 simultaneous active connections.
@@ -33,7 +33,7 @@ The {{< docref "web_server/" >}} component should be disabled as the device is l
 to run out of memory and will malfunction when both components are enabled simultaneously.
 
 Not all devices are supported and ESPHome does not decode or keep a list. To find out if your device is supported,
-please search for it in the [Home Assistant Integrations](https://www.home-assistant.io/integrations/) list.
+please search for it in the [Home Assistant Integrations ](https://www.home-assistant.io/integrations/) list.
 
 {{< /warning >}}
 ## Configuration:

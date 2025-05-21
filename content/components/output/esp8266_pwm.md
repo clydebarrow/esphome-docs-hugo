@@ -43,7 +43,7 @@ should fix it.
 {{< /note >}}
 {{< anchor "output-esp8266_pwm-set_frequency_action" >}}
 
-## ``output.esp8266_pwm.set_frequency`` Action
+## `output.esp8266_pwm.set_frequency` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually change the frequency of an ESP8266 PWM
 channel at runtime. Use cases include controlling a passive buzzer (for pitch control).

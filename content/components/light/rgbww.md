@@ -74,10 +74,10 @@ the `color_mode` option of the [light control actions]({{< ref "components/light
 - **warm_white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the warm
   white channel.
 - **cold_white_color_temperature** (*Optional*, float): The color temperature (in
-  [mireds](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the cold white channel. Note that when the color interlock
+  [mireds ](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the cold white channel. Note that when the color interlock
   is enabled, this option is required to control the light from Home Assistant.
 - **warm_white_color_temperature** (*Optional*, float): The color temperature (in
-  [mireds](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the warm white channel. Note that when the color interlock
+  [mireds ](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the warm white channel. Note that when the color interlock
   is enabled, this option is required to control the light from Home Assistant.
 - **constant_brightness** (*Optional*, boolean): When enabled, this will keep the overall brightness of the
   cold and warm white channels constant by limiting the combined output to 100% of a single channel. This

@@ -193,7 +193,7 @@ display:
       it.print("Hello, world \x08 \x07!");
 
 ```
-Try this [custom character generator](https://omerk.github.io/lcdchargen/) to design your own sybmols.
+Try this [custom character generator ](https://omerk.github.io/lcdchargen/) to design your own sybmols.
 
 
 ## Backlight Control
@@ -250,10 +250,10 @@ binary_sensor:
 - [LCD Menu]({{< ref "components/display_menu/lcd_menu#lcd_menu" >}})
 - [Add pages to LCD display]({{< ref "cookbook/lambda_magic#lambda_magic_pages" >}})
 - {{< docref "/components/pcf8574" >}}
-- [HD44780U (LCD-II) datasheet](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)
-- [Charset cheatsheet](https://user-images.githubusercontent.com/1550668/173113487-9c98e866-8ee4-4a3c-a83f-61fe62057c5f.png)
-- [Custom Character Generator](https://omerk.github.io/lcdchargen/)
-- [Arduino LiquidCrystal Library](https://www.arduino.cc/en/Reference/LiquidCrystal)
+- [HD44780U (LCD-II) datasheet ](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)
+- [Charset cheatsheet ](https://user-images.githubusercontent.com/1550668/173113487-9c98e866-8ee4-4a3c-a83f-61fe62057c5f.png)
+- [Custom Character Generator ](https://omerk.github.io/lcdchargen/)
+- [Arduino LiquidCrystal Library ](https://www.arduino.cc/en/Reference/LiquidCrystal)
 - :apiref:`lcd_base/lcd_display.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/display/lcd_display.md)
 

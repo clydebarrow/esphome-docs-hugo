@@ -10,17 +10,17 @@ that interfaces to a micro-controller through SPI or I²C bus.
 
 The ESPHome `WeiKai` component supports the following WeiKai chips:
 
-- [WK2168-IQPG](https://jlcpcb.com/partdetail/WEIKAI-WK2168IQPG/C401041)
-- [WK2132-ISSG](https://jlcpcb.com/partdetail/WeiKai-WK2132ISSG/C401039)
-- [WK2124-ISSG](https://jlcpcb.com/partdetail/WeiKai-WK2124ISSG/C86332)
-- [WK2204-IQNG](https://jlcpcb.com/partdetail/WeiKai-WK2204IQNG/C401040)
-- [WK2212-IQNG](https://jlcpcb.com/partdetail/WeiKai-WK2212IQNG/C2987671)
+- [WK2168-IQPG ](https://jlcpcb.com/partdetail/WEIKAI-WK2168IQPG/C401041)
+- [WK2132-ISSG ](https://jlcpcb.com/partdetail/WeiKai-WK2132ISSG/C401039)
+- [WK2124-ISSG ](https://jlcpcb.com/partdetail/WeiKai-WK2124ISSG/C86332)
+- [WK2204-IQNG ](https://jlcpcb.com/partdetail/WeiKai-WK2204IQNG/C401040)
+- [WK2212-IQNG ](https://jlcpcb.com/partdetail/WeiKai-WK2212IQNG/C2987671)
 
 It can also be used with evaluation board equipped with these chips, such as:
 
-- [WK2168 Chip Development Board](https://www.aliexpress.com/item/1005002198759633.html)
-- [WK2132 Chip Development Board](https://www.aliexpress.com/item/1005002018579265.html)
-- [DFROBOT Gravity: I²C to Dual UART Module](https://www.dfrobot.com/product-2001.html)
+- [WK2168 Chip Development Board ](https://www.aliexpress.com/item/1005002198759633.html)
+- [WK2132 Chip Development Board ](https://www.aliexpress.com/item/1005002018579265.html)
+- [DFROBOT Gravity: I²C to Dual UART Module ](https://www.dfrobot.com/product-2001.html)
 
 {{< img src="DFR0627.jpg" alt="Image" class="center" >}}
 

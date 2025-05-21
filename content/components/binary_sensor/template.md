@@ -55,7 +55,7 @@ binary_sensor:
 
 {{< anchor "binary_sensor-template-publish_action" >}}
 
-## ``binary_sensor.template.publish`` Action
+## `binary_sensor.template.publish` Action
 
 You can also publish a state to a template binary sensor from elsewhere in your YAML file
 with the `binary_sensor.template.publish` action.

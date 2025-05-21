@@ -30,7 +30,7 @@ registers.
 
 - **register_count** (*Optional*): The number of registers which are used for this Select. Only
   required for uncommon response encodings or to
-  [optimize modbus communications<modbus_register_count>]({{< ref "#optimize modbus communications<modbus_register_count>" >}}). Overrides the defaults determined
+  [optimize modbus communications]({{< ref "components/modbus_controller#modbus_register_count" >}}). Overrides the defaults determined
   by `value_type`.
 - **skip_updates** (*Optional*, int): By default, all sensors of a modbus_controller are updated together. For data points that don't change very frequently, updates can be skipped. A value of 5 would only update this sensor range in every 5th update cycle. Note: The modbus_controller groups components by address ranges to reduce number of transactions. All components with the same starting address will be updated in one request. `skip_updates` applies for *all* components in the same range.
 - **register_count** (*Optional*, int): The number of consecutive registers this read request should span or skip in a single command. Default is 1. See [Optimizing modbus communications]({{< ref "components/modbus_controller#modbus_register_count" >}}) for more details.
@@ -73,7 +73,7 @@ lambda: |-
 
 
 ```
-## Parameters passed into ``write_lambda``
+## Parameters passed into `write_lambda`
 
 - **x** (`const std::string&`): The option value to set for this Select.
 - **value** (`int64_t`): The mapping value of `x` using `optionsmap`.

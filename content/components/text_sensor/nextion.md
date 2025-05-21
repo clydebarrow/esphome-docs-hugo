@@ -53,7 +53,7 @@ should be prefixed with the page name (page0/page1 or whatever you have changed 
 
 {{< anchor "text_sensor-nextion-publish_action" >}}
 
-## ``text_sensor.nextion.publish`` Action
+## `text_sensor.nextion.publish` Action
 
 You can also publish a state to a Nextion text sensor from elsewhere in your YAML file
 with the `text_sensor.nextion.publish` action.

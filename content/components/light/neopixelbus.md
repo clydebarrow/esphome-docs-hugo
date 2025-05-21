@@ -18,8 +18,8 @@ in ESPHome for individually addressable lights like NeoPixel or WS2812.
 It is very similar to the {{< docref "fastled/" >}} platform.
 In fact, most addressable lights are supported through both light platforms. The
 difference is that they use different libraries: while the fastled platform uses
-the [FastLED](https://github.com/FastLED/FastLED) library, this component uses
-the [NeoPixelBus](https://github.com/Makuna/NeoPixelBus/) library internally.
+the [FastLED ](https://github.com/FastLED/FastLED) library, this component uses
+the [NeoPixelBus ](https://github.com/Makuna/NeoPixelBus/) library internally.
 
 ```yaml
 # Example configuration entry
@@ -168,6 +168,6 @@ this method is no longer recommended, but documented here for reference purposes
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/power_supply" >}}
 - :apiref:`neopixelbus/neopixelbus_light.h`
-- [NeoPixelBus library](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods)
+- [NeoPixelBus library ](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/light/neopixelbus.md)
 

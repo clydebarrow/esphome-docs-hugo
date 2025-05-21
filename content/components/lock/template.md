@@ -60,7 +60,7 @@ Only `LOCK_STATE_LOCKED` and `LOCK_STATE_UNLOCKED` are supported by the MQTT com
 
 {{< anchor "lock-template-publish_action" >}}
 
-## ``lock.template.publish`` Action
+## `lock.template.publish` Action
 
 You can also publish a state to a template lock from elsewhere in your YAML file
 with the `lock.template.publish` action.

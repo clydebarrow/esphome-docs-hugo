@@ -72,10 +72,8 @@ light:
   sent to the MCU. If this is set to true ESPHome will treat 0 as warm white and
   **color_temperature_max_value** as cool white when setting **color_temperature_datapoint**.
   Defaults to false.
-- **cold_white_color_temperature** (*Optional*, float): The color temperature (in `mireds
-  <https://en.wikipedia.org/wiki/Mired>`__ or Kelvin) of the cold white channel.
-- **warm_white_color_temperature** (*Optional*, float): The color temperature (in `mireds
-  <https://en.wikipedia.org/wiki/Mired>`__ or Kelvin) of the warm white channel.
+- **cold_white_color_temperature** (*Optional*, float): The color temperature (in [mireds  ](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the cold white channel.
+- **warm_white_color_temperature** (*Optional*, float): The color temperature (in [mireds  ](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the warm white channel.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 - At least one of *dimmer_datapoint*, *switch_datapoint*, *rgb_datapoint*, or *hsv_datapoint* must be provided.
 - Only one of *rgb_datapoint* or *hsv_datapoint* can be provided for one light.

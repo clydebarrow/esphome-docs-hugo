@@ -6,8 +6,8 @@ title: "VL53L0X Time Of Flight Distance Sensor"
 {{< seo description="" image="" >}}
 
 The `vl53l0x` sensor platform allows you to use VL53L0X optical time of flight
-([datasheet](https://www.st.com/resource/en/datasheet/vl53l0x.pdf),
-[ST](https://www.st.com/en/imaging-and-photonics-solutions/vl53l0x.html)) with ESPHome
+([datasheet ](https://www.st.com/resource/en/datasheet/vl53l0x.pdf),
+[ST ](https://www.st.com/en/imaging-and-photonics-solutions/vl53l0x.html)) with ESPHome
 to measure distances. The sensor works optically by emitting short infrared pulses
 and measuring the time it takes the light to be reflected back
 
@@ -97,6 +97,6 @@ sensor:
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
 - :apiref:`vl53l0x/vl53l0x_sensor.h`
-- [vl53l0x-arduino library](https://github.com/pololu/vl53l0x-arduino/) by [Pololu](https://github.com/pololu)
+- [vl53l0x-arduino library ](https://github.com/pololu/vl53l0x-arduino/) by [Pololu ](https://github.com/pololu)
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/vl53l0x.md)
 

@@ -9,7 +9,7 @@ You can easily import community or personal components using the external compon
 Bundled components can be overridden using this feature.
 
 If you want to create your own components/platforms for ESPHome, please see our
-[developer site](https://developers.esphome.io).
+[developer site ](https://developers.esphome.io).
 
 ```yaml
 external_components:

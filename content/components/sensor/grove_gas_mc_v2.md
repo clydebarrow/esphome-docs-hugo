@@ -5,8 +5,7 @@ title: "Grove Multichannel Gas Sensor V2"
 
 {{< seo description="" image="" >}}
 
-The `grove_gas_mc_v2` sensor platform allows you to use your `Grove Multichannel Gas
-Sensor V2 <https://wiki.seeedstudio.com/Grove-Multichannel-Gas-Sensor-V2>`__ 
+The [grove_gas_mc_v2` sensor platform allows you to use your `Grove Multichannel GasSensor V2 ](https://wiki.seeedstudio.com/Grove-Multichannel-Gas-Sensor-V2) 
 with ESPHome. It exposes 4 different gas sensors for qualitatively measuring
 Nitrogen Dioxide (NO2), Carbon Monoxide (CO), Ethanol (C2H5OH), and Volatile Organic
 Compounds (VOCs).
@@ -70,7 +69,7 @@ than 6 months.
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [Grove Multichannel V2 Library](https://github.com/Seeed-Studio/Seeed_Arduino_MultiGas)
+- [Grove Multichannel V2 Library ](https://github.com/Seeed-Studio/Seeed_Arduino_MultiGas)
 - :apiref:`grove_gas_mc_v2/grove_gas_mc_v2.h`
 - [Edit this page on GitHub](https://github.com/clydebarrow/esphome-docs-hugo/blob/current/content/components/sensor/grove_gas_mc_v2.md)
 

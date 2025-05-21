@@ -42,7 +42,7 @@
         {{ $globalPath := printf "images/%s" $image }}
         
         {{ $imagePath := "" }}
-        {{ if fileExists (printf "static/%s" $componentPath) }}
+        {{ if fileExists $componentPath }}
           {{ $imagePath = $componentPath }}
         {{ else if fileExists (printf "static/%s" $globalPath) }}
           {{ $imagePath = $globalPath }}
@@ -71,7 +71,7 @@
     {{ $globalPath := printf "images/%s" $image }}
     
     {{ $imagePath := "" }}
-    {{ if fileExists (printf "static/%s" $componentPath) }}
+    {{ if fileExists $componentPath }}
       {{ $imagePath = $componentPath }}
     {{ else if fileExists (printf "static/%s" $globalPath) }}
       {{ $imagePath = $globalPath }}

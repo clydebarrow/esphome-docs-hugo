@@ -1,9 +1,9 @@
 {{ $currentPage := . }}
 <div class="sidebar-content">
     <nav class="sidebar-nav">
-        <h3>On This Page</h3>
         {{ if .Fragments }}
         {{ if .Fragments.Headings }}
+        <h3>On This Page</h3>
         {{ $startLevel := 2 }}
         {{ $endLevel := 3 }}
         {{ $ordered := true }}

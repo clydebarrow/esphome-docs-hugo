@@ -111,13 +111,10 @@ device logs for those that are found on the device.
 
 Some common ones:
 
-+----------+------------------+-----------------------+
-| Service  | Characteristic   | Description           |
-+==========+==================+=======================+
-| 180F     | 2A19             | Battery level         |
-+----------+------------------+-----------------------+
-| 181A     | 2A6F             | Humidity              |
-+----------+------------------+-----------------------+
+| Service | Characteristic | Description |
+| --- | --- | --- |
+| 180F | 2A19 | Battery level |
+| 181A | 2A6F | Humidity |
 
 
 ## See Also

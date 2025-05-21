@@ -163,23 +163,15 @@ The measurements are expressed with an index scale ranging from 0 to 500. The in
 ethanol gas, as well as important VOC in the exhaled breath of healthy humans. The VOC values themselves are derived
 from several publications on breath analysis studies.  The BSEC2 software library defines the levels as follows:
 
-+-----------+---------------------+
-| IAQ Index |    Air Quality      |
-+===========+=====================+
-|  0 - 50   | Excellent           |
-+-----------+---------------------+
-| 51 - 100  | Good                |
-+-----------+---------------------+
-| 101 - 150 | Lightly polluted    |
-+-----------+---------------------+
+| IAQ Index | Air Quality |
+| --- | --- |
+| 0 - 50 | Excellent |
+| 51 - 100 | Good |
+| 101 - 150 | Lightly polluted |
 | 151 - 200 | Moderately polluted |
-+-----------+---------------------+
-| 201 - 250 | Heavily polluted    |
-+-----------+---------------------+
-| 251 - 350 | Severely polluted   |
-+-----------+---------------------+
-|   > 351   | Extremely polluted  |
-+-----------+---------------------+
+| 201 - 250 | Heavily polluted |
+| 251 - 350 | Severely polluted |
+| > 351 | Extremely polluted |
 
 This can be represented by a template text sensor such as below
 
@@ -216,19 +208,13 @@ text_sensor:
 ```
 The selected b-VOC gasses are as follows:
 
-+--------------------+----------------+
-|       Compound     | Molar fraction |
-+====================+================+
-| `Ethane`_          | 5 ppm          |
-+--------------------+----------------+
-| `Isoprene`_        | 10 ppm         |
-+--------------------+----------------+
-| `Ethanol`_         | 10 ppm         |
-+--------------------+----------------+
-| `Acetone`_         | 50 ppm         |
-+--------------------+----------------+
-| `Carbon Monoxide`_ | 15 ppm         |
-+--------------------+----------------+
+| Compound | Molar fraction |
+| --- | --- |
+| `Ethane`_ | 5 ppm |
+| `Isoprene`_ | 10 ppm |
+| `Ethanol`_ | 10 ppm |
+| `Acetone`_ | 50 ppm |
+| `Carbon Monoxide`_ | 15 ppm |
 
 [Ethane](https://en.wikipedia.org/wiki/Ethane)
 [Isoprene](https://en.wikipedia.org/wiki/Isoprene)

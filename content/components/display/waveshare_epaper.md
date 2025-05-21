@@ -25,25 +25,16 @@ Currently, most displays managed by Esphome are single-color E-Ink displays; but
 The communication ESPHome has chosen to use for this integration is 4-wire [SPI]({{< ref "components/spi#spi" >}}), as it's the most stable and high-speed. So you need to make sure your board is set to the 4-wire SPI mode and have an `spi:` section in your
 configuration.
 
-==================== ===================== =====================
-**E-Paper Pin**      **ESP Pin**           **ESPHome Option**
--------------------- --------------------- ---------------------
-`VCC`              `3.3V`              N/A
--------------------- --------------------- ---------------------
-`GND`              `GND`               N/A
--------------------- --------------------- ---------------------
-`CLK`              Any GPIO              `spi.clk_pin`
--------------------- --------------------- ---------------------
-`DIN`              Any GPIO              `spi.mosi_pin`
--------------------- --------------------- ---------------------
-`CS`               Any GPIO              `cs_pin`
--------------------- --------------------- ---------------------
-`DC`               Any GPIO              `dc_pin`
--------------------- --------------------- ---------------------
-`BUSY` (Optional)  Any GPIO              `busy_pin`
--------------------- --------------------- ---------------------
-`RESET` (Optional) Any GPIO              `reset_pin`
-==================== ===================== =====================
+| **E-Paper Pin** | **ESP Pin** | **ESPHome Option** |  |
+| --- | --- | --- | --- |
+| ``VCC`` | ``3.3V`` | N/A |  |
+| ``GND`` | ``GND`` | N/A |  |
+| ``CLK`` | Any GPIO | ``spi.clk_pin`` |  |
+| ``DIN`` | Any GPIO | ``spi.mosi_pin`` |  |
+| ``CS`` | Any GPIO | ``cs_pin`` |  |
+| ``DC`` | Any GPIO | ``dc_pin`` |  |
+| ``BUSY`` (Optional) | Any GPIO | ``busy_pin`` |  |
+| ``RESET`` (Optional) | Any GPIO | ``reset_pin`` |  |
 
 {{< img src="waveshare_epaper-pins.jpg" alt="Image" width="60.0%" class="center" >}}
 

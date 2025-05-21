@@ -69,16 +69,14 @@ where:
 
 The table lists gain values and corresponding illuminance range:
 
- ========= ================================
-  Gain      Illuminance range
- ========= ================================
-  `1X`    1 lux to 64k lux (default)
-  `2X`    0.5 lux to 32k lux
-  `4X`    0.25 lux to 16k lux
-  `8X`    0.125 lux to 8k lux
-  `48X`   0.02 lux to 1.3k lux
-  `96X`   0.01 lux to 600 lux
- ========= ================================
+| Gain | Illuminance range |  |
+| --- | --- | --- |
+| ``1X`` | 1 lux to 64k lux (default) |  |
+| ``2X`` | 0.5 lux to 32k lux |  |
+| ``4X`` | 0.25 lux to 16k lux |  |
+| ``8X`` | 0.125 lux to 8k lux |  |
+| ``48X`` | 0.02 lux to 1.3k lux |  |
+| ``96X`` | 0.01 lux to 600 lux |  |
 
 
 This Wikipedia [article](https://en.wikipedia.org/wiki/Lux) has a table of some lux values for comparison.

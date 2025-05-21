@@ -10,25 +10,16 @@ This component allows components in ESPHome to communicate to those devices via 
 
 The various sub-components implement some of the Modbus functions below (depending on their required functionality):
 
-+---------------+----------------------------+
-| Function Code | Description                |
-+===============+============================+
-| 1             | Read Coil Status           |
-+---------------+----------------------------+
-| 2             | Read Discrete input Status |
-+---------------+----------------------------+
-| 3             | Read Holding Registers     |
-+---------------+----------------------------+
-| 4             | Read Input Registers       |
-+---------------+----------------------------+
-| 5             | Write Single Coil          |
-+---------------+----------------------------+
-| 6             | Write Single Register      |
-+---------------+----------------------------+
-| 15            | Write Multiple Coils       |
-+---------------+----------------------------+
-| 16            | Write Multiple Registers   |
-+---------------+----------------------------+
+| Function Code | Description |
+| --- | --- |
+| 1 | Read Coil Status |
+| 2 | Read Discrete input Status |
+| 3 | Read Holding Registers |
+| 4 | Read Input Registers |
+| 5 | Write Single Coil |
+| 6 | Write Single Register |
+| 15 | Write Multiple Coils |
+| 16 | Write Multiple Registers |
 
 Modbus RTU requires a [UART Bus]({{< ref "components/uart#uart" >}}) to communicate.
 

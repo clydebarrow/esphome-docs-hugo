@@ -157,40 +157,32 @@ Incoming connections are not affected by `netmask`.
 
 Let's explain with some examples:
 
-+--------------+---------------------+----------------------+------------------------------+
-| address      | netmask             | allowed ips          | working outgoing connections |
-+==============+=====================+======================+==============================+
-| 172.16.0.100 | *omitted* or        | *omitted* or         | **none**,                    |
-|              | 255.255.255.255     | any other value      | no routes are created        |
-+              +---------------------+----------------------+------------------------------+
-|              | 255.255.255.0       | *omitted*            | only to `172.16.0.0/24`    |
-+              +                     +----------------------+ because `192.168.0.0/24`   +
-|              |                     | - 172.16.0.0/24      | and any other network will   |
-|              |                     | - 192.168.0.0/24     | be outside `172.16.0.0/24` |
-|              |                     | - *any other*        |                              |
-+              +                     +----------------------+------------------------------+
-|              |                     | -   192.168.0.0/24   | **none** because             |
-|              |                     |                      | `192.168.0.0/24` is not    |
-|              |                     |                      | part of `172.16.0.0/24`    |
-+--------------+---------------------+----------------------+------------------------------+
-| 10.44.0.100  | 255.0.0.0           | *omitted*            | to `10.0.0.0/8` network    |
-+              +                     +----------------------+------------------------------+
-|              |                     | - 10.44.0.0/16       | only to the networks in      |
-|              |                     | - 10.10.0.0/16       | the allowed list because the |
-|              |                     |                      | netmask will route the whole |
-|              |                     |                      | `10.0.0.0/8` but wireguard |
-|              |                     |                      | allows only those two        |
-|              |                     |                      | subnets                      |
-+--------------+---------------------+----------------------+------------------------------+
-| any          | 0.0.0.0             | *omitted*            | **any**                      |
-+              +                     +----------------------+------------------------------+
-|              |                     | - 172.16.0.0/24      | to any network that is in    |
-|              |                     | - 10.44.0.0/16       | the list of allowed IPs      |
-|              |                     | - 10.10.0.0/16       | because the netmask will     |
-|              |                     |                      | route any traffic but        |
-|              |                     |                      | wireguard allows only its    |
-|              |                     |                      | own list                     |
-+--------------+---------------------+----------------------+------------------------------+
+| address | netmask | allowed ips | working outgoing connections |
+| --- | --- | --- | --- |
+| 172.16.0.100 | *omitted* or | *omitted* or | **none**, |
+|  | 255.255.255.255 | any other value | no routes are created |
+|  | 255.255.255.0 | *omitted* | only to ``172.16.0.0/24`` |
+|  |  | ---------------------- | because ``192.168.0.0/24`` |
+|  |  | - 172.16.0.0/24 | and any other network will |
+|  |  | - 192.168.0.0/24 | be outside ``172.16.0.0/24`` |
+|  |  | - *any other* |  |
+|  |  | -   192.168.0.0/24 | **none** because |
+|  |  |  | ``192.168.0.0/24`` is not |
+|  |  |  | part of ``172.16.0.0/24`` |
+| 10.44.0.100 | 255.0.0.0 | *omitted* | to ``10.0.0.0/8`` network |
+|  |  | - 10.44.0.0/16 | only to the networks in |
+|  |  | - 10.10.0.0/16 | the allowed list because the |
+|  |  |  | netmask will route the whole |
+|  |  |  | ``10.0.0.0/8`` but wireguard |
+|  |  |  | allows only those two |
+|  |  |  | subnets |
+| any | 0.0.0.0 | *omitted* | **any** |
+|  |  | - 172.16.0.0/24 | to any network that is in |
+|  |  | - 10.44.0.0/16 | the list of allowed IPs |
+|  |  | - 10.10.0.0/16 | because the netmask will |
+|  |  |  | route any traffic but |
+|  |  |  | wireguard allows only its |
+|  |  |  | own list |
 
 {{< note >}}
 Setting the `netmask` to `0.0.0.0` has the effect of routing

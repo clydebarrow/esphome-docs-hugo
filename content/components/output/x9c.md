@@ -11,15 +11,11 @@ The [x9c` output platform allows you to add an output that controls a `X9C digit
 
 The X9C family of digital potentiometers are available in different resistance values.
 
-==================== =====================
-`X9C102`           `1kΩ`
--------------------- ---------------------
-`X9C103`           `10kΩ`
--------------------- ---------------------
-`X9C503`           `50kΩ`
--------------------- ---------------------
-`X9C104`           `100kΩ`
-==================== =====================
+| ``X9C102`` | ``1kΩ`` |  |
+| --- | --- | --- |
+| ``X9C103`` | ``10kΩ`` |  |
+| ``X9C503`` | ``50kΩ`` |  |
+| ``X9C104`` | ``100kΩ`` |  |
 
 All chips are controlled by a three wire interface and feature 100 possible wiper positions.
 

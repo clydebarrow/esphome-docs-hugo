@@ -566,6 +566,31 @@ def convert_rst_to_md(lines, filename):
                 i += 1
             continue
         
+        # Handle grid tables
+        if (line.strip() and
+            (line.count('=') > 3 or line.count('-') > 3) and
+            all(c in '=+-| ' for c in line)):
+            # Check if this is likely a grid table by looking at surrounding lines
+            is_grid_table = False
+            
+            # Check if there's a content line after this separator
+            if i + 1 < len(lines) and lines[i + 1].strip():
+                # If the next line has content and is followed by another separator, it's likely a table
+                if (i + 2 < len(lines) and 
+                    lines[i + 2].strip() and 
+                    all(c in '=+-| ' for c in lines[i + 2].strip())):
+                    is_grid_table = True
+                # Or if the next line has content with multiple spaces between words (column alignment)
+                elif '  ' in lines[i + 1]:
+                    is_grid_table = True
+            
+            if is_grid_table:
+                table_lines, new_i = process_grid_table(lines, i)
+                if table_lines:  # Only add if we successfully processed a table
+                    md_lines.extend(table_lines)
+                    i = new_i
+                    continue
+        
         # Process the line for inline markup
         processed_line = process_inline_markup(line)
         if ":ghedit:" in processed_line:
@@ -993,6 +1018,204 @@ def process_csv_table(lines, start_idx):
     md_table.append("")
     
     return md_table, idx
+
+def process_grid_table(lines, start_idx):
+    """Process a grid table directive and convert it to a Markdown table.
+    
+    Grid tables in RST can be formatted in two ways:
+    1. With rows separated by lines of "=" or "-" characters and columns separated by "|" characters
+    2. With rows separated by lines of "=" or "-" characters and columns aligned by whitespace
+    
+    Args:
+        lines: List of lines in the file
+        start_idx: Index of the first line of the grid table
+        
+    Returns:
+        Tuple of (markdown_table_lines, end_idx)
+    """
+    i = start_idx
+    table_lines = []
+    
+    # Collect all lines of the table
+    while i < len(lines):
+        line = lines[i]
+        # If we hit an empty line after the table has started, we're done
+        if not line.strip() and table_lines:
+            break
+        
+        # Add any line that's part of the table structure
+        if line.strip():
+            table_lines.append(line)
+        else:
+            # Not part of the table
+            break
+        
+        i += 1
+    
+    # Process the table
+    if not table_lines:
+        return [], start_idx
+    
+    # Determine if this is a table with | separators or whitespace alignment
+    has_pipe_separators = any('|' in line for line in table_lines)
+    
+    if has_pipe_separators:
+        return process_pipe_separated_table(table_lines, i)
+    else:
+        return process_whitespace_aligned_table(table_lines, i)
+
+def process_pipe_separated_table(table_lines, end_idx):
+    """Process a grid table with | separators."""
+    # Find header rows (rows with '=' characters)
+    header_rows = []
+    for idx, line in enumerate(table_lines):
+        if '=' in line and all(c in '=+-| ' for c in line):
+            header_rows.append(idx-1)
+    
+    # Determine column positions based on separator rows
+    separator_rows = []
+    for idx, line in enumerate(table_lines):
+        if all(c in '=+-| ' for c in line):
+            separator_rows.append(idx)
+    
+    # Find column positions from separator rows
+    column_positions = []
+    for idx in separator_rows:
+        line = table_lines[idx]
+        for j, char in enumerate(line):
+            if char in '|+':
+                if j not in column_positions:
+                    column_positions.append(j)
+    
+    column_positions.sort()
+    
+    # Process each row
+    markdown_rows = []
+    in_header = True
+    
+    for line_idx, line in enumerate(table_lines):
+        # Skip separator rows for Markdown output
+        if line_idx in separator_rows:
+            # If this is the separator after the header row, add a Markdown header separator
+            if in_header and line_idx > 0 and line_idx not in header_rows:
+                in_header = False
+                header_cells = []
+                for k in range(len(column_positions) - 1):
+                    header_cells.append('---')
+                markdown_rows.append('| ' + ' | '.join(header_cells) + ' |')
+            continue
+        
+        # Extract cells from the row
+        cells = []
+        for k in range(len(column_positions) - 1):
+            start_pos = column_positions[k] + 1
+            end_pos = column_positions[k + 1]
+            # Make sure we don't go out of bounds
+            if start_pos < len(line) and end_pos <= len(line):
+                cell_content = line[start_pos:end_pos].strip()
+            else:
+                cell_content = ""
+            cells.append(cell_content)
+        
+        # Add the row to Markdown output
+        markdown_rows.append('| ' + ' | '.join(cells) + ' |')
+    
+    return markdown_rows, end_idx
+
+def process_whitespace_aligned_table(table_lines, end_idx):
+    """Process a grid table with whitespace alignment."""
+    # Find separator rows (rows with only =, -, + and spaces)
+    separator_rows = []
+    for idx, line in enumerate(table_lines):
+        if all(c in '=+-| ' for c in line):
+            separator_rows.append(idx)
+    
+    # Identify the header rows (usually the first and last rows with = characters)
+    header_rows = []
+    for idx, line in enumerate(table_lines):
+        if '=' in line and all(c in '=+-| ' for c in line):
+            header_rows.append(idx)
+    
+    # Find column boundaries by analyzing the content rows
+    # We'll look at the first content row after the first separator
+    content_rows = [idx for idx in range(len(table_lines)) if idx not in separator_rows]
+    
+    # If we have no content rows, return empty
+    if not content_rows:
+        return [], end_idx
+    
+    # Get the first content row
+    first_content_row = min(content_rows)
+    first_content = table_lines[first_content_row]
+    
+    # Find column positions by looking for groups of non-space characters
+    column_positions = []
+    in_column = False
+    for i, char in enumerate(first_content):
+        if not in_column and char != ' ':
+            # Start of a column
+            in_column = True
+            column_positions.append(i)
+        elif in_column and char == ' ' and (i+1 >= len(first_content) or first_content[i+1] == ' '):
+            # End of a column (followed by at least one more space or end of line)
+            in_column = False
+    
+    # If we couldn't find column positions from the first content row,
+    # try to infer them from all content rows
+    if len(column_positions) <= 1:
+        column_positions = []
+        for row_idx in content_rows:
+            line = table_lines[row_idx]
+            in_column = False
+            for i, char in enumerate(line):
+                if not in_column and char != ' ':
+                    # Start of a column
+                    in_column = True
+                    if i not in column_positions:
+                        column_positions.append(i)
+                elif in_column and char == ' ' and (i+1 >= len(line) or line[i+1] == ' '):
+                    # End of a column (followed by at least one more space or end of line)
+                    in_column = False
+        
+        column_positions.sort()
+    
+    # Add an end position if needed
+    max_line_length = max(len(line) for line in table_lines)
+    if column_positions and column_positions[-1] < max_line_length:
+        column_positions.append(max_line_length)
+    
+    # Process each row
+    markdown_rows = []
+    header_added = False
+    
+    for line_idx, line in enumerate(table_lines):
+        # Skip separator rows for Markdown output
+        if line_idx in separator_rows:
+            # If this is the separator after the header row, add a Markdown header separator
+            if not header_added and line_idx > 0 and line_idx-1 not in separator_rows:
+                header_added = True
+                header_cells = ['---' for _ in range(len(column_positions))]
+                markdown_rows.append('| ' + ' | '.join(header_cells) + ' |')
+            continue
+        
+        # Extract cells from the row
+        cells = []
+        for i in range(len(column_positions)):
+            start_pos = column_positions[i]
+            # End position is either the next column start or the end of the line
+            end_pos = column_positions[i+1] if i+1 < len(column_positions) else len(line)
+            
+            # Make sure we don't go out of bounds
+            if start_pos < len(line):
+                cell_content = line[start_pos:min(end_pos, len(line))].strip()
+            else:
+                cell_content = ""
+            cells.append(cell_content)
+        
+        # Add the row to Markdown output
+        markdown_rows.append('| ' + ' | '.join(cells) + ' |')
+    
+    return markdown_rows, end_idx
 
 def process_raw_html_button(lines, i):
     """Process raw HTML button patterns and convert them to button shortcode."""

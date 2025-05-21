@@ -7,9 +7,9 @@ title: "Grow Fingerprint Reader"
 
 The `fingerprint_grow` component allows you to use your R307, R503, R503-RGB, ZFM-20, ... fingerprint sensors with ESPHome.
 
-{{< img src="r307-full.jpg" alt="Image" caption="R307/ZFM-20 Optical Fingerprint Reader (`datasheet <https://cdn-shop.adafruit.com/datasheets/ZFM+user+manualV15.pdf>`__, `Adafruit <https://www.adafruit.com/product/751>`__). Image by `Adafruit <https://www.adafruit.com/product/751>`__." width="50.0%" class="center" >}}
+{{< img src="r307-full.jpg" alt="Image" caption="R307/ZFM-20 Optical Fingerprint Reader ([datasheet](https://cdn-shop.adafruit.com/datasheets/ZFM+user+manualV15.pdf), [Adafruit](https://www.adafruit.com/product/751)). Image by [Adafruit](https://www.adafruit.com/product/751)." width="50.0%" class="center" >}}
 
-{{< img src="r503-full.jpg" alt="Image" caption="R503 Capacitive Fingerprint Reader with Bi-Color Aura LED (`datasheet <https://cdn-shop.adafruit.com/product-files/4651/4651_R503+fingerprint+module+user+manual.pdf>`__, `Adafruit <https://www.adafruit.com/product/4651>`__). Image by `Adafruit <https://www.adafruit.com/product/4651>`__." width="50.0%" class="center" >}}
+{{< img src="r503-full.jpg" alt="Image" caption="R503 Capacitive Fingerprint Reader with Bi-Color Aura LED ([datasheet](https://cdn-shop.adafruit.com/product-files/4651/4651_R503+fingerprint+module+user+manual.pdf), [Adafruit](https://www.adafruit.com/product/4651)). Image by [Adafruit](https://www.adafruit.com/product/4651)." width="50.0%" class="center" >}}
 
 ## Component/Hub
 

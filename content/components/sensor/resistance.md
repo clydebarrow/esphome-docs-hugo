@@ -22,7 +22,7 @@ This consists of three parts:
 There are two kinds of configurations for this circuit: Either the variable resistor
 is close to GND (DOWNSTREAM) or it is closer to VCC (UPSTREAM).
 
-{{< img src="resistance-downstream.png" alt="Image" caption="Example voltage divider configuration of type \"DOWNSTREAM\" and a voltagereference of 5V." width="25.0%" class="center" >}}
+{{< img src="resistance-downstream.png" alt="Image" caption="Example voltage divider configuration of type \"DOWNSTREAM\" and a voltage reference of 5V." width="25.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

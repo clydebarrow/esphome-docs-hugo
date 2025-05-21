@@ -42,5 +42,5 @@
 
 <figure {{ with $class }}class="{{ . }}"{{ end }}>
   <img src="{{ $imagePath | relURL }}" alt="{{ $alt }}" {{ with $width }}width="{{ . }}"{{ end }} {{ with $height }}height="{{ . }}"{{ end }}>
-  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
 </figure>

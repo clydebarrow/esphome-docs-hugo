@@ -1293,13 +1293,21 @@ def process_image_directive(lines, i, is_figure=False):
         i += 1
     
     # Get caption if present (for figures)
+    caption_lines = []
     while i < len(lines) and lines[i].startswith('  ') and is_figure:
-        caption += lines[i].strip()
+        caption_lines.append(lines[i].strip())
         i += 1
 
     # Skip any blank lines after the caption
     while i < len(lines) and not lines[i].strip():
         i += 1
+    
+    # Process caption for inline markup if present
+    if caption_lines:
+        # Join caption lines into a single string
+        caption_text = ' '.join(caption_lines)
+        # Process the caption for inline markup (references, formatting, etc.)
+        caption = process_inline_markup(caption_text)
     
     # Escape quotes in alt text and caption
     if alt_text:

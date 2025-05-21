@@ -6,6 +6,9 @@
   --background-color: #fff;
   --sidebar-background: #f3f6f6;
   --mobile-width-stop: 875px;
+  --nav-height: 50px;
+  --nav-transition-up: transform 0.3s ease;
+  --nav-transition-down: transform 0.1s ease-out;
 }
 
 * {
@@ -88,6 +91,19 @@ img {
 .nav-container {
   background-color: var(--primary-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: var(--nav-transition-down);
+}
+
+.nav-container.nav-scrolling-up {
+  transition: var(--nav-transition-up);
+}
+
+.nav-container.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .sticky-nav {
@@ -176,6 +192,7 @@ main {
   max-width: 1800px;
   margin: 0 auto;
   padding: 2em;
+  margin-top: var(--nav-height); /* Add space for the fixed header */
 }
 
 .content-container {

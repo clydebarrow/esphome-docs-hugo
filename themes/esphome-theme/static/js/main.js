@@ -11,6 +11,65 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
+  // Header scroll behavior
+  const navContainer = document.getElementById('nav-container');
+  let lastScrollTop = 0;
+  let scrollThreshold = 5; // Minimum scroll amount before triggering hide/show
+  let navHeight = navContainer.offsetHeight;
+  let scrollDelta = 0; // Track cumulative scroll amount
+  let ticking = false; // Flag to prevent multiple rAF calls
+  
+  function handleScroll() {
+    const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    // Check if we've scrolled more than the threshold
+    if (Math.abs(lastScrollTop - currentScrollTop) <= scrollThreshold) {
+      ticking = false;
+      return;
+    }
+    
+    // Scrolling down - directly track the scroll position
+    if (currentScrollTop > lastScrollTop) {
+      // Remove the transition class when scrolling down for direct tracking
+      navContainer.classList.remove('nav-scrolling-up');
+      
+      // Increase the scroll delta by the amount scrolled - start immediately from top
+      scrollDelta += (currentScrollTop - lastScrollTop);
+      
+      // Cap the scroll delta at the nav height
+      scrollDelta = Math.min(scrollDelta, navHeight);
+      
+      // Apply the transform
+      navContainer.style.transform = `translateY(-${scrollDelta}px)`;
+      
+      // If fully hidden, add the nav-hidden class
+      if (scrollDelta >= navHeight) {
+        navContainer.classList.add('nav-hidden');
+      }
+    } 
+    // Scrolling up - smooth transition back
+    else if (currentScrollTop < lastScrollTop) {
+      // Reset the scroll delta
+      scrollDelta = 0;
+      
+      // Add transition class for smooth appearance
+      navContainer.classList.add('nav-scrolling-up');
+      navContainer.classList.remove('nav-hidden');
+      navContainer.style.transform = 'translateY(0)';
+    }
+    
+    lastScrollTop = currentScrollTop;
+    ticking = false;
+  }
+  
+  // Use requestAnimationFrame for better performance
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(handleScroll);
+      ticking = true;
+    }
+  });
+  
   // Dropdown menus for mobile
   const dropbtns = document.querySelectorAll('.dropbtn');
   

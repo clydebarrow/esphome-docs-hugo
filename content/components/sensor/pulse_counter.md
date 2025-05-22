@@ -41,7 +41,7 @@ sensor:
   If you enable this, set up the `count_mode` to increase on the falling edge, not leading edge. For S0 pulse meters that are used to meter power consumption 50-100 ms is a reasonable value.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 - **total** (*Optional*): Report the total number of pulses.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< note >}}
 See {{< docref "/components/sensor/integration" "integration sensor" >}} for summing up pulse counter

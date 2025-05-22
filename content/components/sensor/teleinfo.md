@@ -20,7 +20,7 @@ let you retrieve detailed power consumption or power production.
 There is plenty of example on the web.
 
 As the communication with the Teleinformation is done using UART, you need to
-have an :ref:`UART bus <uart>` in your configuration with the `rx_pin`
+have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin`
 connected to the output of the optocoupler component. Additionally, you need to
 set the baud rate to 9600bps if counter is configured to work in standard
 mode or 1200bps in historical mode.  To find out which mode you are using,
@@ -54,7 +54,7 @@ In teleinfo platform:
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the :ref:`UART Component <uart>` if you want
+- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation or multiple hubs.
@@ -85,7 +85,7 @@ sensor:
 ```
 - **tag_name** (**Required**, string): Specify the tag you want to retrieve from the Teleinformation.
 - **teleinfo_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of used hub.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ### Text Sensor
 
@@ -99,7 +99,7 @@ text_sensor:
 ```
 - **tag_name** (**Required**, string): Specify the tag you want to retrieve from the Teleinformation.
 - **teleinfo_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of used hub.
-- All other options from :ref:`Text Sensor <config-text_sensor>`.
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 
 ## See Also

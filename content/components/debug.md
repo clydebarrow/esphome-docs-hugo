@@ -67,26 +67,26 @@ Configuration variables:
     - SDK, Core & Boot versions
     - Reset reason & information
 
-  Accepts all options from :ref:`Text Sensor <config-text_sensor>`.
+  Accepts all options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
-- **reset_reason** (*Optional*): Reports the last reboot reason in a human-readable form. Accepts all options from :ref:`Text Sensor <config-text_sensor>`.
+- **reset_reason** (*Optional*): Reports the last reboot reason in a human-readable form. Accepts all options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Sensor
 Configuration variables:
 
-- **free** (*Optional*): Reports the free heap size in bytes. All options from :ref:`Sensor <config-sensor>`.
+- **free** (*Optional*): Reports the free heap size in bytes. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **fragmentation** (*Optional*): Reports the fragmentation metric of the heap 
   (0% is clean, more than ~50% is not harmless). Only available on ESP8266 with Arduino 2.5.2+.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **block** (*Optional*): Reports the largest contiguous free RAM block on the heap in bytes. All options from :ref:`Sensor <config-sensor>`.
+- **block** (*Optional*): Reports the largest contiguous free RAM block on the heap in bytes. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   
-- **loop_time** (*Optional*): Reports the longest time between successive iterations of the main loop. All options from :ref:`Sensor <config-sensor>`.
+- **loop_time** (*Optional*): Reports the longest time between successive iterations of the main loop. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **psram** (*Optional*): Reports the free PSRAM in bytes. Only available on ESP32. All options from :ref:`Sensor <config-sensor>`.
+- **psram** (*Optional*): Reports the free PSRAM in bytes. Only available on ESP32. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **cpu_frequency** (*Optional*): Reports the CPU frequency in Hz. All options from :ref:`Sensor <config-sensor>`.
+- **cpu_frequency** (*Optional*): Reports the CPU frequency in Hz. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

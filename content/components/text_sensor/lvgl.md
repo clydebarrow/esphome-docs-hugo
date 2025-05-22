@@ -13,7 +13,7 @@ Supported widgets are [`textarea`]({{< ref "components/lvgl/widgets#lvgl-widget-
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a `textarea` widget configured in LVGL, which will reflect the state of the text sensor.
-- All other variables from :ref:`Text Sensor <config-text_sensor>`.
+- All other variables from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 Example:
 
@@ -30,8 +30,8 @@ Widget-specific actions (`lvgl.label.update`, `lvgl.textarea.update`) will trigg
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl" "LVGL Main component" >}}
-- :ref:`Label widget <lvgl-widget-label>`
-- :ref:`Textarea widget <lvgl-widget-textarea>`
+- [Label widget]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}})
+- [Textarea widget]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}})
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

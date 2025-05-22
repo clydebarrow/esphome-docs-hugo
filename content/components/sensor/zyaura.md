@@ -36,15 +36,15 @@ sensor:
 - **data_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the data bus is connected.
 - **co2** (*Optional*): The information for the CO2 sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): The information for the humidity sensor
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.

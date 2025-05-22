@@ -19,7 +19,7 @@ for any of the gases, [Sensor Filters]({{< ref "components/sensor/_index#sensor-
 {{< /note >}}
 {{< img src="grove-gas-mc-v2.png" alt="Image" caption="Grove Multichannel Gas Sensor V2" width="50.0%" class="center" >}}
 
-The communication with this sensor is done via :ref:`I²C Bus <i2c>`, so you need to have
+The communication with this sensor is done via [I²C Bus]({{< ref "components/i2c#i2c" >}}), so you need to have
 an `i2c:` section in your config for this integration to work.
 
 ```yaml
@@ -38,20 +38,20 @@ sensor:
 ## Configuration variables:
 
 - **nitrogen_dioxide** (**Required**): The Nitrogen Dioxide sensor data.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **ethanol** (**Required**): The Ethanol (C2H5OH) sensor data.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **carbon_monoxide** (**Required**): The Carbon Monoxide sensor data.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **tvoc** (**Required**): The Total Volatile Organic Compounds (TVOC) sensor data.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 
 Advanced:
 
-- **address** (*Optional*, int): The :ref:`I²C <i2c>` address of the sensor.
+- **address** (*Optional*, int): The [I²C]({{< ref "components/i2c#i2c" >}}) address of the sensor.
   Defaults to `0x08`
 
 {{< anchor "grove-gas-mc-v2-preheating" >}}

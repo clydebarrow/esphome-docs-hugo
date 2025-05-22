@@ -36,7 +36,7 @@ text_sensor:
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **font_id** (*Optional*, int):  The font id for the component
 - **visible** (*Optional*, boolean):  Visible or not
-- All other options from :ref:`Text Sensor <config-text_sensor>`.
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
@@ -84,10 +84,10 @@ on_...:
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion text sensor.
-- **state** (**Required**, string, :ref:`templatable <config-templatable>`): The string to publish.
-- **publish_state** (*Optional*, bool, :ref:`templatable <config-templatable>`): Publish new state to Home Assistant.
+- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The string to publish.
+- **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
   Default is true.
-- **send_to_nextion** (*Optional*, bool, :ref:`templatable <config-templatable>`): Publish new state to Nextion
+- **send_to_nextion** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
   display which will update component. Default is true.
 
 {{< note >}}
@@ -98,7 +98,7 @@ This action can also be written in lambdas. See [Lambda Calls]({{< ref "componen
 
 ### Lambda Calls
 
-From :ref:`lambdas <config-lambda>`, you can call several methods to access
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full {{< apiref "nextion/text_sensor/nextion_textsensor.h" "nextion/text_sensor/nextion_textsensor.h" >}} for more info).
 
 {{< anchor "nextion_text_sensor_set_state" >}}
@@ -132,7 +132,7 @@ since this will be sending the real value to esphome.
 Using the above yaml example:
 - "text0" will poll the Nextion for `text0.txt` value and set the state accordingly.
 
-- :ref:`Lambda Calls <nextion_text_sensor_lambda_calls>`.
+- [Lambda Calls]({{< ref "components/text_sensor/nextion#nextion_text_sensor_lambda_calls" >}}).
 
 {{< note >}}
 No updates will be sent to the Nextion if it is sleeping. Once it wakes, the components will be updated. If a component is invisible, :code:`visible(false)`, then it won't update until it is set to be visible.

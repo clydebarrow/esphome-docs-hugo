@@ -212,19 +212,19 @@ Configuration variables:
 
 At least one of `condition`, `all` or `any` must be provided.
   
-- **condition** (*Optional*, :ref:`Condition <config-condition>`): The condition to check to determine which branch to take. If this is configured with a list of conditions then they must all be true for the condition to be true.
-- **all** (*Optional*, :ref:`Condition <config-condition>`): Takes a list of conditions, all of which must be true (and is therefore equivalent to `condition`.)
-- **any** (*Optional*, :ref:`Condition <config-condition>`): Takes a list of conditions; if at least one is true, the condition will be true.
-- **then** (*Optional*, :ref:`Action <config-action>`): The action to perform if the condition evaluates to true.
+- **condition** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine which branch to take. If this is configured with a list of conditions then they must all be true for the condition to be true.
+- **all** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): Takes a list of conditions, all of which must be true (and is therefore equivalent to `condition`.)
+- **any** (*Optional*, [Condition]({{< ref "automations/actions#config-condition" >}})): Takes a list of conditions; if at least one is true, the condition will be true.
+- **then** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform if the condition evaluates to true.
   Defaults to doing nothing.
-- **else** (*Optional*, :ref:`Action <config-action>`): The action to perform if the condition evaluates to false.
+- **else** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform if the condition evaluates to false.
   Defaults to doing nothing.
 
 {{< anchor "lambda_action" >}}
 
 ### `lambda` Action
 
-This action executes an arbitrary piece of C++ code (see :ref:`Lambda <config-lambda>`).
+This action executes an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}})).
 
 ```yaml
 on_...:
@@ -254,7 +254,7 @@ on_...:
 Configuration variables:
 
 - **count** (**Required**, int): The number of times the action should be repeated.  The counter is available to lambdas using the reserved word "iteration".
-- **then** (**Required**, :ref:`Action <config-action>`): The action to repeat.
+- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to repeat.
 
 {{< anchor "wait_until_action" >}}
 
@@ -288,14 +288,14 @@ on_...:
 ```
 Configuration variables:
 
-- **condition** (**Required**, :ref:`Condition <config-condition>`): The condition to wait to become true.
+- **condition** (**Required**, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to wait to become true.
 - **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before timing out. Defaults to never timing out.
 
 {{< anchor "while_action" >}}
 
 ### `while` Action
 
-This action is similar to the :ref:`if <if_action>` Action. The `while` action loops
+This action is similar to the [if]({{< ref "automations/actions#if_action" >}}) Action. The `while` action loops
 through a block as long as the given condition is true.
 
 ```yaml
@@ -312,8 +312,8 @@ on_...:
 ```
 Configuration variables:
 
-- **condition** (**Required**, :ref:`Condition <config-condition>`): The condition to check to determine whether or not to execute.
-- **then** (**Required**, :ref:`Action <config-action>`): The action to perform until the condition evaluates to false.
+- **condition** (**Required**, [Condition]({{< ref "automations/actions#config-condition" >}})): The condition to check to determine whether or not to execute.
+- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform until the condition evaluates to false.
 
 {{< anchor "component-update_action" >}}
 
@@ -342,7 +342,7 @@ Using this action you can manually call the `stop_poller()` method of a componen
 After this action the component will stop being refreshed.
 
 While the poller is suspendend, it's still possible to trigger on-demand updates by
-using :ref:`component.update <component-update_action>`
+using [component.update]({{< ref "automations/actions#component-update_action" >}})
 
 Please note that this only works with PollingComponent types and others will result in a
 compile error.
@@ -444,15 +444,15 @@ on_...:
 ```
 Configuration variables:
 
-- **time** (**Required**, :ref:`templatable <config-templatable>`, [Time]({{< ref "guides/configuration-types#config-time" >}})):
+- **time** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The time for which the condition has to have been true.
-- **condition** (**Required**, :ref:`condition<config-condition>`): The condition to check.
+- **condition** (**Required**, [condition]({{< ref "automations/actions#config-condition" >}})): The condition to check.
 
 {{< anchor "lambda_condition" >}}
 
 ### `lambda` Condition
 
-This condition performs an arbitrary piece of C++ code (see :ref:`Lambda <config-lambda>`)
+This condition performs an arbitrary piece of C++ code (see [Lambda]({{< ref "automations/templates#config-lambda" >}}))
 and can be used to create conditional flow in actions.
 
 ```yaml

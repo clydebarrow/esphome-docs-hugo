@@ -38,7 +38,7 @@ and requires {{< docref "/components/modbus_controller" >}} to be configured.
 - **register_count** (*Optional*, int): The number of consecutive registers this read request should span or skip in a single command. Default is 1. See [Optimizing modbus communications]({{< ref "components/modbus_controller#modbus_register_count" >}}) for more details.
 - **response_size** (*Optional*, int): Size of the response for the register in bytes. Defaults to register_count*2.
 - **force_new_range** (*Optional*, boolean): If possible sensors with sequential addresses are grouped together and requested in one range. Setting `force_new_range: true` enforces the start of a new range at that address.
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to get the new value of the sensor.
 
   Parameters passed into the lambda
@@ -58,7 +58,7 @@ and requires {{< docref "/components/modbus_controller" >}} to be configured.
   See [Using `custom_command`]({{< ref "components/modbus_controller#modbus_custom_command" >}}) how to use `custom_command`
 - **offset** (*Optional*, int): Offset from start address in bytes (only required for uncommon response encodings). If more than one register is written in a command this value is used to find the start of this datapoint relative to start address. The component calculates the size of the range based on offset and size of the value type. For `coil` or `discrete_input` registers offset is the position of the coil/register because these registers encode 8 coils in one byte.
 
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Examples
 
@@ -93,7 +93,7 @@ The example below will send 2 modbus commands (device address 1 assumed):
 
 ```
 The `modbus` sensor platform allows you use a lambda that gets called before data is published
-using :ref:`lambdas <config-lambda>`.
+using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
 The example below logs the value as parsed and the raw modbus bytes received for this register range:
 

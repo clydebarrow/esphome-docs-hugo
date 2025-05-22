@@ -47,7 +47,7 @@ Some ESP8266s have an onboard USB chip (e.g. D1 mini) on the chips' control line
 - **sleep_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration to stay in deep sleep mode.
 - **touch_wakeup** (*Optional*, boolean): Only on ESP32. Use a touch event to wakeup from deep sleep. To be able
   to wakeup from a touch event, [Binary Sensor]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-binary-sensor" >}}) must be configured properly.
-- **wakeup_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): Only on ESP32. A pin to wake up to once
+- **wakeup_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Only on ESP32. A pin to wake up to once
   in deep sleep mode. Use the inverted property to wake up to LOW signals.
 - **wakeup_pin_mode** (*Optional*): Only on ESP32. Specify how to handle waking up from a `wakeup_pin` if
   the wakeup pin is already in the state with which it would wake up when attempting to enter deep sleep.
@@ -142,7 +142,7 @@ on_...:
 ```
 Configuration options:
 
-- **sleep_duration** (*Optional*, :ref:`templatable <config-templatable>`, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration to stay in deep sleep mode. If a template is used, it should return a value in milliseconds.
+- **sleep_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The time duration to stay in deep sleep mode. If a template is used, it should return a value in milliseconds.
 - **until** (*Optional*, string): The time of day to wake up. Only on ESP32.
 - **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the time component to use for the `until` option. Only on ESP32.
 

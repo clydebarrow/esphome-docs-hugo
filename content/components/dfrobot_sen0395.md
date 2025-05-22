@@ -97,7 +97,7 @@ binary_sensor:
 
 Connecting the sensor via the serial connection (UART) allows both changing its settings as well as reading its state.
 Note, however, that the UART peripheral cannot wake the processor; if you plan on sleeping the processor, you'll likely
-still need to use the :ref:`GPIO pin <dfrobot_sen0395-via_gpio>` approach described above (in addition to the UART).
+still need to use the [GPIO pin]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-via_gpio" >}}) approach described above (in addition to the UART).
 
 First, setup a {{< docref "/components/uart" >}} and [Hub Component]({{< ref "components/dfrobot_sen0395#dfrobot_sen0395-component" >}}) and then use its binary sensor platform
 to create individual binary sensors for each presence sensor.
@@ -112,13 +112,13 @@ binary_sensor:
 
 - **dfrobot_sen0395_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the DFRobot mmWave component defined above.
   Required when multiple instances of the `dfrobot_sen0395` component are defined.
-- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
+- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "dfrobot_sen0395-switch" >}}
 
 ## Switch
 
-:ref:`Switch components <config-switch>` are used to enable/disable various module features/functions.
+[Switch components]({{< ref "components/switch/_index#config-switch" >}}) are used to enable/disable various module features/functions.
 
 ```yaml
 switch:
@@ -142,7 +142,7 @@ switch:
   - `turn_on_led`: when enabled, the mmWave sensor's LED blinks during operation; when disabled, the LED will always
     remain off.
 
-- All other options from :ref:`Switch <config-switch>`.
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 {{< anchor "dfrobot_sen0395-actions" >}}
 
@@ -243,8 +243,8 @@ Configuration variables:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the mmWave component. Useful when multiple instances of this component are defined.
 
 ## See Also
-- :ref:`UART bus <uart>`
-- :ref:`Binary Sensor <config-binary_sensor>`
+- [UART bus]({{< ref "components/uart#uart" >}})
+- [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}})
 - [ID]({{< ref "guides/configuration-types#config-id" >}})
 - [DFRobot mmWave Radar Wiki page](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
 

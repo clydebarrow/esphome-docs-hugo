@@ -17,7 +17,7 @@ button:
 ```
 ## Configuration variables:
 
-- All options from :ref:`Button <config-button>`.
+- All options from [Button]({{< ref "components/button/_index#config-button" >}}).
 
 ## See Also
 

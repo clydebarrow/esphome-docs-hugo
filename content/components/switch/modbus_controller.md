@@ -23,9 +23,9 @@ and requires {{< docref "/components/modbus_controller" >}} to be configured.
 - **register_count** (*Optional*, int): The number of consecutive registers this read request should span or skip in a single command. Default is 1. See [Optimizing modbus communications]({{< ref "components/modbus_controller#modbus_register_count" >}}) for more details.
 - **use_write_multiple** (*Optional*, boolean): By default the modbus command *Function Code 6 (Preset Single Registers)* is used for setting the holding register if only one register is set. If your device only supports *Function Code 16 (Preset Multiple Registers)* set this option to `true`.
 - **bitmask** (*Optional*, int): Some values are packed in a response. The bitmask is used to determined if the result is true or false. See [Bitmasks]({{< ref "components/modbus_controller#bitmasks" >}}).
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated every update interval to read the status of the switch.
-- **write_lambda** (*Optional*, :ref:`lambda <config-lambda>`): Lambda called before send.
+- **write_lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): Lambda called before send.
   Lambda is evaluated before the modbus write command is created.
 
   Parameters passed into the lambda
@@ -45,7 +45,7 @@ and requires {{< docref "/components/modbus_controller" >}} to be configured.
   Custom data must contain all required bytes including the modbus device address. The CRC is automatically calculated and appended to the command.
   See [Using `custom_command`]({{< ref "components/modbus_controller#modbus_custom_command" >}}) how to use `custom_command`
 - **offset** (*Optional*, int): Offset from start address in bytes (only required for uncommon response encodings). If more than one register is written in a command, this value is used to find the start of this datapoint relative to the start address. The component calculates the size of the range based on offset and size of the value type. The value for offset depends on the register type. For holding input registers, the offset is in bytes. For coil and discrete input resisters, the LSB of the first data byte contains the coil addressed in the request. The other coils follow toward the high-order end of this byte and from low order to high order in subsequent bytes. For registers, the offset is the position of the relevant bit. To get the value of the coil register, 2 can be retrieved using `address: 2` / `offset: 0` or `address: 0` / `offset 2`.
-- **restore_mode** (*Optional*): See :ref:`Switch <config-switch>`, since this configuration variable is inherited. The default value for this setting is `DISABLED` (recommended).
+- **restore_mode** (*Optional*): See [Switch]({{< ref "components/switch/_index#config-switch" >}}), since this configuration variable is inherited. The default value for this setting is `DISABLED` (recommended).
   `DISABLED` leaves the initial state up to the hardware: usually the state lives in the device and ESPHome does not need to remember it. The switch frontend will show an undetermined
   state until the real state is retrieved from the device on the next refresh. Use any other setting if a reboot of your ESPHome device is tied to a reboot of the modbus device.
 

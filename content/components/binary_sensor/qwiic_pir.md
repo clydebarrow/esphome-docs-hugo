@@ -16,7 +16,7 @@ The SparkFun Qwiic PIR Motion binary sensor uses PIR sensors to detect motion. I
 
 You can configure a debounce mode to reduce noise and false detections. See [Debounce Modes]({{< ref "components/binary_sensor/qwiic_pir#debounce-modes" >}}) for the available options.
 
-To use the sensor, first set up an :ref:`I²C Bus <i2c>` and connect the sensor to the specified pins.
+To use the sensor, first set up an [I²C Bus]({{< ref "components/i2c#i2c" >}}) and connect the sensor to the specified pins.
 
 ```yaml
 # Example configuration entry
@@ -30,7 +30,7 @@ binary_sensor:
 - **debounce_mode** (*Optional*, enum): How the component debounces the motion sensor's signal. Must be one of `HYBRID`, `NATIVE`, or `RAW`. See [Debounce Modes]({{< ref "components/binary_sensor/qwiic_pir#debounce-modes" >}}) for details. Defaults to `HYBRID`.
 - **debounce** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Only valid when using `NATIVE` debounce mode. Configures the debounce time on the sensor to reduce noise and false detections. Defaults to `1ms`.
 
--  All other options from :ref:`Binary Sensor <config-binary_sensor>`.
+-  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 {{< anchor "debounce-modes" >}}
 

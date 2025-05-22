@@ -21,7 +21,7 @@ The examples below assume you've set up LVGL correctly with your display and its
 
 {{< img src="lvgl_switch.png" alt="Image" class="left" >}}
 
-The easiest way to integrate an LVGL [`switch`]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}) widget and a switch or light is with :ref:`automations <automation>`: 
+The easiest way to integrate an LVGL [automations]({{< ref "automations/_index#automation" >}}) widget and a switch or light is with [`switch`]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}): 
 
 ```yaml
 light:
@@ -95,7 +95,7 @@ lvgl:
 
 {{< img src="lvgl_cook_volume.png" alt="Image" class="left" >}}
 
-You can use a :ref:`slider <lvgl-widget-slider>` or an :ref:`arc <lvgl-widget-arc>` to control the brightness of a dimmable light.
+You can use a [arc]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}) or an [slider]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}) to control the brightness of a dimmable light.
 
 We can use a sensor to retrieve the current brightness of a light, which is stored in Home Assistant as an attribute of the entity, as an integer value between `0` (min) and `255` (max). It's convenient to set the slider's `min_value` and `max_value` accordingly.
 
@@ -142,7 +142,7 @@ This is applicable to action calls like `fan.set_percentage` or `valve.set_valve
 
 {{< img src="lvgl_cook_volume.png" alt="Image" class="right" >}}
 
-Similarly, you can use a :ref:`slider <lvgl-widget-slider>` or an :ref:`arc <lvgl-widget-arc>` to control the volume level of a media player, which uses float values.
+Similarly, you can use a [arc]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}) or an [slider]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}) to control the volume level of a media player, which uses float values.
 
 With a sensor we retrieve the current volume level of the media player, which is stored in Home Assistant as an attribute of the entity, and is a float value between `0` (min) and `1` (max). Since LVGL only handles integers, it's convenient to set the slider's possible values to be between `0` and `100`. Thus a conversion is needed back and forth, meaning that when we read the value from Home Assistant we have to multiply it by `100`, and when we set the volume through the action call, we have to divide it by `100`:
 
@@ -180,7 +180,7 @@ lvgl:
                       volume_level: !lambda return (x / 100);
 
 ```
-The `adv_hittest` option ensures that accidental touches to the screen won't cause sudden volume changes (more details in the :ref:`slider doc <lvgl-widget-slider>`).
+The `adv_hittest` option ensures that accidental touches to the screen won't cause sudden volume changes (more details in the [slider doc]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})).
 
 {{< note >}}
 Keep in mind that `on_value` is triggered *continuously* by the slider while it's being dragged. This generally has a negative effect on performance. For example, you shouldn't use this trigger to set the target temperature of a heat pump via Modbus, or set the position of motorized covers, because it will likely cause malfunctions. To mitigate this, consider using a universal widget trigger like `on_release` to get the `x` variable once after the interaction has completed.
@@ -777,7 +777,7 @@ lvgl:
                     lvgl.page.next:
 
 ```
-For this example to appear correctly, use the theme and style options from :ref:`above <lvgl-cookbook-theme>` and LVGL's own library :ref:`fonts <lvgl-fonts>`.
+For this example to appear correctly, use the theme and style options from [fonts]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) and LVGL's own library [above]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}).
 
 {{< anchor "lvgl-cookbook-statico" >}}
 
@@ -864,7 +864,7 @@ lvgl:
         ...
 
 ```
-For this example to work, use the theme and style options from :ref:`above <lvgl-cookbook-theme>`.
+For this example to work, use the theme and style options from [above]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}).
 
 {{< anchor "lvgl-cookbook-flex" >}}
 
@@ -1200,7 +1200,7 @@ lvgl:
 
 ## MDI icons in text
 
-ESPHome's :ref:`font renderer <display-fonts>` allows you to use any OpenType/TrueType font file for your text. This is very flexible because you can prepare various sets of fonts at different sizes each with a different number of glyphs; this is important as it may help to conserve flash memory space.
+ESPHome's [font renderer]({{< ref "components/font#display-fonts" >}}) allows you to use any OpenType/TrueType font file for your text. This is very flexible because you can prepare various sets of fonts at different sizes each with a different number of glyphs; this is important as it may help to conserve flash memory space.
 
 One example is when you'd like some MDI icons to be used in line with the text (similar to how LVGL's internal fonts and symbols coexist). You can use a font of your choice; choose the symbols/icons from MDI you want and mix them in a single sized set.
 
@@ -1347,7 +1347,7 @@ lvgl:
 
 {{< img src="lvgl_cook_font_batt.png" alt="Image" class="left" >}}
 
-Another example for using MDI icons is to display battery percentage in 10 steps. We need to have a font containing the glyphs corresponding to the different battery percentage levels, and we need a sensor to import the battery status from Home Assistant into a numeric value. We use a :ref:`lambda <config-lambda>` to return the codepoint of the corresponding glyph based on the sensor value:
+Another example for using MDI icons is to display battery percentage in 10 steps. We need to have a font containing the glyphs corresponding to the different battery percentage levels, and we need a sensor to import the battery status from Home Assistant into a numeric value. We use a [lambda]({{< ref "automations/templates#config-lambda" >}}) to return the codepoint of the corresponding glyph based on the sensor value:
 
 ```yaml
 font:
@@ -1428,7 +1428,7 @@ lvgl:
 
 {{< img src="lvgl_cook_animimg_batt.gif" alt="Image" class="left" >}}
 
-To have an animation illustrating a battery charging, you can use [`animimg`]({{< ref "components/lvgl/widgets#lvgl-widget-animimg" >}}) with a set of :ref:`images rendered from MDI <display-image>` showing battery levels:
+To have an animation illustrating a battery charging, you can use [images rendered from MDI]({{< ref "components/image#display-image" >}}) with a set of [`animimg`]({{< ref "components/lvgl/widgets#lvgl-widget-animimg" >}}) showing battery levels:
 
 ```yaml
 image:
@@ -1787,7 +1787,7 @@ Another example relying on the **Grid** layout can be a weather panel showing th
 
 All the information displayed here could be retrieved to local `platform: homeassistant` sensors as desribed in several examples in this Cookbook, however, this time we take a different approach. Instead of pulling the data by ESPHome, we'll be pushing it from Home Assistant, to native {{< docref "/components/text/lvgl" >}} components.
 
-The weather condition icons we use are from MDI. We import just the ones corresponding to the weather conditions supported by the Weather integration in Home Assistant. For all the other labels you can use any :ref:`font <lvgl-fonts>` of your choice.
+The weather condition icons we use are from MDI. We import just the ones corresponding to the weather conditions supported by the Weather integration in Home Assistant. For all the other labels you can use any [font]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) of your choice.
 
 ```yaml
 binary_sensor:
@@ -2067,7 +2067,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
         value: "{{states('sensor.outdoor_temperature') | round(1)}} °C"
 
 ```
-The automations will be triggered to update the labels every time the corresponding entities change, and when the ESPHome comes alive - the reason you also need the {{< docref "/components/binary_sensor/status" >}}. Note that you'll need to adjust the entity IDs corresponding to your ESPHome node depedning on how you :ref:`configured it to use its name<esphome-configuration_variables>`.
+The automations will be triggered to update the labels every time the corresponding entities change, and when the ESPHome comes alive - the reason you also need the {{< docref "/components/binary_sensor/status" >}}. Note that you'll need to adjust the entity IDs corresponding to your ESPHome node depedning on how you [configured it to use its name]({{< ref "components/esphome#esphome-configuration_variables" >}}).
 
 {{< anchor "lvgl-cookbook-idlescreen" >}}
 

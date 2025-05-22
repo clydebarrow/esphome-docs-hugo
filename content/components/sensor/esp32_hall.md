@@ -34,7 +34,7 @@ sensor:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< warning >}}
 The values this sensor outputs were only calibrated with a few magnets and no real "truth" sensor.

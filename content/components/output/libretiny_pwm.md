@@ -26,17 +26,17 @@ light:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The pin to use PWM on.
+- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to use PWM on.
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
 - **frequency** (*Optional*, frequency): The frequency to run the PWM with. Lower frequencies
   have more visual artifacts, but can represent much more colors. Defaults to `1000 Hz`.
-- All other options from :ref:`Output <config-output>`.
+- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 {{< anchor "output-libretiny_pwm-set_frequency_action" >}}
 
 ## `output.libretiny_pwm.set_frequency` Action
 
-This :ref:`Action <config-action>` allows you to manually change the frequency of a LibreTiny PWM
+This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually change the frequency of a LibreTiny PWM
 channel at runtime. Use cases include controlling a passive buzzer (for pitch control).
 
 ```yaml
@@ -49,7 +49,7 @@ on_...:
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the PWM output to change.
-- **frequency** (**Required**, :ref:`templatable <config-templatable>`, float): The frequency
+- **frequency** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), float): The frequency
   to set in hertz.
 
 ## See Also

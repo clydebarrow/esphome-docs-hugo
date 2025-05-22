@@ -8,7 +8,7 @@ title: "SHT4X Temperature and Humidity Sensor"
 The `sht4x` sensor platform  allows you to use your SHT4X temperature and humidity sensor
 ([datasheet](https://sensirion.com/media/documents/33FD6951/63E1087C/Datasheet_SHT4x_1.pdf), `Adafruit`_) with ESPHome.
 
-The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
+The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 {{< img src="sht4x-full.jpg" alt="Image" width="80.0%" class="center" >}}
 
@@ -27,11 +27,11 @@ sensor:
 
 - **temperature** (*Optional*): Temperature.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): Relative Humidity.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **precision** (*Optional*, string): The measurement precision, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_max_duty** (*Optional*, float): The maximum duty cycle of the heater (limited to `0.05`). Default is `0.0`, i.e. heater off.

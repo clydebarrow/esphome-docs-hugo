@@ -14,7 +14,7 @@ ESPHome node, without the requirement of a network connection.
 
 ## Overview
 
-The component implements the :ref:`Display Menu <display_menu>` component providing
+The component implements the [Display Menu]({{< ref "components/display_menu/_index#display_menu" >}}) component providing
 a hierarchical menu primarily intended to be controlled either by a rotary encoder
 with a button or a five-button joystick controller.
 
@@ -100,7 +100,7 @@ Configuration variables:
 - **mark_submenu** (*Optional*, 0-255): Code of the character used to mark menu item leading to a
   submenu. Defaults to `0x7e` (a right arrow).
 
-The rest of the configuration is described in the :ref:`Display Menu <display_menu>` component.
+The rest of the configuration is described in the [Display Menu]({{< ref "components/display_menu/_index#display_menu" >}}) component.
 The menu inherits the dimensions of the connected LCD display and uses the entire area.
 
 ## See Also
@@ -108,7 +108,7 @@ The menu inherits the dimensions of the connected LCD display and uses the entir
 - [I²C Bus]({{< ref "components/i2c#i2c" >}})
 - [lcd_pcf8574 Component]({{< ref "components/display/lcd_display#lcd-pcf8574" >}})
 - [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}})
-- :ref:`Display Menu <display_menu>`
+- [Display Menu]({{< ref "components/display_menu/_index#display_menu" >}})
 - {{< docref "/components/sensor/rotary_encoder" >}}
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "lcd_menu/lcd_menu.h" "lcd_menu/lcd_menu.h" >}}

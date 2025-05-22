@@ -23,12 +23,12 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The pin to observe for the duty
+- **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to observe for the duty
   cycle.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

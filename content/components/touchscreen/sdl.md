@@ -22,12 +22,12 @@ touchscreen:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
 
-- All other options from :ref:`Touchscreen <config-touchscreen>`.
+- All other options from [Touchscreen]({{< ref "components/touchscreen/_index#config-touchscreen" >}}).
 
 
 ## See Also
 
-- :ref:`SDL display <sdl>`
+- [SDL display]({{< ref "components/display/sdl#sdl" >}})
 - {{< apiref "sdl/sdl_touchscreen.h" "sdl/sdl_touchscreen.h" >}}
 
 

@@ -23,7 +23,7 @@ update:
 - **name** (*Optional*, string): The name of the update entity. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a :ref:`friendly_name <esphome-configuration_variables>` set for your device and
+If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
 you want the light to use that name, you can set `name: None`.
 
   {{< /note >}}
@@ -36,8 +36,8 @@ you want the light to use that name, you can set `name: None`.
 - **icon** (*Optional*, icon): The icon to use for the update entity in the frontend.
 - **internal** (*Optional*, boolean): Mark this component as internal. Internal components will
   not be exposed to the frontend (like Home Assistant). Specifying an `id` without a `name` will
-- **on_update_available** (*Optional*, :ref:`Action <config-action>`): An automation to perform when an update is available.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See :ref:`Webserver Version 3 <config-webserver-version-3-options>`.
+- **on_update_available** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when an update is available.
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 ## Automations
 

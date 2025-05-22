@@ -31,7 +31,7 @@ For addressable lights, you can use {{< docref "spi_led_strip/" >}} or for SPI L
 ## Clockless
 
 The `fastled_clockless` light platform allows you to create RGB lights
-in ESPHome for a :ref:`number of supported chipsets <fastled_clockless-chipsets>`.
+in ESPHome for a [number of supported chipsets]({{< ref "components/light/fastled#fastled_clockless-chipsets" >}}).
 
 Clockless FastLED lights differ from the
 [SPI]({{< ref "components/light/fastled#fastled-spi" >}}) in that they only have a single data wire to connect, and not separate data and clock wires.
@@ -62,7 +62,7 @@ light:
 - **max_refresh_rate** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})):
   A time interval used to limit the number of commands a light can handle per second. For example
   16ms will limit the light to a refresh rate of about 60Hz. Defaults to the default value for the used chipset.
-- All other options from :ref:`Light <config-light>`.
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 {{< anchor "fastled_clockless-chipsets" >}}
 
@@ -99,7 +99,7 @@ light:
 ## SPI
 
 The `fastled_spi` light platform allows you to create RGB lights
-in ESPHome for a :ref:`number of supported chipsets <fastled_spi-chipsets>`.
+in ESPHome for a [number of supported chipsets]({{< ref "components/light/fastled#fastled_spi-chipsets" >}}).
 
 See {{< docref "/components/light/spi_led_strip" >}} for an alternative component that works on ESP-IDF (and Arduino.)
 
@@ -136,8 +136,8 @@ light:
   16ms will limit the light to a refresh rate of about 60Hz. Defaults to the default value for the used chipset.
 - **data_rate** (*Optional*, frequency): The data rate to use for shifting data to the light. Can help if you
   have long cables or slow level-shifters.
-- **effects** (*Optional*, list): A list of :ref:`light effects <light-effects>` to use for this light.
-- All other options from :ref:`Light <config-light>`.
+- **effects** (*Optional*, list): A list of [light effects]({{< ref "components/light/_index#light-effects" >}}) to use for this light.
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 {{< anchor "fastled_spi-chipsets" >}}
 

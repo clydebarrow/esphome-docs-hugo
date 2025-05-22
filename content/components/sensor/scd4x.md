@@ -7,7 +7,7 @@ title: "SCD4X CO₂, Temperature and Relative Humidity Sensor"
 
 The `scd4x` sensor platform  allows you to use your Sensirion SCD4X CO₂
 ([datasheet](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.
-The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
+The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 {{< img src="scd4x.jpg" alt="Image" width="80.0%" class="center" >}}
 
@@ -28,16 +28,16 @@ sensor:
 
 - **co2** (*Optional*): The information for the CO₂ sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the Temperature sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 - **humidity** (*Optional*): The information for the Humidity sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature_offset** (*Optional*, float):  The temperature offset can depend
   on various factors such as the SCD4x measurement mode, self-heating of close
@@ -82,7 +82,7 @@ sensor:
 
 ## `perform_forced_calibration` Action
 
-This :ref:`action <config-action>` manually calibrates the sensor to the provided value in ppm.
+This [action]({{< ref "automations/actions#config-action" >}}) manually calibrates the sensor to the provided value in ppm.
 Operate the SCD4x in the operation mode later used in normal sensor operation (periodic measurement, low power periodic measurement or single shot) for > 3 minutes in an environment with homogenous and constant CO2 concentration before performing a forced recalibration.
 As of April 2022 the average fresh air Co² concentration is 419 ppm.
 
@@ -113,7 +113,7 @@ api:
 
 ## `factory_reset` Action
 
-This :ref:`action <config-action>` triggers a factory reset of the sensor. Calibration settings are restored from factory settings.
+This [action]({{< ref "automations/actions#config-action" >}}) triggers a factory reset of the sensor. Calibration settings are restored from factory settings.
 
 ```yaml
 on_...:
@@ -123,7 +123,7 @@ on_...:
 ```
 ## Pressure compensation
 
-A static ambient pressure value can be set with `ambient_pressure_compensation` or `altitude_compensation`. It can also be changed dynamically with :ref:`lambdas <config-lambda>` using `set_ambient_pressure_compensation(<mBar>)`, or by pointing `ambient_pressure_compensation_source` to a local pressure sensor.
+A static ambient pressure value can be set with `ambient_pressure_compensation` or `altitude_compensation`. It can also be changed dynamically with [lambdas]({{< ref "automations/templates#config-lambda" >}}) using `set_ambient_pressure_compensation(<mBar>)`, or by pointing `ambient_pressure_compensation_source` to a local pressure sensor.
 
 ### Example with a local sensor
 

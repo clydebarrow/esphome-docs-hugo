@@ -77,11 +77,11 @@ sensor:
   
   - **source** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}) {{< docref "/components/sensor" >}}ndex`): The
     sensor id that is used as sample source.
-  - **error** (**Required**, only for `KALMAN` type, float, :ref:`templatable <config-templatable>`): 
+  - **error** (**Required**, only for `KALMAN` type, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): 
     The standard deviation of the sensor's measurements. This works like the `process_std_dev` 
     parameter, with low values marking accurate data. If implemented as a template, the 
     measurement is in parameter `x`.
-  - **coeffecient** (**Required**, only for `LINEAR` type, float, :ref:`templatable <config-templatable>`): 
+  - **coeffecient** (**Required**, only for `LINEAR` type, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): 
     The coeffecient to multiply the sensor's state by before summing all source sensor states.
     If implemented as a template, the measurement is in parameter `x`.
 
@@ -91,9 +91,9 @@ sensor:
   will place high importance on the current state and be slow to respond to
   changes in the measured samples. A high value will update faster, but also be
   more noisy.
-- **std_dev** (*Optional*, only for `KALMAN` type, :ref:`Sensor <config-sensor>`): A sensor
+- **std_dev** (*Optional*, only for `KALMAN` type, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): A sensor
   that publishes the current standard deviation of the state with each update.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

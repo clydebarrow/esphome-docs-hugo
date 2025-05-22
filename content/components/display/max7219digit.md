@@ -11,7 +11,7 @@ is *only* for the digit "matrix" display, for the 7 segment display see {{< docr
 {{< img src="max7219digit.png" alt="Image" caption="MAX7219 Digit Display." width="75.0%" class="center" >}}
 
 As the communication with the MAX7219 Digit is done using SPI for this component, you need
-to have an :ref:`SPI bus <spi>` in your configuration with both the **mosi_pin** set (miso_pin is not required).
+to have an [SPI bus]({{< ref "components/spi#spi" >}}) in your configuration with both the **mosi_pin** set (miso_pin is not required).
 Connect VCC to 3.3V (the manufacturer recommends 4+ V, but 3.3V seems to work fine), DIN to your `mosi_pin` and
 CS to your set `cs_pin` and finally GND to GND.
 
@@ -36,7 +36,7 @@ display:
 ```
 ## Configuration variables:
 
-- **cs_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The pin you have the CS line hooked up to.
+- **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin you have the CS line hooked up to.
 - **num_chips** (*Optional*, int): The number of chips you wish to use for daisy chaining. Defaults to
   `4`.
 - **rotate_chip** (*Optional*): Rotates every 8x8 chip. Valid values are `0`, `90`, `180` and `270`.
@@ -55,10 +55,10 @@ display:
 - **reverse_enable** (*Optional*, boolean): For some displays the order of the displays is reversed ("DCBA"). This option will reverse the display to ("ABCD") again. Defaults to  `false`.
 - **intensity** (*Optional*, int): The intensity with which the MAX7219 should drive the outputs. Range is
   from `0`, least intense to `15` the brightest. Defaults to `15`.
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`): The lambda to use for rendering the content on the
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the
   MAX7219. See [Rendering Lambda]({{< ref "components/display/max7219digit#display-max7219digit_lambda" >}}) for more information.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **spi_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the :ref:`SPI Component <spi>` if you want
+- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple SPI buses.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **num_chip_lines** (*Optional*, int): Number of lines if you want to use the displays in Multiline Mode. Defaults to `1` Example: https://github.com/esphome/esphome/pull/1622#issue-836179156

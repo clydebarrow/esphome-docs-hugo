@@ -74,7 +74,7 @@ The configuration option `enable_on_boot` can be set to `false` if you do not wa
 
 ## `ble.enabled` Condition
 
-This :ref:`Condition <config-condition>` checks if BLE is currently enabled or not.
+This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if BLE is currently enabled or not.
 
 ```yaml
 on_...:

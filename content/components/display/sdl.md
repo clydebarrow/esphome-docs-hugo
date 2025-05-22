@@ -31,7 +31,7 @@ display:
 ```
 ### Configuration variables:
 
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`): The lambda to use for rendering the content on the display.
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
 - **sdl_options** (*Optional*, string): Build arguments if required to specify include or library paths. Should not be required if SDL2 is properly installed.
@@ -91,7 +91,7 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 
 ## See Also
 
-- :ref:`SDL touchscreen <sdl_touchscreen>`
+- [SDL touchscreen]({{< ref "components/touchscreen/sdl#sdl_touchscreen" >}})
 - {{< docref "/components/binary_sensor/sdl" "SDL binary sensor" >}}
 - {{< docref "index/" >}}
 - {{< apiref "sdl/sdl_esphome.h" "sdl/sdl_esphome.h" >}}

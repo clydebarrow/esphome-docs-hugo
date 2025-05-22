@@ -35,7 +35,7 @@ switch:
 ## Configuration variables:
 
 - **switch_datapoint** (**Required**, int): The datapoint id number of the switch.
-- All other options from :ref:`Switch <config-switch>`.
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## See Also
 

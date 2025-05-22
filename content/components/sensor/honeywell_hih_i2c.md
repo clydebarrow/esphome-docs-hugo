@@ -7,7 +7,7 @@ title: "Honeywell HumidIcon (I2C HIH series) Temperature & Humidity Sensor"
 
 Honeywell HumidIcon (I2C HIH series) Temperature & Humidity sensors with ESPHome ([website](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/humidity-with-temperature-sensors),
 [datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/humidity-with-temperature-sensors/common/documents/sps-siot-humidity-sensors-line-guide-009034-7-en-ciid-54931.pdf?download=false)).
-The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
+The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 Example sensors:
 
@@ -24,10 +24,10 @@ sensor:
 ## Configuration variables:
 
 - **temperature** (**Required**): The information for the temperature sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (**Required**): The information for the humidity sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 

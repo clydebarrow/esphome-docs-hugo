@@ -11,7 +11,7 @@ The [npi19` sensor platform allows you to use your NPI-19 (`datasheet](https://w
 {{< img src="npi19.jpg" alt="Image" caption="NPI-19 Pressure Sensor." width="50.0%" class="center" >}}
 
 ## Configuration
-:ref:`I²C <i2c>` bus is required to be set up in your configuration for this sensor to work.
+[I²C]({{< ref "components/i2c#i2c" >}}) bus is required to be set up in your configuration for this sensor to work.
 
 ```yaml
 # Example configuration entry
@@ -28,13 +28,13 @@ sensor:
 
 - **raw_pressure** (*Optional*): The information for the pressure sensor. See [Converting units]({{< ref "components/sensor/npi19#npi19-converting" >}}).
 
- - All other options from :ref:`Sensor <config-sensor>`.
+ - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **temperature** (*Optional*): The information for the temperature sensor. Readings in degrees celsius (°C).
 
- - All other options from :ref:`Sensor <config-sensor>`.
+ - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **i2c_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the :ref:`I²C Component <i2c>`. Defaults to the default I²C bus.
+- **i2c_id** (*Optional*, [I²C Component]({{< ref "components/i2c#i2c" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}). Defaults to the default I²C bus.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   All known sensors currently configured to `0x28`. Defaults to `0x28`.

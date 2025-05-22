@@ -35,7 +35,7 @@ sensor:
 ## Configuration variables:
 
 - **sensor_datapoint** (**Required**, int): The datapoint id number of the sensor.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## See Also
 

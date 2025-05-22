@@ -61,16 +61,16 @@ display:
 
 - **data_pins** (**Required**): A list of pins used for the databus. Specified in 3 groups:
 
-    - **red** (**Required**, :ref:`Pin Schema <config-pin_schema>`): Exactly 5 pin numbers for the red databits, listed from least to most significant bit.
-    - **green** (**Required**, :ref:`Pin Schema <config-pin_schema>`): Exactly 6 pin numbers for the green databits, listed from least to most significant bit.
-    - **blue** (**Required**, :ref:`Pin Schema <config-pin_schema>`): Exactly 5 pin numbers for the blue databits, listed from least to most significant bit.
+    - **red** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Exactly 5 pin numbers for the red databits, listed from least to most significant bit.
+    - **green** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Exactly 6 pin numbers for the green databits, listed from least to most significant bit.
+    - **blue** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Exactly 5 pin numbers for the blue databits, listed from least to most significant bit.
 
-- **de_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The DE pin
-- **pclk_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The PCLK pin.
-- **hsync_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The Horizontal sync pin.
-- **vsync_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The Vertical sync pin.
-- **enable_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The ENABLE pin.
-- **reset_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The RESET pin.
+- **de_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The DE pin
+- **pclk_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The PCLK pin.
+- **hsync_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The Horizontal sync pin.
+- **vsync_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The Vertical sync pin.
+- **enable_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The ENABLE pin.
+- **reset_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The RESET pin.
 - **hsync_pulse_width** (*Optional*, int): The horizontal sync pulse width.
 - **hsync_front_porch** (*Optional*, int): The horizontal front porch length.
 - **hsync_back_porch** (*Optional*, int): The horizontal back porch length.
@@ -94,7 +94,7 @@ display:
 - **pclk_inverted** (*Optional*, bool): If the pclk is active negative (default is True)
 - **invert_colors** (*Optional*): With this boolean option you can invert the display colors. **Note** some of the displays have this option set automatically to true and can't be changed.
 - **rotation** (*Optional*): Rotate the display presentation in software. Choose one of `0°`, `90°`, `180°`, or `270°`.
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`): The lambda to use for rendering the content on the display.
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 
 

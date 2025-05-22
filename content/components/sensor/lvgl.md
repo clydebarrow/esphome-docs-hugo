@@ -13,7 +13,7 @@ Supported widgets are [`spinbox`]({{< ref "components/lvgl/widgets#lvgl-widget-s
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the sensor.
-- All other variables from :ref:`Sensor <config-sensor>`.
+- All other variables from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 Example:
 
@@ -30,10 +30,10 @@ Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.upda
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl" "LVGL Main component" >}}
-- :ref:`Arc widget <lvgl-widget-arc>`
-- :ref:`Bar widget <lvgl-widget-bar>`
-- :ref:`Slider widget <lvgl-widget-slider>`
-- :ref:`Spinbox widget <lvgl-widget-spinbox>`
+- [Arc widget]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}})
+- [Bar widget]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}})
+- [Slider widget]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}})
+- [Spinbox widget]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}})
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/switch/lvgl" >}}
 - {{< docref "/components/select/lvgl" >}}

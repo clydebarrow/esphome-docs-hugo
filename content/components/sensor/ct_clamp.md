@@ -37,12 +37,12 @@ sensor:
   with. Higher values can increase accuracy. Defaults to `200ms` which would be 10 whole cycles on a 50Hz system.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`. The **update_interval** for `ct_clamp` has to be greater than **sample_duration**.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Calibration
 
 This sensor needs calibration to show correct values, for this you can use the
-:ref:`calibrate_linear <sensor-filter-calibrate_linear>` sensor filter. First, hook up a known
+[calibrate_linear]({{< ref "#sensor-filter-calibrate_linear" >}}) sensor filter. First, hook up a known
 current load like a lamp that uses a known amount of current.
 
 Then switch it on and see what value the CT clamp sensor reports. For example in the configuration below

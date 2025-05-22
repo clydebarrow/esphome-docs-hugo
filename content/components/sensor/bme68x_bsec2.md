@@ -16,7 +16,7 @@ Quality (IAQ) measurement derived from the gas resistance sensor's response to s
 (VOCs). The BSEC software also provides estimated values for CO₂ and Breath Volatile Organic Compounds (b-VOC) using
 a correlation between VOC and CO₂ in a human's exhaled breath.
 
-The :ref:`I²C <i2c>` is required to be set up in your configuration for this sensor to work.
+The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 [BSEC license agreement](https://www.bosch-sensortec.com/media/boschsensortec/downloads/software/bme688_development_software/2023_04/license_terms_bme688_bme680_bsec.pdf)
 
@@ -99,43 +99,43 @@ sensor:
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `LP` for low power
     consumption, sampling every 3 seconds or `ULP` for ultra-low power, sampling every 5 minutes.
-  - All other options from :ref:`Sensor <config-sensor>`.
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **pressure** (*Optional*): Configuration for the pressure sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `LP` for low power
     consumption, sampling every 3 seconds or `ULP` for ultra-low power, sampling every 5 minutes.
-  - All other options from :ref:`Sensor <config-sensor>`.
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): Configuration for the humidity sensor.
 
   - **sample_rate** (*Optional*, string): Optional sample rate override for this sensor. Can be `LP` for low power
     consumption, sampling every 3 seconds or `ULP` for ultra-low power, sampling every 5 minutes.
-  - All other options from :ref:`Sensor <config-sensor>`.
+  - All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **gas_resistance** (*Optional*): Configuration for the gas sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **iaq** (*Optional*): Configuration for the IAQ sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **iaq_static** (*Optional*): Configuration for the IAQ static sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **iaq_accuracy** (*Optional*): Configuration for the numeric IAQ accuracy sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **co2_equivalent** (*Optional*): Configuration for the CO₂ equivalent sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **breath_voc_equivalent** (*Optional*): Configuration for the Breath VOC equivalent humidity sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Text Sensor
 
@@ -155,7 +155,7 @@ text_sensor:
 - **iaq_accuracy** (*Optional*): Configuration for the IAQ accuracy sensor. Shows: `Stabilizing`, `Uncertain`,
   `Calibrating`, `Calibrated`.
 
-  - All other options from :ref:`Text Sensor <config-text_sensor>`.
+  - All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 ## Index for Air Quality (IAQ) Measurement
 

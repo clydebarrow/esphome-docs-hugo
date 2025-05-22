@@ -20,7 +20,7 @@ switch:
 ```
 ## Configuration variables:
 
-- All options from :ref:`Switch <config-switch>`.
+- All options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## See Also
 

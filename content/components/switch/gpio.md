@@ -21,7 +21,7 @@ switch:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The
+- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
   GPIO pin to use for the switch.
 - **interlock** (*Optional*, list): A list of other GPIO switches in an interlock group. See
   [Interlocking]({{< ref "components/switch/gpio#switch-gpio-interlocking" >}}).
@@ -29,11 +29,11 @@ switch:
   to wait after other items in an interlock group have been disabled before re-activating.
   Useful for motors where immediately turning on in the other direction could cause problems.
 
-- All other options from :ref:`Switch <config-switch>`.
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## Active Low Switch
 
-To create an active-low switch (one that is turned off by default), use the :ref:`Pin Schema <config-pin_schema>`:
+To create an active-low switch (one that is turned off by default), use the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}):
 
 ```yaml
 # Example configuration entry

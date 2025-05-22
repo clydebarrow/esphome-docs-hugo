@@ -7,7 +7,7 @@ title: "Speaker Audio Media Player"
 
 The `speaker` media player platform allows you to play on-device and online audio media via {{< docref "/components/speaker" "speaker components" >}}.
 
-This platform greatly benefits from having external PSRAM. See the :ref:`performance section <media_player-speaker-performance>` for details.
+This platform greatly benefits from having external PSRAM. See the [performance section]({{< ref "components/media_player/speaker#media_player-speaker-performance" >}}) for details.
 
 It natively supports decoding `FLAC`, `MP3`, and `WAV` audio files. Home Assistant (since version 2024.10) can proxy any media it sends and transcode it to a specified format and sample rate to minimize the device's computational load.
 
@@ -52,10 +52,10 @@ media_player:
 - **files** (*Optional*, list): A list of media files to build into the firmware for on-device playback.
     - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Unique ID for the file.
     - **file** (**Required**, string): Path to audio file. Can be a local file path or a URL.
-- **on_mute** (*Optional*, :ref:`Automation <automation>`): An automation to perform when muted.
-- **on_unmute** (*Optional*, :ref:`Automation <automation>`): An automation to perform when unmuted.
-- **on_volume** (*Optional*, :ref:`Automation <automation>`): An automation to perform when the volume is changed.
-- All other options from :ref:`Media Player <config-media_player>`
+- **on_mute** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when muted.
+- **on_unmute** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when unmuted.
+- **on_volume** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the volume is changed.
+- All other options from [Media Player]({{< ref "components/media_player/_index#config-media_player" >}})
 
 {{< anchor "media_player-speaker-examples" >}}
 

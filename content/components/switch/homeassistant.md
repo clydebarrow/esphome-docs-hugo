@@ -25,7 +25,7 @@ switch:
 ## Configuration variables:
 
 - **entity_id** (**Required**, string): The entity ID to import / control from Home Assistant.
-- All other options from :ref:`Switch <config-switch>`.
+- All other options from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 ## Supported domains
 

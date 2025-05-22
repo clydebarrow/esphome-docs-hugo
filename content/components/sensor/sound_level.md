@@ -30,20 +30,20 @@ sensor:
 
 - **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr{{< docref "/components/microphone" "microphone" >}}to use for input. Multiple channels may be selected.
 - **measurement_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
-- **passive** (**Required**, boolean). Whether passive mode is enabled. See :ref:`Passive Mode <sound_level-passive>`.
+- **passive** (**Required**, boolean). Whether passive mode is enabled. See [Passive Mode]({{< ref "components/sensor/sound_level#sound_level-passive" >}}).
 - **peak** (*Optional*): The information for the peak loudness sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **rms** (*Optional*): The information for the Root Mean Square loudness sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 {{< anchor "sound_level-passive" >}}
 
 ## Passive Mode
 
-If the sound level component is configured in passive mode, then it will only measure sound levels when another ESPHome component is capturing audio from the microphone. If disabled, then you must manually start and stop capturing using actions (see :ref:`Sound Level Actions <sound_level-actions>`). When passive mode is disabled, it will automatically start the microphone when the component sets up.
+If the sound level component is configured in passive mode, then it will only measure sound levels when another ESPHome component is capturing audio from the microphone. If disabled, then you must manually start and stop capturing using actions (see [Sound Level Actions]({{< ref "components/sensor/sound_level#sound_level-actions" >}})). When passive mode is disabled, it will automatically start the microphone when the component sets up.
 
 {{< warning >}}
 Some devices do not support duplex audio, meaning they cannot output audio to a speaker at the same time as capturing audio from a microphone. On these devices, with passive mode disabled, you must take care to manually stop the `sound_level` component whenever you want to send audio to the speaker component. No manual management is necessary if you enable passive mode.

@@ -14,7 +14,7 @@ microphone platforms.
 
 Configuration variables:
 
-- **on_data** (*Optional*, :ref:`Automation <automation>`): An automation to
+- **on_data** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
   perform when new data is received.
 
 

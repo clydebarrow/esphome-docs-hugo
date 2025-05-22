@@ -43,27 +43,27 @@ sensor:
 
 - **haier_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of haier climate component
 - **outdoor_temperature** (*Optional*): Temperature sensor for outdoor temperature.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **humidity** (*Optional*): Sensor for indoor humidity. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **compressor_current** (*Optional*): Sensor for climate compressor current. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **compressor_frequency** (*Optional*): Sensor for climate compressor frequency. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **expansion_valve_open_degree** (*Optional*): Sensor for climate's expansion valve open degree. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **indoor_coil_temperature** (*Optional*): Temperature sensor for indoor coil temperature. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **outdoor_coil_temperature** (*Optional*): Temperature sensor for outdoor coil temperature. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **outdoor_defrost_temperature** (*Optional*): Temperature sensor for outdoor defrost temperature. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **outdoor_in_air_temperature** (*Optional*): Temperature sensor incoming air temperature.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **outdoor_out_air_temperature** (*Optional*): Temperature sensor for outgoing air temperature.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **power** (*Optional*): Sensor for climate power consumption. Make sure that your climate model supports this type of sensor.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 ## See Also

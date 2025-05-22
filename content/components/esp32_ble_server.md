@@ -34,14 +34,14 @@ esp32_ble_server:
 ## Configuration variables:
 
 - **manufacturer** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The name of the manufacturer/firmware creator. Defaults to `ESPHome`.
-- **model** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The model name of the device. Defaults to the project's name defined in the :ref:`core configuration <esphome-creators_project>` if present, otherwise to the friendly name of the `board` chosen in the :ref:`core configuration <esphome-configuration_variables>`.
+- **model** (*Optional*, [core configuration]({{< ref "components/esphome#esphome-configuration_variables" >}})): The model name of the device. Defaults to the project's name defined in the [core configuration]({{< ref "components/esphome#esphome-creators_project" >}}) if present, otherwise to the friendly name of the `board` chosen in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}).
 - **appearance** (*Optional*, int): Sets the [appearance](https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/core/appearance_values.yaml) of the device (included in advertising data.) Defaults to `0`.
-- **firmware_version** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The firmware version of the device. Defaults to the project's version defined in the :ref:`core configuration <esphome-creators_project>` if present, otherwise to the ESPHome version.
+- **firmware_version** (*Optional*, [core configuration]({{< ref "components/esphome#esphome-creators_project" >}})): The firmware version of the device. Defaults to the project's version defined in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) if present, otherwise to the ESPHome version.
 - **manufacturer_data** (*Optional*, list of bytes): The manufacturer-specific data to include in the advertising
   packet. Should be a list of bytes, where the first two are the little-endian representation of the 16-bit
   manufacturer ID as assigned by the Bluetooth SIG.
-- **on_connect** (*Optional*, :ref:`Automation <automation>`): An action to be performed when a client connects to the BLE server. It provides the `id` variable which contains the ID of the client that connected.
-- **on_disconnect** (*Optional*, :ref:`Automation <automation>`): An action to be performed when a client disconnects from the BLE server. It provides the `id` variable which contains the ID of the client that disconnected.
+- **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a client connects to the BLE server. It provides the `id` variable which contains the ID of the client that connected.
+- **on_disconnect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a client disconnects from the BLE server. It provides the `id` variable which contains the ID of the client that disconnected.
 - **services** (*Optional*, list of [Service Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-service" >}})): A list of services to expose on the BLE GATT server.
 
 
@@ -111,7 +111,7 @@ Configuration variables:
 - **write_no_response** (*Optional*, boolean): If the characteristic should be writable without a response. Defaults to `false`.
 - **value** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The value of the characteristic.
 - **descriptors** (*Optional*, list of [Descriptor Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor" >}})): A list of descriptors to expose in this characteristic.
-- **on_write** (*Optional*, :ref:`Automation <automation>`): An action to be performed when the characteristic is written to. The characteristic must have the `write` property. See [`on_write` Trigger]({{< ref "components/esp32_ble_server#esp32_ble_server-characteristic-on_write" >}}).
+- **on_write** (*Optional*, [`on_write` Trigger]({{< ref "components/esp32_ble_server#esp32_ble_server-characteristic-on_write" >}})): An action to be performed when the characteristic is written to. The characteristic must have the `write` property. See [Automation]({{< ref "automations/_index#automation" >}}).
 
 
 {{< anchor "esp32_ble_server-descriptor" >}}
@@ -137,7 +137,7 @@ Configuration variables:
 
 - **id** (*Optional*, string): An ID to refer to this descriptor in automations.
 - **uuid** (**Required**, string, int): The UUID of the descriptor.
-- **value** (**Required**, [`ble_server.descriptor.set_value` Action]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor-set_value" >}})): The value of the descriptor. :ref:`templatable <config-templatable>` values are not allowed. In order to set the value of a descriptor dynamically, use the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) action.
+- **value** (**Required**, [`ble_server.descriptor.set_value` Action]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor-set_value" >}})): The value of the descriptor. [templatable]({{< ref "automations/templates#config-templatable" >}}) values are not allowed. In order to set the value of a descriptor dynamically, use the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) action.
 
 
 {{< anchor "esp32_ble_server-value" >}}
@@ -184,8 +184,8 @@ esp32_ble_server:
 ```
 Configuration variables:
 
-- **data** (**Required**, string, int, float, boolean, list of bytes, :ref:`templatable <config-templatable>`): The value of the characteristic or descriptor. For :ref:`templatable <config-templatable>` values, the lambda function must return a `std::vector<uint8_t>` (you may use the `bytebuffer::ByteBuffer` helper class to transform different data types into a byte array). The value is computed each time the characteristic is read.
-- **type** (*Optional*, string): The C++ type of the value. The available values are `uint8_t`, `uint16_t`, `uint32_t`, `uint64_t`, `int8_t`, `int16_t`, `int32_t`, `int64_t`, `float`, `double` and `string`. It must be defined if the value is not :ref:`templatable <config-templatable>`.
+- **data** (**Required**, string, int, float, boolean, list of bytes, [templatable]({{< ref "automations/templates#config-templatable" >}})): The value of the characteristic or descriptor. For [templatable]({{< ref "automations/templates#config-templatable" >}}) values, the lambda function must return a `std::vector<uint8_t>` (you may use the `bytebuffer::ByteBuffer` helper class to transform different data types into a byte array). The value is computed each time the characteristic is read.
+- **type** (*Optional*, string): The C++ type of the value. The available values are `uint8_t`, `uint16_t`, `uint32_t`, `uint64_t`, `int8_t`, `int16_t`, `int32_t`, `int64_t`, `float`, `double` and `string`. It must be defined if the value is not [templatable]({{< ref "automations/templates#config-templatable" >}}).
 - **endianness** (*Optional*, string): The endianness of the value. Can be `BIG` or `LITTLE`. Defaults to `LITTLE`.
 - **string_encoding** (*Optional*, string): The encoding of the string. Only applicable if the type is [string`. The conversion is done in Python before compilation, so the encoding must be a valid `Python encoding](https://docs.python.org/3/library/codecs.html#standard-encodings). Defaults to `utf-8`.
 

@@ -26,7 +26,7 @@ detection, so it's assumed that the protocol is the same across all models.
 
 {{< /note >}}
 As the communication with the garage door drive is done using UART, you need to
-have an :ref:`UART bus <uart>` in your configuration with the `rx_pin`
+have an [UART bus]({{< ref "components/uart#uart" >}}) in your configuration with the `rx_pin`
 connected unit's USB D- line and the `tx_pin` connected to the USB's D+ line.
 The baud rate should be set to 9600. See `Setup`_ for more detailed
 instructions.
@@ -74,7 +74,7 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
   closed -> opened movement.
 - **close_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The opposite of
   `open_duration`. Defaults to `22s`.
-- All other options from :ref:`Cover <config-cover>`.
+- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
 
 ## Known Issues
 

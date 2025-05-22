@@ -85,14 +85,14 @@ logger:
 
     Defaults to `U_WORD`.
 
-  - **read_lambda** (**Required**, :ref:`lambda <config-lambda>`):
+  - **read_lambda** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})):
     Lambda that returns the value of this register.
 
 Automations:
 
-- **on_command_sent** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a modbus command has been sent. See [`on_command_sent`]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})
-- **on_online** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a modbus controller goes online. See [`on_online`]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})
-- **on_offline** (*Optional*, :ref:`Automation <automation>`): An automation to perform when a modbus controller goes offline. See [`on_offline`]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})
+- **on_command_sent** (*Optional*, [`on_command_sent`]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})): An automation to perform when a modbus command has been sent. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_online** (*Optional*, [`on_online`]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})): An automation to perform when a modbus controller goes online. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_offline** (*Optional*, [`on_offline`]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})): An automation to perform when a modbus controller goes offline. See [Automation]({{< ref "automations/_index#automation" >}})
 
 ## Example Client
 
@@ -677,7 +677,7 @@ esphome:
 
 ### `on_command_sent`
 
-This automation will be triggered when a command has been sent by the `modbus_controller`. In :ref:`Lambdas <config-lambda>`
+This automation will be triggered when a command has been sent by the `modbus_controller`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml
@@ -693,7 +693,7 @@ modbus_controller:
 
 ### `on_online`
 
-This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In :ref:`Lambdas <config-lambda>`
+This automation will be triggered when a `modbus_controller` goes `online`, after been `offline`. In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml
@@ -709,7 +709,7 @@ modbus_controller:
 
 ### `on_offline`
 
-This automation will be triggered when a `modbus_controller` goes `offline` (See :ref:`offline_skip_updates <modbus_controller-offline_skip_updates>`). In :ref:`Lambdas <config-lambda>`
+This automation will be triggered when a `modbus_controller` goes `offline` (See [Lambdas]({{< ref "automations/templates#config-lambda" >}})). In [offline_skip_updates]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml

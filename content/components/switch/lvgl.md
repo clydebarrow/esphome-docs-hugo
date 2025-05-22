@@ -13,7 +13,7 @@ Supported widgets are [`checkbox`]({{< ref "components/lvgl/widgets#lvgl-widget-
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the switch.
-- All other variables from :ref:`Switch <config-switch>`.
+- All other variables from [Switch]({{< ref "components/switch/_index#config-switch" >}}).
 
 Example:
 
@@ -26,9 +26,9 @@ switch:
 ```
 ## See Also
 - {{< docref "/components/lvgl" "LVGL Main component" >}}
-- :ref:`Button widget <lvgl-widget-button>`
-- :ref:`Switch widget <lvgl-widget-switch>`
-- :ref:`Checkbox widget <lvgl-widget-checkbox>`
+- [Button widget]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}})
+- [Switch widget]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}})
+- [Checkbox widget]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}})
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

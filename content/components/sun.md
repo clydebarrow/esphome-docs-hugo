@@ -46,12 +46,12 @@ sun:
         - logger.log: Good evening!
 
 ```
-- **on_sunrise** (*Optional*, :ref:`Automation <automation>`): An automation to perform at sunrise
+- **on_sunrise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform at sunrise
   when the sun crosses a specified angle.
 
   - **elevation** (*Optional*, float): The elevation to cross. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
 
-- **on_sunset** (*Optional*, :ref:`Automation <automation>`): An automation to perform at sunset
+- **on_sunset** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform at sunset
   when the sun crosses a specified angle.
 
   - **elevation** (*Optional*, float): The elevation to cross. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
@@ -77,7 +77,7 @@ Configuration variables:
 
 - **type** (**Required**, string): The type of value to track. One of `elevation` and
   `azimuth`.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## `sun` Text Sensor
 
@@ -104,13 +104,13 @@ Configuration variables:
   for. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
 - **format** (*Optional*, string): The format to format the time value with, see [strftime]({{< ref "components/time/_index#strftime" >}})
   for more information. Defaults to `%X`.
-- All other options from :ref:`Text Sensor <config-text_sensor>`.
+- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
 {{< anchor "sun-is_above_below_horizon-condition" >}}
 
 ## `sun.is_above_horizon` / `sun.is_below_horizon` Conditions
 
-The `sun.is_above_horizon` and `sun.is_below_horizon` :ref:`conditions <config-condition>`
+The `sun.is_above_horizon` and `sun.is_below_horizon` [conditions]({{< ref "automations/actions#config-condition" >}})
 allow you to check if the sun is currently above or below the horizon.
 
 ```yaml

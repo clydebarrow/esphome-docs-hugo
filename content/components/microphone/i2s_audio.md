@@ -47,13 +47,13 @@ microphone:
 - **mclk_multiple** (*Optional*, enum): The multiple of the MCLK frequency to the sample rate. Must be divisible by 3 if using 24 bits per sample. One of `128`, `256`, `384`, `512`. Defaults to `256`.
 - **use_apll** (*Optional*, boolean): I2S using APLL as main I2S clock, enable it to get accurate clock. Defaults to `false`.
 - **i2s_mode** (*Optional*, enum): The I²S mode to use. One of `primary` (clock driven by the host) or `secondary` (clock driven by the attached device). Defaults to `primary`.
-- **i2s_audio_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the :ref:`I²S Audio <i2s_audio>` you wish to use for this microphone.
+- **i2s_audio_id** (*Optional*, [I²S Audio]({{< ref "components/i2s_audio#i2s_audio" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this microphone.
 - **correct_dc_offset** (*Optional*, boolean): Corrects a DC offset for microphones where the audio signal's average amplitude is not 0. Defaults to `false`.
-- All other options from :ref:`Microphone <config-microphone>`
+- All other options from [Microphone]({{< ref "components/microphone/_index#config-microphone" >}})
 
 ## External ADC
 
-- **i2s_din_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The GPIO pin to use for the I²S `DIN/SDIN` *(Data In)* signal, also referred to as `SD/SDATA` *(Serial Data)* or `ADCDAT` *(Analog to Digital Converter Data)*.
+- **i2s_din_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use for the I²S `DIN/SDIN` *(Data In)* signal, also referred to as `SD/SDATA` *(Serial Data)* or `ADCDAT` *(Analog to Digital Converter Data)*.
 - **pdm** (*Optional*, boolean): Set this to `true` if your external ADC uses PDM (Pulse Density Modulation) instead of I²S. Defaults to `false`.
 
   {{< note >}}
@@ -66,7 +66,7 @@ PDM microphones are only supported on ESP32 and ESP32-S3.
 Internal ADC microphones are only supported by the legacy I²S driver on a regular ESP32, not the variants.
 
   {{< /note >}}
-- **adc_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The GPIO pin to use for the ADC input.
+- **adc_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use for the ADC input.
 
 
 ## Known Devices

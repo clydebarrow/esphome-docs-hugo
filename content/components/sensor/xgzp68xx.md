@@ -18,7 +18,7 @@ reading. For example, if your sensor is reading -40Pa when the ports are disconn
 
 [Sparkfun](https://www.sparkfun.com/products/17874)
 
-To use the sensor, set up an :ref:`I²C Bus <i2c>` and connect the sensor to the specified pins.
+To use the sensor, set up an [I²C Bus]({{< ref "components/i2c#i2c" >}}) and connect the sensor to the specified pins.
 
 ```yaml
 # Example configuration entry
@@ -35,8 +35,8 @@ sensor:
 ```
 ## Configuration variables:
 
-- **temperature** (*Optional*): All options from :ref:`Sensor <config-sensor>`.
-- **pressure** (*Optional*): All options from :ref:`Sensor <config-sensor>`.
+- **temperature** (*Optional*): All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **pressure** (*Optional*): All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **k_value** (*Optional*, int): The K value comes from the datasheet. It will default to 4096 if not specified, which is appropriate for a sensor with a range of +/- 0.5kPa.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 

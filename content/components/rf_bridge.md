@@ -38,7 +38,7 @@ rf_bridge:
 
 - **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **on_code_received** (*Optional*, :ref:`Automation <automation>`): An action to be
+- **on_code_received** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be
   performed when a code is received. See [`on_code_received` Trigger]({{< ref "components/rf_bridge#rf_bridge-on_code_received" >}}).
 
 {{< anchor "rf_bridge-on_code_received" >}}
@@ -46,7 +46,7 @@ rf_bridge:
 ## `on_code_received` Trigger
 
 With this configuration option you can write complex automations whenever a code is
-received. To use the code, use a :ref:`lambda <config-lambda>` template, the code
+received. To use the code, use a [lambda]({{< ref "automations/templates#config-lambda" >}}) template, the code
 and the corresponding protocol timings are available inside that lambda under the
 variables named `code`, `sync`, `high` and `low`.
 
@@ -80,14 +80,14 @@ on_...:
 ```
 Configuration options:
 
-- **sync** (**Required**, int, :ref:`templatable <config-templatable>`): RF Sync timing
-- **low** (**Required**, int, :ref:`templatable <config-templatable>`): RF Low timing
-- **high** (**Required**, int, :ref:`templatable <config-templatable>`): RF high timing
-- **code** (**Required**, int, :ref:`templatable <config-templatable>`): RF code
+- **sync** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): RF Sync timing
+- **low** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): RF Low timing
+- **high** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): RF high timing
+- **code** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): RF code
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).send_code(0x700, 0x800, 0x1000, 0xABC123);
@@ -114,11 +114,11 @@ on_...:
 ```
 Configuration options:
 
-- **raw** (**Required**, string, :ref:`templatable <config-templatable>`): RF raw string
+- **raw** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): RF raw string
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).send_raw("AAA5070008001000ABC12355");
@@ -144,7 +144,7 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).learn();
@@ -163,7 +163,7 @@ ESPHome is able to receive the extra protocols that can be decoded as well as ac
 ### `on_advanced_code_received` Trigger
 
 Similar to [`on_code_received` Trigger]({{< ref "components/rf_bridge#rf_bridge-on_code_received" >}}), this trigger receives the codes after advanced sniffing is started.
-To use the code, use a :ref:`lambda <config-lambda>` template, the code and the corresponding protocol and length
+To use the code, use a [lambda]({{< ref "automations/templates#config-lambda" >}}) template, the code and the corresponding protocol and length
 are available inside that lambda under the variables named `code`, `protocol` and `length`.
 
 ```yaml
@@ -194,13 +194,13 @@ on_...:
 ```
 Configuration options:
 
-- **length** (**Required**, int, :ref:`templatable <config-templatable>`): Length of code plus protocol
-- **protocol** (**Required**, int, :ref:`templatable <config-templatable>`): RF Protocol
-- **code** (**Required**, string, :ref:`templatable <config-templatable>`): RF code
+- **length** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): Length of code plus protocol
+- **protocol** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})): RF Protocol
+- **code** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): RF code
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).send_advanced_code(0x04, 0x01, "ABC123");
@@ -226,7 +226,7 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).start_advanced_sniffing();
@@ -251,7 +251,7 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).stop_advanced_sniffing();
@@ -286,7 +286,7 @@ Configuration options:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).start_bucket_sniffing();
@@ -310,11 +310,11 @@ on_...:
 ```
 Configuration options:
 
-- **duration** (**Required**, string, :ref:`templatable <config-templatable>`): beep duration in milliseconds.
+- **duration** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): beep duration in milliseconds.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(rf_bridge).beep(100);

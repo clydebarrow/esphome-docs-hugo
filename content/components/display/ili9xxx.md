@@ -65,7 +65,7 @@ display:
 ```
 ### Configuration variables:
 
-All :ref:`graphical display configuration<display-configuration>` options are available, plus the following.
+All [graphical display configuration]({{< ref "components/display/_index#display-configuration" >}}) options are available, plus the following.
 
 - **model** (**Required**): The model of the display. Options are:
 
@@ -76,9 +76,9 @@ All :ref:`graphical display configuration<display-configuration>` options are av
   - `GC9A01A`, `GC9D01N`, `CUSTOM`
 
 
-- **dc_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The DC pin.
-- **reset_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The RESET pin.
-- **cs_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The CS pin.
+- **dc_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The DC pin.
+- **reset_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The RESET pin.
+- **cs_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The CS pin.
 
 
 {{< note >}}
@@ -127,7 +127,7 @@ With 90 and 270 rotations you will also need to swap the `height` and `width` in
 - **init_sequence** (*Optional*): Allows custom initialisation sequences to be added. See below for more information.
 
 
-To modify the SPI setting see :ref:`SPI bus <spi>` . The default **data_rate** is set to `40MHz` and the **spi_mode** mode is `MODE0` but some displays require `MODE3` (*).
+To modify the SPI setting see [SPI bus]({{< ref "components/spi#spi" >}}) . The default **data_rate** is set to `40MHz` and the **spi_mode** mode is `MODE0` but some displays require `MODE3` (*).
 
 **Note:** The maximum achievable data rate will depend on the chip type (e.g. ESP32 vs ESP32-S3) the pins used (on ESP32 using the default SPI pins allows higher rates) and the connection type (on-board connections will support higher rates than long cables or DuPont wires.) If in doubt, start with a low speed and test higher rates to find what works. A MISO pin should preferably not be specified, as this will limit the maximum rate in some circumstances, and is not required if the SPI bus is used only for the display.
 
@@ -166,7 +166,7 @@ dimensions:
 
 ```
 To utilize the color capabilities of this display module, you'll likely want to add a `color:` section to your
-YAML configuration; please see :ref:`color <config-color>` for more detail on this configuration section.
+YAML configuration; please see [color]({{< ref "components/display/_index#config-color" >}}) for more detail on this configuration section.
 
 To use colors in your lambda:
 

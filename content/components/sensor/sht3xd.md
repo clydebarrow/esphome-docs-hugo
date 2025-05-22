@@ -9,7 +9,7 @@ The `sht3xd` sensor platform Temperature+Humidity sensor allows you to use your 
 ([datasheet](https://cdn-shop.adafruit.com/product-files/2857/Sensirion_Humidity_SHT3x_Datasheet_digital-767294.pdf),
 [Adafruit`_ ) and SHT85 (`datasheet](https://sensirion.com/media/documents/4B40CEF3/640B2346/Sensirion_Humidity_Sensors_SHT85_Datasheet.pdf),
 `Sensirion`_ ) sensors with Esphome.
-The :ref:`I²C Bus <i2c>` is required to be set up in your configuration for this sensor to work.
+The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
 [Adafruit](https://www.adafruit.com/product/2857)
 [Sensirion](https://sensirion.com/products/catalog/SHT85/)
@@ -32,11 +32,11 @@ sensor:
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **humidity** (*Optional*): The information for the humidity sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x44`. For SHT3x, an alternate address can be `0x45` while SHT85 supports only address `0x44`

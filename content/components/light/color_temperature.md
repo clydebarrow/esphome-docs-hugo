@@ -6,7 +6,7 @@ title: "Color Temperature Light"
 {{< seo description="" image="" >}}
 
 The `color_temperature` light platform creates a Color Temperature
-light from 2 :ref:`float output components <output>`. One channel controls the LED temperature,
+light from 2 [float output components]({{< ref "components/output/_index#output" >}}). One channel controls the LED temperature,
 and the other channel controls the brightness.
 
 ```yaml
@@ -30,7 +30,7 @@ light:
 - **warm_white_color_temperature** (**Required**, float): The warmest color temperature supported by this light. This
   is the highest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the lowest value when
   expressed in Kelvin.
-- All other options from :ref:`Light <config-light>`.
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also
 

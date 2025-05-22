@@ -41,7 +41,7 @@ light:
 
 - **is_rgbw** (*Optional*, boolean): Set to `true` if the strip is RGBW. Defaults to `false`.
 
-- All other options from :ref:`Light <config-light>`.
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 
 ### Manual Timings

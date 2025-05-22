@@ -8,7 +8,7 @@ title: "ESP32 Bluetooth Low Energy Tracker Hub"
 The `esp32_ble_tracker` component creates a global hub so that you can track bluetooth low energy devices
 using your ESP32 node.
 
-See :ref:`Setting up devices <esp32_ble_tracker-setting_up_devices>` for information on how you can determine
+See [Setting up devices]({{< ref "components/binary_sensor/ble_presence#esp32_ble_tracker-setting_up_devices" >}}) for information on how you can determine
 the MAC address of a device and track it using ESPHome.
 
 {{< warning >}}
@@ -100,15 +100,15 @@ you can use OTA updates again.
 
 Automations:
 
-- **on_ble_advertise** (*Optional*, :ref:`Automation <automation>`): An automation to perform
+- **on_ble_advertise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when a Bluetooth advertising is received. See [`on_ble_advertise` Trigger]({{< ref "components/esp32_ble_tracker#esp32_ble_tracker-on_ble_advertise" >}}).
-- **on_ble_manufacturer_data_advertise** (*Optional*, :ref:`Automation <automation>`): An automation to
+- **on_ble_manufacturer_data_advertise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
   perform when a Bluetooth advertising with manufacturer data is received. See
   [`on_ble_manufacturer_data_advertise` Trigger]({{< ref "components/esp32_ble_tracker#esp32_ble_tracker-on_ble_manufacturer_data_advertise" >}}).
-- **on_ble_service_data_advertise** (*Optional*, :ref:`Automation <automation>`): An automation to
+- **on_ble_service_data_advertise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to
   perform when a Bluetooth advertising with service data is received. See
   [`on_ble_service_data_advertise` Trigger]({{< ref "components/esp32_ble_tracker#esp32_ble_tracker-on_ble_service_data_advertise" >}}).
-- **on_scan_end** (*Optional*, :ref:`Automation <automation>`): An automation to perform when
+- **on_scan_end** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when
   a BLE scan has completed (the duration of the scan). This works with continuous set to true or false.
 
 
@@ -149,7 +149,7 @@ esp32_ble_tracker:
 Configuration variables:
 
 - **mac_address** (*Optional*, list of MAC Address): The MAC address to filter for this automation.
-- See :ref:`Automation <automation>`.
+- See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< anchor "esp32_ble_tracker-on_ble_manufacturer_data_advertise" >}}
 
@@ -179,7 +179,7 @@ Configuration variables:
 
 - **mac_address** (*Optional*, MAC Address): The MAC address to filter for this automation.
 - **manufacturer_id** (**Required**, string): 16 bit, 32 bit, or 128 bit BLE Manufacturer ID.
-- See :ref:`Automation <automation>`.
+- See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< anchor "esp32_ble_tracker-on_ble_service_data_advertise" >}}
 
@@ -206,7 +206,7 @@ Configuration variables:
 
 - **mac_address** (*Optional*, MAC Address): The MAC address to filter for this automation.
 - **service_uuid** (**Required**, string): 16 bit, 32 bit, or 128 bit BLE Service UUID.
-- See :ref:`Automation <automation>`.
+- See [Automation]({{< ref "automations/_index#automation" >}}).
 
 ### `on_scan_end` Trigger
 
@@ -226,7 +226,7 @@ Configuration variables:
 
 - None
 
-- See :ref:`Automation <automation>`.
+- See [Automation]({{< ref "automations/_index#automation" >}}).
 
 ### `esp32_ble_tracker.start_scan` Action
 
@@ -246,7 +246,7 @@ Configuration variables:
 - **continuous** (*Optional*, boolean): Whether to start the scan in continuous mode. Defaults to `false`
 
 {{< note >}}
-This action can also be written in :ref:`lambdas <config-lambda>`:
+This action can also be written in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 {{< /note >}}
 ```yaml
 esp32_ble_tracker:

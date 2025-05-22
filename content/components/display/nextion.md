@@ -51,14 +51,14 @@ display:
 - **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this display. Specify this
   when you have multiple UART configurations.
 - **brightness** (*Optional*, percentage): When specified, the display brightness will be set to this value at boot.
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`): The lambda to use for rendering the content on the Nextion
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the Nextion
   display. See [Rendering Lambda]({{< ref "components/display/nextion#display-nextion_lambda" >}}) for more information. This is typically empty. The individual components
   for the Nextion will handle almost all functions needed for updating display elements.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to call the lambda to update the display.
   Defaults to `5s`.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **tft_url** (*Optional*, string): The URL from which to download the TFT file for display firmware updates (Nextion
-  OTA). See :ref:`Nextion Upload <nextion_upload_tft>`.
+  OTA). See [Nextion Upload]({{< ref "components/display/nextion#nextion_upload_tft" >}}).
 - **touch_sleep_timeout** (*Optional*, int): Sets internal No-touch-then-sleep timer in seconds.
 - **start_up_page** (*Optional*, int): Sets the page to display when ESPHome connects to the Nextion. (The Nextion will
   display page 0 upon start-up by default).
@@ -70,18 +70,18 @@ display:
 - **skip_connection_handshake** (*Optional*, boolean): Sets whether the initial display connection handshake process is
   skipped. When set to `true`, the connection will be established without performing the handshake. This can be
   useful when using Nextion Simulator. Defaults to `false`.
-- **on_setup** (*Optional*, :ref:`Action <config-action>`): An action to be performed after ESPHome connects to the
-  Nextion. See :ref:`Nextion Automation <nextion-on_setup>`.
-- **on_sleep** (*Optional*, :ref:`Action <config-action>`): An action to be performed when the Nextion goes to sleep.
-  See :ref:`Nextion Automation <nextion-on_sleep>`.
-- **on_wake** (*Optional*, :ref:`Action <config-action>`): An action to be performed when the Nextion wakes up. See
-  :ref:`Nextion Automation <nextion-on_sleep>`.
-- **on_page** (*Optional*, :ref:`Action <config-action>`): An action to be performed after a page change. See
-  :ref:`Nextion Automation <nextion-on_page>`.
-- **on_touch** (*Optional*, :ref:`Action <config-action>`): An action to be performed after a touch event (press or
-  release). See :ref:`Nextion Automation <nextion-on_touch>`.
-- **on_buffer_overflow** (*Optional*, :ref:`Action <config-action>`): An action to be performed when the Nextion
-  reports a buffer overflow. See :ref:`Nextion Automation <nextion-on_buffer_overflow>`.
+- **on_setup** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An action to be performed after ESPHome connects to the
+  Nextion. See [Nextion Automation]({{< ref "components/display/nextion#nextion-on_setup" >}}).
+- **on_sleep** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An action to be performed when the Nextion goes to sleep.
+  See [Nextion Automation]({{< ref "components/display/nextion#nextion-on_sleep" >}}).
+- **on_wake** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An action to be performed when the Nextion wakes up. See
+  [Nextion Automation]({{< ref "components/display/nextion#nextion-on_sleep" >}}).
+- **on_page** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An action to be performed after a page change. See
+  [Nextion Automation]({{< ref "components/display/nextion#nextion-on_page" >}}).
+- **on_touch** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An action to be performed after a touch event (press or
+  release). See [Nextion Automation]({{< ref "components/display/nextion#nextion-on_touch" >}}).
+- **on_buffer_overflow** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An action to be performed when the Nextion
+  reports a buffer overflow. See [Nextion Automation]({{< ref "components/display/nextion#nextion-on_buffer_overflow" >}}).
 - **command_spacing** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Sets the minimum time between commands sent to the Nextion display.
   A higher value can help prevent buffer overflows but will result in slower interface updates.
   Range is `0-255ms`. Defaults to `0ms` (disabled).
@@ -124,7 +124,7 @@ an introduction to `strftime` time formatting.
 
 ### Using Lambdas
 
-Several methods are available for use within :ref:`lambdas <config-lambda>`; these permit advanced functionality beyond
+Several methods are available for use within [lambdas]({{< ref "automations/templates#config-lambda" >}}); these permit advanced functionality beyond
 simple display updates. There are too many to cover here; please see the {{< apiref "nextion/nextion.h" "nextion/nextion.h" >}} for more detail.
 The list below calls out a few commonly-used methods:
 
@@ -152,7 +152,7 @@ The list below calls out a few commonly-used methods:
   ```
 {{< anchor "set_nextion_sensor_state" >}}
 
-- Set various sensor states (See :ref:`Queue Types <nextion_queue_types>` below):
+- Set various sensor states (See [Queue Types]({{< ref "components/display/nextion#nextion_queue_types" >}}) below):
 
   - `set_nextion_sensor_state(NextionQueueType queue_type, std::string name, float state);`
   - `set_nextion_sensor_state(int queue_type, std::string name, float state);`
@@ -241,7 +241,7 @@ display:
 
 These automations will be triggered upon sleep or upon wake (respectively). The Nextion does not accept commands or
 updates while in sleep mode; these triggers may be used to cope with this. For example, you could use them to
-:ref:`force an update <nextion_update_all_components>`, refreshing the display's content upon wake-up.
+[force an update]({{< ref "components/display/nextion#nextion_update_all_components" >}}), refreshing the display's content upon wake-up.
 
 {{< anchor "nextion-on_page" >}}
 
@@ -263,8 +263,8 @@ integer which indicates the current page ID number.
 
 Given the page ID, the appropriate components can be updated. Two strategies are be possible:
 
-- Use :ref:`Nextion Sensors <nextion_sensor>` for every UI field and use one of the
-  :ref:`update functions <nextion_update_all_components>`.
+- Use [Nextion Sensors]({{< ref "components/sensor/nextion#nextion_sensor" >}}) for every UI field and use one of the
+  [update functions]({{< ref "components/display/nextion#nextion_update_all_components" >}}).
 - Manually set component text or value for each field:
 
   ```yaml
@@ -327,7 +327,7 @@ on_buffer_overflow:
 
 ##### `display.nextion.set_brightness`
 
-You can use this :ref:`action<actions-action>` to set the brightness of the Nextion's backlight.
+You can use this [action]({{< ref "automations/actions#actions-action" >}}) to set the brightness of the Nextion's backlight.
 
 ```yaml
 on_...:

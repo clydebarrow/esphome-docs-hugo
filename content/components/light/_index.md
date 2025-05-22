@@ -37,12 +37,12 @@ light:
 - **name** (*Optional*, string): The name of the light. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a :ref:`friendly_name <esphome-configuration_variables>` set for your device and you want the light
+If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and you want the light
 to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the light in the frontend.
-- **effects** (*Optional*, list): A list of :ref:`light effects <light-effects>` to use for this light.
+- **effects** (*Optional*, list): A list of [light effects]({{< ref "components/light/_index#light-effects" >}}) to use for this light.
 - **gamma_correct** (*Optional*, float): Apply a [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) to the light channels. Defaults to `2.8`.
 - **default_transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The default transition length to use when no
   transition length is set in the light call. Defaults to `1s`.
@@ -51,8 +51,8 @@ to use that name, you can set `name: None`.
 - **initial_state** (*Optional*): The initial state the light should be set to on bootup. This state will be applied
   when the state is **not** restored based on `restore_mode` (below).
 
-    - **state** (*Optional*, :ref:`templatable <config-templatable>`, boolean): The ON/OFF state for the light.
-    - All other options from :ref:`light state <light-state_config>`.
+    - **state** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), boolean): The ON/OFF state for the light.
+    - All other options from [light state]({{< ref "components/light/_index#light-state_config" >}}).
 
 - **restore_mode** (*Optional*): Control how the light attempts to restore state on bootup.
 
@@ -65,11 +65,11 @@ to use that name, you can set `name: None`.
     - `ALWAYS_OFF` (Default) - Always initialize the light as OFF on bootup.
     - `ALWAYS_ON` - Always initialize the light as ON on bootup.
 
-- **on_turn_on** (*Optional*, :ref:`Action <config-action>`): An automation to perform when the light is turned on. See
+- **on_turn_on** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when the light is turned on. See
   [`light.on_turn_on` / `light.on_turn_off` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
-- **on_turn_off** (*Optional*, :ref:`Action <config-action>`): An automation to perform when the light is turned off.
+- **on_turn_off** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when the light is turned off.
   See [`light.on_turn_on` / `light.on_turn_off` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
-- **on_state** (*Optional*, :ref:`Action <config-action>`): An automation to perform when the light's set state is
+- **on_state** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): An automation to perform when the light's set state is
   changed. See [`light.on_state` Trigger]({{< ref "components/light/_index#light-on_state_trigger" >}}).
 
 **Additional configuration variables for addressable lights:**
@@ -88,8 +88,8 @@ to use that name, you can set `name: None`.
   (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI). Defaults to `false`.
 - **entity_category** (*Optional*, string): The category of the entity. See [this list](https://developers.home-assistant.io/docs/core/entity/#generic-properties) for a list of available options. Set
   to `""` to remove the default entity category.
-- If MQTT enabled, all other options from :ref:`MQTT Component <config-mqtt-component>`.
-- If Webserver enabled and :ref:`version 3 <config-webserver-version-3-options>` is selected, all other options from
+- If MQTT enabled, all other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
+- If Webserver enabled and [version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}) is selected, all other options from
   {{< docref "/components/web_server" >}}.
 
 {{< anchor "light-state_config" >}}
@@ -99,7 +99,7 @@ to use that name, you can set `name: None`.
 Some actions/configuration refer to **light state**. A **light state** may consist of any of the following
 configuration variables:
 
-- **color_mode** (*Optional*, :ref:`templatable <config-templatable>`): For lights that support more than one color
+- **color_mode** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}})): For lights that support more than one color
   mode, the color mode that will be activated. The color mode determines which outputs of the light are active, and
   which parameters can be used. For example, this can be used to switch between colored and white light. Must be a
   color mode that is supported by the light. Valid color modes are:
@@ -119,19 +119,19 @@ configuration variables:
     - `RGB_COLD_WARM_WHITE`: RGB color channels and two separate cold and warm white channels. Accepts parameters
       from `RGB` and `COLD_WARM_WHITE` color modes.
 
-- **brightness** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The primary brightness of the light;
+- **brightness** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The primary brightness of the light;
   applies to all channels (both color and white) of the light.
-- **color_brightness** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The brightness of the color
+- **color_brightness** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The brightness of the color
   lights. Useful to control brightness of colored and white lights separately for RGBW lights.
-- **red** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The red channel of the light.
-- **green** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The green channel of the light.
-- **blue** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The blue channel of the light.
-- **white** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The brightness of the white channel.
-- **color_temperature** (*Optional*, float, :ref:`templatable <config-templatable>`): The color temperature (in `mireds
+- **red** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The red channel of the light.
+- **green** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The green channel of the light.
+- **blue** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The blue channel of the light.
+- **white** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The brightness of the white channel.
+- **color_temperature** (*Optional*, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): The color temperature (in `mireds
   <https://en.wikipedia.org/wiki/Mired>`__ or Kelvin) of the white channel.
-- **cold_white** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The brightness of the cold white
+- **cold_white** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The brightness of the cold white
   channel. Cannot be used at the same time as *color_temperature*.
-- **warm_white** (*Optional*, percentage, :ref:`templatable <config-templatable>`): The brightness of the warm white
+- **warm_white** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The brightness of the warm white
   channel. Cannot be used at the same time as *color_temperature*.
 
 All percentage options accept values in the range `0%` to `100%` or `0.0` to `1.0` and they default to not
@@ -158,11 +158,11 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), :ref:`templatable <config-templatable>`): The length of the
+- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
   transition if the light supports it.
 
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(light_1).toggle();
@@ -199,16 +199,16 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), :ref:`templatable <config-templatable>`): The length of the
+- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
   transition if the light supports it.
-- **flash_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), :ref:`templatable <config-templatable>`): If set, will flash the
+- **flash_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): If set, will flash the
   given color for this period of time and then go back to the previous state.
-- **effect** (*Optional*, string, :ref:`templatable <config-templatable>`): If set, will attempt to start an effect
+- **effect** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): If set, will attempt to start an effect
   with the given name.
-- All other options from :ref:`light state <light-state_config>`.
+- All other options from [light state]({{< ref "components/light/_index#light-state_config" >}}).
 
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(light_1).turn_on();
@@ -270,11 +270,11 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), :ref:`templatable <config-templatable>`): The length of the
+- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
   transition if the light supports it.
 
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 auto call = id(light_1).turn_off();
@@ -289,7 +289,7 @@ call.perform();
 
 ### `light.control` Action
 
-This :ref:`Action <config-action>` is a generic call to change the state of a light - it is essentially just a
+This [Action]({{< ref "automations/actions#config-action" >}}) is a generic call to change the state of a light - it is essentially just a
 combination of the turn_on and turn_off calls.
 
 ```yaml
@@ -303,14 +303,14 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **state** (*Optional*, :ref:`templatable <config-templatable>`, boolean): Change the ON/OFF state of the light.
-- All other options from :ref:`light state <light-state_config>`.
+- **state** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), boolean): Change the ON/OFF state of the light.
+- All other options from [light state]({{< ref "components/light/_index#light-state_config" >}}).
 
 {{< anchor "light-dim_relative_action" >}}
 
 ### `light.dim_relative` Action
 
-This :ref:`Action <config-action>` allows you to dim a light that supports brightness by a relative amount.
+This [Action]({{< ref "automations/actions#config-action" >}}) allows you to dim a light that supports brightness by a relative amount.
 
 ```yaml
 on_...:
@@ -324,9 +324,9 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **relative_brightness** (**Required**, :ref:`templatable <config-templatable>`, percentage): The relative brightness
+- **relative_brightness** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The relative brightness
   to dim the light by.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), :ref:`templatable <config-templatable>`): The length of the
+- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
   transition.
 - **brightness_limits** (*Optional*): Limits in the brightness range.
     - **min_brightness** (*Optional*, percentage): The minimum brightness to dim the light to. Defaults to `0%`.
@@ -365,7 +365,7 @@ binary_sensor:
 
 ### `light.addressable_set` Action
 
-This :ref:`Action <config-action>` allows you to manually set a range of LEDs on an addressable light to a specific
+This [Action]({{< ref "automations/actions#config-action" >}}) allows you to manually set a range of LEDs on an addressable light to a specific
 color.
 
 ```yaml
@@ -382,16 +382,16 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the addressable light to control.
-- **range_from** (*Optional*, :ref:`templatable <config-templatable>`, int): The beginning of the range of LEDs to
+- **range_from** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), int): The beginning of the range of LEDs to
   control, inclusive, using zero-based indexing. Defaults to 0 (the beginning of the strip).
-- **range_to** (*Optional*, :ref:`templatable <config-templatable>`, int): The end of the range of LEDs to control,
+- **range_to** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), int): The end of the range of LEDs to control,
   inclusive, using zero-based indexing. Defaults to the end of the strip (`num_leds` - 1).
-- **color_brightness** (*Optional*, :ref:`templatable <config-templatable>`, percentage): The brightness to set the
+- **color_brightness** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The brightness to set the
   color channel to.
-- **red** (*Optional*, :ref:`templatable <config-templatable>`, percentage): The value to set the red channel to.
-- **green** (*Optional*, :ref:`templatable <config-templatable>`, percentage): The value to set the green channel to.
-- **blue** (*Optional*, :ref:`templatable <config-templatable>`, percentage): The value to set the blue channel to.
-- **white** (*Optional*, :ref:`templatable <config-templatable>`, percentage): The brightness to set the white channel
+- **red** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The value to set the red channel to.
+- **green** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The value to set the green channel to.
+- **blue** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The value to set the blue channel to.
+- **white** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The brightness to set the white channel
   to.
 
 {{< anchor "light-is_on_condition" >}}
@@ -399,7 +399,7 @@ on_...:
 
 ### `light.is_on` / `light.is_off` Condition
 
-This :ref:`Condition <config-condition>` checks if the given light is ON or OFF. OFF means that the light is completely
+This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the given light is ON or OFF. OFF means that the light is completely
 OFF, and ON means that the light is emitting at least a bit of light.
 
 ```yaml
@@ -596,7 +596,7 @@ light:
   - **duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration this color should be active.
   - **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of each transition. Defaults to `0s`.
 
-See :ref:`light state <light-state_config>` for more information on the various color fields.
+See [light state]({{< ref "components/light/_index#light-state_config" >}}) for more information on the various color fields.
 
 ### Flicker Effect
 
@@ -624,7 +624,7 @@ light:
 
 ### Lambda Effect
 
-This effect allows you to write completely custom light effects yourself using :ref:`lambdas <config-lambda>`.
+This effect allows you to write completely custom light effects yourself using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
 
 Available variable in the lambda:
 
@@ -664,7 +664,7 @@ light:
 - **name** (**Required**, string): The name of the custom effect.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which the lambda code is executed. A value of
   `0ms` means that the lambda is always executed, without a cool-down. Defaults to `0ms`.
-- **lambda** (**Required**, :ref:`lambda <config-lambda>`): The code to execute. `static` variables are especially
+- **lambda** (**Required**, [lambda]({{< ref "automations/templates#config-lambda" >}})): The code to execute. `static` variables are especially
   useful.
 
 ### Addressable Rainbow Effect
@@ -942,7 +942,7 @@ Examples of this API can be found
 ### Automation Light Effect
 
 In addition to the `lambda` and `addressable_lambda` light effects, effects can also be created with ESPHome's
-:ref:`Automation <automation>` system with the `automation` effect type.
+[Automation]({{< ref "automations/_index#automation" >}}) system with the `automation` effect type.
 
 The automation given in the `sequence` block will be repeatedly executed until the effect is stopped by the user.
 
@@ -972,7 +972,7 @@ light:
 **Configuration variables:**
 
 - **name** (*Optional*, string): The name of the effect.
-- **sequence** (*Optional*, :ref:`Action <config-action>`): The actions to perform in sequence until the effect is
+- **sequence** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The actions to perform in sequence until the effect is
   stopped.
 
 {{< anchor "e131-light-effect" >}}
@@ -1058,7 +1058,7 @@ light:
 ```
 **Configuration variables:**
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the :ref:`UART Component <uart>`. Useful if
+- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}). Useful if
   you've configured multiple UARTs.
 
 [Adalight](https://learn.adafruit.com/adalight-diy-ambient-tv-lighting)

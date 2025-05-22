@@ -77,13 +77,13 @@ A typical value on Linux for `ca_certificate_path` would be `/etc/ssl/certs/ca-c
     {{< /note >}}
 ## HTTP Request Actions
 
-The `http_request` component supports a number of :ref:`actions <config-action>` that can be used to send requests.
+The `http_request` component supports a number of [actions]({{< ref "automations/actions#config-action" >}}) that can be used to send requests.
 
 {{< anchor "http_request-get_action" >}}
 
 ### `http_request.get` Action
 
-This :ref:`action <config-action>` sends a GET request.
+This [action]({{< ref "automations/actions#config-action" >}}) sends a GET request.
 
 ```yaml
 on_...:
@@ -104,21 +104,21 @@ on_...:
 ```
 **Configuration variables:**
 
-- **url** (**Required**, string, :ref:`templatable <config-templatable>`): URL to which to send the request.
-- **request_headers** (*Optional*, mapping): Map of HTTP headers. Values are :ref:`templatable <config-templatable>`.
+- **url** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): URL to which to send the request.
+- **request_headers** (*Optional*, mapping): Map of HTTP headers. Values are [templatable]({{< ref "automations/templates#config-templatable" >}}).
 - **collect_headers** (*Optional*, list of strings): List of the names of HTTP headers to collect from the response.
 - **capture_response** (*Optional*, boolean): when set to `true`, the response data will be captured and placed into
-  the `body` variable as a `std::string` for use in :ref:`lambdas <config-lambda>`. Defaults to `false`.
+  the `body` variable as a `std::string` for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}). Defaults to `false`.
 - **max_response_buffer_size** (*Optional*, integer): The maximum buffer size to be used to store the response.
   Defaults to `1 kB`.
-- **on_response** (*Optional*, :ref:`Automation <automation>`): An automation to perform after the request is received.
-- **on_error** (*Optional*, :ref:`Automation <automation>`): An automation to perform if the request cannot be completed.
+- **on_response** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform after the request is received.
+- **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform if the request cannot be completed.
 
 {{< anchor "http_request-post_action" >}}
 
 ### `http_request.post` Action
 
-This :ref:`action <config-action>` sends a POST request.
+This [action]({{< ref "automations/actions#config-action" >}}) sends a POST request.
 
 ```yaml
 on_...:
@@ -134,8 +134,8 @@ on_...:
 ```
 **Configuration variables:**
 
-- **body** (*Optional*, string, :ref:`templatable <config-templatable>`): A HTTP body string to send with request.
-- **json** (*Optional*, mapping): A HTTP body in JSON format. Values are :ref:`templatable <config-templatable>`.
+- **body** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): A HTTP body string to send with request.
+- **json** (*Optional*, mapping): A HTTP body in JSON format. Values are [templatable]({{< ref "automations/templates#config-templatable" >}}).
   See [Examples]({{< ref "components/http_request#http_request-examples" >}}).
 - All other options from [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}).
 
@@ -143,7 +143,7 @@ on_...:
 
 ### `http_request.send` Action
 
-This :ref:`action <config-action>` sends a request.
+This [action]({{< ref "automations/actions#config-action" >}}) sends a request.
 
 ```yaml
 on_...:
@@ -165,7 +165,7 @@ on_...:
 ## `on_response` Trigger
 
 This automation will be triggered when the HTTP request is complete.
-The following variables are available for use in :ref:`lambdas <config-lambda>`:
+The following variables are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 - `response` as a pointer to `HttpContainer` object which contains `content_length`, `status_code` and `duration_ms``.
 - `std::string get_response_header(const std::string &header_name)` to read response headers (only headers with names specified in the `collect_headers` are available).
@@ -207,7 +207,7 @@ on_...
 This automation will be triggered when the HTTP request fails to complete. This may be e.g. when the network is not available,
 or the server is not reachable. This will *not* be triggered if the request
 completes, even if the response code is not 200. No information on the type of error is available and no variables
-are available for use in :ref:`lambdas <config-lambda>`. See example usage above.
+are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}). See example usage above.
 
 
 {{< anchor "http_request-examples" >}}

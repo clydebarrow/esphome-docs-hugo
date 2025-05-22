@@ -11,7 +11,7 @@ with ESPHome.
 
 {{< img src="sdm220m-full.png" alt="Image" caption="SDM230M Energy Monitor." width="50.0%" class="center" >}}
 
-The communication with this component is done via a :ref:`UART <uart>` using the :ref:`Modbus protocol <modbus>` 
+The communication with this component is done via a [Modbus protocol]({{< ref "components/modbus#modbus" >}}) using the [UART]({{< ref "components/uart#uart" >}}) 
 over RS485 wiring. You will need an RS485 to UART converter for communication.
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600bps. 
@@ -63,19 +63,19 @@ sensor:
 - **phase_a** (*Optional*): The group of exposed sensors for Phase A/1.
 
   - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-    :ref:`Sensor <config-sensor>`.
+    [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **voltage** (*Optional*): Use the voltage value of the sensor in volts (V).
-    All options from :ref:`Sensor <config-sensor>`.
+    All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **active_power** (*Optional*): Use the (active) power value of the sensor in watts (W). All options
-    from :ref:`Sensor <config-sensor>`.
+    from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **power_factor** (*Optional*): Use the power factor value of the sensor.
-    All options from :ref:`Sensor <config-sensor>`.
+    All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **apparent_power** (*Optional*): Use the apparent power value of the sensor in volt amps (VA). All
-    options from :ref:`Sensor <config-sensor>`.
+    options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **reactive_power** (*Optional*): Use the reactive power value of the sensor in volt amps reactive (VAR). All
-    options from :ref:`Sensor <config-sensor>`.
+    options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   - **phase_angle** (*Optional*): Use the phase angle value of the sensor in degrees (°). All options
-    from :ref:`Sensor <config-sensor>`.
+    from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 - **phase_b** (*Optional*): The group of exposed sensors for Phase B/2 on applicable meters. eg: SDM630
 
@@ -86,17 +86,17 @@ sensor:
   - All options from **phase_a**
 
 - **frequency** (*Optional*): Use the frequency value of the sensor in hertz.
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **total_power** (*Optional*): Use the total power value of the sensor in watts (W).
-  All options from :ref:`Sensor <config-sensor>`.
+  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **import_active_energy** (*Optional*): Use the import active energy value of the sensor in kilowatt
-  hours (kWh). All options from :ref:`Sensor <config-sensor>`.
+  hours (kWh). All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **export_active_energy** (*Optional*): Use the export active energy value of the sensor in kilowatt
-  hours (kWh). All options from :ref:`Sensor <config-sensor>`.
+  hours (kWh). All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **import_reactive_energy** (*Optional*): Use the import reactive energy value of the sensor in
-  kilovolt amps reactive hours (kVArh). All options from :ref:`Sensor <config-sensor>`.
+  kilovolt amps reactive hours (kVArh). All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **export_reactive_energy** (*Optional*): Use the export reactive energy value of the sensor in
-  kilovolt amps reactive hours (kVArh). All options from :ref:`Sensor <config-sensor>`.
+  kilovolt amps reactive hours (kVArh). All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to

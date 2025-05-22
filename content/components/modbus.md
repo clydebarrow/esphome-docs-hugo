@@ -21,7 +21,7 @@ The various sub-components implement some of the Modbus functions below (dependi
 | 15 | Write Multiple Coils |
 | 16 | Write Multiple Registers |
 
-Modbus RTU requires a :ref:`UART Bus <uart>` to communicate.
+Modbus RTU requires a [UART Bus]({{< ref "components/uart#uart" >}}) to communicate.
 
 ```yaml
 # Example configuration entry
@@ -36,7 +36,7 @@ modbus:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the :ref:`UART Component <uart>` if you want
+- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
   to use multiple UART buses.
 
 - **flow_control_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin used to switch flow control.

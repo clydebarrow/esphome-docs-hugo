@@ -6,7 +6,7 @@ title: "uFire ISE pH sensor"
 {{< seo description="" image="" >}}
 
 The `ufire_ise` sensor platform allows you to use your uFire ISE pH sensor with
-ESPHome. The :ref:`I²C Bus <i2c>` is
+ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work.
 It required also to have an temperature sensor in the liquid tank; this can
 be on the same board or external sensor linked to the uFire ISE pH configuration.
@@ -34,8 +34,8 @@ sensor:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
 - **temperature_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
-- **ph** (*Optional*, :ref:`Sensor <config-sensor>`): Set the pH sensor configuration. All options from :ref:`Sensor <config-sensor>`.
-- **temperature** (*Optional*, :ref:`Sensor <config-sensor>`): Set the onboard temperature sensor configuration. All options from :ref:`Sensor <config-sensor>`.
+- **ph** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the pH sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **temperature** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
   Can't be used together with `temperature_sensor`.
 
 {{< anchor "sensor-ufire_ise-calibrate_probe_high_action" >}}

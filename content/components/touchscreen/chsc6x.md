@@ -6,7 +6,7 @@ title: "chsc6x Touch Screen Controller"
 {{< seo description="" image="" >}}
 
 The `chsc6x` touchscreen platform allows using the touch screen controllers based on the chsc6x chip with ESPHome.
-The :ref:`I²C <i2c>` is required to be set up in your configuration for this touchscreen to work.
+The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this touchscreen to work.
 
 This controller is used in the Seeed Studio Round Display for XIAO with ILI9xxx display
 
@@ -27,9 +27,9 @@ touchscreen:
 ### Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually set the ID of this touchscreen.
-- **interrupt_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The touch detection pin.
+- **interrupt_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The touch detection pin.
 
-- All other options from :ref:`Touchscreen <config-touchscreen>`.
+- All other options from [Touchscreen]({{< ref "components/touchscreen/_index#config-touchscreen" >}}).
 
 
 ### Sample config for the ESP32S3

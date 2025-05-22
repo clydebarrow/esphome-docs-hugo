@@ -41,7 +41,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the sensor. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a :ref:`friendly_name <esphome-configuration_variables>` set for your device and
+If you have a [friendly_name]({{< ref "components/esphome#esphome-configuration_variables" >}}) set for your device and
 you want the sensor to use that name, you can set `name: None`.
 
   {{< /note >}}
@@ -57,7 +57,7 @@ you want the sensor to use that name, you can set `name: None`.
 - **icon** (*Optional*, icon): Manually set the icon to use for the sensor in the frontend.
 - **accuracy_decimals** (*Optional*, int): Manually set the number of decimals to use when reporting values. This does not impact the actual value reported to Home Assistant, it just sets the number of decimals to use when displaying it.
 - **filters** (*Optional*): Specify filters to use for some basic
-  transforming of values. See :ref:`Sensor Filters <sensor-filters>` for more information.
+  transforming of values. See [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}) for more information.
 - **internal** (*Optional*, boolean): Mark this component as internal. Internal components will
   not be exposed to the frontend (like Home Assistant). Only specifying an `id` without
   a `name` will implicitly set this to true.
@@ -72,22 +72,22 @@ you want the sensor to use that name, you can set `name: None`.
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See :ref:`Webserver Version 3 <config-webserver-version-3-options>`.
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3]({{< ref "components/web_server#config-webserver-version-3-options" >}}).
 
 Automations:
 
-- **on_value** (*Optional*, :ref:`Automation <automation>`): An automation to perform
+- **on_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when a new value is published. See [`on_value`]({{< ref "components/sensor/_index#sensor-on_value" >}}).
-- **on_value_range** (*Optional*, :ref:`Automation <automation>`): An automation to perform
+- **on_value_range** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when a published value transition from outside to a range to inside. See [`on_value_range`]({{< ref "components/sensor/_index#sensor-on_value_range" >}}).
-- **on_raw_value** (*Optional*, :ref:`Automation <automation>`): An automation to perform
+- **on_raw_value** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when a raw value is received that hasn't passed through any filters. See [`on_raw_value`]({{< ref "components/sensor/_index#sensor-on_raw_value" >}}).
 
 MQTT Options:
 
 - **expire_after** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Manually set the time in which
   the sensor values should be marked as “expired”/“unknown”. Not providing any value means no expiry.
-- All other options from :ref:`MQTT Component <config-mqtt-component>`.
+- All other options from [MQTT Component]({{< ref "components/mqtt#config-mqtt-component" >}}).
 
 {{< note >}}
 If you're trying to setup filters for a sensor that has multiple outputs - for example a DHT22 which
@@ -801,7 +801,7 @@ unit_of_measurement: "°F"
 
 ## Sensor Automation
 
-You can access the most recent state of the sensor in :ref:`lambdas <config-lambda>` using
+You can access the most recent state of the sensor in [lambdas]({{< ref "automations/templates#config-lambda" >}}) using
 `id(sensor_id).state` and the most recent raw state using `id(sensor_id).raw_state`.
 
 {{< anchor "sensor-on_value" >}}
@@ -809,7 +809,7 @@ You can access the most recent state of the sensor in :ref:`lambdas <config-lamb
 ### `on_value`
 
 This automation will be triggered when a new value that has passed through all filters
-is published. In :ref:`Lambdas <config-lambda>` you can get the value from the trigger
+is published. In [Lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the value from the trigger
 with `x`.
 
 ```yaml
@@ -823,7 +823,7 @@ sensor:
             red: !lambda "return x/255;"
 
 ```
-Configuration variables: See :ref:`Automation <automation>`.
+Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< anchor "sensor-on_value_range" >}}
 
@@ -860,14 +860,14 @@ Configuration variables:
 
 - **above** (*Optional*, float): The minimum for the trigger.
 - **below** (*Optional*, float): The maximum for the trigger.
-- See :ref:`Automation <automation>`.
+- See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< anchor "sensor-on_raw_value" >}}
 
 ### `on_raw_value`
 
 This automation will be triggered when a new value is received that hasn't passed
-through any filters. In :ref:`Lambdas <config-lambda>` you can get the value from the
+through any filters. In [Lambdas]({{< ref "automations/templates#config-lambda" >}}) you can get the value from the
 trigger with `x`.
 
 ```yaml
@@ -881,7 +881,7 @@ sensor:
             red: !lambda "return x/255;"
 
 ```
-Configuration variables: See :ref:`Automation <automation>`.
+Configuration variables: See [Automation]({{< ref "automations/_index#automation" >}}).
 
 {{< anchor "sensor-in_range_condition" >}}
 
@@ -913,7 +913,7 @@ Configuration variables:
 
 ### lambda calls
 
-From :ref:`lambdas <config-lambda>`, you can call several methods on all sensors to do some
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods on all sensors to do some
 advanced stuff (see the full API Reference for more info).
 
 - `publish_state()`: Manually cause the sensor to push out a value. It will then

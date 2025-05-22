@@ -44,7 +44,7 @@ from Home Assistant, use the {{< docref "/components/text_sensor/homeassistant" 
 - **entity_id** (**Required**, string): The entity ID to import from Home Assistant.
 - **attribute** (*Optional*, string): The name of the state attribute to import from the
   specified entity. The entity state is used when this option is omitted.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 
 {{< note >}}

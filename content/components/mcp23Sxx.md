@@ -68,7 +68,7 @@ binary_sensor:
 
 - **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S08 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
-- All other options from :ref:`Pin Schema <config-pin_schema>`
+- All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
 
 {{< anchor "mcp23S17-label" >}}
@@ -78,7 +78,7 @@ binary_sensor:
 The MCP23S17 component allows you to use MCP23S17 I/O expanders
 ([datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf),
 [Digi-Key](https://www.digikey.com/product-detail/en/microchip-technology/MCP23S17-E-SP/MCP23S17-E-SP-ND/894276)) in ESPHome.
-It uses the :ref:`SPI Bus <spi>` for communication.
+It uses the [SPI Bus]({{< ref "components/spi#spi" >}}) for communication.
 
 Once configured, you can use any of the 16 pins as
 pins for your projects. Within ESPHome they emulate a real internal GPIO pin
@@ -133,7 +133,7 @@ binary_sensor:
 
 - **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23S17 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
-- All other options from :ref:`Pin Schema <config-pin_schema>`
+- All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
 
 
 ## See Also

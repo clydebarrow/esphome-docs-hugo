@@ -85,16 +85,16 @@ climate:
 - **outdoor_temperature** (*Optional*): The information for the outdoor temperature
   sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **power_usage** (*Optional*): The information for the current power consumption
   sensor.
 
-  - All options from :ref:`Sensor <config-sensor>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **humidity_setpoint** (*Optional*): The information for the humidity indoor
   sensor (experimental).
 
-  - All options from :ref:`Sensor <config-sensor>`.
-- All other options from :ref:`Climate <config-climate>`.
+  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
 ## Automations
 
@@ -153,16 +153,16 @@ on_...:
 ```
 Configuration variables:
 
-- **temperature** (**Required**, float, :ref:`templatable <config-templatable>`):  
+- **temperature** (**Required**, float, [templatable]({{< ref "automations/templates#config-templatable" >}})):  
   Sets the value of an internal temperature sensor. The value will be **clamped** to the range:  
 
   - *0 °C to 37 °C* when `use_fahrenheit` is `false`.  
   - *32 °F to 99 °F* when `use_fahrenheit` is `true`.
 
-- **use_fahrenheit** (*Optional*, boolean, :ref:`templatable <config-templatable>`):  
+- **use_fahrenheit** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):  
   Specifies if the `temperature` value is in Fahrenheit. When set to `true`, the temperature is parsed and sent in Fahrenheit. Defaults to `false` (Celsius).
 
-- **beeper** (*Optional*, boolean, :ref:`templatable <config-templatable>`):  
+- **beeper** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):  
   Sets beep on update. Defaults to `false`.
 
 

@@ -59,7 +59,7 @@ light:
   Try to use this for dimmable LED lights, it might help turning on at low brightness
   levels. On Halogen lamps it might show at initial flicker. Defaults to `false`.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- All other options from :ref:`Output <config-output>`.
+- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 Dimming lights with phase control can be tricky, the minimum level your light turns on
 might be different from other lights, also the perceived light level might not correlate

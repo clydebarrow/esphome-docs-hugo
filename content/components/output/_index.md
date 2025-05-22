@@ -60,7 +60,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(light_1).turn_on();
@@ -80,7 +80,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 id(light_1).turn_off();
@@ -103,7 +103,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in :ref:`lambdas <config-lambda>`:
+This action can also be expressed in [lambdas]({{< ref "automations/templates#config-lambda" >}}):
 
 ```cpp
 // range is 0.0 (off) to 1.0 (on)

@@ -19,7 +19,7 @@ This driver has been tested with the following displays:
 
 ## Usage
 This component requires an ESP32 and the use of
-ESP-IDF. PSRAM is a requirement due to the size of the display buffer. A :ref:`quad SPI bus <spi>` interface must be configured.
+ESP-IDF. PSRAM is a requirement due to the size of the display buffer. A [quad SPI bus]({{< ref "components/spi#spi" >}}) interface must be configured.
 
 {{< img src="t4-s3.jpg" alt="Image" caption="Lilygo T4-S3" width="75.0%" class="center" >}}
 
@@ -55,9 +55,9 @@ display:
     - `AXS15231`
     
 - **init_sequence** (*Optional*, A list of byte arrays): Specifies the init sequence for the display. This is required when using the `CUSTOM` model - but may be empty. If specified for other models this data will be sent after the pre-configured sequence.
-- **cs_pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The chip select pin.
-- **reset_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The RESET pin.
-- **enable_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The display enable pin.
+- **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The chip select pin.
+- **reset_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The RESET pin.
+- **enable_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The display enable pin.
 - **brightness** (*Optional*, int): A brightness value in the range 0-255
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `5s`.
 - **auto_clear_enabled** (*Optional*, boolean): Whether to automatically clear the display data before each lambda call,
@@ -82,7 +82,7 @@ display:
 - **invert_colors** (*Optional*, boolean): With this boolean option you can invert the display colors.
 - **draw_from_origin** (*Optional*, boolean): When set, all partial display updates will start at the origin (0,0). Defaults to false.
 - **draw_rounding** (*Optional*, int): Caters for display chips that require partial drawing to be aligned to certain boundaries. Default is 2, must be a power of 2.
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`): The lambda to use for rendering the content on the display.
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the display.
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 
 

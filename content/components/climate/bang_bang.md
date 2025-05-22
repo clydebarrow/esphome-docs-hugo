@@ -72,14 +72,14 @@ climate:
   the control algorithm. This can be dynamically set in the frontend later.
 - **default_target_temperature_high** (**Required**, float): The default high target temperature for
   the control algorithm. This can be dynamically set in the frontend later.
-- **idle_action** (**Required**, :ref:`Action <config-action>`): The action to call when
+- **idle_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to call when
   the climate device wants to enter idle mode.
-- **heat_action** (*Optional*, :ref:`Action <config-action>`): The action to call when
+- **heat_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to call when
   the climate device wants to heating mode and increase the current temperature. At least one
   of `heat_action` and `cool_action` need to be specified.
-- **cool_action** (*Optional*, :ref:`Action <config-action>`): The action to call when
+- **cool_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action to call when
   the climate device wants to cooling mode and decrease the current temperature.
-- All other options from :ref:`Climate <config-climate>`.
+- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
 Advanced options:
 

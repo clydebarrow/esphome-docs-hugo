@@ -55,7 +55,7 @@ web_server:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **local** (*Optional*, boolean): Include supporting javascript locally allowing it to work without internet access. Defaults to `false`.
 - **version** (*Optional*, string): `1`, `2` or `3`. Version 1 displays as a table. Version 2 uses web components and has more functionality. Version 3 uses HA-Styling. Defaults to `2`.
-- **sorting_groups** (*Optional*, list): Available only on `version: 3`. A list of group ID's and names to group the entities. See :ref:`Webserver Entity Grouping <config-webserver-grouping>`.
+- **sorting_groups** (*Optional*, list): Available only on `version: 3`. A list of group ID's and names to group the entities. See [Webserver Entity Grouping]({{< ref "components/web_server#config-webserver-grouping" >}}).
   
   - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for the group.
   - **name** (**Required**, string): A string representing the group name which is displayed as the header of the group

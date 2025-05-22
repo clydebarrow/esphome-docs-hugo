@@ -69,13 +69,13 @@ sensor:
 - **wave_max_length** (*Optional*, int): How many data points to store. Typically this is the width of the component in the Nextion
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})):  The duration to update the sensor. This typically should be set for waveforms to send periodic updates.
 
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
   {{< note >}}
-`background_color` , `foreground_color` and `visible` do not retain their state on page change. :ref:`Sensor Settings<nextion_sensor_settings>`.
-A :ref:`Nextion Sensor <nextion_sensor>` with a custom protocol sending the current page can be used to execute the API call :ref:`Update Components By Prefix <update_components_by_prefix>` to update all the components for that page
+`background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings]({{< ref "components/sensor/nextion#nextion_sensor_settings" >}}).
+A [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
 
 
   {{< /note >}}
@@ -123,10 +123,10 @@ on_...:
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion sensor.
-- **state** (**Required**, string, :ref:`templatable <config-templatable>`): The float state to publish.
-- **publish_state** (*Optional*, bool, :ref:`templatable <config-templatable>`): Publish new state to Home Assistant.
+- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The float state to publish.
+- **publish_state** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Home Assistant.
   Default is true.
-- **send_to_nextion** (*Optional*, bool, :ref:`templatable <config-templatable>`): Publish new state to Nextion
+- **send_to_nextion** (*Optional*, bool, [templatable]({{< ref "automations/templates#config-templatable" >}})): Publish new state to Nextion
   display which will update component. Default is true.
 
 {{< note >}}
@@ -137,7 +137,7 @@ This action can also be written in lambdas. See [Lambda Calls]({{< ref "componen
 
 ### Lambda Calls
 
-From :ref:`lambdas <config-lambda>`, you can call several methods to access
+From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call several methods to access
 some more advanced functions (see the full {{< apiref "nextion/sensor/nextion_sensor.h" "nextion/sensor/nextion_sensor.h" >}} for more info).
 
 {{< anchor "nextion_sensor_set_state" >}}
@@ -173,7 +173,7 @@ Using the above yaml example:
 - "Current Humidity" will poll the Nextion for the `humidity.val` value and set the sensor accordingly.
 - "Current Temperature" will NOT poll the Nextion. Either the Nextion will need to use the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) or use a lambda:
 
-- :ref:`Lambda Calls <nextion_sensor_lambda_calls>`.
+- [Lambda Calls]({{< ref "components/sensor/nextion#nextion_sensor_lambda_calls" >}}).
 
 {{< note >}}
 No updates will be sent to the Nextion if it is sleeping. Once it wakes, the components will be updated. If a component is invisible, :code:`visible(false)`, then it won't update until it is set to be visible.

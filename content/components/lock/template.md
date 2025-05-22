@@ -44,11 +44,11 @@ Only `LOCK_STATE_LOCKED` and `LOCK_STATE_UNLOCKED` are supported by the MQTT com
 {{< /note >}}
 ## Configuration variables:
 
-- **lambda** (*Optional*, :ref:`lambda <config-lambda>`):
+- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
   Lambda to be evaluated repeatedly to get the current state of the lock.
-- **lock_action** (*Optional*, :ref:`Action <config-action>`): The action that should
+- **lock_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests the lock to be locked.
-- **unlock_action** (*Optional*, :ref:`Action <config-action>`): The action that should
+- **unlock_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
   be performed when the remote (like Home Assistant's frontend) requests the lock to be unlocked.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the template lock will immediately update the reported state.
@@ -56,7 +56,7 @@ Only `LOCK_STATE_LOCKED` and `LOCK_STATE_UNLOCKED` are supported by the MQTT com
 - **assumed_state** (*Optional*, boolean): Whether the true state of the lock is not known.
   This will make the Home Assistant frontend show buttons for both LOCK and UNLOCK actions, instead
   of hiding one of them when the lock is LOCKED/UNLOCKED. Defaults to `false`.
-- All other options from :ref:`Lock <config-lock>`.
+- All other options from [Lock]({{< ref "components/lock/_index#config-lock" >}}).
 
 {{< anchor "lock-template-publish_action" >}}
 
@@ -87,7 +87,7 @@ on_...:
 Configuration options:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template lock.
-- **state** (**Required**, boolean, :ref:`templatable <config-templatable>`):
+- **state** (**Required**, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})):
   The state to publish.
 
 {{< note >}}

@@ -695,7 +695,7 @@ def process_inline_markup(line):
     apiclass_matches = []
 
     # Find and store all :ref: patterns
-    for match in re.finditer(r':ref:`([^>`]+)`', processed_line):
+    for match in re.finditer(r':ref:`([^`]+)`', processed_line):
         ref_content = match.group(1)
         ref_matches.append((match.span(), ref_content))
     
@@ -743,8 +743,8 @@ def process_inline_markup(line):
         placeholder = f"__REF_PLACEHOLDER_{i}__"
         
         # Handle references with text and ID
-        if " <" in content and ">" in content:
-            text, ref_id = content.split(" <", 1)
+        if "<" in content and ">" in content:
+            text, ref_id = [x.strip() for x in content.split("<", 1)]
             ref_id = ref_id.rstrip(">")
             
             # Look up the document path for this anchor
@@ -775,7 +775,7 @@ def process_inline_markup(line):
         
         # Handle document references with text and path
         if "<" in content and ">" in content:
-            text, doc_path = content.split("<", 1)
+            text, doc_path = [x.strip() for x in content.split("<", 1)]
             doc_path = doc_path.rstrip(">")
             # Fix the path for Hugo content structure
             doc_path = fix_doc_path(doc_path)

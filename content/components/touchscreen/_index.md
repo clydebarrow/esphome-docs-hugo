@@ -59,11 +59,11 @@ touchscreen:
       (or right if `swap_xy` is specified) edge of the touchscreen.
 
 
-- **on_touch** (*Optional*, :ref:`Automation <automation>`): An automation to perform
+- **on_touch** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the touchscreen is touched. See [`on_touch` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_touch" >}}).
-- **on_update** (*Optional*, :ref:`Automation <automation>`): An automation to perform
+- **on_update** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the touchscreen is touched. See [`on_update` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_update" >}}).
-- **on_release** (*Optional*, :ref:`Automation <automation>`): An automation to perform
+- **on_release** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when the touchscreen is no longer touched. See [`on_release` Trigger]({{< ref "components/touchscreen/_index#touchscreen-on_release" >}}).
 
 
@@ -89,7 +89,7 @@ The integer members for the touch positions below are in relation to the display
 ## Calibration
 
 For most touchscreen drivers the dimensions of the touchscreen are automatically set from the display driver to match the screen size.
-In some cases such as the :ref:`XPT2046 <xpt2046-component>` (a resistive touch screen) the reported values bear no relation to the actual screen size.
+In some cases such as the [XPT2046]({{< ref "components/touchscreen/xpt2046#xpt2046-component" >}}) (a resistive touch screen) the reported values bear no relation to the actual screen size.
 The `calibration` configuration can be used to manually calibrate the touchscreen.
 
 To match the point of the touch to the display coordinates the touch screen has to be calibrated.
@@ -278,12 +278,12 @@ binary_sensor:
   area for touch buttons. To allow the sensor to register touches outside the display area set this to `true`. 
   The calibration values as above should be set to the display bounds.
 
-- All other options from :ref:`Binary Sensor <config-binary_sensor>`.
+- All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
 
 
 ## See Also
 
-- :ref:`Binary Sensor Filters <binary_sensor-filters>`
+- [Binary Sensor Filters]({{< ref "components/binary_sensor/_index#binary_sensor-filters" >}})
 - {{< docref "/components/display/inkplate6" "Inkplate 6 Plus" >}}
 - {{< docref "/components/touchscreen/ektf2232" "EKTF2232" >}}
 - {{< docref "/components/touchscreen/xpt2046" "XPT2046" >}}

@@ -70,7 +70,7 @@ light:
   - `P9813`
 
 - **method** (*Optional*, string): The method used to transmit the data. By default, ESPHome will try to use the best method
-  available for this chipset, ESP platform, and the given pin. See :ref:`methods <neopixelbus-methods>` for more information.
+  available for this chipset, ESP platform, and the given pin. See [methods]({{< ref "components/light/neopixelbus#neopixelbus-methods" >}}) for more information.
 
 - **invert** (*Optional*, boolean): Invert data output, for use with n-type transistors. Defaults to `no`.
 
@@ -83,7 +83,7 @@ If you have one line, only specify `pin`, otherwise specify both `clock_pin` and
 - **clock_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the clock line of the light, for two-wire lights.
 - **data_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the light, for two-wire lights.
 
-- All other options from :ref:`Light <config-light>`.
+- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 {{< warning >}}
 On ESP8266 it's highly recommended to connect the light strip to pin

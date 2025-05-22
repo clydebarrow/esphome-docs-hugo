@@ -47,7 +47,7 @@ time:
   Defaults to `true`.
 - **method** (*Optional*, string): The method to use for calculating the total daily energy. One of
   `trapezoid`, `left` or `right`. Defaults to `right`.
-- All other options from :ref:`Sensor <config-sensor>`.
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
 ## Converting from W to kW
 

@@ -50,12 +50,12 @@ output:
 ```
 Configuration variables:
 
-- **update_interval** (**Required**, :ref:`Time <config-time>`): The cycle interval at which the output is recalculated.
-- **pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The pin to pulse.
-- **state_change_action** (*Optional*, :ref:`Automation <automation>`): An automation to perform when the load is switched. If a lambda is used the boolean `state` parameter holds the new status.
-- **turn_on_action** (*Optional*, :ref:`Automation <automation>`): An automation to perform when the load is turned on. Can be used to control for example a switch or output component.
-- **turn_off_action** (*Optional*, :ref:`Automation <automation>`): An automation to perform when the load is turned off. `turn_on_action` and `turn_off_action` must be configured together.
-- All options from :ref:`Output <config-output>`.
+- **update_interval** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The cycle interval at which the output is recalculated.
+- **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to pulse.
+- **state_change_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is switched. If a lambda is used the boolean `state` parameter holds the new status.
+- **turn_on_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is turned on. Can be used to control for example a switch or output component.
+- **turn_off_action** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the load is turned off. `turn_on_action` and `turn_off_action` must be configured together.
+- All options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 {{< note >}}
 - If `pin` is defined, the GPIO pin state is writen before any action is executed.

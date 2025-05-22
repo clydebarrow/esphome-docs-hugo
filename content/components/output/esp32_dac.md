@@ -42,9 +42,9 @@ light:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, :ref:`Pin Schema <config-pin_schema>`): The pin to use DAC on. See above for valid pin numbers.
+- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin to use DAC on. See above for valid pin numbers.
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this output component.
-- All other options from :ref:`Output <config-output>`.
+- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
 
 ## Use Cases
 

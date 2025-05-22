@@ -14,7 +14,7 @@ Supported widgets are [`roller`]({{< ref "components/lvgl/widgets#lvgl-widget-ro
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the select.
 - **restore_value**: (*Optional*, bool) Restore the value of the select from non-volatile memory when the device is restarted. Defaults to `false`.
-- All other variables from :ref:`Select <config-select>`.
+- All other variables from [Select]({{< ref "components/select/_index#config-select" >}}).
 
 Example:
 
@@ -31,8 +31,8 @@ Widget-specific actions (`lvgl.dropdown.update`, `lvgl.roller.update`) will trig
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl" "LVGL Main component" >}}
-- :ref:`Roller widget <lvgl-widget-roller>`
-- :ref:`Dropdown widget <lvgl-widget-dropdown>`
+- [Roller widget]({{< ref "components/lvgl/widgets#lvgl-widget-roller" >}})
+- [Dropdown widget]({{< ref "components/lvgl/widgets#lvgl-widget-dropdown" >}})
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

@@ -60,37 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Dropdown menus for mobile
-  const dropbtns = document.querySelectorAll('.dropbtn');
-  
-  dropbtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      if (window.innerWidth <= 875) {
-        e.preventDefault();
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !expanded);
-        
-        const dropdown = this.nextElementSibling;
-        if (dropdown) {
-          dropdown.style.display = expanded ? 'none' : 'block';
-        }
-      }
-    });
-  });
-  
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.matches('.dropbtn')) {
-      dropbtns.forEach(btn => {
-        const dropdown = btn.nextElementSibling;
-        if (dropdown && dropdown.style.display === 'block' && window.innerWidth <= 875) {
-          dropdown.style.display = 'none';
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  });
-  
+
   // Table of Contents highlighting
   const tocLinks = document.querySelectorAll('.page-toc a');
   if (tocLinks.length > 0) {

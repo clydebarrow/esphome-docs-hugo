@@ -783,6 +783,12 @@ figcaption {
     display: block;
   }
 
+  .nav-search {
+    margin-left: auto;
+    margin-right: 10px;
+    position: relative;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -809,7 +815,7 @@ figcaption {
 
   .dropbtn {
     width: 100%;
-    text-align: left;
+    text-align: right;
     padding: 0.75em 1em;
   }
 

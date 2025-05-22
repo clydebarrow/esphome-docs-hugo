@@ -77,4 +77,10 @@ module:
       lang: ""
       source: pagefind
       target: static/pagefind
+    - disableWatch: false
+      excludeFiles: null
+      includeFiles: null
+      lang: ""
+      source: static/images
+      target: static/images
 

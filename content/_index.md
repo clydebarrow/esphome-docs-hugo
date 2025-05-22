@@ -5,8 +5,6 @@ title: "ESPHome - Smart Home Made Simple"
 
 {{< seo description="" image="" >}}
 
-{{< button href="/" img="_images/logo.svg" alt="ESPHome Logo" >}}
-{{< html_file file="images/logo-text.svg" class="dark-invert  hero-img" >}}
 <div class="hero-container">
 <div class="hero-content">
 <h1>Smart Home Made Simple</h1>

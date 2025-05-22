@@ -143,8 +143,10 @@ img {
   align-items: center;
 }
 
-.nav-logo img {
+.nav-logo img, svg {
   height: 30px;
+  padding: 0;
+  width: fit-content;
 }
 
 .nav-links {
@@ -665,11 +667,6 @@ main {
 .casita {
   fill: var(--logo-casita-color, #18BCF2);
 }
-
-.text {
-  fill: var(--logo-text-color, #1D2126);
-}
-
 
 .hero-img img {
   max-width: 100%;

@@ -20,7 +20,9 @@
     <div class="nav-container" id="nav-container">
         <nav class="sticky-nav">
             <div class="nav-logo">
-                <a href="{{ "/" | relURL }}"><img src="{{ "images/logo-text-on-dark.svg" | relURL }}" alt="ESPHome Logo" height="30"></a>
+                <a href="{{ "/" | relURL }}">
+                    {{ os.ReadFile "static/images/logo-text.svg"  | safeHTML }}
+                </a>
             </div>
             <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false">
                 <i class="fa-solid fa-list"></i>

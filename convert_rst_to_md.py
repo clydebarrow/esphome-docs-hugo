@@ -1343,6 +1343,7 @@ def process_raw_html_button(lines, i):
     file_match = None
     class_match = None
     for line in raw_html_content:
+        print(line)
         if not file_match:
             file_match = re.search(r':file: (.+)', line.strip())
         if not class_match:
@@ -1351,7 +1352,9 @@ def process_raw_html_button(lines, i):
     if file_match:
         href = file_match.group(1)
         href = href.replace('../', '', 1)
-        class_ = 'class="' + class_match.group(1) + '"' if class_match else ''
+        classes = class_match.group(1).replace(',', ' ').strip()
+        class_ = 'class="' + classes + '"' if class_match else ''
+        print(class_)
         button_lines.append(f'{{{{< html_file file="{href}" {class_} >}}}}')
         return button_lines, i
 

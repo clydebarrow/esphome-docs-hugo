@@ -1,12 +1,43 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile navigation toggle
+  const scrollThreshold = 5; // Minimum scroll amount before triggering hide/show
+  const navContainer = document.getElementById('nav-container');
+  let scrollDelta = 0; // Track cumulative scroll amount
+  let lastScrollTop = 0;
+
+
+  function scroll_bar(newDelta) {
+    let navHeight = navContainer.offsetHeight;
+    // Remove the transition class when scrolling down for direct tracking
+    navContainer.classList.remove('nav-scrolling-up');
+
+    // Increase the scroll delta by the amount scrolled - start immediately from top
+    scrollDelta += newDelta;
+
+    // Cap the scroll delta at the nav height
+    console.log("Original scrolldelta", scrollDelta, "navHeight", navHeight);
+    scrollDelta = Math.min(scrollDelta, navHeight);
+    console.log("New scrolldelta", scrollDelta);
+
+    // Apply the transform
+    navContainer.style.transform = `translateY(-${scrollDelta}px)`;
+
+    // If fully hidden, add the nav-hidden class
+    if (scrollDelta >= navHeight) {
+      navContainer.classList.add('nav-hidden');
+    }
+  }
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a'); // Find nearest <a>
+    if (link) {
+      window.setTimeout( () => {
+        scroll_bar(navContainer.offsetHeight);
+      }, 200);
+    }
+  });
 
   // Header scroll behavior
-  const navContainer = document.getElementById('nav-container');
-  let lastScrollTop = 0;
-  let scrollThreshold = 5; // Minimum scroll amount before triggering hide/show
-  let navHeight = navContainer.offsetHeight;
-  let scrollDelta = 0; // Track cumulative scroll amount
   let ticking = false; // Flag to prevent multiple rAF calls
   
   function handleScroll() {
@@ -20,22 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Scrolling down - directly track the scroll position
     if (currentScrollTop > lastScrollTop) {
-      // Remove the transition class when scrolling down for direct tracking
-      navContainer.classList.remove('nav-scrolling-up');
-      
-      // Increase the scroll delta by the amount scrolled - start immediately from top
-      scrollDelta += (currentScrollTop - lastScrollTop);
-      
-      // Cap the scroll delta at the nav height
-      scrollDelta = Math.min(scrollDelta, navHeight);
-      
-      // Apply the transform
-      navContainer.style.transform = `translateY(-${scrollDelta}px)`;
-      
-      // If fully hidden, add the nav-hidden class
-      if (scrollDelta >= navHeight) {
-        navContainer.classList.add('nav-hidden');
-      }
+      scroll_bar(currentScrollTop - lastScrollTop);
     } 
     // Scrolling up - smooth transition back
     else if (currentScrollTop < lastScrollTop) {

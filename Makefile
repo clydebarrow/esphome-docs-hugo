@@ -5,7 +5,7 @@ html:
 	npx pagefind
 
 live-html:	html
-	hugo server
+	hugo server --baseURL "" --bind 0.0.0.0
 
 clean:
 	rm -rf "public/*"

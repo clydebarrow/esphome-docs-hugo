@@ -1,8 +1,26 @@
 // Add keyboard support for dropdown menus
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdownButtons = document.querySelectorAll('.dropbtn');
     const bodystyle = window.getComputedStyle(document.body);
     const mobileWidthStop = parseInt(bodystyle.getPropertyValue('--mobile-width-stop'));
+
+    const tocToggle = document.getElementById('toc-toggle');
+    const tocPanel = document.getElementsByClassName('sidebar')[0];
+    const overlay = document.getElementById('overlay');
+
+    function openTOC() {
+        tocPanel.classList.add('open');
+        overlay.classList.add('show');
+    }
+
+    function closeTOC() {
+        tocPanel.classList.remove('open');
+        overlay.classList.remove('show');
+    }
+
+    tocToggle.addEventListener('click', openTOC);
+    overlay.addEventListener('click', closeTOC);
+
+    const dropdownButtons = document.querySelectorAll('.dropbtn');
 
     dropdownButtons.forEach(button => {
         // Handle Enter and Space key presses
@@ -46,6 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         if (!e.target.matches('.dropbtn')) {
             closeAllDropdowns();
+        }
+        if (!e.target.matches('.toc-button') && !e.target.matches('.fa-list')) {
+            closeTOC();
         }
     });
 

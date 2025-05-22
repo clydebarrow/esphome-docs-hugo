@@ -22,6 +22,9 @@
             <div class="nav-logo">
                 <a href="{{ "/" | relURL }}"><img src="{{ "images/logo-text-on-dark.svg" | relURL }}" alt="ESPHome Logo" height="30"></a>
             </div>
+            <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false">
+                <i class="fa-solid fa-list"></i>
+            </button>
             <button type="button" class="hamburger-button" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -67,6 +70,8 @@
             </div>
         </nav>
     </div>
+    <div id="overlay" class="overlay"></div>
+
 
     <script src="/pagefind/pagefind-modular-ui.js"></script>
     <script src="/js/menu.js" defer></script>
@@ -81,7 +86,6 @@
                 <span>ESPHome is a project from the</span></p>
                 <img src="{{ "images/ohf-logo-on-dark.svg" | relURL }}" alt="ESPHome Logo" width="180px">
             </a>
-            <div class="footer-links">
                 <div class="footer-column">
                     <h3>Documentation</h3>
                     <ul>
@@ -106,7 +110,6 @@
                         <li><a href="https://devices.esphome.io/"><i class="fa fa-microchip"></i>Device Database</a></li>
                         <li><a href="https://developers.esphome.io"><i class="fa fa-code"></i>Development</a></li>
                     </ul>
-                </div>
             </div>
         </div>
     </footer>

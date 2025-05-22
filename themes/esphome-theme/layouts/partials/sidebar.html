@@ -22,15 +22,8 @@
         {{ end }}
     </nav>
 
-    <div class="sidebar-contact">
-        <h3>Contact</h3>
-        <ul class="sidebar-social">
-            <li><a href="https://discord.gg/KhAMKrd" target="_blank"><i class="fab fa-discord"></i>Discord</a></li>
-            <li><a href="https://github.com/esphome/esphome" target="_blank"><i class="fab fa-github"></i>GitHub Repo</a></li>
-            <li><a href="https://community.home-assistant.io/c/esphome/" target="_blank"><i class="fas fa-comments"></i>Forums</a></li>
-        </ul>
-    </div>
     <div class="sidebar-resource">
+        <hr>
         <ul class="sidebar-social">
         {{ $repo := .Site.Data.repo.url }}
         {{ with .File }}

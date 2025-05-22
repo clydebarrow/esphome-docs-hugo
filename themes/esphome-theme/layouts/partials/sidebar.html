@@ -6,7 +6,7 @@
         <h3>On This Page</h3>
         {{ $startLevel := 2 }}
         {{ $endLevel := 3 }}
-        {{ $ordered := true }}
+        {{ $ordered := false }}
         {{ .Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML }}
         {{ end }}
         {{ end }}

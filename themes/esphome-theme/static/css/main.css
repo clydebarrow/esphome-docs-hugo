@@ -209,7 +209,7 @@ img {
   border: 1px solid #ddd;
   font-size: 14px;
   width: 180px;
-  transition: width 0.3s;
+  transition: width 0.3s 0.1s;
   background-color: #f5f5f5;
 }
 
@@ -347,8 +347,11 @@ main {
 }
 
 .sidebar-nav ul {
-  list-style: none;
+  list-style: disc;
   margin: 0 0 1.5em 0;
+  & ul {
+    list-style: none;
+  }
 }
 
 .sidebar-nav li {

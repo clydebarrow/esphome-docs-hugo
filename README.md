@@ -118,19 +118,35 @@ You can include **Markdown** formatting within the warning.
 {{< /warning >}}
 ```
 
+### `apiref`
+Creates a link to a C++ API header file.
+```
+{{< apiref "Component" "esphome/core/component.h" >}}
+```
+
+### `apiclass`
+Creates a link specifically to a C++ class in the API documentation.
+```
+{{< apiclass "ClimateDevice" "esphome::climate::ClimateDevice" >}}
+{{< apiclass "WiFiComponent" "esphome::wifi::WiFiComponent" >}}
+```
+
+### `apistruct`
+Creates a link specifically to a C++ struct in the API documentation.
+```
+{{< apistruct "SensorStateClass" "esphome::sensor::SensorStateClass" >}}
+{{< apistruct "GPIOOutputPin" "esphome::output::GPIOOutputPin" >}}
+```
+
 ## Conversion Scripts
 
-Two Python scripts are included to help with the conversion process:
+A Python script is included to help with the conversion process from RST:
 
-1. `convert_rst_to_md.py` - Converts Sphinx RST files to Hugo Markdown format
-   ```
+`convert_rst_to_md.py` - Converts Sphinx RST files to Hugo Markdown format
+ ```
    python convert_rst_to_md.py /path/to/sphinx/docs /path/to/hugo/content
-   ```
+ ```
 
-2. `copy_static_assets.py` - Copies static assets from Sphinx to Hugo
-   ```
-   python copy_static_assets.py /path/to/sphinx/docs /path/to/hugo
-   ```
 
 ## Development
 

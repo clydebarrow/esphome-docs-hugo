@@ -1,6 +1,8 @@
 // Add keyboard support for dropdown menus
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownButtons = document.querySelectorAll('.dropbtn');
+    const bodystyle = window.getComputedStyle(document.body);
+    const mobileWidthStop = parseInt(bodystyle.getPropertyValue('--mobile-width-stop'));
 
     dropdownButtons.forEach(button => {
         // Handle Enter and Space key presses
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Handle click events
         button.addEventListener('click', function(e) {
-            if (window.innerWidth > 768) return; // Only mobile
+            if (window.innerWidth > mobileWidthStop) return; // Only mobile
             e.preventDefault();
             // Close others
             dropdownButtons.forEach(function(otherBtn) {
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle dropdown function
     function toggleDropdown(button) {
-        if (window.innerWidth > 768) return;
+        if (window.innerWidth > mobileWidthStop) return;
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
         closeAllDropdowns();
 
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close all dropdowns
     function closeAllDropdowns() {
-        if (window.innerWidth > 768) return;
+        if (window.innerWidth > mobileWidthStop) return;
         dropdownButtons.forEach(btn => {
             btn.setAttribute('aria-expanded', 'false');
             const dropdownContent = btn.nextElementSibling;
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     // Close menu on outside click (mobile only)
     document.addEventListener('click', function(e) {
-        if (window.innerWidth > 768) return;
+        if (window.innerWidth > mobileWidthStop) return;
         if (!e.target.closest('.hamburger-button') && !e.target.closest('.nav-links')) {
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
@@ -93,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     // Close menu on resize to desktop
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > mobileWidthStop) {
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
             hamburger.setAttribute('aria-expanded', 'false');

@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile navigation toggle
-  const hamburgerButton = document.querySelector('.hamburger-button');
-  const navLinks = document.querySelector('.nav-links');
-  
-  if (hamburgerButton && navLinks) {
-    hamburgerButton.addEventListener('click', function() {
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !expanded);
-      navLinks.classList.toggle('active');
-    });
-  }
-  
+
   // Header scroll behavior
   const navContainer = document.getElementById('nav-container');
   let lastScrollTop = 0;

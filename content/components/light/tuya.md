@@ -87,7 +87,7 @@ Therefore the `gamma_correct` setting default is `1.0` and the
 ## See Also
 
 - {{< docref "/components/tuya" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< apiref "tuya/light/tuya_light.h" "tuya/light/tuya_light.h" >}}
 
 

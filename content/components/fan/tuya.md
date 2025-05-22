@@ -61,7 +61,7 @@ over the serial bus.
 ## See Also
 
 - {{< docref "/components/tuya" >}}
-- {{< docref "/components/fan/index" >}}
+- {{< docref "/components/fan" >}}
 - {{< apiref "tuya/fan/tuya_fan.h" "tuya/fan/tuya_fan.h" >}}
 
 

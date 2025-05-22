@@ -63,7 +63,7 @@ Configuration variables:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/light/monochromatic" >}}
 - {{< docref "/components/fan/speed" >}}

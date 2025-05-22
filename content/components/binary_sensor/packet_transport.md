@@ -44,8 +44,8 @@ configured.
 
 ## See Also
 
-- {{< docref "/components/packet_transport/index" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/packet_transport" >}}
+- {{< docref "/components/sensor" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 
 

@@ -52,7 +52,7 @@ HowTo by [NUT].
 
 ## See also
 
-- {{< docref "/components/speaker/index" >}}
+- {{< docref "/components/speaker" >}}
 - {{< docref "/components/speaker/i2s_audio" >}}
 
 

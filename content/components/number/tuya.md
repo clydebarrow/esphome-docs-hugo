@@ -98,7 +98,7 @@ Therefore there is also an option to store them on the ESPHome side and they wil
 
 ## See Also
 
-- {{< docref "/components/number/index" >}}
+- {{< docref "/components/number" >}}
 - {{< apiref "tuya/number/tuya_number.h" "tuya/number/tuya_number.h" >}}
 
 

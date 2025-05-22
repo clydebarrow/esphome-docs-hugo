@@ -23,7 +23,7 @@ button:
 
 ## See Also
 
-- {{< docref "/automations/index" >}}
-- {{< docref "/components/button/index" >}}
+- {{< docref "/automations" >}}
+- {{< docref "/components/button" >}}
 
 

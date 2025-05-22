@@ -24,7 +24,7 @@ If you don't have it please read the section [Remote peer setup]({{< ref "compon
 {{< warning >}}
 This component requires the system clock to be synchronized.
 
-See {{< docref "time/index" >}} to setup a time source
+See {{< docref "time/" >}} to setup a time source
 and **do not use** `homeassistant` time-platform if
 Home Assistant is on the remote peer because the time
 synchronization is a prerequisite to establish the VPN link.
@@ -354,7 +354,7 @@ of the :ref:`address <wireguard-address>` configured here.
 {{< /note >}}
 ## See Also
 
-- {{< docref "time/index" >}}
+- {{< docref "time/" >}}
 - {{< docref "time/sntp" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - |wireguard|_ official website

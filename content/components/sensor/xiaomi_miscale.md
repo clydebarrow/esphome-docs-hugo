@@ -102,7 +102,7 @@ sensor:
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 - bodymiscale score integration for Home Assistant (bodymiscale custom component) `<https://github.com/dckiller51/bodymiscale>`__
 - bodymiscale Lovelace Card `<https://github.com/dckiller51/lovelace-body-miscale-card>`__
 

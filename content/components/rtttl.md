@@ -34,7 +34,7 @@ rtttl:
 ```
 ## Overview Using the I2S speaker
 
-The tone generator can instead be used with a {{< docref "/components/speaker/index" "Speaker" >}} to output the audio.
+The tone generator can instead be used with a {{< docref "/components/speaker" "Speaker" >}} to output the audio.
 
 ```yaml
 # Example configuration entry
@@ -169,7 +169,7 @@ api:
 ## See Also
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/ledc" >}}
-- {{< docref "/components/speaker/index" >}}
+- {{< docref "/components/speaker" >}}
 - {{< apiref "rtttl/rtttl.h" "rtttl/rtttl.h" >}}
 
 

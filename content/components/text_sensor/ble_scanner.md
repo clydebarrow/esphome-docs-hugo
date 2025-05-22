@@ -50,7 +50,7 @@ Example json log:
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-- {{< docref "/components/text_sensor/index" >}}
+- {{< docref "/components/text_sensor" >}}
 - {{< apiref "ble_scanner/ble_scanner.h" "ble_scanner/ble_scanner.h" >}}
 
 

@@ -111,7 +111,7 @@ id(my_template_valve).publish_state();
 {{< /note >}}
 ## See Also
 
-- {{< docref "/components/valve/index" >}}
+- {{< docref "/components/valve" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/valve/template_valve.h" "template/valve/template_valve.h" >}}

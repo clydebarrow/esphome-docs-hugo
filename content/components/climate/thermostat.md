@@ -478,7 +478,7 @@ climate:
   any given fan mode must be active before it may be changed.
 
 Note that `min_temperature` and `max_temperature` from the base climate component are used to define
-the range of allowed temperature values in the thermostat component. See {{< docref "/components/climate/index" >}}.
+the range of allowed temperature values in the thermostat component. See {{< docref "/components/climate" >}}.
 
 ### Hysteresis Values
 
@@ -496,7 +496,7 @@ the range of allowed temperature values in the thermostat component. See {{< doc
     For example, controlling humidity is also possible with this platform.
 - `min_temperature` and `max_temperature` from the base climate component are used the define the range of
     adjustability and the defaults will probably not make sense for control of things like humidity. See
-    {{< docref "/components/climate/index" >}}.
+    {{< docref "/components/climate" >}}.
 
 {{< /note >}}
 ## Bang-Bang vs. Thermostat
@@ -505,8 +505,8 @@ Please see the {{< docref "bang_bang/" "Bang-Bang" >}} component's documentation
 
 ## See Also
 
-- {{< docref "/components/climate/index" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/climate" >}}
+- {{< docref "/components/sensor" >}}
 - {{< docref "bang_bang/" "Bang-Bang" >}}
 - [All Actions]({{< ref "automations/actions#config-action" >}})
 

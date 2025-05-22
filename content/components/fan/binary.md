@@ -32,9 +32,9 @@ fan:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/output/gpio" >}}
-- {{< docref "/components/fan/index" >}}
+- {{< docref "/components/fan" >}}
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}
 
 

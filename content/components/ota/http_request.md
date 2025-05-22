@@ -23,7 +23,7 @@ ota:
 ```
 ## Configuration variables:
 
-- All :ref:`automations <automation>` supported by {{< docref "/components/ota/index" >}}.
+- All :ref:`automations <automation>` supported by {{< docref "/components/ota" >}}.
 
 {{< anchor "ota_http_request-flash_action" >}}
 
@@ -102,7 +102,7 @@ on_...:
 ## See Also
 
 - {{< apiref "ota/ota_component.h" "ota/ota_component.h" >}}
-- {{< docref "/components/ota/index" >}}
+- {{< docref "/components/ota" >}}
 - {{< docref "/components/ota/esphome" >}}
 - {{< docref "/components/safe_mode" >}}
 

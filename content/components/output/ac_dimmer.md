@@ -69,7 +69,7 @@ the monochromatic light.
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/light/monochromatic" >}}
 - {{< apiref "ac_dimmer/ac_dimmer.h" "ac_dimmer/ac_dimmer.h" >}}
 

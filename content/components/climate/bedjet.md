@@ -41,7 +41,7 @@ bedjet:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **ble_client_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the BLE Client.
-- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/time/index" >}}ndex` which
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/time" >}}ndex` which
   can be used to set the time on the BedJet device.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to dispatch status
   changes to child components. Defaults to `5s`. Each child component can decide whether to
@@ -203,7 +203,7 @@ ota:
 ## See Also
 
 - {{< docref "/components/ble_client" >}}
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< apiref "bedjet/bedjet.h" "bedjet/bedjet.h" >}}
 
 

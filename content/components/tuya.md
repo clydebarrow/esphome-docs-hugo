@@ -55,7 +55,7 @@ Here is another example output for a Tuya ME-81H thermostat:
 ## Configuration variables:
 
 - **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Some Tuya devices support obtaining local time from ESPHome.
-  Specify the ID of the {{< docref "time/index" >}} which will be used.
+  Specify the ID of the {{< docref "time/" >}} which will be used.
 
 - **status_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): Some Tuya devices support WiFi status reporting ONLY through gpio pin.
   Specify the pin reported in the config dump or leave empty otherwise.

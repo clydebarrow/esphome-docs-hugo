@@ -45,8 +45,8 @@ calculation assumes that both lights have the same illuminance, which might not 
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/rgb" >}}
 - {{< docref "/components/light/rgbw" >}}
 - {{< docref "/components/light/rgbww" >}}

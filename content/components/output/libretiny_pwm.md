@@ -55,7 +55,7 @@ Configuration variables:
 ## See Also
 
 - {{< docref "/components/libretiny" >}}
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/light/monochromatic" >}}
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}

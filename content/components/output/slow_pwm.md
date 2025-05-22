@@ -74,7 +74,7 @@ actuator heads or fans.
 {{< /note >}}
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/sigma_delta_output" >}}

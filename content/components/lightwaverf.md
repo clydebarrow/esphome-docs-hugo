@@ -71,6 +71,6 @@ Compatible receiver:
 
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 
 

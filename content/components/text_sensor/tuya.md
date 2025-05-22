@@ -26,7 +26,7 @@ text_sensor:
 ## See Also
 
 - {{< docref "/components/tuya" >}}
-- {{< docref "/components/text_sensor/index" >}}
+- {{< docref "/components/text_sensor" >}}
 - {{< apiref "tuya/text_sensor/tuya_text_sensor.h" "tuya/text_sensor/tuya_text_sensor.h" >}}
 
 

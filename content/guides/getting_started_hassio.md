@@ -158,7 +158,7 @@ Each time you modify a device's configuration file, you need to update the devic
 and reinstall your updated configuration onto the device.
 
 Note that you won't need to have the device connected to your system with a USB data cable again, as (once ESPHome is
-installed on your device) it can update the device {{< docref "/components/ota/index" ""over the air"" >}}.
+installed on your device) it can update the device {{< docref "/components/ota" ""over the air"" >}}.
 
 {{< anchor "connecting-your-device-to-home-assistant" >}}
 
@@ -180,14 +180,14 @@ You can repeat this process for each ESPHome device.
 Great! 🎉 You've successfully set up your first ESPHome project and installed your first ESPHome custom firmware to your
 device. You've also learned how to enable some basic components via the configuration file.
 
-Now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}. Hopefully you'll find all the hardware
+Now is a great time to go take a look at the {{< docref "/" "Components Index" >}}. Hopefully you'll find all the hardware
 components you need there. If you're having any problems or want to request new features, please either create a new
 issue on the [GitHub issue tracker](https://github.com/esphome/issues/issues) or find us on the
 [Discord chat](https://discord.gg/KhAMKrd). Be sure to read the {{< docref "faq/" "FAQ" >}}, as well!
 
 ## See Also
 
-- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 
 

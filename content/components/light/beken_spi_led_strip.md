@@ -51,7 +51,7 @@ light:
 
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "beken_spi_led_strip/beken_spi_led_strip.h" "beken_spi_led_strip/beken_spi_led_strip.h" >}}
 

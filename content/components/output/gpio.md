@@ -32,7 +32,7 @@ see the {{< docref "/components/switch/gpio" >}}.
 ## See Also
 
 - {{< docref "/components/switch/gpio" >}}
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/light/binary" >}}

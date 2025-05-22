@@ -33,8 +33,8 @@ fan:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/fan/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/fan" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/pca9685" >}}

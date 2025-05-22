@@ -34,8 +34,8 @@ switch:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/switch/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/switch" >}}
 - {{< apiref "hbridge/switch/hbridge_switch.h" "hbridge/switch/hbridge_switch.h" >}}
 
 

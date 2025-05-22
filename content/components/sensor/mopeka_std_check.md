@@ -137,7 +137,7 @@ ESPHome therefore has no impact on the battery life of the device.
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 - {{< apiref "mopeka_std_check/mopeka_std_check.h" "mopeka_std_check/mopeka_std_check.h" >}}
 
 

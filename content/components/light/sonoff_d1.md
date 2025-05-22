@@ -101,7 +101,7 @@ light:
 
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/logger" >}}
 - {{< docref "/components/esp8266" >}}

@@ -54,7 +54,7 @@ pin:
 
 - {{< docref "/components/status_led" >}}
 - {{< docref "/components/light/binary" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< apiref "status_led/light/status_led_light.h" "status_led/light/status_led_light.h" >}}
 
 

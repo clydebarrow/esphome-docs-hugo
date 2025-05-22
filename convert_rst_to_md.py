@@ -1478,6 +1478,8 @@ def fix_doc_path(path):
     path = path.lower()
     if path.endswith('.rst'):
         path = path[:-4]
+    if path.endswith('/index'):
+        path = path[:-6]
     
     # Handle special cases for components
 #    if path.startswith('components/'):

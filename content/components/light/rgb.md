@@ -61,8 +61,8 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 
 {{< img src="rgb-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/rgbw" >}}
 - {{< docref "/components/light/rgbww" >}}
 - {{< docref "/components/light/rgbct" >}}

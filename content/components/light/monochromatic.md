@@ -30,8 +30,8 @@ light:
 
 {{< img src="monochromatic-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/binary" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< docref "/components/output/ledc" >}}

@@ -26,7 +26,7 @@ binary_sensor:
 ## See Also
 
 - {{< docref "/components/tuya" >}}
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "tuya/binary_sensor/tuya_binary_sensor.h" "tuya/binary_sensor/tuya_binary_sensor.h" >}}
 
 

@@ -110,7 +110,7 @@ text_sensor:
 ```
 ## See Also
 
-- {{< docref "/components/text_sensor/index" >}}
+- {{< docref "/components/text_sensor" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< apiref "template/text_sensor/template_text_sensor.h" "template/text_sensor/template_text_sensor.h" >}}
 

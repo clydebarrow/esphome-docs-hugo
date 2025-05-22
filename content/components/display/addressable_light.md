@@ -126,7 +126,7 @@ display:
 ## See Also
 
 - {{< apiref "addressable_light/addressable_light_display.h" "addressable_light/addressable_light_display.h" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/light/neopixelbus" >}}
 - {{< docref "/components/light/partition" >}}

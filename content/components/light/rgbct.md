@@ -43,8 +43,8 @@ light:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/rgb" >}}
 - {{< docref "/components/light/rgbw" >}}
 - {{< docref "/components/light/rgbww" >}}

@@ -154,7 +154,7 @@ light:
 
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/spi_led_strip" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "fastled_base/fastled_light.h" "fastled_base/fastled_light.h" >}}

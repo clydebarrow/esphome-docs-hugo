@@ -55,8 +55,8 @@ on_...:
 ```
 ## See Also
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/fan/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/fan" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}

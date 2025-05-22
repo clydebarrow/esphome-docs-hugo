@@ -351,7 +351,7 @@ This "pulls in" the contents of your Home Assistant `secrets.yaml` file from the
 
 ## Does ESPHome support [this device/feature]?
 
-If it's not in {{< docref "/index" "the docs" >}}, it's not (officially) supported. However, we are always adding support for new
+If it's not in {{< docref "/" "the docs" >}}, it's not (officially) supported. However, we are always adding support for new
 features.
 
 In some cases, community-provided {{< docref "/components/external_components" >}} are available; keep in mind that these are not
@@ -613,7 +613,7 @@ re-add the device in Home Assistant.
 
 ## See Also
 
-- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/" "ESPHome index" >}}
 - [Developer site](https://developers.esphome.io)
 
 

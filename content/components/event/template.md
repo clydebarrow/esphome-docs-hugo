@@ -24,7 +24,7 @@ event:
 
 ## See Also
 
-- {{< docref "/automations/index" >}}
-- {{< docref "/components/event/index" >}}
+- {{< docref "/automations" >}}
+- {{< docref "/components/event" >}}
 
 

@@ -94,7 +94,7 @@ logger:
 
 The most important function for a thermostat is to set the boiler temperature setpoint. This component has three ways
 to provide this input: using a Home Assistant sensor from which the setpoint can be read, using a
-{{< docref "/components/number/index" >}}, or defining an output to which other components can write. For most users, the last
+{{< docref "/components/number" >}}, or defining an output to which other components can write. For most users, the last
 option is the most useful one, as it can be combined with the {{< docref "/components/climate/pid" >}} component to create a
 thermostat that works as you would expect a thermostat to work. See [Basic PID thermostat]({{< ref "components/opentherm#thermostat-pid-basic" >}}) for an example.
 

@@ -36,7 +36,7 @@ ota:
 -  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 -  **version** (*Optional*, int): Version of OTA protocol to use. Version 2 is more stable. To downgrade to legacy
    ESPHome, the device should be updated with OTA version 1 first. Defaults to `2`.
--  All :ref:`automations <automation>` supported by {{< docref "/components/ota/index" >}}.
+-  All :ref:`automations <automation>` supported by {{< docref "/components/ota" >}}.
 
 {{< note >}}
 After a serial upload, ESP8266 modules must be reset before OTA updates will work. If you attempt to perform an OTA
@@ -83,7 +83,7 @@ If OTA is already enabled without a password, simply add a `password:` line to t
 ## See Also
 
 - {{< apiref "ota/ota_component.h" "ota/ota_component.h" >}}
-- {{< docref "/components/ota/index" >}}
+- {{< docref "/components/ota" >}}
 - {{< docref "/components/ota/http_request" >}}
 - {{< docref "/components/safe_mode" >}}
 

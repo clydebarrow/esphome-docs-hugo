@@ -92,9 +92,9 @@ id(template_swi).publish_state(false);
 {{< /note >}}
 ## See Also
 
-- {{< docref "/automations/index" >}}
-- {{< docref "/components/switch/index" >}}
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/automations" >}}
+- {{< docref "/components/switch" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "template/switch/template_switch.h" "template/switch/template_switch.h" >}}
 
 

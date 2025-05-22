@@ -43,8 +43,8 @@ configured.
 
 ## See Also
 
-- {{< docref "/components/packet_transport/index" >}}
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/packet_transport" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/udp" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 

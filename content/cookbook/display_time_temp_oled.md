@@ -148,7 +148,7 @@ display:
 ## See Also
 
 - {{< docref "/components/display/ssd1306" >}}
-- {{< docref "/components/display/index" >}}
+- {{< docref "/components/display" >}}
 - {{< docref "/components/sensor/homeassistant" >}}
 
 

@@ -69,7 +69,7 @@ like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 - {{< apiref "ble_rssi/ble_rssi_sensor.h" "ble_rssi/ble_rssi_sensor.h" >}}
 
 

@@ -101,9 +101,9 @@ id(template_lock1).publish_state(lock::LOCK_STATE_LOCKED);
 {{< /note >}}
 ## See Also
 
-- {{< docref "/automations/index" >}}
-- {{< docref "/components/lock/index" >}}
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/automations" >}}
+- {{< docref "/components/lock" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "template/lock/template_lock.h" "template/lock/template_lock.h" >}}
 
 

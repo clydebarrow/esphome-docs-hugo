@@ -231,7 +231,7 @@ climate:
     transmitted to the `RAC-PT1411HWRU` in the same manner as the original remote controller. How often the
     temperature is transmitted is determined by the `update_interval` assigned to the `sensor`. Note that
     `update_interval` must be less than seven minutes or the `RAC-PT1411HWRU` will revert to using its own
-    internal temperature sensor; a value of 30 seconds seems to work well. See {{< docref "/components/sensor/index" >}}
+    internal temperature sensor; a value of 30 seconds seems to work well. See {{< docref "/components/sensor" >}}
     for more information.
 
 - This climate IR component is also known to work with Midea model MAP14HS1TBL and may work with other similar
@@ -336,16 +336,16 @@ AC unit. If a `sensor` is provided in the configuration with this model, the sen
 transmitted to the `greeyac` device in the same manner as the original remote controller. How often the
 temperature is transmitted is determined by the `update_interval` assigned to the `sensor`. Note that
 `update_interval` must be less than 10 minutes or the `greeyac` device will revert to using its own
-internal temperature sensor; a value of 2 minutes seems to work well. See {{< docref "/components/sensor/index" >}}
+internal temperature sensor; a value of 2 minutes seems to work well. See {{< docref "/components/sensor" >}}
 for more information.
 
 {{< /note >}}
 ## See Also
 
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< docref "/components/remote_receiver" >}}
 - {{< docref "/components/remote_transmitter" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 - {{< apiref "ballu.h" "ballu/ballu.h" >}},
   {{< apiref "climate_ir_lg.h" "climate_ir_lg/climate_ir_lg.h" >}}
   {{< apiref "coolix.h" "coolix/coolix.h" >}},

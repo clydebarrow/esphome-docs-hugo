@@ -74,7 +74,7 @@ In this condition, it will go into an error / uncalibrated state when it next tr
 ## See Also
 
 - {{< docref "/components/tuya" >}}
-- {{< docref "/components/cover/index" >}}
+- {{< docref "/components/cover" >}}
 - {{< apiref "tuya/cover/tuya_cover.h" "tuya/cover/tuya_cover.h" >}}
 
 

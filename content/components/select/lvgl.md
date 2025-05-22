@@ -6,7 +6,7 @@ title: "LVGL Select"
 {{< seo description="" image="" >}}
 
 The `lvgl` select platform creates a select from an LVGL widget
-and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
+and requires {{< docref "/components/lvgl" "LVGL" >}} to be configured.
 
 Supported widgets are [`roller`]({{< ref "components/lvgl/widgets#lvgl-widget-roller" >}}) and [`dropdown`]({{< ref "components/lvgl/widgets#lvgl-widget-dropdown" >}}). A single select supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome select component.
 
@@ -30,7 +30,7 @@ Widget-specific actions (`lvgl.dropdown.update`, `lvgl.roller.update`) will trig
 
 {{< /note >}}
 ## See Also
-- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
+- {{< docref "/components/lvgl" "LVGL Main component" >}}
 - :ref:`Roller widget <lvgl-widget-roller>`
 - :ref:`Dropdown widget <lvgl-widget-dropdown>`
 - {{< docref "/components/binary_sensor/lvgl" >}}

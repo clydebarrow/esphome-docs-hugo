@@ -208,7 +208,7 @@ switch:
 ## See Also
 
 - {{< docref "index/" >}}
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "template/alarm_control_panel/template_alarm_control_panel.h" "template/alarm_control_panel/template_alarm_control_panel.h" >}}
 
 

@@ -30,7 +30,7 @@ fan:
 
 ## See Also
 
-- {{< docref "/components/fan/index" >}}
+- {{< docref "/components/fan" >}}
 - {{< apiref "template/fan/template_fan.h" "template/fan/template_fan.h" >}}
 
 

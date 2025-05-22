@@ -43,7 +43,7 @@ output:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< apiref "x9c/x9c.h" "x9c/x9c.h" >}}
 
 

@@ -176,7 +176,7 @@ In all other situations, the {{< docref "thermostat/" "thermostat" >}} component
 
 ## See Also
 
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< apiref "bang_bang/bang_bang_climate.h" "bang_bang/bang_bang_climate.h" >}}
 
 

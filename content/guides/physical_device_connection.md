@@ -9,7 +9,7 @@ installation, which requires connecting your ESP device to a computer using a
 data cable.
 
 **You only need to do this once per device.** Once you've flashed ESPHome on a
-device, you can use {{< docref "/components/ota/index" >}} to upload new
+device, you can use {{< docref "/components/ota" >}} to upload new
 versions or configuration changes wirelessly.
 
 ESPHome runs on a wide variety of devices, so it's hard to list any specific
@@ -26,7 +26,7 @@ requires you do something different to connect your computer to the ESP in
 order to flash it.
 
 You only need to physically connect to it once. Once you've flashed your device
-and connected it to your WiFi, you can use {{< docref "/components/ota/index" >}} to
+and connected it to your WiFi, you can use {{< docref "/components/ota" >}} to
 install software remotely.
 
 Programming a ESP-based device is done by connecting the serial port on the
@@ -325,7 +325,7 @@ require different parts and tools.
 
 ## See Also
 
-- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - {{< docref "getting_started_hassio/" >}}
 

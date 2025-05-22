@@ -157,7 +157,7 @@ PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc``, then log out and back in.
 
 ## See Also
 
-- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - [Developer site](https://developers.esphome.io)
 

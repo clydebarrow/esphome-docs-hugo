@@ -62,7 +62,7 @@ select:
 
 ## See Also
 
-- {{< docref "/components/select/index" >}}
+- {{< docref "/components/select" >}}
 - {{< apiref "tuya/select/tuya_select.h" "tuya/select/tuya_select.h" >}}
 
 

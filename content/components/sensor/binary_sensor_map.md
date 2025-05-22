@@ -5,7 +5,7 @@ title: "Binary Sensor Map"
 
 {{< seo description="" image="" >}}
 
-The `binary_sensor_map` sensor platform allows you to map multiple {{< docref "/components/binary_sensor/index" "binary sensor" >}}
+The `binary_sensor_map` sensor platform allows you to map multiple {{< docref "/components/binary_sensor" "binary sensor" >}}
 to an individual value. Depending on the state of each binary sensor, its associated configured parameters, and this sensor's mapping type,
 the `binary_sensor_map` publishes a single numerical value.
 
@@ -123,13 +123,13 @@ binary_sensor:
 - **type** (**Required**, string): The sensor type. Should be one of: `BAYESIAN`, `GROUP`, or `SUM`.
 - **channels** (**Required for GROUP or SUM types**): A list of channels that are mapped to certain values.
 
-  - **binary_sensor** (**Required**): The id of the {{< docref "/components/binary_sensor/index" "binary sensor" >}}
+  - **binary_sensor** (**Required**): The id of the {{< docref "/components/binary_sensor" "binary sensor" >}}
     to add as a channel for this sensor.
   - **value** (**Required**): The value this channel should report when its binary sensor is active.
 - **prior** (**Required for BAYESIAN type**, float between 0 and 1): The prior probability of the event.
 - **observations** (**Required for BAYESIAN type**): A list of observations that influence the Bayesian probability of the event.
 
-  - **binary_sensor** (**Required**): The id of the {{< docref "/components/binary_sensor/index" "binary sensor" >}}
+  - **binary_sensor** (**Required**): The id of the {{< docref "/components/binary_sensor" "binary sensor" >}}
     to add as an observation.
   - **prob_given_true** (**Required**, float between 0 and 1): Assuming the event is true, the probability this observation is on.
   - **prob_given_false** (**Required**, float between 0 and 1): Assuming the event is false, the probability this observation is on.

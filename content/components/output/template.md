@@ -70,7 +70,7 @@ Complete example: [Sonoff Dual Light Switch](https://devices.esphome.io/devices/
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 
 

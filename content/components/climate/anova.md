@@ -54,7 +54,7 @@ climate:
 ## See Also
 
 - {{< docref "/components/ble_client" >}}
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< apiref "anova/anova.h" "anova/anova.h" >}}
 
 

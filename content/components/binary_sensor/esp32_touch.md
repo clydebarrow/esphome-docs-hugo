@@ -241,7 +241,7 @@ to make some adjustments to your configuration to accommodate this behavior.
 
 ## See Also
 
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "esp32_touch/esp32_touch.h" "esp32_touch/esp32_touch.h" >}}
 - [esp-idf Touch Sensor API](https://esp-idf.readthedocs.io/en/latest/api-reference/peripherals/touch_pad.html)
 

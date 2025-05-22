@@ -65,7 +65,7 @@ in between to protect the ESP board.
 
 ## See Also
 
-- {{< docref "output/index" >}}
+- {{< docref "output/" >}}
 - {{< apiref "power_supply/power_supply.h" "power_supply/power_supply.h" >}}
 
 

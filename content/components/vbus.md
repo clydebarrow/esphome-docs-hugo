@@ -280,8 +280,8 @@ binary_sensor:
 ## See Also
 
 - {{< docref "/components/uart" >}}
-- {{< docref "/components/binary_sensor/index" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
+- {{< docref "/components/sensor" >}}
 - [Resol manuals](https://www.resol.de/en/dokumente)
 - [VBus protocol](https://danielwippermann.github.io/resol-vbus)
 

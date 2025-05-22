@@ -71,8 +71,8 @@ the `color_mode` option of the :ref:`light control actions <light-turn_on_action
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/cwww" >}}
 - {{< docref "/components/light/color_temperature" >}}
 - {{< docref "/components/light/rgb" >}}

@@ -40,6 +40,6 @@ sensor:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 
 

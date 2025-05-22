@@ -39,7 +39,7 @@ switch:
 
 ## See Also
 
-- {{< docref "/components/switch/index" >}}
+- {{< docref "/components/switch" >}}
 - {{< apiref "tuya/switch/tuya_switch.h" "tuya/switch/tuya_switch.h" >}}
 
 

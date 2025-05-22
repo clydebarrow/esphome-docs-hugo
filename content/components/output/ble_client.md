@@ -44,7 +44,7 @@ output:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/ble_client" >}}
 
 

@@ -27,7 +27,7 @@ separately from these, and is not limited to a specific number.
 The {{< docref "esp32/" >}} component should be configured to use the `esp-idf` framework, as the `arduino` framework
 uses significantly more memory and performs poorly with the Bluetooth proxy enabled. When switching from
 `arduino` to `esp-idf`, make sure to update the device with a serial cable as the partition table is
-different between the two frameworks as {{< docref "/components/ota/index" >}} updates will not change the partition table.
+different between the two frameworks as {{< docref "/components/ota" >}} updates will not change the partition table.
 
 The {{< docref "web_server/" >}} component should be disabled as the device is likely
 to run out of memory and will malfunction when both components are enabled simultaneously.

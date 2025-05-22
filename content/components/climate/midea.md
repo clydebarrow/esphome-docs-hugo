@@ -284,7 +284,7 @@ Special thanks to the project [IRremoteESP8266](https://github.com/crankyoldgit/
 
 ## See Also
 
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< apiref "climate/midea_ac.h" "climate/midea_ac.h" >}}
 
 

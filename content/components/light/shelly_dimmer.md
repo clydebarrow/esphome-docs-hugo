@@ -92,7 +92,7 @@ There is no action required by the user to flash the STM32. There is no way to r
 
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< apiref "shelly_dimmer/light/shelly_dimmer.h" "shelly_dimmer/light/shelly_dimmer.h" >}}
 
 

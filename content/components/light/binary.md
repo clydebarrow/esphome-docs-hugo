@@ -26,8 +26,8 @@ light:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/output" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/output/gpio" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "binary/light/binary_light_output.h" "binary/light/binary_light_output.h" >}}

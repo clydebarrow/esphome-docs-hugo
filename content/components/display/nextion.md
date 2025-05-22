@@ -352,7 +352,7 @@ on_...:
 This will use the file specified for `tft_url` to update ("OTA") the Nextion.
 
 Once completed, both ESPHome and the Nextion will reboot. ESPHome will be unresponsive during the upload process and no
-logging or other {{< docref "/automations/index" "automations" >}} will occur. This process uses the same protocol as the
+logging or other {{< docref "/automations" "automations" >}} will occur. This process uses the same protocol as the
 [Nextion Editor](https://nextion.tech/nextion-editor/) and only transfers required portions of the TFT file.
 
 {{< warning >}}

@@ -134,7 +134,7 @@ integers for data reporting and to get a .5 temperature you need to divide by 2 
 ## See Also
 
 - {{< docref "/components/tuya" >}}
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< apiref "tuya/climate/tuya_climate.h" "tuya/climate/tuya_climate.h" >}}
 
 

@@ -68,3 +68,13 @@ outputFormats:
     mediaType: image/svg+xml
     isPlainText: true
     isHTML: false
+
+module:
+  mounts:
+    - disableWatch: false
+      excludeFiles: null
+      includeFiles: null
+      lang: ""
+      source: pagefind
+      target: static/pagefind
+

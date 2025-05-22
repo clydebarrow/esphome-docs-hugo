@@ -331,7 +331,7 @@ bool all_sensors_ready = id(acp1).get_all_sensors_ready();
 
 ## See Also
 
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "alarm_control_panel/alarm_control_panel.h" "alarm_control_panel/alarm_control_panel.h" >}}
 
 

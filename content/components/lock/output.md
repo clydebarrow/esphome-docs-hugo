@@ -28,7 +28,7 @@ lock:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< apiref "output/lock/output_lock.h" "output/lock/output_lock.h" >}}
 
 

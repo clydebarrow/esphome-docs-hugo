@@ -187,7 +187,7 @@ their brightness can be set using the `brightness` option. This may also be cont
 
 ## Touchscreens
 
-A touchscreen, if present, must be configured separately. See the {{< docref "/components/touchscreen/index" >}} documentation for more information.
+A touchscreen, if present, must be configured separately. See the {{< docref "/components/touchscreen" >}} documentation for more information.
 
 ## See Also
 

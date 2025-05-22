@@ -606,7 +606,7 @@ You should at least protect your sensors with a custom pairing PIN code. Choose 
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 - {{< docref "/components/display/pvvx_mithermometer" >}}
 - {{< apiref "xiaomi_lywsd03mmc/xiaomi_ble.h" "xiaomi_lywsd03mmc/xiaomi_ble.h" >}}
 - {{< docref "/components/ethernet" >}}

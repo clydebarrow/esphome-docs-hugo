@@ -69,7 +69,7 @@ Note that there may be multiple `builds` specified within a single JSON file.
 
 - {{< docref "http_request/" >}}
 - {{< docref "/components/ota/http_request" >}}
-- {{< docref "/components/ota/index" >}}
+- {{< docref "/components/ota" >}}
 - {{< apiref "update/update_entity.h" "update/update_entity.h" >}}
 
 

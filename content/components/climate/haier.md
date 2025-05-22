@@ -301,7 +301,7 @@ on_...:
 - {{< docref "/components/text_sensor/haier" "Haier Climate Text Sensors" >}}
 - {{< docref "/components/button/haier" "Haier Climate Buttons" >}}
 - {{< docref "/components/switch/haier" "Haier Climate Switches" >}}
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< apiref "haier/climate/haier_base.h" "haier/climate/haier_base.h" >}}
 
 

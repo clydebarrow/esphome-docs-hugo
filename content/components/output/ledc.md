@@ -126,7 +126,7 @@ Configuration variables:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/light/monochromatic" >}}
 - {{< docref "/components/fan/speed" >}}

@@ -164,7 +164,7 @@ this method is no longer recommended, but documented here for reference purposes
 
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "neopixelbus/neopixelbus_light.h" "neopixelbus/neopixelbus_light.h" >}}

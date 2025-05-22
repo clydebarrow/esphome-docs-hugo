@@ -114,7 +114,7 @@ See [`light.addressable_set` Action]({{< ref "components/light/_index#light-addr
 {{< /note >}}
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/light/neopixelbus" >}}
 - {{< apiref "partition/light_partition.h" "partition/light_partition.h" >}}

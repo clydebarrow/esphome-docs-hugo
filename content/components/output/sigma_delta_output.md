@@ -72,7 +72,7 @@ cycle.
 {{< /note >}}
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/slow_pwm" >}}

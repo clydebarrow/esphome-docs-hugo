@@ -40,7 +40,7 @@ sensor:
 ## See Also
 
 - {{< docref "/components/tuya" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 - {{< apiref "tuya/sensor/tuya_sensor.h" "tuya/sensor/tuya_sensor.h" >}}
 
 

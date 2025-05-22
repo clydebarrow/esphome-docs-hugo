@@ -43,7 +43,7 @@ cover:
 ```
 ## See Also
 
-- {{< docref "/automations/index" >}}
+- {{< docref "/automations" >}}
 - {{< docref "/components/switch/gpio" >}}
 - {{< docref "/components/cover/template" >}}
 

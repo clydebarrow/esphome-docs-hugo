@@ -21,7 +21,7 @@ sensor:
 - **type** (*Optional*): Either:
 
   - `seconds` (*default*): A simple counter.
-  - `timestamp`: presents the time ESPHome last booted up. Requires a {{< docref "/components/time/index" >}}.
+  - `timestamp`: presents the time ESPHome last booted up. Requires a {{< docref "/components/time" >}}.
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The sensor reporting interval. Defaults to `60s`.
   Valid only with `type: seconds`.

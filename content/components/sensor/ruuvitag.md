@@ -139,7 +139,7 @@ ESPHome therefore has no impact on the battery life of the device.
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-- {{< docref "/components/sensor/index" >}}
+- {{< docref "/components/sensor" >}}
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "ruuvitag/ruuvitag.h" "ruuvitag/ruuvitag.h" >}}
 - [Ruuvi](https://ruuvi.com)

@@ -54,7 +54,7 @@ the unit on USB power 24/7.
 {{< /note >}}
 # Display Font
 
-You'll need to place the [OpenSans-Regular](https://fonts.google.com/specimen/Open+Sans) font (or another of your choosing) alongside your ESPHome yaml file.  See - {{< docref "/components/display/index" >}}.
+You'll need to place the [OpenSans-Regular](https://fonts.google.com/specimen/Open+Sans) font (or another of your choosing) alongside your ESPHome yaml file.  See - {{< docref "/components/display" >}}.
 
 # Calibration & Testing
 
@@ -282,7 +282,7 @@ Enjoy your locally-controlled leak detector with push notification!
 
 # See Also
 
-- {{< docref "/components/display/index" >}}
+- {{< docref "/components/display" >}}
 - {{< docref "/components/display/st7735" >}}
 - {{< docref "/components/binary_sensor/esp32_touch" >}}
 

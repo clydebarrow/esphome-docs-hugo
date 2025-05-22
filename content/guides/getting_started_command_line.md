@@ -197,7 +197,7 @@ and uploaded your first ESPHome custom firmware to your node. You've
 also learned how to enable some basic components via the configuration
 file.
 
-So now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}.
+So now is a great time to go take a look at the {{< docref "/" "Components Index" >}}.
 Hopefully you'll find all sensors/outputs/etc. you'll need in there. If you're having any problems or
 want new features, please either create a new issue on the [GitHub issuetracker](https://github.com/esphome/issues/issues) or find us on the
 [Discord chat](https://discord.gg/KhAMKrd) (also make sure to read the {{< docref "faq/" "FAQ" >}}).
@@ -237,7 +237,7 @@ Logging level can be set with the env var `ESPHOME_LOG_LEVEL` (default is `INFO`
 ## See Also
 
 - {{< docref "cli/" >}}
-- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/" "ESPHome index" >}}
 - {{< docref "getting_started_hassio/" >}}
 
 

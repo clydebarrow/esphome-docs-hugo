@@ -110,7 +110,7 @@ The menu inherits the dimensions of the connected LCD display and uses the entir
 - [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}})
 - :ref:`Display Menu <display_menu>`
 - {{< docref "/components/sensor/rotary_encoder" >}}
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "lcd_menu/lcd_menu.h" "lcd_menu/lcd_menu.h" >}}
 
 

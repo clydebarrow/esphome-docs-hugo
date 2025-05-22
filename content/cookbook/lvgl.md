@@ -5,7 +5,7 @@ title: "LVGL: Tips and Tricks"
 
 {{< seo description="" image="" >}}
 
-Here are a couple recipes for various interesting things you can do with {{< docref "/components/lvgl/index" >}} in ESPHome.
+Here are a couple recipes for various interesting things you can do with {{< docref "/components/lvgl" >}} in ESPHome.
 
 {{< note >}}
 Many of the examples below call service actions in Home Assistant; however, Home Assistant does not allow such action calls by default. For each ESPHome device which will call actions, you must explicitly enable this setting in Home Assistant. This may be done when the device is initially adopted or by using the `Configure` option in the "devices" list of the ESPHome integration.
@@ -2180,7 +2180,7 @@ You can combine it with the previous example to turn off the backlight, so the u
 
 ## See Also
 
-- {{< docref "/components/lvgl/index" >}}
+- {{< docref "/components/lvgl" >}}
 - [Templates]({{< ref "automations/templates#config-lambda" >}})
 - [Automation]({{< ref "automations/_index#automation" >}})
 - [Key collector component]({{< ref "components/key_collector#key_collector" >}})

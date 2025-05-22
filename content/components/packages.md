@@ -220,7 +220,7 @@ captive_portal: !remove
 ```
 ## See Also
 
-- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/" "ESPHome index" >}}
 - {{< docref "/guides/getting_started_command_line" >}}
 - {{< docref "/guides/faq" >}}
 

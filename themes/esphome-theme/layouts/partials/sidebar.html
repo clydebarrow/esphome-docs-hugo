@@ -34,7 +34,7 @@
         <ul class="sidebar-social">
         {{ $repo := .Site.Data.repo.url }}
         {{ with .File }}
-            {{ $path := printf "%s/blob/current/%s" $repo . }}
+            {{ $path := printf "%s/blob/current/%s.md" $repo . }}
             <li></li><a href="{{ $path }}" class="ghedit"><i class="fas fa-edit"></i>Edit this page on GitHub</a></li>
         {{ end }}
         </ul>

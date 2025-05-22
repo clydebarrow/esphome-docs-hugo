@@ -2081,7 +2081,7 @@ When used on a widget, it does not act specifically on that widget but can be us
 
 ## See Also
 
-- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
+- {{< docref "/components/lvgl" "LVGL Main component" >}}
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

@@ -46,7 +46,7 @@ APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso
 
 {{< img src="rgb-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/pca9685" >}}

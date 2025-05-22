@@ -120,7 +120,7 @@ id(template_cov).publish_state();
 {{< /note >}}
 ## See Also
 
-- {{< docref "/components/cover/index" >}}
+- {{< docref "/components/cover" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/cover/template_cover.h" "template/cover/template_cover.h" >}}

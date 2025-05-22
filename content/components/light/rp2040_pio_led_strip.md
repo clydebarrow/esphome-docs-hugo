@@ -56,7 +56,7 @@ please consider adding support to the codebase and add it to the list above.
 
 ## See Also
 
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "/components/power_supply" >}}
 
 

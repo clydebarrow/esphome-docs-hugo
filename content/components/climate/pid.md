@@ -123,7 +123,7 @@ To set up a PID climate controller, you need a couple of components:
 The sensor should have a short update interval. The PID update frequency is tied to the update
 interval of the sensor. Set a short `update_interval` like `5s` on the sensor.
 
-We recommend putting a filter on the sensor (see filters in {{< docref "/components/sensor/index" >}}) and
+We recommend putting a filter on the sensor (see filters in {{< docref "/components/sensor" >}}) and
 using `output_averaging_samples` to calm the PID sensor from a noisy input sensor.
 
 {{< /note >}}
@@ -424,7 +424,7 @@ Advanced options:
   controllers', Transactions of the ASME, 64, 759-768
 - Åström, K. J. and T. Hägglund (1984a), 'Automatic tuning of simple regulators',
   Proceedings of IFAC 9th World Congress, Budapest, 1867-1872
-- {{< docref "/components/climate/index" >}}
+- {{< docref "/components/climate" >}}
 - {{< docref "/components/output/sigma_delta_output" >}}
 - {{< docref "/components/output/slow_pwm" >}}
 - [Principles of PID](https://blog.opticontrols.com/archives/344)

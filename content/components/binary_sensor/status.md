@@ -23,7 +23,7 @@ binary_sensor:
 
 ## See Also
 
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/mqtt" >}}
 - {{< apiref "status/status_binary_sensor.h" "status/status_binary_sensor.h" >}}
 

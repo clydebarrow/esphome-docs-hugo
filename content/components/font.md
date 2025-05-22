@@ -7,7 +7,7 @@ title: "Font Renderer Component"
 
 ESPHome's graphical rendering engine also has a powerful font drawer which integrates seamlessly into the system. You have the option to use **any** OpenType/TrueType ([.ttf`, `.otf`, `.woff`) font file at **any** size, as well as fixed-size `PCF](https://en.wikipedia.org/wiki/Portable_Compiled_Format) and [BDF](https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format) bitmap fonts.
 
-These fonts can be used in ESPHome's :ref:`own rendering engine <display-engine>` or in the {{< docref "/components/lvgl/index" "LVGL Graphics" >}} component.
+These fonts can be used in ESPHome's :ref:`own rendering engine <display-engine>` or in the {{< docref "/components/lvgl" "LVGL Graphics" >}} component.
 
 To use fonts you can either
 - Just grab a `.ttf`, `.otf`, `.woff`, `.pcf`, or `.bdf` file from somewhere on the internet and place it, for example, inside a `fonts` folder next to your configuration file.
@@ -181,7 +181,7 @@ to install it using `pip install "pillow==10.4.0"`.
 
 - {{< apiref "display/display_buffer.h" "display/display_buffer.h" >}}
 - [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}})
-- {{< docref "/components/lvgl/index" >}}
+- {{< docref "/components/lvgl" >}}
 - [MDI cheatsheet](https://pictogrammers.com/library/mdi/)
 - [MDI font repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/)
 - [Google Fonts Glyphsets](https://github.com/googlefonts/glyphsets/blob/main/GLYPHSETS.md)

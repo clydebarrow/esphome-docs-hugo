@@ -38,7 +38,7 @@ in the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}).
 {{< /note >}}
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< apiref "output/button/output_button.h" "output/button/output_button.h" >}}
 
 

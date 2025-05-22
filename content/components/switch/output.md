@@ -28,7 +28,7 @@ switch:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< apiref "output/switch/output_switch.h" "output/switch/output_switch.h" >}}
 
 

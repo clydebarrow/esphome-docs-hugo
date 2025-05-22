@@ -124,8 +124,8 @@ light:
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- {{< docref "/components/binary_sensor/index" >}}
-- {{< docref "/components/light/index" >}}
+- {{< docref "/components/binary_sensor" >}}
+- {{< docref "/components/light" >}}
 - {{< docref "template/" >}}
 - {{< apiref "m5stack_8angle/m5stack_8angle.h" "m5stack_8angle/m5stack_8angle.h" >}}
 

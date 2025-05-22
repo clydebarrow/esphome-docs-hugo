@@ -77,6 +77,6 @@ For that, you need to first manually put it into DOWNLOAD mode.
 {{< /note >}}
 ## See Also
 
-- {{< docref "/guides/index" "Guides" >}}
+- {{< docref "/guides" "Guides" >}}
 
 

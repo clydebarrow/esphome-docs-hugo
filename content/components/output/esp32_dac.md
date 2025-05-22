@@ -58,7 +58,7 @@ light:
 
 ## See Also
 
-- {{< docref "/components/output/index" >}}
+- {{< docref "/components/output" >}}
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/light/monochromatic" >}}

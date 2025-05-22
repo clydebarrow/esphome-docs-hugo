@@ -58,7 +58,7 @@ There are three options for `debounce_mode`.
     - Use binary sensor filters to reduce noise and false detections.
 
 ## See Also
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "qwiic_pir/qwiic_pir.h" "qwiic_pir/qwiic_pir.h" >}}
 - [SparkFun Qwiic PIR Library](https://github.com/sparkfun/SparkFun_Qwiic_PIR_Arduino_Library) by [SparkFun](https://www.sparkfun.com/)
 

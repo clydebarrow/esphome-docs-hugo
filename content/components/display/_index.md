@@ -17,7 +17,7 @@ engine. Fundamentally, there are these types of displays:
 For graphical displays, which offer the greatest flexibility, there are two options for displaying content:
 
 - ESPHome's :ref:`own rendering engine <display-engine>`
-- {{< docref "/components/lvgl/index" "LVGL" >}} - Light and Versatile Graphics Library
+- {{< docref "/components/lvgl" "LVGL" >}} - Light and Versatile Graphics Library
 
 {{< anchor "display-configuration" >}}
 
@@ -617,7 +617,7 @@ For displays in 8 bit mode you will see distinct color blocks rather than a smoo
 ## See Also
 
 - {{< apiref "display/display_buffer.h" "display/display_buffer.h" >}}
-- {{< docref "/components/lvgl/index" "LVGL" >}}
+- {{< docref "/components/lvgl" "LVGL" >}}
 - :ref:`Fonts <display-fonts>`
 - :ref:`Graph Component <display-graphs>`
 - :ref:`QR Code Component <display-qrcode>`

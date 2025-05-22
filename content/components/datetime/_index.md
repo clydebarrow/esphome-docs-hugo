@@ -58,7 +58,7 @@ MQTT Options:
 Time and DateTime Options:
 
 - **on_time** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run when the current datetime or time matches the current state.
-  Only valid on `time` or `datetime` types.  Use of `on_time` causes `time_id` to be required, `time_id` will be automatically assigned if a time source exists in the config, and will cause an invalid configuration if there is no {{< docref "/components/time/index" >}} configured.
+  Only valid on `time` or `datetime` types.  Use of `on_time` causes `time_id` to be required, `time_id` will be automatically assigned if a time source exists in the config, and will cause an invalid configuration if there is no {{< docref "/components/time" >}} configured.
 
 ## Automation
 

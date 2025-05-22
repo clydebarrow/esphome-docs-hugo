@@ -24,7 +24,7 @@ safe_mode:
 
 ## Configuration variables:
 
--  **disabled** (*Optional*, boolean): Set to `true` to disable safe_mode. {{< docref "/components/ota/index" >}} automatically
+-  **disabled** (*Optional*, boolean): Set to `true` to disable safe_mode. {{< docref "/components/ota" >}} automatically
    sets up safe mode; this allows disabling it if/when it is not wanted.
 -  **boot_is_good_after** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time after which the boot is considered successful.
    Defaults to `1min`.

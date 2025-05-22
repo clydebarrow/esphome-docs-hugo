@@ -28,7 +28,7 @@ switch:
 
 ## See Also
 
-- {{< docref "/components/binary_sensor/index" >}}
+- {{< docref "/components/binary_sensor" >}}
 - {{< apiref "switch/binary_sensor/switch_binary_sensor.h" "switch/binary_sensor/switch_binary_sensor.h" >}}
 
 

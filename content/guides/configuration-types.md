@@ -161,7 +161,7 @@ some_config_option:
 ```
 ## See Also
 
-- {{< docref "/index" "ESPHome index" >}}
+- {{< docref "/" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - {{< docref "faq/" >}}
 

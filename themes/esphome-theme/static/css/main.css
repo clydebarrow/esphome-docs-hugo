@@ -14,7 +14,10 @@
   --feature-card-bg: #fff;
   --feature-card-text: #333;
   --feature-icon-color: #00bfff;
-  --cta-button-color: #00bfff;
+  --btn-primary-color: #00bfff;
+  --btn-primary-hover-color: #0288d1;
+  --btn-secondary-color: transparent;
+  --btn-secondary-hover-color: rgba(3, 169, 244, 0.1);
   --getting-started-bg: #f3f6f6;
   --getting-started-text: #333;
   --nav-bg: #fff;
@@ -748,24 +751,24 @@ main {
 }
 
 .btn-primary {
-  background-color: var(--esphome-color);
-  color: var(--background-color);
+  background-color: var(--btn-primary-color);
+  color: white;
 }
 
 .btn-primary:hover {
-  filter: brightness(90%);
+  background-color: var(--btn-primary-hover-color);
   text-decoration: none;
 }
 
 .btn-secondary {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
+  background-color: var(--btn-secondary-color);
+  color: var(--btn-primary-color);
+  border: 2px solid var(--btn-primary-color);
 }
 
 .btn-secondary:hover {
-  filter: brightness(90%);
   text-decoration: none;
+  background-color: var(--btn-secondary-hover-color);
 }
 
 .home-section {
@@ -838,6 +841,7 @@ main {
 
 .feature-icon svg {
   height: 1.5em;
+  width: 1.5em;
   & path {
     fill: var(--esphome-color);
   }

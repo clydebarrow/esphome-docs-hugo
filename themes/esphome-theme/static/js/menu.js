@@ -201,6 +201,14 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.focus(); // Re-focus the search box after clearing
     });
 
+    document.addEventListener('keydown', function(event) {
+        if (!(searchInput === document.activeElement) && event.key === '/') { // Use '/' key as trigger
+            searchInput.focus();
+            event.preventDefault(); // Prevent the '/' key from being entered in the search box
+        }
+    });
+
+
     function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);

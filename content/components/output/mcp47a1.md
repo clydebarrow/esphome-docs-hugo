@@ -5,7 +5,7 @@ title: "MCP47A1 Output"
 
 {{< seo description="" image="" >}}
 
-The [mcp47a1` output component allows to use `6bit external DAC](https://www.microchip.com/en-us/product/MCP47A1)
+The `mcp47a1` output component allows to use [6bit external DAC](https://www.microchip.com/en-us/product/MCP47A1)
 in order to have analog output(s) on any board by using I²C. Devices default address is `0x2E`
 and configurable alternative is `0x3E`.
 

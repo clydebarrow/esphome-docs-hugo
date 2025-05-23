@@ -5,7 +5,7 @@ title: "PVVX MiThermometer Display"
 
 {{< seo description="" image="" >}}
 
-The [pvvx_mithermometer` display platform allows you to use devices running the `ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
+The `pvvx_mithermometer` display platform allows you to use devices running the [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
 
 {{< img src="xiaomi_lywsd03mmc.jpg" alt="Image" caption="Xiaomi LYWSD03MMC." width="75.0%" class="center" >}}
 

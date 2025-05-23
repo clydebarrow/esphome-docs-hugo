@@ -258,7 +258,7 @@ Check out [Battery status icon]({{< ref "cookbook/lvgl#lvgl-cookbook-iconbatt" >
 
 **Library fonts**
 
-The LVGL library offers by default prerendered sets with ASCII characters ([0x20-0x7F`), the degree symbol (`0xB0`), the bullet symbol (`0x2022`) from `Montserrat Medium](https://fonts.google.com/specimen/Montserrat), and 60 symbols from [FontAwesome](https://fontawesome.com/) (see below). You can use the IDs below when specifying the `text_font` parameter:
+The LVGL library offers by default prerendered sets with ASCII characters (`0x20-0x7F`), the degree symbol (`0xB0`), the bullet symbol (`0x2022`) from [Montserrat Medium](https://fonts.google.com/specimen/Montserrat), and 60 symbols from [FontAwesome](https://fontawesome.com/) (see below). You can use the IDs below when specifying the `text_font` parameter:
 
 - `montserrat_8`: 8px font
 - `montserrat_10`: 10px font
@@ -298,7 +298,7 @@ In addition to the above, the following special fonts are available from LVGL as
 
 - `unscii_8`: 8 px pixel perfect font with only ASCII characters.
 - `unscii_16`: 16 px pixel perfect font with only ASCII characters.
-- [simsun_16_cjk`: 16 px font with normal range + 1000 most common `CJK Radicals](https://en.wikipedia.org/wiki/CJK_Radicals_Supplement).
+- `simsun_16_cjk`: 16 px font with normal range + 1000 most common [CJK Radicals](https://en.wikipedia.org/wiki/CJK_Radicals_Supplement).
 - `dejavu_16_persian_hebrew`: 16 px font with normal range + Hebrew, Arabic, Persian letters and all their forms.
 
 {{< anchor "lvgl-styling" >}}

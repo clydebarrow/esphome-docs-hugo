@@ -1246,7 +1246,7 @@ Follow these steps to choose your MDI icons:
 
 ## Restore checkbox mark
 
-If you configure a custom font as the [default_font` used by LVGL and this font does not contain the `FontAwesome](https://fontawesome.com/) symbols, you may observe that some widgets won't display correctly; specifically [`checkbox`]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}}) won't show the checkmark when it's checked.
+If you configure a custom font as the `default_font` used by LVGL and this font does not contain the [FontAwesome](https://fontawesome.com/) symbols, you may observe that some widgets won't display correctly; specifically [`checkbox`]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}}) won't show the checkmark when it's checked.
 
 To work around this issue, simply import only the checkmark symbol in the desired size and apply it through [Theme and style definitions]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) to all the checkboxes in the configuration:
 
@@ -1936,7 +1936,7 @@ text:
 ```
 If you look carefully at the `grid_columns` variable, you'll notice that there are two thinner columns at left and right (`FR(10)`). Reason is to add some space to the labels from the edges. And that's why we had to use `grid_cell_column_span` for the widgets in the first row, to take up the space of multiple columns.
 
-These labels will appear in Home Assistant as [editable text components](https://www.home-assistant.io/integrations/text/), which makes it very easy to update them with the [text.set_value` action. For this purpose, we add the following `automations](https://www.home-assistant.io/docs/automation/) to Home Assistant:
+These labels will appear in Home Assistant as [editable text components](https://www.home-assistant.io/integrations/text/), which makes it very easy to update them with the `text.set_value` action. For this purpose, we add the following [automations](https://www.home-assistant.io/docs/automation/) to Home Assistant:
 
 ```yaml
 - id: weather_cond_forecast

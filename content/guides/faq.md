@@ -108,7 +108,7 @@ If you prefer the more manual way:
     browser the requested permission in the pop-up box that appears. Next, select the serial device associated with
     your board, click **Install** and browse for/select the binary file you downloaded earlier (as above). Note that
     the file is processed locally and is **not** uploaded to any cloud service.
-- [esptool` `from the GitHub repository](https://github.com/espressif/esptool/releases). It's likely available
+- `esptool` [from the GitHub repository](https://github.com/espressif/esptool/releases). It's likely available
     as package for your OS or you can try installing it with `pip install esptool` (in case of Linux).
 
 {{< anchor "esphome-esptool" >}}

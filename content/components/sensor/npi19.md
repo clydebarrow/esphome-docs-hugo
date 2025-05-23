@@ -5,7 +5,7 @@ title: "NPI-19 Pressure Sensor"
 
 {{< seo description="" image="" >}}
 
-The [npi19` sensor platform allows you to use your NPI-19 (`datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf),
+The `npi19` sensor platform allows you to use your NPI-19 ([datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf),
 [product page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)) pressure sensors with ESPHome.
 
 {{< img src="npi19.jpg" alt="Image" caption="NPI-19 Pressure Sensor." width="50.0%" class="center" >}}

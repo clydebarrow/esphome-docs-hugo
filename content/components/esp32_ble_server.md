@@ -187,7 +187,7 @@ Configuration variables:
 - **data** (**Required**, string, int, float, boolean, list of bytes, [templatable]({{< ref "automations/templates#config-templatable" >}})): The value of the characteristic or descriptor. For [templatable]({{< ref "automations/templates#config-templatable" >}}) values, the lambda function must return a `std::vector<uint8_t>` (you may use the `bytebuffer::ByteBuffer` helper class to transform different data types into a byte array). The value is computed each time the characteristic is read.
 - **type** (*Optional*, string): The C++ type of the value. The available values are `uint8_t`, `uint16_t`, `uint32_t`, `uint64_t`, `int8_t`, `int16_t`, `int32_t`, `int64_t`, `float`, `double` and `string`. It must be defined if the value is not [templatable]({{< ref "automations/templates#config-templatable" >}}).
 - **endianness** (*Optional*, string): The endianness of the value. Can be `BIG` or `LITTLE`. Defaults to `LITTLE`.
-- **string_encoding** (*Optional*, string): The encoding of the string. Only applicable if the type is [string`. The conversion is done in Python before compilation, so the encoding must be a valid `Python encoding](https://docs.python.org/3/library/codecs.html#standard-encodings). Defaults to `utf-8`.
+- **string_encoding** (*Optional*, string): The encoding of the string. Only applicable if the type is `string`. The conversion is done in Python before compilation, so the encoding must be a valid [Python encoding](https://docs.python.org/3/library/codecs.html#standard-encodings). Defaults to `utf-8`.
 
 
 {{< anchor "esp32_ble_server-characteristic-on_write" >}}

@@ -555,7 +555,7 @@ With this configuration option you can write complex automations whenever a JSON
 message is received. To use the message content, use a [lambda]({{< ref "automations/templates#config-lambda" >}})
 template, the decoded message payload is available under the name `x` inside that lambda.
 
-The [x` object is of type `JsonObject` by the `ArduinoJson](https://github.com/bblanchon/ArduinoJson)
+The `x` object is of type `JsonObject` by the [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 library, and you can use all of the methods of that library to access data.
 
 Basically, you can access elements by typing `x["THE_KEY"]` and save them into local variables.

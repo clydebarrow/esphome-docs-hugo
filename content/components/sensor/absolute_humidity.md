@@ -39,9 +39,9 @@ sensor:
 There are several different equations for calculating saturated vapor pressure.
 `Wobus` is used by default, as it is notionally the most accurate, but any of the following can be used:
 
-- [Buck`: `Arden Buck equation](https://en.wikipedia.org/wiki/Arden_Buck_equation)
-- [Tetens`: `Tetens equation](https://en.wikipedia.org/wiki/Tetens_equation)
-- [Wobus`: `Wobus equation](https://wahiduddin.net/calc/density_altitude.htm)
+- `Buck`: [Arden Buck equation](https://en.wikipedia.org/wiki/Arden_Buck_equation)
+- `Tetens`: [Tetens equation](https://en.wikipedia.org/wiki/Tetens_equation)
+- `Wobus`: [Wobus equation](https://wahiduddin.net/calc/density_altitude.htm)
 
 ## See Also
 

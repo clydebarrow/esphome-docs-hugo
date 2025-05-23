@@ -618,7 +618,7 @@ You should at least protect your sensors with a custom pairing PIN code. Choose 
 - Custom firmware (ATC) for the Xiaomi Thermometer LYWSD03MMC `<https://github.com/atc1441/ATC_MiThermometer>`__
 - TeLink flasher application (ATC) `<https://atc1441.github.io/TelinkFlasher.html>`__
 - TeLink flasher application modified for CGDK2 `<https://zaluthar.github.io/TelinkFlasher.html>`__
-- Xiaomi LYWSD03MMC passive sensor readout `<https://github.com/ahpohl/xiaomi_lywsd03mmc>[__ by `@ahpohl](https://github.com/ahpohl)
+- Xiaomi LYWSD03MMC passive sensor readout `<https://github.com/ahpohl/xiaomi_lywsd03mmc>`__ by [@ahpohl](https://github.com/ahpohl)
 - Cloud Tokens Extractor: `<https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor>`__
 
 

@@ -31,7 +31,7 @@ the post.
 - [Calibrating Power Sensors](https://frenck.dev/calibrating-an-esphome-flashed-power-plug/) by [Frenck](https://frenck.dev)
 - [Count Water Bottles](https://vigonotion.com/blog/monitor-remainding-water-bottles/) by [vigonotion](https://vigonotion.com)
 - [ESPHome Weather Station with Nextion display](https://github.com/bruxy70/Home-Assistant-ESPHome-Weather-Station) by :ghuser:`bruxy70`
-- [ESPHome Wall Mount with Nextion Display](https://github.com/Andoramb/Nextion-wall-mount) by :ghuser:[Andoramb` (`video](https://www.youtube.com/watch?v=TL8wZNnS4jI))
+- [ESPHome Wall Mount with Nextion Display](https://github.com/Andoramb/Nextion-wall-mount) by :ghuser:`Andoramb` ([video](https://www.youtube.com/watch?v=TL8wZNnS4jI))
 - [ESPHome 12v Fan Controller with PID Climate](https://github.com/patrickcollins12/esphome-fan-controller) by :ghuser:`patrickcollins12`
 - [Sonoff 4CH Irrigation Controller with Nextion Display](https://github.com/bruxy70/Irrigation-with-display) by :ghuser:`bruxy70`
 - [Automated Bathroom Ventilation](https://www.youtube.com/watch?v=weBDnmrQYOs) by [Intermittent Technology](https://intermit.tech)
@@ -80,7 +80,7 @@ the post.
 - [LIFX Protocol for ESPHome](https://github.com/giantorth/ESPHomeLifx) by :ghuser:`giantorth`
 - [Custom ESPHome Keypad sensor](https://github.com/Syralist/esphomekeypad) by :ghuser:`Syralist`
 - [LINP-Doorbell-g03 Custom Component](https://github.com/pauln/esphome-linp-doorbell-g03) by :ghuser:`pauln`
-- `ESPHome <-> Homebridge <https://www.npmjs.com/package/homebridge-esphome>[__ by `basdelfos](https://www.npmjs.com/~basdelfos)
+- `ESPHome <-> Homebridge <https://www.npmjs.com/package/homebridge-esphome>`__ by [basdelfos](https://www.npmjs.com/~basdelfos)
 - [Custom ESPHome for Wofea V10 Alarm](https://github.com/nbergont/wofea_v10_hack) by :ghuser:`nbergont`
 - [Custom Smart meter P1 port reader](https://github.com/nldroid/CustomP1UartComponent) by :ghuser:`nldroid`
 - [Custom Mitsubishi HVAC HeatPump control using UART](https://github.com/geoffdavis/esphome-mitsubishiheatpump) by :ghuser:`geoffdavis`

@@ -5,7 +5,7 @@ title: "Hydreon Rain Sensor"
 
 {{< seo description="" image="" >}}
 
-The [hydreon_rgxx` sensor platform allows you to use rain sensors by Hydreon. Currently supported are the RG-9 and RG-15 sensors (`model comparison](https://rainsensors.com/products/model-comparison/)).
+The `hydreon_rgxx` sensor platform allows you to use rain sensors by Hydreon. Currently supported are the RG-9 and RG-15 sensors ([model comparison](https://rainsensors.com/products/model-comparison/)).
 
 These optical rain sensors use a UART connection at 3.3V. The [UART]({{< ref "components/uart#uart" >}}) is
 required to be set up in your configuration for this sensor to work.

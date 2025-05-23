@@ -307,7 +307,7 @@ climate:
 
 ## Arduino-HeatpumpIR
 
-The [heatpumpir` platform supports dozens of manufacturers and hundreds of AC units by utilising the `Arduino-HeatpumpIR library](https://github.com/ToniA/arduino-heatpumpir).
+The `heatpumpir` platform supports dozens of manufacturers and hundreds of AC units by utilising the [Arduino-HeatpumpIR library](https://github.com/ToniA/arduino-heatpumpir).
 
 This platform compiles only under `arduino` framework or LibreTiny, and should only be used if your AC unit is not supported by any of the other (native) platforms from above. No support can be provided for Arduino-HeatpumpIR, because it is a third party library.
 

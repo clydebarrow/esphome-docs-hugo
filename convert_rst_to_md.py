@@ -808,7 +808,7 @@ def process_inline_markup(line):
     processed_line = process_api(apiclass_matches, processed_line, "apiclass")
 
     # External links
-    processed_line = re.sub(r'`\s*([^<]*[^< ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
+    processed_line = re.sub(r'`\s*([^<`]*[^<` ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
     
     return processed_line

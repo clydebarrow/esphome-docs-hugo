@@ -66,7 +66,7 @@ on_...:
 
     You **cannot** use `firmware.factory.bin` or *"Factory format"* (formerly "Modern format") with this component.
 
-- [username` and `password` must be `URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding)  if they
+- `username` and `password` must be [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding)  if they
     include special characters.
 
 - The [MD5sum](https://en.wikipedia.org/wiki/Md5sum) of the firmware binary file is an ASCII file (also known

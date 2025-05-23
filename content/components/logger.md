@@ -70,14 +70,14 @@ so if you use any other configuration you will not get log messages over the on-
 
 ### Default UART GPIO Pins
 
-|  | `UART0` | `UART0_SWAP` | `UART1` | `UART2` | `USB_CDC` | `USB_SERIAL_JTAG` |
+|  |  `UART0` |  `UART0_SWAP` |  `UART1` |  `UART2` |  `USB_CDC` |  `USB_SERIAL_JTAG` |
 | --- | --- | --- | --- | --- | --- | --- |
-| ESP8266 | TX: 1, RX: 3 | TX: 15, RX: 13 | TX: 2, RX: N/A | N/A | N/A | N/A |
-| ESP32 | TX: 1, RX: 3 | N/A | TX: 10, RX: 9 | TX: 17, RX: 16 | N/A | N/A |
-| ESP32-C3 | TX: 21, RX: 20 | N/A | Undefined | N/A | N/A | 18/19 |
-| ESP32-C6 | TX: 16, RX: 17 | N/A | Undefined | N/A | N/A | 12/13 |
-| ESP32-S2 | TX: 43, RX: 44 | N/A | TX: 17, RX: 18 | N/A | 19/20 | N/A |
-| ESP32-S3 | TX: 43, RX: 44 | N/A | TX: 17, RX: 18 | Undefined | 19/20 | 19/20 |
+| ESP8266 |  TX: 1, RX: 3 |  TX: 15, RX: 13 |  TX: 2, RX: N/A |  N/A |  N/A |  N/A |
+| ESP32 |  TX: 1, RX: 3 |  N/A |  TX: 10, RX: 9 |  TX: 17, RX: 16 |  N/A |  N/A |
+| ESP32-C3 |  TX: 21, RX: 20 |  N/A |  Undefined |  N/A |  N/A |  18/19 |
+| ESP32-C6 |  TX: 16, RX: 17 |  N/A |  Undefined |  N/A |  N/A |  12/13 |
+| ESP32-S2 |  TX: 43, RX: 44 |  N/A |  TX: 17, RX: 18 |  N/A |  19/20 |  N/A |
+| ESP32-S3 |  TX: 43, RX: 44 |  N/A |  TX: 17, RX: 18 |  Undefined |  19/20 |  19/20 |
 
 
 *Undefined* means that the logger component cannot use this harware UART at this time.
@@ -91,15 +91,15 @@ hardware interfaces for logging. Many newer boards based on ESP32 variants (such
 are using the ESP's on-board USB hardware peripheral while boards based on older processors (such as
 the original ESP32 or ESP8266) continue to use USB-to-serial bridge ICs for communication.
 
-|  | Arduino | ESP-IDF |
+|  |  Arduino |  ESP-IDF |
 | --- | --- | --- |
-| ESP8266 | `UART0` | N/A |
-| ESP32 | `UART0` | `UART0` |
-| ESP32-C3 | `USB_CDC` | `USB_SERIAL_JTAG` |
-| ESP32-C6 | `USB_CDC` | `USB_SERIAL_JTAG` |
-| ESP32-S2 | `USB_CDC` | `USB_CDC` |
-| ESP32-S3 | `USB_CDC` | `USB_SERIAL_JTAG` |
-| RP2040 | `USB_CDC` | N/A |
+| ESP8266 |  `UART0` |  N/A |
+| ESP32 |  `UART0` |  `UART0` |
+| ESP32-C3 |  `USB_CDC` |  `USB_SERIAL_JTAG` |
+| ESP32-C6 |  `USB_CDC` |  `USB_SERIAL_JTAG` |
+| ESP32-S2 |  `USB_CDC` |  `USB_CDC` |
+| ESP32-S3 |  `USB_CDC` |  `USB_SERIAL_JTAG` |
+| RP2040 |  `USB_CDC` |  N/A |
 
 
 {{< anchor "logger-log_levels" >}}
@@ -154,7 +154,7 @@ client spams too much. In the following example, we'd first see that the
 tag of the MQTT client is `mqtt.client` (before the first colon) and
 the tag for MQTT components is `mqtt.component`.
 
-{{< img src="logger-manual_log_level.png" alt="Image"  >}}
+{{< img src="logger-manual_log_level.png" alt="Image" >}}
 
 Next, we can manually set the log levels in the configuration like this:
 

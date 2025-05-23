@@ -327,7 +327,7 @@ mode from a GPIO, then this GPIO can be configured as the `request_pin`.
 Best results have been achieved by using an optocoupler circuit to handle the switching. Direct GPIO output
 or a transistor-based circuit are not feasible options. Here's an example circuit design:
 
-{{< img src="dsmr-request-pin-circuit-example.png" alt="Image"  >}}
+{{< img src="dsmr-request-pin-circuit-example.png" alt="Image" >}}
 
 When using a type of MCU that provides 5V on the GPIO outputs instead of 3.3V, then use a 330 Ohm
 resistor instead of the 200 Ohm resistor.

@@ -19,9 +19,9 @@ MSA301 and MSA311 are almost identical sensors. The only difference is the ADC r
 This component provides acceleration data in m/s², orientation information, and tap detection. XYZ axes can be
 calibrated and transformed to match the physical orientation of the sensor.
 
-{{< img src="msa311-full.jpg" alt="Image"  caption="Module breakout board with MSA311 sensor." width="80.0%" class="center" >}}
+{{< img src="msa311-full.jpg" alt="Image" caption="Module breakout board with MSA311 sensor." width="80.0%" class="center" >}}
 
-{{< img src="msa3xx-ui.png" alt="Image"  caption="Example of MSA3xx sensor representation in ESPHome dashboard." width="50.0%" class="center" >}}
+{{< img src="msa3xx-ui.png" alt="Image" caption="Example of MSA3xx sensor representation in ESPHome dashboard." width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -14,7 +14,7 @@ sensor) and turn them off almost immediately after you leave the room.
 It is possible to use this sensor with only a single GPIO pin; however, if you wish to change its settings,
 a {{< docref "/components/uart" >}} component (and its requisite GPIO pins) is required in your device's configuration.
 
-{{< img src="dfrobot_sen0395-full.jpg" alt="Image"  caption="DFRobot mmWave Radar / presence detection sensor" width="75%" class="center" >}}
+{{< img src="dfrobot_sen0395-full.jpg" alt="Image" caption="DFRobot mmWave Radar / presence detection sensor" width="75%" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -9,7 +9,7 @@ The `lcd_pcf8574` and `lcd_gpio` display components allow you to use HD44780-com
 with ESPHome. This component is only for LCDs that display individual characters on a screen
 (usually 8-40 columns and 2-4 rows), and not for LCDs that can control each pixel individually.
 
-{{< img src="lcd-hello_world.jpg" alt="Image"  width="60.0%" class="center" >}}
+{{< img src="lcd-hello_world.jpg" alt="Image" width="60.0%" class="center" >}}
 
 {{< note >}}
 Multiple versions of the display exist, supporting different character sets:
@@ -29,7 +29,7 @@ It is also possible to add eight user-defined characters.
 benefit that you only need to connect two data wires to the ESP instead of the six or ten as with the [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}}).
 The communication happens via [I²C Bus]({{< ref "components/i2c#i2c" >}}), you need to have an `i2c:` section in your configuration.
 
-{{< img src="lcd-pcf8574.jpg" alt="Image"  caption="LCD Display with a PCF8574 board attached on the back" width="75.0%" class="center" >}}
+{{< img src="lcd-pcf8574.jpg" alt="Image" caption="LCD Display with a PCF8574 board attached on the back" width="75.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -68,7 +68,7 @@ The `lcd_gpio` version of this component addresses the screen directly and does 
 Each of the data pins of the LCD needs a dedicated GPIO pin on the ESP. Connecting the screen this way offers
 faster refresh, especially in conjunction with an [LCD Menu]({{< ref "components/display_menu/lcd_menu#lcd_menu" >}}).
 
-{{< img src="lcd_gpio.svg" alt="Image"  caption="LCD Display GPIO pinout" width="75.0%" class="center" >}}
+{{< img src="lcd_gpio.svg" alt="Image" caption="LCD Display GPIO pinout" width="75.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

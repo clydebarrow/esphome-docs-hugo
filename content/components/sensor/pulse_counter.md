@@ -11,7 +11,7 @@ on any pin.
 On the ESP32, this sensor is even highly accurate because it's using the hardware [pulse counterperipheral](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html)
 on the ESP32. However, due to the use of the pulse counter peripheral, a maximum of 8 channels can be used!
 
-{{< img src="pulse-counter.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="pulse-counter.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

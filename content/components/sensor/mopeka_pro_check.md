@@ -24,9 +24,9 @@ Sensors are calibrated for propane only.
 See {{< docref "/components/sensor/mopeka_std_check" >}} for original Mopeka Check sensors support.
 
 {{< /warning >}}
-{{< img src="mopeka_pro_check.jpg" alt="Image"  caption="Mopeka Pro Check LP over BLE." class="center" >}}
+{{< img src="mopeka_pro_check.jpg" alt="Image" caption="Mopeka Pro Check LP over BLE." class="center" >}}
 
-{{< img src="mopeka_pro_check_lippert.jpg" alt="Image"  caption="Lippert™ Propane Tank Sensor" class="center" >}}
+{{< img src="mopeka_pro_check_lippert.jpg" alt="Image" caption="Lippert™ Propane Tank Sensor" class="center" >}}
 
 The original Mopeka Check sensors are not supported.
 

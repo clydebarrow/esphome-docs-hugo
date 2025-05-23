@@ -11,7 +11,7 @@ The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your co
 This controller is used in the Seeed Studio Round Display for XIAO with ILI9xxx display
 
 
-{{< img src="chsc6x.png" alt="Image"  caption="chsc6x touchscreen on Seeed Studio Round Display" width="50.0%" class="center" >}}
+{{< img src="chsc6x.png" alt="Image" caption="chsc6x touchscreen on Seeed Studio Round Display" width="50.0%" class="center" >}}
 
 ## Base Touchscreen Configuration
 

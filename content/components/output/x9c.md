@@ -7,7 +7,7 @@ title: "X9C Potentiometer Output"
 
 The `x9c` output platform allows you to add an output that controls a [X9C digital potentiometer](https://www.renesas.com/us/en/document/dst/x9c102-x9c103-x9c104-x9c503-datasheet).
 
-{{< img src="x9c.jpg" alt="Image"  caption="X9C digital potentiometer" width="70.0%" class="center" >}}
+{{< img src="x9c.jpg" alt="Image" caption="X9C digital potentiometer" width="70.0%" class="center" >}}
 
 The X9C family of digital potentiometers are available in different resistance values.
 

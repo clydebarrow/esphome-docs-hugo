@@ -14,9 +14,9 @@ Seeed Studio mmWave Human Detection Sensor Kit ([Product Page](https://www.seeed
 The [UART]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
 You can use the ESP32 software or hardware serial to use this MR24HPC1, its default baud rate is 115200.
 
-{{< img src="seeed-mr24hpc1.jpg" alt="Image"  caption="Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite" width="50.0%" class="center" >}}
+{{< img src="seeed-mr24hpc1.jpg" alt="Image" caption="Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite" width="50.0%" class="center" >}}
 
-{{< img src="seeed-mr24hpc1-mmwave-kit.png" alt="Image"  caption="Seeed Studio mmWave Human Detection Sensor Kit" width="50.0%" class="center" >}}
+{{< img src="seeed-mr24hpc1-mmwave-kit.png" alt="Image" caption="Seeed Studio mmWave Human Detection Sensor Kit" width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -161,11 +161,11 @@ number:
 
 ### Sensitivity
 
-| Sensitivity | Detection Radius (m) |
+| Sensitivity |  Detection Radius (m) |
 | --- | --- |
-| 1 | 2.5m |
-| 2 | 3m |
-| 3 | 4m |
+| 1 |  2.5m |
+| 2 |  3m |
+| 3 |  4m |
 
 
 - **custom_mode** (*Optional*, int): Settings and go to the Custom Mode option. Some of the function modules can only be set up in Custom Mode.
@@ -291,12 +291,12 @@ select:
 
 ### Scene mode
 
-| Scene mode | Detection Radius (m) |
+| Scene mode |  Detection Radius (m) |
 | --- | --- |
-| Living room | 4m - 4.5m |
-| Bedroom | 3.5m - 4m |
-| Bathroom | 2.5m - 3m |
-| Area detection | 3m - 3.5m |
+| Living room |  4m - 4.5m |
+| Bedroom |  3.5m - 4m |
+| Bathroom |  2.5m - 3m |
+| Area detection |  3m - 3.5m |
 
 
 - **unman_time**: Valid only in [standard mode]({{< ref "components/seeed_mr24hpc1#seeed_mr24hpc1-standard_mode" >}}).
@@ -403,7 +403,7 @@ Then replace all instances of `{$DEVICE}` with your device name
 
 The result:
 
-{{< img src="seeed-mr24hpc1-card.png" alt="Image"  class="center" >}}
+{{< img src="seeed-mr24hpc1-card.png" alt="Image" class="center" >}}
 
 ## See Also
 

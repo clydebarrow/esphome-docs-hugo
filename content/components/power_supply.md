@@ -44,7 +44,7 @@ for information on how to apply the power supply for a specific output.
 
 ## ATX Power Supplies
 
-{{< img src="power_supply-atx.jpg" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="power_supply-atx.jpg" alt="Image" width="80.0%" class="center" >}}
 
 The power supply component will default to pulling the specified GPIO
 pin up when high power mode is needed. Most ATX power supplies however

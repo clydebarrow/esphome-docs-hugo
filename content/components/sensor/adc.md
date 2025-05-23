@@ -13,7 +13,7 @@ ADC in your device to measure a voltage on certain pins.
 - RP2040: GPIO26 through GPIO29 can be used.
 
 
-{{< img src="adc-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="adc-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -80,15 +80,15 @@ Even though the measurements are calibrated, the range *limits* are variable amo
 
 `ADC2` pins are only usable when Wi-Fi is not configured on the device.
 
-| Variant | ADC1 | ADC2 |
+| Variant |  ADC1 |  ADC2 |
 | --- | --- | --- |
-| ESP32 | GPIO32 - GPIO39 | GPIO0, GPIO2, GPIO4, GPIO12 - GPIO15, GPIO25 - GPIO27 |
-| ESP32-C2 | GPIO0 - GPIO4 | GPIO5 |
-| ESP32-C3 | GPIO0 - GPIO4 | GPIO5 |
-| ESP32-C6 | GPIO0 - GPIO6 | no `ADC2` |
-| ESP32-H2 | GPIO1 - GPIO5 | no `ADC2` |
-| ESP32-S2 | GPIO1 - GPIO10 | GPIO11 - GPIO20 |
-| ESP32-S3 | GPIO1 - GPIO10 | GPIO11 - GPIO20 |
+| ESP32 |  GPIO32 - GPIO39 |  GPIO0, GPIO2, GPIO4, GPIO12 - GPIO15, GPIO25 - GPIO27 |
+| ESP32-C2 |  GPIO0 - GPIO4 |  GPIO5 |
+| ESP32-C3 |  GPIO0 - GPIO4 |  GPIO5 |
+| ESP32-C6 |  GPIO0 - GPIO6 |  no `ADC2` |
+| ESP32-H2 |  GPIO1 - GPIO5 |  no `ADC2` |
+| ESP32-S2 |  GPIO1 - GPIO10 |  GPIO11 - GPIO20 |
+| ESP32-S3 |  GPIO1 - GPIO10 |  GPIO11 - GPIO20 |
 
 
 

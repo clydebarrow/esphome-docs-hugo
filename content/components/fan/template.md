@@ -7,7 +7,7 @@ title: "Template Fan"
 
 The `template` fan platform lets you create a fan interface using only triggers.
 
-{{< img src="fan-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

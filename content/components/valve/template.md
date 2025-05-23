@@ -8,7 +8,7 @@ title: "Template Valve"
 The `template` valve platform allows you to create simple valves out of just a few actions and a value lambda. Once
 defined, it will automatically appear in Home Assistant as a valve and can be controlled through the frontend.
 
-{{< img src="valve-ui.png" alt="Image"  class="center" >}}
+{{< img src="valve-ui.png" alt="Image" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -10,7 +10,7 @@ title: "M5Stack Unit 8 Angle"
 The `m5stack_8angle` platform allows to use the [m5angle](https://docs.m5stack.com/en/unit/UNIT%208Angle) input device with ESPHome.
 It has 8 knobs, a switch and can individually drive 9 RGB LEDs.
 
-{{< img src="m5stack_8angle.jpg" alt="Image"  caption="The m5stack_8angle unit." width="75.0%" class="center" >}}
+{{< img src="m5stack_8angle.jpg" alt="Image" caption="The m5stack_8angle unit." width="75.0%" class="center" >}}
 
 The `m5stack_8angle` component communicates through an [I²C]({{< ref "components/i2c#i2c" >}}) bus and uses a default address of 0x43.
 

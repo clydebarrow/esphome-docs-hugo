@@ -22,19 +22,19 @@ It can also be used with evaluation board equipped with these chips, such as:
 - [WK2132 Chip Development Board](https://www.aliexpress.com/item/1005002018579265.html)
 - [DFROBOT Gravity: I²C to Dual UART Module](https://www.dfrobot.com/product-2001.html)
 
-{{< img src="DFR0627.jpg" alt="Image"  class="center" >}}
+{{< img src="DFR0627.jpg" alt="Image" class="center" >}}
 
 The features provided by the different WeiKai chips are described in the following table:
 
 ### WeiKai chip's features
 
-| Chip | Bus | UART | GPIO |
+| Chip |  Bus |  UART |  GPIO |
 | :---: | :---: | :---: | :---: |
-| WK2132-ISSG | S/I | 2 |  |
-| WK2212-IQNG | S/I | 2 | 8 |
-| WK2124-ISSG | S | 4 |  |
-| WK2204-IQNG | S/I | 4 |  |
-| WK2168-IQPG | S/I | 4 | 8 |
+| WK2132-ISSG |  S/I |  2 |   |
+| WK2212-IQNG |  S/I |  2 |  8 |
+| WK2124-ISSG |  S |  4 |   |
+| WK2204-IQNG |  S/I |  4 |   |
+| WK2168-IQPG |  S/I |  4 |  8 |
 
 
 As you can see most of the components can interface either through an I²C bus or a SPI bus,
@@ -120,12 +120,12 @@ positions of two switches, A0 and A1, on the board.
 
 ### WeiKai address selection
 
-| I²C address | A1 | A0 |
+| I²C address |  A1 |  A0 |
 | :---: | :---: | :---: |
-| 0x10 - 0x17 | 0 | 0 |
-| 0x30 - 0x37 | 0 | 1 |
-| 0x50 - 0x57 | 1 | 0 |
-| 0x70 - 0x77 | 1 | 1 |
+| 0x10 - 0x17 |  0 |  0 |
+| 0x30 - 0x37 |  0 |  1 |
+| 0x50 - 0x57 |  1 |  0 |
+| 0x70 - 0x77 |  1 |  1 |
 
 
 .. important::
@@ -269,13 +269,13 @@ gives the maximum baud_rate at usual system clock:
 
 ### maximum baud rate
 
-| Clock | Max Bd |
+| Clock |  Max Bd |
 | :---: | :---: |
-| 14,745,600 Hz | 921,600 Bd |
-| 11,059,200 Hz | 691,200 Bd |
-| 7,372,800 Hz | 460,800 Bd |
-| 3,686,400 Hz | 230,400 Bd |
-| 1,843,200 Hz | 115,200 Bd |
+| 14,745,600 Hz |  921,600 Bd |
+| 11,059,200 Hz |  691,200 Bd |
+| 7,372,800 Hz |  460,800 Bd |
+| 3,686,400 Hz |  230,400 Bd |
+| 1,843,200 Hz |  115,200 Bd |
 
 
 If you try to use a baud  rate superior to the maximum baud_rate an error will be displayed in the

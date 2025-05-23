@@ -8,7 +8,7 @@ title: "Restart Switch"
 The `restart` switch platform allows you to restart your node remotely
 through Home Assistant.
 
-{{< img src="restart-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="restart-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

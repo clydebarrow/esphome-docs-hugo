@@ -19,9 +19,9 @@ measurement has been taken. Because sometimes (for example if no object
 is detected) the echo pulse is never returned, this sensor also has a
 timeout option which specifies how long to wait for values.
 
-{{< img src="ultrasonic-full.jpg" alt="Image"  caption="HC-SR04 Ultrasonic Distance Sensor." width="50.0%" class="center" >}}
+{{< img src="ultrasonic-full.jpg" alt="Image" caption="HC-SR04 Ultrasonic Distance Sensor." width="50.0%" class="center" >}}
 
-{{< img src="ultrasonic-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="ultrasonic-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

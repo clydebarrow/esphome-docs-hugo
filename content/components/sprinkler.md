@@ -5,7 +5,7 @@ title: "Sprinkler Controller"
 
 {{< seo description="" image="" >}}
 
-{{< img src="sprinkler.png" alt="Image"  class="center" >}}
+{{< img src="sprinkler.png" alt="Image" class="center" >}}
 
 The `sprinkler` controller component aims to behave like a sprinkler/irrigation valve controller,
 much like those made by companies such as Rain Bird or Hunter. It does so by automating control of a
@@ -46,7 +46,7 @@ valves (often known in the industry as a "main" or "master" valve). The pump or 
 simply controls the water supply to other downstream valves.
 
 {{< /note >}}
-{{< img src="sprinkler-ui.jpg" alt="Image"  caption="Example Sprinkler Controller UI -- Note that this example leverages {{< docref \"/components/number/index\" \"number\" >}} components for setting run durations, repeat and multiplier values. [More details below.]({{< ref \"components/sprinkler#sprinkler-controller-sprinkler_controller_numbers\" >}})" width="60.0%" class="center" >}}
+{{< img src="sprinkler-ui.jpg" alt="Image" caption="Example Sprinkler Controller UI -- Note that this example leverages {{< docref \"/components/number/index\" \"number\" >}} components for setting run durations, repeat and multiplier values. [More details below.]({{< ref \"components/sprinkler#sprinkler-controller-sprinkler_controller_numbers\" >}})" width="60.0%" class="center" >}}
 
 ```yaml
 # Example minimal configuration entry

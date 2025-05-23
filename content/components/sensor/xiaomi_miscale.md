@@ -15,7 +15,7 @@ To get the body scores using your weight, height, age and gender see the custom_
 
 Miscale (left) measures weight only. Miscale2 (right) measures weight and impedance.
 
-{{< img src="xiaomi_miscale.jpg" alt="Image"  width="60.0%" class="center" >}}
+{{< img src="xiaomi_miscale.jpg" alt="Image" width="60.0%" class="center" >}}
 
 ```yaml
 sensor:

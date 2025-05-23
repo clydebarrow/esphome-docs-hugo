@@ -16,7 +16,7 @@ If you configure a lot of the possible sensors etc. from below it could be that 
 If you configure more than one if this devices with nearly all sensors etc. you run in a stack-size issue. In this case you have to increase stack size.
 
 {{< /warning >}}
-{{< img src="pipsolar.jpg" alt="Image"  caption="pip4048 compatible PV Inverter." width="50.0%" class="center" >}}
+{{< img src="pipsolar.jpg" alt="Image" caption="pip4048 compatible PV Inverter." width="50.0%" class="center" >}}
 
 ## Overview
 

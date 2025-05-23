@@ -7,7 +7,7 @@ title: "Generic Output Lock"
 
 The `output` lock platform allows you to use any output component as a lock.
 
-{{< img src="output-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="output-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

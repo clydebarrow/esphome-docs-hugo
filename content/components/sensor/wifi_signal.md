@@ -11,7 +11,7 @@ strength of the currently connected {{< docref "/components/wifi" "WiFi Access P
 The sensor value is the ["Received signal strength indication"](https://en.wikipedia.org/wiki/Received_signal_strength_indication)
 measured in decibel-milliwatts (dBm). These values are always negative and the closer they are to zero, the better the signal is.
 
-{{< img src="wifi_signal-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="wifi_signal-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

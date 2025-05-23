@@ -9,7 +9,7 @@ The `scd30` sensor platform allows you to use your Sensirion SCD30 CO₂
 ([datasheet](https://sensirion.com/media/documents/4EAF6AF8/61652C3C/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)) sensors with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
-{{< img src="scd30.jpg" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="scd30.jpg" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

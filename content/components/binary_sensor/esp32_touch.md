@@ -116,7 +116,7 @@ you can add individual touch pads as binary sensors. When a touch is detected on
 sensor will report an `ON` state. And, of course, if no touch is detected, the binary sensor will report
 an `OFF` state.
 
-{{< img src="esp32_touch-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="esp32_touch-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -176,9 +176,9 @@ under a flexible object like a plastic mat, add the raw values, and apply a thre
 Various pins on the ESP32, ESP32-S2 and ESP32-S3 can be used to detect touches. They are as follows (using the default
 "raw" pin names/numbers):
 
-| ESP32 | ESP32-S2 | ESP32-S3 |
+| ESP32 |  ESP32-S2 |  ESP32-S3 |
 | --- | --- | --- |
-| GPIO4, GPIO0, GPIO2, GPIO15, GPIO13, GPIO12, GPIO14, GPIO27, GPIO33, GPIO32 | GPIO1 - GPIO14 | GPIO1 - GPIO14 |
+| GPIO4, GPIO0, GPIO2, GPIO15, GPIO13, GPIO12, GPIO14, GPIO27, GPIO33, GPIO32 |  GPIO1 - GPIO14 |  GPIO1 - GPIO14 |
 
 
 {{< anchor "esp32-finding-thresholds" >}}
@@ -215,7 +215,7 @@ Touching the sensor's pins/pads should result in a (significant) change in the v
 different amounts of force applied to the touch pad; a pattern should emerge, revealing a value that falls between
 "touched" and "not touched" which the binary sensor will then use to differentiate between the two states.
 
-{{< img src="esp32_touch-finding_thresholds.png" alt="Image"  class="center" >}}
+{{< img src="esp32_touch-finding_thresholds.png" alt="Image" class="center" >}}
 
 Once you've determined an appropriate value, update the threshold parameter in your configuration and test the updated
 configuration. You may need to repeat this process a few times to fine-tune the behavior and get it just right.

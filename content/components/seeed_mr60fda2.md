@@ -12,7 +12,7 @@ The `seeed_mr60fda2` platform allows you to use Seeed Studio's MR60FDA2 60GHz mm
 The [UART]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
 You can use the ESP32 software or hardware (recommended) serial to use the MR60FDA2; its default baud rate is 115200.
 
-{{< img src="seeed_mr60fda2.jpg" alt="Image"  caption="Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6" width="50.0%" class="center" >}}
+{{< img src="seeed_mr60fda2.jpg" alt="Image" caption="Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6" width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

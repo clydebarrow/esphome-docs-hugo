@@ -15,7 +15,7 @@ configuration. Memory-intensive components such as {{< docref "/components/voice
 audio components are most likely to cause issues.
 
 {{< /warning >}}
-{{< img src="esp32_ble-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="esp32_ble-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

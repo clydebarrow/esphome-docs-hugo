@@ -10,7 +10,7 @@ It uses [UART]({{< ref "components/uart#uart" >}}) for communication.
 
 Once configured, you can use sensors as described below for your projects.
 
-{{< img src="pylontech.jpg" alt="Image"  caption="Pylontech Batteries" width="50.0%" class="center" >}}
+{{< img src="pylontech.jpg" alt="Image" caption="Pylontech Batteries" width="50.0%" class="center" >}}
 
 ## Hardware Setup
 
@@ -25,22 +25,22 @@ If you have multiple batteries you need to connect to the master battery's conso
 
 ### Pylontech RJ45 Console Port (US2000C, US3000C, US5000C)
 
-| RJ45 Pin | TIA-568B Color | TIA-568A Color | Function | Connect to |
+| RJ45 Pin |  TIA-568B Color |  TIA-568A Color |  Function |  Connect to |
 | --- | --- | --- | --- | --- |
-| 3 | White/Green | White/Orange | Pylontech TX | ESPHome RX via transceiver |
-| 6 | Green | Orange | Pylontech RX | ESPHome TX via transceiver |
-| 8 | Brown | Brown | GND | GND |
+| 3 |  White/Green |  White/Orange |  Pylontech TX |  ESPHome RX via transceiver |
+| 6 |  Green |  Orange |  Pylontech RX |  ESPHome TX via transceiver |
+| 8 |  Brown |  Brown |  GND |  GND |
 
 
-{{< img src="rj45_pinout.jpg" alt="Image"  caption="RJ45 pinout" width="70.0%" class="center" >}}
+{{< img src="rj45_pinout.jpg" alt="Image" caption="RJ45 pinout" width="70.0%" class="center" >}}
 
 ### Pylontech RJ11 Console Pinout (US2000B, US2000)
 
-| RJ11 Pin | Function | Connect to |
+| RJ11 Pin |  Function |  Connect to |
 | --- | --- | --- |
-| 2 | Pylontech RX | ESPHome TX via transceiver |
-| 3 | Pylontech TX | ESPHome RX via transceiver |
-| 4 | GND | GND |
+| 2 |  Pylontech RX |  ESPHome TX via transceiver |
+| 3 |  Pylontech TX |  ESPHome RX via transceiver |
+| 4 |  GND |  GND |
 
       
 ## Component/Hub

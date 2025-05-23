@@ -8,7 +8,7 @@ title: "GPS Component"
 The `gps` component allows you to connect GPS modules to your ESPHome project.
 Any GPS module that uses the standardized NMEA communication protocol will work.
 
-{{< img src="gps-full.jpg" alt="Image"  caption="GPS Module. Image by `Adafruit`_" width="50.0%" class="center" >}}
+{{< img src="gps-full.jpg" alt="Image" caption="GPS Module. Image by `Adafruit`_" width="50.0%" class="center" >}}
 
 [Adafruit](https://www.adafruit.com/product/746)
 

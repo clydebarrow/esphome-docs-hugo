@@ -10,9 +10,9 @@ The `aht10` Temperature+Humidity sensor allows you to use your AHT10
 
 The DHT20 ([datasheet](https://cdn.sparkfun.com/assets/8/a/1/5/0/DHT20.pdf)) sensor has the packaging of the {{< docref "dht/" >}} series, but has the AHT20 inside and is speaking [I²C]({{< ref "components/i2c#i2c" >}}) as well.
 
-{{< img src="aht10-full.jpg" alt="Image"  caption="AHT10 Temperature & Humidity Sensor." width="50.0%" class="center" >}}
+{{< img src="aht10-full.jpg" alt="Image" caption="AHT10 Temperature & Humidity Sensor." width="50.0%" class="center" >}}
 
-{{< img src="temperature-humidity.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 
 {{< note >}}
 When configured for humidity, the log *'Components should block for at most 20-30ms in loop().'* will be generated in verbose mode. This is due to technical specs of the sensor and can not be avoided.

@@ -12,12 +12,12 @@ The `modbus_controller` component creates a RS485 connection to either:
 
 To choose the role, set the `role` attribute of the {{< docref "/components/modbus" >}} upon which this `modbus_controller` component relies. `client` is the default.
 
-{{< img src="modbus.png" alt="Image"  width="25%" class="center" >}}
+{{< img src="modbus.png" alt="Image" width="25%" class="center" >}}
 
 ## Hardware setup
 You need an RS485 transceiver module:
 
-{{< img src="rs485.jpg" alt="Image"  >}}
+{{< img src="rs485.jpg" alt="Image" >}}
 
 See [How is this RS485 module working?](https://electronics.stackexchange.com/questions/244425/how-is-this-rs485-module-working) on stackexchange for more details.
 

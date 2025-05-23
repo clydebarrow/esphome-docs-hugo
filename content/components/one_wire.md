@@ -36,7 +36,7 @@ Note that you don't need to define the individual sensors just yet, as
 the scanning will happen even with no sensors configured.
 For example, you will see something like this:
 
-{{< img src="dallas-log.png" alt="Image"  >}}
+{{< img src="dallas-log.png" alt="Image" >}}
 
 ## See Also
 

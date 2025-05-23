@@ -13,7 +13,7 @@ Compared to a dashboard screen the infostrip can only communicate the informatio
 - mode (continuous vs. flashing, flashing or strobe is not recommend)
 - light position on stripe
 
-{{< img src="infostrip-detail.jpg" alt="Image"  caption="Wemos D1 mini, Neopixel, CO2 sensor on a blackboard, pixel meanings are described by the chalk drawn icons." width="75.0%" class="center" >}}
+{{< img src="infostrip-detail.jpg" alt="Image" caption="Wemos D1 mini, Neopixel, CO2 sensor on a blackboard, pixel meanings are described by the chalk drawn icons." width="75.0%" class="center" >}}
 
 ## ESPHome configuration
 
@@ -135,7 +135,7 @@ automation:
           {{ map[state] if state in map else 'white' }}
 
 ```
-{{< img src="infostrip-lights-ui.png" alt="Image"  caption="Each pixel is used as a light entity." width="50.0%" class="center" >}}
+{{< img src="infostrip-lights-ui.png" alt="Image" caption="Each pixel is used as a light entity." width="50.0%" class="center" >}}
 
 ## See Also
 

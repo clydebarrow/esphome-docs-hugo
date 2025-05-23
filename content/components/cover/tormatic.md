@@ -14,7 +14,7 @@ be supported:
 * Novoferm Novomatic 563 S
 * Novoferm Novoport IV
 
-{{< img src="tormatic.png" alt="Image"  caption="Tormatic Black 600 Garage Door Drive" class="center" >}}
+{{< img src="tormatic.png" alt="Image" caption="Tormatic Black 600 Garage Door Drive" class="center" >}}
 
 {{< note >}}
 This component was written and tested against a Novoferm 423, so

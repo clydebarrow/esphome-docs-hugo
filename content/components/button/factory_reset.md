@@ -21,7 +21,7 @@ You'll need to be in close proximity to your device to configure it again using 
 
 
 {{< /note >}}
-{{< img src="factory-rst-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="factory-rst-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

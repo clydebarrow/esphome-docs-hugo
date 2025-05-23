@@ -71,7 +71,7 @@ sensor:
     type: azimuth
 
 ```
-{{< img src="sun-sensor-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="sun-sensor-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 Configuration variables:
 
@@ -94,7 +94,7 @@ text_sensor:
     type: sunset
 
 ```
-{{< img src="sun-text_sensor-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="sun-text_sensor-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 Configuration variables:
 

@@ -12,9 +12,9 @@ The ZyAura CO2 & Temperature & Humidity sensor allows you to use your
 [ZG1583RUD](http://www.zyaura.com/products/ZG1583RUD.asp)
 monitors with ESPHome.
 
-{{< img src="zgm053-full.jpg" alt="Image"  caption="ZyAura ZGm053U CO2 & Temperature Monitor." width="80.0%" class="center" >}}
+{{< img src="zgm053-full.jpg" alt="Image" caption="ZyAura ZGm053U CO2 & Temperature Monitor." width="80.0%" class="center" >}}
 
-{{< img src="zgm053-connection.jpg" alt="Image"  caption="ZyAura ZGm053U connection diagram (1 - empty, 2 - clock, 3 - data, 4 - GND). In some other models the clock and data pins are swapped." width="80.0%" class="center" >}}
+{{< img src="zgm053-connection.jpg" alt="Image" caption="ZyAura ZGm053U connection diagram (1 - empty, 2 - clock, 3 - data, 4 - GND). In some other models the clock and data pins are swapped." width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

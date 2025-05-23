@@ -10,7 +10,7 @@ on character based LCD displays. This offers the user an interactive method to d
 labels, control entities like `switch`, `select`, `number`  available locally on the
 ESPHome node, without the requirement of a network connection.
 
-{{< img src="lcd_menu.png" alt="Image"  width="60.0%" class="center" >}}
+{{< img src="lcd_menu.png" alt="Image" width="60.0%" class="center" >}}
 
 ## Overview
 

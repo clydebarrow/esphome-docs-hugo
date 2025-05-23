@@ -24,7 +24,7 @@ for CO₂ and Breath Volatile Organic Compounds (b-VOC) using a correlation betw
 {{< /note >}}
 The [I²C]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
-{{< img src="bme680-full.jpg" alt="Image"  caption="BME680 Temperature, Pressure, Humidity & Gas Sensor." width="50.0%" class="center" >}}
+{{< img src="bme680-full.jpg" alt="Image" caption="BME680 Temperature, Pressure, Humidity & Gas Sensor." width="50.0%" class="center" >}}
 
 [BSEC license agreement](https://www.bosch-sensortec.com/media/boschsensortec/downloads/software/bme688_development_software/2023_04/license_terms_bme688_bme680_bsec.pdf)
 
@@ -166,7 +166,7 @@ Configuration variables:
 
   - All options from [TextSensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
 
-{{< img src="bme680-bsec-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="bme680-bsec-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ## Advanced configuration
 

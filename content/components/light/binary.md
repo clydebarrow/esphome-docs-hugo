@@ -8,7 +8,7 @@ title: "Binary Light"
 The `binary` light platform creates a simple ON/OFF-only light from a
 [binary output component]({{< ref "components/output/_index#output" >}}).
 
-{{< img src="binary-ui.png" alt="Image"  width="40.0%" class="center" >}}
+{{< img src="binary-ui.png" alt="Image" width="40.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

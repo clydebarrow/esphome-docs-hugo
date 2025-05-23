@@ -8,7 +8,7 @@ title: "Grove TB6612FNG Motor Drive"
 The Grove TBB6612FNG a runs over  I²C bus and has the capability to control DC and Stepper motors.
 At the current stage of implementation only DC motor is implemented.
 
-{{< img src="grove_tb6612fng.jpg" alt="Image"  width="50.0%" class="center" >}}
+{{< img src="grove_tb6612fng.jpg" alt="Image" width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration

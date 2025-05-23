@@ -14,7 +14,7 @@ The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in you
 [Adafruit](https://www.adafruit.com/product/2857)
 [Sensirion](https://sensirion.com/products/catalog/SHT85/)
 
-{{< img src="temperature-humidity.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="temperature-humidity.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -5,7 +5,7 @@ title: "Time & Temperature on OLED Display"
 
 {{< seo description="" image="" >}}
 
-{{< img src="display_time_temp_oled_1.jpg" alt="Image"  width="75.0%" class="left" >}}
+{{< img src="display_time_temp_oled_1.jpg" alt="Image" width="75.0%" class="left" >}}
 
 In this example I have used a {{< docref "/components/display/ssd1306" "SSD1306 OLED Display over I²C" >}} to
 show current time and two different temperature values from Home Assistant.

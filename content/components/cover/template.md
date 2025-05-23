@@ -9,7 +9,7 @@ The `template` cover platform allows you to create simple covers out of just a f
 actions and a value lambda. Once defined, it will automatically appear in Home Assistant
 as a cover and can be controlled through the frontend.
 
-{{< img src="cover-ui.png" alt="Image"  width="75.0%" class="center" >}}
+{{< img src="cover-ui.png" alt="Image" width="75.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

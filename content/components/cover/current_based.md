@@ -15,7 +15,7 @@ consuming goes below a certain amount. The amount of current needs to be specifi
 
 Open and close durations can be specified to allow ESPHome to approximate the current position of the cover.
 
-{{< img src="more-info-ui.png" alt="Image"  width="75.0%" class="center" >}}
+{{< img src="more-info-ui.png" alt="Image" width="75.0%" class="center" >}}
 
 This type of cover also provides safety features like current-based obstacle detection with automatic configurable
 rollback as well as relay malfunction detection: operation cancels if there's a current flowing in the opposite
@@ -99,7 +99,7 @@ The Shelly 2.5 is the perfect hardware for this platform. It features two output
 (thanks to an embedded {{< docref "/components/sensor/ade7953" "ADE7953" >}}) in a very small form factor (39mm x 36mm x 17 mm).
 It also features an {{< docref "/components/sensor/ntc" "NTC temperature sensor" >}}.
 
-{{< img src="shelly2.5.png" alt="Image"  width="30.0%" class="center" >}}
+{{< img src="shelly2.5.png" alt="Image" width="30.0%" class="center" >}}
 
 These devices typically run hot (~55Cº at 20ºC room temperature). Long-term heavy loads (near to its rated limit) can overheat the device.
 It is strongly recommended to monitor the device temperature using the NTC temperature sensor, shutting down the device if it exceeds 90ºC.

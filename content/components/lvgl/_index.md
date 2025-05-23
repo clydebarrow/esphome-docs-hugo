@@ -8,7 +8,7 @@ title: "LVGL Graphics"
 [LVGL](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
 embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8](https://docs.lvgl.io/8.4/).
 
-{{< img src="lvgl_main_screenshot.png" alt="Image"  >}}
+{{< img src="lvgl_main_screenshot.png" alt="Image" >}}
 
 ## Prerequisites
 
@@ -62,14 +62,14 @@ Widgets can be assigned with an [automations]({{< ref "automations/_index#automa
 
 Some widgets integrate also as native ESPHome components:
 
-| LVGL Widget | ESPHome component |
+| LVGL Widget |  ESPHome component |
 | --- | --- |
-| `button` | {{< docref "/components/binary_sensor/lvgl" "Binary Sensor" >}}, {{< docref "/components/switch/lvgl" "Switch" >}} |
-| `switch`, `checkbox` | {{< docref "/components/switch/lvgl" "Switch" >}} |
-| `slider`, `arc`, `spinbox` | {{< docref "/components/sensor/lvgl" "Sensor" >}}, {{< docref "/components/number/lvgl" "Number" >}} |
-| `dropdown`,  `roller` | {{< docref "/components/select/lvgl" "Select" >}} |
-| `label`, `textarea` | {{< docref "/components/text_sensor/lvgl" "Text Sensor" >}}, {{< docref "/components/text/lvgl" "Text" >}} |
-| `led` | {{< docref "/components/light/lvgl" "Light" >}} |
+| `button` |  {{< docref "/components/binary_sensor/lvgl" "Binary Sensor" >}}, {{< docref "/components/switch/lvgl" "Switch" >}} |
+| `switch`, `checkbox` |  {{< docref "/components/switch/lvgl" "Switch" >}} |
+| `slider`, `arc`, `spinbox` |  {{< docref "/components/sensor/lvgl" "Sensor" >}}, {{< docref "/components/number/lvgl" "Number" >}} |
+| `dropdown`,  `roller` |  {{< docref "/components/select/lvgl" "Select" >}} |
+| `label`, `textarea` |  {{< docref "/components/text_sensor/lvgl" "Text Sensor" >}}, {{< docref "/components/text/lvgl" "Text" >}} |
+| `led` |  {{< docref "/components/light/lvgl" "Light" >}} |
 
 
 These are useful with [Home Assistant automations](https://www.home-assistant.io/docs/automation/) interacting directly with the widgets.
@@ -286,7 +286,7 @@ The binary will only include any of the above if used in the configuration.
 
 You can display the embedded symbols among the text by their codepoint address preceded by `\u`. For example: `\uF00C`:
 
-{{< img src="lvgl_symbols.png" alt="Image"  class="center" >}}
+{{< img src="lvgl_symbols.png" alt="Image" class="center" >}}
 
 {{< note >}}
 The `text_font` parameter affects the size of symbols, since all the built-in font arrays based on Montserrat include these symbols at the respective sizes. If you set `text_font` on a widget to a custom ESPHome font, these symbols will likely not display, unless you include them manually from a FontAwesome OpenType file.
@@ -307,7 +307,7 @@ In addition to the above, the following special fonts are available from LVGL as
 
 LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
-{{< img src="lvgl_boxmodel.png" alt="Image"  class="center" >}}
+{{< img src="lvgl_boxmodel.png" alt="Image" class="center" >}}
 
 - *bounding box*: the box defined with `width` and `height` of the widgets (pixels or parent content area percentage; not drawn, just for calculations).
 - *border*: the border line, drawn on the inner side of the bounding box (pixels).

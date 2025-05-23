@@ -14,7 +14,7 @@ Calibrating the sensor can be done by checking the value that is returned when
 the ports are open to the air. This value should be 0. If it is not, you can use the offset option to correct the
 reading. For example, if your sensor is reading -40Pa when the ports are disconnected, you can set the offset to 40.
 
-{{< img src="6897d.jpg" alt="Image"  caption="XGZP6897D Differential Pressure Sensor. (Credit: [CFSensor](https://cfsensor.net/i2c-differential-pressure-sensor-xgzp6897d/), image cropped and compressed)" width="30.0%" class="center" >}}
+{{< img src="6897d.jpg" alt="Image" caption="XGZP6897D Differential Pressure Sensor. (Credit: [CFSensor](https://cfsensor.net/i2c-differential-pressure-sensor-xgzp6897d/), image cropped and compressed)" width="30.0%" class="center" >}}
 
 [Sparkfun](https://www.sparkfun.com/products/17874)
 

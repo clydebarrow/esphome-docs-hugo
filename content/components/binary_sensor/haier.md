@@ -8,7 +8,7 @@ title: "Haier Climate Binary Sensors"
 Additional sensors for Haier Climate device. **These sensors are supported only by the hOn protocol**.
 
 
-{{< img src="haier-climate.jpg" alt="Image"  width="50.0%" class="center" >}}
+{{< img src="haier-climate.jpg" alt="Image" width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

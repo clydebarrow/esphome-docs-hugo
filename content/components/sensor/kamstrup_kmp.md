@@ -4,7 +4,7 @@ title: "Kamstrup Meter Protocol [KMP]"
 ---
 
 
-{{< img src="kamstrup_kmp.jpg" alt="Image"  caption="Kamstrup MULTICAL 403" >}}
+{{< img src="kamstrup_kmp.jpg" alt="Image" caption="Kamstrup MULTICAL 403" >}}
 
 The Kamstrup Meter Protocol (KMP) is used by certain Kamstrup utility
 meters and can be used to read measurements from the meter.
@@ -92,7 +92,7 @@ The Kamstrup meter uses an optical interface, just above the display. The requir
 optical transceiver can be made using the schematic below. Connect the RX and TX
 lines to the pins configured under the uart section in the config file.
 
-{{< img src="kamstrup_kmp_sch.svg" alt="Image"  caption="Optical reader schematic" >}}
+{{< img src="kamstrup_kmp_sch.svg" alt="Image" caption="Optical reader schematic" >}}
 
 To save energy, the optical interface of the Kamstrup meter is not active by default.
 To activate the interface, press a button on the device. The interface will now be
@@ -102,7 +102,7 @@ circles are the LED and photo diode, which must be placed exactly on top of the
 optical interface window of the meter. The red circles indicate 6mm neodymium
 magnets.
 
-{{< img src="kamstrup_kmp_holder.svg" alt="Image"  caption="Magnet arrangement" >}}
+{{< img src="kamstrup_kmp_holder.svg" alt="Image" caption="Magnet arrangement" >}}
 
 ## See Also
 

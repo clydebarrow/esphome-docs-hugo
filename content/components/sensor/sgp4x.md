@@ -19,7 +19,7 @@ the front end at the update_interval, saving wifi power and network
 communication.
 
 {{< /note >}}
-{{< img src="sgp40.jpg" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="sgp40.jpg" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

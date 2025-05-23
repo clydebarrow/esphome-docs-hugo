@@ -8,9 +8,9 @@ title: "Monochromatic Light"
 The `monochromatic` light platform creates a simple brightness-only light from an
 [float output component]({{< ref "components/output/_index#output" >}}).
 
-{{< img src="monochromatic-strip.jpg" alt="Image"  caption="Example of a brightness-only LED strip that can be used with this component." width="75.0%" class="center" >}}
+{{< img src="monochromatic-strip.jpg" alt="Image" caption="Example of a brightness-only LED strip that can be used with this component." width="75.0%" class="center" >}}
 
-{{< img src="kitchen-lights.png" alt="Image"  width="40.0%" class="center" >}}
+{{< img src="kitchen-lights.png" alt="Image" width="40.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -28,7 +28,7 @@ light:
 
 ## See Also
 
-{{< img src="monochromatic-detail.jpg" alt="Image"  width="75.0%" class="center" >}}
+{{< img src="monochromatic-detail.jpg" alt="Image" width="75.0%" class="center" >}}
 
 - {{< docref "/components/output" >}}
 - {{< docref "/components/light" >}}

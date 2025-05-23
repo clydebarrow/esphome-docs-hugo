@@ -11,7 +11,7 @@ The `honeywellabp` sensor platform allows you to use your Honeywell ABP
 [Mouser](https://www.mouser.ca/new/honeywell/honeywell-abp-pressure-sensors/)) pressure and temperature sensors with ESPHome. The [SPI]({{< ref "components/spi#spi" >}}) is
 required to be set up in your configuration for this sensor to work
 
-{{< img src="honeywellabp.jpg" alt="Image"  caption="Honeywell ABP Pressure and Temperature Sensor." width="50.0%" class="center" >}}
+{{< img src="honeywellabp.jpg" alt="Image" caption="Honeywell ABP Pressure and Temperature Sensor." width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

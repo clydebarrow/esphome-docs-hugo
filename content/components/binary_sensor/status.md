@@ -8,7 +8,7 @@ title: "Status Binary Sensor"
 The Status Binary Sensor exposes the node state (if it's connected to via MQTT/native API)
 for Home Assistant.
 
-{{< img src="status-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="status-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

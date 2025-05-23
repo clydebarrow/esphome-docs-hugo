@@ -9,7 +9,7 @@ The `nextion` display platform allows you to use Nextion LCD displays
 ([datasheet](https://nextion.itead.cc/resources/datasheets/), [iTead](https://www.itead.cc/display/nextion.html))
 with ESPHome.
 
-{{< img src="nextion-full.jpg" alt="Image"  caption="Nextion display" width="75.0%" class="center" >}}
+{{< img src="nextion-full.jpg" alt="Image" caption="Nextion display" width="75.0%" class="center" >}}
 
 Communication with the Nextion display is done via a serial interface, so you'll need to have a [UART Bus]({{< ref "components/uart#uart" >}})
 in your configuration with both `rx_pin` and `tx_pin` configured. These pins must then be connected to the
@@ -187,14 +187,14 @@ api:
 
 **Queue Types**
 
-| Type | Value |
+| Type |  Value |
 | --- | --- |
-| `SENSOR` | `0` |
-| `BINARY_SENSOR` | `1` |
-| `SWITCH` | `2` |
-| `TEXT_SENSOR` | `3` |
-| `WAVEFORM_SENSOR` | `4` |
-| `NO_RESULT` | `5` |
+| `SENSOR` |  `0` |
+| `BINARY_SENSOR` |  `1` |
+| `SWITCH` |  `2` |
+| `TEXT_SENSOR` |  `3` |
+| `WAVEFORM_SENSOR` |  `4` |
+| `NO_RESULT` |  `5` |
 
 
 {{< anchor "display-nextion_automation" >}}

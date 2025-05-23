@@ -8,7 +8,7 @@ title: "Version Text Sensor"
 The `version` text sensor platform exposes the ESPHome version the firmware
 was compiled against as a text sensor.
 
-{{< img src="version-ui.png" alt="Image"  class="center" >}}
+{{< img src="version-ui.png" alt="Image" class="center" >}}
 
 ```yaml
 # Example configuration entry

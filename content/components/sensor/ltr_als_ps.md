@@ -5,9 +5,9 @@ title: "Lite-On Ambient Light & Proximity Sensors"
 
 {{< seo description="" image="" >}}
 
-{{< img src="ltr303-full.jpg" alt="Image"  caption="LTR-329 and LTR-303 Ambient Light Sensors." width="90.0%" class="center" >}}
+{{< img src="ltr303-full.jpg" alt="Image" caption="LTR-329 and LTR-303 Ambient Light Sensors." width="90.0%" class="center" >}}
 
-{{< img src="ltr303-ui.png" alt="Image"  caption="LTR-303 Sensor in Home Assistant UI." width="60.0%" class="center" >}}
+{{< img src="ltr303-ui.png" alt="Image" caption="LTR-303 Sensor in Home Assistant UI." width="60.0%" class="center" >}}
 
 The `ltr_als_ps` sensor platform allows you to use a range of LiteOn ambient light and proximity sensors
 with ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
@@ -38,7 +38,7 @@ available for user to configure. Use higher gain for dimmer areas.
 The devices consist of two photodiodes: The *CH0* diode is sensitive to both visible and infrared light and
 the *CH1* diode is sensitive only to infrared light.
 
-{{< img src="ltr303-spectral.png" alt="Image"  caption="CH0 and CH1 typical spectral response" width="100.0%" class="center" >}}
+{{< img src="ltr303-spectral.png" alt="Image" caption="CH0 and CH1 typical spectral response" width="100.0%" class="center" >}}
 
 ##### Ambient light illuminance calculation
 

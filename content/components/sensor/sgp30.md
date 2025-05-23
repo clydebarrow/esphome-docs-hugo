@@ -9,7 +9,7 @@ The `sgp30` sensor platform allows you to use your Sensirion SGP30 multi-pixel g
 ([datasheet](https://sensirion.com/media/documents/984E0DD5/61644B8B/Sensirion_Gas_Sensors_Datasheet_SGP30.pdf)) sensors or the SVM30 breakout-boards  ([product page](https://sensirion.com/products/catalog/SVM30/)) with ESPHome.
 The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
 
-{{< img src="eco2-tvoc.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="eco2-tvoc.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

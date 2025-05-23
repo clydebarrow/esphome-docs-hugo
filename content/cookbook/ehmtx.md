@@ -7,7 +7,7 @@ title: "ehmtx a matrix status display"
 
 Based on a cheap 8x32 RGB matrix you can build flexible status displays for all kind of informations. It is expandable with sensors etc.
 
-{{< img src="ehmtx.jpg" alt="Image"  width="40%" class="center" >}}
+{{< img src="ehmtx.jpg" alt="Image" width="40%" class="center" >}}
 
 ## Introduction
 

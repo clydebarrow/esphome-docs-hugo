@@ -9,7 +9,7 @@ The `safe_mode` switch allows you to remotely reboot your node into {{< docref "
 
 This component requires {{< docref "/components/safe_mode" >}} to be configured.
 
-{{< img src="safemode-ui.png" alt="Image"  width="80.0%" class="center" >}}
+{{< img src="safemode-ui.png" alt="Image" width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -1610,7 +1610,6 @@ def process_raw_html_button(lines, i):
 
 def process_image_directive(lines, i):
     """Process an image or figure directive and convert it to a Hugo shortcode."""
-    print(lines[i:])
     line = lines[i]
 
     is_figure = False

@@ -36,8 +36,7 @@ Configuration variables:
 - **to** (**Required**, string): The type of values in the map. May be one of `string` or `int` or a class specifier as discussed below.
 - **entries** (**Required**, dict): A list of key-value pairs that define the mapping. The keys must be of the type specified in the `from` field, and the values must be of the type specified in the `to` field.
 
-Mapping to a class
-##################
+### Mapping to a class
 
 You can also map to a class. This is useful when you want to map to a more complex type, such as an image or a color. There are several types of class specifiers you can use:
 
@@ -45,8 +44,7 @@ You can also map to a class. This is useful when you want to map to a more compl
 - `color`: Maps to a predefined [Color]({{< ref "components/display/_index#config-color" >}}). The values should each be a color ID.
 - The name of a C++ class defined by ESPHome, e.g. `Component`. The values should each be a ID of that class.
 
-Using a mapping
-###############
+### Using a mapping
 
 A mapping defined in this component can be used in lambdas in other components. The mapping can be accessed using the `id` function, and the value can be looked up using the `[]` operator as per the above example.
 

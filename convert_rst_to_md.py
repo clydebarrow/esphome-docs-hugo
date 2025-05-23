@@ -307,6 +307,12 @@ def convert_rst_to_md(lines, filename):
             i += 2
             continue
 
+        # Handle hash-style headings (section headings)
+        if i + 1 < len(lines) and re.match(r'^#+$', lines[i + 1]) and line:
+            md_lines.append(f"### {line}")
+            i += 2
+            continue
+
         # Handle caret and tilde-style headings (subsection headings)
         if i + 1 < len(lines) and re.match(r'(^\^+|^~+)$', lines[i + 1]) and line:
             md_lines.append(f"##### {line}")

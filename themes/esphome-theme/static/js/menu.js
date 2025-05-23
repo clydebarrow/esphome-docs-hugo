@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tocToggle.addEventListener('click', openTOC);
     overlay.addEventListener('click', closeTOC);
 
-    const dropdownButtons = document.querySelectorAll('.dropbtn');
+    const dropdownButtons = document.querySelectorAll('.dropbtn button');
 
     dropdownButtons.forEach(button => {
         // Handle Enter and Space key presses

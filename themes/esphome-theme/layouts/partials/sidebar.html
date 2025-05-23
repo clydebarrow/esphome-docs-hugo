@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-<div class="sidebar-content">
+<div class="sidebar-content scroll-trap">
     <nav class="sidebar-nav">
         {{ if .Fragments }}
         {{ if .Fragments.Headings }}
@@ -26,8 +26,8 @@
         <hr>
         <ul class="sidebar-social">
         {{ $repo := strings.TrimSuffix ".git" .Site.Data.repo.url }}
-        {{ with .File }}
-            {{ $path := printf "%s/blob/current/%s.md" $repo . }}
+        {{ with .File.Path }}
+            {{ $path := printf "%s/blob/current/content/%s" $repo . }}
             <li></li><a href="{{ $path }}" class="ghedit"><i class="fas fa-edit"></i>Edit this page on GitHub</a></li>
         {{ end }}
         </ul>

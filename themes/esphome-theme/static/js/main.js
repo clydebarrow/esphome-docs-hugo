@@ -1,6 +1,53 @@
 
 
+function trapScroll(el) {
+  el.addEventListener('wheel', (e) => {
+    const scrollTop = el.scrollTop;
+    const scrollHeight = el.scrollHeight;
+    const offsetHeight = el.offsetHeight;
+    const delta = e.deltaY;
+
+    const atTop = scrollTop === 0;
+    const atBottom = scrollTop + offsetHeight >= scrollHeight;
+
+    if ((atTop && delta < 0) || (atBottom && delta > 0)) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+}
+
+function trapTouchScroll(el) {
+  let startY = 0;
+
+  el.addEventListener('touchstart', (e) => {
+    startY = e.touches[0].clientY;
+  });
+
+  el.addEventListener('touchmove', (e) => {
+    const scrollTop = el.scrollTop;
+    const scrollHeight = el.scrollHeight;
+    const offsetHeight = el.offsetHeight;
+    const currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+
+    const atTop = scrollTop === 0;
+    const atBottom = scrollTop + offsetHeight >= scrollHeight;
+
+    if ((atTop && deltaY > 0) || (atBottom && deltaY < 0)) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+
+  const scrollers = document.querySelectorAll('.scroll-trap');
+
+  for (let i = 0; i !== scrollers.length; i++) {
+    trapScroll(scrollers[i]);
+    trapTouchScroll(scrollers[i]);
+  }
+
   const scrollThreshold = 5; // Minimum scroll amount before triggering hide/show
   const navContainer = document.getElementById('nav-container');
   let scrollDelta = 0; // Track cumulative scroll amount
@@ -153,3 +200,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+

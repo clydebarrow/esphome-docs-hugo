@@ -27,9 +27,43 @@
   --link-accent: #00979d;
   --component-card-bg: #fff;
   --component-card-text: #333;
+  --admonition-note-bg: #e7f2fa;
+  --admonition-note-border: #3498db;
+  --admonition-note-title: #3498db;
+  --admonition-tip-bg: #e8f8e5;
+  --admonition-tip-border: #2ecc71;
+  --admonition-tip-title: #2ecc71;
 }
 
-* {
+[data-theme="dark"] {
+  --primary-color: #1f2937;
+  --text-color: #ececec;
+  --background-color: #181c20;
+  --sidebar-background: #23272e;
+  --feature-card-bg: #23272e;
+  --feature-card-text: #ececec;
+  --getting-started-bg: #23272e;
+  --getting-started-text: #ececec;
+  --nav-bg: #222b36;
+  --nav-text: #ececec;
+  --dropdown-bg: #23272e;
+  --dropdown-text: #ececec;
+  --footer-bg: #181c20;
+  --footer-text: #ececec;
+  --border-color: #333;
+  --link-accent: #99e6fc;
+  --component-card-bg: #23272e;
+  --component-card-text: #ececec;
+  --admonition-note-bg: #22313a;
+  --admonition-note-border: #5dade2;
+  --admonition-note-title: #5dade2;
+  --admonition-tip-bg: #1d2a1d;
+  --admonition-tip-border: #58d68d;
+  --admonition-tip-title: #58d68d;
+  --logo-text-color: #FFFFFF;
+}
+
+  * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -144,7 +178,7 @@ img {
   align-items: center;
 }
 
-.nav-logo img, svg {
+.nav-logo img, .nav-logo svg {
   height: 30px;
   padding: 0;
   width: fit-content;
@@ -335,12 +369,12 @@ img {
 
 /* Theme toggle */
 .theme-toggle {
+  margin-right: 1rem;
   background: none;
   border: none;
   color: var(--text-color);
   cursor: pointer;
   padding: 0.5rem;
-  margin-right: 1rem;
   border-radius: 50%;
   transition: all 0.2s ease;
 }
@@ -361,25 +395,6 @@ img {
 }
 
 [data-theme="dark"] {
-    --primary-color: #1f2937;
-    --text-color: #ececec;
-    --background-color: #181c20;
-    --sidebar-background: #23272e;
-    --feature-card-bg: #23272e;
-    --feature-card-text: #ececec;
-    --getting-started-bg: #23272e;
-    --getting-started-text: #ececec;
-    --nav-bg: #222b36;
-    --nav-text: #ececec;
-    --dropdown-bg: #23272e;
-    --dropdown-text: #ececec;
-    --footer-bg: #181c20;
-    --footer-text: #ececec;
-    --border-color: #333;
-    --link-accent: #99e6fc;
-    --component-card-bg: #23272e;
-    --component-card-text: #ececec;
-    --logo-text-color: #FFFFFF;
 
   .dark-invert img {
     filter: invert(1);
@@ -763,21 +778,18 @@ main {
 }
 
 .admonition.note {
-  background-color: #e7f2fa;
-  border-color: #3498db;
+  background-color: var(--admonition-note-bg);
+  border-color: var(--admonition-note-border);
 }
-
 .admonition.note .admonition-title {
-  color: #3498db;
+  color: var(--admonition-note-title);
 }
-
 .admonition.tip {
-  background-color: #e8f8e5;
-  border-color: #2ecc71;
+  background-color: var(--admonition-tip-bg);
+  border-color: var(--admonition-tip-border);
 }
-
 .admonition.tip .admonition-title {
-  color: #2ecc71;
+  color: var(--admonition-tip-title);
 }
 
 .admonition-title {
@@ -941,7 +953,7 @@ footer {
 
   color: var(--component-card-text);
   border-color: var(--border-color);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s;
 }
 
@@ -1030,6 +1042,10 @@ figcaption {
 @media (max-width: 1000px) {
   .sticky-nav {
     padding: 0.5em 1em;
+  }
+
+  .theme-toggle {
+    margin-right: 0;
   }
 
   .hamburger-button {

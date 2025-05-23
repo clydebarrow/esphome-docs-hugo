@@ -42,7 +42,7 @@ markup:
     codeFences: true
     guessSyntax: false
     lineNos: false
-    noClasses: true
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true  # Allow HTML in markdown files
@@ -72,15 +72,9 @@ outputFormats:
 module:
   mounts:
     - disableWatch: false
-      excludeFiles: null
-      includeFiles: null
-      lang: ""
       source: pagefind
       target: static/pagefind
     - disableWatch: false
-      excludeFiles: null
-      includeFiles: null
-      lang: ""
       source: static/images
       target: static/images
 

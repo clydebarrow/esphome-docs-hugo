@@ -29,10 +29,11 @@
     <div class="nav-container" id="nav-container">
         <nav class="sticky-nav">
             <div class="nav-logo">
+                <a
                 {{ if eq .Page.Title "ESPHome Docs" }}
-                    <a href="{{ "/" | relURL }}">
+                    href="{{ "/" | relURL }}">
                 {{ else }}
-                    <a href="{{ "/components" | relURL }}">
+                    href="{{ "/components" | relURL }}">
                 {{ end }}
                     {{ os.ReadFile "static/images/logo-text.svg"  | safeHTML }}
                 </a>

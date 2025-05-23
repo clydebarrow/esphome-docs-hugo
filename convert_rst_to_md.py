@@ -828,6 +828,28 @@ def process_inline_markup(line):
     
     processed_line = re.sub(r':ghuser:`([^`]+)`', ghuser_repl, processed_line)
 
+    def esphome_repl(match):
+        content = match.group(1).strip()
+        number = content
+        return f'{{{{< pr number="{number}" repo="esphome" >}}}}'
+
+    processed_line = re.sub(r':esphomepr:`([^`]+)`', esphome_repl, processed_line)
+    processed_line = re.sub(r':yamlpr:`([^`]+)`', esphome_repl, processed_line)
+
+    def docs_repl(match):
+        content = match.group(1).strip()
+        number = content
+        return f'{{{{< pr number="{number}" repo="esphome-docs" >}}}}'
+
+    processed_line = re.sub(r':docspr:`([^`]+)`', docs_repl, processed_line)
+
+    def lib_repl(match):
+        content = match.group(1).strip()
+        number = content
+        return f'{{{{< pr number="{number}" repo="esphome-core" >}}}}'
+
+    processed_line = re.sub(r':libpr:`([^`]+)`', lib_repl, processed_line)
+
     # External links
     processed_line = re.sub(r'`\s*([^<`]*[^<` ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)

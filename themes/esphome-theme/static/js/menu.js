@@ -1,3 +1,18 @@
+
+function openTOC() {
+    const tocPanel = document.getElementsByClassName('sidebar')[0];
+    const overlay = document.getElementById('overlay');
+    tocPanel.classList.add('open');
+    overlay.classList.add('show');
+}
+
+function closeTOC() {
+    const tocPanel = document.getElementsByClassName('sidebar')[0];
+    const overlay = document.getElementById('overlay');
+    tocPanel.classList.remove('open');
+    overlay.classList.remove('show');
+}
+
 // Add keyboard support for dropdown menus
 document.addEventListener('DOMContentLoaded', function() {
     const bodystyle = window.getComputedStyle(document.body);
@@ -6,16 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tocToggle = document.getElementById('toc-toggle');
     const tocPanel = document.getElementsByClassName('sidebar')[0];
     const overlay = document.getElementById('overlay');
-
-    function openTOC() {
-        tocPanel.classList.add('open');
-        overlay.classList.add('show');
-    }
-
-    function closeTOC() {
-        tocPanel.classList.remove('open');
-        overlay.classList.remove('show');
-    }
 
     tocToggle.addEventListener('click', openTOC);
     overlay.addEventListener('click', closeTOC);
@@ -65,9 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!e.target.matches('.dropbtn')) {
             closeAllDropdowns();
         }
-        if (!e.target.matches('.toc-button') && !e.target.matches('.fa-list')) {
-            closeTOC();
-        }
     });
 
     // Toggle dropdown function
@@ -89,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownButtons.forEach(btn => {
             btn.setAttribute('aria-expanded', 'false');
             const dropdownContent = btn.nextElementSibling;
-            dropdownContent.style.display = 'none';
+            if (dropdownContent)
+                dropdownContent.style.display = 'none';
         });
     }
 

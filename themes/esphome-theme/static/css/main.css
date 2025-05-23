@@ -470,7 +470,7 @@ img {
   }
 
   .footer a:hover {
-    color: #fff;
+    color: var(--nav-text);
   }
 
   code, pre {
@@ -922,10 +922,6 @@ footer {
 
 .footer-column i {
   margin-right: 0.5em;
-}
-
-.footer-column a:hover {
-  color: var(--nav-text);
 }
 
 .footer-bottom {

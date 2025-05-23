@@ -75,14 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
       navContainer.classList.add('nav-hidden');
     }
   }
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a'); // Find nearest <a>
-    if (link) {
-      window.setTimeout( () => {
-        scroll_bar(navContainer.offsetHeight);
-      }, 200);
-    }
-  });
 
   // Header scroll behavior
   let ticking = false; // Flag to prevent multiple rAF calls
@@ -125,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
   // Table of Contents highlighting
-  const tocLinks = document.querySelectorAll('.page-toc a');
+  const tocLinks = document.querySelectorAll('#TableOfContents a');
   if (tocLinks.length > 0) {
     // Get all headings that correspond to TOC entries
     const headings = Array.from(tocLinks).map(link => {
@@ -181,6 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
     tocLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
+        console.log("closing TOC");
+        closeTOC();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
         
@@ -189,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
             top: targetElement.offsetTop - 80, // Offset for fixed header
             behavior: 'smooth'
           });
-          
+
           // Update URL hash without jumping
           history.pushState(null, null, `#${targetId}`);
           

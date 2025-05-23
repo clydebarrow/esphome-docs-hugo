@@ -184,6 +184,12 @@ def convert_rst_to_md(lines, filename):
     if seo_start != -1 and seo_end != -1:
         i = seo_end
 
+    # Parse substitutions from original lines
+    all_lines = lines[:]
+    substitutions = parse_substitutions(all_lines)
+    # Remove substitution definitions from lines before further processing
+    lines = remove_substitution_definitions(lines)
+
     # Pre-process lines to handle split references
     lines = process_multiline_references(lines)
 
@@ -641,6 +647,7 @@ def convert_rst_to_md(lines, filename):
 
 
         processed_line = process_inline_markup(fixed_line)
+        processed_line = replace_substitutions(processed_line, substitutions)
         if ":ghedit:" in processed_line:
             processed_line = ""
 
@@ -901,6 +908,48 @@ def process_multiline_references(lines):
         i += 1
     
     return processed_lines
+
+def parse_substitutions(lines):
+    subs = {}
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        m = re.match(r'^\s*\.\. \|([^|]+)\| raw:: html\s*$', line)
+        if m:
+            subname = m.group(1).strip()
+            html_lines = []
+            i += 1
+            # Collect indented HTML lines
+            while i < len(lines) and (lines[i].strip() == '' or lines[i].startswith('   ')):
+                if lines[i].strip() != '':
+                    html_lines.append(lines[i].lstrip())
+                i += 1
+            subs[subname] = '\n'.join(html_lines)
+        else:
+            i += 1
+    return subs
+
+def replace_substitutions(line, substitutions):
+    def repl(m):
+        name = m.group(1)
+        return substitutions.get(name, m.group(0))
+    return re.sub(r'\|([^|]+)\|', repl, line)
+
+def remove_substitution_definitions(lines):
+    out = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        m = re.match(r'^\s*\.\. \|([^|]+)\| raw:: html\s*$', line)
+        if m:
+            i += 1
+            # Skip indented HTML lines
+            while i < len(lines) and (lines[i].strip() == '' or lines[i].startswith('   ')):
+                i += 1
+            continue  # skip this definition block
+        out.append(line)
+        i += 1
+    return out
 
 def process_list_table(lines, start_idx):
     """Process a list-table directive and convert it to a Markdown table."""

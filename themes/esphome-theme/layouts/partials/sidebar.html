@@ -26,8 +26,8 @@
         <hr>
         <ul class="sidebar-social">
         {{ $repo := strings.TrimSuffix ".git" .Site.Data.repo.url }}
-        {{ with .File.Path }}
-            {{ $path := printf "%s/blob/current/content/%s" $repo . }}
+        {{ with .File }}
+            {{ $path := printf "%s/blob/current/content/%s" $repo .Path }}
             <li></li><a href="{{ $path }}" class="ghedit"><i class="fas fa-edit"></i>Edit this page on GitHub</a></li>
         {{ end }}
         </ul>

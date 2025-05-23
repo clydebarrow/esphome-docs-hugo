@@ -52,7 +52,6 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON
 
 # Static file configuration
 staticDir: 

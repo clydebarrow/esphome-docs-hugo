@@ -16,8 +16,7 @@ WARNING! Migrating via OTA on ESP32, from Tasmota v12 (with boot partition) and 
 
 First create a configuration for your device. Then, generate and download the firmware image:
 
-Using the Home Assistant add-on/dashboard
-`````````````````````````````````````````
+## Using the Home Assistant add-on/dashboard
 
 From the card of your device: open **the three dots menu** and select **Install** option.
 
@@ -33,15 +32,14 @@ Finally, choose **factory format** (formerly "modern format") in the last dialog
 
 The build process of the firmware will start and the image will be automatically downloaded after its completion.
 
-Using the command line
-``````````````````````
+## Using the command line
 
 From your configuration files folder, run 
 
-:: 
+```
+esphome compile <MY_DEVICE>.yaml
 
-  esphome compile <MY_DEVICE>.yaml
-  
+```
 replacing `<MY_DEVICE>.yaml` with your configuration file and navigate to the `<MY_DEVICE>/.pioenvs/<MY_DEVICE>/` folder. 
 
 There you will find a `firmware.bin` file. This is the binary that you will upload.
@@ -91,11 +89,11 @@ the dimming functionality will work as usual and no more power cycles are requir
 
 You may also use Tasmota console to invoke the upgrade with just two commands:
 
-:: 
+```
+OtaUrl http://<MY-ESPHOME:6052>/download.bin?configuration=<MY_DEVICE>.yaml&file=firmware.bin&compressed=1
+Upgrade 1
 
-  OtaUrl http://<MY-ESPHOME:6052>/download.bin?configuration=<MY_DEVICE>.yaml&file=firmware.bin&compressed=1
-  Upgrade 1
-
+```
 replacing `http://<MY-ESPHOME:6052>/` with the host and port of your ESPHome installation and `<MY_DEVICE>.yaml`
 with your device configuration file name.
 

@@ -302,7 +302,7 @@ def convert_rst_to_md(lines, filename):
             continue
         
         # Handle dash-style headings (section headings)
-        if i + 1 < len(lines) and re.match(r'^-+$', lines[i + 1]) and line:
+        if i + 1 < len(lines) and re.match(r'^[-`]+$', lines[i + 1]) and line:
             md_lines.append(f"## {line}")
             i += 2
             continue
@@ -326,13 +326,14 @@ def convert_rst_to_md(lines, filename):
             continue
         
         # Handle code blocks - check for both standalone and nested code blocks
-        if line.lstrip().startswith('.. code-block::'):
+        if line.lstrip().startswith('.. code-block::') or line.strip() == '::':
             # Get the indentation of the current line
             current_indent = len(line) - len(line.lstrip())
             
             # Extract language
             language = line.lstrip().replace('.. code-block::', '').strip()
-            
+            language = language.replace('::', '').strip()
+
             # Add the code block start with proper indentation
             md_lines.append(' ' * current_indent + f"```{language}")
             

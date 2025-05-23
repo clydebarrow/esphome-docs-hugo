@@ -1,11 +1,12 @@
 /* Base styles */
 :root {
-  --primary-color: #00979d;
-  --secondary-color: #4caf50;
+  --primary-color: #00bfff;
+  --esphome-color: #00bfff;
+  --secondary-color: #00979d;
   --text-color: #333;
   --background-color: #fff;
   --sidebar-background: #f3f6f6;
-  --mobile-width-stop: 900px; /* accessed from Javascript */
+  --mobile-width-stop: 1000px; /* accessed from Javascript */
   --nav-height: 50px;
   --nav-transition-up: transform 0.3s ease;
   --nav-transition-down: transform 0.1s ease-out;
@@ -331,10 +332,36 @@ img {
   padding: 15px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+
+/* Theme toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--link-accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  display: none;
+}
+
+[data-theme="dark"] .moon-icon,
+[data-theme="light"] .sun-icon {
+  display: block;
+}
+
+[data-theme="dark"] {
     --primary-color: #1f2937;
-    --secondary-color: #00979d;
     --text-color: #ececec;
     --background-color: #181c20;
     --sidebar-background: #23272e;
@@ -353,7 +380,6 @@ img {
     --component-card-bg: #23272e;
     --component-card-text: #ececec;
     --logo-text-color: #FFFFFF;
-  }
 
   .dark-invert img {
     filter: invert(1);
@@ -401,6 +427,7 @@ img {
   .content {
     background: #181c20;
     color: #ececec;
+    overflow: auto;
   }
 
   .dropdown-content {
@@ -688,7 +715,6 @@ main {
   margin-top: 1em;
 }
 .cta-buttons a {
-  background-color: var(--cta-button-color);
 }
 
 .btn {
@@ -702,7 +728,7 @@ main {
 }
 
 .btn-primary {
-  background-color: white;
+  background-color: var(--esphome-color);
   color: var(--background-color);
 }
 
@@ -712,7 +738,7 @@ main {
 }
 
 .btn-secondary {
-  background-color: var(--text-color);
+  background-color: var(--secondary-color);
   color: var(--text-color);
   border: 2px solid var(--text-color);
 }
@@ -791,6 +817,13 @@ main {
   font-size: 2em;
   color: var(--primary-color);
   margin-bottom: 0.5em;
+}
+
+.feature-icon svg {
+  height: 1.5em;
+  & path {
+    fill: var(--esphome-color);
+  }
 }
 
 .feature-text {
@@ -994,7 +1027,7 @@ figcaption {
 
 /* Responsive */
 /* @media (max-width: var(--mobile-width-stop)) {  // sadly does not work */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .sticky-nav {
     padding: 0.5em 1em;
   }

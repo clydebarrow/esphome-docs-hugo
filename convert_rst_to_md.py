@@ -584,7 +584,7 @@ def convert_rst_to_md(lines, filename):
         
         # Handle figures
         if line.strip().startswith('.. figure::'):
-            shortcode, new_i = process_image_directive(lines, i, is_figure=True)
+            shortcode, new_i = process_image_directive(lines, i)
             md_lines.append(shortcode)
             md_lines.append("")
             i = new_i
@@ -1014,7 +1014,6 @@ def process_anchors_and_images(lines):
 def convert_image_directive_in_text(text, indent=""):
     # Handles .. image:: and .. figure:: path [options] in a text block (single or multiline)
     lines = text.splitlines()
-    print(text)
     out = []
     i = 0
     while i < len(lines):
@@ -1056,6 +1055,9 @@ def convert_image_directive_in_text(text, indent=""):
         out.append(line)
         i += 1
     return '\n'.join(out)
+
+def get_indent(line):
+    return len(line) - len(line.lstrip())
 
 def process_list_table(lines, start_idx):
     """Process a list-table directive and convert it to a Markdown table."""
@@ -1129,13 +1131,32 @@ def process_list_table(lines, start_idx):
         
         # Cell values start with -
         if line.startswith('-'):
-            cell_value = line[1:].strip()
-            current_row.append(cell_value)
+            cell_value = [line[1:].strip()]
+            this_indent = get_indent(lines[idx])
             idx += 1
+            while idx < len(lines):
+                if lines[idx].strip() and get_indent(lines[idx]) > this_indent:
+                    cell_value.append(lines[idx])
+                    idx += 1
+                    continue
+                if not lines[idx].strip() and idx + 1 < len(lines) and get_indent(lines[idx + 1]) > this_indent:
+                    cell_value.append(lines[idx])
+                    idx += 1
+                    continue
+                break
+            cell_text = ""
+            i = 0
+            while i < len(cell_value):
+                if ".. figure::" in cell_value[i] or ".. image::" in cell_value[i]:
+                    shortcode, i = process_image_directive(cell_value, i)
+                    cell_text = " ".join([cell_text, shortcode])
+                else:
+                    cell_text = " ".join([cell_text, cell_value[i].strip()])
+                i += 1
+            current_row.append(process_inline_markup(cell_text))
             continue
         # If we get here, it's either the end of the table or something we don't understand
         if not lines[idx].startswith('    '):
-            print(line, " not processed")
             break
         
         idx += 1
@@ -1587,11 +1608,14 @@ def process_raw_html_button(lines, i):
     button_lines.append('\n'.join(raw_html_content))
     return button_lines, i
 
-def process_image_directive(lines, i, is_figure=False):
+def process_image_directive(lines, i):
     """Process an image or figure directive and convert it to a Hugo shortcode."""
+    print(lines[i:])
     line = lines[i]
 
-    if is_figure:
+    is_figure = False
+    if '.. figure::' in line:
+        is_figure = True
         image_path = line.replace('.. figure::', '').strip()
     else:
         image_path = line.replace('.. image::', '').strip()

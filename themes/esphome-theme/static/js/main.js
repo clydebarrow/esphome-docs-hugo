@@ -63,9 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollDelta += newDelta;
 
     // Cap the scroll delta at the nav height
-    console.log("Original scrolldelta", scrollDelta, "navHeight", navHeight);
     scrollDelta = Math.min(scrollDelta, navHeight);
-    console.log("New scrolldelta", scrollDelta);
 
     // Apply the transform
     navContainer.style.transform = `translateY(-${scrollDelta}px)`;
@@ -173,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
     tocLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        console.log("closing TOC");
         closeTOC();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);

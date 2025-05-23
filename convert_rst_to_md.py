@@ -1327,7 +1327,12 @@ def process_raw_html_button(lines, i):
     # Join the HTML content
     html = ' '.join(html_content)
 
-    # Check if it's a button pattern
+    # --- API KEY SHORTCODE REPLACEMENT (for api.rst) ---
+    if  '<input type="text"' in html and 'id="api-key"' in html and "<script" in html:
+        return ["{{< api-key-input >}}"], i
+    # --- END API KEY SHORTCODE REPLACEMENT ---
+
+# Check if it's a button pattern
     href_match = re.search(r'<a\s+href="([^"]+)"[^>]*>', html)
     img_match = re.search(r'<img\s+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*/?>', html)
     

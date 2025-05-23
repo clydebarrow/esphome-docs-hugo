@@ -50,7 +50,9 @@ jobs:
             hugo --minify
 
       - name: Build search index
-        run: pagefind
+        run: |
+            pagefind
+            hugo --minify
 
       - name: Deploy to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/current' || github.event_name == 'workflow_dispatch'

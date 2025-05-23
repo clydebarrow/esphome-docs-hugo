@@ -89,8 +89,9 @@ Multiple remote receivers can be configured as a list of dict definitions within
   component. Memory is shared by all receivers and transmitters. On variants other than  `ESP32` and `ESP32-S2`,
   only half of the symbol memory is available to receivers. Each symbol is 32 bits and contains two values.
 
-| ESP32 | 512 symbols | 64 symbols |
+| ESP32 Variant | Memory Size | Block Size |
 | --- | --- | --- |
+| ESP32 | 512 symbols | 64 symbols |
 | ESP32-C3 | 192 symbols | 48 symbols |
 | ESP32-C6 | 192 symbols | 48 symbols |
 | ESP32-H2 | 192 symbols | 48 symbols |
@@ -111,13 +112,14 @@ Multiple remote receivers can be configured as a list of dict definitions within
 
 - **rmt_channel** (*Optional*, int): The RMT channel to use. The following ESP32 variants have these channels available:
 
-| ESP32 | "0 | 1 | 2 | 3 | 4 | 5 | 6 | 7" |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ESP32-C3 | "2 | 3" |  |  |  |  |  |  |
-| ESP32-C6 | "2 | 3" |  |  |  |  |  |  |
-| ESP32-H2 | "2 | 3" |  |  |  |  |  |  |
-| ESP32-S2 | "0 | 1 | 2 | 3" |  |  |  |  |
-| ESP32-S3 | "4 | 5 | 6 | 7" |  |  |  |  |
+| ESP32 Variant | Channels |
+| --- | --- |
+| ESP32 | 0, 1, 2, 3, 4, 5, 6, 7 |
+| ESP32-C3 | 2, 3 |
+| ESP32-C6 | 2, 3 |
+| ESP32-H2 | 2, 3 |
+| ESP32-S2 | 0, 1, 2, 3 |
+| ESP32-S3 | 4, 5, 6, 7 |
 
 
 - **memory_blocks** (*Optional*, int): The number of RMT memory blocks used. The maximum

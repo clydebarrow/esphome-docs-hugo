@@ -148,8 +148,9 @@ of the specific peripheral chip.
 
 ### Supported Modes
 
-| 0 | low | leading | /CS activation and falling CLK | rising CLK |
+| Mode | Clock Idle Polarity | Clock Phase | Data shifted on | Data sampled on |
 | --- | --- | --- | --- | --- |
+| 0 | low | leading | /CS activation and falling CLK | rising CLK |
 | 1 | low | trailing | rising CLK | falling CLK |
 | 2 | high | leading | /CS activation and rising CLK | falling CLK |
 | 3 | high | trailing | falling CLK | rising CLK |

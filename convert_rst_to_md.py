@@ -109,7 +109,7 @@ def build_anchor_map(input_dir):
 
 def normalize_csv_lines(lines):
     # Read from list of lines using StringIO
-    reader = csv.reader(io.StringIO('\n'.join(lines)))
+    reader = csv.reader(io.StringIO('\n'.join(lines)), delimiter=',', quotechar='"', skipinitialspace=True)
     rows = list(reader)
 
     # Find the max number of columns
@@ -1215,7 +1215,7 @@ def process_csv_table(lines, start_idx):
     """Process a csv-table directive and convert it to a Markdown table."""
     # Extract table title and options
     title = ""
-    header_rows = 0
+    header_rows = None
     width = ""
     align = ""
     delimiter = ","
@@ -1229,10 +1229,7 @@ def process_csv_table(lines, start_idx):
     while idx < len(lines) and lines[idx].strip().startswith(':'):
         option_line = lines[idx].strip()
         if option_line.startswith(':header:'):
-            try:
-                header_rows = int(option_line.split(':', 2)[2].strip())
-            except (ValueError, IndexError):
-                pass
+            header_rows = normalize_csv_lines([option_line.split(':', 2)[2].strip()])[0]
         elif option_line.startswith(':width:'):
             width = option_line.split(':', 2)[2].strip()
         elif option_line.startswith(':align:'):
@@ -1275,32 +1272,10 @@ def process_csv_table(lines, start_idx):
         
         # Process CSV line
         # Remove leading whitespace but keep the rest of the line intact
-        csv_line = lines[idx][4:].rstrip('\n')
-        
-        # Split by delimiter, respecting quotes
-        import csv
-        from io import StringIO
-        
-        try:
-            reader = csv.reader(StringIO(csv_line), delimiter=delimiter)
-            row = next(reader)
-            # Improved quote stripping from values - handle both single and double quotes
-            # and make sure to strip from both beginning and end of each cell
-            processed_row = []
-            for cell in row:
-                # First strip whitespace
-                cell = cell.strip()
-                # Then strip quotes if they exist at both beginning and end
-                if (cell.startswith('"') and cell.endswith('"')) or (cell.startswith("'") and cell.endswith("'")):
-                    cell = cell[1:-1]
-                processed_row.append(cell)
-            table_data.append(processed_row)
-        except Exception as e:
-            print(f"Warning: Error parsing CSV line: {csv_line} - {e}")
-            table_data.append([csv_line])
-        
+        table_data.append(line.strip())
         idx += 1
-    
+
+    table_data = normalize_csv_lines(table_data)
     # Generate Markdown table
     md_table = []
     
@@ -1320,23 +1295,22 @@ def process_csv_table(lines, start_idx):
                 row.append("")
         
         # Create the table header and separator
-        if header_rows > 0 and len(table_data) > 0:
+        if header_rows:
             # Add header row
-            header_row = table_data[0]
-            md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in header_row) + " |")
+            md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in header_rows) + " |")
             
             # Add alignment to the separator row if specified
             if align == "center":
-                md_table.append("| " + " | ".join([":---:"] * len(header_row)) + " |")
+                md_table.append("| " + " | ".join([":---:"] * len(header_rows)) + " |")
             elif align == "right":
-                md_table.append("| " + " | ".join(["---:"] * len(header_row)) + " |")
+                md_table.append("| " + " | ".join(["---:"] * len(header_rows)) + " |")
             elif align == "left":
-                md_table.append("| " + " | ".join([":---"] * len(header_row)) + " |")
+                md_table.append("| " + " | ".join([":---"] * len(header_rows)) + " |")
             else:
-                md_table.append("| " + " | ".join(["---"] * len(header_row)) + " |")
+                md_table.append("| " + " | ".join(["---"] * len(header_rows)) + " |")
             
             # Add data rows
-            for row in table_data[header_rows:]:
+            for row in table_data:
                 md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in row) + " |")
         else:
             # No header specified, but we still need to add a separator after the first row

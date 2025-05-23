@@ -191,6 +191,7 @@ def convert_rst_to_md(lines, filename):
     lines = remove_substitution_definitions(lines)
     lines = process_redirects(lines)
     lines = process_multiline_references(lines)
+    lines = process_anchors_and_images(lines)
 
     while i < len(lines):
         line = lines[i]
@@ -803,8 +804,6 @@ def process_inline_markup(line):
         if "<" in content and ">" in content:
             text, doc_path = [x.strip() for x in content.split("<", 1)]
             doc_path = doc_path.rstrip(">")
-            # Fix the path for Hugo content structure
-            doc_path = fix_doc_path(doc_path)
             # Use the docref shortcode with custom text
             replacement = f"{{{{< docref \"{doc_path}\" \"{text.strip()}\" >}}}}"
         else:
@@ -969,6 +968,95 @@ def process_redirects(lines):
         i += 1
     return out
 
+def process_anchors_and_images(lines):
+    out = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        indent = re.match(r'^(\s*)', line).group(1)
+        # Detect RST anchor (.. _anchor:)
+        anchor_match = re.match(r'^\s*\.\.\s*_([a-zA-Z0-9_-]+):\s*$', line)
+        if anchor_match:
+            anchor = anchor_match.group(1)
+            out.append(f'{indent}{{{{< anchor "{anchor}" >}}}}')
+            i += 1
+            continue
+        # Detect indented .. image:: (even inside lists/admonitions)
+        image_match = re.match(r'^\s*\.\.\s*image::\s*(\S+)\s*$', line)
+        if image_match:
+            image_path = image_match.group(1)
+            # Collect options (indented lines)
+            options = {}
+            j = i + 1
+            while j < len(lines) and (lines[j].strip() and  lines[j].startswith('   ')):
+                opt_line = lines[j].strip()
+                m = re.match(r':([a-zA-Z0-9_-]+):\s*(.*)', opt_line)
+                if m:
+                    options[m.group(1)] = m.group(2)
+                j += 1
+            alt = options.get('alt', '')
+            width = options.get('width')
+            height = options.get('height')
+            # Build img shortcode
+            shortcode = f'{{{{< img src="{image_path}" alt="{alt}" '
+            if width:
+                shortcode += f' width="{width}"'
+            if height:
+                shortcode += f' height="{height}"'
+            shortcode += ' >}}'
+            out.append(f'{indent}{shortcode}')
+            i = j
+            continue
+        out.append(line)
+        i += 1
+    return out
+
+def convert_image_directive_in_text(text, indent=""):
+    # Handles .. image:: and .. figure:: path [options] in a text block (single or multiline)
+    lines = text.splitlines()
+    print(text)
+    out = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        img_match = re.match(r'^\s*\.\.\s*(image|figure)::\s*(\S+)\s*$', line)
+        if img_match:
+            image_path = img_match.group(2)
+            is_figure = img_match.group(1) == 'figure'
+            options = {}
+            caption_lines = []
+            j = i + 1
+            # Collect options and caption (for figure::)
+            while j < len(lines) and (lines[j].strip() and lines[j].startswith('   ')):
+                opt_line = lines[j].strip()
+                m = re.match(r':([a-zA-Z0-9_-]+):\s*(.*)', opt_line)
+                if m:
+                    options[m.group(1)] = m.group(2)
+                elif is_figure:
+                    caption_lines.append(opt_line)
+                j += 1
+            alt = options.get('alt', '')
+            width = options.get('width')
+            height = options.get('height')
+            caption = ''
+            if is_figure and caption_lines:
+                # Join and process caption lines as inline markup
+                caption = ' '.join(caption_lines)
+            shortcode = f'{{{{< img src="{image_path}" alt="{alt}" '
+            if caption:
+                shortcode += f'caption="{caption}" '
+            if width:
+                shortcode += f'width="{width}" '
+            if height:
+                shortcode += f'height="{height}" '
+            shortcode += '>}}'
+            out.append(f'{indent}{shortcode}')
+            i = j
+            continue
+        out.append(line)
+        i += 1
+    return '\n'.join(out)
+
 def process_list_table(lines, start_idx):
     """Process a list-table directive and convert it to a Markdown table."""
     # Extract table title and options
@@ -992,6 +1080,8 @@ def process_list_table(lines, start_idx):
                 pass
         elif option_line.startswith(':width:'):
             width = option_line.split(':', 2)[2].strip()
+        elif option_line.startswith(':widths:'):
+            pass
         elif option_line.startswith(':align:'):
             align = option_line.split(':', 2)[2].strip()
         elif option_line.startswith(':class:'):
@@ -1006,6 +1096,7 @@ def process_list_table(lines, start_idx):
     # Process table rows
     table_data = []
     current_row = []
+    anchor = ""
     
     while idx < len(lines):
         line = lines[idx].strip()
@@ -1016,7 +1107,11 @@ def process_list_table(lines, start_idx):
                 break
             idx += 1
             continue
-        
+
+        if line.startswith('{{'): # Anchor?
+            anchor = line
+            idx += 1
+            continue
         # New row starts with *
         if line.startswith('*'):
             if current_row:
@@ -1026,7 +1121,7 @@ def process_list_table(lines, start_idx):
             # Extract the first cell value
             cell_value = line[1:].strip()
             if cell_value.startswith('-'):
-                cell_value = cell_value[1:].strip()
+                cell_value = anchor + cell_value[1:].strip()
                 current_row.append(cell_value)
             
             idx += 1
@@ -1038,9 +1133,9 @@ def process_list_table(lines, start_idx):
             current_row.append(cell_value)
             idx += 1
             continue
-        
         # If we get here, it's either the end of the table or something we don't understand
-        if not line.startswith('    '):
+        if not lines[idx].startswith('    '):
+            print(line, " not processed")
             break
         
         idx += 1
@@ -1070,7 +1165,7 @@ def process_list_table(lines, start_idx):
         # Create the table header
         if header_rows > 0:
             header_row = table_data[0]
-            md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in header_row) + " |")
+            md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in header_row) + " |")
             
             # Add alignment to the separator row if specified
             if align == "center":
@@ -1084,11 +1179,11 @@ def process_list_table(lines, start_idx):
             
             # Add data rows
             for row in table_data[header_rows:]:
-                md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in row) + " |")
+                md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in row) + " |")
         else:
             # No header, just data rows
             for row in table_data:
-                md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in row) + " |")
+                md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in row) + " |")
     
     # Add a blank line after the table
     md_table.append("")
@@ -1207,7 +1302,7 @@ def process_csv_table(lines, start_idx):
         if header_rows > 0 and len(table_data) > 0:
             # Add header row
             header_row = table_data[0]
-            md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in header_row) + " |")
+            md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in header_row) + " |")
             
             # Add alignment to the separator row if specified
             if align == "center":
@@ -1221,13 +1316,13 @@ def process_csv_table(lines, start_idx):
             
             # Add data rows
             for row in table_data[header_rows:]:
-                md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in row) + " |")
+                md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in row) + " |")
         else:
             # No header specified, but we still need to add a separator after the first row
             if table_data:
                 # Add first row
                 first_row = table_data[0]
-                md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in first_row) + " |")
+                md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in first_row) + " |")
                 
                 # Add separator row
                 if align == "center":
@@ -1241,7 +1336,7 @@ def process_csv_table(lines, start_idx):
                 
                 # Add remaining data rows
                 for row in table_data[1:]:
-                    md_table.append("| " + " | ".join(process_inline_markup(cell) for cell in row) + " |")
+                    md_table.append("| " + " | ".join(convert_image_directive_in_text(cell) for cell in row) + " |")
     
     # Add a blank line after the table
     md_table.append("")
@@ -1473,7 +1568,6 @@ def process_raw_html_button(lines, i):
     file_match = None
     class_match = None
     for line in raw_html_content:
-        print(line)
         if not file_match:
             file_match = re.search(r':file: (.+)', line.strip())
         if not class_match:
@@ -1496,8 +1590,7 @@ def process_raw_html_button(lines, i):
 def process_image_directive(lines, i, is_figure=False):
     """Process an image or figure directive and convert it to a Hugo shortcode."""
     line = lines[i]
-    print(line)
-    
+
     if is_figure:
         image_path = line.replace('.. figure::', '').strip()
     else:
@@ -1552,16 +1645,16 @@ def process_image_directive(lines, i, is_figure=False):
         caption = caption.replace('"', '\\"')
     
     # Create the shortcode
-    shortcode = f'{{{{< img src="{image_filename}" alt="{alt_text}"'
+    shortcode = f'{{{{< img src="{image_filename}" alt="{alt_text}" '
     if caption:
-        shortcode += f' caption="{caption}"'
+        shortcode += f'caption="{caption}" '
     if width:
-        shortcode += f' width="{width}"'
+        shortcode += f'width="{width}" '
     if height:
-        shortcode += f' height="{height}"'
+        shortcode += f'height="{height}" '
     if align:
-        shortcode += f' class="{align}"'
-    shortcode += ' >}}'
+        shortcode += f'class="{align}" '
+    shortcode += '>}}'
     
     return shortcode, i
 

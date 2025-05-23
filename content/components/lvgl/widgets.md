@@ -49,7 +49,7 @@ Similarly to CSS, LVGL also supports `min_width`, `max_width`, `min_height` and 
     - **x** (*Optional*, int16 or percentage): Horizontal offset position. Default `0`.
     - **y** (*Optional*, int16 or percentage): Vertical offset position. Default `0`.
 
-{{< img src="lvgl_align.png" alt="Image" class="center" >}}
+{{< img src="lvgl_align.png" alt="Image"  class="center" >}}
 
 - **group** (*Optional*, string): The name of the group of widgets which will interact with a  {{< docref "/components/sensor/rotary_encoder" >}}. In every group there is always one focused widget which receives the encoder actions. You need to associate an input device with a group. An input device can send key events to only one group but a group can receive data from more than one input device. If no group is specified for a widget or an encoder, an unnamed default group will be assigned, so in most cases where only one encoder is used it will not be necessary to explicitly specify a group.
 - **layout** (*Optional*): See [Layouts]({{< ref "components/lvgl/_index#lvgl-layouts" >}}) for details. Defaults to `NONE`.
@@ -216,7 +216,7 @@ on_...:
 
 The animation image is similar to the normal `image` widget. The main difference is that instead of one source image, you set a list of multiple source images. You can also specify a duration and a repeat count.
 
-{{< img src="lvgl_animimg.gif" alt="Image" class="center" >}}
+{{< img src="lvgl_animimg.gif" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -273,7 +273,7 @@ See [Battery charging animation]({{< ref "cookbook/lvgl#lvgl-cookbook-animbatt" 
 
 The arc consists of a background and a foreground arc. The indicator foreground can be touch-adjusted with a knob.
 
-{{< img src="lvgl_arc.png" alt="Image" class="center" >}}
+{{< img src="lvgl_arc.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -358,7 +358,7 @@ See [Media player volume slider]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}
 
 The bar widget has a background and an indicator foreground on it. The size of the indicator is set according to the current `value` of the bar.
 
-{{< img src="lvgl_bar.png" alt="Image" class="center" >}}
+{{< img src="lvgl_bar.png" alt="Image"  class="center" >}}
 
 Vertical bars can be created if the width is smaller than the height.
 
@@ -415,7 +415,7 @@ The `bar` can be also integrated as {{< docref "/components/sensor/lvgl" "Sensor
 
 Simple push (momentary) or toggle (two-states) button.
 
-{{< img src="lvgl_button.png" alt="Image" class="center" >}}
+{{< img src="lvgl_button.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -478,7 +478,7 @@ See [Remote light button]({{< ref "cookbook/lvgl#lvgl-cookbook-binent" >}}) for 
 
 The button matrix widget is a lightweight way to display multiple buttons in rows and columns. It's lightweight because the buttons are not actually created but instead simply drawn on the fly. This reduces the memory footprint of each button from approximately 200 bytes (for both the button and its label widget) down to only eight bytes.
 
-{{< img src="lvgl_buttonmatrix.png" alt="Image" class="center" >}}
+{{< img src="lvgl_buttonmatrix.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -608,7 +608,7 @@ The canvas widget provides a surface for custom drawing operations. It allows yo
 All options are templatable.
 Where a list of points is required, this can be provided in the form of a list of dictionaries, each with templatable `x` and `y` keys, or as a shorthand `x,y` pair (constant integers only.)
 
-{{< img src="canvas.png" alt="Image" class="center" >}}
+{{< img src="canvas.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -746,7 +746,7 @@ Where a list of points is required, this can be provided in the form of a list o
 
 The checkbox widget is made internally from a *tick box* and a label. When the checkbox is clicked the tick box's `checked` state will be toggled.
 
-{{< img src="lvgl_checkbox.png" alt="Image" class="center" >}}
+{{< img src="lvgl_checkbox.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -809,7 +809,7 @@ The dropdown widget allows the user to select one value from a list.
 
 The dropdown list is closed by default and displays a single value. When activated (by clicking on the drop-down list), a list is drawn from which the user may select one option. When the user selects a new value, the list is deleted from the screen.
 
-{{< img src="lvgl_dropdown.png" alt="Image" class="center" >}}
+{{< img src="lvgl_dropdown.png" alt="Image"  class="center" >}}
 
 The Dropdown widget is built internally from a *button* part and a *list* part (both not related to the actual widgets with the same name).
 
@@ -887,7 +887,7 @@ The `dropdown` can be also integrated as {{< docref "/components/select/lvgl" "S
 
 Images are the basic widgets used to display images.
 
-{{< img src="lvgl_image.png" alt="Image" class="center" >}}
+{{< img src="lvgl_image.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -945,7 +945,7 @@ Currently `RGB565` type images are supported, with transparency using the option
 
 The keyboard widget is a special Button matrix with predefined keymaps and other features to show an on-screen keyboard usable to type text into a [`textarea`]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}).
 
-{{< img src="lvgl_keyboard.png" alt="Image" class="center" >}}
+{{< img src="lvgl_keyboard.png" alt="Image"  class="center" >}}
 
 For styling, the `keyboard` widget uses the same settings as [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}).
 
@@ -1012,7 +1012,7 @@ The Keyboard widget in ESPHome doesn't support popovers or custom layouts.
 
 A label is the basic widget type that is used to display text.
 
-{{< img src="lvgl_label.png" alt="Image" class="center" >}}
+{{< img src="lvgl_label.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1084,7 +1084,7 @@ The `label` can be also integrated as {{< docref "/components/text_sensor/lvgl" 
 
 The LED widgets are either circular or rectangular widgets whose brightness can be adjusted. As their brightness decreases, the colors become darker.
 
-{{< img src="lvgl_led.png" alt="Image" class="center" >}}
+{{< img src="lvgl_led.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1134,7 +1134,7 @@ Check out [A numeric input keypad]({{< ref "cookbook/lvgl#lvgl-cookbook-keypad" 
 
 The line widget is capable of drawing straight lines between a set of points.
 
-{{< img src="lvgl_line.png" alt="Image" class="center" >}}
+{{< img src="lvgl_line.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1179,7 +1179,7 @@ The points list may be defined with constants in the form `x, y` or as a list of
 
 The meter widget can visualize data in very flexible ways. It can use arcs, needles, ticks, lines and/or labels.
 
-{{< img src="lvgl_meter.png" alt="Image" class="center" >}}
+{{< img src="lvgl_meter.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1297,7 +1297,7 @@ See [An analog clock]({{< ref "cookbook/lvgl#lvgl-cookbook-clock" >}}), [Thermom
 
 The message boxes act as pop-ups. They are built from a background container, a title, an optional close button, a text and optional buttons.
 
-{{< img src="lvgl_msgbox.png" alt="Image" class="center" >}}
+{{< img src="lvgl_msgbox.png" alt="Image"  class="center" >}}
 
 The text will be broken into multiple lines automatically and the height will be set automatically to include the text and the buttons. The message box is modal (blocks clicks on the rest of the screen until closed).
 
@@ -1351,7 +1351,7 @@ You can create your own more complex dialogs with a full-screen sized, half-opaq
 
 The base object is just a simple, empty widget. By default, it's nothing more than a rounded rectangle:
 
-{{< img src="lvgl_baseobj.png" alt="Image" class="center" >}}
+{{< img src="lvgl_baseobj.png" alt="Image"  class="center" >}}
 
 You can use it as a parent container for other widgets. By default, it catches touches.
 
@@ -1426,7 +1426,7 @@ on_...:
 
 Roller allows you to simply select one option from a list by scrolling.
 
-{{< img src="lvgl_roller.png" alt="Image" class="center" >}}
+{{< img src="lvgl_roller.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1490,7 +1490,7 @@ The `roller` can be also integrated as {{< docref "/components/select/lvgl" "Sel
 
 The slider widget looks like a bar supplemented with a knob. The user can drag the knob to set a value. Just like bar, slider can be vertical or horizontal. The size of the indicator foreground and the knob position is set according to the current `value` of the slider.
 
-{{< img src="lvgl_slider.png" alt="Image" class="center" >}}
+{{< img src="lvgl_slider.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1565,7 +1565,7 @@ See [Media player volume slider]({{< ref "cookbook/lvgl#lvgl-cookbook-volume" >}
 
 The spinbox contains a numeric value (as text) which can be increased or decreased through actions. You can, for example, use buttons labeled with plus and minus to call actions which increase or decrease the value as required.
 
-{{< img src="lvgl_spinbox.png" alt="Image" class="center" >}}
+{{< img src="lvgl_spinbox.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1642,7 +1642,7 @@ See [Climate control]({{< ref "cookbook/lvgl#lvgl-cookbook-climate" >}}) for an 
 
 The Spinner widget is a spinning arc over a ring.
 
-{{< img src="lvgl_spinner.gif" alt="Image" class="center" >}}
+{{< img src="lvgl_spinner.gif" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1692,7 +1692,7 @@ on_...:
 
 The switch looks like a little slider and can be used to turn something on and off.
 
-{{< img src="lvgl_switch.png" alt="Image" class="center" >}}
+{{< img src="lvgl_switch.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -1735,7 +1735,7 @@ See [Local light switch]({{< ref "cookbook/lvgl#lvgl-cookbook-relay" >}}) for an
 
 The tab view object can be used to organize content in tabs. The tab buttons are internally generated with a [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}).
 
-{{< img src="lvgl_tabview.png" alt="Image" class="center" >}}
+{{< img src="lvgl_tabview.png" alt="Image"  class="center" >}}
 
 The tabs are indexed (zero-based) in the order they appear in the configuration file. A new tab can be selected either by clicking on a tab button, by sliding horizontally on the content or via the `lvgl.tabview.select` [action]({{< ref "automations/actions#actions-action" >}}), specifying the tab's index.
 
@@ -1810,7 +1810,7 @@ on_...:
 
 The textarea is an extended label widget which displays a cursor and allows the user to input text. Long lines are wrapped and when the text becomes long enough the text area can be scrolled. It supports one line mode and password mode, where typed characters are replaced visually with bullets or asterisks.
 
-{{< img src="lvgl_textarea.png" alt="Image" class="center" >}}
+{{< img src="lvgl_textarea.png" alt="Image"  class="center" >}}
 
 **Configuration variables:**
 
@@ -2081,7 +2081,7 @@ When used on a widget, it does not act specifically on that widget but can be us
 
 ## See Also
 
-- {{< docref "/components/lvgl" "LVGL Main component" >}}
+- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

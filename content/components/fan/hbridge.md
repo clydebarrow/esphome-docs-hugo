@@ -7,11 +7,11 @@ title: "H-bridge Fan"
 
 The `hbridge` fan platform allows you to use a compatible *h-bridge* (L298N, DRV8871, MX1508, BTS7960, L9110S, DRV8833, TB6612, etc.) to control a fan (or motor/solenoid).
 
-{{< img src="L298N_module.jpg" alt="Image" caption="L298N H-bridge module. Image by `kuongshun`_." width="50.0%" class="center" >}}
+{{< img src="L298N_module.jpg" alt="Image"  caption="L298N H-bridge module. Image by `kuongshun`_." width="50.0%" class="center" >}}
 
 [kuongshun](https://kuongshun.com/products/l298n-stepper-motor-driver-board-red)
 
-{{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
+{{< img src="fan-ui.png" alt="Image"  width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

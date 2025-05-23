@@ -17,7 +17,7 @@ sensor's TTL pin to be wired to one of the ESP's input pins. Since these sensors
 multiple times per second, filtering is highly recommended.
 
 
-{{< img src="hrxl_maxsonar_wr-full.jpg" alt="Image" caption="MB7388 HRXL-MaxSonar-WRMLT Ultrasonic Distance Sensor." width="50.0%" class="center" >}}
+{{< img src="hrxl_maxsonar_wr-full.jpg" alt="Image"  caption="MB7388 HRXL-MaxSonar-WRMLT Ultrasonic Distance Sensor." width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

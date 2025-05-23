@@ -6,7 +6,7 @@ title: "Syslog Component"
 {{< seo description="" image="" >}}
 
 The `syslog` component can be used to send ESPHome logs to a [syslog server](https://en.wikipedia.org/wiki/Syslog).
-It requires both a {{< docref "time/" "Time component" >}} and a {{< docref "udp/" "UDP component" >}} to be configured.
+It requires both a {{< docref "time/index" "Time component" >}} and a {{< docref "udp" "UDP component" >}} to be configured.
 
 ```yaml
 # Example configuration entry

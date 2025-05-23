@@ -6,7 +6,7 @@ title: "Total Daily Energy Sensor"
 {{< seo description="" image="" >}}
 
 The `total_daily_energy` sensor is a helper sensor that can use the power value of
-other sensors like the {{< docref "atm90e32/" "ATM90E32" >}}, {{< docref "cse7766/" "CSE7766" >}}, {{< docref "hlw8012/" "HLW8012" >}}, etc and integrate
+other sensors like the {{< docref "atm90e32" "ATM90E32" >}}, {{< docref "cse7766" "CSE7766" >}}, {{< docref "hlw8012" "HLW8012" >}}, etc and integrate
 it over time.
 
 So this component allows you to convert readings in `W` or `kW` to readings of the total
@@ -51,7 +51,7 @@ time:
 
 ## Converting from W to kW
 
-Some sensors such as the {{< docref "hlw8012/" "HLW8012" >}} expose their power sensor with a unit of measurement of
+Some sensors such as the {{< docref "hlw8012" "HLW8012" >}} expose their power sensor with a unit of measurement of
 `W`. To have your readings in `kW`, use a filter:
 
 ```yaml

@@ -8,16 +8,16 @@ title: "Display Component"
 The `display` component houses ESPHome's powerful rendering and display
 engine. Fundamentally, there are these types of displays:
 
-- Character displays like {{< docref "max7219/" "7-Segment displays" >}} or
-  {{< docref "lcd_display/" "LCD displays" >}}.
+- Character displays like {{< docref "max7219" "7-Segment displays" >}} or
+  {{< docref "lcd_display" "LCD displays" >}}.
 - Serial displays like {{< docref "nextion/" >}} that have their own processors for graphics rendering.
-- Graphical displays with fully addressable pixels, like {{< docref "waveshare_epaper/" "E-Paper" >}},
-  {{< docref "ili9xxx/" "TFT" >}} or {{< docref "ssd1306/" "OLED" >}} displays.
+- Graphical displays with fully addressable pixels, like {{< docref "waveshare_epaper" "E-Paper" >}},
+  {{< docref "ili9xxx" "TFT" >}} or {{< docref "ssd1306" "OLED" >}} displays.
 
 For graphical displays, which offer the greatest flexibility, there are two options for displaying content:
 
 - ESPHome's [own rendering engine]({{< ref "components/display/_index#display-engine" >}})
-- {{< docref "/components/lvgl" "LVGL" >}} - Light and Versatile Graphics Library
+- {{< docref "/components/lvgl/index" "LVGL" >}} - Light and Versatile Graphics Library
 
 {{< anchor "display-configuration" >}}
 
@@ -68,7 +68,7 @@ this behavior by setting `auto_clear_enabled: false`.
 In the lambda, you can write code like in any [lambda]({{< ref "automations/templates#config-lambda" >}}) in ESPHome. Display
 lambdas are additionally passed a variable called `it` which represents the rendering engine object.
 
-{{< img src="display_rendering_line.png" alt="Image" class="center" >}}
+{{< img src="display_rendering_line.png" alt="Image"  class="center" >}}
 
 ```yaml
 display:
@@ -100,7 +100,7 @@ the rendering engine is always first specify the `x` coordinate and then the `y`
 
 Now that you know a bit more about ESPHome's coordinate system, let's draw some basic shapes like lines, rectangles, circles or even polygons:
 
-{{< img src="display_rendering_shapes.png" alt="Image" class="center" >}}
+{{< img src="display_rendering_shapes.png" alt="Image"  class="center" >}}
 
 ```yaml
 display:
@@ -159,7 +159,7 @@ display:
 ```
 For color displays (e.g. TFT displays), you can use the Color class.
 
-{{< img src="display_rendering_colors.png" alt="Image" class="center" >}}
+{{< img src="display_rendering_colors.png" alt="Image"  class="center" >}}
 
 ```yaml
 display:
@@ -253,7 +253,7 @@ display:
 
 
 ```
-{{< img src="display_rendering_text.png" alt="Image" class="center" >}}
+{{< img src="display_rendering_text.png" alt="Image"  class="center" >}}
 
 {{< anchor "display-printf" >}}
 
@@ -602,7 +602,7 @@ If you're experiencing issues with your color display, the `show_test_card: true
 - Together with that it will show the letters "**R**", "**G**" and "**B**" to validate the display geometry.
 - There will be a rectangle around the corners of the display with a marker at the 0,0 corner which should be at the top left of the screen.
 
-{{< img src="test_card.jpg" alt="Image" width="50.0%" class="center" >}}
+{{< img src="test_card.jpg" alt="Image"  width="50.0%" class="center" >}}
 
 When all points above are shown correctly then the display is working as expected.
 To help the graphics display team determine the best way to help you, **a picture of the result of this option is very helpful.**
@@ -617,7 +617,7 @@ For displays in 8 bit mode you will see distinct color blocks rather than a smoo
 ## See Also
 
 - {{< apiref "display/display_buffer.h" "display/display_buffer.h" >}}
-- {{< docref "/components/lvgl" "LVGL" >}}
+- {{< docref "/components/lvgl/index" "LVGL" >}}
 - [Fonts]({{< ref "components/font#display-fonts" >}})
 - [Graph Component]({{< ref "components/graph#display-graphs" >}})
 - [QR Code Component]({{< ref "components/qr_code#display-qrcode" >}})

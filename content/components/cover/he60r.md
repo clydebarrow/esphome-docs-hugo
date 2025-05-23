@@ -5,7 +5,7 @@ title: "HE60R Garage Door Opener"
 
 {{< seo description="" image="" >}}
 
-{{< img src="he60r.jpg" alt="Image" class="right" >}}
+{{< img src="he60r.jpg" alt="Image"  class="right" >}}
 
 The `he60r` cover platform allows you to control a HomEntry HE60R
 garage door opener. These units were made by Chamberlain and sold through Bunnings. It is *likely* that this
@@ -53,7 +53,7 @@ the ESP32 via USB from 5V. This circuit also includes a manual control button co
 Any microcontroller board supported by ESPHome should be suitable for this application.
 
 
-{{< img src="he60r-sch.jpg" alt="Image" >}}
+{{< img src="he60r-sch.jpg" alt="Image"  >}}
 
 Note that this circuit inverts the TX line. A configuration for this would look something like:
 

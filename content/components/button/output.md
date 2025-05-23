@@ -8,7 +8,7 @@ title: "Generic Output Button"
 The `output` button platform allows you to use any output component as a button. This can for example be used to
 momentarily set a GPIO pin using a button.
 
-{{< img src="generic-ui.png" alt="Image" width="80.0%" class="center" >}}
+{{< img src="generic-ui.png" alt="Image"  width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

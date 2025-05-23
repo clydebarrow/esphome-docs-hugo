@@ -5,7 +5,7 @@ title: "Sonoff Fish Pond Pump"
 
 {{< seo description="" image="" >}}
 
-{{< img src="sonoff-fishpond.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="sonoff-fishpond.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 The Sonoff range of products containing the ESP chips from Espressif has a myriad of uses and best of all, you can customize it, aka hackable.
 This quick cookbook aims to provide a clear, simple working example.
@@ -134,7 +134,7 @@ time:
 
 Follow the standard way of uploading to your Sonoff Basic.
 
-{{< img src="sonoff-fishpond-pump-1-programming.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="sonoff-fishpond-pump-1-programming.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 For USB uploads this generally includes:
 
@@ -172,16 +172,16 @@ Connecting it
 
 Once the pump is running changing the position of the float in the float sensor will cause the Sonoff to stop the pump.
 
-{{< img src="sonoff-fishpond-pump-gpio14.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="sonoff-fishpond-pump-gpio14.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 Wires connected for easier access to connect and disconnect water level sensor
 
 
-{{< img src="sonoff-fishpond-pump-and-sensor.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="sonoff-fishpond-pump-and-sensor.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 This needs to be submersed, pump (bio filter) and sensor connected in single housing (icecream tub).
 
-{{< img src="sonoff-fishpond-pump-installed.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="sonoff-fishpond-pump-installed.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 In this PVC housing the plates are secured using cabinet door magnets for easier access and maintenance.
 

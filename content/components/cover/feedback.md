@@ -12,7 +12,7 @@ position is approximated with the time the cover has been moving in a direction.
 
 It supports *open*, *close*, *stop* and *toggle* actions. Tilt control is not supported.
 
-{{< img src="more-info-ui.png" alt="Image" width="50.0%" class="center" >}}
+{{< img src="more-info-ui.png" alt="Image"  width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

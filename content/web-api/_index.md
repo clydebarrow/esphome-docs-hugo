@@ -46,7 +46,7 @@ example `sensor`. `state` contains a simple text-based representation of the sta
 underlying component, for example ON/OFF or 21.4 °C. Several components also have additional
 fields in this payload, for example lights have a `brightness` attribute.
 
-{{< img src="event-source.png" alt="Image" caption="Example payload of the event source API." class="center" >}}
+{{< img src="event-source.png" alt="Image"  caption="Example payload of the event source API." class="center" >}}
 
 Additionally, each time a client connects to the event source the server sends out all current
 states so that the client can catch up with reality.

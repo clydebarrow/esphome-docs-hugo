@@ -21,15 +21,15 @@ Using the Home Assistant add-on/dashboard
 
 From the card of your device: open **the three dots menu** and select **Install** option.
 
-{{< img src="dashboard-install.png" alt="Image" >}}
+{{< img src="dashboard-install.png" alt="Image"  >}}
 
 A new dialog will open. Click on **Manual download** option.
 
-{{< img src="dashboard-install-manual.png" alt="Image" >}}
+{{< img src="dashboard-install-manual.png" alt="Image"  >}}
 
 Finally, choose **factory format** (formerly "modern format") in the last dialog.
 
-{{< img src="dashboard-install-manual-modern.png" alt="Image" >}}
+{{< img src="dashboard-install-manual-modern.png" alt="Image"  >}}
 
 The build process of the firmware will start and the image will be automatically downloaded after its completion.
 
@@ -51,16 +51,16 @@ There you will find a `firmware.bin` file. This is the binary that you will uplo
 To upload the binary, navigate to the Tasmota web interface and enter the
 "Firmware Upgrade" section.
 
-{{< img src="tasmota_main.png" alt="Image" width="60.0%" class="center" >}}
+{{< img src="tasmota_main.png" alt="Image"  width="60.0%" class="center" >}}
 
 In the "Upgrade by file upload" section, choose the binary you previously downloaded
 
-{{< img src="tasmota_ota.png" alt="Image" width="60.0%" class="center" >}}
+{{< img src="tasmota_ota.png" alt="Image"  width="60.0%" class="center" >}}
 
 If everything succeeds, you will see an "Upload Successful" message and ESPHome
 will connect to the WiFi network configured in your .yaml file. 🎉
 
-{{< img src="tasmota_upload.png" alt="Image" width="60.0%" class="center" >}}
+{{< img src="tasmota_upload.png" alt="Image"  width="60.0%" class="center" >}}
 
 Happy Hacking!
 

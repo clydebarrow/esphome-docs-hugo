@@ -8,9 +8,9 @@ title: "RGB Light"
 The `rgb` light platform creates an RGB light from 3 [float output components]({{< ref "components/output/_index#output" >}})
 (one for each color channel).
 
-{{< img src="rgb-strip.jpg" alt="Image" caption="Example of an RGB LED strip that can be used with this component." width="75.0%" class="center" >}}
+{{< img src="rgb-strip.jpg" alt="Image"  caption="Example of an RGB LED strip that can be used with this component." width="75.0%" class="center" >}}
 
-{{< img src="rgb-ui.png" alt="Image" width="40.0%" class="center" >}}
+{{< img src="rgb-ui.png" alt="Image"  width="40.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -59,7 +59,7 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 
 ## See Also
 
-{{< img src="rgb-detail.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="rgb-detail.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 - {{< docref "/components/output" >}}
 - {{< docref "/components/light" >}}

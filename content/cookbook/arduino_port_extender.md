@@ -8,7 +8,7 @@ title: "Arduino Port Expander"
 With this sketch you can control pins of a remote Arduino board through ESPHome. The Arduino acts as a port
 expander, allowing you to use more pins than a standard ESP8266/ESP32 has.
 
-{{< img src="arduino_pro_mini.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="arduino_pro_mini.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 The Arduino is connected to the ESP via I²C. Most Arduinos use the `A4` and `A5` pins for the I²C bus
 so those pins are not available to read from ESPHome.

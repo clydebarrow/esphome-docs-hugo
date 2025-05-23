@@ -12,9 +12,9 @@ voltage of a RuuviTag device with RAWv1 protocol every time the sensor sends
 out a BLE broadcast. RAWv2 protocol is supported too. Then tx power,
 movement count and measurement sequence number are also tracked.
 
-{{< img src="ruuvitag-full.jpg" alt="Image" caption="RuuviTagSensor over BLE." width="80.0%" class="center" >}}
+{{< img src="ruuvitag-full.jpg" alt="Image"  caption="RuuviTagSensor over BLE." width="80.0%" class="center" >}}
 
-{{< img src="ruuvitag-ui.jpg" alt="Image" width="80.0%" class="center" >}}
+{{< img src="ruuvitag-ui.jpg" alt="Image"  width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

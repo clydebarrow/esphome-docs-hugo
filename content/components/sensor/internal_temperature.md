@@ -13,7 +13,7 @@ Some ESP32 variants return a large amount of invalid temperature
 values, including 53.3°C which equates to a raw value of 128. Invalid measurements are ignored by this component.
 
 {{< /note >}}
-{{< img src="internal_temperature-ui.png" alt="Image" width="70.0%" class="center" >}}
+{{< img src="internal_temperature-ui.png" alt="Image"  width="70.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

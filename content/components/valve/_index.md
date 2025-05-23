@@ -12,7 +12,7 @@ The `valve` component is a generic representation of valves in ESPHome. A valve 
 To use a valve in Home Assistant requires Home Assistant 2024.5 or later.
 
 {{< /note >}}
-{{< img src="valve-ui.png" alt="Image" class="center" >}}
+{{< img src="valve-ui.png" alt="Image"  class="center" >}}
 
 {{< anchor "config-valve" >}}
 

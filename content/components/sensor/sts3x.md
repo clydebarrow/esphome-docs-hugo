@@ -11,7 +11,7 @@ The `sts3x` sensor platform Temperature sensor allows you to use your Sensirion 
 ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
 required to be set up in your configuration for this sensor to work.
 
-{{< img src="temperature.png" alt="Image" width="80.0%" class="center" >}}
+{{< img src="temperature.png" alt="Image"  width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

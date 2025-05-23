@@ -51,7 +51,7 @@ prepared using the Home Assistant Companion app) or (part of) a string that is c
 
 To obtain a tag's UID:
 
-- Set up a simple NFC component (such as the {{< docref "../pn7160" "PN716x" >}}, {{< docref "../pn7150" "PN7150" >}} or {{< docref "pn532/" "PN532" >}})
+- Set up a simple NFC component (such as the {{< docref "../pn7160" "PN716x" >}}, {{< docref "../pn7150" "PN7150" >}} or {{< docref "pn532" "PN532" >}})
   configuration without any binary sensors.
 - Approach the NFC reader with an NFC tag. When the tag is sufficiently close to the reader, you'll see a message in the
   ESPHome device's logs similar to this:

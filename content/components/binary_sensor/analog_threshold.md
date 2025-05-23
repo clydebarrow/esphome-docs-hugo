@@ -6,7 +6,7 @@ title: "Analog Threshold Binary Sensor"
 {{< seo description="" image="" >}}
 
 The `analog_threshold` binary sensor platform allows you to convert analog values
-(i.e. {{< docref "/components/sensor" "sensor" >}} readings)
+(i.e. {{< docref "/components/sensor/index" "sensor" >}} readings)
 into boolean values, using a threshold as a reference.
 When the signal is above or equal to the threshold the binary sensor is `true`
 (this behavior can be changed by adding an `invert` filter).

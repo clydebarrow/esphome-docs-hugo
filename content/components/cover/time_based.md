@@ -10,7 +10,7 @@ have any position feedback. The state of the cover is thus always an assumed one
 position is approximated with the time the cover has been moving in a direction. The state
 of the cover can be restored at node reboot.
 
-{{< img src="more-info-ui.png" alt="Image" width="75.0%" class="center" >}}
+{{< img src="more-info-ui.png" alt="Image"  width="75.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -21,9 +21,9 @@ This driver has been tested with the following displays:
 This component requires an ESP32 and the use of
 ESP-IDF. PSRAM is a requirement due to the size of the display buffer. A [quad SPI bus]({{< ref "components/spi#spi" >}}) interface must be configured.
 
-{{< img src="t4-s3.jpg" alt="Image" caption="Lilygo T4-S3" width="75.0%" class="center" >}}
+{{< img src="t4-s3.jpg" alt="Image"  caption="Lilygo T4-S3" width="75.0%" class="center" >}}
 
-{{< img src="t-display-amoled.jpg" alt="Image" caption="Lilygo T-Display S3 AMOLED" width="75.0%" class="center" >}}
+{{< img src="t-display-amoled.jpg" alt="Image"  caption="Lilygo T-Display S3 AMOLED" width="75.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

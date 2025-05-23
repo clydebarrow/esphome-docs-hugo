@@ -11,7 +11,7 @@ Rather than counting pulses over a fixed time interval, the pulse meter sensor m
 
 Here's a comparison of the two sensors.  The pulse meter is the smoother line.  Both are set to an update interval of 10 seconds (using the `update_interval` and the `throttle_average` option respectively):
 
-{{< img src="pulse-counter_vs_pulse-meter.png" alt="Image" width="50.0%" class="center" >}}
+{{< img src="pulse-counter_vs_pulse-meter.png" alt="Image"  width="50.0%" class="center" >}}
 
 Please note that it is not possible to use both of these two sensors on the same pin at the same time.
 

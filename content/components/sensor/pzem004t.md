@@ -20,7 +20,7 @@ ESPHome.
 {{< warning >}}
 This page refers to version V1 of the PZEM-004T, which has been out of stock for a while.
 The PZEM-004, however, is still working (and selling) with this protocol and does not use modbus.
-For using the newer V3 variant of this sensor please see {{< docref "pzemac/" "pzemac" >}}.
+For using the newer V3 variant of this sensor please see {{< docref "pzemac" "pzemac" >}}.
 
 {{< /warning >}}
 The communication with this component is done via a [UART]({{< ref "components/uart#uart" >}}).

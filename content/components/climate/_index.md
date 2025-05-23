@@ -9,7 +9,7 @@ ESPHome has support for climate devices. Climate devices can represent different
 hardware, but the defining factor is that climate devices have a settable target temperature
 and can be put in different modes like `HEAT`, `COOL`, `HEAT_COOL` or `OFF`.
 
-{{< img src="climate-ui.png" alt="Image" caption="Climate Device UI in Home Assistant." width="60.0%" class="center" >}}
+{{< img src="climate-ui.png" alt="Image"  caption="Climate Device UI in Home Assistant." width="60.0%" class="center" >}}
 
 {{< note >}}
 Not all climate components support all possible features. Check the corresponding documentation page for details on what is supported.

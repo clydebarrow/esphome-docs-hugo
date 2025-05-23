@@ -5,7 +5,7 @@ title: "Resampler Speaker"
 
 {{< seo description="" image="" >}}
 
-The `resampler` speaker platform allows you to convert the sample rate of an audio stream and output it to another {{< docref "/components/speaker" "speaker component" >}}.
+The `resampler` speaker platform allows you to convert the sample rate of an audio stream and output it to another {{< docref "/components/speaker/index" "speaker component" >}}.
 
 If the audio stream doesn't require resampling, it is automatically sent directly to the output speaker.
 
@@ -29,7 +29,7 @@ speaker:
 ```
 ## Configuration variables:
 
-- **output_speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker" "speaker" >}}dex>` to output the resampled audio.
+- **output_speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker/index" "speaker" >}}dex>` to output the resampled audio.
 - **buffer_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of the internal ring buffer. Larger values may reduce stuttering but use more memory. Defaults to `500ms`.
 - **bits_per_sample** (*Optional*, positive integer): The audio sample bit depth after resampling. Defaults to the output speaker's bits per sample.
 - **sample_rate** (*Optional*, positive integer): Sample rate to convert to. Must be between `8000` and `48000`. Defaults to the output speaker's sample rate.

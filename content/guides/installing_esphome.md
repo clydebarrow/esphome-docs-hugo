@@ -8,7 +8,7 @@ title: "Installing ESPHome Manually"
 
 Download Python from [the official site](https://www.python.org/downloads/).
 
-{{< img src="python-win-installer.png" alt="Python installer window with arrows pointing to \"Add Python to PATH\" and \"Install Now\"" width="75.0%" class="center" >}}
+{{< img src="python-win-installer.png" alt="Python installer window with arrows pointing to \"Add Python to PATH\" and \"Install Now\""  width="75.0%" class="center" >}}
 
 Make sure you check "Add Python to PATH", and go all the way through the
 installer.
@@ -157,7 +157,7 @@ PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc``, then log out and back in.
 
 ## See Also
 
-- {{< docref "/" "ESPHome index" >}}
+- {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - [Developer site](https://developers.esphome.io)
 

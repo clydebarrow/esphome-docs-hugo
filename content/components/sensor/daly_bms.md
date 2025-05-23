@@ -11,7 +11,7 @@ with ESPHome.
 
 The BMS communicates via [UART]({{< ref "components/uart#uart" >}}).
 
-{{< img src="daly_bms_example.png" alt="Image" width="100.0%" class="center" >}}
+{{< img src="daly_bms_example.png" alt="Image"  width="100.0%" class="center" >}}
 
 ## Component/Hub
 
@@ -291,7 +291,7 @@ select:
 
 Connect RX from BMS to TX in ESP board and TX from BMS to RX in ESP board
 
-{{< img src="daly_bms_pinout.png" alt="Image" caption="Uart Pinout." width="100.0%" class="center" >}}
+{{< img src="daly_bms_pinout.png" alt="Image"  caption="Uart Pinout." width="100.0%" class="center" >}}
 
 **3.3v Warning:** some BMS 3.3v cant source large currents and may not work to properly power the ESP. If you are having WIFI connection issues or similar, try a different power source. There is 12-15v available on the Daly connector which via a proper step-down converter can properly power the ESP.
 

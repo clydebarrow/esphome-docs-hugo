@@ -10,7 +10,7 @@ It uses [UART]({{< ref "components/uart#uart" >}}) for communication.
 
 Once configured, you can use sensors as described below for your projects.
 
-{{< img src="pylontech.jpg" alt="Image" caption="Pylontech Batteries" width="50.0%" class="center" >}}
+{{< img src="pylontech.jpg" alt="Image"  caption="Pylontech Batteries" width="50.0%" class="center" >}}
 
 ## Hardware Setup
 
@@ -32,7 +32,7 @@ If you have multiple batteries you need to connect to the master battery's conso
 | 8 | Brown | Brown | GND | GND |
 
 
-{{< img src="rj45_pinout.jpg" alt="Image" caption="RJ45 pinout" width="70.0%" class="center" >}}
+{{< img src="rj45_pinout.jpg" alt="Image"  caption="RJ45 pinout" width="70.0%" class="center" >}}
 
 ### Pylontech RJ11 Console Pinout (US2000B, US2000)
 

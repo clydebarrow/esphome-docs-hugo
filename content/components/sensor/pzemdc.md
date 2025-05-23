@@ -19,7 +19,7 @@ The communication with this component is via a [UART]({{< ref "components/uart#u
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 
-{{< img src="pzem-dc.png" alt="Image" caption="PZEM-0xx Energy Monitor." width="80.0%" class="center" >}}
+{{< img src="pzem-dc.png" alt="Image"  caption="PZEM-0xx Energy Monitor." width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

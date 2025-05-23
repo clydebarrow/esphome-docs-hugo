@@ -20,7 +20,7 @@ This driver has been tested with the following displays:
 This component requires an ESP32 (usually an ESP32-S3 because of the number of GPIO pins required) and the use of
 ESP-IDF. PSRAM is a requirement due to the size of the display buffer.
 
-{{< img src="waveshare_touch-s3.jpg" alt="Image" caption="Waveshare ESP32-S3 Touch 4.3" width="75.0%" class="center" >}}
+{{< img src="waveshare_touch-s3.jpg" alt="Image"  caption="Waveshare ESP32-S3 Touch 4.3" width="75.0%" class="center" >}}
 
 ```yaml
 # Example minimal configuration entry

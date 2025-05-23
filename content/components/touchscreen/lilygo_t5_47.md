@@ -25,7 +25,7 @@ touchscreen:
 
 ## See Also
 
-- {{< docref "index/" "Touchscreen" >}}
+- {{< docref "index" "Touchscreen" >}}
 - {{< apiref "lilygo_t5_47/touchscreen/lilygo_t5_47_touchscreen.h" "lilygo_t5_47/touchscreen/lilygo_t5_47_touchscreen.h" >}}
 
 

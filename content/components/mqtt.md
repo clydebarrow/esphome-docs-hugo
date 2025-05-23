@@ -297,7 +297,7 @@ and birth message feature of MQTT to achieve availability reporting for
 Home Assistant. If the node is not connected to MQTT, Home Assistant
 will show all its entities as unavailable (a feature 😉).
 
-{{< img src="mqtt-availability.png" alt="Image" width="50.0%" class="center" >}}
+{{< img src="mqtt-availability.png" alt="Image"  width="50.0%" class="center" >}}
 
 By default, ESPHome will send a retained MQTT message to
 `<TOPIC_PREFIX>/status` with payload `online`, and will tell the

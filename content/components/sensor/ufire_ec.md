@@ -11,7 +11,7 @@ configuration for this sensor to work. It requires also to have a temperature
 sensor in the liquid tank; this can be on the same board or an external sensor
 linked to the uFire EC configuration.
 
-{{< img src="ufire_ec.png" alt="Image" width="100.0%" class="center" >}}
+{{< img src="ufire_ec.png" alt="Image"  width="100.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

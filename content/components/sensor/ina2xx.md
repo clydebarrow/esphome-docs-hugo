@@ -5,7 +5,7 @@ title: "INA2xx family of digital power monitors"
 
 {{< seo description="" image="" >}}
 
-{{< img src="ina228-full.jpg" alt="Image" caption="INA228 Module with integrated shunt from Adafruit" width="50.0%" class="center" >}}
+{{< img src="ina228-full.jpg" alt="Image"  caption="INA228 Module with integrated shunt from Adafruit" width="50.0%" class="center" >}}
 
 ## Supported devices
 The `ina2xx` sensor platform allows you to use family of Texas Instruments current and power 

@@ -16,7 +16,7 @@ If you are using the {{< docref "logger/" >}} make sure you disable the uart log
 `baud_rate: 0` option.
 
 {{< /warning >}}
-{{< img src="rf_bridge-full.jpg" alt="Image" caption="Sonoff RF Bridge 433, version R1 or R2 V1.0" width="60.0%" class="center" >}}
+{{< img src="rf_bridge-full.jpg" alt="Image"  caption="Sonoff RF Bridge 433, version R1 or R2 V1.0" width="60.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -6,7 +6,7 @@ title: "LVGL Switch"
 {{< seo description="" image="" >}}
 
 The `lvgl` switch platform creates a switch from an LVGL widget
-and requires {{< docref "/components/lvgl" "LVGL" >}} to be configured.
+and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
 Supported widgets are [`checkbox`]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}}) (with `checkable` option enabled), [`switch`]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}) and [`button`]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}}). A single switch supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome switch component.
 
@@ -25,7 +25,7 @@ switch:
 
 ```
 ## See Also
-- {{< docref "/components/lvgl" "LVGL Main component" >}}
+- {{< docref "/components/lvgl/index" "LVGL Main component" >}}
 - [Button widget]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}})
 - [Switch widget]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}})
 - [Checkbox widget]({{< ref "components/lvgl/widgets#lvgl-widget-checkbox" >}})

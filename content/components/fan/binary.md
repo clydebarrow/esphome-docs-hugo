@@ -7,7 +7,7 @@ title: "Binary Fan"
 
 The `binary` fan platform lets you represent any binary [Output Component]({{< ref "components/output/_index#output" >}}) as a fan.
 
-{{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
+{{< img src="fan-ui.png" alt="Image"  width="80.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

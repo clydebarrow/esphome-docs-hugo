@@ -152,7 +152,7 @@ To hide these base files from the dashboard, you can
 {{< /tip >}}
 ## See Also
 
-- {{< docref "/" "ESPHome index" >}}
+- {{< docref "/index" "ESPHome index" >}}
 - {{< docref "/guides/getting_started_command_line" >}}
 - {{< docref "/guides/faq" >}}
 

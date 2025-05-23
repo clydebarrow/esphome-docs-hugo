@@ -6,7 +6,7 @@ title: "Resistance Sensor"
 {{< seo description="" image="" >}}
 
 The `resistance` platform is a helper sensor that allows you to convert readings
-from a voltage sensor (such as the {{< docref "adc/" "ADC Sensor" >}}) into resistance readings
+from a voltage sensor (such as the {{< docref "adc" "ADC Sensor" >}}) into resistance readings
 in Ω (ohm).
 
 In order to calculate the resistance, the circuit needs to be set up in a
@@ -22,7 +22,7 @@ This consists of three parts:
 There are two kinds of configurations for this circuit: Either the variable resistor
 is close to GND (DOWNSTREAM) or it is closer to VCC (UPSTREAM).
 
-{{< img src="resistance-downstream.png" alt="Image" caption="Example voltage divider configuration of type \"DOWNSTREAM\" and a voltage reference of 5V." width="25.0%" class="center" >}}
+{{< img src="resistance-downstream.png" alt="Image"  caption="Example voltage divider configuration of type \"DOWNSTREAM\" and a voltage reference of 5V." width="25.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry

@@ -149,7 +149,7 @@ should see the ESPHome device show up in the discovered section (although this c
 Alternatively, you can manually add the device by clicking **CONFIGURE** on the ESPHome integration
 and entering `<NODE_NAME>.local` as the host.
 
-{{< img src="gpio-ui.png" alt="Image" class="center" >}}
+{{< img src="gpio-ui.png" alt="Image"  class="center" >}}
 
 After the first upload, you will probably never need to use the USB
 cable again, as all features of ESPHome are enabled remotely as well.
@@ -188,7 +188,7 @@ esphome run livingroom.yaml
 docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome run livingroom.yaml
 
 ```
-{{< img src="gpio-ui.png" alt="Image" >}}
+{{< img src="gpio-ui.png" alt="Image"  >}}
 
 ## Where To Go Next
 
@@ -197,17 +197,17 @@ and uploaded your first ESPHome custom firmware to your node. You've
 also learned how to enable some basic components via the configuration
 file.
 
-So now is a great time to go take a look at the {{< docref "/" "Components Index" >}}.
+So now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}.
 Hopefully you'll find all sensors/outputs/etc. you'll need in there. If you're having any problems or
 want new features, please either create a new issue on the [GitHub issuetracker](https://github.com/esphome/issues/issues) or find us on the
-[Discord chat](https://discord.gg/KhAMKrd) (also make sure to read the {{< docref "faq/" "FAQ" >}}).
+[Discord chat](https://discord.gg/KhAMKrd) (also make sure to read the {{< docref "faq" "FAQ" >}}).
 
 {{< anchor "esphome-device-builder-docker" >}}
 
 ## Bonus: ESPHome Device Builder
 
 The ESPHome Device Builder allows you to easily manage your nodes from a nice web interface. It was primarily designed
-as a {{< docref "getting_started_hassio/" "Home Assistant add-on" >}}, but can run in docker independently from Home Assistant.
+as a {{< docref "getting_started_hassio" "Home Assistant add-on" >}}, but can run in docker independently from Home Assistant.
 
 To start the ESPHome Device Builder, simply start ESPHome with the following command (with `config/` pointing to a
 directory where you want to store your configurations):
@@ -232,12 +232,12 @@ After that, you will be able to access the ESPHome Device Builder at `localhost:
 
 Logging level can be set with the env var `ESPHOME_LOG_LEVEL` (default is `INFO`).
 
-{{< img src="dashboard_states.png" alt="Image" >}}
+{{< img src="dashboard_states.png" alt="Image"  >}}
 
 ## See Also
 
 - {{< docref "cli/" >}}
-- {{< docref "/" "ESPHome index" >}}
+- {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_hassio/" >}}
 
 

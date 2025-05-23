@@ -8,7 +8,7 @@ This component uses [sigma-delta modulation](https://en.wikipedia.org/wiki/Delta
 to output a floating-point value on a binary output. Unlike with {{< docref "/components/output/slow_pwm" >}},
 it is possible to update the output value with each update cycle, not just at the end of a longer period.
 
-{{< img src="sigma-delta-example.png" alt="Image" caption="Comparison between a *Slow PWM* with a period of 100s and a *sigma-delta output* with an update interval of 1s" width="65.0%" class="center" >}}
+{{< img src="sigma-delta-example.png" alt="Image"  caption="Comparison between a *Slow PWM* with a period of 100s and a *sigma-delta output* with an update interval of 1s" width="65.0%" class="center" >}}
 
 For example, if you choose to toggle the output at most once every 1 second and decide on a
 PWM period of 10 seconds, for reasonably frequent updates, with {{< docref "/components/output/slow_pwm" >}}

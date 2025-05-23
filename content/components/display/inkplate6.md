@@ -12,7 +12,7 @@ recycled from a Kindle e-reader. Its main feature is simplicity.
 
 Learn more at [Inkplate's documentation website](https://inkplate.readthedocs.io/en/stable/)
 
-{{< img src="inkplate6.jpg" alt="Image" caption="Inkplate 6" width="75.0%" class="center" >}}
+{{< img src="inkplate6.jpg" alt="Image"  caption="Inkplate 6" width="75.0%" class="center" >}}
 
 ```yaml
 # Example minimal configuration entry

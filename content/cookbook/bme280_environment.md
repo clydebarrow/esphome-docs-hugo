@@ -10,7 +10,7 @@ With some simple math it is possible to either determine the height of the senso
 This guide can be applied to any sensor measuring temperature and pressure at the same time, like the
 {{< docref "/components/sensor/bme680" >}}, or {{< docref "/components/sensor/bmp280" >}}.
 
-{{< img src="bme280-header.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="bme280-header.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 The first step is to connect the sensor as described {{< docref "/components/sensor/bme280" "here" >}}.
 After validating the sensor is working, we can proceed and add some formulas.

@@ -6,10 +6,10 @@ title: "Thermostat Climate Controller"
 {{< seo description="" image="" >}}
 
 The `thermostat` climate platform allows you to control a climate control system in much the same manner as a
-physical thermostat. Its operation is similar to the {{< docref "bang_bang/" "Bang-Bang" >}} controller; a sensor measures a value
+physical thermostat. Its operation is similar to the {{< docref "bang_bang" "Bang-Bang" >}} controller; a sensor measures a value
 (the air temperature) and the controller will try to keep this value within a range defined by the set point(s). To do this,
 the controller can activate devices like a heating unit and/or a cooling unit to change the value observed by the sensor.
-When configured for both heating and cooling, it is essentially two {{< docref "bang_bang/" "Bang-Bang" >}} controllers in one; it
+When configured for both heating and cooling, it is essentially two {{< docref "bang_bang" "Bang-Bang" >}} controllers in one; it
 differs, however, in that interaction with the thermostat component is nearly identical to that of a real thermostat.
 
 This component can operate in one of two ways:
@@ -28,7 +28,7 @@ are configured -- more on this in a moment. Two parameters define the set points
 front-end user interface. The screenshot below illustrates a thermostat controller in dual-point mode, where two set points
 are available.
 
-{{< img src="climate-ui.png" alt="Image" caption="Dual-setpoint climate UI" width="60.0%" class="center" >}}
+{{< img src="climate-ui.png" alt="Image"  caption="Dual-setpoint climate UI" width="60.0%" class="center" >}}
 
 This component works by triggering a number of [actions]({{< ref "automations/actions#config-action" >}}) as required to keep the observed
 temperature above/below/within the target range as defined by the set point(s). In general, when the observed temperature
@@ -501,13 +501,13 @@ the range of allowed temperature values in the thermostat component. See {{< doc
 {{< /note >}}
 ## Bang-Bang vs. Thermostat
 
-Please see the {{< docref "bang_bang/" "Bang-Bang" >}} component's documentation for a detailed comparison of these two components.
+Please see the {{< docref "bang_bang" "Bang-Bang" >}} component's documentation for a detailed comparison of these two components.
 
 ## See Also
 
 - {{< docref "/components/climate" >}}
 - {{< docref "/components/sensor" >}}
-- {{< docref "bang_bang/" "Bang-Bang" >}}
+- {{< docref "bang_bang" "Bang-Bang" >}}
 - [All Actions]({{< ref "automations/actions#config-action" >}})
 
 

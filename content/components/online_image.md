@@ -151,7 +151,7 @@ wifi:
 ## See Also
 
 - {{< apiref "online_image/online_image.h" "online_image/online_image.h" >}}
-- {{< docref "image/" "Image Component" >}}
-- {{< docref "animation/" "Animation Component" >}}
+- {{< docref "image" "Image Component" >}}
+- {{< docref "animation" "Animation Component" >}}
 
 

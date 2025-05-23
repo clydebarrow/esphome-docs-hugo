@@ -9,7 +9,7 @@ The `ntc` platform is a helper sensor that allows you to convert resistance read
 from a NTC thermistor to temperature readings.
 
 First, you need to get resistance readings from the sensor - you can set this up with the
-{{< docref "adc/" "adc" >}} and {{< docref "resistance/" "resistance" >}} sensors.
+{{< docref "adc" "adc" >}} and {{< docref "resistance" "resistance" >}} sensors.
 
 This platform will then convert the resistance values to temperature readings.
 It also requires calibration parameters for this conversion. There are two

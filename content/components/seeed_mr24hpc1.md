@@ -14,9 +14,9 @@ Seeed Studio mmWave Human Detection Sensor Kit ([Product Page](https://www.seeed
 The [UART]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
 You can use the ESP32 software or hardware serial to use this MR24HPC1, its default baud rate is 115200.
 
-{{< img src="seeed-mr24hpc1.jpg" alt="Image" caption="Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite" width="50.0%" class="center" >}}
+{{< img src="seeed-mr24hpc1.jpg" alt="Image"  caption="Seeed Studio 24GHz mmWave Sensor - Human Static Presence Module Lite" width="50.0%" class="center" >}}
 
-{{< img src="seeed-mr24hpc1-mmwave-kit.png" alt="Image" caption="Seeed Studio mmWave Human Detection Sensor Kit" width="50.0%" class="center" >}}
+{{< img src="seeed-mr24hpc1-mmwave-kit.png" alt="Image"  caption="Seeed Studio mmWave Human Detection Sensor Kit" width="50.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -403,7 +403,7 @@ Then replace all instances of `{$DEVICE}` with your device name
 
 The result:
 
-{{< img src="seeed-mr24hpc1-card.png" alt="Image" class="center" >}}
+{{< img src="seeed-mr24hpc1-card.png" alt="Image"  class="center" >}}
 
 ## See Also
 

@@ -8,7 +8,7 @@ title: "Tuya Fan"
 The `tuya` fan platform creates a variable speed fan from a
 tuya component.
 
-{{< img src="tuyafan.jpg" alt="Image" caption="A Tuya based fan controller wall plate." width="40%" class="center" >}}
+{{< img src="tuyafan.jpg" alt="Image"  caption="A Tuya based fan controller wall plate." width="40%" class="center" >}}
 
 The Tuya fan requires a {{< docref "/components/tuya" >}} to be configured.
 

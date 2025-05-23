@@ -7,7 +7,7 @@ title: "HHCCJCY10 Xiaomi MiFlora (Pink version)"
 
 MiFlora, tuya (pink) version, measures temperature, moisture, ambient light and nutrient levels in the soil.
 
-{{< img src="xiaomi_hhccjcy10.jpg" alt="Image" width="60.0%" class="center" >}}
+{{< img src="xiaomi_hhccjcy10.jpg" alt="Image"  width="60.0%" class="center" >}}
 
 ```yaml
 sensor:

@@ -112,7 +112,7 @@ Given the above example of `my_components`, the folder structure must look like:
 
 
 ```
-..   _external-components_git:
+{{< anchor "external-components_git" >}}
 
 ## Git
 

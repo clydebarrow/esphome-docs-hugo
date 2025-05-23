@@ -38,7 +38,7 @@ Once the device is found, remove the `airthings_ble` device tracker from your co
 
 AirThings Wave Plus tracks radon (24h and long term), airborne chemicals, CO2, temperature, atmospheric pressure and humidity.
 
-{{< img src="airthings_wave_plus.jpg" alt="Image" width="60.0%" class="center" >}}
+{{< img src="airthings_wave_plus.jpg" alt="Image"  width="60.0%" class="center" >}}
 
 ### Configuration example:
 
@@ -80,7 +80,7 @@ esp32_ble_tracker:
 
 AirThings Wave Mini tracks airborne chemicals, temperature, pressure and humidity.
 
-{{< img src="airthings_wave_mini.jpg" alt="Image" width="60.0%" class="center" >}}
+{{< img src="airthings_wave_mini.jpg" alt="Image"  width="60.0%" class="center" >}}
 
 Configuration example:
 

@@ -7,7 +7,7 @@ title: "ESP32 Water Leak Detector (with notification)"
 
 Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water leak detector using ESPHome.  M5StickC was chosen as a platform due to the integrated Grove connector for clean connections and the fact it's well housed.  The built-in display is a bonus, but not strictly necessary.  Notifications are performed via HomeAssistant's 'alert' and 'notify' facilities, which send via Pushover to iOS & Android.
 
-{{< img src="leak-detector-m5stickC_LeakDetected.gif" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_LeakDetected.gif" alt="Image"  class="center" >}}
 
 # Things you'll need
 
@@ -17,18 +17,18 @@ Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water 
 - M5StickC ESP32 development kit
    [M5Stack Link](https://m5stack.com/collections/m5-core/products/stick-c)
 
-{{< img src="leak-detector-m5stickC-m5stickC.png" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC-m5stickC.png" alt="Image"  class="center" >}}
 
 -  Moisture sensor
     This example uses a [Guardian Remote Sensor Probe](https://www.amazon.com/gp/product/B07G5BMD7L)
     which has a 6' cord.
 
-{{< img src="leak-detector-m5stickC_probe.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_probe.jpg" alt="Image"  class="center" >}}
 
 - Grove connector pigtail
     [Amazon Link](https://www.amazon.com/gp/product/B01CNZ9EEC)
 
-{{< img src="leak-detector-m5stickC_grove1.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_grove1.jpg" alt="Image"  class="center" >}}
 
 - USB power supply with USB-C cable
     (the M5StickC comes with the short black USB cable seen in the pictures)
@@ -39,13 +39,13 @@ Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water 
 
 Since the probe comes with an integrated 3.5mm male plug, a 3.5mm female jack has been connected to the Grove port to allow easy probe replacement in the future.  Orange connects to orange, blue connects to blue.  The pads on the opposite side of the probe are internally-connected identically to the front.  The two middle rings on the 3.5mm jack are unused.  There is no polarity -- simply connect one terminal (orange or blue) to Grove GND, and the other to Grove G33.
 
-{{< img src="leak-detector-m5stickC_pinout.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_pinout.jpg" alt="Image"  class="center" >}}
 
-{{< img src="leak-detector-m5stickC_grove2.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_grove2.jpg" alt="Image"  class="center" >}}
 
 # Assembled Components
 
-{{< img src="leak-detector-m5stickC_overview2.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_overview2.jpg" alt="Image"  class="center" >}}
 
 {{< note >}}
 Even though the M5StickC has a battery inside (which might be enough to cover short power outages), you'll need to keep
@@ -64,15 +64,15 @@ Once everything is hooked up and flashed, enable `esp32_touch:` `setup_mode: tru
 
 ### Normal state
 
-{{< img src="leak-detector-m5stickC_dry.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_dry.jpg" alt="Image"  class="center" >}}
 
 ### Wet state
 
-{{< img src="leak-detector-m5stickC_wet.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_wet.jpg" alt="Image"  class="center" >}}
 
 ### Installed Project
 
-{{< img src="leak-detector-m5stickC_overview1.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC_overview1.jpg" alt="Image"  class="center" >}}
 
 Not shown: Probe is placed on the floor in the corner, out of the way, in the lowest part of the room
 
@@ -278,7 +278,7 @@ notify:
 ```
 Enjoy your locally-controlled leak detector with push notification!
 
-{{< img src="leak-detector-m5stickC-ha_interface.jpg" alt="Image" class="center" >}}
+{{< img src="leak-detector-m5stickC-ha_interface.jpg" alt="Image"  class="center" >}}
 
 # See Also
 

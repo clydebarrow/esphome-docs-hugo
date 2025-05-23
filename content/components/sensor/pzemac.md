@@ -25,11 +25,11 @@ Please note that metering chip inside of PZEM module is powered from AC side and
 
 
 {{< /warning >}}
-{{< img src="pzem-ac.png" alt="Image" caption="PZEM-004T Version 3." width="80.0%" class="center" >}}
+{{< img src="pzem-ac.png" alt="Image"  caption="PZEM-004T Version 3." width="80.0%" class="center" >}}
 
 {{< warning >}}
 This page refers to version V3 of the PZEM004T.
-For using the older V1 variant of this sensor please see {{< docref "pzem004t/" "pzem004t" >}}.
+For using the older V1 variant of this sensor please see {{< docref "pzem004t" "pzem004t" >}}.
 
 {{< /warning >}}
 The communication with this component is done via a [Modbus]({{< ref "components/modbus#modbus" >}}) using [UART]({{< ref "components/uart#uart" >}}).

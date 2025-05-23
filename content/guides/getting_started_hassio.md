@@ -37,7 +37,7 @@ To install the ESPHome Device Builder in Home Assistant, click the following but
 {{< button href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon" img="https://my.home-assistant.io/badges/supervisor_addon.svg" alt="Open your Home Assistant instance and show the user interface of the ESPHome add-on." >}}
 This should open the ESPHome add-on page; once you're there, just click the INSTALL button:
 
-{{< img src="addon.png" alt="Image" width="75.0%" class="center" >}}
+{{< img src="addon.png" alt="Image"  width="75.0%" class="center" >}}
 
 Installation of the add-on may take a moment or two. Once done, click "Start" and then click "Open Web UI".
 
@@ -48,7 +48,7 @@ If you're running Home Assistant in a way that does not provide access to add-on
 {{< /note >}}
 The web UI will present a wizard which will walk you through creating your first configuration:
 
-{{< img src="dashboard_empty.png" alt="Image" width="95.0%" class="center" >}}
+{{< img src="dashboard_empty.png" alt="Image"  width="95.0%" class="center" >}}
 
 After creating your first configuration, you'll need to install it on your device.
 
@@ -69,7 +69,7 @@ with Home Assistant.
 
 Let's take a quick tour of the ESPHome Device Builder interface.
 
-{{< img src="dashboard_states.png" alt="Image" width="95.0%" class="center" >}}
+{{< img src="dashboard_states.png" alt="Image"  width="95.0%" class="center" >}}
 
 The main page displays a list of all configuration files for nodes you've created. For each file, there are a few
 actions you can perform:
@@ -118,7 +118,7 @@ switch:
 ```
 In Home Assistant, the example code above will look like this:
 
-{{< img src="gpio-ui.png" alt="Image" width="75.0%" class="center" >}}
+{{< img src="gpio-ui.png" alt="Image"  width="75.0%" class="center" >}}
 
 In the example above, we're simply adding a switch that's called "Living Room Dehumidifier" and is connected to the pin
 `GPIO5`. This switch could really control anything -- lights or a tabletop fan, for example. Its name and function is
@@ -143,7 +143,7 @@ binary_sensor:
 ```
 In Home Assistant, the example code above will look like this:
 
-{{< img src="gpio-ui.png" alt="Image" width="75.0%" class="center" >}}
+{{< img src="gpio-ui.png" alt="Image"  width="75.0%" class="center" >}}
 
 After adding this to your device's configuration file, be sure to click "SAVE" to save the changes you've made to your
 configuration...and read on to the next section!
@@ -158,7 +158,7 @@ Each time you modify a device's configuration file, you need to update the devic
 and reinstall your updated configuration onto the device.
 
 Note that you won't need to have the device connected to your system with a USB data cable again, as (once ESPHome is
-installed on your device) it can update the device {{< docref "/components/ota" ""over the air"" >}}.
+installed on your device) it can update the device {{< docref "/components/ota/index" ""over the air"" >}}.
 
 {{< anchor "connecting-your-device-to-home-assistant" >}}
 
@@ -180,14 +180,14 @@ You can repeat this process for each ESPHome device.
 Great! 🎉 You've successfully set up your first ESPHome project and installed your first ESPHome custom firmware to your
 device. You've also learned how to enable some basic components via the configuration file.
 
-Now is a great time to go take a look at the {{< docref "/" "Components Index" >}}. Hopefully you'll find all the hardware
+Now is a great time to go take a look at the {{< docref "/index" "Components Index" >}}. Hopefully you'll find all the hardware
 components you need there. If you're having any problems or want to request new features, please either create a new
 issue on the [GitHub issue tracker](https://github.com/esphome/issues/issues) or find us on the
-[Discord chat](https://discord.gg/KhAMKrd). Be sure to read the {{< docref "faq/" "FAQ" >}}, as well!
+[Discord chat](https://discord.gg/KhAMKrd). Be sure to read the {{< docref "faq" "FAQ" >}}, as well!
 
 ## See Also
 
-- {{< docref "/" "ESPHome index" >}}
+- {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 
 

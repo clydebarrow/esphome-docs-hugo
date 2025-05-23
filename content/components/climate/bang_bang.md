@@ -9,7 +9,7 @@ The `bang_bang` climate platform allows you to regulate a value with a
 [bang-bang controller](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control) (also called hysteresis controller).
 
 {{< note >}}
-The {{< docref "thermostat/" "thermostat" >}} component behaves more like a common thermostat; it is
+The {{< docref "thermostat" "thermostat" >}} component behaves more like a common thermostat; it is
 essentially two bang-bang controllers in one. Please see the `Bang-bang vs. Thermostat`_ section below
 if you are not sure which is appropriate for your application.
 
@@ -46,7 +46,7 @@ There are three types of bang bang controllers this platform can represent:
 
 Do note that the actions are only called when the current temperature leaves the target temperature range.
 
-{{< img src="climate-ui.png" alt="Image" width="60.0%" class="center" >}}
+{{< img src="climate-ui.png" alt="Image"  width="60.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -101,7 +101,7 @@ For example, controlling humidity is also possible with this platform.
 
 The behavior of the bang-bang controller is a topic that has surfaced on the ESPHome Discord server
 countless times -- many people have been confused by what it does. While they are similar, there are
-two key differences between the bang-bang component and the {{< docref "thermostat/" "thermostat" >}} component:
+two key differences between the bang-bang component and the {{< docref "thermostat" "thermostat" >}} component:
 
 - When actions are triggered
 - How the set points are used by the controller
@@ -140,7 +140,7 @@ hysteresis window, or going past the set point in either direction, should be ex
 that is turned off after it reaches its set point. The heating element will remain hot (potentially for quite a while),
 and as such will continue to heat the air until the element fully cools down to match the ambient air/room temperature.
 
-The {{< docref "thermostat/" "thermostat" >}} component differs in that there is hysteresis around *each* set point. For example,
+The {{< docref "thermostat" "thermostat" >}} component differs in that there is hysteresis around *each* set point. For example,
 if the `target_temperature_low` set point is 20 °C, and the (default) hysteresis value of 0.5 °C is used,
 `heat_action` is called at a temperature of 19.5 °C and `idle_action` is called at 20.5 °C. If cooling, as defined
 by `target_temperature_high`, is set to 22 °C, `cool_action` would be called at 22.5 °C and `idle_action` called
@@ -152,7 +152,7 @@ Behavioral differences aside, there is another important difference between thes
 
 The interaction with this component via the Home Assistant user interface is also different than what is seen on most
 common residential thermostats. Generally speaking, most thermostats allow either one or two set points -- one of them
-is associated with heating while the other with cooling, and this is exactly how the {{< docref "thermostat/" "thermostat" >}}
+is associated with heating while the other with cooling, and this is exactly how the {{< docref "thermostat" "thermostat" >}}
 component uses them. If you set the "heat" set point to 20 °C, most people assume this means the heating system will
 keep the temperature as close to 20 °C as possible. The same is true for the upper set point, for cooling: if you set
 a temperature of 22 °C, most people assume the cooling system will keep the temperature as close to 22 °C as possible.
@@ -168,11 +168,11 @@ departs from what most people seem to expect.
 It comes down to two points:
 
 - If you have a dual-function system (both heating and cooling), you'll almost certainly want to use the
-  {{< docref "thermostat/" "thermostat" >}} component.
+  {{< docref "thermostat" "thermostat" >}} component.
 - If you have a single-function system *and* have a specific need or desire to manually control both the upper and
   lower bounds for hysteresis, use the bang-bang controller.
 
-In all other situations, the {{< docref "thermostat/" "thermostat" >}} component is probably best.
+In all other situations, the {{< docref "thermostat" "thermostat" >}} component is probably best.
 
 ## See Also
 

@@ -9,7 +9,7 @@ The `nextion` display platform allows you to use Nextion LCD displays
 ([datasheet](https://nextion.itead.cc/resources/datasheets/), [iTead](https://www.itead.cc/display/nextion.html))
 with ESPHome.
 
-{{< img src="nextion-full.jpg" alt="Image" caption="Nextion display" width="75.0%" class="center" >}}
+{{< img src="nextion-full.jpg" alt="Image"  caption="Nextion display" width="75.0%" class="center" >}}
 
 Communication with the Nextion display is done via a serial interface, so you'll need to have a [UART Bus]({{< ref "components/uart#uart" >}})
 in your configuration with both `rx_pin` and `tx_pin` configured. These pins must then be connected to the
@@ -352,7 +352,7 @@ on_...:
 This will use the file specified for `tft_url` to update ("OTA") the Nextion.
 
 Once completed, both ESPHome and the Nextion will reboot. ESPHome will be unresponsive during the upload process and no
-logging or other {{< docref "/automations" "automations" >}} will occur. This process uses the same protocol as the
+logging or other {{< docref "/automations/index" "automations" >}} will occur. This process uses the same protocol as the
 [Nextion Editor](https://nextion.tech/nextion-editor/) and only transfers required portions of the TFT file.
 
 {{< warning >}}

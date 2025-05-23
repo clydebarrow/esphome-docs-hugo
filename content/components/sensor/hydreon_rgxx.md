@@ -16,7 +16,7 @@ Supported firmware versions:
 
 Device FAQ: `<https://rainsensors.com/support/rg-9-rg-15-faq/>`__
 
-{{< img src="hydreon_rg9_full.jpg" alt="Image" caption="Hydreon RG-9 Rain Sensor. Image by [Hydreon](https://rainsensors.com/)." width="50.0%" class="center" >}}
+{{< img src="hydreon_rg9_full.jpg" alt="Image"  caption="Hydreon RG-9 Rain Sensor. Image by [Hydreon](https://rainsensors.com/)." width="50.0%" class="center" >}}
 
 ```yaml
 # Example RG-9 entry

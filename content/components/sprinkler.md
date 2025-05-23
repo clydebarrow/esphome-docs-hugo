@@ -5,7 +5,7 @@ title: "Sprinkler Controller"
 
 {{< seo description="" image="" >}}
 
-{{< img src="sprinkler.png" alt="Image" class="center" >}}
+{{< img src="sprinkler.png" alt="Image"  class="center" >}}
 
 The `sprinkler` controller component aims to behave like a sprinkler/irrigation valve controller,
 much like those made by companies such as Rain Bird or Hunter. It does so by automating control of a
@@ -46,7 +46,7 @@ valves (often known in the industry as a "main" or "master" valve). The pump or 
 simply controls the water supply to other downstream valves.
 
 {{< /note >}}
-{{< img src="sprinkler-ui.jpg" alt="Image" caption="Example Sprinkler Controller UI -- Note that this example leverages {{< docref \"/components/number\" \"number\" >}} components for setting run durations, repeat and multiplier values. [More details below.]({{< ref \"components/sprinkler#sprinkler-controller-sprinkler_controller_numbers\" >}})" width="60.0%" class="center" >}}
+{{< img src="sprinkler-ui.jpg" alt="Image"  caption="Example Sprinkler Controller UI -- Note that this example leverages {{< docref \"/components/number/index\" \"number\" >}} components for setting run durations, repeat and multiplier values. [More details below.]({{< ref \"components/sprinkler#sprinkler-controller-sprinkler_controller_numbers\" >}})" width="60.0%" class="center" >}}
 
 ```yaml
 # Example minimal configuration entry
@@ -136,10 +136,10 @@ examples that are ready for you to copy and paste!
   used in ESPHome). Typically this is expected to provide a resolution of approximately 16 milliseconds, however
   this may vary somewhat depending on your exact configuration. Regardless, it should provide more-than-sufficient
   precision to operate any such valve.
-- **multiplier_number** (*Optional*, *string*): The name of the {{< docref "/components/number" "number" >}} component that
+- **multiplier_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component that
   should be presented to the front end (Home Assistant) to enable control of the sprinkler controller's `multiplier`
   value. See [Using the Sprinkler Controller's Numbers]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_numbers" >}}) below for more detail.
-- **repeat_number** (*Optional*, *string*): The name of the {{< docref "/components/number" "number" >}} component that
+- **repeat_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component that
   should be presented to the front end (Home Assistant) to enable control of the sprinkler controller's `repeat`
   value. May not be used with `repeat`. See [Using the Sprinkler Controller's Numbers]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_numbers" >}}) below for more
   detail.
@@ -180,7 +180,7 @@ examples that are ready for you to copy and paste!
     would *switch on* the respective pump/valve. *It is not recommended to expose this switch to the front end; please
     see* [An Important Note about GPIO Switches and Control]({{< ref "components/sprinkler#sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}}) *below for more detail.*
     May not be specified with *pump_switch_id*.
-  - **run_duration_number** (*Optional*, *string*): The name of the {{< docref "/components/number" "number" >}} component
+  - **run_duration_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component
     that should be presented to the front end (Home Assistant) to enable control of the valve's `run_duration` value.
     May not be used with `run_duration`. See [Using the Sprinkler Controller's Numbers]({{< ref "components/sprinkler#sprinkler-controller-sprinkler_controller_numbers" >}}) below for more
     detail. **Pro tip:** Want times in minutes? Add `unit_of_measurement: min` to the number configuration. See
@@ -927,7 +927,7 @@ the controllers are operating simultaneously.
 
 ### Using the Sprinkler Controller's Numbers
 
-The sprinkler controller can leverage ESPHome's/Home Assistant's {{< docref "/components/number" "number" >}} component to
+The sprinkler controller can leverage ESPHome's/Home Assistant's {{< docref "/components/number/index" "number" >}} component to
 make valve run durations easily adjustable from the front end (Home Assistant).
 
 ```yaml
@@ -938,11 +938,11 @@ sprinkler:
     ...
 
 ```
-An added benefit of using {{< docref "/components/number" "number" >}} components is that modified valve run durations,
+An added benefit of using {{< docref "/components/number/index" "number" >}} components is that modified valve run durations,
 multiplier and repeat values can persist across resets/reboots of the ESP device. If this is your desired behavior, you
-should configure the {{< docref "/components/number" "number" >}} components within your sprinkler controller configuration.
+should configure the {{< docref "/components/number/index" "number" >}} components within your sprinkler controller configuration.
 
-The sprinkler controller's implementation of the {{< docref "/components/number" "number" >}} component is based on
+The sprinkler controller's implementation of the {{< docref "/components/number/index" "number" >}} component is based on
 ESPHome's {{< docref "/components/number" >}}, supporting all of its [configuration variables]({{< ref "components/number/_index#config-number" >}}) in
 addition to a subset of the {{< docref "/components/number/template" "Template Number Component's" >}} configuration variables,
 including:
@@ -1095,7 +1095,7 @@ api:
 
 A number of people have asked about how to determine the sprinkler controller's state. This section aims to outline how
 to use the sprinkler controller's {{< apiref "API" "sprinkler/sprinkler.h" >}} to determine what it is doing, generally with
-the goal of indicating this on some form of {{< docref "/components/display" "display" >}} hardware. Note that this
+the goal of indicating this on some form of {{< docref "/components/display/index" "display" >}} hardware. Note that this
 discussion largely revolves around C++ code (as is used in ESPHome lambdas).
 
 Many of the methods used to determine the sprinkler controller's state return a type of value known as an `optional`.
@@ -1113,8 +1113,8 @@ If you are curious, a general reference for the `optional` type may be found
   template.)
 
 The examples that follow illustrate use of the the sprinkler controller's methods within a
-{{< docref "/components/display" "display" >}} lambda. The examples are intended to illustrate a pattern and (for sake of
-brevity) *are not complete*; at very least you'll need to fill out the {{< docref "/components/display" "display" >}}
+{{< docref "/components/display/index" "display" >}} lambda. The examples are intended to illustrate a pattern and (for sake of
+brevity) *are not complete*; at very least you'll need to fill out the {{< docref "/components/display/index" "display" >}}
 component's specific configuration details before you can use them.
 
 With these points in mind, let's discuss some of the methods which indicate the state of the sprinkler controller.

@@ -8,7 +8,7 @@ title: "LVGL Graphics"
 [LVGL](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
 embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8](https://docs.lvgl.io/8.4/).
 
-{{< img src="lvgl_main_screenshot.png" alt="Image" >}}
+{{< img src="lvgl_main_screenshot.png" alt="Image"  >}}
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ To use LVGL with a [display]({{< ref "components/_index#display-hw" >}}) in ESPH
 
 The graphic display should be configured with `auto_clear_enabled: false` and should not have any `lambda` set. The LVGL component will take care of the display rendering. For most displays, the `update_interval` should be set to `never`, but note that some displays such as OLED and ePaper will need the update interval set to a suitable value.
 
-For interactivity, a {{< docref "/components/binary_sensor" "Binary Sensors" >}} (capacitive highly preferred), a {{< docref "/components/sensor/rotary_encoder" >}} or a custom keypad made up from discrete {{< docref "/components/touchscreen" "Touchscreen" >}} can be used.
+For interactivity, a {{< docref "/components/binary_sensor/index" "Binary Sensors" >}} (capacitive highly preferred), a {{< docref "/components/sensor/rotary_encoder" >}} or a custom keypad made up from discrete {{< docref "/components/touchscreen/index" "Touchscreen" >}} can be used.
 
 Check out the detailed examples in [the Cookbook]({{< ref "cookbook/lvgl#lvgl-cookbook" >}}) which demonstrate a number of ways you can integrate your environment with LVGL and ESPHome.
 
@@ -92,26 +92,26 @@ The following configuration variables apply to the main `lvgl` component, in ord
 - **encoders** (*Optional*, list): A list of rotary encoders interacting with the LVGL widgets on the display.
     - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the {{< docref "/components/lvgl/widgets" "common properties" >}} of the widgets for more information on groups.
     - **initial_focus** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): An optional ID for a widget to be given focus on startup (especially useful if there is only one focusable widget.)
-    - **enter_button** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
+    - **enter_button** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
     - **sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/sensor/rotary_encoder" >}}oder`; or a list with buttons for left/right interaction with the widgets:
-        - **left_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
-        - **right_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
+        - **left_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
+        - **right_button** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
     - **long_press_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the rotary encoder, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`. Can be disabled with `never`.
     - **long_press_repeat_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the rotary encoder, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`. Can be disabled with `never`.
 - **keypads** (*Optional*, list): A list of keypads interacting with the LVGL widgets on the display.
     - **group** (*Optional*, string): A name for a group of widgets which will interact with the the input device. See the {{< docref "/components/lvgl/widgets" "common properties" >}} of the widgets for more information on groups.
-    - **up** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `UP` key.
-    - **down** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `DOWN` key.
-    - **right** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
-    - **left** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
-    - **esc** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `ESC` key.
-    - **del** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `DEL` key.
-    - **backspace** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `BACKSPACE` key.
-    - **enter** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
-    - **next** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `NEXT` key.
-    - **prev** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `PREV` key.
-    - **home** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `HOME` key.
-    - **end** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor" "Binary Sensor" >}}dex>`, to be used as `END` key.
+    - **up** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `UP` key.
+    - **down** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `DOWN` key.
+    - **right** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `RIGHT` key.
+    - **left** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `LEFT` key.
+    - **esc** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ESC` key.
+    - **del** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `DEL` key.
+    - **backspace** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `BACKSPACE` key.
+    - **enter** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `ENTER` key.
+    - **next** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `NEXT` key.
+    - **prev** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `PREV` key.
+    - **home** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `HOME` key.
+    - **end** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID {{< docref "/components/binary_sensor/index" "Binary Sensor" >}}dex>`, to be used as `END` key.
     - **long_press_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the keypad, delay after which the `on_long_pressed` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `400ms`. Can be disabled with `never`.
     - **long_press_repeat_time** (*Optional*, [interaction trigger]({{< ref "components/lvgl/widgets#lvgl-automation-triggers" >}})): For the keypad, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [Time]({{< ref "guides/configuration-types#config-time" >}}) will be called. Defaults to `100ms`. Can be disabled with `never`.
 
@@ -286,7 +286,7 @@ The binary will only include any of the above if used in the configuration.
 
 You can display the embedded symbols among the text by their codepoint address preceded by `\u`. For example: `\uF00C`:
 
-{{< img src="lvgl_symbols.png" alt="Image" class="center" >}}
+{{< img src="lvgl_symbols.png" alt="Image"  class="center" >}}
 
 {{< note >}}
 The `text_font` parameter affects the size of symbols, since all the built-in font arrays based on Montserrat include these symbols at the respective sizes. If you set `text_font` on a widget to a custom ESPHome font, these symbols will likely not display, unless you include them manually from a FontAwesome OpenType file.
@@ -307,7 +307,7 @@ In addition to the above, the following special fonts are available from LVGL as
 
 LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing). A widget's *box* is built from the following parts:
 
-{{< img src="lvgl_boxmodel.png" alt="Image" class="center" >}}
+{{< img src="lvgl_boxmodel.png" alt="Image"  class="center" >}}
 
 - *bounding box*: the box defined with `width` and `height` of the widgets (pixels or parent content area percentage; not drawn, just for calculations).
 - *border*: the border line, drawn on the inner side of the bounding box (pixels).

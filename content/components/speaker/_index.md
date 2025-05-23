@@ -20,7 +20,7 @@ speaker:
 ```
 Configuration variables:
 
-- **audio_dac** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/audio_dac" "audio DAC" >}}dex>` to use for volume control.
+- **audio_dac** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/audio_dac/index" "audio DAC" >}}dex>` to use for volume control.
 
 {{< anchor "speaker-actions" >}}
 

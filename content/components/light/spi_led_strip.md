@@ -11,7 +11,7 @@ each LED is individually addressable. This component requires an SPI interface t
 This component has been tested with APA102 LEDs and the P9813 LED driver. It should also work with HD107 and SK9822 type
 LEDs, or any others with a similar interface - SPI, 8 bits per colour and BGR ordering.
 
-{{< img src="apa102.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="apa102.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 ```yaml
 # Example configuration entry
@@ -44,7 +44,7 @@ APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso
 
 ## See Also
 
-{{< img src="rgb-detail.jpg" alt="Image" width="75.0%" class="center" >}}
+{{< img src="rgb-detail.jpg" alt="Image"  width="75.0%" class="center" >}}
 
 - {{< docref "/components/light" >}}
 - {{< docref "/components/output/ledc" >}}

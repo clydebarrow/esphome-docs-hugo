@@ -279,7 +279,7 @@ For {{< docref "/components/esp8266" "ESP8266" >}}, `restore_from_flash` must al
 ## Changing ESPHome Node Name
 
 Trying to change the name of a node or its address in the network?
-You can do so with the `use_address` option of the {{< docref "wifi/" "WiFi configuration" >}}.
+You can do so with the `use_address` option of the {{< docref "wifi" "WiFi configuration" >}}.
 
 Change the device name or address in your YAML to the new value and additionally
 set `use_address` to point to the old address like so:

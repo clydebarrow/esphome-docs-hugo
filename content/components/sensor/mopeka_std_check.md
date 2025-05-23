@@ -16,7 +16,7 @@ This sensor component only supports the Mopeka Standard Check devices.
 See {{< docref "/components/sensor/mopeka_pro_check" >}} for Mopeka Pro Check sensors support.
 
 {{< /warning >}}
-{{< img src="mopeka_std_check.jpg" alt="Image" caption="Mopeka Std Check LP over BLE." class="center" >}}
+{{< img src="mopeka_std_check.jpg" alt="Image"  caption="Mopeka Std Check LP over BLE." class="center" >}}
 
 ```yaml
 esp32_ble_tracker:

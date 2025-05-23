@@ -5,7 +5,7 @@ title: "Text Sensor Component"
 
 {{< seo description="" image="" >}}
 
-Text sensors are a lot like normal {{< docref "/components/sensor" "sensors" >}}.
+Text sensors are a lot like normal {{< docref "/components/sensor/index" "sensors" >}}.
 But where the "normal" sensors only represent sensors that output **numbers**, this
 component can represent any *text*.
 

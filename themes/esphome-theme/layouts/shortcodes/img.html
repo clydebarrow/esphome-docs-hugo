@@ -40,7 +40,12 @@
   {{- $imagePath = $src -}}
 {{- end -}}
 
+{{- $style := "" -}}
+{{- if $width }}{{ $style = printf "%swidth:%spx;" $style $width }}{{ end }}
+{{- if $height }}{{ $style = printf "%sheight:%spx;" $style $height }}{{ end }}
+{{- if $style }}{{ $style = printf " style=\"%s\"" $style | safeHTMLAttr }}{{ end }}
+
 <figure {{ with $class }}class="{{ . }}"{{ end }}>
-  <img src="{{ $imagePath | relURL }}" alt="{{ $alt }}" {{ with $width }}width="{{ . }}"{{ end }} {{ with $height }}height="{{ . }}"{{ end }}>
+  <img src="{{ $imagePath | relURL }}" alt="{{ $alt }}"{{ if $class }} class="{{ $class }}"{{ end }}{{ $style }} />
   {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
 </figure>

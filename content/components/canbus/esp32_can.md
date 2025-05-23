@@ -64,11 +64,11 @@ board with 5V this is the preferred option. R501 is important to reduce the 5V
 logic level down to 3.3V, to avoid damaging the ESP32. You can alternatively
 use a voltage divider here instead.
 
-{{< img src="canbus_esp32_5v.png" alt="Image" class="center" >}}
+{{< img src="canbus_esp32_5v.png" alt="Image"  class="center" >}}
 
 If you prefer to only have a 3.3V power supply, special 3.3V CAN transceivers are available.
 
-{{< img src="canbus_esp32_3v3.png" alt="Image" class="center" >}}
+{{< img src="canbus_esp32_3v3.png" alt="Image"  class="center" >}}
 
 ## See Also
 

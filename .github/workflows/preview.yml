@@ -32,49 +32,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Check for AVIF files
-        id: check-avif
-        run: |
-          AVIF_COUNT=$(find content -type f -name "*.avif" | wc -l)
-          echo "avif_count=$AVIF_COUNT" >> $GITHUB_OUTPUT
-          if [ "$AVIF_COUNT" -gt 0 ]; then
-            echo "Found $AVIF_COUNT AVIF files to convert"
-          fi
-
-      - name: Install ImageMagick
-        if: steps.check-avif.outputs.avif_count > 0
-        run: sudo apt-get update && sudo apt-get install -y imagemagick
-
-      - name: Convert AVIF to PNG and commit if needed
-        if: steps.check-avif.outputs.avif_count > 0
-        run: |
-          # Configure Git
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          
-          # Set up token-based authentication
-          git remote set-url origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
-
-          # Find and convert AVIF files
-          CONVERTED_FILES=0
-          while IFS= read -r file; do
-            png_file="${file%.avif}.png"
-            convert "$file" "$png_file"
-            rm "$file"
-            git add "$png_file"
-            git rm "$file"
-            echo "Converted $file to $png_file"
-            CONVERTED_FILES=$((CONVERTED_FILES + 1))
-          done < <(find content -type f -name "*.avif")
-
-          # Commit changes if any files were converted
-          if [ $CONVERTED_FILES -gt 0 ]; then
-            git commit -m "chore: convert ${CONVERTED_FILES} AVIF image(s) to PNG format
-
-            Automatically converted AVIF images to PNG format for better compatibility."
-            git push origin HEAD:${{ github.head_ref }}
-          fi
-
       - name: Install Pagefind
         uses: jaxxstorm/action-install-gh-release@v1.10.0
         with:
@@ -87,17 +44,20 @@ jobs:
           echo "HUGO_COMMIT_DATE=$(git log -1 --date=format-local:'%Y-%m-%d %H:%M:%S UTC' --pretty=%cd)" >> $GITHUB_ENV
 
       - name: Build with Hugo
-        run: hugo --minify
+        run: |
+          mkdir -p data
+          echo "url: `git config --get remote.origin.url`" > data/repo.yaml
+          hugo --minify
 
       - name: Build search index
-        run: pagefind --site public
+        run: pagefind
 
       - name: Deploy PR Preview
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=esphome-devices --branch="pr-${{ github.event.pull_request.number }}"
+          command: pages deploy public --project-name=esphome-docs --branch="pr-${{ github.event.pull_request.number }}"
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2

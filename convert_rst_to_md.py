@@ -189,8 +189,7 @@ def convert_rst_to_md(lines, filename):
     substitutions = parse_substitutions(all_lines)
     # Remove substitution definitions from lines before further processing
     lines = remove_substitution_definitions(lines)
-
-    # Pre-process lines to handle split references
+    lines = process_redirects(lines)
     lines = process_multiline_references(lines)
 
     while i < len(lines):
@@ -687,7 +686,6 @@ def convert_rst_to_md(lines, filename):
     frontmatter.append(f'title: "{title}"')
     if skip_build:
         frontmatter.append('build: {render: never}')
-
     frontmatter.append('---')
     # Add Hugo shortcode for SEO
     seo_shortcode = ""
@@ -947,6 +945,26 @@ def remove_substitution_definitions(lines):
             while i < len(lines) and (lines[i].strip() == '' or lines[i].startswith('   ')):
                 i += 1
             continue  # skip this definition block
+        out.append(line)
+        i += 1
+    return out
+
+def process_redirects(lines):
+    out = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if re.match(r'^\s*\.\.\s+redirect::\s*$', line):
+            url = None
+            i += 1
+            while i < len(lines) and (lines[i].strip() == '' or lines[i].startswith('   ')):
+                m = re.match(r'^\s*:url:\s*(\S+)', lines[i].strip())
+                if m:
+                    url = m.group(1)
+                i += 1
+            if url:
+                out.append(f'{{{{< redirect url="{url}" >}}}}')
+            continue
         out.append(line)
         i += 1
     return out
@@ -1478,6 +1496,7 @@ def process_raw_html_button(lines, i):
 def process_image_directive(lines, i, is_figure=False):
     """Process an image or figure directive and convert it to a Hugo shortcode."""
     line = lines[i]
+    print(line)
     
     if is_figure:
         image_path = line.replace('.. figure::', '').strip()

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 
     <script data-cfasync="false" type="text/javascript">
         // cfasync is set to false to prevent Cloudflare from modifying the script
@@ -25,7 +30,7 @@
     <link rel="stylesheet" href="{{ "pagefind/pagefind-modular-ui.css" | relURL }}">
     {{ block "head" . }}{{ end }}
 </head>
-<body>
+<body class="body">
     <div class="nav-container" id="nav-container">
         <nav class="sticky-nav">
             <div class="nav-logo">

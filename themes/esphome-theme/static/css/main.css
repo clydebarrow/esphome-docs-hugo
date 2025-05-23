@@ -76,6 +76,10 @@ body {
   background-color: var(--background-color);
 }
 
+.body {
+  visibility: initial;
+}
+
 a {
   color: var(--link-accent);
   text-decoration: none;

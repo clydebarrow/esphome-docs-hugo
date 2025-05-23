@@ -4,6 +4,4 @@ title: "Changelog"
 ---
 
 
-.. redirect::
-    :url: /changelog/2025.5.0.html
-
+{{< redirect url="/changelog/2025.5.0.html" >}}

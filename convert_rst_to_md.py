@@ -813,6 +813,21 @@ def process_inline_markup(line):
     processed_line = process_api(apistruct_matches, processed_line, "apistruct")
     processed_line = process_api(apiclass_matches, processed_line, "apiclass")
 
+    # Replace :ghuser:`username` or :ghuser:`text <username>` with the ghuser shortcode
+    def ghuser_repl(match):
+        content = match.group(1).strip()
+        # Check for the form: text <username>
+        m = re.match(r'([^<`]+)<([^>]+)>', content)
+        if m:
+            text = m.group(1).strip()
+            username = m.group(2).strip()
+            return f'{{{{< ghuser name="{username}" text="{text}" >}}}}'
+        else:
+            username = content
+            return f'{{{{< ghuser name="{username}" >}}}}'
+    
+    processed_line = re.sub(r':ghuser:`([^`]+)`', ghuser_repl, processed_line)
+
     # External links
     processed_line = re.sub(r'`\s*([^<`]*[^<` ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)

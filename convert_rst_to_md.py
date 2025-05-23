@@ -5,13 +5,11 @@ This script helps migrate the ESPHome documentation from Sphinx to Hugo.
 """
 
 import os
+import io
 import re
-import sys
+import csv
 import argparse
 import shutil
-import glob
-import textwrap
-from collections import defaultdict
 
 # Global anchor map to store all anchors and their document paths
 anchor_map = {}
@@ -108,6 +106,20 @@ def build_anchor_map(input_dir):
                         anchor_map[anchor_name] = doc_path, text
 
     print(f"Found {len(anchor_map)} anchors across all documents")
+
+def normalize_csv_lines(lines):
+    # Read from list of lines using StringIO
+    reader = csv.reader(io.StringIO('\n'.join(lines)))
+    rows = list(reader)
+
+    # Find the max number of columns
+    max_columns = max(len(row) for row in rows)
+
+    # Pad rows with missing columns
+    normalized_rows = [row + [''] * (max_columns - len(row)) for row in rows]
+
+    return normalized_rows
+
 
 def convert_rst_to_md(lines, filename):
     """Convert RST content to Markdown using line-by-line processing."""
@@ -215,7 +227,7 @@ def convert_rst_to_md(lines, filename):
             
             # Start the imgtable shortcode
             md_lines.append('{{< imgtable >}}')
-            
+            csv_lines = []
             # Process each entry (each line should be indented)
             while i < len(lines):
                 current_line = lines[i].strip()
@@ -225,14 +237,17 @@ def convert_rst_to_md(lines, filename):
                     break
                 
                 # Skip empty lines within the imgtable
-                if not current_line:
+                if not current_line or current_line.startswith(':'):
                     i += 1
                     continue
                 
                 # Process the entry - format is typically: Title, Link, Image, [Description]
-                md_lines.append(current_line)
+                csv_lines.append(current_line)
                 i += 1
-            
+
+            csv_lines = normalize_csv_lines(csv_lines)
+            for row in csv_lines:
+                md_lines.append(",".join('"' + col.strip().replace('"', '""').replace(':', ' -') + '"' for col in row))
             # Close the imgtable shortcode
             md_lines.append('{{< /imgtable >}}')
             continue

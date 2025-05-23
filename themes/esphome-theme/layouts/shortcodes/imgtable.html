@@ -23,19 +23,14 @@
 
 <div class="component-grid">
   {{ if .Inner }}
-    {{ $lines := split (trim .Inner "\n\r") "\n" }}
-    {{ range $lines }}
-      {{ $line := trim . " " }}
-      {{ if $line }}
-        {{ $parts := split $line "," }}
-        {{ $title := trim (index $parts 0) " "  }}
-        {{ $link := trim (index $parts 1) " " }}
-        {{ $image := trim (index $parts 2) " " }}
-        {{ $class := "" }}
+      {{ $opts := dict "targetType" "slice" "delimiter" "," "lazyQuotes" true  }}
+      {{ $data := transform.Unmarshal $opts .Inner }}
+    {{ range $data }}
+        {{ $title := trim (index . 0) " "  }}
+        {{ $link := trim (index . 1) " " }}
+        {{ $image := trim (index . 2) " " }}
+        {{ $class := trim (index . 3) " " }}
 
-        {{ if ge (len $parts) 4 }}
-          {{ $class = trim (index $parts 3) " " }}
-        {{ end }}
 
         {{/* Image path handling similar to img shortcode */}}
         {{ $componentPath := printf "%s/images/%s" (path.Dir $.Page.File.Path) $image }}
@@ -58,7 +53,6 @@
             <div class="component-name">{{ $title }}</div>
           </a>
         </div>
-      {{ end }}
     {{ end }}
   {{ else }}
     {{ $title := .Get 0 }}

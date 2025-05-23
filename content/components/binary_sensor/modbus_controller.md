@@ -66,6 +66,6 @@ binary_sensor:
 - {{< docref "/components/select/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - https://www.modbustools.com/modbus.html
-- {{< apiclass ":modbus_controller::ModbusBinarySensor" ":modbus_controller::ModbusBinarySensor" >}}
+- {{< apiclass "modbus_controller::ModbusBinarySensor" "modbus_controller::ModbusBinarySensor" >}}
 
 

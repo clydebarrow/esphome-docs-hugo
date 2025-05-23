@@ -27,7 +27,7 @@
       {{ $data := transform.Unmarshal $opts .Inner }}
     {{ range $data }}
         {{ $title := trim (index . 0) " "  }}
-        {{ $link := trim (index . 1) " " }}
+        {{ $link := trim (index . 1) " " | strings.TrimSuffix "index" }}
         {{ $image := trim (index . 2) " " }}
         {{ $class := trim (index . 3) " " }}
 
@@ -56,7 +56,7 @@
     {{ end }}
   {{ else }}
     {{ $title := .Get 0 }}
-    {{ $link := .Get 1 }}
+    {{ $link := .Get 1 | strings.TrimSuffix "index" }}
     {{ $image := .Get 2 }}
     {{ $class := .Get 3 }}
     

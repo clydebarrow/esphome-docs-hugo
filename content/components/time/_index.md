@@ -226,23 +226,23 @@ Alternatively, you can use `.utcnow()` to get the current UTC time.
 The returned object can either be used directly to get the current minute, hour, ... as numbers or a string can be
 created based on a given format. If you want to get the current time attributes, you have these fields
 
-| **Name** | **Meaning** | **Range (inclusive)** | **Example** |  |
-| --- | --- | --- | --- | --- |
-| `.second`          Se | conds after the minute                 [0 | -60] (generally [0-59],                42 |  |  |
-|  |  | extra range is to accommodate leap |  |  |
-|  |  | seconds.) |  |  |
-| `.minute`          Mi | nutes after the hour                   [0 | -59]                                   31 |  |  |
-| `.hour`            Ho | urs since midnight                     [0 | -23]                                   16 |  |  |
-| `.day_of_week`     Da | y of the week, sunday=1                [1 | -7]                                    7 | (saturday) |  |
-| `.day_of_month`    Da | y of the month                         [1 | -31]                                   18 |  |  |
-| `.day_of_year`     Da | y of the year                          [1 | -366]                                  23 | 1 |  |
-| `.month`           Mo | nth, january=1                         [1 | -12]                                   8 | (august) |  |
-| `.year`            Ye | ar since 0 A.C.                        [1 | 970-∞[                                 20 | 18 |  |
-| `.is_dst`          Is | daylight savings time                 fa | lse, true                              tr | ue |  |
-| `.timestamp`       Un | ix epoch time (seconds since UTC       [- | 2147483648 - 2147483647] (negative     15 | 34606002 |  |
-|  | Midnight January 1, 1970) | values for time past January 19th 2038) |  |  |
-| `.is_valid()`      Ba | sic check if the time is valid         fa | lse, true                              tr | ue |  |
-|  | (i.e. not January 1st 1970) |  |  |  |
+|  **Name** |  **Meaning** |  **Range (inclusive)** |  **Example** |
+| --- | --- | --- | --- |
+|  `.second`          Se |  conds after the minute                 [0 |  -60] (generally [0-59],                42 |
+|   |   |  extra range is to accommodate leap |
+|   |   |  seconds.) |
+|  `.minute`          Mi |  nutes after the hour                   [0 |  -59]                                   31 |
+|  `.hour`            Ho |  urs since midnight                     [0 |  -23]                                   16 |
+|  `.day_of_week`     Da |  y of the week, sunday=1                [1 |  -7]                                    7 |  (saturday) |
+|  `.day_of_month`    Da |  y of the month                         [1 |  -31]                                   18 |
+|  `.day_of_year`     Da |  y of the year                          [1 |  -366]                                  23 |  1 |
+|  `.month`           Mo |  nth, january=1                         [1 |  -12]                                   8 |  (august) |
+|  `.year`            Ye |  ar since 0 A.C.                        [1 |  970-∞[                                 20 |  18 |
+|  `.is_dst`          Is |  daylight savings time                 fa |  lse, true                              tr |  ue |
+|  `.timestamp`       Un |  ix epoch time (seconds since UTC       [- |  2147483648 - 2147483647] (negative     15 |  34606002 |
+|   |  Midnight January 1, 1970) |  values for time past January 19th 2038) |
+|  `.is_valid()`      Ba |  sic check if the time is valid         fa |  lse, true                              tr |  ue |
+|   |  (i.e. not January 1st 1970) |
 
 {{< note >}}
 Before the ESP has connected to the internet and can get the current time the date will be January 1st 1970. So
@@ -267,34 +267,34 @@ The strftime will parse the format string (here `"%Y-%m-%d %H:%M"`) and match an
 a percent sign `%` and a letter corresponding to one of the below formatting options and replace it
 with the current time representation of that format option.
 
-| **Directive** **Meaning** | **Example** |  |
-| --- | --- | --- |
-| `%a`        Abbreviated **weekday** name                                   Sa | t |  |
-| `%A`        Full **weekday** name                                          Sa | turday |  |
-| `%w`        **Weekday** as decimal number, where 0 is Sunday and 6         6 |  |  |
-| is Saturday |  |  |
-| `%d`        **Day of month** as zero-padded decimal number                 01 | , 02, ..., 31 |  |
-| `%b`        Abbreviated **month** name                                     Au | g |  |
-| `%B`        Full **month** name                                            Au | gust |  |
-| `%m`        **Month** as zero-padded decimal number                        01 | , 02, ..., 12 |  |
-| `%y`        **Year** without century as a zero-padded decimal number       00 | , 01, ..., 99 |  |
-| `%Y`        **Year** with century as a decimal number                      20 | 18 |  |
-| `%H`        **Hour** (24-hour clock) as a zero-padded decimal number       00 | , 01, ..., 23 |  |
-| `%I`        **Hour** (12-hour clock) as a zero-padded decimal number       00 | , 01, ..., 12 |  |
-| `%p`        **AM or PM** designation                                       AM | , PM |  |
-| `%M`        **Minute** as a zero-padded decimal number                     00 | , 01, ..., 59 |  |
-| `%S`        **Second** as a zero-padded decimal number                     00 | , 01, ..., 59 |  |
-| `%j`        **Day of year** as a zero-padded decimal number                00 | 1, 002, ..., 366 |  |
-| `%U`        **Week number of year** (Sunday as the first day of the week)  00 | , 01, ..., 53 |  |
-| as a zero-padded decimal number. All days in a new year |  |  |
-| preceding the first Sunday are considered to be in week 0. |  |  |
-| `%W`        **Week number of year** (Monday as the first day of the week)  00 | , 01, ..., 53 |  |
-| as a zero-padded decimal number. All days in a new year |  |  |
-| preceding the first Monday are considered to be in week 0. |  |  |
-| `%c`        **Date and time** representation                               Sa | t Aug 18 16:31:42 2018 |  |
-| `%x`        **Date** representation                                        08 | /18/18 |  |
-| `%X`        **Time** representation                                        16 | :31:42 |  |
-| `%%`        A literal `%` character                                      % |  |  |
+|  **Directive** **Meaning** |  **Example** |
+| --- | --- |
+|  `%a`        Abbreviated **weekday** name                                   Sa |  t |
+|  `%A`        Full **weekday** name                                          Sa |  turday |
+|  `%w`        **Weekday** as decimal number, where 0 is Sunday and 6         6 |
+|  is Saturday |
+|  `%d`        **Day of month** as zero-padded decimal number                 01 |  , 02, ..., 31 |
+|  `%b`        Abbreviated **month** name                                     Au |  g |
+|  `%B`        Full **month** name                                            Au |  gust |
+|  `%m`        **Month** as zero-padded decimal number                        01 |  , 02, ..., 12 |
+|  `%y`        **Year** without century as a zero-padded decimal number       00 |  , 01, ..., 99 |
+|  `%Y`        **Year** with century as a decimal number                      20 |  18 |
+|  `%H`        **Hour** (24-hour clock) as a zero-padded decimal number       00 |  , 01, ..., 23 |
+|  `%I`        **Hour** (12-hour clock) as a zero-padded decimal number       00 |  , 01, ..., 12 |
+|  `%p`        **AM or PM** designation                                       AM |  , PM |
+|  `%M`        **Minute** as a zero-padded decimal number                     00 |  , 01, ..., 59 |
+|  `%S`        **Second** as a zero-padded decimal number                     00 |  , 01, ..., 59 |
+|  `%j`        **Day of year** as a zero-padded decimal number                00 |  1, 002, ..., 366 |
+|  `%U`        **Week number of year** (Sunday as the first day of the week)  00 |  , 01, ..., 53 |
+|  as a zero-padded decimal number. All days in a new year |
+|  preceding the first Sunday are considered to be in week 0. |
+|  `%W`        **Week number of year** (Monday as the first day of the week)  00 |  , 01, ..., 53 |
+|  as a zero-padded decimal number. All days in a new year |
+|  preceding the first Monday are considered to be in week 0. |
+|  `%c`        **Date and time** representation                               Sa |  t Aug 18 16:31:42 2018 |
+|  `%x`        **Date** representation                                        08 |  /18/18 |
+|  `%X`        **Time** representation                                        16 |  :31:42 |
+|  `%%`        A literal `%` character                                      % |
 
 ## See Also
 

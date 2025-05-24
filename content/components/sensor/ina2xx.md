@@ -14,13 +14,13 @@ requred to be set up in your configuration for this sensor to work.
 
 
 
-| Product | Protocol | Description |  |
-| --- | --- | --- | --- |
-| [INA228](http://www.ti.com/lit/ds/symlink/ina228.pdf)     I | ²C       85 | -V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |  |
-| [INA229](http://www.ti.com/lit/ds/symlink/ina229.pdf)     S | PI       85 | -V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |  |
-| [INA238](http://www.ti.com/lit/ds/symlink/ina238.pdf)     I | ²C       85 | -V, 16-Bit, High-Precision Power Monitor |  |
-| [INA239](http://www.ti.com/lit/ds/symlink/ina239.pdf)     S | PI       85 | -V, 16-Bit, High-Precision Power Monitor |  |
-| [INA237](http://www.ti.com/lit/ds/symlink/ina237.pdf)     I | ²C       85 | -V, 16-Bit, Precision Power Monitor |  |
+|  Product |  Protocol |  Description |
+| --- | --- | --- |
+|  [INA228](http://www.ti.com/lit/ds/symlink/ina228.pdf)     I |  ²C       85 |  -V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |
+|  [INA229](http://www.ti.com/lit/ds/symlink/ina229.pdf)     S |  PI       85 |  -V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor |
+|  [INA238](http://www.ti.com/lit/ds/symlink/ina238.pdf)     I |  ²C       85 |  -V, 16-Bit, High-Precision Power Monitor |
+|  [INA239](http://www.ti.com/lit/ds/symlink/ina239.pdf)     S |  PI       85 |  -V, 16-Bit, High-Precision Power Monitor |
+|  [INA237](http://www.ti.com/lit/ds/symlink/ina237.pdf)     I |  ²C       85 |  -V, 16-Bit, Precision Power Monitor |
 
 All devices can measure a selectable full-scale differential input of ±163.84 mV
 or ±40.96 mV across the shunt with common-mode voltage support from –0.3 V to +85 V.

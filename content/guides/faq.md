@@ -241,9 +241,7 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
 
 - You can view the full list of command line interface options here: {{< docref "/guides/cli" >}}
 
-.. |secret| replace:: `!secret`
 [secret](https://www.home-assistant.io/docs/configuration/secrets/)
-.. |include| replace:: `!include`
 [include](https://www.home-assistant.io/docs/configuration/splitting_configuration/)
 
 

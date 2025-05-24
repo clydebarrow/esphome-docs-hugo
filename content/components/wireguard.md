@@ -5,7 +5,6 @@ title: "WireGuard Component"
 
 {{< seo description="" image="" >}}
 
-|wireguard|_ is an extremely simple yet fast and modern VPN that utilizes
 state-of-the-art cryptography. This component uses a **custom**
 implementation not developed by original authors and currently
 available for ESP32, ESP8266 and BK72xx microcontrollers *only*.
@@ -92,7 +91,7 @@ wireguard:
 - **peer_endpoint** (**Required**, string): The hostname of the remote peer.
 
 - **peer_port** (*Optional*, UDP port): The port where remote peer is listening on.
-  The |wireguard| default is `51820`.
+  The unicode:: WireGuard 0xAE default is `51820`.
 
 - **peer_public_key** (**Required**, string): The public key of the remote peer.
 
@@ -196,7 +195,7 @@ above configuration.
 
 ##### Enabled Binary Sensor
 
-This binary sensor tracks if |wireguard| is *enabled* or not.
+This binary sensor tracks if unicode:: WireGuard 0xAE is *enabled* or not.
 
 ```yaml
 # Example configuration entry
@@ -282,7 +281,7 @@ The following conditions are available.
 
 ##### `wireguard.enabled`
 
-This condition checks if |wireguard| is currently enabled or not.
+This condition checks if unicode:: WireGuard 0xAE is currently enabled or not.
 
 ```yaml
 on_...:
@@ -317,7 +316,7 @@ The lambda equivalent is `id(wireguard_id).is_peer_up()`.
 ## Remote peer setup
 
 There are many different ways for installing and configuring
-|wireguard| on servers, home servers or general host. It depends
+unicode:: WireGuard 0xAE on servers, home servers or general host. It depends
 on the platform and on the operating system in use.
 
 You can start reading the [official documentation](https://www.wireguard.com/)
@@ -357,7 +356,7 @@ of the [address]({{< ref "components/wireguard#wireguard-address" >}}) configure
 - {{< docref "time/" >}}
 - {{< docref "time/sntp" >}}
 - [Automation]({{< ref "automations/_index#automation" >}})
-- |wireguard|_ official website
+- unicode:: WireGuard 0xAE_ official website
 - [Home Assistant Community Add-on: WireGuard](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
   (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))
 

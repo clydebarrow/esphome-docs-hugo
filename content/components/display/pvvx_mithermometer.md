@@ -105,16 +105,16 @@ Possible values for the unit of the big number (`it.print_unit()`) are:
 
 The appearance of the smiley can be defined by combining the functions `it.print_happy()`, `it.print_sad()` and  `it.print_bracket(true)`:
 
-| `print_bracket()` `p | rint_sad()` `print | _happy()` result |  |  |  |
-| --- | --- | --- | --- | --- | --- |
-| false | false | false |  |  |  |
-| false | false | true | `^_^` |  |  |
-| false | true | false | `-∧-` |  |  |
-| false | true | true | `Δ△Δ` |  |  |
-| true | false | false | `( | )` |  |
-| true | false | true | `(^_^ | )` |  |
-| true | true | false | `(-∧- | )` |  |
-| true | true | true | `(Δ△Δ | )` |  |
+|  `print_bracket()` `p |  rint_sad()` `print |  _happy()` result |
+| --- | --- | --- | --- | --- |
+|  false |  false |  false |
+|  false |  false |  true |  `^_^` |
+|  false |  true |  false |  `-∧-` |
+|  false |  true |  true |  `Δ△Δ` |
+|  true |  false |  false |  `( |  )` |
+|  true |  false |  true |  `(^_^ |  )` |
+|  true |  true |  false |  `(-∧- |  )` |
+|  true |  true |  true |  `(Δ△Δ |  )` |
 
 
 ### Display states of other sensors

@@ -29,6 +29,7 @@ class ImageInfo:
 
 image_map = {}
 included_files = set()
+substitutions = {}
 
 def find_included_files(file_path):
     """
@@ -186,7 +187,7 @@ def convert_rst_to_md(lines, filename):
 
     # Parse substitutions from original lines
     all_lines = lines[:]
-    substitutions = parse_substitutions(all_lines)
+    parse_substitutions(all_lines)
     # Remove substitution definitions from lines before further processing
     lines = remove_substitution_definitions(lines)
     lines = process_redirects(lines)
@@ -326,7 +327,7 @@ def convert_rst_to_md(lines, filename):
             continue
         
         # Handle code blocks - check for both standalone and nested code blocks
-        if line.lstrip().startswith('.. code-block::') or line.strip() == '::':
+        if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):
             # Get the indentation of the current line
             current_indent = len(line) - len(line.lstrip())
             
@@ -648,7 +649,7 @@ def convert_rst_to_md(lines, filename):
 
 
         processed_line = process_inline_markup(fixed_line)
-        processed_line = replace_substitutions(processed_line, substitutions)
+        processed_line = replace_substitutions(processed_line)
         if ":ghedit:" in processed_line:
             processed_line = ""
 
@@ -908,14 +909,15 @@ def process_multiline_references(lines):
     return processed_lines
 
 def parse_substitutions(lines):
+    global substitutions
     subs = {}
     i = 0
     while i < len(lines):
         line = lines[i]
-        m = re.match(r'^\s*\.\. \|([^|]+)\| raw:: html\s*$', line)
+        m = re.match(r'^\s*\.\.\s+\|([^|]+)\|\s+(.*)', line)
         if m:
             subname = m.group(1).strip()
-            html_lines = []
+            html_lines = [m.group(2).strip()]
             i += 1
             # Collect indented HTML lines
             while i < len(lines) and (lines[i].strip() == '' or lines[i].startswith('   ')):
@@ -925,9 +927,9 @@ def parse_substitutions(lines):
             subs[subname] = '\n'.join(html_lines)
         else:
             i += 1
-    return subs
+    substitutions = subs
 
-def replace_substitutions(line, substitutions):
+def replace_substitutions(line):
     def repl(m):
         name = m.group(1)
         return substitutions.get(name, m.group(0))
@@ -938,7 +940,7 @@ def remove_substitution_definitions(lines):
     i = 0
     while i < len(lines):
         line = lines[i]
-        m = re.match(r'^\s*\.\. \|([^|]+)\| raw:: html\s*$', line)
+        m = re.match(r'^\s*\.\.\s+\|([^|]+)\|\s+(.*)', line)
         if m:
             i += 1
             # Skip indented HTML lines
@@ -1145,16 +1147,8 @@ def process_list_table(lines, start_idx):
                     idx += 1
                     continue
                 break
-            cell_text = ""
-            i = 0
-            while i < len(cell_value):
-                if ".. figure::" in cell_value[i] or ".. image::" in cell_value[i]:
-                    shortcode, i = process_image_directive(cell_value, i)
-                    cell_text = " ".join([cell_text, shortcode])
-                else:
-                    cell_text = " ".join([cell_text, cell_value[i].strip()])
-                i += 1
-            current_row.append(process_inline_markup(cell_text))
+            cell_text = process_cell_value(cell_value)
+            current_row.append(cell_text)
             continue
         # If we get here, it's either the end of the table or something we don't understand
         if not lines[idx].startswith('    '):
@@ -1211,6 +1205,22 @@ def process_list_table(lines, start_idx):
     md_table.append("")
     
     return md_table, idx
+
+
+def process_cell_value(cell_value):
+    if isinstance(cell_value, str):
+        cell_value = cell_value.split('\n')
+    cell_text = ""
+    i = 0
+    while i < len(cell_value):
+        if "figure::" in cell_value[i] or "image::" in cell_value[i]:
+            shortcode, i = process_image_directive(cell_value, i)
+            cell_text = " ".join([cell_text, shortcode])
+        else:
+            cell_text = " ".join([cell_text, cell_value[i].strip()])
+        i += 1
+    return process_inline_markup(cell_text)
+
 
 def process_csv_table(lines, start_idx):
     """Process a csv-table directive and convert it to a Markdown table."""
@@ -1371,13 +1381,13 @@ def process_grid_table(lines, start_idx):
             break
         
         i += 1
-    
+
     # Process the table
     if not table_lines:
         return [], start_idx
     
     # Determine if this is a table with | separators or whitespace alignment
-    has_pipe_separators = any('|' in line for line in table_lines)
+    has_pipe_separators = '+' in table_lines[0]
     
     if has_pipe_separators:
         return process_pipe_separated_table(table_lines, i)
@@ -1496,7 +1506,7 @@ def process_whitespace_aligned_table(table_lines, end_idx):
             # If this is the separator after the header row, add a Markdown header separator
             if not header_added and line_idx > 0 and line_idx-1 not in separator_rows:
                 header_added = True
-                header_cells = ['---' for _ in range(len(column_positions))]
+                header_cells = ['---' for _ in range(len(column_positions)-1)]
                 markdown_rows.append('| ' + ' | '.join(header_cells) + ' |')
             continue
         
@@ -1510,9 +1520,8 @@ def process_whitespace_aligned_table(table_lines, end_idx):
             # Make sure we don't go out of bounds
             if start_pos < len(line):
                 cell_content = line[start_pos:min(end_pos, len(line))].strip()
-            else:
-                cell_content = ""
-            cells.append(process_inline_markup(cell_content))
+                cell_content = process_cell_value(replace_substitutions(cell_content))
+                cells.append(cell_content)
 
         # Add the row to Markdown output
         markdown_rows.append('| ' + ' | '.join(cells) + ' |')
@@ -1588,11 +1597,11 @@ def process_image_directive(lines, i):
     line = lines[i]
 
     is_figure = False
-    if '.. figure::' in line:
+    if 'figure::' in line:
         is_figure = True
-        image_path = line.replace('.. figure::', '').strip()
+        image_path = line.replace('(\\.\\. )?figure::', '').strip()
     else:
-        image_path = line.replace('.. image::', '').strip()
+        image_path = line.replace('(\\.\\. )?image::', '').strip()
     
     # Extract the image filename
     image_filename = os.path.basename(image_path)

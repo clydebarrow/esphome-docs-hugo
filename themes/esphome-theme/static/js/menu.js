@@ -227,7 +227,6 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location = top_hit;
             top_hit = null;
         }
-        navContainer.style.transform = `translateY(0)`;
     });
 
 

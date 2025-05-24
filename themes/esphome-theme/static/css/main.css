@@ -738,6 +738,7 @@ main {
   margin-top: 1em;
 }
 .cta-buttons a {
+  white-space: nowrap;
 }
 
 .btn {

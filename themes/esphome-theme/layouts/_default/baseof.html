@@ -43,9 +43,11 @@
                     {{ os.ReadFile "static/images/logo-text.svg"  | safeHTML }}
                 </a>
             </div>
-            <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false">
-                <i class="fa-solid fa-list"></i>
-            </button>
+            {{ if ne .IsHome true }}
+                <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+            {{ end }}
             <button type="button" class="hamburger-button" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>

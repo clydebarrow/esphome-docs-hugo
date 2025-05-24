@@ -42,7 +42,7 @@ sensor:
 ## Calibration
 
 This sensor needs calibration to show correct values, for this you can use the
-[calibrate_linear]({{< ref "#sensor-filter-calibrate_linear" >}}) sensor filter. First, hook up a known
+[calibrate_linear]({{< ref "components/sensor/_index#sensor-filter-calibrate_linear" >}}) sensor filter. First, hook up a known
 current load like a lamp that uses a known amount of current.
 
 Then switch it on and see what value the CT clamp sensor reports. For example in the configuration below

@@ -23,18 +23,20 @@ required to be set up in your configuration for this sensor to work.
 sensor:
   - platform: shtcx
     temperature:
-      name: "Temperature"
+      name: "Living Room Temperature"
     humidity:
-      name: "Humidity"
+      name: "Living Room Humidity"
+    address: 0x70
+    update_interval: 60s
 
 ```
 ## Configuration variables:
 
-- **temperature** (*Optional*): The information for the temperature sensor.
+- **temperature** (**Required**): The information for the temperature sensor.
 
   - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 
-- **humidity** (*Optional*): The information for the humidity sensor.
+- **humidity** (**Required**): The information for the humidity sensor.
 
   - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 

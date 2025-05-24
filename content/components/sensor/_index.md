@@ -455,7 +455,7 @@ Configuration variables:
 
 Multiplies each value by a templatable value.
 
-{{< anchor "sensor-filter-multiply" >}}
+{{< anchor "sensor-filter-calibrate_linear" >}}
 
 
 

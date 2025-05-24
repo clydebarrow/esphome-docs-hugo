@@ -113,7 +113,7 @@ advanced stuff (see the full API Reference for more info).
   id(my_lock).publish_state(LOCK_STATE_LOCKED);
   id(my_lock).publish_state(LOCK_STATE_UNLOCKED);
 
-  ```
+```
 - `state`: Retrieve the current state of the lock.
 
   ```yaml
@@ -122,7 +122,7 @@ advanced stuff (see the full API Reference for more info).
     // Lock is LOCKED, do something here
   }
 
-  ```
+```
 - `unlock()`/`lock()`/`open()`: Manually lock/unlock/open a  lock from code.
   Similar to the `lock.lock`, `lock.unlock`, and `lock.open` actions,
   but can be used in complex lambda expressions.
@@ -132,7 +132,7 @@ advanced stuff (see the full API Reference for more info).
   id(my_lock).lock();
   id(my_lock).open();
 
-  ```
+```
 {{< anchor "lock-on_lock_unlock_trigger" >}}
 
 ### `lock.on_lock` / `lock.on_unlock` Trigger

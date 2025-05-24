@@ -212,7 +212,7 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
       // Cover is in-between open and closed
     }
 
-    ```
+```
 - `tilt`: Retrieve the current tilt position of the cover, as a value between `0.0` and `1.0`.
 
 - `current_operation`: The operation the cover is currently performing:
@@ -226,7 +226,7 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
       // Cover is currently closing
     }
 
-    ```
+```
 {{< anchor "cover-on_open_trigger" >}}
 
 ### `cover.on_open` Trigger

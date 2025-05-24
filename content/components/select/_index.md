@@ -263,7 +263,7 @@ advanced stuff (see the full API Reference for more info).
   to select the first option or `call.select_next(true)` to select the next
   option with the cycle feature enabled.
 
-  ```
+```
 - `.state`: Retrieve the currently selected option of the select.
 
   ```cpp
@@ -279,14 +279,14 @@ advanced stuff (see the full API Reference for more info).
         - lambda: 'return id(my_select).state == "my_option_value";'
 
 
-  ```
+```
 - `.size()`: Retrieve the number of options in the select.
 
   ```cpp
   auto size = id(my_select).size();
   ESP_LOGI("main", "Select has %d options", size);
 
-  ```
+```
 - `.index_of(<option value>)`: Retrieve the index offset for an option value.
 
   ```cpp
@@ -297,7 +297,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGE("main", "There is no option 'Happy'");
   }
 
-  ```
+```
 - `.active_index()`: Retrieve the index of the currently active option.
 
   ```cpp
@@ -308,7 +308,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGI("main", "No option is active");
   }
 
-  ```
+```
 - `.at(<index offset>)`: Retrieve the option value at a given index offset.
 
   ```cpp
@@ -321,7 +321,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGE("main", "Index %d does not exist", index);
   }
 
-  ```
+```
 - `.has_option(<option value>)`: Check if the select contains the given option value.
 
   ```cpp
@@ -330,7 +330,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGI("main", "Select has option '%s'", option);
   }
 
-  ```
+```
 - `.has_index(<index offset>)`: Check if the select contains an option value for the given index offset.
 
   ```cpp
@@ -340,7 +340,7 @@ advanced stuff (see the full API Reference for more info).
   }
 
 
-  ```
+```
 ## Example
 
 Setting up three options and set component state to selected option value.

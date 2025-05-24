@@ -63,7 +63,7 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call 
         - lambda: |-
             id(bedjet_1).upgrade_firmware();
 
-  ```
+```
 - `.send_local_time`: If `time_id` is set, attempt to sync the clock now.
 
   ```yaml
@@ -75,7 +75,7 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call 
         - lambda: |-
             id(my_bedjet_fan).send_local_time();
 
-  ```
+```
 - `.set_clock`: Set the BedJet clock to a specified time; works with or without a `time_id`.
 
   ```yaml
@@ -88,7 +88,7 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call 
             id(my_bedjet_fan).set_clock(22, 10);
 
 
-  ```
+```
 ## `bedjet` Climate
 
 The `climate` platform exposes the BedJet's climate-related functionality, including

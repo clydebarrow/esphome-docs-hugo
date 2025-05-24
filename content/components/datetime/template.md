@@ -94,7 +94,7 @@ datetime:
       minute: 34
       second: 56
 
-    ```
+```
 - All other options from [Datetime]({{< ref "components/datetime/_index#config-datetime" >}}).
 
 ## See Also

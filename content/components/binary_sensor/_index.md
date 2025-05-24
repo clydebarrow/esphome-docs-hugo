@@ -444,7 +444,7 @@ advanced stuff.
   // Within lambda, publish an ON state.
   id(my_binary_sensor).publish_state(true);
 
-  ```
+```
 - `.state`: Retrieve the current state of the binary sensor.
 
   ```yaml
@@ -456,7 +456,7 @@ advanced stuff.
   }
 
 
-  ```
+```
 ## See Also
 
 - {{< apiref "binary_sensor/binary_sensor.h" "binary_sensor/binary_sensor.h" >}}

@@ -137,7 +137,7 @@ advanced stuff (see the full API Reference for more info).
   id(my_switch).publish_state(false);
   id(my_switch).publish_state(true);
 
-  ```
+```
 - `state`: Retrieve the current state of the switch.
 
   ```yaml
@@ -148,7 +148,7 @@ advanced stuff (see the full API Reference for more info).
     // Switch is OFF, do something else here
   }
 
-  ```
+```
 - `turn_off()`/`turn_on()`: Manually turn the switch ON/OFF from code.
   Similar to the `switch.turn_on` and `switch.turn_off` actions,
   but can be used in complex lambda expressions.
@@ -159,7 +159,7 @@ advanced stuff (see the full API Reference for more info).
   // Toggle the switch
   id(my_switch).toggle();
 
-  ```
+```
 {{< anchor "switch-on_turn_on_off_trigger" >}}
 
 ### `switch.on_turn_on` / `switch.on_turn_off` Trigger

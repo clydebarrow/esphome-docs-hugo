@@ -115,7 +115,7 @@ There are three ways to set a numerical value:
 
   This can be useful if you have an external thermostat-like device that provides the setpoint as a sensor.
 
-  ```
+```
 - As a number:
 
   ```yaml
@@ -126,7 +126,7 @@ There are three ways to set a numerical value:
 
   This is useful if you want full control over your boiler and want to manually set all values.
 
-  ```
+```
 - As an output:
 
   ```yaml
@@ -144,7 +144,7 @@ There are three ways to set a numerical value:
       heat_output: setpoint
       # ...
 
-  ```
+```
 For the output and number variants, there are four more properties you can configure beyond those included in the
 output and number components by default:
 

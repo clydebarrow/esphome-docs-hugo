@@ -299,27 +299,27 @@ advanced stuff (see the full API Reference for more info).
     // Set the (absolute) target position to 250 steps
     id(my_stepper).set_target(250);
 
-    ```
+```
 - `report_position`: Report the current position as an integer.
 
     ```cpp
     // Report the (absolute) current position as 250 steps
     id(my_stepper).report_position(250);
 
-    ```
+```
 - `current_position`: Get the current position of the stepper as an integer.
 
     ```cpp
     int pos = id(my_stepper).current_position;
 
 
-    ```
+```
 - `target_position`: Get the set target position of the stepper  as an integer.
 
     ```cpp
     int pos = id(my_stepper).target_position;
 
-    ```
+```
 ## See Also
 
 - {{< apiref "stepper/stepper.h" "stepper/stepper.h" >}}

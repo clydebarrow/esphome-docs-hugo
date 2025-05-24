@@ -200,7 +200,7 @@ read-only, if you want to act on the valve, use the `make_call()` method as show
       // Valve is in-between open and closed
     }
 
-    ```
+```
 - `current_operation`: The operation the valve is currently performing:
 
     ```cpp
@@ -212,7 +212,7 @@ read-only, if you want to act on the valve, use the `make_call()` method as show
       // Valve is currently closing
     }
 
-    ```
+```
 {{< anchor "valve-on_open_trigger" >}}
 
 ### `valve.on_open` Trigger

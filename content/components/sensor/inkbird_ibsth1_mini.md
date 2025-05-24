@@ -75,12 +75,12 @@ After uploading the ESP32 will immediately try to scan for BLE devices such as t
 When it detects these sensors, it will automatically parse the BLE message print a
 message like this one:
 
-.. code::
+```
+[13:36:43][D][esp32_ble_tracker:544]: Found device XX:XX:XX:XX:XX:XX RSSI=-53
+[13:36:43][D][esp32_ble_tracker:565]:   Address Type: PUBLIC
+[13:36:43][D][esp32_ble_tracker:567]:   Name: 'sps'
 
-    [13:36:43][D][esp32_ble_tracker:544]: Found device XX:XX:XX:XX:XX:XX RSSI=-53
-    [13:36:43][D][esp32_ble_tracker:565]:   Address Type: PUBLIC
-    [13:36:43][D][esp32_ble_tracker:567]:   Name: 'sps'
-
+```
 Note that it can sometimes take some time for the first BLE broadcast to be received. Please note that address type
 should say 'PUBLIC' and the device name should be 'sps', this is how you find the Inkbird IBS-TH1/TH2 among all the
 other devices.

@@ -131,7 +131,7 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can trigg
   // Within lambda, trigger the event.
   id(my_event).trigger("custom_event");
 
-  ```
+```
 ## See Also
 
 - {{< apiref "event/event.h" "event/event.h" >}}

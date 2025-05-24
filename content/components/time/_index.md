@@ -198,7 +198,7 @@ to an external hardware real time clock chip.
       then:
         - logger.log: "Synchronized system clock"
 
-    ```
+```
 {{< note >}}
 Components should trigger `on_time_sync` when they update the system clock. However, not all real time components
 behave exactly the same. Components could e.g. decide to trigger only when a significant time change has been

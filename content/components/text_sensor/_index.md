@@ -269,7 +269,7 @@ advanced stuff (see the full API Reference for more info).
   // Within lambda, push a value of "Hello World"
   id(my_sensor).publish_state("Hello World");
 
-  ```
+```
 - `.state`: Retrieve the current value of the sensor as an `std::string` object.
 
   ```cpp
@@ -277,7 +277,7 @@ advanced stuff (see the full API Reference for more info).
   std::string val = id(my_sensor).state;
   ESP_LOGI("main", "Value of my sensor: %s", val.c_str());
 
-  ```
+```
 ## See Also
 
 - {{< apiref "text_sensor/text_sensor.h" "text_sensor/text_sensor.h" >}}

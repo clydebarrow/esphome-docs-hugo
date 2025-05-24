@@ -297,7 +297,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan is OFF, do something else here
   }
 
-  ```
+```
 - `speed`: Retrieve the current speed of the fan.
 
   ```yaml
@@ -308,7 +308,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan speed is not 2, do something else here
   }
 
-  ```
+```
 - `oscillating`: Retrieve the current oscillating state of the fan.
 
   ```yaml
@@ -319,7 +319,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan is not oscillating, do something else here
   }
 
-  ```
+```
 - `direction`: Retrieve the current direction of the fan.
 
   ```yaml
@@ -330,7 +330,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan direction is reverse, do something else here
   }
 
-  ```
+```
 - `preset_mode`: Retrieve the current preset mode of the fan.
 
   ```yaml
@@ -341,7 +341,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan preset mode is not "auto", do something else here
   }
 
-  ```
+```
 - `turn_off()`/`turn_on()`/`toggle()`: Manually turn the fan ON/OFF from code.
   Similar to the `fan.turn_on`, `fan.turn_off`, and `fan.toggle` actions,
   but can be used in complex lambda expressions.
@@ -367,7 +367,7 @@ advanced stuff (see the full API Reference for more info).
   auto call = id(my_fan).toggle();
   call.perform();
 
-  ```
+```
 ## Full Fan Index
 
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}

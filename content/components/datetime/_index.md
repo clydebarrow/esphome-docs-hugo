@@ -144,7 +144,7 @@ advanced stuff (see the full API Reference for more info).
   Check the API reference for information on the methods that are available for
   the `DateCall` object.
 
-  ```
+```
 - `.year`: Retrieve the current year of the `date`. It will be `0` if no value has been set.
 - `.month`: Retrieve the current month of the `date`. It will be `0` if no value has been set.
 - `.day`: Retrieve the current day of the `date`. It will be `0` if no value has been set.
@@ -154,7 +154,7 @@ advanced stuff (see the full API Reference for more info).
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Value of my datetime: %04d-%02d-%02d", id(my_date).year, id(my_date).month, id(my_date).day);
 
-  ```
+```
 ## Time Automation
 
 {{< anchor "datetime-time_set_action" >}}
@@ -211,7 +211,7 @@ advanced stuff (see the full API Reference for more info).
   Check the API reference for information on the methods that are available for
   the `TimeCall` object.
 
-  ```
+```
 - `.hour`: Retrieve the current hour of the `time`. It will be `0` if no value has been set.
 - `.minute`: Retrieve the current minute of the `time`. It will be `0` if no value has been set.
 - `.second`: Retrieve the current second of the `time`. It will be `0` if no value has been set.
@@ -222,7 +222,7 @@ advanced stuff (see the full API Reference for more info).
   ESP_LOGI("main", "Value of my datetime: %0d:%02d:%02d", id(my_datetime_time).hour, id(my_datetime_time).minute, id(my_datetime_time).second);
 
 
-  ```
+```
 ## DateTime Automation
 
 {{< anchor "datetime-datetime_set_action" >}}
@@ -281,7 +281,7 @@ For more complex use cases, several methods are available for use on datetimes f
   Check the API reference for information on the methods that are available for
   the `DateTimeCall` object.
 
-  ```
+```
 - `.year`: Retrieve the current year of the `datetime`. It will be `0` if no value has been set.
 - `.month`: Retrieve the current month of the `datetime`. It will be `0` if no value has been set.
 - `.day`: Retrieve the current day of the `datetime`. It will be `0` if no value has been set.
@@ -297,7 +297,7 @@ For more complex use cases, several methods are available for use on datetimes f
            id(my_datetime).hour, id(my_datetime).minute, id(my_datetime).second);
 
 
-  ```
+```
 ## See Also
 
 - {{< apiref "DateTimeBase" "datetime/datetime_base.h" >}}

@@ -1146,7 +1146,7 @@ We'll approach this from the angle of *"how do I..."*
           it.print(0, 0, "Idle");
         }
 
-  ```
+```
 - **...determine if the sprinkler controller is paused and, if so, which valve is paused?**
 
   Use the method `optional<size_t> paused_valve()` to check if there is a paused valve. If the `optional` returned
@@ -1188,7 +1188,7 @@ We'll approach this from the angle of *"how do I..."*
           it.print(0, 10, "Queue disabled");
         }
 
-  ```
+```
 - **...determine the sprinkler controller's multiplier/repeat values?**
 
   Methods of interest in this case are:
@@ -1217,7 +1217,7 @@ We'll approach this from the angle of *"how do I..."*
           it.printf(0, 10, "Repeat %u times", id(lawn_sprinkler_ctrlr).repeat().value());
         }
 
-  ```
+```
 - **...determine how much time is left/required?**
 
   Several methods are available for this purpose:
@@ -1248,7 +1248,7 @@ We'll approach this from the angle of *"how do I..."*
           it.print(0, 0, "Idle");
         }
 
-  ```
+```
 ## See Also
 
 - {{< apiref "sprinkler/sprinkler.h" "sprinkler/sprinkler.h" >}}

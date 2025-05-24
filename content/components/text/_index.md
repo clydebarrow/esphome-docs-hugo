@@ -118,14 +118,14 @@ advanced stuff (see the full API Reference for more info).
   call.set_value("Hello World");
   call.perform();
 
-  ```
+```
 - `.state`: Retrieve the current value of the text.
 
   ```cpp
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Value of my text: %s", id(my_text).state.c_str());
 
-  ```
+```
 ## See Also
 
 - {{< apiref "Text" "text/text.h" >}}

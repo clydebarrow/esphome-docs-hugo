@@ -221,7 +221,7 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
           topic: ${device_name}/button${id}/status
           payload: double
 
-  ```
+```
 - You can use {{< docref "/components/substitutions" >}} to build on the examples above and reduce repetition in your
   configuration files.
 
@@ -230,13 +230,13 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
   ```bash
   esphome config livingroom.yaml
 
-  ```
+```
 - To view the logs from your ESPHome node without uploading, run:
 
   ```bash
   esphome logs livingroom.yaml
 
-  ```
+```
 - You can always find the source ESPHome generates in the `<NODE_NAME>/src/` directory.
 
 - You can view the full list of command line interface options here: {{< docref "/guides/cli" >}}
@@ -308,7 +308,7 @@ stable channel. You can help test ESPHome (and use new features) by installing t
   # For docker-based installs
   docker run [...] -it ghcr.io/esphome/esphome:beta run livingroom.yaml
 
-  ```
+```
 The beta documentation is available at [beta.esphome.io](https://beta.esphome.io).
 
 ## How do I use the latest bleeding-edge version?
@@ -326,14 +326,14 @@ That aside, if you want to install the `dev` version of ESPHome:
   ```bash
   pip3 install https://github.com/esphome/esphome/archive/dev.zip
 
-  ```
+```
 - From docker, use the [ghcr.io/esphome/esphome:dev](https://github.com/esphome/esphome/pkgs/container/esphome/)
   image.
 
   ```bash
   docker run [...] -it ghcr.io/esphome/esphome:dev livingroom.yaml compile
 
-  ```
+```
 The dev documentation is available at [next.esphome.io](https://next.esphome.io/).
 
 ## How do I use my Home Assistant `secrets.yaml` file?

@@ -213,7 +213,7 @@ advanced stuff.
   id(my_climate).custom_preset
 
 
-  ```
+```
 - `.make_call`: Control the climate device
 
   ```cpp
@@ -222,7 +222,7 @@ advanced stuff.
   // etc. see API reference
   call.perform();
 
-  ```
+```
 {{< anchor "climate-on_state_trigger" >}}
 
 ### `climate.on_state` Trigger

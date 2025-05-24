@@ -122,7 +122,7 @@ From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can press
   // Within lambda, press the button.
   id(my_button).press();
 
-  ```
+```
 ## See Also
 
 - {{< apiref "button/button.h" "button/button.h" >}}

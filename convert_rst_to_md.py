@@ -122,6 +122,32 @@ def normalize_csv_lines(lines):
     return normalized_rows
 
 
+def get_indented_block(lines, i, current_indent):
+    # skip blank lines
+    while i < len(lines) and not lines[i].strip():
+        i += 1
+
+    md_lines = []
+    # Determine the indentation level of the code block content
+    code_indent = 0
+    if i < len(lines) and lines[i].startswith(' '):
+        code_indent = len(lines[i]) - len(lines[i].lstrip(' '))
+
+    # Add code content
+    while i < len(lines):
+        this_indent = min(len(lines[i]) - len(lines[i].lstrip()), code_indent)
+        if not lines[i].strip():  # Empty line
+            md_lines.append('')
+            i += 1
+        elif this_indent != 0:
+            # Remove only the code block indentation, preserve any existing indentation
+            md_lines.append(' ' * current_indent + lines[i][this_indent:])
+            i += 1
+        else:  # Line without expected indentation - end of code block
+            break
+    return i, md_lines
+
+
 def convert_rst_to_md(lines, filename):
     """Convert RST content to Markdown using line-by-line processing."""
 
@@ -327,44 +353,34 @@ def convert_rst_to_md(lines, filename):
             continue
         
         # Handle code blocks - check for both standalone and nested code blocks
-        if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code-block::'):
+        if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):
             # Get the indentation of the current line
             current_indent = len(line) - len(line.lstrip())
             
             # Extract language
-            language = line.lstrip().replace('.. code-block::', '').strip()
-            language = language.replace('::', '').strip()
+            language = line.split("::")[1].strip()
 
             # Add the code block start with proper indentation
             md_lines.append(' ' * current_indent + f"```{language}")
             
-            # Skip the blank line after the code-block directive
-            i += 1
-            while i < len(lines) and not lines[i].strip():
-                i += 1
-            
-            # Determine the indentation level of the code block content
-            code_indent = 0
-            if i < len(lines) and lines[i].startswith(' '):
-                code_indent = len(lines[i]) - len(lines[i].lstrip(' '))
-            
-            # Add code content
-            while i < len(lines):
-                this_indent = min(len(lines[i]) - len(lines[i].lstrip()), code_indent)
-                if not lines[i].strip():  # Empty line
-                    md_lines.append('')
-                    i += 1
-                elif this_indent != 0:
-                    # Remove only the code block indentation, preserve any existing indentation
-                    md_lines.append(' ' * current_indent + lines[i][this_indent:])
-                    i += 1
-                else:  # Line without expected indentation - end of code block
-                    break
-            
-            # Add the code block end with proper indentation
-            md_lines.append(' ' * current_indent + "```")
+            i, new_lines = get_indented_block(lines, i+1, current_indent)
+            md_lines.extend(new_lines)
+            md_lines.append("```")
             continue
-        
+
+        if line.lstrip().startswith('.. math::'):
+            # Get the indentation of the current line
+            current_indent = len(line) - len(line.lstrip())
+
+            # Add the code block start with proper indentation
+            md_lines.append(' ' * current_indent + "{{< math >}}")
+
+            i, new_lines = get_indented_block(lines, i+1, current_indent)
+            md_lines.extend(new_lines)
+            md_lines.append(' ' * current_indent + "{{< /math >}}")
+            continue
+
+
         # Handle notes
         if line.strip().startswith('.. note::'):
             # Get the indentation level of the note directive
@@ -472,8 +488,8 @@ def convert_rst_to_md(lines, filename):
                     break
                 
                 # Handle code blocks within warnings
-                if current_line.strip().startswith('.. code-block::'):
-                    language = current_line.replace('.. code-block::', '').strip() or 'yaml'
+                if current_line.strip().startswith('.. code-block::') or current_line.strip().startswith(".. code::"):
+                    language = current_line.split('::')[1].strip() or 'yaml'
                     warning_content.append('```' + language)
                     i += 1
                     

@@ -202,7 +202,7 @@ Below are the methods to read current settings and modify them dynamically:
   // Baud rate
   id(my_uart).get_baud_rate();
 
-  ```
+```
 - **Modifying Settings at Runtime:** You can change certain UART parameters during runtime.
   After setting new values, invoke `load_settings()` (ESP only) to apply these changes:
 
@@ -254,7 +254,7 @@ Below are the methods to read current settings and modify them dynamically:
   // Baud rate
   id(my_uart).set_baud_rate(uint32_t baud_rate);
 
-  ```
+```
 This flexibility allows for dynamic adaptation to different communication requirements, enhancing the versatility of your ESPHome setup.
 
 ## UART component with the host platform

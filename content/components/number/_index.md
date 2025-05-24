@@ -312,14 +312,14 @@ advanced stuff (see the full API Reference for more info).
   to set the number to its minimum value or `call.number_increment(true)` to increment
   the number by its step size with the cycle feature enabled.
 
-  ```
+```
 - `.state`: Retrieve the current value of the number. Is `NAN` if no value has been read or set.
 
   ```cpp
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Value of my number: %f", id(my_number).state);
 
-  ```
+```
 ## See Also
 
 - {{< apiref "Number" "number/number.h" >}}

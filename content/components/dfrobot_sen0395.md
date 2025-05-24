@@ -214,7 +214,7 @@ on_...:
   Section values can be defined using lambdas, so you can set the distances depending on other entities. Distances
   are defined as a float in meters (10cm = 0.1). If you return a negative value (-1) the segment will not be set.
 
-  ```
+```
 - **output_latency** (*Optional*, dictionary):
 
   - **delay_after_detect** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time to wait before signaling that a person was

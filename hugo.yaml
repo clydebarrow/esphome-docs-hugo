@@ -9,7 +9,8 @@ params:
   images:
     - logo.svg
   api_docs_url: https://api-docs.esphome.io
-  
+  math: true
+
   # Social media links
   social:
     - name: GitHub
@@ -46,6 +47,13 @@ markup:
   goldmark:
     renderer:
       unsafe: true  # Allow HTML in markdown files
+    extensions: # for math support
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)'], ['$', '$']]
+
 
 # Enable search functionality
 outputs:

@@ -1,4 +1,4 @@
-baseURL: https://esphome.io/
+baseURL: ""
 languageCode: en-us
 title: ESPHome - Smart Home Made Simple
 theme: esphome-theme

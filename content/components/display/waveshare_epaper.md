@@ -148,7 +148,7 @@ The BUSY pin on the `gdew0154m09`, the `Waveshare 7.30in-f` and the `Waveshare 7
   See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`, use `never` to only manually update the screen via `component.update`.
 - **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
-- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **spi_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [SPI Component]({{< ref "components/spi#spi" >}}) if you want
   to use multiple SPI buses.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 

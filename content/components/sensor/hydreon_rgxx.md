@@ -63,7 +63,7 @@ sensor:
 - **disable_led** (*Optional*): Disables the on-board LED. Defaults to `false`. Only on RG-9 firmware version 1.200-onwards.
 
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
 
 - **moisture** (*Optional*): Rain intensity level from 0-7 ([more detail](https://rainsensors.com/support/rg-9-rg-15-faq/#RG-9RValue)). Only on RG-9.

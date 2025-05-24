@@ -96,8 +96,8 @@ climate:
     - **medium_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `medium` speed.
     - **middle_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `middle` speed. (May set to device's `high` value if you have a `Turbo` option).
     - **high_value** (*Optional*, int):  The datapoint value the device reports when the fan is on `high` speed. (Sometimes called `Turbo`).
-- **heating_state_pin** (*Optional*, [see below]({{< ref "components/climate/tuya#active_state_detection" >}})): The input pin indicating that the device is heating - [Pin]({{< ref "guides/configuration-types#config-pin" >}}). Only used if **active_state_datapoint** is not configured.
-- **cooling_state_pin** (*Optional*, [see below]({{< ref "components/climate/tuya#active_state_detection" >}})): The input pin indicating that the device is cooling - [Pin]({{< ref "guides/configuration-types#config-pin" >}}). Only used if **active_state_datapoint** is not configured.
+- **heating_state_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The input pin indicating that the device is heating - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}). Only used if **active_state_datapoint** is not configured.
+- **cooling_state_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The input pin indicating that the device is cooling - [see below]({{< ref "components/climate/tuya#active_state_detection" >}}). Only used if **active_state_datapoint** is not configured.
 - **target_temperature_datapoint** (**Required**, int): The datapoint id number of the target temperature.
 - **current_temperature_datapoint** (**Required**, int): The datapoint id number of the current temperature.
 - **temperature_multiplier** (*Optional*, float): A multiplier to modify the incoming and outgoing temperature values - [see below]({{< ref "components/climate/tuya#temperature-multiplier" >}}).

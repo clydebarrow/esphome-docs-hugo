@@ -129,19 +129,19 @@ You can go ahead and install ESPHome:
 pip3 install esphome
 
 ```
-.. caution::
+{{< warning >}}
+Don't use `sudo` with pip. If you do, you'll run into trouble updating
+your OS down the road.
 
-    Don't use `sudo` with pip. If you do, you'll run into trouble updating
-    your OS down the road.
+For details, see `DontBreakDebian
+<https://wiki.debian.org/DontBreakDebian#A.27make_install.27_can_conflict_with_packages>`_.
+`pip install` is equivalent to `make install` in this context. The
+advice in the article applies to all Linux distributions, not just Debian.
 
-    For details, see `DontBreakDebian
-    <https://wiki.debian.org/DontBreakDebian#A.27make_install.27_can_conflict_with_packages>`_.
-    `pip install` is equivalent to `make install` in this context. The
-    advice in the article applies to all Linux distributions, not just Debian.
+Some people install ESPHome without the virtual environment, which can lead to issues with PATHs etc.
+Non virtual environment installations are considered not "supported" as people end up having to know your exact system setup.
 
-    Some people install ESPHome without the virtual environment, which can lead to issues with PATHs etc.
-    Non virtual environment installations are considered not "supported" as people end up having to know your exact system setup.
-
+{{< /warning >}}
 At this point, you should be able confirm that ESPHome has been successfully installed:
 
 ```console

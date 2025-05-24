@@ -148,7 +148,7 @@ multimeter in continuity mode to figure it out (advanced topic).
 {{< img src="programming-header-filled.jpg" alt="Image" caption="A set of programming headers that are filled with solder" width="75.0%" class="center" >}}
 
 You'll need a USB to serial adapter, [jumper wires]({{< ref "#jumper-wires" >}}), a
-[solder]({{< ref "#solder" >}}), and probably [soldering iron]({{< ref "#soldering-iron" >}}) and
+[soldering iron]({{< ref "#soldering-iron" >}}), and probably [solder]({{< ref "#solder" >}}) and
 some [breakaway headers]({{< ref "#pcb-headers" >}}) if your board looks like this.
 
 You can try placing the jumper wires in the right place, but you'll have

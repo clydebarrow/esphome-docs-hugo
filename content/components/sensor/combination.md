@@ -75,7 +75,7 @@ sensor:
   `MOST_RECENTLY_UPDATED`, `RANGE`, or `SUM`.
 - **sources** (**Required**, list): A list of sensors to use as source.
   
-  - **source** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}) {{< docref "/components/sensor" >}}ndex`): The
+  - **source** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}}) of a {{< docref "/components/sensor" >}}): The
     sensor id that is used as sample source.
   - **error** (**Required**, only for `KALMAN` type, float, [templatable]({{< ref "automations/templates#config-templatable" >}})): 
     The standard deviation of the sensor's measurements. This works like the `process_std_dev` 

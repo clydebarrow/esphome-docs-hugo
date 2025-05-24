@@ -90,9 +90,9 @@ logger:
 
 Automations:
 
-- **on_command_sent** (*Optional*, [`on_command_sent`]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})): An automation to perform when a modbus command has been sent. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_online** (*Optional*, [`on_online`]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})): An automation to perform when a modbus controller goes online. See [Automation]({{< ref "automations/_index#automation" >}})
-- **on_offline** (*Optional*, [`on_offline`]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})): An automation to perform when a modbus controller goes offline. See [Automation]({{< ref "automations/_index#automation" >}})
+- **on_command_sent** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a modbus command has been sent. See [`on_command_sent`]({{< ref "components/modbus_controller#modbus_controller-on_command_sent" >}})
+- **on_online** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a modbus controller goes online. See [`on_online`]({{< ref "components/modbus_controller#modbus_controller-on_online" >}})
+- **on_offline** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when a modbus controller goes offline. See [`on_offline`]({{< ref "components/modbus_controller#modbus_controller-on_offline" >}})
 
 ## Example Client
 
@@ -709,7 +709,7 @@ modbus_controller:
 
 ### `on_offline`
 
-This automation will be triggered when a `modbus_controller` goes `offline` (See [Lambdas]({{< ref "automations/templates#config-lambda" >}})). In [offline_skip_updates]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})
+This automation will be triggered when a `modbus_controller` goes `offline` (See [offline_skip_updates]({{< ref "components/modbus_controller#modbus_controller-offline_skip_updates" >}})). In [Lambdas]({{< ref "automations/templates#config-lambda" >}})
 you can get the function code in `function_code` and the register address in `address`.
 
 ```yaml

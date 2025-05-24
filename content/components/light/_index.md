@@ -77,7 +77,7 @@ to use that name, you can set `name: None`.
 - **color_correct** (*Optional*, list of float): Apply a color correction to each color channel. This defines the
   maximum brightness of each channel. For example `[100%, 50%, 100%]` would set the green channel to be at most at
   50% brightness.
-- **power_supply** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/power_supply" >}}pply` to connect to this light. When
+- **power_supply** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The {{< docref "/components/power_supply" >}} to connect to this light. When
   the light is turned on, the power supply will automatically be switched on too.
 
 **Advanced options:**
@@ -158,7 +158,7 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
+- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The length of the
   transition if the light supports it.
 
 {{< note >}}
@@ -199,9 +199,9 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
+- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The length of the
   transition if the light supports it.
-- **flash_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): If set, will flash the
+- **flash_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): If set, will flash the
   given color for this period of time and then go back to the previous state.
 - **effect** (*Optional*, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): If set, will attempt to start an effect
   with the given name.
@@ -270,7 +270,7 @@ on_...:
 **Configuration variables:**
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
+- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The length of the
   transition if the light supports it.
 
 {{< note >}}
@@ -326,7 +326,7 @@ on_...:
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
 - **relative_brightness** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), percentage): The relative brightness
   to dim the light by.
-- **transition_length** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The length of the
+- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The length of the
   transition.
 - **brightness_limits** (*Optional*): Limits in the brightness range.
     - **min_brightness** (*Optional*, percentage): The minimum brightness to dim the light to. Defaults to `0%`.
@@ -1058,7 +1058,7 @@ light:
 ```
 **Configuration variables:**
 
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}). Useful if
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}). Useful if
   you've configured multiple UARTs.
 
 [Adalight](https://learn.adafruit.com/adalight-diy-ambient-tv-lighting)

@@ -9,7 +9,7 @@ title: "INA2xx family of digital power monitors"
 
 ## Supported devices
 The `ina2xx` sensor platform allows you to use family of Texas Instruments current and power 
-sensors with ESPHome. Appropriate interface ([SPI Bus]({{< ref "components/spi#spi" >}}) or [I²C Bus]({{< ref "components/i2c#i2c" >}})) is 
+sensors with ESPHome. Appropriate interface ([I²C Bus]({{< ref "components/i2c#i2c" >}}) or [SPI Bus]({{< ref "components/spi#spi" >}})) is 
 requred to be set up in your configuration for this sensor to work.
 
 
@@ -75,7 +75,7 @@ sensor:
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
-- All other options from [I²C device]({{< ref "components/i2c#i2c" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and [I²C device]({{< ref "components/i2c#i2c" >}}).
 
 
 ## Over SPI
@@ -124,7 +124,7 @@ sensor:
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
-- All other options from [SPI device]({{< ref "components/spi#spi" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and [SPI device]({{< ref "components/spi#spi" >}}).
 
 
 ## Sensors

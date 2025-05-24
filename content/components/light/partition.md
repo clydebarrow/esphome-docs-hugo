@@ -6,7 +6,7 @@ title: "Light Partition"
 {{< seo description="" image="" >}}
 
 The `partition` light platform allows you to combine multiple addressable light segments
-(like {{< docref "rgb/" >}} or {{< docref "neopixelbus/" >}}) and/or individual lights (like {{< docref "fastled/" >}}) into a single addressable light.
+(like {{< docref "fastled/" >}} or {{< docref "neopixelbus/" >}}) and/or individual lights (like {{< docref "rgb/" >}}) into a single addressable light.
 This platform also allows splitting up an addressable light into multiple segments, so that
 segments can be individually controlled.
 

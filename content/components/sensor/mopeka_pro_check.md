@@ -158,10 +158,10 @@ After uploading, the ESP32 will immediately try to scan for BLE devices.  Press 
 Or alternatively set the configuration flag `show_sensors_without_sync: true` to see all devices.
 For all sensors found the `mopeka_ble` component will print a message like this one:
 
-```.. code
-[20:43:26][I][mopeka_ble:074]: MOPEKA PRO (NRF52) SENSOR FOUND: XX:XX:XX:XX:XX:XX
+.. code::
 
-```
+    [20:43:26][I][mopeka_ble:074]: MOPEKA PRO (NRF52) SENSOR FOUND: XX:XX:XX:XX:XX:XX
+
 Then just copy the address (`XX:XX:XX:XX:XX:XX`) into a new
 `sensor.mopeka_pro_check` platform entry like in the configuration example at the top.
 

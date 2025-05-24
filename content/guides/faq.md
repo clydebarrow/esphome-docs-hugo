@@ -388,7 +388,7 @@ Here are some steps that may help mitigate the issue:
 - The issue seems to happen with "cheap" boards more frequently -- especially the "cheap" NodeMCU boards from eBay
   which sometimes have bad antennas.
 - ESPHome intentionally reboots after a configured duration in specific situations, such as when the
-  {{< docref "/components/api" "API connection is lost" >}}, {{< docref "/components/wifi" "Wi-Fi connection cannot be made" >}} or
+  {{< docref "/components/wifi" "Wi-Fi connection cannot be made" >}}, {{< docref "/components/api" "API connection is lost" >}} or
   {{< docref "/components/mqtt" "MQTT connection is lost" >}}. To disable this behavior, you'll need to explicitly set the
   `reboot_timeout` option to `0s` on the relevant components.
 - If you see `Error: Disconnecting <NODE_NAME>` in your logs, ESPHome is actively closing the native API client

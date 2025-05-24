@@ -158,7 +158,7 @@ on_...:
 **Configuration variables:**
 
 - **method** (**Required**, string): HTTP method to use (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`).
-- All other options from [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}) and [`http_request.post` Action]({{< ref "components/http_request#http_request-post_action" >}}).
+- All other options from [`http_request.post` Action]({{< ref "components/http_request#http_request-post_action" >}}) and [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}).
 
 {{< anchor "http_request-on_response" >}}
 

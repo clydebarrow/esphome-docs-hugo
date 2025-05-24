@@ -7,7 +7,7 @@ title: "LVGL Text"
 
 The `lvgl` text platform creates an editable text component from an LVGL textual widget and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are [`textarea`]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}) and [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}). A single text supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome text component.
+Supported widgets are [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) and [`textarea`]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}). A single text supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome text component.
 
 ## Configuration variables:
 

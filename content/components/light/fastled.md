@@ -23,7 +23,7 @@ See these related issues:
 {{< warning >}}
 FastLED does **not** work with ESP-IDF.
 
-For addressable lights, you can use {{< docref "spi_led_strip/" >}} or for SPI LEDs see {{< docref "esp32_rmt_led_strip/" >}}..
+For addressable lights, you can use {{< docref "esp32_rmt_led_strip/" >}} or for SPI LEDs see {{< docref "spi_led_strip/" >}}..
 
 {{< /warning >}}
 {{< anchor "fastled-clockless" >}}

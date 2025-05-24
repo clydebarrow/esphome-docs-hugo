@@ -56,10 +56,10 @@ climate:
   This is used for information only and does not influence temperature control.
 - **default_target_temperature** (**Required**, float): The default target temperature (setpoint)
   for the control algorithm. This can be dynamically set in the frontend later.
-- **heat_output** (*Optional*, [float output]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **heat_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of a [float output]({{< ref "components/output/_index#config-output" >}})
   that increases the current temperature. At least one of `heat_output` and `cool_output` must
   be specified.
-- **cool_output** (*Optional*, [float output]({{< ref "components/output/_index#config-output" >}})): The ID of a [ID]({{< ref "guides/configuration-types#config-id" >}})
+- **cool_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of a [float output]({{< ref "components/output/_index#config-output" >}})
   that decreases the current temperature. At least one of `heat_output` and `cool_output` must
   be specified.
 - **control_parameters** (**Required**): Control parameters of the PID controller.
@@ -114,7 +114,7 @@ To set up a PID climate controller, you need a couple of components:
 
 - A [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) to read the current temperature (`sensor`).
 - At least one [float output]({{< ref "components/output/_index#config-output" >}}) to drive for heating or cooling (or both).
-  This could for example be a PWM output via {{< docref "/components/output/slow_pwm" >}} or {{< docref "/components/output/sigma_delta_output" >}} that drives a heating unit.
+  This could for example be a PWM output via {{< docref "/components/output/sigma_delta_output" >}} or {{< docref "/components/output/slow_pwm" >}} that drives a heating unit.
 
   Please note the output *must* be controllable with continuous value (not only ON/OFF, but any state
   in between for example 50% heating power).

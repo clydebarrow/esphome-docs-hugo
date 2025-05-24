@@ -163,7 +163,7 @@ Automations:
   when a stream starts.
 - **on_stream_stop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
   when a stream stops.
-- **on_image** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation called when image taken. Image is available as `image` variable of type :apistruc{{< apistruct "esp32_camera::CameraImageData" "esp32_camera::CameraImageData" >}}
+- **on_image** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation called when image taken. Image is available as `image` variable of type {{< apistruct "esp32_camera::CameraImageData" "esp32_camera::CameraImageData" >}}.
 
 Test Setting:
 

@@ -13,7 +13,7 @@ The component is split into two parts:
 - The remote transmitter "hub", which defines the pin and a few additional settings, and...
 - Individual [actions]({{< ref "automations/actions#config-action" >}}) to send encoded remote signals.
 
-**See** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **and** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **for details.**
+**See** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **and** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **for details.**
 
 {{< note >}}
 This component performs best with an ESP32 or variant; they have a dedicated hardware peripheral which ensures
@@ -117,7 +117,7 @@ Configuration variables:
   sent only once.
 
   - **times** ([templatable]({{< ref "automations/templates#config-templatable" >}}), int): The number of times to repeat the code.
-  - **wait_time** ([Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The time to wait between repeats (in
+  - **wait_time** ([templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The time to wait between repeats (in
     µs as a result of a [lambda]({{< ref "automations/templates#config-lambda" >}})).
 
 - **transmitter_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The remote transmitter to send the remote code with. Defaults to

@@ -115,7 +115,7 @@ text_sensor:
 
 ## Energy Monitoring
 
-By combining {{< docref "/components/sensor/integration" "integration sensors" >}} and {{< docref "/components/sensor/template" "template sensors" >}}
+By combining {{< docref "/components/sensor/template" "template sensors" >}} and {{< docref "/components/sensor/integration" "integration sensors" >}}
 one can monitor the energy flowing into and out of all batteries combined, ready for [Homeassistant Energy Monitoring](https://www.home-assistant.io/docs/energy/battery/).
 
 ```yaml

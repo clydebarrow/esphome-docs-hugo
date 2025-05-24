@@ -28,7 +28,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The :doc:`micr{{< docref "/components/microphone/index" "microphone" >}}to use for input. Multiple channels may be selected.
+- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input. Multiple channels may be selected.
 - **measurement_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
 - **passive** (**Required**, boolean). Whether passive mode is enabled. See [Passive Mode]({{< ref "components/sensor/sound_level#sound_level-passive" >}}).
 - **peak** (*Optional*): The information for the peak loudness sensor.

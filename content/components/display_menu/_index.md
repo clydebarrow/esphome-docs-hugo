@@ -84,7 +84,7 @@ Configuration variables:
       the anticlockwise one to [display_menu.up]({{< ref "components/display_menu/_index#display_menu-up_action" >}}) and the switch
       to [display_menu.enter]({{< ref "components/display_menu/_index#display_menu-enter_action" >}}) action.
     - `joystick`: Joystick mode expects the up, down, left and right buttons wired to the [display_menu.up]({{< ref "components/display_menu/_index#display_menu-up_action" >}}),
-      [display_menu.left]({{< ref "components/display_menu/_index#display_menu-left_action" >}}), [display_menu.down]({{< ref "components/display_menu/_index#display_menu-down_action" >}})
+      [display_menu.down]({{< ref "components/display_menu/_index#display_menu-down_action" >}}), [display_menu.left]({{< ref "components/display_menu/_index#display_menu-left_action" >}})
       and [display_menu.right]({{< ref "components/display_menu/_index#display_menu-right_action" >}}) actions and the middle button
       to the [display_menu.enter]({{< ref "components/display_menu/_index#display_menu-enter_action" >}}) action.
 

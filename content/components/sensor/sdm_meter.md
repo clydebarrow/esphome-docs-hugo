@@ -11,7 +11,7 @@ with ESPHome.
 
 {{< img src="sdm220m-full.png" alt="Image" caption="SDM230M Energy Monitor." width="50.0%" class="center" >}}
 
-The communication with this component is done via a [Modbus protocol]({{< ref "components/modbus#modbus" >}}) using the [UART]({{< ref "components/uart#uart" >}}) 
+The communication with this component is done via a [UART]({{< ref "components/uart#uart" >}}) using the [Modbus protocol]({{< ref "components/modbus#modbus" >}}) 
 over RS485 wiring. You will need an RS485 to UART converter for communication.
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600bps. 

@@ -8,7 +8,7 @@ title: "LVGL Text Sensor"
 The `lvgl` text sensor platform creates a Text Sensor from an LVGL textual widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are [`textarea`]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}) and [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}). A single text sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome text sensor component.
+Supported widgets are [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) and [`textarea`]({{< ref "components/lvgl/widgets#lvgl-widget-textarea" >}}). A single text sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome text sensor component.
 
 ## Configuration variables:
 

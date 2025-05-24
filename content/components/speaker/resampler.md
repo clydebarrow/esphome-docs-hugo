@@ -29,7 +29,7 @@ speaker:
 ```
 ## Configuration variables:
 
-- **output_speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})):{{< docref "/components/speaker/index" "speaker" >}}dex>` to output the resampled audio.
+- **output_speaker** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The {{< docref "/components/speaker/index" "speaker" >}} to output the resampled audio.
 - **buffer_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of the internal ring buffer. Larger values may reduce stuttering but use more memory. Defaults to `500ms`.
 - **bits_per_sample** (*Optional*, positive integer): The audio sample bit depth after resampling. Defaults to the output speaker's bits per sample.
 - **sample_rate** (*Optional*, positive integer): Sample rate to convert to. Must be between `8000` and `48000`. Defaults to the output speaker's sample rate.

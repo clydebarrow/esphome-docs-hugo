@@ -123,7 +123,7 @@ wifi:
 ```
 ## User Entered Credentials
 
-Some components such as {{< docref "esp32_improv/" >}}, {{< docref "improv_serial/" >}} and {{< docref "captive_portal/" >}}
+Some components such as {{< docref "captive_portal/" >}}, {{< docref "improv_serial/" >}} and {{< docref "esp32_improv/" >}}
 enable the user to send and save Wi-Fi credentials to the device. Beginning in 2022.11.0,
 as long as no credentials are set in the config file, and firmware is uploaded without erasing
 the flash (via OTA), the device will keep the saved credentials.
@@ -340,7 +340,7 @@ Configuration variables:
 - **ssid** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The name of the WiFi access point.
 - **password** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The password of the WiFi access point. Leave empty for no password.
 - **save** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): If set to `true`, the SSID and password will be saved in persistent memory. Defaults to `true`.
-- **timeout** (*Optional*, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})): The time to wait for the connection to be established. Defaults to 30 seconds.
+- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The time to wait for the connection to be established. Defaults to 30 seconds.
 - **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a connection is established.
 - **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection fails.
 

@@ -66,12 +66,12 @@ the `color_mode` option of the [light control actions]({{< ref "components/light
 
 ## Configuration variables:
 
-- **red** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the red channel.
-- **green** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the green channel.
-- **blue** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the blue channel.
-- **cold_white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the cold
+- **red** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the red channel.
+- **green** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the green channel.
+- **blue** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the blue channel.
+- **cold_white** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the cold
   white channel.
-- **warm_white** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the float [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for the warm
+- **warm_white** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the warm
   white channel.
 - **cold_white_color_temperature** (*Optional*, float): The color temperature (in
   [mireds](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the cold white channel. Note that when the color interlock

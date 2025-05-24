@@ -23,7 +23,7 @@ m5stack_8angle:
 ### Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **i2c_id** (*Optional*, [I²C Component]({{< ref "components/i2c#i2c" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you need
+- **i2c_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [I²C Component]({{< ref "components/i2c#i2c" >}}) if you need
 - **address** (*Optional*, int): Manually specify the I²C address of the device. Defaults to `0x43`.
 
 

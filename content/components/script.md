@@ -155,7 +155,7 @@ This can't be used in a lambda as it would block all functioning of the device. 
 
 This [condition]({{< ref "automations/actions#config-condition" >}}) allows you to check if a given script is running. In case scripts are run in
 `parallel`, this condition only tells you if at least one script of the given id is running, not how many. Not
-designed for use with [script.wait]({{< ref "components/script#script-wait_action" >}}); instead try [while]({{< ref "automations/actions#while_action" >}}).
+designed for use with [while]({{< ref "automations/actions#while_action" >}}); instead try [script.wait]({{< ref "components/script#script-wait_action" >}}).
 
 ```yaml
 on_...:

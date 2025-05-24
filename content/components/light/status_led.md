@@ -34,7 +34,7 @@ The only difference is that the platform won't be loaded in OTA safe mode, while
 ## Configuration variables:
 
 - **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to operate the LED on.
-- **output** (*Optional*, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the binary [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.
+- **output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the binary [Output Component]({{< ref "components/output/_index#output" >}}) to use for this light.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 {{< note >}}

@@ -90,7 +90,7 @@ wk2168_spi:
 ### Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this WeiKai component.
-- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **spi_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [SPI Component]({{< ref "components/spi#spi" >}}) if you want
   to use multiple SPI buses.
 - **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin on the ESP that the chip select line
   of the chip is connected to.

@@ -34,9 +34,9 @@ esp32_ble_server:
 ## Configuration variables:
 
 - **manufacturer** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The name of the manufacturer/firmware creator. Defaults to `ESPHome`.
-- **model** (*Optional*, [core configuration]({{< ref "components/esphome#esphome-configuration_variables" >}})): The model name of the device. Defaults to the project's name defined in the [core configuration]({{< ref "components/esphome#esphome-creators_project" >}}) if present, otherwise to the friendly name of the `board` chosen in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}).
+- **model** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The model name of the device. Defaults to the project's name defined in the [core configuration]({{< ref "components/esphome#esphome-creators_project" >}}) if present, otherwise to the friendly name of the `board` chosen in the [core configuration]({{< ref "components/esphome#esphome-configuration_variables" >}}).
 - **appearance** (*Optional*, int): Sets the [appearance](https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/core/appearance_values.yaml) of the device (included in advertising data.) Defaults to `0`.
-- **firmware_version** (*Optional*, [core configuration]({{< ref "components/esphome#esphome-creators_project" >}})): The firmware version of the device. Defaults to the project's version defined in the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) if present, otherwise to the ESPHome version.
+- **firmware_version** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The firmware version of the device. Defaults to the project's version defined in the [core configuration]({{< ref "components/esphome#esphome-creators_project" >}}) if present, otherwise to the ESPHome version.
 - **manufacturer_data** (*Optional*, list of bytes): The manufacturer-specific data to include in the advertising
   packet. Should be a list of bytes, where the first two are the little-endian representation of the 16-bit
   manufacturer ID as assigned by the Bluetooth SIG.
@@ -111,7 +111,7 @@ Configuration variables:
 - **write_no_response** (*Optional*, boolean): If the characteristic should be writable without a response. Defaults to `false`.
 - **value** (*Optional*, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The value of the characteristic.
 - **descriptors** (*Optional*, list of [Descriptor Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor" >}})): A list of descriptors to expose in this characteristic.
-- **on_write** (*Optional*, [`on_write` Trigger]({{< ref "components/esp32_ble_server#esp32_ble_server-characteristic-on_write" >}})): An action to be performed when the characteristic is written to. The characteristic must have the `write` property. See [Automation]({{< ref "automations/_index#automation" >}}).
+- **on_write** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the characteristic is written to. The characteristic must have the `write` property. See [`on_write` Trigger]({{< ref "components/esp32_ble_server#esp32_ble_server-characteristic-on_write" >}}).
 
 
 {{< anchor "esp32_ble_server-descriptor" >}}
@@ -137,7 +137,7 @@ Configuration variables:
 
 - **id** (*Optional*, string): An ID to refer to this descriptor in automations.
 - **uuid** (**Required**, string, int): The UUID of the descriptor.
-- **value** (**Required**, [`ble_server.descriptor.set_value` Action]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor-set_value" >}})): The value of the descriptor. [templatable]({{< ref "automations/templates#config-templatable" >}}) values are not allowed. In order to set the value of a descriptor dynamically, use the [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}}) action.
+- **value** (**Required**, [Value Configuration]({{< ref "components/esp32_ble_server#esp32_ble_server-value" >}})): The value of the descriptor. [templatable]({{< ref "automations/templates#config-templatable" >}}) values are not allowed. In order to set the value of a descriptor dynamically, use the [`ble_server.descriptor.set_value` Action]({{< ref "components/esp32_ble_server#esp32_ble_server-descriptor-set_value" >}}) action.
 
 
 {{< anchor "esp32_ble_server-value" >}}

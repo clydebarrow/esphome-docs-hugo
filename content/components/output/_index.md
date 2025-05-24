@@ -92,7 +92,7 @@ id(light_1).turn_off();
 ### `output.set_level` Action
 
 This action sets the float output to the given level when executed. Note: This only
-works with floating point outputs like {{< docref "/components/output/slow_pwm" >}}, {{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/ledc" >}}, {{< docref "/components/output/esp8266_pwm" >}}.
+works with floating point outputs like {{< docref "/components/output/esp8266_pwm" >}}, {{< docref "/components/output/ledc" >}}, {{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/slow_pwm" >}}.
 
 ```yaml
 on_...:

@@ -20,7 +20,7 @@ fan:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [float output]({{< ref "components/output/_index#output" >}})): The id of the [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this fan.
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the [float output]({{< ref "components/output/_index#output" >}}) to use for this fan.
 - **oscillation_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
   [output]({{< ref "components/output/_index#output" >}}) to use for the oscillation state of this fan. Default is empty.
 - **direction_output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the

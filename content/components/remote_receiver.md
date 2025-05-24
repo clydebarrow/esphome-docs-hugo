@@ -14,7 +14,7 @@ The component is split into two parts:
 - Individual [remote receiver binary sensors]({{< ref "components/remote_receiver#remote-receiver-binary-sensor" >}}) which will activate when their
   respective signal is received.
 
-**See** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **and** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **for details.**
+**See** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **and** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **for details.**
 
 ```yaml
 # Example configuration entry

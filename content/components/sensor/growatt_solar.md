@@ -9,7 +9,7 @@ The `Growatt Inverter` sensor platform allows you to use growatt inverter data r
 
 {{< img src="growatt.jpg" alt="Image" caption="Growatt Logo" width="50.0%" class="center" >}}
 
-The communication with this component is done over a [Modbus]({{< ref "components/modbus#modbus" >}}) using [UART bus]({{< ref "components/uart#uart" >}}).
+The communication with this component is done over a [UART bus]({{< ref "components/uart#uart" >}}) using [Modbus]({{< ref "components/modbus#modbus" >}}).
 You must therefore have a `uart:` and `modbus:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 

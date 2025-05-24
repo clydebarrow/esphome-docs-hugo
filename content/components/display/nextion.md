@@ -48,7 +48,7 @@ display:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [UART Bus]({{< ref "components/uart#uart" >}})): The ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) you wish to use for this display. Specify this
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the [UART Bus]({{< ref "components/uart#uart" >}}) you wish to use for this display. Specify this
   when you have multiple UART configurations.
 - **brightness** (*Optional*, percentage): When specified, the display brightness will be set to this value at boot.
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the Nextion
@@ -119,7 +119,7 @@ Although you can use the rendering lambda, most, if not all, updates to the Next
 individual Nextion components/platforms. **See Below**
 
 {{< /note >}}
-See [Displaying Time]({{< ref "components/display/_index#display-strftime" >}}) for a quick introduction to the `printf` formatting rules and [Formatted Text]({{< ref "components/display/_index#display-printf" >}}) for
+See [Formatted Text]({{< ref "components/display/_index#display-printf" >}}) for a quick introduction to the `printf` formatting rules and [Displaying Time]({{< ref "components/display/_index#display-strftime" >}}) for
 an introduction to `strftime` time formatting.
 
 ### Using Lambdas

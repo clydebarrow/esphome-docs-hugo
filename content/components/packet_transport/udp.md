@@ -6,7 +6,7 @@ title: "UDP Packet Transport Platform"
 {{< seo description="" image="" >}}
 
 The [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) platform allows ESPHome nodes to directly communicate with each over a communication channel.
-The UDP implementation of the platform uses UDP as a communication medium. See the [UDP Component]({{< ref "components/udp#udp" >}}) and [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) for more information.
+The UDP implementation of the platform uses UDP as a communication medium. See the [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) and [UDP Component]({{< ref "components/udp#udp" >}}) for more information.
 
 ## Example Configuration
 

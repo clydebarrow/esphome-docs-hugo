@@ -8,7 +8,7 @@ title: "NeoPixelBus Light"
 {{< warning >}}
 NeoPixelBus does **not** work with ESP-IDF.
 
-For clockless lights, you can use {{< docref "spi_led_strip/" >}}, and for SPI LEDs see {{< docref "esp32_rmt_led_strip/" >}}.
+For clockless lights, you can use {{< docref "esp32_rmt_led_strip/" >}}, and for SPI LEDs see {{< docref "spi_led_strip/" >}}.
 
 
 {{< /warning >}}

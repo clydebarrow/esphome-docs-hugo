@@ -21,7 +21,7 @@ light:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [Output Component]({{< ref "components/output/_index#output" >}})): The id of the binary [ID]({{< ref "guides/configuration-types#config-id" >}}) to use for this light.
+- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the binary [Output Component]({{< ref "components/output/_index#output" >}}) to use for this light.
 - All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
 
 ## See Also

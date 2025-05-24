@@ -100,9 +100,9 @@ climate:
 - **supported_modes** (*Optional*, list): Can be used to disable some of AC modes. Possible values: `'OFF'`, `HEAT_COOL`, `COOL`, `HEAT`, `DRY`, `FAN_ONLY`.
 - **supported_swing_modes** (*Optional*, list): Can be used to disable some swing modes if your AC does not support it. Possible values: `'OFF'`, `VERTICAL`, `HORIZONTAL`, `BOTH`.
 - **supported_presets** (*Optional*, list): Can be used to disable some presets. Possible values for smartair2 are: `AWAY`, `BOOST`, `COMFORT`. Possible values for hOn are: `AWAY`, `BOOST`, `SLEEP`. `AWAY` preset can be enabled only in `HEAT` mode, it is disabled by default.
-- **on_alarm_start** (*Optional*, [`on_alarm_start` Trigger]({{< ref "components/climate/haier#haier-on_alarm_start" >}})): (supported only by hOn) Automation to perform when AC activates a new alarm. See [Automation]({{< ref "automations/_index#automation" >}}).
-- **on_alarm_end** (*Optional*, [`on_alarm_end` Trigger]({{< ref "components/climate/haier#haier-on_alarm_end" >}})): (supported only by hOn) Automation to perform when AC deactivates a new alarm. See [Automation]({{< ref "automations/_index#automation" >}}).
-- **on_status_message** (*Optional*, [`on_status_message` Trigger]({{< ref "components/climate/haier#haier-on_status_message" >}})): Automation to perform when status message received from AC. See [Automation]({{< ref "automations/_index#automation" >}}).
+- **on_alarm_start** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): (supported only by hOn) Automation to perform when AC activates a new alarm. See [`on_alarm_start` Trigger]({{< ref "components/climate/haier#haier-on_alarm_start" >}}).
+- **on_alarm_end** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): (supported only by hOn) Automation to perform when AC deactivates a new alarm. See [`on_alarm_end` Trigger]({{< ref "components/climate/haier#haier-on_alarm_end" >}}).
+- **on_status_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to perform when status message received from AC. See [`on_status_message` Trigger]({{< ref "components/climate/haier#haier-on_status_message" >}}).
 - All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
 
 ## Automations

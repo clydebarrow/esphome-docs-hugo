@@ -63,7 +63,7 @@ dfrobot_sen0395:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Necessary if you want
   to define multiple instances of this component.
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of{{< docref "/components/uart" >}}uart` if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the {{< docref "/components/uart" >}} if you want
   to use multiple UART buses.
 
 {{< anchor "dfrobot_sen0395-binary_sensor" >}}

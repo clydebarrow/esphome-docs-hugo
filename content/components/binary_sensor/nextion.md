@@ -41,7 +41,7 @@ binary_sensor:
 - **variable_name** (*Optional*, string): The name of the Nextion variable. Any value over `0` is considered to be **on**
 - **page_id** (*Optional*, string): The ID of the page the component is on. Use `0` for the default page.
 - **component_id** (*Optional*, string): The ID (the number, not name!) of the component to track.
-- **update_interval** (*Optional*, [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}})): The duration to update the sensor. If using a [Time]({{< ref "guides/configuration-types#config-time" >}}) this should not be used
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration to update the sensor. If using a [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}}) this should not be used
 - **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **visible** (*Optional*, boolean):  Visible or not
@@ -53,7 +53,7 @@ this native event **page_id** and **component_id** are required. No [Nextion Cus
 
   {{< note >}}
 `background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [Binary Sensor Settings]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_settings" >}}).
-A [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
+A [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) to update all the components for that page
 
 
   {{< /note >}}

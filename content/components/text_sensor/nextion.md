@@ -31,7 +31,7 @@ text_sensor:
 
 - **nextion_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion display.
 - **component_name** (*Optional*, string): The name of the Nextion component.
-- **update_interval** (*Optional*, [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}})): The duration to update the sensor. If using a [Time]({{< ref "guides/configuration-types#config-time" >}}) this should not be used
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration to update the sensor. If using a [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) this should not be used
 - **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
 - **font_id** (*Optional*, int):  The font id for the component

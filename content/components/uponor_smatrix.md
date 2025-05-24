@@ -70,8 +70,8 @@ uponor_smatrix:
 ##### Configuration variables:
 
 - **address** (*Optional*, int): The 16 bit system/controller address. This will be automatically detected from the bus if not specified. See [Getting started]({{< ref "components/uponor_smatrix#uponor-gettingstarted" >}}) on how to find the address.
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want to use multiple UART buses.
-- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of{{< docref "time/index" "Time Component" >}}dex>` to use as the time source if you want ESPHome to automatically synchronize the date and time of the thermostats.
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want to use multiple UART buses.
+- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the {{< docref "time/index" "Time Component" >}} to use as the time source if you want ESPHome to automatically synchronize the date and time of the thermostats.
 - **time_device_address** (*Optional*, int): The 16 bit device address of the thermostat that keeps the system time. This will be automatically detected from the bus if not specified.
   It needs to be the device address of the first thermostat that was paired to the controller, and the one where you can manually change the date and time via the buttons on the thermostat.
 

@@ -11,7 +11,7 @@ with ESPHome.
 
 {{< img src="havellsgti5000d.jpg" alt="Image" caption="Havells On Grid Solar Inverter." width="50.0%" class="center" >}}
 
-The communication with this component is done via a [Modbus]({{< ref "components/modbus#modbus" >}}) using [UART]({{< ref "components/uart#uart" >}}).
+The communication with this component is done via a [UART]({{< ref "components/uart#uart" >}}) using [Modbus]({{< ref "components/modbus#modbus" >}}).
 You must therefore have a `uart:` and `modbus:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 

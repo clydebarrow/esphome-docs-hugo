@@ -21,7 +21,7 @@ The examples below assume you've set up LVGL correctly with your display and its
 
 {{< img src="lvgl_switch.png" alt="Image" class="left" >}}
 
-The easiest way to integrate an LVGL [automations]({{< ref "automations/_index#automation" >}}) widget and a switch or light is with [`switch`]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}): 
+The easiest way to integrate an LVGL [`switch`]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}) widget and a switch or light is with [automations]({{< ref "automations/_index#automation" >}}): 
 
 ```yaml
 light:
@@ -95,7 +95,7 @@ lvgl:
 
 {{< img src="lvgl_cook_volume.png" alt="Image" class="left" >}}
 
-You can use a [arc]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}) or an [slider]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}) to control the brightness of a dimmable light.
+You can use a [slider]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}) or an [arc]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}) to control the brightness of a dimmable light.
 
 We can use a sensor to retrieve the current brightness of a light, which is stored in Home Assistant as an attribute of the entity, as an integer value between `0` (min) and `255` (max). It's convenient to set the slider's `min_value` and `max_value` accordingly.
 
@@ -142,7 +142,7 @@ This is applicable to action calls like `fan.set_percentage` or `valve.set_valve
 
 {{< img src="lvgl_cook_volume.png" alt="Image" class="right" >}}
 
-Similarly, you can use a [arc]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}) or an [slider]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}) to control the volume level of a media player, which uses float values.
+Similarly, you can use a [slider]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}) or an [arc]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}) to control the volume level of a media player, which uses float values.
 
 With a sensor we retrieve the current volume level of the media player, which is stored in Home Assistant as an attribute of the entity, and is a float value between `0` (min) and `1` (max). Since LVGL only handles integers, it's convenient to set the slider's possible values to be between `0` and `100`. Thus a conversion is needed back and forth, meaning that when we read the value from Home Assistant we have to multiply it by `100`, and when we set the volume through the action call, we have to divide it by `100`:
 
@@ -190,11 +190,11 @@ Keep in mind that `on_value` is triggered *continuously* by the slider while it'
 
 ## Semicircle gauge
 
-A gauge similar to what Home Assistant shows in the Energy Dashboard can accomplished with [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) and [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}) widgets:
+A gauge similar to what Home Assistant shows in the Energy Dashboard can accomplished with [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}) and [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) widgets:
 
 {{< img src="lvgl_cook_gauge.png" alt="Image" class="center" >}}
 
-The trick here is to have a parent [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) which contains the other widgets as children. We place a [`obj`]({{< ref "components/lvgl/widgets#lvgl-widget-obj" >}}) in the middle, which is made from an indicator `line` and two `arc` widgets. We use another, smaller [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}) on top of it to hide the indicator's central parts and place some [`obj`]({{< ref "components/lvgl/widgets#lvgl-widget-obj" >}}) widgets to display numeric information:
+The trick here is to have a parent [`obj`]({{< ref "components/lvgl/widgets#lvgl-widget-obj" >}}) which contains the other widgets as children. We place a [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}) in the middle, which is made from an indicator `line` and two `arc` widgets. We use another, smaller [`obj`]({{< ref "components/lvgl/widgets#lvgl-widget-obj" >}}) on top of it to hide the indicator's central parts and place some [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) widgets to display numeric information:
 
 ```yaml
 sensor:
@@ -288,7 +288,7 @@ The `obj` used to hide the middle part of the meter indicator line has `radius` 
 
 ## Thermometer
 
-A thermometer with a precise gauge also made from a [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) widget and a numeric display using [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}):
+A thermometer with a precise gauge also made from a [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}) widget and a numeric display using [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}):
 
 {{< img src="lvgl_cook_thermometer.png" alt="Image" class="center" >}}
 
@@ -777,7 +777,7 @@ lvgl:
                     lvgl.page.next:
 
 ```
-For this example to appear correctly, use the theme and style options from [fonts]({{< ref "components/lvgl/_index#lvgl-fonts" >}}) and LVGL's own library [above]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}).
+For this example to appear correctly, use the theme and style options from [above]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) and LVGL's own library [fonts]({{< ref "components/lvgl/_index#lvgl-fonts" >}}).
 
 {{< anchor "lvgl-cookbook-statico" >}}
 
@@ -1144,7 +1144,7 @@ The big advantage here is that whenever you need to add, for example, an extra c
 
 ## ESPHome boot screen
 
-To display a boot image with a spinner animation which disappears automatically after a few moments or on touch of the screen you can use the *top layer*. The trick is to put a base [`image`]({{< ref "components/lvgl/widgets#lvgl-widget-image" >}}) full screen and child [`obj`]({{< ref "components/lvgl/widgets#lvgl-widget-obj" >}}) widget in its middle as the last item of the widgets list, so they draw on top of all the others. To make it automatically disappear afer boot, you use ESPHome's `on_boot` trigger:
+To display a boot image with a spinner animation which disappears automatically after a few moments or on touch of the screen you can use the *top layer*. The trick is to put a base [`obj`]({{< ref "components/lvgl/widgets#lvgl-widget-obj" >}}) full screen and child [`image`]({{< ref "components/lvgl/widgets#lvgl-widget-image" >}}) widget in its middle as the last item of the widgets list, so they draw on top of all the others. To make it automatically disappear afer boot, you use ESPHome's `on_boot` trigger:
 
 ```yaml
 esphome:
@@ -1277,7 +1277,7 @@ You could of course simply apply one of the built-in `montserrat_` packs, but th
 
 {{< img src="lvgl_cook_font_binstat.png" alt="Image" class="left" >}}
 
-A common use case for icons is a status display. For example, a checkable (toggle) button will display different icons based on the status of a light or switch. To put an icon on a button you use a [Theme and style definitions]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) widget as the child of the [`button`]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}}). The coloring can already be different thanks to the [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) where you can set a different color for the `checked` state. Additionally, by using a `text_sensor` to import the state from Home Assistant, we can not only track the `on` state, but also the `unavailable` or `unknown` states to apply *disabled styles* for these cases.
+A common use case for icons is a status display. For example, a checkable (toggle) button will display different icons based on the status of a light or switch. To put an icon on a button you use a [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) widget as the child of the [`button`]({{< ref "components/lvgl/widgets#lvgl-widget-button" >}}). The coloring can already be different thanks to the [Theme and style definitions]({{< ref "cookbook/lvgl#lvgl-cookbook-theme" >}}) where you can set a different color for the `checked` state. Additionally, by using a `text_sensor` to import the state from Home Assistant, we can not only track the `on` state, but also the `unavailable` or `unknown` states to apply *disabled styles* for these cases.
 
 If we take our previous [Remote light button]({{< ref "cookbook/lvgl#lvgl-cookbook-binent" >}}) example, we can modify it like this:
 
@@ -1428,7 +1428,7 @@ lvgl:
 
 {{< img src="lvgl_cook_animimg_batt.gif" alt="Image" class="left" >}}
 
-To have an animation illustrating a battery charging, you can use [images rendered from MDI]({{< ref "components/image#display-image" >}}) with a set of [`animimg`]({{< ref "components/lvgl/widgets#lvgl-widget-animimg" >}}) showing battery levels:
+To have an animation illustrating a battery charging, you can use [`animimg`]({{< ref "components/lvgl/widgets#lvgl-widget-animimg" >}}) with a set of [images rendered from MDI]({{< ref "components/image#display-image" >}}) showing battery levels:
 
 ```yaml
 image:
@@ -1516,7 +1516,7 @@ Use `x`, `y`, `align` widget properties for precise positioning.
 
 ## An analog clock
 
-Using the [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) and [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}) widgets, we can create an analog clock which shows the date too.
+Using the [`meter`]({{< ref "components/lvgl/widgets#lvgl-widget-meter" >}}) and [`label`]({{< ref "components/lvgl/widgets#lvgl-widget-label" >}}) widgets, we can create an analog clock which shows the date too.
 
 {{< img src="lvgl_cook_clock.png" alt="Image" class="center" >}}
 
@@ -1640,7 +1640,7 @@ script:
 
 ## A numeric input keypad
 
-The [Key collector component]({{< ref "components/key_collector#key_collector" >}}) widget can work together with the [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}) to collect the button presses as key press sequences. It sends the `text` of the buttons (or `key_code` where configured) to the key collector.
+The [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}) widget can work together with the [Key collector component]({{< ref "components/key_collector#key_collector" >}}) to collect the button presses as key press sequences. It sends the `text` of the buttons (or `key_code` where configured) to the key collector.
 
 {{< img src="lvgl_cook_keypad.png" alt="Image" class="center" >}}
 

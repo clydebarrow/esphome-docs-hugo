@@ -387,7 +387,7 @@ Configuration options:
 
 ## `ezo_pmp.clear_total_volume_dosed` Action
 
-Clear the values of the [Total Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-total_volume_dosed_sensor" >}}), [Current Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-current_volume_dosed_sensor" >}})
+Clear the values of the [Current Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-current_volume_dosed_sensor" >}}), [Total Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-total_volume_dosed_sensor" >}})
 and [Absolute Total Volume Dosed]({{< ref "components/ezo_pmp#ezo_pmp-absolute_total_volume_dosed_sensor" >}}) sensors.
 
 ```yaml

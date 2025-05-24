@@ -529,12 +529,12 @@ xiaomi_ble:
 ```
 After uploading, the ESP32 will immediately try to scan for BLE devices. When it detects a new sensor, it will automatically parse the BLE message print a message like this one:
 
-```.. code
-Found device XX:XX:XX:XX:XX:XX RSSI=-78
-  Address Type: PUBLIC
-  Name: 'LYWSD03MMC'
+.. code::
 
-```
+    Found device XX:XX:XX:XX:XX:XX RSSI=-78
+      Address Type: PUBLIC
+      Name: 'LYWSD03MMC'
+
 It can sometimes take some time for the first BLE broadcast to be received. Once the device has been found, copy the address `XX:XX:XX:XX:XX:XX` into a new platform entry like shown in the example configurations.
 
 {{< anchor "obtaining_the_bindkey" >}}

@@ -12,7 +12,7 @@ engine. Fundamentally, there are these types of displays:
   {{< docref "lcd_display" "LCD displays" >}}.
 - Serial displays like {{< docref "nextion/" >}} that have their own processors for graphics rendering.
 - Graphical displays with fully addressable pixels, like {{< docref "waveshare_epaper" "E-Paper" >}},
-  {{< docref "ili9xxx" "TFT" >}} or {{< docref "ssd1306" "OLED" >}} displays.
+  {{< docref "ssd1306" "OLED" >}} or {{< docref "ili9xxx" "TFT" >}} displays.
 
 For graphical displays, which offer the greatest flexibility, there are two options for displaying content:
 

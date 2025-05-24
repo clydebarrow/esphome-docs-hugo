@@ -57,7 +57,7 @@ sensor:
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
-- **uart_id** (*Optional*, [UART Component]({{< ref "components/uart#uart" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
   to use multiple UART buses.
 
 ## Hardware considerations:

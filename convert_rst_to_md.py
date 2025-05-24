@@ -327,7 +327,7 @@ def convert_rst_to_md(lines, filename):
             continue
         
         # Handle code blocks - check for both standalone and nested code blocks
-        if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):
+        if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code-block::'):
             # Get the indentation of the current line
             current_indent = len(line) - len(line.lstrip())
             
@@ -439,7 +439,7 @@ def convert_rst_to_md(lines, filename):
             continue
         
         # Handle warnings
-        if line.strip().startswith('.. warning::'):
+        if line.strip().startswith('.. warning::') or line.strip().startswith(".. caution::"):
             # Get the indentation level of the warning directive
             warning_indent = len(line) - len(line.lstrip())
             md_lines.append(" " * warning_indent + "{{< warning >}}")
@@ -715,62 +715,9 @@ def process_inline_markup(line):
     # Italic
     processed_line = re.sub(r'\*([^*]+)\*', r'*\1*', processed_line)
     
-    # Pre-process the line to handle nested references
-    # Replace :ref:, :doc:, and :apiref: with placeholders to avoid nested processing
-    ref_matches = []
-    doc_matches = []
-    apiref_matches = []
-    apistruct_matches = []
-    apiclass_matches = []
-
     # Find and store all :ref: patterns
-    for match in re.finditer(r':ref:`([^`]+)`', processed_line):
-        ref_content = match.group(1)
-        ref_matches.append((match.span(), ref_content))
-    
-    # Find and store all :doc: patterns
-    for match in re.finditer(r':doc:`([^`]+)`', processed_line):
-        doc_content = match.group(1)
-        doc_matches.append((match.span(), doc_content))
-    
-    # Find and store all :apiref: patterns
-    for match in re.finditer(r':apiref:`([^`]+)`', processed_line):
-        apiref_content = match.group(1)
-        apiref_matches.append((match.span(), apiref_content))
-
-    for match in re.finditer(r':apiclass:`([^`]+)`', processed_line):
-        apiclass_content = match.group(1)
-        apiclass_matches.append((match.span(), apiclass_content))
-
-    for match in re.finditer(r':apistruct:`([^`]+)`', processed_line):
-        apistruct_content = match.group(1)
-        apistruct_matches.append((match.span(), apistruct_content))
-
-    # Replace matches with placeholders, starting from the end to preserve positions
-    for i, ((start, end), content) in enumerate(reversed(ref_matches)):
-        placeholder = f"__REF_PLACEHOLDER_{i}__"
-        processed_line = processed_line[:start] + placeholder + processed_line[end:]
-
-    for i, ((start, end), content) in enumerate(reversed(doc_matches)):
-        placeholder = f"__DOC_PLACEHOLDER_{i}__"
-        processed_line = processed_line[:start] + placeholder + processed_line[end:]
-    
-    for i, ((start, end), content) in enumerate(reversed(apiref_matches)):
-        placeholder = f"__APIREF_PLACEHOLDER_{i}__"
-        processed_line = processed_line[:start] + placeholder + processed_line[end:]
-
-    for i, ((start, end), content) in enumerate(reversed(apiclass_matches)):
-        placeholder = f"__APICLASS_PLACEHOLDER_{i}__"
-        processed_line = processed_line[:start] + placeholder + processed_line[end:]
-
-    for i, ((start, end), content) in enumerate(reversed(apistruct_matches)):
-        placeholder = f"__APISTRUCT_PLACEHOLDER_{i}__"
-        processed_line = processed_line[:start] + placeholder + processed_line[end:]
-
-    # Process the placeholders
-    for i, ((start, end), content) in enumerate(ref_matches):
-        placeholder = f"__REF_PLACEHOLDER_{i}__"
-        
+    def ref_repl(match):
+        content = match.group(1)
         # Handle references with text and ID
         if "<" in content and ">" in content:
             text, ref_id = [x.strip() for x in content.split("<", 1)]
@@ -782,42 +729,35 @@ def process_inline_markup(line):
                 print(f"Warning: Could not find document path for anchor '{ref_id}'")
             text = text or anchor_text
             if doc_path:
-                replacement = f"[{text}]({{{{< ref \"{doc_path}#{ref_id}\" >}}}})"
-            else:
-                # If we can't find the document, just use the anchor
-                replacement = f"[{text}]({{{{< ref \"#{ref_id}\" >}}}})"
-        else:
-            # Simple references
-            # Look up the document path for this anchor
-            doc_path, anchor_text = anchor_map.get(content, ("", ""))
-            anchor_text = anchor_text or content
-            if doc_path:
-                replacement = f"[{anchor_text}]({{{{< ref \"{doc_path}#{content}\" >}}}})"
-            else:
-                # If we can't find the document, just use the anchor
-                replacement = f"[{anchor_text}]({{{{< ref \"#{content}\" >}}}})"
-        
-        processed_line = processed_line.replace(placeholder, replacement)
+                return f"[{text}]({{{{< ref \"{doc_path}#{ref_id}\" >}}}})"
+            return f"[{text}]({{{{< ref \"#{ref_id}\" >}}}})"
+        # Simple references
+        # Look up the document path for this anchor
+        doc_path, anchor_text = anchor_map.get(content, ("", ""))
+        anchor_text = anchor_text or content
+        if doc_path:
+            return f"[{anchor_text}]({{{{< ref \"{doc_path}#{content}\" >}}}})"
+        # If we can't find the document, just use the anchor
+        return f"[{anchor_text}]({{{{< ref \"#{content}\" >}}}})"
 
-    for i, ((start, end), content) in enumerate(doc_matches):
-        placeholder = f"__DOC_PLACEHOLDER_{i}__"
-        
+    def doc_repl(match):
+        content = match.group(1).strip()
+
         # Handle document references with text and path
         if "<" in content and ">" in content:
             text, doc_path = [x.strip() for x in content.split("<", 1)]
             doc_path = doc_path.rstrip(">")
             # Use the docref shortcode with custom text
-            replacement = f"{{{{< docref \"{doc_path}\" \"{text.strip()}\" >}}}}"
-        else:
+            return f"{{{{< docref \"{doc_path}\" \"{text.strip()}\" >}}}}"
             # Simple document references
-            doc_path = fix_doc_path(content)
-            replacement = f"{{{{< docref \"{doc_path}\" >}}}}"
-        
-        processed_line = processed_line.replace(placeholder, replacement)
+        doc_path = fix_doc_path(content)
+        return f"{{{{< docref \"{doc_path}\" >}}}}"
 
-    processed_line = process_api(apiref_matches, processed_line, "apiref")
-    processed_line = process_api(apistruct_matches, processed_line, "apistruct")
-    processed_line = process_api(apiclass_matches, processed_line, "apiclass")
+    processed_line = re.sub(r':ref:`([^`]+)`', ref_repl, processed_line)
+    processed_line = re.sub(r':doc:`([^`]+)`', doc_repl, processed_line)
+    processed_line = process_api(processed_line, "apiref")
+    processed_line = process_api(processed_line, "apistruct")
+    processed_line = process_api(processed_line, "apiclass")
 
     # Replace :ghuser:`username` or :ghuser:`text <username>` with the ghuser shortcode
     def ghuser_repl(match):
@@ -863,22 +803,20 @@ def process_inline_markup(line):
     return processed_line
 
 
-def process_api(apiref_matches, processed_line, shortcode):
-    for i, ((start, end), content) in enumerate(apiref_matches):
-        placeholder = f"__{shortcode.upper()}_PLACEHOLDER_{i}__"
+def process_api(processed_line, shortcode):
+
+    def api_repl(match):
+        content = match.group(1).strip()
 
         # Handle API references with text and path
         if "<" in content and ">" in content:
             text, api_path = content.split("<", 1)
             api_path = api_path.rstrip(">")
             # Use the apiref shortcode with custom text
-            replacement = f"{{{{< {shortcode} \"{text.strip()}\" \"{api_path}\" >}}}}"
-        else:
-            # Simple API references - use the path as the text
-            replacement = f"{{{{< {shortcode} \"{content}\" \"{content}\" >}}}}"
+            return f"{{{{< {shortcode} \"{text.strip()}\" \"{api_path}\" >}}}}"
+        return f"{{{{< {shortcode} \"{content}\" \"{content}\" >}}}}"
 
-        processed_line = processed_line.replace(placeholder, replacement)
-    return processed_line
+    return re.sub(fr':{shortcode}:`([^`]+)`', api_repl, processed_line)
 
 
 def process_multiline_references(lines):

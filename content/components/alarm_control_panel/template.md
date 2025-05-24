@@ -47,7 +47,7 @@ alarm_control_panel:
 
 {{< note >}}
 If `binary_sensors` is omitted then you're expected to trigger the alarm using
-[`triggered` Action]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_triggered_action" >}}) or [`pending` Action]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_pending_action" >}}).
+[`pending` Action]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_pending_action" >}}) or [`triggered` Action]({{< ref "components/alarm_control_panel/_index#alarm_control_panel_triggered_action" >}}).
 
 {{< /note >}}
 {{< anchor "template_alarm_control_panel-trigger_modes" >}}

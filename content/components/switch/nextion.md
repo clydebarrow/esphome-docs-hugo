@@ -34,7 +34,7 @@ switch:
 - **nextion_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion display.
 - **component_name** (*Optional*, string): The name of the Nextion component.
 - **variable_name** (*Optional*, string): The name of the Nextion variable. Any value over `0` is considered to be **on**
-- **update_interval** (*Optional*, [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}})): The duration to update the sensor. If using a [Time]({{< ref "guides/configuration-types#config-time" >}}) this should not be used
+- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration to update the sensor. If using a [Nextion Custom Switch Protocol]({{< ref "components/switch/nextion#nextion_custom_switch_protocol" >}}) this should not be used
 - **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
 - **background_pressed_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color when pressed
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color

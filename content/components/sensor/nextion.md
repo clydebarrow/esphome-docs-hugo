@@ -75,7 +75,7 @@ sensor:
 
   {{< note >}}
 `background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings]({{< ref "components/sensor/nextion#nextion_sensor_settings" >}}).
-A [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) with a custom protocol sending the current page can be used to execute the API call [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) to update all the components for that page
+A [Nextion Sensor]({{< ref "components/sensor/nextion#nextion_sensor" >}}) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix]({{< ref "components/display/nextion#update_components_by_prefix" >}}) to update all the components for that page
 
 
   {{< /note >}}

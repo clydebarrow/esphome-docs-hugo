@@ -6,7 +6,7 @@ title: "UART Packet Transport Platform"
 {{< seo description="" image="" >}}
 
 The [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) platform allows ESPHome nodes to directly communicate with each over a communication channel.
-The UART implementation of the platform uses a serial port as a communication medium. See the [UART Bus]({{< ref "components/uart#uart" >}}) and [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) for more information.
+The UART implementation of the platform uses a serial port as a communication medium. See the [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) and [UART Bus]({{< ref "components/uart#uart" >}}) for more information.
 
 ## Example Configuration
 

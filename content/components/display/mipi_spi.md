@@ -182,7 +182,7 @@ dimensions:
 
 Many displays have an integrated backlight, which may need to be turned on for the display to show. This backlight is not controlled
 by the driver, but can be controlled by a separate GPIO pin. Depending on the display, the backlight may be active high or active low, and may
-be able to be dimmed using a {{< docref "/components/output/ledc" >}} with a {{< docref "/components/light/monochromatic" >}}. AMOLED displays do not have a backlight but
+be able to be dimmed using a {{< docref "/components/light/monochromatic" >}} with a {{< docref "/components/output/ledc" >}}. AMOLED displays do not have a backlight but
 their brightness can be set using the `brightness` option. This may also be controlled by a lambda API call.
 
 ## Touchscreens

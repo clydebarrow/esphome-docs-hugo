@@ -58,7 +58,7 @@ display:
 - **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})): The lambda to use for rendering the content on the
   MAX7219. See [Rendering Lambda]({{< ref "components/display/max7219digit#display-max7219digit_lambda" >}}) for more information.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **spi_id** (*Optional*, [SPI Component]({{< ref "components/spi#spi" >}})): Manually specify the ID of the [ID]({{< ref "guides/configuration-types#config-id" >}}) if you want
+- **spi_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [SPI Component]({{< ref "components/spi#spi" >}}) if you want
   to use multiple SPI buses.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 - **num_chip_lines** (*Optional*, int): Number of lines if you want to use the displays in Multiline Mode. Defaults to `1` Example: https://github.com/esphome/esphome/pull/1622#issue-836179156

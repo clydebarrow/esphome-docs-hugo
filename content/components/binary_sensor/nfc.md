@@ -14,7 +14,7 @@ The tag may be identified in one of three ways:
 - By a given NDEF tag "name", or...
 - By a given string contained in the tag's NDEF message/data
 
-Note that this platform is currently supported by the {{< docref "../pn7160" "PN716x" >}} and {{< docref "../pn7150" "PN7150" >}} only;
+Note that this platform is currently supported by the {{< docref "../pn7150" "PN7150" >}} and {{< docref "../pn7160" "PN716x" >}} only;
 one of these components must be present in your device's configuration in order to use it.
 
 ```yaml
@@ -51,15 +51,15 @@ prepared using the Home Assistant Companion app) or (part of) a string that is c
 
 To obtain a tag's UID:
 
-- Set up a simple NFC component (such as the {{< docref "../pn7160" "PN716x" >}}, {{< docref "../pn7150" "PN7150" >}} or {{< docref "pn532" "PN532" >}})
+- Set up a simple NFC component (such as the {{< docref "pn532" "PN532" >}}, {{< docref "../pn7150" "PN7150" >}} or {{< docref "../pn7160" "PN716x" >}})
   configuration without any binary sensors.
 - Approach the NFC reader with an NFC tag. When the tag is sufficiently close to the reader, you'll see a message in the
   ESPHome device's logs similar to this:
 
-  ```.. code
-  Read tag type Mifare Classic with UID 1C-E5-E7-A6
+  .. code::
 
-  ```
+      Read tag type Mifare Classic with UID 1C-E5-E7-A6
+
 - Either:
 
   - Copy this ID and use it to create a `binary_sensor` entry as shown in the configuration example above, or...

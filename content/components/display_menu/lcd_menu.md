@@ -19,7 +19,7 @@ a hierarchical menu primarily intended to be controlled either by a rotary encod
 with a button or a five-button joystick controller.
 
 The component needs to be connected to an instance of a character based LCD display, which
-like [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}}) or [lcd_pcf8574 Component]({{< ref "components/display/lcd_display#lcd-pcf8574" >}}). For the best results the GPIO connection is
+like [lcd_pcf8574 Component]({{< ref "components/display/lcd_display#lcd-pcf8574" >}}) or [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}}). For the best results the GPIO connection is
 recommended; the I²C one running at the speed according to the datasheet (usually `100`
 kHz) or even ESPHome default (`50` kHz) will create perceptible delays especially when
 changing a numeric value using the rotary encoder. Most `PCF8574` adapters used with

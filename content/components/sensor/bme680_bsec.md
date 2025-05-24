@@ -173,7 +173,7 @@ Configuration variables:
 The following configuration shows all the available sensors and optional settings for the component. It also includes an example of filtering to guard against
 outliers, limit the number of updates sent to home assistant and reduce storage requirements in other systems such as influxdb used to store historical data.
 
-For each sensor, all other options from [TextSensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) and [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) are also available for filtering, automation and so on.
+For each sensor, all other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and [TextSensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}) are also available for filtering, automation and so on.
 
 ```yaml
 bme680_bsec:

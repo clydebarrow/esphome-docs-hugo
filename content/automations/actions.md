@@ -444,7 +444,7 @@ on_...:
 ```
 Configuration variables:
 
-- **time** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **time** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), [Time]({{< ref "guides/configuration-types#config-time" >}})):
   The time for which the condition has to have been true.
 - **condition** (**Required**, [condition]({{< ref "automations/actions#config-condition" >}})): The condition to check.
 

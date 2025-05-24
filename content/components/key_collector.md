@@ -6,8 +6,8 @@ title: "Key collector component"
 {{< seo description="" image="" >}}
 
 The `key_collector` component collects key presses from components
-like [Matrix keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}),{{< docref "/components/wiegand" "Wiegand keypad" >}}`
-or LVGL [Keyboard]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}}), [Button Matrix]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
+like [Matrix keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}), {{< docref "/components/wiegand" "Wiegand keypad" >}}
+or LVGL [Button Matrix]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}), [Keyboard]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
 widgets. It allows you to process key sequences and treat them as one, for
 example to allow inputting of a PIN code or a passkey. The component outputs
 the result of the keypress sequence as a variable usable in automations.

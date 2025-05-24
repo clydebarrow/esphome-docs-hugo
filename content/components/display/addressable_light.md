@@ -9,7 +9,7 @@ The `addressable_light` display platform allows to display text and graphics on 
 light that has been arranged in a display matrix.
 
 The display requires that an {{< apiclass "AddressableLight" "light::AddressableLight" >}} component, such as
-{{< docref "/components/light/neopixelbus" >}} or {{< docref "/components/light/fastled" >}}, be defined.
+{{< docref "/components/light/fastled" >}} or {{< docref "/components/light/neopixelbus" >}}, be defined.
 
 {{< img src="addressable_light.jpg" alt="Image" caption="WS2812B Addressable Light Display" width="75.0%" class="center" >}}
 

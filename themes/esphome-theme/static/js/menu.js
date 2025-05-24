@@ -170,12 +170,18 @@ document.addEventListener('DOMContentLoaded', function() {
         containerElement: "#nav-search-results"
     }));
 
+    let top_hit = null;
+
     // Show/hide results
-    instance.on("results", (results) => {
+    instance.on("results", async (results) => {
         if (results.results.length) {
             resultsContainer.style.display = 'block';
+            data = await results.results[0].data();
+            top_hit = data.url;
+            console.log("url is ", url);
         } else {
             resultsContainer.style.display = 'none';
+            top_hit = null;
         }
     });
 
@@ -214,6 +220,13 @@ document.addEventListener('DOMContentLoaded', function() {
         navContainer.style.transform = `translateY(0)`;
     });
     searchInput.addEventListener('beforeinput', function(event) {
+        navContainer.style.transform = `translateY(0)`;
+    });
+    searchInput.addEventListener('keydown', function(event) {
+        if (event.key === "Enter" && !!top_hit) {
+            window.location = top_hit;
+            top_hit = null;
+        }
         navContainer.style.transform = `translateY(0)`;
     });
 

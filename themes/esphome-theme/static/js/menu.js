@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileWidthStop = parseInt(bodystyle.getPropertyValue('--mobile-width-stop'));
 
     const tocToggle = document.getElementById('toc-toggle');
-    const tocPanel = document.getElementsByClassName('sidebar')[0];
     const overlay = document.getElementById('overlay');
 
     tocToggle.addEventListener('click', openTOC);
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             // Toggle this one
             const expanded = button.getAttribute('aria-expanded') === 'true';
-            button.setAttribute('aria-expanded', !expanded);
+            button.setAttribute('aria-expanded', expanded ? "false" : "true");
             if (button.nextElementSibling) {
                 button.nextElementSibling.style.display = expanded ? 'none' : 'block';
             }
@@ -106,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
         const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-        hamburger.setAttribute('aria-expanded', !expanded);
+        hamburger.setAttribute('aria-expanded', expanded ? "false" : "true");
     });
     // Close menu on outside click (mobile only)
     document.addEventListener('click', function(e) {
@@ -178,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
             resultsContainer.style.display = 'block';
             data = await results.results[0].data();
             top_hit = data.url;
-            console.log("url is ", url);
         } else {
             resultsContainer.style.display = 'none';
             top_hit = null;
@@ -216,10 +214,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const navContainer = document.getElementById('nav-container');
 
-    searchInput.addEventListener('focusin', function(event) {
+    searchInput.addEventListener('focusin', () => {
         navContainer.style.transform = `translateY(0)`;
     });
-    searchInput.addEventListener('beforeinput', function(event) {
+    searchInput.addEventListener('beforeinput', () => {
         navContainer.style.transform = `translateY(0)`;
     });
     searchInput.addEventListener('keydown', function(event) {

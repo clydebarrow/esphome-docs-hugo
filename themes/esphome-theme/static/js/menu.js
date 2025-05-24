@@ -208,6 +208,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    const navContainer = document.getElementById('nav-container');
+
+    searchInput.addEventListener('focusin', function(event) {
+        navContainer.style.transform = `translateY(0)`;
+    });
+    searchInput.addEventListener('beforeinput', function(event) {
+        navContainer.style.transform = `translateY(0)`;
+    });
+
 
     function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);

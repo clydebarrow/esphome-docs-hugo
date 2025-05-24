@@ -47,12 +47,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true  # Allow HTML in markdown files
-    extensions: # for math support
-      passthrough:
-        enable: true
-        delimiters:
-          block: [['\[', '\]'], ['$$', '$$']]
-          inline: [['\(', '\)'], ['$', '$']]
+    extensions:
+      footnote: true
 
 
 # Enable search functionality

@@ -205,6 +205,7 @@ def convert_rst_to_md(lines, filename):
     
     # Process lines
     md_lines = []
+    footnotes = []  # Store footnotes to add at the end
     i = 0
     
     # Skip SEO block
@@ -647,6 +648,25 @@ def convert_rst_to_md(lines, filename):
                     i = new_i
                     continue
         
+        # Handle footnote definitions
+        footnote_match = re.match(r'^\.\. \[([0-9#][^]]*)]', line.strip())
+        if footnote_match:
+            footnote_label = footnote_match.group(1)
+            # Remove the # prefix if it exists (for auto-numbered or labeled footnotes)
+            if footnote_label.startswith('#'):
+                footnote_label = footnote_label[1:]
+            
+            # Get the indentation of the current line
+            current_indent = len(line) - len(line.lstrip())
+            
+            # Get the footnote text from the same line after the label
+            rest_of_line = line.strip()[len(footnote_match.group(0)):].strip()
+            i, new_lines = get_indented_block(lines, i+1, current_indent)
+
+            # Store the footnote to add at the end of the document
+            footnotes.append([f"[^{footnote_label}]: {rest_of_line}"] + new_lines)
+            continue
+    
         # Process the line for inline markup
         fixed_line = line
         match = bullet_regex.match(line)
@@ -684,6 +704,12 @@ def convert_rst_to_md(lines, filename):
         md_lines.append(processed_line)
         i += 1
     
+    # Add footnotes at the end of the document if there are any
+    if footnotes:
+        for footnote in footnotes:
+            md_lines.append("")  # Add a blank line before footnotes
+            md_lines.extend(footnote)
+
     # Generate frontmatter
     frontmatter = []
     frontmatter.append('---')
@@ -725,12 +751,14 @@ def process_inline_markup(line):
     # Code
     processed_line = re.sub(r'``([^`]+)``', r'`\1`', processed_line)
     
-    # Bold
-    processed_line = re.sub(r'\*\*([^*]+)\*\*', r'**\1**', processed_line)
-    
-    # Italic
-    processed_line = re.sub(r'\*([^*]+)\*', r'*\1*', processed_line)
-    
+    def footnote_ref_repl(match):
+        ref = match.group(1).strip()
+        if ref.startswith('#'):
+            # For auto-numbered or labeled footnotes, remove the # prefix
+            ref = ref[1:]
+        return f"[^{ref}]"
+
+    processed_line = re.sub(r'\[([0-9#a-zA-Z_]+)]_', footnote_ref_repl, processed_line)
     # Find and store all :ref: patterns
     def ref_repl(match):
         content = match.group(1)
@@ -815,7 +843,9 @@ def process_inline_markup(line):
     # External links
     processed_line = re.sub(r'`\s*([^<`]*[^<` ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
-    
+
+    # Match [1]_, [#]_, or [#label]_ formats and convert to [^1], [^label], etc.
+
     return processed_line
 
 
@@ -1479,7 +1509,7 @@ def process_whitespace_aligned_table(table_lines, end_idx):
 
         # Add the row to Markdown output
         markdown_rows.append('| ' + ' | '.join(cells) + ' |')
-    
+
     return markdown_rows, end_idx
 
 def process_raw_html_button(lines, i):
@@ -1803,7 +1833,7 @@ def scan_image_references(input_dir):
                             i += 1
                     else:
                         i += 1
-    
+
     # Print statistics
     print(f"Found {len(image_map)} unique images")
     multiple = [image for image in image_map.values() if image.count > 1]

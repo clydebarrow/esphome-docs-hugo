@@ -128,7 +128,7 @@ at `update_interval`.
 
 The encryption used is [XXTEA](https://en.wikipedia.org/wiki/XXTEA) which is fast and compact. Although XXTEA is known
 to be susceptible to a chosen-plaintext attack, such an attack is not possible with this application, and it otherwise
-has no published weaknesses [#f1]_. The implementation used here has been modified slightly to use a 256 bit key which
+has no published weaknesses [^f1]. The implementation used here has been modified slightly to use a 256 bit key which
 will strengthen security compared to the original 128 bit key.
 
 When encryption is used, all data is encrypted except the sender node name, and the initial request for a ping-pong key.
@@ -269,8 +269,6 @@ binary_sensor:
     remote_id: relay1_sensor
 
 ```
-.. [#f1] As known in 2025.02.
-
 ## See Also
 
 - {{< docref "/components/binary_sensor/packet_transport" >}}
@@ -279,3 +277,5 @@ binary_sensor:
 - {{< apiref "packet_transport/packet_transport.h" "packet_transport/packet_transport.h" >}}
 
 
+
+[^f1]: As known in 2025.02.

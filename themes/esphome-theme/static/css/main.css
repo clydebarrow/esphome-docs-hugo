@@ -741,13 +741,16 @@ main {
 }
 
 .btn {
-  display: inline-block;
   padding: 0.75em 1.5em;
   border-radius: 4px;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+
 }
 
 .btn-primary {
@@ -949,6 +952,23 @@ footer {
   gap: 1.5em;
   margin-bottom: 2em;
 }
+@media (min-width: 500px) {
+  .component-grid {
+    grid-template-columns: repeat(2, 1fr); /* force 2 columns minimum */
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.cta-buttons .btn {
+  flex: 1 1 200px; /* base width but can grow and shrink */
+}
+
 
 .component-card {
   background-color: var(--component-card-bg);

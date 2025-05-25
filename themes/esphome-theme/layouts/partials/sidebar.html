@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-<div class="sidebar-content scroll-trap">
+<div class="sidebar-content {{ if .Content }}scroll-trap{{ end }}">
     <nav class="sidebar-nav">
         {{ if .Fragments }}
         {{ if .Fragments.Headings }}

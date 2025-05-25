@@ -574,9 +574,12 @@ main {
   background-color: var(--sidebar-background);
   padding: 1.5em;
   border-radius: 5px;
-  position: sticky;
+}
+
+.sidebar-content.scroll-trap {
   top: calc(var(--nav-height) + 1em);
   max-height: calc(100vh - var(--nav-height) - 2em);
+  position: sticky;
   overflow-y: auto;
   overflow-x: hidden;
 }

@@ -28,8 +28,8 @@
                 {{- $imagePath = $src -}}
             {{- end -}}
             {{ with $imagePath }}}
-                <meta property="og:image" content="{{ printf "images/%s" . | absURL }}">
-                <meta name="twitter:image" content="{{ printf "images/%s" . | absURL }}">
+                <meta property="og:image" content="{{  . | absURL }}">
+                <meta name="twitter:image" content="{{ . | absURL }}">
             {{ end }}
         {{ end }}
     {{ end }}

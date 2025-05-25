@@ -98,8 +98,7 @@ on_...:
         message: Button was pressed
 
 ```
-Configuration variables:
-````````````````````````
+#### Configuration variables:
 
 - **event** (**Required**, string): The event to create - must begin with `esphome.`
 - **data** (*Optional*, mapping): Optional *static* data to pass along with the event.
@@ -139,8 +138,7 @@ on_...:
           return id(my_sensor).state;
 
 ```
-Configuration variables:
-````````````````````````
+#### Configuration variables:
 
 - **action** (**Required**, string): The Home Assistant [Action](https://www.home-assistant.io/docs/scripts/service-calls/)
   to perform.
@@ -202,8 +200,7 @@ on_...:
   - homeassistant.tag_scanned: some-tag
 
 ```
-Configuration variables:
-````````````````````````
+#### Configuration variables:
 
 - **tag** (**Required**, [templatable](automations/templates#config-templatable), string): The id of the scanned tag
 

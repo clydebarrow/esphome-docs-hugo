@@ -182,7 +182,7 @@ def convert_rst_to_md(lines, filename):
         line = lines[i]
         if line and not line.startswith(".") and len(line.lstrip()) == len(line) and i + 1 < len(lines):
             underline = lines[i+1]
-            if re.match(r'^[-_=#+*~^".]+', underline) and len(underline) >= len(line):
+            if re.match(r'^[-_=#+*~^".`]+', underline) and len(underline) >= len(line):
                 underchar = underline[0]
                 if all(x == underchar for x in underline):
                     if underchar not in heading_underlines:

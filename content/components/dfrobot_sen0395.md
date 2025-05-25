@@ -179,8 +179,7 @@ on_...:
 
 
 ```
-Configuration variables:
-````````````````````````
+#### Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the mmWave sensor on which settings should be
   changed. If only one radar is defined, this is optional.
@@ -237,8 +236,7 @@ on_...:
   dfrobot_sen0395.reset:
 
 ```
-Configuration variables:
-````````````````````````
+#### Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the mmWave component. Useful when multiple instances of this component are defined.
 

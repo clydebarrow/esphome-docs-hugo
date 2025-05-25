@@ -1018,6 +1018,10 @@ footer {
   color: #ccc;
 }
 
+.push-right {
+  margin-left: auto;
+}
+
 /* Components page */
 .component-grid {
   display: grid;

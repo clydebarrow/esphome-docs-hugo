@@ -23,6 +23,9 @@
 */ -}}
 {{- $text := .Get 0 -}}
 {{- $path := .Get 1 -}}
+{{- if eq $text $path -}}
+    {{- $text = "API Reference" }}
+{{- end }}
 {{- $lastPathElement := index (last 1 (split $path "/")) 0 -}}
 {{- $processedPath := replace (replace (replace $lastPathElement "_" "__") "." "_8") ":" "_1" -}}
 {{ $match := findRE `([A-Z])` $processedPath }}

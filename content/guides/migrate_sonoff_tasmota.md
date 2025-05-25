@@ -16,8 +16,7 @@ WARNING! Migrating via OTA on ESP32, from Tasmota v12 (with boot partition) and 
 
 First create a configuration for your device. Then, generate and download the firmware image:
 
-Using the Home Assistant add-on/dashboard
-`````````````````````````````````````````
+### Using the Home Assistant add-on/dashboard
 
 From the card of your device: open **the three dots menu** and select **Install** option.
 
@@ -33,8 +32,7 @@ Finally, choose **factory format** (formerly "modern format") in the last dialog
 
 The build process of the firmware will start and the image will be automatically downloaded after its completion.
 
-Using the command line
-``````````````````````
+### Using the command line
 
 From your configuration files folder, run 
 

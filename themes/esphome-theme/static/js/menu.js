@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
         const expanded = hamburger.getAttribute('aria-expanded') === 'true';
         hamburger.setAttribute('aria-expanded', expanded ? "false" : "true");
+        closeTOC();
     });
     // Close menu on outside click (mobile only)
     document.addEventListener('click', function(e) {

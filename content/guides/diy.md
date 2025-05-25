@@ -80,7 +80,7 @@ the post.
 - [LIFX Protocol for ESPHome](https://github.com/giantorth/ESPHomeLifx) by {{< ghuser name="giantorth" >}}
 - [Custom ESPHome Keypad sensor](https://github.com/Syralist/esphomekeypad) by {{< ghuser name="Syralist" >}}
 - [LINP-Doorbell-g03 Custom Component](https://github.com/pauln/esphome-linp-doorbell-g03) by {{< ghuser name="pauln" >}}
-- `ESPHome <-> Homebridge <https://www.npmjs.com/package/homebridge-esphome>`__ by [basdelfos](https://www.npmjs.com/~basdelfos)
+- [ESPHome <-> Homebridge](https://www.npmjs.com/package/homebridge-esphome) by [basdelfos](https://www.npmjs.com/~basdelfos)
 - [Custom ESPHome for Wofea V10 Alarm](https://github.com/nbergont/wofea_v10_hack) by {{< ghuser name="nbergont" >}}
 - [Custom Smart meter P1 port reader](https://github.com/nldroid/CustomP1UartComponent) by {{< ghuser name="nldroid" >}}
 - [Custom Mitsubishi HVAC HeatPump control using UART](https://github.com/geoffdavis/esphome-mitsubishiheatpump) by {{< ghuser name="geoffdavis" >}}

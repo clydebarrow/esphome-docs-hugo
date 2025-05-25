@@ -854,7 +854,7 @@ def process_inline_markup(line):
     processed_line = re.sub(r':libpr:`([^`]+)`', lib_repl, processed_line)
 
     # External links
-    processed_line = re.sub(r'`\s*([^<`]*[^<` ]+)\s*<([^>]+)>`__*', fr'[\1](\2)', processed_line)
+    processed_line = re.sub(r'`\s*([^`]*[^` ]+)\s*<([^`]+)>`__*', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
 
     # Match [1]_, [#]_, or [#label]_ formats and convert to [^1], [^label], etc.

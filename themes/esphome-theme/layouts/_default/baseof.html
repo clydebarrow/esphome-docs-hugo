@@ -27,7 +27,7 @@
             {{- else -}}
                 {{- $imagePath = $src -}}
             {{- end -}}
-            {{ with $imagePath }}}
+            {{ with $imagePath }}
                 <meta property="og:image" content="{{  . | absURL }}">
                 <meta name="twitter:image" content="{{ . | absURL }}">
             {{ end }}

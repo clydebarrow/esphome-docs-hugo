@@ -153,6 +153,21 @@ img {
   width: auto;
 }
 
+.copy-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.2em;
+  font-size: 0.6em;
+  color: inherit;
+  opacity: 50%;
+  text-decoration: none;
+}
+.copy-link:hover {
+  color: blue;
+  text-decoration: none;
+}
+
 /* Navigation */
 .nav-container {
   background-color: var(--nav-bg);

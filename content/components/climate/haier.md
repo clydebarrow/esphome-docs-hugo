@@ -31,7 +31,7 @@ Newer Haier models using a module called ESP32-for-Haier. It is an ESP32 single-
 
 Also, you can use any other ESP32, ESP8266, or an RPI pico W board. In this case, you will need to cut the original wire or make a connector yourself (the board has a JST SM04B-GHS-TB connector)
 
-This component requires a [UART bus]({{< ref "components/uart#uart" >}}) to be setup.
+This component requires a [UART bus](components/uart#uart) to be setup.
 
 ```yaml
 # Example configuration entry
@@ -100,10 +100,10 @@ climate:
 - **supported_modes** (*Optional*, list): Can be used to disable some of AC modes. Possible values: `'OFF'`, `HEAT_COOL`, `COOL`, `HEAT`, `DRY`, `FAN_ONLY`.
 - **supported_swing_modes** (*Optional*, list): Can be used to disable some swing modes if your AC does not support it. Possible values: `'OFF'`, `VERTICAL`, `HORIZONTAL`, `BOTH`.
 - **supported_presets** (*Optional*, list): Can be used to disable some presets. Possible values for smartair2 are: `AWAY`, `BOOST`, `COMFORT`. Possible values for hOn are: `AWAY`, `BOOST`, `SLEEP`. `AWAY` preset can be enabled only in `HEAT` mode, it is disabled by default.
-- **on_alarm_start** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): (supported only by hOn) Automation to perform when AC activates a new alarm. See [`on_alarm_start` Trigger]({{< ref "components/climate/haier#haier-on_alarm_start" >}}).
-- **on_alarm_end** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): (supported only by hOn) Automation to perform when AC deactivates a new alarm. See [`on_alarm_end` Trigger]({{< ref "components/climate/haier#haier-on_alarm_end" >}}).
-- **on_status_message** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to perform when status message received from AC. See [`on_status_message` Trigger]({{< ref "components/climate/haier#haier-on_status_message" >}}).
-- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+- **on_alarm_start** (*Optional*, [Automation](automations/_index#automation)): (supported only by hOn) Automation to perform when AC activates a new alarm. See [`on_alarm_start` Trigger]({{< ref "components/climate/haier#haier-on_alarm_start" >}}).
+- **on_alarm_end** (*Optional*, [Automation](automations/_index#automation)): (supported only by hOn) Automation to perform when AC deactivates a new alarm. See [`on_alarm_end` Trigger]({{< ref "components/climate/haier#haier-on_alarm_end" >}}).
+- **on_status_message** (*Optional*, [Automation](automations/_index#automation)): Automation to perform when status message received from AC. See [`on_status_message` Trigger]({{< ref "components/climate/haier#haier-on_status_message" >}}).
+- All other options from [Climate](components/climate/_index#config-climate).
 
 ## Automations
 
@@ -111,7 +111,7 @@ climate:
 
 ### `on_alarm_start` Trigger
 
-This automation will be triggered when a new alarm is activated by AC. The error code of the alarm will be given in the variable `code` (`uint8_t`), error message in the variable `message` (`const char *`). Those variables can be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+This automation will be triggered when a new alarm is activated by AC. The error code of the alarm will be given in the variable `code` (`uint8_t`), error message in the variable `message` (`const char *`). Those variables can be used in [lambdas](automations/templates#config-lambda).
 
 ```yaml
 climate:
@@ -128,7 +128,7 @@ climate:
 
 ### `on_alarm_end` Trigger
 
-This automation will be triggered when a previously activated alarm is deactivated by AC. The error code of the alarm will be given in the variable `code` (`uint8_t`), error message in the variable `message` (`const char *`). Those variables can be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+This automation will be triggered when a previously activated alarm is deactivated by AC. The error code of the alarm will be given in the variable `code` (`uint8_t`), error message in the variable `message` (`const char *`). Those variables can be used in [lambdas](automations/templates#config-lambda).
 
 ```yaml
 climate:
@@ -145,7 +145,7 @@ climate:
 
 ### `on_status_message` Trigger
 
-This automation will be triggered when component receives new status packet from AC. Raw message binary (without header and checksum) will be provided in the variable `data` (`const char *`), message length in the variable `data_size` (`uint8_t`). Those variables can be used in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+This automation will be triggered when component receives new status packet from AC. Raw message binary (without header and checksum) will be provided in the variable `data` (`const char *`), message length in the variable `data_size` (`uint8_t`). Those variables can be used in [lambdas](automations/templates#config-lambda).
 This trigger can be used to support some features that unique for the model and not supported by others.
 
 ```yaml

@@ -37,7 +37,7 @@ even provide any indication whether data has been successfully delivered or not.
 To write data to the UDP port, use the `udp.write` action. This action takes a single argument, the data to write to the UDP port.
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the UDP component to use. If there is only one UDP component, this can be omitted.
-- **data** (**Required**, [templatable]({{< ref "automations/templates#config-templatable" >}}), string or list of bytes): The data to write to the UDP port.
+- **data** (**Required**, [templatable](automations/templates#config-templatable), string or list of bytes): The data to write to the UDP port.
 
 ## On Receive Trigger
 

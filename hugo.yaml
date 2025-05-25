@@ -113,9 +113,10 @@ markup:
       unsafe: true  # Allow HTML in markdown files
     extensions:
       footnote: true
+    renderHooks:
+      link:
+        enableDefault: true
 
-
-# Enable search functionality
 outputs:
   home:
     - HTML

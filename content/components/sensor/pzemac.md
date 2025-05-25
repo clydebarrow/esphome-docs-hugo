@@ -32,7 +32,7 @@ This page refers to version V3 of the PZEM004T.
 For using the older V1 variant of this sensor please see {{< docref "pzem004t" "pzem004t" >}}.
 
 {{< /warning >}}
-The communication with this component is done via a [UART]({{< ref "components/uart#uart" >}}) using [Modbus]({{< ref "components/modbus#modbus" >}}).
+The communication with this component is done via a [UART](components/uart#uart) using [Modbus](components/modbus#modbus).
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 
@@ -65,17 +65,17 @@ sensor:
 ## Configuration variables:
 
 - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  [Sensor](components/sensor/_index#config-sensor).
 - **energy** (*Optional*): Use the (active) energy value of the sensor in watt*hours. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  [Sensor](components/sensor/_index#config-sensor).
 - **power** (*Optional*): Use the (active) power value of the sensor in watts. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  [Sensor](components/sensor/_index#config-sensor).
 - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **frequency** (*Optional*): Use the frequency value of the sensor in hertz.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **power_factor** (*Optional*): Use the power factor value of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to

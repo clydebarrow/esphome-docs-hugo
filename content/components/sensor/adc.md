@@ -40,7 +40,7 @@ sensor:
 
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor).
 
 {{< note >}}
 This component prints the voltage as seen by the chip pin. On the ESP8266, this is always 0.0V to 1.0V

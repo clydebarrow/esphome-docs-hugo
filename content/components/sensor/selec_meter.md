@@ -11,7 +11,7 @@ with ESPHome.
 
 {{< img src="selec_meter_em2m.jpg" alt="Image" caption="Selec EM2M Energy Monitor." width="50.0%" class="center" >}}
 
-The communication with this component is done via a [UART]({{< ref "components/uart#uart" >}}) using [Modbus]({{< ref "components/modbus#modbus" >}}).
+The communication with this component is done via a [UART](components/uart#uart) using [Modbus](components/modbus#modbus).
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 
@@ -66,39 +66,39 @@ sensor:
 ## Configuration variables:
 
 - **total_active_energy** (*Optional*): Use the total active energy value of the sensor in kilo watt
-  hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  hours. All options from [Sensor](components/sensor/_index#config-sensor).
 - **import_active_energy** (*Optional*): Use the import active energy value of the sensor in kilo watt
-  hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  hours. All options from [Sensor](components/sensor/_index#config-sensor).
 - **export_active_energy** (*Optional*): Use the export active energy value of the sensor in kilo watt
-  hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  hours. All options from [Sensor](components/sensor/_index#config-sensor).
 - **total_reactive_energy** (*Optional*): Use the total reactive energy value of the sensor in
-  kilo volt amps reactive hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  kilo volt amps reactive hours. All options from [Sensor](components/sensor/_index#config-sensor).
 - **import_reactive_energy** (*Optional*): Use the import reactive energy value of the sensor in
-  kilo volt amps reactive hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  kilo volt amps reactive hours. All options from [Sensor](components/sensor/_index#config-sensor).
 - **export_reactive_energy** (*Optional*): Use the export reactive energy value of the sensor in
-  kilo volt amps reactive hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  kilo volt amps reactive hours. All options from [Sensor](components/sensor/_index#config-sensor).
 - **apparent_energy** (*Optional*): Use the apparent energy value of the sensor in
-  kilo volt amps hours. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  kilo volt amps hours. All options from [Sensor](components/sensor/_index#config-sensor).
 - **active_power** (*Optional*): Use the (active) power value of the sensor in watts. All options
-  from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  from [Sensor](components/sensor/_index#config-sensor).
 - **reactive_power** (*Optional*): Use the reactive power value of the sensor in VAR. All
-  options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  options from [Sensor](components/sensor/_index#config-sensor).
 - **apparent_power** (*Optional*): Use the apparent power value of the sensor in VA. All
-  options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  options from [Sensor](components/sensor/_index#config-sensor).
 - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  [Sensor](components/sensor/_index#config-sensor).
 - **power_factor** (*Optional*): Use the power factor value of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **frequency** (*Optional*): Use the frequency value of the sensor in hertz.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **maximum_demand_active_power** (*Optional*): Use the maximum demand (active) power value of the sensor in watts. All options
-  from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  from [Sensor](components/sensor/_index#config-sensor).
 - **maximum_demand_reactive_power** (*Optional*): Use the maximum demand reactive power value of the sensor in VAR. All
-  options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  options from [Sensor](components/sensor/_index#config-sensor).
 - **maximum_demand_apparent_power** (*Optional*): Use the maximum demand apparent power value of the sensor in VA. All
-  options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  options from [Sensor](components/sensor/_index#config-sensor).
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to

@@ -6,7 +6,7 @@ title: "uFire Isolated EC sensor"
 {{< seo description="" image="" >}}
 
 The `ufire_ec` sensor platform allows you to use your uFire Isolated EC sensor
-with ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your
+with ESPHome. The [I²C Bus](components/i2c#i2c) is required to be set up in your
 configuration for this sensor to work. It requires also to have a temperature
 sensor in the liquid tank; this can be on the same board or an external sensor
 linked to the uFire EC configuration.
@@ -34,8 +34,8 @@ sensor:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
 - **temperature_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
-- **ec** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the EC sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **temperature** (*Optional*, [Sensor]({{< ref "components/sensor/_index#config-sensor" >}})): Set the onboard temperature sensor configuration. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- **ec** (*Optional*, [Sensor](components/sensor/_index#config-sensor)): Set the EC sensor configuration. All options from [Sensor](components/sensor/_index#config-sensor).
+- **temperature** (*Optional*, [Sensor](components/sensor/_index#config-sensor)): Set the onboard temperature sensor configuration. All options from [Sensor](components/sensor/_index#config-sensor).
 - **temperature_compensation** (*Optional*, float): Set the temperature compensation for the EC
   sensor. Defaults to `21.0`.
 - **temperature_coefficient** (*Optional*, float): Set the temperature coefficient for the EC

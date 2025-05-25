@@ -9,7 +9,7 @@ title: "INA2xx family of digital power monitors"
 
 ## Supported devices
 The `ina2xx` sensor platform allows you to use family of Texas Instruments current and power 
-sensors with ESPHome. Appropriate interface ([I²C Bus]({{< ref "components/i2c#i2c" >}}) or [SPI Bus]({{< ref "components/spi#spi" >}})) is 
+sensors with ESPHome. Appropriate interface ([I²C Bus](components/i2c#i2c) or [SPI Bus](components/spi#spi)) is 
 requred to be set up in your configuration for this sensor to work.
 
 
@@ -30,7 +30,7 @@ energy and charge accumulation, and capability to utilize the temperature measur
 for shunt resistor temperature variance.
 
 ## Over I²C
-Use `ina2xx_i2c` component to connect INA228, INA237, or INA238 device over [I²C]({{< ref "components/i2c#i2c" >}}) bus. 
+Use `ina2xx_i2c` component to connect INA228, INA237, or INA238 device over [I²C](components/i2c#i2c) bus. 
 
 ```yaml
 # Example configuration entry for I²C
@@ -75,12 +75,12 @@ sensor:
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and [I²C device]({{< ref "components/i2c#i2c" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor) and [I²C device](components/i2c#i2c).
 
 
 ## Over SPI
 
-Use `ina2xx_spi` component to connect INA229 or INA239 device over [SPI]({{< ref "components/spi#spi" >}}) bus. 
+Use `ina2xx_spi` component to connect INA229 or INA239 device over [SPI](components/spi#spi) bus. 
 
 
 ```yaml
@@ -101,7 +101,7 @@ sensor:
 ### Configuration variables:
 
 - **model** (**Required**, string): The model of the INA2xx sensor. Options are `INA229`, `INA239`.
-- **cs_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The Chip Select (CS) pin.
+- **cs_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The Chip Select (CS) pin.
 - **shunt_resistance** (**Required**, float): The value of the shunt resistor used for current calculation. No default value.
 - **max_current** (**Required**, float): The maximum current you are expecting. Component will use it to 
   calibrate the sensor. No default value.
@@ -124,13 +124,13 @@ sensor:
   shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and [SPI device]({{< ref "components/spi#spi" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor) and [SPI device](components/spi#spi).
 
 
 ## Sensors
 The component offers nine sensors. You can configure all or any subset of the sensors. Each configured sensor 
 is reported  separately on each update_interval. The `name` option is required for each sensor configured; 
-all other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}) are also supported. Shorthand notation can be used for the sensors like this:
+all other options from [Sensor](components/sensor/_index#config-sensor) are also supported. Shorthand notation can be used for the sensors like this:
 `current: "Current"`.
 
 - **current** (*Optional*): Calculated current output, A

@@ -31,7 +31,7 @@ text_sensor:
 Configuration variables:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Give the mapping an ID so that you can refer
-  to it later in [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+  to it later in [lambdas](automations/templates#config-lambda).
 - **from** (**Required**, string): The type of the keys in the mapping. Can be one of `string` or `int`.
 - **to** (**Required**, string): The type of values in the map. May be one of `string` or `int` or a class specifier as discussed below.
 - **entries** (**Required**, dict): A list of key-value pairs that define the mapping. The keys must be of the type specified in the `from` field, and the values must be of the type specified in the `to` field.

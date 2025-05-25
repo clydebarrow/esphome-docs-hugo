@@ -5,8 +5,8 @@ title: "Lambda Magic"
 
 {{< seo description="" image="" >}}
 
-Here are a couple recipes for various interesting things you can do with [Lambdas]({{< ref "automations/templates#config-lambda" >}}) in ESPHome.
-These don't require external components and demonstrate how powerful [Lambdas]({{< ref "automations/templates#config-lambda" >}}) can be.
+Here are a couple recipes for various interesting things you can do with [Lambdas](automations/templates#config-lambda) in ESPHome.
+These don't require external components and demonstrate how powerful [Lambdas](automations/templates#config-lambda) can be.
 
 {{< anchor "lambda_magic_pages" >}}
 

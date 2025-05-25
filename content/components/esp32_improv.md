@@ -38,22 +38,22 @@ esp32_improv:
 - **identify_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to identify for. Defaults to `10s`.
 - **wifi_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before starting the Improv service
   after Wi-Fi is no longer connected. Defaults to `1min`.
-- **on_start** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when Improv is waiting for
+- **on_start** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when Improv is waiting for
   authorization and/or upon authorization. See [`on_start`]({{< ref "components/esp32_improv#improv-on_start" >}}).
-- **on_provisioned** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when provisioning has
+- **on_provisioned** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when provisioning has
   completed. See [`on_provisioned`]({{< ref "components/esp32_improv#improv-on_provisioned" >}}).
-- **on_provisioning** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the device begins the
+- **on_provisioning** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the device begins the
   provisioning process. See [`on_provisioning`]({{< ref "components/esp32_improv#improv-on_provisioning" >}}).
-- **on_stop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when Improv has stopped.
+- **on_stop** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when Improv has stopped.
   See [`on_stop`]({{< ref "components/esp32_improv#improv-on_stop" >}}).
-- **on_state** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when an Improv state change
+- **on_state** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when an Improv state change
   happens. See [`on_state`]({{< ref "components/esp32_improv#improv-on_state" >}}).
 
 {{< anchor "improv-automations" >}}
 
 ## Improv Automations
 
-The ESP32 Improv component provides various [automations]({{< ref "automations/_index#automation" >}}) that can be used to provide feedback during
+The ESP32 Improv component provides various [automations](automations/_index#automation) that can be used to provide feedback during
 the Improv provisioning process.
 
 {{< anchor "improv-on_start" >}}
@@ -115,7 +115,7 @@ esp32_improv:
 
 This automation will be triggered on every state change.
 
-Two variables are available for use in [lambdas]({{< ref "automations/templates#config-lambda" >}}) within this automation. They are:
+Two variables are available for use in [lambdas](automations/templates#config-lambda) within this automation. They are:
 
 - `state`, an `enum` named `improv::State`, having one of the following values:
 

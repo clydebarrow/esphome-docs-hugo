@@ -86,8 +86,8 @@ wifi:
 - **enable_btm** (*Optional*, bool): Only on `esp32` with `esp-idf`. Enable 802.11v BSS Transition Management support.
 - **enable_rrm** (*Optional*, bool): Only on `esp32` with `esp-idf`. Enable 802.11k Radio Resource Management support.
 
-- **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a connection is established.
-- **on_disconnect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection is dropped.
+- **on_connect** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a connection is established.
+- **on_disconnect** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the connection is dropped.
 - **enable_on_boot** (*Optional*, boolean): If enabled, the WiFi interface will be enabled on boot. Defaults to `true`.
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
@@ -337,18 +337,18 @@ on_...:
 ```
 Configuration variables:
 
-- **ssid** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The name of the WiFi access point.
-- **password** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})): The password of the WiFi access point. Leave empty for no password.
-- **save** (*Optional*, boolean, [templatable]({{< ref "automations/templates#config-templatable" >}})): If set to `true`, the SSID and password will be saved in persistent memory. Defaults to `true`.
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable]({{< ref "automations/templates#config-templatable" >}})): The time to wait for the connection to be established. Defaults to 30 seconds.
-- **on_connect** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when a connection is established.
-- **on_error** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An action to be performed when the connection fails.
+- **ssid** (**Required**, string, [templatable](automations/templates#config-templatable)): The name of the WiFi access point.
+- **password** (**Required**, string, [templatable](automations/templates#config-templatable)): The password of the WiFi access point. Leave empty for no password.
+- **save** (*Optional*, boolean, [templatable](automations/templates#config-templatable)): If set to `true`, the SSID and password will be saved in persistent memory. Defaults to `true`.
+- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable](automations/templates#config-templatable)): The time to wait for the connection to be established. Defaults to 30 seconds.
+- **on_connect** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a connection is established.
+- **on_error** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the connection fails.
 
 {{< anchor "wifi-connected_condition" >}}
 
 ## `wifi.connected` Condition
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if the WiFi client is currently connected to a station.
+This [Condition](automations/actions#config-condition) checks if the WiFi client is currently connected to a station.
 
 ```yaml
 on_...:
@@ -367,7 +367,7 @@ The lambda equivalent for this is `id(wifi_id).is_connected()`.
 
 ## `wifi.enabled` Condition
 
-This [Condition]({{< ref "automations/actions#config-condition" >}}) checks if WiFi is currently enabled or not.
+This [Condition](automations/actions#config-condition) checks if WiFi is currently enabled or not.
 
 ```yaml
 on_...:

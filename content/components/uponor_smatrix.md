@@ -15,7 +15,7 @@ This component is able to communicate directly with the RS485 thermostat bus. Fo
 The RS485 side of the converter can either be connected to one of the A/B terminals on the controller or on one of the thermostats.
 The +/- terminals provide 5 volts and can be used to power your ESPHome device.
 
-The [UART Component]({{< ref "components/uart#uart" >}}) must be configured with a baud rate of 19200, 8 data bits, no parity, 1 stop bit.
+The [UART Component](components/uart#uart) must be configured with a baud rate of 19200, 8 data bits, no parity, 1 stop bit.
 
 {{< anchor "uponor-gettingstarted" >}}
 
@@ -70,7 +70,7 @@ uponor_smatrix:
 ### Configuration variables:
 
 - **address** (*Optional*, int): The 16 bit system/controller address. This will be automatically detected from the bus if not specified. See [Getting started]({{< ref "components/uponor_smatrix#uponor-gettingstarted" >}}) on how to find the address.
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want to use multiple UART buses.
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component](components/uart#uart) if you want to use multiple UART buses.
 - **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the {{< docref "time/index" "Time Component" >}} to use as the time source if you want ESPHome to automatically synchronize the date and time of the thermostats.
 - **time_device_address** (*Optional*, int): The 16 bit device address of the thermostat that keeps the system time. This will be automatically detected from the bus if not specified.
   It needs to be the device address of the first thermostat that was paired to the controller, and the one where you can manually change the date and time via the buttons on the thermostat.
@@ -93,7 +93,7 @@ climate:
 
 - **address** (**Required**, int): The 16 bit device address of the thermostat. See [Getting started]({{< ref "components/uponor_smatrix#uponor-gettingstarted" >}}) on how to find the address.
 - **uponor_smatrix_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the `uponor_smatrix` hub component if you want to use multiple hub components on one ESPHome device.
-- All options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+- All options from [Climate](components/climate/_index#config-climate).
 
 ## Sensor component
 
@@ -116,14 +116,14 @@ sensor:
 - **address** (**Required**, int): The 16 bit device address of the thermostat. See [Getting started]({{< ref "components/uponor_smatrix#uponor-gettingstarted" >}}) on how to find the address.
 - **uponor_smatrix_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the `uponor_smatrix` hub component if you want to use multiple hub components on one ESPHome device.
 - **humidity** (*Optional*): A sensor reading the current humidity the thermostat reports.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **temperature** (*Optional*): A sensor reading the current temperature the thermostat reports.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **external_temperature** (*Optional*): A sensor reading the current external temperature the thermostat reports.
   This comes from an optionally attached external temperature sensor that can measure the floor or outdoor temperature.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **target_temperature** (*Optional*): A sensor reading the currently set target temperature the thermostat reports.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 
 
 ## See Also

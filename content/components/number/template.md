@@ -6,7 +6,7 @@ title: "Template Number"
 {{< seo description="" image="" >}}
 
 The `template` number platform allows you to create a number with templated values
-using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+using [lambdas](automations/templates#config-lambda).
 
 ```yaml
 # Example configuration entry
@@ -24,9 +24,9 @@ number:
 - **min_value** (**Required**, float): The minimum value this number can be.
 - **max_value** (**Required**, float): The maximum value this number can be.
 - **step** (**Required**, float): The granularity with which the number can be set.
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
   Lambda to be evaluated every update interval to get the current value of the number.
-- **set_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **set_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the
   number value. The new value is available to lambdas in the `x` variable.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval on which to update the number
@@ -39,7 +39,7 @@ number:
 - **initial_value** (*Optional*, float): The value to set the state to on setup if not
   restored with `restore_value`.
   Cannot be used with `lambda`. Defaults to `min_value`.
-- All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
+- All other options from [Number](components/number/_index#config-number).
 
 ## `number.set` Action
 

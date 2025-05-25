@@ -46,7 +46,7 @@ rtl87xx:
 
   - **source** (*Optional*, string): The PlatformIO package or repository to use for the framework. This can be used to use a custom or patched version of the framework.
 
-  - [Advanced options]({{< ref "components/libretiny#advanced-options" >}})
+  - [Advanced options](components/libretiny#advanced-options)
 
 - **family** (*Optional*, string): The family of LibreTiny-supported microcontrollers that is used on this board.
   One of `bk7231n`, `bk7231t`, `rtl8710b`, `rtl8720c`, `bk7251`, `bk7231q`.

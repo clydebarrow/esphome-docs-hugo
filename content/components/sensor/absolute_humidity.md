@@ -32,7 +32,7 @@ sensor:
 - **temperature** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor that is used to measure the current temperature, in °C.
 - **humidity** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor that is used to measure the current relative humidity, in %.
 - **equation** (*Optional*): The saturated vapor pressure equation to use (see below).
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor).
 
 ## Saturated vapor pressure equations
 

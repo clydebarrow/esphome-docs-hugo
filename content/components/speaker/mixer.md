@@ -5,7 +5,7 @@ title: "Mixer Speaker"
 
 {{< seo description="" image="" >}}
 
-The `mixer` speaker platform allows you to mix audio sent to different source speakers into one output which is sent to another {{< docref "/components/speaker/index" "speaker component" >}}. Individual source speakers may be ducked (made quieter) with the [apply ducking action]({{< ref "components/speaker/mixer#mixer_speaker-apply_ducking" >}}).
+The `mixer` speaker platform allows you to mix audio sent to different source speakers into one output which is sent to another {{< docref "/components/speaker/index" "speaker component" >}}. Individual source speakers may be ducked (made quieter) with the [apply ducking action](components/speaker/mixer#mixer_speaker-apply_ducking).
 
 When mixing multiple audio streams into one, they must have the same sample rate. If they are different, enable queue mode so that only one source speaker's audio is played at a time. Otherwise, use a {{< docref "/components/speaker/resampler" "resampler speaker" >}} to send audio to the source speakers.
 
@@ -36,7 +36,7 @@ speaker:
 
     - **buffer_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of the internal ring buffer. Larger values can reduce stuttering but use more memory. Defaults to `100ms`.
     - **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): How long to wait after finishing playback before releasing the bus. Set to `never` to never stop the speaker due to a timeout. Defaults to `500ms`.
-    - All other options from [Speaker Component]({{< ref "components/speaker/_index#config-speaker" >}}).
+    - All other options from [Speaker Component](components/speaker/_index#config-speaker).
 
 - **num_channels** (*Optional*, positive integer): The number of audio channels to send to the output speaker. Either `1` or `2`. Defaults to the output speaker's number of channels.
 - **queue_mode** (*Optional*, boolean): Enables queue mode. If enabled, audio isn't mixed but instead each source speaker's audio is played successively, starting with the first listed source speaker.

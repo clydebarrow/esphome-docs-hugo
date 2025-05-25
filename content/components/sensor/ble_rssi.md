@@ -6,7 +6,7 @@ title: "ESP32 Bluetooth Low Energy RSSI Sensor"
 {{< seo description="" image="" >}}
 
 The `ble_rssi` sensor platform lets you track the RSSI value or signal strength of a
-BLE device. See [the binary sensor setup]({{< ref "components/binary_sensor/ble_presence#esp32_ble_tracker-setting_up_devices" >}}) for
+BLE device. See [the binary sensor setup](components/binary_sensor/ble_presence#esp32_ble_tracker-setting_up_devices) for
 instructions for setting up this platform.
 
 {{< warning >}}
@@ -64,7 +64,7 @@ like `1122aaff`, or 128 bit long like `11223344-5566-7788-99aa-bbccddeeff00`.
   same building.
 - **ibeacon_minor** (*Optional*, int): The iBeacon minor identifier of the beacon that needs
   to be tracked. Usually used to identify beacons within an iBeacon group.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor).
 
 ## See Also
 

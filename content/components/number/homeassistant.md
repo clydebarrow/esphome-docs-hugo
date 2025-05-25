@@ -25,7 +25,7 @@ number:
 ## Configuration variables:
 
 - **entity_id** (**Required**, string): The Home Assistant entity ID of the number to synchronize with.
-- All other options from [Number]({{< ref "components/number/_index#config-number" >}}).
+- All other options from [Number](components/number/_index#config-number).
 
 ## `number.set` Action
 

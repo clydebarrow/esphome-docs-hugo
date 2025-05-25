@@ -14,28 +14,28 @@ There is a growing list of compatible units. If your unit is not listed below yo
 submit a feature request (see FAQ).
 
 | Supported units | Platform name | Supports receiver |
-| ---------------------------------------------------------------------------- | ----------------- | ----------------- |
+| -------------------------------------------------------------- | ----------------- | ----------------- |
 | Ballu | `ballu` | yes |
 | Coolix | `coolix` | yes |
 | Daikin | `daikin` | yes |
-| [Daikin ARC]({{< ref "components/climate/climate_ir#daikin_arc" >}}) | `daikin_arc` | yes |
-| [Daikin BRC]({{< ref "components/climate/climate_ir#daikin_brc" >}}) | `daikin_brc` | yes |
-| [Delonghi]({{< ref "components/climate/climate_ir#delonghi_ir" >}}) | `delonghi` | yes |
+| [Daikin ARC](components/climate/climate_ir#daikin_arc) | `daikin_arc` | yes |
+| [Daikin BRC](components/climate/climate_ir#daikin_brc) | `daikin_brc` | yes |
+| [Delonghi](components/climate/climate_ir#delonghi_ir) | `delonghi` | yes |
 | Emmeti | `emmeti` | yes |
 | Fujitsu General | `fujitsu_general` | yes |
-| [GREE]({{< ref "components/climate/climate_ir#gree_ir" >}}) | `gree` |  |
+| [GREE](components/climate/climate_ir#gree_ir) | `gree` |  |
 | Hitachi | `hitachi_ac344`,<br>`hitachi_ac424` | yes |
-| [LG]({{< ref "components/climate/climate_ir#climate_ir_lg" >}}) | `climate_ir_lg` | yes |
-| [Midea]({{< ref "components/climate/climate_ir#midea_ir" >}}) | `midea_ir` | yes |
-| [Mitsubishi]({{< ref "components/climate/climate_ir#mitsubishi" >}}) | `mitsubishi` | yes |
+| [LG](components/climate/climate_ir#climate_ir_lg) | `climate_ir_lg` | yes |
+| [Midea](components/climate/climate_ir#midea_ir) | `midea_ir` | yes |
+| [Mitsubishi](components/climate/climate_ir#mitsubishi) | `mitsubishi` | yes |
 | Noblex | `noblex` | yes |
 | Electrolux, TCL, Fuego | `tcl112` | yes |
-| [Toshiba]({{< ref "components/climate/climate_ir#toshiba" >}}) | `toshiba` | yes |
-| [Whirlpool]({{< ref "components/climate/climate_ir#whirlpool" >}}) | `whirlpool` | yes |
+| [Toshiba](components/climate/climate_ir#toshiba) | `toshiba` | yes |
+| [Whirlpool](components/climate/climate_ir#whirlpool) | `whirlpool` | yes |
 | Yashima | `yashima` |  |
-| [Whynter]({{< ref "components/climate/climate_ir#whynter" >}}) | `whynter` | yes |
-| [ZH/LT-01]({{< ref "components/climate/climate_ir#zhlt01" >}}) | `zhlt01` | yes |
-| [Arduino-HeatpumpIR]({{< ref "components/climate/climate_ir#heatpumpir" >}})<br>library | `heatpumpir` |  |
+| [Whynter](components/climate/climate_ir#whynter) | `whynter` | yes |
+| [ZH/LT-01](components/climate/climate_ir#zhlt01) | `zhlt01` | yes |
+| [Arduino-HeatpumpIR](components/climate/climate_ir#heatpumpir)<br>library | `heatpumpir` |  |
 
 This component requires that you have configured a {{< docref "/components/remote_transmitter" >}}.
 
@@ -66,7 +66,7 @@ climate:
 - **supports_heat** (*Optional*, boolean): Enables setting heating mode for this climate device. Defaults to `true`.
 - **receiver_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the remote_receiver if this platform supports
   receiver. see: [Using a Receiver]({{< ref "components/climate/climate_ir#ir-receiver_id" >}}).
-- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+- All other options from [Climate](components/climate/_index#config-climate).
 
 **Advanced Options**
 
@@ -121,7 +121,7 @@ The `delonghi` climate currently supports the protocol used by some Delonghi por
 
 `daikin_arc` **Climate**:
 
-The Daikin ARC remotes (`daikin_arc` climate, `daikin_arc417`, `daikin_arc480` protocols of [Arduino-HeatpumpIR]({{< ref "components/climate/climate_ir#heatpumpir" >}})) are used by the japanese model of Daikin.
+The Daikin ARC remotes (`daikin_arc` climate, `daikin_arc417`, `daikin_arc480` protocols of [Arduino-HeatpumpIR](components/climate/climate_ir#heatpumpir)) are used by the japanese model of Daikin.
 
 {{< anchor "gree_ir" >}}
 
@@ -164,8 +164,8 @@ climate:
 
 ```
 {{< note >}}
-- See [Transmit Midea]({{< ref "components/remote_transmitter#remote_transmitter-transmit_midea" >}}) to send custom commands, including Follow Me mode.
-- See [Toshiba]({{< ref "components/climate/climate_ir#toshiba" >}}) below if you are looking for compatibility with Midea model MAP14HS1TBL or similar.
+- See [Transmit Midea](components/remote_transmitter#remote_transmitter-transmit_midea) to send custom commands, including Follow Me mode.
+- See [Toshiba](components/climate/climate_ir#toshiba) below if you are looking for compatibility with Midea model MAP14HS1TBL or similar.
 
 {{< /note >}}
 {{< anchor "mitsubishi" >}}

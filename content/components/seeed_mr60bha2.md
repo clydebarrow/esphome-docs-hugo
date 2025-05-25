@@ -9,7 +9,7 @@ title: "Seeed Studio MR60BHA2 60GHz mmWave Breathing and Heartbeat Detection Sen
 
 The `seeed_mr60bha2` platform allows you to use Seeed Studio MR60BHA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 ([Product Page](https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html)) with ESPHome.
 
-The [UART]({{< ref "components/uart#uart" >}}) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
+The [UART](components/uart#uart) is required to be set up in your configuration for this sensor to work, `parity` and `stop_bits` **must be** respectively `NONE` and `1`.
 You can use the ESP32 software or hardware serial to use this MR60BHA2, its default baud rate is 115200.
 
 {{< img src="seeed_mr60bha2.jpg" alt="Image" caption="Seeed Studio MR60BHA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6" width="50.0%" class="center" >}}
@@ -21,7 +21,7 @@ seeed_mr60bha2:
 ```
 ### Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want
+- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component](components/uart#uart) if you want
   to use multiple UART buses.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for this {{< docref "seeed_mr60bha2/" >}} component if you need multiple components.
 
@@ -39,7 +39,7 @@ binary_sensor:
 ### Configuration variables:
 
 - **has_target** (*Optional*): If true when target (person) is detected.
-  All options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+  All options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor).
 
 ## Sensor
 
@@ -61,13 +61,13 @@ sensor:
 ### Configuration variables:
 
 - **breath_rate** (*Optional*, float): Radar-detected respiratory rate during the first 60 seconds.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **heart_rate** (*Optional*, float): Heart rate during the first 60 seconds as detected by the radar.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **distance** (*Optional*, float): Straight-line distance between the radar and the monitoring object.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **num_targets** (*Optional*, int): The number of target detected by the radar.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 
 
 ## See Also

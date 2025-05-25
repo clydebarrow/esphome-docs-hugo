@@ -85,35 +85,35 @@ To protect the cover hardware from damage, some safety options are available:
 
 ## Configuration variables
 
-- **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **stop_action** (**Required**, [Action](automations/actions#config-action)): The action that should
   be performed when the remote requests the cover to be closed or an endstop is reached.
 
 Open options:
 
-- **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **open_action** (**Required**, [Action](automations/actions#config-action)): The action that should
   be performed when the remote requests the cover to be opened.
 - **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to open up from the fully-closed state.
 - **open_endstop** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the open position is reached.
+  [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) that turns on when the open position is reached.
 - **open_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the cover is moving in the open direction.
+  [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) that turns on when the cover is moving in the open direction.
 - **open_obstacle_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when an obstacle that blocks the
+  [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) that turns on when an obstacle that blocks the
   open direction is detected.
 
 Close options:
 
-- **close_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **close_action** (**Required**, [Action](automations/actions#config-action)): The action that should
   be performed when the remote requests the cover to be closed.
 - **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to close from the fully-open state.
 - **close_endstop** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the closed position is reached.
+  [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) that turns on when the closed position is reached.
 - **close_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when the cover is moving in the close direction.
+  [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) that turns on when the cover is moving in the close direction.
 - **close_obstacle_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the
-  [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}) that turns on when an obstacle that blocks the
+  [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) that turns on when an obstacle that blocks the
   close direction is detected.
 
 Additional options:
@@ -147,7 +147,7 @@ Additional options:
   Defaults to `1s`.
 - **obstacle_rollback** (*Optional*, percentage): The percentage of rollback the cover will perform in case of
   obstacle detection while moving. Defaults to `10%`.
-- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from [Cover](components/cover/_index#config-cover).
 
 ## Example Configurations
 

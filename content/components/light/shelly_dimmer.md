@@ -65,9 +65,9 @@ uart:
 - **nrst_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Pin connected with "NRST" of STM32. The  default is "GPIO5".
 - **boot0_pin** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Pin connected with "BOOT0" of STM32. The  default is "GPIO4".
 - **current** (*Optional*): Sensor of the current in Amperes. All options from
-  [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **voltage** (*Optional*): Sensor of the voltage in Volts. Only accurate if neutral is connected. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
-- **power** (*Optional*): Sensor of the active power in Watts. Only accurate if neutral is connected. All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  [Sensor](components/sensor/_index#config-sensor).
+- **voltage** (*Optional*): Sensor of the voltage in Volts. Only accurate if neutral is connected. All options from [Sensor](components/sensor/_index#config-sensor).
+- **power** (*Optional*): Sensor of the active power in Watts. Only accurate if neutral is connected. All options from [Sensor](components/sensor/_index#config-sensor).
 - **firmware** (*Optional*):
 
   - **version** (*Optional*): Version string of the [firmware](https://github.com/jamesturton/shelly-dimmer-stm32) that will be expected on the microcontroller. The default is "51.6", another known-good firmware is "51.5".
@@ -87,7 +87,7 @@ firmware:
 There is no action required by the user to flash the STM32. There is no way to revert to stock firmware on the STM32 at the time of writing.
 
 {{< /note >}}
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light](components/light/_index#config-light).
 
 
 ## See Also

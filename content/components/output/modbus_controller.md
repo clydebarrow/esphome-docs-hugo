@@ -31,7 +31,7 @@ The `modbus_controller` platform creates an output from a modbus_controller. The
 
 - **multiply** (*Optional*, float): multiply the incoming value with this factor before writing it to the device. Ignored if `write_lambda` is defined. Only valid for `register_type: holding`.
 - **use_write_multiple** (*Optional*, boolean): By default the modbus command *Function Code 6 (Preset Single Registers)* is used for setting the holding register if only one register is set. If your device only supports *Function Code 16 (Preset Multiple Registers)* set this option to `true`.
-- **write_lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+- **write_lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
   Lambda is evaluated before the modbus write command is created. The value is passed in as `float x` and an empty vector is passed in as `std::vector<uint16_t>&payload`.
   You can directly define the payload by adding data to payload then the return value is ignored and the content of payload is used.
 
@@ -55,7 +55,7 @@ The `modbus_controller` platform creates an output from a modbus_controller. The
 - **offset** (*Optional*, int): Offset from start address in bytes (only required for uncommon response encodings). If more than one register is written in a command this value is used to find the start of this datapoint relative to start address. The component calculates the size of the range based on offset and size of the value type.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
-All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+All other options from [Output](components/output/_index#config-output).
 
 
 ## Example:

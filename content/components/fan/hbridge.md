@@ -28,18 +28,18 @@ fan:
 ## Configuration variables:
 
 - **pin_a** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
-  [float output]({{< ref "components/output/_index#output" >}}) connected to Pin A (alternatively IN1, etc.) of the h-bridge.
+  [float output](components/output/_index#output) connected to Pin A (alternatively IN1, etc.) of the h-bridge.
 - **pin_b** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
-  [float output]({{< ref "components/output/_index#output" >}}) connected to Pin B (alternatively IN2, etc.) of the h-bridge.
+  [float output](components/output/_index#output) connected to Pin B (alternatively IN2, etc.) of the h-bridge.
 - **enable_pin** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
-  [float output]({{< ref "components/output/_index#output" >}}) connected to the Enable pin of the h-bridge (if h-bridge uses enable).
+  [float output](components/output/_index#output) connected to the Enable pin of the h-bridge (if h-bridge uses enable).
 - **decay_mode** (*Optional*, string): The decay mode you want to use with
   the h-bridge. Either `slow` (coasting) or `fast` (braking). Defaults to `slow`.
 - **speed_count** (*Optional*, int): Set the number of supported discrete speed levels. The value is used
   to calculate the percentages for each speed. E.g. `2` means that you have 50% and 100% while `100`
   will allow 1% increments in the output. Defaults to `100`.
 - **preset_modes** (*Optional*): A list of preset modes for this fan. Preset modes can be used in automations (i.e. `on_preset_set`).
-- All other options from [Fan Component]({{< ref "components/fan/_index#config-fan" >}}).
+- All other options from [Fan Component](components/fan/_index#config-fan).
 
 {{< anchor "fan-hbridge_brake_action" >}}
 

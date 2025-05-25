@@ -7,7 +7,7 @@ title: "Images"
 
 Use this component to store graphical images on the device, you can then draw the images on compatible displays.
 
-For showing images downloaded at runtime, take a look at the [Online Image]({{< ref "components/online_image#online_image" >}}) component.
+For showing images downloaded at runtime, take a look at the [Online Image](components/online_image#online_image) component.
 
 ```yaml
 image:

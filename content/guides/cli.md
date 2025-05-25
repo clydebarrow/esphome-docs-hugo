@@ -53,7 +53,7 @@ Disable all esphome logs.
 Defines or overrides substitution KEY with value VALUE.
 
 {{< /option >}}
-Please see [command line substitutions]({{< ref "components/substitutions#command-line-substitutions" >}}) for details.
+Please see [command line substitutions](components/substitutions#command-line-substitutions) for details.
 
 ## `run` Command
 

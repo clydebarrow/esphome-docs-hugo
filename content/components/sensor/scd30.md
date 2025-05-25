@@ -7,7 +7,7 @@ title: "SCD30 CO₂, Temperature and Relative Humidity Sensor"
 
 The `scd30` sensor platform allows you to use your Sensirion SCD30 CO₂
 ([datasheet](https://sensirion.com/media/documents/4EAF6AF8/61652C3C/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)) sensors with ESPHome.
-The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
 
 {{< img src="scd30.jpg" alt="Image" width="80.0%" class="center" >}}
 
@@ -33,15 +33,15 @@ sensor:
 
 - **co2** (*Optional*): The information for the CO₂ sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **temperature** (*Optional*): The information for the Temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **humidity** (*Optional*): The information for the Humidity sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **temperature_offset** (*Optional*, float): Temperature and humidity
   offsets may occur when operating the sensor in end-customer

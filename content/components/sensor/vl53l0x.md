@@ -18,7 +18,7 @@ well enough (see also section 5 of datasheet).
 
 {{< img src="vl53l0x.png" alt="Image" width="100.0%" class="center" >}}
 
-The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
 
 - `VCC` connects to 3V3 (`3V3` will output 3.3V), or directly connect `VCC` to 3.3V
 - `GND` connects to ground
@@ -58,14 +58,14 @@ sensor:
   If an address other the `0x29` is specified, the sensor will be dynamically re-addressed at startup.
   A dynamic re-address of sensor requires the `enable_pin` configuration variable to be assigned.
   If more then one VL53L0X sensor is used on the same i2c bus, a unique address must be specified per sensor.
-- **enable_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin connected to XSHUT
+- **enable_pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin connected to XSHUT
   on vl53l0x to enable/disable sensor. **Required** if not using address `0x29` which is the cause if you
   have multiple VL53L0X on the same i2c bus. In this case you have to assign a different pin to each VL53L0X.
 - **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Sensor setup timeout. Default to `10ms`.
 - **timing_budget** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set the timing budget the sensor will use for a single range measurement. 
   Range is from 20000us - 4294967295us, inclusive. The timing budget allows the user to trade off speed for accuracy.
   If not specified, the default timing budget is 33000us.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor).
 
 
 ```yaml

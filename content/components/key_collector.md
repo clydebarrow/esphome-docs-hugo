@@ -7,7 +7,7 @@ title: "Key collector component"
 
 The `key_collector` component collects key presses from components
 like [Matrix keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}), {{< docref "/components/wiegand" "Wiegand keypad" >}}
-or LVGL [Button Matrix]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}), [Keyboard]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
+or LVGL [Button Matrix](components/lvgl/widgets#lvgl-widget-buttonmatrix), [Keyboard](components/lvgl/widgets#lvgl-widget-keyboard)
 widgets. It allows you to process key sequences and treat them as one, for
 example to allow inputting of a PIN code or a passkey. The component outputs
 the result of the keypress sequence as a variable usable in automations.
@@ -67,17 +67,17 @@ accepted until an end key is pressed.
 
 ## Automations:
 
-- **on_progress** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_progress** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
   when keys are pressed. The current sequence of pressed keys is placed in a `vector<uint8_t>` variable `x`
   and `start` holds the start key that activated this sequence or else `0`.
   Useful if you want to have a display showing the current value or number of key presses,
   or a speaker beeping when keys are being pressed.
-- **on_result** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform 
+- **on_result** (*Optional*, [Automation](automations/_index#automation)): An automation to perform 
   when the sequence has been finished (eg. `max_length` has been reached or one of
   the `end_keys` was pressed). The finalized key sequence is placed in a `vector<uint8_t>` variable `x`,
   `start` holds the start key that activated this sequence or else `0`, and
   `end` holds the end key that terminated this sequence or else `0`.
-- **on_timeout** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_timeout** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
   if the timeout happens. The current sequence of pressed keys is placed in a `vector<uint8_t>` variable `x`
   and `start` holds the start key that activated this sequence or else `0`.
 
@@ -111,7 +111,7 @@ on_...:
 
 - {{< docref "/components/matrix_keypad" >}}
 - {{< docref "/components/wiegand" >}}
-- [LVGL Button Matrix widget]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}})
-- [LVGL Keyboard widget]({{< ref "components/lvgl/widgets#lvgl-widget-keyboard" >}})
+- [LVGL Button Matrix widget](components/lvgl/widgets#lvgl-widget-buttonmatrix)
+- [LVGL Keyboard widget](components/lvgl/widgets#lvgl-widget-keyboard)
 
 

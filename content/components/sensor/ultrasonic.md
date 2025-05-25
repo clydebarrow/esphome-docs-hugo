@@ -34,13 +34,13 @@ sensor:
 ```
 ## Configuration variables:
 
-- **trigger_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The output pin to
+- **trigger_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The output pin to
   periodically send the trigger pulse to.
-- **echo_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The input pin on which to
+- **echo_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The input pin on which to
   wait for the echo.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor).
 
 Advanced options:
 

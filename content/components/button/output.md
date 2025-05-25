@@ -28,7 +28,7 @@ button:
 
 - **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the output component to use.
 - **duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): How long the output should be set when the button is pressed.
-- All other options from [Button]({{< ref "components/button/_index#config-button" >}}).
+- All other options from [Button](components/button/_index#config-button).
 
 {{< note >}}
 When used with a {{< docref "/components/output/gpio" >}}, the pin will be low by default and pulled high when the button is

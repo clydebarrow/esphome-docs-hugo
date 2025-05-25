@@ -27,7 +27,7 @@ sensor:
 -  **remote_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the original sensor in the provider node. If not specified defaults to the ID configured with `id:`.
 -  **name** (*Optional*, string): The name of the sensor.
 -  **internal** (*Optional*, boolean): Whether the sensor should be exposed via API (e.g. to Home Assistant.) Defaults to `true` if name is not set, required if name is provided.
--  All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+-  All other options from [Sensor](components/sensor/_index#config-sensor).
 
 At least one of `id` and `remote_id` must be configured. 
 

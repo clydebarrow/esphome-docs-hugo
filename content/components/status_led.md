@@ -28,13 +28,13 @@ If your device has a single LED that needs to be shared use  {{< docref "/compon
 {{< /note >}}
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
+- **pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The
   GPIO pin to operate the status LED on.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
 
 {{< note >}}
 If your LED is in an active-LOW mode (when it's on if the output is enabled), use the
-`inverted` option of the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}):
+`inverted` option of the [Pin Schema](guides/configuration-types#config-pin_schema):
 
 ```yaml
 status_led:

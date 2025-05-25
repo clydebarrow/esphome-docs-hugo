@@ -10,7 +10,7 @@ title: "Lite-On Ambient Light & Proximity Sensors"
 {{< img src="ltr303-ui.png" alt="Image" caption="LTR-303 Sensor in Home Assistant UI." width="60.0%" class="center" >}}
 
 The `ltr_als_ps` sensor platform allows you to use a range of LiteOn ambient light and proximity sensors
-with ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+with ESPHome. The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
 
 The family of sensors includes:
 
@@ -141,8 +141,8 @@ sensor:
 ### Sensors
 This component offers five sensors for ALS-equipped devices and one sensor for PS-equipped devices.
 You can configure all or any subset of these sensors. Each configured sensor is reported separately
-on each `update_interval`. Each is an ESPHome [sensor]({{< ref "components/sensor/_index#config-sensor" >}}) and may be configured
-accordingly; if you don't need to configure additional [sensor]({{< ref "components/sensor/_index#config-sensor" >}}) variables, you
+on each `update_interval`. Each is an ESPHome [sensor](components/sensor/_index#config-sensor) and may be configured
+accordingly; if you don't need to configure additional [sensor](components/sensor/_index#config-sensor) variables, you
 may simply use the shorthand syntax for the sensor. For example: `ambient_light: "Ambient light"`
 
 - **ambient_light** (*Optional*): Illuminance of ambient light, close to human eye spectre, lx.

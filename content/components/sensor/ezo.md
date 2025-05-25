@@ -6,7 +6,7 @@ title: "EZO sensor circuits"
 {{< seo description="" image="" >}}
 
 The `ezo` sensor platform allows you to use your EZO sensor circuits with
-ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
+ESPHome. The [I²C Bus](components/i2c#i2c) is
 required to be set up in your configuration for this sensor to work.
 All embedded solutions from EZO can be found [here](https://atlas-scientific.com/embedded-solutions/).
 If a certain command is not supported directly, it can be executed with the `send_custom()` method call.
@@ -38,27 +38,27 @@ sensor:
 - **address** (**Required**, int): Specify the I²C address of the sensor.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor).
 
 Automation triggers:
 
-- **on_led** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Triggered when the result of `get_led_state()` is ready. The LED
+- **on_led** (*Optional*, [Action](automations/actions#config-action)): Triggered when the result of `get_led_state()` is ready. The LED
   state is provided as a boolean variable named `x`.
-- **on_device_information** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Triggered when the result of `get_device_information()`
+- **on_device_information** (*Optional*, [Action](automations/actions#config-action)): Triggered when the result of `get_device_information()`
   is ready.  The result is provided as a `std::string` variable named `x`.
-- **on_slope** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Triggered when the result of `get_slope()` is ready.  The result
+- **on_slope** (*Optional*, [Action](automations/actions#config-action)): Triggered when the result of `get_slope()` is ready.  The result
   is provided as a `std::string` variable named `x`.
-- **on_calibration** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Triggered when the result of `get_calibration()` is ready.
+- **on_calibration** (*Optional*, [Action](automations/actions#config-action)): Triggered when the result of `get_calibration()` is ready.
   The result is provided as a `std::string` variable named `x`.
-- **on_t** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Triggered when the result of `get_t()` is ready.  The result is provided
+- **on_t** (*Optional*, [Action](automations/actions#config-action)): Triggered when the result of `get_t()` is ready.  The result is provided
   as a `std::string` variable named `x`.
-- **on_custom** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): Triggered when the result of `get_custom()` is ready.  The result is provided as a `std::string` variable named `x`.
+- **on_custom** (*Optional*, [Action](automations/actions#config-action)): Triggered when the result of `get_custom()` is ready.  The result is provided as a `std::string` variable named `x`.
 
 {{< anchor "ezo_lambda_calls" >}}
 
 ## Lambda calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can interact with the sensor in various ways. For any `get` command a trigger will be called
+From [lambdas](automations/templates#config-lambda), you can interact with the sensor in various ways. For any `get` command a trigger will be called
 with the information retrieved from the sensor. For more information on the command specifics, refer to the datasheet.
 
 - `set_i2c(uint8_t address)`: Set I2C address of the device, must be an integer between 1 and 127

@@ -13,7 +13,7 @@ Supported widget is [`led`]({{< ref "components/lvgl/widgets#lvgl-widget-led" >}
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a `led` widget configured in LVGL, which will reflect the state of the light.
-- All other options from [light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [light](components/light/_index#config-light).
 
 
 Example:
@@ -31,7 +31,7 @@ To have linear brightness control, `gamma_correct` of the light is set by defaul
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [LED widget]({{< ref "components/lvgl/widgets#lvgl-widget-led" >}})
+- [LED widget](components/lvgl/widgets#lvgl-widget-led)
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

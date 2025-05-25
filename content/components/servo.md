@@ -12,7 +12,7 @@ a simple PWM interface to control the motor.
 This component works with both continuous-rotation and absolute servos and has a similar
 interface to the Arduino Servo library.
 
-First, create an [output component]({{< ref "components/output/_index#output" >}}) (here `esp8266_pwm`) for the pin the
+First, create an [output component](components/output/_index#output) (here `esp8266_pwm`) for the pin the
 servo is connected to. Then connect that output to the servo component by assigning an ID.
 Please note the frequency of the output should be around 50Hz, as most servo controllers
 only operate in this frequency range.
@@ -69,7 +69,7 @@ to match your servo (Experiment with these values).
 
 ## `servo.write` Action
 
-To use your servo motor in [automations]({{< ref "automations/_index#automation" >}}) or templates, you can use this action to set the
+To use your servo motor in [automations](automations/_index#automation) or templates, you can use this action to set the
 target level of the servo from -100% to 100%.
 
 - -100% (= -1.0) is the minimum value of the servo. For continuous-rotation servos this will
@@ -101,11 +101,11 @@ on_...:
 Configuration options:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the servo.
-- **level** (*Optional*, percentage, [templatable]({{< ref "automations/templates#config-templatable" >}})): The target level.
+- **level** (*Optional*, percentage, [templatable](automations/templates#config-templatable)): The target level.
   Range is from -100% to 100% (-1.0 to 1.0).
 
 {{< note >}}
-This action can also be expressed as a [lambda]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed as a [lambda](automations/templates#config-lambda):
 
 ```cpp
 id(my_servo).write(1.0);
@@ -116,7 +116,7 @@ id(my_servo).write(1.0);
 
 ## `servo.detach` Action
 
-This [Action]({{< ref "automations/actions#config-action" >}}) allows you to disable the output on a servo motor -
+This [Action](automations/actions#config-action) allows you to disable the output on a servo motor -
 this will make the servo motor stop immediately and disable its active control.
 
 ```yaml
@@ -126,7 +126,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed as a [lambda]({{< ref "automations/templates#config-lambda" >}}):
+This action can also be expressed as a [lambda](automations/templates#config-lambda):
 
 ```cpp
 id(my_servo).detach();
@@ -138,7 +138,7 @@ id(my_servo).detach();
 ## Home Assistant Configuration
 
 The easiest way to control your servo from Home Assistant is to add a `number` to your ESPHome
-configuration. See [Number]({{< ref "components/number/_index#config-number" >}}) for more information.
+configuration. See [Number](components/number/_index#config-number) for more information.
 
 ```yaml
 number:

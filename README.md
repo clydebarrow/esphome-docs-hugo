@@ -46,22 +46,13 @@ Creates a button with an image that links to a URL.
 {{< button href="https://example.com" img="/images/button.png" alt="Example Button" target="_self" >}}
 ```
 
-### `code-block`
-Creates a syntax-highlighted code block with a language indicator and copy button.
-```
-{{< code-block "yaml" >}}
-name: example
-platform: gpio
-pin: D1
-{{< /code-block >}}
-```
-
 ### `collapse`
 Creates a collapsible section with a title that can be clicked to show/hide content.
 ```
-{{< collapse "Optional Configuration" >}}
+{{< collapse "title" true >}}
 This content will be hidden by default and can be expanded by clicking the header.
 You can include any Markdown content here, including lists, code blocks, etc.
+the second parameter, if true, will have the content initially opened.
 {{< /collapse >}}
 ```
 

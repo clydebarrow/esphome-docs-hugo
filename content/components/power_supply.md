@@ -9,7 +9,7 @@ The `power_supply` component allows you to have a high power mode for
 certain outputs. For example, if you're using an [ATX powersupply](https://en.wikipedia.org/wiki/ATX) to power your LED strips,
 you usually don't want to have the power supply on all the time while
 the output is not on. The power supply component can be attached to any
-[Output Component]({{< ref "components/output/_index#output" >}}) and
+[Output Component](components/output/_index#output) and
 will automatically switch on if any of the outputs are on. Furthermore,
 it also has a cooldown time that keeps the power supply on for a while
 after the last output has been disabled.
@@ -25,7 +25,7 @@ power_supply:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the
   power supply so that it can be used by the outputs.
-- **pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The
+- **pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The
   GPIO pin to control the power supply on.
 - **enable_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time
   that the power supply needs for startup. The output component will
@@ -39,7 +39,7 @@ power_supply:
   until the delay has elapsed.) This is useful for power supplies that will never be turned off and avoids the need
   to specifically configure the power supply in a different component.
 
-See the [output component base configuration]({{< ref "components/output/_index#config-output" >}})
+See the [output component base configuration](components/output/_index#config-output)
 for information on how to apply the power supply for a specific output.
 
 ## ATX Power Supplies

@@ -60,7 +60,7 @@ spi:
 ## Configuration variables:
 
 - **type** (*Optional*): Choose between `single` for standard 1 bit bus SPI (the default), `quad` and `octal`.
-- **clk_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin used for the clock line of the SPI bus.
+- **clk_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin used for the clock line of the SPI bus.
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for this SPI hub if you need multiple SPI hubs.
 - **interface** (*Optional*): Controls which hardware or software SPI implementation should be used.
   Value may be one of `any` (default), `software`, `hardware`, `spi`, `spi2` or `spi3`, depending on
@@ -68,12 +68,12 @@ spi:
 
 For the conventional `single` bit bus at least one of `miso_pin` or `mosi_pin` is required.
 
-- **mosi_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin used for the MOSI line of the SPI bus.
-- **miso_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The pin used for the MISO line of the SPI bus.
+- **mosi_pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin used for the MOSI line of the SPI bus.
+- **miso_pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin used for the MISO line of the SPI bus.
 
 For `quad` or `octal` type instead specify `data_pins`:
 
-- **data_pins** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): Must be a list of exactly 4 pins to be used
+- **data_pins** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): Must be a list of exactly 4 pins to be used
   for the quad SPI output data lines, or exactly 8 pins for octal mode. Not used for single mode.
 
 
@@ -139,7 +139,7 @@ on...:
 - **spi_mode** (*Optional*): Set the controller mode - one of `mode0`, `mode1`, `mode2`, `mode3`. The default is `mode3`.
   See table below for more information
 - **bit_order** (*Optional*): Set the bit order - choose one of `msb_first` (default) or `lsb_first`.
-- **cs_pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The CS pin.
+- **cs_pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): The CS pin.
 
 ## SPI modes:
 

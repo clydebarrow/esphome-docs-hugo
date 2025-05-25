@@ -6,7 +6,7 @@ title: "H-bridge Light"
 {{< seo description="" image="" >}}
 
 The `hbridge` light platform creates a dual color brightness controlled light from two
-[float output component]({{< ref "components/output/_index#output" >}}).
+[float output component](components/output/_index#output).
 
 {{< img src="hbridge-ui.png" alt="Image" width="40.0%" class="center" >}}
 
@@ -25,7 +25,7 @@ light:
 ```
 Internally, H-bridge lights are implemented as cold/warm white lights. This means that the brightness of the two colors
 is mapped to the cold white and warm white values, even if the colors aren't actually white in reality. To individually
-control the colors in the [light control actions]({{< ref "components/light/_index#light-turn_on_action" >}}), you need to use the `cold_white` and
+control the colors in the [light control actions](components/light/_index#light-turn_on_action), you need to use the `cold_white` and
 `warm_white` options.
 
 
@@ -33,7 +33,7 @@ control the colors in the [light control actions]({{< ref "components/light/_ind
 
 - **pin_a** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the first float [Output Component]({{< ref "components/output/_index#output" >}}) to use for this light.
 - **pin_b** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the second float [Output Component]({{< ref "components/output/_index#output" >}}) to use for this light.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light](components/light/_index#config-light).
 
 {{< note >}}
 As we are switching the H-bridge in software, the light may glitch every so often when other tasks run on the MCU.

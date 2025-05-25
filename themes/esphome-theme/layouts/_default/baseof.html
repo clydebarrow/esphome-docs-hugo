@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    <meta name="description"
+          content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
     <style>
         body {
             visibility: hidden;
@@ -21,7 +22,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="{{ "/images/logo.svg" | relURL }}">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
@@ -31,21 +32,23 @@
     {{ block "head" . }}{{ end }}
 </head>
 <body class="body">
+<div class="page-container">
     <div class="nav-container" id="nav-container">
         <nav class="sticky-nav">
             {{ if ne .IsHome true }}
-                <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false">
+                <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents"
+                        aria-expanded="false">
                     <i class="fa-solid fa-list"></i>
                 </button>
             {{ end }}
             <div class="nav-logo">
                 <a
-                {{ if eq .Page.Title "ESPHome Docs" }}
-                    href="{{ "/" | relURL }}">
-                {{ else }}
-                    href="{{ "/components" | relURL }}">
-                {{ end }}
-                    {{ os.ReadFile "static/images/logo-text.svg"  | safeHTML }}
+                        {{ if eq .Page.Title "ESPHome Docs" }}
+                        href="{{ "/" | relURL }}">
+                    {{ else }}
+                        href="{{ "/components" | relURL }}">
+                    {{ end }}
+                    {{ os.ReadFile "static/images/logo-text.svg" | safeHTML }}
                 </a>
             </div>
             <button type="button" class="hamburger-button" aria-label="Open menu" aria-expanded="false">
@@ -55,29 +58,33 @@
             </button>
             <div class="nav-links">
                 <div class="dropbtn">
-                <button class="theme-toggle" aria-label="Toggle theme" title="Toggle dark mode">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                         fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
+                    <button class="theme-toggle" aria-label="Toggle theme" title="Toggle dark mode">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                             viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                             viewBox="0 0 24 24"
+                             fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                 </div>
                 {{ range (index .Site.Menus "main") }}
                     {{ if .HasChildren }}
                         <div class="dropdown">
-                            <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">{{ .Name }}</button>
+                            <button type="button" class="dropbtn" aria-haspopup="true"
+                                    aria-expanded="false">{{ .Name }}</button>
                             <div class="dropdown-content">
                                 {{ range .Children }}
                                     <a href="{{ .URL }}">{{ .Name }}</a>
@@ -95,8 +102,6 @@
             </div>
         </nav>
     </div>
-    <div id="overlay" class="overlay {{ if not .Content}}show{{ end }}"></div>
-
 
     <script src="/pagefind/pagefind-modular-ui.js"></script>
     <script src="/js/menu.js" defer></script>
@@ -111,43 +116,51 @@
                 <span>ESPHome is a project from the</span>
                 <img src="{{ "images/ohf-logo-on-dark.svg" | relURL }}" alt="ESPHome Logo" width="180px">
             </a>
-                <div class="footer-column">
-                    <h3>Documentation</h3>
-                    <ul>
-                        <li><a href="{{ "components/" | relURL }}"><i class="fa fa-puzzle-piece"></i>Components</a></li>
-                        <li><a href="{{ "guides/" | relURL }}"><i class="fa fa-compass"></i>Guides</a></li>
-                        <li><a href="{{ "automations/" | relURL }}"><i class="fa fa-magic"></i>Automations</a></li>
-                        <li><a href="{{ "cookbook/" | relURL }}"><i class="fa fa-kitchen-set"></i>Cookbook</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Community</h3>
-                    <ul>
-                        <li><a href="https://discord.gg/KhAMKrd" target="_blank"><i class="fab fa-discord"></i>Discord</a></li>
-                        <li><a href="https://github.com/esphome/esphome" target="_blank"><i class="fab fa-github"></i>GitHub Repo</a></li>
-                        <li><a href="https://community.home-assistant.io/c/esphome/" target="_blank"><i class="fas fa-comments"></i>Forums</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="{{ "changelog/" | relURL }}"><i class="fa fa-history"></i>Changelog</a></li>
-                        <li><a href="https://devices.esphome.io/"><i class="fa fa-microchip"></i>Device Database</a></li>
-                        <li><a href="https://developers.esphome.io"><i class="fa fa-code"></i>Development</a></li>
-                    </ul>
+            <div class="footer-column">
+                <h3>Documentation</h3>
+                <ul>
+                    <li><a href="{{ "components/" | relURL }}"><i class="fa fa-puzzle-piece"></i>Components</a></li>
+                    <li><a href="{{ "guides/" | relURL }}"><i class="fa fa-compass"></i>Guides</a></li>
+                    <li><a href="{{ "automations/" | relURL }}"><i class="fa fa-magic"></i>Automations</a></li>
+                    <li><a href="{{ "cookbook/" | relURL }}"><i class="fa fa-kitchen-set"></i>Cookbook</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="https://discord.gg/KhAMKrd" target="_blank"><i class="fab fa-discord"></i>Discord</a>
+                    </li>
+                    <li><a href="https://github.com/esphome/esphome" target="_blank"><i class="fab fa-github"></i>GitHub
+                        Repo</a></li>
+                    <li><a href="https://community.home-assistant.io/c/esphome/" target="_blank"><i
+                            class="fas fa-comments"></i>Forums</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="{{ "changelog/" | relURL }}"><i class="fa fa-history"></i>Changelog</a></li>
+                    <li><a href="https://devices.esphome.io/"><i class="fa fa-microchip"></i>Device Database</a></li>
+                    <li><a href="https://developers.esphome.io"><i class="fa fa-code"></i>Development</a></li>
+                </ul>
             </div>
         </div>
     </footer>
+</div>
 
-    <!-- JavaScript -->
-    {{ if .Store.Get "hasMath" }}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+<!-- JavaScript -->
+{{ if .Store.Get "hasMath" }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+          integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+            integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6"
+            crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+            integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
             onload="renderMathInElement(document.body);"></script>
-    {{ end }}
+{{ end }}
 
-    <script src="{{ "js/main.js" | relURL }}"></script>
-    {{ block "scripts" . }}{{ end }}
+<script src="{{ "js/main.js" | relURL }}"></script>
+{{ block "scripts" . }}{{ end }}
 </body>
 </html>

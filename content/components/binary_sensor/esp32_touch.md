@@ -16,8 +16,8 @@ In ESPHome, it is configured in two parts:
 ## Component/Hub
 
 The `esp32_touch` component creates a global hub enabling (capacitive) touch detection on GPIO pins
-[supported by ESP32, ESP32-S2 or ESP32-S3 processors]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-pad-pins" >}}). With this enabled,
-[binary sensors]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-binary-sensor" >}}) may then be configured to permit touch detection.
+[supported by ESP32, ESP32-S2 or ESP32-S3 processors](components/binary_sensor/esp32_touch#esp32-touch-pad-pins). With this enabled,
+[binary sensors](components/binary_sensor/esp32_touch#esp32-touch-binary-sensor) may then be configured to permit touch detection.
 
 ```yaml
 # Example configuration entry
@@ -29,7 +29,7 @@ esp32_touch:
 
 -  **setup_mode** (*Optional*, boolean): Whether debug messages with the touch pad value should
    be displayed in the logs. Useful for finding out suitable thresholds for the binary sensors, but
-   will spam the logs. See [setting up touch pads]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-binary-sensor" >}})
+   will spam the logs. See [setting up touch pads](components/binary_sensor/esp32_touch#esp32-touch-binary-sensor)
    for more information. Defaults to `false`.
 -  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for code generation.
 
@@ -111,7 +111,7 @@ For a more detailed explanation of the waterproof configuration, please see the
 The `esp32_touch` binary sensor platform lets you use the touch peripheral of the
 ESP32 to detect if a certain pin is being "touched".
 
-First, you need to setup the [global touch hub]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-component" >}}). Then
+First, you need to setup the [global touch hub](components/binary_sensor/esp32_touch#esp32-touch-component). Then
 you can add individual touch pads as binary sensors. When a touch is detected on these pins, the binary
 sensor will report an `ON` state. And, of course, if no touch is detected, the binary sensor will report
 an `OFF` state.
@@ -139,7 +139,7 @@ binary_sensor:
    See [Finding Thresholds]({{< ref "components/binary_sensor/esp32_touch#esp32-finding-thresholds" >}}) below for help determining this value. Touch pad sensors that should trigger a
    wake-up from deep sleep must specify this value. The [Deep Sleep Component]({{< ref "components/deep_sleep#deep_sleep-component" >}}) must also be configured to enable
    wake-up from a touch event. Note that no filter(s) is/are active during deep sleep.
--  All other options from [Binary Sensor]({{< ref "components/binary_sensor/_index#config-binary_sensor" >}}).
+-  All other options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor).
 
 
 ## Raw Values
@@ -193,7 +193,7 @@ touched, the value will change significantly, enabling the touch to be detected.
 Exact values reported by the sensor hardware will vary based on the processor, PCB layout and potentially even
 environmental factors.
 
-To find suitable threshold values, first configure the [ESP32 touch hub]({{< ref "components/binary_sensor/esp32_touch#esp32-touch-component" >}}) to log measured
+To find suitable threshold values, first configure the [ESP32 touch hub](components/binary_sensor/esp32_touch#esp32-touch-component) to log measured
 values using the `setup_mode:` configuration option. Next, add some binary sensors for the touch pads you want to
 observe. You'll also need to put some (temporary) threshold values into the configuration (as shown below) to make the
 validator happy; we'll replace these in a moment once we determine suitable values.

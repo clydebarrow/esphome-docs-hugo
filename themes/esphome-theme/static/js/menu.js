@@ -7,6 +7,8 @@ function openTOC() {
     if (!isMobile) return;
     const tocPanel = document.getElementsByClassName('sidebar')[0];
     const overlay = document.getElementById('overlay');
+    const tocToggle = document.getElementById('toc-toggle');
+    tocToggle.classList.add('open');
     tocPanel.classList.add('open');
     overlay.classList.add('show');
 }
@@ -14,6 +16,8 @@ function openTOC() {
 function closeTOC() {
     const tocPanel = document.getElementsByClassName('sidebar')[0];
     const overlay = document.getElementById('overlay');
+    const tocToggle = document.getElementById('toc-toggle');
+    tocToggle.classList.remove('open');
     tocPanel.classList.remove('open');
     overlay.classList.remove('show');
 }

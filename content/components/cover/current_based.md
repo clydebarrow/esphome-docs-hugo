@@ -60,7 +60,7 @@ cover:
 ## Configuration variables:
 
 - **open_sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The open current sensor.
-- **open_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **open_action** (**Required**, [Action](automations/actions#config-action)): The action that should
   be performed when the remote requests the cover to be opened.
 - **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to open up from the fully-closed state.
@@ -69,7 +69,7 @@ cover:
 - **open_obstacle_current_threshold** (**Required**, float): The amount of current in Amps the motor
   should drain to consider the cover is blocked during opening.
 - **close_sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The close current sensor.
-- **close_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **close_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
   be performed when the remote requests the cover to be closed.
 - **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
   to close from the fully-open state.
@@ -77,7 +77,7 @@ cover:
   should drain to consider the cover is closing.
 - **close_obstacle_current_threshold** (**Required**, float): The amount of current in Amps the motor
   should drain to consider the cover is blocked during closing.
-- **stop_action** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **stop_action** (**Required**, [Action](automations/actions#config-action)): The action that should
   be performed to stop the cover.
 - **max_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The maximum duration the cover should be opening
   or closing. Useful for protecting from dysfunctional motor integrated endstops.
@@ -88,10 +88,10 @@ cover:
 - **obstacle_rollback** (*Optional*, percentage): The percentage of rollback the cover will perform in case of
   obstacle detection. Defaults to `10%`.
 - **malfunction_detection** (*Optional*, boolean): Enable to detect malfunction detection (Tipically welded realys). Defaults to `True`.
-- **malfunction_action** (*Optional*, [Action]({{< ref "automations/actions#config-action" >}})): The action that should
+- **malfunction_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
   be performed when relay malfunction is detected. Malfunction may require device servicing. You can use this action
   to notify other systems about this situation
-- All other options from [Cover]({{< ref "components/cover/_index#config-cover" >}}).
+- All other options from [Cover](components/cover/_index#config-cover).
 
 ## Use with Shelly 2.5
 

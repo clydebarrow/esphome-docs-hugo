@@ -32,10 +32,10 @@ Configuration variables:
 
 - **max_runs** (*Optional*, int): Allows limiting the maximum number of runs when using script modes `queued` and
   `parallel`, use value `0` for unlimited runs. Defaults to `0`.
-- **parameters** (*Optional*, [Script Parameters]({{< ref "components/script#script-parameters" >}})): A script can define one or more parameters
+- **parameters** (*Optional*, [Script Parameters](components/script#script-parameters)): A script can define one or more parameters
   that must be provided in order to execute. All parameters defined here are mandatory and must be given when calling
   the script.
-- **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform.
+- **then** (**Required**, [Action](automations/actions#config-action)): The action to perform.
 
 {{< anchor "script-parameters" >}}
 
@@ -153,9 +153,9 @@ This can't be used in a lambda as it would block all functioning of the device. 
 
 # `script.is_running` Condition
 
-This [condition]({{< ref "automations/actions#config-condition" >}}) allows you to check if a given script is running. In case scripts are run in
+This [condition](automations/actions#config-condition) allows you to check if a given script is running. In case scripts are run in
 `parallel`, this condition only tells you if at least one script of the given id is running, not how many. Not
-designed for use with [while]({{< ref "automations/actions#while_action" >}}); instead try [script.wait]({{< ref "components/script#script-wait_action" >}}).
+designed for use with [while](automations/actions#while_action); instead try [script.wait](components/script#script-wait_action).
 
 ```yaml
 on_...:

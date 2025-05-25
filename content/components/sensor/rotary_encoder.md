@@ -43,11 +43,11 @@ pin_a:
 ```
 ## Configuration variables:
 
-- **pin_a** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})):
+- **pin_a** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)):
   The first pin for determining the step value. Must not be a pin from an external I/O expander.
-- **pin_b** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})):
+- **pin_b** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)):
   The second pin for determining the step value. Must not be a pin from an external I/O expander.
-- **pin_reset** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})):
+- **pin_reset** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)):
   An optional pin that resets the step value. This is useful with rotary encoders that have a
   third pin. Defaults to no reset pin.
 - **resolution** (*Optional*, string): The resolution of the sensor, this controls how many
@@ -70,11 +70,11 @@ pin_a:
     - `RESTORE_DEFAULT_ZERO` - (Default) Attempt to restore state and default to zero (0) if not possible to restore.
     - `ALWAYS_ZERO` - Always initialize the counter with value zero (0).
 
-- **on_clockwise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Actions to be performed when
+- **on_clockwise** (*Optional*, [Automation](automations/_index#automation)): Actions to be performed when
   the knob is turned clockwise. See [`on_clockwise` and `on_anticlockwise` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
-- **on_anticlockwise** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Actions to be performed when
+- **on_anticlockwise** (*Optional*, [Automation](automations/_index#automation)): Actions to be performed when
   the knob is turned anticlockwise. See [`on_clockwise` and `on_anticlockwise` Triggers]({{< ref "components/sensor/rotary_encoder#sensor-rotary_encoder-triggers" >}}).
-- All other options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+- All other options from [Sensor](components/sensor/_index#config-sensor).
 
 {{< anchor "sensor-rotary_encoder-set_value_action" >}}
 
@@ -106,7 +106,7 @@ on_...:
 Configuration options:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the rotary encoder.
-- **value** (**Required**, int, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **value** (**Required**, int, [templatable](automations/templates#config-templatable)):
   The value to set the internal counter to.
 
 {{< anchor "sensor-rotary_encoder-triggers" >}}

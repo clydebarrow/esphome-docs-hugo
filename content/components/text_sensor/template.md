@@ -6,7 +6,7 @@ title: "Template Text Sensor"
 {{< seo description="" image="" >}}
 
 The `template` text sensor platform allows you to create a text sensor with templated values
-using [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+using [lambdas](automations/templates#config-lambda).
 
 ```yaml
 # Example configuration entry
@@ -27,11 +27,11 @@ Possible return values for the lambda:
 
 ## Configuration variables:
 
-- **lambda** (*Optional*, [lambda]({{< ref "automations/templates#config-lambda" >}})):
+- **lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
   Lambda to be evaluated every update interval to get the new value of the text sensor
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   text sensor. Set to `never` to disable updates. Defaults to `60s`.
-- All other options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
+- All other options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
 
 {{< anchor "text_sensor-template-publish_action" >}}
 
@@ -62,7 +62,7 @@ on_...:
 Configuration options:
 
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template text sensor.
-- **state** (**Required**, string, [templatable]({{< ref "automations/templates#config-templatable" >}})):
+- **state** (**Required**, string, [templatable](automations/templates#config-templatable)):
   The state to publish.
 
 {{< note >}}

@@ -16,7 +16,7 @@ ESPHome runs on a wide variety of devices, so it's hard to list any specific
 set of tools that you need or to give instructions on how to connect. This
 guide tries to cover some of the more common flashing situations. If your
 device doesn't fit any of these situations, try and find a guide for your
-specific device in the [devices guides]({{< ref "components/_index#devices" >}}) or elsewhere on the
+specific device in the [devices guides](components/_index#devices) or elsewhere on the
 internet.
 
 ## Connecting to the ESP
@@ -114,7 +114,7 @@ is wrong or are uncomfortable with continuing, stop immediately.
 
 Development boards often come with a USB port built in. This USB port is
 connected to a serial adapter, so you don't need a separate serial adapter. You
-can use just a [USB data cable]({{< ref "#usb-cable" >}}) to connect it to your computer to
+can use just a [USB data cable](#usb-cable) to connect it to your computer to
 program it. Additionally, a development board can also be used to flash other ESPs.
 {{< docref "/guides/devboard_as_flasher" "Read more here." >}}
 
@@ -126,16 +126,16 @@ by either soldering or using a breadboard, but you do not need anything else to
 
 {{< img src="programming-header-populated.jpg" alt="Image" caption="A device that comes with programming headers pre-installed" width="75.0%" class="center" >}}
 
-In this situation, you'll need just [jumper wires]({{< ref "#jumper-wires" >}}) and a
-[USB to serial adapter]({{< ref "#usb-serial-adapter" >}}). You don't need to solder
+In this situation, you'll need just [jumper wires](#jumper-wires) and a
+[USB to serial adapter](#usb-serial-adapter). You don't need to solder
 anything, that's already been done by the factory.
 
 ### Unpopulated Programming Header
 
 {{< img src="programming-header-unpopulated.jpg" alt="Image" caption="A device that has a spot for programming headers on the circuit board" width="75.0%" class="center" >}}
 
-You can probably get away with [jumper wires]({{< ref "#jumper-wires" >}}) and a
-[USB to serial adapter]({{< ref "#usb-serial-adapter" >}}). You can place the male end
+You can probably get away with [jumper wires](#jumper-wires) and a
+[USB to serial adapter](#usb-serial-adapter). You can place the male end
 of the wires directly into the circuit board and hold them into place with your
 hand until you're done flashing the board.
 
@@ -147,9 +147,9 @@ multimeter in continuity mode to figure it out (advanced topic).
 
 {{< img src="programming-header-filled.jpg" alt="Image" caption="A set of programming headers that are filled with solder" width="75.0%" class="center" >}}
 
-You'll need a USB to serial adapter, [jumper wires]({{< ref "#jumper-wires" >}}), a
-[soldering iron]({{< ref "#soldering-iron" >}}), and probably [solder]({{< ref "#solder" >}}) and
-some [breakaway headers]({{< ref "#pcb-headers" >}}) if your board looks like this.
+You'll need a USB to serial adapter, [jumper wires](#jumper-wires), a
+[soldering iron](#soldering-iron), and probably [solder](#solder) and
+some [breakaway headers](#pcb-headers) if your board looks like this.
 
 You can try placing the jumper wires in the right place, but you'll have
 trouble holding them without having them slide around. You'll want to solder a
@@ -164,10 +164,10 @@ multimeter in continuity mode to figure it out (advanced topic).
 {{< img src="module-only-programming.jpg" alt="From https://tasmota.github.io/docs/devices/SM-SO301/" caption="An ESP8266 module with programming wires soldered on" width="75.0%" class="center" >}}
 
 If the device has a module but no programming headers, things get a bit tricky.
-You'll need a [USB to serial adapter]({{< ref "#usb-serial-adapter" >}}), :ref:`jumper
-wires <jumper-wires>`, [wire strippers]({{< ref "#wire-strippers" >}}), :ref:`wire snips
-<wire-snips>`, a [soldering iron]({{< ref "#soldering-iron" >}}), :ref:`solder
-<solder>`, and a bit of [flux]({{< ref "#soldering-flux" >}}) would help.
+You'll need a [USB to serial adapter](#usb-serial-adapter), :ref:`jumper
+wires <jumper-wires>`, [wire strippers](#wire-strippers), :ref:`wire snips
+<wire-snips>`, a [soldering iron](#soldering-iron), :ref:`solder
+<solder>`, and a bit of [flux](#soldering-flux) would help.
 
 Cut the jumper wires, strip a bit off the end, and then solder them onto the
 module. You can find the correct places to solder the wires by looking up the
@@ -184,7 +184,7 @@ This is an advanced topic and won't be covered in detail, but you have three opt
   these tools have been broken by vendors, and the ESPHome community can't help
   you with using these tools.
 - If the programming wires connect to a larger component like a resistor, you
-  can solder or clip your [jumper wires]({{< ref "#jumper-wires" >}}) to that larger
+  can solder or clip your [jumper wires](#jumper-wires) to that larger
   component.
 - You can use your amazing microsoldering skills to connect directly to the IC.
 
@@ -199,15 +199,15 @@ require different parts and tools.
 
 | Name |  Purpose |  Approx. cost |  Picture  {{< anchor "usb-cable" >}} |
 | --- | --- | --- | --- |
-| [USB to micro-USB/mini-USB/USB-C]({{< ref "#usb-cable" >}}) |  If your target device has a USB port on it, you need the appropriate data cable to connect to it. A power only USB cable that usually comes presupplied with powerbanks won't work. |  $3 to $10 |  {{< img src="usb-cable.jpg" alt="From https://www.stockvault.net/photo/271754/usb-cable" >}} |
-| [USB to serial adapter]({{< ref "#usb-serial-adapter" >}}) |  Serial communication is a simple way of talking to other devices, like the ESP32/ESP8266 you're flashing. But your computer probably doesn't have this capability built-in. "Serial", "UART", "TTL", and "COM" are all more-or-less synonyms.  There are many different types of these, so don't worry if yours doesn't look exactly like the picture. However, you do need one with a voltage regulator.  The [Tasmota website provides a good set of suggestions on what to buy](https://tasmota.github.io/docs/Getting-Started/#needed-hardware).  Any ESP development board with functioning USB_UART bridge chip can also be used instead. {{< docref "/guides/devboard_as_flasher" "Read instructions here." >}} |  $3 to $10 |  {{< img src="usb-serial-adapter.jpg" alt="From https://tasmota.github.io/docs/Getting-Started/" >}} |
-| [Jumper wires]({{< ref "#jumper-wires" >}}) |  Used to connect two things together electrically. The male end has metal protuding and is plugged into the female end of a wire or board. They come in varying lengths too, but for our purposes, any length will do. |  $3 to $8 for a pack |  {{< img src="jumper-wires.jpg" alt="From https://www.flickr.com/photos/snazzyguy/8096512976" >}} |
-| [Breakable headers]({{< ref "#pcb-headers" >}}) |  Soldered to a PCB to provide a way to connect jumper wires. The distance between the metal pins is known as the pitch, and is usually 2.54mm for what we're doing.  This sort of header can be cut to the correct length along the groves. |  $3 to $8 for a pack |  {{< img src="breakable-header.jpg" alt="From https://www.flickr.com/photos/snazzyguy/27120004896/" >}} |
-| [Wire snips, wire cutters, flush cutters]({{< ref "#wire-snips" >}}) |  Used to cut wire. These can often be subsituted by a knife or scissors, but be careful not to hurt yourself. |  $5 to $15 |  {{< img src="wire-cutters.jpg" alt="From https://www.flickr.com/photos/snazzyguy/3932324106" >}} |
-| [Wire strippers]({{< ref "#wire-strippers" >}}) |  Used to remove the insulation from wires, leaving the conductive metal interior exposed. These can often be subsituted by a knife, scissors, or fingernails, but be careful not to hurt yourself.  There are many different styles, not just that in the picture. You'll want something that works with fairly thin wire, about 20 AWG to 26 AWG. |  $5 to $15 |  {{< img src="strippers.jpg" alt="From https://www.flickr.com/photos/snazzyguy/3931542659" >}} |
-| [Soldering iron]({{< ref "#soldering-iron" >}}) |  Used to melt metal, called solder, to connect things together in an electrically conductive way.  You'll want something with temperature control. Other than that, there are many varying opinions and options here.  [The /r/AskElectronics wiki has some good suggestions](https://www.reddit.com/r/AskElectronics/wiki/soldering). The following would serve you well, although be careful to buy from a reliable source:  - Hakko FX-888D - KSGER T12 - TS100/TS80 |  $60 to $120 |  {{< img src="soldering-iron.jpg" alt="From https://commons.wikimedia.org/wiki/File:Soldering_Station_Weller_2.jpeg" >}} |
-| [Electronics solder]({{< ref "#solder" >}}) |  Molten metal used to join things in an electrically conductive way. There are two types, leaded and lead-free. Leaded melts at a lower temperature and is a little easier to work with, but is hazardous to the environment (but not to humans in this form).  Electronics solder also usually has a "rosin core", which helps clean the surfaces to allow the solder to stick.  You absolutely do not want plumbing solder, also known as "acid core" or "silver solder". It needs much higher temperatures than we can safely use here. |  $8 to $12 |  {{< img src="solder.jpg" alt="From https://commons.wikimedia.org/wiki/File:Rosin_core_solder.JPG" >}} |
-| [Electronics flux]({{< ref "#soldering-flux" >}}) |  Used to clean the metal surfaces before soldering them together. Sometimes the rosin core of the solder doesn't provide enough, so you'd want add some extra.  This stuff is helpful, but probably not needed for this guide since we won't be doing any advanced soldering.  If you do buy it, you absolutely do not want plumber's flux. It will destroy your circuit boards. |  $8 to $12 |  {{< img src="flux.jpg" alt="Image" >}} |
+| [USB to micro-USB/mini-USB/USB-C](#usb-cable) |  If your target device has a USB port on it, you need the appropriate data cable to connect to it. A power only USB cable that usually comes presupplied with powerbanks won't work. |  $3 to $10 |  {{< img src="usb-cable.jpg" alt="From https://www.stockvault.net/photo/271754/usb-cable" >}} |
+| [USB to serial adapter](#usb-serial-adapter) |  Serial communication is a simple way of talking to other devices, like the ESP32/ESP8266 you're flashing. But your computer probably doesn't have this capability built-in. "Serial", "UART", "TTL", and "COM" are all more-or-less synonyms.  There are many different types of these, so don't worry if yours doesn't look exactly like the picture. However, you do need one with a voltage regulator.  The [Tasmota website provides a good set of suggestions on what to buy](https://tasmota.github.io/docs/Getting-Started/#needed-hardware).  Any ESP development board with functioning USB_UART bridge chip can also be used instead. {{< docref "/guides/devboard_as_flasher" "Read instructions here." >}} |  $3 to $10 |  {{< img src="usb-serial-adapter.jpg" alt="From https://tasmota.github.io/docs/Getting-Started/" >}} |
+| [Jumper wires](#jumper-wires) |  Used to connect two things together electrically. The male end has metal protuding and is plugged into the female end of a wire or board. They come in varying lengths too, but for our purposes, any length will do. |  $3 to $8 for a pack |  {{< img src="jumper-wires.jpg" alt="From https://www.flickr.com/photos/snazzyguy/8096512976" >}} |
+| [Breakable headers](#pcb-headers) |  Soldered to a PCB to provide a way to connect jumper wires. The distance between the metal pins is known as the pitch, and is usually 2.54mm for what we're doing.  This sort of header can be cut to the correct length along the groves. |  $3 to $8 for a pack |  {{< img src="breakable-header.jpg" alt="From https://www.flickr.com/photos/snazzyguy/27120004896/" >}} |
+| [Wire snips, wire cutters, flush cutters](#wire-snips) |  Used to cut wire. These can often be subsituted by a knife or scissors, but be careful not to hurt yourself. |  $5 to $15 |  {{< img src="wire-cutters.jpg" alt="From https://www.flickr.com/photos/snazzyguy/3932324106" >}} |
+| [Wire strippers](#wire-strippers) |  Used to remove the insulation from wires, leaving the conductive metal interior exposed. These can often be subsituted by a knife, scissors, or fingernails, but be careful not to hurt yourself.  There are many different styles, not just that in the picture. You'll want something that works with fairly thin wire, about 20 AWG to 26 AWG. |  $5 to $15 |  {{< img src="strippers.jpg" alt="From https://www.flickr.com/photos/snazzyguy/3931542659" >}} |
+| [Soldering iron](#soldering-iron) |  Used to melt metal, called solder, to connect things together in an electrically conductive way.  You'll want something with temperature control. Other than that, there are many varying opinions and options here.  [The /r/AskElectronics wiki has some good suggestions](https://www.reddit.com/r/AskElectronics/wiki/soldering). The following would serve you well, although be careful to buy from a reliable source:  - Hakko FX-888D - KSGER T12 - TS100/TS80 |  $60 to $120 |  {{< img src="soldering-iron.jpg" alt="From https://commons.wikimedia.org/wiki/File:Soldering_Station_Weller_2.jpeg" >}} |
+| [Electronics solder](#solder) |  Molten metal used to join things in an electrically conductive way. There are two types, leaded and lead-free. Leaded melts at a lower temperature and is a little easier to work with, but is hazardous to the environment (but not to humans in this form).  Electronics solder also usually has a "rosin core", which helps clean the surfaces to allow the solder to stick.  You absolutely do not want plumbing solder, also known as "acid core" or "silver solder". It needs much higher temperatures than we can safely use here. |  $8 to $12 |  {{< img src="solder.jpg" alt="From https://commons.wikimedia.org/wiki/File:Rosin_core_solder.JPG" >}} |
+| [Electronics flux](#soldering-flux) |  Used to clean the metal surfaces before soldering them together. Sometimes the rosin core of the solder doesn't provide enough, so you'd want add some extra.  This stuff is helpful, but probably not needed for this guide since we won't be doing any advanced soldering.  If you do buy it, you absolutely do not want plumber's flux. It will destroy your circuit boards. |  $8 to $12 |  {{< img src="flux.jpg" alt="Image" >}} |
 
 
 ## See Also

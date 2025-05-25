@@ -61,7 +61,7 @@ Advanced options:
 
   - **name** (**Required**, string): Name of the project
   - **version** (**Required**, string): Version of the project
-  - **on_update** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform when the device firmware is updated.
+  - **on_update** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when the device firmware is updated.
     This compares the above `version` field with the `version` that was in the previous firmware
     as long as the `name` matches.
     The `version` is stored in flash memory when the firmware is first run for future comparisons.
@@ -73,11 +73,11 @@ Advanced options:
 
 Automations:
 
-- **on_boot** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_boot** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
   when the node starts. See [`on_boot`]({{< ref "components/esphome#esphome-on_boot" >}}).
-- **on_shutdown** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_shutdown** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
   right before the node shuts down. See [`on_shutdown`]({{< ref "components/esphome#esphome-on_shutdown" >}}).
-- **on_loop** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): An automation to perform
+- **on_loop** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
   on each `loop()` iteration. See [`on_loop`]({{< ref "components/esphome#esphome-on_loop" >}}).
 
 {{< anchor "esphome-on_boot" >}}
@@ -109,7 +109,7 @@ Configuration variables:
   - `200.0`: Network connections like MQTT/native API are set up at this priority.
   - `-100.0`: At this priority, pretty much everything should already be initialized.
 
-- See [Automation]({{< ref "automations/_index#automation" >}}).
+- See [Automation](automations/_index#automation).
 
 {{< anchor "esphome-on_shutdown" >}}
 
@@ -140,7 +140,7 @@ Configuration variables:
   Please note this is an ESPHome-internal value and any change will not be marked as a breaking change.
   Defaults to `600`. For priority values refer to the list in the [`on_boot`]({{< ref "components/esphome#esphome-on_boot" >}}) section.
 
-- See [Automation]({{< ref "automations/_index#automation" >}}).
+- See [Automation](automations/_index#automation).
 
 {{< anchor "esphome-on_loop" >}}
 
@@ -212,7 +212,7 @@ This option behaves differently depending on what the included file is pointing 
 ## `libraries`
 
 The `libraries` option allows you to include libraries in the PlatformIO project. These libraries will then be
-compiled into the resulting firmware and may be used by [lambdas]({{< ref "automations/templates#config-lambda" >}}).
+compiled into the resulting firmware and may be used by [lambdas](automations/templates#config-lambda).
 
 ```yaml
 # Example configuration entry

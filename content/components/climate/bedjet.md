@@ -50,7 +50,7 @@ bedjet:
 
 ### lambda calls
 
-From [lambdas]({{< ref "automations/templates#config-lambda" >}}), you can call methods to do some advanced stuff.
+From [lambdas](automations/templates#config-lambda), you can call methods to do some advanced stuff.
 
 - `.upgrade_firmware`: Check for and install updated BedJet firmware.
 
@@ -119,7 +119,7 @@ climate:
       reported as the climate entity's current temperature.
     - `outlet` - The temperature of the air being discharged by the BedJet will be
       reported as the climate entity's current temperature.
-- All other options from [Climate]({{< ref "components/climate/_index#config-climate" >}}).
+- All other options from [Climate](components/climate/_index#config-climate).
 
 ## `bedjet` Fan
 
@@ -140,7 +140,7 @@ fan:
 ### Configuration variables:
 
 - **bedjet_id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Bedjet component.
-- Other options from [Fan]({{< ref "components/fan/_index#config-fan" >}}).
+- Other options from [Fan](components/fan/_index#config-fan).
 
 ## `bedjet` Sensor
 
@@ -160,11 +160,11 @@ sensor:
 
 - **outlet_temperature** (*Optional*): If specified, the temperature of the air being
   discharged from the BedJet will be reported as a sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **ambient_temperature** (*Optional*): If specified, the temperature of the room the
   BedJet is in will be reported as a sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 
 ## Known issues:
 
@@ -187,7 +187,7 @@ configuration. If this occurs, see the previous note about adding disconnect swi
 and toggle those off while performing the installation. This will free up resources
 on the ESP and allow the installation to complete.
 
-Additionally, you may use an [ota.on_begin]({{< ref "components/ota/_index#ota-on_begin" >}}) [Automation]({{< ref "automations/_index#automation" >}})
+Additionally, you may use an [ota.on_begin](components/ota/_index#ota-on_begin) [Automation](automations/_index#automation)
 to do this automatically:
 
 ```yaml

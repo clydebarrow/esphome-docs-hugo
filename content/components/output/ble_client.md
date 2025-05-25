@@ -40,7 +40,7 @@ output:
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID to use for code generation, and for reference by dependent components.
 - **require_response** (*Optional*, boolean): Control whether to require a remote response from the device when writing.
   Whether or not this is required will vary by device. Defaults to `false`
-- All other options from [Output]({{< ref "components/output/_index#config-output" >}}).
+- All other options from [Output](components/output/_index#config-output).
 
 ## See Also
 

@@ -33,13 +33,13 @@ The only difference is that the platform won't be loaded in OTA safe mode, while
 {{< /note >}}
 ## Configuration variables:
 
-- **pin** (*Optional*, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to operate the LED on.
+- **pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): The GPIO pin to operate the LED on.
 - **output** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the binary [Output Component]({{< ref "components/output/_index#output" >}}) to use for this light.
-- All other options from [Light]({{< ref "components/light/_index#config-light" >}}).
+- All other options from [Light](components/light/_index#config-light).
 
 {{< note >}}
 If your Status LED is in an active-LOW mode (such as with the D1 Mini ESP8266 boards), use the
-`inverted` option of the [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}}):
+`inverted` option of the [Pin Schema](guides/configuration-types#config-pin_schema):
 
 ```yaml
 pin:

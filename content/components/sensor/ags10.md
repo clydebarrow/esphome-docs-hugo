@@ -8,7 +8,7 @@ title: "AGS10 Volatile Organic Compound (VOC) Sensor"
 The `ags10` sensor platform VOC sensor allows you to use your ASAIR AGS10
 ([datasheet](http://www.aosong.com/userfiles/files/Datasheet%20AGS10.pdf),
 `ASAIR`_ ) sensors with
-ESPHome. The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is
+ESPHome. The [I²C Bus](components/i2c#i2c) is
 required to be set up in your configuration for this sensor to work.
 
 {{< note >}}
@@ -31,15 +31,15 @@ sensor:
 ## Configuration variables:
 
 - **tvoc** (**Required**): The information for the total Volatile Organic Compounds sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **address** (*Optional*, int): Manually specify the I²C address of
   the sensor. Defaults to `0x1A`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
   sensor. Defaults to `60s`.
 - **version** (*Optional*): The firmware version of the sensor.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 - **resistance** (*Optional*): The initial value of the sensor resistance.
-  All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  All options from [Sensor](components/sensor/_index#config-sensor).
 
 ## Actions:
 

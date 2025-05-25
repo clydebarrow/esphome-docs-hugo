@@ -122,7 +122,7 @@ binary_sensor:
 ### Pin configuration variables:
 
 - **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23016 component.
-- All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
+- All other options from [Pin Schema](guides/configuration-types#config-pin_schema)
 
 
 {{< anchor "mcp23017-label" >}}
@@ -132,7 +132,7 @@ binary_sensor:
 The MCP23017 component allows you to use MCP23017 I/O expanders
 ([datasheet](http://ww1.microchip.com/downloads/en/devicedoc/20001952c.pdf),
 [Adafruit](https://www.adafruit.com/product/732)) in ESPHome.
-It uses the [I²C Bus]({{< ref "components/i2c#i2c" >}}) for communication.
+It uses the [I²C Bus](components/i2c#i2c) for communication.
 
 Once configured, you can use any of the 16 pins as
 pins for your projects. Within ESPHome they emulate a real internal GPIO pin
@@ -188,7 +188,7 @@ binary_sensor:
 
 - **mcp23xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the MCP23017 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
-- All other options from [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})
+- All other options from [Pin Schema](guides/configuration-types#config-pin_schema)
 
 
 ## See Also

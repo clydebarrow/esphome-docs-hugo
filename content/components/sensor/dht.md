@@ -43,11 +43,11 @@ sensor:
 - **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the DHT bus is connected.
 - **temperature** (**Required**): The information for the temperature sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **humidity** (**Required**): The information for the humidity sensor
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 
 - **model** (*Optional*, int): Manually specify the DHT model, can be

@@ -41,7 +41,7 @@ speaker:
 - **mclk_multiple** (*Optional*, enum): The multiple of the MCLK frequency to the sample rate. Must be divisible by 3 if using 24 bits per sample. One of `128`, `256`, `384`, `512`. Defaults to `256`.
 - **use_apll** (*Optional*, boolean): I2S using APLL as main I2S clock, enable it to get accurate clock. Defaults to `false`.
 - **i2s_mode** (*Optional*, enum): The I²S mode to use. One of `primary` (clock driven by the host) or `secondary` (clock driven by the attached device). Defaults to `primary`.
-- **i2s_audio_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the [I²S Audio]({{< ref "components/i2s_audio#i2s_audio" >}}) you wish to use for this speaker.
+- **i2s_audio_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the [I²S Audio](components/i2s_audio#i2s_audio) you wish to use for this speaker.
 - **i2s_comm_fmt** (*Optional*, enum): The I²S communication standard format used by this speaker.
 
   - `stand_i2s` (Default)
@@ -56,11 +56,11 @@ speaker:
   - `pcm_long`
 - **buffer_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of the internal ring buffer. Larger values can reduce stuttering but uses more memory. Defaults to `500ms`.
 - **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): How long to wait after finishing playback before releasing the bus. Set to `never` to never stop the speaker due to a timeout. Defaults to `500ms`.
-- All other options from [Speaker Component]({{< ref "components/speaker/_index#config-speaker" >}}).
+- All other options from [Speaker Component](components/speaker/_index#config-speaker).
 
 ### External DAC
 
-- **i2s_dout_pin** (**Required**, [Pin Schema]({{< ref "guides/configuration-types#config-pin_schema" >}})): The GPIO pin to use for the I²S DOUT (Data Out) signal.
+- **i2s_dout_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The GPIO pin to use for the I²S DOUT (Data Out) signal.
 
 For best results, keep the wires as short as possible.
 

@@ -7,7 +7,7 @@ title: "SGP30 CO₂ and Volatile Organic Compound Sensor"
 
 The `sgp30` sensor platform allows you to use your Sensirion SGP30 multi-pixel gas
 ([datasheet](https://sensirion.com/media/documents/984E0DD5/61644B8B/Sensirion_Gas_Sensors_Datasheet_SGP30.pdf)) sensors or the SVM30 breakout-boards  ([product page](https://sensirion.com/products/catalog/SVM30/)) with ESPHome.
-The [I²C Bus]({{< ref "components/i2c#i2c" >}}) is required to be set up in your configuration for this sensor to work.
+The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
 
 {{< img src="eco2-tvoc.png" alt="Image" width="80.0%" class="center" >}}
 
@@ -30,11 +30,11 @@ sensor:
 
 - **eco2** (**Required**): The information for the CO₂eq. sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **tvoc** (**Required**): The information for the total Volatile Organic Compounds sensor.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **store_baseline** (*Optional*, boolean): Store the sensor baselines persistently when calculated or updated.
   Defaults to yes.
@@ -55,11 +55,11 @@ Advanced:
 
 - **eco2_baseline** (*Optional*): The information for the CO₂eq. baseline value sensor. Baseline value is published in decimals.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **tvoc_baseline** (*Optional*): The information for the TVOC baseline value sensor. Baseline value is published in decimals.
 
-  - All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
+  - All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **compensation** (*Optional*): The block containing sensors used for compensation. Both values must be supplied in order to be able to generate the absolute humidity to be reported to the sensor.
 

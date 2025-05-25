@@ -10,7 +10,6 @@ import re
 import csv
 import argparse
 import shutil
-from operator import truediv
 
 # Global anchor map to store all anchors and their document paths
 anchor_map = {}
@@ -38,7 +37,6 @@ def find_included_files(file_path):
 
     Args:
         file_path: Path to the file to parse
-        base_dir: Base directory for resolving relative paths
 
     Returns:
         List of absolute paths to included files
@@ -84,7 +82,7 @@ def build_anchor_map(input_dir):
     
     for root, _, files in os.walk(input_dir):
         for file in files:
-            rst_file = os.path.join(root, file)
+            rst_file = str(os.path.join(root, file))
             if not rst_file in included_files and file.endswith('.rst'):
                 rel_path = os.path.relpath(rst_file, input_dir)
                 doc_path = os.path.splitext(rel_path)[0]
@@ -1760,8 +1758,7 @@ def scan_image_references(input_dir):
         for file in files:
             if file.endswith('.rst'):
                 rst_file = os.path.join(root, file)
-                rel_path = os.path.relpath(rst_file, input_dir)
-                
+
                 with open(rst_file, 'r', encoding='utf-8') as f:
                     content = f.read()
                     lines = content.splitlines()

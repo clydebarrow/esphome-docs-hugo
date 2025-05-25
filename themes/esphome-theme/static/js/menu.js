@@ -4,19 +4,20 @@ const mobileWidthStop = parseInt(bodystyle.getPropertyValue('--mobile-width-stop
 const isMobile = (window.innerWidth <= mobileWidthStop);
 
 function openTOC() {
-    if (!isMobile) return;
+    const tocToggle = document.getElementById('toc-toggle');
+    if (!isMobile || !tocToggle) return;
     const tocPanel = document.getElementsByClassName('sidebar')[0];
     const overlay = document.getElementById('overlay');
-    const tocToggle = document.getElementById('toc-toggle');
     tocToggle.classList.add('open');
     tocPanel.classList.add('open');
     overlay.classList.add('show');
 }
 
 function closeTOC() {
+    const tocToggle = document.getElementById('toc-toggle');
+    if (!isMobile || !tocToggle) return;
     const tocPanel = document.getElementsByClassName('sidebar')[0];
     const overlay = document.getElementById('overlay');
-    const tocToggle = document.getElementById('toc-toggle');
     tocToggle.classList.remove('open');
     tocPanel.classList.remove('open');
     overlay.classList.remove('show');
@@ -27,9 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const tocToggle = document.getElementById('toc-toggle');
     const overlay = document.getElementById('overlay');
-
-    tocToggle.addEventListener('click', openTOC);
-    overlay.addEventListener('click', closeTOC);
+    if (tocToggle)
+        tocToggle.addEventListener('click', openTOC);
+    if (overlay)
+        overlay.addEventListener('click', closeTOC);
 
     const dropdownButtons = document.querySelectorAll('.dropbtn button');
 
@@ -106,6 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-button');
     const navLinks = document.querySelector('.nav-links');
     if (!hamburger || !navLinks) return;
+
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
     hamburger.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -119,17 +127,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         if (window.innerWidth > mobileWidthStop) return;
         if (!e.target.closest('.hamburger-button') && !e.target.closest('.nav-links')) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
+            closeMenu();
         }
     });
     // Close menu on resize to desktop
     window.addEventListener('resize', function() {
         if (window.innerWidth > mobileWidthStop) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
+            closeMenu();
         }
     });
 
@@ -240,6 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         document.querySelector('.theme-toggle').setAttribute('aria-label', `Toggle ${theme === 'dark' ? 'light' : 'dark'} mode`);
+        closeMenu();
     }
 
     // Theme toggle functionality

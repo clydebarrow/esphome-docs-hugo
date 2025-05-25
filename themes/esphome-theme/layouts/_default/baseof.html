@@ -35,7 +35,7 @@
 <div class="page-container">
     <div class="nav-container" id="nav-container">
         <nav class="sticky-nav">
-            {{ if ne .IsHome true }}
+            {{ if and (ne .IsHome true) (.Content) }}
                 <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents"
                         aria-expanded="false">
                     <i class="fa-solid fa-list"></i>

@@ -10,7 +10,7 @@ title: "Frequently Asked Questions"
 We're asked this *all the time.* As with all things engineering, "it depends". Based on the current state of hardware
 support within ESPHome, here's what we suggest:
 
-##### Recommended
+### Recommended
 
 - **ESP32**
 
@@ -32,7 +32,7 @@ support within ESPHome, here's what we suggest:
     - You're worried that the ESP32(-Sx) is "too powerful".
     - You need a lower-power device than the ESP32(-Sx) family offers.
 
-##### Not Recommended
+### Not Recommended
 
 - **ESP8266**
 
@@ -43,7 +43,7 @@ support within ESPHome, here's what we suggest:
   - The original NodeMCU, D1-Mini and ESP-01 are examples of boards which utilize an ESP8266; note that there are
     (pin-compatible) versions of these boards available which instead utilize a more modern ESP32 or variant.
 
-##### Additional Considerations
+### Additional Considerations
 
 - These recommendations are primarily for people who are starting from scratch and/or are new to ESPHome.
 - A lot of people already have a drawer full of ESP8266 boards -- we're not trying to stop you from using them! That
@@ -127,7 +127,7 @@ Before using `esptool`, make sure you know which serial port your board/serial a
     port's COM number.
 
 {{< /note >}}
-##### Erase flash
+### Erase flash
 
 This erases your microcontroller's flash memory -- nothing (settings, data, etc.) will remain!
 
@@ -135,7 +135,7 @@ This erases your microcontroller's flash memory -- nothing (settings, data, etc.
 esptool --port /dev/ttyUSB0 erase_flash
 
 ```
-##### Write flash
+### Write flash
 
 This will install ("flash") your binary (ESPHome) onto your microcontroller.
 
@@ -149,7 +149,7 @@ esptool --port /dev/ttyUSB0 write_flash 0x0 your_node_firmware.bin
 
 There are a number of reasons this may happen.
 
-##### Common Issues
+### Common Issues
 
 - You are **not using a USB data cable.** To reduce cost, many USB cables are designed for *battery charging only* and
   they are not capable of establishing the data connection required to communicate with your board.
@@ -158,7 +158,7 @@ There are a number of reasons this may happen.
 - If you're trying to install ESPHome onto your device from within a Docker container, be sure you are mounting the
   device into your container using `--device=/dev/ttyUSB0`.
 
-##### `esptool` Troubleshooting
+### `esptool` Troubleshooting
 
 If you're just seeing `Connecting....____....` on the screen and installation ("flashing") fails:
 

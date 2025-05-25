@@ -31,7 +31,7 @@ your configuration YAML.
 
 {{< anchor "speaker-play" >}}
 
-##### `speaker.play` Action
+### `speaker.play` Action
 
 This action will start playing raw audio data from the speaker.
 
@@ -56,7 +56,7 @@ Configuration variables:
 
 {{< anchor "speaker-stop" >}}
 
-##### `speaker.stop` Action
+### `speaker.stop` Action
 
 This action will stop playing audio data from the speaker and discard the unplayed data.
 
@@ -66,7 +66,7 @@ Configuration variables:
 
 {{< anchor "speaker-finish" >}}
 
-##### `speaker.finish` Action
+### `speaker.finish` Action
 
 This action will stop playing audio data from the speaker after all data **is** played.
 
@@ -76,7 +76,7 @@ Configuration variables:
 
 {{< anchor "speaker-mute_on" >}}
 
-##### `speaker.mute_on` Action
+### `speaker.mute_on` Action
 
 This action will mute the speaker.
 
@@ -86,7 +86,7 @@ Configuration variables:
 
 {{< anchor "speaker-mute_off" >}}
 
-##### `speaker.mute_off` Action
+### `speaker.mute_off` Action
 
 This action will unmute the speaker.
 
@@ -96,7 +96,7 @@ Configuration variables:
 
 {{< anchor "speaker-volume_set" >}}
 
-##### `speaker.volume_set` Action
+### `speaker.volume_set` Action
 
 This action will set the volume of the speaker.
 
@@ -127,7 +127,7 @@ your configuration YAML.
 
 {{< anchor "speaker-is_playing" >}}
 
-##### `speaker.is_playing` Condition
+### `speaker.is_playing` Condition
 
 This condition will check if the speaker is currently playing audio data.
 
@@ -137,7 +137,7 @@ Configuration variables:
 
 {{< anchor "speaker-is_stopped" >}}
 
-##### `speaker.is_stopped` Condition
+### `speaker.is_stopped` Condition
 
 This condition will check if the speaker is fully stopped audio data and is in idle mode.
 

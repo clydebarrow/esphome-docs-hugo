@@ -3,7 +3,7 @@ description: "Global Variables"
 title: "Global Variables"
 ---
 
-## Global Variables
+# Global Variables
 
 In some cases you might need to share a global variable across multiple lambdas. For example, global variables can be
 used to store the state of a garage door.
@@ -52,7 +52,7 @@ Configuration variables:
 
 {{< anchor "globals-set_action" >}}
 
-## `globals.set` Action
+# `globals.set` Action
 
 This [Action]({{< ref "automations/actions#config-action" >}}) allows you to change the value of a `global`
 variable without having to use the lambda syntax.
@@ -78,7 +78,7 @@ id(my_global_var) = 10;
 ```
 
 {{< /note >}}
-## See Also
+# See Also
 
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}

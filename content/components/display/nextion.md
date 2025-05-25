@@ -207,7 +207,7 @@ Several [Triggers]({{< ref "automations/actions#actions-trigger" >}}) are availa
 
 {{< anchor "nextion-on_setup" >}}
 
-##### `on_setup`
+#### `on_setup`
 
 This automation will be triggered when a connection is established with the Nextion display. This happens after boot
 and it may take some time (hundreds of milliseconds). It could be used to change some display element once start-up is
@@ -237,7 +237,7 @@ display:
 ```
 {{< anchor "nextion-on_sleep" >}}
 
-##### `on_sleep`/`on_wake`
+#### `on_sleep`/`on_wake`
 
 These automations will be triggered upon sleep or upon wake (respectively). The Nextion does not accept commands or
 updates while in sleep mode; these triggers may be used to cope with this. For example, you could use them to
@@ -245,7 +245,7 @@ updates while in sleep mode; these triggers may be used to cope with this. For e
 
 {{< anchor "nextion-on_page" >}}
 
-##### `on_page`
+#### `on_page`
 
 This automation is triggered when the page is changed on display. This includes both ESPHome-initiated and
 Nextion-initiated page changes. ESPHome initiates a page change by calling either the `goto_page("page_name")` or
@@ -281,7 +281,7 @@ Given the page ID, the appropriate components can be updated. Two strategies are
 ```
 {{< anchor "nextion-on_touch" >}}
 
-##### `on_touch`
+#### `on_touch`
 
 This automation is triggered when a component is pressed or released on the Nextion display.
 
@@ -305,7 +305,7 @@ on_touch:
 ```
 {{< anchor "nextion-on_buffer_overflow" >}}
 
-##### `on_buffer_overflow`
+#### `on_buffer_overflow`
 
 This automation is triggered when the Nextion display reports a serial buffer overflow. When this happens, the
 Nextion's buffer will continue to receive the new instructions, but all previous instructions are lost and the Nextion
@@ -325,7 +325,7 @@ on_buffer_overflow:
 
 {{< anchor "nextion-set_brightness" >}}
 
-##### `display.nextion.set_brightness`
+#### `display.nextion.set_brightness`
 
 You can use this [action]({{< ref "automations/actions#actions-action" >}}) to set the brightness of the Nextion's backlight.
 

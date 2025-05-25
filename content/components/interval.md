@@ -3,7 +3,7 @@ description: "Interval Component"
 title: "Interval Component"
 ---
 
-## Interval Component
+# Interval Component
 
 This component allows you to run actions at fixed time intervals. For example, if you want to toggle a switch every
 minute, you can use this component. Please note that it's possible to achieve the same thing with the
@@ -20,13 +20,13 @@ interval:
 ```
 If a startup delay is configured, the first execution of the actions will not occur before at least that time after boot.
 
-### Configuration variables:
+## Configuration variables:
 
 - **interval** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to execute the action with.
 - **startup_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): An optional startup delay - defaults to zero.
 - **then** (**Required**, [Action]({{< ref "automations/actions#config-action" >}})): The action to perform.
 
-## See Also
+# See Also
 
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}

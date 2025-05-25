@@ -1014,7 +1014,7 @@ LEDs, first 170 LEDs will be assigned to universe 1, while the remaining 19 LEDs
 It is possible to enable multiple light platforms to concurrently listen to the same universe, allowing the behavior
 to be replicated on multiple strips.
 
-##### E1.31 Component
+#### E1.31 Component
 
 The [E1.31 Effect]({{< ref "components/light/_index#e131-light-effect" >}}) requires a component hub for the `e131` light effect.
 

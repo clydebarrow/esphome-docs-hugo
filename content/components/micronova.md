@@ -46,7 +46,7 @@ micronova:
   enable_rx_pin: GPIOXX
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **enable_rx_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): Output pin to be used to switch the line between RX and TX.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval that the sensors should be checked.
@@ -72,7 +72,7 @@ text_sensor:
       name: Stove status
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **stove_state** (*Optional*): The current stove state.
   All options from [Text Sensor]({{< ref "components/text_sensor/_index#config-text_sensor" >}}).
@@ -101,7 +101,7 @@ sensor:
       name: Custom Address sensor
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **room_temperature** (*Optional*): Sensor that reads the stoves ambient room temperature.
   All options from [Sensor]({{< ref "components/sensor/_index#config-sensor" >}}).
@@ -134,7 +134,7 @@ number:
       name: Thermostat temperature
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **thermostat_temperature** (*Optional*): Number that holds the current stove thermostat value.
    - **step** (*Optional*): Temperature step. This value is used to multiply/devide the raw value when setting/reading the **thermostat_temperature**
@@ -161,7 +161,7 @@ button:
       memory_data: 0x08
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **custom_button** (*Optional*): Write the hex value **memory_data** to a **memory_location** and **memory_address**
   All options from [Button]({{< ref "components/button/_index#config-button" >}}).
@@ -181,7 +181,7 @@ switch:
       name: Stove on/off switch
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **stove** (*Optional*): Turn the stove on or off. This switch will also reflect the current stove state.
   If the **stove_state** is "Off" the switch will be off, in all other states, the switch wil be on.

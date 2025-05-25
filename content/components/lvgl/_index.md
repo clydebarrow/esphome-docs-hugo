@@ -317,7 +317,7 @@ LVGL follows CSS's [border-box model](https://developer.mozilla.org/en-US/docs/W
 
 You can adjust the appearance of widgets by changing their foreground, background, border color and/or font. Some widgets allow for more complex styling, effectively changing all or part of their appearance.
 
-##### Using Lambdas for Styling
+#### Using Lambdas for Styling
 
 Most LVGL style and widget properties can be set as either constant values or lambdas (which will be evaluated at run time).
 When using lambdas, the returned value must be of the type and within the range expected by the native LVGL library, which may not be the same
@@ -331,7 +331,7 @@ floating point, instead uses scaled integers. Properties with the following nati
 - **zoom** Zoom levels should be multiplied by 256 (valid range is 0 to 2560, corresponding to 0-10.0).
 - **percentage** To convert a fractional value to a percentage, use `lv_pct(value * 100)`
 
-##### Style properties
+#### Style properties
 
 These style properties may be applied to any widget, though not all widgets use all of them.
 

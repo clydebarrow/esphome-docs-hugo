@@ -34,7 +34,7 @@ For custom displays, the driver can be configured with the correct pins and dime
 specified, or a custom init sequence can be provided. Displays with 8 bit parallel interfaces are supported by
 using an octal SPI bus, so references here to parallel and octal SPI are equivalent.
 
-##### Driver chips
+### Driver chips
 
 | Driver Chip | Typical Dimensions |
 | --- | --- |
@@ -53,7 +53,7 @@ using an octal SPI bus, so references here to parallel and octal SPI are equival
 | CUSTOM | Customisable |
 
 
-##### Boards with integrated displays
+### Boards with integrated displays
 
 | Model | Manufacturer | Product Description |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ display:
     model: T_EMBED
 
 ```
-##### Configuration options
+### Configuration options
 
 All [graphical display configuration]({{< ref "components/display/_index#display-configuration" >}}) options are available, plus the following. For integrated display boards
 most of the configuration will be set by default, but can be overridden if needed.
@@ -129,7 +129,7 @@ default, but can be overridden in the config if needed.
 
 - **color_depth** (*Optional*): The color depth of the display buffer, expressed in bits. Options are `16` (default) and `8`. 8 bit depth will result in only 256 possible colors and should be used only if the microcontroller has limited memory. The driver will convert the 8 bit color to the display chip's required format.
 
-##### Advanced options
+### Advanced options
 
 - **init_sequence** (*Optional*): Allows custom initialisation sequences to be added. See below for more information.
 - **pixel_mode** (*Optional*): Select the interface mode for the display driver. Options are `16bit` (default) and `18bit`. Most displays require 16 bit mode, and it is preferred unless the display requires 18 bit mode.
@@ -142,7 +142,7 @@ default, but can be overridden in the config if needed.
 
 **Note:** The maximum achievable data rate will depend on the chip type (e.g. ESP32 vs ESP32-S3) the pins used (on ESP32 using the default SPI pins allows higher rates) and the connection type (on-board connections will support higher rates than long cables or DuPont wires.) If in doubt, start with a low speed and test higher rates to find what works. A MISO pin should preferably not be specified, as this will limit the maximum rate in some circumstances, and is not required if the SPI bus is used only for the display.
 
-### Additional inititialisation sequences
+#### Additional inititialisation sequences
 
 The `init_sequence` option allows additional configuration of the driver chip. Provided commands will be sent to the
 driver chip in addition to, and after the chosen model's pre-defined commands. It requires a list of byte sequences:
@@ -157,11 +157,11 @@ init_sequence:
 Each entry represents a single-byte command followed by zero or more data bytes. Delays can be inserted with the `delay` keyword followed by a time in milliseconds. The delay is not precise, but will be at least the specified time.
 If converting from other code, make sure the length byte, if present, is not copied as the length of each command sequence is determined by the number of bytes in the list.
 
-### CUSTOM model
+#### CUSTOM model
 
 The `CUSTOM` model selection is provided for otherwise unsupported displays, and requires both `dimensions:` and `init_sequence:` to be specfied. There is no pre-defined init sequence.
 
-### Using the `transform` options
+#### Using the `transform` options
 
 In most cases, the `rotation` option will be sufficient to orient the display correctly. However, some displays may require additional transformations. The `transform` option allows for these transformations to be applied in any of 8 different
 combinations. It may be necessary to experiment with different combinations to achieve the desired result. When using the `transform` option, the `rotation` option should not be set unless the display does not support axis-swapping.

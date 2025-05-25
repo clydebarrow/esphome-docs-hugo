@@ -21,7 +21,7 @@ For graphical displays, which offer the greatest flexibility, there are two opti
 
 {{< anchor "display-configuration" >}}
 
-### Configuration variables:
+## Configuration variables:
 
 All display components inherit these configuration variables.
 
@@ -40,7 +40,7 @@ All *graphical* displays also inherit these configuration variables.
 
 {{< anchor "display-engine" >}}
 
-## Display Rendering Engine
+### Display Rendering Engine
 
 ESPHome's own powerful rendering engine can handle many common tasks such as drawing basic shapes,
 printing text with fonts of your choice, or even rendering images.
@@ -96,7 +96,7 @@ are a pair of integers like `50, 50` which represent the shift to the right and 
 x always represents the horizontal axis (width) and y the vertical axis (height). And the convention in
 the rendering engine is always first specify the `x` coordinate and then the `y` coordinate.
 
-## Basic Shapes
+### Basic Shapes
 
 Now that you know a bit more about ESPHome's coordinate system, let's draw some basic shapes like lines, rectangles, circles or even polygons:
 
@@ -196,7 +196,7 @@ You can view the full API documentation for the rendering engine in the "API Ref
 
 {{< anchor "display-static_text" >}}
 
-## Drawing Static Text
+### Drawing Static Text
 
 To be able to display text, you need to prepare some fonts. ESPHome's [font renderer]({{< ref "components/font#display-fonts" >}}) allows you to use OpenType/TrueType/Bitmap fonts for your texts. This is very flexiblle because you can prepare various sets of fonts at different sizes with a different number of glyphs which is extremely convenient when we're talking about flash space.
 
@@ -257,7 +257,7 @@ display:
 
 {{< anchor "display-printf" >}}
 
-## Formatted Text
+### Formatted Text
 
 Static text by itself is not too impressive. What we really want is to display *dynamic* content like sensor values
 on the display!. That's where `printf` comes in. `printf` is a formatting engine from the C era and ESPHome
@@ -373,13 +373,13 @@ you can use the {{< docref "/components/text_sensor/mqtt_subscribe" >}} (see the
 {{< /note >}}
 {{< anchor "display-strftime" >}}
 
-## Displaying Time
+### Displaying Time
 
 You can display current time using a time component. Please see the example [here]({{< ref "components/time/_index#strftime" >}}).
 
 {{< anchor "clipping" >}}
 
-## Screen Clipping
+### Screen Clipping
 
 Screen clipping can be useful when you just want to show a part of an image or make sure that what you draw on the screen does not go outside a specific region on the screen.
 
@@ -432,7 +432,7 @@ With `is_clipping();` tells you if clipping is activated.
 
 {{< anchor "config-color" >}}
 
-## Color
+### Color
 
 When using RGB-capable displays in ESPHome you may wish to use custom colors.
 A `color` component exists for just this purpose:
@@ -482,7 +482,7 @@ RGB displays use red, green, and blue, while grayscale displays may use white.
 
 {{< anchor "display-pages" >}}
 
-## Display Pages
+### Display Pages
 
 Certain display types also allow you to show "pages". With pages you can create drawing lambdas
 that you can switch between. For example with pages you can set up 3 screens, each with
@@ -592,9 +592,9 @@ Additionally the old page will be given as the variable `from` and the new one a
 
 {{< anchor "troubleshooting" >}}
 
-## Troubleshooting
+### Troubleshooting
 
-## Using the Color Test Card
+### Using the Color Test Card
 
 If you're experiencing issues with your color display, the `show_test_card: true` option can help you to identify what might be wrong.
 
@@ -614,7 +614,7 @@ be sure to **include a link to where you purchased the display** so that we can 
 For displays in 8 bit mode you will see distinct color blocks rather than a smooth gradient.
 
 {{< /note >}}
-## See Also
+### See Also
 
 - {{< apiref "display/display_buffer.h" "display/display_buffer.h" >}}
 - {{< docref "/components/lvgl/index" "LVGL" >}}

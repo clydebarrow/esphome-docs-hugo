@@ -47,7 +47,7 @@ speaker:
 
 {{< anchor "mixer_speaker-apply_ducking" >}}
 
-##### `mixer_speaker.apply_ducking` Action
+### `mixer_speaker.apply_ducking` Action
 
 This action ducks (reduces the volume of) the media stream.
 

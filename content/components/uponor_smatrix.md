@@ -67,7 +67,7 @@ uponor_smatrix:
   time_id: my_time
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **address** (*Optional*, int): The 16 bit system/controller address. This will be automatically detected from the bus if not specified. See [Getting started]({{< ref "components/uponor_smatrix#uponor-gettingstarted" >}}) on how to find the address.
 - **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component]({{< ref "components/uart#uart" >}}) if you want to use multiple UART buses.
@@ -89,7 +89,7 @@ climate:
     name: Thermostat Living Room
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **address** (**Required**, int): The 16 bit device address of the thermostat. See [Getting started]({{< ref "components/uponor_smatrix#uponor-gettingstarted" >}}) on how to find the address.
 - **uponor_smatrix_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the `uponor_smatrix` hub component if you want to use multiple hub components on one ESPHome device.
@@ -111,7 +111,7 @@ sensor:
       name: Thermostat Target Temperature Living Room
 
 ```
-##### Configuration variables:
+### Configuration variables:
 
 - **address** (**Required**, int): The 16 bit device address of the thermostat. See [Getting started]({{< ref "components/uponor_smatrix#uponor-gettingstarted" >}}) on how to find the address.
 - **uponor_smatrix_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the `uponor_smatrix` hub component if you want to use multiple hub components on one ESPHome device.

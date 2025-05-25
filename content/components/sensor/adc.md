@@ -126,7 +126,7 @@ sensor:
     name: "VCC Voltage"
 
 ```
-##### On ESP8266
+### On ESP8266
 
 On the ESP8266 you can even measure the voltage the *chip is getting*. This can be useful in situations
 where you want to shut down the chip if the voltage is low when using a battery.
@@ -137,7 +137,7 @@ To measure the VCC voltage, set `pin:` to `VCC` and make sure nothing is connect
 To avoid confusion: It measures the voltage at the chip, and not at the VCC pin of the board. It should usually be around 3.3V.
 
 {{< /note >}}
-##### On Raspberry Pi Pico
+### On Raspberry Pi Pico
 
 On the Raspberry Pi Pico and Pico W the ADC can measure VSYS voltage.
 

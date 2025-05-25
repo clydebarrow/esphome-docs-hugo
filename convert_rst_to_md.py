@@ -173,7 +173,22 @@ def convert_rst_to_md(lines, filename):
     # Use explicit title if available, otherwise use the heading title
     if explicit_title:
         title = explicit_title
-    
+
+    # Find all headings and collate the order
+    heading_underlines = []
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if line and not line.startswith(".") and len(line.lstrip()) == len(line) and i + 1 < len(lines):
+            underline = lines[i+1]
+            if re.match(r'^[-_=#+*~^".]+', underline) and len(underline) >= len(line):
+                underchar = underline[0]
+                if all(x == underchar for x in underline):
+                    if underchar not in heading_underlines:
+                        heading_underlines.append(underchar)
+        i += 1
+
     # Extract SEO data
     in_seo = False
     seo_lines = []
@@ -321,36 +336,17 @@ def convert_rst_to_md(lines, filename):
             md_lines.extend(table_lines)
             i = new_i
             continue
-        
-        # Handle equals-style headings (main headings)
-        if i + 1 < len(lines) and re.match(r'^=+$', lines[i + 1]) and line:
-            md_lines.append(f"# {line}")
-            i += 2
-            continue
-        
-        # Handle dash-style headings (section headings)
-        if i + 1 < len(lines) and re.match(r'^[-`.]+$', lines[i + 1]) and line:
-            md_lines.append(f"## {line}")
-            i += 2
-            continue
 
-        # Handle star-style headings (section headings)
-        if i + 1 < len(lines) and re.match(r'^\*+$', lines[i + 1]) and line:
-            md_lines.append(f"### {line}")
-            i += 2
-            continue
-
-        # Handle hash-style headings (section headings)
-        if i + 1 < len(lines) and re.match(r'^#+$', lines[i + 1]) and line:
-            md_lines.append(f"### {line}")
-            i += 2
-            continue
-
-        # Handle caret and tilde-style headings (subsection headings)
-        if i + 1 < len(lines) and re.match(r'(^\^+|^~+)$', lines[i + 1]) and line:
-            md_lines.append(f"##### {line}")
-            i += 2
-            continue
+        # Handle headings
+        if line and i + 1 < len(lines) and len(lines[i + 1]) >= len(line):
+            next_line = lines[i + 1]
+            underchar = next_line[0]
+            if underchar in heading_underlines and all(x == underchar for x in next_line):
+                level = heading_underlines.index(underchar) + 1
+                prefix = "#" * level
+                md_lines.append(f"{prefix} {line}")
+                i += 2
+                continue
         
         # Handle code blocks - check for both standalone and nested code blocks
         if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):

@@ -41,7 +41,7 @@ you want the light to use that name, you can set `name: None`.
 
 ## Automations
 
-##### `update.perform` Action
+### `update.perform` Action
 
 This action allows you to trigger the update entity to start the update process.
 
@@ -51,7 +51,7 @@ Configuration variables:
 - **force_update** (*Optional*, boolean): Perform the update even if the device is already running the same version.
   Defaults to `false`.
 
-##### `update.is_available` Condition
+### `update.is_available` Condition
 
 This condition checks if an update is available for the device.
 

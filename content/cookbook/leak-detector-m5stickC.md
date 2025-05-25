@@ -1,9 +1,13 @@
 ---
-description: "ESP32 Water Leak Detector (with notification)"
+description: "Water leak detector with ESPHome on an M5StickC ESP32"
 title: "ESP32 Water Leak Detector (with notification)"
+params:
+  seo:
+    description: Water leak detector with ESPHome on an M5StickC ESP32
 ---
 
-{{< seo description="" image="" >}}
+|  ESP32 Water Leak Detector (with notification) |
+| --- |
 
 Using the ESP32's capacitive touch GPIOs, it's relatively easy to build a water leak detector using ESPHome.  M5StickC was chosen as a platform due to the integrated Grove connector for clean connections and the fact it's well housed.  The built-in display is a bonus, but not strictly necessary.  Notifications are performed via HomeAssistant's 'alert' and 'notify' facilities, which send via Pushover to iOS & Android.
 

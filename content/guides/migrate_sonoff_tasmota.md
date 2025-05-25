@@ -1,9 +1,12 @@
 ---
-description: "Migrating from Tasmota"
+description: "Migration guide for installing ESPHome on ESPs running Tasmota."
 title: "Migrating from Tasmota"
+params:
+  seo:
+    description: Migration guide for installing ESPHome on ESPs running Tasmota.
+    image: tasmota.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Migrating from previous Tasmota setups is very easy. You just need to have
 ESPHome create a binary for you and then upload that in the Tasmota web interface.

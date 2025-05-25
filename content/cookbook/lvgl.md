@@ -1,9 +1,14 @@
 ---
-description: "LVGL: Tips and Tricks"
+description: "Recipes for common use cases of LVGL Displays with ESPHome"
 title: "LVGL: Tips and Tricks"
+params:
+  seo:
+    description: Recipes for common use cases of LVGL Displays with ESPHome
+    image: /images/lvgl.png
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "lvgl-cookbook" >}}
+
 
 Here are a couple recipes for various interesting things you can do with {{< docref "/components/lvgl" >}} in ESPHome.
 

@@ -1,9 +1,12 @@
 ---
-description: "Packages"
+description: "How to use packages in ESPHome"
 title: "Packages"
+params:
+  seo:
+    description: How to use packages in ESPHome
+    image: settings.svg
 ---
 
-{{< seo description="" image="" >}}
 
 When you have many ESPHome devices (or are producing and distributing them at scale), a common need tends to surface:
 configuration modularization. You'll likely want to break your configuration into common (groups of) elements, building

@@ -1,9 +1,11 @@
 ---
-description: "Modbus Controller Switch"
+description: "Instructions for setting up a modbus_controller device sensor."
 title: "Modbus Controller Switch"
+params:
+  seo:
+    description: Instructions for setting up a modbus_controller device sensor.
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` switch platform creates a switch from a modbus_controller component
 and requires {{< docref "/components/modbus_controller" >}} to be configured.

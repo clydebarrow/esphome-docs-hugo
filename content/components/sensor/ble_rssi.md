@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Bluetooth Low Energy RSSI Sensor"
+description: "Instructions for setting up RSSI sensors for the ESP32 BLE."
 title: "ESP32 Bluetooth Low Energy RSSI Sensor"
+params:
+  seo:
+    description: Instructions for setting up RSSI sensors for the ESP32 BLE.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ble_rssi` sensor platform lets you track the RSSI value or signal strength of a
 BLE device. See [the binary sensor setup](components/binary_sensor/ble_presence#esp32_ble_tracker-setting_up_devices) for

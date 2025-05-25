@@ -1,9 +1,12 @@
 ---
-description: "MCP230xx I/O Expander"
+description: "Instructions for setting up MCP23008, MCP23016 or MCP23017 digital port expander in ESPHome."
 title: "MCP230xx I/O Expander"
+params:
+  seo:
+    description: Instructions for setting up MCP23008, MCP23016 or MCP23017 digital port expander in ESPHome.
+    image: mcp230xx.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The Microchip MCP230xx series of general purpose, parallel I/O expansion for I²C bus applications.
 

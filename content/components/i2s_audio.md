@@ -1,9 +1,14 @@
 ---
-description: "I²S Audio Component"
+description: "Instructions for setting up I²S based devices in ESPHome."
 title: "I²S Audio Component"
+params:
+  seo:
+    description: Instructions for setting up I²S based devices in ESPHome.
+    image: i2s_audio.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "i2s_audio" >}}
+
 
 The `i2s_audio` component allows for sending and receiving audio via I²S.
 This component only works on ESP32 based chips.

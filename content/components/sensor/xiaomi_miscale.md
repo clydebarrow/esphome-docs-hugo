@@ -1,9 +1,12 @@
 ---
-description: "Xiaomi Miscale Sensors"
+description: "Instructions for setting up Xiaomi Miscale bluetooth-based sensors in ESPHome."
 title: "Xiaomi Miscale Sensors"
+params:
+  seo:
+    description: Instructions for setting up Xiaomi Miscale bluetooth-based sensors in ESPHome.
+    image: xiaomi_miscale.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `xiaomi_miscale` sensor platform lets you track the output of Xiaomi Bluetooth Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}. This component will track, for example, the weight of the device every time the sensor sends out a BLE broadcast. Contrary to other implementations, `xiaomi_miscale` listens passively to advertisement packets and does not pair with the device. Hence ESPHome has no impact on battery life.
 

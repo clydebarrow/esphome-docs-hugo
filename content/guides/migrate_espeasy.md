@@ -1,9 +1,12 @@
 ---
-description: "Migrating from ESPEasy"
+description: "Migration guide for installing ESPHome on ESPs running ESPEasy."
 title: "Migrating from ESPEasy"
+params:
+  seo:
+    description: Migration guide for installing ESPHome on ESPs running ESPEasy.
+    image: espeasy.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Migrating from previous ESPEasy setups is very easy. You just need to have
 ESPHome create a binary for you and then upload that in the ESPEasy web interface.

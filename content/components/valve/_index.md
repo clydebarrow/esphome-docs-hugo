@@ -1,9 +1,12 @@
 ---
-description: "Valve Component"
+description: "Instructions for setting up base valves in ESPHome."
 title: "Valve Component"
+params:
+  seo:
+    description: Instructions for setting up base valves in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `valve` component is a generic representation of valves in ESPHome. A valve can (currently) either be *closed* or
 *open* and supports three commands: *open*, *close* and *stop*.

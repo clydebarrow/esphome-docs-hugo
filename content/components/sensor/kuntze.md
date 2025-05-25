@@ -1,9 +1,12 @@
 ---
-description: "Kuntze pool monitor"
+description: "Instructions for setting up Kuntze pool monitor in ESPHome."
 title: "Kuntze pool monitor"
+params:
+  seo:
+    description: Instructions for setting up Kuntze pool monitor in ESPHome.
+    image: kuntze.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `kuntze` component allows you to integrate the Kuntze water measurement
 instrument in ESPHome. It uses [UART](components/uart#uart) (ModBUS) for communication.

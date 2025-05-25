@@ -1,9 +1,12 @@
 ---
-description: "Tuya Climate"
+description: "Instructions for setting up a Tuya climate device."
 title: "Tuya Climate"
+params:
+  seo:
+    description: Instructions for setting up a Tuya climate device.
+    image: air-conditioner.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` climate platform creates a climate device from a tuya component.
 

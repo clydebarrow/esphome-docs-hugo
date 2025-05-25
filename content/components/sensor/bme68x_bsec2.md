@@ -1,9 +1,12 @@
 ---
-description: "BME68x Temperature, Humidity, Pressure & Gas Sensor via BSEC2"
+description: "Instructions for setting up BME68x temperature, humidity, pressure, and gas sensors via BSEC2."
 title: "BME68x Temperature, Humidity, Pressure & Gas Sensor via BSEC2"
+params:
+  seo:
+    description: Instructions for setting up BME68x temperature, humidity, pressure, and gas sensors via BSEC2.
+    image: bme680.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

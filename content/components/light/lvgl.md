@@ -1,9 +1,12 @@
 ---
-description: "LVGL Light"
+description: "Instructions for setting up an LVGL widget light."
 title: "LVGL Light"
+params:
+  seo:
+    description: Instructions for setting up an LVGL widget light.
+    image: ../images/lvgl_c_lig.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` light platform creates a light from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.

@@ -1,9 +1,12 @@
 ---
-description: "Inkbird IBS-TH1, IBS-TH1 Mini, and IBS-TH2 BLE Sensor"
+description: "Instructions for setting up Inkbird IBS-TH1/TH2 Bluetooth-based temperature and humidity sensors in ESPHome."
 title: "Inkbird IBS-TH1, IBS-TH1 Mini, and IBS-TH2 BLE Sensor"
+params:
+  seo:
+    description: Instructions for setting up Inkbird IBS-TH1/TH2 Bluetooth-based temperature and humidity sensors in ESPHome.
+    image: inkbird_isbth1_mini.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `inkbird_ibsth1_mini` sensor platform lets you track the output of Inkbird IBS-TH1, IBS-TH1 Mini, and IBS-TH2 Bluetooth
 Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}. This component will track the

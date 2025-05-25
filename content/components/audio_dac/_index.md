@@ -1,9 +1,12 @@
 ---
-description: "Audio DAC Core"
+description: "Instructions for using ESPHome's Audio DAC Core component."
 title: "Audio DAC Core"
+params:
+  seo:
+    description: Instructions for using ESPHome's Audio DAC Core component.
+    image: i2s_audio.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `audio_dac` component allows your ESPHome devices to use audio DAC hardware components, allowing the playback of
 audio via the microcontroller from a range of sources via {{< docref "/components/media_player" >}}.

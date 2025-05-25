@@ -1,9 +1,12 @@
 ---
-description: "Tuya Sensor"
+description: "Instructions for setting up a Tuya device sensor."
 title: "Tuya Sensor"
+params:
+  seo:
+    description: Instructions for setting up a Tuya device sensor.
+    image: tuya.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` sensor platform creates a sensor from a tuya component
 and requires {{< docref "/components/tuya" >}} to be configured.

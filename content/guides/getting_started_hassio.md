@@ -1,9 +1,12 @@
 ---
-description: "Getting Started with ESPHome and Home Assistant"
+description: "Getting Started guide for installing ESPHome Device Builder as a Home Assistant add-on and creating a basic configuration."
 title: "Getting Started with ESPHome and Home Assistant"
+params:
+  seo:
+    description: Getting Started guide for installing ESPHome Device Builder as a Home Assistant add-on and creating a basic configuration.
+    image: home-assistant.svg
 ---
 
-{{< seo description="" image="" >}}
 
 In this guide, we'll walk you through how to install ESPHome onto a device/microcontroller using the ESPHome Device
 Builder, installed as a Home Assistant add-on.

@@ -1,9 +1,12 @@
 ---
-description: "Sonoff D1 Dimmer"
+description: "Instructions for setting up a Sonoff D1 dimmer switch."
 title: "Sonoff D1 Dimmer"
+params:
+  seo:
+    description: Instructions for setting up a Sonoff D1 dimmer switch.
+    image: brightness-medium.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sonoff_d1` light platform creates a simple brightness-only light for the
 hardware found in [Sonoff D1 dimmer](https://itead.cc/product/sonoff-d1-smart-dimmer-switch/). Installations with Sonoff RM433 433MHz radio

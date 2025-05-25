@@ -1,9 +1,12 @@
 ---
-description: "Inkplate 5, 6, 10 and 6 Plus"
+description: "Instructions for setting up Inkplate E-Paper displays in ESPHome."
 title: "Inkplate 5, 6, 10 and 6 Plus"
+params:
+  seo:
+    description: Instructions for setting up Inkplate E-Paper displays in ESPHome.
+    image: inkplate6.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 All-in-one e-paper display `Inkplate 5`, `Inkplate 6`, `Inkplate 10` and `Inkplate 6 Plus`.
 

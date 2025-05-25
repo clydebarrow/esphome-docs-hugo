@@ -1,9 +1,12 @@
 ---
-description: "Quad SPI Displays"
+description: "Instructions for setting up quad SPI displays."
 title: "Quad SPI Displays"
+params:
+  seo:
+    description: Instructions for setting up quad SPI displays.
+    image: t4-s3.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "qspi_dbi" >}}
 

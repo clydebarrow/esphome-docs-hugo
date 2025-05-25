@@ -1,9 +1,11 @@
 ---
-description: "Command Line Interface"
+description: "Documentation for the command line interface of ESPHome."
 title: "Command Line Interface"
+params:
+  seo:
+    description: Documentation for the command line interface of ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 ## Base Usage
 

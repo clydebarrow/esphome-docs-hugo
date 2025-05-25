@@ -1,9 +1,12 @@
 ---
-description: "Haier Climate Switches"
+description: "Instructions for setting up additional switches for Haier climate devices."
 title: "Haier Climate Switches"
+params:
+  seo:
+    description: Instructions for setting up additional switches for Haier climate devices.
+    image: haier.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Additional switches to support additional features for Haier AC.
 

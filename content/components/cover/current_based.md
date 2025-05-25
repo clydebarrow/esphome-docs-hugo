@@ -1,9 +1,12 @@
 ---
-description: "Current Based Cover"
+description: "Instructions for setting up current-based covers in ESPHome."
 title: "Current Based Cover"
+params:
+  seo:
+    description: Instructions for setting up current-based covers in ESPHome.
+    image: window-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `current_based` cover platform allows you to create covers with position control by using current
 sensors to detect the fully-open and fully-closed states. This is pretty useful when using motors with

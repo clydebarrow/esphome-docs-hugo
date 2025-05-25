@@ -1,9 +1,12 @@
 ---
-description: "Over-the-Air Updates"
+description: "Instructions for setting up the Over-The-Air (OTA) component to allow remote updating of devices."
 title: "Over-the-Air Updates"
+params:
+  seo:
+    description: Instructions for setting up the Over-The-Air (OTA) component to allow remote updating of devices.
+    image: system-update.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "config-ota" >}}
 

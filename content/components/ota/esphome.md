@@ -1,9 +1,12 @@
 ---
-description: "OTA Updates"
+description: "Instructions for setting up ESPHome's Over-The-Air (OTA) platform to allow remote updating of devices."
 title: "ESPHome OTA Updates"
+params:
+  seo:
+    description: Instructions for setting up ESPHome's Over-The-Air (OTA) platform to allow remote updating of devices.
+    image: system-update.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "config-ota_esphome" >}}
 

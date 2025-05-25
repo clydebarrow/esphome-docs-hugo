@@ -1,9 +1,12 @@
 ---
-description: "Honeywell HumidIcon (I2C HIH series) Temperature & Humidity Sensor"
+description: "Instructions for setting up Honeywell HumidIcon temperature and humidity sensors."
 title: "Honeywell HumidIcon (I2C HIH series) Temperature & Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up Honeywell HumidIcon temperature and humidity sensors.
+    image: honeywellhih.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 Honeywell HumidIcon (I2C HIH series) Temperature & Humidity sensors with ESPHome ([website](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/humidity-with-temperature-sensors),
 [datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/humidity-with-temperature-sensors/common/documents/sps-siot-humidity-sensors-line-guide-009034-7-en-ciid-54931.pdf?download=false)).

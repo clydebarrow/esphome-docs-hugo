@@ -1,9 +1,12 @@
 ---
-description: "WiFi Info Text Sensor"
+description: "Instructions for setting up WiFi info text sensors."
 title: "WiFi Info Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up WiFi info text sensors.
+    image: network-wifi.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `wifi_info` text sensor platform exposes different WiFi information
 via text sensors.

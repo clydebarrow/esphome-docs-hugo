@@ -1,9 +1,14 @@
 ---
-description: "UDP Component"
+description: "Instructions for setting up a UDP component on ESPHome"
 title: "UDP Component"
+params:
+  seo:
+    description: Instructions for setting up a UDP component on ESPHome
+    image: udp.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "udp" >}}
+
 
 This component allows reception and transmission of data over a network using the [User Datagram Protocol (UDP)](https://en.wikipedia.org/wiki/User_Datagram_Protocol).
 In conjunction with the [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) it can be used to broadcast sensor data.

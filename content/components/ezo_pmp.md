@@ -1,9 +1,12 @@
 ---
-description: "Atlas Scientific Peristaltic Pump"
+description: "Instructions for setting up an Atlas Scientific Peristaltic Pump in ESPHome"
 title: "Atlas Scientific Peristaltic Pump"
+params:
+  seo:
+    description: Instructions for setting up an Atlas Scientific Peristaltic Pump in ESPHome
+    image: ezo-pmp.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ezo_pmp` component allows you to use an Atlas Scientific Peristaltic Pump with ESPHome.
 Both the EZO-PMP ([datasheet](https://files.atlas-scientific.com/EZO_PMP_Datasheet.pdf))

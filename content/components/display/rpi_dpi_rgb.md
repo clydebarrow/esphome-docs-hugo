@@ -1,9 +1,12 @@
 ---
-description: "RPI_DPI_RGB Display Driver"
+description: "Instructions for setting up 16 bit \"RPI_DPI_RGB\" parallel displays"
 title: "RPI_DPI_RGB Display Driver"
+params:
+  seo:
+    description: Instructions for setting up 16 bit "RPI_DPI_RGB" parallel displays
+    image: waveshare_touch-s3.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "rpi_dpi_rgb" >}}
 

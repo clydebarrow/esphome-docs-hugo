@@ -1,9 +1,12 @@
 ---
-description: "Datetime Component"
+description: "Instructions for setting up datetime components in ESPHome."
 title: "Datetime Component"
+params:
+  seo:
+    description: Instructions for setting up datetime components in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome has support for components to create a datetime entity. A datetime entity
 currently represents a date that can be set by the user/frontend.

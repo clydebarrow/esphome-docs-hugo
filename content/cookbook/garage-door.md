@@ -1,9 +1,12 @@
 ---
-description: "Simple Garage Door"
+description: "Instructions for setting up a simple garage door in ESPHome."
 title: "Simple Garage Door"
+params:
+  seo:
+    description: Instructions for setting up a simple garage door in ESPHome.
+    image: window-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The following is a possible configuration file for garage doors that are controlled by two relays:
 One for opening and another one for closing the garage door. When either one of them is turned on

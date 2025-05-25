@@ -1,9 +1,12 @@
 ---
-description: "BedJet"
+description: "Instructions for setting up a BedJet climate device."
 title: "BedJet"
+params:
+  seo:
+    description: Instructions for setting up a BedJet climate device.
+    image: bedjet.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `bedjet` component allows you to communicate with a BedJet V3 Climate Comfort
 Sleep System.

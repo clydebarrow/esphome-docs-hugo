@@ -1,9 +1,12 @@
 ---
-description: "SPS30 Particulate Matter Sensor"
+description: "Instructions for setting up SPS30 PM1.0, PM2.5, PM4, PM10 Particulate Matter sensors"
 title: "SPS30 Particulate Matter Sensor"
+params:
+  seo:
+    description: Instructions for setting up SPS30 PM1.0, PM2.5, PM4, PM10 Particulate Matter sensors
+    image: sps30.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sps30` sensor platform allows you to use your Sensirion SPS30
 ([datasheet](https://sensirion.com/media/documents/8600FF88/616542B5/Sensirion_PM_Sensors_Datasheet_SPS30.pdf)) sensors with ESPHome.

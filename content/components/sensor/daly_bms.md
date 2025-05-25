@@ -1,9 +1,12 @@
 ---
-description: "Daly BMS Sensor"
+description: "Instructions for setting up a Daly Smart BMS"
 title: "Daly BMS Sensor"
+params:
+  seo:
+    description: Instructions for setting up a Daly Smart BMS
+    image: daly_bms.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `daly_bms` sensor platform allows you to use a Daly Smart BMS
 ([more info](https://dalyelec.en.made-in-china.com/))

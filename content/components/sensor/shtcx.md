@@ -1,9 +1,12 @@
 ---
-description: "SHTCx Temperature+Humidity Sensors"
+description: "Instructions for setting up SHTC1 and SHTC3 temperature and humidity sensors"
 title: "SHTCx Temperature+Humidity Sensors"
+params:
+  seo:
+    description: Instructions for setting up SHTC1 and SHTC3 temperature and humidity sensors
+    image: shtc3.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `shtcx` sensor platform Temperature+Humidity sensor allows you to use your Sensirion SHTC1
 ([datasheet](https://sensirion.com/media/documents/21BF77EA/63A5A411/Datasheet_SHTC1.pdf),

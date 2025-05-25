@@ -1,9 +1,12 @@
 ---
-description: "IR Remote Climate"
+description: "Controls a variety of compatible Climate devices via IR"
 title: "IR Remote Climate"
+params:
+  seo:
+    description: Controls a variety of compatible Climate devices via IR
+    image: air-conditioner-ir.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This climate component allows you to control compatible AC units by sending an infrared (IR)
 control signal, just as the unit's handheld remote controller would.

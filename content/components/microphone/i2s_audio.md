@@ -1,9 +1,12 @@
 ---
-description: "I²S Audio Microphone"
+description: "Instructions for setting up I²S based microphones in ESPHome."
 title: "I²S Audio Microphone"
+params:
+  seo:
+    description: Instructions for setting up I²S based microphones in ESPHome.
+    image: i2s_audio.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `i2s_audio` microphone platform allows you to receive audio via the the {{< docref "/components/i2s_audio" >}}.
 

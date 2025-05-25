@@ -1,9 +1,14 @@
 ---
-description: "Online Image Component"
+description: "Instructions for displaying images downloaded at runtime in ESPHome."
 title: "Online Image Component"
+params:
+  seo:
+    description: Instructions for displaying images downloaded at runtime in ESPHome.
+    image: image-sync-outline.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "online_image" >}}
+
 
 With this component you can define images that will be downloaded, decoded and drawn at runtime.
 

@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <meta name="description"
-          content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    {{ $seo := .Page.Param "seo" }}
+    {{ with $seo }}
+        {{ $src := $seo.image }}
+
+        {{ with $seo.description | default .Page.Title | default .Site.Params.Description }}
+            <meta name="description" content="{{ . }}">
+            <meta name="twitter:description" content="{{ . }}">
+            <meta property="og:description" content="{{ . }}">
+        {{ end }}
+
+        {{ if $src }}
+            {{/* Check if image exists in local images directory first */}}
+            {{- $localPath := printf "images/%s" $src -}}
+            {{- $componentPath := printf "%s/images/%s" (path.Dir .Page.File.Path) $src -}}
+            {{- $globalPath := printf "images/%s" $src -}}
+            {{- $imagePath := "" -}}
+            {{- if fileExists (printf "content/%s" $componentPath) -}}
+                {{- $imagePath = $componentPath -}}
+            {{- else if fileExists (printf "static/%s" $globalPath) -}}
+                {{- $imagePath = $globalPath -}}
+            {{- else -}}
+                {{- $imagePath = $src -}}
+            {{- end -}}
+            {{ with $imagePath }}}
+                <meta property="og:image" content="{{ printf "images/%s" . | absURL }}">
+                <meta name="twitter:image" content="{{ printf "images/%s" . | absURL }}">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    <meta property="og:title" content="{{ .Page.Title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Page.Permalink }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Page.Title }}">
     <style>
         body {
             visibility: hidden;

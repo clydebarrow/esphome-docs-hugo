@@ -1,9 +1,12 @@
 ---
-description: "Display Component"
+description: "Instructions for setting up the display component."
 title: "Display Component"
+params:
+  seo:
+    description: Instructions for setting up the display component.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `display` component houses ESPHome's powerful rendering and display
 engine. Fundamentally, there are these types of displays:

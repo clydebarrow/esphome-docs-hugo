@@ -1,9 +1,12 @@
 ---
-description: "Template Button"
+description: "Instructions for setting up template buttons that can execute arbitrary actions when pressed."
 title: "Template Button"
+params:
+  seo:
+    description: Instructions for setting up template buttons that can execute arbitrary actions when pressed.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` button platform allows you to create simple buttons out of just actions. Once defined,
 it will automatically appear in Home Assistant as a button and can be controlled through the frontend.

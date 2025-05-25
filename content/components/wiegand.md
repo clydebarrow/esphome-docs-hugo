@@ -1,9 +1,12 @@
 ---
-description: "Wiegand keypad and tag reader"
+description: "Wiegand-standard key input and card/tag reader panel"
 title: "Wiegand keypad and tag reader"
+params:
+  seo:
+    description: Wiegand-standard key input and card/tag reader panel
+    image: wiegand.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `wiegand` component allows you to integrate Wiegand-standard key
 input and card or tag reader panels in Home Assistant.

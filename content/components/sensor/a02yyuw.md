@@ -1,9 +1,12 @@
 ---
-description: "A02YYUW Waterproof Ultrasonic Sensor"
+description: "Instructions for setting up A02YYUW waterproof ultrasonic distance sensor in ESPHome."
 title: "A02YYUW Waterproof Ultrasonic Sensor"
+params:
+  seo:
+    description: Instructions for setting up A02YYUW waterproof ultrasonic distance sensor in ESPHome.
+    image: a02yyuw.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 This sensor allows you to use A02YYUW waterproof ultrasonic sensor by DFRobot
 ([datasheet](https://wiki.dfrobot.com/_A02YYUW_Waterproof_Ultrasonic_Sensor_SKU_SEN0311))

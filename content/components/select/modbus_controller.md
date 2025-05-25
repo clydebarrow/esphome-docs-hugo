@@ -1,9 +1,11 @@
 ---
-description: "Modbus Controller Select"
+description: "Instructions for setting up Modbus Controller Select(s) with ESPHome."
 title: "Modbus Controller Select"
+params:
+  seo:
+    description: Instructions for setting up Modbus Controller Select(s) with ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` Select platform allows you to create a Select from modbus
 registers.

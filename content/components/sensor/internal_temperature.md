@@ -1,9 +1,12 @@
 ---
-description: "Internal Temperature Sensor"
+description: "Instructions for setting up the integrated temperature sensor of the ESP32, RP2040 and BK72XX."
 title: "Internal Temperature Sensor"
+params:
+  seo:
+    description: Instructions for setting up the integrated temperature sensor of the ESP32, RP2040 and BK72XX.
+    image: thermometer.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `internal_temperature` sensor platform allows you to use the integrated
 temperature sensor of the ESP32, RP2040 and BK72XX chip.

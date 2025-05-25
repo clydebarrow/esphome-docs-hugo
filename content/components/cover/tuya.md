@@ -1,9 +1,11 @@
 ---
-description: "Tuya Cover"
+description: "Instructions for setting up a Tuya cover motor."
 title: "Tuya Cover"
+params:
+  seo:
+    description: Instructions for setting up a Tuya cover motor.
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` cover platform creates a simple position-only cover from a
 tuya serial component.

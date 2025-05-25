@@ -1,9 +1,12 @@
 ---
-description: "RGBCT Light"
+description: "Instructions for setting up RGBCT lights."
 title: "RGBCT Light"
+params:
+  seo:
+    description: Instructions for setting up RGBCT lights.
+    image: rgbw.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `rgbct` light platform creates an RGBWT (color temperature + white brightness)
 light from 5 [float output components](components/output/_index#output) (one for each channel).

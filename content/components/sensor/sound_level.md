@@ -1,9 +1,12 @@
 ---
-description: "Sound Level Sensor"
+description: "Instructions for setting up microphone sound level sensors with ESPHome"
 title: "Sound Level Sensor"
+params:
+  seo:
+    description: Instructions for setting up microphone sound level sensors with ESPHome
+    image: waveform.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sound_level` sensor platform allows you to measure a {{< docref "/components/microphone/index" "microphone" >}}'s average and peak sound pressure levels over a specified measurement duration. The sensors output in **relative** `dB`, where `0 dB` represents the loudest sound the microphone can measure.
 

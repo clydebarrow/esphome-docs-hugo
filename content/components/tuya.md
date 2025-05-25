@@ -1,9 +1,12 @@
 ---
-description: "Tuya MCU"
+description: "Instructions for setting up the Tuya component."
 title: "Tuya MCU"
+params:
+  seo:
+    description: Instructions for setting up the Tuya component.
+    image: tuya.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` component creates a serial connection to the Tuya MCU for platforms to use.
 

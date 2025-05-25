@@ -1,9 +1,12 @@
 ---
-description: "SML (Smart Message Language)"
+description: "Instructions for setting up SML sensors"
 title: "SML (Smart Message Language)"
+params:
+  seo:
+    description: Instructions for setting up SML sensors
+    image: sml.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `SML` component connects to smart meters which use the *Smart Message Language* (SML) protocol.
 

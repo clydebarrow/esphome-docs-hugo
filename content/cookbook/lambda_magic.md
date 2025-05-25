@@ -1,9 +1,12 @@
 ---
-description: "Lambda Magic"
+description: "Recipes for various interesting things you can do with Lambdas in ESPHome"
 title: "Lambda Magic"
+params:
+  seo:
+    description: Recipes for various interesting things you can do with Lambdas in ESPHome
+    image: language-cpp.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Here are a couple recipes for various interesting things you can do with [Lambdas](automations/templates#config-lambda) in ESPHome.
 These don't require external components and demonstrate how powerful [Lambdas](automations/templates#config-lambda) can be.

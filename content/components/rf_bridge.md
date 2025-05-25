@@ -1,9 +1,12 @@
 ---
-description: "RF Bridge Component"
+description: "Instructions for setting up the RF Bridge in ESPHome."
 title: "RF Bridge Component"
+params:
+  seo:
+    description: Instructions for setting up the RF Bridge in ESPHome.
+    image: rf_bridge.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `RF Bridge` Component provides the ability to send and receive 433MHz remote codes using the
 embedded EFM8BB1 microcontroller. This component implements the communication protocol

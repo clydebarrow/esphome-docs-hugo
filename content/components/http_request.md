@@ -1,9 +1,12 @@
 ---
-description: "HTTP Request"
+description: "Instructions for setting up HTTP Requests in ESPHome"
 title: "HTTP Request"
+params:
+  seo:
+    description: Instructions for setting up HTTP Requests in ESPHome
+    image: connection.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `http_request` component lets you make HTTP/HTTPS requests. To do so, you need to add it to your device's configuration:
 

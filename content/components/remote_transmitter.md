@@ -1,9 +1,12 @@
 ---
-description: "Remote Transmitter"
+description: "Instructions for setting up configurations that send out pre-defined sequences of IR or RF signals"
 title: "Remote Transmitter"
+params:
+  seo:
+    description: Instructions for setting up configurations that send out pre-defined sequences of IR or RF signals
+    image: remote.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `remote_transmitter` component lets you send various common remote control signals, such as infrared
 or 433 MHz radio frequency (RF) signals.

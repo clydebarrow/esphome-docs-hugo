@@ -1,9 +1,12 @@
 ---
-description: "Core Configuration"
+description: "Instructions for setting up the core ESPHome configuration."
 title: "ESPHome Core Configuration"
+params:
+  seo:
+    description: Instructions for setting up the core ESPHome configuration.
+    image: cloud-circle.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Here you specify some core information that ESPHome needs to create
 firmwares. Most importantly, this is the section of the configuration

@@ -1,9 +1,11 @@
 ---
-description: "Combine the state of several sensors"
+description: "Instructions for setting up a combination sensor"
 title: "Combine the state of several sensors"
+params:
+  seo:
+    description: Instructions for setting up a combination sensor
 ---
 
-{{< seo description="" image="" >}}
 
 The `combination` sensor platform allows you to combine the state of several 
 sensors into one. To use this sensor, specify the combination type and add your source sensors.

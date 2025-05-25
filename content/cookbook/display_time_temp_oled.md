@@ -1,9 +1,11 @@
 ---
-description: "Time & Temperature on OLED Display"
+description: "Instructions for setting up a display in ESPHome to show sensor values from Home Assistant"
 title: "Time & Temperature on OLED Display"
+params:
+  seo:
+    description: Instructions for setting up a display in ESPHome to show sensor values from Home Assistant
 ---
 
-{{< seo description="" image="" >}}
 
 {{< img src="display_time_temp_oled_1.jpg" alt="Image" width="75.0%" class="left" >}}
 

@@ -1,9 +1,13 @@
 ---
-description: "HHCCJCY10 Xiaomi MiFlora (Pink version)"
+description: "Instructions for setting up a Xiaomi MiFlora HHCCJCY10 (Pink) using ESPHome."
 title: "HHCCJCY10 Xiaomi MiFlora (Pink version)"
+params:
+  seo:
+    description: Instructions for setting up a Xiaomi MiFlora HHCCJCY10 (Pink) using ESPHome.
+    image: xiaomi_hhccjcy10.jpg
 ---
 
-{{< seo description="" image="" >}}
+
 
 MiFlora, tuya (pink) version, measures temperature, moisture, ambient light and nutrient levels in the soil.
 

@@ -1,9 +1,12 @@
 ---
-description: "NTC Sensor"
+description: "Instructions for setting up NTC thermistor sensor in ESPHome"
 title: "NTC Sensor"
+params:
+  seo:
+    description: Instructions for setting up NTC thermistor sensor in ESPHome
+    image: ntc.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ntc` platform is a helper sensor that allows you to convert resistance readings
 from a NTC thermistor to temperature readings.

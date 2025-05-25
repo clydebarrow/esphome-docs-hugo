@@ -1,9 +1,12 @@
 ---
-description: "GPIO Switch"
+description: "Instructions for setting up GPIO pin switches in ESPHome that control GPIO outputs."
 title: "GPIO Switch"
+params:
+  seo:
+    description: Instructions for setting up GPIO pin switches in ESPHome that control GPIO outputs.
+    image: gpio.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `gpio` switch platform allows you to use any pin on your node as a
 switch. You can for example hook up a relay to a GPIO pin and use it

@@ -1,9 +1,12 @@
 ---
-description: "SCD4X CO₂, Temperature and Relative Humidity Sensor"
+description: "Instructions for setting up SCD4X CO₂ Temperature and Relative Humidity Sensor"
 title: "SCD4X CO₂, Temperature and Relative Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up SCD4X CO₂ Temperature and Relative Humidity Sensor
+    image: scd4x.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `scd4x` sensor platform  allows you to use your Sensirion SCD4X CO₂
 ([datasheet](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.

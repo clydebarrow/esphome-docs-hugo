@@ -1,9 +1,12 @@
 ---
-description: "M5Stack Unit 8 Angle"
+description: "Setting up the M5Stack Unit 8 Angle input device with 8 knobs."
 title: "M5Stack Unit 8 Angle"
+params:
+  seo:
+    description: Setting up the M5Stack Unit 8 Angle input device with 8 knobs.
+    image: m5stack_8angle.png
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

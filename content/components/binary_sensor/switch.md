@@ -1,9 +1,13 @@
 ---
-description: "Switch Binary Sensor"
+description: "Instructions for setting up switch binary sensors with ESPHome."
 title: "Switch Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up switch binary sensors with ESPHome.
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "switch-binary-sensor" >}}
+
 
 The Switch Binary Sensor platform allows you to view the state of any switch component as a
 read-only binary sensor.

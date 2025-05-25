@@ -1,9 +1,12 @@
 ---
-description: "FastLED Light"
+description: "Instructions for setting up FastLED addressable lights like NEOPIXEL."
 title: "FastLED Light"
+params:
+  seo:
+    description: Instructions for setting up FastLED addressable lights like NEOPIXEL.
+    image: color_lens.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< warning >}}
 FastLED does **not** work as expected with Arduino 3 or newer for ESP8266. For now, you can either downgrade the arduino version or use {{< docref "neopixelbus/" >}}.

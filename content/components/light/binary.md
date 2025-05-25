@@ -1,9 +1,12 @@
 ---
-description: "Binary Light"
+description: "Instructions for setting up binary ON/OFF lights in ESPHome."
 title: "Binary Light"
+params:
+  seo:
+    description: Instructions for setting up binary ON/OFF lights in ESPHome.
+    image: lightbulb.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `binary` light platform creates a simple ON/OFF-only light from a
 [binary output component](components/output/_index#output).

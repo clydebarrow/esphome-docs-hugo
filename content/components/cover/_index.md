@@ -1,9 +1,12 @@
 ---
-description: "Cover Component"
+description: "Instructions for setting up base covers in ESPHome."
 title: "Cover Component"
+params:
+  seo:
+    description: Instructions for setting up base covers in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `cover` component is a generic representation of covers in ESPHome.
 A cover can (currently) either be *closed* or *open* and supports three types of

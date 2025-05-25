@@ -1,9 +1,12 @@
 ---
-description: "Template Switch"
+description: "Instructions for setting up template switches that can execute arbitrary actions when turned on or off."
 title: "Template Switch"
+params:
+  seo:
+    description: Instructions for setting up template switches that can execute arbitrary actions when turned on or off.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` switch platform allows you to create simple switches out of just actions and
 an optional value lambda. Once defined, it will automatically appear in Home Assistant

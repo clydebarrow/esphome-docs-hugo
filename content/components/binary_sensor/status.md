@@ -1,9 +1,12 @@
 ---
-description: "Status Binary Sensor"
+description: "Instructions for setting up MQTT status binary sensors."
 title: "Status Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up MQTT status binary sensors.
+    image: server-network.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The Status Binary Sensor exposes the node state (if it's connected to via MQTT/native API)
 for Home Assistant.

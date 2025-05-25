@@ -1,9 +1,12 @@
 ---
-description: "Alarm Control Panel Component"
+description: "Instructions for setting up generic Alarm Control Panels in ESPHome."
 title: "Alarm Control Panel Component"
+params:
+  seo:
+    description: Instructions for setting up generic Alarm Control Panels in ESPHome.
+    image: alarm-panel.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "config-alarm_control_panel" >}}
 

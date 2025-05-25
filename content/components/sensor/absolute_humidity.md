@@ -1,9 +1,12 @@
 ---
-description: "Absolute Humidity"
+description: "Instructions for setting up absolute humidity calculation"
 title: "Absolute Humidity"
+params:
+  seo:
+    description: Instructions for setting up absolute humidity calculation
+    image: water-drop.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `absolute_humidity` platform allows you to calculate absolute humidity from air temperature and relative humidity.
 

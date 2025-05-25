@@ -1,9 +1,12 @@
 ---
-description: "VL53L0X Time Of Flight Distance Sensor"
+description: "Instructions for setting up VL53L0X distance sensors in ESPHome."
 title: "VL53L0X Time Of Flight Distance Sensor"
+params:
+  seo:
+    description: Instructions for setting up VL53L0X distance sensors in ESPHome.
+    image: vl53l0x.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `vl53l0x` sensor platform allows you to use VL53L0X optical time of flight
 ([datasheet](https://www.st.com/resource/en/datasheet/vl53l0x.pdf),

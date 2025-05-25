@@ -1,9 +1,12 @@
 ---
-description: "Speed Fan"
+description: "Instructions for setting up speed-controllable fans."
 title: "Speed Fan"
+params:
+  seo:
+    description: Instructions for setting up speed-controllable fans.
+    image: fan.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `speed` fan platform lets you represent any float [Output Component]({{< ref "components/output/_index#output" >}}) as a fan that
 supports speed settings.

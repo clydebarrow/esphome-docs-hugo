@@ -1,9 +1,12 @@
 ---
-description: "SFA30 Formaldehyde Sensor"
+description: "Instructions for setting up SFA30 Formaldehyde Sensor"
 title: "SFA30 Formaldehyde Sensor"
+params:
+  seo:
+    description: Instructions for setting up SFA30 Formaldehyde Sensor
+    image: sfa30.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sfa30` sensor platform  allows you to use your Sensirion SFA30 Formaldehyde
 ([datasheet](https://sensirion.com/media/documents/DEB1C6D6/63D92360/Sensirion_formaldehyde_sensors_datasheet_SFA30.pdf)) sensors with ESPHome.

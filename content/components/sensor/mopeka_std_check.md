@@ -1,9 +1,12 @@
 ---
-description: "Mopeka Standard Check BLE Sensor"
+description: "Instructions for setting up Mopeka Standard Check bluetooth-based sensors in ESPHome."
 title: "Mopeka Standard Check BLE Sensor"
+params:
+  seo:
+    description: Instructions for setting up Mopeka Standard Check bluetooth-based sensors in ESPHome.
+    image: mopeka_std_check.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `mopeka_std_check` sensor platform lets you track the output of Mopeka
 Standard Check LP Bluetooth Low Energy devices using the

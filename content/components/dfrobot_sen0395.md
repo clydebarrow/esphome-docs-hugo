@@ -1,9 +1,12 @@
 ---
-description: "DFRobot mmWave Radar"
+description: "Instructions for setting up DFRobot mmWave Radar"
 title: "DFRobot mmWave Radar"
+params:
+  seo:
+    description: Instructions for setting up DFRobot mmWave Radar
+    image: dfrobot_sen0395.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The [DFRobot mmWave Radar](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
 (aka `SEN0395`) is a 24GHz radar which can be used for human presence detection. It can detect tiny movements

@@ -1,9 +1,12 @@
 ---
-description: "Template Binary Sensor"
+description: "Instructions for setting up template binary sensors."
 title: "Template Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up template binary sensors.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` binary sensor platform allows you to define a boolean condition and use it to provide a binary sensor.
 The condition may be expressed as a C++ lambda, or as a [YAML expression](automations/actions#config-condition).

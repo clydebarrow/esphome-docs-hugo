@@ -1,9 +1,12 @@
 ---
-description: "Fan Component"
+description: "Instructions for setting up the base fan component."
 title: "Fan Component"
+params:
+  seo:
+    description: Instructions for setting up the base fan component.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 With the `fan` domain you can create components that appear as fans in
 the Home Assistant frontend. A fan can be switched on or off, optionally

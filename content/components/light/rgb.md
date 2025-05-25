@@ -1,9 +1,12 @@
 ---
-description: "RGB Light"
+description: "Instructions for setting up RGB lights in ESPHome."
 title: "RGB Light"
+params:
+  seo:
+    description: Instructions for setting up RGB lights in ESPHome.
+    image: rgb.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `rgb` light platform creates an RGB light from 3 [float output components](components/output/_index#output)
 (one for each color channel).

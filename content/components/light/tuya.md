@@ -1,9 +1,12 @@
 ---
-description: "Tuya Dimmer"
+description: "Instructions for setting up a Tuya dimmer switch."
 title: "Tuya Dimmer"
+params:
+  seo:
+    description: Instructions for setting up a Tuya dimmer switch.
+    image: brightness-medium.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` light platform creates a simple brightness-only light from a
 tuya serial component.

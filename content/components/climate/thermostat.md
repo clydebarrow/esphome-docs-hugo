@@ -1,9 +1,12 @@
 ---
-description: "Thermostat Climate Controller"
+description: "Instructions for setting up Thermostat climate controllers with ESPHome."
 title: "Thermostat Climate Controller"
+params:
+  seo:
+    description: Instructions for setting up Thermostat climate controllers with ESPHome.
+    image: air-conditioner.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `thermostat` climate platform allows you to control a climate control system in much the same manner as a
 physical thermostat. Its operation is similar to the {{< docref "bang_bang" "Bang-Bang" >}} controller; a sensor measures a value

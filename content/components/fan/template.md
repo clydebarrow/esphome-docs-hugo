@@ -1,9 +1,12 @@
 ---
-description: "Template Fan"
+description: "Instructions for setting up template fans."
 title: "Template Fan"
+params:
+  seo:
+    description: Instructions for setting up template fans.
+    image: fan.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` fan platform lets you create a fan interface using only triggers.
 

@@ -1,9 +1,11 @@
 ---
-description: "External Components"
+description: "Instructions for setting up ESPHome External Components."
 title: "External Components"
+params:
+  seo:
+    description: Instructions for setting up ESPHome External Components.
 ---
 
-{{< seo description="" image="" >}}
 
 You can easily import community or personal components using the external components feature.
 Bundled components can be overridden using this feature.

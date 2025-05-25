@@ -1,9 +1,12 @@
 ---
-description: "Havells Solar"
+description: "Instructions for setting up Havells inverter reading on modbus."
 title: "Havells Solar"
+params:
+  seo:
+    description: Instructions for setting up Havells inverter reading on modbus.
+    image: havellsgti5000d_s.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `Havells Inverter` sensor platform allows you to use Havells inverter data reading on modbus
 ([website](https://www.havells.com/en/consumer/solar/solar-on-grid-inverter-and-solutions/solar-on-grid-inverter.html))

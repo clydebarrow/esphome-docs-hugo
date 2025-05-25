@@ -1,9 +1,12 @@
 ---
-description: "Midea Air Conditioner"
+description: "Instructions for setting up a Midea climate device"
 title: "Midea Air Conditioner"
+params:
+  seo:
+    description: Instructions for setting up a Midea climate device
+    image: air-conditioner.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `midea` component creates a Midea air conditioner climate device.
 

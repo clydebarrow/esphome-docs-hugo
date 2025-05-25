@@ -1,9 +1,12 @@
 ---
-description: "Status LED Light"
+description: "Instructions for setting up a Status LED shared also as binary ON/OFF light in ESPHome."
 title: "Status LED Light"
+params:
+  seo:
+    description: Instructions for setting up a Status LED shared also as binary ON/OFF light in ESPHome.
+    image: led-on.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `status_led` light platform allows to share a single LED for indicating the status of
 the device (when on error/warning state) or as binary light (when on OK state).

@@ -1,9 +1,12 @@
 ---
-description: "PSRAM"
+description: "Configuration for the ESP32 PSRAM platform for ESPHome."
 title: "PSRAM"
+params:
+  seo:
+    description: Configuration for the ESP32 PSRAM platform for ESPHome.
+    image: psram.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This component enables and configures PSRAM if/when available on ESP32 modules/boards.
 It is automatically loaded and enabled by components that require it.

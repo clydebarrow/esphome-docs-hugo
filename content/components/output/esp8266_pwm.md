@@ -1,9 +1,12 @@
 ---
-description: "ESP8266 Software PWM Output"
+description: "Instructions for setting up ESP8266 software-based PWMs."
 title: "ESP8266 Software PWM Output"
+params:
+  seo:
+    description: Instructions for setting up ESP8266 software-based PWMs.
+    image: pwm.png
 ---
 
-{{< seo description="" image="" >}}
 
 The ESP8266 Software PWM platform allows you to use a software PWM on
 the pins GPIO0-GPIO16 on your ESP8266. Note that this is a software PWM,

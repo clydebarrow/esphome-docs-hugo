@@ -1,9 +1,12 @@
 ---
-description: "Template Select"
+description: "Instructions for setting up Template Select(s) with ESPHome."
 title: "Template Select"
+params:
+  seo:
+    description: Instructions for setting up Template Select(s) with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` Select platform allows you to create a Select with templated values
 using [lambdas](automations/templates#config-lambda).

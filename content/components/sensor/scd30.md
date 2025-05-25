@@ -1,9 +1,12 @@
 ---
-description: "SCD30 CO₂, Temperature and Relative Humidity Sensor"
+description: "Instructions for setting up SCD30 CO₂ Temperature and Relative Humidity Sensor"
 title: "SCD30 CO₂, Temperature and Relative Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up SCD30 CO₂ Temperature and Relative Humidity Sensor
+    image: scd30.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `scd30` sensor platform allows you to use your Sensirion SCD30 CO₂
 ([datasheet](https://sensirion.com/media/documents/4EAF6AF8/61652C3C/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)) sensors with ESPHome.

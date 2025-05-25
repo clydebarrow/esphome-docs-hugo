@@ -1,9 +1,12 @@
 ---
-description: "Web Server Component"
+description: "Instructions for setting up a web server in ESPHome."
 title: "Web Server Component"
+params:
+  seo:
+    description: Instructions for setting up a web server in ESPHome.
+    image: http.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `web_server` component creates a simple web server on the node that can be accessed
 through any browser and a simple [REST API]({{< ref "web-api/_index#api-rest" >}}). Please note that enabling this component

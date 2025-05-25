@@ -1,9 +1,11 @@
 ---
-description: "Radon Eye BLE Sensors"
+description: "Instructions for setting up Radon Eye bluetooth-based sensors in ESPHome."
 title: "Radon Eye BLE Sensors"
+params:
+  seo:
+    description: Instructions for setting up Radon Eye bluetooth-based sensors in ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 The `radon_eye_rd200` sensor platforms lets you track the output of Radon Eye RD200 Bluetooth Low Energy device.
 

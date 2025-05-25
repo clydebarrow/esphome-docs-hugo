@@ -1,9 +1,12 @@
 ---
-description: "CFSensor XGZP68xx Series Differential Pressure Sensor"
+description: "Instructions for setting up the CFSensor XGZP68xx Series Differential Pressure sensor."
 title: "CFSensor XGZP68xx Series Differential Pressure Sensor"
+params:
+  seo:
+    description: Instructions for setting up the CFSensor XGZP68xx Series Differential Pressure sensor.
+    image: 6897d.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The XGZP68xx Differential Pressure sensor allows you to use digital differential pressure sensors such as the 6899D
 ([datasheet](https://cfsensor.com/wp-content/uploads/2022/11/XGZP6899D-Pressure-Sensor-V2.8.pdf)) or 

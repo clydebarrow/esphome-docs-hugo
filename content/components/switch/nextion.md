@@ -1,9 +1,14 @@
 ---
-description: "Nextion Switch Component"
+description: "Instructions for setting up Nextion Switch."
 title: "Nextion Switch Component"
+params:
+  seo:
+    description: Instructions for setting up Nextion Switch.
+    image: nextion.jpg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "nextion_switch" >}}
+
 
 The `nextion` switch platform supports the many switched components in the Nextion as well as integer variables. It can be a component or variable in the Nextion display.
 It is best to set the components vscope to global in the Nextion Editor. This way the component will be available if the page is shown or not.

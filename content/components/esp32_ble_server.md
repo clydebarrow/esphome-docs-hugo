@@ -1,9 +1,12 @@
 ---
-description: "BLE Server"
+description: "Instructions for setting up Bluetooth LE GATT Server in ESPHome."
 title: "BLE Server"
+params:
+  seo:
+    description: Instructions for setting up Bluetooth LE GATT Server in ESPHome.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `esp32_ble_server` component in ESPHome sets up a  BLE GATT server that exposes the device name,
 manufacturer and board. BLE GATT services and characteristics can be added to the server to expose data and control.

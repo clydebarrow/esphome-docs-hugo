@@ -1,9 +1,12 @@
 ---
-description: "Web Server API"
+description: "Information on Web Server APIs, including Event Source APIs and REST APIs."
 title: "Web Server API"
+params:
+  seo:
+    description: Information on Web Server APIs, including Event Source APIs and REST APIs.
+    image: ../images/logo-text.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome includes a built-in web server that can be used to view states
 and send commands. In addition to the web-frontend available under the root index of the

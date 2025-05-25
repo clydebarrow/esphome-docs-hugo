@@ -1,9 +1,12 @@
 ---
-description: "ESP32 LEDC Output"
+description: "Instructions for setting up LEDC hardware PWM outputs on the ESP32."
 title: "ESP32 LEDC Output"
+params:
+  seo:
+    description: Instructions for setting up LEDC hardware PWM outputs on the ESP32.
+    image: pwm.png
 ---
 
-{{< seo description="" image="" >}}
 
 The LEDC output component exposes a [LEDC PWMchannel](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 of the ESP32 as an output component.

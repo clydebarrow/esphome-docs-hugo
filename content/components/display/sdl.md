@@ -1,9 +1,12 @@
 ---
-description: "SDL2 Display on host platform"
+description: "Instructions for setting up SDL2 display on host"
 title: "SDL2 Display on host platform"
+params:
+  seo:
+    description: Instructions for setting up SDL2 display on host
+    image: sdl.png
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "sdl" >}}
 

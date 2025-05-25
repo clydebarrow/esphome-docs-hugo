@@ -1,9 +1,12 @@
 ---
-description: "MCP47A1 Output"
+description: "Instructions for setting up MCP47A1 outputs on the ESP."
 title: "MCP47A1 Output"
+params:
+  seo:
+    description: Instructions for setting up MCP47A1 outputs on the ESP.
+    image: mcp47a1.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `mcp47a1` output component allows to use [6bit external DAC](https://www.microchip.com/en-us/product/MCP47A1)
 in order to have analog output(s) on any board by using I²C. Devices default address is `0x2E`

@@ -1,9 +1,12 @@
 ---
-description: "Pulse Counter Sensor"
+description: "Instructions for setting up pulse counter sensors."
 title: "Pulse Counter Sensor"
+params:
+  seo:
+    description: Instructions for setting up pulse counter sensors.
+    image: pulse.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The pulse counter sensor allows you to count the number of pulses and the frequency of a signal
 on any pin.

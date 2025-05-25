@@ -1,9 +1,11 @@
 ---
-description: "Modbus Controller Number"
+description: "Instructions for setting up a modbus_controller device sensor."
 title: "Modbus Controller Number"
+params:
+  seo:
+    description: Instructions for setting up a modbus_controller device sensor.
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` platform creates a Number from a modbus_controller.
 When the Number is updated a modbus write command is created sent to the device.

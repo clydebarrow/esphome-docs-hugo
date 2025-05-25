@@ -1,9 +1,12 @@
 ---
-description: "ZyAura CO2 & Temperature & Humidity Sensor"
+description: "Instructions for setting up ZyAura co2, temperature and humidity monitors."
 title: "ZyAura CO2 & Temperature & Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up ZyAura co2, temperature and humidity monitors.
+    image: zgm053.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The ZyAura CO2 & Temperature & Humidity sensor allows you to use your
 [ZGm05(3)(U)](http://www.zyaura.com/products/ZGm05.asp)

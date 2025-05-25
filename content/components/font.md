@@ -1,9 +1,14 @@
 ---
-description: "Font Renderer Component"
+description: "Instructions for setting up fonts in ESPHome."
 title: "Font Renderer Component"
+params:
+  seo:
+    description: Instructions for setting up fonts in ESPHome.
+    image: format-font.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "display-fonts" >}}
+
 
 ESPHome's graphical rendering engine also has a powerful font drawer which integrates seamlessly into the system. You have the option to use **any** OpenType/TrueType (`.ttf`, `.otf`, `.woff`) font file at **any** size, as well as fixed-size [PCF](https://en.wikipedia.org/wiki/Portable_Compiled_Format) and [BDF](https://en.wikipedia.org/wiki/Glyph_Bitmap_Distribution_Format) bitmap fonts.
 

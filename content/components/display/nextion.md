@@ -1,9 +1,12 @@
 ---
-description: "Nextion TFT LCD Display"
+description: "Instructions for setting up Nextion TFT LCD displays"
 title: "Nextion TFT LCD Display"
+params:
+  seo:
+    description: Instructions for setting up Nextion TFT LCD displays
+    image: nextion.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `nextion` display platform allows you to use Nextion LCD displays
 ([datasheet](https://nextion.itead.cc/resources/datasheets/), [iTead](https://www.itead.cc/display/nextion.html))

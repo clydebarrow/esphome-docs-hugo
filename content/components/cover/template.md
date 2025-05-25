@@ -1,9 +1,12 @@
 ---
-description: "Template Cover"
+description: "Instructions for setting up template covers in ESPHome."
 title: "Template Cover"
+params:
+  seo:
+    description: Instructions for setting up template covers in ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` cover platform allows you to create simple covers out of just a few
 actions and a value lambda. Once defined, it will automatically appear in Home Assistant

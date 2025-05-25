@@ -1,9 +1,12 @@
 ---
-description: "Wake-on-LAN Button"
+description: "Instructions for setting up buttons that can send wakeup packets to computers on the network."
 title: "Wake-on-LAN Button"
+params:
+  seo:
+    description: Instructions for setting up buttons that can send wakeup packets to computers on the network.
+    image: radio-tower.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `wake_on_lan` button platform allows you to send a Wake-on-LAN magic packet to a computer on the network
 by specifying its MAC address.

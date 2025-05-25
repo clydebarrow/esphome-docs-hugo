@@ -1,9 +1,12 @@
 ---
-description: "RGBWW Light"
+description: "Instructions for setting up RGBWW lights."
 title: "RGBWW Light"
+params:
+  seo:
+    description: Instructions for setting up RGBWW lights.
+    image: rgbw.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `rgbww` light platform creates an RGBWW (cold white + warm white)
 light from 5 [float output components](components/output/_index#output) (one for each channel). The cold and warm

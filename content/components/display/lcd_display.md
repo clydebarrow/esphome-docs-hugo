@@ -1,9 +1,12 @@
 ---
-description: "Character-Based LCD Display"
+description: "Instructions for setting up character-based HD44780 LCDs."
 title: "Character-Based LCD Display"
+params:
+  seo:
+    description: Instructions for setting up character-based HD44780 LCDs.
+    image: lcd.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `lcd_pcf8574` and `lcd_gpio` display components allow you to use HD44780-compatible, character-based LCDs
 with ESPHome. This component is only for LCDs that display individual characters on a screen

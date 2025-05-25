@@ -1,9 +1,12 @@
 ---
-description: "LVGL Sensor"
+description: "Instructions for setting up an LVGL widget sensor component."
 title: "LVGL Sensor"
+params:
+  seo:
+    description: Instructions for setting up an LVGL widget sensor component.
+    image: ../images/lvgl_c_num.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` sensor platform creates a sensor component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.

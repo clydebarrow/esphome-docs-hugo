@@ -1,9 +1,12 @@
 ---
-description: "Native API Component"
+description: "Instructions for setting up the native ESPHome API for communication with Home Assistant."
 title: "Native API Component"
+params:
+  seo:
+    description: Instructions for setting up the native ESPHome API for communication with Home Assistant.
+    image: server-network.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The ESPHome native API is used to communicate with clients directly, with a highly-optimized
 network protocol. Currently, only the ESPHome tool, Home Assistant and ioBroker use this native API.

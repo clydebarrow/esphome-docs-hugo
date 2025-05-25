@@ -1,9 +1,12 @@
 ---
-description: "ILI9xxx TFT LCD Series"
+description: "Instructions for setting up ILI9xxx like TFT LCD display drivers."
 title: "ILI9xxx TFT LCD Series"
+params:
+  seo:
+    description: Instructions for setting up ILI9xxx like TFT LCD display drivers.
+    image: ili9341.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "ili9xxx" >}}
 

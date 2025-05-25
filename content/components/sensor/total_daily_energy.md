@@ -1,9 +1,12 @@
 ---
-description: "Total Daily Energy Sensor"
+description: "Instructions for setting up sensors that track the total daily energy usage per day and accumulate the power usage."
 title: "Total Daily Energy Sensor"
+params:
+  seo:
+    description: Instructions for setting up sensors that track the total daily energy usage per day and accumulate the power usage.
+    image: sigma.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `total_daily_energy` sensor is a helper sensor that can use the power value of
 other sensors like the {{< docref "hlw8012" "HLW8012" >}}, {{< docref "cse7766" "CSE7766" >}}, {{< docref "atm90e32" "ATM90E32" >}}, etc and integrate

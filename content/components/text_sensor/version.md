@@ -1,9 +1,12 @@
 ---
-description: "Version Text Sensor"
+description: "Instructions for setting up version text sensors."
 title: "Version Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up version text sensors.
+    image: new-box.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `version` text sensor platform exposes the ESPHome version the firmware
 was compiled against as a text sensor.

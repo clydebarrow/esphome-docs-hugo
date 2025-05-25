@@ -1,9 +1,12 @@
 ---
-description: "Rotary Encoder Sensor"
+description: "Instructions for setting up rotary encoders."
 title: "Rotary Encoder Sensor"
+params:
+  seo:
+    description: Instructions for setting up rotary encoders.
+    image: rotary_encoder.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `rotary_encoder` sensor platform allows you to use any continuous-rotation
 rotary encoders with ESPHome. These devices usually have two pins with which

@@ -1,9 +1,14 @@
 ---
-description: "Templates"
+description: "Guide for using templates in ESPHome"
 title: "Templates"
+params:
+  seo:
+    description: Guide for using templates in ESPHome
+    image: auto-fix.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "config-lambda" >}}
+
 
 *Templates* (also known as *lambdas*) allow you to do almost *anything* in ESPHome. For example, if you want to only
 perform a certain automation if a certain complex formula evaluates to true, you can do that with templates. Let's look

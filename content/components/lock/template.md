@@ -1,9 +1,12 @@
 ---
-description: "Template Lock"
+description: "Instructions for setting up template locks that can execute arbitrary actions when locked, unlocked, or opened"
 title: "Template Lock"
+params:
+  seo:
+    description: Instructions for setting up template locks that can execute arbitrary actions when locked, unlocked, or opened
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` lock platform allows you to create simple locks out of just actions and
 an optional value lambda. Once defined, it will automatically appear in Home Assistant

@@ -1,9 +1,12 @@
 ---
-description: "ESP32 CAN"
+description: "Instructions for setting up the ESP32 CAN bus platform in ESPHome"
 title: "ESP32 CAN"
+params:
+  seo:
+    description: Instructions for setting up the ESP32 CAN bus platform in ESPHome
+    image: canbus.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The ESP32 has an integrated CAN controller and therefore doesn't necessarily need an external controller.
 You only need to specify the RX and TX pins. Any GPIO will work.

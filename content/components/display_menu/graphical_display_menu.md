@@ -1,9 +1,14 @@
 ---
-description: "Graphical Display Menu"
+description: "Instructions for setting up a simple hierarchical menu on displays."
 title: "Graphical Display Menu"
+params:
+  seo:
+    description: Instructions for setting up a simple hierarchical menu on displays.
+    image: lcd_menu.png
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "graphical_display_menu" >}}
+
 
 The component provides an infrastructure for setting up a hierarchical menu
 on graphical displays. This offers the user an interactive method to display 

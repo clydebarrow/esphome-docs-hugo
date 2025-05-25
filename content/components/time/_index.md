@@ -1,9 +1,12 @@
 ---
-description: "Time Component"
+description: "Instructions for setting up real time clock sources in ESPHome like network based time."
 title: "Time Component"
+params:
+  seo:
+    description: Instructions for setting up real time clock sources in ESPHome like network based time.
+    image: clock-outline.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `time` component allows you to set up real time clock time sources for ESPHome.
 You can then get the current time in [lambdas](automations/templates#config-lambda).

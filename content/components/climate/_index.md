@@ -1,9 +1,12 @@
 ---
-description: "Climate Component"
+description: "Information about the base representation of all climate devices."
 title: "Climate Component"
+params:
+  seo:
+    description: Information about the base representation of all climate devices.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome has support for climate devices. Climate devices can represent different types of
 hardware, but the defining factor is that climate devices have a settable target temperature

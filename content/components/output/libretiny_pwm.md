@@ -1,9 +1,12 @@
 ---
-description: "LibreTiny PWM Output"
+description: "Instructions for setting up LibreTiny hardware PWMs."
 title: "LibreTiny PWM Output"
+params:
+  seo:
+    description: Instructions for setting up LibreTiny hardware PWMs.
+    image: pwm.png
 ---
 
-{{< seo description="" image="" >}}
 
 The LibreTiny PWM platform allows you to use a hardware PWM on BK72xx and RTL87xx chips.
 Refer to [LibreTiny/Boards](https://docs.libretiny.eu/link/boards) to find your board

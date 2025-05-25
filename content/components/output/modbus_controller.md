@@ -1,9 +1,11 @@
 ---
-description: "Modbus Controller Output"
+description: "Instructions for setting up a modbus_controller device output."
 title: "Modbus Controller Output"
+params:
+  seo:
+    description: Instructions for setting up a modbus_controller device output.
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` platform creates an output from a modbus_controller. The goal is to write a value to a modbus register on a device.
 

@@ -1,9 +1,12 @@
 ---
-description: "LightWaveRF"
+description: "LightWaveRF Switch Lights"
 title: "LightWaveRF"
+params:
+  seo:
+    description: LightWaveRF Switch Lights
+    image: brightness-medium.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `LightWaveRF` light platform creates a module to dump and send commands to light switches
 

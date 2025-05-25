@@ -1,9 +1,12 @@
 ---
-description: "Binary Sensor Map"
+description: "Instructions for setting up a Binary Sensor Map"
 title: "Binary Sensor Map"
+params:
+  seo:
+    description: Instructions for setting up a Binary Sensor Map
+    image: binary_sensor_map.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `binary_sensor_map` sensor platform allows you to map multiple {{< docref "/components/binary_sensor/index" "binary sensor" >}}
 to an individual value. Depending on the state of each binary sensor, its associated configured parameters, and this sensor's mapping type,

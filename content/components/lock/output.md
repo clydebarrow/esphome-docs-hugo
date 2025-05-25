@@ -1,9 +1,12 @@
 ---
-description: "Generic Output Lock"
+description: "Instructions for setting up generic output locks in ESPHome that control an output component."
 title: "Generic Output Lock"
+params:
+  seo:
+    description: Instructions for setting up generic output locks in ESPHome that control an output component.
+    image: upload.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `output` lock platform allows you to use any output component as a lock.
 

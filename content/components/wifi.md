@@ -1,9 +1,12 @@
 ---
-description: "WiFi Component"
+description: "Instructions for setting up the WiFi configuration for your ESP node in ESPHome."
 title: "WiFi Component"
+params:
+  seo:
+    description: Instructions for setting up the WiFi configuration for your ESP node in ESPHome.
+    image: network-wifi.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This core ESPHome component sets up WiFi connections to access points
 for you. You need to have a network configuration (either Wifi or Ethernet)

@@ -1,9 +1,11 @@
 ---
-description: "Feedback Cover"
+description: "Instructions for setting up feedback covers in ESPHome."
 title: "Feedback Cover"
+params:
+  seo:
+    description: Instructions for setting up feedback covers in ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 The `feedback` cover platform allows you to create covers with position control that
 can optionally have feedback from sensors to detect the fully-open and fully-closed states (endstops),

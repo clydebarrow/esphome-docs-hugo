@@ -1,9 +1,12 @@
 ---
-description: "Grow Fingerprint Reader"
+description: "Instructions for setting up Grow Fingerprint Reader component in ESPHome."
 title: "Grow Fingerprint Reader"
+params:
+  seo:
+    description: Instructions for setting up Grow Fingerprint Reader component in ESPHome.
+    image: fingerprint.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `fingerprint_grow` component allows you to use your R307, R503, R503-RGB, ZFM-20, ... fingerprint sensors with ESPHome.
 

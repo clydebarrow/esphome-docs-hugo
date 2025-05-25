@@ -1,9 +1,12 @@
 ---
-description: "Button Component"
+description: "Instructions for setting up button components in ESPHome."
 title: "Button Component"
+params:
+  seo:
+    description: Instructions for setting up button components in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< note >}}
 To attach a physical button to ESPHome, see

@@ -1,9 +1,12 @@
 ---
-description: "Hydreon Rain Sensor"
+description: "Instructions for setting up Hydreon rain sensors"
 title: "Hydreon Rain Sensor"
+params:
+  seo:
+    description: Instructions for setting up Hydreon rain sensors
+    image: hydreon_rg9.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `hydreon_rgxx` sensor platform allows you to use rain sensors by Hydreon. Currently supported are the RG-9 and RG-15 sensors ([model comparison](https://rainsensors.com/products/model-comparison/)).
 

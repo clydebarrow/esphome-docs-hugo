@@ -1,9 +1,12 @@
 ---
-description: "NFC Binary Sensor"
+description: "Instructions for setting up a NFC binary sensor in ESPHome"
 title: "NFC Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up a NFC binary sensor in ESPHome
+    image: nfc.png
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "nfc-platform" >}}
 

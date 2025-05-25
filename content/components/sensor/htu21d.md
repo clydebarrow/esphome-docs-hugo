@@ -1,9 +1,12 @@
 ---
-description: "HTU21D | Si7021 | SHT21 Temperature & Humidity Sensor"
+description: "Instructions for setting up HTU21D temperature and humidity sensors."
 title: "HTU21D | Si7021 | SHT21 Temperature & Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up HTU21D temperature and humidity sensors.
+    image: htu21d.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The HTU21D Temperature & Humidity component allows you to use HTU21D, Si7021 and SHT21 sensors with
 ESPHome. The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.

@@ -1,9 +1,12 @@
 ---
-description: "DHT12 Temperature+Humidity Sensor"
+description: "Instructions for setting up DHT12 temperature and humidity sensors"
 title: "DHT12 Temperature+Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up DHT12 temperature and humidity sensors
+    image: dht12.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `dht12` Temperature+Humidity sensor allows you to use your DHT12
 ([datasheet](http://www.robototehnika.ru/file/DHT12.pdf),

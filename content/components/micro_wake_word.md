@@ -1,9 +1,12 @@
 ---
-description: "Micro Wake Word"
+description: "Instructions for creating a custom wake word using microWakeWord."
 title: "Micro Wake Word"
+params:
+  seo:
+    description: Instructions for creating a custom wake word using microWakeWord.
+    image: voice-assistant.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome implements an on-device wake word detection framework from [microWakeWord](https://github.com/kahrendt/microWakeWord).
 This repository/library allows you to create a custom wake word for your ESPHome device.

@@ -1,9 +1,12 @@
 ---
-description: "WeiKai SPI/I²C UART/IO Expander"
+description: "Instructions for setting up WeiKai SPI/I²C to UART Expanders in ESPHome."
 title: "WeiKai SPI/I²C UART/IO Expander"
+params:
+  seo:
+    description: Instructions for setting up WeiKai SPI/I²C to UART Expanders in ESPHome.
+    image: wk2168.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 **WeiKai Microelectronics** provides a family of UART & GPIO expansion chips
 that interfaces to a micro-controller through SPI or I²C bus.

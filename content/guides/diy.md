@@ -1,9 +1,12 @@
 ---
-description: "DIY Examples"
+description: "Community curated list of DIY creations and custom code for ESPHome."
 title: "DIY Examples"
+params:
+  seo:
+    description: Community curated list of DIY creations and custom code for ESPHome.
+    image: earth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This is a curated list of awesome creations with ESPHome containing various
 external components, blog posts, videos and sample configurations. It should serve as a means of

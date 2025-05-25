@@ -1,9 +1,12 @@
 ---
-description: "SGP40 Volatile Organic Compound Sensor and SGP41 VOC and NOx Sensor"
+description: "Instructions for setting up SGP40/SGP41 Volatile Organic Compound and NOx sensor"
 title: "SGP40 Volatile Organic Compound Sensor and SGP41 VOC and NOx Sensor"
+params:
+  seo:
+    description: Instructions for setting up SGP40/SGP41 Volatile Organic Compound and NOx sensor
+    image: sgp40.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sgp4x` sensor platform allows you to use your Sensirion SGP40
 ([datasheet](https://sensirion.com/media/documents/296373BB/6203C5DF/Sensirion_Gas_Sensors_Datasheet_SGP40.pdf)) or SGP41

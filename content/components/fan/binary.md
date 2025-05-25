@@ -1,9 +1,12 @@
 ---
-description: "Binary Fan"
+description: "Instructions for setting up binary fans."
 title: "Binary Fan"
+params:
+  seo:
+    description: Instructions for setting up binary fans.
+    image: fan.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `binary` fan platform lets you represent any binary [Output Component]({{< ref "components/output/_index#output" >}}) as a fan.
 

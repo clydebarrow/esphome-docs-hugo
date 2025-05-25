@@ -1,9 +1,12 @@
 ---
 description: "Network component"
 title: "Network component"
+params:
+  seo:
+    description: 
+    image: network-wifi.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The network component is a global configuration for all types of 
 networks (WiFi, Ethernet).

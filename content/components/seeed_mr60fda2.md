@@ -1,9 +1,12 @@
 ---
-description: "Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit"
+description: "Instructions for setting up Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit."
 title: "Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit"
+params:
+  seo:
+    description: Instructions for setting up Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit.
+    image: seeed_mr60fda2.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

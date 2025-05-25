@@ -1,9 +1,12 @@
 ---
-description: "Sprinkler Controller"
+description: "Instructions for setting up the sprinkler controller component in ESPHome to control sprinkler valves."
 title: "Sprinkler Controller"
+params:
+  seo:
+    description: Instructions for setting up the sprinkler controller component in ESPHome to control sprinkler valves.
+    image: sprinkler-variant.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< img src="sprinkler.png" alt="Image" class="center" >}}
 

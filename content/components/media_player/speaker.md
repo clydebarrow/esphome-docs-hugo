@@ -1,9 +1,12 @@
 ---
-description: "Speaker Audio Media Player"
+description: "Instructions for setting up a speaker media player in ESPHome."
 title: "Speaker Audio Media Player"
+params:
+  seo:
+    description: Instructions for setting up a speaker media player in ESPHome.
+    image: speaker.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `speaker` media player platform allows you to play on-device and online audio media via {{< docref "/components/speaker/index" "speaker components" >}}.
 

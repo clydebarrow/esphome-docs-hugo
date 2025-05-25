@@ -1,9 +1,12 @@
 ---
-description: "DHT Temperature+Humidity Sensor"
+description: "Instructions for setting up DHT11 and DHT22 temperature and humidity sensors."
 title: "DHT Temperature+Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up DHT11 and DHT22 temperature and humidity sensors.
+    image: dht.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The DHT Temperature+Humidity sensor allows you to use your
 

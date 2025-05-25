@@ -1,9 +1,12 @@
 ---
-description: "AMS iAQ-Core Indoor Air Quality Sensor"
+description: "Instructions for setting up the iAQ-Core sensor."
 title: "AMS iAQ-Core Indoor Air Quality Sensor"
+params:
+  seo:
+    description: Instructions for setting up the iAQ-Core sensor.
+    image: iaqcore.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The AMS iAQ-Core sensor allows you to use your
 ([datasheet](https://www.sciosense.com/wp-content/uploads/documents/iaQ-Core-Datasheet.pdf))

@@ -1,9 +1,12 @@
 ---
-description: "Modbus Controller"
+description: "Instructions for setting up the Modbus Controller component."
 title: "Modbus Controller"
+params:
+  seo:
+    description: Instructions for setting up the Modbus Controller component.
+    image: modbus.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` component creates a RS485 connection to either:
 

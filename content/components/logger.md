@@ -1,9 +1,14 @@
 ---
-description: "Logger Component"
+description: "Instructions for setting up the central logging component in ESPHome."
 title: "Logger Component"
+params:
+  seo:
+    description: Instructions for setting up the central logging component in ESPHome.
+    image: file-document-box.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "logger" >}}
+
 
 The logger component automatically logs all log messages through the
 serial port and through MQTT topics (if there is an MQTT client in the

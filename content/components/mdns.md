@@ -1,9 +1,12 @@
 ---
-description: "mDNS Component"
+description: "Instructions for setting up the mDNS configuration for your ESP node in ESPHome."
 title: "mDNS Component"
+params:
+  seo:
+    description: Instructions for setting up the mDNS configuration for your ESP node in ESPHome.
+    image: radio-tower.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `mdns` component makes the node announce itself on the local network using the multicast DNS (mDNS) protocol.
 

@@ -1,9 +1,12 @@
 ---
-description: "MH-Z19 CO_2 and Temperature Sensor"
+description: "Instructions for setting up MH-Z19 CO2 and temperature sensors"
 title: "MH-Z19 CO_2 and Temperature Sensor"
+params:
+  seo:
+    description: Instructions for setting up MH-Z19 CO2 and temperature sensors
+    image: mhz19.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `mhz19` sensor platform allows you to use MH-Z19 CO_2 and temperature sensors
 (`Revspace`_) with ESPHome.

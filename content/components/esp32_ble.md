@@ -1,9 +1,12 @@
 ---
-description: "BLE Component"
+description: "Instructions for setting up Bluetooth LE in ESPHome."
 title: "BLE Component"
+params:
+  seo:
+    description: Instructions for setting up Bluetooth LE in ESPHome.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `esp32_ble` component in ESPHome sets up the Bluetooth LE stack on the device so that a {{< docref "esp32_ble_server/" >}}
 can run.

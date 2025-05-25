@@ -1,9 +1,12 @@
 ---
-description: "Addressable Light"
+description: "Instructions for setting up displays using addressable lights and LED matrix"
 title: "Addressable Light"
+params:
+  seo:
+    description: Instructions for setting up displays using addressable lights and LED matrix
+    image: addressable_light.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `addressable_light` display platform allows to display text and graphics on an addressable
 light that has been arranged in a display matrix.

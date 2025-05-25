@@ -1,9 +1,12 @@
 ---
-description: "Grove TB6612FNG Motor Drive"
+description: "Instructions for setting up Grove TB6612FNG Motor Driver  in ESPHome."
 title: "Grove TB6612FNG Motor Drive"
+params:
+  seo:
+    description: Instructions for setting up Grove TB6612FNG Motor Driver  in ESPHome.
+    image: grove_tb6612fng.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The Grove TBB6612FNG a runs over  I²C bus and has the capability to control DC and Stepper motors.
 At the current stage of implementation only DC motor is implemented.

@@ -1,9 +1,12 @@
 ---
-description: "uFire ISE pH sensor"
+description: "Instructions for setting up uFire ISE pH sensor in esphome"
 title: "uFire ISE pH sensor"
+params:
+  seo:
+    description: Instructions for setting up uFire ISE pH sensor in esphome
+    image: ufire_ise.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `ufire_ise` sensor platform allows you to use your uFire ISE pH sensor with
 ESPHome. The [I²C Bus](components/i2c#i2c) is

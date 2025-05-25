@@ -1,9 +1,14 @@
 ---
-description: "Actions, Triggers, Conditions"
+description: "Guide for building automations in ESPHome"
 title: "Actions, Triggers, Conditions"
+params:
+  seo:
+    description: Guide for building automations in ESPHome
+    image: auto-fix.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "actions-triggers" >}}
+
 
 ESPHome *actions* are how we make an ESPHome device *do something.*
 

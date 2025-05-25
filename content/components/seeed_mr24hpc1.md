@@ -1,9 +1,12 @@
 ---
-description: "Seeed Studio MR24HPC1 mmWave (Kit)"
+description: "Instructions for setting up MR24HPC1 mmWave (Kit)."
 title: "Seeed Studio MR24HPC1 mmWave (Kit)"
+params:
+  seo:
+    description: Instructions for setting up MR24HPC1 mmWave (Kit).
+    image: seeed-mr24hpc1.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

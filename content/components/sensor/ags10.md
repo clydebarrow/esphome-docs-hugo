@@ -1,9 +1,12 @@
 ---
-description: "AGS10 Volatile Organic Compound (VOC) Sensor"
+description: "Instructions for setting up AGS10 VOC sensors with ESPHome"
 title: "AGS10 Volatile Organic Compound (VOC) Sensor"
+params:
+  seo:
+    description: Instructions for setting up AGS10 VOC sensors with ESPHome
+    image: ags10.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ags10` sensor platform VOC sensor allows you to use your ASAIR AGS10
 ([datasheet](http://www.aosong.com/userfiles/files/Datasheet%20AGS10.pdf),

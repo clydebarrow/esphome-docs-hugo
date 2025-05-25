@@ -1,9 +1,12 @@
 ---
-description: "Template Datetime"
+description: "Instructions for setting up template datetime with ESPHome."
 title: "Template Datetime"
+params:
+  seo:
+    description: Instructions for setting up template datetime with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` datetime platform allows you to create a datetime with templated values
 using [lambdas](automations/templates#config-lambda).

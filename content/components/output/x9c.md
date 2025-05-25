@@ -1,9 +1,12 @@
 ---
-description: "X9C Potentiometer Output"
+description: "Instructions for setting up a X9C digital potentiometer with ESPHome."
 title: "X9C Potentiometer Output"
+params:
+  seo:
+    description: Instructions for setting up a X9C digital potentiometer with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `x9c` output platform allows you to add an output that controls a [X9C digital potentiometer](https://www.renesas.com/us/en/document/dst/x9c102-x9c103-x9c104-x9c503-datasheet).
 

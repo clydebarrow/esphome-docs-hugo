@@ -1,9 +1,12 @@
 ---
-description: "LibreTiny Platform"
+description: "Configuration for the LibreTiny platform for ESPHome."
 title: "LibreTiny Platform"
+params:
+  seo:
+    description: Configuration for the LibreTiny platform for ESPHome.
+    image: libretiny.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This component contains platform-specific options for the [LibreTiny](https://docs.libretiny.eu/) platform.
 It provides support for the following microcontrollers, commonly used in Tuya devices, amongst others:

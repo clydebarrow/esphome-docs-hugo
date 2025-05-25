@@ -1,9 +1,13 @@
 ---
-description: "Matrix keypad"
+description: "Matrix key input panel"
 title: "Matrix keypad"
+params:
+  seo:
+    description: Matrix key input panel
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "matrix_keypad" >}}
+
 
 The `matrix_keypad` component allows you to integrate pads which
 have the keys connected at the intersection points of the rows and columns

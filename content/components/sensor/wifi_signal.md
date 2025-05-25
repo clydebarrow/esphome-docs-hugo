@@ -1,9 +1,12 @@
 ---
-description: "WiFi Signal Sensor"
+description: "Instructions for setting up WiFi signal sensors that track the RSSI connection strength value to the network."
 title: "WiFi Signal Sensor"
+params:
+  seo:
+    description: Instructions for setting up WiFi signal sensors that track the RSSI connection strength value to the network.
+    image: network-wifi.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `wifi_signal` sensor platform allows you to read the signal
 strength of the currently connected {{< docref "/components/wifi" "WiFi Access Point" >}}.

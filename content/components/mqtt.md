@@ -1,9 +1,12 @@
 ---
-description: "MQTT Client Component"
+description: "Instructions for setting up the MQTT client to communicate with the local network in ESPHome."
 title: "MQTT Client Component"
+params:
+  seo:
+    description: Instructions for setting up the MQTT client to communicate with the local network in ESPHome.
+    image: mqtt.png
 ---
 
-{{< seo description="" image="" >}}
 
 The MQTT Client Component sets up the MQTT connection to your broker.
 If you are connecting to Home Assistant, you may prefer to use the native API,

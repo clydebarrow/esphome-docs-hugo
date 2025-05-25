@@ -1,9 +1,12 @@
 ---
-description: "Switch Component"
+description: "Instructions for setting up generic switches in ESPHome."
 title: "Switch Component"
+params:
+  seo:
+    description: Instructions for setting up generic switches in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `switch` domain includes all platforms that should show up like a
 switch and can only be turned ON or OFF.

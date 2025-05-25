@@ -1,9 +1,12 @@
 ---
-description: "VBus Component"
+description: "Instructions for integrating a solar energy collector controller using VBus protocol in ESPHome."
 title: "VBus Component"
+params:
+  seo:
+    description: Instructions for integrating a solar energy collector controller using VBus protocol in ESPHome.
+    image: resol_deltasol_bs_plus.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `VBus` Component provides status reading connectivity to solar heat energy collector controllers using VBus
 protocol. These devices are mainly produced by Resol, often also found under different brand names like Viessmann,

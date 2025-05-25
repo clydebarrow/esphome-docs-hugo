@@ -1,9 +1,14 @@
 ---
-description: "Nextion Sensor Component"
+description: "Instructions for setting up Nextion sensor."
 title: "Nextion Sensor Component"
+params:
+  seo:
+    description: Instructions for setting up Nextion sensor.
+    image: nextion.jpg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "nextion_sensor" >}}
+
 
 The `nextion` sensor platform supports integers or floats (Xfloat). It can be a component, a variable or a waveform in the Nextion display.
 It is best to set the component's vscope to global in the Nextion Editor. This way the component will be available

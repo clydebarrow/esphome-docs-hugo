@@ -1,9 +1,12 @@
 ---
-description: "Pylontech Battery"
+description: "Instructions for setting up Pylontech Battery in ESPHome."
 title: "Pylontech Battery"
+params:
+  seo:
+    description: Instructions for setting up Pylontech Battery in ESPHome.
+    image: pylontech.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The Pylontech component allows you to pull data from Pylontech Batteries into ESPHome.
 It uses [UART](components/uart#uart) for communication.

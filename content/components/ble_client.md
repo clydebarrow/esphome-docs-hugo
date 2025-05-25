@@ -1,9 +1,12 @@
 ---
-description: "BLE Client"
+description: "Configuration of the BLE client on ESP32."
 title: "BLE Client"
+params:
+  seo:
+    description: Configuration of the BLE client on ESP32.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ble_client` component enables connections to Bluetooth Low Energy devices in order to query and
 control them. This component does not expose any sensors or output components itself, but merely manages

@@ -1,9 +1,14 @@
 ---
-description: "GPIO Binary Sensor"
+description: "Instructions for setting up GPIO binary sensors with ESPHome."
 title: "GPIO Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up GPIO binary sensors with ESPHome.
+    image: gpio.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "gpio-binary-sensor" >}}
+
 
 The GPIO Binary Sensor platform allows you to use any input pin on your
 device as a binary sensor.

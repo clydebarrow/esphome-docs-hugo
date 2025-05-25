@@ -1,9 +1,12 @@
 ---
-description: "Restart Button"
+description: "Instructions for setting up buttons that can remotely reboot the ESP in ESPHome."
 title: "Restart Button"
+params:
+  seo:
+    description: Instructions for setting up buttons that can remotely reboot the ESP in ESPHome.
+    image: restart.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `restart` button platform allows you to restart your node remotely
 through Home Assistant.

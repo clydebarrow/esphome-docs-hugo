@@ -1,9 +1,12 @@
 ---
-description: "Haier Climate Binary Sensors"
+description: "Instructions for setting up additional binary sensors for Haier climate devices."
 title: "Haier Climate Binary Sensors"
+params:
+  seo:
+    description: Instructions for setting up additional binary sensors for Haier climate devices.
+    image: haier.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Additional sensors for Haier Climate device. **These sensors are supported only by the hOn protocol**.
 

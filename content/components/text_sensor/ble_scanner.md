@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Bluetooth Low Energy Scanner"
+description: "Instructions for setting up BLE text sensors for the ESP32."
 title: "ESP32 Bluetooth Low Energy Scanner"
+params:
+  seo:
+    description: Instructions for setting up BLE text sensors for the ESP32.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ble_scanner` text sensor platform lets you track reachable BLE devices.
 

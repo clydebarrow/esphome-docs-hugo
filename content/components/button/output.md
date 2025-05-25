@@ -1,9 +1,12 @@
 ---
-description: "Generic Output Button"
+description: "Instructions for setting up generic output buttons in ESPHome that control an output component."
 title: "Generic Output Button"
+params:
+  seo:
+    description: Instructions for setting up generic output buttons in ESPHome that control an output component.
+    image: upload.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `output` button platform allows you to use any output component as a button. This can for example be used to
 momentarily set a GPIO pin using a button.

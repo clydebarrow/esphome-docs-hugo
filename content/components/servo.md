@@ -1,9 +1,12 @@
 ---
-description: "Servo Component"
+description: "Instructions for setting up servos in ESPHome"
 title: "Servo Component"
+params:
+  seo:
+    description: Instructions for setting up servos in ESPHome
+    image: servo.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `servo` component allows you to use servo motors with ESPHome. Servos are
 motor controllers that contain all the electronics necessary for driving the motor and provide

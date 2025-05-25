@@ -1,9 +1,14 @@
 ---
-description: "Deep Sleep Component"
+description: "Instructions for setting up the deep sleep support for minimizing power consumption on ESPs."
 title: "Deep Sleep Component"
+params:
+  seo:
+    description: Instructions for setting up the deep sleep support for minimizing power consumption on ESPs.
+    image: hotel.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "deep_sleep-component" >}}
+
 
 The `deep_sleep` component can be used to automatically enter a deep sleep mode on the
 ESP8266/ESP32 after a certain amount of time. This is especially useful with nodes that operate

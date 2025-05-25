@@ -1,9 +1,12 @@
 ---
-description: "Event Component"
+description: "Instructions for setting up event components in ESPHome."
 title: "Event Component"
+params:
+  seo:
+    description: Instructions for setting up event components in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome supports the creation of event entities in Home Assistant.
 These entities allow for the triggering of custom events within the Home Assistant ecosystem,

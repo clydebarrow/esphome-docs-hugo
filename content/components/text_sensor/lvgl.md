@@ -1,9 +1,12 @@
 ---
-description: "LVGL Text Sensor"
+description: "Instructions for setting up an LVGL Text Sensor."
 title: "LVGL Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up an LVGL Text Sensor.
+    image: ../images/lvgl_c_txt.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` text sensor platform creates a Text Sensor from an LVGL textual widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.

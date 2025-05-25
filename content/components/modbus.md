@@ -1,9 +1,13 @@
 ---
-description: "Modbus Component"
+description: "Instructions for setting up Modbus in ESPHome."
 title: "Modbus Component"
+params:
+  seo:
+    description: Instructions for setting up Modbus in ESPHome.
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "modbus" >}}
+
 
 The Modbus protocol is used by many consumer and industrial devices for communication.
 This component allows components in ESPHome to communicate to those devices via RTU protocol. You can access the coils, inputs, holding, read registers from your devices as sensors, switches, selects, numbers or various other ESPHome components and present them to your favorite Home Automation system. You can even write them as binary or float ouptputs from ESPHome.

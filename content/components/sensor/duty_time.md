@@ -1,9 +1,12 @@
 ---
-description: "Duty Time"
+description: "Instructions for setting up a sensor that tracks the duty time of some object."
 title: "Duty Time"
+params:
+  seo:
+    description: Instructions for setting up a sensor that tracks the duty time of some object.
+    image: timer-play-outline.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `duty_time` sensor allows you to track the total duty time of some object, for example, a light bulb, in seconds.
 Able to calculate the last turn-on time when an optional sensor `last_time` is included in the configuration.

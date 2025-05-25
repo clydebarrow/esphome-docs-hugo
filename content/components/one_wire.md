@@ -1,9 +1,14 @@
 ---
-description: "1-Wire Bus"
+description: "Instructions for setting up a Dallas (Analog Devices) 1-Wire bus to communicate with 1-wire devices in ESPHome"
 title: "1-Wire Bus"
+params:
+  seo:
+    description: Instructions for setting up a Dallas (Analog Devices) 1-Wire bus to communicate with 1-wire devices in ESPHome
+    image: one-wire.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "one_wire" >}}
+
 
 The `one_wire` component allows you to use supported 1-Wire devices in ESPHome.
 The 1-Wire bus the devices are connected to should have an external pullup resistor of

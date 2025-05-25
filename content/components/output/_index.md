@@ -1,9 +1,14 @@
 ---
-description: "Output Component"
+description: "Instructions for setting up generic outputs in ESPHome"
 title: "Output Component"
+params:
+  seo:
+    description: Instructions for setting up generic outputs in ESPHome
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "output" >}}
+
 
 Each platform of the `output` domain exposes some output to
 ESPHome. These are grouped into two categories: `binary` outputs

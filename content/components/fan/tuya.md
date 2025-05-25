@@ -1,9 +1,12 @@
 ---
-description: "Tuya Fan"
+description: "Instructions for setting up a Tuya ceiling fan switch."
 title: "Tuya Fan"
+params:
+  seo:
+    description: Instructions for setting up a Tuya ceiling fan switch.
+    image: fan.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` fan platform creates a variable speed fan from a
 tuya component.

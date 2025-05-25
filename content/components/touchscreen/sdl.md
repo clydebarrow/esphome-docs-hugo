@@ -1,9 +1,11 @@
 ---
-description: "SDL2 Touch Screen Emulator"
+description: "Instructions for setting up touch screen emulation with the sdl display driver."
 title: "SDL2 Touch Screen Emulator"
+params:
+  seo:
+    description: Instructions for setting up touch screen emulation with the sdl display driver.
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "sdl_touchscreen" >}}
 

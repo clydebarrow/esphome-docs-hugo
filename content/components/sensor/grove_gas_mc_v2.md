@@ -1,9 +1,12 @@
 ---
-description: "Grove Multichannel Gas Sensor V2"
+description: "Instructions for setting up Grove Multichannel Gas Sensor V2 that"
 title: "Grove Multichannel Gas Sensor V2"
+params:
+  seo:
+    description: Instructions for setting up Grove Multichannel Gas Sensor V2 that
+    image: grove-gas-mc-v2.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `grove_gas_mc_v2` sensor platform allows you to use your [Grove Multichannel GasSensor V2](https://wiki.seeedstudio.com/Grove-Multichannel-Gas-Sensor-V2) 
 with ESPHome. It exposes 4 different gas sensors for qualitatively measuring

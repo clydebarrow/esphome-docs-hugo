@@ -1,9 +1,12 @@
 ---
-description: "Grundfos Alpha3"
+description: "Instructions for monitoring a Grundfos Alpha3 Model B circulator pump."
 title: "Grundfos Alpha3"
+params:
+  seo:
+    description: Instructions for monitoring a Grundfos Alpha3 Model B circulator pump.
+    image: alpha3.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `alpha3` component allows you to monitor a Grundfos Alpha3 Model B circulator pump over BLE.
 

@@ -1,9 +1,12 @@
 ---
-description: "Mixer Speaker"
+description: "Instructions for setting up mixer speakers in ESPHome."
 title: "Mixer Speaker"
+params:
+  seo:
+    description: Instructions for setting up mixer speakers in ESPHome.
+    image: mixer.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `mixer` speaker platform allows you to mix audio sent to different source speakers into one output which is sent to another {{< docref "/components/speaker/index" "speaker component" >}}. Individual source speakers may be ducked (made quieter) with the [apply ducking action](components/speaker/mixer#mixer_speaker-apply_ducking).
 

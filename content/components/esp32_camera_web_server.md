@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Camera Web Server Component"
+description: "Instructions for setting up the ESP32 Camera Web Server in ESPHome"
 title: "ESP32 Camera Web Server Component"
+params:
+  seo:
+    description: Instructions for setting up the ESP32 Camera Web Server in ESPHome
+    image: camera.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `esp32_camera_web_server` component allows you to use expose web server of
 ESP32-based camera boards in ESPHome that directly can be integrated into external

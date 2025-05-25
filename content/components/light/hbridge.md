@@ -1,9 +1,12 @@
 ---
-description: "H-bridge Light"
+description: "Instructions for setting up a hbridge light."
 title: "H-bridge Light"
+params:
+  seo:
+    description: Instructions for setting up a hbridge light.
+    image: brightness-medium.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `hbridge` light platform creates a dual color brightness controlled light from two
 [float output component](components/output/_index#output).

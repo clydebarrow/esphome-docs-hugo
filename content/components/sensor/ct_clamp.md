@@ -1,9 +1,12 @@
 ---
-description: "CT Clamp Current Sensor"
+description: "Instructions for setting up ct clamp sensors."
 title: "CT Clamp Current Sensor"
+params:
+  seo:
+    description: Instructions for setting up ct clamp sensors.
+    image: ct_clamp.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The Current Transformer Clamp (`ct_clamp`) sensor allows you to hook up a CT Clamp to an analog
 voltage sensor (like the {{< docref "adc" "ADC sensor" >}}) and convert the readings to measured single phase AC current.

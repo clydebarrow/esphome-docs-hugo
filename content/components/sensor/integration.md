@@ -1,9 +1,12 @@
 ---
-description: "Integration Sensor"
+description: "Instructions for setting up sensors that integrate values over time."
 title: "Integration Sensor"
+params:
+  seo:
+    description: Instructions for setting up sensors that integrate values over time.
+    image: sigma.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `integration` sensor is a helper sensor that can integrate values from other sensors over
 time. This can for example be useful to integrate the values of a water flow sensor (in m^3/s) over

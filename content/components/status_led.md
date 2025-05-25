@@ -1,9 +1,12 @@
 ---
-description: "Status LED"
+description: "Instructions for setting up status LEDs in ESPHome to monitor the status of an ESP."
 title: "Status LED"
+params:
+  seo:
+    description: Instructions for setting up status LEDs in ESPHome to monitor the status of an ESP.
+    image: led-on.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `status_led` hooks into all ESPHome components and can indicate the status of
 the device. Specifically, it will:

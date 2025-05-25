@@ -1,9 +1,12 @@
 ---
-description: "LVGL Select"
+description: "Instructions for setting up an LVGL widget select."
 title: "LVGL Select"
+params:
+  seo:
+    description: Instructions for setting up an LVGL widget select.
+    image: ../images/lvgl_c_sel.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` select platform creates a select from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.

@@ -1,9 +1,11 @@
 ---
-description: "XXTEA Component"
+description: "Lightweight encryption algorithm for ESPHome"
 title: "XXTEA Component"
+params:
+  seo:
+    description: Lightweight encryption algorithm for ESPHome
 ---
 
-{{< seo description="" image="" >}}
 
 This component cannot be used directly in YAML, but can be used in lambdas to encrypt and decrypt data.
 

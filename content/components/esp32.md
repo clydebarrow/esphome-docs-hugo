@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Platform"
+description: "Configuration for the ESP32 platform for ESPHome."
 title: "ESP32 Platform"
+params:
+  seo:
+    description: Configuration for the ESP32 platform for ESPHome.
+    image: esp32.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This component contains platform-specific options for the ESP32 platform.
 

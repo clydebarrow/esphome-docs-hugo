@@ -1,10 +1,15 @@
 ---
-description: "WireGuard Component"
+description: "Instructions to setup WireGuard for your ESP board."
 title: "WireGuard Component"
+params:
+  seo:
+    description: Instructions to setup WireGuard for your ESP board.
 ---
 
-{{< seo description="" image="" >}}
 
+[wireguard](https://www.wireguard.org/)
+
+unicode:: WireGuard 0xAE_ is an extremely simple yet fast and modern VPN that utilizes
 state-of-the-art cryptography. This component uses a **custom**
 implementation not developed by original authors and currently
 available for ESP32, ESP8266 and BK72xx microcontrollers *only*.

@@ -1,9 +1,12 @@
 ---
-description: "Tormatic/Novoferm Cover"
+description: "Setting up Tormatic and Novoferm covers in ESPHome."
 title: "Tormatic/Novoferm Cover"
+params:
+  seo:
+    description: Setting up Tormatic and Novoferm covers in ESPHome.
+    image: tormatic.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `tormatic` cover platform allows you to control Tormatic and Novoferm
 garage door drives manufactured in 2016 onwards. The following models should

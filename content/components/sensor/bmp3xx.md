@@ -1,9 +1,12 @@
 ---
-description: "BMP388 / BMP390 Temperature+Pressure Sensor"
+description: "Instructions for setting up BMP388 or BMP390 temperature and pressure sensors with ESPHome"
 title: "BMP388 / BMP390 Temperature+Pressure Sensor"
+params:
+  seo:
+    description: Instructions for setting up BMP388 or BMP390 temperature and pressure sensors with ESPHome
+    image: bmp388.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `bmp3xx` sensor platform allows you to use your BMP388 or BMP390 
 ([datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp390-ds002.pdf), [BMP390 product page](https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/)) temperature and pressure sensors with ESPHome. 

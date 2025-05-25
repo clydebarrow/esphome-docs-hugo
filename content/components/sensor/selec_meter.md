@@ -1,9 +1,12 @@
 ---
-description: "Selec Energy Monitor"
+description: "Instructions for setting up Selec power monitors."
 title: "Selec Energy Monitor"
+params:
+  seo:
+    description: Instructions for setting up Selec power monitors.
+    image: selec_meter_em2m.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `selec_meter` sensor platform allows you to use Selec Modbus energy monitors
 ([website](https://www.selec.com/product-details/energy-meter-direct-operated-em2m))

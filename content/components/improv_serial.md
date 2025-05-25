@@ -1,9 +1,12 @@
 ---
-description: "Improv via Serial"
+description: "Instructions for setting up Improv via Serial in ESPHome."
 title: "Improv via Serial"
+params:
+  seo:
+    description: Instructions for setting up Improv via Serial in ESPHome.
+    image: improv-social.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `improv_serial` component in ESPHome implements the open [Improv standard](https://www.improv-wifi.com/)
 for configuring Wi-Fi on an ESPHome device by using a serial connection to the device, eg. USB.

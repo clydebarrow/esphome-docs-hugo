@@ -1,9 +1,12 @@
 ---
-description: "PMSA003I Particulate Matter Sensor"
+description: "Instructions for setting up PMSX003 Particulate matter sensors"
 title: "PMSA003I Particulate Matter Sensor"
+params:
+  seo:
+    description: Instructions for setting up PMSX003 Particulate matter sensors
+    image: pmsa003i.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `pmsa003i` sensor platform  allows you to use your Plantower PMSA003I
 particulate matter sensor

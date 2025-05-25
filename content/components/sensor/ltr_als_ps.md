@@ -1,9 +1,12 @@
 ---
-description: "Lite-On Ambient Light & Proximity Sensors"
+description: "Instructions for setting up LTR303, LTR329, LTR553, LTR556, LTR559, LTR659 ambient light sensors/proximity sensors with ESPHome."
 title: "Lite-On Ambient Light & Proximity Sensors"
+params:
+  seo:
+    description: Instructions for setting up LTR303, LTR329, LTR553, LTR556, LTR559, LTR659 ambient light sensors/proximity sensors with ESPHome.
+    image: ltr303.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< img src="ltr303-full.jpg" alt="Image" caption="LTR-329 and LTR-303 Ambient Light Sensors." width="90.0%" class="center" >}}
 

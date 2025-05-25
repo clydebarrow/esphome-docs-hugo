@@ -1,9 +1,12 @@
 ---
-description: "A01NYUB Waterproof Ultrasonic Sensor"
+description: "Instructions for setting up A01NYUB waterproof ultrasonic distance sensor in ESPHome."
 title: "A01NYUB Waterproof Ultrasonic Sensor"
+params:
+  seo:
+    description: Instructions for setting up A01NYUB waterproof ultrasonic distance sensor in ESPHome.
+    image: a01nyub.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 This sensor allows you to use A01NYUB waterproof ultrasonic sensor by DFRobot
 ([datasheet](https://wiki.dfrobot.com/A01NYUB%20Waterproof%20Ultrasonic%20Sensor%20SKU:%20SEN0313))

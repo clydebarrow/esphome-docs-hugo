@@ -1,9 +1,12 @@
 ---
-description: "b-parasite"
+description: "Instructions for setting up the b-parasite soil moisture sensor in ESPHome."
 title: "b-parasite"
+params:
+  seo:
+    description: Instructions for setting up the b-parasite soil moisture sensor in ESPHome.
+    image: b_parasite.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 [b-parasite](https://github.com/rbaron/b-parasite) is an open source soil moisture and ambient temperature/humidity/light sensor.
 

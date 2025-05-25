@@ -1,9 +1,14 @@
 ---
-description: "Made for ESPHome"
+description: "Information about the Made for ESPHome program"
 title: "Made for ESPHome"
+params:
+  seo:
+    description: Information about the Made for ESPHome program
+    image: /_static/made-for-esphome-black-on-white.png
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "made_for_esphome" >}}
+
 
 ESPHome has a wonderful and active community that loves creating and sharing projects.
 You can apply for your project to get the `Made for ESPHome` stamp of approval.

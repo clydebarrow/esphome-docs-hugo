@@ -1,9 +1,12 @@
 ---
-description: "Waveshare E-Paper Display"
+description: "Instructions for setting up Waveshare E-Paper displays in ESPHome."
 title: "Waveshare E-Paper Display"
+params:
+  seo:
+    description: Instructions for setting up Waveshare E-Paper displays in ESPHome.
+    image: waveshare_epaper.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `waveshare_epaper` display platform allows you to use
 some E-Paper displays sold by [Waveshare](https://www.waveshare.com/product/displays/e-paper.htm)

@@ -1,9 +1,12 @@
 ---
-description: "Modbus Controller Sensor"
+description: "Instructions for setting up a modbus_controller device sensor."
 title: "Modbus Controller Sensor"
+params:
+  seo:
+    description: Instructions for setting up a modbus_controller device sensor.
+    image: modbus.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` sensor platform creates a sensor from a modbus_controller component
 and requires {{< docref "/components/modbus_controller" >}} to be configured.

@@ -1,9 +1,12 @@
 ---
-description: "RP2040 PIO LED Strip"
+description: "Instructions for setting up addressable lights like NEOPIXEL on an RP2040 using the PIO peripheral."
 title: "RP2040 PIO LED Strip"
+params:
+  seo:
+    description: Instructions for setting up addressable lights like NEOPIXEL on an RP2040 using the PIO peripheral.
+    image: color_lens.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This is a component using the RP2040 PIO peripheral to drive most addressable LED strips.
 

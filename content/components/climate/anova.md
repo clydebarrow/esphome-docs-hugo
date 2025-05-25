@@ -1,9 +1,12 @@
 ---
-description: "Anova Cooker"
+description: "Instructions for setting up an Anova sous-vide cooker."
 title: "Anova Cooker"
+params:
+  seo:
+    description: Instructions for setting up an Anova sous-vide cooker.
+    image: anova.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `anova` climate platform creates a climate device which can be used
 to control a BLE Anova sous-vide stick. Whilst not strictly a climate

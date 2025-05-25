@@ -1,9 +1,12 @@
 ---
-description: "Audio ADC Core"
+description: "Instructions for using ESPHome's Audio ADC Core component."
 title: "Audio ADC Core"
+params:
+  seo:
+    description: Instructions for using ESPHome's Audio ADC Core component.
+    image: i2s_audio.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `audio_adc` component allows your ESPHome devices to use audio ADC hardware components, allowing the
 capture/recording of audio via the microcontroller from a range of sources.

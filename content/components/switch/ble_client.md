@@ -1,9 +1,12 @@
 ---
-description: "BLE Client Switch"
+description: "Control the state of BLE clients."
 title: "BLE Client Switch"
+params:
+  seo:
+    description: Control the state of BLE clients.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ble_client` component is a switch platform that is used to enable and disable a `ble_client`. This has
 several uses, such as minimizing battery usage or for allowing other clients (Eg phone apps) to connect to the device.

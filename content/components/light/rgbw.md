@@ -1,9 +1,12 @@
 ---
-description: "RGBW Light"
+description: "Instructions for setting up RGB + White-Channel lights."
 title: "RGBW Light"
+params:
+  seo:
+    description: Instructions for setting up RGB + White-Channel lights.
+    image: rgbw.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `rgbw` light platform creates an RGBW light from 4 [float output components](components/output/_index#output) (one for each channel).
 

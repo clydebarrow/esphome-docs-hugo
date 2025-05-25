@@ -1,9 +1,12 @@
 ---
-description: "Number Component"
+description: "Instructions for setting up number components in ESPHome."
 title: "Number Component"
+params:
+  seo:
+    description: Instructions for setting up number components in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome has support for components to create a number entity. A number entity is
 like a sensor that can read a value from a device, but is useful when that value

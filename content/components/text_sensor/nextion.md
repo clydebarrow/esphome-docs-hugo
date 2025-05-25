@@ -1,9 +1,14 @@
 ---
-description: "Nextion Text Sensor Component"
+description: "Instructions for setting up Nextion text sensor."
 title: "Nextion Text Sensor Component"
+params:
+  seo:
+    description: Instructions for setting up Nextion text sensor.
+    image: nextion.jpg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "nextion_text_sensor" >}}
+
 
 The `nextion` text sensor platform supports text strings. It can be a component or variable in the Nextion display.
 It is best to set the components vscope to global in the Nextion Editor. This way the component will be available

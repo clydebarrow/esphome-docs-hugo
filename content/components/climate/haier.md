@@ -1,9 +1,12 @@
 ---
-description: "Haier Climate"
+description: "Instructions for setting up Haier climate devices."
 title: "Haier Climate"
+params:
+  seo:
+    description: Instructions for setting up Haier climate devices.
+    image: air-conditioner.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This is an implementation of the ESPHome component to control HVAC on the base of the SmartAir2 and hOn Haier protocols (AC that is controlled by the hOn or SmartAir2 application).
 

@@ -1,9 +1,12 @@
 ---
-description: "H-bridge Switch"
+description: "Instructions for setting up H-Bridge controlled switches (or relays)."
 title: "H-bridge Switch"
+params:
+  seo:
+    description: Instructions for setting up H-Bridge controlled switches (or relays).
+    image: hbridge-relay.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `hbridge` switch platform allows you to drive an *h-bridge* controlled latching relay.
 

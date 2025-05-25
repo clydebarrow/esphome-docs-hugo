@@ -1,9 +1,12 @@
 ---
-description: "Bang Bang Climate Controller"
+description: "Instructions for setting up Bang Bang climate controllers with ESPHome."
 title: "Bang Bang Climate Controller"
+params:
+  seo:
+    description: Instructions for setting up Bang Bang climate controllers with ESPHome.
+    image: air-conditioner.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `bang_bang` climate platform allows you to regulate a value with a
 [bang-bang controller](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control) (also called hysteresis controller).

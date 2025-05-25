@@ -1,9 +1,12 @@
 ---
-description: "Lilygo T5 4.7\" Touchscreen"
+description: "Instructions for setting up the Lilygo T5 4.7\" Touchscreen with ESPHome"
 title: "Lilygo T5 4.7\" Touchscreen"
+params:
+  seo:
+    description: Instructions for setting up the Lilygo T5 4.7" Touchscreen with ESPHome
+    image: lilygo_t5_47_touch.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `liygo_t5_47` touchscreen platform allows using the touchscreen controller
 for the Lilygo T5 4.7" e-Paper Display with ESPHome.

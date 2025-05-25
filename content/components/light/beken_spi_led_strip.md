@@ -1,9 +1,12 @@
 ---
-description: "Beken SPI LED Strip"
+description: "Instructions for setting up addressable lights like NEOPIXEL on a Beken chip using the SPI DMA interface."
 title: "Beken SPI LED Strip"
+params:
+  seo:
+    description: Instructions for setting up addressable lights like NEOPIXEL on a Beken chip using the SPI DMA interface.
+    image: color_lens.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This is a component using the Beken SPI DMA interface to drive addressable LED strips.
 

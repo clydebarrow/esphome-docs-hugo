@@ -1,9 +1,12 @@
 ---
-description: "Update Core"
+description: "Instructions for using Update entities to manage updates on your ESPHome devices."
 title: "Update Core"
+params:
+  seo:
+    description: Instructions for using Update entities to manage updates on your ESPHome devices.
+    image: system-update.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `update` component allows your ESPHome devices to install updates from a remote source; instead of
 {{< docref "/components/ota/index" ""pushing" an update to your device" >}}, the device can retrieve an update and

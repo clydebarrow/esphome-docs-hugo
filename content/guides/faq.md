@@ -1,9 +1,12 @@
 ---
-description: "Frequently Asked Questions"
+description: "Frequently asked questions in ESPHome."
 title: "Frequently Asked Questions"
+params:
+  seo:
+    description: Frequently asked questions in ESPHome.
+    image: question_answer.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Which ESP should I use for my project?
 

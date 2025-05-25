@@ -1,9 +1,12 @@
 ---
-description: "Factory Reset Switch"
+description: "Instructions for setting up switches that can remotely invalidate all ESPHome preferences stored in flash and reboot ESP."
 title: "Factory Reset Switch"
+params:
+  seo:
+    description: Instructions for setting up switches that can remotely invalidate all ESPHome preferences stored in flash and reboot ESP.
+    image: restart.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `factory_reset` switch allows you to remotely invalidate (reset) all ESPHome [preferences](components/esphome#preferences-flash_write_interval) stored in flash memory and reboot your node.
 After reboot all states, parameters and variables will be reinitialized with their default values. This is useful:

@@ -1,9 +1,12 @@
 ---
-description: "Template Number"
+description: "Instructions for setting up template numbers with ESPHome."
 title: "Template Number"
+params:
+  seo:
+    description: Instructions for setting up template numbers with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` number platform allows you to create a number with templated values
 using [lambdas](automations/templates#config-lambda).

@@ -1,9 +1,12 @@
 ---
-description: "PMWCS3 Capacitive Soil Moisture and Temperature Sensor"
+description: "Instructions for setting up PMWCS3 capacitive soil moisture sensor in ESPHome."
 title: "PMWCS3 Capacitive Soil Moisture and Temperature Sensor"
+params:
+  seo:
+    description: Instructions for setting up PMWCS3 capacitive soil moisture sensor in ESPHome.
+    image: pmwcs3.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `pmwcs3` sensor platform allows you to use your PMWCS3
 ([informations](https://tinovi.com/wp-content/uploads/2020/01/PM-WCS-3-I2C.pdf))

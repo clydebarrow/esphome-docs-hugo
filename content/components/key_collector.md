@@ -1,9 +1,13 @@
 ---
 description: "Key collector component"
 title: "Key collector component"
+params:
+  seo:
+    description: Key collector component
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "key_collector" >}}
+
 
 The `key_collector` component collects key presses from components
 like [Matrix keypad]({{< ref "components/matrix_keypad#matrix_keypad" >}}), {{< docref "/components/wiegand" "Wiegand keypad" >}}

@@ -1,9 +1,12 @@
 ---
-description: "ESP32 DAC"
+description: "Instructions for setting up ESP32 digital-to-analog converter."
 title: "ESP32 DAC"
+params:
+  seo:
+    description: Instructions for setting up ESP32 digital-to-analog converter.
+    image: dac.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The ESP32 DAC platform allows you to output analog voltages using the 8-bit digital-to-analog
 converter of the ESP32. Unlike the {{< docref "/components/output/ledc" >}}, which can simulate an analog

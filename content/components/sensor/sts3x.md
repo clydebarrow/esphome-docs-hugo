@@ -1,9 +1,12 @@
 ---
-description: "STS3X Temperature Sensor"
+description: "Instructions for setting up STS3x-DIS temperature sensors"
 title: "STS3X Temperature Sensor"
+params:
+  seo:
+    description: Instructions for setting up STS3x-DIS temperature sensors
+    image: sts3x.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sts3x` sensor platform Temperature sensor allows you to use your Sensirion STS30-DIS, STS31-DIS or STS35-DIS
 ([datasheet](https://sensirion.com/media/documents/1DA31AFD/61641F76/Sensirion_Temperature_Sensors_STS3x_Datasheet.pdf),

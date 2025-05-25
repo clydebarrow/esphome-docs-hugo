@@ -1,9 +1,12 @@
 ---
-description: "Tuya Switch"
+description: "Instructions for setting up a Tuya device switch."
 title: "Tuya Switch"
+params:
+  seo:
+    description: Instructions for setting up a Tuya device switch.
+    image: upload.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` switch platform creates a sensor from a tuya serial component
 and requires {{< docref "/components/tuya" >}} to be configured.

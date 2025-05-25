@@ -1,9 +1,12 @@
 ---
-description: "JSN-SR04T Waterproof Ultrasonic Range Finder"
+description: "Instructions for setting up JSN-SR04T waterproof ultrasonic distance sensor in ESPHome."
 title: "JSN-SR04T Waterproof Ultrasonic Range Finder"
+params:
+  seo:
+    description: Instructions for setting up JSN-SR04T waterproof ultrasonic distance sensor in ESPHome.
+    image: jsn-sr04t-v3.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 This sensor allows you to use the JSN-SR04T and AJ_SR04M Waterproof Ultrasonic Range Finder **in Mode 1 and 2**
 with ESPHome to measure distances. This sensor can measure

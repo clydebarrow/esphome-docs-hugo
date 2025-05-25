@@ -1,9 +1,12 @@
 ---
-description: "LVGL Binary Sensor"
+description: "Instructions for setting up an LVGL widget binary sensor."
 title: "LVGL Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up an LVGL widget binary sensor.
+    image: ../images/lvgl_c_bns.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` binary sensor platform creates a binary sensor from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.

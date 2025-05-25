@@ -1,9 +1,12 @@
 ---
-description: "Sonoff Fish Pond Pump"
+description: "Making an automated fish pond pump with timing and auto stop safety with Sonoff Basic ESP8266 chip"
 title: "Sonoff Fish Pond Pump"
+params:
+  seo:
+    description: Making an automated fish pond pump with timing and auto stop safety with Sonoff Basic ESP8266 chip
+    image: cookbook-sonoff-fishpond-pump.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< img src="sonoff-fishpond.jpg" alt="Image" width="75.0%" class="center" >}}
 

@@ -1,9 +1,11 @@
 ---
-description: "Uponor Smatrix Base Pulse Underfloor Heating"
+description: "Instructions for setting up an Uponor Smatrix Base Pulse underfloor heating control system in ESPHome."
 title: "Uponor Smatrix Base Pulse Underfloor Heating"
+params:
+  seo:
+    description: Instructions for setting up an Uponor Smatrix Base Pulse underfloor heating control system in ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 The Uponor Smatrix component allows you to integrate an Uponor Smatrix Base Pulse underfloor heating control system in ESPHome without the need for an Smatrix Pulse Com R-208 communication module.
 It directly communicates with the controller and thermostats via the RS485 thermostat bus.

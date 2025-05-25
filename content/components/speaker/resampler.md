@@ -1,9 +1,12 @@
 ---
-description: "Resampler Speaker"
+description: "Instructions for setting up resampler speakers in ESPHome."
 title: "Resampler Speaker"
+params:
+  seo:
+    description: Instructions for setting up resampler speakers in ESPHome.
+    image: waveform.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `resampler` speaker platform allows you to convert the sample rate of an audio stream and output it to another {{< docref "/components/speaker/index" "speaker component" >}}.
 

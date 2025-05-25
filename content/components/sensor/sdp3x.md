@@ -1,9 +1,12 @@
 ---
-description: "SDP3x / SDP800 Series Differential Pressure Sensor"
+description: "Instructions for setting up the SDP3x or SDP800 Series Differential Pressure sensor."
 title: "SDP3x / SDP800 Series Differential Pressure Sensor"
+params:
+  seo:
+    description: Instructions for setting up the SDP3x or SDP800 Series Differential Pressure sensor.
+    image: sdp31.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The SDP3x Differential Pressure sensor allows you to use your SDP3x
 ([datasheet](https://sensirion.com/media/documents/4D045D69/6375F34F/DP_DS_SDP3x_digital_D1.pdf),

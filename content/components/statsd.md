@@ -1,9 +1,13 @@
 ---
-description: "StatsD"
+description: "Instructions for setting up a StatsD"
 title: "StatsD"
+params:
+  seo:
+    description: Instructions for setting up a StatsD
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "statsd" >}}
+
 
 StatsD is a [protocol](https://github.com/statsd/statsd/blob/master/docs/metric_types.md) to send metrics to a Daemon to store and aggregate them.
 Today there are many monitoring solutions that support receiving metrics via the StatsD protocol.

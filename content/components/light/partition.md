@@ -1,9 +1,12 @@
 ---
-description: "Light Partition"
+description: "Instructions for setting up light partitions."
 title: "Light Partition"
+params:
+  seo:
+    description: Instructions for setting up light partitions.
+    image: color_lens.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `partition` light platform allows you to combine multiple addressable light segments
 (like {{< docref "fastled/" >}} or {{< docref "neopixelbus/" >}}) and/or individual lights (like {{< docref "rgb/" >}}) into a single addressable light.

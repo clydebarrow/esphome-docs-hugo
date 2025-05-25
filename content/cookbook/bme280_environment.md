@@ -1,9 +1,12 @@
 ---
-description: "BME280 Environment"
+description: "Instructions for setting up BME280 sensors in ESPHome and calculate altitude, absolute humidity, and sea level pressure."
 title: "BME280 Environment"
+params:
+  seo:
+    description: Instructions for setting up BME280 sensors in ESPHome and calculate altitude, absolute humidity, and sea level pressure.
+    image: bme280.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The {{< docref "/components/sensor/bme280" >}} is a simple temperature, humidity, and pressure sensor with communication over [I²C](components/i2c#i2c) or [SPI](components/spi#spi).
 With some simple math it is possible to either determine the height of the sensor, or the current pressure at sea level.

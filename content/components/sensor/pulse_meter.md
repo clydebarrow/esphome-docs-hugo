@@ -1,9 +1,12 @@
 ---
-description: "Pulse Meter Sensor"
+description: "Instructions for setting up pulse meter sensors."
 title: "Pulse Meter Sensor"
+params:
+  seo:
+    description: Instructions for setting up pulse meter sensors.
+    image: pulse.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The pulse meter sensor allows you to count the number and frequency of pulses on any pin. It is intended to be a drop-in replacement
 for the {{< docref "/components/sensor/pulse_counter" "pulse counter component" >}}.

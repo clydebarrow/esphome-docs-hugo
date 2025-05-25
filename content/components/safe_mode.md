@@ -1,9 +1,12 @@
 ---
-description: "Safe Mode"
+description: "Instructions for setting up ESPHome's Safe Mode to help recover from repeated boot failures."
 title: "Safe Mode"
+params:
+  seo:
+    description: Instructions for setting up ESPHome's Safe Mode to help recover from repeated boot failures.
+    image: system-update.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Sometimes hardware and/or software doesn't behave as expected. ESPHome supports a "safe mode" to help recover from
 repeated boot failures/reboot loops. After a specified number (the default is ten) of boot failures, the safe mode may

@@ -1,9 +1,12 @@
 ---
-description: "Copy Component"
+description: "Instructions for setting up the copy component in ESPHome"
 title: "Copy Component"
+params:
+  seo:
+    description: Instructions for setting up the copy component in ESPHome
+    image: content-copy.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `copy` component can be used to copy an existing component (like a sensor, switch, etc.)
 and create a duplicate mirroring the source's state and forwarding actions such as turning on to the source.

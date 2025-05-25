@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Camera Component"
+description: "Instructions for setting up the ESP32 Cameras in ESPHome"
 title: "ESP32 Camera Component"
+params:
+  seo:
+    description: Instructions for setting up the ESP32 Cameras in ESPHome
+    image: camera.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `esp32_camera` component allows you to use ESP32-based camera boards in ESPHome that
 directly integrate into Home Assistant through the native API.

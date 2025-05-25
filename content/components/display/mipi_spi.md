@@ -1,9 +1,12 @@
 ---
-description: "MIPI SPI Display Driver"
+description: "Details for the MIPI SPI display driver component in ESPHome"
 title: "MIPI SPI Display Driver"
+params:
+  seo:
+    description: Details for the MIPI SPI display driver component in ESPHome
+    image: ili9341.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "mipi_spi" >}}
 

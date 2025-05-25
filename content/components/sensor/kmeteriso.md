@@ -1,9 +1,12 @@
 ---
-description: "M5Stack KMeterISO I2C K-Type probe temperature sensor"
+description: "Instructions for setting up KMeterISO temperature sensors"
 title: "M5Stack KMeterISO I2C K-Type probe temperature sensor"
+params:
+  seo:
+    description: Instructions for setting up KMeterISO temperature sensors
+    image: kmeteriso.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `kmeteriso` sensor platform allows you to use your KMeterISO
 ([product](https://docs.m5stack.com/en/unit/KMeterISO%20Unit),

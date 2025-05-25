@@ -1,9 +1,12 @@
 ---
-description: "Pulse Width Sensor"
+description: "Instructions for setting up pulse width sensors in ESPHome"
 title: "Pulse Width Sensor"
+params:
+  seo:
+    description: Instructions for setting up pulse width sensors in ESPHome
+    image: pulse.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `pulse_width` sensor allows you to measure how long a given digital signal
 is HIGH. For example this can be used to measure PWM signals to transmit some

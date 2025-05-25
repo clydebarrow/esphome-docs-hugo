@@ -1,9 +1,12 @@
 ---
-description: "HRXL/XL MaxSonar WR Series"
+description: "Instructions for setting up MaxBotix HRXL or XL MaxSonar WR ultrasonic distance measurement sensors in ESPHome."
 title: "HRXL/XL MaxSonar WR Series"
+params:
+  seo:
+    description: Instructions for setting up MaxBotix HRXL or XL MaxSonar WR ultrasonic distance measurement sensors in ESPHome.
+    image: hrxl_maxsonar_wr.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 This sensor allows you to use HRXL MaxSonar WR series ultrasonic sensors by MaxBotix
 ([datasheet](https://www.maxbotix.com/documents/HRXL-MaxSonar-WR_Datasheet.pdf))

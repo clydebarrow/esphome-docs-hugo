@@ -1,9 +1,12 @@
 ---
-description: "Logger Select"
+description: "Instructions for setting up a logger select in ESPHome."
 title: "Logger Select"
+params:
+  seo:
+    description: Instructions for setting up a logger select in ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `logger` Select platform allows you to create a Select that can be used to change the log level of the logger component.
 

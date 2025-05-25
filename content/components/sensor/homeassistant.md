@@ -1,9 +1,12 @@
 ---
-description: "Home Assistant Sensor"
+description: "Instructions for setting up Home Assistant sensors with ESPHome that import states from your Home Assistant instance."
 title: "Home Assistant Sensor"
+params:
+  seo:
+    description: Instructions for setting up Home Assistant sensors with ESPHome that import states from your Home Assistant instance.
+    image: home-assistant.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `homeassistant` sensor platform allows you to create sensors that import
 states from your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.

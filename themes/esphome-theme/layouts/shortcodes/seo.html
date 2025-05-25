@@ -16,6 +16,11 @@
 */}}
 {{ $description := .Get "description" }}
 {{ $image := .Get "image" }}
+{{ $seo := .Page.Param "seo" }}
+{{ with $seo }}
+    {{ $description = $seo.description | default $description }}
+    {{ $image = $seo.image | default $image }}
+{{ end }}
 
 {{ with $description | default .Page.Title }}
 <meta name="description" content="{{ . }}">

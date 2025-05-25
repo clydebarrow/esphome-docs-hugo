@@ -1,9 +1,14 @@
 ---
-description: "QR Code Component"
+description: "Instructions for displaying a QR Code in ESPHome"
 title: "QR Code Component"
+params:
+  seo:
+    description: Instructions for displaying a QR Code in ESPHome
+    image: qr-code.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "display-qrcode" >}}
+
 
 Use this component to generate a QR-code containing a string on the device, which can then be drawn on compatible displays.
 

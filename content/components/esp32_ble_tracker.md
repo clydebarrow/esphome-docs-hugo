@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Bluetooth Low Energy Tracker Hub"
+description: "Instructions for setting up ESP32 bluetooth low energy device trackers using ESPHome."
 title: "ESP32 Bluetooth Low Energy Tracker Hub"
+params:
+  seo:
+    description: Instructions for setting up ESP32 bluetooth low energy device trackers using ESPHome.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `esp32_ble_tracker` component creates a global hub so that you can track bluetooth low energy devices
 using your ESP32 node.

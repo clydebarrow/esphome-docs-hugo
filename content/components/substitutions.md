@@ -1,9 +1,12 @@
 ---
-description: "Substitutions"
+description: "How to use substitutions in ESPHome"
 title: "Substitutions"
+params:
+  seo:
+    description: How to use substitutions in ESPHome
+    image: settings.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome has a powerful way to reduce repetition in configuration files: substitutions.
 With substitutions, you can have a single generic source file for all nodes of one kind and

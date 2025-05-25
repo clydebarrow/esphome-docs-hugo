@@ -1,9 +1,12 @@
 ---
-description: "SPI LED Strip Light"
+description: "Instructions for setting up SPI LED RGB lights in ESPHome."
 title: "SPI LED Strip Light"
+params:
+  seo:
+    description: Instructions for setting up SPI LED RGB lights in ESPHome.
+    image: ../components/light/images/apa102.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `spi_led_strip` light platform drives one or more SPI interfaced RGB LEDs. These LEDs are often used in strips, where
 each LED is individually addressable. This component requires an SPI interface to be configured.

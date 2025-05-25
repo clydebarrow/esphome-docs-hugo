@@ -1,9 +1,12 @@
 ---
-description: "Mopeka Pro Check BLE Sensor"
+description: "Instructions for setting up Mopeka Pro Check or Lippert Propane Tank bluetooth-based sensors in ESPHome."
 title: "Mopeka Pro Check BLE Sensor"
+params:
+  seo:
+    description: Instructions for setting up Mopeka Pro Check or Lippert Propane Tank bluetooth-based sensors in ESPHome.
+    image: mopeka_pro_check.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `mopeka_pro_check` sensor platform lets you track the output of Mopeka Pro
 Check LP, Mopeka Pro Plus, Mopeka Pro Universal or Lippert Propane Tank Sensors,   Bluetooth Low

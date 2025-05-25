@@ -1,9 +1,12 @@
 ---
-description: "Display Menu"
+description: "Instructions for setting up a simple hierarchical menu on displays."
 title: "Display Menu"
+params:
+  seo:
+    description: Instructions for setting up a simple hierarchical menu on displays.
+    image: lcd_menu.png
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "display_menu" >}}
 

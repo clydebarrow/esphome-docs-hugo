@@ -1,9 +1,12 @@
 ---
-description: "Sim800L Component"
+description: "Instructions for setting up the SIM800L GSM module to dial, send and receive SMS in ESPHome."
 title: "Sim800L Component"
+params:
+  seo:
+    description: Instructions for setting up the SIM800L GSM module to dial, send and receive SMS in ESPHome.
+    image: sim800l.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

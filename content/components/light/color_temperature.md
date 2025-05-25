@@ -1,9 +1,12 @@
 ---
-description: "Color Temperature Light"
+description: "Instructions for setting up Color Temperature lights."
 title: "Color Temperature Light"
+params:
+  seo:
+    description: Instructions for setting up Color Temperature lights.
+    image: brightness-medium.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `color_temperature` light platform creates a Color Temperature
 light from 2 [float output components](components/output/_index#output). One channel controls the LED temperature,

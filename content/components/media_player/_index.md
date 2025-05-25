@@ -1,9 +1,12 @@
 ---
-description: "Media Player Components"
+description: "Instructions for setting up generic media players in ESPHome."
 title: "Media Player Components"
+params:
+  seo:
+    description: Instructions for setting up generic media players in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `media_player` domain includes all platforms that implement media player
 functionality.

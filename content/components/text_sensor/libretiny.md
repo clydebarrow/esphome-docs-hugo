@@ -1,9 +1,12 @@
 ---
-description: "LibreTiny Text Sensor"
+description: "Instructions for setting up LibreTiny text sensors."
 title: "LibreTiny Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up LibreTiny text sensors.
+    image: libretiny.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `libretiny` text sensor platform exposes various LibreTiny core
 information via text sensors.

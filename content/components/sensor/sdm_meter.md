@@ -1,9 +1,12 @@
 ---
-description: "Eastron SDM Energy Monitor"
+description: "Instructions for setting up SDM power monitors."
 title: "Eastron SDM Energy Monitor"
+params:
+  seo:
+    description: Instructions for setting up SDM power monitors.
+    image: sdm220m.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sdm_meter` sensor platform allows you to use Eastron SDM modbus energy monitors
 ([website](http://www.eastrongroup.com/product_detail.php?id=170&menu1=&menu2=))

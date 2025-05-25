@@ -1,9 +1,12 @@
 ---
-description: "DF-Player mini"
+description: "Instructions for setting up DF Player Mini component in ESPHome."
 title: "DF-Player mini"
+params:
+  seo:
+    description: Instructions for setting up DF Player Mini component in ESPHome.
+    image: dfplayer.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `dfplayer` ([datasheet](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)), component
 allows you to play sound and music stored in an SD card or USB flash drive.

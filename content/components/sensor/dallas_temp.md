@@ -1,9 +1,12 @@
 ---
-description: "Dallas Temperature Sensor"
+description: "Instructions for setting up Dallas 1-Wire temperature sensors"
 title: "Dallas Temperature Sensor"
+params:
+  seo:
+    description: Instructions for setting up Dallas 1-Wire temperature sensors
+    image: dallas.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `dallas_temp` component allows you to use 
 [DS18B20](https://www.adafruit.com/product/374)

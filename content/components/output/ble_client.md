@@ -1,9 +1,12 @@
 ---
-description: "BLE Client Binary Output"
+description: "Writes a binary value to a BLE device."
 title: "BLE Client Binary Output"
+params:
+  seo:
+    description: Writes a binary value to a BLE device.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ble_client` component is a output that can write a binary value to service characteristics of BLE devices.
 

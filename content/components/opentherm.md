@@ -1,9 +1,12 @@
 ---
-description: "OpenTherm"
+description: "Instructions for setting up OpenTherm bridge in ESPHome."
 title: "OpenTherm"
+params:
+  seo:
+    description: Instructions for setting up OpenTherm bridge in ESPHome.
+    image: ../components/images/opentherm-shield.png
 ---
 
-{{< seo description="" image="" >}}
 
 OpenTherm (OT) is a standard communications protocol used in central heating systems for the communication between
 central heating appliances and a thermostatic controller. As a standard, OpenTherm is independent of any single

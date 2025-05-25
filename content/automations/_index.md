@@ -1,9 +1,14 @@
 ---
-description: "Automation"
+description: "Getting started guide for automations in ESPHome"
 title: "Automation"
+params:
+  seo:
+    description: Getting started guide for automations in ESPHome
+    image: auto-fix.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "automation" >}}
+
 
 Automations are a very powerful aspect of ESPHome; they allow you to easily perform actions given some condition(s).
 

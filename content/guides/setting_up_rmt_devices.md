@@ -1,9 +1,11 @@
 ---
-description: "Setting up IR Devices"
+description: "Set up guide for configuring IR and RF devices in ESPHome."
 title: "Setting up IR Devices"
+params:
+  seo:
+    description: Set up guide for configuring IR and RF devices in ESPHome.
+    image: remote.svg
 ---
-
-{{< seo description="" image="" >}}
 
 {{< anchor "remote-setting-up-infrared" >}}
 

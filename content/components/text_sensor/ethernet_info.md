@@ -1,9 +1,12 @@
 ---
-description: "Ethernet Info Text Sensor"
+description: "Instructions for setting up Ethernet info text sensors."
 title: "Ethernet Info Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up Ethernet info text sensors.
+    image: ethernet.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ethernet_info` text sensor platform exposes different Ethernet information
 via text sensors.

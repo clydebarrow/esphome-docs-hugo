@@ -1,9 +1,12 @@
 ---
-description: "Text Component"
+description: "Instructions for setting up text components in ESPHome."
 title: "Text Component"
+params:
+  seo:
+    description: Instructions for setting up text components in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome has support for components to create a text entity. A text entity is
 like a `text_sensor` that can read a value from a device, but is useful when that value

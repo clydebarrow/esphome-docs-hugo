@@ -1,9 +1,12 @@
 ---
-description: "BLE Client Sensor"
+description: "Fetch numeric values from BLE devices."
 title: "BLE Client Sensor"
+params:
+  seo:
+    description: Fetch numeric values from BLE devices.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ble_client` component is a sensor platform that can query BLE devices for RSSI or specific
 values of service characteristics.

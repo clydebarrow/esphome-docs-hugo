@@ -1,9 +1,12 @@
 ---
-description: "PVVX MiThermometer Display"
+description: "Instructions for setting up BLE devices with PVVX MiThermometer custom firmware as displays."
 title: "PVVX MiThermometer Display"
+params:
+  seo:
+    description: Instructions for setting up BLE devices with PVVX MiThermometer custom firmware as displays.
+    image: /components/sensor/images/xiaomi_lywsd03mmc.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `pvvx_mithermometer` display platform allows you to use devices running the [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
 

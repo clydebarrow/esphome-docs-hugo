@@ -1,9 +1,12 @@
 ---
-description: "PipSolar PV Inverter"
+description: "Instructions for setting up PipSolar Compatible PV Inverter in ESPHome."
 title: "PipSolar PV Inverter"
+params:
+  seo:
+    description: Instructions for setting up PipSolar Compatible PV Inverter in ESPHome.
+    image: pipsolar.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The PipSolar component allows you to integrate PIP-compatible Inverters in ESPHome.
 It uses [UART](components/uart#uart) for communication.

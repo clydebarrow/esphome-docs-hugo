@@ -1,9 +1,12 @@
 ---
-description: "HTU31D Temperature & Humidity Sensor"
+description: "Instructions for setting up HTU31D temperature and humidity sensors."
 title: "HTU31D Temperature & Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up HTU31D temperature and humidity sensors.
+    image: htu31d.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The HTU31D Temperature & Humidity component allows you to use HTU31D sensors with
 ESPHome. The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.

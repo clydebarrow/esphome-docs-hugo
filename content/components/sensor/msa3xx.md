@@ -1,9 +1,12 @@
 ---
-description: "MSA301 and MSA311 Sensors"
+description: "Instructions for setting up MSA301 and MSA311 digital tri-axial accelerometers."
 title: "MSA301 and MSA311 Sensors"
+params:
+  seo:
+    description: Instructions for setting up MSA301 and MSA311 digital tri-axial accelerometers.
+    image: msa311.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< anchor "msa3xx-component" >}}
 

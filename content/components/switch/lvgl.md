@@ -1,9 +1,12 @@
 ---
-description: "LVGL Switch"
+description: "Instructions for setting up an LVGL widget switch."
 title: "LVGL Switch"
+params:
+  seo:
+    description: Instructions for setting up an LVGL widget switch.
+    image: ../images/lvgl_c_swi.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` switch platform creates a switch from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.

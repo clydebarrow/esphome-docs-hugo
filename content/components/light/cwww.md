@@ -1,9 +1,12 @@
 ---
-description: "Cold White + Warm White Light"
+description: "Instructions for setting up Cold White + Warm White lights."
 title: "Cold White + Warm White Light"
+params:
+  seo:
+    description: Instructions for setting up Cold White + Warm White lights.
+    image: brightness-medium.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `cwww` light platform creates a cold white + warm white light from 2
 [float output components](components/output/_index#output) (one for each channel). The two channels

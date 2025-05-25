@@ -1,9 +1,12 @@
 ---
-description: "Demo Component"
+description: "Instructions for setting up the demo component in ESPHome"
 title: "Demo Component"
+params:
+  seo:
+    description: Instructions for setting up the demo component in ESPHome
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `demo` component can be used for testing to generate sample instances of many
 different components (sensors, lights, ...)

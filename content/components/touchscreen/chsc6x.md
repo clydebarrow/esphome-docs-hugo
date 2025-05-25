@@ -1,9 +1,12 @@
 ---
-description: "chsc6x Touch Screen Controller"
+description: "Instructions for setting up chsc6x touch screen controller with ESPHome"
 title: "chsc6x Touch Screen Controller"
+params:
+  seo:
+    description: Instructions for setting up chsc6x touch screen controller with ESPHome
+    image: chsc6x.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `chsc6x` touchscreen platform allows using the touch screen controllers based on the chsc6x chip with ESPHome.
 The [I²C](components/i2c#i2c) is required to be set up in your configuration for this touchscreen to work.

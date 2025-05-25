@@ -1,9 +1,12 @@
 ---
-description: "Tuya Number"
+description: "Instructions for setting up a Tuya device integer or enum datapoint.."
 title: "Tuya Number"
+params:
+  seo:
+    description: Instructions for setting up a Tuya device integer or enum datapoint..
+    image: upload.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` number platform allows you to create a number that controls
 a tuya serial component. This platform requires {{< docref "/components/tuya" >}} to be configured.

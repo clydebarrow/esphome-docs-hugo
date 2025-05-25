@@ -1,9 +1,12 @@
 ---
-description: "LVGL Number"
+description: "Instructions for setting up an LVGL widget number component."
 title: "LVGL Number"
+params:
+  seo:
+    description: Instructions for setting up an LVGL widget number component.
+    image: ../images/lvgl_c_num.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` number platform creates a number component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.

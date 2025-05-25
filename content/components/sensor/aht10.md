@@ -1,9 +1,12 @@
 ---
-description: "AHT10 Temperature+Humidity Sensor"
+description: "Instructions for setting up AHT10 temperature and humidity sensors"
 title: "AHT10 Temperature+Humidity Sensor"
+params:
+  seo:
+    description: Instructions for setting up AHT10 temperature and humidity sensors
+    image: aht10.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `aht10` Temperature+Humidity sensor allows you to use your AHT10
 ([datasheet](http://www.aosong.com/userfiles/files/media/aht10%E8%A7%84%E6%A0%BC%E4%B9%A6v1_1%EF%BC%8820191015%EF%BC%89.pdf)), AHT20 ([datasheet](https://cdn-learn.adafruit.com/assets/assets/000/091/676/original/AHT20-datasheet-2020-4-16.pdf?1591047915)) or AHT30 ([datasheet](https://eleparts.co.kr/data/goods_attach/202306/good-pdf-12751003-1.pdf)) [I²C](components/i2c#i2c)-based sensor with ESPHome.

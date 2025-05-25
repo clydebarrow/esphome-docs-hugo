@@ -1,9 +1,12 @@
 ---
-description: "Sun"
+description: "Instructions for setting up tracking the sun position in ESPHome."
 title: "Sun"
+params:
+  seo:
+    description: Instructions for setting up tracking the sun position in ESPHome.
+    image: weather-sunny.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sun` component allows you to track the sun's position in the sky. Calculations are done every 60 seconds.
 

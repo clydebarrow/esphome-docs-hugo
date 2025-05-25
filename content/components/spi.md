@@ -1,9 +1,14 @@
 ---
-description: "SPI Bus"
+description: "Instructions for setting up SPI components in ESPHome"
 title: "SPI Bus"
+params:
+  seo:
+    description: Instructions for setting up SPI components in ESPHome
+    image: spi.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "spi" >}}
+
 
 SPI is a very common high-speed protocol for a lot of devices. The ESPHome SPI component implements only the host controller
 role, where it controls the bus, and writes or reads data from peripherals attached to the bus.

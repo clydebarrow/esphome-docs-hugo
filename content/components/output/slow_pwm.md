@@ -1,9 +1,12 @@
 ---
-description: "Slow PWM Output"
+description: "Instructions for setting up slow pwm outputs for GPIO pins."
 title: "Slow PWM Output"
+params:
+  seo:
+    description: Instructions for setting up slow pwm outputs for GPIO pins.
+    image: pwm.png
 ---
 
-{{< seo description="" image="" >}}
 
 Similar to PWM, the Slow PWM Output platform allows you to control GPIO pins by
 pulsing them on/off over a longer time period. It could be used to control a

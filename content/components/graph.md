@@ -1,9 +1,14 @@
 ---
-description: "Graph Component"
+description: "Instructions for displaying graphs in ESPHome."
 title: "Graph Component"
+params:
+  seo:
+    description: Instructions for displaying graphs in ESPHome.
+    image: chart-line.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "display-graphs" >}}
+
 
 You can display a graph of a sensor value(s) using this component. The states used for the graph are stored in
 memory at the time the sensor updates and will be lost when the device reboots.

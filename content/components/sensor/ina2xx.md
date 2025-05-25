@@ -1,9 +1,12 @@
 ---
-description: "INA2xx family of digital power monitors"
+description: "Instructions for setting up INA228, INA229, INA237, INA238, INA239 DC current, power, and charge sensors"
 title: "INA2xx family of digital power monitors"
+params:
+  seo:
+    description: Instructions for setting up INA228, INA229, INA237, INA238, INA239 DC current, power, and charge sensors
+    image: ina228.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< img src="ina228-full.jpg" alt="Image" caption="INA228 Module with integrated shunt from Adafruit" width="50.0%" class="center" >}}
 

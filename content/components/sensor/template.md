@@ -1,9 +1,12 @@
 ---
-description: "Template Sensor"
+description: "Instructions for setting up template sensors with ESPHome."
 title: "Template Sensor"
+params:
+  seo:
+    description: Instructions for setting up template sensors with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` sensor platform allows you to create a sensor with templated values
 using [lambdas](automations/templates#config-lambda).

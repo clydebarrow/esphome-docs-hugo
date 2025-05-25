@@ -1,9 +1,11 @@
 ---
-description: "AirThings BLE Sensors"
+description: "Instructions for setting up AirThings bluetooth-based sensors in ESPHome."
 title: "AirThings BLE Sensors"
+params:
+  seo:
+    description: Instructions for setting up AirThings bluetooth-based sensors in ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 The `airthings_wave_plus` and `airthings_wave_mini` sensor platforms lets you track the output of AirThings Bluetooth Low Energy devices.
 

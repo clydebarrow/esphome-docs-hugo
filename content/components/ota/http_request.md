@@ -1,9 +1,12 @@
 ---
-description: "OTA Update via HTTP Request"
+description: "Instructions for setting up Over-The-Air (OTA) updates for ESPs to download firmwares remotely by HTTP."
 title: "OTA Update via HTTP Request"
+params:
+  seo:
+    description: Instructions for setting up Over-The-Air (OTA) updates for ESPs to download firmwares remotely by HTTP.
+    image: system-update.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The OTA (Over The Air) via HTTP Request update component allows your devices to install updated firmware on their own.
 To use it, in your device's configuration, you specify a URL from which the device will download the binary

@@ -1,9 +1,12 @@
 ---
-description: "BME680 Temperature+Pressure+Humidity+Gas Sensor via BSEC"
+description: "Instructions for setting up BME680 temperature, humidity, pressure, and gas sensors via BSEC."
 title: "BME680 Temperature+Pressure+Humidity+Gas Sensor via BSEC"
+params:
+  seo:
+    description: Instructions for setting up BME680 temperature, humidity, pressure, and gas sensors via BSEC.
+    image: bme680.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

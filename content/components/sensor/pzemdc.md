@@ -1,9 +1,12 @@
 ---
-description: "Peacefair PZEM-00X DC Energy Monitor"
+description: "Instructions for setting up DC PZEM power monitors."
 title: "Peacefair PZEM-00X DC Energy Monitor"
+params:
+  seo:
+    description: Instructions for setting up DC PZEM power monitors.
+    image: pzem-dc.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< note >}}
 This page is incomplete and could use some work. If you want to contribute, please see our

@@ -189,42 +189,11 @@ def convert_rst_to_md(lines, filename):
                         heading_underlines.append(underchar)
         i += 1
 
-    # Extract SEO data
-    in_seo = False
-    seo_lines = []
-    seo_start = -1
-    seo_end = -1
-    
-    for i, line in enumerate(lines):
-        if line.startswith('.. seo::'):
-            in_seo = True
-            seo_start = i
-            continue
-        
-        if in_seo:
-            if line.strip() and line.startswith('    '):
-                seo_lines.append(line.strip())
-            elif line.strip() == '':
-                continue
-            else:
-                in_seo = False
-                seo_end = i
-                break
-    
-    # Parse SEO data
-    for line in seo_lines:
-        if ':' in line:
-            key, value = line.split(':', 1)
-            seo[key.strip()] = value.strip()
-    
     # Process lines
     md_lines = []
     footnotes = []  # Store footnotes to add at the end
     i = 0
-    
-    # Skip SEO block
-    if seo_start != -1 and seo_end != -1:
-        i = seo_end
+
 
     # Parse substitutions from original lines
     all_lines = lines[:]
@@ -245,6 +214,15 @@ def convert_rst_to_md(lines, filename):
         # Skip title directive
         if line.startswith('.. title::'):
             i += 1
+            continue
+
+        if line.startswith(".. seo::"):
+            i, seo_lines = get_indented_block(lines, i + 1, 0)
+            for line in seo_lines:
+                if line.strip().startswith(":description:"):
+                    seo["description"] = line.split(":")[2].strip()
+                if line.strip().startswith(":image:"):
+                    seo["image"] = line.split(":")[2].strip()
             continue
 
         if line.startswith('.. option::'):
@@ -744,16 +722,17 @@ def convert_rst_to_md(lines, filename):
     frontmatter.append(f'title: "{title}"')
     if skip_build:
         frontmatter.append('build: {render: never}')
-    frontmatter.append('---')
-    # Add Hugo shortcode for SEO
-    seo_shortcode = ""
     if seo:
-        seo_shortcode = f'{{{{< seo description="{seo.get("description", "")}" image="{seo.get("image", "")}" >}}}}\n\n'
-    
+        frontmatter.append("params:")
+        frontmatter.append("  seo:")
+        for k, v in seo.items():
+            frontmatter.append(f'    {k}: {v}')
+    frontmatter.append('---')
+
     # Combine frontmatter and content
     frontmatter_yaml = "\n".join(frontmatter)
     md_content = "\n".join(md_lines)
-    final_content = f"{frontmatter_yaml}\n\n{seo_shortcode}{md_content}\n"
+    final_content = f"{frontmatter_yaml}\n\n{md_content}\n"
     
     return final_content
 
@@ -1743,6 +1722,7 @@ def scan_image_references(input_dir):
         r'.. figure:: ([^\s]+)',  # Figure directive
         r'.. image:: ([^\s]+)',   # Image directive
         r'image:: ([^\s]+)',      # Image reference
+        r':image: ([^\s]+)',      # Seo Image reference
         r'src="([^"]+\.(png|jpg|jpeg|gif|svg))"',  # HTML img tag
         r'!\[(.*?)\]\(([^)]+\.(png|jpg|jpeg|gif|svg))\)'  # Markdown image syntax
     ]
@@ -1779,6 +1759,8 @@ def scan_image_references(input_dir):
                         else:
                             # Relative path
                             abs_image_path = os.path.join(os.path.dirname(rst_file), image_path)
+                            if not os.path.exists(abs_image_path):
+                                abs_image_path = os.path.join(input_dir, "images/" + image_path.lstrip('/'))
 
                         # Only count if the image file exists
                         if os.path.exists(abs_image_path):

@@ -1,9 +1,12 @@
 ---
-description: "EZO sensor circuits"
+description: "Instructions for setting up EZO sensor circuits in esphome"
 title: "EZO sensor circuits"
+params:
+  seo:
+    description: Instructions for setting up EZO sensor circuits in esphome
+    image: ezo-ph-circuit.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `ezo` sensor platform allows you to use your EZO sensor circuits with
 ESPHome. The [I²C Bus](components/i2c#i2c) is

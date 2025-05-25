@@ -1,9 +1,14 @@
 ---
-description: "LCD Menu"
+description: "Instructions for setting up a simple hierarchical menu on displays."
 title: "LCD Menu"
+params:
+  seo:
+    description: Instructions for setting up a simple hierarchical menu on displays.
+    image: lcd_menu.png
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "lcd_menu" >}}
+
 
 The component provides an infrastructure for setting up a hierarchical menu
 on character based LCD displays. This offers the user an interactive method to display

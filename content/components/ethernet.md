@@ -1,9 +1,12 @@
 ---
-description: "Ethernet Component"
+description: "Instructions for setting up the Ethernet configuration for your ESP32 node in ESPHome."
 title: "Ethernet Component"
+params:
+  seo:
+    description: Instructions for setting up the Ethernet configuration for your ESP32 node in ESPHome.
+    image: ethernet.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This ESPHome component enables *wired* Ethernet connections for ESP32s.
 

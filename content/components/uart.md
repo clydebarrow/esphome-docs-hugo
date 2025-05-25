@@ -1,9 +1,14 @@
 ---
-description: "UART Bus"
+description: "Instructions for setting up a UART serial bus on ESPs"
 title: "UART Bus"
+params:
+  seo:
+    description: Instructions for setting up a UART serial bus on ESPs
+    image: uart.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "uart" >}}
+
 
 UART is a common serial protocol for many devices. For example, when uploading a binary to your ESP
 you have probably used UART to access the chip. UART (or for Arduino often also called Serial) usually

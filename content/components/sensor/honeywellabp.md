@@ -1,9 +1,12 @@
 ---
-description: "Honeywell ABP Pressure Sensors"
+description: "Instructions for setting up Honeywell ABP Pressure sensors"
 title: "Honeywell ABP Pressure Sensors"
+params:
+  seo:
+    description: Instructions for setting up Honeywell ABP Pressure sensors
+    image: honeywellabp.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `honeywellabp` sensor platform allows you to use your Honeywell ABP
 ([website](https://sps.honeywell.com/us/en/products/sensing-and-iot/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp-series),

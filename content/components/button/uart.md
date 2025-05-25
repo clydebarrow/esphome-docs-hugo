@@ -1,9 +1,12 @@
 ---
-description: "UART Button"
+description: "Instructions for setting up UART buttons in ESPHome that can output arbitrary UART sequences when activated."
 title: "UART Button"
+params:
+  seo:
+    description: Instructions for setting up UART buttons in ESPHome that can output arbitrary UART sequences when activated.
+    image: uart.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `uart` button platform allows you to send a pre-defined sequence of bytes on a
 {{< docref "/components/uart" "UART bus" >}} when triggered.

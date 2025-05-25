@@ -1,9 +1,12 @@
 ---
-description: "Template Valve"
+description: "Instructions for setting up template valves in ESPHome."
 title: "Template Valve"
+params:
+  seo:
+    description: Instructions for setting up template valves in ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` valve platform allows you to create simple valves out of just a few actions and a value lambda. Once
 defined, it will automatically appear in Home Assistant as a valve and can be controlled through the frontend.

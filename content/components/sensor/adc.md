@@ -1,9 +1,12 @@
 ---
-description: "Analog To Digital Sensor"
+description: "Instructions for setting up built-in analog voltage sensors."
 title: "Analog To Digital Sensor"
+params:
+  seo:
+    description: Instructions for setting up built-in analog voltage sensors.
+    image: flash.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The Analog To Digital (`adc`) Sensor allows you to use the built-in
 ADC in your device to measure a voltage on certain pins.

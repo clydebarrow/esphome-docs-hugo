@@ -1,9 +1,11 @@
 ---
-description: "Modbus Controller Text Sensor"
+description: "Instructions for setting up a modbus_controller modbus text sensor."
 title: "Modbus Controller Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up a modbus_controller modbus text sensor.
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` sensor platform creates a text sensor from a modbus_controller component
 and requires {{< docref "/components/modbus_controller" >}} to be configured.

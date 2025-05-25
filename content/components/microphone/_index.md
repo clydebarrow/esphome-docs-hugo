@@ -1,9 +1,12 @@
 ---
-description: "Microphone Components"
+description: "Instructions for setting up microphones in ESPHome."
 title: "Microphone Components"
+params:
+  seo:
+    description: Instructions for setting up microphones in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `microphone` domain contains common functionality shared across the
 microphone platforms.

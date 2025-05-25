@@ -1,9 +1,11 @@
 ---
-description: "json Component"
+description: "Instructions for parsing and building json within ESPHome."
 title: "json Component"
+params:
+  seo:
+    description: Instructions for parsing and building json within ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 The `json` component enables ESPHome to work with JSON data in automations, sensors, and HTTP requests. This is particularly useful for:
 

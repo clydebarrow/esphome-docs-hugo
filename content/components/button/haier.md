@@ -1,9 +1,12 @@
 ---
-description: "Haier Climate Buttons"
+description: "Instructions for setting up additional buttons for Haier climate devices."
 title: "Haier Climate Buttons"
+params:
+  seo:
+    description: Instructions for setting up additional buttons for Haier climate devices.
+    image: haier.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Additional buttons for Haier AC cleaning. **These buttons are supported only by the hOn protocol**.
 

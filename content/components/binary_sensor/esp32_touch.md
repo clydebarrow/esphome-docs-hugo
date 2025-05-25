@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Touch Pad"
+description: "Instructions for setting up the touch pad on the ESP32"
 title: "ESP32 Touch Pad"
+params:
+  seo:
+    description: Instructions for setting up the touch pad on the ESP32
+    image: touch.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Capacitive touch detection is possible on ESP32, ESP32-S2 or ESP32-S3 processors.
 In ESPHome, it is configured in two parts:

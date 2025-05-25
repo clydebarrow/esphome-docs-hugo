@@ -1,9 +1,12 @@
 ---
-description: "Monochromatic Light"
+description: "Instructions for setting up monochromatic (brightness-only) lights."
 title: "Monochromatic Light"
+params:
+  seo:
+    description: Instructions for setting up monochromatic (brightness-only) lights.
+    image: brightness-medium.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `monochromatic` light platform creates a simple brightness-only light from an
 [float output component](components/output/_index#output).

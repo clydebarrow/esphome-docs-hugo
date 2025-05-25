@@ -1,9 +1,12 @@
 ---
-description: "Template Text Sensor"
+description: "Instructions for setting up template text sensors in ESPHome"
 title: "Template Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up template text sensors in ESPHome
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` text sensor platform allows you to create a text sensor with templated values
 using [lambdas](automations/templates#config-lambda).

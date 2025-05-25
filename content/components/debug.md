@@ -1,9 +1,12 @@
 ---
-description: "Debug Component"
+description: "Instructions for setting up the debug component in ESPHome"
 title: "Debug Component"
+params:
+  seo:
+    description: Instructions for setting up the debug component in ESPHome
+    image: bug-report.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `debug` component can be used to debug problems with ESPHome. At startup, it prints
 a bunch of useful information like reset reason, free heap size, ESPHome version and so on.

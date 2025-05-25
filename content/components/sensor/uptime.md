@@ -1,9 +1,12 @@
 ---
-description: "Uptime Sensor"
+description: "Instructions for setting up a sensor that tracks the uptime of the ESP."
 title: "Uptime Sensor"
+params:
+  seo:
+    description: Instructions for setting up a sensor that tracks the uptime of the ESP.
+    image: timer.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `uptime` sensor allows you to track the time the ESP has stayed up for in seconds.
 Time rollovers are automatically handled.

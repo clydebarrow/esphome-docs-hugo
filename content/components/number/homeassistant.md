@@ -1,9 +1,12 @@
 ---
-description: "Home Assistant Number"
+description: "Instructions for setting up Home Assistant numbers with ESPHome."
 title: "Home Assistant Number"
+params:
+  seo:
+    description: Instructions for setting up Home Assistant numbers with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `homeassistant` number platform allows you to create a number that is synchronized
 with Home Assistant. Min, Max and Step are not configurable for this platform because they are taken from the Home Assistant entity.

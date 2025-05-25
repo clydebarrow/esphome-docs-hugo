@@ -1,9 +1,12 @@
 ---
-description: "Template Alarm Control Panel"
+description: "Instructions for setting up template Alarm Control Panels in ESPHome."
 title: "Template Alarm Control Panel"
+params:
+  seo:
+    description: Instructions for setting up template Alarm Control Panels in ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` alarm control panel platform allows you to turn your binary sensors into a state machine
 managed alarm control panel.

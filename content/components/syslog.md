@@ -1,9 +1,11 @@
 ---
-description: "Syslog Component"
+description: "Instructions for setting up a syslog component in ESPHome"
 title: "Syslog Component"
+params:
+  seo:
+    description: Instructions for setting up a syslog component in ESPHome
 ---
 
-{{< seo description="" image="" >}}
 
 The `syslog` component can be used to send ESPHome logs to a [syslog server](https://en.wikipedia.org/wiki/Syslog).
 It requires both a {{< docref "udp" "UDP component" >}} and a {{< docref "time/index" "Time component" >}} to be configured.

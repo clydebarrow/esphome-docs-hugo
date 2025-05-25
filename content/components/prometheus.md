@@ -1,9 +1,12 @@
 ---
-description: "Prometheus Component"
+description: "Instructions for setting up a prometheus exporter with ESPHome."
 title: "Prometheus Component"
+params:
+  seo:
+    description: Instructions for setting up a prometheus exporter with ESPHome.
+    image: prometheus.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `prometheus` component enables an HTTP endpoint for the
 {{< docref "web_server/" >}} in order to integrate a [Prometheus](https://prometheus.io/) installation.

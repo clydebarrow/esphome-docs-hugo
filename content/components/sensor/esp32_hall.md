@@ -1,9 +1,12 @@
 ---
-description: "ESP32 Hall Sensor"
+description: "Instructions for setting up the integrated hall-effect sensor of the ESP32."
 title: "ESP32 Hall Sensor"
+params:
+  seo:
+    description: Instructions for setting up the integrated hall-effect sensor of the ESP32.
+    image: magnet.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `esp32_hall` sensor platform allows you to use the integrated
 [hall effect sensor](https://en.wikipedia.org/wiki/Hall_effect_sensor) of the

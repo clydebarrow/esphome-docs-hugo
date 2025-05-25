@@ -1,9 +1,12 @@
 ---
-description: "Lock Component"
+description: "Instructions for setting up generic locks in ESPHome."
 title: "Lock Component"
+params:
+  seo:
+    description: Instructions for setting up generic locks in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `lock` domain includes all platforms that should function like a lock
 with lock/unlock actions.

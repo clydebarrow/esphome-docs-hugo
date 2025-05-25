@@ -1,9 +1,12 @@
 ---
-description: "SenseAir CO_2 Sensor"
+description: "Instructions for setting up SenseAir S8 CO2 sensor"
 title: "SenseAir CO_2 Sensor"
+params:
+  seo:
+    description: Instructions for setting up SenseAir S8 CO2 sensor
+    image: senseair_s8.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `senseair` sensor platform allows you to use SenseAir CO_2 sensor
 (`website`_) with ESPHome.

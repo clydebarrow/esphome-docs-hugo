@@ -1,9 +1,12 @@
 ---
-description: "NeoPixelBus Light"
+description: "Instructions for setting up Neopixel addressable lights."
 title: "NeoPixelBus Light"
+params:
+  seo:
+    description: Instructions for setting up Neopixel addressable lights.
+    image: color_lens.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< warning >}}
 NeoPixelBus does **not** work with ESP-IDF.

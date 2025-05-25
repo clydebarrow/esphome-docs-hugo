@@ -1,9 +1,11 @@
 ---
-description: "SDL Binary Sensor"
+description: "Instructions for setting up an SDL keyboard binary sensor."
 title: "SDL Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up an SDL keyboard binary sensor.
 ---
 
-{{< seo description="" image="" >}}
 
 The `sdl` binary sensor platform creates a binary sensor from keyboard presses on the host platform. 
 The sensor will be true when the key is pressed.

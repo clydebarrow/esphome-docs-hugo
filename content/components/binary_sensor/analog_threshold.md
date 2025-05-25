@@ -1,9 +1,12 @@
 ---
-description: "Analog Threshold Binary Sensor"
+description: "Instructions for setting up an analog threshold binary sensors."
 title: "Analog Threshold Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up an analog threshold binary sensors.
+    image: analog_threshold.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `analog_threshold` binary sensor platform allows you to convert analog values
 (i.e. {{< docref "/components/sensor/index" "sensor" >}} readings)

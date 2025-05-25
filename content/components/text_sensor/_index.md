@@ -1,9 +1,12 @@
 ---
-description: "Text Sensor Component"
+description: "Instructions for setting up text sensors that represent their state as a string of text."
 title: "Text Sensor Component"
+params:
+  seo:
+    description: Instructions for setting up text sensors that represent their state as a string of text.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Text sensors are a lot like normal {{< docref "/components/sensor/index" "sensors" >}}.
 But where the "normal" sensors only represent sensors that output **numbers**, this

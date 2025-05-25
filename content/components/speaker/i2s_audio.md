@@ -1,9 +1,12 @@
 ---
-description: "I²S Audio Speaker"
+description: "Instructions for setting up I²S based speakers in ESPHome."
 title: "I²S Audio Speaker"
+params:
+  seo:
+    description: Instructions for setting up I²S based speakers in ESPHome.
+    image: i2s_audio.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `i2s_audio` speaker platform allows you to receive audio via the the {{< docref "/components/i2s_audio" >}}.
 

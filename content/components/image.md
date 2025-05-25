@@ -1,9 +1,14 @@
 ---
-description: "Images"
+description: "Instructions to display static images on ESPHome"
 title: "Images"
+params:
+  seo:
+    description: Instructions to display static images on ESPHome
+    image: image-outline.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "display-image" >}}
+
 
 Use this component to store graphical images on the device, you can then draw the images on compatible displays.
 

@@ -1,9 +1,12 @@
 ---
-description: "Light Component"
+description: "Instructions for setting up lights and light effects in ESPHome."
 title: "Light Component"
+params:
+  seo:
+    description: Instructions for setting up lights and light effects in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 In ESPHome, `light` components allow you to create lights usable from Home Assistant's frontend and have many
 features such as colors, transitions and even effects.

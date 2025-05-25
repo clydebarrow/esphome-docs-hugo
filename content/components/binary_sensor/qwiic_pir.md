@@ -1,9 +1,12 @@
 ---
-description: "Qwiic PIR Motion Binary Sensor"
+description: "Instructions for setting up the Qwiic PIR Motion binary sensor."
 title: "Qwiic PIR Motion Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up the Qwiic PIR Motion binary sensor.
+    image: qwiic_pir.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The Qwiic PIR Motion binary sensor allows you to use your Qwiic PIR ([EKMC4607112K based](https://www.sparkfun.com/products/17374), [EKMB1107112 based](https://www.sparkfun.com/products/17375), [firmware documentation](https://github.com/sparkfun/Qwiic_PIR))
 sensors from SparkFun with ESPHome.

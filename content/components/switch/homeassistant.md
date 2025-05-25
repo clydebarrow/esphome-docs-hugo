@@ -1,9 +1,12 @@
 ---
-description: "Home Assistant Switch"
+description: "Instructions for setting up Home Assistant Switch with ESPHome that import states and allows control via your Home Assistant instance."
 title: "Home Assistant Switch"
+params:
+  seo:
+    description: Instructions for setting up Home Assistant Switch with ESPHome that import states and allows control via your Home Assistant instance.
+    image: home-assistant.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `homeassistant` Switch platform allows you to create Switch that **import**
 states and allow **control** via your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.

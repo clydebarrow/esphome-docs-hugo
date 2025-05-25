@@ -1,9 +1,12 @@
 ---
-description: "Hydreon Rain Sensor Binary Sensor"
+description: "Instructions for setting up Hydreon rain sensors"
 title: "Hydreon Rain Sensor Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up Hydreon rain sensors
+    image: hydreon_rg9.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `hydreon_rgxx` binary sensor platform gives access to information provided by a Hydreon Rain Sensor.
 For this sensor to work, a {{< docref "/components/sensor/hydreon_rgxx" >}} must be set up.

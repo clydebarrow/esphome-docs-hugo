@@ -1,9 +1,12 @@
 ---
-description: "Remote Receiver"
+description: "Instructions for setting up remote receiver binary sensors for infrared and RF codes."
 title: "Remote Receiver"
+params:
+  seo:
+    description: Instructions for setting up remote receiver binary sensors for infrared and RF codes.
+    image: remote.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `remote_receiver` component lets you receive and decode various common remote control signals, such as infrared
 or 433 MHz radio frequency (RF) signals.

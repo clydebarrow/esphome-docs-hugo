@@ -1,9 +1,12 @@
 ---
-description: "Modbus Controller Binary Sensor"
+description: "Instructions for setting up a modbus_controller device binary sensor."
 title: "Modbus Controller Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up a modbus_controller device binary sensor.
+    image: modbus.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `modbus_controller` binary sensor platform creates a binary sensor from a modbus_controller component
 and requires {{< docref "/components/modbus_controller" >}} to be configured.

@@ -1,9 +1,12 @@
 ---
-description: "Captive Portal"
+description: "Instructions for setting up the Captive Portal fallback mechanism in ESPHome."
 title: "Captive Portal"
+params:
+  seo:
+    description: Instructions for setting up the Captive Portal fallback mechanism in ESPHome.
+    image: wifi-strength-alert-outline.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The captive portal component in ESPHome is a fallback mechanism for when connecting to the
 configured {{< docref "wifi" "WiFi" >}} fails.

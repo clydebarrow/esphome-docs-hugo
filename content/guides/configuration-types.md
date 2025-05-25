@@ -1,9 +1,12 @@
 ---
-description: "Configuration Types"
+description: "Documentation of different configuration types in ESPHome"
 title: "Configuration Types"
+params:
+  seo:
+    description: Documentation of different configuration types in ESPHome
+    image: settings.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome's configuration files have several configuration types. This
 page describes them.

@@ -1,9 +1,12 @@
 ---
-description: "I²S Audio Media Player"
+description: "Instructions for setting up I²S based media players in ESPHome."
 title: "I²S Audio Media Player"
+params:
+  seo:
+    description: Instructions for setting up I²S based media players in ESPHome.
+    image: i2s_audio.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `i2s_audio` media player platform allows you to play media from webservers and web streams
 via the {{< docref "/components/i2s_audio" >}}. This platform only works on ESP32 based chips.

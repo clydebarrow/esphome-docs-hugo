@@ -1,9 +1,12 @@
 ---
-description: "ESP32 RMT LED Strip"
+description: "Instructions for setting up addressable lights like NEOPIXEL on an ESP32 using the RMT peripheral."
 title: "ESP32 RMT LED Strip"
+params:
+  seo:
+    description: Instructions for setting up addressable lights like NEOPIXEL on an ESP32 using the RMT peripheral.
+    image: color_lens.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This is a component using the ESP32 RMT peripheral to drive most addressable LED strips.
 

@@ -1,9 +1,12 @@
 ---
-description: "Ultrasonic Distance Sensor"
+description: "Instructions for setting up ultrasonic distance measurement sensors in ESPHome."
 title: "Ultrasonic Distance Sensor"
+params:
+  seo:
+    description: Instructions for setting up ultrasonic distance measurement sensors in ESPHome.
+    image: ultrasonic.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The ultrasonic distance sensor allows you to use simple ultrasonic
 sensors like the HC-SR04

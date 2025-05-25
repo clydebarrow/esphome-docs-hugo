@@ -1,9 +1,12 @@
 ---
-description: "Generic Output Switch"
+description: "Instructions for setting up generic output switches in ESPHome that control an output component."
 title: "Generic Output Switch"
+params:
+  seo:
+    description: Instructions for setting up generic output switches in ESPHome that control an output component.
+    image: upload.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `output` switch platform allows you to use any output component as a switch.
 

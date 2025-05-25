@@ -1,9 +1,12 @@
 ---
-description: "LVGL Text"
+description: "Instructions for setting up an LVGL Text component."
 title: "LVGL Text"
+params:
+  seo:
+    description: Instructions for setting up an LVGL Text component.
+    image: ../images/lvgl_c_txt.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `lvgl` text platform creates an editable text component from an LVGL textual widget and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 

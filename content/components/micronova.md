@@ -1,9 +1,11 @@
 ---
-description: "MicroNova based pellet stove"
+description: "Instructions for setting up a MicroNova board based pellet stove in ESPHome."
 title: "MicroNova based pellet stove"
+params:
+  seo:
+    description: Instructions for setting up a MicroNova board based pellet stove in ESPHome.
 ---
 
-{{< seo description="" image="" >}}
 
 The MicroNova component allows you to integrate a pellet stove with a MicroNova board in ESPHome.
 It uses [UART](components/uart#uart) for communication.

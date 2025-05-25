@@ -1,9 +1,12 @@
 ---
-description: "Touchscreen Components"
+description: "Instruction for using touchscreen components."
 title: "Touchscreen Components"
+params:
+  seo:
+    description: Instruction for using touchscreen components.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `touchscreen` component contains the base code for most touchscreen driver components
 available in ESPHome and is responsible for passing the touch events to

@@ -1,9 +1,12 @@
 ---
-description: "Sen5x Series Environmental sensor"
+description: "Instructions for setting up Sen5x Series Environmental sensor for PM, RH/T, VOC, and NOx measurements."
 title: "Sen5x Series Environmental sensor"
+params:
+  seo:
+    description: Instructions for setting up Sen5x Series Environmental sensor for PM, RH/T, VOC, and NOx measurements.
+    image: sen54.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `sen5x` sensor platform allows you to use your Sensirion [SEN50](https://sensirion.com/products/catalog/SEN50/), [SEN54](https://sensirion.com/products/catalog/SEN54/) and [SEN55](https://sensirion.com/products/catalog/SEN55/) Environmental sensor ([datasheet](https://sensirion.com/media/documents/6791EFA0/62A1F68F/Sensirion_Datasheet_Environmental_Node_SEN5x.pdf)) sensors with ESPHome.
 The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.

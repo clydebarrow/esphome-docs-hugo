@@ -1,9 +1,14 @@
 ---
-description: "Packet Transport Component"
+description: "Instructions for setting up a packet transport component on ESPHome"
 title: "Packet Transport Component"
+params:
+  seo:
+    description: Instructions for setting up a packet transport component on ESPHome
+    image: packet_transport.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "packet-transport" >}}
+
 
 The purpose of this component is to allow ESPHome nodes to directly communicate with each over a communication channel.
 It permits the state of sensors and binary sensors to be transmitted from one node to another, without the need for a

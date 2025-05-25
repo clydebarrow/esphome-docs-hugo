@@ -1,9 +1,12 @@
 ---
-description: "MAX7219 Digit Display"
+description: "Instructions for setting up MAX7219 Digit displays."
 title: "MAX7219 Digit Display"
+params:
+  seo:
+    description: Instructions for setting up MAX7219 Digit displays.
+    image: max7219digit.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `max7219` display platform allows you to use MAX7219 digit with ESPHome. Please note that this component
 is *only* for the digit "matrix" display, for the 7 segment display see {{< docref "max7219/" >}}.

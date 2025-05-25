@@ -1,9 +1,12 @@
 ---
-description: "Managed Updates via HTTP Request"
+description: "Instructions for using ESPHome's http_request update platform to manage updates on your devices."
 title: "Managed Updates via HTTP Request"
+params:
+  seo:
+    description: Instructions for using ESPHome's http_request update platform to manage updates on your devices.
+    image: system-update.svg
 ---
 
-{{< seo description="" image="" >}}
 
 This platform allows you to manage the deployment of updates to your ESPHome devices. It works by reading a
 [JSON manifest file](components/update/http_request#update_http_request-manifest_format) and using it to determine the presence of an update.

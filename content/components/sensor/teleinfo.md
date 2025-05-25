@@ -1,9 +1,12 @@
 ---
-description: "Teleinformation from Linky electrical counter."
+description: "Instructions for setting up French Teleinformation"
 title: "Teleinformation from Linky electrical counter."
+params:
+  seo:
+    description: Instructions for setting up French Teleinformation
+    image: teleinfo.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

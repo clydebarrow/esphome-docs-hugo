@@ -1,9 +1,12 @@
 ---
-description: "Improv via BLE"
+description: "Instructions for setting up Improv via BLE in ESPHome."
 title: "Improv via BLE"
+params:
+  seo:
+    description: Instructions for setting up Improv via BLE in ESPHome.
+    image: improv-social.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `esp32_improv` component in ESPHome implements the open [Improv standard](https://www.improv-wifi.com/)
 for configuring Wi-Fi on an ESP32 device by using Bluetooth Low Energy (BLE) to receive the credentials.

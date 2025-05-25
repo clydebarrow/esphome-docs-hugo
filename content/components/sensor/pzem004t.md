@@ -1,9 +1,12 @@
 ---
-description: "Peacefair PZEM-004T Energy Monitor"
+description: "Instructions for setting up PZEM-004 and PZEM-004T V1 power monitors."
 title: "Peacefair PZEM-004T Energy Monitor"
+params:
+  seo:
+    description: Instructions for setting up PZEM-004 and PZEM-004T V1 power monitors.
+    image: pzem004t.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< note >}}
 This page is incomplete and could use some work. If you want to contribute, please see our

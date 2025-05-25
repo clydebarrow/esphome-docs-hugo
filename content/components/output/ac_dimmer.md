@@ -1,9 +1,12 @@
 ---
-description: "AC Dimmer Component"
+description: "Instructions for setting up AC Dimmer component in ESPHome."
 title: "AC Dimmer Component"
+params:
+  seo:
+    description: Instructions for setting up AC Dimmer component in ESPHome.
+    image: ac_dimmer.svg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< warning >}}
 This component has not been fully tested yet, if you are testing this component

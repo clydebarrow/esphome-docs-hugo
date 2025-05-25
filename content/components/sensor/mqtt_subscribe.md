@@ -1,9 +1,12 @@
 ---
-description: "MQTT Subscribe Sensor"
+description: "Instructions for setting up MQTT subscribe sensors"
 title: "MQTT Subscribe Sensor"
+params:
+  seo:
+    description: Instructions for setting up MQTT subscribe sensors
+    image: mqtt.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `mqtt_subscribe` sensor platform allows you to get external data into ESPHome.
 The sensor will subscribe to messages on the given MQTT topic and parse each message into

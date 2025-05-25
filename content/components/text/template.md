@@ -1,9 +1,12 @@
 ---
-description: "Template Text"
+description: "Instructions for setting up template texts with ESPHome."
 title: "Template Text"
+params:
+  seo:
+    description: Instructions for setting up template texts with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` text platform allows you to create a text with templated values
 using [lambdas](automations/templates#config-lambda).

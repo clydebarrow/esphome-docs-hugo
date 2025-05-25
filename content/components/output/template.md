@@ -1,9 +1,12 @@
 ---
-description: "Template Output"
+description: "Instructions for setting up template outputs with ESPHome."
 title: "Template Output"
+params:
+  seo:
+    description: Instructions for setting up template outputs with ESPHome.
+    image: description.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `template` output component can be used to create templated binary and float outputs in ESPHome.
 

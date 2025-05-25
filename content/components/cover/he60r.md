@@ -1,9 +1,12 @@
 ---
-description: "HE60R Garage Door Opener"
+description: "Setting up a Chamberlain HomEntry HE60R and similar garage door openers"
 title: "HE60R Garage Door Opener"
+params:
+  seo:
+    description: Setting up a Chamberlain HomEntry HE60R and similar garage door openers
+    image: he60r.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 {{< img src="he60r.jpg" alt="Image" class="right" >}}
 

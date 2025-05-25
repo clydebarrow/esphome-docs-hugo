@@ -1,9 +1,12 @@
 ---
-description: "Packet Transport Binary Sensor"
+description: "Instructions for setting up a packet transport binary sensor."
 title: "Packet Transport Binary Sensor"
+params:
+  seo:
+    description: Instructions for setting up a packet transport binary sensor.
+    image: packet_transport.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `packet_transport` binary sensor platform allows you to receive binary sensor data directly from another ESPHome node.
 It requires a `packet_transport` component to be configured.

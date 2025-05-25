@@ -1,9 +1,12 @@
 ---
-description: "Tuya Select"
+description: "Instructions for setting up a Tuya device select."
 title: "Tuya Select"
+params:
+  seo:
+    description: Instructions for setting up a Tuya device select.
+    image: tuya.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `tuya` select platform creates a select from a tuya serial component
 and requires {{< docref "/components/tuya" >}} to be configured.

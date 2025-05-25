@@ -1,9 +1,12 @@
 ---
-description: "Xiaomi Mijia BLE Sensors"
+description: "Instructions for setting up Xiaomi Mi Home (Mijia) bluetooth-based sensors in ESPHome."
 title: "Xiaomi Mijia BLE Sensors"
+params:
+  seo:
+    description: Instructions for setting up Xiaomi Mi Home (Mijia) bluetooth-based sensors in ESPHome.
+    image: xiaomi_mijia_logo.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `xiaomi_ble` sensor platform lets you track the output of Xiaomi Bluetooth Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}. This component will track, for example, the temperature, humidity, moisture, conductivity, illuminance, formaldehyde, mosquito tablet and battery level of the device every time the sensor sends out a BLE broadcast. Contrary to other implementations, `xiaomi_ble` listens passively to advertisement packets and does not pair with the device. Hence ESPHome has no impact on battery life. Thus, if you only use such sensors, you can safely set `scan_parameters.active: false` in `esp32_ble_tracker` configuration, to save from spamming your RF environment with useless scan requests.
 

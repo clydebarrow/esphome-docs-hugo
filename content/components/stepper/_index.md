@@ -1,9 +1,12 @@
 ---
-description: "Stepper Component"
+description: "Instructions for setting up stepper motor drivers in ESPHome"
 title: "Stepper Component"
+params:
+  seo:
+    description: Instructions for setting up stepper motor drivers in ESPHome
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `stepper` component allows you to use stepper motors with ESPHome.
 Currently only the A4988 stepper driver

@@ -1,9 +1,12 @@
 ---
-description: "Speaker Components"
+description: "Instructions for setting up speakers in ESPHome."
 title: "Speaker Components"
+params:
+  seo:
+    description: Instructions for setting up speakers in ESPHome.
+    image: speaker.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `speaker` domain contains common functionality shared across the
 speaker platforms.

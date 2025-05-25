@@ -1,9 +1,12 @@
 ---
-description: "RuuviTag Open Source BLE Sensor"
+description: "Instructions for setting up RuuviTag bluetooth-based sensors in ESPHome."
 title: "RuuviTag Open Source BLE Sensor"
+params:
+  seo:
+    description: Instructions for setting up RuuviTag bluetooth-based sensors in ESPHome.
+    image: ruuvitag.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `ruuvitag` sensor platform lets you track the output of RuuviTag
 Bluetooth Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}.

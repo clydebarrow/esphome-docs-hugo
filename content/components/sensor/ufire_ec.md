@@ -1,9 +1,12 @@
 ---
-description: "uFire Isolated EC sensor"
+description: "Instructions for setting up uFire Isolated EC sensor in esphome"
 title: "uFire Isolated EC sensor"
+params:
+  seo:
+    description: Instructions for setting up uFire Isolated EC sensor in esphome
+    image: ufire_ec.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `ufire_ec` sensor platform allows you to use your uFire Isolated EC sensor
 with ESPHome. The [I²C Bus](components/i2c#i2c) is required to be set up in your

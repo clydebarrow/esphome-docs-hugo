@@ -1,9 +1,12 @@
 ---
-description: "Bluetooth Proxy"
+description: "Instructions for setting up the Bluetooth Proxy in ESPHome."
 title: "Bluetooth Proxy"
+params:
+  seo:
+    description: Instructions for setting up the Bluetooth Proxy in ESPHome.
+    image: bluetooth.svg
 ---
 
-{{< seo description="" image="" >}}
 
 Home Assistant can expand its Bluetooth reach by communicating through the Bluetooth proxy component in ESPHome.
 The individual device integrations in Home Assistant (such as BTHome) will receive the data from the Bluetooth

@@ -1,9 +1,14 @@
 ---
-description: "Nextion Binary Sensor Component"
+description: "Instructions for setting up Nextion binary sensor."
 title: "Nextion Binary Sensor Component"
+params:
+  seo:
+    description: Instructions for setting up Nextion binary sensor.
+    image: nextion.jpg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "nextion_binary_sensor" >}}
+
 
 The `nextion` binary sensor platform supports the many switched components in the Nextion as well as integer variables (>0 == true). It can be a component or variable in the Nextion display.
 It is best to set the components vscope to global in the Nextion Editor. This way the component will be available if the page is shown or not.

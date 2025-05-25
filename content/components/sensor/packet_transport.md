@@ -1,9 +1,12 @@
 ---
-description: "Packet Transport Sensor"
+description: "Instructions for setting up a packet transport sensor."
 title: "Packet Transport Sensor"
+params:
+  seo:
+    description: Instructions for setting up a packet transport sensor.
+    image: packet_transport.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `packet_transport` sensor platform allows you to receive numeric sensor data directly from another ESPHome node.
 It requires a `packet_transport` component to be configured.

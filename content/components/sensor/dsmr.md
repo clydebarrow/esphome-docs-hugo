@@ -1,9 +1,12 @@
 ---
-description: "DSMR Component"
+description: "Instructions for setting up DSMR Meter component in ESPHome."
 title: "DSMR Component"
+params:
+  seo:
+    description: Instructions for setting up DSMR Meter component in ESPHome.
+    image: dsmr.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ## Component/Hub
 

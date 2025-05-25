@@ -1,9 +1,12 @@
 ---
-description: "Growatt Solar"
+description: "Instructions for setting up a Growatt inverter reading on modbus."
 title: "Growatt Solar"
+params:
+  seo:
+    description: Instructions for setting up a Growatt inverter reading on modbus.
+    image: growatt.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `Growatt Inverter` sensor platform allows you to use growatt inverter data reading on modbus with ESPHome.
 

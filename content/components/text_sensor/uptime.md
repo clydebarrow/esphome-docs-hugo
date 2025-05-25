@@ -1,9 +1,12 @@
 ---
-description: "Uptime Text Sensor"
+description: "Instructions for setting up a text sensor that tracks the uptime of the ESP."
 title: "Uptime Text Sensor"
+params:
+  seo:
+    description: Instructions for setting up a text sensor that tracks the uptime of the ESP.
+    image: timer.svg
 ---
 
-{{< seo description="" image="" >}}
 
 The `uptime` text sensor provides a human-readable representation the time since. The
 elements can be separated by a custom string, and more significant elements will be omitted if they are zero. For example,

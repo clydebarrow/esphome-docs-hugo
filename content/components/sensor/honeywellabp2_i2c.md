@@ -1,9 +1,12 @@
 ---
-description: "Honeywell ABP 2 Pressure Sensors"
+description: "Instructions for setting up Honeywell ABP2 Pressure sensors"
 title: "Honeywell ABP 2 Pressure Sensors"
+params:
+  seo:
+    description: Instructions for setting up Honeywell ABP2 Pressure sensors
+    image: honeywellabp.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The `honeywellabp2_i2c` sensor platform allows you to use your Honeywell ABP 
 ([website](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/board-mount-pressure-sensors/basic-abp2-series),

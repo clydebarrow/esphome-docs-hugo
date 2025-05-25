@@ -1,9 +1,12 @@
 ---
-description: "Zio Ultrasonic Distance Sensor"
+description: "Instructions for setting up the Zio Ultrasonic Distance sensor."
 title: "Zio Ultrasonic Distance Sensor"
+params:
+  seo:
+    description: Instructions for setting up the Zio Ultrasonic Distance sensor.
+    image: zio_ultrasonic.jpg
 ---
 
-{{< seo description="" image="" >}}
 
 The Zio Ultrasonic Distance sensor allows you to use your compatible
 ([datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf),

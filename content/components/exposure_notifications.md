@@ -1,9 +1,12 @@
 ---
-description: "Exposure Notification Listener"
+description: "Instructions for setting up exposure notification listeners for ESPHome."
 title: "Exposure Notification Listener"
+params:
+  seo:
+    description: Instructions for setting up exposure notification listeners for ESPHome.
+    image: exposure_notifications.png
 ---
 
-{{< seo description="" image="" >}}
 
 The `exposure_notifications` component uses the {{< docref "/components/esp32_ble_tracker" >}} to discover
 nearby COVID-19 exposure notification bluetooth messages sent by phones running the

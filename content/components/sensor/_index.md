@@ -1,9 +1,12 @@
 ---
-description: "Sensor Component"
+description: "Instructions for setting up sensor components in ESPHome."
 title: "Sensor Component"
+params:
+  seo:
+    description: Instructions for setting up sensor components in ESPHome.
+    image: folder-open.svg
 ---
 
-{{< seo description="" image="" >}}
 
 ESPHome has support for many different sensors. Each of them is a
 platform of the `sensor` domain and each sensor has several base

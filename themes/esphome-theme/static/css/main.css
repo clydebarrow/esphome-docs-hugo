@@ -1122,6 +1122,11 @@ figcaption {
   display: block;
 }
 
+@media (min-width: 1001px) {
+  .overlay.show {
+    display: none;
+  }
+}
 /* Responsive */
 /* @media (max-width: var(--mobile-width-stop)) {  // sadly does not work */
 @media (max-width: 1000px) {

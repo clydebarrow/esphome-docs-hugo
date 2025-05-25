@@ -1,5 +1,10 @@
 
+const bodystyle = window.getComputedStyle(document.body);
+const mobileWidthStop = parseInt(bodystyle.getPropertyValue('--mobile-width-stop'));
+const isMobile = (window.innerWidth <= mobileWidthStop);
+
 function openTOC() {
+    if (!isMobile) return;
     const tocPanel = document.getElementsByClassName('sidebar')[0];
     const overlay = document.getElementById('overlay');
     tocPanel.classList.add('open');
@@ -15,8 +20,6 @@ function closeTOC() {
 
 // Add keyboard support for dropdown menus
 document.addEventListener('DOMContentLoaded', function() {
-    const bodystyle = window.getComputedStyle(document.body);
-    const mobileWidthStop = parseInt(bodystyle.getPropertyValue('--mobile-width-stop'));
 
     const tocToggle = document.getElementById('toc-toggle');
     const overlay = document.getElementById('overlay');
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Handle click events
         button.addEventListener('click', function(e) {
-            if (window.innerWidth > mobileWidthStop) return; // Only mobile
+            if (!isMobile) return;
             e.preventDefault();
             // Close others
             dropdownButtons.forEach(function(otherBtn) {
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close dropdowns when Escape key is pressed
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
             closeAllDropdowns();
         }

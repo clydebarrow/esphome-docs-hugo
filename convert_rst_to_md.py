@@ -10,6 +10,7 @@ import re
 import csv
 import argparse
 import shutil
+from operator import truediv
 
 # Global anchor map to store all anchors and their document paths
 anchor_map = {}
@@ -380,6 +381,24 @@ def convert_rst_to_md(lines, filename):
             md_lines.extend(new_lines)
             md_lines.append(' ' * current_indent + "{{< /math >}}")
             continue
+
+        if line.lstrip().startswith('.. collapse::'):
+            # Get the indentation of the current line
+            current_indent = len(line) - len(line.lstrip())
+            collapse_title = line.strip().removeprefix(".. collapse::").strip()
+
+            # Add the code block start with proper indentation
+
+            is_open = False
+            i, new_lines = get_indented_block(lines, i+1, current_indent)
+            if new_lines[0].startswith(":open:"):
+                is_open = True
+                new_lines = new_lines[1:]
+            md_lines.append(' ' * current_indent + f'{{{{< collapse "{collapse_title}" {is_open} >}}}}')
+            md_lines.extend(new_lines)
+            md_lines.append(' ' * current_indent + "{{< /collapse >}}")
+            continue
+
 
 
         # Handle notes

@@ -779,6 +779,64 @@ main {
   margin-bottom: 3em;
 }
 
+.collapse-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.collapse-header {
+  background-color: #f3f6f6;
+  padding: 0.75em 1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapse-container h4 {
+  margin: 0;
+}
+
+.collapse-container.active h4 {
+  margin: 0;
+  display: none;
+}
+
+.collapse-container.active h5 {
+  margin: 0;
+  display: block;
+}
+
+.collapse-container h5 {
+  margin: 0;
+  display: none;
+}
+
+.collapse-content {
+  height: 0;
+  overflow: hidden;
+  transition: height,padding 0.3s ease;
+  padding-left: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.collapse-container.active .collapse-content {
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.collapse-container.active .collapse-icon {
+  transform: rotate(45deg);
+}
+
+.collapse-icon {
+  font-size: 1.5em;
+  transition: transform 0.3s;
+}
+
 .admonition {
   margin: 1.5em 0;
   padding-top: 0.2em;

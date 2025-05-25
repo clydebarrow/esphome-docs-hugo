@@ -33,6 +33,11 @@
 <body class="body">
     <div class="nav-container" id="nav-container">
         <nav class="sticky-nav">
+            {{ if ne .IsHome true }}
+                <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+            {{ end }}
             <div class="nav-logo">
                 <a
                 {{ if eq .Page.Title "ESPHome Docs" }}
@@ -43,11 +48,6 @@
                     {{ os.ReadFile "static/images/logo-text.svg"  | safeHTML }}
                 </a>
             </div>
-            {{ if ne .IsHome true }}
-                <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false">
-                    <i class="fa-solid fa-list"></i>
-                </button>
-            {{ end }}
             <button type="button" class="hamburger-button" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -74,38 +74,20 @@
                     </svg>
                 </button>
                 </div>
-                <div class="dropdown">
-                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">Getting Started</button>
-                    <div class="dropdown-content">
-                        <a href="{{ "guides/getting_started_hassio/" | relURL }}">From Home Assistant</a>
-                        <a href="{{ "guides/getting_started_command_line/" | relURL }}">Using Command Line</a>
-                        <a href="{{ "projects/" | relURL }}">Ready-Made Projects</a>
-                        <a href="{{ "guides/migrate_sonoff_tasmota/" | relURL }}">Migrate from Tasmota</a>
-                        <a href="{{ "guides/faq/" | relURL }}">FAQ and Tips</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">Next Steps</button>
-                    <div class="dropdown-content">
-                        <a href="{{ "components/" | relURL }}">Documentation</a>
-                        <a href="{{ "automations/" | relURL }}">Automations</a>
-                        <a href="{{ "guides/configuration-types/" | relURL }}">Configuration Types</a>
-                        <a href="https://devices.esphome.io/">Device Examples</a>
-                        <a href="{{ "guides/diy/" | relURL }}">DIY Examples</a>
-                        <a href="{{ "guides/creators/" | relURL }}">Sharing ESPHome Devices</a>
-                        <a href="{{ "guides/made_for_esphome/" | relURL }}">Made for ESPHome</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">Keeping Up</button>
-                    <div class="dropdown-content">
-                        <a href="{{ "changelog/" | relURL }}">Changelog</a>
-                        <a href="https://discord.gg/KhAMKrd">Discord</a>
-                        <a href="https://community.home-assistant.io/c/esphome/">Forums</a>
-                        <a href="https://developers.esphome.io">Development</a>
-                        <a href="{{ "guides/supporters/" | relURL }}">Supporters</a>
-                    </div>
-                </div>
+                {{ range (index .Site.Menus "main") }}
+                    {{ if .HasChildren }}
+                        <div class="dropdown">
+                            <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false">{{ .Name }}</button>
+                            <div class="dropdown-content">
+                                {{ range .Children }}
+                                    <a href="{{ .URL }}">{{ .Name }}</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ else }}
+                        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                    {{ end }}
+                {{ end }}
                 <div class="nav-search">
                     <div id="nav-search-container"></div>
                     <div id="nav-search-results"></div>
@@ -126,7 +108,7 @@
     <footer>
         <div class="footer-content">
             <a class="footer-logo" href="https://www.openhomefoundation.org/">
-                <span>ESPHome is a project from the</span></p>
+                <span>ESPHome is a project from the</span>
                 <img src="{{ "images/ohf-logo-on-dark.svg" | relURL }}" alt="ESPHome Logo" width="180px">
             </a>
                 <div class="footer-column">

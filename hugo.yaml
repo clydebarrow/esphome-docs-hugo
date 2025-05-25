@@ -22,21 +22,85 @@ params:
 
 menu:
   main:
-    - name: Getting Started
+    - name: "Getting Started"
       weight: 10
-      identifier: getting-started
-    - name: Components
-      url: /components/
+      identifier: "getting-started"
+    - name: "From Home Assistant"
+      url: "/guides/getting_started_hassio/"
+      weight: 11
+      parent: "getting-started"
+    - name: "Using Command Line"
+      url: "/guides/getting_started_command_line/"
+      weight: 12
+      parent: "getting-started"
+    - name: "Ready-Made Projects"
+      url: "/projects/"
+      weight: 13
+      parent: "getting-started"
+    - name: "Migrate from Tasmota"
+      url: "/guides/migrate_sonoff_tasmota/"
+      weight: 14
+      parent: "getting-started"
+    - name: "FAQ and Tips"
+      url: "/guides/faq/"
+      weight: 15
+      parent: "getting-started"
+
+    - name: "Next Steps"
       weight: 20
-    - name: Guides
-      url: /guides/
+      identifier: "next-steps"
+    - name: "Documentation"
+      url: "/components/"
+      weight: 21
+      parent: "next-steps"
+    - name: "Automations"
+      url: "/automations/"
+      weight: 22
+      parent: "next-steps"
+    - name: "Configuration Types"
+      url: "/guides/configuration-types/"
+      weight: 23
+      parent: "next-steps"
+    - name: "Device Examples"
+      url: "https://devices.esphome.io/"
+      weight: 24
+      parent: "next-steps"
+    - name: "DIY Examples"
+      url: "/guides/diy/"
+      weight: 25
+      parent: "next-steps"
+    - name: "Sharing ESPHome Devices"
+      url: "/guides/creators/"
+      weight: 26
+      parent: "next-steps"
+    - name: "Made for ESPHome"
+      url: "/guides/made_for_esphome/"
+      weight: 27
+      parent: "next-steps"
+
+    - name: "Keeping Up"
       weight: 30
-    - name: Automations
-      url: /automations/
-      weight: 40
-    - name: Changelog
-      url: /changelog/
-      weight: 50
+      identifier: "keeping-up"
+    - name: "Changelog"
+      url: "/changelog/"
+      weight: 31
+      parent: "keeping-up"
+    - name: "Discord"
+      url: "https://discord.gg/KhAMKrd"
+      weight: 32
+      parent: "keeping-up"
+    - name: "Forums"
+      url: "https://community.home-assistant.io/c/esphome/"
+      weight: 33
+      parent: "keeping-up"
+    - name: "Development"
+      url: "https://developers.esphome.io"
+      weight: 34
+      parent: "keeping-up"
+    - name: "Supporters"
+      url: "/guides/supporters/"
+      weight: 35
+      parent: "keeping-up"
 
 markup:
   highlight:
@@ -80,4 +144,3 @@ module:
     - disableWatch: false
       source: static/images
       target: static/images
-

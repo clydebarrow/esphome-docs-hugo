@@ -1354,6 +1354,7 @@ def process_raw_html_block(lines, i):
             classes = class_match.group(1).replace(',', ' ').strip()
             class_ = 'class="' + classes + '"'
         button_lines.append(f'{{{{< html_file file="{href}" {class_} >}}}}')
+        button_lines.append("")
         return button_lines, i
 
 

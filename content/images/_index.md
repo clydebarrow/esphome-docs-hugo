@@ -15,3 +15,4 @@ that will only be used in raw HTML and thus not auto-included.
 {{< img src="logo-docs.svg" alt=""  >}}
 
 {{< html_file file="images/logo-text.svg"  >}}
+

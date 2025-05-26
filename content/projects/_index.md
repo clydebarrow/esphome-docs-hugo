@@ -16,3 +16,4 @@ and your ESPHome device is ready to do its magic - as a Bluetooth proxy or a med
 No programming or other software required.
 
 {{< html_file file="./installer.html"  >}}
+

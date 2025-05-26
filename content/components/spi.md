@@ -134,7 +134,6 @@ on...:
        id(spidev).write_byte(0x4F);
        id(spidev).disable();
 
-
 ```
 ## Configuration variables:
 

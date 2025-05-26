@@ -19,13 +19,13 @@ Hooking it all up is quite easy: Just buy a suitable photoresistor (make sure th
 {{< note >}}
 Some energy meters have an exposed [S0 port](https://en.wikipedia.org/wiki/S_interface) (which essentially just is a switch that closes), if that is the case the photodiode can be replaced with the following connection.
 
-```yaml
+```
 S0 ------------ VCC
 S0 --+-- 10k -- GND
 .    |
 .    +--------- GPIO12
-```
 
+```
 {{< /note >}}
 For ESPHome, you can then use the {{< docref "/components/sensor/pulse_meter" "pulse meter sensor" >}} using below configuration:
 
@@ -55,8 +55,8 @@ sensor:
     filters:
       - throttle_average: 10s
       - filter_out: NaN
-```
 
+```
 {{< /note >}}
 {{< note >}}
 The `pulse_meter` sensor has an internal filter that is used to debounce the input signal. This filter is set to `13us` by default. To increase the safety margin, you can increase this value. For this you need to know the *minimum pulse width* that you can expect to see from your power meter within the expected load range.
@@ -74,8 +74,8 @@ sensor:
   - platform: pulse_meter
     # ...
     internal_filter: 20ms
-```
 
+```
 {{< /note >}}
 If a technician shows up and he looks confused about what the heck you have done to your power meter, tell them about ESPHome 😉
 

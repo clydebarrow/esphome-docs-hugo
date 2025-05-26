@@ -16,7 +16,7 @@ if the page is shown or not.
 
 {{< note >}}
 The Nextion can receive an integer but it can only send 3 bytes for a negative integer. The range if using the [Nextion Custom Sensor Protocol]({{< ref "components/sensor/nextion#nextion_custom_sensor_protocol" >}}) is:
-        -16777215 to 4294967295
+    -16777215 to 4294967295
 
 {{< /note >}}
 See {{< docref "/components/display/nextion" >}} for setting up the display
@@ -79,8 +79,8 @@ sensor:
 **Only one** *component_name* **or** *variable_name* **can be set**
 
   {{< note >}}
-`background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings](components/sensor/nextion#nextion_sensor_settings).
-A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
+  `background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings](components/sensor/nextion#nextion_sensor_settings).
+  A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
 
 
   {{< /note >}}

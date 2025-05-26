@@ -23,7 +23,6 @@ wifi:
 
 improv_serial:
 
-
 ```
 ## Configuration variables
 

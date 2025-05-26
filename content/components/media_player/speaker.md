@@ -140,7 +140,6 @@ switch:
                     not:
                       media_player.is_announcing:
 
-
 ```
 ## Automations
 

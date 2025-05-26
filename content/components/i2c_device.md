@@ -26,7 +26,6 @@ on...:
          // TODO
        }
 
-
 ```
 # Configuration variables:
 

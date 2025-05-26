@@ -100,7 +100,6 @@ sensor:
     icon: mdi:omega
     accuracy_decimals: 0
 
-
 ```
 ## See Also
 

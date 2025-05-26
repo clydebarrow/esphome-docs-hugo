@@ -15,7 +15,7 @@ sensors from SparkFun with ESPHome.
 
 [Sparkfun](https://www.sparkfun.com/products/17374)
 
-The SparkFun Qwiic PIR Motion binary sensor uses PIR sensors to detect motion. It communicates over I²C. There are two models currently available. One uses the [Panasonic EKMC4607112K sensor](https://cdn.sparkfun.com/assets/7/2/a/4/3/EKMC460711xK_Spec.pdf), and the other uses the [Panasonic EKMB1107112 sensor](https://cdn.sparkfun.com/assets/c/e/8/7/5/EKMB110711x_Spec.pdf). 
+The SparkFun Qwiic PIR Motion binary sensor uses PIR sensors to detect motion. It communicates over I²C. There are two models currently available. One uses the [Panasonic EKMC4607112K sensor](https://cdn.sparkfun.com/assets/7/2/a/4/3/EKMC460711xK_Spec.pdf), and the other uses the [Panasonic EKMB1107112 sensor](https://cdn.sparkfun.com/assets/c/e/8/7/5/EKMB110711x_Spec.pdf).
 
 You can configure a debounce mode to reduce noise and false detections. See [Debounce Modes]({{< ref "components/binary_sensor/qwiic_pir#debounce-modes" >}}) for the available options.
 
@@ -48,14 +48,14 @@ There are three options for `debounce_mode`.
     - Use binary sensor filters to reduce noise and false detections.
 
 - `NATIVE`:
-    
+
     - Use the sensor's native event detection to debounce the signal.
     - Logic follows [SparkFun's reference example implementation](https://github.com/sparkfun/SparkFun_Qwiic_PIR_Arduino_Library/blob/master/examples/Example2_PrintPIRStatus/Example2_PrintPIRStatus.ino).
     - May be unreliable at detecting when an object is removed, especially at high debounce rates.
     - Binary sensor filters are not necessary to reduce noise and false detections.
 
 - `RAW`:
-    
+
     - Use the raw state of the PIR sensor as reported by the firmware.
     - May miss a very short motion detection events if ESPHome's loop time is slow.
     - Use binary sensor filters to reduce noise and false detections.

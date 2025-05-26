@@ -69,7 +69,6 @@ esp32_improv:
 improv_serial:
   next_url: https://example.com/project-template/manual?ip={{ip_address}}&name={{device_name}}&version={{esphome_version}}
 
-
 ```
 ## Relevant Documentation
 
@@ -82,15 +81,15 @@ improv_serial:
   the `esp32_improv` / `improv_serial` components.
 - `dashboard_import`
     {{< note >}}
-The [Project information]({{< ref "components/esphome#esphome-creators_project" >}}) above is required for adoption to work in the Dashboard.
+    The [Project information]({{< ref "components/esphome#esphome-creators_project" >}}) above is required for adoption to work in the Dashboard.
 
-    {{< /note >}}
     - `package_import_url` - This should point to the public repository containing
-      the configuration for the device so that the user's ESPHome dashboard can autodetect this device and
-      create a minimal YAML using [Remote/Git Packages]({{< ref "components/packages#config-git_packages" >}}).
+    the configuration for the device so that the user's ESPHome dashboard can autodetect this device and
+    create a minimal YAML using [Remote/Git Packages]({{< ref "components/packages#config-git_packages" >}}).
     - `import_full_config` - This signals if ESPHome should download the entire YAML file as the user's config
-      YAML instead of referencing the package. Set this to `true` if you are creating a tutorial to let users
-      easily tweak the whole configuration or be able to uncomment follow-up tutorial steps.
+    YAML instead of referencing the package. Set this to `true` if you are creating a tutorial to let users
+    easily tweak the whole configuration or be able to uncomment follow-up tutorial steps.
+    {{< /note >}}
 - `improv_serial` - {{< docref "/components/improv_serial" >}}
 
 ## See Also

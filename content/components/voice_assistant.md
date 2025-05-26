@@ -191,7 +191,6 @@ binary_sensor:
           else:
             - voice_assistant.start_continuous:
 
-
 ```
 ## See Also
 

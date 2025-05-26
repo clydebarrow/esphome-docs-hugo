@@ -7,7 +7,7 @@ params:
 ---
 
 
-The `sdl` binary sensor platform creates a binary sensor from keyboard presses on the host platform. 
+The `sdl` binary sensor platform creates a binary sensor from keyboard presses on the host platform.
 The sensor will be true when the key is pressed.
 
 ## Configuration variables:

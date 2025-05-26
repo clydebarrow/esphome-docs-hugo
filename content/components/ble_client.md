@@ -95,7 +95,6 @@ ble_client:
         - lambda: |-
             ESP_LOGD("ble_client_lambda", "Disconnected from BLE device");
 
-
 ```
 {{< anchor "ble_client-on_passkey_request" >}}
 
@@ -413,7 +412,6 @@ display them in the log:
 [18:24:57][I][ble_client:143]: Service UUID: 0x1802
 [18:24:57][I][ble_client:144]:   start_handle: 0x27  end_handle: 0x29
 [18:24:57][I][ble_client:305]:  characteristic 0x2A06, handle 0x29, properties 0x4
-
 
 ```
 The discovered services can then be used to enable and configure other

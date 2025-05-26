@@ -27,7 +27,6 @@ sensor:
     ph:
       name: pH
 
-
 ```
 ## Configuration variables:
 

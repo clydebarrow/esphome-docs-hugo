@@ -54,7 +54,6 @@ climate:
     address: 0xDE13
     name: Thermostat Living Room
 
-
 ```
 ## Controller/Hub component
 

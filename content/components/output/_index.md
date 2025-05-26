@@ -69,8 +69,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 
 ```cpp
 id(light_1).turn_on();
-```
 
+```
 {{< /note >}}
 {{< anchor "output-turn_off_action" >}}
 
@@ -89,8 +89,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 
 ```cpp
 id(light_1).turn_off();
-```
 
+```
 {{< /note >}}
 {{< anchor "output-set_level_action" >}}
 
@@ -113,8 +113,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 ```cpp
 // range is 0.0 (off) to 1.0 (on)
 id(light_1).set_level(0.5);
-```
 
+```
 {{< /note >}}
 ## Full Output Index
 

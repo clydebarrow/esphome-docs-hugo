@@ -11,7 +11,7 @@ params:
 The Zio Ultrasonic Distance sensor allows you to use your compatible
 ([datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf),
 [sparkfun](https://www.sparkfun.com/products/17777))
-sensors with ESPHome. 
+sensors with ESPHome.
 
 {{< img src="zio_ultrasonic.jpg" alt="Image" caption="Zio Ultrasonic Distance Sensor. (Credit: [Sparkfun](https://www.sparkfun.com/products/17777), image cropped and compressed)" width="30.0%" class="center" >}}
 

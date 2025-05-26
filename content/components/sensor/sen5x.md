@@ -181,9 +181,6 @@ on_...:
   then:
     - sen5x.start_fan_autoclean: sen54
 
-
-
-
 ```
 ## See Also
 

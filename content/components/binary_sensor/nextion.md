@@ -57,8 +57,8 @@ The Nextion will send a **page_id** and **component_id** when the *Send Componen
 this native event **page_id** and **component_id** are required. No [Nextion Custom Binary Sensor Protocol]({{< ref "components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol" >}}) is required. If **page_id** and **component_id** are set then the component will only react to touch events from the Nextion. Setting **component_name** will allow setting options like foreground color.
 
   {{< note >}}
-`background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [Binary Sensor Settings](components/binary_sensor/nextion#nextion_binary_sensor_settings).
-A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
+  `background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [Binary Sensor Settings](components/binary_sensor/nextion#nextion_binary_sensor_settings).
+  A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
 
 
   {{< /note >}}
@@ -73,8 +73,6 @@ Example:
   on_value:
     lambda: |-
       id(nextion1).update_components_by_page_prefix("page"+x+".");
-
-
 
 ```
 See [How things Update]({{< ref "components/binary_sensor/nextion#nextion_binary_sensor_how_things_update" >}}) for additional information

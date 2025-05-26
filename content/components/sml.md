@@ -48,8 +48,6 @@ sml:
           id(mqttclient).publish("gridmeter/sensor/sml/error", format_hex(bytes));
         }
 
-
-
 ```
 Configuration variables:
 

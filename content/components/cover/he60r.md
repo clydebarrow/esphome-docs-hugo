@@ -35,7 +35,6 @@ cover:
   id: garage_door
   name: Garage Door
 
-
 ```
 ## Configuration variables:
 
@@ -94,8 +93,6 @@ binary_sensor:
     on_press:
       then:
         - cover.toggle: garage_door
-
-
 
 ```
 ## See Also

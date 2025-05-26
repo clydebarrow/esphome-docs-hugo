@@ -17,10 +17,10 @@ to control handling of poor quality readings and reporting reading quality issue
 
 {{< warning >}}
 This sensor component only supports the following sensors:
-    + Mopeka Pro Check devices
-    + Mopeka Pro Plus devices
-    + Mopeka Pro Check Universal Sensor
-    + Lippert Propane Tank Sensor, part number 2021130655
++ Mopeka Pro Check devices
++ Mopeka Pro Plus devices
++ Mopeka Pro Check Universal Sensor
++ Lippert Propane Tank Sensor, part number 2021130655
 
 Sensors are calibrated for propane only.
 
@@ -55,7 +55,7 @@ sensor:
         name: "Propane test read quality"
     ignored_reads:
         name: "Propane test ignored reads"
-    # Report sensor distance/level data for all equal or greater than 
+    # Report sensor distance/level data for all equal or greater than
     minimum_signal_quality: "LOW"
 
   # Custom example - user defined empty / full points
@@ -72,7 +72,6 @@ sensor:
         name: "Propane c test distance"
     battery_level:
         name: "Propane c test battery level"
-
 
 ```
 ## Configuration variables:

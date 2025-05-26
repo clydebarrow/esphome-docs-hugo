@@ -22,7 +22,6 @@ light:
     name: "Kitchen Lights"
     output: output_component1
 
-
 ```
 ## Configuration variables:
 

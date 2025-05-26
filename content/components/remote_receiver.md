@@ -538,9 +538,8 @@ remote_receiver:
       input: true
       pullup: true
   dump: all
+
 ```
-
-
 {{< /note >}}
 {{< note >}}
 For the black Sonoff RF Bridge, you can bypass the EFM8BB1 microcontroller handling RF signals with
@@ -551,12 +550,12 @@ created by the GitHub user wildwiz. Then use this configuration for the remote r
 remote_receiver:
   pin: 4
   dump: all
+
+remote_transmitter:
+  pin: 5
+  carrier_duty_percent: 100%
+
 ```
-
-        remote_transmitter:
-            pin: 5
-            carrier_duty_percent: 100%
-
 There's also a software ["hack"](https://github.com/mightymos/RF-Bridge-OB38S003) that allows the radio chip to mirror all the voltages to the ESP to do the decoding,
 rendering the hardware hack uncessary. This software passthrough mode can be used for the OB38S003 (white) and EFM8BB1 (black) sonoff RF bridge. Then use this configuration for the remote receiver/transmitter hubs:
 
@@ -571,12 +570,12 @@ remote_receiver:
   tolerance: 60%
   filter: 4us
   idle: 4ms
+
+remote_transmitter:
+  pin: 1
+  carrier_duty_percent: 100%
+
 ```
-
-        remote_transmitter:
-            pin: 1
-            carrier_duty_percent: 100%
-
 {{< /note >}}
 ## See Also
 

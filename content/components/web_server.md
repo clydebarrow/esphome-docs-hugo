@@ -27,7 +27,6 @@ use `<node_name>.local/` (note the trailing forward slash) via mDNS.
 web_server:
   port: 80
 
-
 ```
 ## Configuration variables:
 
@@ -59,7 +58,7 @@ web_server:
 - **local** (*Optional*, boolean): Include supporting javascript locally allowing it to work without internet access. Defaults to `false`.
 - **version** (*Optional*, string): `1`, `2` or `3`. Version 1 displays as a table. Version 2 uses web components and has more functionality. Version 3 uses HA-Styling. Defaults to `2`.
 - **sorting_groups** (*Optional*, list): Available only on `version: 3`. A list of group ID's and names to group the entities. See [Webserver Entity Grouping](components/web_server#config-webserver-grouping).
-  
+
   - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for the group.
   - **name** (**Required**, string): A string representing the group name which is displayed as the header of the group
   - **sorting_weight** (*Optional*, float): A float representing the weight of the group. A group with a smaller `sorting_weight` will be displayed first. Defaults to `50`
@@ -97,7 +96,6 @@ No internet/intranet required on the clients (all assets are inlined, compressed
 web_server:
   local: true
 
-
 ```
 ## Advanced usage
 
@@ -129,7 +127,6 @@ web_server:
   js_url: ""
   version: 2
 
-
 ```
 Copy https://oi.esphome.io/v2/www.js to a V2 folder in your yaml folder.
 
@@ -160,7 +157,6 @@ sensor:
     name: "My Sensor 2"
     web_server:
       sorting_weight: -1
-
 
 ```
 {{< anchor "config-webserver-grouping" >}}
@@ -195,7 +191,6 @@ number:
   ...
     web_server:
       sorting_group_id: sorting_group_number_settings
-
 
 ```
 ### Number in slider mode

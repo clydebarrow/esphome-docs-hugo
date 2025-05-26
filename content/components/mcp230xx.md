@@ -114,7 +114,6 @@ binary_sensor:
         input: true
       inverted: false
 
-
 ```
 ### Configuration variables:
 

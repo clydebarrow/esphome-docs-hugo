@@ -13,19 +13,19 @@ The `midea` component creates a Midea air conditioner climate device.
 {{< note >}}
 This protocol also used by some vendors:
 
-        - [Electrolux](https://www.electrolux.ru/)
-        - [Qlima](https://www.qlima.com/)
-        - [Artel](https://www.artelgroup.com/)
-        - [Carrier](https://www.carrier.com/)
-        - [Comfee](http://www.comfee-russia.ru/)
-        - [Inventor](https://www.inventorairconditioner.com/)
-        - [Senville](https://senville.com/)
-        - and maybe others
+- [Electrolux](https://www.electrolux.ru/)
+- [Qlima](https://www.qlima.com/)
+- [Artel](https://www.artelgroup.com/)
+- [Carrier](https://www.carrier.com/)
+- [Comfee](http://www.comfee-russia.ru/)
+- [Inventor](https://www.inventorairconditioner.com/)
+- [Senville](https://senville.com/)
+- and maybe others
 
 Control is possible with a custom dongle. Example of hardware implementation is [IoT Uni Dongle](https://github.com/dudanov/iot-uni-dongle) or [Midea SLWF-01pro](https://smartlight.me/smart-home-devices/wifi-devices/wifi-dongle-air-conditioners-midea-idea-electrolux-for-home-assistant) ([CloudFree](https://cloudfree.shop/product/ductless-hvac-wi-fi-module/), [Tindie](https://www.tindie.com/products/smartlightme/wifi-dongle-for-air-conditioners-midea-electrolux)).
 
 {{< /note >}}
-The Midea air conditioner requires the UART to be configured with `baud_rate: 9600`.  The hardware requires **5V logic levels** and does not appear to work with 3.3V logic levels. Use a logic level shifter if building your own dongle. 
+The Midea air conditioner requires the UART to be configured with `baud_rate: 9600`.  The hardware requires **5V logic levels** and does not appear to work with 3.3V logic levels. Use a logic level shifter if building your own dongle.
 
 ```yaml
 # Example configuration entry
@@ -136,7 +136,6 @@ on_...:
   then:
     - midea_ac.power_toggle:
 
-
 ```
 {{< anchor "midea_ac-follow_me_action" >}}
 
@@ -156,16 +155,16 @@ on_...:
 ```
 Configuration variables:
 
-- **temperature** (**Required**, float, [templatable](automations/templates#config-templatable)):  
-  Sets the value of an internal temperature sensor. The value will be **clamped** to the range:  
+- **temperature** (**Required**, float, [templatable](automations/templates#config-templatable)):
+  Sets the value of an internal temperature sensor. The value will be **clamped** to the range:
 
-  - *0 °C to 37 °C* when `use_fahrenheit` is `false`.  
+  - *0 °C to 37 °C* when `use_fahrenheit` is `false`.
   - *32 °F to 99 °F* when `use_fahrenheit` is `true`.
 
-- **use_fahrenheit** (*Optional*, boolean, [templatable](automations/templates#config-templatable)):  
+- **use_fahrenheit** (*Optional*, boolean, [templatable](automations/templates#config-templatable)):
   Specifies if the `temperature` value is in Fahrenheit. When set to `true`, the temperature is parsed and sent in Fahrenheit. Defaults to `false` (Celsius).
 
-- **beeper** (*Optional*, boolean, [templatable](automations/templates#config-templatable)):  
+- **beeper** (*Optional*, boolean, [templatable](automations/templates#config-templatable)):
   Sets beep on update. Defaults to `false`.
 
 
@@ -180,7 +179,6 @@ on_...:
   then:
     - midea_ac.display_toggle:
 
-
 ```
 {{< anchor "midea_ac-swing_step_action" >}}
 
@@ -192,7 +190,6 @@ This action adjust the louver by one step. {{< docref "../remote_transmitter" >}
 on_...:
   then:
     - midea_ac.swing_step:
-
 
 ```
 {{< anchor "midea_ac-beeper_on_action" >}}
@@ -217,7 +214,6 @@ This action turn off beeper feedback.
 on_...:
   then:
     - midea_ac.beeper_off:
-
 
 ```
 ## Additional control options using IR commands
@@ -258,7 +254,6 @@ button:
     icon: mdi:tailwind
     on_press:
       midea_ac.swing_step:
-
 
 ```
 ## Example of Beeper Control Using a Switch

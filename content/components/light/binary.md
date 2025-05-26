@@ -20,7 +20,6 @@ light:
     name: "Desk Lamp"
     output: light_output
 
-
 ```
 ## Configuration variables:
 

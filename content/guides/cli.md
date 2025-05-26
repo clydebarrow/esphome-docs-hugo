@@ -21,8 +21,8 @@ just list all files after the <COMMAND> like so:
 
 ```console
 esphome run livingroom.yaml kitchen.yaml
-```
 
+```
 {{< /note >}}
 ## `--help` Option
 

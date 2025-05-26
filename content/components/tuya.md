@@ -19,7 +19,6 @@ Put the `tuya` component in the config and it will list the possible devices for
 # Register the Tuya MCU connection
 tuya:
 
-
 ```
 Here is an example output for a Tuya fan controller:
 

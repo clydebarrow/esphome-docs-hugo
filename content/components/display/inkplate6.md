@@ -273,7 +273,6 @@ display:
       it.print(700, 100, id(helvetica_48), COLOR_OFF, TextAlign::TOP_RIGHT, "Offline");
     }
 
-
 ```
 ## Inkplate 6 Plus Touchscreen
 
@@ -372,7 +371,6 @@ display:
     pca6416a: pca6416a_hub
     number: 5
 
-
 ```
 ## Inkplate 5
 
@@ -416,7 +414,6 @@ display:
   vcom_pin:
     pca6416a: pca6416a_hub
     number: 5
-
 
 ```
 ## Inkplate 10
@@ -482,7 +479,7 @@ display:
     greyscale: true
     partial_updating: false
     update_interval: never
-    model: inkplate_10  
+    model: inkplate_10
 
     ckv_pin: 32
     sph_pin: 33

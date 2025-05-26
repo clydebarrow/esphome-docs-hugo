@@ -20,7 +20,7 @@ available for ESP32, ESP8266 and BK72xx microcontrollers *only*.
   for additional information.
 
 {{< warning >}}
-To successfully use this component you must have |wireguard| also
+To successfully use this component you must have unicode:: WireGuard 0xAE also
 on your remote host (already installed and ready to accept connections).
 If you don't have it please read the section [Remote peer setup]({{< ref "components/wireguard#wireguard-installation" >}}).
 
@@ -47,7 +47,7 @@ wireguard:
   peer_endpoint: wg.server.example
   peer_public_key: EeFfGgHh...=
 
-  # Optional netmask (this is the default, no outgoing traffic 
+  # Optional netmask (this is the default, no outgoing traffic
   # will pass through the tunnel if omitted)
   netmask: 255.255.255.255
 
@@ -262,7 +262,7 @@ on_...:
 The lambda equivalent is `id(wireguard_id).disable()`.
 
 {{< note >}}
-To disable |wireguard| since device boot you can execute this action
+To disable unicode:: WireGuard 0xAE since device boot you can execute this action
 in the [`on_boot`]({{< ref "components/esphome#esphome-on_boot" >}}) step.
 
 {{< /note >}}

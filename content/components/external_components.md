@@ -42,7 +42,6 @@ external_components:
       ref: my_awesome_branch
     components: [my_awesome_component]
 
-
 ```
 Configuration variables:
 
@@ -86,7 +85,6 @@ external_components:
 external_components:
   - source: my_components
 
-
 ```
 Notice that relative paths are supported, so you can enter `my_components` as the source path and then
 ESPHome will load components from a `my_components` folder in the same folder where your YAML configuration
@@ -111,7 +109,6 @@ Given the above example of `my_components`, the folder structure must look like:
         ├── component2.cpp
         ├── component2.h
         └── switch.py
-
 
 ```
 {{< anchor "external-components_git" >}}
@@ -142,7 +139,6 @@ components
     └── switch.py
 example_component1.yaml        <- not required but recommended
 README.md
-
 
 ```
 or, this structure is also supported, which makes handy to share components from a **forked** ESPHome

@@ -25,7 +25,6 @@ lightwaverf:
   read_pin: GPIOXX
   write_pin: GPIOXX
 
-
 ```
 Note: To gather the RAW codes from the remote, setup the `read_pin` and observe in the logs the printing of the codes.
 

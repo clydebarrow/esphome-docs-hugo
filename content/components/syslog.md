@@ -21,8 +21,6 @@ time:
 
 syslog:
 
-
-
 ```
 ## Configuration Options
 

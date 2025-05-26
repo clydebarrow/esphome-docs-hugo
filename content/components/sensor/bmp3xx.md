@@ -8,8 +8,8 @@ params:
 ---
 
 
-The `bmp3xx` sensor platform allows you to use your BMP388 or BMP390 
-([datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp390-ds002.pdf), [BMP390 product page](https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/)) temperature and pressure sensors with ESPHome. 
+The `bmp3xx` sensor platform allows you to use your BMP388 or BMP390
+([datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp390-ds002.pdf), [BMP390 product page](https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/)) temperature and pressure sensors with ESPHome.
 Either [I²C](components/i2c#i2c) bus or [SPI](components/spi#spi) bus is required to be set up in your configuration for this sensor to work.
 
 {{< img src="bmp388.jpg" alt="Image" caption="BMP388/BMP390 Temperature and Pressure Sensor." width="50.0%" class="center" >}}
@@ -29,11 +29,10 @@ sensor:
     address: 0x77
     update_interval: 60s
 
-
 ```
 ### Configuration variables:
 
-- **address** (*Optional*, int): Manually specify the I²C address of  the sensor. Defaults to `0x77`. 
+- **address** (*Optional*, int): Manually specify the I²C address of  the sensor. Defaults to `0x77`.
   Another address can be `0x76`.
 - **temperature** (*Optional*): The information for the temperature sensor.
 
@@ -67,7 +66,6 @@ sensor:
       name: "Outside Pressure"
     cs_pin: 13
     update_interval: 60s
-
 
 ```
 ### Configuration variables:

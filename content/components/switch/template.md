@@ -28,7 +28,6 @@ switch:
     turn_off_action:
       - switch.turn_on: switch1
 
-
 ```
 Possible return values for the optional lambda:
 
@@ -90,8 +89,8 @@ the switch is currently on or off:
 
 ```cpp
 id(template_swi).publish_state(false);
-```
 
+```
 {{< /note >}}
 ## See Also
 

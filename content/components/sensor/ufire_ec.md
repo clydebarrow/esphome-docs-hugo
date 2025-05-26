@@ -27,7 +27,6 @@ sensor:
     ec:
       name: EC
 
-
 ```
 ## Configuration variables:
 

@@ -27,7 +27,7 @@ The `modbus_controller` platform creates an output from a modbus_controller. The
     - `FP32` (32 bit IEEE 754 floating point from 2 registers)
     - `FP32_R` (32 bit IEEE 754 floating point - same as FP32 but low word first)
 
-- **register_type** (*Optional*): 
+- **register_type** (*Optional*):
     - `coil`: Write Coil - Write the ON/OFF status of a discrete coil in the device with *Function Code 5 or 15*. This will create a binary output.
     - `holding`: Write Holding Registers - write contents of holding registers in the device with *Function Code 6 or 16*. This will create a float output.
 
@@ -71,7 +71,6 @@ output:
     value_type: U_WORD
     multiply: 1000
 
-
 ```
 **The same with lambda:**
 
@@ -86,7 +85,6 @@ output:
       uint16_t value = x ;
       payload.push_back(value);
       return x * 1000 ;
-
 
 ```
 ## See Also

@@ -222,7 +222,6 @@ on_...:
         level: DEBUG
         tag: mqtt.client
 
-
 ```
 ## Logger Automation
 

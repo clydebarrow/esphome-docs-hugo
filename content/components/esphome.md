@@ -33,11 +33,11 @@ esp32:
   characters long if `name_add_mac_suffix` is `false`.
   See [Changing ESPHome Node Name]({{< ref "components/esphome#esphome-changing_node_name" >}}).
 - **friendly_name** (*Optional*, string):
-  This name is sent to the frontend and used by Home Assistant as  
-  the integration and device name. It also gets prefixed to entity  
-  names when needed. While optional, leaving it out can result in  
-  less intuitive names and a less polished experience in Home  
-  Assistant. Setting a `friendly_name` helps keep things clear,  
+  This name is sent to the frontend and used by Home Assistant as
+  the integration and device name. It also gets prefixed to entity
+  names when needed. While optional, leaving it out can result in
+  less intuitive names and a less polished experience in Home
+  Assistant. Setting a `friendly_name` helps keep things clear,
   consistent, and easier to manage.
 - **area** (*Optional*, string): This is the area sent to the frontend. It is used
   by Home Assistant as the area / zone which the node belongs to.

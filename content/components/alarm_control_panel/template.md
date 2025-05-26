@@ -206,7 +206,6 @@ switch:
     icon: mdi:alarm-bell
     pin: GPIOXX
 
-
 ```
 ## See Also
 

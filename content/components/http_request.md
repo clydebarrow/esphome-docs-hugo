@@ -73,8 +73,8 @@ To maximize security, do not set `verify_ssl` to `false` *unless:*
    On Linux this is required to enable SSL.
 
     {{< note >}}
-To use SSL on Linux you must have the `libssl-dev` package installed (e.g. `sudo apt install libssl-dev`).
-A typical value on Linux for `ca_certificate_path` would be `/etc/ssl/certs/ca-certificates.crt`.
+    To use SSL on Linux you must have the `libssl-dev` package installed (e.g. `sudo apt install libssl-dev`).
+    A typical value on Linux for `ca_certificate_path` would be `/etc/ssl/certs/ca-certificates.crt`.
 
 
     {{< /note >}}
@@ -176,8 +176,8 @@ The following variables are available for use in [lambdas](automations/templates
   (see [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}})) is set to `true`.
 
     {{< note >}}
-The `status_code` should be checked before using the `body` variable. A successful response will usually have
-a status code of `200`. Server errors such as "not found" (404) or "internal server error" (500) will have an appropriate status code, and may contain an error message in the `body` variable.
+    The `status_code` should be checked before using the `body` variable. A successful response will usually have
+    a status code of `200`. Server errors such as "not found" (404) or "internal server error" (500) will have an appropriate status code, and may contain an error message in the `body` variable.
 
     {{< /note >}}
 ```yaml
@@ -200,7 +200,6 @@ on_...
         on_error:
           then:
             - logger.log: "Request failed!"
-
 
 ```
 {{< anchor "http_request-on_error" >}}
@@ -229,7 +228,6 @@ on_...:
           return ((std::string) "Value-" + id(my_sensor).state).c_str();
       body: !lambda |-
         return id(my_sensor).state;
-
 
 ```
 ### POST Body in JSON format (syntax 1)

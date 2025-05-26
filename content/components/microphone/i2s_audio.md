@@ -33,7 +33,6 @@ microphone:
     adc_type: internal
     adc_pin: GPIOXX
 
-
 ```
 ## Configuration variables:
 
@@ -60,13 +59,13 @@ microphone:
 - **pdm** (*Optional*, boolean): Set this to `true` if your external ADC uses PDM (Pulse Density Modulation) instead of I²S. Defaults to `false`.
 
   {{< note >}}
-PDM microphones are only supported on ESP32 and ESP32-S3.
+  PDM microphones are only supported on ESP32 and ESP32-S3.
 
   {{< /note >}}
 ## Internal ADC
 
   {{< note >}}
-Internal ADC microphones are only supported by the legacy I²S driver on a regular ESP32, not the variants.
+  Internal ADC microphones are only supported by the legacy I²S driver on a regular ESP32, not the variants.
 
   {{< /note >}}
 - **adc_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The GPIO pin to use for the ADC input.
@@ -92,7 +91,6 @@ microphone:
     i2s_din_pin: GPIOXX
     adc_type: external
     pdm: false
-
 
 ```
 ## See also

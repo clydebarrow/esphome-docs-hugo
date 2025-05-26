@@ -25,7 +25,6 @@ sensor:
   - platform: "a02yyuw"
     name: "Distance"
 
-
 ```
 ## Configuration variables:
 

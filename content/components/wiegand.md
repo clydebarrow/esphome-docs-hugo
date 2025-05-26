@@ -36,8 +36,6 @@ wiegand:
     on_raw:
       - lambda: ESP_LOGI("RAW", "received raw %d bits, value %llx", bits, value);
 
-
-
 ```
 Configuration variables:
 

@@ -23,7 +23,6 @@ sensor:
       filters:
         - offset: ${bme280_temperature_offset}
 
-
 ```
 In the top-level `substitutions` section, you can put as many key-value pairs as you want. Before
 validating your configuration, ESPHome will automatically replace all occurrences of substitutions

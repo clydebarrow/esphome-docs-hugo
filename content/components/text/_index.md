@@ -36,8 +36,8 @@ Configuration variables:
 - **name** (**Required**, string): The name for the text.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the text to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the text to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the text in the frontend.

@@ -44,8 +44,8 @@ status_led:
   pin:
     number: GPIOXX
     inverted: true
-```
 
+```
 {{< /note >}}
 ## See Also
 

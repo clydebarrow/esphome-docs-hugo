@@ -43,8 +43,8 @@ See {{< docref "logger/" >}} for more details
 logger:
     level: <level>
     baud_rate: 0
-```
 
+```
 {{< /note >}}
 ## Configuration variables:
 
@@ -198,7 +198,6 @@ sensor:
     filters:
       - multiply: 0.1
 
-
 ```
 Check out the various Modbus components available at the bottom of the document in the [.. _modbus_controller-automations:]({{< ref "components/modbus_controller#modbusseealso" >}}) section. They can be directly defined *(inline)* under the `modbus_controller` hub or as standalone components. Technically there is no difference between the *inline* and the standard definitions approach.
 
@@ -259,7 +258,6 @@ binary_sensor:
   register_type: read
   address: 15
   bitmask: 0x8000
-
 
 ```
 {{< anchor "modbus_custom_command" >}}
@@ -394,7 +392,6 @@ Of course, you can delete the sensors your don't care about, but then you'd have
 Because the option `register_count: 6` is used for the first sensor, *one* command *read multiple registers from 0 to 6* will be used but the values in between will be ignored.
 
 {{< note >}}
-
 {{< /note >}}
 ## Protocol decoding example
 
@@ -481,7 +478,6 @@ sensors:
   register_type: read
   value_type: U_WORD
   accuracy_decimals: 0
-
 
 ```
 To minimize the required transactions all registers with the same base address are read in one request.
@@ -591,84 +587,84 @@ esphome:
               0x04BA,  // 900d Low Volt. Disconnect Volt. 11.8
               0x04BA   // 900E Discharging Limit Voltage 11.8
           };
+
+          // Boost and equalization periods
+          std::vector<uint16_t> battery_settings2 = {
+              0x0000,  // 906B Equalize Duration (min.) 0
+              0x0075   // 906C Boost Duration (aka absorb) 117 mins
+          };
+          esphome::modbus_controller::ModbusCommandItem set_battery1_command =
+              esphome::modbus_controller::ModbusCommandItem::create_write_multiple_command(controller, 0x9000, battery_settings1.size() ,
+                                                                                          battery_settings1);
+
+          esphome::modbus_controller::ModbusCommandItem set_battery2_command =
+              esphome::modbus_controller::ModbusCommandItem::create_write_multiple_command(controller, 0x906B, battery_settings3.size(),
+                                                                                          battery_settings2);
+          delay(200) ;
+          controller->queue_command(set_battery1_command);
+          delay(200) ;
+          controller->queue_command(set_battery2_command);
+          ESP_LOGI("ModbusLambda", "EPSOLAR Battery set");
+
+uart:
+  id: mod_bus
+  tx_pin: GPIOXX
+  rx_pin: GPIOXX
+  baud_rate: 115200
+  stop_bits: 1
+
+modbus:
+  #flow_control_pin: GPIOXX
+  send_wait_time: 200ms
+  id: mod_bus_epever
+
+modbus_controller:
+  - id: epever
+    ## the Modbus device addr
+    address: 0x1
+    modbus_id: mod_bus_epever
+    command_throttle: 0ms
+    setup_priority: -10
+    update_interval: ${updates}
+
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: epever
+    id: array_rated_voltage
+    name: "array_rated_voltage"
+    address: 0x3000
+    unit_of_measurement: "V"
+    register_type: read
+    value_type: U_WORD
+    accuracy_decimals: 1
+    filters:
+      - multiply: 0.01
+
+  - platform: modbus_controller
+    modbus_controller_id: epever
+    id: array_rated_current
+    name: "array_rated_current"
+    address: 0x3001
+    unit_of_measurement: "A"
+    register_type: read
+    value_type: U_WORD
+    accuracy_decimals: 2
+    filters:
+      - multiply: 0.01
+
+  - platform: modbus_controller
+    modbus_controller_id: epever
+    id: array_rated_power
+    name: "array_rated_power"
+    address: 0x3002
+    unit_of_measurement: "W"
+    register_type: read
+    value_type: U_DWORD_R
+    accuracy_decimals: 1
+    filters:
+      - multiply: 0.01
+
 ```
-
-                            // Boost and equalization periods
-                            std::vector<uint16_t> battery_settings2 = {
-                                    0x0000,  // 906B Equalize Duration (min.) 0
-                                    0x0075   // 906C Boost Duration (aka absorb) 117 mins
-                            };
-                            esphome::modbus_controller::ModbusCommandItem set_battery1_command =
-                                    esphome::modbus_controller::ModbusCommandItem::create_write_multiple_command(controller, 0x9000, battery_settings1.size() ,
-                                                                                                                                                                                            battery_settings1);
-
-                            esphome::modbus_controller::ModbusCommandItem set_battery2_command =
-                                    esphome::modbus_controller::ModbusCommandItem::create_write_multiple_command(controller, 0x906B, battery_settings3.size(),
-                                                                                                                                                                                            battery_settings2);
-                            delay(200) ;
-                            controller->queue_command(set_battery1_command);
-                            delay(200) ;
-                            controller->queue_command(set_battery2_command);
-                            ESP_LOGI("ModbusLambda", "EPSOLAR Battery set");
-
-        uart:
-            id: mod_bus
-            tx_pin: GPIOXX
-            rx_pin: GPIOXX
-            baud_rate: 115200
-            stop_bits: 1
-
-        modbus:
-            #flow_control_pin: GPIOXX
-            send_wait_time: 200ms
-            id: mod_bus_epever
-
-        modbus_controller:
-            - id: epever
-                ## the Modbus device addr
-                address: 0x1
-                modbus_id: mod_bus_epever
-                command_throttle: 0ms
-                setup_priority: -10
-                update_interval: ${updates}
-
-        sensor:
-            - platform: modbus_controller
-                modbus_controller_id: epever
-                id: array_rated_voltage
-                name: "array_rated_voltage"
-                address: 0x3000
-                unit_of_measurement: "V"
-                register_type: read
-                value_type: U_WORD
-                accuracy_decimals: 1
-                filters:
-                    - multiply: 0.01
-
-            - platform: modbus_controller
-                modbus_controller_id: epever
-                id: array_rated_current
-                name: "array_rated_current"
-                address: 0x3001
-                unit_of_measurement: "A"
-                register_type: read
-                value_type: U_WORD
-                accuracy_decimals: 2
-                filters:
-                    - multiply: 0.01
-
-            - platform: modbus_controller
-                modbus_controller_id: epever
-                id: array_rated_power
-                name: "array_rated_power"
-                address: 0x3002
-                unit_of_measurement: "W"
-                register_type: read
-                value_type: U_DWORD_R
-                accuracy_decimals: 1
-                filters:
-                    - multiply: 0.01
-
 {{< /note >}}
 {{< anchor "modbusseealso" >}}
 

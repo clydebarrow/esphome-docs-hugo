@@ -57,8 +57,6 @@ cover:
     obstacle_rollback: 30%
     start_sensing_delay: 0.8s
 
-
-
 ```
 ## Configuration variables:
 
@@ -242,8 +240,6 @@ status_led:
   pin:
     number: GPIO0
     inverted: yes
-
-
 
 ```
 ## See Also

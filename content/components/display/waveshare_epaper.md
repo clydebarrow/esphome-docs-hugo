@@ -67,7 +67,7 @@ display:
 For the 7-color display, colors can be defined like this in the lambda function:
 
 ```yaml
-lambda: |- 
+lambda: |-
   const auto BLACK   = Color(0,   0,   0,   0);
   const auto RED     = Color(255, 0,   0,   0);
   const auto GREEN   = Color(0,   255, 0,   0);

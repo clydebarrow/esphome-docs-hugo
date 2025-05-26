@@ -36,15 +36,13 @@ key_collector:
           format: "input progress: '%s', started by '%c'"
           args: [ 'x.c_str()', "(start == 0 ? '~' : start)" ]
     on_result:
-      - logger.log: 
+      - logger.log:
           format: "input result: '%s', started by '%c', ended by '%c'"
           args: [ 'x.c_str()', "(start == 0 ? '~' : start)", "(end == 0 ? '~' : end)" ]
     on_timeout:
       - logger.log:
           format: "input timeout: '%s', started by '%c'"
           args: [ 'x.c_str()', "(start == 0 ? '~' : start)" ]
-
-
 
 ```
 Configuration variables:
@@ -53,14 +51,14 @@ Configuration variables:
 - **source_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the key input device.
 - **min_length** (*Optional*, integer): The minimal length of the desired key sequence. Below
   this, `on_result` automation will not trigger even if any of the `end_keys` was pressed.
-- **max_length** (*Optional*, integer): The maximum length of the desired key sequence, after 
+- **max_length** (*Optional*, integer): The maximum length of the desired key sequence, after
   which the sequence will trigger the `on_result` automation witout having to press any of the `end_keys`
 - **end_keys** (*Optional*, string): Keys used to *enter* the sequence.
 - **end_key_required** (*Optional*, boolean): Only trigger `on_result` automation when one of
   the `end_keys` was pressed. Defaults to `false`.
 - **back_keys** (*Optional*, string): Keys used to delete the last pressed key. Like *Backspace* on a keyboard.
 - **clear_keys** (*Optional*, string): Keys used to entirely clear the sequence, all the pressed keys.
-- **allowed_keys** (*Optional*, string): Keys allowed to be used. If not specified, then any otherwise 
+- **allowed_keys** (*Optional*, string): Keys allowed to be used. If not specified, then any otherwise
   unused keys will be allowed.
 - **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Timeout after which to cancel building the sequence and delete all the keys.
 - **enable_on_boot** (*Optional*, boolean): If enabled, this key collector will be enabled on boot. Defaults to `true`.
@@ -76,7 +74,7 @@ accepted until an end key is pressed.
   and `start` holds the start key that activated this sequence or else `0`.
   Useful if you want to have a display showing the current value or number of key presses,
   or a speaker beeping when keys are being pressed.
-- **on_result** (*Optional*, [Automation](automations/_index#automation)): An automation to perform 
+- **on_result** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
   when the sequence has been finished (eg. `max_length` has been reached or one of
   the `end_keys` was pressed). The finalized key sequence is placed in a `vector<uint8_t>` variable `x`,
   `start` holds the start key that activated this sequence or else `0`, and

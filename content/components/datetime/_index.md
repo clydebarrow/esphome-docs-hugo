@@ -35,8 +35,8 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the datetime. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the datetime to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the datetime to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the datetime in the frontend.
@@ -224,7 +224,6 @@ advanced stuff (see the full API Reference for more info).
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Value of my datetime: %0d:%02d:%02d", id(my_datetime_time).hour, id(my_datetime_time).minute, id(my_datetime_time).second);
 
-
 ```
 ## DateTime Automation
 
@@ -298,7 +297,6 @@ For more complex use cases, several methods are available for use on datetimes f
   ESP_LOGI("main", "Value of my datetime: %04d-%02d-%02d %0d:%02d:%02d",
            id(my_datetime).year, id(my_datetime).month, id(my_datetime).day,
            id(my_datetime).hour, id(my_datetime).minute, id(my_datetime).second);
-
 
 ```
 ## See Also

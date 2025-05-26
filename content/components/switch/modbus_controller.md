@@ -64,7 +64,6 @@ switch:
     name: "enable load test mode"
     bitmask: 1
 
-
 ```
 ```yaml
 switch:
@@ -85,7 +84,6 @@ switch:
       payload.push_back(0x00);
       return true;
 
-
 ```
 Since offset is not zero the read command is part of a range and will be parsed when the range is updated.
 The write command to be constructed uses the function code to determine the write command. For a coil it is write single coil.
@@ -104,7 +102,6 @@ switch:
   bitmask: 1
   entity_category: config
   icon: "mdi:toggle-switch"
-
 
 ```
 ## See Also

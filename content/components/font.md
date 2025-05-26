@@ -96,7 +96,6 @@ font:
 display:
   # ...
 
-
 ```
 ## Configuration variables:
 

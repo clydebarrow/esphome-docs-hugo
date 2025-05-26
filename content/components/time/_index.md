@@ -175,8 +175,8 @@ time:
       - minutes: /5
         then:
           - switch.toggle: my_switch
-```
 
+```
 {{< /warning >}}
 {{< note >}}
 `on_time` does not re-schedule events for times that are skipped or duplicated due to local Daylight

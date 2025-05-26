@@ -16,7 +16,6 @@ select:
   - platform: logger
     name: "Logger select"
 
-
 ```
 ## See Also
 

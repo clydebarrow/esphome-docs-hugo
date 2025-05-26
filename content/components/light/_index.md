@@ -23,7 +23,6 @@ All light configuration schemas inherit these options.
 light:
   - platform: ...
 
-
 ```
 **Configuration variables:**
 
@@ -40,8 +39,8 @@ light:
 - **name** (*Optional*, string): The name of the light. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and you want the light
-to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and you want the light
+  to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the light in the frontend.
@@ -171,8 +170,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 auto call = id(light_1).toggle();
 // perform action:
 call.perform();
-```
 
+```
 {{< /note >}}
 {{< anchor "light-turn_on_action" >}}
 
@@ -225,15 +224,14 @@ call.set_warm_white(0.75);
 call.set_effect("The Effect");
 // perform action:
 call.perform();
-```
 
+```
 Shorter example using auto call , call.set_brightness and call.perform.
 
 ```cpp
 id(light_1).turn_on().set_brightness(1.0).perform();
+
 ```
-
-
 {{< /note >}}
 {{< note >}}
 The `red`, `green` and `blue` values only control the color of the light, not its brightness! If you assign
@@ -252,8 +250,8 @@ result in color at 40% brightness and white at 60% brightness:
     brightness: 80%
     color_brightness: 50%
     white: 75%
-```
 
+```
 {{< /note >}}
 {{< anchor "light-turn_off_action" >}}
 
@@ -285,8 +283,8 @@ auto call = id(light_1).turn_off();
 call.set_transition_length(1000); // in ms
 // perform action:
 call.perform();
-```
 
+```
 {{< /note >}}
 {{< anchor "light-control_action" >}}
 
@@ -336,7 +334,7 @@ on_...:
     - **max_brightness** (*Optional*, percentage): The maximum brightness to dim the light to. Defaults to `100%`.
     - **limit_mode** (*Optional*): What to do when the current brightness is outside of the limit range. Defaults to
       `CLAMP`. Valid limit modes are:
-    
+
         - `CLAMP`: Clamp the brightness to the limit range.
         - `DO_NOTHING`: No dimming if the brightness is outside the limit range.
 
@@ -361,8 +359,8 @@ binary_sensor:
                 brightness_limits:
                     max_brightness: 90%
             - delay: 0.1s
-```
 
+```
 {{< /note >}}
 {{< anchor "light-addressable_set_action" >}}
 
@@ -412,7 +410,6 @@ on_...:
     condition:
       # Same syntax for is_off
       light.is_on: my_light
-
 
 ```
 {{< anchor "light-on_turn_on_off_trigger" >}}
@@ -882,7 +879,7 @@ Available variables in the lambda:
   restarting an effect.
 
   {{< note >}}
-ESPColor has been migrated to Color. See {{< apistruct "Color" "Color" >}} for more information.
+  ESPColor has been migrated to Color. See {{< apistruct "Color" "Color" >}} for more information.
 
   {{< /note >}}
 ```yaml
@@ -935,7 +932,6 @@ light:
             // optionally do a return so nothing happens until the next update_interval
             return;
           }
-
 
 ```
 Examples of this API can be found

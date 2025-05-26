@@ -45,7 +45,6 @@ sensor:
     name: "Distance"
     update_interval: 1s
 
-
 ```
 ## Configuration variables:
 

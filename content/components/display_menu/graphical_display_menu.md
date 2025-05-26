@@ -11,8 +11,8 @@ params:
 
 
 The component provides an infrastructure for setting up a hierarchical menu
-on graphical displays. This offers the user an interactive method to display 
-labels, control entities like `switch`, `select`, `number`  available locally on the 
+on graphical displays. This offers the user an interactive method to display
+labels, control entities like `switch`, `select`, `number`  available locally on the
 ESPHome node, without the requirement of a network connection.
 
 {{< img src="graphical_display_menu.png" alt="Image" width="60.0%" class="center" >}}
@@ -23,7 +23,7 @@ The component implements the [Display Menu](components/display_menu/_index#displ
 a hierarchical menu primarily intended to be controlled either by a rotary encoder
 with a button or a five-button joystick controller.
 
-The component needs to be connected to an instance of a display supporting ESPHome's rendering 
+The component needs to be connected to an instance of a display supporting ESPHome's rendering
 engine such as {{< docref "/components/display/waveshare_epaper" "E-Paper displays" >}} or {{< docref "/components/display/ssd1306" "OLED displays" >}}.
 
 ```yaml
@@ -43,7 +43,7 @@ graphical_display_menu:
 Configuration variables:
 
 - **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **display** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the display to render to. See 
+- **display** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the display to render to. See
   [Drawing Modes]({{< ref "components/display_menu/graphical_display_menu#drawing_modes" >}}) for more details
 - **font** (**Required**, [Font](components/font#display-fonts)): Specifies the font to use
 - **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})): Specifies the foreground color to use.
@@ -139,7 +139,7 @@ By default menu items with a value will be rendered between a set of parenthesis
 controlled via the `menu_item_value` parameter.
 
 - **menu_item_value** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): Specifies how to render values for
-  menu items that have values (eg. Selects, numbers). Defaults to rendering the value as 
+  menu items that have values (eg. Selects, numbers). Defaults to rendering the value as
   "(value here)". Receives a MenuItemValueArguments as the argument`it`.
 
 ```yaml

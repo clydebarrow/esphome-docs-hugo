@@ -44,7 +44,6 @@ display:
     reset_pin: GPIOXX
     enable_pin: GPIOXX
 
-
 ```
 ### Configuration variables:
 
@@ -56,7 +55,7 @@ display:
     - `JC4832W535`
     - `JC3636W518`
     - `AXS15231`
-    
+
 - **init_sequence** (*Optional*, A list of byte arrays): Specifies the init sequence for the display. This is required when using the `CUSTOM` model - but may be empty. If specified for other models this data will be sent after the pre-configured sequence.
 - **cs_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The chip select pin.
 - **reset_pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): The RESET pin.
@@ -172,7 +171,6 @@ display:
     reset_pin: 17
     enable_pin: 38
 
-
 ```
 ### JC4832W535 3.5" LCD Board
 
@@ -216,7 +214,6 @@ touchscreen:
   transform:
     swap_xy: true
     mirror_y: true
-
 
 ```
 ## See Also

@@ -54,7 +54,6 @@ sensor:
     temperature:
       id: temperature
 
-
 ```
 Configuration variables:
 

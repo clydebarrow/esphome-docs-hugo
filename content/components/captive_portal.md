@@ -35,7 +35,6 @@ wifi:
 
 captive_portal:
 
-
 ```
 No configuration variables.
 

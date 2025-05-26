@@ -17,7 +17,6 @@ alarm_control_panel:
   - platform: ...
     name: Alarm Panel
 
-
 ```
 Configuration variables:
 
@@ -25,8 +24,8 @@ Configuration variables:
 - **name** (*Optional*, string): The name of the alarm control panel. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the switch to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the switch to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **on_state** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
@@ -307,7 +306,6 @@ on_...:
     condition:
       alarm_control_panel.is_armed: acp1
 
-
 ```
 {{< anchor "alarm_control_panel_lambda_calls" >}}
 
@@ -327,7 +325,6 @@ id(acp1).arm_home();
 id(acp1).arm_night();
 id(acp1).disarm(std::string("1234"));
 bool all_sensors_ready = id(acp1).get_all_sensors_ready();
-
 
 ```
 ## Platforms

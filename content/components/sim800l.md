@@ -130,7 +130,6 @@ on_incoming_call:
       data:
         payload: !lambda 'return id(caller_id_text_sensor).state;'
 
-
 ```
 ## `on_ussd_received` Trigger
 
@@ -139,8 +138,6 @@ has been received.
 
 ```yaml
 on_ussd_received:
-
-
 
 ```
 {{< anchor "sim800l-send_sms_action" >}}
@@ -201,7 +198,6 @@ on_...:
   then:
     - sim800l.connect
 
-
 ```
 ## `sim800l.disconnect` Action
 
@@ -212,7 +208,6 @@ on_...:
   then:
     - sim800l.disconnect
 
-
 ```
 ## `sim800l.send_ussd` Action
 
@@ -222,7 +217,6 @@ Sends a ussd code to the network.
 on_...:
   then:
     - sim800l.send_ussd
-
 
 ```
 ## Getting started with Home Assistant
@@ -297,7 +291,6 @@ sim800l:
     - lambda: |-
         id(ussd_message).publish_state(ussd);
 
-
 ```
 Now your latest received SMS and sender number will be displayed by the text sensors.
 
@@ -315,7 +308,6 @@ automation:
     data:
       recipient: "+15551234567"
 
-
 ```
 Relay management commands received from an authorized sender:
 
@@ -330,7 +322,6 @@ switch:
   - platform: gpio
     id: relay_1
     pin: GPIOXX
-
 
 ```
 ## See Also

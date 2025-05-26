@@ -23,7 +23,6 @@ select:
       - three
     initial_option: two
 
-
 ```
 ## Configuration variables:
 

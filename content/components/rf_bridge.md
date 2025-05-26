@@ -63,7 +63,6 @@ on_code_received:
         high: !lambda 'return format_hex(data.high);'
         code: !lambda 'return format_hex(data.code);'
 
-
 ```
 {{< anchor "rf_bridge-send_code_action" >}}
 
@@ -94,9 +93,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).send_code(0x700, 0x800, 0x1000, 0xABC123);
+
 ```
-
-
 {{< /note >}}
 {{< anchor "rf_bridge-send_raw_action" >}}
 
@@ -125,9 +123,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).send_raw("AAA5070008001000ABC12355");
+
 ```
-
-
 {{< /note >}}
 {{< anchor "rf_bridge-learn_action" >}}
 
@@ -151,9 +148,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).learn();
+
 ```
-
-
 {{< /note >}}
 ## Portisch firmware
 
@@ -177,7 +173,6 @@ on_advanced_code_received:
         length: !lambda 'return format_hex(data.length);'
         protocol: !lambda 'return format_hex(data.protocol);'
         code: !lambda 'return data.code;'
-
 
 ```
 {{< anchor "rf_bridge-send_advanced_code_action" >}}
@@ -207,9 +202,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).send_advanced_code(0x04, 0x01, "ABC123");
+
 ```
-
-
 {{< /note >}}
 {{< anchor "rf_bridge-start_advanced_sniffing_action" >}}
 
@@ -233,9 +227,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).start_advanced_sniffing();
+
 ```
-
-
 {{< /note >}}
 {{< anchor "rf_bridge-stop_advanced_sniffing_action" >}}
 
@@ -258,8 +251,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).stop_advanced_sniffing();
-```
 
+```
 {{< /note >}}
 {{< anchor "rf_bridge-start_bucket_sniffing_action" >}}
 
@@ -293,9 +286,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).start_bucket_sniffing();
+
 ```
-
-
 {{< /note >}}
 {{< anchor "rf_bridge-beep_action" >}}
 
@@ -321,8 +313,8 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 
 ```cpp
 id(rf_bridge).beep(100);
-```
 
+```
 {{< /note >}}
 ## Getting started with Home Assistant
 
@@ -366,7 +358,6 @@ rf_bridge:
             low: !lambda 'return format_hex(data.low);'
             high: !lambda 'return format_hex(data.high);'
             code: !lambda 'return format_hex(data.code);'
-
 
 ```
 Now your latest received code will be in an event.

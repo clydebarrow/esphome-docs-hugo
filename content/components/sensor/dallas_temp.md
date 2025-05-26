@@ -8,7 +8,7 @@ params:
 ---
 
 
-The `dallas_temp` component allows you to use 
+The `dallas_temp` component allows you to use
 [DS18B20](https://www.adafruit.com/product/374)
 ([datasheet](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf))
 and similar 1-Wire temperature sensors.  A [1-Wire bus](components/one_wire#one_wire) is

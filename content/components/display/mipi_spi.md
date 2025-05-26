@@ -179,7 +179,6 @@ dimensions:
   height: 480
   width: 320
 
-
 ```
 ## LCD Backlights
 

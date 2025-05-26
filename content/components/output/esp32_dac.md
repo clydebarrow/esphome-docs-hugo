@@ -13,7 +13,7 @@ converter of the ESP32. Unlike the {{< docref "/components/output/ledc" >}}, whi
 signal by using a fast switching frequency, the hardware DAC can output a *real* analog signal with
 no need for additional filtering.
 
-The DAC spans across two pins, each on its own channel: 
+The DAC spans across two pins, each on its own channel:
 - ESP32: GPIO25 (Channel 0) and GPIO26 (Channel 1).
 - ESP32 S2: GPIO17 (Channel 0) and GPIO18 (Channel 1).
 
@@ -40,7 +40,6 @@ light:
     output: dac_output
     gamma_correct: 1.4
     id: mono_light
-
 
 ```
 ## Configuration variables:

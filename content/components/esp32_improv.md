@@ -29,7 +29,6 @@ wifi:
 esp32_improv:
   authorizer: binary_sensor_id
 
-
 ```
 ## Configuration variables:
 

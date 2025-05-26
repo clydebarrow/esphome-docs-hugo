@@ -85,7 +85,6 @@ climate:
           format: "New status message received, size=%d, subcmd=%02X%02X"
           args: [ 'data_size', 'data[0]', 'data[1]' ]
 
-
 ```
 ## Configuration variables:
 

@@ -63,8 +63,6 @@ climate:
         datapoint: 5
         temperature: 28
 
-
-
 ```
 ## Configuration variables:
 

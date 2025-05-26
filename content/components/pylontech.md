@@ -45,13 +45,12 @@ If you have multiple batteries you need to connect to the master battery's conso
 | 3 |  Pylontech TX |  ESPHome RX via transceiver |
 | 4 |  GND |  GND |
 
-      
+
 ## Component/Hub
 
 ```yaml
 # Example configuration entry
 pylontech:
-
 
 ```
 ### Configuration variables:
@@ -104,7 +103,6 @@ text_sensor:
     base_state:
       id: bat1_base_state
       name: "Battery1 Base State"
-
 
 ```
 ### Configuration variables:

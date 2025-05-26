@@ -15,8 +15,8 @@ FastLED does **not** work as expected with Arduino 3 or newer for ESP8266. For n
 esp8266:
   framework:
     version: 2.7.4
-```
 
+```
 See these related issues:
 
 - https://github.com/FastLED/FastLED/issues/1322

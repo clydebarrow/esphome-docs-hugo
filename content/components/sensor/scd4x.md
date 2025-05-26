@@ -25,7 +25,6 @@ sensor:
     humidity:
       name: "Workshop Humidity"
 
-
 ```
 ## Configuration variables:
 
@@ -110,7 +109,6 @@ api:
           value: !lambda 'return co2_ppm;'
           id: my_scd41
 
-
 ```
 {{< anchor "factory_reset_action" >}}
 
@@ -167,7 +165,6 @@ sensor:
     temperature_offset: 0
     co2:
       name: "CO2 level"
-
 
 ```
 ## See Also

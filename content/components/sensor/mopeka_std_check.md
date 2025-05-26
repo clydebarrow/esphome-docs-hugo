@@ -54,7 +54,6 @@ sensor:
     battery_level:
         name: "Propane c test battery level"
 
-
 ```
 ## Configuration variables:
 

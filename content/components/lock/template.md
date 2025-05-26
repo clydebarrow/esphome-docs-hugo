@@ -30,7 +30,6 @@ lock:
     open_action:
       - button.press: button1
 
-
 ```
 Possible return values for the optional lambda:
 
@@ -99,8 +98,8 @@ lock should become:
 
 ```cpp
 id(template_lock1).publish_state(lock::LOCK_STATE_LOCKED);
-```
 
+```
 {{< /note >}}
 ## See Also
 

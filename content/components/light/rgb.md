@@ -24,7 +24,6 @@ light:
     green: output_component2
     blue: output_component3
 
-
 ```
 ## Color Correction
 

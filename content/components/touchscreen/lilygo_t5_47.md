@@ -18,7 +18,6 @@ touchscreen:
   - platform: lilygo_t5_47
     interrupt_pin: GPIOXX
 
-
 ```
 ## Configuration variables:
 

@@ -127,7 +127,6 @@ wake_word:
       - voice_assistant.start:
           wake_word: !lambda return wake_word;
 
-
 ```
 ## Model JSON
 

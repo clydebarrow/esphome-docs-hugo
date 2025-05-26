@@ -51,7 +51,6 @@ interval:
           id(page) = 1;
         }
 
-
 ```
 {{< anchor "lambda_magic_udp_sender" >}}
 
@@ -274,7 +273,6 @@ sensor:
     id: num_from_text
     name: "Number from text"
 
-
 ```
 ## Factory reset after 5 quick reboots
 
@@ -295,7 +293,7 @@ esp32:
   board: esp32-c3-devkitm-1
 
 substitutions:
-  factory_reset_boot_count_trigger: 5 
+  factory_reset_boot_count_trigger: 5
 
 globals:
   - id: fast_boot
@@ -340,7 +338,6 @@ button:
   - platform: factory_reset
     id: factory_reset_button
     name: "ESPHome: Factory reset"
-
 
 ```
 ## See Also

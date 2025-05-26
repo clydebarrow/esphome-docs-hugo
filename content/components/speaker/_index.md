@@ -19,7 +19,6 @@ speaker platforms.
 speaker:
   - platform: ...
 
-
 ```
 Configuration variables:
 

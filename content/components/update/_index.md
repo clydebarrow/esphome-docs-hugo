@@ -26,8 +26,8 @@ update:
 - **name** (*Optional*, string): The name of the update entity. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the light to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the light to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **device_class** (*Optional*, string): The device class for the update entity. See

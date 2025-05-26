@@ -72,8 +72,8 @@ lambda: |-
   static int num_executions = 0;
   ESP_LOGD("main", "I am at execution number %d", num_executions);
   num_executions += 1;
-```
 
+```
 {{< /tip >}}
 {{< anchor "config-templatable" >}}
 

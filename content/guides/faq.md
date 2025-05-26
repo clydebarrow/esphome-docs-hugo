@@ -31,7 +31,7 @@ support within ESPHome, here's what we suggest:
 
   - Generally intended ([per Espressif](https://www.espressif.com/en/news/ESP32_C3)) to replace the well-known ESP8266.
   - Use if:
-  
+
     - You're worried that the ESP32(-Sx) is "too powerful".
     - You need a lower-power device than the ESP32(-Sx) family offers.
 
@@ -125,9 +125,9 @@ microcontrollers. It's not the most user-friendly approach, but it's quite power
 Before using `esptool`, make sure you know which serial port your board/serial adapter is connected to!
 
 - In Linux, you can use the `dmesg` command after you plug the device into the USB port to see the name of the
-    (new) serial port.
+  (new) serial port.
 - In Windows, look in the Device Manager to see if a new serial port appears when you plug it in and note the (new)
-    port's COM number.
+  port's COM number.
 
 {{< /note >}}
 ### Erase flash

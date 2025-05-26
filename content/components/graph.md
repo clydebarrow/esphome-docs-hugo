@@ -110,6 +110,7 @@ color:
     red: 100%
     green: 100%
     blue: 0%
+
 ```
 {{< note >}}
 Here are some things to note:

@@ -17,8 +17,8 @@ Current supported formats:
 
 - BMP images
 
-    - 1-bit / binary / black and white
-    - 24-bit / RGB
+  - 1-bit / binary / black and white
+  - 24-bit / RGB
 
 - JPEG images, currently only baseline images (no progressive support)
 

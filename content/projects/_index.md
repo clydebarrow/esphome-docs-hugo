@@ -1,9 +1,14 @@
 ---
-description: "Ready-Made Projects"
+description: "Install ready-made projects directly on your device."
 title: "Ready-Made Projects"
+params:
+  seo:
+    description: Install ready-made projects directly on your device.
+    image: auto-fix.svg
 ---
 
-{{< seo description="" image="" >}}
+{{< anchor "ready_made_projects" >}}
+
 
 Unleash the potential of your device by installing ready-made ESPHome
 projects from this page. Connect your device to your PC, a few clicks in the browser

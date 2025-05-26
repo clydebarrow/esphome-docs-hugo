@@ -25,7 +25,6 @@ sensor:
     temperature:
       name: Temperature
 
-
 ```
 ## Configuration variables
 
@@ -77,7 +76,6 @@ filters:
   - calibrate_linear:
     - 1500 -> 5.0
     - 14500 -> 90.0
-
 
 ```
 ## Notes

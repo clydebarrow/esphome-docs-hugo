@@ -32,7 +32,7 @@ sensor:
 -  **internal** (*Optional*, boolean): Whether the sensor should be exposed via API (e.g. to Home Assistant.) Defaults to `true` if name is not set, required if name is provided.
 -  All other options from [Sensor](components/sensor/_index#config-sensor).
 
-At least one of `id` and `remote_id` must be configured. 
+At least one of `id` and `remote_id` must be configured.
 
 ## Publishing to Home Assistant
 

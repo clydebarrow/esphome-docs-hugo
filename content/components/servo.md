@@ -112,8 +112,8 @@ This action can also be expressed as a [lambda](automations/templates#config-lam
 
 ```cpp
 id(my_servo).write(1.0);
-```
 
+```
 {{< /note >}}
 {{< anchor "servo-detach_action" >}}
 
@@ -133,8 +133,8 @@ This action can also be expressed as a [lambda](automations/templates#config-lam
 
 ```cpp
 id(my_servo).detach();
-```
 
+```
 {{< /note >}}
 {{< anchor "servo-ha-config" >}}
 
@@ -162,7 +162,6 @@ servo:
   - platform: ...
     # [...] servo config
     id: my_servo
-
 
 ```
 ## See Also

@@ -22,8 +22,7 @@ override substitutions with the same name in a package.
 Dictionaries are merged key-by-key. Lists of components are merged by component ID (if specified). Other lists are
 merged by concatenation. All other configuration values are replaced with the later value.
 
-ESPHome uses `!include` to "bring in" packages; this is a syntax brought over from
-[Home Assistant's YAML configuration directives](https://www.home-assistant.io/docs/configuration/splitting_configuration/).
+ESPHome uses `!include` to "bring in" packages from other files; this feature is described in [!include]({{< ref "guides/yaml#yaml-include" >}}).
 
 The `packages:` key may have a value that is a list of valid package references, or a mapping of keys to package references.
 When a mapping is used, the keys are for reference only and have no significance in themselves.
@@ -124,7 +123,7 @@ For each package:
 - **username** (*Optional*, string): Username to be used for authentication, if required.
 - **password** (*Optional*, string): Password to be used for authentication, if required.
 - **files** (**Required**): List of files to include. Can be one of:
-  
+
   - list of file paths
   - list of objects containing `path` and `vars`
 
@@ -158,7 +157,6 @@ packages:
     file: garage-door.yaml
     vars:
       door_name: Right
-
 
 ```
 ```yaml

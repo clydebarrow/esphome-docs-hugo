@@ -194,8 +194,8 @@ mqtt:
       payload: 'ON'
       then:
         - deep_sleep.enter: deep_sleep_1
-```
 
+```
 {{< /note >}}
 {{< anchor "deep_sleep-allow_action" >}}
 

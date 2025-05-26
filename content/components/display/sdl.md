@@ -30,7 +30,6 @@ display:
       width: 450
       height: 600
 
-
 ```
 ### Configuration variables:
 
@@ -61,8 +60,6 @@ It may also be necessary to run the command:
 
 ```sh
 brew link sdl2 libsodium
-
-
 
 ```
 To ensure that the files are symlinked correctly.

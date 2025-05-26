@@ -91,7 +91,6 @@ a GET request to `/sensor/outside_temperature` could yield this payload:
   "value": 19.76666
 }
 
-
 ```
 -  **id**: The id of the sensor. Prefixed by `sensor-`.
 -  **state**: The text-based state of the sensor as a string.
@@ -109,7 +108,6 @@ result in following payload:
   "state": "ON",
   "value": true
 }
-
 
 ```
 -  **id**: The id of the binary sensor. Prefixed by `binary_sensor-`.
@@ -143,7 +141,6 @@ the state of a light, send a GET request to `/light/<id>`, for example `light/li
   "effect": "None",
   "white_value": 255
 }
-
 
 ```
 -  **id**: The id of the light. Prefixed by `light-`.
@@ -197,7 +194,6 @@ GET request to `/fan/<id>`.
   "speed_level": 2,
   "oscillation": false
 }
-
 
 ```
 -  **id**: The id of the fan. Prefixed by `fan-`.
@@ -323,7 +319,7 @@ which may yield:
 
 ```
 -  **id**: The ID of the alarm control panel, prefixed with `alarm-control-panel-`.
--  **state**: `DISARMED`, `ARMED_HOME`, `ARMED_AWAY`, `ARMED_NIGHT`, `ARMED_VACATION`, 
+-  **state**: `DISARMED`, `ARMED_HOME`, `ARMED_AWAY`, `ARMED_NIGHT`, `ARMED_VACATION`,
    `ARMED_CUSTOM_BYPASS`, `PENDING`, `ARMING`, `DISARMING`, or `TRIGGERED`.
 -  **value**: Current state as number. See the `AlarmControlPanelState` enum.
 

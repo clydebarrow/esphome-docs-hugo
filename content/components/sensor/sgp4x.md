@@ -33,7 +33,6 @@ sensor:
     nox:
       name: "NOx Index"
 
-
 ```
 ## Configuration variables:
 

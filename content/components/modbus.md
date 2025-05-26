@@ -34,7 +34,6 @@ uart:
 
 modbus:
 
-
 ```
 ## Configuration variables:
 
@@ -49,8 +48,8 @@ modbus:
 
 - **send_wait_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Time in milliseconds before the next ModBUS command is sent when an answer from a previous command has not yet started (i.e. when to timeout and assume no response is coming). Defaults to 250 ms.
   Set this value to the maximum time required for the slowest device on the bus to begin responding (time to first byte).
-  If a device starts responding within this time, the next command will be queued and sent after the response is finished, no matter how long the response.  
-  
+  If a device starts responding within this time, the next command will be queued and sent after the response is finished, no matter how long the response.
+
 - **disable_crc** (*Optional*, boolean): Ignores a bad CRC if set to `true`. Defaults to `false`
 
 - **role** (*Optional*, string): The role of this component, `client` or `server`. Defaults to `client`.

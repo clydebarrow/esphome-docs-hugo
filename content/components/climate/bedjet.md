@@ -90,7 +90,6 @@ From [lambdas](automations/templates#config-lambda), you can call methods to do 
         - lambda: |-
             id(my_bedjet_fan).set_clock(22, 10);
 
-
 ```
 ## `bedjet` Climate
 
@@ -200,8 +199,8 @@ ota:
       - logger.log: "Disconnecting clients for OTA update..."
       - switch.turn_off: bedjet_1_monitor
       - switch.turn_off: bedjet_2_monitor
-```
 
+```
 {{< /note >}}
 ## See Also
 

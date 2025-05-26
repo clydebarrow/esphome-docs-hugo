@@ -50,7 +50,6 @@ on_...:
     then:
       logger.log: 'Playback is active!'
 
-
 ```
 ## `dfplayer.play_next` Action
 
@@ -70,7 +69,6 @@ Plays the previously played track.
 on_...:
   then:
     - dfplayer.play_previous:
-
 
 ```
 ## `dfplayer.play` Action
@@ -152,7 +150,6 @@ on_...:
     - dfplayer.play_folder:
         folder: 2
         file: 1
-
 
 ```
 Configuration options:
@@ -279,7 +276,6 @@ Stops playback.
 on_...:
   then:
     - dfplayer.stop
-
 
 ```
 ## `dfplayer.random` Action

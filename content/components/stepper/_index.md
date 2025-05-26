@@ -53,7 +53,6 @@ stepper:
     acceleration: inf
     deceleration: inf
 
-
 ```
 Configuration variables:
 
@@ -78,8 +77,8 @@ stepper:
     dir_pin:
       number: GPIOXX
       inverted: true
-```
 
+```
 {{< /note >}}
 ## ULN2003 Component
 
@@ -99,7 +98,6 @@ stepper:
     # Optional:
     acceleration: inf
     deceleration: inf
-
 
 ```
 Configuration variables:
@@ -163,8 +161,8 @@ on_...:
     - stepper.set_target:
         id: my_stepper
         target: 150
-```
 
+```
 {{< /warning >}}
 {{< anchor "stepper-report_position_action" >}}
 
@@ -314,7 +312,6 @@ advanced stuff (see the full API Reference for more info).
 
     ```cpp
     int pos = id(my_stepper).current_position;
-
 
 ```
 - `target_position`: Get the set target position of the stepper  as an integer.

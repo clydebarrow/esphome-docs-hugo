@@ -8,7 +8,7 @@ params:
 ---
 
 
-The network component is a global configuration for all types of 
+The network component is a global configuration for all types of
 networks (WiFi, Ethernet).
 
 ```yaml

@@ -106,7 +106,7 @@ Configuration options:
 - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
 - **address** (**Required**, int): New I2C address.
 
-  
+
 ## See Also
 
 - [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})

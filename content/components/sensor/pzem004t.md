@@ -12,8 +12,8 @@ params:
 This page is incomplete and could use some work. If you want to contribute, please see our
 [developer site](https://developers.esphome.io). This page is missing:
 
-    - An image for the front page.
-    - Images/screenshots/example configs of this device being used in action.
+- An image for the front page.
+- Images/screenshots/example configs of this device being used in action.
 
 {{< /note >}}
 The `pzem004t` sensor platform allows you to use PZEM-004 (version with 8-segment screens, [website](https://www.instructables.com/Power-Peacefair-PZEM-004-ESP8266-Arduino-Nano/)) and PZEM-004T V1 energy monitors

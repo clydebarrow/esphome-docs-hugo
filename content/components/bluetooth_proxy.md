@@ -66,6 +66,7 @@ esp32_ble_tracker:
   scan_parameters:
     interval: 1100ms
     window: 1100ms
+
 ```
 {{< note >}}
 For WiFi-based proxies, changing the `interval` or `window` from their default values may result in an unstable WiFi connection. Using the default values for `interval` and `window` will usually resolve any instability.
@@ -119,7 +120,6 @@ esp32_ble_tracker:
 bluetooth_proxy:
   active: true
   connection_slots: 3
-
 
 ```
 ## See Also

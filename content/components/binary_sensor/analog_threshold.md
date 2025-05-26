@@ -34,7 +34,6 @@ binary_sensor:
     sensor_id: motor_current_sensor
     threshold: 0.5
 
-
 ```
 ## Configuration variables
 

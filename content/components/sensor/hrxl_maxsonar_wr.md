@@ -28,7 +28,6 @@ sensor:
   - platform: "hrxl_maxsonar_wr"
     name: "Rainwater Tank"
 
-
 ```
 ## Configuration variables:
 

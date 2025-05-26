@@ -58,7 +58,6 @@ Example 2: Simple JSON:
 ```json
 {"key": 42.0, "greeting": "Hello World"}
 
-
 ```
 ## Parsing JSON:
 
@@ -88,7 +87,6 @@ on_...:
                 }
             });
 
-
 ```
 ## Building JSON:
 
@@ -114,7 +112,7 @@ A very common error when deserializing is:
 JSON parse error: InvalidInput
 
 ```
-The software ESPHome uses does not provide particularly informative messages as to why, but 
+The software ESPHome uses does not provide particularly informative messages as to why, but
 the people at ArduinoJson have created a [wonderful troubleshooter](https://arduinojson.org/troubleshooter).
 
 Another important resource is [JSONLint](https://jsonlint.com/). It will help you determine if the JSON you are using is valid. It must be valid to work with ESPHome's deserializer and it probably needs to be valid for the destination, if you are sending it.

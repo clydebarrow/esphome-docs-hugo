@@ -48,8 +48,8 @@ Configuration variables:
 - **name** (*Optional*, string): The name of the climate device. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the climate to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the climate to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the climate device in the frontend.
@@ -215,7 +215,6 @@ advanced stuff.
   // Custom Preset, type: string
   id(my_climate).custom_preset
 
-
 ```
 - `.make_call`: Control the climate device
 
@@ -244,7 +243,6 @@ climate:
           if (x.mode != CLIMATE_MODE_OFF)
             id(some_binary_sensor).publish_state(true);
 
-
 ```
 {{< anchor "climate-on_control_trigger" >}}
 
@@ -268,7 +266,6 @@ climate:
               id(turnoff_script).stop();
               x.set_target_temperature(25.0f);
           }
-
 
 ```
 ## See Also

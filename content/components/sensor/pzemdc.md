@@ -12,7 +12,7 @@ params:
 This page is incomplete and could use some work. If you want to contribute, please see our
 [developer site](https://developers.esphome.io). This page is missing:
 
-    - Images/screenshots/example configs of this device being used in action.
+- Images/screenshots/example configs of this device being used in action.
 
 {{< /note >}}
 The `pzemdc` sensor platform allows you to use various DC Peacefair PZEM energy monitors
@@ -70,7 +70,6 @@ This action resets the total energy value of the pzemdc device with the given ID
 on_...:
   then:
     - pzemdc.reset_energy: pzemdc_1
-
 
 ```
 ## See Also

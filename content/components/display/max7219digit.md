@@ -109,7 +109,6 @@ They can also be changed in the Lambda by adding the following command:
 ```cpp
 it.scroll(<on/off>, <mode>, <speed>, <delay>, <dwell>);
 
-
 ```
 - **on/off** -> switch scrolling on or off, use true or false
 - **mode** -> max7219digit::CONTINUOUS for continuous scrolling, max7219digit::STOP = Stop at end and reset

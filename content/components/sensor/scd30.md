@@ -94,8 +94,6 @@ number:
     icon: "mdi:molecule-co2"
     entity_category: "config"
 
-
-
 ```
 ## See Also
 

@@ -56,7 +56,6 @@ udp:
             format: "Received %s"
             args: [format_hex_pretty(data).c_str()]
 
-
 ```
 ## Examples
 
@@ -114,7 +113,6 @@ binary_sensor:
     on_press:
       - lambda: |-
           ESP_LOGI("main", "d command to binary_sensor_unlock");
-
 
 ```
 ## See Also

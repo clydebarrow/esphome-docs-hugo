@@ -144,8 +144,6 @@ init_sequence:
   - [ 0xD0, 0x07, 0x42, 0x18]
   - [ 0xD1, 0x00, 0x07, 0x10]
 
-
-
 ```
 Each entry represents a single-byte command followed by zero or more data bytes.
 
@@ -165,7 +163,6 @@ transform:
 dimensions:
   height: 480
   width: 320
-
 
 ```
 To utilize the color capabilities of this display module, you'll likely want to add a `color:` section to your
@@ -187,7 +184,6 @@ display:
     lambda: |-
       it.rectangle(0,  0, it.get_width(), it.get_height(), id(my_red));
 
-
 ```
 To bring in color images:
 
@@ -204,7 +200,6 @@ display:
     ...
     lambda: |-
       it.image(0, 0, id(my_image));
-
 
 ```
 To configure a dimmable backlight:

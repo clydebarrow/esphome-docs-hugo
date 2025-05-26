@@ -26,7 +26,6 @@ sensor:
     humidity:
       name: "Humidity"
 
-
 ```
 ## Configuration variables:
 

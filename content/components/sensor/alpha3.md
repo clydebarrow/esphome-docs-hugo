@@ -48,7 +48,6 @@ sensor:
     current:
       name: "Radiator Pump Current"
 
-
 ```
 ### Configuration variables:
 

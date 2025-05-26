@@ -47,7 +47,6 @@ binary_sensor:
         id: engine_rpm
         above: 300.0
 
-
 ```
 ## Configuration variables:
 
@@ -93,8 +92,8 @@ This action can also be written in lambdas:
 
 ```cpp
 id(template_bin).publish_state(true);
-```
 
+```
 {{< /note >}}
 ## See Also
 

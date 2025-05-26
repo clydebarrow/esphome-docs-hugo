@@ -11,8 +11,8 @@ params:
 {{< img src="ina228-full.jpg" alt="Image" caption="INA228 Module with integrated shunt from Adafruit" width="50.0%" class="center" >}}
 
 ## Supported devices
-The `ina2xx` sensor platform allows you to use family of Texas Instruments current and power 
-sensors with ESPHome. Appropriate interface ([I²C Bus](components/i2c#i2c) or [SPI Bus](components/spi#spi)) is 
+The `ina2xx` sensor platform allows you to use family of Texas Instruments current and power
+sensors with ESPHome. Appropriate interface ([I²C Bus](components/i2c#i2c) or [SPI Bus](components/spi#spi)) is
 requred to be set up in your configuration for this sensor to work.
 
 
@@ -29,11 +29,11 @@ All devices can measure a selectable full-scale differential input of ±163.84 m
 or ±40.96 mV across the shunt with common-mode voltage support from –0.3 V to +85 V.
 
 INA228 and INA229 are the most comprehensive devices of the family with extra features: 20-bit ADC resolution,
-energy and charge accumulation, and capability to utilize the temperature measurement to compensate 
+energy and charge accumulation, and capability to utilize the temperature measurement to compensate
 for shunt resistor temperature variance.
 
 ## Over I²C
-Use `ina2xx_i2c` component to connect INA228, INA237, or INA238 device over [I²C](components/i2c#i2c) bus. 
+Use `ina2xx_i2c` component to connect INA228, INA237, or INA238 device over [I²C](components/i2c#i2c) bus.
 
 ```yaml
 # Example configuration entry for I²C
@@ -50,32 +50,31 @@ sensor:
     bus_voltage: "INA228 Bus Voltage"
     charge: "INA228 Charge"
 
-
 ```
 ### Configuration variables:
 
 - **model** (**Required**, string): The model of the INA2xx sensor. Options are `INA228`, `INA237`, `INA238`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Defaults to `0x40`.
 - **shunt_resistance** (**Required**, float): The value of the shunt resistor used for current calculation. No default value.
-- **max_current** (**Required**, float): The maximum current you are expecting. Component will use it to 
+- **max_current** (**Required**, float): The maximum current you are expecting. Component will use it to
   calibrate the sensor. No default value.
 - **adc_range** (*Optional*, `0` or `1`): Selects the range for differential input across shunt
   resistor. `0` for ±163.84 mV, `1` for ±40.96 mV range. Defaults to `0`.
-- **adc_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time in microseconds to perform a single ADC conversion. 
-  Defaults to `4120 us`. Valid values are `50 us`, `84 us`, `150 us`, `280 us`, `540 us`, 
+- **adc_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time in microseconds to perform a single ADC conversion.
+  Defaults to `4120 us`. Valid values are `50 us`, `84 us`, `150 us`, `280 us`, `540 us`,
   `1052 us`, `2074 us`, `4120 us`.
 
-  Instead of one time for all ADC measurements, separate configuration of conversion times for shunt voltage, 
+  Instead of one time for all ADC measurements, separate configuration of conversion times for shunt voltage,
   bus voltage, and temperature measurements possible. Options are the same as for `adc_time`.
 
   - **bus_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for bus voltage measurement.
   - **shunt_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for shunt voltage measurement.
   - **temperature** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for temperature measurement.
 
-- **adc_averaging** (*Optional*, integer): Selects ADC sample averaging count. Defaults to `128`. 
+- **adc_averaging** (*Optional*, integer): Selects ADC sample averaging count. Defaults to `128`.
   Valid values are `1`, `4`, `16`, `64`, `128`, `256`, `512`, `1024`.
-- **temperature_coefficient** (*Optional*, integer from `0` to `16383`): Temperature coefficient (ppm/°C) of the 
-  shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
+- **temperature_coefficient** (*Optional*, integer from `0` to `16383`): Temperature coefficient (ppm/°C) of the
+  shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 - All other options from [Sensor](components/sensor/_index#config-sensor) and [I²C device](components/i2c#i2c).
@@ -83,7 +82,7 @@ sensor:
 
 ## Over SPI
 
-Use `ina2xx_spi` component to connect INA229 or INA239 device over [SPI](components/spi#spi) bus. 
+Use `ina2xx_spi` component to connect INA229 or INA239 device over [SPI](components/spi#spi) bus.
 
 
 ```yaml
@@ -99,40 +98,39 @@ sensor:
     current: "INA239 Current"
     power: "INA239 Power"
 
-
 ```
 ### Configuration variables:
 
 - **model** (**Required**, string): The model of the INA2xx sensor. Options are `INA229`, `INA239`.
 - **cs_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The Chip Select (CS) pin.
 - **shunt_resistance** (**Required**, float): The value of the shunt resistor used for current calculation. No default value.
-- **max_current** (**Required**, float): The maximum current you are expecting. Component will use it to 
+- **max_current** (**Required**, float): The maximum current you are expecting. Component will use it to
   calibrate the sensor. No default value.
 - **adc_range** (*Optional*, `0` or `1`): Selects the range for differential input across shunt
   resistor. `0` for ±163.84 mV, `1` for ±40.96 mV range. Defaults to `0`.
-- **adc_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time in microseconds to perform a single ADC conversion. 
-  Defaults to `4120 us`. Valid values are `50 us`, `84 us`, `150 us`, `280 us`, `540 us`, 
+- **adc_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time in microseconds to perform a single ADC conversion.
+  Defaults to `4120 us`. Valid values are `50 us`, `84 us`, `150 us`, `280 us`, `540 us`,
   `1052 us`, `2074 us`, `4120 us`.
 
-  Instead of one time for all ADC measurements, separate configuration of conversion times for shunt voltage, 
+  Instead of one time for all ADC measurements, separate configuration of conversion times for shunt voltage,
   bus voltage, and temperature measurements possible. Options are the same as for `adc_time`.
 
   - **bus_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for bus voltage measurement.
   - **shunt_voltage** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for shunt voltage measurement.
   - **temperature** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Conversion time for temperature measurement.
 
-- **adc_averaging** (*Optional*, integer): Selects ADC sample averaging count. Defaults to `128`. 
+- **adc_averaging** (*Optional*, integer): Selects ADC sample averaging count. Defaults to `128`.
   Valid values are `1`, `4`, `16`, `64`, `128`, `256`, `512`, `1024`.
-- **temperature_coefficient** (*Optional*, integer from `0` to `16383`): Temperature coefficient (ppm/°C) of the 
-  shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means 
+- **temperature_coefficient** (*Optional*, integer from `0` to `16383`): Temperature coefficient (ppm/°C) of the
+  shunt for temperature compensation correction. Only applicable to INA228 and INA229 devices. Zero value means
   no compensation is done. Defaults to `0`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
 - All other options from [Sensor](components/sensor/_index#config-sensor) and [SPI device](components/spi#spi).
 
 
 ## Sensors
-The component offers nine sensors. You can configure all or any subset of the sensors. Each configured sensor 
-is reported  separately on each update_interval. The `name` option is required for each sensor configured; 
+The component offers nine sensors. You can configure all or any subset of the sensors. Each configured sensor
+is reported  separately on each update_interval. The `name` option is required for each sensor configured;
 all other options from [Sensor](components/sensor/_index#config-sensor) are also supported. Shorthand notation can be used for the sensors like this:
 `current: "Current"`.
 
@@ -165,7 +163,6 @@ To simplify the use of this function, you can use the following example to add a
       name: "Reset counters"
       on_press:
         - lambda: "id(my_change_sensor).reset_energy_counters();"
-
 
 ```
 ## See Also

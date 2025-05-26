@@ -36,7 +36,6 @@ matrix_keypad:
   on_key:
     - lambda: ESP_LOGI("KEY", "key %d pressed", x);
 
-
 ```
 Configuration variables:
 

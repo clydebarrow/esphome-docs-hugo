@@ -37,14 +37,14 @@ embedded in the MCU, in which case things are a bit easier.
 In case you use an external serial programmer connected to RX and TX of the ESP, choose one based
 on CH340 as it's the most reliable and the cheapest one to use for flashing. Programmers based on
 CP2102 or PL2303 are compatible with many devices, but using an external 3.3V supply might be
-necessary for them. 
+necessary for them.
 
 {{< anchor "esphome-phy-con-drv" >}}
 
 Plug in the board or the serial programmer into a free USB port and check if it has been properly detected
-by your computer. The firmware programming tools use a serial interface to communicate with your device. 
+by your computer. The firmware programming tools use a serial interface to communicate with your device.
 On Windows these interfaces are named `COM1`, `COM2`, etc. and on Linux they are named `/dev/ttyUSB0`,
-`/dev/ttyACM1`, etc. 
+`/dev/ttyACM1`, etc.
 
 {{< note >}}
 If it's not showing up as a serial port, you might not have the required drivers
@@ -77,7 +77,7 @@ Some adapters can be switched between `3.3V` and `5V` for the data pins, but sti
 
 {{< /note >}}
 ESP needs to be put into programming mode or flash mode before the firmware can be uploaded. This is
-done by connecting `GPIO0` pin to `GND` while the chip is booting. 
+done by connecting `GPIO0` pin to `GND` while the chip is booting.
 
 {{< anchor "esphome-phy-con-prg" >}}
 

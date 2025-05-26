@@ -57,7 +57,6 @@ binary_sensor:
   address: 0x3200
   bitmask: 0x80 #(bit 8)
 
-
 ```
 ## See Also
 - {{< docref "/components/modbus" >}}

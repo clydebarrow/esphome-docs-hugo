@@ -53,7 +53,6 @@ binary_sensor:
     provider: device2-name
     id: other_binary_sensor_id  # also used as remote_id
 
-
 ```
 ## Configuration variables:
 

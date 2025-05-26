@@ -11,7 +11,7 @@ params:
 ## Component/Hub
 
 The `bme68x_bsec2_i2c` sensor platform allows you to use your
-[BME680](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) and 
+[BME680](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf) and
 [BME688](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)
 (`Adafruit`_, `Pimoroni`_) temperature, humidity, pressure and gas sensors with ESPHome via the Bosch Sensortec
 Environmental Cluster 2 (BSEC2) software library. The use of Bosch's proprietary algorithms provide an Index for Air
@@ -45,8 +45,6 @@ bme68x_bsec2_i2c:
   operating_age: 28d
   sample_rate: LP
   supply_voltage: 3.3V
-
-
 
 ```
 ### Configuration variables:

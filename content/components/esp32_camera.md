@@ -389,7 +389,6 @@ esp32_camera:
   name: My Camera
   # ...
 
-
 ```
 **TTGO-Camera Plus**:
 

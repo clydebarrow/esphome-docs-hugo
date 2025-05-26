@@ -516,12 +516,12 @@ on_...:
 {{< note >}}
 - The `start_single_valve` action ignores whether a valve is enabled via its enable switch.
 - The `next_valve` and `previous_valve` actions may not appear to respond immediately if either
-    `manual_selection_delay` or any of the various delay mechanisms described in the
-    [Pump and Distribution Valve Coordination]({{< ref "components/sprinkler#sprinkler-controller-pump_and_distribution_valve_coordination" >}}) section below are configured.
-    If you are using any of these configuration options, be sure to allow the delay intervals to elapse
-    before assuming something isn't working!
+  `manual_selection_delay` or any of the various delay mechanisms described in the
+  [Pump and Distribution Valve Coordination]({{< ref "components/sprinkler#sprinkler-controller-pump_and_distribution_valve_coordination" >}}) section below are configured.
+  If you are using any of these configuration options, be sure to allow the delay intervals to elapse
+  before assuming something isn't working!
 - If a valve is active when its `run_duration` or the multiplier value is changed, the active
-    valve's run duration will remain unaffected until the next time it is started.
+  valve's run duration will remain unaffected until the next time it is started.
 
 {{< /note >}}
 {{< anchor "sprinkler-controller-pump_and_distribution_valve_coordination" >}}

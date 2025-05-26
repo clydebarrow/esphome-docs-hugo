@@ -131,7 +131,6 @@ on_...:
   then:
     - sps30.start_fan_autoclean: my_sps30
 
-
 ```
 ## See Also
 

@@ -142,7 +142,6 @@ canbus:
               // to be continued...
             }
 
-
 ```
 **Configuration variables:**
 

@@ -75,8 +75,8 @@ This action can also be written in lambdas:
 
 ```cpp
 id(my_global_var) = 10;
-```
 
+```
 {{< /note >}}
 # See Also
 

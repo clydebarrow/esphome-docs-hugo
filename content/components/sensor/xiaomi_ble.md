@@ -243,7 +243,6 @@ sensor:
     signal_strength:
       name: "ATC Signal"
 
-
 ```
 ### MHO-C303
 
@@ -312,7 +311,6 @@ sensor:
       name: "PVVX Battery-Level"
     battery_voltage:
       name: "PVVX Battery-Voltage"
-
 
 ```
 ### CGD1
@@ -496,8 +494,6 @@ sensor:
     id: motion_one
     battery_level:
       name: "Mi Motion Sensor Battery Level"
-
-
 
 ```
 ## Setting Up Devices

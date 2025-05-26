@@ -243,7 +243,6 @@ binary_sensor:
         - lambda: |-
             id(mydisplay).no_backlight();
 
-
 ```
 ## See Also
 

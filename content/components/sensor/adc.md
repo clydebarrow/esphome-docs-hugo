@@ -57,9 +57,8 @@ sensor:
     # ...
     filters:
       - multiply: 3.3
+
 ```
-
-
 {{< /note >}}
 {{< anchor "adc-esp32_attenuation" >}}
 

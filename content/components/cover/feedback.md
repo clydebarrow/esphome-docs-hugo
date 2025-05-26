@@ -243,10 +243,6 @@ Most options can be left untouched, but some modifications are needed:
             then:
               - logger.log: "Malfunction detected. Relay welded."
 
-
-
-
-
 ```
 ## See Also
 

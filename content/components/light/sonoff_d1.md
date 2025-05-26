@@ -80,7 +80,6 @@ light:
     gamma_correct: 0.0
     default_transition_length: 1s
 
-
 ```
 ## Configuration variables:
 

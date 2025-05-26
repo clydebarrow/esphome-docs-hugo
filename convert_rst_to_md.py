@@ -121,7 +121,7 @@ def normalize_csv_lines(lines):
     return normalized_rows
 
 
-def get_indented_block(lines, i, current_indent):
+def get_indented_block(lines, i, current_indent, process_md=False):
     # skip blank lines
     while i < len(lines) and not lines[i].strip():
         i += 1
@@ -146,20 +146,320 @@ def get_indented_block(lines, i, current_indent):
             break
     return i, md_lines
 
+bullet_regex = re.compile(r'^(\s*)([-*+])\s+')
+
+
 
 def convert_rst_to_md(lines, filename):
     """Convert RST content to Markdown using line-by-line processing."""
+    heading_underlines = []
+    footnotes = []  # Store footnotes to add at the end
+    seo = {}
+    indent_stack = []
 
     # Extract title and SEO data
     title = ""
     explicit_title = ""
-    seo = {}
-    indent_stack = []
     skip_build = False
-    bullet_regex = re.compile(r'^(\s*)([-*+])\s+')
 
+    def process_lines(inner_lines):
+
+        md_lines = []
+        i = 0
+
+        while i < len(inner_lines):
+            line = inner_lines[i]
+            if line and not line[0].isspace():
+                indent_stack.clear()
+
+            # Skip title directive
+            if line.startswith('.. title::'):
+                i += 1
+                continue
+
+            if line.startswith(".. seo::"):
+                i, seo_lines = get_indented_block(inner_lines, i + 1, 0)
+                for line in seo_lines:
+                    if line.strip().startswith(":description:"):
+                        seo["description"] = line.split(":")[2].strip()
+                    if line.strip().startswith(":image:"):
+                        seo["image"] = line.split(":")[2].strip()
+                continue
+
+            if line.startswith('.. option::'):
+                text = line.replace('.. option::', '').strip()
+                i += 1
+                while i < len(inner_lines) and not inner_lines[i].strip():
+                    i += 1
+                md_lines.append(f'{{{{< option "{text}" >}}}}')
+                while i < len(inner_lines):
+                    if not inner_lines[i]:
+                        md_lines.append('')
+                        i += 1
+                        continue
+                    if inner_lines[i].startswith(' '):
+                        md_lines.append(inner_lines[i].strip())
+                        i += 1
+                    else:
+                        break
+                md_lines.append('{{< /option >}}')
+                continue
+
+            # Handle imgtable directive
+            if line.strip() == '.. imgtable::':
+                i += 1
+                # Skip empty lines
+                while i < len(inner_lines) and not inner_lines[i].strip():
+                    i += 1
+
+                # Start the imgtable shortcode
+                md_lines.append('{{< imgtable >}}')
+                csv_lines = []
+                # Process each entry (each line should be indented)
+                while i < len(inner_lines):
+                    current_line = inner_lines[i].strip()
+
+                    # If we hit an empty line or a non-indented line, we're done with this imgtable
+                    if not inner_lines[i].startswith('    ') and current_line:
+                        break
+
+                    # Skip empty lines within the imgtable
+                    if not current_line or current_line.startswith(':'):
+                        i += 1
+                        continue
+
+                    # Process the entry - format is typically: Title, Link, Image, [Description]
+                    csv_lines.append(current_line)
+                    i += 1
+
+                csv_lines = normalize_csv_lines(csv_lines)
+                for row in csv_lines:
+                    md_lines.append(",".join('"' + col.strip().replace('"', '""').replace(':', ' -') + '"' for col in row))
+                # Close the imgtable shortcode
+                md_lines.append('{{< /imgtable >}}')
+                continue
+
+            if line.startswith('.. program::'):
+                i += 1
+                continue
+
+            # Skip title (we'll add it later with frontmatter)
+            if line == title and i + 1 < len(inner_lines) and re.match(r'^=+$', inner_lines[i + 1]):
+                i += 2
+                continue
+
+            # Handle RST anchors (.. _anchor:)
+            if line.startswith('.. _') and line.endswith(':'):
+                anchor_name = line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
+                md_lines.append(f'{{{{< anchor "{anchor_name}" >}}}}')
+                i += 1
+                continue
+
+            # Handle raw HTML blocks that might contain buttons
+            if line.strip().startswith('.. raw:: html'):
+                button_lines, new_i = process_raw_html_block(inner_lines, i)
+                md_lines.extend(button_lines)
+                i = new_i
+                continue
+
+            # Handle list-table directive
+            if line.strip().startswith('.. list-table::') or line.strip().startswith('..  list-table::'):
+                table_lines, new_i = process_list_table(inner_lines, i)
+                md_lines.extend(table_lines)
+                i = new_i
+                continue
+
+            # Handle csv-table directive
+            if line.strip().startswith('.. csv-table::'):
+                table_lines, new_i = process_csv_table(inner_lines, i)
+                md_lines.extend(table_lines)
+                i = new_i
+                continue
+
+            # Handle headings
+            if line and i + 1 < len(inner_lines) and len(inner_lines[i + 1]) >= len(line):
+                next_line = inner_lines[i + 1]
+                underchar = next_line[0]
+                if underchar in heading_underlines and all(x == underchar for x in next_line):
+                    level = heading_underlines.index(underchar) + 1
+                    prefix = "#" * level
+                    md_lines.append(f"{prefix} {line}")
+                    i += 2
+                    continue
+
+            # Handle code blocks - check for both standalone and nested code blocks
+            if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):
+                # Get the indentation of the current line
+                current_indent = len(line) - len(line.lstrip())
+
+                # Extract language
+                language = line.split("::")[1].strip()
+
+                # Add the code block start with proper indentation
+                md_lines.append(' ' * current_indent + f"```{language}")
+
+                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
+                while len(new_lines) and not new_lines[-1].strip():
+                    new_lines.pop()
+                md_lines.extend(new_lines)
+                md_lines.append("")
+                md_lines.append("```")
+                continue
+
+            if line.lstrip().startswith('.. math::'):
+                # Get the indentation of the current line
+                current_indent = len(line) - len(line.lstrip())
+
+                # Add the code block start with proper indentation
+                md_lines.append(' ' * current_indent + "{{< math >}}")
+
+                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
+                md_lines.extend(new_lines)
+                md_lines.append(' ' * current_indent + "{{< /math >}}")
+                continue
+
+            if line.lstrip().startswith('.. collapse::'):
+                # Get the indentation of the current line
+                current_indent = len(line) - len(line.lstrip())
+                collapse_title = line.strip().removeprefix(".. collapse::").strip()
+
+                # Add the code block start with proper indentation
+
+                is_open = False
+                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
+                if new_lines[0].startswith(":open:"):
+                    is_open = True
+                    new_lines = new_lines[1:]
+                md_lines.append(' ' * current_indent + f'{{{{< collapse "{collapse_title}" {is_open} >}}}}')
+                md_lines.extend(new_lines)
+                md_lines.append(' ' * current_indent + "{{< /collapse >}}")
+                continue
+
+
+
+            # Handle notes
+            handled = False
+            for directive in ["note", "warning", "caution", "important", "tip"]:
+                if line.strip().startswith(f'.. {directive}::'):
+                    # Get the indentation level of the note directive
+                    note_indent = len(line) - len(line.lstrip())
+                    md_lines.append(" " * note_indent + f"{{{{< {directive} >}}}}")
+                    i, note_lines = get_indented_block(inner_lines, i + 1, note_indent, True)
+                    note_lines = process_lines(note_lines)
+                    md_lines.extend(note_lines)
+                    md_lines.append(" " * note_indent + f"{{{{< /{directive} >}}}}")
+                    handled = True
+                    break
+            if handled:
+                continue
+
+            # Handle figures
+            if line.strip().startswith('.. figure::'):
+                shortcode, new_i = process_image_directive(inner_lines, i)
+                md_lines.append(shortcode)
+                md_lines.append("")
+                i = new_i
+                continue
+
+            # Handle image directives
+            if line.strip().startswith('.. image::'):
+                shortcode, new_i = process_image_directive(inner_lines, i)
+                md_lines.append(shortcode)
+                i = new_i
+                continue
+
+            # Skip toctree
+            if line.startswith('.. toctree::'):
+                i += 1
+                while i < len(inner_lines) and (inner_lines[i].startswith('    ') or not inner_lines[i].strip()):
+                    i += 1
+                continue
+
+            # Handle grid tables
+            if (line.strip() and
+                    (line.count('=') > 3 or line.count('-') > 3) and
+                    all(c in '=+-| ' for c in line)):
+                # Check if this is likely a grid table by looking at surrounding lines
+                is_grid_table = False
+
+                # Check if there's a content line after this separator
+                if i + 1 < len(inner_lines) and inner_lines[i + 1].strip():
+                    # If the next line has content and is followed by another separator, it's likely a table
+                    if (i + 2 < len(inner_lines) and
+                            inner_lines[i + 2].strip() and
+                            all(c in '=+-| ' for c in inner_lines[i + 2].strip())):
+                        is_grid_table = True
+                    # Or if the next line has content with multiple spaces between words (column alignment)
+                    elif '  ' in inner_lines[i + 1]:
+                        is_grid_table = True
+
+                if is_grid_table:
+                    table_lines, new_i = process_grid_table(inner_lines, i)
+                    if table_lines:  # Only add if we successfully processed a table
+                        md_lines.extend(table_lines)
+                        i = new_i
+                        continue
+
+            # Handle footnote definitions
+            footnote_match = re.match(r'^\.\. \[([0-9#][^]]*)]', line.strip())
+            if footnote_match:
+                footnote_label = footnote_match.group(1)
+                # Remove the # prefix if it exists (for auto-numbered or labeled footnotes)
+                if footnote_label.startswith('#'):
+                    footnote_label = footnote_label[1:]
+
+                # Get the indentation of the current line
+                current_indent = len(line) - len(line.lstrip())
+
+                # Get the footnote text from the same line after the label
+                rest_of_line = line.strip()[len(footnote_match.group(0)):].strip()
+                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
+
+                # Store the footnote to add at the end of the document
+                footnotes.append([f"[^{footnote_label}]: {rest_of_line}"] + new_lines)
+                continue
+
+            # Process the line for inline markup
+            fixed_line = line
+            match = bullet_regex.match(line)
+            if match:
+                indent, bullet = match.groups()
+                indent_len = len(indent)
+                if not indent_stack and indent_len > 0:
+                    fixed_line = line.lstrip()
+                elif indent_stack and indent_len > indent_stack[-1]:
+                    indent_stack.append(indent_len)
+                else:
+                    while indent_stack and indent_len < indent_stack[-1]:
+                        indent_stack.pop()
+                    if not indent_stack:
+                        indent_stack.append(indent_len)
+
+
+            processed_line = process_inline_markup(fixed_line)
+            processed_line = replace_substitutions(processed_line)
+            if ":ghedit:" in processed_line:
+                processed_line = ""
+
+
+            # Fix image paths in markdown content
+            if '/components/' in filename and '![' in processed_line and '](/components/' in processed_line:
+                processed_line = processed_line.replace('](/components/', '](../')
+            elif '/components/' in filename and '![' in processed_line and '](images/' in processed_line:
+                processed_line = processed_line.replace('](images/', '](../images/')
+
+            # Fix SVG image paths in markdown content
+            if '![' in processed_line and '](_build/_images/' in processed_line and '.svg)' in processed_line:
+                processed_line = processed_line.replace('](_build/_images/', '](/images/_build/_images/')
+
+            # Add the processed line
+            md_lines.append(processed_line)
+            i += 1
+        return [x.rstrip() for x in md_lines]
      # Check for explicit title directive
     for i, line in enumerate(lines):
+        if "This is a dummy file" in line:
+            skip_build = True
         if line.startswith('.. title::'):
             explicit_title = line.replace('.. title::', '').strip()
             break
@@ -175,7 +475,6 @@ def convert_rst_to_md(lines, filename):
         title = explicit_title
 
     # Find all headings and collate the order
-    heading_underlines = []
 
     i = 0
     while i < len(lines):
@@ -189,11 +488,6 @@ def convert_rst_to_md(lines, filename):
                         heading_underlines.append(underchar)
         i += 1
 
-    # Process lines
-    md_lines = []
-    footnotes = []  # Store footnotes to add at the end
-    i = 0
-
 
     # Parse substitutions from original lines
     all_lines = lines[:]
@@ -204,497 +498,8 @@ def convert_rst_to_md(lines, filename):
     lines = process_multiline_references(lines)
     lines = process_anchors_and_images(lines)
 
-    while i < len(lines):
-        line = lines[i]
-        if line and not line[0].isspace():
-            indent_stack = []
+    md_lines = process_lines(lines)
 
-        if "This is a dummy file" in line:
-            skip_build = True
-        # Skip title directive
-        if line.startswith('.. title::'):
-            i += 1
-            continue
-
-        if line.startswith(".. seo::"):
-            i, seo_lines = get_indented_block(lines, i + 1, 0)
-            for line in seo_lines:
-                if line.strip().startswith(":description:"):
-                    seo["description"] = line.split(":")[2].strip()
-                if line.strip().startswith(":image:"):
-                    seo["image"] = line.split(":")[2].strip()
-            continue
-
-        if line.startswith('.. option::'):
-            text = line.replace('.. option::', '').strip()
-            i += 1
-            while i < len(lines) and not lines[i].strip():
-                i += 1
-            md_lines.append(f'{{{{< option "{text}" >}}}}')
-            while i < len(lines):
-                if not lines[i]:
-                    md_lines.append('')
-                    i += 1
-                    continue
-                if lines[i].startswith(' '):
-                    md_lines.append(lines[i].strip())
-                    i += 1
-                else:
-                    break
-            md_lines.append('{{< /option >}}')
-            continue
-
-        # Handle imgtable directive
-        if line.strip() == '.. imgtable::':
-            i += 1
-            # Skip empty lines
-            while i < len(lines) and not lines[i].strip():
-                i += 1
-            
-            # Start the imgtable shortcode
-            md_lines.append('{{< imgtable >}}')
-            csv_lines = []
-            # Process each entry (each line should be indented)
-            while i < len(lines):
-                current_line = lines[i].strip()
-                
-                # If we hit an empty line or a non-indented line, we're done with this imgtable
-                if not lines[i].startswith('    ') and current_line:
-                    break
-                
-                # Skip empty lines within the imgtable
-                if not current_line or current_line.startswith(':'):
-                    i += 1
-                    continue
-                
-                # Process the entry - format is typically: Title, Link, Image, [Description]
-                csv_lines.append(current_line)
-                i += 1
-
-            csv_lines = normalize_csv_lines(csv_lines)
-            for row in csv_lines:
-                md_lines.append(",".join('"' + col.strip().replace('"', '""').replace(':', ' -') + '"' for col in row))
-            # Close the imgtable shortcode
-            md_lines.append('{{< /imgtable >}}')
-            continue
-
-        if line.startswith('.. program::'):
-            i += 1
-            continue
-
-        # Skip title (we'll add it later with frontmatter)
-        if line == title and i + 1 < len(lines) and re.match(r'^=+$', lines[i + 1]):
-            i += 2
-            continue
-        
-        # Handle RST anchors (.. _anchor:)
-        if line.startswith('.. _') and line.endswith(':'):
-            anchor_name = line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
-            md_lines.append(f'{{{{< anchor "{anchor_name}" >}}}}')
-            i += 1
-            continue
-
-        # Handle raw HTML blocks that might contain buttons
-        if line.strip().startswith('.. raw:: html'):
-            button_lines, new_i = process_raw_html_button(lines, i)
-            md_lines.extend(button_lines)
-            i = new_i
-            continue
-        
-        # Handle list-table directive
-        if line.strip().startswith('.. list-table::') or line.strip().startswith('..  list-table::'):
-            table_lines, new_i = process_list_table(lines, i)
-            md_lines.extend(table_lines)
-            i = new_i
-            continue
-            
-        # Handle csv-table directive
-        if line.strip().startswith('.. csv-table::'):
-            table_lines, new_i = process_csv_table(lines, i)
-            md_lines.extend(table_lines)
-            i = new_i
-            continue
-
-        # Handle headings
-        if line and i + 1 < len(lines) and len(lines[i + 1]) >= len(line):
-            next_line = lines[i + 1]
-            underchar = next_line[0]
-            if underchar in heading_underlines and all(x == underchar for x in next_line):
-                level = heading_underlines.index(underchar) + 1
-                prefix = "#" * level
-                md_lines.append(f"{prefix} {line}")
-                i += 2
-                continue
-        
-        # Handle code blocks - check for both standalone and nested code blocks
-        if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):
-            # Get the indentation of the current line
-            current_indent = len(line) - len(line.lstrip())
-            
-            # Extract language
-            language = line.split("::")[1].strip()
-
-            # Add the code block start with proper indentation
-            md_lines.append(' ' * current_indent + f"```{language}")
-            
-            i, new_lines = get_indented_block(lines, i+1, current_indent)
-            md_lines.extend(new_lines)
-            md_lines.append("```")
-            continue
-
-        if line.lstrip().startswith('.. math::'):
-            # Get the indentation of the current line
-            current_indent = len(line) - len(line.lstrip())
-
-            # Add the code block start with proper indentation
-            md_lines.append(' ' * current_indent + "{{< math >}}")
-
-            i, new_lines = get_indented_block(lines, i+1, current_indent)
-            md_lines.extend(new_lines)
-            md_lines.append(' ' * current_indent + "{{< /math >}}")
-            continue
-
-        if line.lstrip().startswith('.. collapse::'):
-            # Get the indentation of the current line
-            current_indent = len(line) - len(line.lstrip())
-            collapse_title = line.strip().removeprefix(".. collapse::").strip()
-
-            # Add the code block start with proper indentation
-
-            is_open = False
-            i, new_lines = get_indented_block(lines, i+1, current_indent)
-            if new_lines[0].startswith(":open:"):
-                is_open = True
-                new_lines = new_lines[1:]
-            md_lines.append(' ' * current_indent + f'{{{{< collapse "{collapse_title}" {is_open} >}}}}')
-            md_lines.extend(new_lines)
-            md_lines.append(' ' * current_indent + "{{< /collapse >}}")
-            continue
-
-
-
-        # Handle notes
-        if line.strip().startswith('.. note::'):
-            # Get the indentation level of the note directive
-            note_indent = len(line) - len(line.lstrip())
-            md_lines.append(" " * note_indent + "{{< note >}}")
-            
-            # Skip the blank line
-            i += 2
-            
-            # Add note content
-            note_content = []
-            content_indent_level = 0
-            
-            while i < len(lines):
-                current_line = lines[i]
-                
-                # Empty line
-                if not current_line.strip():
-                    note_content.append('')
-                    i += 1
-                    continue
-                
-                # Determine indentation level
-                current_indent = len(current_line) - len(current_line.lstrip())
-                
-                # If this is the first content line, set the base indentation level
-                if content_indent_level == 0:
-                    content_indent_level = current_indent
-                
-                # If the line is not indented enough, we've reached the end of the note
-                if current_indent < note_indent + 4 and current_line.strip():
-                    break
-
-                # Handle code blocks within notes
-                if current_line.strip().startswith('.. code-block::'):
-                    language = current_line.replace('.. code-block::', '').strip() or 'yaml'
-                    note_content.append('```' + language)
-                    i += 1
-                    
-                    # Skip blank line if present
-                    if i < len(lines) and not lines[i].strip():
-                        i += 1
-                    
-                    # Add code content
-                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > content_indent_level):
-                        code_line = lines[i]
-                        # Remove the extra indentation but preserve indentation relative to the note
-                        extra_indent = current_indent - content_indent_level
-                        code_line = " " * extra_indent + code_line[content_indent_level + 4:]  # 4 spaces for code block indentation
-                        note_content.append(code_line)
-                        i += 1
-                    
-                    note_content.append('```')
-                    continue
-                
-                # Regular content - remove the base indentation but preserve indentation relative to the note
-                if current_indent >= content_indent_level:
-                    extra_indent = max(0, current_indent - content_indent_level)
-                    processed_line = " " * extra_indent + current_line[content_indent_level:].rstrip()
-                    # Process inline markup
-                    processed_line = process_inline_markup(processed_line)
-                    note_content.append(processed_line)
-                else:
-                    # End of the note block
-                    break
-                
-                i += 1
-            
-            # Add the processed note content
-            md_lines.extend(note_content)
-            md_lines.append(" " * note_indent + "{{< /note >}}")
-            continue
-        
-        # Handle warnings
-        if line.strip().startswith('.. warning::') or line.strip().startswith(".. caution::"):
-            # Get the indentation level of the warning directive
-            warning_indent = len(line) - len(line.lstrip())
-            md_lines.append(" " * warning_indent + "{{< warning >}}")
-            
-            # Skip the blank line
-            i += 2
-            
-            # Add warning content
-            warning_content = []
-            content_indent_level = 0
-            
-            while i < len(lines):
-                current_line = lines[i]
-                
-                # Empty line
-                if not current_line.strip():
-                    warning_content.append('')
-                    i += 1
-                    continue
-                
-                # Determine indentation level
-                current_indent = len(current_line) - len(current_line.lstrip())
-                
-                # If this is the first content line, set the base indentation level
-                if content_indent_level == 0:
-                    content_indent_level = current_indent
-                
-                # If the line is not indented enough, we've reached the end of the warning
-                if current_indent < warning_indent + 4 and current_line.strip():
-                    break
-                
-                # Handle code blocks within warnings
-                if current_line.strip().startswith('.. code-block::') or current_line.strip().startswith(".. code::"):
-                    language = current_line.split('::')[1].strip() or 'yaml'
-                    warning_content.append('```' + language)
-                    i += 1
-                    
-                    # Skip blank line if present
-                    if i < len(lines) and not lines[i].strip():
-                        i += 1
-                    
-                    # Add code content
-                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > content_indent_level):
-                        code_line = lines[i]
-                        # Remove the extra indentation but preserve indentation relative to the warning
-                        extra_indent = current_indent - content_indent_level
-                        code_line = " " * extra_indent + code_line[content_indent_level + 4:]  # 4 spaces for code block indentation
-                        warning_content.append(code_line)
-                        i += 1
-                    
-                    warning_content.append('```')
-                    continue
-                
-                # Regular content - remove the base indentation but preserve indentation relative to the warning
-                if current_indent >= content_indent_level:
-                    extra_indent = max(0, current_indent - content_indent_level)
-                    processed_line = " " * extra_indent + current_line[content_indent_level:].rstrip()
-                    # Process inline markup
-                    processed_line = process_inline_markup(processed_line)
-                    warning_content.append(processed_line)
-                else:
-                    # End of the warning block
-                    break
-                
-                i += 1
-            
-            # Add the processed warning content
-            md_lines.extend(warning_content)
-            md_lines.append(" " * warning_indent + "{{< /warning >}}")
-            continue
-        
-        # Handle tips
-        if line.strip().startswith('.. tip::'):
-            # Get the indentation level of the tip directive
-            tip_indent = len(line) - len(line.lstrip())
-            md_lines.append(" " * tip_indent + "{{< tip >}}")
-            
-            # Skip the blank line
-            i += 2
-            
-            # Add tip content
-            tip_content = []
-            content_indent_level = 0
-            
-            while i < len(lines):
-                current_line = lines[i]
-                
-                # Empty line
-                if not current_line.strip():
-                    tip_content.append('')
-                    i += 1
-                    continue
-                
-                # Determine indentation level
-                current_indent = len(current_line) - len(current_line.lstrip())
-                
-                # If this is the first content line, set the base indentation level
-                if content_indent_level == 0:
-                    content_indent_level = current_indent
-                
-                # If the line is not indented enough, we've reached the end of the tip
-                if current_indent < tip_indent + 4 and current_line.strip() and not current_line.strip().startswith('..'):
-                    break
-                
-                # Handle code blocks within tips
-                if current_line.strip().startswith('.. code-block::'):
-                    language = current_line.replace('.. code-block::', '').strip() or 'yaml'
-                    tip_content.append('```' + language)
-                    i += 1
-                    
-                    # Skip blank line if present
-                    if i < len(lines) and not lines[i].strip():
-                        i += 1
-                    
-                    # Add code content
-                    while i < len(lines) and (len(lines[i]) - len(lines[i].lstrip()) > content_indent_level):
-                        code_line = lines[i]
-                        # Remove the extra indentation but preserve indentation relative to the tip
-                        extra_indent = current_indent - content_indent_level
-                        code_line = " " * extra_indent + code_line[content_indent_level + 4:]  # 4 spaces for code block indentation
-                        tip_content.append(code_line)
-                        i += 1
-                    
-                    tip_content.append('```')
-                    continue
-                
-                # Regular content - remove the base indentation but preserve indentation relative to the tip
-                if current_indent >= content_indent_level:
-                    extra_indent = max(0, current_indent - content_indent_level)
-                    processed_line = " " * extra_indent + current_line[content_indent_level:].rstrip()
-                    # Process inline markup
-                    processed_line = process_inline_markup(processed_line)
-                    tip_content.append(processed_line)
-                else:
-                    # End of the tip block
-                    break
-                
-                i += 1
-            
-            # Add the processed tip content
-            md_lines.extend(tip_content)
-            md_lines.append(" " * tip_indent + "{{< /tip >}}")
-            continue
-        
-        # Handle figures
-        if line.strip().startswith('.. figure::'):
-            shortcode, new_i = process_image_directive(lines, i)
-            md_lines.append(shortcode)
-            md_lines.append("")
-            i = new_i
-            continue
-        
-        # Handle image directives
-        if line.strip().startswith('.. image::'):
-            shortcode, new_i = process_image_directive(lines, i)
-            md_lines.append(shortcode)
-            i = new_i
-            continue
-        
-        # Skip toctree
-        if line.startswith('.. toctree::'):
-            i += 1
-            while i < len(lines) and (lines[i].startswith('    ') or not lines[i].strip()):
-                i += 1
-            continue
-        
-        # Handle grid tables
-        if (line.strip() and
-            (line.count('=') > 3 or line.count('-') > 3) and
-            all(c in '=+-| ' for c in line)):
-            # Check if this is likely a grid table by looking at surrounding lines
-            is_grid_table = False
-            
-            # Check if there's a content line after this separator
-            if i + 1 < len(lines) and lines[i + 1].strip():
-                # If the next line has content and is followed by another separator, it's likely a table
-                if (i + 2 < len(lines) and 
-                    lines[i + 2].strip() and 
-                    all(c in '=+-| ' for c in lines[i + 2].strip())):
-                    is_grid_table = True
-                # Or if the next line has content with multiple spaces between words (column alignment)
-                elif '  ' in lines[i + 1]:
-                    is_grid_table = True
-            
-            if is_grid_table:
-                table_lines, new_i = process_grid_table(lines, i)
-                if table_lines:  # Only add if we successfully processed a table
-                    md_lines.extend(table_lines)
-                    i = new_i
-                    continue
-        
-        # Handle footnote definitions
-        footnote_match = re.match(r'^\.\. \[([0-9#][^]]*)]', line.strip())
-        if footnote_match:
-            footnote_label = footnote_match.group(1)
-            # Remove the # prefix if it exists (for auto-numbered or labeled footnotes)
-            if footnote_label.startswith('#'):
-                footnote_label = footnote_label[1:]
-            
-            # Get the indentation of the current line
-            current_indent = len(line) - len(line.lstrip())
-            
-            # Get the footnote text from the same line after the label
-            rest_of_line = line.strip()[len(footnote_match.group(0)):].strip()
-            i, new_lines = get_indented_block(lines, i+1, current_indent)
-
-            # Store the footnote to add at the end of the document
-            footnotes.append([f"[^{footnote_label}]: {rest_of_line}"] + new_lines)
-            continue
-    
-        # Process the line for inline markup
-        fixed_line = line
-        match = bullet_regex.match(line)
-        if match:
-            indent, bullet = match.groups()
-            indent_len = len(indent)
-            if not indent_stack and indent_len > 0:
-                fixed_line = line.lstrip()
-            elif indent_stack and indent_len > indent_stack[-1]:
-                indent_stack.append(indent_len)
-            else:
-                while indent_stack and indent_len < indent_stack[-1]:
-                    indent_stack.pop()
-                if not indent_stack:
-                    indent_stack.append(indent_len)
-
-
-        processed_line = process_inline_markup(fixed_line)
-        processed_line = replace_substitutions(processed_line)
-        if ":ghedit:" in processed_line:
-            processed_line = ""
-
-
-    # Fix image paths in markdown content
-        if '/components/' in filename and '![' in processed_line and '](/components/' in processed_line:
-            processed_line = processed_line.replace('](/components/', '](../')
-        elif '/components/' in filename and '![' in processed_line and '](images/' in processed_line:
-            processed_line = processed_line.replace('](images/', '](../images/')
-        
-        # Fix SVG image paths in markdown content
-        if '![' in processed_line and '](_build/_images/' in processed_line and '.svg)' in processed_line:
-            processed_line = processed_line.replace('](_build/_images/', '](/images/_build/_images/')
-        
-        # Add the processed line
-        md_lines.append(processed_line)
-        i += 1
-    
     # Add footnotes at the end of the document if there are any
     if footnotes:
         for footnote in footnotes:
@@ -702,8 +507,7 @@ def convert_rst_to_md(lines, filename):
             md_lines.extend(footnote)
 
     # Generate frontmatter
-    frontmatter = []
-    frontmatter.append('---')
+    frontmatter = ['---']
 
     # Use description from SEO if available, otherwise use title
     description = seo.get('description', title)
@@ -833,7 +637,7 @@ def process_inline_markup(line):
     processed_line = re.sub(r':libpr:`([^`]+)`', lib_repl, processed_line)
 
     # External links
-    processed_line = re.sub(r'`\s*([^`]*[^` ]+)\s*<([^`]+)>`__*', fr'[\1](\2)', processed_line)
+    processed_line = re.sub(r'`\s*([^`]*[^` ]+)\s*<([^`]+)>`_+', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
 
     # Match [1]_, [#]_, or [#label]_ formats and convert to [^1], [^label], etc.
@@ -1039,11 +843,11 @@ def get_indent(line):
     return len(line) - len(line.lstrip())
 
 def process_list_table(lines, start_idx):
+    global title
     """Process a list-table directive and convert it to a Markdown table."""
     # Extract table title and options
     title = ""
     header_rows = 0
-    width = ""
     align = ""
     
     current_line = lines[start_idx].strip()
@@ -1504,28 +1308,13 @@ def process_whitespace_aligned_table(table_lines, end_idx):
 
     return markdown_rows, end_idx
 
-def process_raw_html_button(lines, i):
+def process_raw_html_block(lines, i):
     """Process raw HTML button patterns and convert them to button shortcode."""
     button_lines = []
     raw_html_indent = len(lines[i]) - len(lines[i].lstrip())
-    
-    # Skip the ".. raw:: html" line
-    i += 1
-    
-    # Skip any blank lines
-    while i < len(lines) and not lines[i].strip():
-        i += 1
-    
-    # Collect HTML content
-    html_content = []
-    raw_html_content = []
-    while i < len(lines) and (not lines[i].strip() or lines[i].startswith(' ' * (raw_html_indent + 3))):
-        raw_html_content.append(lines[i].lstrip())
-        if lines[i].strip():
-            html_content.append(lines[i].strip())
-        i += 1
-    
-    # Join the HTML content
+
+    i, raw_html_content = get_indented_block(lines, i + 1, raw_html_indent)
+    html_content = [x.strip() for x in raw_html_content]
     html = ' '.join(html_content)
 
     # --- API KEY SHORTCODE REPLACEMENT (for api.rst) ---
@@ -1557,9 +1346,10 @@ def process_raw_html_button(lines, i):
     if file_match:
         href = file_match.group(1)
         href = href.replace('../', '', 1)
-        classes = class_match.group(1).replace(',', ' ').strip()
-        class_ = 'class="' + classes + '"' if class_match else ''
-        print(class_)
+        class_ = ""
+        if class_match:
+            classes = class_match.group(1).replace(',', ' ').strip()
+            class_ = 'class="' + classes + '"'
         button_lines.append(f'{{{{< html_file file="{href}" {class_} >}}}}')
         return button_lines, i
 

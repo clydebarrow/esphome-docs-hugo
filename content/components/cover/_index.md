@@ -32,8 +32,8 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the cover. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the cover to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the cover to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **device_class** (*Optional*, string): The device class for the
@@ -87,8 +87,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 auto call = id(cover_1).make_call();
 call.set_command_open();
 call.perform();
-```
 
+```
 {{< /note >}}
 {{< anchor "cover-close_action" >}}
 
@@ -109,8 +109,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 auto call = id(cover_1).make_call();
 call.set_command_close();
 call.perform();
-```
 
+```
 {{< /note >}}
 {{< anchor "cover-stop_action" >}}
 
@@ -131,8 +131,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 auto call = id(cover_1).make_call();
 call.set_command_stop();
 call.perform();
-```
 
+```
 {{< /note >}}
 {{< anchor "cover-toggle_action" >}}
 
@@ -155,8 +155,8 @@ This action can also be expressed in [lambdas](automations/templates#config-lamb
 auto call = id(cover_1).make_call();
 call.set_command_toggle();
 call.perform();
-```
 
+```
 {{< /note >}}
 {{< anchor "cover-control_action" >}}
 
@@ -194,8 +194,8 @@ auto call = id(cover_1).make_call();
 // set attributes
 call.set_position(0.5);
 call.perform();
-```
 
+```
 {{< /note >}}
 {{< anchor "cover-lambda_calls" >}}
 

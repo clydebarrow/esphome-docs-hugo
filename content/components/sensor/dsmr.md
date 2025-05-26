@@ -39,7 +39,6 @@ text_sensor:
     p1_version:
       name: "DSMR Version"
 
-
 ```
 Configuration variables:
 
@@ -297,7 +296,6 @@ text_sensor:
       name: "dsmr_p1_version"
     gas_delivered_text:
       name: "gas delivered raw"
-
 
 ```
 {{< anchor "sensor-dsmr-request_pin" >}}

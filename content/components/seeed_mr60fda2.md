@@ -63,7 +63,7 @@ button:
 ```
 ### Configuration variables:
 
-- **factory_reset** (*Optional*): Restore all radar settings to factory parameters. 
+- **factory_reset** (*Optional*): Restore all radar settings to factory parameters.
   All options from [Button](components/button/_index#config-button).
 - **get_radar_parameters** (*Optional*): Get all the current setup parameters of the radar.
   All options from [Button](components/button/_index#config-button).

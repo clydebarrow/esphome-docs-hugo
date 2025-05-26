@@ -63,8 +63,8 @@ sensor:
     i2c_id: bus_b
     address: 0x76
 # ...
-```
 
+```
 {{< /note >}}
 For I²C multiplexing see {{< docref "/components/tca9548a" >}}.
 

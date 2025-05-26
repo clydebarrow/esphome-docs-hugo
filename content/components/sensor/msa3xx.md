@@ -12,11 +12,11 @@ params:
 
 ## Component/Hub
 
-The `msa3xx` sensor platform allows you to use your MSA301 and MSA311 tri-axial, 
-low-g accelerometers ([datasheet](https://cdn-shop.adafruit.com/product-files/5309/MSA311-V1.1-ENG.pdf)) 
+The `msa3xx` sensor platform allows you to use your MSA301 and MSA311 tri-axial,
+low-g accelerometers ([datasheet](https://cdn-shop.adafruit.com/product-files/5309/MSA311-V1.1-ENG.pdf))
 with ESPHome. The [I²C](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
 
-MSA301 and MSA311 are almost identical sensors. The only difference is the ADC resolution. MSA311 has fixed 
+MSA301 and MSA311 are almost identical sensors. The only difference is the ADC resolution. MSA311 has fixed
 12-bits resolution while MSA301 ADC is 14-bits and it can be configured to do 8, 10, 12, or 14 bits measurements.
 
 This component provides acceleration data in m/s², orientation information, and tap detection. XYZ axes can be
@@ -34,7 +34,6 @@ msa3xx:
   resolution: 12
   update_interval: 10s
 
-
 ```
 ### Configuration variables:
 
@@ -46,9 +45,9 @@ Base Configuration:
 - **type** (**Required**, string): Sensor type. Either `msa301` or `msa311`.
 - **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval for updating acceleration sensors.
   Defaults to `10s`.
-- **range** (*Optional*, string): The range of the sensor measurements. One of `2G`, `4G`, `8G`, `16G`. 
+- **range** (*Optional*, string): The range of the sensor measurements. One of `2G`, `4G`, `8G`, `16G`.
   Defaults to `2G` which means it picks up accelerations between `-2g` and `2g`.
-- **resolution** (*Optional*, int): The ADC resolution of the sensor in bits. Supported values for `msa301` are `8`, `10`, `12`, `14` (*default*). 
+- **resolution** (*Optional*, int): The ADC resolution of the sensor in bits. Supported values for `msa301` are `8`, `10`, `12`, `14` (*default*).
   For `msa311` the only resolution supported is `12` (and it is *default*).
 - **calibration** (*Optional*):
 
@@ -62,7 +61,7 @@ Base Configuration:
   - **mirror_y** (*Optional*, boolean): Mirror Y-axis. Defaults to `false`.
   - **mirror_z** (*Optional*, boolean): Mirror Z-axis. Defaults to `false`.
   - **swap_xy** (*Optional*, boolean): Swap X and Y axis. Defaults to `false`.
-  
+
 
 ## Binary Sensor
 
@@ -74,12 +73,11 @@ Shorthand notation also can be used.
 binary_sensor:
   - platform: msa3xx
     tap: Single tap          # shorthand notation for the sensor
-    double_tap: Double tap   # -- "" -- 
+    double_tap: Double tap   # -- "" --
     active:                  # regular notation for the sensor to be able
       name: Active           # to use filters and other options
-      filters: 
+      filters:
         - delayed_off: 5000ms # example of prolongation of movement detection signal
-
 
 ```
 ### Configuration variables:
@@ -91,8 +89,8 @@ binary_sensor:
 
 ## Sensor
 
-Acceleration data is available through sensors configuration. 
-You can use shorthand notation like `acceleration_x: "Acceleration X"` or use regular notation. For 
+Acceleration data is available through sensors configuration.
+You can use shorthand notation like `acceleration_x: "Acceleration X"` or use regular notation. For
 regular notation only the **name** is required. All options from [Sensor](components/sensor/_index#config-sensor).
 
 ```yaml
@@ -111,7 +109,7 @@ sensor:
 
 ## Text Sensor
 
-Text sensor provides orientation information. You can use shorthand notation like 
+Text sensor provides orientation information. You can use shorthand notation like
 `orientation_xy: "Orientation XY"` or use regular notation.
 
 ```yaml
@@ -123,9 +121,9 @@ text_sensor:
 ```
 ### Configuration variables:
 
-- **orientation_xy** (*Optional*): XY orientation. Can be one of `Portrait Upright`, 
+- **orientation_xy** (*Optional*): XY orientation. Can be one of `Portrait Upright`,
   `Portrait Upside Down`, `Landscape Left`, `Landscape Right`.
-- **orientation_z** (*Optional*): Z orientation. Can be one of `Upwards looking`, `Downwards looking` 
+- **orientation_z** (*Optional*): Z orientation. Can be one of `Upwards looking`, `Downwards looking`
 
 ## Automations
 
@@ -138,9 +136,8 @@ msa3xx:
   type: msa301
   # ...
   on_tap:
-    - then: 
+    - then:
         - logger.log: "Tapped"
-
 
 ```
 ### `on_double_tap` trigger
@@ -152,9 +149,8 @@ msa3xx:
   type: msa301
   # ...
   on_double_tap:
-    - then: 
+    - then:
         - logger.log: "Double tapped"
-
 
 ```
 ### `on_active` trigger
@@ -166,9 +162,8 @@ msa3xx:
   type: msa301
   # ...
   on_active:
-    - then: 
+    - then:
         - logger.log: "Activity detected"
-
 
 ```
 ### `on_orientation` trigger
@@ -180,7 +175,7 @@ msa3xx:
   type: msa301
   # ...
   on_orientation:
-    - then: 
+    - then:
         - logger.log: "Orientation change detected"
 
 ```
@@ -207,7 +202,6 @@ binary_sensor:
   - platform: msa3xx
     msa3xx_id: my_msa301_sensor
     tap: Single tap
-
 
 ```
 ## See Also

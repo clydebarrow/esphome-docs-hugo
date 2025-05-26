@@ -43,7 +43,6 @@ simply press -/+ buttons on the counter and look for `Standard mode` or
 teleinfo:
   id: myteleinfo
 
-
 ```
 ## Configuration variables:
 

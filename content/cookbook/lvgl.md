@@ -26,7 +26,7 @@ The examples below assume you've set up LVGL correctly with your display and its
 
 {{< img src="lvgl_switch.png" alt="Image" class="left" >}}
 
-The easiest way to integrate an LVGL [`switch`]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}) widget and a switch or light is with [automations](automations/_index#automation): 
+The easiest way to integrate an LVGL [`switch`]({{< ref "components/lvgl/widgets#lvgl-widget-switch" >}}) widget and a switch or light is with [automations](automations/_index#automation):
 
 ```yaml
 light:
@@ -90,7 +90,7 @@ lvgl:
               on_click:
                 - homeassistant.action:
                     action: light.toggle
-                    data: 
+                    data:
                       entity_id: light.remote_light
 
 ```
@@ -111,9 +111,9 @@ sensor:
     entity_id: light.your_dimmer
     attribute: brightness
     on_value:
-      - lvgl.slider.update: 
+      - lvgl.slider.update:
           id: dimmer_slider
-          value: !lambda return x; 
+          value: !lambda return x;
 
 lvgl:
     ...
@@ -158,9 +158,9 @@ sensor:
     entity_id: media_player.your_room
     attribute: volume_level
     on_value:
-      - lvgl.slider.update: 
+      - lvgl.slider.update:
           id: slider_media_player
-          value: !lambda return (x * 100); 
+          value: !lambda return (x * 100);
 
 lvgl:
     ...
@@ -220,7 +220,7 @@ lvgl:
       - id: gauge_page
         widgets:
           - obj:
-              height: 240 
+              height: 240
               width: 240
               align: CENTER
               bg_color: 0xFFFFFF
@@ -306,7 +306,7 @@ sensor:
     on_value:
       - lvgl.indicator.update:
           id: temperature_needle
-          value: !lambda return x * 10; 
+          value: !lambda return x * 10;
       - lvgl.label.update:
           id: temperature_text
           text:
@@ -377,7 +377,7 @@ lvgl:
     pages:
       - id: meter_page
         widgets:
-          - obj: 
+          - obj:
               height: 240
               width: 240
               align: CENTER
@@ -459,7 +459,7 @@ sensor:
     on_value:
       - lvgl.spinbox.update:
           id: spinbox_id
-          value: !lambda return x; 
+          value: !lambda return x;
 
 lvgl:
     ...
@@ -469,7 +469,7 @@ lvgl:
           - obj:
               align: BOTTOM_MID
               y: -50
-              layout: 
+              layout:
                 type: FLEX
                 flex_flow: ROW
                 flex_align_cross: CENTER
@@ -514,7 +514,7 @@ lvgl:
 
 ## Cover status and control
 
-To make a nice user interface for controlling Home Assistant covers you could use 3 buttons, which also display the state. 
+To make a nice user interface for controlling Home Assistant covers you could use 3 buttons, which also display the state.
 
 {{< img src="lvgl_cook_cover.png" alt="Image" class="center" >}}
 
@@ -637,7 +637,7 @@ lvgl:
 
 ## Theme and style definitions
 
-Since LVGL uses inheritance to apply styles across the widgets, it's possible to apply them at the top level, and only make modifications on demand, if necessary. 
+Since LVGL uses inheritance to apply styles across the widgets, it's possible to apply them at the top level, and only make modifications on demand, if necessary.
 
 {{< img src="lvgl_cook_gradient_styles.png" alt="Image" class="center" >}}
 
@@ -678,7 +678,7 @@ lvgl:
         border_color: 0x0077b3
         border_width: 1
         text_color: 0xFFFFFF
-        text_font: my_font 
+        text_font: my_font
         pressed:
           bg_color: 0x006699
           bg_grad_color: 0x00334d
@@ -746,7 +746,7 @@ If using multiple pages, a navigation bar can be useful at the bottom of the scr
 
 {{< img src="lvgl_cook_pagenav.png" alt="Image" class="center" >}}
 
-To save from repeating the same widgets on each page, there's the *top_layer* which is the *Always on Top* transparent page above all the pages. Everything you put on this page will be on top of all the others. 
+To save from repeating the same widgets on each page, there's the *top_layer* which is the *Always on Top* transparent page above all the pages. Everything you put on this page will be on top of all the others.
 
 For the navigation bar we can use a [`buttonmatrix`]({{< ref "components/lvgl/widgets#lvgl-widget-buttonmatrix" >}}). Note how the *header_footer* style definition is being applied to the widget and its children objects, and how a few more styles are configured manually at the main widget:
 
@@ -799,13 +799,13 @@ api:
   on_client_connected:
     - if:
         condition:
-          lambda: 'return (0 == client_info.find("Home Assistant "));' 
+          lambda: 'return (0 == client_info.find("Home Assistant "));'
         then:
           - lvgl.widget.show: lbl_hastatus
   on_client_disconnected:
     - if:
         condition:
-          lambda: 'return (0 == client_info.find("Home Assistant "));' 
+          lambda: 'return (0 == client_info.find("Home Assistant "));'
         then:
           - lvgl.widget.hide: lbl_hastatus
 
@@ -907,7 +907,7 @@ lvgl:
                     text: "East"
                 - button:
                     id: but_cov_up_east
-                    width: 70 # choose the button dimensions so 
+                    width: 70 # choose the button dimensions so
                     height: 68 # they fill the columns nincely as they flow
                     widgets:
                       - label:
@@ -1342,7 +1342,7 @@ lvgl:
               on_short_click:
                 - homeassistant.action:
                     action: light.toggle
-                    data: 
+                    data:
                       entity_id: light.remote_light
 
 ```
@@ -1481,17 +1481,17 @@ lvgl:
               y: 41
               x: -10
               id: ani_battery_charging
-              src: [ 
-                batt_empty, 
-                batt_10, 
-                batt_20, 
-                batt_30, 
-                batt_40, 
-                batt_50, 
-                batt_60, 
-                batt_70, 
-                batt_80, 
-                batt_90, 
+              src: [
+                batt_empty,
+                batt_10,
+                batt_20,
+                batt_30,
+                batt_40,
+                batt_50,
+                batt_60,
+                batt_70,
+                batt_80,
+                batt_90,
                 batt_full
                 ]
               duration: 2200ms
@@ -1512,8 +1512,8 @@ binary_sensor:
       then:
         - lvgl.widget.show: lbl_battery_status
         - lvgl.widget.hide: ani_battery_charging
-```
 
+```
 Use `x`, `y`, `align` widget properties for precise positioning.
 
 {{< /tip >}}
@@ -1571,7 +1571,7 @@ lvgl:
                       range_to: 12
                       angle_range: 330
                       rotation: 300
-                      ticks: 
+                      ticks:
                         width: 1
                         count: 12
                         length: 1
@@ -1585,7 +1585,7 @@ lvgl:
                       range_to: 720
                       angle_range: 360
                       rotation: 270
-                      ticks: 
+                      ticks:
                         count: 0
                       indicators:
                         - line:
@@ -1955,7 +1955,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
   action:
     - action: text.set_value
       target:
-        entity_id: 
+        entity_id:
           - text.your_esphome_node_fr_cond_icon
       data:
         value: >
@@ -1982,7 +1982,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
 
     - action: text.set_value
       target:
-        entity_id: 
+        entity_id:
           - text.your_esphome_node_fr_cond_name
       data:
         value: >
@@ -2018,7 +2018,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
   action:
     - action: text.set_value
       target:
-        entity_id: 
+        entity_id:
           - text.your_esphome_node_fr_tempap
       data:
         value: "{{states('sensor.openweathermap_feels_like_temperature') | round(1)}} °C"
@@ -2034,7 +2034,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
   action:
     - action: text.set_value
       target:
-        entity_id: 
+        entity_id:
           - text.your_esphome_node_fr_temphi
       data:
         value: "{{states('sensor.openweathermap_forecast_temperature') | round(1)}} °C"
@@ -2050,7 +2050,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
   action:
     - action: text.set_value
       target:
-        entity_id: 
+        entity_id:
           - text.your_esphome_node_fr_templo
       data:
         value: "{{states('sensor.openweathermap_forecast_temperature_low') | round(1)}} °C"
@@ -2066,7 +2066,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
   action:
     - action: text.set_value
       target:
-        entity_id: 
+        entity_id:
           - text.your_esphome_node_wd_out_now
       data:
         value: "{{states('sensor.outdoor_temperature') | round(1)}} °C"

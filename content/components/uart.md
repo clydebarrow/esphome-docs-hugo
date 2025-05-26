@@ -265,7 +265,7 @@ This flexibility allows for dynamic adaptation to different communication requir
 ## UART component with the host platform
 
 Since the host platform does not have physical UART pins, the UART component is implemented using Unix-style ports. Instead of using pins,
-you can specify the port name to use. This implementation also supports components that have `require_tx` and `require_rx` options such as 
+you can specify the port name to use. This implementation also supports components that have `require_tx` and `require_rx` options such as
 smt100 etc.
 
 ```yaml

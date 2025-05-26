@@ -33,8 +33,8 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the binary sensor. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the binary sensor to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the binary sensor to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **device_class** (*Optional*, string): The device class for the
@@ -319,9 +319,8 @@ binary_sensor:
       max_length: 1000ms
       then:
         - switch.turn_on: relay_1
+
 ```
-
-
 {{< /note >}}
 {{< anchor "binary_sensor-on_double_click" >}}
 
@@ -457,7 +456,6 @@ advanced stuff.
   } else {
     // Binary sensor is OFF, do something else here
   }
-
 
 ```
 ## See Also

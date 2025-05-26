@@ -125,7 +125,6 @@ on_press:
     - switch.toggle: dehumidifier1
     - light.toggle: dehumidifier_indicator_light
 
-
 ```
 As a final example, let's make our dehumidifier "smart". Let's make it turn on automatically when
 the humidity reported by a sensor is above 65% and make it turn off again when it falls below 50%:
@@ -211,12 +210,11 @@ on_...:
           - logger.log: "The sensor value is above 30!"
     - light.turn_off: my_light
 
-
 ```
 Configuration variables:
 
 At least one of `condition`, `all` or `any` must be provided.
-  
+
 - **condition** (*Optional*, [Condition](automations/actions#config-condition)): The condition to check to determine which branch to take. If this is configured with a list of conditions then they must all be true for the condition to be true.
 - **all** (*Optional*, [Condition](automations/actions#config-condition)): Takes a list of conditions, all of which must be true (and is therefore equivalent to `condition`.)
 - **any** (*Optional*, [Condition](automations/actions#config-condition)): Takes a list of conditions; if at least one is true, the condition will be true.
@@ -288,7 +286,6 @@ on_...:
         binary_sensor.is_on: some_binary_sensor
       timeout: 8s
   - logger.log: "Binary sensor might be ready"
-
 
 ```
 Configuration variables:

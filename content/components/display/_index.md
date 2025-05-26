@@ -254,7 +254,6 @@ display:
       // Syntax is always: it.print(<x>, <y>, <font>, [color=COLOR_ON], [align], <text>, [color=COLOR_OFF]);
       it.print(0, 0, id(my_font_with_icons), COLOR_ON, TextAlign::CENTER, "Just\U000f05d4here. Already\U000F02D1this.", COLOR_OFF);
 
-
 ```
 {{< img src="display_rendering_text.png" alt="Image" class="center" >}}
 
@@ -331,7 +330,6 @@ display:
     lambda: |-
       it.printf(0, 0, id(my_font), "Text to follow: %s", id(template_text).state.c_str());
 
-
 ```
 When using anti-aliased fonts you will probably need to specify the color to draw the characters, and the background
 color to mix in for anti-aliasing. This requires the full version of `printf`, e.g.:
@@ -342,7 +340,6 @@ display:
     # ...
     lambda: |-
         it.printf(10, 100, id(roboto), Color(0x123456), COLOR_OFF, display::TextAlign::BASELINE, "%f", id(heap_free).state);
-
 
 ```
 The last printf tip for use in displays I will discuss here is how to display binary sensor values. You
@@ -548,8 +545,8 @@ interval:
     then:
       - display.page.show_next: my_display
       - component.update: my_display
-```
 
+```
 {{< /note >}}
 {{< anchor "display-is_displaying_page-condition" >}}
 

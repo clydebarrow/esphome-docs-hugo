@@ -207,8 +207,6 @@ on_...:
         time_format: "%c"
         time: !lambda return id(sntp_id).utcnow();
 
-
-
 ```
 {{< anchor "lvgl-widget-animimg" >}}
 
@@ -738,7 +736,6 @@ Where a list of points is required, this can be provided in the form of a list o
             max_width: 100
             color: red
 
-
 ```
 {{< anchor "lvgl-widget-checkbox" >}}
 
@@ -1044,7 +1041,7 @@ Newline escape sequences are handled automatically by the label widget. You can 
 - `lvgl.label.update` [action](automations/actions#actions-action) updates the widget styles and properties from the specific options above, just like the [lvgl.widget.update](components/lvgl/widgets#lvgl-automation-actions) action is used for the common styles, states or flags.
     - **id** (**Required**): The ID or a list of IDs of label widgets to be updated.
     - **text** (*Optional*, [Text property]({{< ref "components/lvgl/widgets#text-property" >}})): New text to display on the label.
-    - All other configuration variables from above are optional and have the same function as previously described. 
+    - All other configuration variables from above are optional and have the same function as previously described.
 
 **Triggers:**
 
@@ -1096,7 +1093,7 @@ The LED widgets are either circular or rectangular widgets whose brightness can 
 
 - `lvgl.led.update` [action](automations/actions#actions-action) updates the widget styles and properties from the specific options above, just like the [lvgl.widget.update](components/lvgl/widgets#lvgl-automation-actions) action is used for the common styles, states or flags.
     - **id** (**Required**): The ID or a list of IDs of led widgets to be updated.
-    - All other configuration variables from above are optional and have the same function as previously described. 
+    - All other configuration variables from above are optional and have the same function as previously described.
 
 **Triggers:**
 
@@ -1660,7 +1657,7 @@ The Spinner widget is a spinning arc over a ring.
 - `lvgl.spinner.update` [action](automations/actions#actions-action), just like the [lvgl.widget.update](components/lvgl/widgets#lvgl-automation-actions) action is used for the common styles, states or flags.
     - **id** (**Required**): The ID or a list of IDs of spinner widgets to be updated.
     - Style options from [Style properties]({{< ref "components/lvgl/_index#lvgl-styling" >}}).
-    
+
 
 **Triggers:**
 
@@ -1827,7 +1824,7 @@ The textarea is an extended label widget which displays a cursor and allows the 
 - `lvgl.textarea.update` [action](automations/actions#actions-action) updates the widget's `text` property, to replace the entire text content.
     - **id** (**Required**): The ID or a list of IDs of textarea widgets to be updated.
     - **text** (*Optional*, [Text property]({{< ref "components/lvgl/widgets#text-property" >}})): The text to replace the textarea content.
-    - All other configuration variables from above are optional and have the same function as previously described. 
+    - All other configuration variables from above are optional and have the same function as previously described.
 
 **Triggers:**
 
@@ -2070,7 +2067,6 @@ when the page becomes active or inactive respectively.
             id: display_backlight
             transition_length: 0ms
             brightness: !lambda return x / 100;
-
 
 ```
 ### `on_boot`

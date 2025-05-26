@@ -132,8 +132,8 @@ remote_receiver:
   dump:
     - rc_switch
   ...
-```
 
+```
 {{< /note >}}
 If the codec is already implemented in ESPHome, you will see the decoded value directly -
 otherwise you will see the raw data dump (which you can use just as well). You have

@@ -180,7 +180,6 @@ on_...:
         delay_after_disappear: 0s
       sensitivity: 7
 
-
 ```
 #### Configuration variables:
 
@@ -195,7 +194,7 @@ on_...:
   range from 0cm to 3m.
 
   **Examples**
-  
+
   ```yaml
   detection_segments:
     - [0cm, 3m]

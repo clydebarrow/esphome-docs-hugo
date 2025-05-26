@@ -23,7 +23,6 @@ The BMS communicates via [UART](components/uart#uart).
 daly_bms:
   update_interval: 20s
 
-
 ```
 ### Configuration variables:
 
@@ -225,7 +224,6 @@ switch:
       - logger.log:
           format: "Send cmd to Daly: Set discharge MOS off"
 
-
 ```
 Also you can add select to change battery level
 
@@ -288,7 +286,6 @@ select:
                                       - logger.log:
                                           format: "Send cmd to Daly: Set SOC to 0%"
 
-
 ```
 ## UART Connection
 
@@ -305,8 +302,6 @@ Add the following to your configuration to increase the buffer from the default 
 uart:
   ...
   rx_buffer_size: 512
-
-
 
 ```
 ## See Also

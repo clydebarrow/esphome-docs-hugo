@@ -141,7 +141,6 @@ to your docker command to map a local USB device. Docker on Mac will not be able
 ```bash
 docker run --rm --privileged -v "${PWD}":/config --device=/dev/ttyUSB0 -it ghcr.io/esphome/esphome run livingroom.yaml
 
-
 ```
 {{< note >}}
 Alternatively, you can flash the binary using [ESPHome Web or esptool](guides/faq#esphome-esptool).
@@ -228,7 +227,6 @@ docker run --rm --net=host -v "${PWD}":/config -it ghcr.io/esphome/esphome
 # On Docker with MacOS, the host networking option doesn't work as expected. An
 # alternative is to use the following command if you are a MacOS user.
 docker run --rm -p 6052:6052 -e ESPHOME_DASHBOARD_USE_PING=true -v "${PWD}":/config -it ghcr.io/esphome/esphome
-
 
 ```
 After that, you will be able to access the ESPHome Device Builder at `localhost:6052`.

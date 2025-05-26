@@ -41,7 +41,6 @@ on_...:
         direction: BACKWARD
         id: test_motor
 
-
 ```
 .. grove_tb6612fng.stop:
 
@@ -55,8 +54,6 @@ on_...:
   then:
     - grove_tb6612fng.stop:
         channel: 1
-
-
 
 ```
 .. grove_tb6612fng.break:
@@ -112,7 +109,6 @@ on_...:
     - grove_tb6612fng.change_address:
         address: 0x15
         id: test_motor
-
 
 ```
 ### See Also

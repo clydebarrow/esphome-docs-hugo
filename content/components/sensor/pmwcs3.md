@@ -32,9 +32,9 @@ sensor:
 ```
 ## Configuration variables:
 
-- **e25** (*Optional*): Electrical Conductivity, reference at 25°C in dS/m. 
+- **e25** (*Optional*): Electrical Conductivity, reference at 25°C in dS/m.
   All options from [Sensor](components/sensor/_index#config-sensor).
-- **ec** (*Optional*): Electrical Conductivity in mS/m. 
+- **ec** (*Optional*): Electrical Conductivity in mS/m.
   All options from [Sensor](components/sensor/_index#config-sensor).
 - **temperature** (*Optional*): Soil temperature in °C.
   All options from [Sensor](components/sensor/_index#config-sensor).
@@ -49,7 +49,7 @@ sensor:
 
 ## `pmwcs3.air_calibration` Action
 
-The pmwcs3 probe can to be calibrated in dry/air conditions. 
+The pmwcs3 probe can to be calibrated in dry/air conditions.
 The air calibration is a 30s procedure.
 
 ```yaml
@@ -73,7 +73,7 @@ Configuration option:
 
 ## `pmwcs3.water_calibration` Action
 
-The pmwcs3 probe can to be also calibrated in water saturated conditions. Install the probe into a glass of water. 
+The pmwcs3 probe can to be also calibrated in water saturated conditions. Install the probe into a glass of water.
 The water calibration is also a 30s procedure.
 
 ```yaml

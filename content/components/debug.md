@@ -79,12 +79,12 @@ Configuration variables:
 
 - **free** (*Optional*): Reports the free heap size in bytes. All options from [Sensor](components/sensor/_index#config-sensor).
 
-- **fragmentation** (*Optional*): Reports the fragmentation metric of the heap 
+- **fragmentation** (*Optional*): Reports the fragmentation metric of the heap
   (0% is clean, more than ~50% is not harmless). Only available on ESP8266 with Arduino 2.5.2+.
   All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **block** (*Optional*): Reports the largest contiguous free RAM block on the heap in bytes. All options from [Sensor](components/sensor/_index#config-sensor).
-  
+
 - **loop_time** (*Optional*): Reports the longest time between successive iterations of the main loop. All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **psram** (*Optional*): Reports the free PSRAM in bytes. Only available on ESP32. All options from [Sensor](components/sensor/_index#config-sensor).

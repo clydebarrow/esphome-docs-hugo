@@ -315,8 +315,6 @@ sensor:
         filters:
           - throttle: 2s
 
-
-
 ```
 ## See Also
 

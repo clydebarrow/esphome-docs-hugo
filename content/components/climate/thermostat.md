@@ -87,7 +87,6 @@ climate:
       - name: Home
         default_target_temperature_low: 20 °C
 
-
 ```
 ```yaml
 # Example single-point configuration entry (for cooling only)
@@ -106,8 +105,6 @@ climate:
     preset:
       - name: Home
         default_target_temperature_high: 22 °C
-
-
 
 ```
 ## Controller Behavior and Hysteresis
@@ -496,10 +493,10 @@ the range of allowed temperature values in the thermostat component. See {{< doc
 
 {{< note >}}
 - While this platform uses the term temperature everywhere, it can also be used to regulate other values.
-    For example, controlling humidity is also possible with this platform.
+  For example, controlling humidity is also possible with this platform.
 - `min_temperature` and `max_temperature` from the base climate component are used the define the range of
-    adjustability and the defaults will probably not make sense for control of things like humidity. See
-    {{< docref "/components/climate" >}}.
+  adjustability and the defaults will probably not make sense for control of things like humidity. See
+  {{< docref "/components/climate" >}}.
 
 {{< /note >}}
 ## Bang-Bang vs. Thermostat

@@ -309,7 +309,6 @@ on_...:
       id: my_pipsolar_output
       value: 48.0
 
-
 ```
 Configuration options:
 

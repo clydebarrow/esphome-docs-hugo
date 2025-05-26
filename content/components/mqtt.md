@@ -25,7 +25,6 @@ mqtt:
   username: livingroom
   password: !secret mqtt_password
 
-
 ```
 {{< note >}}
 Support for esp-idf is still experminental. Please report issues you have with mqtt using the esp-idf framework.
@@ -130,7 +129,6 @@ some_option:
   qos: 0
   retain: true
 
-
 ```
 Configuration options:
 
@@ -175,7 +173,6 @@ Example Payload:
   "network": "wifi",
   "api_encryption": "Noise_NNpsk0_25519_ChaChaPoly_SHA256"
 }
-
 
 ```
 JSON keys:
@@ -354,7 +351,6 @@ mqtt:
   ssl_fingerprints:
     - a502ff13999f8b398ef1834f1123650b3236fc07
 
-
 ```
 {{< anchor "mqtt-tls-idf" >}}
 
@@ -379,8 +375,8 @@ If a secure connection is necessary for your device, you really want to set:
 
 ```yaml
 skip_cert_cn_check: false
-```
 
+```
 {{< /warning >}}
 ```yaml
 mqtt:
@@ -531,8 +527,8 @@ mqtt:
      - topic: some/other/topic
        then:
          - # ...
-```
 
+```
 {{< /note >}}
 {{< note >}}
 This action can also be used in [lambdas](automations/templates#config-lambda):
@@ -541,14 +537,14 @@ This action can also be used in [lambdas](automations/templates#config-lambda):
 mqtt:
   # Give the mqtt component an ID
   id: mqtt_client
-```
 
+```
 ```cpp
 id(mqtt_client).subscribe("the/topic", [=](const std::string &topic, const std::string &payload) {
     // do something with payload
 });
-```
 
+```
 {{< /note >}}
 {{< anchor "mqtt-on_json_message" >}}
 
@@ -609,14 +605,14 @@ This action can also be used in [lambdas](automations/templates#config-lambda):
 mqtt:
   # Give the mqtt component an ID
   id: mqtt_client
-```
 
+```
 ```cpp
 id(mqtt_client).subscribe_json("the/topic", [=](const std::string &topic, JsonObject root) {
     // do something with JSON-decoded value root
 });
-```
 
+```
 {{< /note >}}
 {{< anchor "mqtt-publish_action" >}}
 
@@ -659,12 +655,12 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 mqtt:
   # Give the mqtt component an ID
   id: mqtt_client
-```
 
+```
 ```cpp
 id(mqtt_client).publish("the/topic", "The Payload");
-```
 
+```
 {{< /note >}}
 {{< anchor "mqtt-publish_json_action" >}}
 
@@ -708,14 +704,14 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 mqtt:
   # Give the mqtt component an ID
   id: mqtt_client
-```
 
+```
 ```cpp
 id(mqtt_client).publish_json("the/topic", [=](JsonObject root) {
   root["something"] = id(my_sensor).state;
 });
-```
 
+```
 {{< /note >}}
 ## `mqtt.disable` Action
 
@@ -789,14 +785,14 @@ This action can also be written in [lambdas](automations/templates#config-lambda
 mqtt:
   # Give the mqtt component an ID
   id: mqtt_client
-```
 
+```
 ```cpp
 if (id(mqtt_client)->is_connected()) {
   // do something if MQTT is connected
 }
-```
 
+```
 {{< /note >}}
 ## See Also
 

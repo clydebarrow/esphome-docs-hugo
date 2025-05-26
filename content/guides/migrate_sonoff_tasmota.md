@@ -37,13 +37,13 @@ The build process of the firmware will start and the image will be automatically
 
 ### Using the command line
 
-From your configuration files folder, run 
+From your configuration files folder, run
 
 ```
 esphome compile <MY_DEVICE>.yaml
 
 ```
-replacing `<MY_DEVICE>.yaml` with your configuration file and navigate to the `<MY_DEVICE>/.pioenvs/<MY_DEVICE>/` folder. 
+replacing `<MY_DEVICE>.yaml` with your configuration file and navigate to the `<MY_DEVICE>/.pioenvs/<MY_DEVICE>/` folder.
 
 There you will find a `firmware.bin` file. This is the binary that you will upload.
 
@@ -77,14 +77,14 @@ the dimming functionality will work as usual and no more power cycles are requir
     upgrade process to fail.
 
     Tasmota 8.2 introduced upgrading using gzipped binaries which are smaller in size and
-    make the upgrade process easier. 
+    make the upgrade process easier.
 
 - If you are using Tasmota 8.2 or later (recommended) you probably will want to compress the firmware generated from ESPHome with `gzip` before uploading it.
-    
-- If you are using any version older than 8.2: first upload `tasmota-minimal.bin` from Tasmota repository. Then upload the firmware generated from ESPHome. 
+
+- If you are using any version older than 8.2: first upload `tasmota-minimal.bin` from Tasmota repository. Then upload the firmware generated from ESPHome.
 - Alternatively, first upgrade Tasmota to the latest version. Then use the first (gzip, recommended) method.
-    
-    If you are using Tasmota 7.2+ it may be necessary to run the command `SetOption78 1` in the 
+
+    If you are using Tasmota 7.2+ it may be necessary to run the command `SetOption78 1` in the
     Tasmota console and restart your device to be able to upgrade to esphome.
 
 

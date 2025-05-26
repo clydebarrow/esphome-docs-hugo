@@ -87,7 +87,7 @@ light:
 ```
 ### Configuration variables:
 - All options from [Light](components/light/_index#config-light).
-   
+
 
 ## Read knob's positions and switch state in Lambdas
 
@@ -113,7 +113,7 @@ light:
                     for (int i=0; i < 8; i++) {
                       auto kpos = parent->read_knob_pos(i);
                       if (kpos >= 0){
-                        hsv.hue = kpos * 200; 
+                        hsv.hue = kpos * 200;
                         it[i] = hsv;
                       }
                     }

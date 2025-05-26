@@ -119,7 +119,6 @@ switch:
     underlying_open_function:
       name: Underlying Open Function Info Output Switch
 
-
 ```
 ### Configuration variables:
 

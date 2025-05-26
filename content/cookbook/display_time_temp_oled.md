@@ -145,7 +145,6 @@ display:
       // Print "Alarm State: <state>" in top center
       it.printf(64, 0, id(font1), TextAlign::TOP_CENTER, "Alarm State: %s", id(alarm_state).state.c_str());
 
-
 ```
 ## See Also
 

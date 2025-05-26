@@ -257,7 +257,6 @@ ethernet:
       value: 0x1FFA
       page_id: 0x07
 
-
 ```
 {{< note >}}
 Revision 5 and below of the wESP32 board use the LAN8720 Ethernet PHY. Revision 7 and newer of it use the RTL8201 Ethernet PHY.
@@ -302,7 +301,6 @@ ethernet:
   clk_mode: GPIO0_IN
   phy_addr: 0
   power_pin: GPIO12
-
 
 ```
 **QEMU qemu-system-xtensa**:

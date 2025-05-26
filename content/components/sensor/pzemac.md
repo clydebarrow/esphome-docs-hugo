@@ -12,7 +12,7 @@ params:
 This page is incomplete and could use some work. If you want to contribute, please see our
 [developer site](https://developers.esphome.io). This page is missing:
 
-    - Images/screenshots/example configs of this device being used in action.
+- Images/screenshots/example configs of this device being used in action.
 
 {{< /note >}}
 The `pzemac` sensor platform allows you to use PZEM-004T V3 energy monitors
@@ -141,13 +141,12 @@ modbus_controller:
     address: 0x1
     # The special address 0xF8 is a broadcast address accepted by any pzem device,
     # so if you use this address, make sure there is only one pzem device connected
-    # to the uart bus. 
+    # to the uart bus.
     # address: 0xF8
     modbus_id: mod_bus_pzem
     command_throttle: 0ms
     setup_priority: -10
     update_interval: 30s
-
 
 ```
 ## See Also

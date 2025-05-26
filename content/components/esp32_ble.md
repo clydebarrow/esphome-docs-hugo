@@ -88,7 +88,6 @@ on_...:
       else:
         - ble.enable:
 
-
 ```
 The lambda equivalent for this is `id(ble_id).is_active()`.
 

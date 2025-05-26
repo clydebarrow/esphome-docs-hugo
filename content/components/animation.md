@@ -43,8 +43,8 @@ interval:
   - interval: 5s
       then:
         animation.next_frame: my_animation
-```
 
+```
 {{< /note >}}
 ## Configuration variables:
 

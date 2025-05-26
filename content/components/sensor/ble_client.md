@@ -94,7 +94,6 @@ sensor:
     lambda: |-
       return *((float*)(&x[0]));
 
-
 ```
 ## BLE Sensor Automation
 

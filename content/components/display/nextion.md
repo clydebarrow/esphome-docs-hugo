@@ -183,8 +183,8 @@ api:
       then:
         - lambda: |-
             id(nextion1).set_nextion_text_state(name,state);
-```
 
+```
 {{< /note >}}
 {{< anchor "nextion_queue_types" >}}
 
@@ -417,7 +417,6 @@ the example below illustrates:
      name: "current_page"
      variable_name: dp
      update_interval: 1s
-
 
 ```
 Note that the first one requires a custom protocol to be included in the Nextion display's HMI code/configuration. See

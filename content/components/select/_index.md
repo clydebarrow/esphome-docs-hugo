@@ -36,8 +36,8 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the select. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the select to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the select to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the select in the frontend.
@@ -281,7 +281,6 @@ advanced stuff (see the full API Reference for more info).
       condition:
         - lambda: 'return id(my_select).state == "my_option_value";'
 
-
 ```
 - `.size()`: Retrieve the number of options in the select.
 
@@ -342,7 +341,6 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGI("main", "Select has index offset %d", index);
   }
 
-
 ```
 ## Example
 
@@ -363,7 +361,6 @@ select:
       - logger.log:
           format: "Chosen option: %s"
           args: ["x.c_str()"]
-
 
 ```
 ## See Also

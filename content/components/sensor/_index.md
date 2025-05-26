@@ -44,8 +44,8 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the sensor. At least one of **id** and **name** must be specified.
 
   {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-you want the sensor to use that name, you can set `name: None`.
+  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+  you want the sensor to use that name, you can set `name: None`.
 
   {{< /note >}}
 - **unit_of_measurement** (*Optional*, string): Manually set the unit
@@ -106,8 +106,8 @@ sensor:
     humidity:
       filters:
         # ...
-```
 
+```
 {{< /note >}}
 {{< anchor "sensor-filters" >}}
 
@@ -243,10 +243,6 @@ Configuration variables:
         max_value: 75
         ignore_out_of_range: true
 
-
-
-
-
 ```
 ### `debounce`
 
@@ -280,8 +276,6 @@ However, if the last value passed through was 100 only values greater than 120 o
 ```yaml
 filters:
   - delta: 20%
-
-
 
 ```
 ### `exponential_moving_average`
@@ -326,9 +320,6 @@ A list of values may be supplied, and values are templatable:
         - 85.0
         - !lambda return id(some_sensor).state;
 
-
-
-
 ```
 ### `heartbeat`
 
@@ -350,7 +341,6 @@ the result of the lambda is used as the output (use `return`).
 filters:
   - lambda: return x * (9.0/5.0) + 32.0;
 
-
 ```
 Make sure to add `.0` to all values in the lambda, otherwise divisions of integers will
 result in integers (not floating point values).
@@ -362,9 +352,6 @@ filters:
   - lambda: |-
       if (x < 10) return {};
       return x-10;
-
-
-
 
 ```
 ### `max`
@@ -475,8 +462,6 @@ Adds a value to each sensor value. The value may be a constant or a lambda retur
     - multiply: 1.2
     - offset: !lambda return id(some_sensor).state;
 
-
-
 ```
 ### `or`
 
@@ -490,9 +475,6 @@ filters:
   - or:
     - throttle: 1s
     - delta: 5.0
-
-
-
 
 ```
 ### `quantile`
@@ -540,10 +522,6 @@ Rounds the value to the given decimal places.
   filters:
     - round: 1 # will round to 1 decimal place
 
-
-
-
-
 ```
 ### `round_to_multiple_of`
 
@@ -562,9 +540,6 @@ Rounds the value to the nearest multiple. Takes a float greater than zero.
     # 3.1415 -> 3.25
     # 1.6180 -> 1.5
 
-
-
-
 ```
 ### `skip_initial`
 
@@ -578,8 +553,6 @@ readings have been skipped, this filter does nothing.
   # ...
   filters:
     - skip_initial: 3
-
-
 
 ```
 ### `sliding_window_moving_average`
@@ -628,8 +601,6 @@ filters:
   - delta: 5.0
   - lambda: return x * (9.0/5.0) + 32.0;
 
-
-
 ```
 ### `throttle_average`
 
@@ -658,8 +629,6 @@ filters:
   - timeout:
       timeout: 10s
       value: !lambda return 0;
-
-
 
 ```
 ### `to_ntc_resistance`
@@ -728,8 +697,6 @@ on_value:
         id: output_id
         level: !lambda return x / 100000.0;
 
-
-
 ```
 ### `to_ntc_temperature`
 
@@ -781,8 +748,6 @@ pairs of values which can also be specified directly as an alternative.
           a: 1.439114856904070E-03
           b: 2.693066430764570E-04
           c: 1.653440958554570E-07
-
-
 
 ```
 ## Example: Converting Celsius to Fahrenheit
@@ -941,7 +906,6 @@ advanced stuff (see the full API Reference for more info).
   ```cpp
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Raw Value of my sensor: %f", id(my_sensor).raw_state);
-
 
 ```
 ## See Also

@@ -20,7 +20,6 @@ text_sensor:
       return {"Hello World"};
     update_interval: 60s
 
-
 ```
 Possible return values for the lambda:
 
@@ -73,8 +72,8 @@ This action can also be written in lambdas:
 
 ```cpp
 id(template_text).publish_state("Hello World");
-```
 
+```
 {{< /note >}}
 ## Useful Template Sensors
 

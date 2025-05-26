@@ -8,9 +8,9 @@ params:
 ---
 
 
-The `honeywellabp2_i2c` sensor platform allows you to use your Honeywell ABP 
+The `honeywellabp2_i2c` sensor platform allows you to use your Honeywell ABP
 ([website](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/board-mount-pressure-sensors/basic-abp2-series),
-[datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp2-series/documents/sps-siot-abp2-series-datasheet-32350268-en.pdf?download=false)) 
+[datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp2-series/documents/sps-siot-abp2-series-datasheet-32350268-en.pdf?download=false))
 pressure and temperature sensors with ESPHome. The [I2C](components/i2c#i2c) is
 required to be set up in your configuration for this sensor to work
 
@@ -30,8 +30,8 @@ sensor:
 ```
 ## Configuration variables:
 
-The values for `min_pressure` and `max_pressure` and `transfer_function` can be found in the device datasheet for the specific device. 
-These are used to calculate the pressure reading published by the sensor. Some sensors measure pressure in `bar` or `Psi`; 
+The values for `min_pressure` and `max_pressure` and `transfer_function` can be found in the device datasheet for the specific device.
+These are used to calculate the pressure reading published by the sensor. Some sensors measure pressure in `bar` or `Psi`;
 set `min_pressure` and `max_pressure` to the measurement range, `transfer_function` to `A` or `B` and `unit_of_measurement` to the appropriate unit for your device.
 
 - **pressure** (*Optional*): The information for the pressure sensor.
@@ -41,7 +41,7 @@ set `min_pressure` and `max_pressure` to the measurement range, `transfer_functi
   - **transfer_function** (**Required**, "A" or "B"): Transfer function used by the pressure sensor.
   - All other options from [Sensor](components/sensor/_index#config-sensor).
 
-Some sensors do not have temperature sensing ability, see datasheet. In some cases the sensor may return a valid temperature even though the 
+Some sensors do not have temperature sensing ability, see datasheet. In some cases the sensor may return a valid temperature even though the
 datasheet indicates that the sensor does not measure temperature.
 
 - **temperature** (*Optional*): The information for the temperature sensor.

@@ -46,8 +46,6 @@ fingerprint_grow:
   on_enrollment_failed:
     ...
 
-
-
 ```
 Configuration variables:
 
@@ -143,7 +141,6 @@ The `new_password:` configuration option is meant to be compiled, flashed to the
 ```yaml
 fingerprint_grow:
   password: 0x72AB96CD      # Update the existing password with the new one
-
 
 ```
 {{< anchor "fingerprint_grow-on_finger_scan_start" >}}
@@ -277,7 +274,6 @@ on_enrollment_failed:
       state: !lambda 'return "Retrying enrollment into slot " + to_string(finger_id) + " in 3 seconds...";'
   - delay: 3s
   - fingerprint_grow.enroll: !lambda 'return finger_id;'
-
 
 ```
 ## `fingerprint_grow.enroll` Action

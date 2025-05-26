@@ -24,7 +24,6 @@ sensor:
       }
     update_interval: 60s
 
-
 ```
 Possible return values for the lambda:
 
@@ -77,8 +76,8 @@ This action can also be written in lambdas:
 
 ```cpp
 id(template_sens).publish_state(42.0);
-```
 
+```
 {{< /note >}}
 ## Useful Template Sensors
 

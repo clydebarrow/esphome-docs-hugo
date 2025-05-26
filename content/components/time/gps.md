@@ -12,7 +12,6 @@ time:
   - platform: gps
     id: gps_time
 
-
 ```
 ## Configuration variables
 

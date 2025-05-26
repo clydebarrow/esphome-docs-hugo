@@ -361,7 +361,6 @@ on_...:
     then:
       - logger.log: WiFi is connected!
 
-
 ```
 The lambda equivalent for this is `id(wifi_id).is_connected()`.
 
@@ -380,7 +379,6 @@ on_...:
         - wifi.disable:
       else:
         - wifi.enable:
-
 
 ```
 The lambda equivalent for this is `!id(wifi_id).is_disabled()`.

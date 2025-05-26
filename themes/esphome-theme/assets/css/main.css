@@ -214,9 +214,21 @@ img {
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-.nav-logo a {
+#nav-logo-a {
+  position: static;
   display: flex;
   align-items: center;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0;
+  transform: none;
+  z-index: auto;
+  opacity: 1.0;
+}
+
+.after-css {
+  display: block;
 }
 
 .nav-logo img, .nav-logo svg {

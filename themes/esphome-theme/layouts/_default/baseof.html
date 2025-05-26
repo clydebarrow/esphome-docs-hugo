@@ -58,11 +58,27 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/tables.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/chroma.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "pagefind/pagefind-modular-ui.css" | relURL }}">
+    {{ partial "asset.html" "css/main.css" }}
+    {{ partial "asset.html" "css/tables.css" }}
+    {{ partial "asset.html" "css/chroma.css" }}
+    {{ partial "asset.html" "pagefind/pagefind-modular-ui.css" }}
     {{ block "head" . }}{{ end }}
+    <style>
+        /* Center the logo before main CSS loads */
+        .nav-logo a {
+            position: fixed;
+            top: 50%;
+            opacity: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            display: block;
+        }
+        main, footer  {
+            display: none;
+        }
+    </style>
+
 </head>
 <body class="body">
 <div class="page-container">
@@ -75,7 +91,7 @@
                 </button>
             {{ end }}
             <div class="nav-logo">
-                <a
+                <a id="nav-logo-a"
                         {{ if eq .Page.Title "ESPHome Docs" }}
                         href="{{ "/" | relURL }}">
                     {{ else }}
@@ -136,14 +152,12 @@
         </nav>
     </div>
 
-    <script src="/pagefind/pagefind-modular-ui.js"></script>
-    <script src="/js/menu.js" defer></script>
 
-    <main data-pagefind-body>
+    <main data-pagefind-body class="after-css">
         {{ block "main" . }}{{ end }}
     </main>
 
-    <footer>
+    <footer class="after-css">
         <div class="footer-content">
             <a class="footer-logo" href="https://www.openhomefoundation.org/">
                 <span>ESPHome is a project from the</span>
@@ -182,6 +196,7 @@
 </div>
 
 <!-- JavaScript -->
+<!-- if there are equations on the page, use katex to render client-side -->
 {{ if .Store.Get "hasMath" }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
           integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
@@ -193,7 +208,11 @@
             onload="renderMathInElement(document.body);"></script>
 {{ end }}
 
-<script src="{{ "js/main.js" | relURL }}"></script>
+{{ partial "asset.html" "/pagefind/pagefind-modular-ui.js" }}
+{{ partial "asset.html" "/js/menu.js" }}
+{{ partial "asset.html" "/js/main.js" }}
+
 {{ block "scripts" . }}{{ end }}
+
 </body>
 </html>

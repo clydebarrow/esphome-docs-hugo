@@ -141,7 +141,7 @@ module:
   mounts:
     - disableWatch: false
       source: pagefind
-      target: static/pagefind
+      target: assets/pagefind
     - disableWatch: false
       source: static/images
       target: static/images

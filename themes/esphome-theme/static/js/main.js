@@ -50,13 +50,15 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', () => {
             const anchor = button.getAttribute('data-anchor');
             const url = `${window.location.origin}${window.location.pathname}#${anchor}`;
-            console.log("copying link ", url);
             navigator.clipboard.writeText(url)
-                .then(() => {
-                    button.textContent = '✅'; // Feedback
-                    setTimeout(() => button.textContent = '🔗', 1000);
-                })
-                .catch(err => console.error('Failed to copy: ', err));
+            // Remove the class if it’s already there (to restart the animation)
+            button.classList.remove('spin-once');
+
+            // Trigger reflow to "restart" the animation
+            void button.offsetWidth;
+
+            // Add the class to trigger the spin
+            button.classList.add('spin-once');
         });
     });
 

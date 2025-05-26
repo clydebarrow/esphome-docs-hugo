@@ -21,6 +21,23 @@ esphome-docs-hugo/
 └── README.md          # This file
 ```
 
+## Image File Resolution
+
+Images in the Hugo site referred to in `img` shortcodes are handled using a specific search strategy:
+
+### Relative paths
+
+- When using relative paths in the `img` shortcode (e.g., `{{< img src="dht22.jpg" >}}`), Hugo will first look in a local `images/` subdirectory.
+  For example, an image referenced in `content/components/sensor/dht.md` will first be searched for in `content/components/sensor/images/`.
+
+- If the image is not found in the local directory, Hugo will then look in the global `/static/images/` directory.
+
+### Absolute paths
+
+When using absolute paths (starting with `/`), Hugo will look directly in the specified location relative to the `/static/` directory.
+
+This strategy allows component documentation to have its own images while also supporting shared images across the site.
+
 ## Custom Theme
 
 The site uses a custom theme called `esphome-theme` which is designed to match the look and feel of the original ESPHome documentation. The theme includes:
@@ -35,9 +52,54 @@ The site uses a custom theme called `esphome-theme` which is designed to match t
 
 Hugo uses Markdown files as input. The Markdown processor in use is Goldmark.
 
+## Hugo Template System
+
+Hugo uses a templating system to generate HTML from Markdown content. Understanding the following concepts is helpful when working with or modifying the theme:
+
+### Templates
+
+Templates are HTML files with Go templating syntax that define the structure and layout of pages. Hugo uses different types of templates:
+
+- **Base Templates**: Define the overall structure of the site (found in `layouts/_default/baseof.html`)
+- **List Templates**: Used for section pages that list multiple content items
+- **Single Templates**: Used for individual content pages
+- **Home Template**: Specifically for the homepage
+
+Templates use blocks (like `{{ block "main" . }}{{ end }}`) that can be overridden by other templates.
+
+### Partials
+
+Partials are reusable template components that can be included in other templates. They help maintain DRY (Don't Repeat Yourself) code by extracting common elements:
+
+```
+{{ partial "header.html" . }}
+```
+
+The dot (`.`) passes the current context to the partial. Partials are stored in the `layouts/partials/` directory.
+
+### Shortcodes
+
+Shortcodes are special tags you can use within Markdown content to insert complex elements or custom HTML.
+They bridge the gap between the simplicity of Markdown and the need for more complex formatting.
+
+```
+{{< shortcode-name param1="value" param2="value" >}}
+```
+
+Shortcodes can be self-closing or can wrap content:
+
+```
+{{< shortcode-name >}}
+  Content to be processed
+{{< /shortcode-name >}}
+```
+
+Shortcode templates are stored in the `layouts/shortcodes/` directory.
+
 ## Shortcodes
 
-The following custom shortcodes are available for use in your Markdown content:
+Hugo has a number of [built-in shortcodes](https://gohugo.io/content-management/shortcodes/) and the ESPHome theme also defines
+several custom shortcodes:
 
 ### `anchor`
 Creates an HTML anchor point that can be linked to with fragment identifiers.

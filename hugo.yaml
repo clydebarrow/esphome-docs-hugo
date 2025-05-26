@@ -143,5 +143,8 @@ module:
       source: pagefind
       target: assets/pagefind
     - disableWatch: false
+      source: pagefind
+      target: static/pagefind
+    - disableWatch: false
       source: static/images
       target: static/images

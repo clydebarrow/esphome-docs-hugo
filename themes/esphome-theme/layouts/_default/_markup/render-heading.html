@@ -1,4 +1,4 @@
 <h{{ .Level }}  id="{{ .Anchor | safeURL }}">
     {{ .Text | safeHTML }}
-    <img alt="Copy link to header" class="copy-link" data-anchor="{{ .Anchor }}" title="Copy link" src="/images/link.svg">
+    <img data-pagefind-ignore="all" alt="Copy link to header" class="copy-link" data-anchor="{{ .Anchor }}" title="Copy link" src="/images/link.svg">
 </h{{ .Level }}>

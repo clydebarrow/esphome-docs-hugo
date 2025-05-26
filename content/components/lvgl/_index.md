@@ -116,23 +116,23 @@ The following configuration variables apply to the main `lvgl` component, in ord
     - **long_press_time** (*Optional*, [Time](guides/configuration-types#config-time)): For the keypad, delay after which the `on_long_pressed` [interaction trigger](components/lvgl/widgets#lvgl-automation-triggers) will be called. Defaults to `400ms`. Can be disabled with `never`.
     - **long_press_repeat_time** (*Optional*, [Time](guides/configuration-types#config-time)): For the keypad, repeated interval after `long_press_time`, when `on_long_pressed_repeat` [interaction trigger](components/lvgl/widgets#lvgl-automation-triggers) will be called. Defaults to `100ms`. Can be disabled with `never`.
 
-    {{< tip >}}
-    When using binary sensors (from physical keys) to interact with LVGL, if there are only three keys available, they are best used when configured as a rotary encoder, where `LEFT` and `RIGHT` act like the rotary wheel, and `ENTER` generates an `on_press` [trigger](components/lvgl/widgets#lvgl-automation-triggers). With four or more keys, a keypad configuration is generally more appropriate. For example, a keypad consisting of five keys might use `PREV`, `NEXT`, `UP`, `DOWN` and `ENTER`; `PREV`/`NEXT` are used to select a widget within the group, `UP`/`DOWN` changes the selected value and `ENTER` generates an `on_press` [trigger](components/lvgl/widgets#lvgl-automation-triggers).
+{{< tip >}}
+When using binary sensors (from physical keys) to interact with LVGL, if there are only three keys available, they are best used when configured as a rotary encoder, where `LEFT` and `RIGHT` act like the rotary wheel, and `ENTER` generates an `on_press` [trigger](components/lvgl/widgets#lvgl-automation-triggers). With four or more keys, a keypad configuration is generally more appropriate. For example, a keypad consisting of five keys might use `PREV`, `NEXT`, `UP`, `DOWN` and `ENTER`; `PREV`/`NEXT` are used to select a widget within the group, `UP`/`DOWN` changes the selected value and `ENTER` generates an `on_press` [trigger](components/lvgl/widgets#lvgl-automation-triggers).
 
-    The `long_press_time` and `long_press_repeat_time` can be fine-tuned also by setting them to `never` and using the `autorepeat` filter on each binary sensor separately.
+The `long_press_time` and `long_press_repeat_time` can be fine-tuned also by setting them to `never` and using the `autorepeat` filter on each binary sensor separately.
 
-    {{< tip >}}
-    When using an encoder input device the navigation works as follows:
+{{< /tip >}}
+{{< tip >}}
+When using an encoder input device the navigation works as follows:
 
-    - By turning the encoder you can focus on the next/previous object.
-    - When you press the encoder on a simple object (like a button), it will be clicked.
-    - If you press the encoder on a complex object (like a list, message box, etc.) the object will go to edit mode whereby you can adjust the value of the object by turning the encoder.
-    - To leave edit mode, long press the button.
+- By turning the encoder you can focus on the next/previous object.
+- When you press the encoder on a simple object (like a button), it will be clicked.
+- If you press the encoder on a complex object (like a list, message box, etc.) the object will go to edit mode whereby you can adjust the value of the object by turning the encoder.
+- To leave edit mode, long press the button.
 
 
 
-    {{< /tip >}}
-    {{< /tip >}}
+{{< /tip >}}
 - **resume_on_input** (*Optional*, boolean): If LVGL is paused and the user interacts with the screen, resume the activity of LVGL. Defaults to `true`. "Interacts" means to release a touch or button, or rotate an encoder.
 - **color_depth** (*Optional*, string): The color depth at which the contents are generated. Currently only `16` is supported (RGB565, 2 bytes/pixel), which is the default value.
 - **buffer_size** (*Optional*, percentage): The percentage of screen size to allocate buffer memory. Default is `100%` (or `1.0`). For devices without PSRAM, the recommended value is `25%`.
@@ -603,10 +603,10 @@ In a grid layout, *all the widgets placed on the grid* will get some additional 
 - **grid_cell_row_span**  (*Optional*, int16): How many rows to span across the widget. Defaults to `1`.
 - **grid_cell_column_span** (*Optional*, int16): How many columns to span across the widget. . Defaults to `1`.
 
-    {{< note >}}
-    These `grid_cell_` variables apply to widget configuations!
+{{< note >}}
+These `grid_cell_` variables apply to widget configuations!
 
-    {{< /note >}}
+{{< /note >}}
 Values for use with `grid_column_align`, `grid_row_align`, `grid_cell_x_align`, `grid_cell_y_align`:
 
 - `START`: means left horizontally and top vertically (default).

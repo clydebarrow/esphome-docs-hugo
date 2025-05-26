@@ -81,26 +81,26 @@ on_...:
     ```shell
     md5 -q firmware.ota.bin > firmware.md5
 
-    - On most Linux distributions:
+    ```
+  - On most Linux distributions:
 
-    .. code-block:: shell
-
+    ```shell
     md5sum firmware.ota.bin > firmware.md5
 
-    - On Windows/PowerShell:
+    ```
+  - On Windows/PowerShell:
 
-    .. code-block:: shell
-
+    ```shell
     (Get-FileHash -Path firmware.ota.bin -Algorithm md5).Hash.ToLower() | Out-File -FilePath firmware.md5 -Encoding ASCII
 
-    This will generate the MD5 hash of the `firmware.ota.bin` file and write the resulting hash value to the
-    `firmware.md5` file. The `md5_url` configuration variable should point to this file on the web server.
-    It is used by the OTA updating mechanism to ensure the integrity of the (new) firmware as it is installed.
+    ```
+  This will generate the MD5 hash of the `firmware.ota.bin` file and write the resulting hash value to the
+  `firmware.md5` file. The `md5_url` configuration variable should point to this file on the web server.
+  It is used by the OTA updating mechanism to ensure the integrity of the (new) firmware as it is installed.
 
-    **If, for any reason, the MD5sum provided does not match the MD5sum computed as the firmware is installed, the
-    device will continue to use the original firmware and the new firmware is discarded.**
+  **If, for any reason, the MD5sum provided does not match the MD5sum computed as the firmware is installed, the
+  device will continue to use the original firmware and the new firmware is discarded.**
 
-```
 {{< /note >}}
 ## See Also
 

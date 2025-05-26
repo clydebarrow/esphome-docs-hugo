@@ -43,11 +43,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the sensor. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the sensor to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the sensor to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **unit_of_measurement** (*Optional*, string): Manually set the unit
   of measurement the sensor should advertise its values with. This does
   not actually do any maths (conversion between units).
@@ -891,7 +891,7 @@ advanced stuff (see the full API Reference for more info).
   // Within lambda, push a value of 42.0
   id(my_sensor).publish_state(42.0);
 
-```
+  ```
 - `.state`: Retrieve the current value of the sensor that has passed through all sensor filters.
   Is `NAN` if no value has gotten through all filters yet.
 
@@ -899,7 +899,7 @@ advanced stuff (see the full API Reference for more info).
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Value of my sensor: %f", id(my_sensor).state);
 
-```
+  ```
 - `raw_state`: Retrieve the current value of the sensor that has not passed through any filters.
   Is `NAN` if no value has been pushed by the sensor itself yet.
 
@@ -907,7 +907,7 @@ advanced stuff (see the full API Reference for more info).
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Raw Value of my sensor: %f", id(my_sensor).raw_state);
 
-```
+  ```
 ## See Also
 
 - {{< apiref "sensor/sensor.h" "sensor/sensor.h" >}}

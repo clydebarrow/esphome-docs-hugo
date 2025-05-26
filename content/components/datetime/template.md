@@ -70,25 +70,25 @@ datetime:
       month: 12
       day: 4
 
-    - For `type: time`:
+    ```
+  - For `type: time`:
 
     - A string in the format `%H:%M:%S` , eg: `"12:34:56"`.
     - An object including `hour`, `minute`, `second`.
 
-    .. code-block:: yaml
-
+    ```yaml
     initial_value:
       hour: 12
       minute: 34
       second: 56
 
-    - For `type: datetime`:
+    ```
+  - For `type: datetime`:
 
     - A string in the format `%Y-%m-%d %H:%M:%S` , eg: `"2023-12-04 12:34:56"`.
     - An object including `year`, `month`, `day`, `hour`, `minute`, `second`.
 
-    .. code-block:: yaml
-
+    ```yaml
     initial_value:
       year: 2023
       month: 12
@@ -97,7 +97,7 @@ datetime:
       minute: 34
       second: 56
 
-```
+    ```
 - All other options from [Datetime](components/datetime/_index#config-datetime).
 
 ## See Also

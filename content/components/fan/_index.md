@@ -30,11 +30,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name of the fan. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the fan to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the fan to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the fan in the frontend.
 - **restore_mode** (*Optional*): Control how the fan attempts to restore state on boot.
 
@@ -300,7 +300,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan is OFF, do something else here
   }
 
-```
+  ```
 - `speed`: Retrieve the current speed of the fan.
 
   ```yaml
@@ -311,7 +311,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan speed is not 2, do something else here
   }
 
-```
+  ```
 - `oscillating`: Retrieve the current oscillating state of the fan.
 
   ```yaml
@@ -322,7 +322,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan is not oscillating, do something else here
   }
 
-```
+  ```
 - `direction`: Retrieve the current direction of the fan.
 
   ```yaml
@@ -333,7 +333,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan direction is reverse, do something else here
   }
 
-```
+  ```
 - `preset_mode`: Retrieve the current preset mode of the fan.
 
   ```yaml
@@ -344,7 +344,7 @@ advanced stuff (see the full API Reference for more info).
     // Fan preset mode is not "auto", do something else here
   }
 
-```
+  ```
 - `turn_off()`/`turn_on()`/`toggle()`: Manually turn the fan ON/OFF from code.
   Similar to the `fan.turn_on`, `fan.turn_off`, and `fan.toggle` actions,
   but can be used in complex lambda expressions.
@@ -370,7 +370,7 @@ advanced stuff (see the full API Reference for more info).
   auto call = id(my_fan).toggle();
   call.perform();
 
-```
+  ```
 ## Full Fan Index
 
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}

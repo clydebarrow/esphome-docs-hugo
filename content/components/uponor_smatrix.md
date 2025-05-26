@@ -49,12 +49,14 @@ With that you can then add `climate` or `sensor` components for the detected dev
 uponor_smatrix:
   address: 0x110B
 
-climate:
-  - platform: uponor_smatrix
-    address: 0xDE13
-    name: Thermostat Living Room
-
 ```
+
+    climate:
+- platform: uponor_smatrix
+        address: 0xDE13
+        name: Thermostat Living Room
+
+
 ## Controller/Hub component
 
 The main `uponor_smatrix` component is responsible for the communication with the controller and thermostats and distributes data to the climate and sensor components described below.

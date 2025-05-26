@@ -116,9 +116,9 @@ There are three ways to set a numerical value:
       id: setpoint_sensor
       entity_id: sensor.boiler_setpoint
 
+  ```
   This can be useful if you have an external thermostat-like device that provides the setpoint as a sensor.
 
-```
 - As a number:
 
   ```yaml
@@ -127,9 +127,9 @@ There are three ways to set a numerical value:
       t_set:
         name: Boiler Setpoint
 
+  ```
   This is useful if you want full control over your boiler and want to manually set all values.
 
-```
 - As an output:
 
   ```yaml
@@ -138,16 +138,16 @@ There are three ways to set a numerical value:
     t_set:
       id: setpoint
 
+  ```
   This is especially useful in combination with the PID Climate component:
 
-  .. code-block:: yaml
-
+  ```yaml
   climate:
     - platform: pid
       heat_output: setpoint
       # ...
 
-```
+  ```
 For the output and number variants, there are four more properties you can configure beyond those included in the
 output and number components by default:
 

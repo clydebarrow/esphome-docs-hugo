@@ -38,11 +38,11 @@ light:
   specified.
 - **name** (*Optional*, string): The name of the light. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and you want the light
-  to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and you want the light
+to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the light in the frontend.
 - **effects** (*Optional*, list): A list of [light effects](components/light/_index#light-effects) to use for this light.
 - **gamma_correct** (*Optional*, float): Apply a [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) to the light channels. Defaults to `2.8`.
@@ -878,10 +878,10 @@ Available variables in the lambda:
 - **initial_run** - A bool which is true on the first execution of the lambda. Useful to reset static variables when
   restarting an effect.
 
-  {{< note >}}
-  ESPColor has been migrated to Color. See {{< apistruct "Color" "Color" >}} for more information.
+{{< note >}}
+ESPColor has been migrated to Color. See {{< apistruct "Color" "Color" >}} for more information.
 
-  {{< /note >}}
+{{< /note >}}
 ```yaml
 light:
 - platform: ...

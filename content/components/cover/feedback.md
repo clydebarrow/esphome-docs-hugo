@@ -205,7 +205,7 @@ Most options can be left untouched, but some modifications are needed:
       open_obstacle_sensor: open_obstacle_binary_sensor
       #... rest of options
 
-```
+  ```
 3. Malfunction detection is not directly supported by Feedback Cover, as the malfunction was very narrowly defined to a specific use case
    (while in other hardware configurations, the same situation is perfectly valid).
 
@@ -243,7 +243,7 @@ Most options can be left untouched, but some modifications are needed:
             then:
               - logger.log: "Malfunction detected. Relay welded."
 
-```
+  ```
 ## See Also
 
 - {{< docref "index/" >}}

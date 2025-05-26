@@ -23,11 +23,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name of the alarm control panel. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the switch to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the switch to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **on_state** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
   when the alarm changes state. See [`on_state` Trigger](components/alarm_control_panel/_index#alarm_control_panel_on_state_trigger).
 - **on_arming** (*Optional*, [Action](automations/actions#config-action)): An automation to perform

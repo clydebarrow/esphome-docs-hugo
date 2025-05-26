@@ -78,12 +78,12 @@ sensor:
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
-  {{< note >}}
-  `background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings](components/sensor/nextion#nextion_sensor_settings).
-  A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
+{{< note >}}
+`background_color` , `foreground_color` and `visible` do not retain their state on page change. [Sensor Settings](components/sensor/nextion#nextion_sensor_settings).
+A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
 
 
-  {{< /note >}}
+{{< /note >}}
 See [How things Update](components/sensor/nextion#nextion_sensor_how_things_update) for additional information
 
 ### Globals

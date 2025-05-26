@@ -30,6 +30,7 @@ sensor:
       name: "pmwcs3 vwc"
 
 ```
+
 ## Configuration variables:
 
 - **e25** (*Optional*): Electrical Conductivity, reference at 25°C in dS/m.

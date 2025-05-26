@@ -35,11 +35,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (**Required**, string): The name for the text.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the text to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the text to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the text in the frontend.
 - **internal** (*Optional*, boolean): Mark this component as internal. Internal components will
   not be exposed to the frontend (like Home Assistant). Only specifying an `id` without
@@ -121,14 +121,14 @@ advanced stuff (see the full API Reference for more info).
   call.set_value("Hello World");
   call.perform();
 
-```
+  ```
 - `.state`: Retrieve the current value of the text.
 
   ```cpp
   // For example, create a custom log message when a value is received:
   ESP_LOGI("main", "Value of my text: %s", id(my_text).state.c_str());
 
-```
+  ```
 ## See Also
 
 - {{< apiref "Text" "text/text.h" >}}

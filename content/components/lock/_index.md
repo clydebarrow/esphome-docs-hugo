@@ -26,11 +26,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name of the lock. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the lock to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the lock to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the
   lock in the frontend.
 - **internal** (*Optional*, boolean): Mark this component as internal. Internal components will
@@ -116,7 +116,7 @@ advanced stuff (see the full API Reference for more info).
   id(my_lock).publish_state(LOCK_STATE_LOCKED);
   id(my_lock).publish_state(LOCK_STATE_UNLOCKED);
 
-```
+  ```
 - `state`: Retrieve the current state of the lock.
 
   ```yaml
@@ -125,7 +125,7 @@ advanced stuff (see the full API Reference for more info).
     // Lock is LOCKED, do something here
   }
 
-```
+  ```
 - `unlock()`/`lock()`/`open()`: Manually lock/unlock/open a  lock from code.
   Similar to the `lock.lock`, `lock.unlock`, and `lock.open` actions,
   but can be used in complex lambda expressions.
@@ -135,7 +135,7 @@ advanced stuff (see the full API Reference for more info).
   id(my_lock).lock();
   id(my_lock).open();
 
-```
+  ```
 {{< anchor "lock-on_lock_unlock_trigger" >}}
 
 ### `lock.on_lock` / `lock.on_unlock` Trigger

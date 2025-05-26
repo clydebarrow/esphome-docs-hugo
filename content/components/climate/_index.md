@@ -47,11 +47,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name of the climate device. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the climate to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the climate to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the climate device in the frontend.
 - **visual** (*Optional*): Visual settings for the climate device - these do not
   affect operation and are solely for controlling how the climate device shows up in the
@@ -215,7 +215,7 @@ advanced stuff.
   // Custom Preset, type: string
   id(my_climate).custom_preset
 
-```
+  ```
 - `.make_call`: Control the climate device
 
   ```cpp
@@ -224,7 +224,7 @@ advanced stuff.
   // etc. see API reference
   call.perform();
 
-```
+  ```
 {{< anchor "climate-on_state_trigger" >}}
 
 ### `climate.on_state` Trigger

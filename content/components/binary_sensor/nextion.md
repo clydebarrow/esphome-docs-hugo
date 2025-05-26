@@ -56,12 +56,12 @@ binary_sensor:
 The Nextion will send a **page_id** and **component_id** when the *Send Component ID* check box is selected for the component. To enable
 this native event **page_id** and **component_id** are required. No [Nextion Custom Binary Sensor Protocol](components/binary_sensor/nextion#nextion_custom_binary_sensor_protocol) is required. If **page_id** and **component_id** are set then the component will only react to touch events from the Nextion. Setting **component_name** will allow setting options like foreground color.
 
-  {{< note >}}
-  `background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [Binary Sensor Settings](components/binary_sensor/nextion#nextion_binary_sensor_settings).
-  A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
+{{< note >}}
+`background_color(s)` , `foreground_color(s)` and `visible` do not retain their state on page change. [Binary Sensor Settings](components/binary_sensor/nextion#nextion_binary_sensor_settings).
+A [Nextion Sensor](components/sensor/nextion#nextion_sensor) with a custom protocol sending the current page can be used to execute the API call [Update Components By Prefix](components/display/nextion#update_components_by_prefix) to update all the components for that page
 
 
-  {{< /note >}}
+{{< /note >}}
 Example:
 
 ```yaml

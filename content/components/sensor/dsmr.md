@@ -64,7 +64,6 @@ Configuration variables:
 ## Sensor
 
 {{< note >}}
-{{< /note >}}
 Country specific sensors are listed last.
 
 Configuration variables:
@@ -424,3 +423,4 @@ text_sensor:
 - {{< apiref "dsmr/dsmr.h" "dsmr/dsmr.h" >}}
 
 
+{{< /note >}}

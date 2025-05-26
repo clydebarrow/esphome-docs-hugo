@@ -35,11 +35,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the select. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the select to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the select to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **icon** (*Optional*, icon): Manually set the icon to use for the select in the frontend.
 - **internal** (*Optional*, boolean): Mark this component as internal. Internal components will
   not be exposed to the frontend (like Home Assistant). Only specifying an `id` without
@@ -261,12 +261,12 @@ advanced stuff (see the full API Reference for more info).
   call.set_option("Happy");
   call.perform();
 
+  ```
   Check the API reference for information on the methods that are available for
   the `SelectCall` object. You can for example also use `call.select_first()`
   to select the first option or `call.select_next(true)` to select the next
   option with the cycle feature enabled.
 
-```
 - `.state`: Retrieve the currently selected option of the select.
 
   ```cpp
@@ -274,21 +274,21 @@ advanced stuff (see the full API Reference for more info).
   auto state = id(my_select).state.c_str();
   ESP_LOGI("main", "Option of my select: %s", state);
 
-  .. code-block:: yaml
-
+  ```
+  ```yaml
   # Check if a specific option is selected
   - if:
       condition:
         - lambda: 'return id(my_select).state == "my_option_value";'
 
-```
+  ```
 - `.size()`: Retrieve the number of options in the select.
 
   ```cpp
   auto size = id(my_select).size();
   ESP_LOGI("main", "Select has %d options", size);
 
-```
+  ```
 - `.index_of(<option value>)`: Retrieve the index offset for an option value.
 
   ```cpp
@@ -299,7 +299,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGE("main", "There is no option 'Happy'");
   }
 
-```
+  ```
 - `.active_index()`: Retrieve the index of the currently active option.
 
   ```cpp
@@ -310,7 +310,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGI("main", "No option is active");
   }
 
-```
+  ```
 - `.at(<index offset>)`: Retrieve the option value at a given index offset.
 
   ```cpp
@@ -323,7 +323,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGE("main", "Index %d does not exist", index);
   }
 
-```
+  ```
 - `.has_option(<option value>)`: Check if the select contains the given option value.
 
   ```cpp
@@ -332,7 +332,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGI("main", "Select has option '%s'", option);
   }
 
-```
+  ```
 - `.has_index(<index offset>)`: Check if the select contains an option value for the given index offset.
 
   ```cpp
@@ -341,7 +341,7 @@ advanced stuff (see the full API Reference for more info).
     ESP_LOGI("main", "Select has index offset %d", index);
   }
 
-```
+  ```
 ## Example
 
 Setting up three options and set component state to selected option value.

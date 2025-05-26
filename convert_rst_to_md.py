@@ -134,13 +134,18 @@ def get_indented_block(lines, i, current_indent, process_md=False):
 
     # Add code content
     while i < len(lines):
-        this_indent = min(len(lines[i]) - len(lines[i].lstrip()), code_indent)
-        if not lines[i].strip():  # Empty line
+        line = lines[i]
+        this_indent = min(len(line) - len(line.lstrip()), code_indent)
+        if not line:
             md_lines.append('')
             i += 1
-        elif this_indent != 0:
+        elif this_indent >= code_indent -1:
             # Remove only the code block indentation, preserve any existing indentation
-            md_lines.append(' ' * current_indent + lines[i][this_indent:])
+            if this_indent >= code_indent:
+                line = line[this_indent:]
+            else:
+                line = line[this_indent - 1:]
+            md_lines.append(' ' * current_indent + line)
             i += 1
         else:  # Line without expected indentation - end of code block
             break
@@ -172,6 +177,7 @@ def convert_rst_to_md(lines, filename):
             if line and not line[0].isspace():
                 indent_stack.clear()
 
+            current_indent = len(line) - len(line.lstrip())
             # Skip title directive
             if line.startswith('.. title::'):
                 i += 1
@@ -290,7 +296,6 @@ def convert_rst_to_md(lines, filename):
             # Handle code blocks - check for both standalone and nested code blocks
             if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):
                 # Get the indentation of the current line
-                current_indent = len(line) - len(line.lstrip())
 
                 # Extract language
                 language = line.split("::")[1].strip()
@@ -303,12 +308,11 @@ def convert_rst_to_md(lines, filename):
                     new_lines.pop()
                 md_lines.extend(new_lines)
                 md_lines.append("")
-                md_lines.append("```")
+                md_lines.append(' ' * current_indent + "```")
                 continue
 
             if line.lstrip().startswith('.. math::'):
                 # Get the indentation of the current line
-                current_indent = len(line) - len(line.lstrip())
 
                 # Add the code block start with proper indentation
                 md_lines.append(' ' * current_indent + "{{< math >}}")
@@ -320,7 +324,6 @@ def convert_rst_to_md(lines, filename):
 
             if line.lstrip().startswith('.. collapse::'):
                 # Get the indentation of the current line
-                current_indent = len(line) - len(line.lstrip())
                 collapse_title = line.strip().removeprefix(".. collapse::").strip()
 
                 # Add the code block start with proper indentation
@@ -342,12 +345,12 @@ def convert_rst_to_md(lines, filename):
             for directive in ["note", "warning", "caution", "important", "tip"]:
                 if line.strip().startswith(f'.. {directive}::'):
                     # Get the indentation level of the note directive
-                    note_indent = len(line) - len(line.lstrip())
-                    md_lines.append(" " * note_indent + f"{{{{< {directive} >}}}}")
-                    i, note_lines = get_indented_block(inner_lines, i + 1, note_indent, True)
+                    md_lines.append(f"{{{{< {directive} >}}}}")
+                    i, note_lines = get_indented_block(inner_lines, i + 1, current_indent, True)
                     note_lines = process_lines(note_lines)
-                    md_lines.extend(note_lines)
-                    md_lines.append(" " * note_indent + f"{{{{< /{directive} >}}}}")
+                    # Note blocks can't be indented.
+                    md_lines.extend(x[current_indent:] for x in note_lines)
+                    md_lines.append(f"{{{{< /{directive} >}}}}")
                     handled = True
                     break
             if handled:

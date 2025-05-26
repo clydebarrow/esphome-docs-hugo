@@ -220,7 +220,7 @@ To autotune the control parameters:
         ki: 0.0
         kd: 0.0
 
-```
+  ```
 2. Create a {{< docref "/components/button/template" "template button" >}} to start autotuning later:
 
   ```yaml
@@ -230,7 +230,7 @@ To autotune the control parameters:
       on_press:
         - climate.pid.autotune: pid_climate
 
-```
+  ```
 3. Compile & Upload the new firmware.
 
 Now you should have a climate entity called *PID Climate Controller* and a button called
@@ -266,7 +266,7 @@ autotune will likely fail or give false results.
        Detected 5 zero-crossings
        # ...
 
-```
+   ```
 {{< note >}}
 In the output above, the autotuner is driving the heating output at 100% and trying to reach 24.25 °C.
 
@@ -292,7 +292,7 @@ heating up and cooling down oscillations the required number of times.
 
      Please copy these values into your YAML configuration! They will reset on the next reboot.
 
-```
+   ```
 As soon as the the autotune procedure finishes, the climate starts to work with the calculated parameters
 so that expected operation can be immediately verified.
 
@@ -307,7 +307,7 @@ If satisfied, copy the values in `control_parameters` into your configuration:
          ki: 0.00487
          kd: 12.56301
 
-```
+   ```
 The *PID Climate Autotune* button can be removed from the config, if the results are satisfactory,
 it's not needed anymore.
 

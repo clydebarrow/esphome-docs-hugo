@@ -12,6 +12,6 @@
   The content between the opening and closing shortcode tags will be displayed inside the tip box.
 */}}
 <div class="admonition tip">
-  <p class="admonition-title">Tip</p>
-  {{ .Inner | .Page.RenderString }}
+<p class="admonition-title">Tip</p>
+{{- .Inner | .Page.RenderString -}}
 </div>

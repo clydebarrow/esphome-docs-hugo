@@ -34,11 +34,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the valve. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and you want the valve
-  to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and you want the valve
+to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **device_class** (*Optional*, string): The device class for the sensor. See
   https://www.home-assistant.io/components/valve/ for a list of available options.
 - **icon** (*Optional*, icon): Manually set the icon to use for the valve in the frontend.
@@ -203,7 +203,7 @@ read-only, if you want to act on the valve, use the `make_call()` method as show
       // Valve is in-between open and closed
     }
 
-```
+    ```
 - `current_operation`: The operation the valve is currently performing:
 
     ```cpp
@@ -215,7 +215,7 @@ read-only, if you want to act on the valve, use the `make_call()` method as show
       // Valve is currently closing
     }
 
-```
+    ```
 {{< anchor "valve-on_open_trigger" >}}
 
 ### `valve.on_open` Trigger

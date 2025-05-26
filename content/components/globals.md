@@ -22,8 +22,8 @@ globals:
     max_restore_data_length: 24
     initial_value: '"Global value is"'
 
-# In an automation
-on_...:
+ # In an automation
+ on_...:
  then:
    - lambda: |-
        if (id(my_global_int) > 5) {

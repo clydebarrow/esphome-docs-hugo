@@ -17,7 +17,7 @@ mapping:
       clear-night: clear_night_img
       cloudy: cloudy_img
 
-# Using the mapping in an automation
+ # Using the mapping in an automation
 text_sensor:
  - id: forecast_text
    platform: homeassistant

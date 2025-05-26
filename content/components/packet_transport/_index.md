@@ -273,13 +273,20 @@ binary_sensor:
     remote_id: relay1_sensor
 
 ```
-## See Also
+
+[^f1]: As known in 2025.02.
+See Also
+--------
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    *
 
 - {{< docref "/components/binary_sensor/packet_transport" >}}
 - {{< docref "/components/sensor/packet_transport" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "packet_transport/packet_transport.h" "packet_transport/packet_transport.h" >}}
+- :ghedit:`Edit`
 
-
-
-[^f1]: As known in 2025.02.

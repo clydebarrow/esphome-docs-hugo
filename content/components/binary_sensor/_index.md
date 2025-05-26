@@ -32,11 +32,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the binary sensor. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the binary sensor to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the binary sensor to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **device_class** (*Optional*, string): The device class for the
   sensor. See https://www.home-assistant.io/integrations/binary_sensor/#device-class
   for a list of available options.
@@ -446,7 +446,7 @@ advanced stuff.
   // Within lambda, publish an ON state.
   id(my_binary_sensor).publish_state(true);
 
-```
+  ```
 - `.state`: Retrieve the current state of the binary sensor.
 
   ```yaml
@@ -457,7 +457,7 @@ advanced stuff.
     // Binary sensor is OFF, do something else here
   }
 
-```
+  ```
 ## See Also
 
 - {{< apiref "binary_sensor/binary_sensor.h" "binary_sensor/binary_sensor.h" >}}

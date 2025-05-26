@@ -62,7 +62,7 @@ To obtain a tag's UID:
   ```
   Read tag type Mifare Classic with UID 1C-E5-E7-A6
 
-```
+  ```
 - Either:
 
   - Copy this ID and use it to create a `binary_sensor` entry as shown in the configuration example above, or...

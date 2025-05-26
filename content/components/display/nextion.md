@@ -142,7 +142,7 @@ The list below calls out a few commonly-used methods:
   ```c++
   id(nextion1).update_all_components();
 
-```
+  ```
 {{< anchor "update_components_by_prefix" >}}
 
 - `update_components_by_prefix(std::string page)`: This will send the current state of any **component_name**
@@ -152,7 +152,7 @@ The list below calls out a few commonly-used methods:
   ```c++
   id(nextion1).update_components_by_prefix("page0.");
 
-```
+  ```
 {{< anchor "set_nextion_sensor_state" >}}
 
 - Set various sensor states (See [Queue Types](components/display/nextion#nextion_queue_types) below):
@@ -281,7 +281,7 @@ Given the page ID, the appropriate components can be updated. Two strategies are
               break;
           }
 
-```
+  ```
 {{< anchor "nextion-on_touch" >}}
 
 #### `on_touch`
@@ -418,7 +418,7 @@ the example below illustrates:
      variable_name: dp
      update_interval: 1s
 
-```
+ ```
 Note that the first one requires a custom protocol to be included in the Nextion display's HMI code/configuration. See
 the individual components (linked below) for more detail.
 

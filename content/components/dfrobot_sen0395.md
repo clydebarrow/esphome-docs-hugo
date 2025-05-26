@@ -200,23 +200,22 @@ on_...:
     - [0cm, 3m]
     - [5.1m, 6.6m]
 
-
+  ```
   In the above example, if a person was present in the range between 0cm and 3m (distance from the sensor) or
   between 5.1m and 6.6m the sensor would trigger (meaning a person was detected). If a person is present
   between 3.1m and 5m or 6.7m and 9m it would not trigger.
 
-  .. code-block:: yaml
-
+  ```yaml
   detection_segments:
     - !lambda |-
         return 0;
     - !lambda |-
         return return id(mwave_max_distance).state;
 
+  ```
   Section values can be defined using lambdas, so you can set the distances depending on other entities. Distances
   are defined as a float in meters (10cm = 0.1). If you return a negative value (-1) the segment will not be set.
 
-```
 - **output_latency** (*Optional*, dictionary):
 
   - **delay_after_detect** (**Required**, [Time](guides/configuration-types#config-time)): Time to wait before signaling that a person was

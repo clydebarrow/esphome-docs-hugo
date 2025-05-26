@@ -58,16 +58,16 @@ microphone:
 - **i2s_din_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The GPIO pin to use for the I²S `DIN/SDIN` *(Data In)* signal, also referred to as `SD/SDATA` *(Serial Data)* or `ADCDAT` *(Analog to Digital Converter Data)*.
 - **pdm** (*Optional*, boolean): Set this to `true` if your external ADC uses PDM (Pulse Density Modulation) instead of I²S. Defaults to `false`.
 
-  {{< note >}}
-  PDM microphones are only supported on ESP32 and ESP32-S3.
+{{< note >}}
+PDM microphones are only supported on ESP32 and ESP32-S3.
 
-  {{< /note >}}
+{{< /note >}}
 ## Internal ADC
 
-  {{< note >}}
-  Internal ADC microphones are only supported by the legacy I²S driver on a regular ESP32, not the variants.
+{{< note >}}
+Internal ADC microphones are only supported by the legacy I²S driver on a regular ESP32, not the variants.
 
-  {{< /note >}}
+{{< /note >}}
 - **adc_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The GPIO pin to use for the ADC input.
 
 

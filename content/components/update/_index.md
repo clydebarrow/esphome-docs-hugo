@@ -25,11 +25,11 @@ update:
 - **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name of the update entity. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the light to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the light to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **device_class** (*Optional*, string): The device class for the update entity. See
   https://www.home-assistant.io/integrations/binary_sensor/#device-class for a list of available options.
 - **disabled_by_default** (*Optional*, boolean): If true, then this entity should not be added to any client's frontend

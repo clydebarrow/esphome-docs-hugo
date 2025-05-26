@@ -31,11 +31,11 @@ Configuration variables:
 - **id** (*Optional*, string): Manually specify the ID for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the cover. At least one of **id** and **name** must be specified.
 
-  {{< note >}}
-  If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
-  you want the cover to use that name, you can set `name: None`.
+{{< note >}}
+If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+you want the cover to use that name, you can set `name: None`.
 
-  {{< /note >}}
+{{< /note >}}
 - **device_class** (*Optional*, string): The device class for the
   sensor. See https://www.home-assistant.io/integrations/cover/#device-class for a list of available options.
 - **icon** (*Optional*, icon): Manually set the icon to use for the cover in the frontend.
@@ -215,7 +215,7 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
       // Cover is in-between open and closed
     }
 
-```
+    ```
 - `tilt`: Retrieve the current tilt position of the cover, as a value between `0.0` and `1.0`.
 
 - `current_operation`: The operation the cover is currently performing:
@@ -229,7 +229,7 @@ fields are read-only, if you want to act on the cover, use the `make_call()` met
       // Cover is currently closing
     }
 
-```
+    ```
 {{< anchor "cover-on_open_trigger" >}}
 
 ### `cover.on_open` Trigger

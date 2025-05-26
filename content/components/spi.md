@@ -127,7 +127,7 @@ spi_device:
     spi_mode: 3
     bit_order: lsb_first
 
-on...:
+ on...:
  then:
    - lambda: !lambda |-
        id(spidev).enable();

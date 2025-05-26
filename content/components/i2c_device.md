@@ -18,7 +18,7 @@ i2c_device:
   id: i2cdev
   address: 0x2C
 
-on...:
+ on...:
  then:
    - lambda: !lambda |-
        id(i2cdev).write_byte(0x00, 0x12);

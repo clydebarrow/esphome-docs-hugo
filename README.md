@@ -13,7 +13,8 @@ esphome-docs-hugo/
 ├── content/           # Markdown content files
 ├── data/              # Data files for templates
 ├── layouts/           # HTML templates
-├── static/            # Static files (images, CSS, JS)
+├── static/            # Static files
+│   └── images/        # Image files
 ├── themes/            # Custom theme for ESPHome
 │   └── esphome-theme/ # The ESPHome custom theme
 ├── hugo.yaml          # Hugo configuration
@@ -29,6 +30,10 @@ The site uses a custom theme called `esphome-theme` which is designed to match t
 - Custom shortcodes for documentation features
 - Navigation sidebar
 - Search functionality
+
+## Markdown
+
+Hugo uses Markdown files as input. The Markdown processor in use is Goldmark.
 
 ## Shortcodes
 
@@ -129,6 +134,46 @@ Creates a link specifically to a C++ struct in the API documentation.
 {{< apistruct "GPIOOutputPin" "esphome::output::GPIOOutputPin" >}}
 ```
 
+### `api-key-input`
+Creates an input field with a randomly generated API key and a copy button.
+```
+{{< api-key-input >}}
+```
+
+### `ghuser`
+Creates a link to a GitHub user profile.
+```
+{{< ghuser name="octocat" >}}                <!-- Links to @octocat -->
+{{< ghuser name="octocat" text="GitHub" >}}  <!-- Links to @octocat but displays "GitHub" -->
+```
+
+### `html_file`
+Reads a file from the static directory and inserts it as HTML.
+```
+{{< html_file file="example.html" class="example-class" >}}
+```
+
+### `option`
+Creates an option block for documenting command-line options or configuration parameters.
+```
+{{< option "--help|-h" >}}
+This is the help option.
+{{< /option >}}
+```
+
+### `pr`
+Creates a link to a GitHub pull request.
+```
+{{< pr number="123" >}}                <!-- Links to esphome/esphome#123 -->
+{{< pr number="123" repo="docs" >}}    <!-- Links to esphome/docs#123 -->
+```
+
+### `redirect`
+Creates a page that automatically redirects to another URL.
+```
+{{< redirect url="/some/path" >}}
+```
+
 ## Conversion Scripts
 
 A Python script is included to help with the conversion process from RST:
@@ -138,24 +183,53 @@ A Python script is included to help with the conversion process from RST:
    python convert_rst_to_md.py /path/to/sphinx/docs /path/to/hugo/content
  ```
 
+Available options for convert_rst_to_md.py:
+
+```
+positional arguments:
+  input_dir             Input directory containing RST files
+  output_dir            Output directory for Markdown files
+
+optional arguments:
+  --single FILENAME     Process a single file (relative to input_dir)
+  --no-images           Skip image processing
+```
+
+Examples:
+
+```bash
+# Convert all RST files in a directory
+python convert_rst_to_md.py /path/to/sphinx/docs /path/to/hugo/content
+
+# Convert a single RST file
+python convert_rst_to_md.py /path/to/sphinx/docs /path/to/hugo/content --single components/sensor/dht.rst
+
+# Convert without processing images
+python convert_rst_to_md.py /path/to/sphinx/docs /path/to/hugo/content --no-images
+```
+
+The script performs the following operations:
+- Builds an anchor map to maintain internal links
+- Converts RST formatting to Markdown
+- Processes special directives like notes, warnings, and tips
+- Converts RST tables to Markdown format
+- Handles image references and copies images to appropriate locations
+- Processes inline markup and references
 
 ## Development
 
 To run the site locally:
 
 1. Install Hugo: https://gohugo.io/installation/
+2. Install NodeJS (simplest way to run pagefind)
 2. Clone this repository
 3. Navigate to the repository directory
-4. Run `hugo server -D`
+4. Run `make live-html`
 5. Open your browser to http://localhost:1313/
 
 ## Building for Production
 
-To build the site for production:
-
-```
-hugo --minify
-```
+See the GitHub workflows in `.github/workflows`
 
 The built site will be in the `public` directory.
 

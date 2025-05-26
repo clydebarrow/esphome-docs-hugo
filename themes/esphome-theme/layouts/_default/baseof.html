@@ -40,6 +40,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Page.Title }}">
 
+    /* prevent flash of unstyled content, will be overridden */
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+
     <script data-cfasync="false" type="text/javascript">
         // cfasync is set to false to prevent Cloudflare from modifying the script
         // Critical theme preferences
@@ -58,13 +65,6 @@
     {{ partial "asset.html" "css/chroma.css" }}
     {{ partial "asset.html" "pagefind/pagefind-modular-ui.css" }}
     {{ block "head" . }}{{ end }}
-
-    <style>
-        /* hide content before CSS loads to prevent Flash of Unstyled Content */
-        main, footer  {
-            display: none;
-        }
-    </style>
 
 </head>
 <body class="body">
@@ -140,11 +140,11 @@
     </div>
 
 
-    <main data-pagefind-body class="after-css">
+    <main data-pagefind-body>
         {{ block "main" . }}{{ end }}
     </main>
 
-    <footer class="after-css">
+    <footer>
         <div class="footer-content">
             <a class="footer-logo" href="https://www.openhomefoundation.org/">
                 <span>ESPHome is a project from the</span>

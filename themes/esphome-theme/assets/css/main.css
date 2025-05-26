@@ -214,10 +214,6 @@ img {
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-.after-css {
-  display: block;
-}
-
 .nav-logo img, .nav-logo svg {
   height: 30px;
   padding: 0;

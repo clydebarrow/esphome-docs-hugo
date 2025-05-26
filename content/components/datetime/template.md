@@ -49,7 +49,7 @@ datetime:
 - **set_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the
   dateime value. The new value is available to lambdas in the `x` variable.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval on which to update the datetime
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval on which to update the datetime
   by executing the `lambda`. Defaults to `60s`.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the template datetime will immediately update the reported state.
@@ -102,7 +102,7 @@ datetime:
 
 ## See Also
 
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Automation](automations/_index#automation)
 - {{< apiref "template/datetime/template_date.h" "template/datetime/template_date.h" >}}
 
 

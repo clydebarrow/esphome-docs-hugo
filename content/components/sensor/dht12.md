@@ -39,12 +39,12 @@ sensor:
 
   - All options from [Sensor](components/sensor/_index#config-sensor).
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht/" >}}
 - {{< docref "hdc1080/" >}}

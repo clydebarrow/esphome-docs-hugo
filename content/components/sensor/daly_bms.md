@@ -26,7 +26,7 @@ daly_bms:
 ```
 ### Configuration variables:
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Delay between data requests.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): Delay between data requests.
 - **address** (*Optional*, int): Address to use, defaults to `0x80`.
 
 ## Sensor
@@ -306,7 +306,7 @@ uart:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "daly_bms/daly_bms.h" "daly_bms/daly_bms.h" >}}
 
 

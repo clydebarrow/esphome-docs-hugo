@@ -73,11 +73,11 @@ See {{< docref "time/gps" >}} for config options for the GPS time source.
 
   - All options from [Sensor](components/sensor/_index#config-sensor).
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval of sensor updates. Defaults to  `20s`.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval of sensor updates. Defaults to  `20s`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - [TinyGPS++ library](http://arduiniana.org/libraries/tinygpsplus/)
 - {{< apiref "gps/gps.h" "gps/gps.h" >}}
 

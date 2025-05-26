@@ -46,9 +46,9 @@ light:
 ```
 ## Configuration variables:
 
-- **gate_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin used to control the Triac or
+- **gate_pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin used to control the Triac or
   Mosfet.
-- **zero_cross_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin used to sense the AC
+- **zero_cross_pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin used to sense the AC
   Zero cross event, you can have several dimmers controlled with the same zero cross
   detector, in such case duplicate the `zero_cross_pin` config on each output.
 - **method** (*Optional*): Set the method for dimming, can be:
@@ -61,7 +61,7 @@ light:
 - **init_with_half_cycle** (*Optional*, boolean): Will send the first full half AC cycle
   Try to use this for dimmable LED lights, it might help turning on at low brightness
   levels. On Halogen lamps it might show at initial flicker. Defaults to `false`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - All other options from [Output](components/output/_index#config-output).
 
 Dimming lights with phase control can be tricky, the minimum level your light turns on

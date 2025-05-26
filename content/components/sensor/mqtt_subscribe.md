@@ -33,7 +33,7 @@ sensor:
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "mqtt_subscribe/sensor/mqtt_subscribe_sensor.h" "mqtt_subscribe/sensor/mqtt_subscribe_sensor.h" >}}
 
 

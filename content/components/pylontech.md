@@ -55,9 +55,9 @@ pylontech:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this Pylontech component.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this Pylontech component.
 - **uart_id** (*Optional*): The uart Bus ID
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 ## Sensor
 
@@ -165,6 +165,6 @@ sensor:
 - [nodered-pylontech-console-reader](https://github.com/juanhaywood/nodered-pylontech-console-reader)
 - [MultiSIBControl](http://www.multisibcontrol.net/)
 - [ioBroker.pylontech](https://github.com/PLCHome/ioBroker.pylontech/)
-- [UART Bus]({{< ref "components/uart#uart" >}})
+- [UART Bus](components/uart#uart)
 
 

@@ -19,7 +19,7 @@ select:
 ```
 ## See Also
 
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Automation](automations/_index#automation)
 - {{< docref "/components/logger" >}}
 
 

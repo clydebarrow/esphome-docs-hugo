@@ -32,24 +32,24 @@ esp32_improv:
 ```
 ## Configuration variables:
 
-- **authorizer** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): A {{< docref "binary_sensor/index" "binary sensor" >}} to authorize with.
+- **authorizer** (**Required**, [ID](guides/configuration-types#config-id)): A {{< docref "binary_sensor/index" "binary sensor" >}} to authorize with.
   Also accepts `none` to skip authorization.
-- **authorized_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time until authorization times out and needs
+- **authorized_duration** (*Optional*, [Time](guides/configuration-types#config-time)): The amount of time until authorization times out and needs
   to be re-authorized. Defaults to `1min`.
-- **status_indicator** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): An {{< docref "output/index" "output" >}} to display feedback to the user.
-- **identify_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to identify for. Defaults to `10s`.
-- **wifi_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time to wait before starting the Improv service
+- **status_indicator** (*Optional*, [ID](guides/configuration-types#config-id)): An {{< docref "output/index" "output" >}} to display feedback to the user.
+- **identify_duration** (*Optional*, [Time](guides/configuration-types#config-time)): The amount of time to identify for. Defaults to `10s`.
+- **wifi_timeout** (*Optional*, [Time](guides/configuration-types#config-time)): The amount of time to wait before starting the Improv service
   after Wi-Fi is no longer connected. Defaults to `1min`.
 - **on_start** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when Improv is waiting for
-  authorization and/or upon authorization. See [`on_start`]({{< ref "components/esp32_improv#improv-on_start" >}}).
+  authorization and/or upon authorization. See [`on_start`](components/esp32_improv#improv-on_start).
 - **on_provisioned** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when provisioning has
-  completed. See [`on_provisioned`]({{< ref "components/esp32_improv#improv-on_provisioned" >}}).
+  completed. See [`on_provisioned`](components/esp32_improv#improv-on_provisioned).
 - **on_provisioning** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the device begins the
-  provisioning process. See [`on_provisioning`]({{< ref "components/esp32_improv#improv-on_provisioning" >}}).
+  provisioning process. See [`on_provisioning`](components/esp32_improv#improv-on_provisioning).
 - **on_stop** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when Improv has stopped.
-  See [`on_stop`]({{< ref "components/esp32_improv#improv-on_stop" >}}).
+  See [`on_stop`](components/esp32_improv#improv-on_stop).
 - **on_state** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when an Improv state change
-  happens. See [`on_state`]({{< ref "components/esp32_improv#improv-on_state" >}}).
+  happens. See [`on_state`](components/esp32_improv#improv-on_state).
 
 {{< anchor "improv-automations" >}}
 

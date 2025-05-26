@@ -145,7 +145,7 @@ This is an [Action](automations/actions#config-action) for setting parameters fo
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the climate device to control.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the climate device to control.
 - **mode** (*Optional*, string, [templatable](automations/templates#config-templatable)): Put the climate device
   in a specific mode. One of
 

@@ -67,7 +67,7 @@ Configuration variables:
 Automations:
 
 - **on_press** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when the button is pressed. See [`on_press`]({{< ref "components/button/_index#button-on_press" >}}).
+  when the button is pressed. See [`on_press`](components/button/_index#button-on_press).
 
 MQTT options:
 
@@ -104,7 +104,7 @@ This is an [Action](automations/actions#config-action) for pressing a button in 
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the button to set.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the button to set.
 
 {{< note >}}
 Buttons are designed to trigger an action on a device from Home Assistant, and have an unidirectional flow from

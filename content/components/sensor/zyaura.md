@@ -35,8 +35,8 @@ sensor:
 ```
 ## Configuration variables:
 
-- **clock_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the clock bus is connected.
-- **data_pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin where the data bus is connected.
+- **clock_pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin where the clock bus is connected.
+- **data_pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin where the data bus is connected.
 - **co2** (*Optional*): The information for the CO2 sensor.
 
   - All options from [Sensor](components/sensor/_index#config-sensor).
@@ -49,7 +49,7 @@ sensor:
 
   - All options from [Sensor](components/sensor/_index#config-sensor).
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 
@@ -61,7 +61,7 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 {{< /note >}}
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "mhz19/" >}}
 - [CO2mon-esp firmware](https://github.com/Anonym-tsk/co2mon-esp) by [@anonym-tsk](https://github.com/Anonym-tsk)

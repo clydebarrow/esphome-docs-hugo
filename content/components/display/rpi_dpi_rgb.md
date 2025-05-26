@@ -80,11 +80,11 @@ display:
 - **vsync_pulse_width** (*Optional*, int): The vertical sync pulse width.
 - **vsync_front_porch** (*Optional*, int): The vertical front porch length.
 - **vsync_back_porch** (*Optional*, int): The vertical back porch length.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `5s`.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to re-draw the screen. Defaults to `5s`.
 - **auto_clear_enabled** (*Optional*, boolean): If the display should be cleared before each update. Defaults to `true` if a lambda or pages are configured, false otherwise.
   or to keep the existing display content (must overwrite explicitly, e.g., only on data change).
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages]({{< ref "components/display/_index#display-pages" >}}).
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages](components/display/_index#display-pages).
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - **color_order** (*Optional*): Should be one of `bgr` (default) or `rgb`.
 - **dimensions** (**Required**): Dimensions of the screen, specified either as *width* **x** *height* (e.g `320x240`) or with separate config keys.
 
@@ -98,7 +98,7 @@ display:
 - **invert_colors** (*Optional*): With this boolean option you can invert the display colors. **Note** some of the displays have this option set automatically to true and can't be changed.
 - **rotation** (*Optional*): Rotate the display presentation in software. Choose one of `0°`, `90°`, `180°`, or `270°`.
 - **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): The lambda to use for rendering the content on the display.
-  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+  See [Display Rendering Engine](components/display/_index#display-engine) for more information.
 
 
 The horizontal and vertical `pulse_width`, `front_porch` and `back_porch` values are optional, but may require

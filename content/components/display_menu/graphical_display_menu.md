@@ -42,13 +42,13 @@ graphical_display_menu:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **display** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): ID of the display to render to. See
-  [Drawing Modes]({{< ref "components/display_menu/graphical_display_menu#drawing_modes" >}}) for more details
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **display** (*Optional*, [ID](guides/configuration-types#config-id)): ID of the display to render to. See
+  [Drawing Modes](components/display_menu/graphical_display_menu#drawing_modes) for more details
 - **font** (**Required**, [Font](components/font#display-fonts)): Specifies the font to use
-- **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})): Specifies the foreground color to use.
+- **foreground_color** (*Optional*, [Color](components/display/_index#config-color)): Specifies the foreground color to use.
   Defaults to COLOR_ON
-- **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})): Specifies the background color to use.
+- **background_color** (*Optional*, [Color](components/display/_index#config-color)): Specifies the background color to use.
   Defaults to COLOR_OFF
 
 Automations:
@@ -138,7 +138,7 @@ display:
 By default menu items with a value will be rendered between a set of parenthesis. This can be
 controlled via the `menu_item_value` parameter.
 
-- **menu_item_value** (*Optional*, [Templates]({{< ref "automations/templates#config-lambda" >}})): Specifies how to render values for
+- **menu_item_value** (*Optional*, [Templates](automations/templates#config-lambda)): Specifies how to render values for
   menu items that have values (eg. Selects, numbers). Defaults to rendering the value as
   "(value here)". Receives a MenuItemValueArguments as the argument`it`.
 
@@ -228,8 +228,8 @@ binary_sensor:
 
 - [Display Menu](components/display_menu/_index#display_menu)
 - [Display](components/display/_index#display-engine)
-- [Font Renderer Component]({{< ref "components/font#display-fonts" >}})
-- [Display Pages]({{< ref "components/display/_index#display-pages" >}})
+- [Font Renderer Component](components/font#display-fonts)
+- [Display Pages](components/display/_index#display-pages)
 - {{< apiref "graphical_display_menu/graphical_display_menu.h" "graphical_display_menu/graphical_display_menu.h" >}}
 
 

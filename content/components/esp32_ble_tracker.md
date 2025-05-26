@@ -73,13 +73,13 @@ you can use OTA updates again.
   See also [this guide by Texas Instruments](https://dev.ti.com/tirex/explore/content/simplelink_academy_cc2640r2sdk_5_10_02_00/modules/blestack/ble_scan_adv_basic/ble_scan_adv_basic.html#scanning-basics)
   for reference.
 
-  - **interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval between each consecutive scan window.
+  - **interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval between each consecutive scan window.
     This is the time the ESP spends on each of the 3 BLE advertising channels.
     Defaults to `320ms`.
-  - **window** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time the ESP is actively listening for packets
+  - **window** (*Optional*, [Time](guides/configuration-types#config-time)): The time the ESP is actively listening for packets
     on a channel during each scan interval. If this is close to the `interval` value, the ESP will
     spend more time listening to packets (but also consume more power). Defaults to `30ms`
-  - **duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of each complete scan. This has no real
+  - **duration** (*Optional*, [Time](guides/configuration-types#config-time)): The duration of each complete scan. This has no real
     impact on the device but can be used to debug the BLE stack. Defaults to `5min`.
   - **active** (*Optional*, boolean): Whether to actively send scan requests to request more data
     after having received an advertising packet. With some devices this is necessary to receive all data,
@@ -92,7 +92,7 @@ you can use OTA updates again.
     which can improve reliability. Only available if `wifi` component is configured.
     Defaults to `true`.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for this ESP32 BLE Hub.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID for this ESP32 BLE Hub.
 - **max_connections** (*Optional*, int): The maximum number of BLE connection slots to use.
   Each configured slot consumes ~1KB of RAM. It is recommended not to exceed `5`
   connection slots to avoid memory issues. Defaults to `3`.
@@ -104,13 +104,13 @@ you can use OTA updates again.
 Automations:
 
 - **on_ble_advertise** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a Bluetooth advertising is received. See [`on_ble_advertise` Trigger]({{< ref "components/esp32_ble_tracker#esp32_ble_tracker-on_ble_advertise" >}}).
+  when a Bluetooth advertising is received. See [`on_ble_advertise` Trigger](components/esp32_ble_tracker#esp32_ble_tracker-on_ble_advertise).
 - **on_ble_manufacturer_data_advertise** (*Optional*, [Automation](automations/_index#automation)): An automation to
   perform when a Bluetooth advertising with manufacturer data is received. See
-  [`on_ble_manufacturer_data_advertise` Trigger]({{< ref "components/esp32_ble_tracker#esp32_ble_tracker-on_ble_manufacturer_data_advertise" >}}).
+  [`on_ble_manufacturer_data_advertise` Trigger](components/esp32_ble_tracker#esp32_ble_tracker-on_ble_manufacturer_data_advertise).
 - **on_ble_service_data_advertise** (*Optional*, [Automation](automations/_index#automation)): An automation to
   perform when a Bluetooth advertising with service data is received. See
-  [`on_ble_service_data_advertise` Trigger]({{< ref "components/esp32_ble_tracker#esp32_ble_tracker-on_ble_service_data_advertise" >}}).
+  [`on_ble_service_data_advertise` Trigger](components/esp32_ble_tracker#esp32_ble_tracker-on_ble_service_data_advertise).
 - **on_scan_end** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when
   a BLE scan has completed (the duration of the scan). This works with continuous set to true or false.
 

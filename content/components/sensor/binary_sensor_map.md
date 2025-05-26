@@ -143,7 +143,7 @@ binary_sensor:
 
 - {{< docref "/components/binary_sensor/mpr121" >}}
 - {{< docref "/components/binary_sensor/analog_threshold" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "binary_sensor_map/binary_sensor_map.h" "binary_sensor_map/binary_sensor_map.h" >}}
 - [Bayesian sensor in Home Assistant](https://www.home-assistant.io/integrations/bayesian/)
 

@@ -65,9 +65,9 @@ Configuration variables:
 Automations:
 
 - **on_value** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a new value is published. See [`on_value`]({{< ref "components/number/_index#number-on_value" >}}).
+  when a new value is published. See [`on_value`](components/number/_index#number-on_value).
 - **on_value_range** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a published value transition from outside to a range to inside. See [`on_value_range`]({{< ref "components/number/_index#number-on_value_range" >}}).
+  when a published value transition from outside to a range to inside. See [`on_value_range`](components/number/_index#number-on_value_range).
 
 MQTT Options:
 
@@ -169,7 +169,7 @@ This is an [Action](automations/actions#config-action) for setting a number stat
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number to set.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number to set.
 - **value** (**Required**, float, [templatable](automations/templates#config-templatable)):
   The value to set the number to.
 
@@ -191,7 +191,7 @@ step size (default: 1).
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
 - **cycle** (*Optional*, boolean): Whether or not to set the number to its minimum
   value when the increment pushes the value beyond its maximum value. This will only
   work when the number component uses a minimum and maximum value.
@@ -215,7 +215,7 @@ step size (default: 1).
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
 - **cycle** (*Optional*, boolean): Whether or not to set the number to its maximum
   value when the decrement pushes the value below its minimum value. This will only
   work when the number component uses a minimum and maximum value.
@@ -238,7 +238,7 @@ a number component that has a minimum value defined for it.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
 
 {{< anchor "number-to-max_action" >}}
 
@@ -257,7 +257,7 @@ a number component that has a maximum value defined for it.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number component to update.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
 
 {{< anchor "number-operation_action" >}}
 
@@ -283,7 +283,7 @@ using a generic templatable action call.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the number to update.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number to update.
 - **operation** (**Required**, string, [templatable](automations/templates#config-templatable)):
   What operation to perform on the number component. One of `TO_MIN`,
   `TO_MAX`, `DECREMENT` or `INCREMENT` (case insensitive). When writing a

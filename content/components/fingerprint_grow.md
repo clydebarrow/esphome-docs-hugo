@@ -53,21 +53,21 @@ The configuration is made up of three parts: The central component, optional ind
 
 Base Configuration:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - **sensing_pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): Pin connected to the reader's finger detection signal (WAKEUP) output.
 - **sensor_power_pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): Output pin responsible for toogling the sensor power on and off.
 - **password** (*Optional*, int): Password to use for authentication. Defaults to `0x00`.
-- **new_password** (*Optional*, int): Sets a new password to use for authentication. See [Setting a New Password]({{< ref "components/fingerprint_grow#fingerprint_grow-set_new_password" >}}) for more information.
-- **idle_period_to_sleep** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The sensor idle period to wait before powering it off (sleep). Defaults to `5s`. See [Sleep Mode]({{< ref "components/fingerprint_grow#fingerprint_grow-sleep_mode" >}}) for more information.
-- **on_finger_scan_start** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the finger touches the sensor. See [`on_finger_scan_start` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_finger_scan_start" >}}).
-- **on_finger_scan_matched** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when an enrolled fingerprint is scanned. See [`on_finger_scan_matched` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_finger_scan_matched" >}}).
-- **on_finger_scan_unmatched** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when an unknown fingerprint is scanned. See [`on_finger_scan_unmatched` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_finger_scan_unmatched" >}}).
-- **on_finger_scan_misplaced** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the finger is not entirely touching the sensor. See [`on_finger_scan_misplaced` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_finger_scan_misplaced" >}}).
-- **on_finger_scan_invalid** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the scan of a fingerprint failed. See [`on_finger_scan_invalid` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_finger_scan_invalid" >}}).
-- **on_enrollment_scan** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a fingerprint is scanned during enrollment. See [`on_enrollment_scan` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_enrollment_scan" >}}).
-- **on_enrollment_done** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a fingerprint is enrolled. See [`on_enrollment_done` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_enrollment_done" >}}).
-- **on_enrollment_failed** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a fingerprint enrollment failed. See [`on_enrollment_failed` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_enrollment_failed" >}}).
+- **new_password** (*Optional*, int): Sets a new password to use for authentication. See [Setting a New Password](components/fingerprint_grow#fingerprint_grow-set_new_password) for more information.
+- **idle_period_to_sleep** (*Optional*, [Time](guides/configuration-types#config-time)): The sensor idle period to wait before powering it off (sleep). Defaults to `5s`. See [Sleep Mode](components/fingerprint_grow#fingerprint_grow-sleep_mode) for more information.
+- **on_finger_scan_start** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the finger touches the sensor. See [`on_finger_scan_start` Trigger](components/fingerprint_grow#fingerprint_grow-on_finger_scan_start).
+- **on_finger_scan_matched** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when an enrolled fingerprint is scanned. See [`on_finger_scan_matched` Trigger](components/fingerprint_grow#fingerprint_grow-on_finger_scan_matched).
+- **on_finger_scan_unmatched** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when an unknown fingerprint is scanned. See [`on_finger_scan_unmatched` Trigger](components/fingerprint_grow#fingerprint_grow-on_finger_scan_unmatched).
+- **on_finger_scan_misplaced** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the finger is not entirely touching the sensor. See [`on_finger_scan_misplaced` Trigger](components/fingerprint_grow#fingerprint_grow-on_finger_scan_misplaced).
+- **on_finger_scan_invalid** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when the scan of a fingerprint failed. See [`on_finger_scan_invalid` Trigger](components/fingerprint_grow#fingerprint_grow-on_finger_scan_invalid).
+- **on_enrollment_scan** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a fingerprint is scanned during enrollment. See [`on_enrollment_scan` Trigger](components/fingerprint_grow#fingerprint_grow-on_enrollment_scan).
+- **on_enrollment_done** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a fingerprint is enrolled. See [`on_enrollment_done` Trigger](components/fingerprint_grow#fingerprint_grow-on_enrollment_done).
+- **on_enrollment_failed** (*Optional*, [Automation](automations/_index#automation)): An action to be performed when a fingerprint enrollment failed. See [`on_enrollment_failed` Trigger](components/fingerprint_grow#fingerprint_grow-on_enrollment_failed).
 
 ## Binary Sensor
 
@@ -81,10 +81,10 @@ Configuration variables:
 - **fingerprint_count**: The number of enrolled fingerprints stored on the reader.
   All options from [Sensor](components/sensor/_index#config-sensor).
 
-- **last_finger_id**: The last matched enrolled fingerprint as set by [`on_finger_scan_matched` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_finger_scan_matched" >}}).
+- **last_finger_id**: The last matched enrolled fingerprint as set by [`on_finger_scan_matched` Trigger](components/fingerprint_grow#fingerprint_grow-on_finger_scan_matched).
   All options from [Sensor](components/sensor/_index#config-sensor).
 
-- **last_confidence**: The last matched confidence as set by [`on_finger_scan_matched` Trigger]({{< ref "components/fingerprint_grow#fingerprint_grow-on_finger_scan_matched" >}}).
+- **last_confidence**: The last matched confidence as set by [`on_finger_scan_matched` Trigger](components/fingerprint_grow#fingerprint_grow-on_finger_scan_matched).
   All options from [Sensor](components/sensor/_index#config-sensor).
 
 - **status**: The integer representation of the internal status register of the reader.
@@ -338,7 +338,7 @@ on_...:
 ```
 ## `fingerprint_grow.led_control` Action
 
-Turns on or off the LED on the reader. Only available on select models. If you have the R503 or R503-RGB use [`fingerprint_grow.aura_led_control` Action]({{< ref "components/fingerprint_grow#fingerprint_grow-aura_led_control" >}}) instead.
+Turns on or off the LED on the reader. Only available on select models. If you have the R503 or R503-RGB use [`fingerprint_grow.aura_led_control` Action](components/fingerprint_grow#fingerprint_grow-aura_led_control) instead.
 
 ```yaml
 on_...:
@@ -435,7 +435,7 @@ Configuration options:
 
 ## All actions
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the Grow fingerprint reader if you have multiple components.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the Grow fingerprint reader if you have multiple components.
 
 
 ## Test setup

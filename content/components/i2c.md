@@ -29,19 +29,19 @@ i2c:
 ```
 ## Configuration variables:
 
-- **sda** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the data line of the I²C bus.
+- **sda** (*Optional*, [Pin](guides/configuration-types#config-pin)): The pin for the data line of the I²C bus.
   Defaults to the default of your board (usually GPIO21 for ESP32 and GPIO4 for ESP8266).
-- **scl** (*Optional*, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin for the clock line of the I²C bus.
+- **scl** (*Optional*, [Pin](guides/configuration-types#config-pin)): The pin for the clock line of the I²C bus.
   Defaults to the default of your board (usually GPIO22 for ESP32 and
   GPIO5 for ESP8266).
 - **scan** (*Optional*, boolean): If ESPHome should do a search of the I²C address space on startup.
   Defaults to `true`.
 - **frequency** (*Optional*, float): Set the frequency the I²C bus should operate on.
   Defaults to `50kHz`. Values are `10kHz`, `50kHz`, `100kHz`, `200kHz`, ... `800kHz`
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Set the I²C bus timeout.
+- **timeout** (*Optional*, [Time](guides/configuration-types#config-time)): Set the I²C bus timeout.
   Defaults to the framework defaults (`100us` on `esp32` with `esp-idf`, `50ms` on `esp32` with `Arduino`,
   `1s` on `esp8266` and `1s` on `rp2040`). Maximum on `esp-idf` is 13ms.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID for this I²C bus if you need multiple I²C buses.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID for this I²C bus if you need multiple I²C buses.
 
 {{< note >}}
 If the device can support multiple I²C buses these buses need to be defined as below and sensors need to be setup specifying the correct bus:

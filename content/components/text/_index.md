@@ -57,7 +57,7 @@ Configuration variables:
 Automations:
 
 - **on_value** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a new value is published. See [`on_value`]({{< ref "components/text/_index#text-on_value" >}}).
+  when a new value is published. See [`on_value`](components/text/_index#text-on_value).
 
 MQTT Options:
 
@@ -102,7 +102,7 @@ This is an [Action](automations/actions#config-action) for setting a text state.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the text to set.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the text to set.
 - **value** (**Required**, string, [templatable](automations/templates#config-templatable)):
   The value to set the text to.
 

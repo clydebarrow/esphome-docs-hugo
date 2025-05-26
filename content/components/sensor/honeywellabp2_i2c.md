@@ -48,12 +48,12 @@ datasheet indicates that the sensor does not measure temperature.
   All options from [Sensor](components/sensor/_index#config-sensor).
 
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "honeywellabp/honeywellabp2.h" "honeywellabp/honeywellabp2.h" >}}
 
 

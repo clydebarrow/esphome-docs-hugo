@@ -25,9 +25,9 @@ sensor:
 ```
 ## Configuration variables
 
--  **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+-  **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 -  **provider** (**Required**, string): The name of the provider node.
--  **remote_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the original sensor in the provider node. If not specified defaults to the ID configured with `id:`.
+-  **remote_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the original sensor in the provider node. If not specified defaults to the ID configured with `id:`.
 -  **name** (*Optional*, string): The name of the sensor.
 -  **internal** (*Optional*, boolean): Whether the sensor should be exposed via API (e.g. to Home Assistant.) Defaults to `true` if name is not set, required if name is provided.
 -  All other options from [Sensor](components/sensor/_index#config-sensor).
@@ -49,6 +49,6 @@ configured.
 - {{< docref "/components/packet_transport" >}}
 - {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/udp" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Automation](automations/_index#automation)
 
 

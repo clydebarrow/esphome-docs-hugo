@@ -28,9 +28,9 @@ sensor:
 ```
 ## Configuration variables
 
-- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to count pulses on.
+- **pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin to count pulses on.
 
-- **internal_filter** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): If a pulse shorter than this   time is detected, it is discarded. Defaults to `13us`.
+- **internal_filter** (*Optional*, [Time](guides/configuration-types#config-time)): If a pulse shorter than this   time is detected, it is discarded. Defaults to `13us`.
 
   This acts as a debounce filter to eliminate input noise, so choose a value a little less than your expected minimum pulse width.
 
@@ -39,13 +39,13 @@ sensor:
   - In `EDGE`  mode, subsequent rising edges are compared and if they fall into an interval lesser than the `internal filter` value, the last one is discarded. This is useful if your input signal bounces, but is otherwise clean.
   - In `PULSE` mode, the rising edge is discarded if any further interrupts are detected before the `internal_filter` time has passed. In other words, a high pulse must be at least `internal_filter` long to be counted. This is useful if you have a noisy input signal that may have bounces before and/or after the main pulse.
 
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): If we don't see a pulse for this length of time, we assume *0 pulses/s*. Defaults to `5 min`.
-- **total** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): An additional sensor that outputs the total number of pulses counted.
+- **timeout** (*Optional*, [Time](guides/configuration-types#config-time)): If we don't see a pulse for this length of time, we assume *0 pulses/s*. Defaults to `5 min`.
+- **total** (*Optional*, [ID](guides/configuration-types#config-id)): An additional sensor that outputs the total number of pulses counted.
 - All other options from [Sensor](components/sensor/_index#config-sensor).
 
 ## Converting units
 
-The sensor defaults to units of *pulses/min*, You can change this by using [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}}).
+The sensor defaults to units of *pulses/min*, You can change this by using [Sensor Filters](components/sensor/_index#sensor-filters).
 For example, if you're using the pulse meter with a photodiode to count the light pulses on a power meter that has an impulse constant of *10000 pulses / kWh*, you can use the following to output instantaneous usage in *W*:
 
 ```yaml
@@ -102,7 +102,7 @@ This value is the raw count of pulses, and not the value you see after the filte
 {{< /note >}}
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "/components/sensor/pulse_counter" >}}
 - {{< docref "/components/sensor/total_daily_energy" >}}
 - {{< docref "/cookbook/power_meter" >}}

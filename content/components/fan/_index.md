@@ -81,19 +81,19 @@ MQTT options:
 Automation triggers:
 
 - **on_state** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the fan state is changed. See [`fan.on_state` Trigger]({{< ref "components/fan/_index#fan-on_state_trigger" >}}).
+  when the fan state is changed. See [`fan.on_state` Trigger](components/fan/_index#fan-on_state_trigger).
 - **on_turn_on** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the fan is turned on. See [`fan.on_turn_on` / `fan.on_turn_off` Trigger]({{< ref "components/fan/_index#fan-on_turn_on_off_trigger" >}}).
+  when the fan is turned on. See [`fan.on_turn_on` / `fan.on_turn_off` Trigger](components/fan/_index#fan-on_turn_on_off_trigger).
 - **on_turn_off** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the fan is turned off. See [`fan.on_turn_on` / `fan.on_turn_off` Trigger]({{< ref "components/fan/_index#fan-on_turn_on_off_trigger" >}}).
+  when the fan is turned off. See [`fan.on_turn_on` / `fan.on_turn_off` Trigger](components/fan/_index#fan-on_turn_on_off_trigger).
 - **on_direction_set** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the fan direction is changed. See [`fan.on_direction_set` Trigger]({{< ref "components/fan/_index#fan-on_direction_set_trigger" >}}).
+  when the fan direction is changed. See [`fan.on_direction_set` Trigger](components/fan/_index#fan-on_direction_set_trigger).
 - **on_oscillating_set** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the fan oscillating state is changed. See [`fan.on_oscillating_set` Trigger]({{< ref "components/fan/_index#fan-on_oscillating_set_trigger" >}}).
+  when the fan oscillating state is changed. See [`fan.on_oscillating_set` Trigger](components/fan/_index#fan-on_oscillating_set_trigger).
 - **on_speed_set** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the fan speed is changed. See [`fan.on_speed_set` Trigger]({{< ref "components/fan/_index#fan-on_speed_set_trigger" >}}).
+  when the fan speed is changed. See [`fan.on_speed_set` Trigger](components/fan/_index#fan-on_speed_set_trigger).
 - **on_preset_set** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the fan preset mode is changed. See [`fan.on_preset_set` Trigger]({{< ref "components/fan/_index#fan-on_preset_set_trigger" >}}).
+  when the fan preset mode is changed. See [`fan.on_preset_set` Trigger](components/fan/_index#fan-on_preset_set_trigger).
 
 {{< anchor "fan-toggle_action" >}}
 
@@ -136,7 +136,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the fan.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the fan.
 - **oscillating** (*Optional*, boolean, [templatable](automations/templates#config-templatable)):
   Set the oscillation state of the fan. Defaults to not affecting oscillation.
 - **speed** (*Optional*, int, [templatable](automations/templates#config-templatable)):
@@ -162,7 +162,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the fan.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the fan.
 - **off_speed_cycle** (*Optional*, boolean, [templatable](automations/templates#config-templatable)): Determines if the fan will cycle off after cycling though its highest speed. Can be `true` or `false`. If `false` fan will cycle to its lowest speed instead of turning off.  Defaults to `true`.
 
 {{< anchor "fan-is_on_condition" >}}

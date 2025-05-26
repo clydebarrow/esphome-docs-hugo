@@ -50,7 +50,7 @@ Configuration variables:
 
 One of `id` or `name` is required.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. At least one of **id** and **name** must be specified.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation. At least one of **id** and **name** must be specified.
 - **name** (*Optional*, string): The name for the event. At least one of **id** and **name** must be specified.
 
   {{< note >}}
@@ -119,7 +119,7 @@ This action allows for the triggering of an event from within an automation.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the event.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the event.
 - **event_type** (**Required**, string): The type of event to trigger.
 
 {{< anchor "event-lambda_calls" >}}

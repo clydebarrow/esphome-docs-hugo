@@ -39,7 +39,7 @@ wiegand:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this device for use in lambdas.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Set the ID of this device for use in lambdas.
 - **d0** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin where the `D0` output
   of the Wiegand's interface connects.
 - **d1** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin where the `D1` output

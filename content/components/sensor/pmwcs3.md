@@ -42,7 +42,7 @@ sensor:
   All options from [Sensor](components/sensor/_index#config-sensor).
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x63`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< anchor "sensor-PMWCS3AirCalibrationAction" >}}
@@ -67,7 +67,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the pmwcs3 sensor.
 
 {{< anchor "sensor-PMWCS3WaterCalibrationAction" >}}
 
@@ -91,7 +91,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the pmwcs3 sensor.
 
 {{< anchor "sensor-PMWCS3NewI2cAddressAction" >}}
 
@@ -115,12 +115,12 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the pmwcs3 sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the pmwcs3 sensor.
 - **address** (**Required**, int): New I2C address.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "pmwcs3/pmwcs3.h" "pmwcs3/pmwcs3.h" >}}
 - [Temperature Compensation for Conductivity](https://www.aqion.de/site/112)
 - [PMWCS3 Library](https://github.com/tinovi/i2cArduino) by [@tinovi](https://github.com/tinovi)

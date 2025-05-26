@@ -77,13 +77,13 @@ sensor:
   All options from [Sensor](components/sensor/_index#config-sensor).
 - **update_interval** (*Optional*): Amount of time to wait between generating measurements. If this is longer than 30
   seconds, and if `tx_pin` is set in the UART configuration, the fan will be spun down between measurements. Default to `0s` (forward data as it's coming in from the sensor).
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component](components/uart#uart) if you want
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [UART Component](components/uart#uart) if you want
   to use multiple UART buses.
 
 ## See Also
 
 - {{< docref "/components/sensor/sds011" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "pmsx003/pmsx003.h" "pmsx003/pmsx003.h" >}}
 
 

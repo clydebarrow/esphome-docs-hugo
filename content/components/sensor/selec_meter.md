@@ -100,13 +100,13 @@ sensor:
   options from [Sensor](components/sensor/_index#config-sensor).
 - **maximum_demand_apparent_power** (*Optional*): Use the maximum demand apparent power value of the sensor in VA. All
   options from [Sensor](components/sensor/_index#config-sensor).
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 
 

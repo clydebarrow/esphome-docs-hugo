@@ -20,7 +20,7 @@ script:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The [ID]({{< ref "guides/configuration-types#config-id" >}}) of the script. Use this to interact with the script
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The [ID](guides/configuration-types#config-id) of the script. Use this to interact with the script
   using the script actions.
 - **mode** (*Optional*, string): Controls what happens when a script is invoked while it is still running from one or
   more previous invocations. Default to `single`.

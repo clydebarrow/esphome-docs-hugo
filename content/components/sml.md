@@ -51,8 +51,8 @@ sml:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component](components/uart#uart) if you want
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [UART Component](components/uart#uart) if you want
   to use multiple UART buses.
 
 ## Sensor
@@ -75,7 +75,7 @@ sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the [SML platform](components/sml#sml-platform)
+- **sml_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the [SML platform](components/sml#sml-platform)
 - All other options from [Sensor](components/sensor/_index#config-sensor).
 
 
@@ -94,7 +94,7 @@ text_sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the [SML platform](components/sml#sml-platform)
+- **sml_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the [SML platform](components/sml#sml-platform)
 - **format** (*Optional*, string): Override the automatic interpretation of the transmitted binary data value. Possible values (`int`, `uint`, `bool`, `hex`, `text`).
 - All other options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
 
@@ -102,7 +102,7 @@ text_sensor:
 ## Automations:
 
 - **on_data** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when a
-  SML message is received. See [`on_data` Trigger]({{< ref "components/sml#sml-on-data" >}}).
+  SML message is received. See [`on_data` Trigger](components/sml#sml-on-data).
 
 {{< anchor "sml-on-data" >}}
 

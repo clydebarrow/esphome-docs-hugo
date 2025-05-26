@@ -93,7 +93,7 @@ Configuration variables:
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "logger/" >}}
 - {{< apiref "debug/debug_component.h" "debug/debug_component.h" >}}
 

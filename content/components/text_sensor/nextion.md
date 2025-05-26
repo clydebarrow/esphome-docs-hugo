@@ -34,18 +34,18 @@ text_sensor:
 ```
 ## Configuration variables:
 
-- **nextion_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion display.
+- **nextion_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the Nextion display.
 - **component_name** (*Optional*, string): The name of the Nextion component.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration to update the sensor. If using a [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) this should not be used
-- **background_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The background color
-- **foreground_color** (*Optional*, [Color]({{< ref "components/display/_index#config-color" >}})):  The foreground color
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The duration to update the sensor. If using a [Nextion Custom Text Sensor Protocol](components/text_sensor/nextion#nextion_custom_text_sensor_protocol) this should not be used
+- **background_color** (*Optional*, [Color](components/display/_index#config-color)):  The background color
+- **foreground_color** (*Optional*, [Color](components/display/_index#config-color)):  The foreground color
 - **font_id** (*Optional*, int):  The font id for the component
 - **visible** (*Optional*, boolean):  Visible or not
 - All other options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
 
 **Only one** *component_name* **or** *variable_name* **can be set**
 
-See [How things Update]({{< ref "components/text_sensor/nextion#nextion_text_sensor_how_things_update" >}}) for additional information
+See [How things Update](components/text_sensor/nextion#nextion_text_sensor_how_things_update) for additional information
 
 ### Globals
 The Nextion does not retain data on Nextion page changes. Additionally, if a page is changed and the **component_name** does not exist on that page then
@@ -88,7 +88,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the Nextion text sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the Nextion text sensor.
 - **state** (**Required**, string, [templatable](automations/templates#config-templatable)): The string to publish.
 - **publish_state** (*Optional*, bool, [templatable](automations/templates#config-templatable)): Publish new state to Home Assistant.
   Default is true.
@@ -96,7 +96,7 @@ Configuration variables:
   display which will update component. Default is true.
 
 {{< note >}}
-This action can also be written in lambdas. See [Lambda Calls]({{< ref "components/text_sensor/nextion#nextion_text_sensor_lambda_calls" >}})
+This action can also be written in lambdas. See [Lambda Calls](components/text_sensor/nextion#nextion_text_sensor_lambda_calls)
 
 {{< /note >}}
 {{< anchor "nextion_text_sensor_lambda_calls" >}}
@@ -124,7 +124,7 @@ some more advanced functions (see the full {{< apiref "nextion/text_sensor/nexti
 
 ## How things Update
 A Nextion component with an integer value (.val) or Nextion variable will be automatically polled if **update_interval** is set.
-To have the Nextion send the data you can use the [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) for this. Add the [Nextion Custom Text Sensor Protocol]({{< ref "components/text_sensor/nextion#nextion_custom_text_sensor_protocol" >}}) to the
+To have the Nextion send the data you can use the [Nextion Custom Text Sensor Protocol](components/text_sensor/nextion#nextion_custom_text_sensor_protocol) for this. Add the [Nextion Custom Text Sensor Protocol](components/text_sensor/nextion#nextion_custom_text_sensor_protocol) to the
 component or function you want to trigger the send. Typically this is in *Touch Press Event* but some components, like a slider, should have it
 set in the *Touch Release Event* to capture all the changes. Since this is a custom protocol it can be sent from anywhere (timers/functions/components)
 in the Nextion.

@@ -21,8 +21,8 @@ If a startup delay is configured, the first execution of the actions will not oc
 
 ## Configuration variables:
 
-- **interval** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to execute the action with.
-- **startup_delay** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): An optional startup delay - defaults to zero.
+- **interval** (**Required**, [Time](guides/configuration-types#config-time)): The interval to execute the action with.
+- **startup_delay** (*Optional*, [Time](guides/configuration-types#config-time)): An optional startup delay - defaults to zero.
 - **then** (**Required**, [Action](automations/actions#config-action)): The action to perform.
 
 # See Also

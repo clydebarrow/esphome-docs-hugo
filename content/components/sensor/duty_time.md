@@ -34,7 +34,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the `binary_sensor` to track the duty time. *May not be
+- **sensor** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the `binary_sensor` to track the duty time. *May not be
   used with* `lambda`.
 - **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): Lambda that will be called in a loop to get the current
   state of the tracked object. *May not be used with* `sensor`.
@@ -43,8 +43,8 @@ sensor:
 - **restore** (*Optional*, boolean): Whether to store the intermediate result on the device so that the value can be
   restored upon power cycle or reboot.
   Warning: this option can wear out your flash. Defaults to `false`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The update interval. Defaults to `60s`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The update interval. Defaults to `60s`.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Set the ID of this sensor for use in lambdas.
 - All other options from [Sensor](components/sensor/_index#config-sensor).
 
 
@@ -106,9 +106,9 @@ on_...:
 ```
 ## See Also
 
-- [Base Sensor Configuration]({{< ref "components/sensor/_index#config-sensor" >}})
-- [Templates]({{< ref "automations/templates#config-lambda" >}})
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Base Sensor Configuration](components/sensor/_index#config-sensor)
+- [Templates](automations/templates#config-lambda)
+- [Automation](automations/_index#automation)
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "duty_time/duty_time_sensor.h" "duty_time/duty_time_sensor.h" >}}
 

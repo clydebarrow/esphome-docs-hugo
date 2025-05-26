@@ -50,7 +50,7 @@ Configuration variables:
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- **time_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the time entity. Automatically set
+- **time_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the time entity. Automatically set
   to the ID of a time component if only a single one is defined. Required if `on_time` is used.
 - If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](components/web_server#config-webserver-version-3-options).
 
@@ -60,7 +60,7 @@ MQTT Options:
 
 Time and DateTime Options:
 
-- **on_time** (*Optional*, [Automation]({{< ref "automations/_index#automation" >}})): Automation to run when the current datetime or time matches the current state.
+- **on_time** (*Optional*, [Automation](automations/_index#automation)): Automation to run when the current datetime or time matches the current state.
   Only valid on `time` or `datetime` types.  Use of `on_time` causes `time_id` to be required, `time_id` will be automatically assigned if a time source exists in the config, and will cause an invalid configuration if there is no {{< docref "/components/time" >}} configured.
 
 ## Automation
@@ -123,7 +123,7 @@ The `date` provided can be in one of 3 formats:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the datetime to set.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the datetime to set.
 - **date** (**Required**, string, date parts, [templatable](automations/templates#config-templatable)):
   The value to set the datetime to.
 
@@ -191,7 +191,7 @@ The `time` provided can be in one of 3 formats:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the datetime to set.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the datetime to set.
 - **time** (**Required**, string, time parts, [templatable](automations/templates#config-templatable)):
   The value to set the datetime to.
 
@@ -261,7 +261,7 @@ The `datetime` provided can be in one of 3 formats:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the datetime to set.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the datetime to set.
 - **datetime** (**Required**, string, datetime parts, [templatable](automations/templates#config-templatable)):
   The value to set the datetime to.
 

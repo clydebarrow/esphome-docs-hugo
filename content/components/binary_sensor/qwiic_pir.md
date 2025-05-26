@@ -17,7 +17,7 @@ sensors from SparkFun with ESPHome.
 
 The SparkFun Qwiic PIR Motion binary sensor uses PIR sensors to detect motion. It communicates over I²C. There are two models currently available. One uses the [Panasonic EKMC4607112K sensor](https://cdn.sparkfun.com/assets/7/2/a/4/3/EKMC460711xK_Spec.pdf), and the other uses the [Panasonic EKMB1107112 sensor](https://cdn.sparkfun.com/assets/c/e/8/7/5/EKMB110711x_Spec.pdf).
 
-You can configure a debounce mode to reduce noise and false detections. See [Debounce Modes]({{< ref "components/binary_sensor/qwiic_pir#debounce-modes" >}}) for the available options.
+You can configure a debounce mode to reduce noise and false detections. See [Debounce Modes](components/binary_sensor/qwiic_pir#debounce-modes) for the available options.
 
 To use the sensor, first set up an [I²C Bus](components/i2c#i2c) and connect the sensor to the specified pins.
 
@@ -30,8 +30,8 @@ binary_sensor:
 ```
 ## Configuration variables:
 
-- **debounce_mode** (*Optional*, enum): How the component debounces the motion sensor's signal. Must be one of `HYBRID`, `NATIVE`, or `RAW`. See [Debounce Modes]({{< ref "components/binary_sensor/qwiic_pir#debounce-modes" >}}) for details. Defaults to `HYBRID`.
-- **debounce** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Only valid when using `NATIVE` debounce mode. Configures the debounce time on the sensor to reduce noise and false detections. Defaults to `1ms`.
+- **debounce_mode** (*Optional*, enum): How the component debounces the motion sensor's signal. Must be one of `HYBRID`, `NATIVE`, or `RAW`. See [Debounce Modes](components/binary_sensor/qwiic_pir#debounce-modes) for details. Defaults to `HYBRID`.
+- **debounce** (*Optional*, [Time](guides/configuration-types#config-time)): Only valid when using `NATIVE` debounce mode. Configures the debounce time on the sensor to reduce noise and false detections. Defaults to `1ms`.
 
 -  All other options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor).
 

@@ -37,7 +37,7 @@ sensor:
   All options from [Sensor](components/sensor/_index#config-sensor).
 - **address** (*Optional*, int): Manually specify the I²C address of
   the sensor. Defaults to `0x1A`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **version** (*Optional*): The firmware version of the sensor.
   All options from [Sensor](components/sensor/_index#config-sensor).
@@ -69,7 +69,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the AGS10 sensor.
 - **mode** (**Required**, enum): One of supported modes:
 
   - `FACTORY_DEFAULT` - reset to the factory zero-point
@@ -103,13 +103,13 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the AGS10 sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the AGS10 sensor.
 - **address** (**Required**, int): New I2C address.
 
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ags10/ags10.h" "ags10/ags10.h" >}}
 
 

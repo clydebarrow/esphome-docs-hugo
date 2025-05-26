@@ -28,10 +28,10 @@ For graphical displays, which offer the greatest flexibility, there are two opti
 
 All display components inherit these configuration variables.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Required if there are multiple displays.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation. Required if there are multiple displays.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to re-draw the screen. Defaults to `1s`.
 - **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): The lambda to use for rendering the content on the display.
-  See [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more information.
+  See [Display Rendering Engine](components/display/_index#display-engine) for more information.
 
 All *graphical* displays also inherit these configuration variables.
 
@@ -61,7 +61,7 @@ individually.
 
 {{< note >}}
 Display hardware is complex and sometimes doesn't behave as expected. If you're having trouble with your display,
-please see [Troubleshooting]({{< ref "components/display/_index#troubleshooting" >}}) below.
+please see [Troubleshooting](components/display/_index#troubleshooting) below.
 
 {{< /note >}}
 So, first a few basics: When setting up a display platform in ESPHome there will be a configuration
@@ -585,8 +585,8 @@ display:
             ESP_LOGD("display", "Page changed from 1 to 2");
 
 ```
-- **from** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing from this page. Defaults to all pages.
-- **to** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): A page id. If set the automation is only triggered if changing to this page. Defaults to all pages.
+- **from** (*Optional*, [ID](guides/configuration-types#config-id)): A page id. If set the automation is only triggered if changing from this page. Defaults to all pages.
+- **to** (*Optional*, [ID](guides/configuration-types#config-id)): A page id. If set the automation is only triggered if changing to this page. Defaults to all pages.
 
 Additionally the old page will be given as the variable `from` and the new one as the variable `to`.
 

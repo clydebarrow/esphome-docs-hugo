@@ -16,7 +16,7 @@ The component is split into two parts:
 - The remote transmitter "hub", which defines the pin and a few additional settings, and...
 - Individual [actions](automations/actions#config-action) to send encoded remote signals.
 
-**See** [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}}) **and** [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}}) **for details.**
+**See** [Setting up IR Devices](guides/setting_up_rmt_devices#remote-setting-up-infrared) **and** [Setting up RF Devices](guides/setting_up_rmt_devices#remote-setting-up-rf) **for details.**
 
 {{< note >}}
 This component performs best with an ESP32 or variant; they have a dedicated hardware peripheral which ensures
@@ -32,11 +32,11 @@ remote_transmitter:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to transmit the remote signal on.
+- **pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin to transmit the remote signal on.
 - **carrier_duty_percent** (*Optional*, int): How much of the time the remote is on. For example, infrared protocols
   modulate the signal using a carrier signal. Set this to `50%` if you're using IR LEDs and `100%` for RF
   applications like 433 MHz transmitters.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation. Useful when multiple
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation. Useful when multiple
   transmitters are connected to a single device.
 
 ### ESP32 IDF configuration variables:
@@ -120,10 +120,10 @@ Configuration variables:
   sent only once.
 
   - **times** ([templatable](automations/templates#config-templatable), int): The number of times to repeat the code.
-  - **wait_time** ([templatable](automations/templates#config-templatable), [Time]({{< ref "guides/configuration-types#config-time" >}})): The time to wait between repeats (in
+  - **wait_time** ([templatable](automations/templates#config-templatable), [Time](guides/configuration-types#config-time)): The time to wait between repeats (in
     µs as a result of a [lambda](automations/templates#config-lambda)).
 
-- **transmitter_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The remote transmitter to send the remote code with. Defaults to
+- **transmitter_id** (*Optional*, [ID](guides/configuration-types#config-id)): The remote transmitter to send the remote code with. Defaults to
   the first one defined in the configuration.
 
 If you're looking for the same functionality as is default in the `rpi_rf` integration in Home Assistant, you'll want
@@ -169,7 +169,7 @@ Configuration variables:
   Defaults to a randomly generated ID if this message is not a reply or retransmission.
 - **data** (*Optional*, 0-7 bytes list): The code to send.
   Usually you only need to copy this directly from the dumper output. Defaults to `[]`
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< note >}}
 ABB-Welcome messages are sent over the two-wire bus of your intercom system.
@@ -196,7 +196,7 @@ Configuration variables:
 - **data** (**Required**, list): The command to send, A length of 2-35 bytes can be specified for one packet.
 - **carrier_frequency** (*Optional*, float): Set a frequency to send the signal
   with for infrared signals. Defaults to `38000Hz`.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 AEHA refers to the Association for Electric Home Appliances in Japan, a format used by Panasonic and many other
 companies.
@@ -218,7 +218,7 @@ Configuration variables:
 
 - **source** (**Required**, int): The 8-bit source to send, e.g. 0x00=video,0x01=audio,..., see dumper output for more info.
 - **command** (**Required**, int): The command to send, e.g. 0x01=num1, 0x0d=mute,...,  see dumper output for more info.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_byronsx" >}}
 
@@ -237,7 +237,7 @@ Configuration variables:
 
 - **address** (**Required**, int): The 8-bit ID to send, see dumper output for more info.
 - **command** (**Required**, int): The command to send, see dumper output for more info.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_canalsat" >}}
 
@@ -264,7 +264,7 @@ Configuration variables:
 - **address** (*Optional*, int): The address (or sub-device) to send to, see dumper output for more details.
   Defaults to `0`.
 - **command** (**Required**, int): The command to send.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_canalsatld" >}}
 
@@ -291,7 +291,7 @@ Configuration variables:
 - **address** (*Optional*, int): The address (or sub-device) to send to, see dumper output for more details.
   Defaults to `0`.
 - **command** (**Required**, int): The command to send.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_coolix" >}}
 
@@ -312,7 +312,7 @@ Configuration variables:
   see dumper output for more info.
 - **second** (*Optional*, [templatable](automations/templates#config-templatable), uint32_t): The second 24-bit Coolix code to send;
   see dumper output for more info.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_dish" >}}
 
@@ -331,7 +331,7 @@ Configuration variables:
 
 - **address** (*Optional*, int): The number of the receiver to target, between 1 and 16 inclusive. Defaults to `1`.
 - **command** (**Required**, int): The command to send, between 0 and 63 inclusive.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 You can find a list of commands in the
 [LIRC project](https://sourceforge.net/p/lirc-remotes/code/ci/master/tree/remotes/dishnet/Dish_Network.lircd.conf).
@@ -358,7 +358,7 @@ Configuration variables:
 - **button** (**Required**, int): The 4-bit button to send, between 0 and 15 inclusive.
 - **check** (**Required**, int): The 4-bit check to send. Includes an indication that a button is being held down.
   See dumper output for more info.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_drayton" >}}
 
@@ -379,7 +379,7 @@ Configuration variables:
 - **address** (**Required**, int): The 16-bit ID to send, see dumper output for more info.
 - **channel** (**Required**, int): The switch/channel to send, between 0 and 127 inclusive.
 - **command** (**Required**, int): The command to send, between 0 and 63 inclusive.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_gobox" >}}
 
@@ -410,7 +410,7 @@ Configuration variables:
   - LOUDER = 0xb04f,
   - SOFTER = 0xf807,
 
-  - All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+  - All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_jvc" >}}
 
@@ -427,7 +427,7 @@ on_...:
 Configuration variables:
 
 - **data** (**Required**, int): The JVC code to send, see dumper output for more info.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_keeloq" >}}
 
@@ -452,7 +452,7 @@ Configuration variables:
 - **command** (**Required**, int): The 4 bit command/button code to send, see dumper output for more info.
 - **code** (*Optional*, int): The 32 bit encrypted field to send. Defaults to all zeros.
 - **level** (*Optional*, boolean): Low battery level status bit. Defaults to false.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 - A repeat **wait_time** of 15ms as shown replicates the repetition of an HCS301.
 
 {{< anchor "remote_transmitter-transmit_haier" >}}
@@ -471,7 +471,7 @@ on_...:
 Configuration variables:
 
 - **code** (**Required**, list): The 13 byte Haier code to send.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_lg" >}}
 
@@ -490,7 +490,7 @@ Configuration variables:
 
 - **data** (**Required**, int): The LG code to send, see dumper output for more info.
 - **nbits** (*Optional*, int): The number of bits to send. Defaults to `28`.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_magiquest" >}}
 
@@ -510,7 +510,7 @@ Configuration variables:
 - **wand_id** (**Required**, int): The wand ID to send, as a hex integer.  See the dumper output for your wand ID.
 - **magnitude** (*Optional*, int): The magnitude of swishes and swirls the wand should transmit.  See the dumper output
   for examples.  If omitted, sends 0xFFFF (which the real wand never uses).
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_midea" >}}
 
@@ -535,7 +535,7 @@ Configuration variables:
 
 - **code** (**Required**, list, [templatable](automations/templates#config-templatable)): The 40-bit Midea code to send as a list of
   hex or integers.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 ### `remote_transmitter.transmit_nec` **Action**
 
@@ -564,7 +564,7 @@ Configuration variables:
 - **command** (**Required**, int): The 16-bit NEC command to send.
 - **command_repeats** (*Optional*, int): The number of times the command bytes are sent in one transmission.
   Defaults to `1`.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 ### `remote_transmitter.transmit_nexa` **Action**
 
@@ -588,7 +588,7 @@ Configuration variables:
 - **group** (**Required**, int): The Nexa group code to send, see dumper output for more info.
 - **channel** (**Required**, int): The Nexa channel code to send, see dumper output for more info.
 - **level** (**Required**, int): The Nexa level code to send, see dumper output for more info.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_panasonic" >}}
 
@@ -607,7 +607,7 @@ Configuration variables:
 
 - **address** (**Required**, int): The address to send the command to, see dumper output for more details.
 - **command** (**Required**, int): The command to send.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_pioneer" >}}
 
@@ -632,7 +632,7 @@ Configuration variables:
 - Note that `repeat` is still optional, however **Pioneer devices may require that a given code is
   received multiple times before they will act on it.** Add this if your device does not respond to
   commands sent with this action.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 At the time this action was created, Pioneer maintained listings of IR codes used for their devices
 [here](https://www.pioneerelectronics.com/PUSA/Support/Home-Entertainment-Custom-Install/IR+Codes).
@@ -655,7 +655,7 @@ Configuration variables:
 
 - **data** (**Required**, string): The raw code to send specified as a string. Many remote control Pronto codes can be
   found on http://remotecentral.com
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_raw" >}}
 
@@ -682,7 +682,7 @@ Configuration variables:
   The number itself encodes how long the signal should last (in microseconds).
 - **carrier_frequency** (*Optional*, float): Optionally set a frequency to send the signal
   with for infrared signals. Defaults to `0Hz`.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_rc5" >}}
 
@@ -701,7 +701,7 @@ Configuration variables:
 
 - **address** (**Required**, int): The address to send, see dumper output for more details.
 - **command** (**Required**, int): The RC5 command to send.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_rc6" >}}
 
@@ -720,7 +720,7 @@ Configuration variables:
 
 - **address** (**Required**, int): The address to send, see dumper output for more details.
 - **command** (**Required**, int): The RC6 command to send.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_rc_switch_raw" >}}
 
@@ -739,9 +739,9 @@ on_...:
 Configuration variables:
 
 - **code** (**Required**, string): The raw code to send, copy this from the dump output.
-- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}})
+- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](components/remote_transmitter#remote_transmitter-rc_switch-protocol)
   for more information.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_a" >}}
 
@@ -764,9 +764,9 @@ Configuration variables:
 - **group** (**Required**, string): The group to send the command to.
 - **device** (**Required**, string): The device in the group to send the command to.
 - **state** (**Required**, boolean): The on/off state to send.
-- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}})
+- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](components/remote_transmitter#remote_transmitter-rc_switch-protocol)
   for more information.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_b" >}}
 
@@ -789,9 +789,9 @@ Configuration variables:
 - **address** (**Required**, int): The address to send the command to.
 - **channel** (**Required**, int): The channel to send the command to.
 - **state** (**Required**, boolean): The on/off state to send.
-- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}})
+- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](components/remote_transmitter#remote_transmitter-rc_switch-protocol)
   for more information.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_c" >}}
 
@@ -816,9 +816,9 @@ Configuration variables:
 - **group** (**Required**, int): The group to send the command to. Range is 1 to 4.
 - **device** (**Required**, int): The device to send the command to. Range is 1 to 4.
 - **state** (**Required**, boolean): The on/off state to send.
-- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}})
+- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](components/remote_transmitter#remote_transmitter-rc_switch-protocol)
   for more information.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_rc_switch_type_d" >}}
 
@@ -841,9 +841,9 @@ Configuration variables:
 - **group** (**Required**, int): The group to send the command to. Range is 1 to 4.
 - **device** (**Required**, int): The device to send the command to. Range is 1 to 3.
 - **state** (**Required**, boolean): The on/off state to send.
-- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol]({{< ref "components/remote_transmitter#remote_transmitter-rc_switch-protocol" >}})
+- **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](components/remote_transmitter#remote_transmitter-rc_switch-protocol)
   for more information.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_roomba" >}}
 
@@ -863,7 +863,7 @@ on_...:
 Configuration variables:
 
 - **data** (**Required**, int): The Roomba code to send, see dumper output for more info.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 **Important:**
 
@@ -893,7 +893,7 @@ Configuration variables:
 
 - **data** (**Required**, int): The data to send, see dumper output for more details.
 - **nbits** (*Optional*, int): The number of bits to send. Defaults to `32`.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_samsung36" >}}
 
@@ -913,7 +913,7 @@ Configuration variables:
 
 - **address** (**Required**, int): The address to send, see dumper output for more details.
 - **command** (**Required**, int): The Samsung36 command to send, see dumper output for more details.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_sony" >}}
 
@@ -932,7 +932,7 @@ Configuration variables:
 
 - **data** (**Required**, int): The Sony code to send, see dumper output for more info.
 - **nbits** (*Optional*, int): The number of bits to send. Defaults to `12`.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_toshiba_ac" >}}
 
@@ -956,7 +956,7 @@ Configuration variables:
 - **rc_code_1** (**Required**, int): The remote control code to send, see dumper output for more details.
 - **rc_code_2** (*Optional*, int): The secondary remote control code to send; some codes are sent in
   two parts.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_mirage" >}}
 
@@ -974,7 +974,7 @@ on_...:
 Configuration variables:
 
 - **code** (**Required**, list): The 14 byte Mirage code to send.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< anchor "remote_transmitter-transmit_toto" >}}
 
@@ -996,7 +996,7 @@ Configuration variables:
 - **command** (**Required**, int): The 1-byte Toto command code to send. Range is 0 to 0xFF.
 - **rc_code_1** (*Optional*, int): The first 4-bit Toto code (usually a command parameter) to send. Range is 0 to 0xF.
 - **rc_code_2** (*Optional*, int): The second 4-bit Toto code (usually a command parameter) to send. Range is 0 to 0xF.
-- All other options from [Remote Transmitter Actions]({{< ref "components/remote_transmitter#remote_transmitter-transmit_action" >}}).
+- All other options from [Remote Transmitter Actions](components/remote_transmitter#remote_transmitter-transmit_action).
 
 {{< note >}}
 Toto remotes repeat all codes three times at a 36ms interval. This behavior will occur by default, but may be overridden by specifying `repeat` and `wait time` configuration variables.
@@ -1041,10 +1041,10 @@ See the full API Reference for more info.
 
 - {{< docref "index/" >}}
 - {{< docref "/components/remote_receiver" >}}
-- [Setting up IR Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-infrared" >}})
-- [Setting up RF Devices]({{< ref "guides/setting_up_rmt_devices#remote-setting-up-rf" >}})
+- [Setting up IR Devices](guides/setting_up_rmt_devices#remote-setting-up-infrared)
+- [Setting up RF Devices](guides/setting_up_rmt_devices#remote-setting-up-rf)
 - {{< docref "/components/rf_bridge" >}}
-- [Delaying Remote Transmissions]({{< ref "cookbook/lambda_magic#lambda_magic_rf_queues" >}})
+- [Delaying Remote Transmissions](cookbook/lambda_magic#lambda_magic_rf_queues)
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - {{< apiref "remote_transmitter/remote_transmitter.h" "remote_transmitter/remote_transmitter.h" >}}
 

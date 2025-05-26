@@ -166,7 +166,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The valve to control.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The valve to control.
 - **stop** (*Optional*, boolean): Whether to stop the valve.
 - **state** (*Optional*, string): The state to set the valve to - one of `OPEN` or `CLOSE`.
 - **position** (*Optional*, float): The valve position to set.

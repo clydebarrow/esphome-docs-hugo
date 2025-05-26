@@ -35,7 +35,7 @@ The controller connects to the UART of the MCU. For ESP32 GPIO `16` to `TXD` and
 to RXD are the default ones but any other pins can be used as well. 3.3V to VCC and GND to GND.
 
 {{< warning >}}
-If you are using the [Logger Component]({{< ref "components/logger#logger" >}}) make sure you are not using the same pins for it or otherwise disable the UART
+If you are using the [Logger Component](components/logger#logger) make sure you are not using the same pins for it or otherwise disable the UART
 logging with the `baud_rate: 0` option.
 
 {{< /warning >}}
@@ -69,8 +69,8 @@ All sensors are *Optional* and support all other options from [Sensor](component
 
 ## See Also
 
-- [UART Bus]({{< ref "components/uart#uart" >}})
-- [Logger Component]({{< ref "components/logger#logger" >}})
+- [UART Bus](components/uart#uart)
+- [Logger Component](components/logger#logger)
 - [Sensor](components/sensor/_index#config-sensor)
 - [Kuntze manuals](https://www.kuntze.com/en/downloads-2/)
 - [Communication protocol](https://www.kuntze.com/wp-content/uploads/2021/05/2019_Manual_Modbus-RTU_ENG.pdf)

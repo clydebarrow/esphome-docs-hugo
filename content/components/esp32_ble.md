@@ -41,7 +41,7 @@ esp32_ble:
 - **name** (*Optional*, string): The name of the BLE device.
     - Defaults to the hostname of the device.
     - Must be 20 characters or less.
-    - Must be 13 characters or less when using `name_add_mac_suffix: true` - [Adding the MAC address as a suffix to the device name]({{< ref "components/esphome#esphome-mac_suffix" >}}).
+    - Must be 13 characters or less when using `name_add_mac_suffix: true` - [Adding the MAC address as a suffix to the device name](components/esphome#esphome-mac_suffix).
 
 ## `ble.disable` Action
 

@@ -32,12 +32,12 @@ sensor:
 
 - **temperature** (*Optional*): The information for the temperature sensor. All options from [Sensor](components/sensor/_index#config-sensor).
 - **internal_temperature** (*Optional*): The information for the temperature sensor inside the probe. All options from [Sensor](components/sensor/_index#config-sensor).
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `5s`.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "kmeteriso/kmeteriso.h" "kmeteriso/kmeteriso.h" >}}
 - [M5Stack Unit code](https://github.com/m5stack/M5Unit-KMeterISO) by [M5Stack](https://m5stack.com/)

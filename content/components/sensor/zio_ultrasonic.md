@@ -32,13 +32,13 @@ sensor:
 ## Configuration variables:
 
 - **address** (*Optional*, int): Manually specifiy the I²C address of the sensor. Defaults to `0x00`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
 - All other options from [Sensor](components/sensor/_index#config-sensor).
 
 ## See Also
 
 - {{< docref "/components/sensor/ultrasonic" "Ultrasonic Sensor Component" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "template/" >}}
 
 

@@ -28,9 +28,9 @@ sensor:
 - **address** (*Optional*, int): The address of the sensor. Required if there is more than one device on the bus.
 - **resolution** (*Optional*, int): An optional resolution from 9 to 12. Higher means more accurate.
   Defaults to the maximum for most Dallas temperature sensors: 12.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval that the sensors should be checked.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval that the sensors should be checked.
   Defaults to 60 seconds.
-- **one_wire_id** (*Optional*, [1-Wire Bus]({{< ref "components/one_wire#one_wire" >}})): The ID of the 1-Wire bus to use.
+- **one_wire_id** (*Optional*, [1-Wire Bus](components/one_wire#one_wire)): The ID of the 1-Wire bus to use.
   Required if there is more than one bus.
 - All other options from [Sensor](components/sensor/_index#config-sensor).
 

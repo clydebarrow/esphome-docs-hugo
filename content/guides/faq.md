@@ -183,7 +183,7 @@ transfer. Don't worry -- just try again, perhaps with a reduced baud rate for sa
 esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash 0x0 your_node_firmware.bin
 
 ```
-If you *still* can't get it to work, you might want to revisit [I can't get installation over USB to work]({{< ref "guides/faq#faq-usb_troubleshooting" >}}) above.
+If you *still* can't get it to work, you might want to revisit [I can't get installation over USB to work](guides/faq#faq-usb_troubleshooting) above.
 
 ## Tips for using ESPHome
 
@@ -252,7 +252,7 @@ If you *still* can't get it to work, you might want to revisit [I can't get inst
 
 That's no good. Here are some steps that resolve some problems:
 
-- **If you're having Wi-Fi problems**: See [My node keeps reconnecting randomly]({{< ref "guides/faq#wifi-problems" >}}).
+- **If you're having Wi-Fi problems**: See [My node keeps reconnecting randomly](guides/faq#wifi-problems).
 - [Enable verbose logs](components/logger#logger-log_levels) in your ESPHome device's `logger:` section.
 - **Still seeing an error?** Check if there is a known issue in the
   [ESPHome issue tracker](https://github.com/esphome/issues/issues). If not, you can create a new issue to describe your
@@ -387,7 +387,7 @@ Here are some steps that may help mitigate the issue:
   configuration. Note that this may help with non-hidden networks, as well.
 - Give your ESPHome device a [static IP](components/wifi#wifi-manual_ip).
 - Set the `power_save_mode` to `light` in your `wifi:` configuration. Note, however, that this may exacerbate the
-  problem in some situations. See [Power Save Mode]({{< ref "components/wifi#wifi-power_save_mode" >}}).
+  problem in some situations. See [Power Save Mode](components/wifi#wifi-power_save_mode).
 - The issue seems to happen with "cheap" boards more frequently -- especially the "cheap" NodeMCU boards from eBay
   which sometimes have bad antennas.
 - ESPHome intentionally reboots after a configured duration in specific situations, such as when the

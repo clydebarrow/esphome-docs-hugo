@@ -29,11 +29,11 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin]({{< ref "guides/configuration-types#config-pin" >}})): The pin to measure the voltage on.
-  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see [Measuring VCC]({{< ref "components/sensor/adc#adc-vcc" >}}).
+- **pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin to measure the voltage on.
+  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see [Measuring VCC](components/sensor/adc#adc-vcc).
 - **attenuation** (*Optional*): Only on ESP32. Specify the ADC
-  attenuation to use. See [ESP32 Attenuation]({{< ref "components/sensor/adc#adc-esp32_attenuation" >}}). Defaults to `0db`.
-- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See [Different ESP32-ADC behavior since 2021.11]({{< ref "components/sensor/adc#adc-raw" >}}). Defaults to `false`.
+  attenuation to use. See [ESP32 Attenuation](components/sensor/adc#adc-esp32_attenuation). Defaults to `0db`.
+- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See [Different ESP32-ADC behavior since 2021.11](components/sensor/adc#adc-raw). Defaults to `false`.
 - **samples** (*Optional*): The amount of ADC readings to take per sensor update. On the ESP32 this value is ignored if `attenuation` is set to `auto`. Defaults to `1`.
 - **sampling_mode** (*Optional*): Sampling method to use when multiple samples are taken.
 
@@ -41,7 +41,7 @@ sensor:
   - `min` minimal value from all samples
   - `max` maximal value from all samples
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval
   to check the sensor. Defaults to `60s`.
 - All other options from [Sensor](components/sensor/_index#config-sensor).
 
@@ -193,7 +193,7 @@ This works on SKU:DFR0654. For more information see: [manufacturer's website](ht
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "ads1115/" >}}
 - {{< docref "max6675/" >}}
 - {{< apiref "adc/adc_sensor.h" "adc/adc_sensor.h" >}}

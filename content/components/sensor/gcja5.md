@@ -57,7 +57,7 @@ sensor:
 ## See Also
 
 - {{< docref "/components/sensor/gcja5" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "gcja5/gcja5.h" "gcja5/gcja5.h" >}}
 
 

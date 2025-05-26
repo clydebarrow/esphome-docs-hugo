@@ -41,7 +41,7 @@ sensor:
 - **heater_power** (*Optional*, string): The heater power, either `High`, `Med` or `Low`. Default is `High`.
 - **heater_time** (*Optional*, string):  The length of time to run the heater, either `Long` (1000ms) or `Short` (100ms). Default is `Long`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Default is `0x44`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 ## Heater Configuration:
 
@@ -60,7 +60,7 @@ for more information about heater operation.
 
 - {{< docref "/components/sensor/sht3xd" >}}
 - {{< docref "/components/sensor/shtcx" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "sht4x/sht4x.h" "sht4x/sht4x.h" >}}
 

@@ -83,7 +83,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template binary sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the template binary sensor.
 - **state** (**Required**, boolean, [templatable](automations/templates#config-templatable)):
   The state to publish.
 
@@ -99,7 +99,7 @@ id(template_bin).publish_state(true);
 
 - {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/sensor/template" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Automation](automations/_index#automation)
 - {{< apiref "template/binary_sensor/template_binary_sensor.h" "template/binary_sensor/template_binary_sensor.h" >}}
 
 

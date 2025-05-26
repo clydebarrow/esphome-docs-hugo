@@ -11,7 +11,7 @@ params:
 The `lvgl` light platform creates a light from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widget is [`led`]({{< ref "components/lvgl/widgets#lvgl-widget-led" >}}). A single light supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome light component.
+Supported widget is [`led`](components/lvgl/widgets#lvgl-widget-led). A single light supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome light component.
 
 ## Configuration variables:
 

@@ -31,10 +31,10 @@ sensor:
 ## Configuration variables:
 
 - **address** (*Optional*, int): Specify the I²C address of the sensor. Defaults to `0x3C`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of this sensor for use in lambdas.
-- **temperature_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Set the ID of the temperature
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Set the ID of this sensor for use in lambdas.
+- **temperature_sensor** (*Optional*, [ID](guides/configuration-types#config-id)): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
 - **ec** (*Optional*, [Sensor](components/sensor/_index#config-sensor)): Set the EC sensor configuration. All options from [Sensor](components/sensor/_index#config-sensor).
 - **temperature** (*Optional*, [Sensor](components/sensor/_index#config-sensor)): Set the onboard temperature sensor configuration. All options from [Sensor](components/sensor/_index#config-sensor).
@@ -67,7 +67,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the ufire EC sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the ufire EC sensor.
 - **solution** (**Required**, float): Solution reference EC value.
 - **temperature** (**Required**, float): Solution current temperature.
 
@@ -92,11 +92,11 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the ufire EC sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the ufire EC sensor.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ufire_ec/ufire_ec.h" "ufire_ec/ufire_ec.h" >}}
 
 

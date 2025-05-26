@@ -576,9 +576,9 @@ def process_inline_markup(line):
         doc_path, anchor_text = anchor_map.get(content, ("", ""))
         anchor_text = anchor_text or content
         if doc_path:
-            return f"[{anchor_text}]({{{{< ref \"{doc_path}#{content}\" >}}}})"
+            return f"[{anchor_text}]({doc_path}#{content})"
         # If we can't find the document, just use the anchor
-        return f"[{anchor_text}]({{{{< ref \"#{content}\" >}}}})"
+        return f"[{anchor_text}](#{content})"
 
     def doc_repl(match):
         content = match.group(1).strip()

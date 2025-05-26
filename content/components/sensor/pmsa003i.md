@@ -66,7 +66,7 @@ sensor:
 - **standard_units** (*Optional*, boolean): `True` to use standard units or `False` to use  environmental units. Defaults to `True`.
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x12`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< note >}}
@@ -86,7 +86,7 @@ Standard vs environmental units from https://publiclab.org/questions/samr/04-07-
 
 - {{< docref "/components/sensor/pmsx003" >}}
 - {{< docref "/components/sensor/sds011" >}}
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "pmsa003i/pmsa003i.h" "pmsa003i/pmsa003i.h" >}}
 
 

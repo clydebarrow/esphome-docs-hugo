@@ -28,7 +28,7 @@ sensor:
 ```
 ## Configuration variables
 
-- **raw_pressure** (*Optional*): The information for the pressure sensor. See [Converting units]({{< ref "components/sensor/npi19#npi19-converting" >}}).
+- **raw_pressure** (*Optional*): The information for the pressure sensor. See [Converting units](components/sensor/npi19#npi19-converting).
 
  - All other options from [Sensor](components/sensor/_index#config-sensor).
 
@@ -36,7 +36,7 @@ sensor:
 
  - All other options from [Sensor](components/sensor/_index#config-sensor).
 
-- **i2c_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [I²C Component](components/i2c#i2c). Defaults to the default I²C bus.
+- **i2c_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [I²C Component](components/i2c#i2c). Defaults to the default I²C bus.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   All known sensors currently configured to `0x28`. Defaults to `0x28`.
@@ -89,7 +89,7 @@ compensation.
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - [NPI-19 Product Page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)
 - [NPI-19 Datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf)
 - [NPI-19 Product Application Note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)

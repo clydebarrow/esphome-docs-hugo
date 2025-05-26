@@ -19,10 +19,10 @@ http_request:
 
 ## Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - **follow_redirects** (*Optional*, boolean): Enable following HTTP redirects. Defaults to `true`.
 - **redirect_limit** (*Optional*, integer): Maximum amount of redirects to follow when enabled. Defaults to `3`.
-- **timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Timeout for request. Defaults to `4.5s`.
+- **timeout** (*Optional*, [Time](guides/configuration-types#config-time)): Timeout for request. Defaults to `4.5s`.
 - **useragent** (*Optional*, string): User-Agent header for requests. Defaults to
   `ESPHome/<version> (https://esphome.io)` where `<version>` is the version of ESPHome the device is running.
   For example: `ESPHome/2024.6.0 (https://esphome.io)`
@@ -31,7 +31,7 @@ http_request:
   bundle is included in the build. This certificate bundle includes the complete list of root certificates from
   Mozilla's NSS root certificate store. **May only be set to true when using the ESP-IDF framework; must be explicitly
   set to false when using the Arduino framework.**
-- **watchdog_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Change the watchdog timeout during connection/data transfer.
+- **watchdog_timeout** (*Optional*, [Time](guides/configuration-types#config-time)): Change the watchdog timeout during connection/data transfer.
   May be useful on slow connections or connections with high latency. **Do not change this value unless you are
   experiencing device reboots due to watchdog timeouts;** doing so may prevent the device from rebooting due to a
   legitimate problem. **Only available on ESP32 and RP2040**.
@@ -139,8 +139,8 @@ on_...:
 
 - **body** (*Optional*, string, [templatable](automations/templates#config-templatable)): A HTTP body string to send with request.
 - **json** (*Optional*, mapping): A HTTP body in JSON format. Values are [templatable](automations/templates#config-templatable).
-  See [Examples]({{< ref "components/http_request#http_request-examples" >}}).
-- All other options from [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}).
+  See [Examples](components/http_request#http_request-examples).
+- All other options from [`http_request.get` Action](components/http_request#http_request-get_action).
 
 {{< anchor "http_request-send_action" >}}
 
@@ -161,7 +161,7 @@ on_...:
 **Configuration variables:**
 
 - **method** (**Required**, string): HTTP method to use (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`).
-- All other options from [`http_request.post` Action]({{< ref "components/http_request#http_request-post_action" >}}) and [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}}).
+- All other options from [`http_request.post` Action](components/http_request#http_request-post_action) and [`http_request.get` Action](components/http_request#http_request-get_action).
 
 {{< anchor "http_request-on_response" >}}
 
@@ -173,7 +173,7 @@ The following variables are available for use in [lambdas](automations/templates
 - `response` as a pointer to `HttpContainer` object which contains `content_length`, `status_code` and `duration_ms``.
 - `std::string get_response_header(const std::string &header_name)` to read response headers (only headers with names specified in the `collect_headers` are available).
 - `body` as `std::string` which contains the response body when `capture_response`
-  (see [`http_request.get` Action]({{< ref "components/http_request#http_request-get_action" >}})) is set to `true`.
+  (see [`http_request.get` Action](components/http_request#http_request-get_action)) is set to `true`.
 
     {{< note >}}
     The `status_code` should be checked before using the `body` variable. A successful response will usually have

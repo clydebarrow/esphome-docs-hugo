@@ -35,10 +35,10 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The source sensor to measure voltage values from.
-- **sample_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration to sample the current clamp
+- **sensor** (**Required**, [ID](guides/configuration-types#config-id)): The source sensor to measure voltage values from.
+- **sample_duration** (*Optional*, [Time](guides/configuration-types#config-time)): The time duration to sample the current clamp
   with. Higher values can increase accuracy. Defaults to `200ms` which would be 10 whole cycles on a 50Hz system.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval
   to check the sensor. Defaults to `60s`. The **update_interval** for `ct_clamp` has to be greater than **sample_duration**.
 - All other options from [Sensor](components/sensor/_index#config-sensor).
 

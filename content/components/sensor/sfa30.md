@@ -43,13 +43,13 @@ sensor:
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x5D`.
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "sfa30/sfa30.h" "sfa30/sfa30.h" >}}
 

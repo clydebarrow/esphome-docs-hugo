@@ -27,12 +27,12 @@ light:
 ```
 ## Configuration variables:
 
-- **red** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the red channel.
-- **green** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the green channel.
-- **blue** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the blue channel.
-- **color_temperature** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the
+- **red** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the red channel.
+- **green** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the green channel.
+- **blue** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the blue channel.
+- **color_temperature** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the
   color temperature channel.
-- **white_brightness** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the float [Output Component]({{< ref "components/output/_index#output" >}}) to use for the brightness
+- **white_brightness** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the brightness
   of the white leds.
 - **cold_white_color_temperature** (**Required**, float): The coldest color temperature supported by this light. This
   is the lowest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the highest value when
@@ -41,7 +41,7 @@ light:
   is the highest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the lowest value when
   expressed in Kelvin.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See [Color Interlock]({{< ref "components/light/rgbw#rgbw_color_interlock" >}}) for more information. Defaults to `false`.
+  time as RGB leds. See [Color Interlock](components/light/rgbw#rgbw_color_interlock) for more information. Defaults to `false`.
 - All other options from [Light](components/light/_index#config-light).
 
 ## See Also

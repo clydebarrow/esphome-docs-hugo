@@ -123,7 +123,7 @@ display:
 
 - Alignment of text can use different reference points, for example `TOP_RIGHT` or `BASELINE_LEFT`, which all are defined in {{< apiref "display/display_buffer.h" "display/display_buffer.h" >}}.
 - The property `has_state()` on a sensor is useful as it can take some seconds to get the data from Home Assistant and you may not want to display `Nan`
-- Refer to the rendering engine [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}) for more features (it can draw lines and circles too!)
+- Refer to the rendering engine [Display Rendering Engine](components/display/_index#display-engine) for more features (it can draw lines and circles too!)
 
 ## Add a Text-Based Sensor
 

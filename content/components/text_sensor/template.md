@@ -31,7 +31,7 @@ Possible return values for the lambda:
 
 - **lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
   Lambda to be evaluated every update interval to get the new value of the text sensor
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   text sensor. Set to `never` to disable updates. Defaults to `60s`.
 - All other options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
 
@@ -63,7 +63,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the template text sensor.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the template text sensor.
 - **state** (**Required**, string, [templatable](automations/templates#config-templatable)):
   The state to publish.
 
@@ -113,7 +113,7 @@ text_sensor:
 ## See Also
 
 - {{< docref "/components/text_sensor" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Automation](automations/_index#automation)
 - {{< apiref "template/text_sensor/template_text_sensor.h" "template/text_sensor/template_text_sensor.h" >}}
 
 

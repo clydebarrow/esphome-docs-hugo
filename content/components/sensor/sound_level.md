@@ -31,8 +31,8 @@ sensor:
 ```
 ## Configuration variables:
 
-- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input. Multiple channels may be selected.
-- **measurement_duration** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
+- **microphone** (**Required**, [Microphone Source Configuration](components/microphone/_index#config-microphone-source)): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input. Multiple channels may be selected.
+- **measurement_duration** (*Optional*, [Time](guides/configuration-types#config-time)): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
 - **passive** (**Required**, boolean). Whether passive mode is enabled. See [Passive Mode](components/sensor/sound_level#sound_level-passive).
 - **peak** (*Optional*): The information for the peak loudness sensor.
 
@@ -70,7 +70,7 @@ Stops measuring sound levels. Does nothing in passive mode.
 ## See Also
 
 - [Root Mean Square (Wikipedia)](https://en.wikipedia.org/wiki/Root_mean_square)
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "sound_level/sound_level.h" "sound_level/sound_level.h" >}}
 
 

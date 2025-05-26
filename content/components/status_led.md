@@ -33,7 +33,7 @@ If your device has a single LED that needs to be shared use  {{< docref "/compon
 
 - **pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The
   GPIO pin to operate the status LED on.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 
 {{< note >}}
 If your LED is in an active-LOW mode (when it's on if the output is enabled), use the

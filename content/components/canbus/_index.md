@@ -56,8 +56,8 @@ canbus:
 
 **Configuration variables:**
 
-- **platform** (**Required**, [platform](components/canbus/_index#platforms-canbus)): One of the supported CAN bus [Platforms]({{< ref "components/canbus/_index#platforms-canbus" >}}).
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **platform** (**Required**, [platform](components/canbus/_index#platforms-canbus)): One of the supported CAN bus [Platforms](components/canbus/_index#platforms-canbus).
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - **can_id** (**Required**, int): default *CAN ID* used for transmitting frames.
 - **use_extended_id** (*Optional*, boolean): Identifies the type of `can_id`:
 
@@ -89,7 +89,7 @@ canbus:
     - `1000KBPS`
 
 - **on_frame** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when a
-  CAN frame is received. See [`on_frame` Trigger]({{< ref "components/canbus/_index#canbus-on-frame" >}}).
+  CAN frame is received. See [`on_frame` Trigger](components/canbus/_index#canbus-on-frame).
 
 {{< anchor "platforms-canbus" >}}
 

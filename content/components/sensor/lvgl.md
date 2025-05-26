@@ -11,7 +11,7 @@ params:
 The `lvgl` sensor platform creates a sensor component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are [`arc`]({{< ref "components/lvgl/widgets#lvgl-widget-arc" >}}), [`bar`]({{< ref "components/lvgl/widgets#lvgl-widget-bar" >}}), [`slider`]({{< ref "components/lvgl/widgets#lvgl-widget-slider" >}}) and [`spinbox`]({{< ref "components/lvgl/widgets#lvgl-widget-spinbox" >}}). A single sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome sensor.
+Supported widgets are [`arc`](components/lvgl/widgets#lvgl-widget-arc), [`bar`](components/lvgl/widgets#lvgl-widget-bar), [`slider`](components/lvgl/widgets#lvgl-widget-slider) and [`spinbox`](components/lvgl/widgets#lvgl-widget-spinbox). A single sensor supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome sensor.
 
 ## Configuration variables:
 

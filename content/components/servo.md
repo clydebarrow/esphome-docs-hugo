@@ -22,7 +22,7 @@ only operate in this frequency range.
 
 {{< note >}}
 This component will not show up in the Home Assistant front-end automatically because
-Home Assistant doesn't have support for servos. Please see [Home Assistant Configuration]({{< ref "components/servo#servo-ha-config" >}}).
+Home Assistant doesn't have support for servos. Please see [Home Assistant Configuration](components/servo#servo-ha-config).
 
 {{< /note >}}
 ```yaml
@@ -42,9 +42,9 @@ output:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the {{< docref "/components/output/index" "output component" >}}
+- **output** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the {{< docref "/components/output/index" "output component" >}}
   to use for this servo.
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of this servo so that it can be controlled.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of this servo so that it can be controlled.
 
 Advanced Options:
 
@@ -57,8 +57,8 @@ Advanced Options:
 - **restore** (*Optional*, boolean): Whether to restore the state of the servo motor at startup.
   This is useful if you have an absolute servo motor and it goes back to its 0 position at startup.
   Defaults to `false`.
-- **auto_detach_time** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time after reaching the target value when the servo will be detached`, if set to zero, servo will not be detached. Defaults to `0s`.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time needed for a full movement (-1.0 to 1.0). This will effectively limit the speed of the servo, the larger the value, the slowest the servo will move. Defaults to `0s`.
+- **auto_detach_time** (*Optional*, [Time](guides/configuration-types#config-time)): The time after reaching the target value when the servo will be detached`, if set to zero, servo will not be detached. Defaults to `0s`.
+- **transition_length** (*Optional*, [Time](guides/configuration-types#config-time)): The time needed for a full movement (-1.0 to 1.0). This will effectively limit the speed of the servo, the larger the value, the slowest the servo will move. Defaults to `0s`.
   This can slow down the servo to avoid loud noises or just make the movement not jerking.
 
 {{< note >}}
@@ -103,7 +103,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the servo.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the servo.
 - **level** (*Optional*, percentage, [templatable](automations/templates#config-templatable)): The target level.
   Range is from -100% to 100% (-1.0 to 1.0).
 

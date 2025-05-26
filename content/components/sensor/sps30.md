@@ -101,7 +101,7 @@ sensor:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x69`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Wiring:
@@ -134,7 +134,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "sds011/" >}}
 - {{< docref "pmsx003/" >}}
 - {{< docref "ccs811/" >}}

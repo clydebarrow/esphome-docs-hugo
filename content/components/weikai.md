@@ -92,8 +92,8 @@ wk2168_spi:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this WeiKai component.
-- **spi_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [SPI Component](components/spi#spi) if you want
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this WeiKai component.
+- **spi_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [SPI Component](components/spi#spi) if you want
   to use multiple SPI buses.
 - **cs_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin on the ESP that the chip select line
   of the chip is connected to.
@@ -104,7 +104,7 @@ wk2168_spi:
   The default value is 14745600 Hz.
 - **uart** (**Required**): The UART channels.
 
-  - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this UART channel.
+  - **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this UART channel.
   - **channel** (**Required**): Unique channel number of this virtual UART.
     Options: `0` to `1` or `0` to `3` depending on the model.
   - **baud_rate** (**Required**): The baud rate of the UART channel.
@@ -166,14 +166,14 @@ wk2168_i2c:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this WeiKai component.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this WeiKai component.
 - **address** (*Optional*): The I²C address of this component. Defaults to `0x10`.
 - **i2c_id** (*Optional*): The I²C Bus ID. Defaults to the default i²c bus.
 - **crystal** (*Optional*): The frequency in Hz of the crystal connected to the chip.
   The default value is 14745600 Hz.
 - **uart** (**Required**): The UART channels.
 
-  - **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id to use for this UART channel.
+  - **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this UART channel.
   - **channel** (**Required**): Unique channel number of this virtual UART.
     Options: `0` to `1` or `0` to `3` depending on the model.
   - **baud_rate** (**Required**): The baud rate of the UART channel.
@@ -227,7 +227,7 @@ switch:
 ```
 ### Pin configuration variables:
 
-- **wkxxxx_xxx** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the `wkxxxx_xxx` component for the pin. For
+- **wkxxxx_xxx** (**Required**, [ID](guides/configuration-types#config-id)): The id of the `wkxxxx_xxx` component for the pin. For
   example `wk2212_i2c: wk2168_bridge_spi`
 - **number** (**Required**): The pin number (`0` to `7`)
 - **inverted** (*Optional*): If all read and written values should be treated as inverted. Defaults to `false`.
@@ -286,8 +286,8 @@ log file and the baud rate will automatically be decreased.
 
 ## See Also
 
-- [I²C Bus]({{< ref "components/i2c#i2c" >}})
-- [SPI Bus]({{< ref "components/spi#spi" >}})
+- [I²C Bus](components/i2c#i2c)
+- [SPI Bus](components/spi#spi)
 - {{< docref "switch/gpio" >}}
 - {{< docref "binary_sensor/gpio" >}}
 - {{< apiref "weika/weika.h" "weika/weika.h" >}}

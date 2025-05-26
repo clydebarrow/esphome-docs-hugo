@@ -55,9 +55,9 @@ Configuration variables:
 Automations:
 
 - **on_value** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a new value is published. See [`on_value`]({{< ref "components/text_sensor/_index#text_sensor-on_value" >}}).
+  when a new value is published. See [`on_value`](components/text_sensor/_index#text_sensor-on_value).
 - **on_raw_value** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a new value is received that hasn't passed through any filters. See [`on_raw_value`]({{< ref "components/text_sensor/_index#text_sensor-on_raw_value" >}}).
+  when a new value is received that hasn't passed through any filters. See [`on_raw_value`](components/text_sensor/_index#text_sensor-on_raw_value).
 
 {{< anchor "text_sensor-filters" >}}
 
@@ -245,7 +245,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The text sensor ID.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The text sensor ID.
 - **state** (**Required**, [templatable](automations/templates#config-templatable), string): The state to compare
   to.
 

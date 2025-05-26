@@ -10,8 +10,8 @@ params:
 {{< anchor "uart-packet-transport" >}}
 
 
-The [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) platform allows ESPHome nodes to directly communicate with each over a communication channel.
-The UART implementation of the platform uses a serial port as a communication medium. See the [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}}) and [UART Bus]({{< ref "components/uart#uart" >}}) for more information.
+The [Packet Transport Component](components/packet_transport/_index#packet-transport) platform allows ESPHome nodes to directly communicate with each over a communication channel.
+The UART implementation of the platform uses a serial port as a communication medium. See the [Packet Transport Component](components/packet_transport/_index#packet-transport) and [UART Bus](components/uart#uart) for more information.
 
 ## Example Configuration
 
@@ -38,11 +38,11 @@ sensor:
 ```
 ## See Also
 
-- [Packet Transport Component]({{< ref "components/packet_transport/_index#packet-transport" >}})
+- [Packet Transport Component](components/packet_transport/_index#packet-transport)
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/binary_sensor/packet_transport" >}}
 - {{< docref "/components/sensor/packet_transport" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Automation](automations/_index#automation)
 - {{< apiref "packet_transport/packet_transport.h" "packet_transport/packet_transport.h" >}}
 
 

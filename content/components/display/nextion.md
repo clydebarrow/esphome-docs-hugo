@@ -14,7 +14,7 @@ with ESPHome.
 
 {{< img src="nextion-full.jpg" alt="Image" caption="Nextion display" width="75.0%" class="center" >}}
 
-Communication with the Nextion display is done via a serial interface, so you'll need to have a [UART Bus]({{< ref "components/uart#uart" >}})
+Communication with the Nextion display is done via a serial interface, so you'll need to have a [UART Bus](components/uart#uart)
 in your configuration with both `rx_pin` and `tx_pin` configured. These pins must then be connected to the
 respective pins on the display.
 
@@ -27,10 +27,10 @@ bkcmd=0       // Tells the Nextion to not send responses on commands. This is th
 
 ```
 This permits faster communication with the Nextion display and it is highly recommended when using
-[Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}).
+[Hardware UARTs](components/uart#uart-hardware_uarts).
 
 {{< warning >}}
-**We highly recommend using only** [Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}) **with Nextion displays.**
+**We highly recommend using only** [Hardware UARTs](components/uart#uart-hardware_uarts) **with Nextion displays.**
 
 *Use of software UARTs is known to result in unpredictable/inconsistent behavior.*
 
@@ -51,15 +51,15 @@ display:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the [UART Bus]({{< ref "components/uart#uart" >}}) you wish to use for this display. Specify this
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the [UART Bus](components/uart#uart) you wish to use for this display. Specify this
   when you have multiple UART configurations.
 - **brightness** (*Optional*, percentage): When specified, the display brightness will be set to this value at boot.
 - **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): The lambda to use for rendering the content on the Nextion
-  display. See [Rendering Lambda]({{< ref "components/display/nextion#display-nextion_lambda" >}}) for more information. This is typically empty. The individual components
+  display. See [Rendering Lambda](components/display/nextion#display-nextion_lambda) for more information. This is typically empty. The individual components
   for the Nextion will handle almost all functions needed for updating display elements.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to call the lambda to update the display.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to call the lambda to update the display.
   Defaults to `5s`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - **tft_url** (*Optional*, string): The URL from which to download the TFT file for display firmware updates (Nextion
   OTA). See [Nextion Upload](components/display/nextion#nextion_upload_tft).
 - **touch_sleep_timeout** (*Optional*, int): Sets internal No-touch-then-sleep timer in seconds.
@@ -85,7 +85,7 @@ display:
   release). See [Nextion Automation](components/display/nextion#nextion-on_touch).
 - **on_buffer_overflow** (*Optional*, [Action](automations/actions#config-action)): An action to be performed when the Nextion
   reports a buffer overflow. See [Nextion Automation](components/display/nextion#nextion-on_buffer_overflow).
-- **command_spacing** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): Sets the minimum time between commands sent to the Nextion display.
+- **command_spacing** (*Optional*, [Time](guides/configuration-types#config-time)): Sets the minimum time between commands sent to the Nextion display.
   A higher value can help prevent buffer overflows but will result in slower interface updates.
   Range is `0-255ms`. Defaults to `0ms` (disabled).
 
@@ -122,7 +122,7 @@ Although you can use the rendering lambda, most, if not all, updates to the Next
 individual Nextion components/platforms. **See Below**
 
 {{< /note >}}
-See [Formatted Text]({{< ref "components/display/_index#display-printf" >}}) for a quick introduction to the `printf` formatting rules and [Displaying Time]({{< ref "components/display/_index#display-strftime" >}}) for
+See [Formatted Text](components/display/_index#display-printf) for a quick introduction to the `printf` formatting rules and [Displaying Time](components/display/_index#display-strftime) for
 an introduction to `strftime` time formatting.
 
 ### Using Lambdas
@@ -133,7 +133,7 @@ The list below calls out a few commonly-used methods:
 
 {{< anchor "nextion_upload_tft" >}}
 
-- `upload_tft`: Start the process to upload a new TFT file to the Nextion; see [Uploading A TFT File]({{< ref "components/display/nextion#nextion_upload_tft_file" >}}) below.
+- `upload_tft`: Start the process to upload a new TFT file to the Nextion; see [Uploading A TFT File](components/display/nextion#nextion_upload_tft_file) below.
 
 {{< anchor "nextion_update_all_components" >}}
 
@@ -206,7 +206,7 @@ api:
 
 ### Triggers
 
-Several [Triggers]({{< ref "automations/actions#actions-trigger" >}}) are available for use with your Nextion display.
+Several [Triggers](automations/actions#actions-trigger) are available for use with your Nextion display.
 
 {{< anchor "nextion-on_setup" >}}
 
@@ -363,7 +363,7 @@ logging or other {{< docref "/automations/index" "automations" >}} will occur. T
 update process failing.*
 
 If you experience problems with the update process and are using a software UART (for example, on the ESP8266), you
-should switch to an ESP32 or supported variant which has more available [Hardware UARTs]({{< ref "components/uart#uart-hardware_uarts" >}}).
+should switch to an ESP32 or supported variant which has more available [Hardware UARTs](components/uart#uart-hardware_uarts).
 
 {{< /warning >}}
 You can use Home Assistant itself or any other web server to host the TFT file. When using HTTPS (generally

@@ -33,14 +33,14 @@ voice_assistant:
   microphone: mic_id
 
 ```
-- **microphone** (**Required**, [Microphone Source Configuration]({{< ref "components/microphone/_index#config-microphone-source" >}})): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input.
-- **micro_wake_word** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The {{< docref "/components/micro_wake_word" "micro_wake_word" >}} component used for wake word detection. Configuring this allows Home Assistant to change which wake word model is enabled.
-- **speaker** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The {{< docref "/components/speaker/index" "speaker" >}} to use to output the response.
+- **microphone** (**Required**, [Microphone Source Configuration](components/microphone/_index#config-microphone-source)): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input.
+- **micro_wake_word** (*Optional*, [ID](guides/configuration-types#config-id)): The {{< docref "/components/micro_wake_word" "micro_wake_word" >}} component used for wake word detection. Configuring this allows Home Assistant to change which wake word model is enabled.
+- **speaker** (*Optional*, [ID](guides/configuration-types#config-id)): The {{< docref "/components/speaker/index" "speaker" >}} to use to output the response.
   Cannot be used with `media_player` below.
-- **media_player** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The {{< docref "/components/media_player/index" "media_player" >}} to use
+- **media_player** (*Optional*, [ID](guides/configuration-types#config-id)): The {{< docref "/components/media_player/index" "media_player" >}} to use
   to output the response. Cannot be used with `speaker` above.
 - **use_wake_word** (*Optional*, boolean): Enable wake word on the assist pipeline. Defaults to `false`.
-- **conversation_timeout** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): How long to wait before resetting the `conversation_id`
+- **conversation_timeout** (*Optional*, [Time](guides/configuration-types#config-time)): How long to wait before resetting the `conversation_id`
   sent to the voice assist pipeline, which contains the context of the current assist pipeline. Defaults to `300s`.
 - **on_intent_start** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when intent processing starts.
 - **on_intent_end** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when intent processing ends.

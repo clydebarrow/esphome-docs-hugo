@@ -68,8 +68,8 @@ climate:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The sensor that is used to measure the current temperature.
-- **humidity_sensor** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): If specified, this sensor is used to measure the current humidity.
+- **sensor** (**Required**, [ID](guides/configuration-types#config-id)): The sensor that is used to measure the current temperature.
+- **humidity_sensor** (*Optional*, [ID](guides/configuration-types#config-id)): If specified, this sensor is used to measure the current humidity.
   This is used for information only and does not influence temperature control.
 - **default_target_temperature_low** (**Required**, float): The default low target temperature for
   the control algorithm. This can be dynamically set in the frontend later.

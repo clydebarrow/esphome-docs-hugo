@@ -46,9 +46,9 @@ light:
 - **icon** (*Optional*, icon): Manually set the icon to use for the light in the frontend.
 - **effects** (*Optional*, list): A list of [light effects](components/light/_index#light-effects) to use for this light.
 - **gamma_correct** (*Optional*, float): Apply a [gamma correction factor](https://en.wikipedia.org/wiki/Gamma_correction) to the light channels. Defaults to `2.8`.
-- **default_transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The default transition length to use when no
+- **default_transition_length** (*Optional*, [Time](guides/configuration-types#config-time)): The default transition length to use when no
   transition length is set in the light call. Defaults to `1s`.
-- **flash_transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The transition length to use when flash is called.
+- **flash_transition_length** (*Optional*, [Time](guides/configuration-types#config-time)): The transition length to use when flash is called.
   Defaults to `0s`.
 - **initial_state** (*Optional*): The initial state the light should be set to on bootup. This state will be applied
   when the state is **not** restored based on `restore_mode` (below).
@@ -68,18 +68,18 @@ light:
     - `ALWAYS_ON` - Always initialize the light as ON on bootup.
 
 - **on_turn_on** (*Optional*, [Action](automations/actions#config-action)): An automation to perform when the light is turned on. See
-  [`light.on_turn_on` / `light.on_turn_off` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
+  [`light.on_turn_on` / `light.on_turn_off` Trigger](components/light/_index#light-on_turn_on_off_trigger).
 - **on_turn_off** (*Optional*, [Action](automations/actions#config-action)): An automation to perform when the light is turned off.
-  See [`light.on_turn_on` / `light.on_turn_off` Trigger]({{< ref "components/light/_index#light-on_turn_on_off_trigger" >}}).
+  See [`light.on_turn_on` / `light.on_turn_off` Trigger](components/light/_index#light-on_turn_on_off_trigger).
 - **on_state** (*Optional*, [Action](automations/actions#config-action)): An automation to perform when the light's set state is
-  changed. See [`light.on_state` Trigger]({{< ref "components/light/_index#light-on_state_trigger" >}}).
+  changed. See [`light.on_state` Trigger](components/light/_index#light-on_state_trigger).
 
 **Additional configuration variables for addressable lights:**
 
 - **color_correct** (*Optional*, list of float): Apply a color correction to each color channel. This defines the
   maximum brightness of each channel. For example `[100%, 50%, 100%]` would set the green channel to be at most at
   50% brightness.
-- **power_supply** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The {{< docref "/components/power_supply" >}} to connect to this light. When
+- **power_supply** (*Optional*, [ID](guides/configuration-types#config-id)): The {{< docref "/components/power_supply" >}} to connect to this light. When
   the light is turned on, the power supply will automatically be switched on too.
 
 **Advanced options:**
@@ -159,8 +159,8 @@ on_...:
 ```
 **Configuration variables:**
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable](automations/templates#config-templatable)): The length of the
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the light.
+- **transition_length** (*Optional*, [Time](guides/configuration-types#config-time), [templatable](automations/templates#config-templatable)): The length of the
   transition if the light supports it.
 
 {{< note >}}
@@ -200,10 +200,10 @@ on_...:
 ```
 **Configuration variables:**
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable](automations/templates#config-templatable)): The length of the
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the light.
+- **transition_length** (*Optional*, [Time](guides/configuration-types#config-time), [templatable](automations/templates#config-templatable)): The length of the
   transition if the light supports it.
-- **flash_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable](automations/templates#config-templatable)): If set, will flash the
+- **flash_length** (*Optional*, [Time](guides/configuration-types#config-time), [templatable](automations/templates#config-templatable)): If set, will flash the
   given color for this period of time and then go back to the previous state.
 - **effect** (*Optional*, string, [templatable](automations/templates#config-templatable)): If set, will attempt to start an effect
   with the given name.
@@ -270,8 +270,8 @@ on_...:
 ```
 **Configuration variables:**
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable](automations/templates#config-templatable)): The length of the
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the light.
+- **transition_length** (*Optional*, [Time](guides/configuration-types#config-time), [templatable](automations/templates#config-templatable)): The length of the
   transition if the light supports it.
 
 {{< note >}}
@@ -303,7 +303,7 @@ on_...:
 ```
 **Configuration variables:**
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the light.
 - **state** (*Optional*, [templatable](automations/templates#config-templatable), boolean): Change the ON/OFF state of the light.
 - All other options from [light state](components/light/_index#light-state_config).
 
@@ -324,10 +324,10 @@ on_...:
 ```
 **Configuration variables:**
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the light.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the light.
 - **relative_brightness** (**Required**, [templatable](automations/templates#config-templatable), percentage): The relative brightness
   to dim the light by.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}}), [templatable](automations/templates#config-templatable)): The length of the
+- **transition_length** (*Optional*, [Time](guides/configuration-types#config-time), [templatable](automations/templates#config-templatable)): The length of the
   transition.
 - **brightness_limits** (*Optional*): Limits in the brightness range.
     - **min_brightness** (*Optional*, percentage): The minimum brightness to dim the light to. Defaults to `0%`.
@@ -382,7 +382,7 @@ on_...:
 ```
 **Configuration variables:**
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the addressable light to control.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the addressable light to control.
 - **range_from** (*Optional*, [templatable](automations/templates#config-templatable), int): The beginning of the range of LEDs to
   control, inclusive, using zero-based indexing. Defaults to 0 (the beginning of the strip).
 - **range_to** (*Optional*, [templatable](automations/templates#config-templatable), int): The end of the range of LEDs to control,
@@ -513,12 +513,12 @@ light:
 **Configuration variables:**
 
 - **name** (*Optional*, string): The name of the effect. Defaults to `Pulse`.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of each transition. Defaults to `1s`. Can be a
+- **transition_length** (*Optional*, [Time](guides/configuration-types#config-time)): The duration of each transition. Defaults to `1s`. Can be a
   single time or split for on and off using these nested options.
 
-  - **on_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of the transition when the light is turned on.
-  - **off_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of the transition when the light is turned off.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval when the new transition is started. Defaults to
+  - **on_length** (*Optional*, [Time](guides/configuration-types#config-time)): The duration of the transition when the light is turned on.
+  - **off_length** (*Optional*, [Time](guides/configuration-types#config-time)): The duration of the transition when the light is turned off.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval when the new transition is started. Defaults to
   `1s`.
 - **min_brightness** (*Optional*, percentage): The minimum brightness value. Defaults to `0%`
 - **max_brightness** (*Optional*, percentage): The maximum brightness value. Defaults to `100%`
@@ -543,8 +543,8 @@ light:
 **Configuration variables:**
 
 - **name** (*Optional*, string): The name of the effect. Defaults to `Random`.
-- **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of each transition to start. Defaults to `5s`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which a new color is selected and
+- **transition_length** (*Optional*, [Time](guides/configuration-types#config-time)): The duration of each transition to start. Defaults to `5s`.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval with which a new color is selected and
   transitioned to.
 
 ### Strobe Effect
@@ -593,8 +593,8 @@ light:
     or Kelvin) of the light, if applicable.
   - **cold_white** (*Optional*, percentage): The cold white channel of the light, if applicable. Defaults to `100%`.
   - **warm_white** (*Optional*, percentage): The warm white channel of the light, if applicable. Defaults to `100%`.
-  - **duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration this color should be active.
-  - **transition_length** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The duration of each transition. Defaults to `0s`.
+  - **duration** (**Required**, [Time](guides/configuration-types#config-time)): The duration this color should be active.
+  - **transition_length** (*Optional*, [Time](guides/configuration-types#config-time)): The duration of each transition. Defaults to `0s`.
 
 See [light state](components/light/_index#light-state_config) for more information on the various color fields.
 
@@ -662,7 +662,7 @@ light:
 **Configuration variables:**
 
 - **name** (**Required**, string): The name of the custom effect.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which the lambda code is executed. A value of
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval with which the lambda code is executed. A value of
   `0ms` means that the lambda is always executed, without a cool-down. Defaults to `0ms`.
 - **lambda** (**Required**, [lambda](automations/templates#config-lambda)): The code to execute. `static` variables are especially
   useful.
@@ -733,7 +733,7 @@ light:
   - **gradient** (*Optional*, boolean): If `true` the current color will transition with a gradient over `num_leds`
     to the next color. Defaults to `false`.
 
-- **add_led_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which to shift in new LEDs at the beginning
+- **add_led_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval with which to shift in new LEDs at the beginning
   of the strip. Defaults to `100ms`.
 - **reverse** (*Optional*, boolean): Whether to reverse the direction of the color wipe. Defaults to `false`.
 
@@ -757,7 +757,7 @@ light:
 **Configuration variables:**
 
 - **name** (*Optional*, string): The name of the effect. Defaults to `Scan`.
-- **move_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which to move the dot/line one LED forward.
+- **move_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval with which to move the dot/line one LED forward.
   Defaults to `100ms`.
 - **scan_width** (*Optional*, int): The number of LEDs to use. Defaults to `1`.
 
@@ -783,7 +783,7 @@ light:
 - **name** (*Optional*, string): The name of the effect. Defaults to `Twinkle`.
 - **twinkle_probability** (*Optional*, percentage): The percentage with which, at any time step, a randomly-chosen LED
   should start its twinkle animation.
-- **progress_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which to progress the effect. This affects
+- **progress_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval with which to progress the effect. This affects
   the duration of a twinkle animation. Defaults to `4ms`.
 
 ### Addressable Random Twinkle Effect
@@ -807,7 +807,7 @@ light:
 - **name** (*Optional*, string): The name of the effect. Defaults to `Random Twinkle`.
 - **twinkle_probability** (*Optional*, percentage): The percentage with which, at any time step, a randomly-chosen LED
   should start its twinkle animation.
-- **progress_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which to progress the effect. This affects
+- **progress_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval with which to progress the effect. This affects
   the duration of a twinkle animation. Defaults to `4ms`.
 
 ### Addressable Fireworks Effect
@@ -832,7 +832,7 @@ light:
 **Configuration variables:**
 
 - **name** (*Optional*, string): The name of the effect. Defaults to `Fireworks`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval with which to progress the effect. Defaults to
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval with which to progress the effect. Defaults to
   `32ms`.
 - **spark_probability** (*Optional*, percentage): The probability to start a new firework spark at a randomly-chosen
   LED at any given time step. Defaults to `10%`.
@@ -862,7 +862,7 @@ light:
 **Configuration variables:**
 
 - **name** (*Optional*, string): The name of the effect. Defaults to `Addressable Flicker`.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The time interval for updating the random offsets. Defaults to
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The time interval for updating the random offsets. Defaults to
   `16ms`.
 - **intensity** (*Optional*, percentage): The intensity of the effect, basically how much the random values can offset
   the currently active light color. Defaults to `5%`.
@@ -1015,7 +1015,7 @@ to be replicated on multiple strips.
 
 #### E1.31 Component
 
-The [E1.31 Effect]({{< ref "components/light/_index#e131-light-effect" >}}) requires a component hub for the `e131` light effect.
+The [E1.31 Effect](components/light/_index#e131-light-effect) requires a component hub for the `e131` light effect.
 
 **Configuration variables:**
 
@@ -1057,7 +1057,7 @@ light:
 ```
 **Configuration variables:**
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component](components/uart#uart). Useful if
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [UART Component](components/uart#uart). Useful if
   you've configured multiple UARTs.
 
 [Adalight](https://learn.adafruit.com/adalight-diy-ambient-tv-lighting)

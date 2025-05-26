@@ -48,12 +48,12 @@ logger:
 ```
 Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - **on_sms_received** (*Optional*, [Automation](automations/_index#automation)): An action to be
-  performed when an SMS is received. See [`on_sms_received` Trigger]({{< ref "components/sim800l#sim800l-on_sms_received" >}}).
+  performed when an SMS is received. See [`on_sms_received` Trigger](components/sim800l#sim800l-on_sms_received).
 - **on_incoming_call** (*Optional*, [Automation](automations/_index#automation)): An action to be
-  performed when a call is received. See [`on_incoming_call` Trigger]({{< ref "components/sim800l#sim800l-on_incoming_call" >}}).
+  performed when a call is received. See [`on_incoming_call` Trigger](components/sim800l#sim800l-on_incoming_call).
 - **on_call_connected** (*Optional*, [Automation](automations/_index#automation)): An action to be
   performed when a call is connected, either because an outgoing call accepted is
   accepted or an incoming call answered.
@@ -167,7 +167,7 @@ Configuration options:
 - **recipient** (**Required**, string, [templatable](automations/templates#config-templatable)): The message recipient.
   number.
 - **message** (**Required**, string, [templatable](automations/templates#config-templatable)): The message content.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the SIM800L if you have multiple components.
 
 
 {{< anchor "sim800l-dial_action" >}}
@@ -186,7 +186,7 @@ on_...:
 Configuration options:
 
 - **recipient** (**Required**, string, [templatable](automations/templates#config-templatable)): The number to dial.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the SIM800L if you have multiple components.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the SIM800L if you have multiple components.
 
 
 ## `sim800l.connect` Action

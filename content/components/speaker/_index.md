@@ -22,7 +22,7 @@ speaker:
 ```
 Configuration variables:
 
-- **audio_dac** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The {{< docref "/components/audio_dac/index" "audio DAC" >}} to use for volume control.
+- **audio_dac** (*Optional*, [ID](guides/configuration-types#config-id)): The {{< docref "/components/audio_dac/index" "audio DAC" >}} to use for volume control.
 
 {{< anchor "speaker-actions" >}}
 
@@ -53,7 +53,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The speaker to control. Defaults to the only one in YAML.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The speaker to control. Defaults to the only one in YAML.
 - **data** (**Required**, list of bytes): The raw audio data to play.
 
 {{< anchor "speaker-stop" >}}
@@ -64,7 +64,7 @@ This action will stop playing audio data from the speaker and discard the unplay
 
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The speaker to control. Defaults to the only one in YAML.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The speaker to control. Defaults to the only one in YAML.
 
 {{< anchor "speaker-finish" >}}
 
@@ -74,7 +74,7 @@ This action will stop playing audio data from the speaker after all data **is** 
 
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The speaker to control. Defaults to the only one in YAML.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The speaker to control. Defaults to the only one in YAML.
 
 {{< anchor "speaker-mute_on" >}}
 
@@ -84,7 +84,7 @@ This action will mute the speaker.
 
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The speaker to control. Defaults to the only one in YAML.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The speaker to control. Defaults to the only one in YAML.
 
 {{< anchor "speaker-mute_off" >}}
 
@@ -94,7 +94,7 @@ This action will unmute the speaker.
 
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The speaker to control. Defaults to the only one in YAML.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The speaker to control. Defaults to the only one in YAML.
 
 {{< anchor "speaker-volume_set" >}}
 
@@ -135,7 +135,7 @@ This condition will check if the speaker is currently playing audio data.
 
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The speaker to check. Defaults to the only one in YAML.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The speaker to check. Defaults to the only one in YAML.
 
 {{< anchor "speaker-is_stopped" >}}
 
@@ -149,7 +149,7 @@ Between the time `speaker.is_playing` is false and `speaker.is_stopped` is true 
 
 Configuration variables:
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): The speaker to check. Defaults to the only one in YAML.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The speaker to check. Defaults to the only one in YAML.
 
 
 ## Platforms

@@ -41,13 +41,13 @@ sensor:
 
   - All options from [Sensor](components/sensor/_index#config-sensor).
 
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the [UART Component](components/uart#uart) if you want
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [UART Component](components/uart#uart) if you want
   to use multiple UART buses.
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for actions.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for actions.
 
 {{< img src="senseair_s8-pins.jpg" alt="Image" caption="Pins on the SenseAir S8. Only the ones marked with a red circle need to be connected." width="80.0%" class="center" >}}
 
@@ -124,7 +124,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "senseair/senseair.h" "senseair/senseair.h" >}}
 
 

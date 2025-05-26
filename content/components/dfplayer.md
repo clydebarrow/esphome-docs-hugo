@@ -32,8 +32,8 @@ dfplayer:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 - **on_finished_playback** (*Optional*, [Automation](automations/_index#automation)): An action to be
   performed when playback is finished.
 
@@ -290,7 +290,7 @@ on_...:
 ```
 ## All actions
 
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID of the DFPlayer if you have multiple components.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the DFPlayer if you have multiple components.
 
 
 ## Test setup

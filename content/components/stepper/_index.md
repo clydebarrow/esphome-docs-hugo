@@ -15,7 +15,7 @@ and ULN2003 ([datasheet](http://www.ti.com/lit/ds/symlink/uln2003a.pdf)) are sup
 
 {{< note >}}
 This component will not show up in the Home Assistant front-end automatically because
-Home Assistant doesn't have support for steppers. Please see [Home Assistant Configuration]({{< ref "components/stepper/_index#stepper-ha-config" >}}).
+Home Assistant doesn't have support for steppers. Please see [Home Assistant Configuration](components/stepper/_index#stepper-ha-config).
 
 {{< /note >}}
 {{< anchor "base_stepper_config" >}}
@@ -56,7 +56,7 @@ stepper:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the stepper so that you can control it.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): Specify the ID of the stepper so that you can control it.
 - **step_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The `STEP` pin of the A4988
   stepper driver.
 - **dir_pin** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The `DIRECTION` pin of the A4988
@@ -65,7 +65,7 @@ Configuration variables:
   of the A4988 stepper driver. If specified, the driver will be put into sleep mode as soon as the stepper
   reaches the target steps.
 
-- All other from [Base Stepper Configuration]({{< ref "components/stepper/_index#base_stepper_config" >}}).
+- All other from [Base Stepper Configuration](components/stepper/_index#base_stepper_config).
 
 {{< note >}}
 If the stepper is driving in the wrong direction, you can invert the `dir_pin`:
@@ -102,7 +102,7 @@ stepper:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): Specify the ID of the stepper so that you can control it.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): Specify the ID of the stepper so that you can control it.
 - **pin_a** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin **a** of the stepper control board.
 - **pin_b** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin **b** of the stepper control board.
 - **pin_c** (**Required**, [Pin Schema](guides/configuration-types#config-pin_schema)): The pin **c** of the stepper control board.
@@ -115,7 +115,7 @@ Configuration variables:
     - `HALF_STEP`
     - `WAVE_DRIVE`
 
-- All other from [Base Stepper Configuration]({{< ref "components/stepper/_index#base_stepper_config" >}}).
+- All other from [Base Stepper Configuration](components/stepper/_index#base_stepper_config).
 
 {{< anchor "stepper-set_target_action" >}}
 
@@ -144,7 +144,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the stepper.
 - **target** (**Required**, int, [templatable](automations/templates#config-templatable)): The target position in steps.
 
 {{< warning >}}
@@ -200,7 +200,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the stepper.
 - **position** (**Required**, int, [templatable](automations/templates#config-templatable)): The position to report in steps.
 
 {{< anchor "stepper-set_speed_action" >}}
@@ -218,7 +218,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the stepper.
 - **speed** (**Required**, [templatable](automations/templates#config-templatable), float): The speed
   in `steps/s` (steps per seconds) to drive the stepper at.
 
@@ -237,7 +237,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the stepper.
 - **acceleration** (**Required**, [templatable](automations/templates#config-templatable), float): The acceleration
   in `steps/s^2` (steps per seconds squared) to use when starting to move.
 
@@ -256,7 +256,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The ID of the stepper.
+- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the stepper.
 - **deceleration** (**Required**, [templatable](automations/templates#config-templatable), float): The same as `acceleration`,
   but for when the motor is decelerating shortly before reaching the set position.
 

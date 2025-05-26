@@ -38,11 +38,11 @@ cover:
 
 - **open_action** (**Required**, [Action](automations/actions#config-action)): The action that should
   be performed when the remote requests the cover to be opened.
-- **open_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **open_duration** (**Required**, [Time](guides/configuration-types#config-time)): The amount of time it takes the cover
   to open up from the fully-closed state.
 - **close_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
   be performed when the remote requests the cover to be closed.
-- **close_duration** (**Required**, [Time]({{< ref "guides/configuration-types#config-time" >}})): The amount of time it takes the cover
+- **close_duration** (**Required**, [Time](guides/configuration-types#config-time)): The amount of time it takes the cover
   to close from the fully-open state.
 - **stop_action** (**Required**, [Action](automations/actions#config-action)): The action that should
   be performed to stop the cover when the remote requests the cover to be stopped or
@@ -91,7 +91,7 @@ This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issue
 ## See Also
 
 - {{< docref "index/" >}}
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Automation](automations/_index#automation)
 - {{< apiref "time_based/time_based_cover.h" "time_based/time_based_cover.h" >}}
 
 

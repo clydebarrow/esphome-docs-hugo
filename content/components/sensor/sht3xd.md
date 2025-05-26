@@ -43,7 +43,7 @@ sensor:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x44`. For SHT3x, an alternate address can be `0x45` while SHT85 supports only address `0x44`
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to check the
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **heater_enabled** (*Optional*, bool): Turn on/off heater at boot.
   This may help provide [more accurate readings in condensing conditions](https://forum.arduino.cc/t/atmospheric-sensors-in-condensing-conditions/412167),
@@ -69,7 +69,7 @@ i2c:
 ```
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}

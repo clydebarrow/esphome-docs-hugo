@@ -29,7 +29,7 @@ It is also possible to add eight user-defined characters.
 ## lcd_pcf8574 Component
 
 `lcd_pcf8574` is for LCD displays with a PCF8574 GPIO expander module connected to all the data pins. This has the
-benefit that you only need to connect two data wires to the ESP instead of the six or ten as with the [lcd_gpio Component]({{< ref "components/display/lcd_display#lcd-gpio" >}}).
+benefit that you only need to connect two data wires to the ESP instead of the six or ten as with the [lcd_gpio Component](components/display/lcd_display#lcd-gpio).
 The communication happens via [I²C Bus](components/i2c#i2c), you need to have an `i2c:` section in your configuration.
 
 {{< img src="lcd-pcf8574.jpg" alt="Image" caption="LCD Display with a PCF8574 board attached on the back" width="75.0%" class="center" >}}
@@ -54,9 +54,9 @@ display:
   sure, power the display up and just count them.
 - **address** (*Optional*, int): The [I²C](components/i2c#i2c) address of the PCF8574 chip, defaults to `0x3F`.
 - **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): The lambda to use for rendering the content on the display.
-  See [Rendering Lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+  See [Rendering Lambda](components/display/lcd_display#display-lcd_lambda) for more information.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to re-draw the screen. Defaults to `1s`.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 
 {{< note >}}
 If you're not seeing anything on the display, try turning the contrast potentiometer around on the
@@ -101,9 +101,9 @@ display:
 - **rs_pin** (**Required**, [pin](guides/configuration-types#config-pin_schema)): The pin you have `RS` (`04`) hooked up to.
 - **rw_pin** (*Optional*, [pin](guides/configuration-types#config-pin_schema)): Optionally set the pin you have `R/W` (`05`) hooked up to. You can also just permanently connect that pin to `GND`.
 - **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): The lambda to use for rendering the content on the display.
-  See [Rendering Lambda]({{< ref "components/display/lcd_display#display-lcd_lambda" >}}) for more information.
-- **update_interval** (*Optional*, [Time]({{< ref "guides/configuration-types#config-time" >}})): The interval to re-draw the screen. Defaults to `1s`.
-- **id** (*Optional*, [ID]({{< ref "guides/configuration-types#config-id" >}})): Manually specify the ID used for code generation.
+  See [Rendering Lambda](components/display/lcd_display#display-lcd_lambda) for more information.
+- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to re-draw the screen. Defaults to `1s`.
+- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
 
 {{< note >}}
 If you're not seeing anything on the display, make sure you apply `3.3V` to the `VEE` (`03`) contrast control
@@ -115,7 +115,7 @@ pin of the board. You can use a potentiometer to make it adjustable.
 
 ## Rendering Lambda
 
-The LCD displays has a similar API to the fully fledged [Display Rendering Engine]({{< ref "components/display/_index#display-engine" >}}), but it's only a subset as LCD displays
+The LCD displays has a similar API to the fully fledged [Display Rendering Engine](components/display/_index#display-engine), but it's only a subset as LCD displays
 don't have a concept of individual pixels. In the lambda you're passed a variable called `it`
 as with all other displays. In this case however, `it` is an instance of either `GPIOLCDDisplay` or `PCF8574LCDDisplay`.
 
@@ -155,8 +155,8 @@ time:
   id: my_time
 
 ```
-Please see [Formatted Text]({{< ref "components/display/_index#display-printf" >}}) for a quick introduction into the `printf` formatting rules and
-[Displaying Time]({{< ref "components/display/_index#display-strftime" >}}) for an introduction into the `strftime` time formatting.
+Please see [Formatted Text](components/display/_index#display-printf) for a quick introduction into the `printf` formatting rules and
+[Displaying Time](components/display/_index#display-strftime) for an introduction into the `strftime` time formatting.
 
 ## User Defined Characters
 

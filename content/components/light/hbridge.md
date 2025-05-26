@@ -34,8 +34,8 @@ control the colors in the [light control actions](components/light/_index#light-
 
 ## Configuration variables:
 
-- **pin_a** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the first float [Output Component]({{< ref "components/output/_index#output" >}}) to use for this light.
-- **pin_b** (**Required**, [ID]({{< ref "guides/configuration-types#config-id" >}})): The id of the second float [Output Component]({{< ref "components/output/_index#output" >}}) to use for this light.
+- **pin_a** (**Required**, [ID](guides/configuration-types#config-id)): The id of the first float [Output Component](components/output/_index#output) to use for this light.
+- **pin_b** (**Required**, [ID](guides/configuration-types#config-id)): The id of the second float [Output Component](components/output/_index#output) to use for this light.
 - All other options from [Light](components/light/_index#config-light).
 
 {{< note >}}

@@ -14,7 +14,7 @@ states from your Home Assistant instance using the {{< docref "/components/api" 
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
-[Connecting your device to Home Assistant]({{< ref "guides/getting_started_hassio#connecting-your-device-to-home-assistant" >}}).
+[Connecting your device to Home Assistant](guides/getting_started_hassio#connecting-your-device-to-home-assistant).
 
 {{< /note >}}
 ```yaml
@@ -45,8 +45,8 @@ text_sensor:
 
 ## See Also
 
-- [Sensor Filters]({{< ref "components/sensor/_index#sensor-filters" >}})
-- [Automation]({{< ref "automations/_index#automation" >}})
+- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [Automation](automations/_index#automation)
 - {{< apiref "homeassistant/text_sensor/homeassistant_text_sensor.h" "homeassistant/text_sensor/homeassistant_text_sensor.h" >}}
 
 

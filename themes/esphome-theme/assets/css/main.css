@@ -603,6 +603,10 @@ main {
   overflow: hidden;
 }
 
+.content svg {
+  max-width: 600px;
+}
+
 /* Sidebar */
 .sidebar-content {
   background-color: var(--sidebar-background);
@@ -1074,11 +1078,6 @@ footer {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5em;
   margin-bottom: 2em;
-}
-@media (min-width: 500px) {
-  .component-grid {
-    grid-template-columns: repeat(2, 1fr); /* force 2 columns minimum */
-  }
 }
 
 .cta-buttons {

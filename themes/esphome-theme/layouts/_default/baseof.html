@@ -39,11 +39,6 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Page.Title }}">
-    <style>
-        body {
-            visibility: hidden;
-        }
-    </style>
 
     <script data-cfasync="false" type="text/javascript">
         // cfasync is set to false to prevent Cloudflare from modifying the script
@@ -63,17 +58,9 @@
     {{ partial "asset.html" "css/chroma.css" }}
     {{ partial "asset.html" "pagefind/pagefind-modular-ui.css" }}
     {{ block "head" . }}{{ end }}
+
     <style>
-        /* Center the logo before main CSS loads */
-        .nav-logo a {
-            position: fixed;
-            top: 50%;
-            opacity: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 999;
-            display: block;
-        }
+        /* hide content before CSS loads to prevent Flash of Unstyled Content */
         main, footer  {
             display: none;
         }

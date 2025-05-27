@@ -45,8 +45,7 @@ jobs:
 
       - name: Build with Hugo
         run: |
-            mkdir -p data
-            echo "url: `git config --get remote.origin.url`" > data/repo.yaml
+            make repo-data
             hugo --minify
 
       - name: Build search index

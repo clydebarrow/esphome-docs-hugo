@@ -10,9 +10,9 @@ repo-data:
 
 automations: repo-data
 	mkdir -p data/automations
-	curl https://data.esphome.io/release/automations.json | ./collate_automations.sh > data/automations/release.json
+	curl https://data.esphome.io/release/automations.json | ./collate_automations.sh > data/automations/current.json
 	curl https://data.esphome.io/beta/automations.json | ./collate_automations.sh > data/automations/beta.json
-	curl https://data.esphome.io/dev/automations.json | ./collate_automations.sh > data/automations/dev.json
+	curl https://data.esphome.io/dev/automations.json | ./collate_automations.sh > data/automations/next.json
 
 live-html:	html
 	hugo server --baseURL "" --bind 0.0.0.0

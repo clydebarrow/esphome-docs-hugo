@@ -1,10 +1,4 @@
 {{- $branch := site.Data.repo.branch -}}
-{{- if eq $branch "current" -}}
-    {{- $branch = "release" -}}
-{{- end -}}
-{{- if eq $branch "next" -}}
-    {{- $branch = "dev" -}}
-{{- end -}}
 {{- $data := index site.Data.automations $branch "automations" -}}
 
 {{- if $data }}

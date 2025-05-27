@@ -1311,3 +1311,53 @@ figcaption {
     left: 0;
   }
 }
+
+.code-block {
+  position: relative;
+}
+
+.copy-button.copied .copy-feedback {
+  opacity: 1;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.5rem;
+  background: var(--feature-card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.copy-button:hover {
+  background-color: var(--btn-secondary-hover-color);
+}
+
+.copy-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.copy-feedback {
+  position: absolute;
+  right: calc(100% + 0.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--text-color);
+  color: var(--feature-card-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+

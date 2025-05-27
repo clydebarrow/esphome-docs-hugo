@@ -62,6 +62,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
+    // Copy button functionality
+    const copyButtons = document.querySelectorAll('.copy-button');
+    copyButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+            const codeBlock = button.closest('.code-block');
+            const yamlContent = codeBlock.querySelector('.codeblock-content');
+            const code = yamlContent.textContent;
+
+            try {
+                await navigator.clipboard.writeText(code);
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+            }
+        });
+    });
+
     const scrollThreshold = 5; // Minimum scroll amount before triggering hide/show
     const navContainer = document.getElementById('nav-container');
     let scrollDelta = 0; // Track cumulative scroll amount

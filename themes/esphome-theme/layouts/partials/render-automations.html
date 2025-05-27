@@ -1,0 +1,29 @@
+{{- $branch := site.Data.repo.branch -}}
+{{- if eq $branch "current" -}}
+    {{- $branch = "release" -}}
+{{- end -}}
+{{- if eq $branch "next" -}}
+    {{- $branch = "dev" -}}
+{{- end -}}
+{{- $data := index site.Data.automations $branch "automations" -}}
+
+{{- if $data }}
+    {{- $markdown := "" }}
+
+    {{- range $category, $items := $data }}
+        {{- $markdown = printf "%s\n## All %s\n" $markdown ($category | title) }}
+        {{- range $domain, $entries := $items }}
+            {{- $entryList := "" }}
+            {{- range $i, $entry := $entries }}
+                {{- if $i }}{{ $entryList = printf "%s, " $entryList }}{{ end }}
+                {{- $entryList = printf "%s`%s`" $entryList $entry }}
+            {{- end }}
+            {{- $markdown = printf "%s- %s: %s\n" $markdown $domain $entryList }}
+        {{- end }}
+    {{- end }}
+
+    {{- $markdown | markdownify }}
+{{- else }}
+    <p>⚠️ Data not found for branch: <code>{{ $branch }}</code></p>
+{{- end }}
+

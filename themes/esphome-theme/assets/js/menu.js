@@ -26,6 +26,20 @@ function closeTOC() {
 // Add keyboard support for dropdown menus
 document.addEventListener('DOMContentLoaded', function() {
 
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        document.querySelector('.theme-toggle').setAttribute('aria-label', `Toggle ${theme === 'dark' ? 'light' : 'dark'} mode`);
+        closeMenu();
+    }
+
+    // Theme toggle functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
     const tocToggle = document.getElementById('toc-toggle');
     const overlay = document.getElementById('overlay');
     if (tocToggle)
@@ -137,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
     // Search functionality
     if (typeof PagefindModularUI === 'undefined') {
         console.error('PagefindModularUI library not loaded');
@@ -155,10 +168,8 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.className = 'pagefind-ui__search-input';
     searchContainer.appendChild(searchInput);
 
-    // Create search results container
     const resultsContainer = document.getElementById('nav-search-results');
 
-    // Initialize PagefindModularUI
     const instance = new PagefindModularUI.Instance({
         showSubResults: true,
         showImages: false,
@@ -195,6 +206,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('#nav-search-results')) {
+            resultsContainer.style.display = 'none';
+            top_hit = null;
+        }
+    });
     // Create clear button
     const clearButton = document.createElement('button');
     clearButton.type = 'button';
@@ -223,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Prevent the '/' key from being entered in the search box
         }
     });
-
     const navContainer = document.getElementById('nav-container');
 
     searchInput.addEventListener('focusin', () => {
@@ -239,19 +255,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
-    function setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        document.querySelector('.theme-toggle').setAttribute('aria-label', `Toggle ${theme === 'dark' ? 'light' : 'dark'} mode`);
-        closeMenu();
-    }
-
-    // Theme toggle functionality
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-    });
 
 });

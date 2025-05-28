@@ -11,6 +11,7 @@
             {{- $docref := printf "{{< docref %s %s true >}}" $domain $domain -}}
             {{- if eq $domain "Core" -}}
                 {{- $docref = printf "[Common %s](#common-%s)" $category $category -}}
+                {{- $domain = "" -}}
             {{- end -}}
             {{- range $i, $entry := $entries }}
                 {{- $entryLink := printf "#%s%s" $domain (replace $entry "." "") -}}

@@ -471,7 +471,10 @@ on_...:
 ```
 {{< anchor "config-action" >}}
 
-{{< render-automations >}}
+## All Actions
+{{< render-automations "actions" >}}
+## All Conditions
+{{< render-automations "conditions" >}}
 {{< anchor "tips-and-tricks" >}}
 
 ## Tips and Tricks

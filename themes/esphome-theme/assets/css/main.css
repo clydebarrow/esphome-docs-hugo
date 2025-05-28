@@ -128,7 +128,6 @@ ul, ol {
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background-color: var(--sidebar-background);
-  padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 0.9em;
 }
@@ -648,14 +647,23 @@ main {
 
 .sidebar-nav ul {
   list-style: disc;
-  margin: 0 0 1.5em 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0.5em;
+
   & ul {
     list-style: none;
+    margin-bottom: 0;
+    margin-left: 0.75em;
   }
 }
 
 .sidebar-nav li {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  & li {
+    margin-bottom: 0;
+  }
 }
 
 .sidebar-nav a {

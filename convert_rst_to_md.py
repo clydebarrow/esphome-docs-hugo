@@ -1634,7 +1634,12 @@ def process_actions_file(lines):
     end_actions = lines.index('{{< anchor "tips-and-tricks" >}}')
 
     if start_actions and end_actions:
-        return lines[:start_actions] + ["{{< render-automations >}}"] + lines[end_actions:]
+        lines = lines[:start_actions] + [
+            '## All Actions',
+            '{{< render-automations "actions" >}}',
+            '## All Conditions',
+            '{{< render-automations "conditions" >}}'
+        ] + lines[end_actions:]
     return lines
 
 

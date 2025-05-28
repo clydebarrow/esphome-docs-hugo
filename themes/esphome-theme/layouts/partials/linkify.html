@@ -1,36 +1,34 @@
 {{/*
 Try to convert a link text to match a known anchor, with soft failure.
+The link will be searched for in the given domain, and or category
 */}}
 {{- $text := .text -}}
-{{- $link := .link -}}
+{{- $domain := .domain -}}
 {{- $category := .category -}}
-{{- if strings.HasPrefix $link "#" -}}
-    {{- $id := strings.TrimPrefix "#" $link -}}
-    {{- $anchors := site.Data.anchors -}}
-    {{- $entries := index $anchors $id -}}
-    {{- if and (not $entries) $category -}}
-        {{- $entries = index $anchors (printf "%s-%s" $id $category) -}}
-            {{- $id = printf "%s-%s" $id $category -}}
-        {{- if $entries -}}
-        {{- end -}}
-    {{- end -}}
-    {{- $foundLocal := false -}}
+{{- $link := .link -}}
+{{- $links := slice (printf "%s%s" $domain .link) (printf "%s%s-%s" $domain .link $category) .link (printf "%s-%s" .link $category) -}}
+{{- $anchors := site.Data.anchors -}}
+{{- $entries := false -}}
+{{- range $links -}}
+    {{- $entries = index $anchors . -}}
     {{- if $entries -}}
-        {{- range $entries -}}
-            {{- if eq .page .Page.File.Path -}}
-                {{- $foundLocal = true -}}
-            {{- end -}}
+        {{- break -}}
+    {{- end -}}
+{{- end -}}
+{{- $foundLocal := false -}}
+{{- if $entries -}}
+    {{- range $entries -}}
+        {{- if eq .page .Page.File.Path -}}
+            {{- $foundLocal = true -}}
         {{- end -}}
     {{- end -}}
+{{- end -}}
 
-    {{- if $foundLocal -}}
-        {{- printf "[%s](#%s)" $text $id -}}
-    {{- else if $entries -}}
-        {{- $firstEntry := index $entries 0 -}}
-        {{- printf "[%s](/%s#%s)" $text $firstEntry.page $id -}}
-    {{- else -}}
-        {{- $text -}}
-    {{- end -}}
+{{- if $foundLocal -}}
+    {{- printf "[%s](#%s)" $text $link -}}
+{{- else if $entries -}}
+    {{- $firstEntry := index $entries 0 -}}
+    {{- printf "[%s](/%s#%s)" $text $firstEntry.page $link -}}
 {{- else -}}
-    {{- printf "[%s](%s)" $text $link -}}
+    {{- $text -}}
 {{- end -}}

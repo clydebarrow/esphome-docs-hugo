@@ -1,6 +1,6 @@
 .PHONY: html clean live-html automations check-links anchors production
 
-check-links: html
+check-links: repo-data anchors
 	hugo --environment production
 
 anchors:

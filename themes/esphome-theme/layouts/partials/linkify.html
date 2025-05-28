@@ -20,6 +20,7 @@ The link will be searched for in the given domain, and or category
 {{- if $entries -}}
     {{- range $entries -}}
         {{- if eq .page .Page.File.Path -}}
+            {{- $text = $text | default .text -}}
             {{- $foundLocal = true -}}
         {{- end -}}
     {{- end -}}
@@ -29,6 +30,7 @@ The link will be searched for in the given domain, and or category
     {{- printf "[%s](#%s)" $text $link -}}
 {{- else if $entries -}}
     {{- $firstEntry := index $entries 0 -}}
+    {{- $text = $text | default $firstEntry.text -}}
     {{- printf "[%s](/%s#%s)" $text $firstEntry.page $link -}}
 {{- else -}}
     {{- $text -}}

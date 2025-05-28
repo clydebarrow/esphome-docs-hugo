@@ -14,9 +14,11 @@
         <h2>In this section</h2>
         <ul class="section-list">
             {{ range .Pages }}
-            <li class="section-item">
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
+                {{ if .Title }}
+                <li class="section-item">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
             {{ end }}
         </ul>
         {{ end }}

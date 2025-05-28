@@ -1,0 +1,36 @@
+{{/*
+Try to convert a link text to match a known anchor, with soft failure.
+*/}}
+{{- $text := .text -}}
+{{- $link := .link -}}
+{{- $category := .category -}}
+{{- if strings.HasPrefix $link "#" -}}
+    {{- $id := strings.TrimPrefix "#" $link -}}
+    {{- $anchors := site.Data.anchors -}}
+    {{- $entries := index $anchors $id -}}
+    {{- if and (not $entries) $category -}}
+        {{- $entries = index $anchors (printf "%s-%s" $id $category) -}}
+            {{- $id = printf "%s-%s" $id $category -}}
+        {{- if $entries -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $foundLocal := false -}}
+    {{- if $entries -}}
+        {{- range $entries -}}
+            {{- if eq .page .Page.File.Path -}}
+                {{- $foundLocal = true -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- if $foundLocal -}}
+        {{- printf "[%s](#%s)" $text $id -}}
+    {{- else if $entries -}}
+        {{- $firstEntry := index $entries 0 -}}
+        {{- printf "[%s](/%s#%s)" $text $firstEntry.page $id -}}
+    {{- else -}}
+        {{- $text -}}
+    {{- end -}}
+{{- else -}}
+    {{- printf "[%s](%s)" $text $link -}}
+{{- end -}}

@@ -41,7 +41,7 @@ def find_included_files(file_path):
     Returns:
         List of absolute paths to included files
     """
-    included_files = []
+    include_file_list = []
 
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -60,11 +60,11 @@ def find_included_files(file_path):
 
             # Check if the file exists
             if os.path.exists(included_path):
-                included_files.append(included_path)
+                include_file_list.append(included_path)
             else:
                 print(f"Warning: Included file not found: {included_path}")
 
-        return included_files
+        return include_file_list
 
     except Exception as e:
         print(f"Error parsing includes in {file_path}: {e}")
@@ -82,9 +82,9 @@ def build_anchor_map(input_dir):
     
     for root, _, files in os.walk(input_dir):
         for file in files:
-            rst_file = str(os.path.join(root, file))
-            if not rst_file in included_files and file.endswith('.rst'):
-                rel_path = os.path.relpath(rst_file, input_dir)
+            file_path = str(os.path.join(root, file))
+            if not file_path in included_files and file.endswith('.rst'):
+                rel_path = os.path.relpath(file_path, input_dir)
                 doc_path = os.path.splitext(rel_path)[0]
                 
                 # Convert to Hugo path format
@@ -94,7 +94,7 @@ def build_anchor_map(input_dir):
                 if os.path.basename(doc_path) == 'index':
                     doc_path = os.path.dirname(doc_path) + '/_index'
 
-                rel_path, rst_content = get_rst_content(input_dir, rst_file)
+                rel_path, rst_content = get_rst_content(input_dir, file_path)
                 for i, line in enumerate(rst_content):
 
                     if line.startswith('.. _') and line.endswith(':'):
@@ -107,9 +107,9 @@ def build_anchor_map(input_dir):
 
     print(f"Found {len(anchor_map)} anchors across all documents")
 
-def normalize_csv_lines(lines):
+def normalize_csv_lines(lines, delimiter=","):
     # Read from list of lines using StringIO
-    reader = csv.reader(io.StringIO('\n'.join(lines)), delimiter=',', quotechar='"', skipinitialspace=True)
+    reader = csv.reader(io.StringIO('\n'.join(lines)), delimiter=delimiter, quotechar='"', skipinitialspace=True)
     rows = list(reader)
 
     # Find the max number of columns
@@ -121,7 +121,7 @@ def normalize_csv_lines(lines):
     return normalized_rows
 
 
-def get_indented_block(lines, i, current_indent, process_md=False):
+def get_indented_block(lines, i, current_indent):
     # skip blank lines
     while i < len(lines) and not lines[i].strip():
         i += 1
@@ -169,173 +169,173 @@ def convert_rst_to_md(lines, filename):
 
     def process_lines(inner_lines):
 
-        md_lines = []
-        i = 0
+        result_lines = []
+        current_idx = 0
 
-        while i < len(inner_lines):
-            line = inner_lines[i]
-            if line and not line[0].isspace():
+        while current_idx < len(inner_lines):
+            this_line = inner_lines[current_idx]
+            if this_line and not this_line[0].isspace():
                 indent_stack.clear()
 
-            current_indent = len(line) - len(line.lstrip())
+            current_indent = len(this_line) - len(this_line.lstrip())
             # Skip title directive
-            if line.startswith('.. title::'):
-                i += 1
+            if this_line.startswith('.. title::'):
+                current_idx += 1
                 continue
 
-            if line.startswith(".. seo::"):
-                i, seo_lines = get_indented_block(inner_lines, i + 1, 0)
-                for line in seo_lines:
-                    if line.strip().startswith(":description:"):
-                        seo["description"] = line.split(":")[2].strip()
-                    if line.strip().startswith(":image:"):
-                        seo["image"] = line.split(":")[2].strip()
+            if this_line.startswith(".. seo::"):
+                current_idx, seo_lines = get_indented_block(inner_lines, current_idx + 1, 0)
+                for this_line in seo_lines:
+                    if this_line.strip().startswith(":description:"):
+                        seo["description"] = this_line.split(":")[2].strip()
+                    if this_line.strip().startswith(":image:"):
+                        seo["image"] = this_line.split(":")[2].strip()
                 continue
 
-            if line.startswith('.. option::'):
-                text = line.replace('.. option::', '').strip()
-                i += 1
-                while i < len(inner_lines) and not inner_lines[i].strip():
-                    i += 1
-                md_lines.append(f'{{{{< option "{text}" >}}}}')
-                while i < len(inner_lines):
-                    if not inner_lines[i]:
-                        md_lines.append('')
-                        i += 1
+            if this_line.startswith('.. option::'):
+                text = this_line.replace('.. option::', '').strip()
+                current_idx += 1
+                while current_idx < len(inner_lines) and not inner_lines[current_idx].strip():
+                    current_idx += 1
+                result_lines.append(f'{{{{< option "{text}" >}}}}')
+                while current_idx < len(inner_lines):
+                    if not inner_lines[current_idx]:
+                        result_lines.append('')
+                        current_idx += 1
                         continue
-                    if inner_lines[i].startswith(' '):
-                        md_lines.append(inner_lines[i].strip())
-                        i += 1
+                    if inner_lines[current_idx].startswith(' '):
+                        result_lines.append(inner_lines[current_idx].strip())
+                        current_idx += 1
                     else:
                         break
-                md_lines.append('{{< /option >}}')
+                result_lines.append('{{< /option >}}')
                 continue
 
             # Handle imgtable directive
-            if line.strip() == '.. imgtable::':
-                i += 1
+            if this_line.strip() == '.. imgtable::':
+                current_idx += 1
                 # Skip empty lines
-                while i < len(inner_lines) and not inner_lines[i].strip():
-                    i += 1
+                while current_idx < len(inner_lines) and not inner_lines[current_idx].strip():
+                    current_idx += 1
 
                 # Start the imgtable shortcode
-                md_lines.append('{{< imgtable >}}')
+                result_lines.append('{{< imgtable >}}')
                 csv_lines = []
                 # Process each entry (each line should be indented)
-                while i < len(inner_lines):
-                    current_line = inner_lines[i].strip()
+                while current_idx < len(inner_lines):
+                    current_line = inner_lines[current_idx].strip()
 
                     # If we hit an empty line or a non-indented line, we're done with this imgtable
-                    if not inner_lines[i].startswith('    ') and current_line:
+                    if not inner_lines[current_idx].startswith('    ') and current_line:
                         break
 
                     # Skip empty lines within the imgtable
                     if not current_line or current_line.startswith(':'):
-                        i += 1
+                        current_idx += 1
                         continue
 
                     # Process the entry - format is typically: Title, Link, Image, [Description]
                     csv_lines.append(current_line)
-                    i += 1
+                    current_idx += 1
 
                 csv_lines = normalize_csv_lines(csv_lines)
                 for row in csv_lines:
-                    md_lines.append(",".join('"' + col.strip().replace('"', '""').replace(':', ' -') + '"' for col in row))
+                    result_lines.append(",".join('"' + col.strip().replace('"', '""').replace(':', ' -') + '"' for col in row))
                 # Close the imgtable shortcode
-                md_lines.append('{{< /imgtable >}}')
+                result_lines.append('{{< /imgtable >}}')
                 continue
 
-            if line.startswith('.. program::'):
-                i += 1
+            if this_line.startswith('.. program::'):
+                current_idx += 1
                 continue
 
             # Skip title (we'll add it later with frontmatter)
-            if line == title and i + 1 < len(inner_lines) and re.match(r'^=+$', inner_lines[i + 1]):
-                i += 2
+            if this_line == title and current_idx + 1 < len(inner_lines) and re.match(r'^=+$', inner_lines[current_idx + 1]):
+                current_idx += 2
                 continue
 
             # Handle RST anchors (.. _anchor:)
-            if line.startswith('.. _') and line.endswith(':'):
-                anchor_name = line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
-                md_lines.append(f'{{{{< anchor "{anchor_name}" >}}}}')
-                i += 1
+            if this_line.startswith('.. _') and this_line.endswith(':'):
+                anchor_name = this_line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
+                result_lines.append(f'{{{{< anchor "{anchor_name}" >}}}}')
+                current_idx += 1
                 continue
 
             # Handle raw HTML blocks that might contain buttons
-            if line.strip().startswith('.. raw:: html'):
-                button_lines, new_i = process_raw_html_block(inner_lines, i)
-                md_lines.extend(button_lines)
-                i = new_i
+            if this_line.strip().startswith('.. raw:: html'):
+                button_lines, new_i = process_raw_html_block(inner_lines, current_idx)
+                result_lines.extend(button_lines)
+                current_idx = new_i
                 continue
 
             # Handle list-table directive
-            if line.strip().startswith('.. list-table::') or line.strip().startswith('..  list-table::'):
-                table_lines, new_i = process_list_table(inner_lines, i)
-                md_lines.extend(table_lines)
-                i = new_i
+            if this_line.strip().startswith('.. list-table::') or this_line.strip().startswith('..  list-table::'):
+                table_lines, new_i = process_list_table(inner_lines, current_idx)
+                result_lines.extend(table_lines)
+                current_idx = new_i
                 continue
 
             # Handle csv-table directive
-            if line.strip().startswith('.. csv-table::'):
-                table_lines, new_i = process_csv_table(inner_lines, i)
-                md_lines.extend(table_lines)
-                i = new_i
+            if this_line.strip().startswith('.. csv-table::'):
+                table_lines, new_i = process_csv_table(inner_lines, current_idx)
+                result_lines.extend(table_lines)
+                current_idx = new_i
                 continue
 
             # Handle headings
-            if line and i + 1 < len(inner_lines) and len(inner_lines[i + 1]) >= len(line):
-                next_line = inner_lines[i + 1]
-                underchar = next_line[0]
-                if underchar in heading_underlines and all(x == underchar for x in next_line):
-                    level = heading_underlines.index(underchar) + 1
+            if this_line and current_idx + 1 < len(inner_lines) and len(inner_lines[current_idx + 1]) >= len(this_line):
+                next_line = inner_lines[current_idx + 1]
+                uchar = next_line[0]
+                if uchar in heading_underlines and all(x == uchar for x in next_line):
+                    level = heading_underlines.index(uchar) + 1
                     prefix = "#" * level
-                    md_lines.append(f"{prefix} {line}")
-                    i += 2
+                    result_lines.append(f"{prefix} {this_line}")
+                    current_idx += 2
                     continue
 
             # Handle code blocks - check for both standalone and nested code blocks
-            if line.lstrip().startswith('.. code-block::') or line.strip() == '::' or line.lstrip().startswith('.. code::'):
+            if this_line.lstrip().startswith('.. code-block::') or this_line.strip() == '::' or this_line.lstrip().startswith('.. code::'):
                 # Get the indentation of the current line
 
                 # Extract language
-                language = line.split("::")[1].strip()
+                language = this_line.split("::")[1].strip()
 
                 # Add the code block start with proper indentation
-                md_lines.append(' ' * current_indent + f"```{language}")
+                result_lines.append(' ' * current_indent + f"```{language}")
 
-                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
+                current_idx, new_lines = get_indented_block(inner_lines, current_idx + 1, current_indent)
                 while len(new_lines) and not new_lines[-1].strip():
                     new_lines.pop()
-                md_lines.extend(new_lines)
-                md_lines.append("")
-                md_lines.append(' ' * current_indent + "```")
+                result_lines.extend(new_lines)
+                result_lines.append("")
+                result_lines.append(' ' * current_indent + "```")
                 continue
 
-            if line.lstrip().startswith('.. math::'):
+            if this_line.lstrip().startswith('.. math::'):
                 # Get the indentation of the current line
 
                 # Add the code block start with proper indentation
-                md_lines.append(' ' * current_indent + "{{< math >}}")
+                result_lines.append(' ' * current_indent + "{{< math >}}")
 
-                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
-                md_lines.extend(new_lines)
-                md_lines.append(' ' * current_indent + "{{< /math >}}")
+                current_idx, new_lines = get_indented_block(inner_lines, current_idx + 1, current_indent)
+                result_lines.extend(new_lines)
+                result_lines.append(' ' * current_indent + "{{< /math >}}")
                 continue
 
-            if line.lstrip().startswith('.. collapse::'):
+            if this_line.lstrip().startswith('.. collapse::'):
                 # Get the indentation of the current line
-                collapse_title = line.strip().removeprefix(".. collapse::").strip()
+                collapse_title = this_line.strip().removeprefix(".. collapse::").strip()
 
                 # Add the code block start with proper indentation
 
                 is_open = False
-                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
+                current_idx, new_lines = get_indented_block(inner_lines, current_idx + 1, current_indent)
                 if new_lines[0].startswith(":open:"):
                     is_open = True
                     new_lines = new_lines[1:]
-                md_lines.append(' ' * current_indent + f'{{{{< collapse "{collapse_title}" {is_open} >}}}}')
-                md_lines.extend(new_lines)
-                md_lines.append(' ' * current_indent + "{{< /collapse >}}")
+                result_lines.append(' ' * current_indent + f'{{{{< collapse "{collapse_title}" {is_open} >}}}}')
+                result_lines.extend(new_lines)
+                result_lines.append(' ' * current_indent + "{{< /collapse >}}")
                 continue
 
 
@@ -343,68 +343,68 @@ def convert_rst_to_md(lines, filename):
             # Handle notes
             handled = False
             for directive in ["note", "warning", "caution", "important", "tip"]:
-                if line.strip().startswith(f'.. {directive}::'):
+                if this_line.strip().startswith(f'.. {directive}::'):
                     # Get the indentation level of the note directive
-                    md_lines.append(f"{{{{< {directive} >}}}}")
-                    i, note_lines = get_indented_block(inner_lines, i + 1, current_indent, True)
+                    result_lines.append(f"{{{{< {directive} >}}}}")
+                    current_idx, note_lines = get_indented_block(inner_lines, current_idx + 1, current_indent)
                     note_lines = process_lines(note_lines)
                     # Note blocks can't be indented.
-                    md_lines.extend(x[current_indent:] for x in note_lines)
-                    md_lines.append(f"{{{{< /{directive} >}}}}")
+                    result_lines.extend(x[current_indent:] for x in note_lines)
+                    result_lines.append(f"{{{{< /{directive} >}}}}")
                     handled = True
                     break
             if handled:
                 continue
 
             # Handle figures
-            if line.strip().startswith('.. figure::'):
-                shortcode, new_i = process_image_directive(inner_lines, i)
-                md_lines.append(shortcode)
-                md_lines.append("")
-                i = new_i
+            if this_line.strip().startswith('.. figure::'):
+                shortcode, new_i = process_image_directive(inner_lines, current_idx)
+                result_lines.append(shortcode)
+                result_lines.append("")
+                current_idx = new_i
                 continue
 
             # Handle image directives
-            if line.strip().startswith('.. image::'):
-                shortcode, new_i = process_image_directive(inner_lines, i)
-                md_lines.append(shortcode)
-                i = new_i
+            if this_line.strip().startswith('.. image::'):
+                shortcode, new_i = process_image_directive(inner_lines, current_idx)
+                result_lines.append(shortcode)
+                current_idx = new_i
                 continue
 
             # Skip toctree
-            if line.startswith('.. toctree::'):
-                i += 1
-                while i < len(inner_lines) and (inner_lines[i].startswith('    ') or not inner_lines[i].strip()):
-                    i += 1
+            if this_line.startswith('.. toctree::'):
+                current_idx += 1
+                while current_idx < len(inner_lines) and (inner_lines[current_idx].startswith('    ') or not inner_lines[current_idx].strip()):
+                    current_idx += 1
                 continue
 
             # Handle grid tables
-            if (line.strip() and
-                    (line.count('=') > 3 or line.count('-') > 3) and
-                    all(c in '=+-| ' for c in line)):
+            if (this_line.strip() and
+                    (this_line.count('=') > 3 or this_line.count('-') > 3) and
+                    all(c in '=+-| ' for c in this_line)):
                 # Check if this is likely a grid table by looking at surrounding lines
                 is_grid_table = False
 
                 # Check if there's a content line after this separator
-                if i + 1 < len(inner_lines) and inner_lines[i + 1].strip():
+                if current_idx + 1 < len(inner_lines) and inner_lines[current_idx + 1].strip():
                     # If the next line has content and is followed by another separator, it's likely a table
-                    if (i + 2 < len(inner_lines) and
-                            inner_lines[i + 2].strip() and
-                            all(c in '=+-| ' for c in inner_lines[i + 2].strip())):
+                    if (current_idx + 2 < len(inner_lines) and
+                            inner_lines[current_idx + 2].strip() and
+                            all(c in '=+-| ' for c in inner_lines[current_idx + 2].strip())):
                         is_grid_table = True
                     # Or if the next line has content with multiple spaces between words (column alignment)
-                    elif '  ' in inner_lines[i + 1]:
+                    elif '  ' in inner_lines[current_idx + 1]:
                         is_grid_table = True
 
                 if is_grid_table:
-                    table_lines, new_i = process_grid_table(inner_lines, i)
+                    table_lines, new_i = process_grid_table(inner_lines, current_idx)
                     if table_lines:  # Only add if we successfully processed a table
-                        md_lines.extend(table_lines)
-                        i = new_i
+                        result_lines.extend(table_lines)
+                        current_idx = new_i
                         continue
 
             # Handle footnote definitions
-            footnote_match = re.match(r'^\.\. \[([0-9#][^]]*)]', line.strip())
+            footnote_match = re.match(r'^\.\. \[([0-9#][^]]*)]', this_line.strip())
             if footnote_match:
                 footnote_label = footnote_match.group(1)
                 # Remove the # prefix if it exists (for auto-numbered or labeled footnotes)
@@ -412,24 +412,24 @@ def convert_rst_to_md(lines, filename):
                     footnote_label = footnote_label[1:]
 
                 # Get the indentation of the current line
-                current_indent = len(line) - len(line.lstrip())
+                current_indent = len(this_line) - len(this_line.lstrip())
 
                 # Get the footnote text from the same line after the label
-                rest_of_line = line.strip()[len(footnote_match.group(0)):].strip()
-                i, new_lines = get_indented_block(inner_lines, i + 1, current_indent)
+                rest_of_line = this_line.strip()[len(footnote_match.group(0)):].strip()
+                current_idx, new_lines = get_indented_block(inner_lines, current_idx + 1, current_indent)
 
                 # Store the footnote to add at the end of the document
                 footnotes.append([f"[^{footnote_label}]: {rest_of_line}"] + new_lines)
                 continue
 
             # Process the line for inline markup
-            fixed_line = line
-            match = bullet_regex.match(line)
+            fixed_line = this_line
+            match = bullet_regex.match(this_line)
             if match:
                 indent, bullet = match.groups()
                 indent_len = len(indent)
                 if not indent_stack and indent_len > 0:
-                    fixed_line = line.lstrip()
+                    fixed_line = this_line.lstrip()
                 elif indent_stack and indent_len > indent_stack[-1]:
                     indent_stack.append(indent_len)
                 else:
@@ -456,9 +456,9 @@ def convert_rst_to_md(lines, filename):
                 processed_line = processed_line.replace('](_build/_images/', '](/images/_build/_images/')
 
             # Add the processed line
-            md_lines.append(processed_line)
-            i += 1
-        return [x.rstrip() for x in md_lines]
+            result_lines.append(processed_line)
+            current_idx += 1
+        return [x.rstrip() for x in result_lines]
      # Check for explicit title directive
     for i, line in enumerate(lines):
         if "This is a dummy file" in line:
@@ -536,12 +536,7 @@ def convert_rst_to_md(lines, filename):
             frontmatter.append(f'    {k}: {v}')
     frontmatter.append('---')
 
-    # Combine frontmatter and content
-    frontmatter_yaml = "\n".join(frontmatter)
-    md_content = "\n".join(md_lines)
-    final_content = f"{frontmatter_yaml}\n\n{md_content}\n"
-    
-    return final_content
+    return frontmatter + ["", ""] + md_lines
 
 def process_inline_markup(line):
     """Process inline markup in a line of text."""
@@ -571,6 +566,7 @@ def process_inline_markup(line):
             if not doc_path:
                 print(f"Warning: Could not find document path for anchor '{ref_id}'")
             text = text or anchor_text
+            ref_id = ref_id.lower()
             if doc_path:
                 return f"[{text}]({doc_path}#{ref_id})"
             return f"[{text}](#{ref_id})"
@@ -581,7 +577,7 @@ def process_inline_markup(line):
         if doc_path:
             return f"[{anchor_text}]({doc_path}#{content})"
         # If we can't find the document, just use the anchor
-        return f"[{anchor_text}](#{content})"
+        return f"[{anchor_text}](#{content.lower()})"
 
     def doc_repl(match):
         content = match.group(1).strip()
@@ -846,7 +842,6 @@ def get_indent(line):
     return len(line) - len(line.lstrip())
 
 def process_list_table(lines, start_idx):
-    global title
     """Process a list-table directive and convert it to a Markdown table."""
     # Extract table title and options
     title = ""
@@ -867,7 +862,7 @@ def process_list_table(lines, start_idx):
             except (ValueError, IndexError):
                 pass
         elif option_line.startswith(':width:'):
-            width = option_line.split(':', 2)[2].strip()
+            pass #width = option_line.split(':', 2)[2].strip()
         elif option_line.startswith(':widths:'):
             pass
         elif option_line.startswith(':align:'):
@@ -896,7 +891,7 @@ def process_list_table(lines, start_idx):
             idx += 1
             continue
 
-        if line.startswith('{{'): # Anchor?
+        if line.strip().startswith('.. _') and line.endswith(':') or line.strip().startswith("{{"):
             anchor = line
             idx += 1
             continue
@@ -909,7 +904,8 @@ def process_list_table(lines, start_idx):
             # Extract the first cell value
             cell_value = line[1:].strip()
             if cell_value.startswith('-'):
-                cell_value = anchor + cell_value[1:].strip()
+                cell_value = anchor.strip() + cell_value[1:].strip()
+                anchor = ""
                 current_row.append(cell_value)
             
             idx += 1
@@ -921,6 +917,10 @@ def process_list_table(lines, start_idx):
             this_indent = get_indent(lines[idx])
             idx += 1
             while idx < len(lines):
+                if lines[idx].strip().startswith("{{"):
+                    anchor = lines[idx]
+                    idx += 1
+                    continue
                 if lines[idx].strip() and get_indent(lines[idx]) > this_indent:
                     cell_value.append(lines[idx])
                     idx += 1
@@ -1010,7 +1010,6 @@ def process_csv_table(lines, start_idx):
     # Extract table title and options
     title = ""
     header_rows = None
-    width = ""
     align = ""
     delimiter = ","
     
@@ -1025,7 +1024,7 @@ def process_csv_table(lines, start_idx):
         if option_line.startswith(':header:'):
             header_rows = normalize_csv_lines([option_line.split(':', 2)[2].strip()])[0]
         elif option_line.startswith(':width:'):
-            width = option_line.split(':', 2)[2].strip()
+            pass #width = option_line.split(':', 2)[2].strip()
         elif option_line.startswith(':align:'):
             align = option_line.split(':', 2)[2].strip()
         elif option_line.startswith(':delim:'):
@@ -1069,7 +1068,7 @@ def process_csv_table(lines, start_idx):
         table_data.append(line.strip())
         idx += 1
 
-    table_data = normalize_csv_lines(table_data)
+    table_data = normalize_csv_lines(table_data, delimiter)
     # Generate Markdown table
     md_table = []
     
@@ -1522,14 +1521,14 @@ def scan_image_references(input_dir):
     ]
     
     # Initialize image tracking dictionaries
-    image_map = {}
+    result = {}
 
     for root, _, files in os.walk(input_dir):
         for file in files:
             if file.endswith('.rst'):
-                rst_file = os.path.join(root, file)
+                src_file = os.path.join(root, file)
 
-                with open(rst_file, 'r', encoding='utf-8') as f:
+                with open(src_file, 'r', encoding='utf-8') as f:
                     content = f.read()
                     lines = content.splitlines()
                 
@@ -1552,14 +1551,14 @@ def scan_image_references(input_dir):
                             abs_image_path = os.path.join(input_dir, image_path.lstrip('/'))
                         else:
                             # Relative path
-                            abs_image_path = os.path.join(os.path.dirname(rst_file), image_path)
+                            abs_image_path = os.path.join(os.path.dirname(src_file), image_path)
                             if not os.path.exists(abs_image_path):
                                 abs_image_path = os.path.join(input_dir, "images/" + image_path.lstrip('/'))
 
                         # Only count if the image file exists
                         if os.path.exists(abs_image_path):
                             image_filename = os.path.basename(image_path)
-                            entry = image_map.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, rst_file))
+                            entry = result.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, src_file))
                             entry.increment()
                             #print(f"Found image: {image_filename} in {rel_path}")
                 
@@ -1602,17 +1601,16 @@ def scan_image_references(input_dir):
                                 if image_path.startswith('/'):
                                     # Absolute path within docs
                                     abs_image_path = os.path.join(input_dir, image_path.lstrip('/'))
-                                    rel_image_path = image_path.lstrip('/')
                                 else:
                                     # Relative path
-                                    abs_image_path = os.path.join(os.path.dirname(rst_file), image_path)
+                                    abs_image_path = os.path.join(os.path.dirname(src_file), image_path)
                                     if not os.path.exists(abs_image_path):
                                         abs_image_path = os.path.join(input_dir, "images", image_path)
 
                                 # Only count if the image file exists
                                 if os.path.exists(abs_image_path):
                                     image_filename = os.path.basename(image_path)
-                                    entry = image_map.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, rst_file))
+                                    entry = result.setdefault(image_filename, ImageInfo(image_filename, abs_image_path, src_file))
                                     entry.increment()
                                     #print(f"Found image in imgtable: {image_filename} in {rel_path}")
                                 else:
@@ -1623,57 +1621,71 @@ def scan_image_references(input_dir):
                         i += 1
 
     # Print statistics
-    print(f"Found {len(image_map)} unique images")
-    multiple = [image for image in image_map.values() if image.count > 1]
+    print(f"Found {len(result)} unique images")
+    multiple = [image for image in result.values() if image.count > 1]
     print(f"Images used more than once: {len(multiple)}")
     
-    return image_map
+    return result
 
-def process_file(rst_file, output_dir, input_dir):
+# Special handling for some files
+
+def process_actions_file(lines):
+    start_actions = lines.index("## All Actions")
+    end_actions = lines.index('{{< anchor "tips-and-tricks" >}}')
+
+    if start_actions and end_actions:
+        return lines[:start_actions] + ["{{< render-automations >}}"] + lines[end_actions:]
+    return lines
+
+
+def process_file(src_file, output_dir, input_dir):
     output_dir = os.path.join(output_dir, "content")
     """Process a single RST file and convert it to Markdown."""
     try:
-        print(f"\nProcessing file: {rst_file}")
+        print(f"\nProcessing file: {src_file}")
         
         # Read the RST file
-        rel_path, rst_content = get_rst_content(input_dir, rst_file)
+        rel_path, rst_content = get_rst_content(input_dir, src_file)
 
         # Convert RST to Markdown
         md_content = convert_rst_to_md(rst_content, rel_path)
         
         # Determine output path
-        if os.path.basename(rst_file) == 'index.rst':
+        if os.path.basename(src_file) == 'index.rst':
             # Convert index.rst to _index.md for Hugo
             output_path = os.path.join(output_dir, os.path.dirname(rel_path), '_index.md')
         else:
             output_path = os.path.join(output_dir, os.path.splitext(rel_path)[0] + '.md')
+
+        if output_path.endswith("automations/actions.md"):
+            md_content = process_actions_file(md_content)
         
         # Create output directory if it doesn't exist
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         
         # Write the Markdown file
         with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(md_content)
+            f.write("\n".join(md_content))
         
-        print(f"Converted {rst_file} -> {output_path}")
+        print(f"Converted {src_file} -> {output_path}")
         #print(f"Output file size: {len(md_content)} bytes")
         
         return output_path
     except Exception as e:
-        print(f"Error converting {rst_file}: {str(e)}")
+        print(f"Error converting {src_file}: {str(e)}")
         import traceback
         traceback.print_exc()
         return None
 
 
-def get_rst_content(input_dir, rst_file):
-    with open(rst_file, 'r', encoding='utf-8') as f:
+def get_rst_content(input_dir, src_file):
+    with open(src_file, 'r', encoding='utf-8') as f:
         rst_content = f.read()
     #print(f"File size: {len(rst_content)} bytes")
     # Get the relative path of the file
-    rel_path = os.path.relpath(rst_file, input_dir)
+    rel_path = os.path.relpath(src_file, input_dir)
     # Process includes before conversion
-    current_dir = os.path.dirname(rst_file)
+    current_dir = os.path.dirname(src_file)
     rst_lines = rst_content.split('\n')
     rst_lines = process_includes(rst_lines, current_dir)
     return rel_path, rst_lines
@@ -1687,18 +1699,18 @@ def process_directory(input_dir, output_dir):
     for root, _, files in os.walk(input_dir):
         for file in files:
             if file.endswith('.rst'):
-                rst_file = os.path.join(root, file)
-                included_files.update(set(find_included_files(rst_file)))
+                fullpath = os.path.join(root, file)
+                included_files.update(set(find_included_files(fullpath)))
 
     for root, _, files in os.walk(input_dir):
         for file in files:
-            rst_file = os.path.join(root, file)
-            if rst_file in included_files:
-                print("Skipping included file:", rst_file)
+            fullpath = os.path.join(root, file)
+            if fullpath in included_files:
+                print("Skipping included file:", fullpath)
             elif file.endswith('.rst'):
-                included_files.update(set(find_included_files(rst_file)))
+                included_files.update(set(find_included_files(fullpath)))
                 total_count += 1
-                if process_file(rst_file, output_dir, input_dir):
+                if process_file(fullpath, output_dir, input_dir):
                     success_count += 1
     
     print(f"Conversion complete. {success_count}/{total_count} files successfully converted to {output_dir}")
@@ -1717,16 +1729,13 @@ def should_copy_file(source_path, target_path):
     
     return source_mtime > target_mtime
 
-def copy_images_to_output(output_dir, input_dir, image_map):
+def copy_images_to_output(output_dir, input_dir):
     """Copy images to the appropriate locations based on usage."""
     print("Copying images to output directories...")
     
     # Create global images directory
     global_images_dir = os.path.join(output_dir, 'static', 'images')
     os.makedirs(global_images_dir, exist_ok=True)
-    
-    # Track which files have been copied to which component directories
-    component_image_map = {}
     
     # Copy images based on usage
     for image in image_map.values():
@@ -1753,7 +1762,6 @@ def copy_images_to_output(output_dir, input_dir, image_map):
                             
             target_content_path = os.path.join(component_images_dir, image.name)
 
-            copied = False
             if should_copy_file(source_path, target_content_path):
                 shutil.copy2(source_path, target_content_path)
                 print(f"Copied {image.name} to {component_dir}/images folder")
@@ -1794,4 +1802,4 @@ if __name__ == "__main__":
     
     # Copy images to output directories
     if not args.no_images:
-        copy_images_to_output(args.output_dir, args.input_dir, image_map)
+        copy_images_to_output(args.output_dir, args.input_dir)

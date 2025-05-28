@@ -1,8 +1,16 @@
-.PHONY: html clean live-html automations
+.PHONY: html clean live-html automations check-links anchors production
 
-html: repo-data
-	hugo
+check-links: html
+	hugo --environment production
+
+anchors:
+	hugo --environment development
+	python3 tools/find-anchors.py
+
+production: repo-data anchors
+	hugo --minify
 	npx pagefind
+	hugo --minify
 
 repo-data:
 	mkdir -p data/automations
@@ -12,8 +20,9 @@ repo-data:
 	curl https://data.esphome.io/beta/automations.json | ./collate_automations.sh > data/automations/beta.json
 	curl https://data.esphome.io/dev/automations.json | ./collate_automations.sh > data/automations/next.json
 
-live-html:	html
-	hugo server --baseURL "" --bind 0.0.0.0
+live-html:	repo-data anchors
+	npx pagefind
+	hugo server --bind 0.0.0.0
 
 clean:
 	rm -rf "public/*"

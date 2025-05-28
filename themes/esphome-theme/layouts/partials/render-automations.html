@@ -3,16 +3,22 @@
 
 {{- if $data }}
     {{- $markdown := "" }}
-
     {{- range $category, $items := $data }}
+        {{ $singular := substr $category 0 (sub (len $category) 1) -}}
         {{- $markdown = printf "%s\n## All %s\n" $markdown ($category | title) }}
         {{- range $domain, $entries := $items }}
             {{- $entryList := "" }}
+            {{- $docref := printf "{{< docref %s %s true >}}" $domain $domain -}}
+            {{- if eq $domain "Core" -}}
+                {{- $docref = printf "[Common %s](#common-%s)" $category $category -}}
+            {{- end -}}
             {{- range $i, $entry := $entries }}
+                {{- $entryLink := printf "#%s%s" $domain (replace $entry "." "") -}}
+                {{- $entryLink = partial "linkify.html" (dict "text" $entry "link" $entryLink "category" $singular) -}}
                 {{- if $i }}{{ $entryList = printf "%s, " $entryList }}{{ end }}
-                {{- $entryList = printf "%s`%s`" $entryList $entry }}
+                {{- $entryList = printf "%s%s" $entryList $entryLink }}
             {{- end }}
-            {{- $markdown = printf "%s- %s: %s\n" $markdown $domain $entryList }}
+            {{- $markdown = printf "%s- **%s**: %s\n" $markdown $docref $entryList }}
         {{- end }}
     {{- end }}
 
@@ -20,4 +26,3 @@
 {{- else }}
     <p>⚠️ Data not found for branch: <code>{{ $branch }}</code></p>
 {{- end }}
-

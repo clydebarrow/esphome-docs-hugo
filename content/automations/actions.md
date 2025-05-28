@@ -7,6 +7,7 @@ params:
     image: auto-fix.svg
 ---
 
+
 {{< anchor "actions-triggers" >}}
 
 
@@ -471,7 +472,6 @@ on_...:
 {{< anchor "config-action" >}}
 
 {{< render-automations >}}
-
 {{< anchor "tips-and-tricks" >}}
 
 ## Tips and Tricks
@@ -525,5 +525,4 @@ action and then (in your automation) use the `script.is_running` condition to kn
 
 - {{< docref "index/" >}}
 - {{< docref "templates/" >}}
-
 

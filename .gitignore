@@ -6,4 +6,6 @@ public/
 /package-lock.json
 /pagefind/
 /data/repo.yaml
+/data/anchors.json
+/data/automations
 my-secrets

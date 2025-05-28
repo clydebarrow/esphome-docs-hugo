@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.querySelectorAll('.copy-link').forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', async () => {
             const anchor = button.getAttribute('data-anchor');
             const url = `${window.location.origin}${window.location.pathname}#${anchor}`;
-            navigator.clipboard.writeText(url)
+            await navigator.clipboard.writeText(url)
             // Remove the class if it’s already there (to restart the animation)
             button.classList.remove('spin-once');
 
@@ -73,6 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             try {
                 await navigator.clipboard.writeText(code);
+                const feedback = button.querySelector(".copy-feedback");
+                if (feedback) {
+                    feedback.textContent = "Copied!";
+                }
                 button.classList.add('copied');
                 setTimeout(() => {
                     button.classList.remove('copied');

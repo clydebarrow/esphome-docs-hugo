@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
     instance.on("results", async (results) => {
         if (results.results.length) {
             resultsContainer.style.display = 'block';
-            data = await results.results[0].data();
+            const data = await results.results[0].data();
             top_hit = data.url;
             console.log(data);
         } else {

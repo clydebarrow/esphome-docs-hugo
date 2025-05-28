@@ -45,13 +45,7 @@ jobs:
 
       - name: Build with Hugo
         run: |
-            make repo-data
-            hugo --minify
-
-      - name: Build search index
-        run: |
-            pagefind
-            hugo --minify
+            make production
 
       - name: Deploy to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/current' || github.event_name == 'workflow_dispatch'

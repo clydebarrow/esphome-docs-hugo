@@ -28,11 +28,11 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- All other options from [Sensor](#config-sensor).
 
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 

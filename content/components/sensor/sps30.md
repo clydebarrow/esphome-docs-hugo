@@ -11,7 +11,7 @@ params:
 
 The `sps30` sensor platform allows you to use your Sensirion SPS30
 ([datasheet](https://sensirion.com/media/documents/8600FF88/616542B5/Sensirion_PM_Sensors_Datasheet_SPS30.pdf)) sensors with ESPHome.
-The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
+The [I²C Bus](#i2c) is required to be set up in your configuration for this sensor to work.
 This sensor supports both UART and I²C communication. However, at the moment only I²C communication is implemented.
 
 [Sparkfun](https://www.sparkfun.com/products/15103)
@@ -60,49 +60,49 @@ sensor:
 
 - **pm_1_0** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 1μm. Readings in µg/m³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pm_2_5** (*Optional*): The information for the **Weight Concentration** sensor for fine particles up to 2.5μm. Readings in µg/m³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pm_4_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 4μm. Readings in µg/m³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pm_10_0** (*Optional*): The information for the **Weight Concentration** sensor for coarse particles up to 10μm. Readings in µg/m³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pmc_0_5** (*Optional*): The information for the **Number Concentration** sensor for ultrafine particles up to 0.5μm. Readings in particles/cm³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pmc_1_0** (*Optional*): The information for the **Number Concentration** sensor for fine particles up to 1μm. Readings in particles/cm³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pmc_2_5** (*Optional*): The information for the **Number Concentration** sensor for fine particles up to 2.5μm. Readings in particles/cm³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pmc_4_0** (*Optional*): The information for the **Number Concentration** sensor for coarse particles up to 4μm. Readings in particles/cm³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pmc_10_0** (*Optional*): The information for the **Number Concentration** sensor for coarse particles up to 10μm. Readings in particles/cm³.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **pm_size** (*Optional*): Typical particle size in μm.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **auto_cleaning_interval** (*Optional*): The interval in seconds of the periodic fan-cleaning.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x69`.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Wiring:
@@ -125,7 +125,7 @@ Disabling of automatic-cleaning or setting a manual interval is not supported at
 
 ## `sps30.start_fan_autoclean` Action
 
-This [action](automations/actions#config-action) manually starts fan-cleaning.
+This [action](#config-action) manually starts fan-cleaning.
 
 ```yaml
 on_...:
@@ -135,7 +135,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< docref "sds011/" >}}
 - {{< docref "pmsx003/" >}}
 - {{< docref "ccs811/" >}}

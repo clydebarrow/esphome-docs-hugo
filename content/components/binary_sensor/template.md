@@ -10,7 +10,7 @@ params:
 
 
 The `template` binary sensor platform allows you to define a boolean condition and use it to provide a binary sensor.
-The condition may be expressed as a C++ lambda, or as a [YAML expression](automations/actions#config-condition).
+The condition may be expressed as a C++ lambda, or as a [YAML expression](#config-condition).
 The condition expression will be evaluated continually, on each call to the component's `loop()` method, which is typically every 16ms.
 
 The example below polls an analog sensor and yields a value dependent on whether the sensor value is above a threshold.
@@ -36,7 +36,7 @@ Possible return values of the lambda:
 - `return false;` if the binary sensor should be OFF.
 - `return {};` if the state is not known. The last known state will be maintained.
 
-As an alternative to using a lambda you may use ESPHome [condition expressions](automations/actions#config-condition):
+As an alternative to using a lambda you may use ESPHome [condition expressions](#config-condition):
 
 ```yaml
 # Example configuration entry
@@ -51,10 +51,10 @@ binary_sensor:
 ```
 ## Configuration variables:
 
--  **lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
+-  **lambda** (*Optional*, [lambda](#config-lambda)):
    C++ Lambda to be evaluated repeatedly to get the current state of the binary sensor.
-- **condition** (*Optional*, [Condition](automations/actions#config-condition)): The condition to check to determine the value of the binary sensor. `lambda` and `condition` may not both be present in the configuration.
--  All other options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor).
+- **condition** (*Optional*, [Condition](#config-condition)): The condition to check to determine the value of the binary sensor. `lambda` and `condition` may not both be present in the configuration.
+-  All other options from [Binary Sensor](#config-binary_sensor).
 
 {{< anchor "binary_sensor-template-publish_action" >}}
 
@@ -84,8 +84,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the template binary sensor.
-- **state** (**Required**, boolean, [templatable](automations/templates#config-templatable)):
+- **id** (**Required**, [config-id](#config-id)): The ID of the template binary sensor.
+- **state** (**Required**, boolean, [templatable](#config-templatable)):
   The state to publish.
 
 {{< note >}}
@@ -100,6 +100,6 @@ id(template_bin).publish_state(true);
 
 - {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/sensor/template" >}}
-- [Automation](automations/_index#automation)
+- [automation](#automation)
 - {{< apiref "template/binary_sensor/template_binary_sensor.h" "template/binary_sensor/template_binary_sensor.h" >}}
 

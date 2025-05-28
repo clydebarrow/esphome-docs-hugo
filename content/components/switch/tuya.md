@@ -39,7 +39,7 @@ switch:
 ## Configuration variables:
 
 - **switch_datapoint** (**Required**, int): The datapoint id number of the switch.
-- All other options from [Switch](components/switch/_index#config-switch).
+- All other options from [Switch](#config-switch).
 
 ## See Also
 

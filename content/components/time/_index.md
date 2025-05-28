@@ -10,7 +10,7 @@ params:
 
 
 The `time` component allows you to set up real time clock time sources for ESPHome.
-You can then get the current time in [lambdas](automations/templates#config-lambda).
+You can then get the current time in [lambdas](#config-lambda).
 
 {{< anchor "base_time_config" >}}
 
@@ -20,22 +20,22 @@ All time configuration schemas inherit these options.
 
 ### Configuration variables:
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Specify the ID of the time for use in lambdas.
+- **id** (*Optional*, [config-id](#config-id)): Specify the ID of the time for use in lambdas.
 - **timezone** (*Optional*, string): Manually tell ESPHome what time zone to use with [this format](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html)
   (warning: the format is quite complicated, see [examples](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv))
   or the simpler [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in the form
   :code:`<Region>/<City>`. ESPHome tries to automatically infer the time zone string based on the time zone of the computer
   that is running ESPHome, but this might not always be accurate.
-- **on_time** (*Optional*, [Automation](automations/_index#automation)): Automation to run at specific intervals using
-  a cron-like syntax. See [`on_time` Trigger](components/time/_index#time-on_time).
-- **on_time_sync** (*Optional*, [Automation](automations/_index#automation)): Automation to run when the time source
-  could be (re-)synchronized.. See [`on_time_sync` Trigger](components/time/_index#time-on_time_sync).
+- **on_time** (*Optional*, [Automation](#automation)): Automation to run at specific intervals using
+  a cron-like syntax. See [time-on_time](#time-on_time).
+- **on_time_sync** (*Optional*, [Automation](#automation)): Automation to run when the time source
+  could be (re-)synchronized.. See [time-on_time_sync](#time-on_time_sync).
 
 {{< anchor "time-has_time_condition" >}}
 
 ### `time.has_time` Condition
 
-This [Condition](automations/actions#config-condition) checks if time has been set and is valid.
+This [Condition](#config-condition) checks if time has been set and is valid.
 
 ```yaml
 # Example configuration
@@ -112,7 +112,7 @@ Configuration variables:
 - **cron** (*Optional*, string): Alternatively, you can specify a whole cron expression like
   `* /5 * * * *`. Please note that years and some special characters like `L`, `#` are currently not supported. Also, the day of week field is interpreted like the **days_of_week** variable (range from 1 (Sunday) to 7 (Saturday)) and not like other cron implementations would do it (range from 0 (Sunday) to 7 (Sunday)).
 
-- See [Automation](automations/_index#automation).
+- See [Automation](#automation).
 
 In the `seconds:`, `minutes:`, ... fields you can use the following operators:
 
@@ -193,7 +193,7 @@ despite allowing the use of similar `crontab` syntax. Similarly, triggers on day
 ### `on_time_sync` Trigger
 
 This automation is triggered after a time source successfully retrieves the current time.
-See the [DS1307 configuration example](components/time/ds1307#ds1307-config_example) for a scenario
+See the [DS1307 configuration example](#ds1307-config_example) for a scenario
 where a network time synchronization from a home assistant server trigger a write
 to an external hardware real time clock chip.
 
@@ -219,7 +219,7 @@ change in time.
 ## Use In Lambdas
 
 To get the current local time with the time zone applied
-in [lambdas](automations/templates#config-lambda), just call the `.now()` method like so:
+in [lambdas](#config-lambda), just call the `.now()` method like so:
 
 ```cpp
 auto time = id(sntp_time).now();

@@ -24,7 +24,7 @@ inverter via the (more limited) external RS232 interface you should use the
 
 {{< img src="sun_gtil2_schematic.png" alt="Image" caption="Simplified connection diagram" width="75.0%" class="center" >}}
 
-As the data is read from the inverter using UART, you need to have an [UART bus](components/uart#uart) in your
+As the data is read from the inverter using UART, you need to have an [UART bus](#uart) in your
 configuration with the `rx_pin` connected to the TX pin of the inverter's controller board. Additionally, you
 need to set the `baud_rate` to 9600.
 
@@ -42,7 +42,7 @@ sun_gtil2:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this component.
+- **id** (**Required**, [config-id](#config-id)): The id to use for this component.
 - **uart_id** (*Optional*): The UART Bus ID for receiving messages sent from the inverter's controller to the display.
 
 ## Sensor
@@ -82,22 +82,22 @@ sensor:
 - **sun_gtil2_id** (*Optional*): Manually specify the ID of the sun_gtil2 instance if there are multiple.
 
 - **temperature** (*Optional*): The temperature of your inverter's heatsink.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 - **dc_voltage** (*Optional*): The voltage of your DC source. (battery or solar panels)
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 - **ac_voltage** (*Optional*): The grid voltage measured by the inverter.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 - **dc_power** (*Optional*): The inverter's input power.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 - **ac_power** (*Optional*): The inverter's output power.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 - **limiter_power** (*Optional*): The power measured by the inverter's "Internal" limiter.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 ## Text Sensor
 
@@ -118,12 +118,12 @@ text_sensor:
 - **sun_gtil2_id** (*Optional*): Manually specify the ID of the sun_gtil2 instance if there are multiple.
 
 - **state** (*Optional*): The inverter's state.
-  All options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
+  All options from [Text Sensor](#config-text_sensor).
 
 - **serial_number** (*Optional*): The inverter's serial number.
-  All options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
+  All options from [Text Sensor](#config-text_sensor).
 
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 

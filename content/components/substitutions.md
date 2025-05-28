@@ -116,7 +116,7 @@ Command line substitutions take precedence over those in your configuration file
 "template" configuration files (like `example.yaml` above) which can be used by multiple devices, leveraging
 substitutions which are provided on the command line.
 
-{{< anchor "YAML-insertion-operator" >}}
+{{< anchor "yaml-insertion-operator" >}}
 
 ## Bonus: YAML insertion operator
 

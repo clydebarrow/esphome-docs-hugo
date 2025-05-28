@@ -30,14 +30,14 @@ button:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the output component to use.
-- **duration** (**Required**, [Time](guides/configuration-types#config-time)): How long the output should be set when the button is pressed.
-- All other options from [Button](components/button/_index#config-button).
+- **output** (**Required**, [config-id](#config-id)): The ID of the output component to use.
+- **duration** (**Required**, [config-time](#config-time)): How long the output should be set when the button is pressed.
+- All other options from [Button](#config-button).
 
 {{< note >}}
 When used with a {{< docref "/components/output/gpio" >}}, the pin will be low by default and pulled high when the button is
 pressed. To invert this behaviour and have the pin pulled low when the button is pressed, set the `inverted` option
-in the [Pin Schema](guides/configuration-types#config-pin_schema).
+in the [config-pin_schema](#config-pin_schema).
 
 {{< /note >}}
 ## See Also

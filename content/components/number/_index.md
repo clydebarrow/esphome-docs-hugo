@@ -37,7 +37,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the number. At least one of **id** and **name** must be specified.
 
 {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+If you have a [friendly_name](#esphome-configuration_variables) set for your device and
 you want the number to use that name, you can set `name: None`.
 
 {{< /note >}}
@@ -61,30 +61,30 @@ you want the number to use that name, you can set `name: None`.
 - **device_class** (*Optional*, string): The device class for the number.
   See https://www.home-assistant.io/integrations/number/#device-class
   for a list of available options.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](components/web_server#config-webserver-version-3-options).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](#config-webserver-version-3-options).
 
 Automations:
 
-- **on_value** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a new value is published. See [`on_value`](components/number/_index#number-on_value).
-- **on_value_range** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a published value transition from outside to a range to inside. See [`on_value_range`](components/number/_index#number-on_value_range).
+- **on_value** (*Optional*, [Automation](#automation)): An automation to perform
+  when a new value is published. See [number-on_value](#number-on_value).
+- **on_value_range** (*Optional*, [Automation](#automation)): An automation to perform
+  when a published value transition from outside to a range to inside. See [number-on_value_range](#number-on_value_range).
 
 MQTT Options:
 
-- All other options from [MQTT Component](components/mqtt#config-mqtt-component).
+- All other options from [MQTT Component](#config-mqtt-component).
 
 
 ## Number Automation
 
-You can access the most recent state of the number in [lambdas](automations/templates#config-lambda) using
+You can access the most recent state of the number in [lambdas](#config-lambda) using
 `id(number_id).state`.
 
 {{< anchor "number-on_value" >}}
 
 ### `on_value`
 
-This automation will be triggered when a new value is published. In [Lambdas](automations/templates#config-lambda)
+This automation will be triggered when a new value is published. In [Lambdas](#config-lambda)
 you can get the value from the trigger with `x`.
 
 ```yaml
@@ -98,7 +98,7 @@ number:
             red: !lambda "return x/255;"
 
 ```
-Configuration variables: See [Automation](automations/_index#automation).
+Configuration variables: See [Automation](#automation).
 
 {{< anchor "number-on_value_range" >}}
 
@@ -128,7 +128,7 @@ Configuration variables:
 
 - **above** (*Optional*, float): The minimum for the trigger.
 - **below** (*Optional*, float): The maximum for the trigger.
-- See [Automation](automations/_index#automation).
+- See [Automation](#automation).
 
 {{< anchor "number-in_range_condition" >}}
 
@@ -160,7 +160,7 @@ Configuration variables:
 
 ### `number.set` Action
 
-This is an [Action](automations/actions#config-action) for setting a number state.
+This is an [Action](#config-action) for setting a number state.
 
 ```yaml
 - number.set:
@@ -170,15 +170,15 @@ This is an [Action](automations/actions#config-action) for setting a number stat
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number to set.
-- **value** (**Required**, float, [templatable](automations/templates#config-templatable)):
+- **id** (**Required**, [config-id](#config-id)): The ID of the number to set.
+- **value** (**Required**, float, [templatable](#config-templatable)):
   The value to set the number to.
 
 {{< anchor "number-increment_action" >}}
 
 ### `number.increment` Action
 
-This is an [Action](automations/actions#config-action) for incrementing a number value by its
+This is an [Action](#config-action) for incrementing a number value by its
 step size (default: 1).
 
 ```yaml
@@ -192,7 +192,7 @@ step size (default: 1).
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
+- **id** (**Required**, [config-id](#config-id)): The ID of the number component to update.
 - **cycle** (*Optional*, boolean): Whether or not to set the number to its minimum
   value when the increment pushes the value beyond its maximum value. This will only
   work when the number component uses a minimum and maximum value.
@@ -202,7 +202,7 @@ Configuration variables:
 
 ### `number.decrement` Action
 
-This is an [Action](automations/actions#config-action) for decrementing a number value by its
+This is an [Action](#config-action) for decrementing a number value by its
 step size (default: 1).
 
 ```yaml
@@ -216,7 +216,7 @@ step size (default: 1).
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
+- **id** (**Required**, [config-id](#config-id)): The ID of the number component to update.
 - **cycle** (*Optional*, boolean): Whether or not to set the number to its maximum
   value when the decrement pushes the value below its minimum value. This will only
   work when the number component uses a minimum and maximum value.
@@ -226,7 +226,7 @@ Configuration variables:
 
 ### `number.to_min` Action
 
-This is an [Action](automations/actions#config-action) seting a number to its minimum value, given
+This is an [Action](#config-action) seting a number to its minimum value, given
 a number component that has a minimum value defined for it.
 
 ```yaml
@@ -239,13 +239,13 @@ a number component that has a minimum value defined for it.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
+- **id** (**Required**, [config-id](#config-id)): The ID of the number component to update.
 
 {{< anchor "number-to-max_action" >}}
 
 ### `number.to_max` Action
 
-This is an [Action](automations/actions#config-action) seting a number to its maximum value (given
+This is an [Action](#config-action) seting a number to its maximum value (given
 a number component that has a maximum value defined for it.
 
 ```yaml
@@ -258,13 +258,13 @@ a number component that has a maximum value defined for it.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number component to update.
+- **id** (**Required**, [config-id](#config-id)): The ID of the number component to update.
 
 {{< anchor "number-operation_action" >}}
 
 ### `number.operation` Action
 
-This is an [Action](automations/actions#config-action) that can be used to perform an operation
+This is an [Action](#config-action) that can be used to perform an operation
 on a number component (set to minimum or maximum value, decrement, increment),
 using a generic templatable action call.
 
@@ -284,14 +284,14 @@ using a generic templatable action call.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the number to update.
-- **operation** (**Required**, string, [templatable](automations/templates#config-templatable)):
+- **id** (**Required**, [config-id](#config-id)): The ID of the number to update.
+- **operation** (**Required**, string, [templatable](#config-templatable)):
   What operation to perform on the number component. One of `TO_MIN`,
   `TO_MAX`, `DECREMENT` or `INCREMENT` (case insensitive). When writing a
   lambda for this field, then return one of the following enum values:
   `NUMBER_OP_TO_MIN`, `NUMBER_OP_TO_MAX`, `NUMBER_OP_DECREMENT` or
   `NUMBER_OP_INCREMENT`.
-- **cycle** (*Optional*, bool, [templatable](automations/templates#config-templatable)):
+- **cycle** (*Optional*, bool, [templatable](#config-templatable)):
   Can be used with `DECREMENT` or `INCREMENT` to specify whether or not to
   wrap around the value when respectively the minimum or maximum value of the
   number is exceeded.
@@ -300,7 +300,7 @@ Configuration variables:
 
 ### lambda calls
 
-From [lambdas](automations/templates#config-lambda), you can call several methods on all numbers to do some
+From [lambdas](#config-lambda), you can call several methods on all numbers to do some
 advanced stuff (see the full API Reference for more info).
 
 - `.make_call()`: Make a call for updating the number value.

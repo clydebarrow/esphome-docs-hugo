@@ -44,20 +44,20 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin where the DHT bus is connected.
+- **pin** (**Required**, [config-pin](#config-pin)): The pin where the DHT bus is connected.
 - **temperature** (**Required**): The information for the temperature sensor.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **humidity** (**Required**): The information for the humidity sensor
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 
 - **model** (*Optional*, int): Manually specify the DHT model, can be
   one of `AUTO_DETECT`, `DHT11`, `DHT22`, `DHT22_TYPE2`, `AM2302`, `RHT03`, `SI7021`, `AM2120`
   and helps with some connection issues. Defaults to `AUTO_DETECT`.  Auto detection doesn't work for the SI7021 chip.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 {{< note >}}
@@ -75,7 +75,7 @@ set `pullup: false` under your `pin` configuration.
 {{< /note >}}
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}

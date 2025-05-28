@@ -18,7 +18,7 @@ sensors with ESPHome.
 
 [Sparkfun](https://www.sparkfun.com/products/17874)
 
-To use the sensor, set up an [I²C Bus](components/i2c#i2c) and connect the sensor to the specified pins.
+To use the sensor, set up an [I²C Bus](#i2c) and connect the sensor to the specified pins.
 
 ```yaml
 # Example configuration entry
@@ -31,11 +31,11 @@ To use the sensor, set up an [I²C Bus](components/i2c#i2c) and connect the sens
 
 - **address** (*Optional*, int): The I²C address of the sensor. Defaults to `0x21`.
 - **measurement_mode** (*Optional*): The measurement mode of the sensor. Valid options are `differential_pressure` and `mass_flow`. Defaults to `differential_pressure`.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
+- All other options from [Sensor](#config-sensor).
 
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< apiref "sdp3x/sdp3x.h" "sdp3x/sdp3x.h" >}}
 

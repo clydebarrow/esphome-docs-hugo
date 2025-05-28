@@ -36,9 +36,9 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval
   to check the sensor. Defaults to `60s`.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- All other options from [Sensor](#config-sensor).
 
 {{< warning >}}
 The values this sensor outputs were only calibrated with a few magnets and no real "truth" sensor.
@@ -51,7 +51,7 @@ please feel free to do so 😺.
 {{< /warning >}}
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< docref "adc/" >}}
 - {{< docref "/components/esp32" >}}
 - {{< apiref "esp32_hall/esp32_hall.h" "esp32_hall/esp32_hall.h" >}}

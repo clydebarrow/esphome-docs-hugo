@@ -15,7 +15,7 @@ The `npi19` sensor platform allows you to use your NPI-19 ([datasheet](https://w
 {{< img src="npi19.jpg" alt="Image" caption="NPI-19 Pressure Sensor." width="50.0%" class="center" >}}
 
 ## Configuration
-[I²C](components/i2c#i2c) bus is required to be set up in your configuration for this sensor to work.
+[I²C](#i2c) bus is required to be set up in your configuration for this sensor to work.
 
 ```yaml
 # Example configuration entry
@@ -29,15 +29,15 @@ sensor:
 ```
 ## Configuration variables
 
-- **raw_pressure** (*Optional*): The information for the pressure sensor. See [Converting units](components/sensor/npi19#npi19-converting).
+- **raw_pressure** (*Optional*): The information for the pressure sensor. See [npi19-converting](#npi19-converting).
 
- - All other options from [Sensor](components/sensor/_index#config-sensor).
+ - All other options from [Sensor](#config-sensor).
 
 - **temperature** (*Optional*): The information for the temperature sensor. Readings in degrees celsius (°C).
 
- - All other options from [Sensor](components/sensor/_index#config-sensor).
+ - All other options from [Sensor](#config-sensor).
 
-- **i2c_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [I²C Component](components/i2c#i2c). Defaults to the default I²C bus.
+- **i2c_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [I²C Component](#i2c). Defaults to the default I²C bus.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   All known sensors currently configured to `0x28`. Defaults to `0x28`.
@@ -90,7 +90,7 @@ compensation.
 
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - [NPI-19 Product Page](https://www.amphenol-sensors.com/en/novasensor/pressure-sensors/3358-npi-19-i2c)
 - [NPI-19 Datasheet](https://www.amphenol-sensors.com/hubfs/AAS-920-699F-NovaSensor-NPI-19-I2C-061322-web.pdf)
 - [NPI-19 Product Application Note](https://www.amphenol-sensors.com/hubfs/I2C%20NPI-19%20product%20application%20Note.pdf)

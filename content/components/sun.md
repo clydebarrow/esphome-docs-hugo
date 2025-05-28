@@ -27,7 +27,7 @@ time:
 - **latitude** (**Required**, float): The latitude for performing the calculation.
 - **longitude** (**Required**, float): The longitude for performing the calculation.
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
 
 Automation:
 
@@ -50,12 +50,12 @@ sun:
         - logger.log: Good evening!
 
 ```
-- **on_sunrise** (*Optional*, [Automation](automations/_index#automation)): An automation to perform at sunrise
+- **on_sunrise** (*Optional*, [Automation](#automation)): An automation to perform at sunrise
   when the sun crosses a specified angle.
 
   - **elevation** (*Optional*, float): The elevation to cross. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
 
-- **on_sunset** (*Optional*, [Automation](automations/_index#automation)): An automation to perform at sunset
+- **on_sunset** (*Optional*, [Automation](#automation)): An automation to perform at sunset
   when the sun crosses a specified angle.
 
   - **elevation** (*Optional*, float): The elevation to cross. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
@@ -81,7 +81,7 @@ Configuration variables:
 
 - **type** (**Required**, string): The type of value to track. One of `elevation` and
   `azimuth`.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- All other options from [Sensor](#config-sensor).
 
 ## `sun` Text Sensor
 
@@ -106,15 +106,15 @@ Configuration variables:
   `sunset`.
 - **elevation** (*Optional*, float): The elevation to calculate the next sunrise/sunset event
   for. Defaults to -0.833° (the horizon, slightly less than 0° to compensate for atmospheric refraction).
-- **format** (*Optional*, string): The format to format the time value with, see [strftime](components/time/_index#strftime)
+- **format** (*Optional*, string): The format to format the time value with, see [strftime](#strftime)
   for more information. Defaults to `%X`.
-- All other options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
+- All other options from [Text Sensor](#config-text_sensor).
 
 {{< anchor "sun-is_above_below_horizon-condition" >}}
 
 ## `sun.is_above_horizon` / `sun.is_below_horizon` Conditions
 
-The `sun.is_above_horizon` and `sun.is_below_horizon` [conditions](automations/actions#config-condition)
+The `sun.is_above_horizon` and `sun.is_below_horizon` [conditions](#config-condition)
 allow you to check if the sun is currently above or below the horizon.
 
 ```yaml

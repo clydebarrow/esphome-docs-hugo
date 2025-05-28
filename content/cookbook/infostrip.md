@@ -92,7 +92,7 @@ Consider the warning in {{< docref "/components/light/partition" >}} regarging t
 {{< /warning >}}
 ## Home Assistant configuration
 
-The automation to show the CO2 warning light (e.g. red if CO2 > 1000 ppm) is done in Home Assistant, but could also be implemented using ESPHome [Automations](automations/_index#automation).
+The automation to show the CO2 warning light (e.g. red if CO2 > 1000 ppm) is done in Home Assistant, but could also be implemented using ESPHome [Automations](#automation).
 
 ```yaml
 # Turn on a light with the related color

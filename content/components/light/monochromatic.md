@@ -10,7 +10,7 @@ params:
 
 
 The `monochromatic` light platform creates a simple brightness-only light from an
-[float output component](components/output/_index#output).
+[float output component](#output).
 
 {{< img src="monochromatic-strip.jpg" alt="Image" caption="Example of a brightness-only LED strip that can be used with this component." width="75.0%" class="center" >}}
 
@@ -26,8 +26,8 @@ light:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for this light.
-- All other options from [Light](components/light/_index#config-light).
+- **output** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for this light.
+- All other options from [Light](#config-light).
 
 ## See Also
 

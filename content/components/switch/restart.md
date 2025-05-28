@@ -23,7 +23,7 @@ switch:
 ```
 ## Configuration variables:
 
-- All options from [Switch](components/switch/_index#config-switch).
+- All options from [Switch](#config-switch).
 
 ## See Also
 

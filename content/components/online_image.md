@@ -42,7 +42,7 @@ online_image:
 ## Configuration variables
 
 - **url** (**Required**, url): The URL where the image will be downloaded from.
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID with which you will be able to reference the image later
+- **id** (**Required**, [config-id](#config-id)): The ID with which you will be able to reference the image later
   in your display code.
 - **format** (**Required**): The format that the image is encoded with.
 
@@ -51,7 +51,7 @@ online_image:
   - `PNG`: The image on the server is encoded in PNG format.
 - **resize** (*Optional*, string): If set, this will resize the image to fit inside the given dimensions `WIDTHxHEIGHT`
   and preserve the aspect ratio.
-- **placeholder** (*Optional*, [ID](guides/configuration-types#config-id)): ID of an {{< docref "/components/image" "Image" >}} to display while the downloaded image is not yet ready.
+- **placeholder** (*Optional*, [config-id](#config-id)): ID of an {{< docref "/components/image" "Image" >}} to display while the downloaded image is not yet ready.
   This placeholder image will **not** be resized; regardless of the `resize` option value for the `online_image`.
 - **type** (*Required*): Specifies how to encode image internally.
 
@@ -60,7 +60,7 @@ online_image:
   - `GRAYSCALE`: Full scale grey. Uses 8 bits per pixel, 1 pixel per byte.
   - `RGB565`: Lossy RGB color stored. Uses 2 bytes per pixel, 3 with an alpha channel
   - `RGB`: Full RGB color stored. Uses 3 bytes per pixel, 4 with an alpha channel.
-- **transparency** (*Optional*): If set the alpha channel of the input image will be taken into account. The possible values are `opaque` (default), `chroma_key` and `alpha_channel`. See the discussion on transparency in the  [image component](components/image#display-image).
+- **transparency** (*Optional*): If set the alpha channel of the input image will be taken into account. The possible values are `opaque` (default), `chroma_key` and `alpha_channel`. See the discussion on transparency in the  [image component](#display-image).
 - **update_interval** (*Optional*, int): Redownload the image when the specified time has elapsed. Defaults to `never` (i.e. the update component action needs to be called manually).
 
 Advanced options:
@@ -69,11 +69,11 @@ Advanced options:
 
 ## Automations
 
-- **on_download_finished** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when the image has been successfully downloaded.
+- **on_download_finished** (*Optional*, [Automation](#automation)): An automation to perform when the image has been successfully downloaded.
 
 A good example for that is to update the display component after the download succeeded.
 
-- **on_error** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when an error happened during download or decode.
+- **on_error** (*Optional*, [Automation](#automation)): An automation to perform when an error happened during download or decode.
 
 ## Actions
 
@@ -81,7 +81,7 @@ A good example for that is to update the display component after the download su
 
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The image to update the URL for.
+- **id** (**Required**, [config-id](#config-id)): The image to update the URL for.
 - **url** (**Required**, url): The new URL to download the image from.
 
 ```yaml
@@ -96,7 +96,7 @@ on_...:
 
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The image to update the URL for.
+- **id** (**Required**, [config-id](#config-id)): The image to update the URL for.
 
 ```yaml
 on_...:

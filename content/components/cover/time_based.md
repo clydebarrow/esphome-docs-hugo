@@ -37,15 +37,15 @@ cover:
 ```
 ## Configuration variables:
 
-- **open_action** (**Required**, [Action](automations/actions#config-action)): The action that should
+- **open_action** (**Required**, [Action](#config-action)): The action that should
   be performed when the remote requests the cover to be opened.
-- **open_duration** (**Required**, [Time](guides/configuration-types#config-time)): The amount of time it takes the cover
+- **open_duration** (**Required**, [config-time](#config-time)): The amount of time it takes the cover
   to open up from the fully-closed state.
-- **close_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
+- **close_action** (*Optional*, [Action](#config-action)): The action that should
   be performed when the remote requests the cover to be closed.
-- **close_duration** (**Required**, [Time](guides/configuration-types#config-time)): The amount of time it takes the cover
+- **close_duration** (**Required**, [config-time](#config-time)): The amount of time it takes the cover
   to close from the fully-open state.
-- **stop_action** (**Required**, [Action](automations/actions#config-action)): The action that should
+- **stop_action** (**Required**, [Action](#config-action)): The action that should
   be performed to stop the cover when the remote requests the cover to be stopped or
   when the cover has been opening/closing for the given durations.
 - **has_built_in_endstop** (*Optional*, boolean): Indicates that the cover has built in end stop
@@ -62,7 +62,7 @@ cover:
 - **assumed_state** (*Optional*, boolean): Whether the true state of the cover is not known.
   This will make the Home Assistant frontend show buttons for both OPEN and CLOSE actions, instead
   of hiding or disabling one of them. Defaults to `true`.
-- All other options from [Cover](components/cover/_index#config-cover).
+- All other options from [Cover](#config-cover).
 
 
 {{< note >}}
@@ -92,6 +92,6 @@ This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issue
 ## See Also
 
 - {{< docref "index/" >}}
-- [Automation](automations/_index#automation)
+- [automation](#automation)
 - {{< apiref "time_based/time_based_cover.h" "time_based/time_based_cover.h" >}}
 

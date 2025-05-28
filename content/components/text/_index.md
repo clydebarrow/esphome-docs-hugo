@@ -37,7 +37,7 @@ Configuration variables:
 - **name** (**Required**, string): The name for the text.
 
 {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+If you have a [friendly_name](#esphome-configuration_variables) set for your device and
 you want the text to use that name, you can set `name: None`.
 
 {{< /note >}}
@@ -53,27 +53,27 @@ you want the text to use that name, you can set `name: None`.
   for a list of available options. Set to `""` to remove the default entity category.
 - **mode** (**Required**, string): Defines how the text should be displayed in the frontend.
   One of `text` or `password`.
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](components/web_server#config-webserver-version-3-options).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](#config-webserver-version-3-options).
 
 Automations:
 
-- **on_value** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a new value is published. See [`on_value`](components/text/_index#text-on_value).
+- **on_value** (*Optional*, [Automation](#automation)): An automation to perform
+  when a new value is published. See [text-on_value](#text-on_value).
 
 MQTT Options:
 
-- All other options from [MQTT Component](components/mqtt#config-mqtt-component).
+- All other options from [MQTT Component](#config-mqtt-component).
 
 ## Text Automation
 
-You can access the most recent state of the text in [lambdas](automations/templates#config-lambda) using
+You can access the most recent state of the text in [lambdas](#config-lambda) using
 `id(text_id).state`.
 
 {{< anchor "text-on_value" >}}
 
 ### `on_value`
 
-This automation will be triggered when a new value is published. In [Lambdas](automations/templates#config-lambda)
+This automation will be triggered when a new value is published. In [Lambdas](#config-lambda)
 you can get the value from the trigger with `x`.
 
 ```yaml
@@ -87,13 +87,13 @@ text:
             args: ["x.c_str()"]
 
 ```
-Configuration variables: See [Automation](automations/_index#automation).
+Configuration variables: See [Automation](#automation).
 
 {{< anchor "text-set_action" >}}
 
 ### `text.set` Action
 
-This is an [Action](automations/actions#config-action) for setting a text state.
+This is an [Action](#config-action) for setting a text state.
 
 ```yaml
 - text.set:
@@ -103,15 +103,15 @@ This is an [Action](automations/actions#config-action) for setting a text state.
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the text to set.
-- **value** (**Required**, string, [templatable](automations/templates#config-templatable)):
+- **id** (**Required**, [config-id](#config-id)): The ID of the text to set.
+- **value** (**Required**, string, [templatable](#config-templatable)):
   The value to set the text to.
 
 {{< anchor "text-lambda_calls" >}}
 
 ### lambda calls
 
-From [lambdas](automations/templates#config-lambda), you can call certain methods on all texts to do some
+From [lambdas](#config-lambda), you can call certain methods on all texts to do some
 advanced stuff (see the full API Reference for more info).
 
 - `.make_call()`: Make a call for updating the text value.

@@ -10,7 +10,7 @@ params:
 
 
 The `template` sensor platform allows you to create a sensor with templated values
-using [lambdas](automations/templates#config-lambda).
+using [lambdas](#config-lambda).
 
 ```yaml
 # Example configuration entry
@@ -34,11 +34,11 @@ Possible return values for the lambda:
 
 ## Configuration variables:
 
-- **lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
+- **lambda** (*Optional*, [lambda](#config-lambda)):
   Lambda to be evaluated every update interval to get the new value of the sensor
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
   sensor. Set to `never` to disable updates. Defaults to `60s`.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- All other options from [Sensor](#config-sensor).
 
 {{< anchor "sensor-template-publish_action" >}}
 
@@ -68,8 +68,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the template sensor.
-- **state** (**Required**, float, [templatable](automations/templates#config-templatable)):
+- **id** (**Required**, [config-id](#config-id)): The ID of the template sensor.
+- **state** (**Required**, float, [templatable](#config-templatable)):
   The state to publish.
 
 {{< note >}}
@@ -112,7 +112,7 @@ sensor:
 ```
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
-- [Automation](automations/_index#automation)
+- [sensor-filters](#sensor-filters)
+- [automation](#automation)
 - {{< apiref "template/sensor/template_sensor.h" "template/sensor/template_sensor.h" >}}
 

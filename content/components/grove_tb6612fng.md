@@ -23,7 +23,7 @@ grove_tb6612fng:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this TB6612FNG component.
+- **id** (**Required**, [config-id](#config-id)): The id to use for this TB6612FNG component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x14`.
 
@@ -114,6 +114,6 @@ on_...:
 ```
 ### See Also
 
-- [I²C Bus](components/i2c#i2c)
+- [i2c](#i2c)
 - {{< docref "switch/gpio" >}}
 

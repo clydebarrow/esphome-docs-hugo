@@ -26,7 +26,7 @@ The various sub-components implement some of the Modbus functions below (dependi
 | 15 | Write Multiple Coils |
 | 16 | Write Multiple Registers |
 
-Modbus RTU requires a [UART Bus](components/uart#uart) to communicate.
+Modbus RTU requires a [UART Bus](#uart) to communicate.
 
 ```yaml
 # Example configuration entry
@@ -38,16 +38,16 @@ modbus:
 ```
 ## Configuration variables:
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
 
-- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [UART Component](components/uart#uart) if you want
+- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
   to use multiple UART buses.
 
-- **flow_control_pin** (*Optional*, [Pin](guides/configuration-types#config-pin)): The pin used to switch flow control.
+- **flow_control_pin** (*Optional*, [config-pin](#config-pin)): The pin used to switch flow control.
   This is useful for RS485 transceivers that do not have automatic flow control switching,
   like the common MAX485.
 
-- **send_wait_time** (*Optional*, [Time](guides/configuration-types#config-time)): Time in milliseconds before the next ModBUS command is sent when an answer from a previous command has not yet started (i.e. when to timeout and assume no response is coming). Defaults to 250 ms.
+- **send_wait_time** (*Optional*, [config-time](#config-time)): Time in milliseconds before the next ModBUS command is sent when an answer from a previous command has not yet started (i.e. when to timeout and assume no response is coming). Defaults to 250 ms.
   Set this value to the maximum time required for the slowest device on the bus to begin responding (time to first byte).
   If a device starts responding within this time, the next command will be queued and sent after the response is finished, no matter how long the response.
 
@@ -65,6 +65,6 @@ modbus:
 - {{< docref "/components/select/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
-- [UART Bus](components/uart#uart)
+- [uart](#uart)
 - {{< apiref "modbus/modbus.h" "modbus/modbus.h" >}}
 

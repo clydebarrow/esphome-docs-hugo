@@ -12,7 +12,7 @@ params:
 The `status_led` light platform allows to share a single LED for indicating the status of
 the device (when on error/warning state) or as binary light (when on OK state).
 This is useful for devices with only one LED available.
-You can also use a binary [Output Component](components/output/_index#output).
+You can also use a binary [output](#output).
 
 It provides the combined functionality of {{< docref "/components/status_led" "status_led component" >}} and a
 {{< docref "/components/light/binary" "binary light component" >}} over a single shared GPIO led.
@@ -37,13 +37,13 @@ The only difference is that the platform won't be loaded in OTA safe mode, while
 {{< /note >}}
 ## Configuration variables:
 
-- **pin** (*Optional*, [Pin Schema](guides/configuration-types#config-pin_schema)): The GPIO pin to operate the LED on.
-- **output** (*Optional*, [ID](guides/configuration-types#config-id)): The id of the binary [Output Component](components/output/_index#output) to use for this light.
-- All other options from [Light](components/light/_index#config-light).
+- **pin** (*Optional*, [Pin Schema](#config-pin_schema)): The GPIO pin to operate the LED on.
+- **output** (*Optional*, [config-id](#config-id)): The id of the binary [output](#output) to use for this light.
+- All other options from [Light](#config-light).
 
 {{< note >}}
 If your Status LED is in an active-LOW mode (such as with the D1 Mini ESP8266 boards), use the
-`inverted` option of the [Pin Schema](guides/configuration-types#config-pin_schema):
+`inverted` option of the [Pin Schema](#config-pin_schema):
 
 ```yaml
 pin:

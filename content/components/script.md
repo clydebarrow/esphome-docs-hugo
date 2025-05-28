@@ -21,7 +21,7 @@ script:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The [ID](guides/configuration-types#config-id) of the script. Use this to interact with the script
+- **id** (**Required**, [config-id](#config-id)): The [config-id](#config-id) of the script. Use this to interact with the script
   using the script actions.
 - **mode** (*Optional*, string): Controls what happens when a script is invoked while it is still running from one or
   more previous invocations. Default to `single`.
@@ -33,10 +33,10 @@ Configuration variables:
 
 - **max_runs** (*Optional*, int): Allows limiting the maximum number of runs when using script modes `queued` and
   `parallel`, use value `0` for unlimited runs. Defaults to `0`.
-- **parameters** (*Optional*, [Script Parameters](components/script#script-parameters)): A script can define one or more parameters
+- **parameters** (*Optional*, [Script Parameters](#script-parameters)): A script can define one or more parameters
   that must be provided in order to execute. All parameters defined here are mandatory and must be given when calling
   the script.
-- **then** (**Required**, [Action](automations/actions#config-action)): The action to perform.
+- **then** (**Required**, [Action](#config-action)): The action to perform.
 
 {{< anchor "script-parameters" >}}
 
@@ -154,9 +154,9 @@ This can't be used in a lambda as it would block all functioning of the device. 
 
 # `script.is_running` Condition
 
-This [condition](automations/actions#config-condition) allows you to check if a given script is running. In case scripts are run in
+This [condition](#config-condition) allows you to check if a given script is running. In case scripts are run in
 `parallel`, this condition only tells you if at least one script of the given id is running, not how many. Not
-designed for use with [while](automations/actions#while_action); instead try [script.wait](components/script#script-wait_action).
+designed for use with [while](#while_action); instead try [script.wait](#script-wait_action).
 
 ```yaml
 on_...:

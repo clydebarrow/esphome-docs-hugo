@@ -32,22 +32,22 @@ sensor:
 ```
 ## Configuration variables:
 
-- **microphone** (**Required**, [Microphone Source Configuration](components/microphone/_index#config-microphone-source)): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input. Multiple channels may be selected.
-- **measurement_duration** (*Optional*, [Time](guides/configuration-types#config-time)): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
-- **passive** (**Required**, boolean). Whether passive mode is enabled. See [Passive Mode](components/sensor/sound_level#sound_level-passive).
+- **microphone** (**Required**, [config-microphone-source](#config-microphone-source)): The {{< docref "/components/microphone/index" "microphone" >}} settings to use for input. Multiple channels may be selected.
+- **measurement_duration** (*Optional*, [config-time](#config-time)): The time duration for each sound level measurement. Ranges from `50ms` to `60s`. Defaults to `1000ms`.
+- **passive** (**Required**, boolean). Whether passive mode is enabled. See [Passive Mode](#sound_level-passive).
 - **peak** (*Optional*): The information for the peak loudness sensor.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **rms** (*Optional*): The information for the Root Mean Square loudness sensor.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 {{< anchor "sound_level-passive" >}}
 
 ## Passive Mode
 
-If the sound level component is configured in passive mode, then it will only measure sound levels when another ESPHome component is capturing audio from the microphone. If disabled, then you must manually start and stop capturing using actions (see [Sound Level Actions](components/sensor/sound_level#sound_level-actions)). When passive mode is disabled, it will automatically start the microphone when the component sets up.
+If the sound level component is configured in passive mode, then it will only measure sound levels when another ESPHome component is capturing audio from the microphone. If disabled, then you must manually start and stop capturing using actions (see [Sound Level Actions](#sound_level-actions)). When passive mode is disabled, it will automatically start the microphone when the component sets up.
 
 {{< warning >}}
 Some devices do not support duplex audio, meaning they cannot output audio to a speaker at the same time as capturing audio from a microphone. On these devices, with passive mode disabled, you must take care to manually stop the `sound_level` component whenever you want to send audio to the speaker component. No manual management is necessary if you enable passive mode.
@@ -71,6 +71,6 @@ Stops measuring sound levels. Does nothing in passive mode.
 ## See Also
 
 - [Root Mean Square (Wikipedia)](https://en.wikipedia.org/wiki/Root_mean_square)
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< apiref "sound_level/sound_level.h" "sound_level/sound_level.h" >}}
 

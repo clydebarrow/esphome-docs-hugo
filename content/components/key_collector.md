@@ -11,8 +11,8 @@ params:
 
 
 The `key_collector` component collects key presses from components
-like [Matrix keypad](components/matrix_keypad#matrix_keypad), {{< docref "/components/wiegand" "Wiegand keypad" >}}
-or LVGL [Button Matrix](components/lvgl/widgets#lvgl-widget-buttonmatrix), [Keyboard](components/lvgl/widgets#lvgl-widget-keyboard)
+like [matrix_keypad](#matrix_keypad), {{< docref "/components/wiegand" "Wiegand keypad" >}}
+or LVGL [Button Matrix](#lvgl-widget-buttonmatrix), [Keyboard](#lvgl-widget-keyboard)
 widgets. It allows you to process key sequences and treat them as one, for
 example to allow inputting of a PIN code or a passkey. The component outputs
 the result of the keypress sequence as a variable usable in automations.
@@ -48,8 +48,8 @@ key_collector:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Set the ID of this entry for use in lambdas.
-- **source_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of the key input device.
+- **id** (*Optional*, [config-id](#config-id)): Set the ID of this entry for use in lambdas.
+- **source_id** (*Optional*, [config-id](#config-id)): The ID of the key input device.
 - **min_length** (*Optional*, integer): The minimal length of the desired key sequence. Below
   this, `on_result` automation will not trigger even if any of the `end_keys` was pressed.
 - **max_length** (*Optional*, integer): The maximum length of the desired key sequence, after
@@ -61,7 +61,7 @@ Configuration variables:
 - **clear_keys** (*Optional*, string): Keys used to entirely clear the sequence, all the pressed keys.
 - **allowed_keys** (*Optional*, string): Keys allowed to be used. If not specified, then any otherwise
   unused keys will be allowed.
-- **timeout** (*Optional*, [Time](guides/configuration-types#config-time)): Timeout after which to cancel building the sequence and delete all the keys.
+- **timeout** (*Optional*, [config-time](#config-time)): Timeout after which to cancel building the sequence and delete all the keys.
 - **enable_on_boot** (*Optional*, boolean): If enabled, this key collector will be enabled on boot. Defaults to `true`.
 
 At least one of `end_keys` or `max_length` have to be specified. The rest are optional.
@@ -70,17 +70,17 @@ accepted until an end key is pressed.
 
 ## Automations:
 
-- **on_progress** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
+- **on_progress** (*Optional*, [Automation](#automation)): An automation to perform
   when keys are pressed. The current sequence of pressed keys is placed in a `vector<uint8_t>` variable `x`
   and `start` holds the start key that activated this sequence or else `0`.
   Useful if you want to have a display showing the current value or number of key presses,
   or a speaker beeping when keys are being pressed.
-- **on_result** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
+- **on_result** (*Optional*, [Automation](#automation)): An automation to perform
   when the sequence has been finished (eg. `max_length` has been reached or one of
   the `end_keys` was pressed). The finalized key sequence is placed in a `vector<uint8_t>` variable `x`,
   `start` holds the start key that activated this sequence or else `0`, and
   `end` holds the end key that terminated this sequence or else `0`.
-- **on_timeout** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
+- **on_timeout** (*Optional*, [Automation](#automation)): An automation to perform
   if the timeout happens. The current sequence of pressed keys is placed in a `vector<uint8_t>` variable `x`
   and `start` holds the start key that activated this sequence or else `0`.
 
@@ -114,6 +114,6 @@ on_...:
 
 - {{< docref "/components/matrix_keypad" >}}
 - {{< docref "/components/wiegand" >}}
-- [LVGL Button Matrix widget](components/lvgl/widgets#lvgl-widget-buttonmatrix)
-- [LVGL Keyboard widget](components/lvgl/widgets#lvgl-widget-keyboard)
+- [LVGL Button Matrix widget](#lvgl-widget-buttonmatrix)
+- [LVGL Keyboard widget](#lvgl-widget-keyboard)
 

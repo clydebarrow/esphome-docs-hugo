@@ -27,8 +27,8 @@ switch:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the output component to use.
-- All other options from [Switch](components/switch/_index#config-switch).
+- **output** (**Required**, [config-id](#config-id)): The ID of the output component to use.
+- All other options from [Switch](#config-switch).
 
 ## See Also
 

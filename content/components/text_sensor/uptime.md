@@ -27,7 +27,7 @@ text_sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The sensor reporting interval. Defaults to `30s`.
+- **update_interval** (*Optional*, [config-time](#config-time)): The sensor reporting interval. Defaults to `30s`.
 - **expand** (*Optional*, boolean): If set, the text will always include all elements, even if they are zero. Defaults to `false`.
 - **format** (*Optional*, list): Allows the customization of the output format. The following options are available:
 
@@ -36,7 +36,7 @@ text_sensor:
     - **minutes** (*Optional*, string): The string to use for the minutes element. Defaults to `m`.
     - **seconds** (*Optional*, string): The string to use for the seconds element. Defaults to `s`.
     - **separator** (*Optional*, string): The separator to use between the uptime values. Defaults to the empty string.
-- All other options from [Text Sensor](components/text_sensor/_index#config-text_sensor).
+- All other options from [Text Sensor](#config-text_sensor).
 
 The resolution of the reported uptime will be determined by the update interval. For example, if the update interval is set to 30 seconds (the default), the uptime will be reported in minutes. More frequent updates will result in seconds being reported.
 
@@ -44,6 +44,6 @@ The resolution of the reported uptime will be determined by the update interval.
 
 ## See Also
 - {{< docref "/components/sensor/uptime" >}}
-- [Text Sensor Filters](components/text_sensor/_index#text_sensor-filters)
+- [text_sensor-filters](#text_sensor-filters)
 - {{< apiref "uptime/uptime_text_sensor.h" "uptime/uptime_text_sensor.h" >}}
 

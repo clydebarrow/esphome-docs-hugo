@@ -25,9 +25,9 @@ syslog:
 ```
 ## Configuration Options
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
-- **udp_id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the UDP client to use for sending logs. May be omitted if only one UDP client is configured.
-- **time_id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the time client to use for time-stamping logs. May be omitted if only one time client is configured.
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **udp_id** (**Required**, [config-id](#config-id)): The ID of the UDP client to use for sending logs. May be omitted if only one UDP client is configured.
+- **time_id** (**Required**, [config-id](#config-id)): The ID of the time client to use for time-stamping logs. May be omitted if only one time client is configured.
 - **port** (*Optional*, int): The port to send logs to. Defaults to `514`.
 - **facility** (*Optional*, int): The syslog facility to use. Defaults to `16` (corresponding to `local0`).
 - **level** (*Optional*, string): The highest log level to send to the syslog server. Defaults to `DEBUG`.

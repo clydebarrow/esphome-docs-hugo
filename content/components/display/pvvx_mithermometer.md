@@ -45,16 +45,16 @@ display:
 ```
 ## Configuration variables:
 
-- **ble_client_id** (**Required**, [ID](guides/configuration-types#config-id)): ID of the associated BLE client.
-- **time_id** (*Optional*, [ID](guides/configuration-types#config-id)): ID of a {{< docref "/components/time" >}}. If set, the time will be synchronized with every connection.
-- **disconnect_delay** (*Optional*, [Time](guides/configuration-types#config-time)): The amount of time the BLE connection is maintained before being disconnected again. Defaults to `5s`.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to transmit the display data. Defaults to `60s`.
-- **validity_period** (*Optional*, [Time](guides/configuration-types#config-time)): The time periode for which the pvvx device should display the information. Defaults to `5min`.
-- **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): The lambda to use to define the information to be displayed.
-  See [Rendering Lambda](components/display/pvvx_mithermometer#display-pvvx_mithermometer_lambda) for more information.
+- **ble_client_id** (**Required**, [config-id](#config-id)): ID of the associated BLE client.
+- **time_id** (*Optional*, [config-id](#config-id)): ID of a {{< docref "/components/time" >}}. If set, the time will be synchronized with every connection.
+- **disconnect_delay** (*Optional*, [config-time](#config-time)): The amount of time the BLE connection is maintained before being disconnected again. Defaults to `5s`.
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to transmit the display data. Defaults to `60s`.
+- **validity_period** (*Optional*, [config-time](#config-time)): The time periode for which the pvvx device should display the information. Defaults to `5min`.
+- **lambda** (*Optional*, [lambda](#config-lambda)): The lambda to use to define the information to be displayed.
+  See [display-pvvx_mithermometer_lambda](#display-pvvx_mithermometer_lambda) for more information.
 - **auto_clear_enabled** (*Optional*, boolean): Whether to automatically clear the display data before each lambda call,
   or to keep the existing display content (must overwrite explicitly, e.g., only on data change). Defaults to `true` if a lambda or pages are configured, false otherwise.
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
 
 {{< anchor "display-pvvx_mithermometer_lambda" >}}
 

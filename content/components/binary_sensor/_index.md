@@ -34,7 +34,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name for the binary sensor. At least one of **id** and **name** must be specified.
 
 {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+If you have a [friendly_name](#esphome-configuration_variables) set for your device and
 you want the binary sensor to use that name, you can set `name: None`.
 
 {{< /note >}}
@@ -43,25 +43,25 @@ you want the binary sensor to use that name, you can set `name: None`.
   for a list of available options.
 - **icon** (*Optional*, icon): Manually set the icon to use for the binary sensor in the frontend.
 - **filters** (*Optional*, list): A list of filters to apply on the binary sensor values such as
-  inverting signals. See [Binary Sensor Filters](components/binary_sensor/_index#binary_sensor-filters).
+  inverting signals. See [binary_sensor-filters](#binary_sensor-filters).
 
 Automations:
 
-- **on_press** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when the button is pressed. See [`on_press`](components/binary_sensor/_index#binary_sensor-on_press).
-- **on_release** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when the button is released. See [`on_release`](components/binary_sensor/_index#binary_sensor-on_release).
-- **on_state** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when a state change is published. See [`on_state`](components/binary_sensor/_index#binary_sensor-on_state).
-- **on_click** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
+- **on_press** (*Optional*, [Automation](#automation)): An automation to perform
+  when the button is pressed. See [binary_sensor-on_press](#binary_sensor-on_press).
+- **on_release** (*Optional*, [Automation](#automation)): An automation to perform
+  when the button is released. See [binary_sensor-on_release](#binary_sensor-on_release).
+- **on_state** (*Optional*, [Automation](#automation)): An automation to perform
+  when a state change is published. See [binary_sensor-on_state](#binary_sensor-on_state).
+- **on_click** (*Optional*, [Automation](#automation)): An automation to perform
   when the button is held down for a specified period of time.
-  See [`on_click`](components/binary_sensor/_index#binary_sensor-on_click).
-- **on_double_click** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
+  See [binary_sensor-on_click](#binary_sensor-on_click).
+- **on_double_click** (*Optional*, [Automation](#automation)): An automation to perform
   when the button is pressed twice for specified periods of time.
-  See [`on_double_click`](components/binary_sensor/_index#binary_sensor-on_double_click).
-- **on_multi_click** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
+  See [binary_sensor-on_double_click](#binary_sensor-on_double_click).
+- **on_multi_click** (*Optional*, [Automation](#automation)): An automation to perform
   when the button is pressed in a specific sequence.
-  See [`on_multi_click`](components/binary_sensor/_index#binary_sensor-on_multi_click).
+  See [binary_sensor-on_multi_click](#binary_sensor-on_multi_click).
 
 Advanced options:
 
@@ -77,15 +77,15 @@ Advanced options:
   See https://developers.home-assistant.io/docs/core/entity/#generic-properties
   for a list of available options.
   Set to `""` to remove the default entity category.
-- If MQTT enabled, all other options from [MQTT Component](components/mqtt#config-mqtt-component).
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](components/web_server#config-webserver-version-3-options).
+- If MQTT enabled, all other options from [MQTT Component](#config-mqtt-component).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](#config-webserver-version-3-options).
 
 {{< anchor "binary_sensor-filters" >}}
 
 ## Binary Sensor Filters
 
 With binary sensor filters you can customize how ESPHome handles your binary sensor values even more.
-They are similar to [Sensor Filters](components/sensor/_index#sensor-filters). All filters are processed in a pipeline.
+They are similar to [Sensor Filters](#sensor-filters). All filters are processed in a pipeline.
 This means all binary sensor filters are processed in the order given in the configuration (so order
 of these entries matters!)
 
@@ -123,7 +123,7 @@ Simple filter that just inverts every value from the binary sensor.
 
 ### `delayed_on`
 
-(**Required**, time, [templatable](automations/templates#config-templatable)): When a signal ON is received,
+(**Required**, time, [templatable](#config-templatable)): When a signal ON is received,
 wait for the specified time period until publishing an ON state. If an OFF value is received
 while waiting, the ON action is discarded. Or in other words:
 Only send an ON value if the binary sensor has stayed ON for at least the specified time period.
@@ -132,7 +132,7 @@ When using a lambda call, you should return the delay value in milliseconds.
 
 ### `delayed_off`
 
-(**Required**, time, [templatable](automations/templates#config-templatable)): When a signal OFF is received,
+(**Required**, time, [templatable](#config-templatable)): When a signal OFF is received,
 wait for the specified time period until publishing an OFF state. If an ON value is received
 while waiting, the OFF action is discarded. Or in other words:
 Only send an OFF value if the binary sensor has stayed OFF for at least the specified time period.
@@ -155,7 +155,7 @@ binary_sensor:
       - delayed_on_off: 1s
 
 ```
-(**Required**, time, [templatable](automations/templates#config-templatable)): ON and OFF delay.
+(**Required**, time, [templatable](#config-templatable)): ON and OFF delay.
 When using a lambda call, you should return the delay value in milliseconds.
 **Useful for debouncing binary switches**.
 
@@ -173,8 +173,8 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **time_on** (**Required**, time, [templatable](automations/templates#config-templatable)): ON delay.
-- **time_off** (**Required**, time, [templatable](automations/templates#config-templatable)): OFF delay.
+- **time_on** (**Required**, time, [templatable](#config-templatable)): ON delay.
+- **time_off** (**Required**, time, [templatable](#config-templatable)): OFF delay.
 
 When using a lambda call, you should return the delay value in milliseconds.
 
@@ -196,19 +196,19 @@ set to default values.
 
 Configuration variables:
 
-- **delay** (*Optional*, [Time](guides/configuration-types#config-time)): Delay to proceed to the next timing. Defaults to `1s`.
-- **time_off** (*Optional*, [Time](guides/configuration-types#config-time)): Interval to hold the output at OFF. Defaults to `100ms`.
-- **time_on** (*Optional*, [Time](guides/configuration-types#config-time)): Interval to hold the output at ON. Defaults to `900ms`.
+- **delay** (*Optional*, [config-time](#config-time)): Delay to proceed to the next timing. Defaults to `1s`.
+- **time_off** (*Optional*, [config-time](#config-time)): Interval to hold the output at OFF. Defaults to `100ms`.
+- **time_on** (*Optional*, [config-time](#config-time)): Interval to hold the output at ON. Defaults to `900ms`.
 
 ### `lambda`
 
-Specify any [lambda](automations/templates#config-lambda) for more complex filters. The input value from
+Specify any [lambda](#config-lambda) for more complex filters. The input value from
 the binary sensor is `x` and you can return `true` for ON, `false` for OFF, and `{}` to stop
 the filter chain.
 
 ### `settle`
 
-(**Required**, time, [templatable](automations/templates#config-templatable)): When a signal is received, publish the state
+(**Required**, time, [templatable](#config-templatable)): When a signal is received, publish the state
 but wait for the received state to remain the same for specified time period before publishing any
 additional state changes. This filter complements the `delayed_on_off` filter but publishes value changes at
 the beginning of the delay period.
@@ -220,7 +220,7 @@ When using a lambda call, you should return the delay value in milliseconds.
 The triggers for binary sensors in ESPHome use the lingo from computer mouses.
 For example, a `press` is triggered in the first moment when the button on your mouse is pushed down.
 
-You can access the current state of the binary sensor in [lambdas](automations/templates#config-lambda) using
+You can access the current state of the binary sensor in [lambdas](#config-lambda) using
 `id(binary_sensor_id).state`.
 
 {{< anchor "binary_sensor-on_press" >}}
@@ -239,7 +239,7 @@ binary_sensor:
         - switch.turn_on: relay_1
 
 ```
-Configuration variables: See [Automation](automations/_index#automation).
+Configuration variables: See [Automation](#automation).
 
 {{< anchor "binary_sensor-on_release" >}}
 
@@ -257,7 +257,7 @@ binary_sensor:
         - switch.turn_off: relay_1
 
 ```
-Configuration variables: See [Automation](automations/_index#automation).
+Configuration variables: See [Automation](#automation).
 
 {{< anchor "binary_sensor-on_state" >}}
 
@@ -265,7 +265,7 @@ Configuration variables: See [Automation](automations/_index#automation).
 
 This automation will be triggered when a new state is received (and thus combines `on_press`
 and `on_release` into one trigger). The new state will be given as the variable `x` as a boolean
-and can be used in [lambdas](automations/templates#config-lambda).
+and can be used in [lambdas](#config-lambda).
 
 ```yaml
 binary_sensor:
@@ -276,7 +276,7 @@ binary_sensor:
         - switch.turn_off: relay_1
 
 ```
-Configuration variables: See [Automation](automations/_index#automation).
+Configuration variables: See [Automation](#automation).
 
 {{< anchor "binary_sensor-on_click" >}}
 
@@ -299,12 +299,12 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **min_length** (*Optional*, [Time](guides/configuration-types#config-time)): The minimum duration the click should last. Defaults to `50ms`.
-- **max_length** (*Optional*, [Time](guides/configuration-types#config-time)): The maximum duration the click should last. Defaults to `350ms`.
-- See [Automation](automations/_index#automation).
+- **min_length** (*Optional*, [config-time](#config-time)): The minimum duration the click should last. Defaults to `50ms`.
+- **max_length** (*Optional*, [config-time](#config-time)): The maximum duration the click should last. Defaults to `350ms`.
+- See [Automation](#automation).
 
 {{< note >}}
-Multiple `on_click` entries can be defined like this (see also [`on_multi_click`](components/binary_sensor/_index#binary_sensor-on_multi_click)
+Multiple `on_click` entries can be defined like this (see also [binary_sensor-on_multi_click](#binary_sensor-on_multi_click)
 for more complex matching):
 
 ```yaml
@@ -344,9 +344,9 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **min_length** (*Optional*, [Time](guides/configuration-types#config-time)): The minimum duration the click should last. Defaults to `50ms`.
-- **max_length** (*Optional*, [Time](guides/configuration-types#config-time)): The maximum duration the click should last. Defaults to `350ms`.
-- See [Automation](automations/_index#automation).
+- **min_length** (*Optional*, [config-time](#config-time)): The minimum duration the click should last. Defaults to `50ms`.
+- **max_length** (*Optional*, [config-time](#config-time)): The maximum duration the click should last. Defaults to `350ms`.
+- See [Automation](#automation).
 
 {{< anchor "binary_sensor-on_multi_click" >}}
 
@@ -378,14 +378,14 @@ Configuration variables:
   - `<ON/OFF> for at least <TIME>`
   - `<ON/OFF> for at most <TIME>`
 
-- **invalid_cooldown** (*Optional*, [Time](guides/configuration-types#config-time)): If a multi click is started, but the timing
+- **invalid_cooldown** (*Optional*, [config-time](#config-time)): If a multi click is started, but the timing
   set in `timing` does not match, a "cool down" period will be activated during which no timing
   will be matched. Defaults to `1s`.
-- See [Automation](automations/_index#automation).
+- See [Automation](#automation).
 
 {{< note >}}
 Getting the timing right for your use-case can sometimes be a bit difficult. If you set the
-[global log level](components/logger#logger-log_levels) to `VERBOSE`, the multi click trigger shows logs
+[global log level](#logger-log_levels) to `VERBOSE`, the multi click trigger shows logs
 about what stopped the trigger from happening.
 
 {{< /note >}}
@@ -419,7 +419,7 @@ on_multi_click:
 
 ### `binary_sensor.is_on` / `binary_sensor.is_off` Condition
 
-This [Condition](automations/actions#config-condition) checks if the given binary sensor is ON (or OFF).
+This [Condition](#config-condition) checks if the given binary sensor is ON (or OFF).
 
 ```yaml
 # In some trigger:
@@ -434,7 +434,7 @@ on_...:
 
 ### lambda calls
 
-From [lambdas](automations/templates#config-lambda), you can call several methods on all binary sensors to do some
+From [lambdas](#config-lambda), you can call several methods on all binary sensors to do some
 advanced stuff.
 
 - `publish_state()`: Manually cause the binary sensor to publish and store a state from anywhere

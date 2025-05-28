@@ -32,7 +32,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name of the media player. At least one of **id** and **name** must be specified.
 
 {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+If you have a [friendly_name](#esphome-configuration_variables) set for your device and
 you want the media player to use that name, you can set `name: None`.
 
 {{< /note >}}
@@ -57,7 +57,7 @@ your configuration YAML.
 
 Configuration variables:
 
-**id** (*Optional*, [ID](guides/configuration-types#config-id)): The media player to control. Defaults to the only one in YAML.
+**id** (*Optional*, [config-id](#config-id)): The media player to control. Defaults to the only one in YAML.
 
 
 {{< anchor "media_player-play" >}}

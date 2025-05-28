@@ -10,7 +10,7 @@ params:
 
 
 The `template` datetime platform allows you to create a datetime with templated values
-using [lambdas](automations/templates#config-lambda).
+using [lambdas](#config-lambda).
 
 ```yaml
 datetime:
@@ -45,12 +45,12 @@ datetime:
 ## Configuration variables:
 
 - **type** (**Required**, enum): The type of the datetime. Can be one of `date` or `time`.
-- **lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
+- **lambda** (*Optional*, [lambda](#config-lambda)):
   Lambda to be evaluated every update interval to get the current value of the datetime.
-- **set_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
+- **set_action** (*Optional*, [Action](#config-action)): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the
   dateime value. The new value is available to lambdas in the `x` variable.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval on which to update the datetime
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval on which to update the datetime
   by executing the `lambda`. Defaults to `60s`.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the template datetime will immediately update the reported state.
@@ -99,10 +99,10 @@ datetime:
       second: 56
 
     ```
-- All other options from [Datetime](components/datetime/_index#config-datetime).
+- All other options from [Datetime](#config-datetime).
 
 ## See Also
 
-- [Automation](automations/_index#automation)
+- [automation](#automation)
 - {{< apiref "template/datetime/template_date.h" "template/datetime/template_date.h" >}}
 

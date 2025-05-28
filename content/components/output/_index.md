@@ -35,8 +35,8 @@ output:
 ```
 Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this output component.
-- **power_supply** (*Optional*, [ID](guides/configuration-types#config-id)): The :doc:`power
+- **id** (**Required**, [config-id](#config-id)): The id to use for this output component.
+- **power_supply** (*Optional*, [config-id](#config-id)): The :doc:`power
   supply </components/power_supply>` to connect to
   this output. When the output is enabled, the power supply will
   automatically be switched on too.
@@ -66,7 +66,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [lambdas](automations/templates#config-lambda):
+This action can also be expressed in [lambdas](#config-lambda):
 
 ```cpp
 id(light_1).turn_on();
@@ -86,7 +86,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [lambdas](automations/templates#config-lambda):
+This action can also be expressed in [lambdas](#config-lambda):
 
 ```cpp
 id(light_1).turn_off();
@@ -109,7 +109,7 @@ on_...:
 
 ```
 {{< note >}}
-This action can also be expressed in [lambdas](automations/templates#config-lambda):
+This action can also be expressed in [lambdas](#config-lambda):
 
 ```cpp
 // range is 0.0 (off) to 1.0 (on)

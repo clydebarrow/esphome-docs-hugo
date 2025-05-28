@@ -11,7 +11,7 @@ params:
 
 The `hydreon_rgxx` sensor platform allows you to use rain sensors by Hydreon. Currently supported are the RG-9 and RG-15 sensors ([model comparison](https://rainsensors.com/products/model-comparison/)).
 
-These optical rain sensors use a UART connection at 3.3V. The [UART](components/uart#uart) is
+These optical rain sensors use a UART connection at 3.3V. The [UART](#uart) is
 required to be set up in your configuration for this sensor to work.
 
 Supported firmware versions:
@@ -67,42 +67,42 @@ sensor:
 - **disable_led** (*Optional*): Disables the on-board LED. Defaults to `false`. Only on RG-9 firmware version 1.200-onwards.
 
 
-- **uart_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [UART Component](components/uart#uart) if you want
+- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
   to use multiple UART buses.
 
 - **moisture** (*Optional*): Rain intensity level from 0-7 ([more detail](https://rainsensors.com/support/rg-9-rg-15-faq/#RG-9RValue)). Only on RG-9.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **temperature** (*Optional*): Device internal temperature in Celsius. Accuracy is ±5°C. Only on RG-9 firmware version 1.100-onwards.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **resolution** (*Optional*, string): Specify rain sensor resolution. Must be either `low` or `high`. Default resolution is `high`.
   Only applies to RG-15.
 
 - **acc** (*Optional*): Amount of rain since last message (see `update_interval`), in `mm`. Only on RG-15.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **event_acc** (*Optional*): Amount of rain for this event (i.e. since it last stopped raining), in `mm`. Only on RG-15.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **total_acc** (*Optional*): Total amount of rain this sensor has ever measured, in `mm`. Only on RG-15.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
 - **r_int** (*Optional*): Current rain intensity in `mm/h`. Only on RG-15.
 
-  - All options from [Sensor](components/sensor/_index#config-sensor).
+  - All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< docref "../binary_sensor/hydreon_rgxx" >}}
 
 - [Hydreon RG-9](https://rainsensors.com/products/rg-9/)

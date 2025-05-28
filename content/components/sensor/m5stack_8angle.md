@@ -16,7 +16,7 @@ It has 8 knobs, a switch and can individually drive 9 RGB LEDs.
 
 {{< img src="m5stack_8angle.jpg" alt="Image" caption="The m5stack_8angle unit." width="75.0%" class="center" >}}
 
-The `m5stack_8angle` component communicates through an [I²C](components/i2c#i2c) bus and uses a default address of 0x43.
+The `m5stack_8angle` component communicates through an [I²C](#i2c) bus and uses a default address of 0x43.
 
 ```yaml
 # Example configuration entry
@@ -26,8 +26,8 @@ m5stack_8angle:
 ```
 ### Configuration variables:
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
-- **i2c_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the [I²C Component](components/i2c#i2c) if you need
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **i2c_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [I²C Component](#i2c) if you need
 - **address** (*Optional*, int): Manually specify the I²C address of the device. Defaults to `0x43`.
 
 
@@ -50,10 +50,10 @@ sensor:
 ```
 ### Configuration variables:
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `10s`.
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `10s`.
 - **bit_depth** (*Optional*, one of `12 bit` or `8 bit`) determines the precision of the analog readout, defaults to `8bit`.
 - **raw** (*Optional*, boolean) if true, the sensor returns the raw readout value of the knob.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- All other options from [Sensor](#config-sensor).
 
 
 ## Input switch binary sensor
@@ -69,8 +69,8 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the sensor. Defaults to `10s`.
-- All other options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor).
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `10s`.
+- All other options from [Binary Sensor](#config-binary_sensor).
 
 
 ## Lights
@@ -87,7 +87,7 @@ light:
 
 ```
 ### Configuration variables:
-- All options from [Light](components/light/_index#config-light).
+- All options from [Light](#config-light).
 
 
 ## Read knob's positions and switch state in Lambdas
@@ -127,7 +127,7 @@ light:
 ```
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/light" >}}
 - {{< docref "template/" >}}

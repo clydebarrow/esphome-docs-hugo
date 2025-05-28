@@ -27,13 +27,13 @@ sensor:
   - `seconds` (*default*): A simple counter.
   - `timestamp`: presents the time ESPHome last booted up. Requires a {{< docref "/components/time" >}}.
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The sensor reporting interval. Defaults to `60s`.
+- **update_interval** (*Optional*, [config-time](#config-time)): The sensor reporting interval. Defaults to `60s`.
   Valid only with `type: seconds`.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- All other options from [Sensor](#config-sensor).
 
 ## See Also
 
 - {{< docref "/components/text_sensor/uptime" >}}
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< apiref "uptime/uptime_sensor.h" "uptime/uptime_sensor.h" >}}
 

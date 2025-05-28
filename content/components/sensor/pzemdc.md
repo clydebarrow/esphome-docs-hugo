@@ -19,7 +19,7 @@ This page is incomplete and could use some work. If you want to contribute, plea
 The `pzemdc` sensor platform allows you to use various DC Peacefair PZEM energy monitors
 with ESPHome. The supported models are: PZEM-003, PZEM-014, PZEM-016 and PZEM-017.
 
-The communication with this component is via a [UART](components/uart#uart).
+The communication with this component is via a [UART](#uart).
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600.
 
@@ -49,14 +49,14 @@ sensor:
 ## Configuration variables:
 
 - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-  [Sensor](components/sensor/_index#config-sensor).
+  [Sensor](#config-sensor).
 - **power** (*Optional*): Use the power value of the sensor in watts. All options from
-  [Sensor](components/sensor/_index#config-sensor).
+  [Sensor](#config-sensor).
 - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 - **energy** (*Optional*): Use the energy value of the sensor in kWh.
-  All options from [Sensor](components/sensor/_index#config-sensor).
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
+  All options from [Sensor](#config-sensor).
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
@@ -75,7 +75,7 @@ on_...:
 ```
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< docref "pzem004t/" >}}
 - {{< docref "pzemac/" >}}
 - {{< apiref "pzemdc/pzemdc.h" "pzemdc/pzemdc.h" >}}

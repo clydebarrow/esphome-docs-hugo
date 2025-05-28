@@ -12,12 +12,12 @@ params:
 The `lvgl` light platform creates a light from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widget is [`led`](components/lvgl/widgets#lvgl-widget-led). A single light supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome light component.
+Supported widget is [lvgl-widget-led](#lvgl-widget-led). A single light supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome light component.
 
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a `led` widget configured in LVGL, which will reflect the state of the light.
-- All other options from [light](components/light/_index#config-light).
+- All other options from [light](#config-light).
 
 
 Example:
@@ -35,7 +35,7 @@ To have linear brightness control, `gamma_correct` of the light is set by defaul
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [LED widget](components/lvgl/widgets#lvgl-widget-led)
+- [LED widget](#lvgl-widget-led)
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

@@ -10,7 +10,7 @@ params:
 
 
 The `rgbct` light platform creates an RGBWT (color temperature + white brightness)
-light from 5 [float output components](components/output/_index#output) (one for each channel).
+light from 5 [float output components](#output) (one for each channel).
 
 ```yaml
 # Example configuration entry
@@ -28,12 +28,12 @@ light:
 ```
 ## Configuration variables:
 
-- **red** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the red channel.
-- **green** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the green channel.
-- **blue** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the blue channel.
-- **color_temperature** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the
+- **red** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the red channel.
+- **green** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the green channel.
+- **blue** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the blue channel.
+- **color_temperature** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the
   color temperature channel.
-- **white_brightness** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the brightness
+- **white_brightness** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the brightness
   of the white leds.
 - **cold_white_color_temperature** (**Required**, float): The coldest color temperature supported by this light. This
   is the lowest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the highest value when
@@ -42,8 +42,8 @@ light:
   is the highest value when expressed in [mireds](https://en.wikipedia.org/wiki/Mired), or the lowest value when
   expressed in Kelvin.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See [Color Interlock](components/light/rgbw#rgbw_color_interlock) for more information. Defaults to `false`.
-- All other options from [Light](components/light/_index#config-light).
+  time as RGB leds. See [rgbw_color_interlock](#rgbw_color_interlock) for more information. Defaults to `false`.
+- All other options from [Light](#config-light).
 
 ## See Also
 

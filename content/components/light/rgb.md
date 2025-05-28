@@ -9,7 +9,7 @@ params:
 
 
 
-The `rgb` light platform creates an RGB light from 3 [float output components](components/output/_index#output)
+The `rgb` light platform creates an RGB light from 3 [float output components](#output)
 (one for each color channel).
 
 {{< img src="rgb-strip.jpg" alt="Image" caption="Example of an RGB LED strip that can be used with this component." width="75.0%" class="center" >}}
@@ -30,7 +30,7 @@ light:
 
 It is often favourable to calibrate/correct the color produced by an LED strip light as the
 perceived intensity of different colors will generally vary. This can be done by using
-[max_power](components/output/_index#config-output) on individual output channels:
+[max_power](#config-output) on individual output channels:
 
 ```yaml
 # Example configuration entry
@@ -55,10 +55,10 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 {{< /note >}}
 ## Configuration variables:
 
-- **red** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the red channel.
-- **green** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the green channel.
-- **blue** (**Required**, [ID](guides/configuration-types#config-id)): The id of the float [Output Component](components/output/_index#output) to use for the blue channel.
-- All other options from [Light](components/light/_index#config-light).
+- **red** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the red channel.
+- **green** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the green channel.
+- **blue** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the blue channel.
+- All other options from [Light](#config-light).
 
 ## See Also
 

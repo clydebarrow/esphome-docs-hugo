@@ -15,7 +15,7 @@ with ESPHome.
 
 {{< img src="sdm220m-full.png" alt="Image" caption="SDM230M Energy Monitor." width="50.0%" class="center" >}}
 
-The communication with this component is done via a [UART](components/uart#uart) using the [Modbus protocol](components/modbus#modbus)
+The communication with this component is done via a [UART](#uart) using the [Modbus protocol](#modbus)
 over RS485 wiring. You will need an RS485 to UART converter for communication.
 You must therefore have a `uart:` entry in your configuration with both the TX and RX pins set
 to some pins on your board and the baud rate set to 9600bps.
@@ -66,19 +66,19 @@ sensor:
 - **phase_a** (*Optional*): The group of exposed sensors for Phase A/1.
 
   - **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-    [Sensor](components/sensor/_index#config-sensor).
+    [Sensor](#config-sensor).
   - **voltage** (*Optional*): Use the voltage value of the sensor in volts (V).
-    All options from [Sensor](components/sensor/_index#config-sensor).
+    All options from [Sensor](#config-sensor).
   - **active_power** (*Optional*): Use the (active) power value of the sensor in watts (W). All options
-    from [Sensor](components/sensor/_index#config-sensor).
+    from [Sensor](#config-sensor).
   - **power_factor** (*Optional*): Use the power factor value of the sensor.
-    All options from [Sensor](components/sensor/_index#config-sensor).
+    All options from [Sensor](#config-sensor).
   - **apparent_power** (*Optional*): Use the apparent power value of the sensor in volt amps (VA). All
-    options from [Sensor](components/sensor/_index#config-sensor).
+    options from [Sensor](#config-sensor).
   - **reactive_power** (*Optional*): Use the reactive power value of the sensor in volt amps reactive (VAR). All
-    options from [Sensor](components/sensor/_index#config-sensor).
+    options from [Sensor](#config-sensor).
   - **phase_angle** (*Optional*): Use the phase angle value of the sensor in degrees (°). All options
-    from [Sensor](components/sensor/_index#config-sensor).
+    from [Sensor](#config-sensor).
 
 - **phase_b** (*Optional*): The group of exposed sensors for Phase B/2 on applicable meters. eg: SDM630
 
@@ -89,25 +89,25 @@ sensor:
   - All options from **phase_a**
 
 - **frequency** (*Optional*): Use the frequency value of the sensor in hertz.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 - **total_power** (*Optional*): Use the total power value of the sensor in watts (W).
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 - **import_active_energy** (*Optional*): Use the import active energy value of the sensor in kilowatt
-  hours (kWh). All options from [Sensor](components/sensor/_index#config-sensor).
+  hours (kWh). All options from [Sensor](#config-sensor).
 - **export_active_energy** (*Optional*): Use the export active energy value of the sensor in kilowatt
-  hours (kWh). All options from [Sensor](components/sensor/_index#config-sensor).
+  hours (kWh). All options from [Sensor](#config-sensor).
 - **import_reactive_energy** (*Optional*): Use the import reactive energy value of the sensor in
-  kilovolt amps reactive hours (kVArh). All options from [Sensor](components/sensor/_index#config-sensor).
+  kilovolt amps reactive hours (kVArh). All options from [Sensor](#config-sensor).
 - **export_reactive_energy** (*Optional*): Use the export reactive energy value of the sensor in
-  kilovolt amps reactive hours (kVArh). All options from [Sensor](components/sensor/_index#config-sensor).
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
+  kilovolt amps reactive hours (kVArh). All options from [Sensor](#config-sensor).
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< apiref "sdm220m/sdm220m.h" "sdm220m/sdm220m.h" >}}
 
 

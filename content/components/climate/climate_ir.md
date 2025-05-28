@@ -18,28 +18,28 @@ There is a growing list of compatible units. If your unit is not listed below yo
 submit a feature request (see FAQ).
 
 | Supported units | Platform name | Supports receiver |
-| -------------------------------------------------------------- | ----------------- | ----------------- |
+| --------------------------------- | ----------------- | ----------------- |
 | Ballu | `ballu` | yes |
 | Coolix | `coolix` | yes |
 | Daikin | `daikin` | yes |
-| [Daikin ARC](components/climate/climate_ir#daikin_arc) | `daikin_arc` | yes |
-| [Daikin BRC](components/climate/climate_ir#daikin_brc) | `daikin_brc` | yes |
-| [Delonghi](components/climate/climate_ir#delonghi_ir) | `delonghi` | yes |
+| [Daikin ARC](#daikin_arc) | `daikin_arc` | yes |
+| [Daikin BRC](#daikin_brc) | `daikin_brc` | yes |
+| [Delonghi](#delonghi_ir) | `delonghi` | yes |
 | Emmeti | `emmeti` | yes |
 | Fujitsu General | `fujitsu_general` | yes |
-| [GREE](components/climate/climate_ir#gree_ir) | `gree` |  |
+| [GREE](#gree_ir) | `gree` |  |
 | Hitachi | `hitachi_ac344`,<br>`hitachi_ac424` | yes |
-| [LG](components/climate/climate_ir#climate_ir_lg) | `climate_ir_lg` | yes |
-| [Midea](components/climate/climate_ir#midea_ir) | `midea_ir` | yes |
-| [Mitsubishi](components/climate/climate_ir#mitsubishi) | `mitsubishi` | yes |
+| [LG](#climate_ir_lg) | `climate_ir_lg` | yes |
+| [Midea](#midea_ir) | `midea_ir` | yes |
+| [Mitsubishi](#mitsubishi) | `mitsubishi` | yes |
 | Noblex | `noblex` | yes |
 | Electrolux, TCL, Fuego | `tcl112` | yes |
-| [Toshiba](components/climate/climate_ir#toshiba) | `toshiba` | yes |
-| [Whirlpool](components/climate/climate_ir#whirlpool) | `whirlpool` | yes |
+| [Toshiba](#toshiba) | `toshiba` | yes |
+| [Whirlpool](#whirlpool) | `whirlpool` | yes |
 | Yashima | `yashima` |  |
-| [Whynter](components/climate/climate_ir#whynter) | `whynter` | yes |
-| [ZH/LT-01](components/climate/climate_ir#zhlt01) | `zhlt01` | yes |
-| [Arduino-HeatpumpIR](components/climate/climate_ir#heatpumpir)<br>library | `heatpumpir` |  |
+| [Whynter](#whynter) | `whynter` | yes |
+| [ZH/LT-01](#zhlt01) | `zhlt01` | yes |
+| [Arduino-HeatpumpIR](#heatpumpir)<br>library | `heatpumpir` |  |
 
 This component requires that you have configured a {{< docref "/components/remote_transmitter" >}}.
 
@@ -64,17 +64,17 @@ climate:
 ```
 ## Configuration Variables:
 
-- **sensor** (*Optional*, [ID](guides/configuration-types#config-id)): The sensor that is used to measure the ambient
+- **sensor** (*Optional*, [config-id](#config-id)): The sensor that is used to measure the ambient
   temperature. This is only for reporting the current temperature in the frontend.
 - **supports_cool** (*Optional*, boolean): Enables setting cooling mode for this climate device. Defaults to `true`.
 - **supports_heat** (*Optional*, boolean): Enables setting heating mode for this climate device. Defaults to `true`.
-- **receiver_id** (*Optional*, [ID](guides/configuration-types#config-id)): The id of the remote_receiver if this platform supports
-  receiver. see: [Using a Receiver](components/climate/climate_ir#ir-receiver_id).
-- All other options from [Climate](components/climate/_index#config-climate).
+- **receiver_id** (*Optional*, [config-id](#config-id)): The id of the remote_receiver if this platform supports
+  receiver. see: [ir-receiver_id](#ir-receiver_id).
+- All other options from [Climate](#config-climate).
 
 **Advanced Options**
 
-- **transmitter_id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID of the remote transmitter.
+- **transmitter_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the remote transmitter.
 
 **Specific configuration variables:**
 
@@ -82,11 +82,11 @@ climate:
 
 `climate_ir_lg` **Climate**:
 
-- **header_high** (*Optional*, [Time](guides/configuration-types#config-time)): time for the high part of the header for the LG protocol. Defaults to `8000us`
-- **header_low** (*Optional*, [Time](guides/configuration-types#config-time)): time for the low part of the header for the LG protocol. Defaults to `4000us`
-- **bit_high** (*Optional*, [Time](guides/configuration-types#config-time)): time for the high part of any bit in the LG protocol. Defaults to `600us`
-- **bit_one_low** (*Optional*, [Time](guides/configuration-types#config-time)): time for the low part of a '1' bit in the LG protocol. Defaults to `1600us`
-- **bit_zero_low** (*Optional*, [Time](guides/configuration-types#config-time)): time for the low part of a '0' bit in the LG protocol. Defaults to `550us`
+- **header_high** (*Optional*, [config-time](#config-time)): time for the high part of the header for the LG protocol. Defaults to `8000us`
+- **header_low** (*Optional*, [config-time](#config-time)): time for the low part of the header for the LG protocol. Defaults to `4000us`
+- **bit_high** (*Optional*, [config-time](#config-time)): time for the high part of any bit in the LG protocol. Defaults to `600us`
+- **bit_one_low** (*Optional*, [config-time](#config-time)): time for the low part of a '1' bit in the LG protocol. Defaults to `1600us`
+- **bit_zero_low** (*Optional*, [config-time](#config-time)): time for the low part of a '0' bit in the LG protocol. Defaults to `550us`
 
 ```yaml
 # Example configuration entry
@@ -125,7 +125,7 @@ The `delonghi` climate currently supports the protocol used by some Delonghi por
 
 `daikin_arc` **Climate**:
 
-The Daikin ARC remotes (`daikin_arc` climate, `daikin_arc417`, `daikin_arc480` protocols of [Arduino-HeatpumpIR](components/climate/climate_ir#heatpumpir)) are used by the japanese model of Daikin.
+The Daikin ARC remotes (`daikin_arc` climate, `daikin_arc417`, `daikin_arc480` protocols of [Arduino-HeatpumpIR](#heatpumpir)) are used by the japanese model of Daikin.
 
 {{< anchor "gree_ir" >}}
 
@@ -168,8 +168,8 @@ climate:
 
 ```
 {{< note >}}
-- See [Transmit Midea](components/remote_transmitter#remote_transmitter-transmit_midea) to send custom commands, including Follow Me mode.
-- See [Toshiba](components/climate/climate_ir#toshiba) below if you are looking for compatibility with Midea model MAP14HS1TBL or similar.
+- See [Transmit Midea](#remote_transmitter-transmit_midea) to send custom commands, including Follow Me mode.
+- See [Toshiba](#toshiba) below if you are looking for compatibility with Midea model MAP14HS1TBL or similar.
 
 {{< /note >}}
 {{< anchor "mitsubishi" >}}
@@ -331,7 +331,7 @@ Additional configuration must be specified for this platform:
 - **vertical_default** (**Required**, string): What to default to when the AC unit's vertical direction is *not* set to swing. Options are: `down`, `mdown`, `middle`, `mup`, `up`, `auto`
 - **max_temperature** (**Required**, float): The maximum temperature that the AC unit supports being set to.
 - **min_temperature** (**Required**, float): The minimum temperature that the AC unit supports being set to.
-- **sensor** (*Optional*, [ID](guides/configuration-types#config-id)): The sensor that is used to measure the ambient temperature.
+- **sensor** (*Optional*, [config-id](#config-id)): The sensor that is used to measure the ambient temperature.
 
 {{< note >}}
 The `greeyac` protocol in `heatpumpir` supports a feature Gree calls "I-Feel". The handheld remote control

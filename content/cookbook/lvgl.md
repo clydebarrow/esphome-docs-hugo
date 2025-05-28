@@ -27,7 +27,7 @@ The examples below assume you've set up LVGL correctly with your display and its
 
 {{< img src="lvgl_switch.png" alt="Image" class="left" >}}
 
-The easiest way to integrate an LVGL [`switch`](components/lvgl/widgets#lvgl-widget-switch) widget and a switch or light is with [automations](automations/_index#automation):
+The easiest way to integrate an LVGL [lvgl-widget-switch](#lvgl-widget-switch) widget and a switch or light is with [automations](#automation):
 
 ```yaml
 light:
@@ -58,7 +58,7 @@ lvgl:
 
 {{< img src="lvgl_cook_remligbut.png" alt="Image" class="right" >}}
 
-If you'd like to control a remote light which appears as an entity in Home Assistant from a checkable (toggle) [`button`](components/lvgl/widgets#lvgl-widget-button), first you need to import the light state into ESPHome, and then control it using a action call:
+If you'd like to control a remote light which appears as an entity in Home Assistant from a checkable (toggle) [lvgl-widget-button](#lvgl-widget-button), first you need to import the light state into ESPHome, and then control it using a action call:
 
 ```yaml
 binary_sensor:
@@ -101,7 +101,7 @@ lvgl:
 
 {{< img src="lvgl_cook_volume.png" alt="Image" class="left" >}}
 
-You can use a [slider](components/lvgl/widgets#lvgl-widget-slider) or an [arc](components/lvgl/widgets#lvgl-widget-arc) to control the brightness of a dimmable light.
+You can use a [slider](#lvgl-widget-slider) or an [arc](#lvgl-widget-arc) to control the brightness of a dimmable light.
 
 We can use a sensor to retrieve the current brightness of a light, which is stored in Home Assistant as an attribute of the entity, as an integer value between `0` (min) and `255` (max). It's convenient to set the slider's `min_value` and `max_value` accordingly.
 
@@ -148,7 +148,7 @@ This is applicable to action calls like `fan.set_percentage` or `valve.set_valve
 
 {{< img src="lvgl_cook_volume.png" alt="Image" class="right" >}}
 
-Similarly, you can use a [slider](components/lvgl/widgets#lvgl-widget-slider) or an [arc](components/lvgl/widgets#lvgl-widget-arc) to control the volume level of a media player, which uses float values.
+Similarly, you can use a [slider](#lvgl-widget-slider) or an [arc](#lvgl-widget-arc) to control the volume level of a media player, which uses float values.
 
 With a sensor we retrieve the current volume level of the media player, which is stored in Home Assistant as an attribute of the entity, and is a float value between `0` (min) and `1` (max). Since LVGL only handles integers, it's convenient to set the slider's possible values to be between `0` and `100`. Thus a conversion is needed back and forth, meaning that when we read the value from Home Assistant we have to multiply it by `100`, and when we set the volume through the action call, we have to divide it by `100`:
 
@@ -186,7 +186,7 @@ lvgl:
                       volume_level: !lambda return (x / 100);
 
 ```
-The `adv_hittest` option ensures that accidental touches to the screen won't cause sudden volume changes (more details in the [slider doc](components/lvgl/widgets#lvgl-widget-slider)).
+The `adv_hittest` option ensures that accidental touches to the screen won't cause sudden volume changes (more details in the [slider doc](#lvgl-widget-slider)).
 
 {{< note >}}
 Keep in mind that `on_value` is triggered *continuously* by the slider while it's being dragged. This generally has a negative effect on performance. For example, you shouldn't use this trigger to set the target temperature of a heat pump via Modbus, or set the position of motorized covers, because it will likely cause malfunctions. To mitigate this, consider using a universal widget trigger like `on_release` to get the `x` variable once after the interaction has completed.
@@ -196,11 +196,11 @@ Keep in mind that `on_value` is triggered *continuously* by the slider while it'
 
 ## Semicircle gauge
 
-A gauge similar to what Home Assistant shows in the Energy Dashboard can accomplished with [`meter`](components/lvgl/widgets#lvgl-widget-meter) and [`label`](components/lvgl/widgets#lvgl-widget-label) widgets:
+A gauge similar to what Home Assistant shows in the Energy Dashboard can accomplished with [lvgl-widget-meter](#lvgl-widget-meter) and [lvgl-widget-label](#lvgl-widget-label) widgets:
 
 {{< img src="lvgl_cook_gauge.png" alt="Image" class="center" >}}
 
-The trick here is to have a parent [`obj`](components/lvgl/widgets#lvgl-widget-obj) which contains the other widgets as children. We place a [`meter`](components/lvgl/widgets#lvgl-widget-meter) in the middle, which is made from an indicator `line` and two `arc` widgets. We use another, smaller [`obj`](components/lvgl/widgets#lvgl-widget-obj) on top of it to hide the indicator's central parts and place some [`label`](components/lvgl/widgets#lvgl-widget-label) widgets to display numeric information:
+The trick here is to have a parent [lvgl-widget-obj](#lvgl-widget-obj) which contains the other widgets as children. We place a [lvgl-widget-meter](#lvgl-widget-meter) in the middle, which is made from an indicator `line` and two `arc` widgets. We use another, smaller [lvgl-widget-obj](#lvgl-widget-obj) on top of it to hide the indicator's central parts and place some [lvgl-widget-label](#lvgl-widget-label) widgets to display numeric information:
 
 ```yaml
 sensor:
@@ -294,11 +294,11 @@ The `obj` used to hide the middle part of the meter indicator line has `radius` 
 
 ## Thermometer
 
-A thermometer with a precise gauge also made from a [`meter`](components/lvgl/widgets#lvgl-widget-meter) widget and a numeric display using [`label`](components/lvgl/widgets#lvgl-widget-label):
+A thermometer with a precise gauge also made from a [lvgl-widget-meter](#lvgl-widget-meter) widget and a numeric display using [lvgl-widget-label](#lvgl-widget-label):
 
 {{< img src="lvgl_cook_thermometer.png" alt="Image" class="center" >}}
 
-Whenever a new value comes from the sensor, we update the needle indicator as well as the text in the [`label`](components/lvgl/widgets#lvgl-widget-label). Since LVGL only handles integer values on the [`meter`](components/lvgl/widgets#lvgl-widget-meter) scale, but the sensor's value is a `float`, we use the same approach as in the examples above; we multiply the sensor's values by `10` and feed this value to the [`meter`](components/lvgl/widgets#lvgl-widget-meter). It's essentially two scales on top of each other: one to set the needle based on the multiplied value and the other to show sensor's original value in the [`label`](components/lvgl/widgets#lvgl-widget-label).
+Whenever a new value comes from the sensor, we update the needle indicator as well as the text in the [lvgl-widget-label](#lvgl-widget-label). Since LVGL only handles integer values on the [lvgl-widget-meter](#lvgl-widget-meter) scale, but the sensor's value is a `float`, we use the same approach as in the examples above; we multiply the sensor's values by `10` and feed this value to the [lvgl-widget-meter](#lvgl-widget-meter). It's essentially two scales on top of each other: one to set the needle based on the multiplied value and the other to show sensor's original value in the [lvgl-widget-label](#lvgl-widget-label).
 
 ```yaml
 sensor:
@@ -445,7 +445,7 @@ You can omit the `obj` used to hide the middle part of meter indicator line by u
 
 ## Climate control
 
-[`spinbox`](components/lvgl/widgets#lvgl-widget-spinbox) is the ideal widget to control a thermostat:
+[lvgl-widget-spinbox](#lvgl-widget-spinbox) is the ideal widget to control a thermostat:
 
 {{< img src="lvgl_cook_climate.png" alt="Image" class="center" >}}
 
@@ -749,7 +749,7 @@ If using multiple pages, a navigation bar can be useful at the bottom of the scr
 
 To save from repeating the same widgets on each page, there's the *top_layer* which is the *Always on Top* transparent page above all the pages. Everything you put on this page will be on top of all the others.
 
-For the navigation bar we can use a [`buttonmatrix`](components/lvgl/widgets#lvgl-widget-buttonmatrix). Note how the *header_footer* style definition is being applied to the widget and its children objects, and how a few more styles are configured manually at the main widget:
+For the navigation bar we can use a [lvgl-widget-buttonmatrix](#lvgl-widget-buttonmatrix). Note how the *header_footer* style definition is being applied to the widget and its children objects, and how a few more styles are configured manually at the main widget:
 
 ```yaml
 lvgl:
@@ -783,7 +783,7 @@ lvgl:
                     lvgl.page.next:
 
 ```
-For this example to appear correctly, use the theme and style options from [above](cookbook/lvgl#lvgl-cookbook-theme) and LVGL's own library [fonts](components/lvgl/_index#lvgl-fonts).
+For this example to appear correctly, use the theme and style options from [above](#lvgl-cookbook-theme) and LVGL's own library [fonts](#lvgl-fonts).
 
 {{< anchor "lvgl-cookbook-statico" >}}
 
@@ -870,17 +870,17 @@ lvgl:
         ...
 
 ```
-For this example to work, use the theme and style options from [above](cookbook/lvgl#lvgl-cookbook-theme).
+For this example to work, use the theme and style options from [above](#lvgl-cookbook-theme).
 
 {{< anchor "lvgl-cookbook-flex" >}}
 
 ## Flex layout positioning
 
-[Layouts](components/lvgl/_index#lvgl-layouts) aim to position widgets automatically, eliminating the need to specify coordinates to position each widget. This is a great way to simplify your configuration containing many widgets as it allows you to even omit alignment options.
+[lvgl-layouts](#lvgl-layouts) aim to position widgets automatically, eliminating the need to specify coordinates to position each widget. This is a great way to simplify your configuration containing many widgets as it allows you to even omit alignment options.
 
 {{< img src="lvgl_cook_flex_layout.png" alt="Image" class="center" >}}
 
-This example illustrates a control panel for three covers, made up of labels and discrete buttons. Although a button matrix could also be suitable for this, you might still prefer fully-featured individual buttons, as they offer a wider range of customization possibilities as seen in the [Cover status and control](cookbook/lvgl#lvgl-cookbook-cover) example. Here we use the **Flex** layout:
+This example illustrates a control panel for three covers, made up of labels and discrete buttons. Although a button matrix could also be suitable for this, you might still prefer fully-featured individual buttons, as they offer a wider range of customization possibilities as seen in the [lvgl-cookbook-cover](#lvgl-cookbook-cover) example. Here we use the **Flex** layout:
 
 ```yaml
 lvgl:
@@ -995,7 +995,7 @@ lvgl:
                           text: "\U000F0045"
 
 ```
-This saved you from a considerable amount of manual calculation of widget positioning which would otherwise be required to place them manually with `x` and `y`! You only need to determine a common width and height for your widgets to distribute them on the page as you prefer. ([MDI icons in text](cookbook/lvgl#lvgl-cookbook-icontext) below shows how to use custom icons.)
+This saved you from a considerable amount of manual calculation of widget positioning which would otherwise be required to place them manually with `x` and `y`! You only need to determine a common width and height for your widgets to distribute them on the page as you prefer. ([lvgl-cookbook-icontext](#lvgl-cookbook-icontext) below shows how to use custom icons.)
 
 {{< anchor "lvgl-cookbook-grid" >}}
 
@@ -1144,13 +1144,13 @@ lvgl:
                           text: "\U000F0045"
 
 ```
-The big advantage here is that whenever you need to add, for example, an extra column of buttons for a new cover, you just simply append it to the `grid_columns` variable, and add the corresponding widgets as above. With `STRETCH` their sizes and positions will automatically be calculated to fill in the cells, while the parent's `pad_all`, `pad_row` and `pad_column` can help with spacing between them. See [Weather forecast panel](cookbook/lvgl#lvgl-cookbook-weather) further down this page for another example relying on **Grid**.
+The big advantage here is that whenever you need to add, for example, an extra column of buttons for a new cover, you just simply append it to the `grid_columns` variable, and add the corresponding widgets as above. With `STRETCH` their sizes and positions will automatically be calculated to fill in the cells, while the parent's `pad_all`, `pad_row` and `pad_column` can help with spacing between them. See [lvgl-cookbook-weather](#lvgl-cookbook-weather) further down this page for another example relying on **Grid**.
 
 {{< anchor "lvgl-cookbook-btlg" >}}
 
 ## ESPHome boot screen
 
-To display a boot image with a spinner animation which disappears automatically after a few moments or on touch of the screen you can use the *top layer*. The trick is to put a base [`obj`](components/lvgl/widgets#lvgl-widget-obj) full screen and child [`image`](components/lvgl/widgets#lvgl-widget-image) widget in its middle as the last item of the widgets list, so they draw on top of all the others. To make it automatically disappear afer boot, you use ESPHome's `on_boot` trigger:
+To display a boot image with a spinner animation which disappears automatically after a few moments or on touch of the screen you can use the *top layer*. The trick is to put a base [lvgl-widget-obj](#lvgl-widget-obj) full screen and child [lvgl-widget-image](#lvgl-widget-image) widget in its middle as the last item of the widgets list, so they draw on top of all the others. To make it automatically disappear afer boot, you use ESPHome's `on_boot` trigger:
 
 ```yaml
 esphome:
@@ -1164,7 +1164,7 @@ image:
     id: boot_logo
     resize: 200x200
     type: RGB565
-    use_transparency: alpha_channel
+    transparency: alpha_channel
 
 lvgl:
   ...
@@ -1206,7 +1206,7 @@ lvgl:
 
 ## MDI icons in text
 
-ESPHome's [font renderer](components/font#display-fonts) allows you to use any OpenType/TrueType font file for your text. This is very flexible because you can prepare various sets of fonts at different sizes each with a different number of glyphs; this is important as it may help to conserve flash memory space.
+ESPHome's [font renderer](#display-fonts) allows you to use any OpenType/TrueType font file for your text. This is very flexible because you can prepare various sets of fonts at different sizes each with a different number of glyphs; this is important as it may help to conserve flash memory space.
 
 One example is when you'd like some MDI icons to be used in line with the text (similar to how LVGL's internal fonts and symbols coexist). You can use a font of your choice; choose the symbols/icons from MDI you want and mix them in a single sized set.
 
@@ -1252,9 +1252,9 @@ Follow these steps to choose your MDI icons:
 
 ## Restore checkbox mark
 
-If you configure a custom font as the `default_font` used by LVGL and this font does not contain the [FontAwesome](https://fontawesome.com/) symbols, you may observe that some widgets won't display correctly; specifically [`checkbox`](components/lvgl/widgets#lvgl-widget-checkbox) won't show the checkmark when it's checked.
+If you configure a custom font as the `default_font` used by LVGL and this font does not contain the [FontAwesome](https://fontawesome.com/) symbols, you may observe that some widgets won't display correctly; specifically [lvgl-widget-checkbox](#lvgl-widget-checkbox) won't show the checkmark when it's checked.
 
-To work around this issue, simply import only the checkmark symbol in the desired size and apply it through [Theme and style definitions](cookbook/lvgl#lvgl-cookbook-theme) to all the checkboxes in the configuration:
+To work around this issue, simply import only the checkmark symbol in the desired size and apply it through [lvgl-cookbook-theme](#lvgl-cookbook-theme) to all the checkboxes in the configuration:
 
 ```yaml
 font:
@@ -1283,9 +1283,9 @@ You could of course simply apply one of the built-in `montserrat_` packs, but th
 
 {{< img src="lvgl_cook_font_binstat.png" alt="Image" class="left" >}}
 
-A common use case for icons is a status display. For example, a checkable (toggle) button will display different icons based on the status of a light or switch. To put an icon on a button you use a [`label`](components/lvgl/widgets#lvgl-widget-label) widget as the child of the [`button`](components/lvgl/widgets#lvgl-widget-button). The coloring can already be different thanks to the [Theme and style definitions](cookbook/lvgl#lvgl-cookbook-theme) where you can set a different color for the `checked` state. Additionally, by using a `text_sensor` to import the state from Home Assistant, we can not only track the `on` state, but also the `unavailable` or `unknown` states to apply *disabled styles* for these cases.
+A common use case for icons is a status display. For example, a checkable (toggle) button will display different icons based on the status of a light or switch. To put an icon on a button you use a [lvgl-widget-label](#lvgl-widget-label) widget as the child of the [lvgl-widget-button](#lvgl-widget-button). The coloring can already be different thanks to the [lvgl-cookbook-theme](#lvgl-cookbook-theme) where you can set a different color for the `checked` state. Additionally, by using a `text_sensor` to import the state from Home Assistant, we can not only track the `on` state, but also the `unavailable` or `unknown` states to apply *disabled styles* for these cases.
 
-If we take our previous [Remote light button](cookbook/lvgl#lvgl-cookbook-binent) example, we can modify it like this:
+If we take our previous [lvgl-cookbook-binent](#lvgl-cookbook-binent) example, we can modify it like this:
 
 ```yaml
 font:
@@ -1353,7 +1353,7 @@ lvgl:
 
 {{< img src="lvgl_cook_font_batt.png" alt="Image" class="left" >}}
 
-Another example for using MDI icons is to display battery percentage in 10 steps. We need to have a font containing the glyphs corresponding to the different battery percentage levels, and we need a sensor to import the battery status from Home Assistant into a numeric value. We use a [lambda](automations/templates#config-lambda) to return the codepoint of the corresponding glyph based on the sensor value:
+Another example for using MDI icons is to display battery percentage in 10 steps. We need to have a font containing the glyphs corresponding to the different battery percentage levels, and we need a sensor to import the battery status from Home Assistant into a numeric value. We use a [lambda](#config-lambda) to return the codepoint of the corresponding glyph based on the sensor value:
 
 ```yaml
 font:
@@ -1434,7 +1434,7 @@ lvgl:
 
 {{< img src="lvgl_cook_animimg_batt.gif" alt="Image" class="left" >}}
 
-To have an animation illustrating a battery charging, you can use [`animimg`](components/lvgl/widgets#lvgl-widget-animimg) with a set of [images rendered from MDI](components/image#display-image) showing battery levels:
+To have an animation illustrating a battery charging, you can use [lvgl-widget-animimg](#lvgl-widget-animimg) with a set of [images rendered from MDI](#display-image) showing battery levels:
 
 ```yaml
 image:
@@ -1522,11 +1522,11 @@ Use `x`, `y`, `align` widget properties for precise positioning.
 
 ## An analog clock
 
-Using the [`meter`](components/lvgl/widgets#lvgl-widget-meter) and [`label`](components/lvgl/widgets#lvgl-widget-label) widgets, we can create an analog clock which shows the date too.
+Using the [lvgl-widget-meter](#lvgl-widget-meter) and [lvgl-widget-label](#lvgl-widget-label) widgets, we can create an analog clock which shows the date too.
 
 {{< img src="lvgl_cook_clock.png" alt="Image" class="center" >}}
 
-The [`meter`](components/lvgl/widgets#lvgl-widget-meter) has three scales: one for minutes ticks and hand, ranged between `0` and `60`; one for the hour ticks and the labels as majors, ranged between `1` and `12`; and a higher resolution scale for the hour hand, ranged between `0` and `720`, to be able to naturally position the hand in between the hours. The second scale doesn't have an indicator, while the third scale doesn't have ticks nor labels.
+The [lvgl-widget-meter](#lvgl-widget-meter) has three scales: one for minutes ticks and hand, ranged between `0` and `60`; one for the hour ticks and the labels as majors, ranged between `1` and `12`; and a higher resolution scale for the hour hand, ranged between `0` and `720`, to be able to naturally position the hand in between the hours. The second scale doesn't have an indicator, while the third scale doesn't have ticks nor labels.
 
 The script runs at the beginning of every minute to update the line positions for each hand as well as the respective text.
 
@@ -1646,11 +1646,11 @@ script:
 
 ## A numeric input keypad
 
-The [`buttonmatrix`](components/lvgl/widgets#lvgl-widget-buttonmatrix) widget can work together with the [Key collector component](components/key_collector#key_collector) to collect the button presses as key press sequences. It sends the `text` of the buttons (or `key_code` where configured) to the key collector.
+The [lvgl-widget-buttonmatrix](#lvgl-widget-buttonmatrix) widget can work together with the [key_collector](#key_collector) to collect the button presses as key press sequences. It sends the `text` of the buttons (or `key_code` where configured) to the key collector.
 
 {{< img src="lvgl_cook_keypad.png" alt="Image" class="center" >}}
 
-If you key in the correct sequence, the [`led`](components/lvgl/widgets#lvgl-widget-led) widget will change color accordingly:
+If you key in the correct sequence, the [lvgl-widget-led](#lvgl-widget-led) widget will change color accordingly:
 
 ```yaml
 lvgl:
@@ -1793,7 +1793,7 @@ Another example relying on the **Grid** layout can be a weather panel showing th
 
 All the information displayed here could be retrieved to local `platform: homeassistant` sensors as desribed in several examples in this Cookbook, however, this time we take a different approach. Instead of pulling the data by ESPHome, we'll be pushing it from Home Assistant, to native {{< docref "/components/text/lvgl" >}} components.
 
-The weather condition icons we use are from MDI. We import just the ones corresponding to the weather conditions supported by the Weather integration in Home Assistant. For all the other labels you can use any [font](components/lvgl/_index#lvgl-fonts) of your choice.
+The weather condition icons we use are from MDI. We import just the ones corresponding to the weather conditions supported by the Weather integration in Home Assistant. For all the other labels you can use any [font](#lvgl-fonts) of your choice.
 
 ```yaml
 binary_sensor:
@@ -2073,7 +2073,7 @@ These labels will appear in Home Assistant as [editable text components](https:/
         value: "{{states('sensor.outdoor_temperature') | round(1)}} °C"
 
 ```
-The automations will be triggered to update the labels every time the corresponding entities change, and when the ESPHome comes alive - the reason you also need the {{< docref "/components/binary_sensor/status" >}}. Note that you'll need to adjust the entity IDs corresponding to your ESPHome node depedning on how you [configured it to use its name](components/esphome#esphome-configuration_variables).
+The automations will be triggered to update the labels every time the corresponding entities change, and when the ESPHome comes alive - the reason you also need the {{< docref "/components/binary_sensor/status" >}}. Note that you'll need to adjust the entity IDs corresponding to your ESPHome node depedning on how you [configured it to use its name](#esphome-configuration_variables).
 
 {{< anchor "lvgl-cookbook-idlescreen" >}}
 
@@ -2187,9 +2187,9 @@ You can combine it with the previous example to turn off the backlight, so the u
 ## See Also
 
 - {{< docref "/components/lvgl" >}}
-- [Templates](automations/templates#config-lambda)
-- [Automation](automations/_index#automation)
-- [Key collector component](components/key_collector#key_collector)
+- [config-lambda](#config-lambda)
+- [automation](#automation)
+- [key_collector](#key_collector)
 - [What is Image Sticking, Image Burn-in, an After Image, or a Ghost Image on an LCD?](https://www.philips.ca/c-f/XC000007486/what-is-image-sticking,-image-burn-in,-an-after-image,-or-a-ghost-image-on-an-lcd)
 - [Image persistence](https://en.wikipedia.org/wiki/Image_persistence)
 

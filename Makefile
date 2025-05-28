@@ -1,11 +1,11 @@
-.PHONY: html clean live-html automations check-links anchors production
+.PHONY: html clean live-html automations check-links anchors production convert-from-rst
 
 check-links: repo-data anchors
 	hugo --environment production
 
 anchors:
 	hugo --environment development
-	python3 tools/find-anchors.py
+	python3 tools/md_anchors.py
 
 production: repo-data anchors
 	hugo --minify
@@ -30,3 +30,6 @@ clean:
 	rm -rf data/automations/
 	rm -rf data/repo.yaml
 	hugo mod clean
+
+convert-from-rst: 
+	python3 tools/convert_rst_to_md.py ./esphome-docs .

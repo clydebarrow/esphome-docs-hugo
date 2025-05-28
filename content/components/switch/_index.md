@@ -29,7 +29,7 @@ Configuration variables:
 - **name** (*Optional*, string): The name of the switch. At least one of **id** and **name** must be specified.
 
 {{< note >}}
-If you have a [friendly_name](components/esphome#esphome-configuration_variables) set for your device and
+If you have a [friendly_name](#esphome-configuration_variables) set for your device and
 you want the switch to use that name, you can set `name: None`.
 
 {{< /note >}}
@@ -57,10 +57,10 @@ you want the switch to use that name, you can set `name: None`.
 
   Unless a specific platform defines another default value, the default is `ALWAYS_OFF`.
 
-- **on_turn_on** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the switch is turned on. See [`switch.on_turn_on` / `switch.on_turn_off` Trigger](components/switch/_index#switch-on_turn_on_off_trigger).
-- **on_turn_off** (*Optional*, [Action](automations/actions#config-action)): An automation to perform
-  when the switch is turned off. See [`switch.on_turn_on` / `switch.on_turn_off` Trigger](components/switch/_index#switch-on_turn_on_off_trigger).
+- **on_turn_on** (*Optional*, [Action](#config-action)): An automation to perform
+  when the switch is turned on. See [switch-on_turn_on_off_trigger](#switch-on_turn_on_off_trigger).
+- **on_turn_off** (*Optional*, [Action](#config-action)): An automation to perform
+  when the switch is turned off. See [switch-on_turn_on_off_trigger](#switch-on_turn_on_off_trigger).
 - **disabled_by_default** (*Optional*, boolean): If true, then this entity should not be added to any client's frontend,
   (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI).
   Defaults to `false`.
@@ -71,8 +71,8 @@ you want the switch to use that name, you can set `name: None`.
 - **device_class** (*Optional*, string): The device class for the switch.
   See https://www.home-assistant.io/integrations/switch/#device-class
   for a list of available options.
-- If MQTT enabled, All other options from [MQTT Component](components/mqtt#config-mqtt-component).
-- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](components/web_server#config-webserver-version-3-options).
+- If MQTT enabled, All other options from [MQTT Component](#config-mqtt-component).
+- If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](#config-webserver-version-3-options).
 
 {{< anchor "switch-toggle_action" >}}
 
@@ -115,7 +115,7 @@ on_...:
 
 ### `switch.is_on` / `switch.is_off` Condition
 
-This [Condition](automations/actions#config-condition) checks if the given switch is ON (or OFF).
+This [Condition](#config-condition) checks if the given switch is ON (or OFF).
 
 ```yaml
 # In some trigger:
@@ -130,7 +130,7 @@ on_...:
 
 ### lambda calls
 
-From [lambdas](automations/templates#config-lambda), you can call several methods on all switches to do some
+From [lambdas](#config-lambda), you can call several methods on all switches to do some
 advanced stuff (see the full API Reference for more info).
 
 - `publish_state()`: Manually cause the switch to publish a new state and store it internally.
@@ -142,6 +142,17 @@ advanced stuff (see the full API Reference for more info).
   id(my_switch).publish_state(true);
 
   ```
+{{< note >}}
+Keep in mind that this does not change the actual state of the switch. It only
+changes the state in the frontend and the internal state. If you want to
+change the actual state of the switch, you need to call `turn_on()`,
+`turn_off()` or `toggle()`.
+
+For example, if you are using a {{< docref "/components/switch/gpio" >}}, calling `publish_state()` will
+not change the GPIO pin level. To do that, you need to call `turn_on()`,
+`turn_off()` or `toggle()`. The same applies to other switch platforms.
+
+{{< /note >}}
 - `state`: Retrieve the current state of the switch.
 
   ```yaml

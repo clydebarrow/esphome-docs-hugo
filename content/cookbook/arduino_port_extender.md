@@ -39,7 +39,7 @@ esphome:
       - arduino_port_expander.h
 
 ```
-Setup your [I²C Bus](components/i2c#i2c) and assign it an `id`:
+Setup your [I²C Bus](#i2c) and assign it an `id`:
 
 ```yaml
 i2c:
@@ -97,7 +97,7 @@ binary_sensor:
           ...
 
 ```
-The listed `binary_sensors` supports all options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) like
+The listed `binary_sensors` supports all options from [Binary Sensor](#config-binary_sensor) like
 automations and filters.
 
 ## Sensor
@@ -137,7 +137,7 @@ sensor:
           - throttle: 2s
 
 ```
-The listed `sensors` supports all options from [Sensor](components/sensor/_index#config-sensor) like
+The listed `sensors` supports all options from [Sensor](#config-sensor) like
 automations and filters.
 
 {{< note >}}

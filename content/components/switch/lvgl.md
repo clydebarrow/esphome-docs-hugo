@@ -12,12 +12,12 @@ params:
 The `lvgl` switch platform creates a switch from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are [`button`](components/lvgl/widgets#lvgl-widget-button) (with `checkable` option enabled), [`switch`](components/lvgl/widgets#lvgl-widget-switch) and [`checkbox`](components/lvgl/widgets#lvgl-widget-checkbox). A single switch supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome switch component.
+Supported widgets are [lvgl-widget-button](#lvgl-widget-button) (with `checkable` option enabled), [lvgl-widget-switch](#lvgl-widget-switch) and [lvgl-widget-checkbox](#lvgl-widget-checkbox). A single switch supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome switch component.
 
 ## Configuration variables:
 
 - **widget** (**Required**): The ID of a supported widget configured in LVGL, which will reflect the state of the switch.
-- All other variables from [Switch](components/switch/_index#config-switch).
+- All other variables from [Switch](#config-switch).
 
 Example:
 
@@ -30,9 +30,9 @@ switch:
 ```
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [Button widget](components/lvgl/widgets#lvgl-widget-button)
-- [Switch widget](components/lvgl/widgets#lvgl-widget-switch)
-- [Checkbox widget](components/lvgl/widgets#lvgl-widget-checkbox)
+- [Button widget](#lvgl-widget-button)
+- [Switch widget](#lvgl-widget-switch)
+- [Checkbox widget](#lvgl-widget-checkbox)
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/number/lvgl" >}}

@@ -24,10 +24,10 @@ light:
 ```
 ## Configuration variables
 
-- **pin** (**Required**, [Pin](guides/configuration-types#config-pin)): The pin for the data line of the light.
+- **pin** (**Required**, [config-pin](#config-pin)): The pin for the data line of the light.
 - **num_leds** (**Required**, int): The number of LEDs in the strip.
 - **chipset** (**Required**, enum): The name of the chipset used; determines signal timing. Not required if
-  [specifying the timings manually](components/light/esp32_rmt_led_strip#esp32-rmt-led-strip-manual_timings).
+  [specifying the timings manually](#esp32-rmt-led-strip-manual_timings).
 
     - `WS2811`
     - `WS2812`
@@ -46,7 +46,7 @@ light:
 
 - **is_rgbw** (*Optional*, boolean): Set to `true` if the strip is RGBW. Defaults to `false`.
 - **is_wrgb** (*Optional*, boolean): Set to `true` if the strip is WRGB. Defaults to `false`.
-- **max_refresh_rate** (*Optional*, [Time](guides/configuration-types#config-time)): A time interval used to limit the number of commands a light
+- **max_refresh_rate** (*Optional*, [config-time](#config-time)): A time interval used to limit the number of commands a light
   can handle per second. For example, `16ms` will limit the light to a refresh rate of about 60Hz. Defaults to
   sending commands as quickly as changes are made to the lights.
 - **use_psram** (*Optional*, boolean): Set to `false` to force internal RAM allocation even if you have the the PSRAM component enabled. This can be useful if you're experiencing issues like flickering with your leds strip. Defaults to `true`.
@@ -82,7 +82,7 @@ light:
 | ESP32-S3 | 0, 1, 2, 3 |
 
 
-- All other options from [Light](components/light/_index#config-light).
+- All other options from [Light](#config-light).
 
 {{< anchor "esp32-rmt-led-strip-manual_timings" >}}
 
@@ -91,13 +91,13 @@ light:
 These can be used if you know the timings and your chipset is not set above. If you have a new specific chipset,
 please consider adding support to the codebase and add it to the list above.
 
-- **bit0_high** (*Optional*, [Time](guides/configuration-types#config-time)): The time to hold the data line high for a `0` bit.
-- **bit0_low** (*Optional*, [Time](guides/configuration-types#config-time)): The time to hold the data line low for a `0` bit.
-- **bit1_high** (*Optional*, [Time](guides/configuration-types#config-time)): The time to hold the data line high for a `1` bit.
-- **bit1_low** (*Optional*, [Time](guides/configuration-types#config-time)): The time to hold the data line low for a `1` bit.
-- **reset_high** (*Optional*, [Time](guides/configuration-types#config-time)): The time to hold the data line high after writing
+- **bit0_high** (*Optional*, [config-time](#config-time)): The time to hold the data line high for a `0` bit.
+- **bit0_low** (*Optional*, [config-time](#config-time)): The time to hold the data line low for a `0` bit.
+- **bit1_high** (*Optional*, [config-time](#config-time)): The time to hold the data line high for a `1` bit.
+- **bit1_low** (*Optional*, [config-time](#config-time)): The time to hold the data line low for a `1` bit.
+- **reset_high** (*Optional*, [config-time](#config-time)): The time to hold the data line high after writing
   the state. Defaults to `0 us`.
-- **reset_low** (*Optional*, [Time](guides/configuration-types#config-time)): The time to hold the data line low after writing
+- **reset_low** (*Optional*, [config-time](#config-time)): The time to hold the data line low after writing
   the state. Defaults to `0 us`.
 
 ## See Also

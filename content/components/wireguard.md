@@ -23,7 +23,7 @@ available for ESP32, ESP8266 and BK72xx microcontrollers *only*.
 {{< warning >}}
 To successfully use this component you must have unicode:: WireGuard 0xAE also
 on your remote host (already installed and ready to accept connections).
-If you don't have it please read the section [Remote peer setup](components/wireguard#wireguard-installation).
+If you don't have it please read the section [wireguard-installation](#wireguard-installation).
 
 {{< /warning >}}
 {{< warning >}}
@@ -88,7 +88,7 @@ wireguard:
 - **netmask** (*Optional*, IPv4 address): The netmask for the configured address.
   Default to `255.255.255.255`.
 
-  See section [Static routes and outgoing connections](components/wireguard#wireguard-static-routes) if outgoing connections are
+  See section [wireguard-static-routes](#wireguard-static-routes) if outgoing connections are
   expected to transit through the VPN link (e.g. with {{< docref "mqtt/" >}} to a
   remote MQTT broker).
 
@@ -104,7 +104,7 @@ wireguard:
 - **peer_preshared_key** (*Optional*, string): The chosen pre-shared key between
   local device and remote peer.
 
-- **peer_persistent_keepalive** (*Optional*, [Time](guides/configuration-types#config-time)): The amount of
+- **peer_persistent_keepalive** (*Optional*, [config-time](#config-time)): The amount of
   time after which a *keepalive* packet is sent through the tunnel.
   By default this feature is disabled (`0s`).
 
@@ -117,11 +117,11 @@ wireguard:
 
   The device own `address/32` is always added by default to this list.
 
-  See section [Static routes and outgoing connections](components/wireguard#wireguard-static-routes) if outgoing connections are
+  See section [wireguard-static-routes](#wireguard-static-routes) if outgoing connections are
   expected to transit through the VPN link (e.g. with {{< docref "mqtt/" >}} to a
   remote MQTT broker).
 
-- **reboot_timeout** (*Optional*, [Time](guides/configuration-types#config-time)): The amount of time to wait
+- **reboot_timeout** (*Optional*, [config-time](#config-time)): The amount of time to wait
   before rebooting the device when the remote peer is unreachable. Can be disabled
   by setting this to `0s`. Default to `15min`.
 
@@ -137,10 +137,10 @@ wireguard:
   active too. To bypass such deadlock set this parameter to `true` in
   order to not initialize MQTT until the remote peer is up.
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): How often to check
+- **update_interval** (*Optional*, [config-time](#config-time)): How often to check
   the connection status and the latest handshake value. Default to `10s`.
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
 
 {{< anchor "wireguard-static-routes" >}}
 
@@ -196,7 +196,7 @@ binary_sensor:
       name: 'WireGuard Status'
 
 ```
-All options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) can be added to the
+All options from [Binary Sensor](#config-binary_sensor) can be added to the
 above configuration.
 
 ### Enabled Binary Sensor
@@ -211,7 +211,7 @@ binary_sensor:
       name: 'WireGuard Enabled'
 
 ```
-All options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor) can be added to the
+All options from [Binary Sensor](#config-binary_sensor) can be added to the
 above configuration.
 
 ### Latest Handshake Sensor
@@ -226,12 +226,12 @@ sensor:
       name: 'WireGuard Latest Handshake'
 
 ```
-All options from [Sensor](components/sensor/_index#config-sensor) can be added to the
+All options from [Sensor](#config-sensor) can be added to the
 above configuration.
 
 ### Address Text Sensor
 
-This sensor exposes to the frontend the configured [address](components/wireguard#wireguard-address).
+This sensor exposes to the frontend the configured [address](#wireguard-address).
 
 ```yaml
 # Example configuration entry
@@ -241,7 +241,7 @@ text_sensor:
       name: 'WireGuard Address'
 
 ```
-All options from [Text Sensor](components/text_sensor/_index#config-text_sensor) can be added to the
+All options from [Text Sensor](#config-text_sensor) can be added to the
 above configuration.
 
 {{< anchor "wireguard-actions" >}}
@@ -264,7 +264,7 @@ The lambda equivalent is `id(wireguard_id).disable()`.
 
 {{< note >}}
 To disable unicode:: WireGuard 0xAE since device boot you can execute this action
-in the [`on_boot`](components/esphome#esphome-on_boot) step.
+in the [esphome-on_boot](#esphome-on_boot) step.
 
 {{< /note >}}
 ### `wireguard.enable`
@@ -346,7 +346,7 @@ These are the steps:
 1. go to the Home Assistant "Integrations" page
 2. click on the "Add Integration" button (bottom right corner)
 3. select "ESPHome" from the list
-4. insert the configured IP [address](components/wireguard#wireguard-address)
+4. insert the configured IP [address](#wireguard-address)
    as the host name
 
 The device should now be linked to your remote Home Assistant.
@@ -354,14 +354,14 @@ The device should now be linked to your remote Home Assistant.
 {{< note >}}
 If you have issues linking the ESP device try setting
 the `use_address` parameter of the {{< docref "wifi/" >}} to the value
-of the [address](components/wireguard#wireguard-address) configured here.
+of the [address](#wireguard-address) configured here.
 
 {{< /note >}}
 ## See Also
 
 - {{< docref "time/" >}}
 - {{< docref "time/sntp" >}}
-- [Automation](automations/_index#automation)
+- [automation](#automation)
 - unicode:: WireGuard 0xAE_ official website
 - [Home Assistant Community Add-on: WireGuard](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
   (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))

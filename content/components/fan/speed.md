@@ -9,7 +9,7 @@ params:
 
 
 
-The `speed` fan platform lets you represent any float [Output Component](components/output/_index#output) as a fan that
+The `speed` fan platform lets you represent any float [output](#output) as a fan that
 supports speed settings.
 
 {{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
@@ -24,16 +24,16 @@ fan:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [ID](guides/configuration-types#config-id)): The id of the [float output](components/output/_index#output) to use for this fan.
-- **oscillation_output** (*Optional*, [ID](guides/configuration-types#config-id)): The id of the
-  [output](components/output/_index#output) to use for the oscillation state of this fan. Default is empty.
-- **direction_output** (*Optional*, [ID](guides/configuration-types#config-id)): The id of the
-  [output](components/output/_index#output) to use for the direction state of the fan. Default is empty.
+- **output** (**Required**, [config-id](#config-id)): The id of the [float output](#output) to use for this fan.
+- **oscillation_output** (*Optional*, [config-id](#config-id)): The id of the
+  [output](#output) to use for the oscillation state of this fan. Default is empty.
+- **direction_output** (*Optional*, [config-id](#config-id)): The id of the
+  [output](#output) to use for the direction state of the fan. Default is empty.
 - **speed_count** (*Optional*, int): Set the number of supported discrete speed levels. The value is used
   to calculate the percentages for each speed. E.g. `2` means that you have 50% and 100% while `100`
   will allow 1% increments in the output. Defaults to `100`.
 - **preset_modes** (*Optional*): A list of preset modes for this fan. Preset modes can be used in automations (i.e. `on_preset_set`).
-- All other options from [Fan Component](components/fan/_index#config-fan).
+- All other options from [Fan Component](#config-fan).
 
 ## See Also
 

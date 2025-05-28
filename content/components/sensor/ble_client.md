@@ -51,27 +51,27 @@ sensor:
 
 rssi options:
 
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to poll the device.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to poll the device.
+- All other options from [Sensor](#config-sensor).
 
 characteristic options:
 
-- **ble_client_id** (**Required**, [ID](guides/configuration-types#config-id)): ID of the associated BLE client.
+- **ble_client_id** (**Required**, [config-id](#config-id)): ID of the associated BLE client.
 - **service_uuid** (**Required**, UUID): UUID of the service on the device.
 - **characteristic_uuid** (**Required**, UUID): UUID of the service's characteristic to query.
 - **descriptor_uuid** (*Optional*, UUID): UUID of the characteristic's descriptor to query.
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID to use for code generation, and for reference by dependent components.
-- **lambda** (*Optional*, [lambda](automations/templates#config-lambda)): The lambda to use for converting a raw data
-  reading to a sensor value. See [Raw Data Parsing Lambda](components/sensor/ble_client#ble-sensor-lambda) for more information.
+- **id** (*Optional*, [config-id](#config-id)): The ID to use for code generation, and for reference by dependent components.
+- **lambda** (*Optional*, [lambda](#config-lambda)): The lambda to use for converting a raw data
+  reading to a sensor value. See [ble-sensor-lambda](#ble-sensor-lambda) for more information.
 - **notify** (*Optional*, boolean): Instruct the server to send notifications for this
   characteristic.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to poll the device.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to poll the device.
+- All other options from [Sensor](#config-sensor).
 
 Automations:
 
-- **on_notify** (*Optional*, [Automation](automations/_index#automation)): An automation to
-  perform when a notify message is received from the device. See [`on_notify`](components/sensor/ble_client#ble_sensor-on_notify).
+- **on_notify** (*Optional*, [Automation](#automation)): An automation to
+  perform when a notify message is received from the device. See [ble_sensor-on_notify](#ble_sensor-on_notify).
 
 {{< anchor "ble-sensor-lambda" >}}
 
@@ -123,6 +123,6 @@ Some common ones:
 ## See Also
 
 - {{< docref "/components/ble_client" >}}
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< apiref "ble_sensor/ble_sensor.h" "ble_sensor/ble_sensor.h" >}}
 

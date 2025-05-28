@@ -44,14 +44,14 @@ time:
 ```
 ## Configuration variables:
 
-- **power_id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the power sensor
+- **power_id** (**Required**, [config-id](#config-id)): The ID of the power sensor
   to integrate over time.
 - **restore** (*Optional*, boolean): Whether to store the intermediate result on the device so
   that the value can be restored upon power cycle or reboot.
   Defaults to `true`.
 - **method** (*Optional*, string): The method to use for calculating the total daily energy. One of
   `trapezoid`, `left` or `right`. Defaults to `right`.
-- All other options from [Sensor](components/sensor/_index#config-sensor).
+- All other options from [Sensor](#config-sensor).
 
 ## Converting from W to kW
 
@@ -89,7 +89,7 @@ sensor:
 ```
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< docref "hlw8012/" >}}
 - {{< docref "cse7766/" >}}
 - {{< docref "integration/" >}}

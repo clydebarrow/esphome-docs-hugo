@@ -23,7 +23,7 @@ binary_sensor:
 ```
 ## Configuration variables:
 
-- All options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor). (Inverted mode is not supported)
+- All options from [Binary Sensor](#config-binary_sensor). (Inverted mode is not supported)
 
 ## See Also
 

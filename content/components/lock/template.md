@@ -47,11 +47,11 @@ Only `LOCK_STATE_LOCKED` and `LOCK_STATE_UNLOCKED` are supported by the MQTT com
 {{< /note >}}
 ## Configuration variables:
 
-- **lambda** (*Optional*, [lambda](automations/templates#config-lambda)):
+- **lambda** (*Optional*, [lambda](#config-lambda)):
   Lambda to be evaluated repeatedly to get the current state of the lock.
-- **lock_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
+- **lock_action** (*Optional*, [Action](#config-action)): The action that should
   be performed when the remote (like Home Assistant's frontend) requests the lock to be locked.
-- **unlock_action** (*Optional*, [Action](automations/actions#config-action)): The action that should
+- **unlock_action** (*Optional*, [Action](#config-action)): The action that should
   be performed when the remote (like Home Assistant's frontend) requests the lock to be unlocked.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the template lock will immediately update the reported state.
@@ -59,7 +59,7 @@ Only `LOCK_STATE_LOCKED` and `LOCK_STATE_UNLOCKED` are supported by the MQTT com
 - **assumed_state** (*Optional*, boolean): Whether the true state of the lock is not known.
   This will make the Home Assistant frontend show buttons for both LOCK and UNLOCK actions, instead
   of hiding one of them when the lock is LOCKED/UNLOCKED. Defaults to `false`.
-- All other options from [Lock](components/lock/_index#config-lock).
+- All other options from [Lock](#config-lock).
 
 {{< anchor "lock-template-publish_action" >}}
 
@@ -89,8 +89,8 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the template lock.
-- **state** (**Required**, boolean, [templatable](automations/templates#config-templatable)):
+- **id** (**Required**, [config-id](#config-id)): The ID of the template lock.
+- **state** (**Required**, boolean, [templatable](#config-templatable)):
   The state to publish.
 
 {{< note >}}

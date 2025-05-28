@@ -12,7 +12,7 @@ params:
 The `ags10` sensor platform VOC sensor allows you to use your ASAIR AGS10
 ([datasheet](http://www.aosong.com/userfiles/files/Datasheet%20AGS10.pdf),
 `ASAIR`_ ) sensors with
-ESPHome. The [I²C Bus](components/i2c#i2c) is
+ESPHome. The [I²C Bus](#i2c) is
 required to be set up in your configuration for this sensor to work.
 
 {{< note >}}
@@ -35,19 +35,19 @@ sensor:
 ## Configuration variables:
 
 - **tvoc** (**Required**): The information for the total Volatile Organic Compounds sensor.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 - **address** (*Optional*, int): Manually specify the I²C address of
   the sensor. Defaults to `0x1A`.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to check the
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **version** (*Optional*): The firmware version of the sensor.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 - **resistance** (*Optional*): The initial value of the sensor resistance.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 ## Actions:
 
-{{< anchor "sensor-AGS10SetZeroPointAction" >}}
+{{< anchor "sensor-ags10setzeropointaction" >}}
 
 ## `ags10.set_zero_point` Action
 
@@ -70,7 +70,7 @@ on_...:
 ```
 Configuration option:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the AGS10 sensor.
+- **id** (**Required**, [config-id](#config-id)): The ID of the AGS10 sensor.
 - **mode** (**Required**, enum): One of supported modes:
 
   - `FACTORY_DEFAULT` - reset to the factory zero-point
@@ -80,7 +80,7 @@ Configuration option:
 - **value** (*Optional*, int): nominated resistance value to set (unit: 0.1 kΩ).
 
 
-{{< anchor "sensor-AGS10NewI2cAddressAction" >}}
+{{< anchor "sensor-ags10newi2caddressaction" >}}
 
 ## `ags10.new_i2c_address` Action
 
@@ -104,12 +104,12 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the AGS10 sensor.
+- **id** (**Required**, [config-id](#config-id)): The ID of the AGS10 sensor.
 - **address** (**Required**, int): New I2C address.
 
 
 ## See Also
 
-- [Sensor Filters](components/sensor/_index#sensor-filters)
+- [sensor-filters](#sensor-filters)
 - {{< apiref "ags10/ags10.h" "ags10/ags10.h" >}}
 

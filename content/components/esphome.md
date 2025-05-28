@@ -32,7 +32,7 @@ esp32:
   should always be unique in your ESPHome network. May only contain lowercase
   characters, digits and hyphens, and can be at most 24 characters long by default, or 31
   characters long if `name_add_mac_suffix` is `false`.
-  See [Changing ESPHome Node Name](components/esphome#esphome-changing_node_name).
+  See [esphome-changing_node_name](#esphome-changing_node_name).
 - **friendly_name** (*Optional*, string):
   This name is sent to the frontend and used by Home Assistant as
   the integration and device name. It also gets prefixed to entity
@@ -51,38 +51,38 @@ Advanced options:
   but you can customize this behavior using this option. Official docker image automatically use `/build` folder
   as default one in case it is mounted to it.
 - **platformio_options** (*Optional*, mapping): Additional options to pass over to PlatformIO in the
-  platformio.ini file. See [`platformio_options`](components/esphome#esphome-platformio_options).
+  platformio.ini file. See [esphome-platformio_options](#esphome-platformio_options).
 - **includes** (*Optional*, list of files): A list of C/C++ files to include in the (auto-generated) `main` file.
   The paths in this list are relative to the directory where the YAML configuration file is located or `<...>` includes.
-  See [`includes`](components/esphome#esphome-includes).
+  See [esphome-includes](#esphome-includes).
 - **libraries** (*Optional*, list of libraries): A list of libraries to include in the project. See
-  [`libraries`](components/esphome#esphome-libraries).
+  [esphome-libraries](#esphome-libraries).
 - **comment** (*Optional*, string): Additional text information about this node. Only for display in UI.
 - **name_add_mac_suffix** (*Optional*, boolean): Appends the last 3 bytes of the mac address of the device to
   the name in the form `<name>-aabbcc`. Defaults to `false`.
-  See [Adding the MAC address as a suffix to the device name](components/esphome#esphome-mac_suffix).
-- **project** (*Optional*): ESPHome Creator's Project information. See [Project information](components/esphome#esphome-creators_project).
+  See [esphome-mac_suffix](#esphome-mac_suffix).
+- **project** (*Optional*): ESPHome Creator's Project information. See [esphome-creators_project](#esphome-creators_project).
 
   - **name** (**Required**, string): Name of the project
   - **version** (**Required**, string): Version of the project
-  - **on_update** (*Optional*, [Automation](automations/_index#automation)): An automation to perform when the device firmware is updated.
+  - **on_update** (*Optional*, [Automation](#automation)): An automation to perform when the device firmware is updated.
     This compares the above `version` field with the `version` that was in the previous firmware
     as long as the `name` matches.
     The `version` is stored in flash memory when the firmware is first run for future comparisons.
 - **min_version** (*Optional*, string): The minimum ESPHome version required to compile this configuration.
-  See [Minimum ESPHome version](components/esphome#esphome-min_version).
+  See [esphome-min_version](#esphome-min_version).
 - **compile_process_limit** (*Optional*, int): The maximum number of simultaneous compile processes to run.
   Defaults to the number of cores of the CPU which is also the maximum you can set.
 - **debug_scheduler** (*Optional*, boolean): If set, the scheduler will print debug information about scheduled tasks at log level DEBUG.
 
 Automations:
 
-- **on_boot** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  when the node starts. See [`on_boot`](components/esphome#esphome-on_boot).
-- **on_shutdown** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  right before the node shuts down. See [`on_shutdown`](components/esphome#esphome-on_shutdown).
-- **on_loop** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
-  on each `loop()` iteration. See [`on_loop`](components/esphome#esphome-on_loop).
+- **on_boot** (*Optional*, [Automation](#automation)): An automation to perform
+  when the node starts. See [esphome-on_boot](#esphome-on_boot).
+- **on_shutdown** (*Optional*, [Automation](#automation)): An automation to perform
+  right before the node shuts down. See [esphome-on_shutdown](#esphome-on_shutdown).
+- **on_loop** (*Optional*, [Automation](#automation)): An automation to perform
+  on each `loop()` iteration. See [esphome-on_loop](#esphome-on_loop).
 
 {{< anchor "esphome-on_boot" >}}
 
@@ -113,7 +113,7 @@ Configuration variables:
   - `200.0`: Network connections like MQTT/native API are set up at this priority.
   - `-100.0`: At this priority, pretty much everything should already be initialized.
 
-- See [Automation](automations/_index#automation).
+- See [Automation](#automation).
 
 {{< anchor "esphome-on_shutdown" >}}
 
@@ -142,9 +142,9 @@ Configuration variables:
   means a high priority and in case of shutdown triggers that the code is executed **later**.
   Priority is used primarily for the initialization order of components. Shutdowns for these components are handled in *reverse* order, such that e.g. sensors (600) are shutdown before the hardware components (800) they depend on.
   Please note this is an ESPHome-internal value and any change will not be marked as a breaking change.
-  Defaults to `600`. For priority values refer to the list in the [`on_boot`](components/esphome#esphome-on_boot) section.
+  Defaults to `600`. For priority values refer to the list in the [esphome-on_boot](#esphome-on_boot) section.
 
-- See [Automation](automations/_index#automation).
+- See [Automation](#automation).
 
 {{< anchor "esphome-on_loop" >}}
 
@@ -216,7 +216,7 @@ This option behaves differently depending on what the included file is pointing 
 ## `libraries`
 
 The `libraries` option allows you to include libraries in the PlatformIO project. These libraries will then be
-compiled into the resulting firmware and may be used by [lambdas](automations/templates#config-lambda).
+compiled into the resulting firmware and may be used by [lambdas](#config-lambda).
 
 ```yaml
 # Example configuration entry
@@ -259,7 +259,7 @@ preferences:
 ```
 Configuration variables:
 
-- **flash_write_interval** (*Optional*, [Time](guides/configuration-types#config-time)): Customize the frequency in which data is
+- **flash_write_interval** (*Optional*, [config-time](#config-time)): Customize the frequency in which data is
   flushed to the flash. This setting helps to prevent rapid changes to a component from being quickly
   written to the flash and wearing it out. Defaults to `1min`. Set to `never` to disable this feature.
 

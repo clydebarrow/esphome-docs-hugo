@@ -20,6 +20,6 @@ select:
 ```
 ## See Also
 
-- [Automation](automations/_index#automation)
+- [automation](#automation)
 - {{< docref "/components/logger" >}}
 

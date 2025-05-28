@@ -28,8 +28,8 @@ switch:
 ```
 ## Configuration variables:
 
-- **source_id** (**Required**, [ID](guides/configuration-types#config-id)): The source switch to observe.
-- All other options from [Binary Sensor](components/binary_sensor/_index#config-binary_sensor).
+- **source_id** (**Required**, [config-id](#config-id)): The source switch to observe.
+- All other options from [Binary Sensor](#config-binary_sensor).
 
 ## See Also
 

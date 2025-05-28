@@ -43,18 +43,18 @@ bedjet:
 ```
 ### Configuration variables:
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
-- **ble_client_id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the BLE Client.
-- **time_id** (*Optional*, [ID](guides/configuration-types#config-id)): The ID of a {{< docref "/components/time" >}} which
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **ble_client_id** (**Required**, [config-id](#config-id)): The ID of the BLE Client.
+- **time_id** (*Optional*, [config-id](#config-id)): The ID of a {{< docref "/components/time" >}} which
   can be used to set the time on the BedJet device.
-- **update_interval** (*Optional*, [Time](guides/configuration-types#config-time)): The interval to dispatch status
+- **update_interval** (*Optional*, [config-time](#config-time)): The interval to dispatch status
   changes to child components. Defaults to `5s`. Each child component can decide whether to
   publish its own updated state on this interval, or use another (longer) update interval to
   throttle its own updates.
 
 ### lambda calls
 
-From [lambdas](automations/templates#config-lambda), you can call methods to do some advanced stuff.
+From [lambdas](#config-lambda), you can call methods to do some advanced stuff.
 
 - `.upgrade_firmware`: Check for and install updated BedJet firmware.
 
@@ -107,7 +107,7 @@ climate:
 ```
 ### Configuration variables:
 
-- **bedjet_id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the Bedjet component.
+- **bedjet_id** (**Required**, [config-id](#config-id)): The ID of the Bedjet component.
 - **heat_mode** (*Optional*, string): The primary heating mode to use for `HVACMode.HEAT`:
 
     - `heat` (Default) - Setting `hvac_mode=heat` uses the BedJet "HEAT" mode.
@@ -122,7 +122,7 @@ climate:
       reported as the climate entity's current temperature.
     - `outlet` - The temperature of the air being discharged by the BedJet will be
       reported as the climate entity's current temperature.
-- All other options from [Climate](components/climate/_index#config-climate).
+- All other options from [Climate](#config-climate).
 
 ## `bedjet` Fan
 
@@ -142,8 +142,8 @@ fan:
 ```
 ### Configuration variables:
 
-- **bedjet_id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the Bedjet component.
-- Other options from [Fan](components/fan/_index#config-fan).
+- **bedjet_id** (**Required**, [config-id](#config-id)): The ID of the Bedjet component.
+- Other options from [Fan](#config-fan).
 
 ## `bedjet` Sensor
 
@@ -163,11 +163,11 @@ sensor:
 
 - **outlet_temperature** (*Optional*): If specified, the temperature of the air being
   discharged from the BedJet will be reported as a sensor.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 - **ambient_temperature** (*Optional*): If specified, the temperature of the room the
   BedJet is in will be reported as a sensor.
-  All options from [Sensor](components/sensor/_index#config-sensor).
+  All options from [Sensor](#config-sensor).
 
 ## Known issues:
 
@@ -190,7 +190,7 @@ configuration. If this occurs, see the previous note about adding disconnect swi
 and toggle those off while performing the installation. This will free up resources
 on the ESP and allow the installation to complete.
 
-Additionally, you may use an [ota.on_begin](components/ota/_index#ota-on_begin) [Automation](automations/_index#automation)
+Additionally, you may use an [ota.on_begin](#ota-on_begin) [Automation](#automation)
 to do this automatically:
 
 ```yaml

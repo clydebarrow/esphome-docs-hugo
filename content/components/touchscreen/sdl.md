@@ -23,13 +23,13 @@ touchscreen:
 ```
 ### Configuration variables:
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually set the ID of this touchscreen.
+- **id** (*Optional*, [config-id](#config-id)): Manually set the ID of this touchscreen.
 
-- All other options from [Touchscreen](components/touchscreen/_index#config-touchscreen).
+- All other options from [Touchscreen](#config-touchscreen).
 
 
 ## See Also
 
-- [SDL display](components/display/sdl#sdl)
+- [SDL display](#sdl)
 - {{< apiref "sdl/sdl_touchscreen.h" "sdl/sdl_touchscreen.h" >}}
 

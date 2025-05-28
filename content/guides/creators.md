@@ -73,8 +73,8 @@ improv_serial:
 ```
 ## Relevant Documentation
 
-- `name_add_mac_suffix` - [Adding the MAC address as a suffix to the device name](components/esphome#esphome-mac_suffix)
-- `project` - [Project information](components/esphome#esphome-creators_project)
+- `name_add_mac_suffix` - [esphome-mac_suffix](#esphome-mac_suffix)
+- `project` - [esphome-creators_project](#esphome-creators_project)
 - `esp32_improv` - {{< docref "/components/esp32_improv" >}}
 - `captive_portal` - {{< docref "/components/captive_portal" >}}
 - `wifi` -> `ap` allows you to flash a device that will not contain any
@@ -82,12 +82,12 @@ improv_serial:
   the `esp32_improv` / `improv_serial` components.
 - `dashboard_import`
 {{< note >}}
-The [Project information](components/esphome#esphome-creators_project) above is required for adoption to work in the Dashboard.
+The [esphome-creators_project](#esphome-creators_project) above is required for adoption to work in the Dashboard.
 
 {{< /note >}}
     - `package_import_url` - This should point to the public repository containing
       the configuration for the device so that the user's ESPHome dashboard can autodetect this device and
-      create a minimal YAML using [Remote/Git Packages](components/packages#config-git_packages).
+      create a minimal YAML using [config-git_packages](#config-git_packages).
     - `import_full_config` - This signals if ESPHome should download the entire YAML file as the user's config
       YAML instead of referencing the package. Set this to `true` if you are creating a tutorial to let users
       easily tweak the whole configuration or be able to uncomment follow-up tutorial steps.

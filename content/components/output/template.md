@@ -33,11 +33,11 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [ID](guides/configuration-types#config-id)): The id to use for this output component.
+- **id** (**Required**, [config-id](#config-id)): The id to use for this output component.
 - **type** (**Required**, string): The type of output. One of `binary` and `float`.
-- **write_action** (**Required**, [Automation](automations/_index#automation)): An automation to perform
+- **write_action** (**Required**, [Automation](#automation)): An automation to perform
   when the state of the output is updated.
-- All other options from [Output](components/output/_index#config-output).
+- All other options from [Output](#config-output).
 
 See {{< apiclass "output::BinaryOutput" "output::BinaryOutput" >}} and {{< apiclass "output::FloatOutput" "output::FloatOutput" >}}.
 
@@ -72,5 +72,5 @@ Complete example: [Sonoff Dual Light Switch](https://devices.esphome.io/devices/
 ## See Also
 
 - {{< docref "/components/output" >}}
-- [Automation](automations/_index#automation)
+- [automation](#automation)
 

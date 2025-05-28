@@ -12,7 +12,7 @@ params:
 The `lvgl` number platform creates a number component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are [`arc`](components/lvgl/widgets#lvgl-widget-arc), [`bar`](components/lvgl/widgets#lvgl-widget-bar), [`slider`](components/lvgl/widgets#lvgl-widget-slider) and [`spinbox`](components/lvgl/widgets#lvgl-widget-spinbox). A single number supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome number component.
+Supported widgets are [lvgl-widget-arc](#lvgl-widget-arc), [lvgl-widget-bar](#lvgl-widget-bar), [lvgl-widget-slider](#lvgl-widget-slider) and [lvgl-widget-spinbox](#lvgl-widget-spinbox). A single number supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome number component.
 
 ## Configuration variables:
 
@@ -20,7 +20,7 @@ Supported widgets are [`arc`](components/lvgl/widgets#lvgl-widget-arc), [`bar`](
 - **animated** (*Optional*, boolean): Whether to set the value of the widget with an animation (if supported by the widget). Defaults to `true`.
 - **update_on_release** (*Optional*, boolean): By default the number will publish a new value each time the value of the associated widget changes. If this option is `true` then the value will only be published when touch is released.
 - **restore_value**: (*Optional*, bool) Restore the value of the number from non-volatile memory when the device is restarted. Defaults to `false`.
-- All other variables from [Number](components/number/_index#config-number).
+- All other variables from [Number](#config-number).
 
 Example:
 
@@ -37,10 +37,10 @@ Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.upda
 {{< /note >}}
 ## See Also
 - {{< docref "/components/lvgl/index" "LVGL Main component" >}}
-- [Arc widget](components/lvgl/widgets#lvgl-widget-arc)
-- [Bar widget](components/lvgl/widgets#lvgl-widget-bar)
-- [Slider widget](components/lvgl/widgets#lvgl-widget-slider)
-- [Spinbox widget](components/lvgl/widgets#lvgl-widget-spinbox)
+- [Arc widget](#lvgl-widget-arc)
+- [Bar widget](#lvgl-widget-bar)
+- [Slider widget](#lvgl-widget-slider)
+- [Spinbox widget](#lvgl-widget-spinbox)
 - {{< docref "/components/binary_sensor/lvgl" >}}
 - {{< docref "/components/sensor/lvgl" >}}
 - {{< docref "/components/switch/lvgl" >}}

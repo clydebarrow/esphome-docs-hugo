@@ -24,7 +24,7 @@ event:
 ## Configuration variables:
 
 - **event_types** (**Required**, list): A list of custom event identifiers that this template event is capable of triggering. These identifiers can be used in Home Assistant automations or ESPHome scripts to perform actions when the event occurs.
-- All other options from [Event](components/event/_index#config-event).
+- All other options from [Event](#config-event).
 
 ## See Also
 

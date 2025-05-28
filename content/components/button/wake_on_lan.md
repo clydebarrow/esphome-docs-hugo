@@ -23,7 +23,7 @@ button:
 ## Configuration variables:
 
 - **target_mac_address** (**Required**, MAC Address): The MAC Address of the target computer.
-- All other options from [Button](components/button/_index#config-button).
+- All other options from [Button](#config-button).
 
 ## See Also
 

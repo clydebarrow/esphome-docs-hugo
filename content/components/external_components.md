@@ -46,7 +46,7 @@ external_components:
 ```
 Configuration variables:
 
-- **source**: The location of the components you want to retrieve. See [Local](components/external_components#external-components_local)
+- **source**: The location of the components you want to retrieve. See [external-components_local](#external-components_local)
   and [external-components_git](#external-components_git).
 
   - **type** (**Required**): Repository type. One of `local`, `git`.
@@ -61,13 +61,13 @@ Configuration variables:
 
   local options:
 
-  - **path** (**Required**):  Path to use when using local components. See [Local](components/external_components#external-components_local).
+  - **path** (**Required**):  Path to use when using local components. See [external-components_local](#external-components_local).
 
 - **components** (*Optional*, list): The list of components to use from the external source.
   By default, all available components are used.
 
-- **refresh** (*Optional*, [Time](guides/configuration-types#config-time)): The interval the source will be checked. Has no
-  effect on `local`. See [Refresh](components/external_components#external-components_refresh). for more info. Defaults to `1day`.
+- **refresh** (*Optional*, [config-time](#config-time)): The interval the source will be checked. Has no
+  effect on `local`. See [external-components_refresh](#external-components_refresh). for more info. Defaults to `1day`.
 
 
 {{< anchor "external-components_local" >}}

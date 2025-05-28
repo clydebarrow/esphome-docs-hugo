@@ -5,6 +5,7 @@ This script helps migrate the ESPHome documentation from Sphinx to Hugo.
 """
 
 import os
+import sys
 import io
 import re
 import csv
@@ -257,7 +258,7 @@ def convert_rst_to_md(lines, filename):
             # Handle RST anchors (.. _anchor:)
             if this_line.startswith('.. _') and this_line.endswith(':'):
                 anchor_name = this_line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
-                result_lines.append(f'{{{{< anchor "{anchor_name}" >}}}}')
+                result_lines.append(f'{{{{< anchor "{anchor_name.lower()}" >}}}}')
                 current_idx += 1
                 continue
 
@@ -567,15 +568,10 @@ def process_inline_markup(line):
                 print(f"Warning: Could not find document path for anchor '{ref_id}'")
             text = text or anchor_text
             ref_id = ref_id.lower()
-            if doc_path:
-                return f"[{text}]({doc_path}#{ref_id})"
             return f"[{text}](#{ref_id})"
         # Simple references
         # Look up the document path for this anchor
-        doc_path, anchor_text = anchor_map.get(content, ("", ""))
-        anchor_text = anchor_text or content
-        if doc_path:
-            return f"[{anchor_text}]({doc_path}#{content})"
+        anchor_text = content
         # If we can't find the document, just use the anchor
         return f"[{anchor_text}](#{content.lower()})"
 
@@ -760,7 +756,7 @@ def process_anchors_and_images(lines):
         anchor_match = re.match(r'^\s*\.\.\s*_([a-zA-Z0-9_-]+):\s*$', line)
         if anchor_match:
             anchor = anchor_match.group(1)
-            out.append(f'{indent}{{{{< anchor "{anchor}" >}}}}')
+            out.append(f'{indent}{{{{< anchor "{anchor.lower()}" >}}}}')
             i += 1
             continue
         # Detect indented .. image:: (even inside lists/admonitions)
@@ -1637,6 +1633,7 @@ def process_actions_file(lines):
         lines = lines[:start_actions] + [
             '## All Actions',
             '{{< render-automations "actions" >}}',
+            '{{< anchor "config-condition" >}}',
             '## All Conditions',
             '{{< render-automations "conditions" >}}'
         ] + lines[end_actions:]
@@ -1646,8 +1643,8 @@ def process_actions_file(lines):
 def process_file(src_file, output_dir, input_dir):
     output_dir = os.path.join(output_dir, "content")
     """Process a single RST file and convert it to Markdown."""
+    #print(rf"Processing file: {src_file}", end="", flush=True)
     try:
-        print(f"\nProcessing file: {src_file}")
         
         # Read the RST file
         rel_path, rst_content = get_rst_content(input_dir, src_file)
@@ -1672,7 +1669,7 @@ def process_file(src_file, output_dir, input_dir):
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write("\n".join(md_content))
         
-        print(f"Converted {src_file} -> {output_path}")
+        #print(f"  Converted {src_file} -> {output_path}\033G", end="", flush=True)
         #print(f"Output file size: {len(md_content)} bytes")
         
         return output_path
@@ -1753,7 +1750,7 @@ def copy_images_to_output(output_dir, input_dir):
                 shutil.copy2(source_path, target_path)
                 print(f"Copied {image.name} to global images folder")
             else:
-                print(f"Skipped copying {image.name} to global images folder (unchanged)")
+                pass #print(f"Skipped copying {image.name} to global images folder (unchanged)")
         else:
             # Used only once - copy to component-level images folder
             # Find the RST file that references this image
@@ -1771,7 +1768,7 @@ def copy_images_to_output(output_dir, input_dir):
                 shutil.copy2(source_path, target_content_path)
                 print(f"Copied {image.name} to {component_dir}/images folder")
             else:
-                print(f"Skipped copying {image.name} to {component_dir}/images folder (unchanged)")
+                pass #print(f"Skipped copying {image.name} to {component_dir}/images folder (unchanged)")
                             
 
 if __name__ == "__main__":

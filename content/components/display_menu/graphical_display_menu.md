@@ -20,7 +20,7 @@ ESPHome node, without the requirement of a network connection.
 
 ## Overview
 
-The component implements the [Display Menu](components/display_menu/_index#display_menu) component providing
+The component implements the [Display Menu](#display_menu) component providing
 a hierarchical menu primarily intended to be controlled either by a rotary encoder
 with a button or a five-button joystick controller.
 
@@ -43,22 +43,22 @@ graphical_display_menu:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [ID](guides/configuration-types#config-id)): Manually specify the ID used for code generation.
-- **display** (*Optional*, [ID](guides/configuration-types#config-id)): ID of the display to render to. See
-  [Drawing Modes](components/display_menu/graphical_display_menu#drawing_modes) for more details
-- **font** (**Required**, [Font](components/font#display-fonts)): Specifies the font to use
-- **foreground_color** (*Optional*, [Color](components/display/_index#config-color)): Specifies the foreground color to use.
+- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **display** (*Optional*, [config-id](#config-id)): ID of the display to render to. See
+  [drawing_modes](#drawing_modes) for more details
+- **font** (**Required**, [Font](#display-fonts)): Specifies the font to use
+- **foreground_color** (*Optional*, [config-color](#config-color)): Specifies the foreground color to use.
   Defaults to COLOR_ON
-- **background_color** (*Optional*, [Color](components/display/_index#config-color)): Specifies the background color to use.
+- **background_color** (*Optional*, [config-color](#config-color)): Specifies the background color to use.
   Defaults to COLOR_OFF
 
 Automations:
 
-- **on_redraw** (*Optional*, [Automation](automations/_index#automation)): An automation to perform
+- **on_redraw** (*Optional*, [Automation](#automation)): An automation to perform
   when the menu needs to be redrawn. This can be useful if your display has slow refresh rates.
   For example E-Ink displays that are used with `display_interval: never`.
 
-Additional configuration is described in the [Display Menu](components/display_menu/_index#display_menu) component.
+Additional configuration is described in the [Display Menu](#display_menu) component.
 
 {{< anchor "drawing_modes" >}}
 
@@ -66,12 +66,12 @@ Additional configuration is described in the [Display Menu](components/display_m
 
 ### Pop Up Mode
 
-When a **display** is specified the menu will create a [page](components/display/_index#display-pages) as part of the initialisation. It will render to the entire
+When a **display** is specified the menu will create a [page](#display-pages) as part of the initialisation. It will render to the entire
 of the display when invoked. This is useful when you may want to use the display for other purposes but show a menu in response to user
 interaction.
 
 {{< note >}}
-Pop Up Mode requires that your display makes use of [pages](components/display/_index#display-pages). If you are using a drawing lambda, without pages, it will not
+Pop Up Mode requires that your display makes use of [pages](#display-pages). If you are using a drawing lambda, without pages, it will not
 behave as expected. Instead you will have to use Advanced Mode
 
 {{< /note >}}
@@ -106,7 +106,7 @@ display:
 ### Emulating Pop Up Mode
 
 If you wish to emulate Pop Up Mode the following sample will emulate the same behaviour. This can
-be useful if you're using a display without [pages](components/display/_index#display-pages) or if you have other
+be useful if you're using a display without [pages](#display-pages) or if you have other
 requirements that requires control over how and where the menu is rendered.
 
 ```yaml
@@ -139,7 +139,7 @@ display:
 By default menu items with a value will be rendered between a set of parenthesis. This can be
 controlled via the `menu_item_value` parameter.
 
-- **menu_item_value** (*Optional*, [Templates](automations/templates#config-lambda)): Specifies how to render values for
+- **menu_item_value** (*Optional*, [config-lambda](#config-lambda)): Specifies how to render values for
   menu items that have values (eg. Selects, numbers). Defaults to rendering the value as
   "(value here)". Receives a MenuItemValueArguments as the argument`it`.
 
@@ -161,7 +161,7 @@ graphical_display_menu:
 
 ```
 {{< note >}}
-Ensure that all characters you use in the menu_item_value are available glyphs for your [font](components/font#display-fonts)
+Ensure that all characters you use in the menu_item_value are available glyphs for your [font](#display-fonts)
 
 {{< /note >}}
 ## User Interaction Example
@@ -227,9 +227,9 @@ binary_sensor:
 ```
 ## See Also
 
-- [Display Menu](components/display_menu/_index#display_menu)
-- [Display](components/display/_index#display-engine)
-- [Font Renderer Component](components/font#display-fonts)
-- [Display Pages](components/display/_index#display-pages)
+- [Display Menu](#display_menu)
+- [Display](#display-engine)
+- [display-fonts](#display-fonts)
+- [display-pages](#display-pages)
 - {{< apiref "graphical_display_menu/graphical_display_menu.h" "graphical_display_menu/graphical_display_menu.h" >}}
 

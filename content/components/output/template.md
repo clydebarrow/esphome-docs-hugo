@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` output component can be used to create templated binary and float outputs in ESPHome.
 
 ```yaml
@@ -72,5 +73,4 @@ Complete example: [Sonoff Dual Light Switch](https://devices.esphome.io/devices/
 
 - {{< docref "/components/output" >}}
 - [Automation](automations/_index#automation)
-
 

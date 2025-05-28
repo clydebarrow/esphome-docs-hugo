@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This is a component using the RP2040 PIO peripheral to drive most addressable LED strips.
 
 ```yaml
@@ -61,5 +62,4 @@ please consider adding support to the codebase and add it to the list above.
 
 - {{< docref "/components/light" >}}
 - {{< docref "/components/power_supply" >}}
-
 

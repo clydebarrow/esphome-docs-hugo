@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ble_presence` binary sensor platform lets you track the presence of a Bluetooth Low Energy device.
 
 {{< warning >}}
@@ -134,5 +135,4 @@ Alternatively you can:
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "ble_presence/ble_presence.h" "ble_presence/ble_presence.h" >}}
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
-
 

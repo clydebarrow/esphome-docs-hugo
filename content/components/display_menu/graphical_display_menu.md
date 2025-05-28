@@ -7,6 +7,7 @@ params:
     image: lcd_menu.png
 ---
 
+
 {{< anchor "graphical_display_menu" >}}
 
 
@@ -231,5 +232,4 @@ binary_sensor:
 - [Font Renderer Component](components/font#display-fonts)
 - [Display Pages](components/display/_index#display-pages)
 - {{< apiref "graphical_display_menu/graphical_display_menu.h" "graphical_display_menu/graphical_display_menu.h" >}}
-
 

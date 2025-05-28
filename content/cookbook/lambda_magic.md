@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Here are a couple recipes for various interesting things you can do with [Lambdas](automations/templates#config-lambda) in ESPHome.
 These don't require external components and demonstrate how powerful [Lambdas](automations/templates#config-lambda) can be.
 
@@ -344,6 +345,5 @@ button:
 
 - [Templates](automations/templates#config-lambda)
 - [Automation](automations/_index#automation)
-
 
 

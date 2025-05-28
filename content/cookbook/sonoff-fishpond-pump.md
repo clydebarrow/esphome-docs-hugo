@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< img src="sonoff-fishpond.jpg" alt="Image" width="75.0%" class="center" >}}
 
 The Sonoff range of products containing the ESP chips from Espressif has a myriad of uses and best of all, you can customize it, aka hackable.
@@ -199,4 +200,3 @@ You can now add your device to home assistant via the configurations page and un
 
 - [Flashing Sonoff Basic](https://randomnerdtutorials.com/how-to-flash-a-custom-firmware-to-sonoff/).
 - [Adding ESPHome to Home Assistant](https://www.home-assistant.io/components/esphome/).
-

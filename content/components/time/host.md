@@ -4,6 +4,7 @@ title: "Host Time Source"
 ---
 
 
+
 ```yaml
 # Example configuration entry
 time:
@@ -19,5 +20,4 @@ All options from [Base Time Configuration](components/time/_index#base_time_conf
 ## See Also
 
 - {{< docref "/components/host" >}}
-
 

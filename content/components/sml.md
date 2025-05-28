@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `SML` component connects to smart meters which use the *Smart Message Language* (SML) protocol.
 
 Although the SML protocol is well defined, it gives a lot of freedom to the manufacturers how to store
@@ -214,5 +215,4 @@ sensor:
 ## See Also
 
 - {{< apiref "sml/sml.h" "sml/sml.h" >}}
-
 

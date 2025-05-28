@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Component/Hub
 
 The `m5stack_8angle` platform allows to use the [m5angle](https://docs.m5stack.com/en/unit/UNIT%208Angle) input device with ESPHome.
@@ -131,5 +132,4 @@ light:
 - {{< docref "/components/light" >}}
 - {{< docref "template/" >}}
 - {{< apiref "m5stack_8angle/m5stack_8angle.h" "m5stack_8angle/m5stack_8angle.h" >}}
-
 

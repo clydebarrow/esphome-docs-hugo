@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `fingerprint_grow` component allows you to use your R307, R503, R503-RGB, ZFM-20, ... fingerprint sensors with ESPHome.
 
 {{< img src="r307-full.jpg" alt="Image" caption="R307/ZFM-20 Optical Fingerprint Reader ([datasheet](https://cdn-shop.adafruit.com/datasheets/ZFM+user+manualV15.pdf), [Adafruit](https://www.adafruit.com/product/751)). Image by [Adafruit](https://www.adafruit.com/product/751)." width="50.0%" class="center" >}}
@@ -518,5 +519,4 @@ api:
 - {{< apiref "fingerprint_grow/fingerprint_grow.h" "fingerprint_grow/fingerprint_grow.h" >}}
 - [Tutorial from Adafruit](https://learn.adafruit.com/adafruit-optical-fingerprint-sensor)
 - [Adafruit Fingerprint Sensor Library](https://github.com/adafruit/Adafruit-Fingerprint-Sensor-Library) by [Adafruit](https://www.adafruit.com/)
-
 

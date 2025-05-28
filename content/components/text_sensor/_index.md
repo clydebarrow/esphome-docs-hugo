@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Text sensors are a lot like normal {{< docref "/components/sensor/index" "sensors" >}}.
 But where the "normal" sensors only represent sensors that output **numbers**, this
 component can represent any *text*.
@@ -284,5 +285,4 @@ advanced stuff (see the full API Reference for more info).
 ## See Also
 
 - {{< apiref "text_sensor/text_sensor.h" "text_sensor/text_sensor.h" >}}
-
 

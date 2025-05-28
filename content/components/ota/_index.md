@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "config-ota" >}}
 
 ESPHome supports remotely updating a device "over-the-air" (OTA). Each update mechanism is a *platform* of the base
@@ -153,5 +154,4 @@ expected. This is automatically enabled by the `ota` component, but it may be di
 
 - {{< apiref "ota/ota_component.h" "ota/ota_component.h" >}}
 - {{< docref "/components/safe_mode" >}}
-
 

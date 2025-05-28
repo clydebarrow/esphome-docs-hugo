@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` sensor platform allows you to create a sensor with templated values
 using [lambdas](automations/templates#config-lambda).
 
@@ -114,5 +115,4 @@ sensor:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - [Automation](automations/_index#automation)
 - {{< apiref "template/sensor/template_sensor.h" "template/sensor/template_sensor.h" >}}
-
 

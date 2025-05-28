@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `touchscreen` component contains the base code for most touchscreen driver components
 available in ESPHome and is responsible for passing the touch events to
 `binary_sensors` with the `touchscreen` platform. It is also used by the LVGL component.
@@ -294,5 +295,4 @@ binary_sensor:
 - {{< docref "/components/touchscreen/gt911" "GT911" >}}
 - {{< apiref "touchscreen/touchscreen.h" "touchscreen/touchscreen.h" >}}
 - {{< apiref "touchscreen/binary_sensor/touchscreen_binary_sensor.h" "touchscreen/binary_sensor/touchscreen_binary_sensor.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome includes a built-in web server that can be used to view states
 and send commands. In addition to the web-frontend available under the root index of the
 web server, there's also two other features the web server currently offers: A real time event
@@ -336,5 +337,4 @@ disarmed successfully. It only indicates that the command was received and proce
 - {{< docref "/components/web_server" >}}
 - {{< docref "/components/prometheus" >}}
 - {{< docref "/components/http_request" >}}
-
 

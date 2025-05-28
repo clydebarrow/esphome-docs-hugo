@@ -7,6 +7,7 @@ params:
     image: nextion.jpg
 ---
 
+
 {{< anchor "nextion_binary_sensor" >}}
 
 
@@ -207,5 +208,4 @@ printh FF FF FF
 - {{< docref "/components/display/nextion" >}}
 - {{< docref "index/" >}}
 - {{< apiref "nextion/binary_sensor/nextion_binarysensor.h" "nextion/binary_sensor/nextion_binarysensor.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `gpio` switch platform allows you to use any pin on your node as a
 switch. You can for example hook up a relay to a GPIO pin and use it
 through this platform.
@@ -132,5 +133,4 @@ a switch.
 - {{< docref "/components/cover/template" >}}
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "gpio/switch/gpio_switch.h" "gpio/switch/gpio_switch.h" >}}
-
 

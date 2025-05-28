@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The LEDC output component exposes a [LEDC PWMchannel](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
 of the ESP32 as an output component.
 
@@ -136,5 +137,4 @@ Configuration variables:
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "ledc/ledc_output.h" "ledc/ledc_output.h" >}}
 - [esp-idf LEDC API docs](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html)
-
 

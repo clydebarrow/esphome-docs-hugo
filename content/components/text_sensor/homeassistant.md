@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `homeassistant` text sensor platform allows you to create sensors that import
 states from your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.
 
@@ -48,5 +49,4 @@ text_sensor:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - [Automation](automations/_index#automation)
 - {{< apiref "homeassistant/text_sensor/homeassistant_text_sensor.h" "homeassistant/text_sensor/homeassistant_text_sensor.h" >}}
-
 

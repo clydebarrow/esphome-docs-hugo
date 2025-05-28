@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `version` text sensor platform exposes the ESPHome version the firmware
 was compiled against as a text sensor.
 
@@ -43,5 +44,4 @@ This will, for example, change the output of the sensor from:
 ## See Also
 
 - {{< apiref "version/version_text_sensor.h" "version/version_text_sensor.h" >}}
-
 

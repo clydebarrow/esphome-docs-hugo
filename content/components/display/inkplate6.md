@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 All-in-one e-paper display `Inkplate 5`, `Inkplate 6`, `Inkplate 10` and `Inkplate 6 Plus`.
 
 The Inkplate 5, 6, 10 and 6 Plus are powerful, Wi-Fi enabled ESP32 based six-inch e-paper displays -
@@ -511,5 +512,4 @@ display:
 - {{< docref "index/" >}}
 - {{< docref "/components/touchscreen/ektf2232" >}}
 - [Arduino Inkplate 6 library](https://github.com/e-radionicacom/Inkplate-6-Arduino-library) by [E-radionica.com](https://e-radionica.com/)
-
 

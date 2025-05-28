@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Additional switches to support additional features for Haier AC.
 
 ```yaml
@@ -39,5 +40,4 @@ switch:
 ## See Also
 
 - {{< docref "/components/climate/haier" "Haier Climate" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Component/Hub
 
 The `bme68x_bsec2_i2c` sensor platform allows you to use your
@@ -251,5 +252,4 @@ saved to flash so that the process does not have to start from scratch on device
 - [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
 - [Bosch BSEC2 Library](https://github.com/boschsensortec/Bosch-BSEC2-Library) by [Bosch Sensortec](https://www.bosch-sensortec.com/)
 - [Bosch Sensortec Community](https://community.bosch-sensortec.com/)
-
 

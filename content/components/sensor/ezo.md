@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ezo` sensor platform allows you to use your EZO sensor circuits with
 ESPHome. The [I²C Bus](components/i2c#i2c) is
 required to be set up in your configuration for this sensor to work.
@@ -170,5 +171,4 @@ with the information retrieved from the sensor. For more information on the comm
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ezo/ezo.h" "ezo/ezo.h" >}}
-
 

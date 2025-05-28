@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` switch platform creates a sensor from a tuya serial component
 and requires {{< docref "/components/tuya" >}} to be configured.
 
@@ -44,5 +45,4 @@ switch:
 
 - {{< docref "/components/switch" >}}
 - {{< apiref "tuya/switch/tuya_switch.h" "tuya/switch/tuya_switch.h" >}}
-
 

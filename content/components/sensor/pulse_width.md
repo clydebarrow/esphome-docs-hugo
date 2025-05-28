@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `pulse_width` sensor allows you to measure how long a given digital signal
 is HIGH. For example this can be used to measure PWM signals to transmit some
 value over a simple protocol. The unit of measurement for this sensor is seconds.
@@ -39,5 +40,4 @@ sensor:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "pulse_width/pulse_width.h" "pulse_width/pulse_width.h" >}}
-
 

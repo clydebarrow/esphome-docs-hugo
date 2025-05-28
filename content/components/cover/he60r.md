@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< img src="he60r.jpg" alt="Image" class="right" >}}
 
 The `he60r` cover platform allows you to control a HomEntry HE60R
@@ -100,5 +101,4 @@ binary_sensor:
 - {{< docref "index/" >}}
 - [Automation](automations/_index#automation)
 - [GPIO Binary Sensor](components/binary_sensor/gpio#gpio-binary-sensor)
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sht3xd` sensor platform Temperature+Humidity sensor allows you to use your Sensirion SHT31-D/SHT3x
 ([datasheet](https://cdn-shop.adafruit.com/product-files/2857/Sensirion_Humidity_SHT3x_Datasheet_digital-767294.pdf),
 `Adafruit`_ ) and SHT85 ([datasheet](https://sensirion.com/media/documents/4B40CEF3/640B2346/Sensirion_Humidity_Sensors_SHT85_Datasheet.pdf),
@@ -76,5 +77,4 @@ i2c:
 - {{< docref "hdc1080/" >}}
 - {{< docref "htu21d/" >}}
 - {{< apiref "sht3xd/sht3xd.h" "sht3xd/sht3xd.h" >}}
-
 

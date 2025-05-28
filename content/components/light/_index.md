@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 In ESPHome, `light` components allow you to create lights usable from Home Assistant's frontend and have many
 features such as colors, transitions and even effects.
 
@@ -1113,5 +1114,4 @@ The following realtime protocols are supported:
 
 - {{< apiref "light/light_state.h" "light/light_state.h" >}}
 - [WS2812FX library](https://github.com/kitesurfer1404/WS2812FX) by [@kitesurfer1404](https://github.com/kitesurfer1404)
-
 

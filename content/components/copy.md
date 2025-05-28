@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `copy` component can be used to copy an existing component (like a sensor, switch, etc.)
 and create a duplicate mirroring the source's state and forwarding actions such as turning on to the source.
 
@@ -182,6 +183,5 @@ text:
 - All other options from [Text](components/text/_index#config-text).
 
 ## See Also
-
 
 

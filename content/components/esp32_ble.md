@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `esp32_ble` component in ESPHome sets up the Bluetooth LE stack on the device so that a {{< docref "esp32_ble_server/" >}}
 can run.
 
@@ -97,5 +98,4 @@ The lambda equivalent for this is `id(ble_id).is_active()`.
 - {{< docref "esp32_ble_server/" >}}
 - {{< docref "esp32_improv/" >}}
 - {{< apiref "esp32_ble/ble.h" "esp32_ble/ble.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` button platform allows you to create simple buttons out of just actions. Once defined,
 it will automatically appear in Home Assistant as a button and can be controlled through the frontend.
 
@@ -28,5 +29,4 @@ button:
 
 - {{< docref "/automations" >}}
 - {{< docref "/components/button" >}}
-
 

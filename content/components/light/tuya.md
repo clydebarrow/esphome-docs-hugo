@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` light platform creates a simple brightness-only light from a
 tuya serial component.
 
@@ -92,5 +93,4 @@ Therefore the `gamma_correct` setting default is `1.0` and the
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/light" >}}
 - {{< apiref "tuya/light/tuya_light.h" "tuya/light/tuya_light.h" >}}
-
 

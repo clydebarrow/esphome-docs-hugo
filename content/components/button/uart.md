@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `uart` button platform allows you to send a pre-defined sequence of bytes on a
 {{< docref "/components/uart" "UART bus" >}} when triggered.
 
@@ -33,5 +34,4 @@ button:
 
 - {{< docref "/components/uart" >}}
 - {{< apiref "uart/button/uart_button.h" "uart/button/uart_button.h" >}}
-
 

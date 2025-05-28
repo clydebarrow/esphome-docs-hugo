@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `safe_mode` button allows you to remotely reboot your node into {{< docref "/components/safe_mode" >}}. This is useful in certain situations
 where a misbehaving component is preventing Over-The-Air updates from completing successfully.
 
@@ -34,5 +35,4 @@ button:
 - {{< docref "/components/switch/safe_mode" >}}
 - {{< docref "template/" >}}
 - {{< apiref "safe_mode/safe_mode_button.h" "safe_mode/safe_mode_button.h" >}}
-
 

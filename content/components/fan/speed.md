@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `speed` fan platform lets you represent any float [Output Component](components/output/_index#output) as a fan that
 supports speed settings.
 
@@ -42,5 +43,4 @@ fan:
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< docref "/components/output/pca9685" >}}
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Component/Hub
 
 The `seeed_mr60bha2` platform allows you to use Seeed Studio MR60BHA2 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 ([Product Page](https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html)) with ESPHome.
@@ -79,5 +80,4 @@ sensor:
 - [Product Detail Page for Seeed Studio MR60BHA2 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6](https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html)
 - [Source of inspiration for implementation](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/)
 - {{< apiref "seeed_mr60bha2/seeed_mr60bha2.h" "seeed_mr60bha2/seeed_mr60bha2.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `esp32_ble_server` component in ESPHome sets up a  BLE GATT server that exposes the device name,
 manufacturer and board. BLE GATT services and characteristics can be added to the server to expose data and control.
 
@@ -266,5 +267,4 @@ Configuration variables:
 - {{< docref "esp32_ble/" >}}
 - {{< docref "esp32_improv/" >}}
 - {{< apiref "esp32_ble/ble.h" "esp32_ble/ble.h" >}}
-
 

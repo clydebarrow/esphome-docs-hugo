@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lvgl` sensor platform creates a sensor component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
@@ -44,5 +45,4 @@ Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.upda
 - {{< docref "/components/number/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
-
 

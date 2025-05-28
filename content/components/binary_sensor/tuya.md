@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `tuya` binary sensor platform creates a binary sensor from a
 tuya component and requires {{< docref "/components/tuya" >}} to be configured.
 
@@ -30,5 +31,4 @@ binary_sensor:
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "tuya/binary_sensor/tuya_binary_sensor.h" "tuya/binary_sensor/tuya_binary_sensor.h" >}}
-
 

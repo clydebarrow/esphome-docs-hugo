@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lock` domain includes all platforms that should function like a lock
 with lock/unlock actions.
 
@@ -156,5 +157,4 @@ lock:
 ## See Also
 
 - {{< apiref "lock/lock.h" "lock/lock.h" >}}
-
 

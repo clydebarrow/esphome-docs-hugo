@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `nextion` display platform allows you to use Nextion LCD displays
 ([datasheet](https://nextion.itead.cc/resources/datasheets/), [iTead](https://www.itead.cc/display/nextion.html))
 with ESPHome.
@@ -433,5 +434,4 @@ the individual components (linked below) for more detail.
 - {{< apiref "nextion/nextion.h" "nextion/nextion.h" >}}
 - [Simple Nextion Library](https://github.com/bborncr/nextion) by [Bentley Born](https://github.com/bborncr)
 - [Official Nextion Library](https://github.com/itead/ITEADLIB_Arduino_Nextion) by [iTead](https://www.itead.cc/)
-
 

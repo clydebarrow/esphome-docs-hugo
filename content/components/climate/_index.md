@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome has support for climate devices. Climate devices can represent different types of
 hardware, but the defining factor is that climate devices have a settable target temperature
 and can be put in different modes like `HEAT`, `COOL`, `HEAT_COOL` or `OFF`.
@@ -271,5 +272,4 @@ climate:
 ## See Also
 
 - {{< apiref "climate/climate.h" "climate/climate.h" >}}
-
 

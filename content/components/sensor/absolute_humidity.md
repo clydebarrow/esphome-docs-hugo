@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `absolute_humidity` platform allows you to calculate absolute humidity from air temperature and relative humidity.
 
 See the links at the bottom of the page for details on absolute humidity and the different saturated vapor pressure equations.
@@ -54,5 +55,4 @@ There are several different equations for calculating saturated vapor pressure.
 - [Absolute humidity on Wikipedia](https://en.wikipedia.org/wiki/Humidity#Absolute_humidity)
 - [How to calculate absolute humidity](https://www.environmentalbiophysics.org/chalk-talk-how-to-calculate-absolute-humidity/)
 - [How to convert relative humidity to absolute humidity](https://carnotcycle.wordpress.com/2012/08/04/how-to-convert-relative-humidity-to-absolute-humidity/)
-
 

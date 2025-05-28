@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This component contains platform-specific options for the ESP32 platform.
 
 ```yaml
@@ -142,5 +143,4 @@ binary_sensor:
 ## See Also
 
 - {{< docref "esphome/" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `LightWaveRF` light platform creates a module to dump and send commands to light switches
 
 {{< img src="lightwaverf.jpg" alt="Image" width="40.0%" class="center" >}}
@@ -74,5 +75,4 @@ Compatible receiver:
 ## See Also
 
 - {{< docref "/components/light" >}}
-
 

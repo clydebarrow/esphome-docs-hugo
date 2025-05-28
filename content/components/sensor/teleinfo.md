@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Component/Hub
 
 The `teleinfo` component allows you to retrieve data from a
@@ -107,5 +108,4 @@ text_sensor:
 ## See Also
 
 - {{< apiref "teleinfo/teleinfo.h" "teleinfo/teleinfo.h" >}}
-
 

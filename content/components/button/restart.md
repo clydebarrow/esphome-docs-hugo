@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `restart` button platform allows you to restart your node remotely
 through Home Assistant.
 
@@ -30,5 +31,4 @@ button:
 - {{< docref "/components/switch/restart" >}}
 - {{< docref "template/" >}}
 - {{< apiref "restart/button/restart_button.h" "restart/button/restart_button.h" >}}
-
 

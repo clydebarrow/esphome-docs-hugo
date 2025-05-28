@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` datetime platform allows you to create a datetime with templated values
 using [lambdas](automations/templates#config-lambda).
 
@@ -104,5 +105,4 @@ datetime:
 
 - [Automation](automations/_index#automation)
 - {{< apiref "template/datetime/template_date.h" "template/datetime/template_date.h" >}}
-
 

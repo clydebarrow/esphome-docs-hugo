@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome has support for components to create a select entity. A select entity is
 basically an option list that can be set by either yaml, hardware or the user/frontend.
 
@@ -367,5 +368,4 @@ select:
 
 - {{< apiref "Select" "select/select.h" >}}
 - {{< apiref "SelectCall" "select/select_call.h" >}}
-
 

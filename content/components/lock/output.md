@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `output` lock platform allows you to use any output component as a lock.
 
 {{< img src="output-ui.png" alt="Image" width="80.0%" class="center" >}}
@@ -33,5 +34,4 @@ lock:
 
 - {{< docref "/components/output" >}}
 - {{< apiref "output/lock/output_lock.h" "output/lock/output_lock.h" >}}
-
 

@@ -6,6 +6,7 @@ params:
     description: Instructions for setting up Modbus in ESPHome.
 ---
 
+
 {{< anchor "modbus" >}}
 
 
@@ -66,5 +67,4 @@ modbus:
 - [Modbus RTU Protocol Description](https://www.modbustools.com/modbus.html)
 - [UART Bus](components/uart#uart)
 - {{< apiref "modbus/modbus.h" "modbus/modbus.h" >}}
-
 

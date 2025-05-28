@@ -6,6 +6,7 @@ params:
     description: Instructions for setting up a StatsD
 ---
 
+
 {{< anchor "statsd" >}}
 
 
@@ -48,5 +49,4 @@ This example will generate a metric named `test1.sensor` with the value of the `
 ## See Also
 
 - {{< apiref "statsd/statsd.h" "statsd/statsd.h" >}}
-
 

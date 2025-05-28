@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Migrating from previous ESPurna setups is very easy. You just need to have
 ESPHome create a binary for you and then upload that in the ESPurna web interface.
 
@@ -52,5 +53,4 @@ Happy Hacking!
 - {{< docref "/components/esp32" >}}
 - {{< docref "migrate_espeasy/" >}}
 - {{< docref "migrate_sonoff_tasmota/" >}}
-
 

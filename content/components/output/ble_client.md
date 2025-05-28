@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ble_client` component is a output that can write a binary value to service characteristics of BLE devices.
 
 For more information on BLE services and characteristics, see {{< docref "/components/ble_client" >}}.
@@ -49,5 +50,4 @@ output:
 
 - {{< docref "/components/output" >}}
 - {{< docref "/components/ble_client" >}}
-
 

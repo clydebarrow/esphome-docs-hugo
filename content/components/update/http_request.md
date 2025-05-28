@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This platform allows you to manage the deployment of updates to your ESPHome devices. It works by reading a
 [JSON manifest file](components/update/http_request#update_http_request-manifest_format) and using it to determine the presence of an update.
 
@@ -74,5 +75,4 @@ Note that there may be multiple `builds` specified within a single JSON file.
 - {{< docref "/components/ota/http_request" >}}
 - {{< docref "/components/ota" >}}
 - {{< apiref "update/update_entity.h" "update/update_entity.h" >}}
-
 

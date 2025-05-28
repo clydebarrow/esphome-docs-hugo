@@ -7,6 +7,7 @@ params:
     image: auto-fix.svg
 ---
 
+
 {{< anchor "config-lambda" >}}
 
 
@@ -114,5 +115,4 @@ using the lambda syntax as described/shown above.
 
 - {{< docref "index/" >}}
 - {{< docref "actions/" >}}
-
 

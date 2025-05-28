@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `hbridge` light platform creates a dual color brightness controlled light from two
 [float output component](components/output/_index#output).
 
@@ -47,5 +48,4 @@ As we are switching the H-bridge in software, the light may glitch every so ofte
 - {{< docref "/components/light" >}}
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< apiref "hbridge/light/hbridge_light.h" "hbridge/light/hbridge_light.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` text sensor platform allows you to create a text sensor with templated values
 using [lambdas](automations/templates#config-lambda).
 
@@ -115,5 +116,4 @@ text_sensor:
 - {{< docref "/components/text_sensor" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "template/text_sensor/template_text_sensor.h" "template/text_sensor/template_text_sensor.h" >}}
-
 

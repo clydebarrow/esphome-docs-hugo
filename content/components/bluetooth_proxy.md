@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Home Assistant can expand its Bluetooth reach by communicating through the Bluetooth proxy component in ESPHome.
 The individual device integrations in Home Assistant (such as BTHome) will receive the data from the Bluetooth
 Integration in Home Assistant which automatically aggregates all ESPHome Bluetooth proxies with any USB Bluetooth
@@ -127,5 +128,4 @@ bluetooth_proxy:
 - {{< docref "esp32_ble_tracker/" >}}
 - {{< apiref "bluetooth_proxy/bluetooth_proxy.h" "bluetooth_proxy/bluetooth_proxy.h" >}}
 - BTHome `<https://bthome.io/>`__
-
 

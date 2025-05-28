@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Grove TBB6612FNG a runs over  I²C bus and has the capability to control DC and Stepper motors.
 At the current stage of implementation only DC motor is implemented.
 
@@ -115,5 +116,4 @@ on_...:
 
 - [I²C Bus](components/i2c#i2c)
 - {{< docref "switch/gpio" >}}
-
 

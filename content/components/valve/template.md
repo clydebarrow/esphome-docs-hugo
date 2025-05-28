@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` valve platform allows you to create simple valves out of just a few actions and a value lambda. Once
 defined, it will automatically appear in Home Assistant as a valve and can be controlled through the frontend.
 
@@ -117,5 +118,4 @@ id(my_template_valve).publish_state();
 - [Automation](automations/_index#automation)
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/valve/template_valve.h" "template/valve/template_valve.h" >}}
-
 

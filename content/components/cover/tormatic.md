@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tormatic` cover platform allows you to control Tormatic and Novoferm
 garage door drives manufactured in 2016 onwards. The following models should
 be supported:
@@ -96,5 +97,4 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 - {{< docref "index/" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "tormatic/tormatic_cover.h" "tormatic/tormatic_cover.h" >}}
-
 

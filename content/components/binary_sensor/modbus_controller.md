@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `modbus_controller` binary sensor platform creates a binary sensor from a modbus_controller component
 and requires {{< docref "/components/modbus_controller" >}} to be configured.
 
@@ -69,5 +70,4 @@ binary_sensor:
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - https://www.modbustools.com/modbus.html
 - {{< apiclass "modbus_controller::ModbusBinarySensor" "modbus_controller::ModbusBinarySensor" >}}
-
 

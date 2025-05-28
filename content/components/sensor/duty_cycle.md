@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The duty cycle sensor allows you to measure for what percentage of time a signal
 on a GPIO pin is HIGH or LOW.
 
@@ -37,5 +38,4 @@ sensor:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "duty_cycle/duty_cycle_sensor.h" "duty_cycle/duty_cycle_sensor.h" >}}
-
 

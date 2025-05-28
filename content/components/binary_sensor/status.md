@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Status Binary Sensor exposes the node state (if it's connected to via MQTT/native API)
 for Home Assistant.
 
@@ -29,5 +30,4 @@ binary_sensor:
 - {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/mqtt" >}}
 - {{< apiref "status/status_binary_sensor.h" "status/status_binary_sensor.h" >}}
-
 

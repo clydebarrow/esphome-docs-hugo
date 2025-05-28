@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `dht12` Temperature+Humidity sensor allows you to use your DHT12
 ([datasheet](http://www.robototehnika.ru/file/DHT12.pdf),
 `electrodragon`_) I²C-based sensor with ESPHome. This sensor is also called AM2320 by some sellers.
@@ -52,5 +53,4 @@ sensor:
 - {{< docref "sht3xd/" >}}
 - {{< apiref "dht12/dht12.h" "dht12/dht12.h" >}}
 - [DHT12 Library](https://github.com/dplasa/dht) by [Daniel Plasa](https://github.com/dplasa)
-
 

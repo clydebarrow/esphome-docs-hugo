@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `scd4x` sensor platform  allows you to use your Sensirion SCD4X CO₂
 ([datasheet](https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf)) sensors with ESPHome.
 The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
@@ -173,5 +174,4 @@ sensor:
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "scd30/" >}}
 - {{< apiref "scd4x/scd4x.h" "scd4x/scd4x.h" >}}
-
 

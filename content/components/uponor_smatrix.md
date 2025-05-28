@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The Uponor Smatrix component allows you to integrate an Uponor Smatrix Base Pulse underfloor heating control system in ESPHome without the need for an Smatrix Pulse Com R-208 communication module.
 It directly communicates with the controller and thermostats via the RS485 thermostat bus.
 
@@ -133,5 +134,4 @@ sensor:
 
 - [Protocol Analysis](https://github.com/kroimon/uponor-smatrix-analysis)
 - {{< apiref "uponor_smatrix/uponor_smatrix.h" "uponor_smatrix/uponor_smatrix.h" >}}
-
 

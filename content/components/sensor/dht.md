@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The DHT Temperature+Humidity sensor allows you to use your
 
 - DHT11 ([datasheet](https://akizukidenshi.com/download/ds/aosong/DHT11.pdf), [Adafruit](https://www.adafruit.com/product/386)),
@@ -82,5 +83,4 @@ set `pullup: false` under your `pin` configuration.
 - {{< docref "sht3xd/" >}}
 - {{< apiref "dht/dht.h" "dht/dht.h" >}}
 - [Arduino DHTLib](https://playground.arduino.cc/Main/DHTLib)
-
 

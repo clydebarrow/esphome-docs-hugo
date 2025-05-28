@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The MicroNova component allows you to integrate a pellet stove with a MicroNova board in ESPHome.
 It uses [UART](components/uart#uart) for communication.
 
@@ -203,5 +204,4 @@ turns on or off.
 - [ridiculouslab micronova](https://www.ridiculouslab.com/arguments/iot/stufa/micronova_en.php)
 - [philibertc / micronova_controller](https://github.com/philibertc/micronova_controller/)
 - [eni23 / micronova-controller](https://github.com/eni23/micronova-controller)
-
 

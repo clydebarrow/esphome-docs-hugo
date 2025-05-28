@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Migrating from previous ESPEasy setups is very easy. You just need to have
 ESPHome create a binary for you and then upload that in the ESPEasy web interface.
 
@@ -49,5 +50,4 @@ Happy Hacking!
 - {{< docref "/components/esp32" >}}
 - {{< docref "migrate_espurna/" >}}
 - {{< docref "migrate_sonoff_tasmota/" >}}
-
 

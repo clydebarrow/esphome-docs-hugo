@@ -7,6 +7,7 @@ params:
     image: auto-fix.svg
 ---
 
+
 {{< anchor "automation" >}}
 
 
@@ -26,4 +27,3 @@ templates, and more--to customize your ESPHome device just how you like it.
 - {{< docref "/components/globals" >}}
 - {{< docref "/components/script" >}}
 - {{< docref "/components/interval" >}}
-

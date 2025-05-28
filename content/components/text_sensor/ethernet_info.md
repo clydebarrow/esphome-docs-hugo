@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ethernet_info` text sensor platform exposes different Ethernet information
 via text sensors.
 
@@ -49,5 +50,4 @@ text_sensor:
 
 - {{< docref "/components/ethernet" >}}
 - {{< apiref "ethernet_info/ethernet_info_text_sensor.h" "ethernet_info/ethernet_info_text_sensor.h" >}}
-
 

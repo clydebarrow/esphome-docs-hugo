@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< warning >}}
 NeoPixelBus does **not** work with ESP-IDF.
 
@@ -172,5 +173,4 @@ this method is no longer recommended, but documented here for reference purposes
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "neopixelbus/neopixelbus_light.h" "neopixelbus/neopixelbus_light.h" >}}
 - [NeoPixelBus library](https://github.com/Makuna/NeoPixelBus/wiki/ESP8266-NeoMethods)
-
 

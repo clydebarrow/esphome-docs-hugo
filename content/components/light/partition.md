@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `partition` light platform allows you to combine multiple addressable light segments
 (like {{< docref "fastled/" >}} or {{< docref "neopixelbus/" >}}) and/or individual lights (like {{< docref "rgb/" >}}) into a single addressable light.
 This platform also allows splitting up an addressable light into multiple segments, so that
@@ -121,5 +122,4 @@ See [`light.addressable_set` Action](components/light/_index#light-addressable_s
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/light/neopixelbus" >}}
 - {{< apiref "partition/light_partition.h" "partition/light_partition.h" >}}
-
 

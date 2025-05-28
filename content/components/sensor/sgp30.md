@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sgp30` sensor platform allows you to use your Sensirion SGP30 multi-pixel gas
 ([datasheet](https://sensirion.com/media/documents/984E0DD5/61644B8B/Sensirion_Gas_Sensors_Datasheet_SGP30.pdf)) sensors or the SVM30 breakout-boards  ([product page](https://sensirion.com/products/catalog/SVM30/)) with ESPHome.
 The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
@@ -118,5 +119,4 @@ Please note while the sensor is off, baseline values are valid for a maximum of 
 - {{< docref "htu21d/" >}}
 - {{< docref "sht3xd/" >}}
 - {{< apiref "sgp30/sgp30.h" "sgp30/sgp30.h" >}}
-
 

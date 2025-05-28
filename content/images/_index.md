@@ -5,6 +5,7 @@ build: {render: never}
 ---
 
 
+
 This is a dummy file to include images in the sphinx output
 that will only be used in raw HTML and thus not auto-included.
 
@@ -15,4 +16,3 @@ that will only be used in raw HTML and thus not auto-included.
 {{< img src="logo-docs.svg" alt=""  >}}
 
 {{< html_file file="images/logo-text.svg"  >}}
-

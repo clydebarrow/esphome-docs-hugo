@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `audio_dac` component allows your ESPHome devices to use audio DAC hardware components, allowing the playback of
 audio via the microcontroller from a range of sources via {{< docref "/components/media_player" >}}.
 
@@ -56,6 +57,5 @@ Configuration variables:
   output from 0% to 100%.
 
 ## See Also
-
 
 

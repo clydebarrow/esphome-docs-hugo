@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome has support for components to create a number entity. A number entity is
 like a sensor that can read a value from a device, but is useful when that value
 can be set by the user/frontend.
@@ -327,5 +328,4 @@ advanced stuff (see the full API Reference for more info).
 
 - {{< apiref "Number" "number/number.h" >}}
 - {{< apiref "NumberCall" "number/number_call.h" >}}
-
 

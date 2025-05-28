@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` cover platform allows you to create simple covers out of just a few
 actions and a value lambda. Once defined, it will automatically appear in Home Assistant
 as a cover and can be controlled through the frontend.
@@ -126,5 +127,4 @@ id(template_cov).publish_state();
 - [Automation](automations/_index#automation)
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/cover/template_cover.h" "template/cover/template_cover.h" >}}
-
 

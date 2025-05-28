@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Additional sensors for Haier Climate device. **These sensors are supported only by the hOn protocol**.
 
 ```yaml
@@ -36,5 +37,4 @@ text_sensor:
 ## See Also
 
 - {{< docref "/components/climate/haier" "Haier Climate" >}}
-
 

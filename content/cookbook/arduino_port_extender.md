@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 With this sketch you can control pins of a remote Arduino board through ESPHome. The Arduino acts as a port
 expander, allowing you to use more pins than a standard ESP8266/ESP32 has.
 
@@ -317,6 +318,5 @@ sensor:
 
 ```
 ## See Also
-
 
 

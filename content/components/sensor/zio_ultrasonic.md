@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Zio Ultrasonic Distance sensor allows you to use your compatible
 ([datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf),
 [sparkfun](https://www.sparkfun.com/products/17777))
@@ -40,5 +41,4 @@ sensor:
 - {{< docref "/components/sensor/ultrasonic" "Ultrasonic Sensor Component" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "template/" >}}
-
 

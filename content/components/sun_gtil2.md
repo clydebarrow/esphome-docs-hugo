@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `sun_gtil2` component allows you to get voltage, power and temperature readings from your `SUN-1000G2`
 or `SUN-2000G2` grid tie inverter. This is done by reading the UART data transmitted from the inverter's
 controller board to the display board.
@@ -125,5 +126,4 @@ text_sensor:
 ## See Also
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
-
 

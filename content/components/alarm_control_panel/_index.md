@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "config-alarm_control_panel" >}}
 
 ## Base Alarm Control Panel Configuration
@@ -333,5 +334,4 @@ bool all_sensors_ready = id(acp1).get_all_sensors_ready();
 
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "alarm_control_panel/alarm_control_panel.h" "alarm_control_panel/alarm_control_panel.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< warning >}}
 FastLED does **not** work as expected with Arduino 3 or newer for ESP8266. For now, you can either downgrade the arduino version or use {{< docref "neopixelbus/" >}}.
 
@@ -162,5 +163,4 @@ light:
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "fastled_base/fastled_light.h" "fastled_base/fastled_light.h" >}}
 - [Arduino FastLED library](https://github.com/FastLED/FastLED)
-
 

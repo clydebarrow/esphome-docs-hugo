@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `modbus_controller` Select platform allows you to create a Select from modbus
 registers.
 
@@ -139,5 +140,4 @@ select:
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - [Automation](automations/_index#automation)
 - https://www.modbustools.com/modbus.html
-
 

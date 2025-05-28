@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `daly_bms` sensor platform allows you to use a Daly Smart BMS
 ([more info](https://dalyelec.en.made-in-china.com/))
 with ESPHome.
@@ -308,5 +309,4 @@ uart:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "daly_bms/daly_bms.h" "daly_bms/daly_bms.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The MQTT Client Component sets up the MQTT connection to your broker.
 If you are connecting to Home Assistant, you may prefer to use the native API,
 in which case this is not needed.
@@ -797,5 +798,4 @@ if (id(mqtt_client)->is_connected()) {
 ## See Also
 
 - {{< apiref "mqtt/mqtt_client.h" "mqtt/mqtt_client.h" >}}
-
 

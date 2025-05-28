@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `syslog` component can be used to send ESPHome logs to a [syslog server](https://en.wikipedia.org/wiki/Syslog).
 It requires both a {{< docref "udp" "UDP component" >}} and a {{< docref "time/index" "Time component" >}} to be configured.
 
@@ -31,4 +32,3 @@ syslog:
 - **facility** (*Optional*, int): The syslog facility to use. Defaults to `16` (corresponding to `local0`).
 - **level** (*Optional*, string): The highest log level to send to the syslog server. Defaults to `DEBUG`.
 - **strip** (*Optional*, boolean): If set, remove color-codes from log messages. Defaults to `true`.
-

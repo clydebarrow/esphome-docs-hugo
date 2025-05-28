@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `airthings_wave_plus` and `airthings_wave_mini` sensor platforms lets you track the output of AirThings Bluetooth Low Energy devices.
 
 This component will track radon, airborne chemicals, CO2, temperature and humidity and others depending on the device sensors.
@@ -178,5 +179,4 @@ sensor:
 ## See Also
 
 - {{< docref "/components/esp32_ble_tracker" >}}
-
 

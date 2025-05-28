@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `dallas_temp` component allows you to use
 [DS18B20](https://www.adafruit.com/product/374)
 ([datasheet](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf))
@@ -39,5 +40,4 @@ sensor:
 - [Arduino DallasTemperature library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
   by [Miles Burton](https://github.com/milesburton)
 - {{< apiref "dallas_temp/dallas_temp.h" "dallas_temp/dallas_temp.h" >}}
-
 

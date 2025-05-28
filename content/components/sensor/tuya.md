@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` sensor platform creates a sensor from a tuya component
 and requires {{< docref "/components/tuya" >}} to be configured.
 
@@ -45,5 +46,4 @@ sensor:
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/sensor" >}}
 - {{< apiref "tuya/sensor/tuya_sensor.h" "tuya/sensor/tuya_sensor.h" >}}
-
 

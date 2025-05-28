@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sps30` sensor platform allows you to use your Sensirion SPS30
 ([datasheet](https://sensirion.com/media/documents/8600FF88/616542B5/Sensirion_PM_Sensors_Datasheet_SPS30.pdf)) sensors with ESPHome.
 The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
@@ -140,5 +141,4 @@ on_...:
 - {{< docref "ccs811/" >}}
 - {{< docref "sgp30/" >}}
 - {{< apiref "sps30/sps30.h" "sps30/sps30.h" >}}
-
 

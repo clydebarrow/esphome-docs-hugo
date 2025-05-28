@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The ESPHome native API is used to communicate with clients directly, with a highly-optimized
 network protocol. Currently, only the ESPHome tool, Home Assistant and ioBroker use this native API.
 
@@ -351,5 +352,4 @@ never be removed. Features of native API (vs. MQTT):
 ## See Also
 
 - {{< apiref "api/api_server.h" "api/api_server.h" >}}
-
 

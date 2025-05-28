@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `hbridge` fan platform allows you to use a compatible *h-bridge* (L298N, DRV8871, MX1508, BTS7960, L9110S, DRV8833, TB6612, etc.) to control a fan (or motor/solenoid).
 
 {{< img src="L298N_module.jpg" alt="Image" caption="L298N H-bridge module. Image by `kuongshun`_." width="50.0%" class="center" >}}
@@ -64,5 +65,4 @@ on_...:
 - {{< docref "/components/output/esp8266_pwm" >}}
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}
 - [Adafruit's excellent H-bridge tutorial](https://learn.adafruit.com/improve-brushed-dc-motor-performance)
-
 

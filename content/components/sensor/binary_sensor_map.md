@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `binary_sensor_map` sensor platform allows you to map multiple {{< docref "/components/binary_sensor/index" "binary sensor" >}}
 to an individual value. Depending on the state of each binary sensor, its associated configured parameters, and this sensor's mapping type,
 the `binary_sensor_map` publishes a single numerical value.
@@ -146,5 +147,4 @@ binary_sensor:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "binary_sensor_map/binary_sensor_map.h" "binary_sensor_map/binary_sensor_map.h" >}}
 - [Bayesian sensor in Home Assistant](https://www.home-assistant.io/integrations/bayesian/)
-
 

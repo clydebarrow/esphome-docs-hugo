@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ble_client` component is a text sensor platform that can
 query BLE devices for specific values of service characteristics.
 
@@ -63,5 +64,4 @@ A variable `x` of type `std::string` is passed to the automation for use in lamb
 - {{< docref "/components/sensor/ble_client" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ble_text_sensor/ble_text_sensor.h" "ble_text_sensor/ble_text_sensor.h" >}}
-
 

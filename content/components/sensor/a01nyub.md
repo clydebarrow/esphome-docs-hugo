@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This sensor allows you to use A01NYUB waterproof ultrasonic sensor by DFRobot
 ([datasheet](https://wiki.dfrobot.com/A01NYUB%20Waterproof%20Ultrasonic%20Sensor%20SKU:%20SEN0313))
 with ESPHome to measure distances. This sensor can measure
@@ -37,5 +38,4 @@ sensor:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - [UART Bus](components/uart#uart)
 - {{< apiref "a01nyub/a01nyub.h" "a01nyub/a01nyub.h" >}}
-
 

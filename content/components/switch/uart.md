@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `uart` switch platform allows you to send a pre-defined sequence of bytes on a
 {{< docref "/components/uart" "UART bus" >}} when triggered.
 
@@ -46,5 +47,4 @@ switch:
 
 - {{< docref "/components/uart" >}}
 - {{< apiref "uart/switch/uart_switch.h" "uart/switch/uart_switch.h" >}}
-
 

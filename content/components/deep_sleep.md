@@ -7,6 +7,7 @@ params:
     image: hotel.svg
 ---
 
+
 {{< anchor "deep_sleep-component" >}}
 
 
@@ -214,5 +215,4 @@ on_...:
 - {{< docref "switch/shutdown" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "deep_sleep/deep_sleep_component.h" "deep_sleep/deep_sleep_component.h" >}}
-
 

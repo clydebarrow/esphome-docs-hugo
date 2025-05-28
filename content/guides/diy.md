@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This is a curated list of awesome creations with ESPHome containing various
 external components, blog posts, videos and sample configurations. It should serve as a means of
 finding inspiration for new projects and finding other ESPHome-enthusiasts on the web.
@@ -133,4 +134,3 @@ the post.
 - [FishFeeder](https://github.com/ColoMAX/fishfeeder) by {{< ghuser name="ColoMAX" >}}
 - [ESPHome IKEA VINDRIKTNING](https://github.com/DzurisHome/ESPHome-IKEA-VINDRIKTNING) by {{< ghuser name="DzurisHome" >}}
 - [ESPHome Refoss P11](https://github.com/DzurisHome/ESPHome-Refoss-P11) by {{< ghuser name="DzurisHome" >}}
-

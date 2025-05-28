@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` text platform allows you to create a text with templated values
 using [lambdas](automations/templates#config-lambda).
 
@@ -49,5 +50,4 @@ text:
 
 - [Automation](automations/_index#automation)
 - {{< apiref "template/text/template_text.h" "template/text/template_text.h" >}}
-
 

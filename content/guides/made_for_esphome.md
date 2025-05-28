@@ -7,6 +7,7 @@ params:
     image: /_static/made-for-esphome-black-on-white.png
 ---
 
+
 {{< anchor "made_for_esphome" >}}
 
 
@@ -73,4 +74,3 @@ After your project is approved, you may use these logos on your product and/or i
 {{< img src="made-for-esphome-black-on-transparent.svg" alt="Image" caption="Made with ESPHome black on transparent ([svg](/_static/made-for-esphome-black-on-transparent.svg), [png](/_static/made-for-esphome-black-on-transparent.png))" width="100%" class="center" >}}
 
 {{< img src="made-for-esphome-white-on-transparent.svg" alt="Image" caption="Made with ESPHome white on transparent ([svg](/_static/made-for-esphome-white-on-transparent.svg), [png](/_static/made-for-esphome-white-on-transparent.png))" width="100%" class="center" >}}
-

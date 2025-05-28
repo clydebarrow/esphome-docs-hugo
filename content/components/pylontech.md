@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Pylontech component allows you to pull data from Pylontech Batteries into ESPHome.
 It uses [UART](components/uart#uart) for communication.
 
@@ -166,5 +167,4 @@ sensor:
 - [MultiSIBControl](http://www.multisibcontrol.net/)
 - [ioBroker.pylontech](https://github.com/PLCHome/ioBroker.pylontech/)
 - [UART Bus](components/uart#uart)
-
 

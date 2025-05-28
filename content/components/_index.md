@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< html_file file="images/logo-docs.svg"  >}}
 
 This is the top-level ESPHome documentation index. Browse the tables below, use the sidebar menu, or the search
@@ -965,4 +966,3 @@ ESPHome to cellular networks. **Does not encompass Wi-Fi.**
 
 ESPHome depends on and welcomes contributions from our community. If you'd like to contribute, please see our
 [developer site](https://developers.esphome.io).
-

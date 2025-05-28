@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `packet_transport` sensor platform allows you to receive numeric sensor data directly from another ESPHome node.
 It requires a `packet_transport` component to be configured.
 
@@ -50,5 +51,4 @@ configured.
 - {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/udp" >}}
 - [Automation](automations/_index#automation)
-
 

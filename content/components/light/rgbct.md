@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `rgbct` light platform creates an RGBWT (color temperature + white brightness)
 light from 5 [float output components](components/output/_index#output) (one for each channel).
 
@@ -59,5 +60,4 @@ light:
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
 - {{< apiref "rgbct/rgbct_light_output.h" "rgbct/rgbct_light_output.h" >}}
-
 

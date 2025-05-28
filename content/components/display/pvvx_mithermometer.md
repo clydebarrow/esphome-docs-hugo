@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `pvvx_mithermometer` display platform allows you to use devices running the [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by pvvx as display drivers with ESPHome.
 
 {{< img src="xiaomi_lywsd03mmc.jpg" alt="Image" caption="Xiaomi LYWSD03MMC." width="75.0%" class="center" >}}
@@ -219,5 +220,4 @@ display:
 - {{< docref "/components/sensor/xiaomi_ble" >}}
 - {{< apiref "pvvx_mithermometer/display/pvvx_display.h" "pvvx_mithermometer/display/pvvx_display.h" >}}
 - [ATC_MiThermometer firmware](https://github.com/pvvx/ATC_MiThermometer) by [pvvx](https://github.com/pvvx)
-
 

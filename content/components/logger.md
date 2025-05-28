@@ -7,6 +7,7 @@ params:
     image: file-document-box.svg
 ---
 
+
 {{< anchor "logger" >}}
 
 
@@ -255,5 +256,4 @@ and the `ESP_LOGx` logging macros in this automation.
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/select/logger" >}}
 - {{< apiref "logger/logger.h" "logger/logger.h" >}}
-
 

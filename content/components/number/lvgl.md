@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lvgl` number platform creates a number component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
@@ -47,5 +48,4 @@ Widget-specific actions (`lvgl.arc.update`, `lvgl.bar.update`, `lvgl.slider.upda
 - {{< docref "/components/light/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
-
 

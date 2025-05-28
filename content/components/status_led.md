@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `status_led` hooks into all ESPHome components and can indicate the status of
 the device. Specifically, it will:
 
@@ -51,5 +52,4 @@ status_led:
 
 - {{< docref "/components/light/status_led" >}}
 - {{< apiref "status_led/status_led.h" "status_led/status_led.h" >}}
-
 

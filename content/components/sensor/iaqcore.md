@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The AMS iAQ-Core sensor allows you to use your
 ([datasheet](https://www.sciosense.com/wp-content/uploads/documents/iaQ-Core-Datasheet.pdf))
 sensors with ESPHome.
@@ -44,5 +45,4 @@ sensor:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "/components/sensor" >}}
-
 

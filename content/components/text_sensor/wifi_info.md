@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `wifi_info` text sensor platform exposes different WiFi information
 via text sensors.
 
@@ -63,5 +64,4 @@ text_sensor:
 - {{< docref "/components/wifi" >}}
 - {{< docref "/components/sensor/wifi_signal" >}}
 - {{< apiref "wifi_info/wifi_info_text_sensor.h" "wifi_info/wifi_info_text_sensor.h" >}}
-
 

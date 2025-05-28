@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `debug` component can be used to debug problems with ESPHome. At startup, it prints
 a bunch of useful information like reset reason, free heap size, ESPHome version and so on.
 It also allows you to get the same information as a text sensor, and to monitor the state of the
@@ -96,5 +97,4 @@ Configuration variables:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "logger/" >}}
 - {{< apiref "debug/debug_component.h" "debug/debug_component.h" >}}
-
 

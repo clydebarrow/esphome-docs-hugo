@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome has a powerful way to reduce repetition in configuration files: substitutions.
 With substitutions, you can have a single generic source file for all nodes of one kind and
 substitute expressions in as required.
@@ -157,5 +158,4 @@ To hide these base files from the dashboard, you can
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "/guides/getting_started_command_line" >}}
 - {{< docref "/guides/faq" >}}
-
 

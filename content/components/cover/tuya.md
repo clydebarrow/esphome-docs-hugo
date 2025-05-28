@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `tuya` cover platform creates a simple position-only cover from a
 tuya serial component.
 
@@ -78,5 +79,4 @@ In this condition, it will go into an error / uncalibrated state when it next tr
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/cover" >}}
 - {{< apiref "tuya/cover/tuya_cover.h" "tuya/cover/tuya_cover.h" >}}
-
 

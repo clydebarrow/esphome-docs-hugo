@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `remote_receiver` component lets you receive and decode various common remote control signals, such as infrared
 or 433 MHz radio frequency (RF) signals.
 
@@ -586,5 +587,4 @@ remote_transmitter:
 - {{< docref "/components/rf_bridge" >}}
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - {{< apiref "remote/remote_receiver.h" "remote/remote_receiver.h" >}}
-
 

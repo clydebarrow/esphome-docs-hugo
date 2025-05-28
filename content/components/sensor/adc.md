@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Analog To Digital (`adc`) Sensor allows you to use the built-in
 ADC in your device to measure a voltage on certain pins.
 
@@ -197,5 +198,4 @@ This works on SKU:DFR0654. For more information see: [manufacturer's website](ht
 - {{< docref "ads1115/" >}}
 - {{< docref "max6675/" >}}
 - {{< apiref "adc/adc_sensor.h" "adc/adc_sensor.h" >}}
-
 

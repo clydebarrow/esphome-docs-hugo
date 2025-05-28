@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The GPIO output component is quite simple: It exposes a single GPIO pin
 as an output component. Note that output components are **not** switches and
 will not show up in Home Assistant. See {{< docref "/components/switch/gpio" >}}.
@@ -42,5 +43,4 @@ see the {{< docref "/components/switch/gpio" >}}.
 - {{< docref "/components/fan/binary" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "gpio/output/gpio_binary_output.h" "gpio/output/gpio_binary_output.h" >}}
-
 

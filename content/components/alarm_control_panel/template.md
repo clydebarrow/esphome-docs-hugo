@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` alarm control panel platform allows you to turn your binary sensors into a state machine
 managed alarm control panel.
 
@@ -212,5 +213,4 @@ switch:
 - {{< docref "index/" >}}
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "template/alarm_control_panel/template_alarm_control_panel.h" "template/alarm_control_panel/template_alarm_control_panel.h" >}}
-
 

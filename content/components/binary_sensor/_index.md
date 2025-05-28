@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 With ESPHome you can use different types of binary sensors. They will
 automatically appear in the Home Assistant front-end and have several
 configuration options.
@@ -461,5 +462,4 @@ advanced stuff.
 ## See Also
 
 - {{< apiref "binary_sensor/binary_sensor.h" "binary_sensor/binary_sensor.h" >}}
-
 

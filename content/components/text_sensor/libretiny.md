@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `libretiny` text sensor platform exposes various LibreTiny core
 information via text sensors.
 
@@ -29,5 +30,4 @@ text_sensor:
 
 - {{< docref "/components/libretiny" >}}
 - {{< apiref "libretiny/lt_component.h" "libretiny/lt_component.h" >}}
-
 

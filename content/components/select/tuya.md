@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` select platform creates a select from a tuya serial component
 and requires {{< docref "/components/tuya" >}} to be configured.
 
@@ -67,5 +68,4 @@ select:
 
 - {{< docref "/components/select" >}}
 - {{< apiref "tuya/select/tuya_select.h" "tuya/select/tuya_select.h" >}}
-
 

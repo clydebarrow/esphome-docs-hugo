@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `endstop` cover platform allows you to create covers with position control that have
 endstops at both ends of the cover to detect the fully-open and fully-closed states.
 When any of these endstops are reached, the cover is stopped (via `stop_action`)
@@ -71,5 +72,4 @@ cover:
 - {{< docref "index/" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "endstop/endstop_cover.h" "endstop/endstop_cover.h" >}}
-
 

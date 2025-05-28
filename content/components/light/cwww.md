@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `cwww` light platform creates a cold white + warm white light from 2
 [float output components](components/output/_index#output) (one for each channel). The two channels
 can be controlled individually or together.
@@ -61,5 +62,4 @@ calculation assumes that both lights have the same illuminance, which might not 
 - {{< docref "/components/output/pca9685" >}}
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< apiref "cwww/cwww_light_output.h" "cwww/cwww_light_output.h" >}}
-
 

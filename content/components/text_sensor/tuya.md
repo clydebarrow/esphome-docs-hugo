@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` text sensor platform creates a sensor from a tuya component
 and requires {{< docref "/components/tuya" >}} to be configured.
 
@@ -31,5 +32,4 @@ text_sensor:
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/text_sensor" >}}
 - {{< apiref "tuya/text_sensor/tuya_text_sensor.h" "tuya/text_sensor/tuya_text_sensor.h" >}}
-
 

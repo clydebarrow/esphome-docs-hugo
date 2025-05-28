@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 {{< img src="display_time_temp_oled_1.jpg" alt="Image" width="75.0%" class="left" >}}
 
 In this example I have used a {{< docref "/components/display/ssd1306" "SSD1306 OLED Display over I²C" >}} to
@@ -151,5 +152,4 @@ display:
 - {{< docref "/components/display/ssd1306" >}}
 - {{< docref "/components/display" >}}
 - {{< docref "/components/sensor/homeassistant" >}}
-
 

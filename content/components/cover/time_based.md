@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `time_based` cover platform allows you to create covers with position control that do not
 have any position feedback. The state of the cover is thus always an assumed one, the current
 position is approximated with the time the cover has been moving in a direction. The state
@@ -93,5 +94,4 @@ This issue is tracked [here](https://github.com/esphome/issues/issues/4252#issue
 - {{< docref "index/" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "time_based/time_based_cover.h" "time_based/time_based_cover.h" >}}
-
 

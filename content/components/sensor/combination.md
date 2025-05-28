@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `combination` sensor platform allows you to combine the state of several
 sensors into one. To use this sensor, specify the combination type and add your source sensors.
 
@@ -101,5 +102,4 @@ sensor:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "combination/combination.h" "combination/combination.h" >}}
-
 

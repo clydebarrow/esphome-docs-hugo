@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Sometimes hardware and/or software doesn't behave as expected. ESPHome supports a "safe mode" to help recover from
 repeated boot failures/reboot loops. After a specified number (the default is ten) of boot failures, the safe mode may
 be invoked; in this mode, all components are disabled except serial logging, network (Wi-Fi or Ethernet) and the OTA
@@ -51,5 +52,4 @@ and OTA component(s).
 - {{< apiref "safe_mode/safe_mode.h" "safe_mode/safe_mode.h" >}}
 - {{< docref "/components/button/safe_mode" >}}
 - {{< docref "/components/switch/safe_mode" >}}
-
 

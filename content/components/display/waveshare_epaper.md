@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `waveshare_epaper` display platform allows you to use
 some E-Paper displays sold by [Waveshare](https://www.waveshare.com/product/displays/e-paper.htm)
 with ESPHome. The 2.13" [TTGO module](https://github.com/lewisxhe/TTGO-EPaper-Series) and the
@@ -160,5 +161,4 @@ The BUSY pin on the `gdew0154m09`, the `Waveshare 7.30in-f` and the `Waveshare 7
 - {{< docref "index/" >}}
 - {{< apiref "waveshare_epaper/waveshare_epaper.h" "waveshare_epaper/waveshare_epaper.h" >}}
 - [Arduino Waveshare E-Paper library](https://github.com/soonuse/epd-library-arduino) by [Yehui (@soonuse)](https://github.com/soonuse)
-
 

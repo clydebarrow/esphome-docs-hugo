@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `speaker` media player platform allows you to play on-device and online audio media via {{< docref "/components/speaker/index" "speaker components" >}}.
 
 This platform greatly benefits from having external PSRAM. See the [performance section](components/media_player/speaker#media_player-speaker-performance) for details.
@@ -196,5 +197,4 @@ If there is a noticeable delay before a pause command takes effect, reduce the b
 - {{< docref "/components/speaker/mixer" >}}
 - {{< docref "/components/speaker/resampler" >}}
 - {{< docref "index/" >}}
-
 

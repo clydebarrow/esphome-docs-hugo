@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This ESPHome component enables *wired* Ethernet connections for ESP32s.
 
 Ethernet for ESP8266 is not supported.
@@ -316,5 +317,4 @@ ethernet:
 - {{< docref "text_sensor/ethernet_info" >}}
 - {{< apiref "ethernet/ethernet_component.h" "ethernet/ethernet_component.h" >}}
 - [ESP32 Ethernet PHY connection info](https://pcbartists.com/design/embedded/esp32-ethernet-phy-schematic-design/)
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sht4x` sensor platform  allows you to use your SHT4X temperature and humidity sensor
 ([datasheet](https://sensirion.com/media/documents/33FD6951/63E1087C/Datasheet_SHT4x_1.pdf), `Adafruit`_) with ESPHome.
 
@@ -63,5 +64,4 @@ for more information about heater operation.
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "sht4x/sht4x.h" "sht4x/sht4x.h" >}}
-
 

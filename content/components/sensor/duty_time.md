@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `duty_time` sensor allows you to track the total duty time of some object, for example, a light bulb, in seconds.
 Able to calculate the last turn-on time when an optional sensor `last_time` is included in the configuration.
 
@@ -111,5 +112,4 @@ on_...:
 - [Automation](automations/_index#automation)
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "duty_time/duty_time_sensor.h" "duty_time/duty_time_sensor.h" >}}
-
 

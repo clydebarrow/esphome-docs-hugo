@@ -7,6 +7,7 @@ params:
     image: chart-line.svg
 ---
 
+
 {{< anchor "display-graphs" >}}
 
 

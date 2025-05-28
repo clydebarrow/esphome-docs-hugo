@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ble_scanner` text sensor platform lets you track reachable BLE devices.
 
 See the [BLE Tracker Configuration variables](components/esp32_ble_tracker#config-esp32_ble_tracker) for instructions for setting up scan parameters.
@@ -55,5 +56,4 @@ Example json log:
 - {{< docref "/components/esp32_ble_tracker" >}}
 - {{< docref "/components/text_sensor" >}}
 - {{< apiref "ble_scanner/ble_scanner.h" "ble_scanner/ble_scanner.h" >}}
-
 

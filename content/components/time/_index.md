@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `time` component allows you to set up real time clock time sources for ESPHome.
 You can then get the current time in [lambdas](automations/templates#config-lambda).
 
@@ -302,5 +303,4 @@ with the current time representation of that format option.
 ## See Also
 
 - {{< apiref "time/real_time_clock.h" "time/real_time_clock.h" >}}
-
 

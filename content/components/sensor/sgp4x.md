@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sgp4x` sensor platform allows you to use your Sensirion SGP40
 ([datasheet](https://sensirion.com/media/documents/296373BB/6203C5DF/Sensirion_Gas_Sensors_Datasheet_SGP40.pdf)) or SGP41
 ([datasheet](https://sensirion.com/media/documents/5FE8673C/61E96F50/Sensirion_Gas_Sensors_Datasheet_SGP41.pdf)) with ESPHome.
@@ -99,5 +100,4 @@ sensor:
 - {{< docref "sht3xd/" >}}
 - {{< docref "sht4x/" >}}
 - {{< apiref "sgp4x/sgp4x.h" "sgp4x/sgp4x.h" >}}
-
 

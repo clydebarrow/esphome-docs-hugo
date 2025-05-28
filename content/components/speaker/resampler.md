@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `resampler` speaker platform allows you to convert the sample rate of an audio stream and output it to another {{< docref "/components/speaker/index" "speaker component" >}}.
 
 If the audio stream doesn't require resampling, it is automatically sent directly to the output speaker.
@@ -49,5 +50,4 @@ Resampling is processor intensive and should be avoided as much as possible. The
 
 - [ART Audio Resampler (GitHub)](https://github.com/dbry/audio-resampler)
 - {{< docref "index/" >}}
-
 

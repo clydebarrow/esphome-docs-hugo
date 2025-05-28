@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `gps` component allows you to connect GPS modules to your ESPHome project.
 Any GPS module that uses the standardized NMEA communication protocol will work.
 
@@ -80,5 +81,4 @@ See {{< docref "time/gps" >}} for config options for the GPS time source.
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - [TinyGPS++ library](http://arduiniana.org/libraries/tinygpsplus/)
 - {{< apiref "gps/gps.h" "gps/gps.h" >}}
-
 

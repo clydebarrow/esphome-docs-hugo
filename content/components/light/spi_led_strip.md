@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `spi_led_strip` light platform drives one or more SPI interfaced RGB LEDs. These LEDs are often used in strips, where
 each LED is individually addressable. This component requires an SPI interface to be configured.
 
@@ -57,5 +58,4 @@ APA102 and friends do not have a `CS` input, and are write-only so the SPI `miso
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
 - {{< apiref "rgb/rgb_light_output.h" "rgb/rgb_light_output.h" >}}
-
 

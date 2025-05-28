@@ -7,6 +7,7 @@ params:
     image: nextion.jpg
 ---
 
+
 {{< anchor "nextion_text_sensor" >}}
 
 
@@ -173,5 +174,4 @@ printh FF FF FF
 - {{< docref "/components/display/nextion" >}}
 - {{< docref "index/" >}}
 - {{< apiref "nextion/text_sensor/nextion_textsensor.h" "nextion/text_sensor/nextion_textsensor.h" >}}
-
 

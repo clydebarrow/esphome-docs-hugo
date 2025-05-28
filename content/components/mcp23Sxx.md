@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Microchip MCP23Sxx series of general purpose, parallel I/O expansion for SPI bus applications.
 This series features exactly the same API as the MCP230xx I/O Expander (I²C).
 
@@ -146,5 +147,4 @@ binary_sensor:
 - {{< docref "binary_sensor/gpio" >}}
 - {{< apiref "API Reference (MCP23S08)" "mcp23S08/mcp23S08.h" >}}
 - {{< apiref "API Reference (MCP23S17)" "mcp23S17/mcp23S17.h" >}}
-
 

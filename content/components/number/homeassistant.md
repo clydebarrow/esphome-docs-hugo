@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `homeassistant` number platform allows you to create a number that is synchronized
 with Home Assistant. Min, Max and Step are not configurable for this platform because they are taken from the Home Assistant entity.
 
@@ -39,5 +40,4 @@ with the [`number.set` Action](components/number/_index#number-set_action).
 
 - [Automation](automations/_index#automation)
 - {{< apiref "homeassistant/number/homeassistant_number.h" "homeassistant/number/homeassistant_number.h" >}}
-
 

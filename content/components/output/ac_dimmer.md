@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< warning >}}
 This component has not been fully tested yet, if you are testing this component
 please share your experience with the dimmer hardware and light model and
@@ -75,5 +76,4 @@ the monochromatic light.
 - {{< docref "/components/output" >}}
 - {{< docref "/components/light/monochromatic" >}}
 - {{< apiref "ac_dimmer/ac_dimmer.h" "ac_dimmer/ac_dimmer.h" >}}
-
 

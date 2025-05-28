@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The network component is a global configuration for all types of
 networks (WiFi, Ethernet).
 
@@ -33,5 +34,4 @@ Therefore, the address generation does not comply to [RFC7217](https://datatrack
 
 - {{< docref "/components/wifi" >}}
 - {{< docref "/components/ethernet" >}}
-
 

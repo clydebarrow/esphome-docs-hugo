@@ -3,6 +3,7 @@ description: "Create audio clip files for use with I²S Speakers"
 title: "Create audio clip files for use with I²S Speakers"
 ---
 
+
 .. audio_clips_for_i2s:
 
 
@@ -54,5 +55,4 @@ HowTo by [NUT].
 
 - {{< docref "/components/speaker" >}}
 - {{< docref "/components/speaker/i2s_audio" >}}
-
 

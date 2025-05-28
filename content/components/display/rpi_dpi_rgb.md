@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "rpi_dpi_rgb" >}}
 
 ## Models
@@ -198,5 +199,4 @@ display:
 
 - {{< docref "index/" >}}
 - {{< apiref "rpi_dpi_rgb/rpi_dpi_rgb.h" "rpi_dpi_rgb/rpi_dpi_rgb.h" >}}
-
 

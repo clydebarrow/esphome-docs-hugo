@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `kmeteriso` sensor platform allows you to use your KMeterISO
 ([product](https://docs.m5stack.com/en/unit/KMeterISO%20Unit),
 `M5Stack`_) K-Type thermocouple temperature sensor with ESPHome.
@@ -41,5 +42,4 @@ sensor:
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "kmeteriso/kmeteriso.h" "kmeteriso/kmeteriso.h" >}}
 - [M5Stack Unit code](https://github.com/m5stack/M5Unit-KMeterISO) by [M5Stack](https://m5stack.com/)
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` climate platform creates a climate device from a tuya component.
 
 Tuya climate requires a {{< docref "/components/tuya" >}} to be configured.
@@ -137,5 +138,4 @@ integers for data reporting and to get a .5 temperature you need to divide by 2 
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/climate" >}}
 - {{< apiref "tuya/climate/tuya_climate.h" "tuya/climate/tuya_climate.h" >}}
-
 

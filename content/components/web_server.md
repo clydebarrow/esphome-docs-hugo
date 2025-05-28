@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `web_server` component creates a simple web server on the node that can be accessed
 through any browser and a simple [REST API](web-api/_index#api-rest). Please note that enabling this component
 will take up *a lot* of memory and may decrease stability, especially on ESP8266.
@@ -222,5 +223,4 @@ By clicking on any sensor it will expand a graph with the historical values for 
 - [REST API](web-api/_index#api-rest)
 - {{< apiref "web_server/web_server.h" "web_server/web_server.h" >}}
 - {{< docref "prometheus/" >}}
-
 

@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 ## Base Usage
 
 ESPHome's command line interface always has the following format
@@ -260,4 +261,3 @@ eval "$(register-python-argcomplete esphome)"
 
 ```
 For more information, see [argcomplete](https://kislyuk.github.io/argcomplete/) documentation.
-

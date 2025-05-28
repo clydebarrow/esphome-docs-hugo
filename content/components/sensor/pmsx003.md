@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `pmsx003` sensor platform allows you to use your Plantower PMS5003, PMS7003, ... laser based particulate matter sensors
 ([datasheet](http://www.aqmd.gov/docs/default-source/aq-spec/resources-page/plantower-pms5003-manual_v2-3.pdf))
 sensors with ESPHome.
@@ -85,5 +86,4 @@ sensor:
 - {{< docref "/components/sensor/sds011" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "pmsx003/pmsx003.h" "pmsx003/pmsx003.h" >}}
-
 

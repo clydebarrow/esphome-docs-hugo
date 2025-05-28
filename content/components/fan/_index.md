@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 With the `fan` domain you can create components that appear as fans in
 the Home Assistant frontend. A fan can be switched on or off, optionally
 has a speed between 1 and the maximum supported speed of the fan, and can have an
@@ -374,5 +375,4 @@ advanced stuff (see the full API Reference for more info).
 ## Full Fan Index
 
 - {{< apiref "fan/fan_state.h" "fan/fan_state.h" >}}
-
 

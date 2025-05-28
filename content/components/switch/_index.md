@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `switch` domain includes all platforms that should show up like a
 switch and can only be turned ON or OFF.
 
@@ -184,5 +185,4 @@ switch:
 ## See Also
 
 - {{< apiref "switch/switch.h" "switch/switch.h" >}}
-
 

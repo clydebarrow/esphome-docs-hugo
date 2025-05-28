@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` Select platform allows you to create a Select with templated values
 using [lambdas](automations/templates#config-lambda).
 
@@ -57,5 +58,4 @@ with the [`select.set` Action](components/select/_index#select-set_action).
 
 - [Automation](automations/_index#automation)
 - {{< apiref "template/select/template_select.h" "template/select/template_select.h" >}}
-
 

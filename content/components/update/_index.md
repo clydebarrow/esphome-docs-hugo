@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `update` component allows your ESPHome devices to install updates from a remote source; instead of
 {{< docref "/components/ota/index" ""pushing" an update to your device" >}}, the device can retrieve an update and
 install it on its own.
@@ -64,6 +65,5 @@ Configuration variables:
 
 
 ## See Also
-
 
 

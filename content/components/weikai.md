@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 **WeiKai Microelectronics** provides a family of UART & GPIO expansion chips
 that interfaces to a micro-controller through SPI or I²C bus.
 
@@ -291,5 +292,4 @@ log file and the baud rate will automatically be decreased.
 - {{< docref "switch/gpio" >}}
 - {{< docref "binary_sensor/gpio" >}}
 - {{< apiref "weika/weika.h" "weika/weika.h" >}}
-
 

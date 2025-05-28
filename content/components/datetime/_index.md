@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome has support for components to create a datetime entity. A datetime entity
 currently represents a date that can be set by the user/frontend.
 
@@ -308,5 +309,4 @@ For more complex use cases, several methods are available for use on datetimes f
 - {{< apiref "TimeCall" "datetime/time_entity.h" >}}
 - {{< apiref "DateTimeEntity" "datetime/datetime_entity.h" >}}
 - {{< apiref "DateTimeCall" "datetime/datetime_entity.h" >}}
-
 

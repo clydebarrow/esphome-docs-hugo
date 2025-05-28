@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` number platform allows you to create a number that controls
 a tuya serial component. This platform requires {{< docref "/components/tuya" >}} to be configured.
 
@@ -103,5 +104,4 @@ Therefore there is also an option to store them on the ESPHome side and they wil
 
 - {{< docref "/components/number" >}}
 - {{< apiref "tuya/number/tuya_number.h" "tuya/number/tuya_number.h" >}}
-
 

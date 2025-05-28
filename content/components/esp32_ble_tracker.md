@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `esp32_ble_tracker` component creates a global hub so that you can track bluetooth low energy devices
 using your ESP32 node.
 
@@ -307,5 +308,4 @@ api:
 - {{< docref "bluetooth_proxy/" >}}
 - {{< apiref "esp32_ble_tracker/esp32_ble_tracker.h" "esp32_ble_tracker/esp32_ble_tracker.h" >}}
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
-
 

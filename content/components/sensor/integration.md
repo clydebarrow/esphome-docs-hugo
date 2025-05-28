@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `integration` sensor is a helper sensor that can integrate values from other sensors over
 time. This can for example be useful to integrate the values of a water flow sensor (in m^3/s) over
 time (result is in m^3).
@@ -59,5 +60,4 @@ on_...:
 - {{< docref "total_daily_energy/" >}}
 - {{< docref "/cookbook/power_meter" >}}
 - {{< apiref "integration/integration_sensor.h" "integration/integration_sensor.h" >}}
-
 

@@ -6,6 +6,7 @@ params:
     description: Water leak detector with ESPHome on an M5StickC ESP32
 ---
 
+
 |  ESP32 Water Leak Detector (with notification) |
 | --- |
 
@@ -286,5 +287,4 @@ Enjoy your locally-controlled leak detector with push notification!
 - {{< docref "/components/display" >}}
 - {{< docref "/components/display/st7735" >}}
 - {{< docref "/components/binary_sensor/esp32_touch" >}}
-
 

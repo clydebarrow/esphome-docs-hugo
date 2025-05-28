@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `honeywellabp` sensor platform allows you to use your Honeywell ABP
 ([website](https://sps.honeywell.com/us/en/products/sensing-and-iot/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp-series),
 [datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/basic-abp-series/documents/sps-siot-basic-board-mount-pressure-abp-series-datasheet-32305128-ciid-155789.pdf?download=false),
@@ -57,5 +58,4 @@ datasheet indicates that the sensor does not measure temperature.
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "honeywellabp/honeywellabp.h" "honeywellabp/honeywellabp.h" >}}
-
 

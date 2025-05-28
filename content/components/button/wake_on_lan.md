@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `wake_on_lan` button platform allows you to send a Wake-on-LAN magic packet to a computer on the network
 by specifying its MAC address.
 
@@ -28,5 +29,4 @@ button:
 
 - {{< docref "template/" >}}
 - {{< apiref "wake_on_lan/wake_on_lan.h" "wake_on_lan/wake_on_lan.h" >}}
-
 

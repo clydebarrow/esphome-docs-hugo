@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The HTU31D Temperature & Humidity component allows you to use HTU31D sensors with
 ESPHome. The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
 
@@ -53,5 +54,4 @@ sensor:
 - {{< docref "sht3xd/" >}}
 - {{< apiref "htu31d/htu31d.h" "htu31d/htu31d.h" >}}
 - [i2cdevlib](https://github.com/jrowberg/i2cdevlib) by [Jeff Rowberg](https://github.com/jrowberg)
-
 

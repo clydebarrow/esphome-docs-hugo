@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Current Transformer Clamp (`ct_clamp`) sensor allows you to hook up a CT Clamp to an analog
 voltage sensor (like the {{< docref "adc" "ADC sensor" >}}) and convert the readings to measured single phase AC current.
 
@@ -76,5 +77,4 @@ Recompile and upload, now your CT clamp sensor is calibrated!
 - {{< docref "adc/" >}}
 - {{< docref "ads1115/" >}}
 - {{< apiref "sensor/ct_clamp_sensor.h" "sensor/ct_clamp_sensor.h" >}}
-
 

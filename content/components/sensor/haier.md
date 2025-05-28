@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Additional sensors for Haier Climate device. **These sensors are supported only by the hOn protocol**.
 
 
@@ -73,5 +74,4 @@ sensor:
 
 - {{< docref "/components/climate/haier" "Haier Climate" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
-
 

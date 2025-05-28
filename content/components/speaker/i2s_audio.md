@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `i2s_audio` speaker platform allows you to receive audio via the the {{< docref "/components/i2s_audio" >}}.
 
 This platform only works on ESP32 based chips.
@@ -82,5 +83,4 @@ Internal DAC speakers are only supported by the legacy I²S driver on a regular 
 ## See also
 
 - {{< docref "index/" >}}
-
 

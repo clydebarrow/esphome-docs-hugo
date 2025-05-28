@@ -3,6 +3,7 @@ description: "YAML Configuration in ESPHome"
 title: "YAML Configuration in ESPHome"
 ---
 
+
 {{< anchor "yaml-configuration" >}}
 
 
@@ -348,4 +349,3 @@ See [Templates](automations/templates#config-lambda) for more information.
 - {{< docref "/components/packages" >}}
 - {{< docref "/guides/configuration-types" >}}
 - [YAML Official Site](https://yaml.org/)
-

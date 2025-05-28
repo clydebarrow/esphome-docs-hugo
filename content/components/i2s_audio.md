@@ -7,6 +7,7 @@ params:
     image: i2s_audio.svg
 ---
 
+
 {{< anchor "i2s_audio" >}}
 
 
@@ -33,5 +34,4 @@ i2s_audio:
 - {{< docref "microphone/i2s_audio" >}}
 - {{< docref "media_player/i2s_audio" >}}
 - {{< docref "speaker/i2s_audio" >}}
-
 

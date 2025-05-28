@@ -4,6 +4,7 @@ title: "Contributors"
 ---
 
 
+
 ESPHome is an open-source project of the [Open Home Foundation](https://www.openhomefoundation.org/),
 and everybody can contribute to it to make this project awesome. This list contains a list of people who have
 submitted patches that have made it into the [ESPHome organization's](https://github.com/esphome) repositories.
@@ -703,6 +704,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Frank Langtind (@frankiboy1)](https://github.com/frankiboy1)
 - [Frankster-NL (@Frankster-NL)](https://github.com/Frankster-NL)
 - [frauhottelmann (@frauhottelmann)](https://github.com/frauhottelmann)
+- [Joe Groocock (@frebib)](https://github.com/frebib)
 - [Fredrik Erlandsson (@fredrike)](https://github.com/fredrike)
 - [freeasabeer (@freeasabeer)](https://github.com/freeasabeer)
 - [FreeBear-nc (@FreeBear-nc)](https://github.com/FreeBear-nc)
@@ -1647,6 +1649,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Regev Brody (@regevbr)](https://github.com/regevbr)
 - [Rei Vilo (@rei-vilo)](https://github.com/rei-vilo)
 - [Alex Reid (@reidprojects)](https://github.com/reidprojects)
+- [Devon G. Redekopp (@Renegade605)](https://github.com/Renegade605)
 - [RenierM26 (@RenierM26)](https://github.com/RenierM26)
 - [Reuben (@reubn)](https://github.com/reubn)
 - [RFDarter (@RFDarter)](https://github.com/RFDarter)
@@ -1655,6 +1658,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Robert Gabrielson (@rgabrielson11)](https://github.com/rgabrielson11)
 - [Rob Gray (@rgr4y)](https://github.com/rgr4y)
 - [Rafael Goes (@rgriffogoes)](https://github.com/rgriffogoes)
+- [Ralf Habacker (@rhabacker)](https://github.com/rhabacker)
 - [rheinz (@rheinz)](https://github.com/rheinz)
 - [Rhys79 (@Rhys79)](https://github.com/Rhys79)
 - [richardhopton (@richardhopton)](https://github.com/richardhopton)
@@ -2142,5 +2146,4 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Christian Zufferey (@zuzu59)](https://github.com/zuzu59)
 - [Zynth-dev (@Zynth-dev)](https://github.com/Zynth-dev)
 
-*This page was last updated May 21, 2025.*
-
+*This page was last updated May 27, 2025.*

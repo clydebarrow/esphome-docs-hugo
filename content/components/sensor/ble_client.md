@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ble_client` component is a sensor platform that can query BLE devices for RSSI or specific
 values of service characteristics.
 
@@ -124,5 +125,4 @@ Some common ones:
 - {{< docref "/components/ble_client" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ble_sensor/ble_sensor.h" "ble_sensor/ble_sensor.h" >}}
-
 

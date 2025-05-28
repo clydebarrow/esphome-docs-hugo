@@ -7,6 +7,7 @@ params:
     image: spi.svg
 ---
 
+
 {{< anchor "spi" >}}
 
 
@@ -165,5 +166,4 @@ of the specific peripheral chip.
 ## See Also
 
 - {{< apiref "spi/spi.h" "spi/spi.h" >}}
-
 

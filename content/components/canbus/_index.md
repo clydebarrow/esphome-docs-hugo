@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Controller Area Network (CAN) bus is a serial bus protocol to connect individual systems and sensors
 as an alternative to conventional multi-wire looms. It allows automotive components to communicate on a
 single or dual-wire data bus at speeds up to 1Mbps.
@@ -352,5 +353,4 @@ cover:
 ## See Also
 
 - {{< apiref "canbus/canbus.h" "canbus/canbus.h" >}}
-
 

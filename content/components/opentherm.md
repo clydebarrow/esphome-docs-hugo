@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 OpenTherm (OT) is a standard communications protocol used in central heating systems for the communication between
 central heating appliances and a thermostatic controller. As a standard, OpenTherm is independent of any single
 manufacturer. A controller from manufacturer A can in principle be used to control a boiler from manufacturer B.
@@ -473,5 +474,4 @@ climate:
   real-world use case for this component.
 - [Development repository](https://github.com/olegtarasov/esphome-opentherm) — new features will be tested here
   before proposing them to ESPHome core.
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `cover` component is a generic representation of covers in ESPHome.
 A cover can (currently) either be *closed* or *open* and supports three types of
 commands: *open*, *close* and *stop*.
@@ -261,5 +262,4 @@ cover:
 ## See Also
 
 - {{< apiref "cover/cover.h" "cover/cover.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome is the perfect solution for creating custom firmwares for
 your ESP8266/ESP32 boards. In this guide we'll go through how to set up a
 basic “node” in a few simple steps.
@@ -240,5 +241,4 @@ Logging level can be set with the env var `ESPHOME_LOG_LEVEL` (default is `INFO`
 - {{< docref "cli/" >}}
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_hassio/" >}}
-
 

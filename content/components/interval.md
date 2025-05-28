@@ -3,6 +3,7 @@ description: "Interval Component"
 title: "Interval Component"
 ---
 
+
 # Interval Component
 
 This component allows you to run actions at fixed time intervals. For example, if you want to toggle a switch every
@@ -30,5 +31,4 @@ If a startup delay is configured, the first execution of the actions will not oc
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}
 - {{< docref "/automations/templates" >}}
-
 

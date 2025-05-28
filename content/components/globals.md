@@ -3,6 +3,7 @@ description: "Global Variables"
 title: "Global Variables"
 ---
 
+
 # Global Variables
 
 In some cases you might need to share a global variable across multiple lambdas. For example, global variables can be
@@ -83,5 +84,4 @@ id(my_global_var) = 10;
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}
 - {{< docref "/automations/templates" >}}
-
 

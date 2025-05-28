@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The pulse meter sensor allows you to count the number and frequency of pulses on any pin. It is intended to be a drop-in replacement
 for the {{< docref "/components/sensor/pulse_counter" "pulse counter component" >}}.
 Rather than counting pulses over a fixed time interval, the pulse meter sensor measures the time between pulses. The precise manner in which this is done depends on the `internal_filter_mode` option. This leads to a higher resolution, especially for low pulse rates, as the pulse counter sensor is limited by the number of pulses within a time interval.
@@ -108,5 +109,4 @@ This value is the raw count of pulses, and not the value you see after the filte
 - {{< docref "/cookbook/power_meter" >}}
 - [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
 - {{< apiref "pulse_meter/pulse_meter_sensor.h" "pulse_meter/pulse_meter_sensor.h" >}}
-
 

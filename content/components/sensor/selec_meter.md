@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `selec_meter` sensor platform allows you to use Selec Modbus energy monitors
 ([website](https://www.selec.com/product-details/energy-meter-direct-operated-em2m))
 with ESPHome.
@@ -108,5 +109,4 @@ sensor:
 ## See Also
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
-
 

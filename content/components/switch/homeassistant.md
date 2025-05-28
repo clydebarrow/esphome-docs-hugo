@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `homeassistant` Switch platform allows you to create Switch that **import**
 states and allow **control** via your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.
 
@@ -47,5 +48,4 @@ The following entity domains from Home Assistant are supported by this platform.
 
 - [Automation](automations/_index#automation)
 - {{< apiref "homeassistant/switch/homeassistant_switch.h" "homeassistant/switch/homeassistant_switch.h" >}}
-
 

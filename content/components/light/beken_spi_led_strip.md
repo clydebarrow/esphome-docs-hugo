@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This is a component using the Beken SPI DMA interface to drive addressable LED strips.
 
 {{< warning >}}
@@ -57,5 +58,4 @@ light:
 - {{< docref "/components/light" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "beken_spi_led_strip/beken_spi_led_strip.h" "beken_spi_led_strip/beken_spi_led_strip.h" >}}
-
 

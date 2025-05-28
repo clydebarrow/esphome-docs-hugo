@@ -3,6 +3,7 @@ description: "Mapping Component"
 title: "Mapping Component"
 ---
 
+
 # Mapping Component
 
 The `mapping` component allows you to create a map or dictionary that allows a one-to-one translation from keys to values. This enables e.g. mapping a string to a number or vice versa, or mapping a string such as a weather condition to an image.
@@ -93,5 +94,4 @@ display:
 
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}
-
 

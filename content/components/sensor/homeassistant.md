@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `homeassistant` sensor platform allows you to create sensors that import
 states from your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.
 
@@ -63,5 +64,4 @@ are not inherited from the imported sensor so you need to set them manually.
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - [Automation](automations/_index#automation)
 - {{< apiref "homeassistant/sensor/homeassistant_sensor.h" "homeassistant/sensor/homeassistant_sensor.h" >}}
-
 

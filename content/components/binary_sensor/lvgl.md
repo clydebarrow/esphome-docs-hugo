@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lvgl` binary sensor platform creates a binary sensor from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
@@ -37,5 +38,4 @@ binary_sensor:
 - {{< docref "/components/light/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
-
 

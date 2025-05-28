@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `pmsa003i` sensor platform  allows you to use your Plantower PMSA003I
 particulate matter sensor
 ([datasheet](https://cdn-shop.adafruit.com/product-files/4632/4505_PMSA003I_series_data_manual_English_V2.6.pdf),
@@ -88,5 +89,4 @@ Standard vs environmental units from https://publiclab.org/questions/samr/04-07-
 - {{< docref "/components/sensor/sds011" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "pmsa003i/pmsa003i.h" "pmsa003i/pmsa003i.h" >}}
-
 

@@ -7,6 +7,7 @@ params:
     image: /images/lvgl.png
 ---
 
+
 {{< anchor "lvgl-cookbook" >}}
 
 
@@ -2191,6 +2192,5 @@ You can combine it with the previous example to turn off the backlight, so the u
 - [Key collector component](components/key_collector#key_collector)
 - [What is Image Sticking, Image Burn-in, an After Image, or a Ghost Image on an LCD?](https://www.philips.ca/c-f/XC000007486/what-is-image-sticking,-image-burn-in,-an-after-image,-or-a-ghost-image-on-an-lcd)
 - [Image persistence](https://en.wikipedia.org/wiki/Image_persistence)
-
 
 

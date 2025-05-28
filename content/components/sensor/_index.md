@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome has support for many different sensors. Each of them is a
 platform of the `sensor` domain and each sensor has several base
 configuration options.
@@ -911,5 +912,4 @@ advanced stuff (see the full API Reference for more info).
 ## See Also
 
 - {{< apiref "sensor/sensor.h" "sensor/sensor.h" >}}
-
 

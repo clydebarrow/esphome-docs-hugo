@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sound_level` sensor platform allows you to measure a {{< docref "/components/microphone/index" "microphone" >}}'s average and peak sound pressure levels over a specified measurement duration. The sensors output in **relative** `dB`, where `0 dB` represents the loudest sound the microphone can measure.
 
 {{< warning >}}
@@ -72,5 +73,4 @@ Stops measuring sound levels. Does nothing in passive mode.
 - [Root Mean Square (Wikipedia)](https://en.wikipedia.org/wiki/Root_mean_square)
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "sound_level/sound_level.h" "sound_level/sound_level.h" >}}
-
 

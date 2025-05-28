@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 When you have many ESPHome devices (or are producing and distributing them at scale), a common need tends to surface:
 configuration modularization. You'll likely want to break your configuration into common (groups of) elements, building
 it into reusable pieces which can subsequently be used by many/all devices. Only unique pieces of your configuration
@@ -224,5 +225,4 @@ captive_portal: !remove
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "/guides/getting_started_command_line" >}}
 - {{< docref "/guides/faq" >}}
-
 

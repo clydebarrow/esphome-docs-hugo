@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `bang_bang` climate platform allows you to regulate a value with a
 [bang-bang controller](https://en.wikipedia.org/wiki/Bang%E2%80%93bang_control) (also called hysteresis controller).
 
@@ -181,5 +182,4 @@ In all other situations, the {{< docref "thermostat" "thermostat" >}} component 
 
 - {{< docref "/components/climate" >}}
 - {{< apiref "bang_bang/bang_bang_climate.h" "bang_bang/bang_bang_climate.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `logger` Select platform allows you to create a Select that can be used to change the log level of the logger component.
 
 ```yaml
@@ -21,5 +22,4 @@ select:
 
 - [Automation](automations/_index#automation)
 - {{< docref "/components/logger" >}}
-
 

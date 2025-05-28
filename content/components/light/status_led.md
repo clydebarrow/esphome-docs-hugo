@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `status_led` light platform allows to share a single LED for indicating the status of
 the device (when on error/warning state) or as binary light (when on OK state).
 This is useful for devices with only one LED available.
@@ -57,5 +58,4 @@ pin:
 - {{< docref "/components/light/binary" >}}
 - {{< docref "/components/light" >}}
 - {{< apiref "status_led/light/status_led_light.h" "status_led/light/status_led_light.h" >}}
-
 

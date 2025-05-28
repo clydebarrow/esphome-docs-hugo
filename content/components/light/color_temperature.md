@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `color_temperature` light platform creates a Color Temperature
 light from 2 [float output components](components/output/_index#output). One channel controls the LED temperature,
 and the other channel controls the brightness.
@@ -50,5 +51,4 @@ light:
 - {{< docref "/components/output/pca9685" >}}
 - {{< docref "/components/output/tlc59208f" >}}
 - {{< apiref "color_temperature/ct_light_output.h" "color_temperature/ct_light_output.h" >}}
-
 

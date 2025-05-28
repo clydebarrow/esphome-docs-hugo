@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 You can easily import community or personal components using the external components feature.
 Bundled components can be overridden using this feature.
 
@@ -219,6 +220,5 @@ Likewise, you can set this setting to `never` and ESPHome will never
 
 
 ## See Also
-
 
 

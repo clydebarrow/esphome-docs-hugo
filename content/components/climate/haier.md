@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This is an implementation of the ESPHome component to control HVAC on the base of the SmartAir2 and hOn Haier protocols (AC that is controlled by the hOn or SmartAir2 application).
 
 There are two versions of the Haier protocol: the older version uses an application called SmartAir2 while the newer version uses an application called hOn. Both protocols are compatible on the transport level but utilize different commands to control appliances.
@@ -305,5 +306,4 @@ on_...:
 - {{< docref "/components/switch/haier" "Haier Climate Switches" >}}
 - {{< docref "/components/climate" >}}
 - {{< apiref "haier/climate/haier_base.h" "haier/climate/haier_base.h" >}}
-
 

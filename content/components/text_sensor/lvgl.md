@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lvgl` text sensor platform creates a Text Sensor from an LVGL textual widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
@@ -42,5 +43,4 @@ Widget-specific actions (`lvgl.label.update`, `lvgl.textarea.update`) will trigg
 - {{< docref "/components/light/lvgl" >}}
 - {{< docref "/components/select/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `rgbw` light platform creates an RGBW light from 4 [float output components](components/output/_index#output) (one for each channel).
 
 ```yaml
@@ -89,5 +90,4 @@ the `color_mode` option of the [light control actions](components/light/_index#l
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
 - {{< apiref "rgbw/rgb_light_output.h" "rgbw/rgb_light_output.h" >}}
-
 

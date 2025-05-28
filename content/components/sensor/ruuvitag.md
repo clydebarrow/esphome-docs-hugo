@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ruuvitag` sensor platform lets you track the output of RuuviTag
 Bluetooth Low Energy devices using the {{< docref "/components/esp32_ble_tracker" >}}.
 This component will track the temperature, humidity, acceleration and battery
@@ -146,5 +147,4 @@ ESPHome therefore has no impact on the battery life of the device.
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "ruuvitag/ruuvitag.h" "ruuvitag/ruuvitag.h" >}}
 - [Ruuvi](https://ruuvi.com)
-
 

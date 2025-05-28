@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Here you specify some core information that ESPHome needs to create
 firmwares. Most importantly, this is the section of the configuration
 where you specify the **name** of the node.
@@ -359,6 +360,5 @@ This is useful in the case of packages where a published package might use featu
 available in a newer version of ESPHome. This allows for a more friendly error message.
 
 ## See Also
-
 
 

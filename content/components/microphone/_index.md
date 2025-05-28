@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `microphone` domain contains common functionality shared across the
 microphone platforms.
 
@@ -129,6 +130,5 @@ This condition will check if the microphone is currently apply a software mute.
 ## Platforms
 
 ## See Also
-
 
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `rotary_encoder` sensor platform allows you to use any continuous-rotation
 rotary encoders with ESPHome. These devices usually have two pins with which
 they encode the rotation. Every time the knob of the rotary encoder is turned, the
@@ -134,5 +135,4 @@ on_anticlockwise:
 - {{< docref "template/" >}}
 - [Mechanical Input Library](https://github.com/jkDesignDE/MechInputs) by [Jochen Krapf](https://github.com/JK-de)
 - {{< apiref "rotary_encoder/rotary_encoder.h" "rotary_encoder/rotary_encoder.h" >}}
-
 

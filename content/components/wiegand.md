@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `wiegand` component allows you to integrate Wiegand-standard key
 input and card or tag reader panels in Home Assistant.
 
@@ -71,5 +72,4 @@ but check the logs to see which key code you get and use the corresponding chara
 ## See Also
 
 - {{< docref "/components/key_collector" >}}
-
 

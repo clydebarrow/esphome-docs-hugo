@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< img src="sprinkler.png" alt="Image" class="center" >}}
 
 The `sprinkler` controller component aims to behave like a sprinkler/irrigation valve controller,
@@ -1256,5 +1257,4 @@ We'll approach this from the angle of *"how do I..."*
 
 - {{< apiref "sprinkler/sprinkler.h" "sprinkler/sprinkler.h" >}}
 - {{< apiref "switch/switch.h" "switch/switch.h" >}}
-
 

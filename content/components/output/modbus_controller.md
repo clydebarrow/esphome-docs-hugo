@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `modbus_controller` platform creates an output from a modbus_controller. The goal is to write a value to a modbus register on a device.
 
 ## Configuration variables:
@@ -97,5 +98,4 @@ output:
 - {{< docref "/components/select/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - https://www.modbustools.com/modbus.html
-
 

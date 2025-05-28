@@ -4,6 +4,7 @@ title: "LVGL Widgets"
 ---
 
 
+
 At the next level of the LVGL object hierarchy are the widgets, which support styling directly. They can have sub-parts, which may be styled separately. Usually styles are inherited, but this depends on widget specifics or functionality. The widget and its parts have states, and different styling can be set for different states.
 
 Widgets can have children, which can be any other widgets. Think of this as a nested structure. The child widgets move with the parent and, if the parent is hidden, its children will also be hidden.
@@ -2090,5 +2091,4 @@ When used on a widget, it does not act specifically on that widget but can be us
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
 - [LVGL docs](https://docs.lvgl.io/)
-
 

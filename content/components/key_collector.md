@@ -6,6 +6,7 @@ params:
     description: Key collector component
 ---
 
+
 {{< anchor "key_collector" >}}
 
 
@@ -115,5 +116,4 @@ on_...:
 - {{< docref "/components/wiegand" >}}
 - [LVGL Button Matrix widget](components/lvgl/widgets#lvgl-widget-buttonmatrix)
 - [LVGL Keyboard widget](components/lvgl/widgets#lvgl-widget-keyboard)
-
 

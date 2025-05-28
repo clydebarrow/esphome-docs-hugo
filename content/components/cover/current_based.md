@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `current_based` cover platform allows you to create covers with position control by using current
 sensors to detect the fully-open and fully-closed states. This is pretty useful when using motors with
 integrated mechanical endstops. During cover operation, the component monitors the current consumption
@@ -249,5 +250,4 @@ status_led:
 - {{< docref "/components/sensor/ade7953" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "current_based/current_based_cover.h" "current_based/current_based_cover.h" >}}
-
 

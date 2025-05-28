@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< note >}}
 To attach a physical button to ESPHome, see
 {{< docref "/components/binary_sensor/gpio" "GPIO Binary Sensor" >}}.
@@ -129,5 +130,4 @@ From [lambdas](automations/templates#config-lambda), you can press a button.
 ## See Also
 
 - {{< apiref "button/button.h" "button/button.h" >}}
-
 

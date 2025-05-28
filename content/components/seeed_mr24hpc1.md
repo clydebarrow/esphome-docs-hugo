@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Component/Hub
 
 The `seeed_mr24hpc1` platform allows you to use Seeed Studio 24GHz mmWave Sensor -
@@ -415,5 +416,4 @@ The result:
 - [Product Detail Page for Seeed Studio mmWave Human Detection Sensor Kit](https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html)
 - [Source of inspiration for implementation](https://github.com/limengdu/mmwave-kit-external-components/)
 - {{< apiref "seeed_mr24hpc1/seeed_mr24hpc1.h" "seeed_mr24hpc1/seeed_mr24hpc1.h" >}}
-
 

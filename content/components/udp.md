@@ -7,6 +7,7 @@ params:
     image: udp.svg
 ---
 
+
 {{< anchor "udp" >}}
 
 
@@ -122,5 +123,4 @@ binary_sensor:
 - {{< docref "/components/sensor/packet_transport" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "udp/udp_component.h" "udp/udp_component.h" >}}
-
 

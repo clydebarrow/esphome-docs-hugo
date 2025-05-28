@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `vl53l0x` sensor platform allows you to use VL53L0X optical time of flight
 ([datasheet](https://www.st.com/resource/en/datasheet/vl53l0x.pdf),
 [ST](https://www.st.com/en/imaging-and-photonics-solutions/vl53l0x.html)) with ESPHome
@@ -99,5 +100,4 @@ sensor:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "vl53l0x/vl53l0x_sensor.h" "vl53l0x/vl53l0x_sensor.h" >}}
 - [vl53l0x-arduino library](https://github.com/pololu/vl53l0x-arduino/) by [Pololu](https://github.com/pololu)
-
 

@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 {{< anchor "sdl_touchscreen" >}}
 
 The `sdl` touchscreen platform allows emulating a touch screen by using the mouse with the `sdl` display driver.
@@ -31,5 +32,4 @@ touchscreen:
 
 - [SDL display](components/display/sdl#sdl)
 - {{< apiref "sdl/sdl_touchscreen.h" "sdl/sdl_touchscreen.h" >}}
-
 

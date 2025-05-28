@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `modbus_controller` sensor platform creates a text sensor from a modbus_controller component
 and requires {{< docref "/components/modbus_controller" >}} to be configured.
 
@@ -91,5 +92,4 @@ text_sensor:
 - {{< docref "/components/select/modbus_controller" >}}
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 - https://www.modbustools.com/modbus.html
-
 

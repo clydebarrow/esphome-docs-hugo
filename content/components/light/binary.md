@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `binary` light platform creates a simple ON/OFF-only light from a
 [binary output component](components/output/_index#output).
 
@@ -33,5 +34,4 @@ light:
 - {{< docref "/components/output/gpio" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "binary/light/binary_light_output.h" "binary/light/binary_light_output.h" >}}
-
 

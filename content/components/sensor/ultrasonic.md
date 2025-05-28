@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The ultrasonic distance sensor allows you to use simple ultrasonic
 sensors like the HC-SR04
 ([datasheet](https://www.electroschematics.com/wp-content/uploads/2013/07/HC-SR04-datasheet-version-2.pdf),
@@ -58,5 +59,4 @@ Advanced options:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "template/" >}}
 - {{< apiref "ultrasonic/ultrasonic_sensor.h" "ultrasonic/ultrasonic_sensor.h" >}}
-
 

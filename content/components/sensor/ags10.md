@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ags10` sensor platform VOC sensor allows you to use your ASAIR AGS10
 ([datasheet](http://www.aosong.com/userfiles/files/Datasheet%20AGS10.pdf),
 `ASAIR`_ ) sensors with
@@ -111,5 +112,4 @@ Configuration options:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ags10/ags10.h" "ags10/ags10.h" >}}
-
 

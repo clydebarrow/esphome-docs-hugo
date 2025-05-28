@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `stepper` component allows you to use stepper motors with ESPHome.
 Currently only the A4988 stepper driver
 ([datasheet](https://www.pololu.com/file/0J450/a4988_DMOS_microstepping_driver_with_translator.pdf))
@@ -323,5 +324,4 @@ advanced stuff (see the full API Reference for more info).
 ## See Also
 
 - {{< apiref "stepper/stepper.h" "stepper/stepper.h" >}}
-
 

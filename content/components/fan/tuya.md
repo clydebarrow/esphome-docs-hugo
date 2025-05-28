@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` fan platform creates a variable speed fan from a
 tuya component.
 
@@ -66,5 +67,4 @@ over the serial bus.
 - {{< docref "/components/tuya" >}}
 - {{< docref "/components/fan" >}}
 - {{< apiref "tuya/fan/tuya_fan.h" "tuya/fan/tuya_fan.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `bedjet` component allows you to communicate with a BedJet V3 Climate Comfort
 Sleep System.
 
@@ -207,5 +208,4 @@ ota:
 - {{< docref "/components/ble_client" >}}
 - {{< docref "/components/climate" >}}
 - {{< apiref "bedjet/bedjet.h" "bedjet/bedjet.h" >}}
-
 

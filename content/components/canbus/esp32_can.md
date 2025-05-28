@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The ESP32 has an integrated CAN controller and therefore doesn't necessarily need an external controller.
 You only need to specify the RX and TX pins. Any GPIO will work.
 
@@ -77,5 +78,4 @@ If you prefer to only have a 3.3V power supply, special 3.3V CAN transceivers ar
 
 - {{< docref "index/" >}}
 - {{< apiref "canbus/canbus.h" "canbus/canbus.h" >}}
-
 

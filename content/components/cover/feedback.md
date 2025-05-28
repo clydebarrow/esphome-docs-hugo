@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `feedback` cover platform allows you to create covers with position control that
 can optionally have feedback from sensors to detect the fully-open and fully-closed states (endstops),
 and from sensors to detect actual movement (opening/closing). In all the cases the current
@@ -249,5 +250,4 @@ Most options can be left untouched, but some modifications are needed:
 - {{< docref "index/" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "feedback/feedback_cover.h" "feedback/feedback_cover.h" >}}
-
 

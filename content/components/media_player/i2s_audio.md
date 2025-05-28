@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `i2s_audio` media player platform allows you to play media from webservers and web streams
 via the {{< docref "/components/i2s_audio" >}}. This platform only works on ESP32 based chips.
 
@@ -53,5 +54,4 @@ For best results, keep the wires as short as possible.
 ## See also
 
 - {{< docref "index/" >}}
-
 

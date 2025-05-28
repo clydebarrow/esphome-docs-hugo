@@ -3,6 +3,7 @@ description: "Script Component"
 title: "Script Component"
 ---
 
+
 # Script Component
 
 ESPHome's `script` component allows you to define a list of steps (actions) in a central place. You can then execute
@@ -180,5 +181,4 @@ lambda: |-
 - {{< docref "index/" >}}
 - {{< docref "/automations/actions" >}}
 - {{< docref "/automations/templates" >}}
-
 

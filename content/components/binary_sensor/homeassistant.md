@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `homeassistant` binary sensor platform allows you to create binary sensors that **import**
 states from your Home Assistant instance using the {{< docref "/components/api" "native API" >}}.
 
@@ -47,5 +48,4 @@ binary_sensor:
 
 - [Automation](automations/_index#automation)
 - {{< apiref "homeassistant/binary_sensor/homeassistant_binary_sensor.h" "homeassistant/binary_sensor/homeassistant_binary_sensor.h" >}}
-
 

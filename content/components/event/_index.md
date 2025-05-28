@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome supports the creation of event entities in Home Assistant.
 These entities allow for the triggering of custom events within the Home Assistant ecosystem,
 enabling complex automations and integrations. An event entity is represented as a stateless
@@ -138,5 +139,4 @@ From [lambdas](automations/templates#config-lambda), you can trigger an event.
 ## See Also
 
 - {{< apiref "event/event.h" "event/event.h" >}}
-
 

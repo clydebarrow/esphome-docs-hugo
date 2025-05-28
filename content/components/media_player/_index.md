@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `media_player` domain includes all platforms that implement media player
 functionality.
 
@@ -289,6 +290,5 @@ on_...:
 
 ```
 ## See Also
-
 
 

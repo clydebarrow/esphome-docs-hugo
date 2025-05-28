@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "msa3xx-component" >}}
 
 ## Component/Hub
@@ -208,5 +209,4 @@ binary_sensor:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "msa3xxx/msa3xxx.h" "msa3xxx/msa3xxx.h" >}}
-
 

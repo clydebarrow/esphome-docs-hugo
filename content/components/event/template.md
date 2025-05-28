@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` event platform enables you to define events that trigger specific automations or actions within Home Assistant. These custom events can be utilized to orchestrate complex behaviors across your smart home ecosystem based on conditions or sequences defined in your ESPHome configuration.
 
 ```yaml
@@ -29,5 +30,4 @@ event:
 
 - {{< docref "/automations" >}}
 - {{< docref "/components/event" >}}
-
 

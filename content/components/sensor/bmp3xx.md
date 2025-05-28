@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `bmp3xx` sensor platform allows you to use your BMP388 or BMP390
 ([datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp390-ds002.pdf), [BMP390 product page](https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/)) temperature and pressure sensors with ESPHome.
 Either [I²C](components/i2c#i2c) bus or [SPI](components/spi#spi) bus is required to be set up in your configuration for this sensor to work.
@@ -115,5 +116,4 @@ configure this amount. Possible oversampling values:
 - {{< apiref "bmp3xx_base/bmp3xx_base.h" "bmp3xx_base/bmp3xx_base.h" >}}
 - [BMP3 sensor API](https://github.com/BoschSensortec/BMP3-Sensor-API)
 - [BMP388/BMP390 Library](https://github.com/MartinL1/BMP388_DEV) by  Martin Lindupp
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ufire_ec` sensor platform allows you to use your uFire Isolated EC sensor
 with ESPHome. The [I²C Bus](components/i2c#i2c) is required to be set up in your
 configuration for this sensor to work. It requires also to have a temperature
@@ -98,5 +99,4 @@ Configuration options:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ufire_ec/ufire_ec.h" "ufire_ec/ufire_ec.h" >}}
-
 

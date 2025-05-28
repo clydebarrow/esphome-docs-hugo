@@ -3,6 +3,7 @@ description: "Animation"
 title: "Animation"
 ---
 
+
 {{< anchor "display-animation" >}}
 
 
@@ -82,4 +83,3 @@ interval:
 
   - **id** (**Required**, [ID](guides/configuration-types#config-id)): The ID of the animation to animate.
   - **frame** (**Required**, int): The frame index to show next.
-

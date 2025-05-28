@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `dfplayer` ([datasheet](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)), component
 allows you to play sound and music stored in an SD card or USB flash drive.
 
@@ -409,5 +410,4 @@ api:
 ## See Also
 
 - {{< apiref "dfplayer/dfplayer.h" "dfplayer/dfplayer.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ezo_pmp` component allows you to use an Atlas Scientific Peristaltic Pump with ESPHome.
 Both the EZO-PMP ([datasheet](https://files.atlas-scientific.com/EZO_PMP_Datasheet.pdf))
 and EZO-PMP-L ([datasheet](https://files.atlas-scientific.com/EZO_PMP_L_Datasheet.pdf)) are supported.
@@ -540,5 +541,4 @@ of the actions in YAML config.
 ## See Also
 
 - {{< apiref "ezo_pmp/ezo_pmp.h" "ezo_pmp/ezo_pmp.h" >}}
-
 

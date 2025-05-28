@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 [wireguard](https://www.wireguard.org/)
 
 unicode:: WireGuard 0xAE_ is an extremely simple yet fast and modern VPN that utilizes
@@ -364,5 +365,4 @@ of the [address](components/wireguard#wireguard-address) configured here.
 - unicode:: WireGuard 0xAE_ official website
 - [Home Assistant Community Add-on: WireGuard](https://community.home-assistant.io/t/home-assistant-community-add-on-wireguard/134662)
   (also on [GitHub](https://github.com/hassio-addons/addon-wireguard))
-
 

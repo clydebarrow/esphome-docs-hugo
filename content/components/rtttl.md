@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `rtttl`, component allows you to easily connect a passive piezo buzzer to your microcontroller
 and play monophonic songs. It accepts the Ring Tone Text Transfer Language, rtttl format ([Wikipedia](https://en.wikipedia.org/wiki/Ring_Tone_Transfer_Language)) which allows to store simple melodies.
 
@@ -172,5 +173,4 @@ api:
 - {{< docref "/components/output/ledc" >}}
 - {{< docref "/components/speaker" >}}
 - {{< apiref "rtttl/rtttl.h" "rtttl/rtttl.h" >}}
-
 

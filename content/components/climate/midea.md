@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `midea` component creates a Midea air conditioner climate device.
 
 {{< note >}}
@@ -284,5 +285,4 @@ Special thanks to the project [IRremoteESP8266](https://github.com/crankyoldgit/
 
 - {{< docref "/components/climate" >}}
 - {{< apiref "climate/midea_ac.h" "climate/midea_ac.h" >}}
-
 

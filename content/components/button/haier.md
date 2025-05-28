@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Additional buttons for Haier AC cleaning. **These buttons are supported only by the hOn protocol**.
 
 ```yaml
@@ -32,5 +33,4 @@ button:
 ## See Also
 
 - {{< docref "/components/climate/haier" "Haier Climate" >}}
-
 

@@ -7,6 +7,7 @@ params:
     image: remote.svg
 ---
 
+
 {{< anchor "remote-setting-up-infrared" >}}
 
 
@@ -191,4 +192,3 @@ You can adjust the `repeat:` settings accordingly.
 
 - {{< docref "/components/remote_receiver" >}}
 - {{< docref "/components/remote_transmitter" >}}
-

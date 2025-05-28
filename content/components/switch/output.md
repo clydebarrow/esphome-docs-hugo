@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `output` switch platform allows you to use any output component as a switch.
 
 {{< img src="output-ui.png" alt="Image" width="80.0%" class="center" >}}
@@ -33,5 +34,4 @@ switch:
 
 - {{< docref "/components/output" >}}
 - {{< apiref "output/switch/output_switch.h" "output/switch/output_switch.h" >}}
-
 

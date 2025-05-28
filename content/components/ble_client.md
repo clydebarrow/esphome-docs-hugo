@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ble_client` component enables connections to Bluetooth Low Energy devices in order to query and
 control them. This component does not expose any sensors or output components itself, but merely manages
 connections to them for use by other components.
@@ -494,5 +495,4 @@ ble_client:
 - {{< docref "/components/sensor/ble_client" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "ble_client/ble_client.h" "ble_client/ble_client.h" >}}
-
 

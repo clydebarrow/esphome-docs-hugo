@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome's configuration files have several configuration types. This
 page describes them.
 
@@ -167,5 +168,4 @@ some_config_option:
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - {{< docref "faq/" >}}
-
 

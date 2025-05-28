@@ -7,6 +7,7 @@ params:
     image: uart.svg
 ---
 
+
 {{< anchor "uart" >}}
 
 
@@ -280,5 +281,4 @@ uart:
 - {{< docref "/components/logger" >}}
 - {{< docref "/components/packet_transport/uart" >}}
 - {{< apiref "uart/uart.h" "uart/uart.h" >}}
-
 

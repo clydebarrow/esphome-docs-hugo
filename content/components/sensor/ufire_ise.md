@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ufire_ise` sensor platform allows you to use your uFire ISE pH sensor with
 ESPHome. The [I²C Bus](components/i2c#i2c) is
 required to be set up in your configuration for this sensor to work.
@@ -121,5 +122,4 @@ Configuration options:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ufire_ise/ufire_ise.h" "ufire_ise/ufire_ise.h" >}}
-
 

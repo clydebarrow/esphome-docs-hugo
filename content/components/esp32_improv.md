@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `esp32_improv` component in ESPHome implements the open [Improv standard](https://www.improv-wifi.com/)
 for configuring Wi-Fi on an ESP32 device by using Bluetooth Low Energy (BLE) to receive the credentials.
 
@@ -164,5 +165,4 @@ The `status_indicator` has the following patterns:
 - {{< docref "captive_portal/" >}}
 - [Improv Wi-Fi](https://www.improv-wifi.com/)
 - {{< apiref "esp32_improv/esp32_improv_component.h" "esp32_improv/esp32_improv_component.h" >}}
-
 

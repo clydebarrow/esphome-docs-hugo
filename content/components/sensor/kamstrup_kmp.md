@@ -4,6 +4,7 @@ title: "Kamstrup Meter Protocol [KMP]"
 ---
 
 
+
 {{< img src="kamstrup_kmp.jpg" alt="Image" caption="Kamstrup MULTICAL 403" >}}
 
 The Kamstrup Meter Protocol (KMP) is used by certain Kamstrup utility
@@ -108,5 +109,4 @@ magnets.
 
 - [Base Sensor Configuration](components/sensor/_index#config-sensor)
 - [DIY hardware with housing](https://github.com/cfeenstra1024/kamstrup-multical-hardware#readme) by [Chris Feenstra](https://github.com/cfeenstra1024)
-
 

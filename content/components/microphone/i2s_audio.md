@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `i2s_audio` microphone platform allows you to receive audio via the the {{< docref "/components/i2s_audio" >}}.
 
 This platform only works on ESP32 based chips.
@@ -96,5 +97,4 @@ microphone:
 ## See also
 
 - {{< docref "index/" >}}
-
 

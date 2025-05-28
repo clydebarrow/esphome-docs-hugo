@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sun` component allows you to track the sun's position in the sky. Calculations are done every 60 seconds.
 
 ```yaml
@@ -128,5 +129,4 @@ on_...:
 ## See Also
 
 - {{< apiref "sun/sun.h" "sun/sun.h" >}}
-
 

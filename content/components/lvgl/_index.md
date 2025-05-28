@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 [LVGL](https://lvgl.io/) (Light and Versatile Graphics Library) is a free and open-source
 embedded graphics library to create beautiful UIs for any MCU, MPU and display type. ESPHome supports [LVGL version 8](https://docs.lvgl.io/8.4/).
 
@@ -980,5 +981,4 @@ This [trigger](components/lvgl/widgets#lvgl-automation-triggers) is triggered af
 - {{< docref "/components/touchscreen" >}}
 - {{< docref "/components/sensor/rotary_encoder" >}}
 - [LVGL docs](https://docs.lvgl.io/)
-
 

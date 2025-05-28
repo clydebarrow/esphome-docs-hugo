@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "display_menu" >}}
 
 The component provides a menu primarily intended to be controlled either by a rotary encoder
@@ -729,6 +730,5 @@ on_press:
 ## See Also
 
 - {{< apiref "display_menu_base/display_menu_base.h" "display_menu_base/display_menu_base.h" >}}
-
 
 

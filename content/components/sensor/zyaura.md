@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The ZyAura CO2 & Temperature & Humidity sensor allows you to use your
 [ZGm05(3)(U)](http://www.zyaura.com/products/ZGm05.asp)
 ([MT8057](https://masterkit.ru/shop/1266110), [MT8057S](https://medgadgets.ru/shop/kit-mt8057.html)),
@@ -68,5 +69,4 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 - [Some information about hacking MT8060](https://habr.com/ru/company/dadget/blog/394333/)
 - [CO2MeterHacking project](https://revspace.nl/CO2MeterHacking)
 - {{< apiref "zyaura/zyaura.h" "zyaura/zyaura.h" >}}
-
 

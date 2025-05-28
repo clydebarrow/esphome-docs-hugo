@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `tuya` component creates a serial connection to the Tuya MCU for platforms to use.
 
 {{< img src="tuya.png" alt="Image" width="40%" class="center" >}}
@@ -138,5 +139,4 @@ Configuration variables:
 - {{< docref "/components/text_sensor/tuya" >}}
 - {{< docref "/components/number/tuya" >}}
 - {{< apiref "tuya/tuya.h" "tuya/tuya.h" >}}
-
 

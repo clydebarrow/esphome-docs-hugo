@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `Growatt Inverter` sensor platform allows you to use growatt inverter data reading on modbus with ESPHome.
 
 {{< img src="growatt.jpg" alt="Image" caption="Growatt Logo" width="50.0%" class="center" >}}
@@ -141,5 +142,4 @@ sensor:
 ## See Also
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The OTA (Over The Air) via HTTP Request update component allows your devices to install updated firmware on their own.
 To use it, in your device's configuration, you specify a URL from which the device will download the binary
 file (firmware). To trigger the update, an ESPHome [action](automations/actions#config-action) is used which initiates the
@@ -108,5 +109,4 @@ on_...:
 - {{< docref "/components/ota" >}}
 - {{< docref "/components/ota/esphome" >}}
 - {{< docref "/components/safe_mode" >}}
-
 

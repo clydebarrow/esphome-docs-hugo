@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This core ESPHome component sets up WiFi connections to access points
 for you. You need to have a network configuration (either Wifi or Ethernet)
 or ESPHome will fail in the config validation stage. You also can't have both Wifi
@@ -393,5 +394,4 @@ The lambda equivalent for this is `!id(wifi_id).is_disabled()`.
 - {{< docref "/components/ethernet" >}}
 - {{< docref "api/" >}}
 - {{< apiref "wifi/wifi_component.h" "wifi/wifi_component.h" >}}
-
 

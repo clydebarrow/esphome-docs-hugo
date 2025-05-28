@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Honeywell HumidIcon (I2C HIH series) Temperature & Humidity sensors with ESPHome ([website](https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/healthcare-sensing/humidity-with-temperature-sensors),
 [datasheet](https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/humidity-with-temperature-sensors/common/documents/sps-siot-humidity-sensors-line-guide-009034-7-en-ciid-54931.pdf?download=false)).
 The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
@@ -39,5 +40,4 @@ sensor:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "honeywell_hih_i2c/honeywell_hih.h" "honeywell_hih_i2c/honeywell_hih.h" >}}
-
 

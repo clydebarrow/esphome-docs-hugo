@@ -7,6 +7,7 @@ params:
     image: nextion.jpg
 ---
 
+
 {{< anchor "nextion_switch" >}}
 
 
@@ -179,5 +180,4 @@ printh FF FF FF
 - {{< docref "/components/display/nextion" >}}
 - {{< docref "index/" >}}
 - {{< apiref "nextion/switch/nextion_switch.h" "nextion/switch/nextion_switch.h" >}}
-
 

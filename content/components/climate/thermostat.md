@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `thermostat` climate platform allows you to control a climate control system in much the same manner as a
 physical thermostat. Its operation is similar to the {{< docref "bang_bang" "Bang-Bang" >}} controller; a sensor measures a value
 (the air temperature) and the controller will try to keep this value within a range defined by the set point(s). To do this,
@@ -509,5 +510,4 @@ Please see the {{< docref "bang_bang" "Bang-Bang" >}} component's documentation 
 - {{< docref "/components/sensor" >}}
 - {{< docref "bang_bang" "Bang-Bang" >}}
 - [All Actions](automations/actions#config-action)
-
 

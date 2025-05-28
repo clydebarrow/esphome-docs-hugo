@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `pid` climate platform allows you to regulate a value with a
 [PID controller](https://en.wikipedia.org/wiki/PID_controller).
 
@@ -433,5 +434,4 @@ Advanced options:
 - [Principles of PID](https://blog.opticontrols.com/archives/344)
 - {{< apiref "pid/pid_climate.h" "pid/pid_climate.h" >}}
 - {{< apiref "PID Autotuner" "pid/pid_autotuner.h" >}}
-
 

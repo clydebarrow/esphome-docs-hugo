@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` lock platform allows you to create simple locks out of just actions and
 an optional value lambda. Once defined, it will automatically appear in Home Assistant
 as a lock and can be controlled through the frontend.
@@ -107,5 +108,4 @@ id(template_lock1).publish_state(lock::LOCK_STATE_LOCKED);
 - {{< docref "/components/lock" >}}
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "template/lock/template_lock.h" "template/lock/template_lock.h" >}}
-
 

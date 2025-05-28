@@ -3,6 +3,7 @@ description: "Generic I²C device component:"
 title: "Generic I²C device component:"
 ---
 
+
 # Generic I²C device component:
 {{< anchor "i2c_device" >}}
 
@@ -35,5 +36,4 @@ i2c_device:
 
 - {{< docref "/components/i2c" >}}
 - {{< apiref "i2c_device/i2c_device.h" "i2c_device/i2c_device.h" >}}
-
 

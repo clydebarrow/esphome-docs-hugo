@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Based on a cheap 8x32 RGB matrix you can build flexible status displays for all kind of informations. It is expandable with sensors etc.
 
 {{< img src="ehmtx.jpg" alt="Image" width="40%" class="center" >}}
@@ -32,5 +33,4 @@ Sample video:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZyaFj7ArIdY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ## See Also
-
 

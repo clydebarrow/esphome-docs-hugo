@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lcd_pcf8574` and `lcd_gpio` display components allow you to use HD44780-compatible, character-based LCDs
 with ESPHome. This component is only for LCDs that display individual characters on a screen
 (usually 8-40 columns and 2-4 rows), and not for LCDs that can control each pixel individually.
@@ -257,5 +258,4 @@ binary_sensor:
 - [Custom Character Generator](https://omerk.github.io/lcdchargen/)
 - [Arduino LiquidCrystal Library](https://www.arduino.cc/en/Reference/LiquidCrystal)
 - {{< apiref "lcd_base/lcd_display.h" "lcd_base/lcd_display.h" >}}
-
 

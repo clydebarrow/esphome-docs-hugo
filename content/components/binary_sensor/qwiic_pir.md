@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Qwiic PIR Motion binary sensor allows you to use your Qwiic PIR ([EKMC4607112K based](https://www.sparkfun.com/products/17374), [EKMB1107112 based](https://www.sparkfun.com/products/17375), [firmware documentation](https://github.com/sparkfun/Qwiic_PIR))
 sensors from SparkFun with ESPHome.
 
@@ -64,5 +65,4 @@ There are three options for `debounce_mode`.
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "qwiic_pir/qwiic_pir.h" "qwiic_pir/qwiic_pir.h" >}}
 - [SparkFun Qwiic PIR Library](https://github.com/sparkfun/SparkFun_Qwiic_PIR_Arduino_Library) by [SparkFun](https://www.sparkfun.com/)
-
 

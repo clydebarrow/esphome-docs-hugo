@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lvgl` light platform creates a light from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
@@ -42,5 +43,4 @@ To have linear brightness control, `gamma_correct` of the light is set by defaul
 - {{< docref "/components/select/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
-
 

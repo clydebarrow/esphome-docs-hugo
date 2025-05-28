@@ -4,6 +4,7 @@ title: "SNTP Time Source"
 ---
 
 
+
 ```yaml
 # Example configuration entry
 time:
@@ -35,6 +36,5 @@ update the time before SNTP synchronizes.
 
 {{< /warning >}}
 ## See Also
-
 
 

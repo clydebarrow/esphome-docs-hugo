@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `remote_transmitter` component lets you send various common remote control signals, such as infrared
 or 433 MHz radio frequency (RF) signals.
 
@@ -1047,5 +1048,4 @@ See the full API Reference for more info.
 - [Delaying Remote Transmissions](cookbook/lambda_magic#lambda_magic_rf_queues)
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - {{< apiref "remote_transmitter/remote_transmitter.h" "remote_transmitter/remote_transmitter.h" >}}
-
 

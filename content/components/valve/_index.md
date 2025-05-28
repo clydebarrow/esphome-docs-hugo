@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `valve` component is a generic representation of valves in ESPHome. A valve can (currently) either be *closed* or
 *open* and supports three commands: *open*, *close* and *stop*.
 
@@ -247,5 +248,4 @@ valve:
 ## See Also
 
 - {{< apiref "valve/valve.h" "valve/valve.h" >}}
-
 

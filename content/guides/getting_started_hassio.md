@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 In this guide, we'll walk you through how to install ESPHome onto a device/microcontroller using the ESPHome Device
 Builder, installed as a Home Assistant add-on.
 
@@ -192,5 +193,4 @@ issue on the [GitHub issue tracker](https://github.com/esphome/issues/issues) or
 
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
-
 

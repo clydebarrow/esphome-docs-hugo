@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` number platform allows you to create a number with templated values
 using [lambdas](automations/templates#config-lambda).
 
@@ -53,5 +54,4 @@ with the [`number.set` Action](components/number/_index#number-set_action).
 
 - [Automation](automations/_index#automation)
 - {{< apiref "template/number/template_number.h" "template/number/template_number.h" >}}
-
 

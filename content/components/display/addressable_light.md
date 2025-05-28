@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `addressable_light` display platform allows to display text and graphics on an addressable
 light that has been arranged in a display matrix.
 
@@ -133,5 +134,4 @@ display:
 - {{< docref "/components/light/fastled" >}}
 - {{< docref "/components/light/neopixelbus" >}}
 - {{< docref "/components/light/partition" >}}
-
 

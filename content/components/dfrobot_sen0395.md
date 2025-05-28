@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The [DFRobot mmWave Radar](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
 (aka `SEN0395`) is a 24GHz radar which can be used for human presence detection. It can detect tiny movements
 and compared to a PIR sensor **it can detect presence continuously**. This can be useful, for example, to turn
@@ -246,5 +247,4 @@ on_...:
 - [Binary Sensor](components/binary_sensor/_index#config-binary_sensor)
 - [ID](guides/configuration-types#config-id)
 - [DFRobot mmWave Radar Wiki page](https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395)
-
 

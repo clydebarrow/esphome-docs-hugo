@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `speaker` domain contains common functionality shared across the
 speaker platforms.
 
@@ -158,5 +159,4 @@ Configuration variables:
 
 - {{< docref "/guides/audio_clips_for_i2s" >}}
 - {{< docref "/components/speaker/i2s_audio" >}}
-
 

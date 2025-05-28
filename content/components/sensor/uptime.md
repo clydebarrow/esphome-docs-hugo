@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `uptime` sensor allows you to track the time the ESP has stayed up for in seconds.
 Time rollovers are automatically handled.
 
@@ -35,5 +36,4 @@ sensor:
 - {{< docref "/components/text_sensor/uptime" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "uptime/uptime_sensor.h" "uptime/uptime_sensor.h" >}}
-
 

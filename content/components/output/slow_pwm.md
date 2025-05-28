@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Similar to PWM, the Slow PWM Output platform allows you to control GPIO pins by
 pulsing them on/off over a longer time period. It could be used to control a
 heating element through a relay where a fast PWM update cycle would not be appropriate.
@@ -83,5 +84,4 @@ actuator heads or fans.
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "slow_pwm/slow_pwm_output.h" "slow_pwm/slow_pwm_output.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `anova` climate platform creates a climate device which can be used
 to control a BLE Anova sous-vide stick. Whilst not strictly a climate
 device, the concept of keeping something to a set temperature applies
@@ -59,5 +60,4 @@ climate:
 - {{< docref "/components/ble_client" >}}
 - {{< docref "/components/climate" >}}
 - {{< apiref "anova/anova.h" "anova/anova.h" >}}
-
 

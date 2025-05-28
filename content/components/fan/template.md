@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` fan platform lets you create a fan interface using only triggers.
 
 {{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
@@ -35,5 +36,4 @@ fan:
 
 - {{< docref "/components/fan" >}}
 - {{< apiref "template/fan/template_fan.h" "template/fan/template_fan.h" >}}
-
 

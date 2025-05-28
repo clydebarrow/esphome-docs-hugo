@@ -4,6 +4,7 @@ title: "Physically Connecting to your Device"
 ---
 
 
+
 The most difficult part of setting up a new ESPHome device is the initial
 installation, which requires connecting your ESP device to a computer using a
 data cable.
@@ -215,5 +216,4 @@ require different parts and tools.
 - {{< docref "/index" "ESPHome index" >}}
 - {{< docref "getting_started_command_line/" >}}
 - {{< docref "getting_started_hassio/" >}}
-
 

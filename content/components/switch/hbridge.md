@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `hbridge` switch platform allows you to drive an *h-bridge* controlled latching relay.
 
 {{< img src="hbridge-relay.png" alt="Image" caption="Omron G6CK-2117P relay module." width="50.0%" class="center" >}}
@@ -40,5 +41,4 @@ switch:
 - {{< docref "/components/output" >}}
 - {{< docref "/components/switch" >}}
 - {{< apiref "hbridge/switch/hbridge_switch.h" "hbridge/switch/hbridge_switch.h" >}}
-
 

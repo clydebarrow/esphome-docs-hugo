@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This component enables and configures PSRAM if/when available on ESP32 modules/boards.
 It is automatically loaded and enabled by components that require it.
 
@@ -38,6 +39,5 @@ psram:
 * Typically on ESP32-S3 modules, a 2MB PSRAM will use quad mode, while 8 or 16MB will use octal mode.
 
 ## See Also
-
 
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The Microchip MCP230xx series of general purpose, parallel I/O expansion for I²C bus applications.
 
 **Supported Variants :**
@@ -201,5 +202,4 @@ binary_sensor:
 - {{< apiref "API Reference (MCP23008)" "mcp23008/mcp23008.h" >}}
 - {{< apiref "API Reference (MCP23016)" "mcp23016/mcp23016.h" >}}
 - {{< apiref "API Reference (MCP23017)" "mcp23017/mcp23017.h" >}}
-
 

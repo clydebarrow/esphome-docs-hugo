@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `pmwcs3` sensor platform allows you to use your PMWCS3
 ([informations](https://tinovi.com/wp-content/uploads/2020/01/PM-WCS-3-I2C.pdf))
 capacitive soil moisture and temperature sensor with ESPHome. The [I²C bus](components/i2c#i2c) is required to be set up in
@@ -125,5 +126,4 @@ Configuration options:
 - {{< apiref "pmwcs3/pmwcs3.h" "pmwcs3/pmwcs3.h" >}}
 - [Temperature Compensation for Conductivity](https://www.aqion.de/site/112)
 - [PMWCS3 Library](https://github.com/tinovi/i2cArduino) by [@tinovi](https://github.com/tinovi)
-
 

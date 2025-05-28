@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 Migrating from previous Tasmota setups is very easy. You just need to have
 ESPHome create a binary for you and then upload that in the Tasmota web interface.
 
@@ -108,5 +109,4 @@ If you need to use the uncompressed image for any reason, just remove `&compress
 - {{< docref "/components/esp32" >}}
 - {{< docref "migrate_espurna/" >}}
 - {{< docref "migrate_espeasy/" >}}
-
 

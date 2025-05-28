@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `json` component enables ESPHome to work with JSON data in automations, sensors, and HTTP requests. This is particularly useful for:
 
 - Processing API responses
@@ -124,6 +125,5 @@ Another important resource is [JSONLint](https://jsonlint.com/). It will help yo
 - {{< apiref "http_request/http_request.h" "http_request/http_request.h" >}}
 - {{< apiref "json/json_util.h" "json/json_util.h" >}}
 - `ArduinoJson <https://arduinojson.org/>`
-
 
 

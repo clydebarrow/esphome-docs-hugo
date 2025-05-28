@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `total_daily_energy` sensor is a helper sensor that can use the power value of
 other sensors like the {{< docref "hlw8012" "HLW8012" >}}, {{< docref "cse7766" "CSE7766" >}}, {{< docref "atm90e32" "ATM90E32" >}}, etc and integrate
 it over time.
@@ -97,5 +98,4 @@ sensor:
 - {{< docref "/components/time/homeassistant" >}}
 - {{< docref "/cookbook/power_meter" >}}
 - {{< apiref "total_daily_energy/total_daily_energy.h" "total_daily_energy/total_daily_energy.h" >}}
-
 

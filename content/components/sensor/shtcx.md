@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `shtcx` sensor platform Temperature+Humidity sensor allows you to use your Sensirion SHTC1
 ([datasheet](https://sensirion.com/media/documents/21BF77EA/63A5A411/Datasheet_SHTC1.pdf),
 [Sensirion STHC1](https://www.sensirion.com/en/environmental-sensors/humidity-sensors/digital-humidity-sensor-for-consumer-electronics-and-iot/)) and
@@ -58,5 +59,4 @@ sensor:
 - {{< docref "htu21d/" >}}
 - {{< docref "sht3xd/" >}}
 - {{< apiref "shtcx/shtcx.h" "shtcx/shtcx.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "mipi_spi" >}}
 
 ## Introduction
@@ -195,5 +196,4 @@ A touchscreen, if present, must be configured separately. See the {{< docref "/c
 
 - {{< docref "index/" >}}
 - {{< apiref "mipi_spi/mipi_spi.h" "mipi_spi/mipi_spi.h" >}}
-
 

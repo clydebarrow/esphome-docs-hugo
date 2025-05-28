@@ -4,6 +4,7 @@ title: "Using an ESP devboard as a USB-UART bridge"
 ---
 
 
+
 {{< anchor "devboard-as-flasher" >}}
 
 ESP development boards usually have an onboard USB interface,
@@ -78,5 +79,4 @@ For that, you need to first manually put it into DOWNLOAD mode.
 ## See Also
 
 - {{< docref "/guides/index" "Guides" >}}
-
 

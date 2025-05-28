@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `display` component houses ESPHome's powerful rendering and display
 engine. Fundamentally, there are these types of displays:
 
@@ -624,5 +625,4 @@ For displays in 8 bit mode you will see distinct color blocks rather than a smoo
 - [Image Component](components/image#display-image)
 - [Animation Component](components/animation#display-animation)
 - [Online Image](components/online_image#online_image)
-
 

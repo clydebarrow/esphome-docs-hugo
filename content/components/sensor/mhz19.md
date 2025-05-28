@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `mhz19` sensor platform allows you to use MH-Z19 CO_2 and temperature sensors
 (`Revspace`_) with ESPHome.
 The CO_2 measurement also works with the MH-Z16 and MH-Z14 sensors.
@@ -126,5 +127,4 @@ switch:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - [MH-Z19 library](https://github.com/nara256/mhz19_uart) by [@nara356](https://github.com/nara256)
 - {{< apiref "mhz19/mhz19.h" "mhz19/mhz19.h" >}}
-
 

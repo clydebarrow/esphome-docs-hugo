@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `prometheus` component enables an HTTP endpoint for the
 {{< docref "web_server/" >}} in order to integrate a [Prometheus](https://prometheus.io/) installation.
 
@@ -100,5 +101,4 @@ prometheus:
 - {{< docref "/components/http_request" >}}
 - {{< apiref "prometheus/prometheus_handler.h" "prometheus/prometheus_handler.h" >}}
 - [Prometheus](https://prometheus.io/)
-
 

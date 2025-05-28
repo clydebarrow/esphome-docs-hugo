@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This component contains platform-specific options for the [LibreTiny](https://docs.libretiny.eu/) platform.
 It provides support for the following microcontrollers, commonly used in Tuya devices, amongst others:
 
@@ -214,5 +215,4 @@ bk72xx:
 - {{< docref "/components/text_sensor/libretiny" >}}
 - [LibreTiny Documentation](https://docs.libretiny.eu/) (external)
 - {{< docref "/components/tuya" >}}
-
 

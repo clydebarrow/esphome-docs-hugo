@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sonoff_d1` light platform creates a simple brightness-only light for the
 hardware found in [Sonoff D1 dimmer](https://itead.cc/product/sonoff-d1-smart-dimmer-switch/). Installations with Sonoff RM433 433MHz radio
 remotes are also supported. Use this component to integrate Sonoff D1 dimmer into
@@ -107,5 +108,4 @@ light:
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/logger" >}}
 - {{< docref "/components/esp8266" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `VBus` Component provides status reading connectivity to solar heat energy collector controllers using VBus
 protocol. These devices are mainly produced by Resol, often also found under different brand names like Viessmann,
 Kioto, Wagner etc. The component currently supports natively the models in the table below
@@ -284,5 +285,4 @@ binary_sensor:
 - {{< docref "/components/sensor" >}}
 - [Resol manuals](https://www.resol.de/en/dokumente)
 - [VBus protocol](https://danielwippermann.github.io/resol-vbus)
-
 

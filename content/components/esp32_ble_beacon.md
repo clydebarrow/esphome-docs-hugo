@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `esp32_ble_beacon` component creates a Bluetooth Low Energy Beacon with your ESP32 device.
 Beacons are BLE devices that repeatedly just send out a pre-defined packet of data. This packet
 can then be received by devices like smartphones and can then be used to track a phone's location.
@@ -91,5 +92,4 @@ It can work with multiple beacons simultaneously.
 - {{< docref "binary_sensor/ble_presence" >}}
 - {{< apiref "esp32_ble_beacon/esp32_ble_beacon.h" "esp32_ble_beacon/esp32_ble_beacon.h" >}}
 - [ESP32 BLE for Arduino](https://github.com/nkolban/ESP32_BLE_Arduino) by [Neil Kolban](https://github.com/nkolban).
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `mdns` component makes the node announce itself on the local network using the multicast DNS (mDNS) protocol.
 
 Both Home Assistant and the ESPHome dashboard use mDNS to identify the IP address of all ESPHome nodes on the network.
@@ -52,4 +53,3 @@ mdns:
   - **protocol** (**Required**, string): Protocol of service (_udp or _tcp).
   - **port** (*Optional*, [templatable](automations/templates#config-templatable), int): Port number of extra service.
   - **txt** (*Optional*, mapping): Additional text records to add to service. Values are [templatable](automations/templates#config-templatable).
-

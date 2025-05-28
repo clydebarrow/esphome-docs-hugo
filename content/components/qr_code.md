@@ -7,6 +7,7 @@ params:
     image: qr-code.svg
 ---
 
+
 {{< anchor "display-qrcode" >}}
 
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Which ESP should I use for my project?
 
 We're asked this *all the time.* As with all things engineering, "it depends". Based on the current state of hardware
@@ -616,5 +617,4 @@ re-add the device in Home Assistant.
 
 - {{< docref "/index" "ESPHome index" >}}
 - [Developer site](https://developers.esphome.io)
-
 

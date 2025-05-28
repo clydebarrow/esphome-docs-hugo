@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The SDP3x Differential Pressure sensor allows you to use your SDP3x
 ([datasheet](https://sensirion.com/media/documents/4D045D69/6375F34F/DP_DS_SDP3x_digital_D1.pdf),
 [sparkfun](https://www.sparkfun.com/products/17874)) or SDP800 Series ([datasheet](https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf))
@@ -37,5 +38,4 @@ To use the sensor, set up an [I²C Bus](components/i2c#i2c) and connect the sens
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "sdp3x/sdp3x.h" "sdp3x/sdp3x.h" >}}
-
 

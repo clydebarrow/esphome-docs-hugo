@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This climate component allows you to control compatible AC units by sending an infrared (IR)
 control signal, just as the unit's handheld remote controller would.
 
@@ -361,5 +362,4 @@ for more information.
   {{< apiref "tcl112.h" "tcl112/tcl112.h" >}},
   {{< apiref "yashima.h" "yashima/yashima.h" >}}
   {{< apiref "whirlpool.h" "whirlpool/whirlpool.h" >}}
-
 

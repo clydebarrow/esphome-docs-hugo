@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `senseair` sensor platform allows you to use SenseAir CO_2 sensor
 (`website`_) with ESPHome.
 
@@ -126,5 +127,4 @@ on_...:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "senseair/senseair.h" "senseair/senseair.h" >}}
-
 

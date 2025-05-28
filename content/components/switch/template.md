@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `template` switch platform allows you to create simple switches out of just actions and
 an optional value lambda. Once defined, it will automatically appear in Home Assistant
 as a switch and can be controlled through the frontend.
@@ -98,5 +99,4 @@ id(template_swi).publish_state(false);
 - {{< docref "/components/switch" >}}
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "template/switch/template_switch.h" "template/switch/template_switch.h" >}}
-
 

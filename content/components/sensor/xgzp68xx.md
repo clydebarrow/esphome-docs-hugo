@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The XGZP68xx Differential Pressure sensor allows you to use digital differential pressure sensors such as the 6899D
 ([datasheet](https://cfsensor.com/wp-content/uploads/2022/11/XGZP6899D-Pressure-Sensor-V2.8.pdf)) or
 6897D Series ([datasheet](https://cfsensor.com/wp-content/uploads/2022/11/XGZP6897D-Pressure-Sensor-V2.7.pdf))
@@ -48,5 +49,4 @@ sensor:
 - [esphome-pressure device](https://github.com/gcormier/esphome-pressure/)
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "sdp3x/sdp3x.h" "sdp3x/sdp3x.h" >}}
-
 

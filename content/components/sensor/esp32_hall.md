@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `esp32_hall` sensor platform allows you to use the integrated
 [hall effect sensor](https://en.wikipedia.org/wiki/Hall_effect_sensor) of the
 ESP32 chip to measure the magnitude and direction of magnetic field around the
@@ -54,5 +55,4 @@ please feel free to do so 😺.
 - {{< docref "adc/" >}}
 - {{< docref "/components/esp32" >}}
 - {{< apiref "esp32_hall/esp32_hall.h" "esp32_hall/esp32_hall.h" >}}
-
 

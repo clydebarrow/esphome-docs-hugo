@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This is a component using the ESP32 RMT peripheral to drive most addressable LED strips.
 
 ```yaml
@@ -104,5 +105,4 @@ please consider adding support to the codebase and add it to the list above.
 - {{< docref "/components/light" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "esp32_rmt_led_strip/esp32_rmt_led_strip.h" "esp32_rmt_led_strip/esp32_rmt_led_strip.h" >}}
-
 

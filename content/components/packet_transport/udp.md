@@ -7,6 +7,7 @@ params:
     image: udp.svg
 ---
 
+
 {{< anchor "udp-packet-transport" >}}
 
 
@@ -41,5 +42,4 @@ sensor:
 - {{< docref "/components/sensor/packet_transport" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "packet_transport/packet_transport.h" "packet_transport/packet_transport.h" >}}
-
 

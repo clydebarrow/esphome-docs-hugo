@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `rgb` light platform creates an RGB light from 3 [float output components](components/output/_index#output)
 (one for each color channel).
 
@@ -76,5 +77,4 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
 - {{< apiref "rgb/rgb_light_output.h" "rgb/rgb_light_output.h" >}}
-
 

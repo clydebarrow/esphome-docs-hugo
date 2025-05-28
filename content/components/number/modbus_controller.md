@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `modbus_controller` platform creates a Number from a modbus_controller.
 When the Number is updated a modbus write command is created sent to the device.
 
@@ -112,5 +113,4 @@ number:
 - {{< docref "/components/text_sensor/modbus_controller" >}}
 
 - https://www.modbustools.com/modbus.html
-
 

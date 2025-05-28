@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `audio_adc` component allows your ESPHome devices to use audio ADC hardware components, allowing the
 capture/recording of audio via the microcontroller from a range of sources.
 
@@ -40,6 +41,5 @@ Configuration variables:
   for the input.
 
 ## See Also
-
 
 

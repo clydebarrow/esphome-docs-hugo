@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sdm_meter` sensor platform allows you to use Eastron SDM modbus energy monitors
 ([website](http://www.eastrongroup.com/product_detail.php?id=170&menu1=&menu2=))
 with ESPHome.
@@ -108,6 +109,5 @@ sensor:
 
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "sdm220m/sdm220m.h" "sdm220m/sdm220m.h" >}}
-
 
 

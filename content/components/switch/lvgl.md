@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lvgl` switch platform creates a switch from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
@@ -40,5 +41,4 @@ switch:
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
 - {{< docref "/components/output" >}}
-
 

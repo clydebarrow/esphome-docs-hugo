@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The captive portal component in ESPHome is a fallback mechanism for when connecting to the
 configured {{< docref "wifi" "WiFi" >}} fails.
 
@@ -45,5 +46,4 @@ No configuration variables.
 - {{< docref "improv_serial/" >}}
 - {{< docref "esp32_improv/" >}}
 - {{< apiref "captive_portal/captive_portal.h" "captive_portal/captive_portal.h" >}}
-
 

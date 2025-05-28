@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `resistance` platform is a helper sensor that allows you to convert readings
 from a voltage sensor (such as the {{< docref "adc" "ADC Sensor" >}}) into resistance readings
 in Ω (ohm).
@@ -71,5 +72,4 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 - {{< docref "ntc/" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "resistance/resistance_sensor.h" "resistance/resistance_sensor.h" >}}
-
 

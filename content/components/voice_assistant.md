@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome devices with a microphone are able to stream the audio to Home Assistant and be processed there by [assist](https://www.home-assistant.io/voice_control/).
 
 {{< note >}}
@@ -196,5 +197,4 @@ binary_sensor:
 
 - {{< docref "microphone/" >}}
 - {{< apiref "voice_assistant/voice_assistant.h" "voice_assistant/voice_assistant.h" >}}
-
 

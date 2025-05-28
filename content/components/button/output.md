@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `output` button platform allows you to use any output component as a button. This can for example be used to
 momentarily set a GPIO pin using a button.
 
@@ -43,5 +44,4 @@ in the [Pin Schema](guides/configuration-types#config-pin_schema).
 
 - {{< docref "/components/output" >}}
 - {{< apiref "output/button/output_button.h" "output/button/output_button.h" >}}
-
 

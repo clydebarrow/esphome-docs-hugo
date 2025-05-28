@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `esp32_camera_web_server` component allows you to use expose web server of
 ESP32-based camera boards in ESPHome that directly can be integrated into external
 surveillance or PVR software.
@@ -44,5 +45,4 @@ esp32_camera_web_server:
 ## See Also
 
 - {{< apiref "esp32_camera_web_server/camera_web_server.h" "esp32_camera_web_server/camera_web_server.h" >}}
-
 

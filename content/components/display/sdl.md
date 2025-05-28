@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "sdl" >}}
 
 ## Usage
@@ -95,5 +96,4 @@ The `esphome run yourfile.yaml` command will compile and automatically run the b
 - {{< docref "/components/binary_sensor/sdl" "SDL binary sensor" >}}
 - {{< docref "index/" >}}
 - {{< apiref "sdl/sdl_esphome.h" "sdl/sdl_esphome.h" >}}
-
 

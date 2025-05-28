@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< img src="ltr303-full.jpg" alt="Image" caption="LTR-329 and LTR-303 Ambient Light Sensors." width="90.0%" class="center" >}}
 
 {{< img src="ltr303-ui.png" alt="Image" caption="LTR-303 Sensor in Home Assistant UI." width="60.0%" class="center" >}}
@@ -160,5 +161,4 @@ may simply use the shorthand syntax for the sensor. For example: `ambient_light:
 - Application note [LTR-303ALS & LTR-329ALS Appendix A](https://github.com/latonita/datasheets-storage/blob/main/sensors/LTR-303%20329_Appendix%20A%20Ver_1.0_22%20Feb%202013.pdf)
 - [LTR-559ALS datasheet](https://github.com/latonita/datasheets-storage/blob/main/sensors/ltr-559als-01_ds_v1.pdf)
 - {{< apiref "ltr_als_ps/ltr_als_ps.h" "ltr_als_ps/ltr_als_ps.h" >}}
-
 

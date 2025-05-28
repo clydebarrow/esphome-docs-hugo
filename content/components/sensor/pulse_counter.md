@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The pulse counter sensor allows you to count the number of pulses and the frequency of a signal
 on any pin.
 
@@ -160,5 +161,4 @@ circuiting the wire by mistake.
 - {{< docref "rotary_encoder/" >}}
 - [esp-idf Pulse Counter API](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/pcnt.html).
 - {{< apiref "pulse_counter/pulse_counter_sensor.h" "pulse_counter/pulse_counter_sensor.h" >}}
-
 

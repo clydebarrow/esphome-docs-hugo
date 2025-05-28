@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 So an essential part of making your home smart is knowing how much power it uses over the day. Tracking this can be difficult, often you need to install a completely new power meter which can often cost a bunch of money. However, quite a few power meters have a red LED on the front that blinks every time that one Wh has been used.
 
 The simple idea therefore is: Why don't we just abuse that functionality to make the power-meter IoT enabled? We just have to hook up a simple photoresistor in front of that aforementioned LED and track the number of pulses we receive. Then using ESPHome we can instantly have the power meter show up in Home Assistant 🎉
@@ -149,5 +150,4 @@ While you can in theory also do this with the home assistant [integration](https
 - {{< docref "/components/sensor/total_daily_energy" >}}
 - {{< docref "/components/time/homeassistant" >}}
 - [Home Assistant Glow 🌟](https://github.com/klaasnicolaas/home-assistant-glow/).
-
 

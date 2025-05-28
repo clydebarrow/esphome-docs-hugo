@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `sfa30` sensor platform  allows you to use your Sensirion SFA30 Formaldehyde
 ([datasheet](https://sensirion.com/media/documents/DEB1C6D6/63D92360/Sensirion_formaldehyde_sensors_datasheet_SFA30.pdf)) sensors with ESPHome.
 The [I²C Bus](components/i2c#i2c) is required to be set up in your configuration for this sensor to work.
@@ -52,5 +53,4 @@ sensor:
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "sfa30/sfa30.h" "sfa30/sfa30.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The ESP32 DAC platform allows you to output analog voltages using the 8-bit digital-to-analog
 converter of the ESP32. Unlike the {{< docref "/components/output/ledc" >}}, which can simulate an analog
 signal by using a fast switching frequency, the hardware DAC can output a *real* analog signal with
@@ -67,5 +68,4 @@ light:
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "esp32_dac/esp32_dac.h" "esp32_dac/esp32_dac.h" >}}
-
 

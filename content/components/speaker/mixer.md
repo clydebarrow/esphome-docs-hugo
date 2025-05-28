@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `mixer` speaker platform allows you to mix audio sent to different source speakers into one output which is sent to another {{< docref "/components/speaker/index" "speaker component" >}}. Individual source speakers may be ducked (made quieter) with the [apply ducking action](components/speaker/mixer#mixer_speaker-apply_ducking).
 
 When mixing multiple audio streams into one, they must have the same sample rate. If they are different, enable queue mode so that only one source speaker's audio is played at a time. Otherwise, use a {{< docref "/components/speaker/resampler" "resampler speaker" >}} to send audio to the source speakers.
@@ -71,5 +72,4 @@ Configuration variables:
 ## See also
 
 - {{< docref "index/" >}}
-
 

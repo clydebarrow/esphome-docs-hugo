@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Component/Hub
 
 The `SIM800L` Component provides the ability to dial, answer calls, send/receive SMS text messages and
@@ -328,5 +329,4 @@ switch:
 
 - {{< apiref "sim800l/sim800l.h" "sim800l/sim800l.h" >}}
 - {{< docref "/components/uart" >}}
-
 

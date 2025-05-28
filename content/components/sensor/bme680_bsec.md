@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ## Component/Hub
 
 The `bme680_bsec` sensor platform allows you to use your BME680
@@ -417,5 +418,4 @@ so that the process does not have to start from zero on device restart.
 - [BME680 VOC classification](https://community.bosch-sensortec.com/t5/MEMS-sensors-forum/BME680-VOC-classification/td-p/26154)
 - [BSEC Arduino Library](https://github.com/BoschSensortec/BSEC-Arduino-library) by [Bosch Sensortec](https://www.bosch-sensortec.com/)
 - [Bosch Sensortec Community](https://community.bosch-sensortec.com/)
-
 

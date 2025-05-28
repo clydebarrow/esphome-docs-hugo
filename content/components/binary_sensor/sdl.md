@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 The `sdl` binary sensor platform creates a binary sensor from keyboard presses on the host platform.
 The sensor will be true when the key is pressed.
 
@@ -27,5 +28,4 @@ binary_sensor:
 ## See Also
 - {{< docref "/components/host" "Host Platform" >}}
 - [SDL display](components/display/sdl#sdl)
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `shelly_dimmer` component adds support for the dimming and power-metering functionality that can be found the [Shelly Dimmer 2](https://shelly.cloud/knowledge-base/devices/shelly-dimmer-2/). The interaction with mains is done via an STM32 microcontroller that is automatically (when configured) flashed with an [open source firmware](https://github.com/jamesturton/shelly-dimmer-stm32).
 A detailed analysis of the Shelly Dimmer 2 hardware is given [here](https://github.com/arendst/Tasmota/issues/6914).
 
@@ -95,5 +96,4 @@ There is no action required by the user to flash the STM32. There is no way to r
 
 - {{< docref "/components/light" >}}
 - {{< apiref "shelly_dimmer/light/shelly_dimmer.h" "shelly_dimmer/light/shelly_dimmer.h" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `power_supply` component allows you to have a high power mode for
 certain outputs. For example, if you're using an [ATX powersupply](https://en.wikipedia.org/wiki/ATX) to power your LED strips,
 you usually don't want to have the power supply on all the time while
@@ -70,5 +71,4 @@ in between to protect the ESP board.
 
 - {{< docref "output/" >}}
 - {{< apiref "power_supply/power_supply.h" "power_supply/power_supply.h" >}}
-
 

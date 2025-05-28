@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `wifi_signal` sensor platform allows you to read the signal
 strength of the currently connected {{< docref "/components/wifi" "WiFi Access Point" >}}.
 
@@ -62,5 +63,4 @@ if the device is acting as an access point without any station mode connection.
 - {{< docref "/components/wifi" >}}
 - {{< docref "/components/text_sensor/wifi_info" >}}
 - {{< apiref "wifi_signal/wifi_signal_sensor.h" "wifi_signal/wifi_signal_sensor.h" >}}
-
 

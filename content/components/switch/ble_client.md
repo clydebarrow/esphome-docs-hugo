@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ble_client` component is a switch platform that is used to enable and disable a `ble_client`. This has
 several uses, such as minimizing battery usage or for allowing other clients (Eg phone apps) to connect to the device.
 
@@ -43,5 +44,4 @@ switch:
 
 - {{< docref "/components/ble_client" >}}
 - {{< apiref "ble_client/switch/ble_switch.h" "ble_client/switch/ble_switch.h" >}}
-
 

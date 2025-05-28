@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `analog_threshold` binary sensor platform allows you to convert analog values
 (i.e. {{< docref "/components/sensor/index" "sensor" >}} readings)
 into boolean values, using a threshold as a reference.
@@ -54,5 +55,4 @@ binary_sensor:
 - {{< docref "/components/sensor" >}}
 - [Automation](automations/_index#automation)
 - {{< apiref "analog_threshold/analog_threshold_binary_sensor.h" "analog_threshold/analog_threshold_binary_sensor.h" >}}
-
 

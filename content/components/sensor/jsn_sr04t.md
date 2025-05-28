@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 This sensor allows you to use the JSN-SR04T and AJ_SR04M Waterproof Ultrasonic Range Finder **in Mode 1 and 2**
 with ESPHome to measure distances. This sensor can measure
 ranges between 25 centimeters and 600 centimeters with a resolution of 1 millimeter.
@@ -60,5 +61,4 @@ sensor:
 - [UART Bus](components/uart#uart)
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "jsn_sr04t/jsn_sr04t.h" "jsn_sr04t/jsn_sr04t.h" >}}
-
 

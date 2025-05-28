@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `ntc` platform is a helper sensor that allows you to convert resistance readings
 from a NTC thermistor to temperature readings.
 
@@ -123,5 +124,4 @@ interval:
 - {{< docref "resistance/" >}}
 - [Sensor Filters](components/sensor/_index#sensor-filters)
 - {{< apiref "ntc/ntc.h" "ntc/ntc.h" >}}
-
 

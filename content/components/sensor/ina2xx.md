@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< img src="ina228-full.jpg" alt="Image" caption="INA228 Module with integrated shunt from Adafruit" width="50.0%" class="center" >}}
 
 ## Supported devices
@@ -172,5 +173,4 @@ To simplify the use of this function, you can use the following example to add a
 - {{< docref "ina226/" >}}
 - {{< docref "ina3221/" >}}
 - {{< apiref "ina2xx_base/ina2xx_base.h" "ina2xx_base/ina2xx_base.h" >}}
-
 

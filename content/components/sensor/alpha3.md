@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `alpha3` component allows you to monitor a Grundfos Alpha3 Model B circulator pump over BLE.
 
 This component supports the following metrics:
@@ -91,5 +92,4 @@ The pump can only be connected to one device at a time. If you want to use the G
 
 - {{< docref "/components/ble_client" >}}
 - {{< apiref "alpha3/alpha3.h" "alpha3/alpha3.h" >}}
-
 

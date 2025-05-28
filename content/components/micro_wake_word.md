@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome implements an on-device wake word detection framework from [microWakeWord](https://github.com/kahrendt/microWakeWord).
 This repository/library allows you to create a custom wake word for your ESPHome device.
 
@@ -171,5 +172,4 @@ The model JSON file contains the following fields that are all **required** unle
 
 - {{< docref "voice_assistant/" >}}
 - {{< apiref "micro_wake_word/micro_wake_word.h" "micro_wake_word/micro_wake_word.h" >}}
-
 

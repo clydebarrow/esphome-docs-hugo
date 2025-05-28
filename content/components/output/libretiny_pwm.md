@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The LibreTiny PWM platform allows you to use a hardware PWM on BK72xx and RTL87xx chips.
 Refer to [LibreTiny/Boards](https://docs.libretiny.eu/link/boards) to find your board
 and which PWM pins it supports.
@@ -63,5 +64,4 @@ Configuration variables:
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "libretiny_pwm/libretiny_pwm.h" "libretiny_pwm/libretiny_pwm.h" >}}
-
 

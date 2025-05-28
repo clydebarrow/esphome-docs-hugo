@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `RF Bridge` Component provides the ability to send and receive 433MHz remote codes using the
 embedded EFM8BB1 microcontroller. This component implements the communication protocol
 that the original `efm8bb1` firmware implements. The device is connected via the
@@ -384,5 +385,4 @@ automation:
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/remote_receiver" >}}
 - {{< docref "/components/remote_transmitter" >}}
-
 

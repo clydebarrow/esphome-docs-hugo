@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `max7219` display platform allows you to use MAX7219 digit with ESPHome. Please note that this component
 is *only* for the digit "matrix" display, for the 7 segment display see {{< docref "max7219/" >}}.
 
@@ -201,5 +202,4 @@ Please see [Formatted Text](components/display/_index#display-printf) for a quic
 - {{< docref "index/" >}}
 - {{< apiref "max7219/max7219.h" "max7219/max7219.h" >}}
 - [MAX7219 Library](https://github.com/nickgammon/MAX7219) by [Nick Gammon](https://github.com/nickgammon)
-
 

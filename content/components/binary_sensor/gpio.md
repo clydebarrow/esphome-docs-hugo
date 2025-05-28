@@ -7,6 +7,7 @@ params:
     image: gpio.svg
 ---
 
+
 {{< anchor "gpio-binary-sensor" >}}
 
 
@@ -97,5 +98,4 @@ binary_sensor:
 - {{< docref "/components/binary_sensor" >}}
 - [Pin Schema](guides/configuration-types#config-pin_schema)
 - {{< apiref "gpio/binary_sensor/gpio_binary_sensor.h" "gpio/binary_sensor/gpio_binary_sensor.h" >}}
-
 

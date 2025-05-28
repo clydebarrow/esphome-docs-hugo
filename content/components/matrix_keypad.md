@@ -6,6 +6,7 @@ params:
     description: Matrix key input panel
 ---
 
+
 {{< anchor "matrix_keypad" >}}
 
 
@@ -96,5 +97,4 @@ the [Key Collector](components/key_collector#key_collector) component.
 
 - {{< docref "/components/key_collector" >}}
 - [Binary Sensor](components/binary_sensor/_index#config-binary_sensor)
-
 

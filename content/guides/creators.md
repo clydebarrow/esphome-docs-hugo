@@ -7,6 +7,7 @@ params:
 ---
 
 
+
 We have added configuration options to ESPHome to make it easier
 to create, configure, install and distribute devices running ESPHome.
 
@@ -93,6 +94,5 @@ The [Project information](components/esphome#esphome-creators_project) above is 
 - `improv_serial` - {{< docref "/components/improv_serial" >}}
 
 ## See Also
-
 
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `lvgl` select platform creates a select from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
@@ -43,5 +44,4 @@ Widget-specific actions (`lvgl.dropdown.update`, `lvgl.roller.update`) will trig
 - {{< docref "/components/light/lvgl" >}}
 - {{< docref "/components/text/lvgl" >}}
 - {{< docref "/components/text_sensor/lvgl" >}}
-
 

@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 {{< anchor "config-ota_esphome" >}}
 
 ESPHome's Over-The-Air (OTA) platform allows you to remotely install modified/updated firmware binaries onto your
@@ -89,5 +90,4 @@ If OTA is already enabled without a password, simply add a `password:` line to t
 - {{< docref "/components/ota" >}}
 - {{< docref "/components/ota/http_request" >}}
 - {{< docref "/components/safe_mode" >}}
-
 

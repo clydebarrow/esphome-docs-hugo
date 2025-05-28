@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The ESP8266 Software PWM platform allows you to use a software PWM on
 the pins GPIO0-GPIO16 on your ESP8266. Note that this is a software PWM,
 so there can be some flickering during periods of high WiFi activity. Hardware PWMs
@@ -72,5 +73,4 @@ Configuration variables:
 - {{< docref "/components/fan/speed" >}}
 - {{< docref "/components/power_supply" >}}
 - {{< apiref "esp8266_pwm/esp8266_pwm.h" "esp8266_pwm/esp8266_pwm.h" >}}
-
 

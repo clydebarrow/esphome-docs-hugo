@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `http_request` component lets you make HTTP/HTTPS requests. To do so, you need to add it to your device's configuration:
 
 ```yaml
@@ -313,5 +314,4 @@ on_...:
 - {{< docref "index/" >}}
 - {{< apiref "http_request/http_request.h" "http_request/http_request.h" >}}
 - {{< docref "/components/json" >}}
-
 

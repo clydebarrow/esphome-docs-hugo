@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `rgbww` light platform creates an RGBWW (cold white + warm white)
 light from 5 [float output components](components/output/_index#output) (one for each channel). The cold and warm
 white channels can be controlled individually or together, see [Mixing](components/light/cwww#cwww_mixing) for more information.
@@ -104,5 +105,4 @@ the `color_mode` option of the [light control actions](components/light/_index#l
 - {{< docref "/components/output/my9231" >}}
 - {{< docref "/components/output/sm16716" >}}
 - {{< apiref "rgbww/rgbww_light_output.h" "rgbww/rgbww_light_output.h" >}}
-
 

@@ -6,6 +6,7 @@ params:
     description: Instructions for setting up switch binary sensors with ESPHome.
 ---
 
+
 {{< anchor "switch-binary-sensor" >}}
 
 
@@ -34,5 +35,4 @@ switch:
 
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "switch/binary_sensor/switch_binary_sensor.h" "switch/binary_sensor/switch_binary_sensor.h" >}}
-
 

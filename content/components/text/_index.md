@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 ESPHome has support for components to create a text entity. A text entity is
 like a `text_sensor` that can read a value from a device, but is useful when that value
 can be set by the user/frontend.
@@ -133,5 +134,4 @@ advanced stuff (see the full API Reference for more info).
 
 - {{< apiref "Text" "text/text.h" >}}
 - {{< apiref "TextCall" "text/text_call.h" >}}
-
 

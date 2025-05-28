@@ -8,6 +8,7 @@ params:
 ---
 
 
+
 The `mqtt_subscribe` text sensor platform allows you to get external data into ESPHome.
 The sensor will subscribe to messages on the given MQTT topic and save the most recent value
 in its `id(mysensor).state`.
@@ -51,5 +52,4 @@ display:
 ## See Also
 
 - {{< apiref "mqtt_subscribe/text_sensor/mqtt_subscribe_text_sensor.h" "mqtt_subscribe/text_sensor/mqtt_subscribe_text_sensor.h" >}}
-
 

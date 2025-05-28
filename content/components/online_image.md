@@ -7,6 +7,7 @@ params:
     image: image-sync-outline.svg
 ---
 
+
 {{< anchor "online_image" >}}
 
 
@@ -158,5 +159,4 @@ wifi:
 - {{< apiref "online_image/online_image.h" "online_image/online_image.h" >}}
 - {{< docref "image" "Image Component" >}}
 - {{< docref "animation" "Animation Component" >}}
-
 

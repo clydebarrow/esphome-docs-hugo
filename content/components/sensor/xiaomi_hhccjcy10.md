@@ -9,6 +9,7 @@ params:
 
 
 
+
 MiFlora, tuya (pink) version, measures temperature, moisture, ambient light and nutrient levels in the soil.
 
 {{< img src="xiaomi_hhccjcy10.jpg" alt="Image" width="60.0%" class="center" >}}
@@ -47,5 +48,4 @@ sensor:
 ## See Also
 
 - {{< docref "ble_client/" >}}
-
 

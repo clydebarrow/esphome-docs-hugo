@@ -141,8 +141,17 @@ outputFormats:
 module:
   mounts:
     - disableWatch: false
+      source: static
+      target: static
+    - disableWatch: false
       source: pagefind
       target: assets/pagefind
+    - disableWatch: false
+      source: static/images
+      target: assets/images
+    - disableWatch: false
+      source: content
+      target: assets/content
     - disableWatch: false
       source: pagefind
       target: static/pagefind

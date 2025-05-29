@@ -10,3 +10,4 @@ esphome-docs
 /data/anchors.json
 /data/automations
 my-secrets
+resources/_gen

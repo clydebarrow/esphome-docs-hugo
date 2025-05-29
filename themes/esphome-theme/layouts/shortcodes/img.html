@@ -26,26 +26,9 @@
 {{- $width := .Get "width" -}}
 {{- $height := .Get "height" -}}
 
-{{/* Check if image exists in local images directory first */}}
-{{- $localPath := printf "images/%s" $src -}}
-{{- $componentPath := printf "%s/images/%s" (path.Dir .Page.File.Path) $src -}}
-{{- $globalPath := printf "images/%s" $src -}}
-
-{{- $imagePath := "" -}}
-{{- if fileExists (printf "content/%s" $componentPath) -}}
-  {{- $imagePath = $componentPath -}}
-{{- else if fileExists (printf "static/%s" $globalPath) -}}
-  {{- $imagePath = $globalPath -}}
-{{- else -}}
-  {{- $imagePath = $src -}}
-{{- end -}}
-
 {{- $style := "" -}}
 {{- if $width -}}{{- $style = printf "%swidth:%spx;" $style $width -}}{{- end -}}
 {{- if $height -}}{{- $style = printf "%sheight:%spx;" $style $height -}}{{- end -}}
 {{- if $style -}}{{- $style = printf " style=\"%s\"" $style | safeHTMLAttr -}}{{- end -}}
-<figure {{- with $class -}}class="{{- . -}}"{{- end -}}>
-  <img src="{{- $imagePath | relURL -}}" alt="{{- $alt -}}"{{- if $class -}} class="{{- $class -}}"{{- end -}}{{- $style -}} />
-  {{- with $caption -}}<figcaption>{{- . | markdownify -}}</figcaption>{{- end -}}
-</figure>
+{{ partial "image.html" (dict "src" $src "page" .Page "style" $style "width" $width) }}
 {{- .Page.Store.Set "hasImg" true -}}

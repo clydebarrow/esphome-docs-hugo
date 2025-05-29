@@ -1037,6 +1037,11 @@ footer {
 
 .footer-logo img {
   width: 220px;
+  height: 49px;
+}
+
+.footer-logo a {
+  filter: brightness(1.3);
 }
 
 .footer-links {
@@ -1064,6 +1069,7 @@ footer {
 
 .footer-column a {
   color: var(--link-accent);
+  filter: brightness(1.3);
 }
 
 .footer-column i {

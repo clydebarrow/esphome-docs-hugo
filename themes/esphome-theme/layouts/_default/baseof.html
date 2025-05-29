@@ -80,9 +80,11 @@
             {{ end }}
             <div class="nav-logo">
                 <a id="nav-logo-a"
-                        {{ if eq .Page.Title "ESPHome Docs" }}
+                        {{ if or (eq .Page.Title "ESPHome Docs") .IsHome }}
+                        title="ESPHome Landing Page"
                         href="{{ "/" | relURL }}">
                     {{ else }}
+                        title="ESPHome Documentation Home"
                         href="{{ "/components" | relURL }}">
                     {{ end }}
                     {{ os.ReadFile "static/images/logo-text.svg" | safeHTML }}
@@ -149,36 +151,18 @@
         <div class="footer-content">
             <a class="footer-logo" href="https://www.openhomefoundation.org/">
                 <span>ESPHome is a project from the</span>
-                <img src="{{ "images/ohf-logo-on-dark.svg" | relURL }}" alt="ESPHome Logo" width="180px">
+                <img src="{{ "images/ohf-logo-on-dark.svg" | relURL }}" alt="ESPHome Logo" width="220px" height="49px">
             </a>
-            <div class="footer-column">
-                <h3>Documentation</h3>
+            {{ range (index .Site.Menus "footer") }}
+            <div class="footer-column {{ if eq .Weight 1000 }}push-right{{ end }}">
+                <h3>{{ .Name }}</h3>
                 <ul>
-                    <li><a href="{{ "components/" | relURL }}"><i class="fa fa-puzzle-piece"></i>Components</a></li>
-                    <li><a href="{{ "guides/" | relURL }}"><i class="fa fa-compass"></i>Guides</a></li>
-                    <li><a href="{{ "automations/" | relURL }}"><i class="fa fa-magic"></i>Automations</a></li>
-                    <li><a href="{{ "cookbook/" | relURL }}"><i class="fa fa-kitchen-set"></i>Cookbook</a></li>
+                {{ range .Children }}
+                    <li><a href="{{ .URL | relURL }}"><i class="{{ .Post }}"></i>{{ .Name}}</a></li>
+                {{ end }}
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Community</h3>
-                <ul>
-                    <li><a href="https://discord.gg/KhAMKrd" target="_blank"><i class="fab fa-discord"></i>Discord</a>
-                    </li>
-                    <li><a href="https://github.com/esphome/esphome" target="_blank"><i class="fab fa-github"></i>GitHub
-                        Repo</a></li>
-                    <li><a href="https://community.home-assistant.io/c/esphome/" target="_blank"><i
-                            class="fas fa-comments"></i>Forums</a></li>
-                </ul>
-            </div>
-            <div class="footer-column push-right">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="{{ "changelog/" | relURL }}"><i class="fa fa-history"></i>Changelog</a></li>
-                    <li><a href="https://devices.esphome.io/"><i class="fa fa-microchip"></i>Device Database</a></li>
-                    <li><a href="https://developers.esphome.io"><i class="fa fa-code"></i>Development</a></li>
-                </ul>
-            </div>
+            {{ end }}
         </div>
     </footer>
 </div>

@@ -105,6 +105,25 @@ menu:
       url: "/guides/supporters/"
       weight: 35
       parent: "keeping-up"
+  footer:
+    - name: Documentation
+      weight: 1
+    - { parent: Documentation, url: "components/", post: "fa fa-puzzle-piece", name: Components}
+    - { parent: Documentation, url: "guides/", post: "fa fa-compass", name: Guides}
+    - { parent: Documentation, url: "automations/", post: "fa fa-magic", name: Automations}
+    - { parent: Documentation, url: "cookbook/", post: "fa fa-kitchen-set", name: Cookbook}
+
+    - name: Community
+      weight: 2
+    - { parent: Community, url: "https://discord.gg/KhAMKrd/", post: "fab fa-discord", name: Discord}
+    - { parent: Community, url: "https://github.com/esphome/esphome", post: "fab fa-github", name: Github}
+    - { parent: Community, url: "https://community.home-assistant.io/c/esphome/", post: "fas fa-comments", name: Forum}
+
+    - name: Resources
+      weight: 1000
+    - { parent: Resources, url: "changelog/", post: "fa fa-history", name: Changelog}
+    - { parent: Resources, url: "https://devices.esphome.io", post: "fa fa-microchip", name: "Device Database"}
+    - { parent: Resources, url: "https://developers.esphome.io", post: "fa fa-code", name: Development}
 
 markup:
   highlight:

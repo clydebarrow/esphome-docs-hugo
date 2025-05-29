@@ -43,7 +43,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Page.Title }}">
 
-    /* prevent flash of unstyled content, will be overridden */
+    <!-- prevent flash of unstyled content, will be overridden -->
     <style>
         body {
             visibility: hidden;
@@ -65,7 +65,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {{ partial "asset.html" "css/main.css" }}
     {{ partial "asset.html" "css/tables.css" }}
-    {{ partial "asset.html" "css/chroma.css" }}
     {{ partial "asset.html" "pagefind/pagefind-modular-ui.css" }}
     {{ block "head" . }}{{ end }}
 
@@ -201,6 +200,9 @@
 {{ partial "asset.html" "/pagefind/pagefind-modular-ui.js" }}
 {{ partial "asset.html" "/js/menu.js" }}
 {{ partial "asset.html" "/js/main.js" }}
+{{ if .Store.Get "hasCode" }}
+    {{ partial "asset.html" "css/chroma.css" }}
+{{ end }}
 
 {{ block "scripts" . }}{{ end }}
 

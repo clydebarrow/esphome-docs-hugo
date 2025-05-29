@@ -62,10 +62,9 @@
     <link rel="icon" type="image/svg+xml" href="{{ "/images/logo.svg" | relURL }}">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    {{ partial "asset.html" "css/main.css" }}
-    {{ partial "asset.html" "css/tables.css" }}
-    {{ partial "asset.html" "pagefind/pagefind-modular-ui.css" }}
+    {{ partial "asset.html" (dict "path" "css/main.css" "defer" false) }}
+    {{ partial "asset.html" (dict "path" "css/tables.css" "defer" true) }}
+    {{ partial "asset.html" (dict "path" "pagefind/pagefind-modular-ui.css" "defer" true) }}
     {{ block "head" . }}{{ end }}
 
 </head>
@@ -197,11 +196,17 @@
             onload="renderMathInElement(document.body);"></script>
 {{ end }}
 
-{{ partial "asset.html" "/pagefind/pagefind-modular-ui.js" }}
-{{ partial "asset.html" "/js/menu.js" }}
-{{ partial "asset.html" "/js/main.js" }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="(max-width:1px)"
+        onload="this.onload=null;this.removeAttribute('media');"
+        fetchpriority="high"
+      >
+
+{{ partial "asset.html" (dict "path" "/pagefind/pagefind-modular-ui.js" "defer" true) }}
+{{ partial "asset.html" (dict "path" "/js/menu.js" "defer" true) }}
+{{ partial "asset.html" (dict "path" "/js/main.js" "defer" true) }}
 {{ if .Store.Get "hasCode" }}
-    {{ partial "asset.html" "css/chroma.css" }}
+    {{ partial "asset.html" (dict "path" "css/chroma.css" "defer" true) }}
 {{ end }}
 
 {{ block "scripts" . }}{{ end }}

@@ -1,5 +1,6 @@
 {{ $ext := lower (path.Ext .src) }}
 {{ $page := .page }}
+{{ $thumbSize := .thumbSize | default "180x q20" }}
 {{/* Check if image exists in local images directory first */}}
 {{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) .src -}}
 {{- $globalPath := printf "images/%s" .src -}}
@@ -22,7 +23,7 @@
         {{ if isset . "fill" }}
             {{ $image = $image.Fill .fill }}
         {{ end }}
-        {{ $placeholder := ($image.Resize "180x q20") | images.Filter (images.GaussianBlur 1) }}
+        {{ $placeholder := ($image.Resize $thumbSize) | images.Filter (images.GaussianBlur 1) }}
         {{ $src_set := slice (print $image.RelPermalink " " $image.Width "w") }}
         {{ $maxwidth := .maxwidth | default 1500 }}
 

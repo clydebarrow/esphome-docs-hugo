@@ -15,7 +15,7 @@
   --feature-card-bg: #fff;
   --feature-card-text: #333;
   --feature-icon-color: #00bfff;
-  --btn-primary-color: #00bfff;
+  --btn-primary-color: #009DDD;
   --btn-primary-hover-color: #0288d1;
   --btn-secondary-color: transparent;
   --btn-secondary-hover-color: rgba(3, 169, 244, 0.1);
@@ -1040,7 +1040,7 @@ footer {
   height: 49px;
 }
 
-.footer-logo a {
+.footer-content a {
   filter: brightness(1.3);
 }
 

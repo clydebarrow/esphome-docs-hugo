@@ -3,8 +3,8 @@
 {{ $style := .style }}
 {{ $thumbSize := .thumbSize | default "180x q20" }}
 {{/* Check if image exists in local images directory first */}}
-{{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) .src -}}
-{{- $globalPath := printf "images/%s" .src -}}
+{{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) (strings.TrimPrefix "images/" .src) -}}
+{{- $globalPath := printf "images/%s" (strings.TrimPrefix "images/" .src) -}}
 
 {{ $image := resources.Get $componentPath }}
 {{ if not $image }}
@@ -61,9 +61,10 @@
             <a href='{{ .href }}'>
                 {{ end }}
                 <img class="lazyload w-100 h-100" data-sizes="auto" src="{{ $image.RelPermalink }}" {{ if .width }}width="{{.width}}" {{ end }}
+                     fetchpriority=high
+                     {{ $style }}
                      srcset="data:image/jpeg;base64,{{ $placeholder.Content | base64Encode }}"
                      data-src="{{ $image.RelPermalink }}"
-                     {{ $style }}
                      data-srcset="{{ $srclist }}" style="max-width: {{ $image.Width }}px; max-height: {{ $image.Height }}px;"
                      width="{{ $image.Width }}" height="{{ $image.Height }}"
                      alt="{{ .alt }}"/>

@@ -767,7 +767,6 @@ main {
 .hero-container {
   display: flex;
   align-items: center;
-  margin-bottom: 3em;
 }
 
 .hero-content {
@@ -794,7 +793,6 @@ main {
   color: white;
   padding: 2em;
   border-radius: 5px;
-  margin-bottom: 3em;
   text-align: center;
 }
 
@@ -970,6 +968,9 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5em;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feature-icon {

@@ -19,25 +19,5 @@
     </div>
 </div>
 
-    {{ .Content }}
-<div class="home-section">
-    <h2 id="getting-started">Getting Started</h2>
-</div>
-
-<div class="getting-started-grid">
-    <div class="feature-card">
-        <div class="feature-icon">
-            {{ os.ReadFile "static/images/home-assistant.svg"  | safeHTML }}
-        </div>
-        <h3>From Home Assistant</h3>
-        <p>The easiest way to get started with ESPHome is through the Home Assistant integration.</p>
-        <a href="{{ "guides/getting_started_hassio/" | relURL }}" class="btn btn-primary">Home Assistant Guide</a>
-    </div>
-    <div class="feature-card">
-        <div class="feature-icon"><i aria-hidden="true" class="fas fa-terminal"></i></div>
-        <h3>Command Line</h3>
-        <p>For advanced users, the command line interface provides full control over your ESPHome setup.</p>
-        <a href="{{ "guides/getting_started_command_line/" | relURL }}" class="btn btn-primary">Command Line Guide</a>
-    </div>
-</div>
+{{ .Content }}
 {{ end }}

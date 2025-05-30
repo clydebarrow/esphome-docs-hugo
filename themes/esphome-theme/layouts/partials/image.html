@@ -1,5 +1,6 @@
 {{ $ext := lower (path.Ext .src) }}
 {{ $page := .page }}
+{{ $style := .style }}
 {{ $thumbSize := .thumbSize | default "180x q20" }}
 {{/* Check if image exists in local images directory first */}}
 {{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) .src -}}
@@ -17,7 +18,7 @@
 {{ end }}
 
 {{ if and $image (eq $ext ".svg") }}
-    <img src="{{ $image.RelPermalink }}" {{ if .width }}width="{{.width}}" {{ end }} alt="{{ .alt }}"/>
+    <img src="{{ $image.RelPermalink }}" {{ if .width }}width="{{.width}}" {{ end }} alt="{{ .alt }}" {{ $style }}/>
 {{ end }}
 {{ if and $image (in (split ".jpeg,.jpg,.png" ",") $ext) }}
         {{ if isset . "fill" }}
@@ -62,6 +63,7 @@
                 <img class="lazyload w-100 h-100" data-sizes="auto" src="{{ $image.RelPermalink }}" {{ if .width }}width="{{.width}}" {{ end }}
                      srcset="data:image/jpeg;base64,{{ $placeholder.Content | base64Encode }}"
                      data-src="{{ $image.RelPermalink }}"
+                     {{ $style }}
                      data-srcset="{{ $srclist }}" style="max-width: {{ $image.Width }}px; max-height: {{ $image.Height }}px;"
                      width="{{ $image.Width }}" height="{{ $image.Height }}"
                      alt="{{ .alt }}"/>

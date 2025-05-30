@@ -38,8 +38,6 @@ Configuration variables:
   the script.
 - **then** (**Required**, [Action](#config-action)): The action to perform.
 
-{{< anchor "script-parameters" >}}
-
 # Script Parameters
 
 Scripts can be defined with parameters. The arguments given when calling the script can be used within the script's

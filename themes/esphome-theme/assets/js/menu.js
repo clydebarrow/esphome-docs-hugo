@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearButton = document.createElement('button');
     clearButton.type = 'button';
     clearButton.className = 'search-clear-button';
-    clearButton.innerHTML = '<i class="fas fa-times"></i>';
+    clearButton.textContent = "X";
     clearButton.style.display = 'none';
     searchContainer.appendChild(clearButton);
 

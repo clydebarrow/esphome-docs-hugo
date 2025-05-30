@@ -1,13 +1,23 @@
 {{ $currentPage := . }}
+{{ $title := .Title }}
 <div class="sidebar-content {{ if .Content }}scroll-trap{{ end }}">
     <nav class="sidebar-nav">
         {{ if .Fragments }}
         {{ if .Fragments.Headings }}
         <h3>On This Page</h3>
-        {{ $startLevel := 2 }}
-        {{ $endLevel := 3 }}
-        {{ $ordered := false }}
-        {{ .Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML }}
+            <ul>
+            {{ range .Fragments.HeadingsMap }}
+                <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a>
+                    {{ if .Headings }}
+                        <ul>
+                        {{ range .Headings }}
+                            <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a></li>
+                        {{ end }}
+                        </ul>
+                    {{ end }}
+                </li>
+            {{ end }}
+            </ul>
         {{ end }}
         {{ end }}
         {{ if .Pages }}
@@ -30,7 +40,10 @@
         {{ $repo := strings.TrimSuffix ".git" .Site.Data.repo.url }}
         {{ with .File }}
             {{ $path := printf "%s/blob/current/content/%s" $repo .Path }}
-            <li></li><a href="{{ $path }}" class="ghedit"><i class="fas fa-edit"></i>Edit this page on GitHub</a></li>
+            <a href="{{ $path }}" class="ghedit">
+                {{ os.ReadFile "static/images/icons/edit.svg" | safeHTML }}
+                Edit this page on GitHub
+            </a></li>
         {{ end }}
         </ul>
     </div>

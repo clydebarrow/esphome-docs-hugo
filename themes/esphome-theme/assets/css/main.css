@@ -231,6 +231,15 @@ img {
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
+.sticky-nav button svg {
+  height: 1.1em;
+  width: 1.1em;
+  margin-right: 0.5em;
+  margin-bottom: -10px;
+  & path {
+    fill: var(--text-color);
+  }
+}
 .nav-logo img, .nav-logo svg {
   height: 30px;
   padding: 0;
@@ -602,6 +611,15 @@ main {
   background: var(--sidebar-background);
   color: var(--text-color);
   border-color: var(--border-color);
+}
+
+.sidebar svg {
+  height: .8em;
+  width: .8em;
+  margin-right: 0.5em;
+  & path {
+    fill: var(--link-accent);
+  }
 }
 
 .content {
@@ -1220,6 +1238,7 @@ figcaption {
   }
 
   .toc-button {
+    transform-origin: 40% 60%;
     transform: rotate(0deg);
     transition: transform 0.3s ease;
   }

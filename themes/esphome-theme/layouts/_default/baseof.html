@@ -68,7 +68,7 @@
             {{ if and (ne .IsHome true) (.Content) }}
                 <button type="button" class="toc-button" id="toc-toggle" aria-label="Open table of contents"
                         aria-expanded="false">
-                    <i class="fa-solid fa-list"></i>
+                    {{ os.ReadFile "static/images/icons/list.svg" | safeHTML }}
                 </button>
             {{ end }}
             <div class="nav-logo">

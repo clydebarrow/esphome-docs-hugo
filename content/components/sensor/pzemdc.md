@@ -56,7 +56,7 @@ sensor:
   All options from [Sensor](#config-sensor).
 - **energy** (*Optional*): Use the energy value of the sensor in kWh.
   All options from [Sensor](#config-sensor).
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
@@ -75,7 +75,7 @@ on_...:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "pzem004t/" >}}
 - {{< docref "pzemac/" >}}
 - {{< apiref "pzemdc/pzemdc.h" "pzemdc/pzemdc.h" >}}

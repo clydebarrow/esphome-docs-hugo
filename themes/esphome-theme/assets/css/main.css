@@ -639,11 +639,14 @@ main {
 }
 
 .sidebar-content.scroll-trap {
-  top: calc(var(--nav-height) + 1em);
+  top: var(--nav-height);
   max-height: calc(100vh - var(--nav-height) - 2em);
   position: sticky;
   overflow-y: auto;
   overflow-x: hidden;
+  & h3 {
+    margin-top: 0;
+  }
 }
 
 .sidebar-logo {
@@ -1187,8 +1190,9 @@ figure {
 }
 
 figure img {
-  max-width: 100%;
-  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  width: auto;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

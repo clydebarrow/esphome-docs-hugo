@@ -42,7 +42,7 @@ sensor:
   periodically send the trigger pulse to.
 - **echo_pin** (**Required**, [Pin Schema](#config-pin_schema)): The input pin on which to
   wait for the echo.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - All other options from [Sensor](#config-sensor).
 
@@ -50,13 +50,13 @@ Advanced options:
 
 - **timeout** (*Optional*, float): The number of meters for the
   timeout. Most sensors can only sense up to 2 meters. Defaults to 2 meters.
-- **pulse_time** (*Optional*, [config-time](#config-time)): The duration for which the trigger pin will be
+- **pulse_time** (*Optional*, [Time](#config-time)): The duration for which the trigger pin will be
   active. Defaults to `10us`.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "template/" >}}
 - {{< apiref "ultrasonic/ultrasonic_sensor.h" "ultrasonic/ultrasonic_sensor.h" >}}
 

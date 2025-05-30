@@ -56,9 +56,9 @@ you want the text sensor to use that name, you can set `name: None`.
 Automations:
 
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
-  when a new value is published. See [text_sensor-on_value](#text_sensor-on_value).
+  when a new value is published. See [`on_value`](#text_sensor-on_value).
 - **on_raw_value** (*Optional*, [Automation](#automation)): An automation to perform
-  when a new value is received that hasn't passed through any filters. See [text_sensor-on_raw_value](#text_sensor-on_raw_value).
+  when a new value is received that hasn't passed through any filters. See [`on_raw_value`](#text_sensor-on_raw_value).
 
 {{< anchor "text_sensor-filters" >}}
 
@@ -246,7 +246,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The text sensor ID.
+- **id** (**Required**, [ID](#config-id)): The text sensor ID.
 - **state** (**Required**, [templatable](#config-templatable), string): The state to compare
   to.
 

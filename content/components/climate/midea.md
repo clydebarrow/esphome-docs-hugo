@@ -72,11 +72,11 @@ climate:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the {{< docref "../uart" >}} if you want
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the {{< docref "../uart" >}} if you want
   to use multiple UART buses.
-- **transmitter_id** (*Optional*, [config-id](#config-id)): Defined and used automatically when using {{< docref "../remote_transmitter" >}} component for IR commands transmit.
-- **period** (*Optional*, [config-time](#config-time)): Minimal period between requests to the appliance. Defaults to `1s`.
-- **timeout** (*Optional*, [config-time](#config-time)): Request response timeout until next request attempt. Defaults to `2s`.
+- **transmitter_id** (*Optional*, [ID](#config-id)): Defined and used automatically when using {{< docref "../remote_transmitter" >}} component for IR commands transmit.
+- **period** (*Optional*, [Time](#config-time)): Minimal period between requests to the appliance. Defaults to `1s`.
+- **timeout** (*Optional*, [Time](#config-time)): Request response timeout until next request attempt. Defaults to `2s`.
 - **num_attempts** (*Optional*, int): Number of request attempts between 1 and 5 inclusive. Defaults to `3`.
 - **autoconf** (*Optional*, boolean): Get capabilities automatically. Allows you not to manually define most of the capabilities of the appliance.
   Defaults to `True`.

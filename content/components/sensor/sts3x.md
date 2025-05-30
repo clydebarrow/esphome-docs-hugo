@@ -30,13 +30,13 @@ sensor:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x4A`.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - All other options from [Sensor](#config-sensor).
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}

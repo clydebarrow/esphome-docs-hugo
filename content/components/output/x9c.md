@@ -37,7 +37,7 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The id to use for this output component.
+- **id** (**Required**, [ID](#config-id)): The id to use for this output component.
 - **cs_pin** (**Required**, [Pin Schema](#config-pin_schema)): Chip Select pin
 - **inc_pin** (**Required**, [Pin Schema](#config-pin_schema)): Increment pin
 - **ud_pin** (**Required**, [Pin Schema](#config-pin_schema)): Up/Down pin

@@ -24,7 +24,7 @@ audio_adc:
 
 ## Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 
 {{< anchor "automations-audio_adc" >}}
 
@@ -36,7 +36,7 @@ This action sets the (microphone) gain of the ADC.
 
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the `audio_adc` platform.
+- **id** (**Required**, [ID](#config-id)): The ID of the `audio_adc` platform.
 - **mic_gain** (**Required**, percentage, [templatable](#config-templatable)): The desired gain level in decibels
   for the input.
 

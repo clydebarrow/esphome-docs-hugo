@@ -44,7 +44,7 @@ time:
 ```
 ## Configuration variables:
 
-- **power_id** (**Required**, [config-id](#config-id)): The ID of the power sensor
+- **power_id** (**Required**, [ID](#config-id)): The ID of the power sensor
   to integrate over time.
 - **restore** (*Optional*, boolean): Whether to store the intermediate result on the device so
   that the value can be restored upon power cycle or reboot.
@@ -89,7 +89,7 @@ sensor:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "hlw8012/" >}}
 - {{< docref "cse7766/" >}}
 - {{< docref "integration/" >}}

@@ -161,8 +161,8 @@ Got all that? Great. Let's take a closer look at some configuration.
 
 The thermostat controller uses the sensor to determine whether it should heat or cool.
 
-- **sensor** (**Required**, [config-id](#config-id)): The sensor that is used to measure the current temperature.
-- **humidity_sensor** (*Optional*, [config-id](#config-id)): If specified, this sensor is used to measure the current humidity.
+- **sensor** (**Required**, [ID](#config-id)): The sensor that is used to measure the current temperature.
+- **humidity_sensor** (*Optional*, [ID](#config-id)): If specified, this sensor is used to measure the current humidity.
   This is used for information only and does not influence temperature control.
 
 ### Heating and Cooling Actions
@@ -453,29 +453,29 @@ climate:
 - **fan_with_heating** (*Optional*, boolean): If set to `true`, `fan_only_action` will be called whenever
   `heat_action` is called. This is useful for forced-air systems where the fan typically runs with heating.
   Defaults to `false`.
-- **max_cooling_run_time** (*Required with* `supplemental_cooling_action`, [config-time](#config-time)): Duration after
+- **max_cooling_run_time** (*Required with* `supplemental_cooling_action`, [Time](#config-time)): Duration after
   which `supplemental_cooling_action` will be called when cooling is active. Note that
   `supplemental_cooling_action` will be called repeatedly at an interval defined by this parameter, as well,
   enabling multiple stages of supplemental (auxiliary/emergency) cooling.
-- **max_heating_run_time** (*Required with* `supplemental_heating_action`, [config-time](#config-time)): Duration after
+- **max_heating_run_time** (*Required with* `supplemental_heating_action`, [Time](#config-time)): Duration after
   which `supplemental_heating_action` will be called when heating is active. Note that
   `supplemental_heating_action` will be called repeatedly at an interval defined by this parameter, as well,
   enabling multiple stages of supplemental (auxiliary/emergency) heating.
-- **min_cooling_off_time** (*Required with* `cool_action`, [config-time](#config-time)): Minimum duration the cooling action
+- **min_cooling_off_time** (*Required with* `cool_action`, [Time](#config-time)): Minimum duration the cooling action
   must be disengaged before it may be engaged.
-- **min_cooling_run_time** (*Required with* `cool_action`, [config-time](#config-time)): Minimum duration the cooling action
+- **min_cooling_run_time** (*Required with* `cool_action`, [Time](#config-time)): Minimum duration the cooling action
   must be engaged before it may be disengaged.
-- **min_fanning_off_time** (*Required with* `fan_only_action`, [config-time](#config-time)): Minimum duration the fanning
+- **min_fanning_off_time** (*Required with* `fan_only_action`, [Time](#config-time)): Minimum duration the fanning
   action must be disengaged before it may be engaged.
-- **min_fanning_run_time** (*Required with* `fan_only_action`, [config-time](#config-time)): Minimum duration the fanning
+- **min_fanning_run_time** (*Required with* `fan_only_action`, [Time](#config-time)): Minimum duration the fanning
   action must be engaged before it may be disengaged.
-- **min_heating_off_time** (*Required with* `heat_action`, [config-time](#config-time)): Minimum duration the heating action
+- **min_heating_off_time** (*Required with* `heat_action`, [Time](#config-time)): Minimum duration the heating action
   must be disengaged before it may be engaged.
-- **min_heating_run_time** (*Required with* `heat_action`, [config-time](#config-time)): Minimum duration the heating action
+- **min_heating_run_time** (*Required with* `heat_action`, [Time](#config-time)): Minimum duration the heating action
   must be engaged before it may be disengaged.
-- **min_idle_time** (**Required**, [config-time](#config-time)): Minimum duration the idle action must be active before calling
+- **min_idle_time** (**Required**, [Time](#config-time)): Minimum duration the idle action must be active before calling
   another climate action.
-- **min_fan_mode_switching_time** (*Required with any* `fan_mode` *action*, [config-time](#config-time)): Minimum duration
+- **min_fan_mode_switching_time** (*Required with any* `fan_mode` *action*, [Time](#config-time)): Minimum duration
   any given fan mode must be active before it may be changed.
 
 Note that `min_temperature` and `max_temperature` from the base climate component are used to define
@@ -509,5 +509,5 @@ Please see the {{< docref "bang_bang" "Bang-Bang" >}} component's documentation 
 - {{< docref "/components/climate" >}}
 - {{< docref "/components/sensor" >}}
 - {{< docref "bang_bang" "Bang-Bang" >}}
-- [config-action](#config-action)
+- [All Actions](#config-action)
 

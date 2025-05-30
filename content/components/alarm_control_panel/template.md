@@ -29,11 +29,11 @@ alarm_control_panel:
 
 - **codes** (*Optional*, list of string): A list of codes for disarming the alarm, if *requires_code_to_arm* set to true then for arming the alarm too.
 - **requires_code_to_arm** (*Optional*, boolean): Code required for arming the alarm, *codes* must be provided.
-- **arming_away_time** (*Optional*, [config-time](#config-time)): The exit delay before the alarm is armed to away mode. Defaults to `0s`.
-- **arming_home_time** (*Optional*, [config-time](#config-time)): The exit delay before the alarm is armed to home mode.
-- **arming_night_time** (*Optional*, [config-time](#config-time)): The exit delay before the alarm is armed to night mode.
-- **pending_time** (*Optional*, [config-time](#config-time)): The entry delay before the alarm is triggered. Defaults to `0s`.
-- **trigger_time** (*Optional*, [config-time](#config-time)): The time after a triggered alarm before resetting to previous state if the sensors are cleared/off. Defaults to `0s`.
+- **arming_away_time** (*Optional*, [Time](#config-time)): The exit delay before the alarm is armed to away mode. Defaults to `0s`.
+- **arming_home_time** (*Optional*, [Time](#config-time)): The exit delay before the alarm is armed to home mode.
+- **arming_night_time** (*Optional*, [Time](#config-time)): The exit delay before the alarm is armed to night mode.
+- **pending_time** (*Optional*, [Time](#config-time)): The entry delay before the alarm is triggered. Defaults to `0s`.
+- **trigger_time** (*Optional*, [Time](#config-time)): The time after a triggered alarm before resetting to previous state if the sensors are cleared/off. Defaults to `0s`.
 - **binary_sensors** (*Optional*, *list*): A list of binary sensors the panel should use. Each consists of:
 
   - **input** (**Required**, string): The id of the binary sensor component
@@ -51,7 +51,7 @@ alarm_control_panel:
 
 {{< note >}}
 If `binary_sensors` is omitted then you're expected to trigger the alarm using
-[alarm_control_panel_pending_action](#alarm_control_panel_pending_action) or [alarm_control_panel_triggered_action](#alarm_control_panel_triggered_action).
+[`pending` Action](#alarm_control_panel_pending_action) or [`triggered` Action](#alarm_control_panel_triggered_action).
 
 {{< /note >}}
 {{< anchor "template_alarm_control_panel-trigger_modes" >}}

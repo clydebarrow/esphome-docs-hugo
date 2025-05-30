@@ -94,7 +94,7 @@ Configuration variables:
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "logger/" >}}
 - {{< apiref "debug/debug_component.h" "debug/debug_component.h" >}}
 

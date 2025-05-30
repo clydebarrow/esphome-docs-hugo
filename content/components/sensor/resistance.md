@@ -57,7 +57,7 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [config-id](#config-id)): The sensor to read the voltage values from
+- **sensor** (**Required**, [ID](#config-id)): The sensor to read the voltage values from
   to convert to resistance readings.
 - **configuration** (**Required**, string): The type of circuit, one of `DOWNSTREAM` or
   `UPSTREAM`.
@@ -70,6 +70,6 @@ Some boards like NodeMCUv2 needs to multiply ADC reading by 3.3 to provide accur
 
 - {{< docref "adc/" >}}
 - {{< docref "ntc/" >}}
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "resistance/resistance_sensor.h" "resistance/resistance_sensor.h" >}}
 

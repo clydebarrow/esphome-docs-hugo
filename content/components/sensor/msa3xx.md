@@ -44,7 +44,7 @@ text sensors with orientation information, and binary sensors for taps and movem
 Base Configuration:
 
 - **type** (**Required**, string): Sensor type. Either `msa301` or `msa311`.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval for updating acceleration sensors.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval for updating acceleration sensors.
   Defaults to `10s`.
 - **range** (*Optional*, string): The range of the sensor measurements. One of `2G`, `4G`, `8G`, `16G`.
   Defaults to `2G` which means it picks up accelerations between `-2g` and `2g`.
@@ -207,6 +207,6 @@ binary_sensor:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "msa3xxx/msa3xxx.h" "msa3xxx/msa3xxx.h" >}}
 

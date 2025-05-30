@@ -49,7 +49,7 @@ sensor:
 
 - **iir_filter** (*Optional*): Set up an Infinite Impulse Response filter to increase accuracy. One of
   `OFF`, `2x`, `4x`, `16x`, `32`, `64x`, `128x`. Defaults to `OFF`.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 
@@ -88,7 +88,7 @@ sensor:
   `OFF`, `2x`, `4x`, `16x`, `32`, `64x`, `128x`. Defaults to `OFF`.
 - **address** (*Optional*, int): *I2C* only. Manually specify the I²C address of
   the sensor. Defaults to `0x77`. Another address can be `0x76`.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 
@@ -108,7 +108,7 @@ configure this amount. Possible oversampling values:
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "bme280/" >}}
 - {{< docref "bmp280/" >}}
 - {{< docref "bme680/" >}}

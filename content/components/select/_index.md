@@ -57,7 +57,7 @@ you want the select to use that name, you can set `name: None`.
 Automations:
 
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
-  when a new value is published. See [select-on_value](#select-on_value).
+  when a new value is published. See [`on_value`](#select-on_value).
 
 MQTT Options:
 
@@ -67,7 +67,7 @@ MQTT Options:
 
 You can access the most recent state of the select in [lambdas](#config-lambda) using
 `id(select_id).state`.
-For more information on using lambdas with select, see [select-lambda_calls](#select-lambda_calls).
+For more information on using lambdas with select, see [lambda calls](#select-lambda_calls).
 
 {{< anchor "select-on_value" >}}
 
@@ -103,7 +103,7 @@ This is an [Action](#config-action) for setting the active option using an optio
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the select to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the select to set.
 - **option** (**Required**, string, [templatable](#config-templatable)):
   The option to set the select to.
 
@@ -124,7 +124,7 @@ This is an [Action](#config-action) for setting the active option using its inde
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the select to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the select to set.
 - **index** (**Required**, int, [templatable](#config-templatable)):
   The index offset of the option to be activated.
 
@@ -148,7 +148,7 @@ This is an [Action](#config-action) for selecting the next option in a select co
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the select to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the select to set.
 - **cycle** (*Optional*, boolean): Whether or not to jump back to the first option
   of the select when the last option is currently selected. Defaults to `true`.
 
@@ -170,7 +170,7 @@ a select component.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the select to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the select to set.
 - **cycle** (*Optional*, boolean): Whether or not to jump to the last option
   of the select when the first option is currently selected. Defaults to `true`.
 
@@ -191,7 +191,7 @@ a select component.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the select to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the select to set.
 
 {{< anchor "select-last_action" >}}
 
@@ -210,7 +210,7 @@ a select component.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the select to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the select to set.
 
 {{< anchor "select-operation_action" >}}
 
@@ -236,7 +236,7 @@ templatable action call.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the select to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the select to set.
 - **operation** (**Required**, string, [templatable](#config-templatable)): The
   operation to perform. One of `FIRST`, `LAST`, `PREVIOUS` or
   `NEXT` (case insensitive). When writing a lambda for this field, then return

@@ -66,17 +66,17 @@ sensor:
   - `low_power_periodic`: The sensor takes a new measurement every 30 seconds. Make sure `update_interval` is at least 30 seconds.
   - `single_shot`: A measurement is started in every update interval. A measurement takes 5 seconds. This mode is only available on scd41 and useful if low power consumption is required.
     The automatic self-calibration is optimized for single shot measurements performed every 5 minutes.
-    To reduce noise levels, you can can perform several single shot measurements in a row and average the output values using a [sensor-filters](#sensor-filters).
+    To reduce noise levels, you can can perform several single shot measurements in a row and average the output values using a [Sensor Filters](#sensor-filters).
   - `single_shot_rht_only`: A measurement is started in every update interval. A measurement takes 50 ms. Only humidity and temperature is measured. CO2 is reported as 0 ppm. This mode is only available on scd41 and useful if low power consumption is required.
 
 
-- **ambient_pressure_compensation_source** (*Optional*, [config-id](#config-id)): Set an external pressure sensor ID used for ambient pressure compensation.
+- **ambient_pressure_compensation_source** (*Optional*, [ID](#config-id)): Set an external pressure sensor ID used for ambient pressure compensation.
   The pressure sensor must report pressure in hPa. the correction is applied before updating the state of the co2 sensor.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x62`.
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 ## Actions:
@@ -170,7 +170,7 @@ sensor:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "scd30/" >}}
 - {{< apiref "scd4x/scd4x.h" "scd4x/scd4x.h" >}}

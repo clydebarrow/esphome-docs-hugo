@@ -33,7 +33,7 @@ select:
 - **set_action** (*Optional*, [Action](#config-action)): The action that should
   be performed when the remote (like Home Assistant's frontend) requests to set the Select option.
   The new option is available to lambdas in the `x` variable.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval on which to update the select
+- **update_interval** (*Optional*, [Time](#config-time)): The interval on which to update the select
   by executing the `lambda`. Defaults to `60s`.
 - **optimistic** (*Optional*, boolean): Whether to operate in optimistic mode - when in this mode,
   any command sent to the Template Select will immediately update the reported state.
@@ -46,16 +46,16 @@ select:
 - All other options from [Select](#config-select).
 
 {{< note >}}
-If you don't set a `lambda` and `optimistic` is `false` (default), updates to the select component state will need to be taken care of as part of your `set_action` using `id(my_select).publish_state(x);` (in a lambda). Do not use [select-set_action](#select-set_action) here, as this would generate a loop. Also, don't use `id(my_select).state = x` as this won't have the desired effect (e.g. HA won't update with the change).
+If you don't set a `lambda` and `optimistic` is `false` (default), updates to the select component state will need to be taken care of as part of your `set_action` using `id(my_select).publish_state(x);` (in a lambda). Do not use [`select.set` Action](#select-set_action) here, as this would generate a loop. Also, don't use `id(my_select).state = x` as this won't have the desired effect (e.g. HA won't update with the change).
 
 {{< /note >}}
 ## `select.set` Action
 
 You can also set an option for the template select from elsewhere in your YAML file
-with the [select-set_action](#select-set_action).
+with the [`select.set` Action](#select-set_action).
 
 ## See Also
 
-- [automation](#automation)
+- [Automation](#automation)
 - {{< apiref "template/select/template_select.h" "template/select/template_select.h" >}}
 

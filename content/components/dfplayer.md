@@ -33,8 +33,8 @@ dfplayer:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **on_finished_playback** (*Optional*, [Automation](#automation)): An action to be
   performed when playback is finished.
 
@@ -291,7 +291,7 @@ on_...:
 ```
 ## All actions
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the DFPlayer if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the DFPlayer if you have multiple components.
 
 
 ## Test setup

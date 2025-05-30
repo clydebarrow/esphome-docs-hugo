@@ -57,7 +57,7 @@ your configuration YAML.
 
 Configuration variables:
 
-**id** (*Optional*, [config-id](#config-id)): The media player to control. Defaults to the only one in YAML.
+**id** (*Optional*, [ID](#config-id)): The media player to control. Defaults to the only one in YAML.
 
 
 {{< anchor "media_player-play" >}}

@@ -42,13 +42,13 @@ sensor:
   not officially documented in the datasheet and seems to be quite inaccurate.
   All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
   to use multiple UART buses.
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for actions.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for actions.
 
 - **automatic_baseline_calibration** (*Optional*, boolean): MH-Z19 has automatic calibration procedure.
   The automatic calibration cycle is every 24 hours after powered on.
@@ -124,7 +124,7 @@ switch:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - [MH-Z19 library](https://github.com/nara256/mhz19_uart) by [@nara356](https://github.com/nara256)
 - {{< apiref "mhz19/mhz19.h" "mhz19/mhz19.h" >}}
 

@@ -1,10 +1,10 @@
 {{ $currentPage := . }}
 {{ $title := .Title }}
 <div class="sidebar-content {{ if .Content }}scroll-trap{{ end }}">
+    <h3>{{ $title }}</h3>
     <nav class="sidebar-nav">
         {{ if .Fragments }}
         {{ if .Fragments.Headings }}
-        <h3>On This Page</h3>
             <ul>
             {{ range .Fragments.HeadingsMap }}
                 <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a>
@@ -21,7 +21,7 @@
         {{ end }}
         {{ end }}
         {{ if .Pages }}
-        <h2>In this section</h2>
+        <h3>In this section</h3>
         <ul class="section-list">
             {{ range .Pages }}
                 {{ if .Title }}

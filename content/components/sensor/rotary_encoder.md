@@ -75,9 +75,9 @@ pin_a:
     - `ALWAYS_ZERO` - Always initialize the counter with value zero (0).
 
 - **on_clockwise** (*Optional*, [Automation](#automation)): Actions to be performed when
-  the knob is turned clockwise. See [sensor-rotary_encoder-triggers](#sensor-rotary_encoder-triggers).
+  the knob is turned clockwise. See [`on_clockwise` and `on_anticlockwise` Triggers](#sensor-rotary_encoder-triggers).
 - **on_anticlockwise** (*Optional*, [Automation](#automation)): Actions to be performed when
-  the knob is turned anticlockwise. See [sensor-rotary_encoder-triggers](#sensor-rotary_encoder-triggers).
+  the knob is turned anticlockwise. See [`on_clockwise` and `on_anticlockwise` Triggers](#sensor-rotary_encoder-triggers).
 - All other options from [Sensor](#config-sensor).
 
 {{< anchor "sensor-rotary_encoder-set_value_action" >}}
@@ -109,7 +109,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the rotary encoder.
+- **id** (**Required**, [ID](#config-id)): The ID of the rotary encoder.
 - **value** (**Required**, int, [templatable](#config-templatable)):
   The value to set the internal counter to.
 
@@ -130,7 +130,7 @@ on_anticlockwise:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "pulse_counter/" >}}
 - {{< docref "template/" >}}
 - [Mechanical Input Library](https://github.com/jkDesignDE/MechInputs) by [Jochen Krapf](https://github.com/JK-de)

@@ -33,8 +33,8 @@ sensor:
 ```
 ## Configuration variables:
 
-- **temperature** (**Required**, [config-id](#config-id)): The sensor that is used to measure the current temperature, in °C.
-- **humidity** (**Required**, [config-id](#config-id)): The sensor that is used to measure the current relative humidity, in %.
+- **temperature** (**Required**, [ID](#config-id)): The sensor that is used to measure the current temperature, in °C.
+- **humidity** (**Required**, [ID](#config-id)): The sensor that is used to measure the current relative humidity, in %.
 - **equation** (*Optional*): The saturated vapor pressure equation to use (see below).
 - All other options from [Sensor](#config-sensor).
 
@@ -49,7 +49,7 @@ There are several different equations for calculating saturated vapor pressure.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "absolute_humidity/absolute_humidity.h" "absolute_humidity/absolute_humidity.h" >}}
 - [NOAA Discussion on Humidity](https://www.weather.gov/lmk/humidity)
 - [Absolute humidity on Wikipedia](https://en.wikipedia.org/wiki/Humidity#Absolute_humidity)

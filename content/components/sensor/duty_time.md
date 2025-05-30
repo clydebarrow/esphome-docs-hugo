@@ -35,7 +35,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (*Optional*, [config-id](#config-id)): The ID of the `binary_sensor` to track the duty time. *May not be
+- **sensor** (*Optional*, [ID](#config-id)): The ID of the `binary_sensor` to track the duty time. *May not be
   used with* `lambda`.
 - **lambda** (*Optional*, [lambda](#config-lambda)): Lambda that will be called in a loop to get the current
   state of the tracked object. *May not be used with* `sensor`.
@@ -44,8 +44,8 @@ sensor:
 - **restore** (*Optional*, boolean): Whether to store the intermediate result on the device so that the value can be
   restored upon power cycle or reboot.
   Warning: this option can wear out your flash. Defaults to `false`.
-- **update_interval** (*Optional*, [config-time](#config-time)): The update interval. Defaults to `60s`.
-- **id** (*Optional*, [config-id](#config-id)): Set the ID of this sensor for use in lambdas.
+- **update_interval** (*Optional*, [Time](#config-time)): The update interval. Defaults to `60s`.
+- **id** (*Optional*, [ID](#config-id)): Set the ID of this sensor for use in lambdas.
 - All other options from [Sensor](#config-sensor).
 
 
@@ -107,9 +107,9 @@ on_...:
 ```
 ## See Also
 
-- [config-sensor](#config-sensor)
-- [config-lambda](#config-lambda)
-- [automation](#automation)
+- [Base Sensor Configuration](#config-sensor)
+- [Templates](#config-lambda)
+- [Automation](#automation)
 - {{< docref "/components/binary_sensor" >}}
 - {{< apiref "duty_time/duty_time_sensor.h" "duty_time/duty_time_sensor.h" >}}
 

@@ -30,12 +30,12 @@ Configure the AJ_SR04M for mode 2:
 {{< img src="jsn-sr04t-v3-mode-select-pads.jpg" alt="Image" caption="JSN-SR04T Waterproof Ultrasonic Range Finder Mode Select Pads." width="50.0%" class="center" >}}
 
 In mode 1 the module continuously takes measurements approximately every 100mS and outputs the distance on the TX pin at 9600 baud.
-In this mode [sensor-filters](#sensor-filters) are highly recommended.
+In this mode [Sensor Filters](#sensor-filters) are highly recommended.
 
 In mode 2 the module takes a measurement only when a trigger command of 0x55 is sent to the RX pin on the module.
 The module then outputs the distance on its TX pin. The frequency of the measurements can be set with the **update_interval** option.
 
-To use the sensor, first set up an [uart](#uart) with a baud rate of 9600 and connect the sensor to the specified pin.
+To use the sensor, first set up an [UART Bus](#uart) with a baud rate of 9600 and connect the sensor to the specified pin.
 
 {{< img src="jsn-sr04t-v3.jpg" alt="Image" caption="JSN-SR04T Waterproof Ultrasonic Range Finder." width="70.0%" class="center" >}}
 
@@ -49,16 +49,16 @@ sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`. Not applicable in mode 1.
-- **uart_id** (*Optional*, [config-id](#config-id)): The ID of the [UART bus](#uart) you wish to use for this sensor.
+- **uart_id** (*Optional*, [ID](#config-id)): The ID of the [UART bus](#uart) you wish to use for this sensor.
   Use this if you want to use multiple UART buses at once.
 - **model** (*Optional*): Sensor model. Available options: `jsn_sr04t` (default) and `aj_sr04m`.
 - All other options from [Sensor](#config-sensor).
 
 ## See Also
 
-- [uart](#uart)
-- [sensor-filters](#sensor-filters)
+- [UART Bus](#uart)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "jsn_sr04t/jsn_sr04t.h" "jsn_sr04t/jsn_sr04t.h" >}}
 

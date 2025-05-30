@@ -55,10 +55,10 @@ rtttl:
 ```
 ## Configuration variables:
 
-- **output** (**Exclusive**, [config-id](#config-id)): The id of the [float output](#output) to use for
+- **output** (**Exclusive**, [ID](#config-id)): The id of the [float output](#output) to use for
   this buzzer.
-- **speaker** (**Exclusive**, [config-id](#config-id)): The id of the [speaker](#i2s_audio) to play the song on.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **speaker** (**Exclusive**, [ID](#config-id)): The id of the [speaker](#i2s_audio) to play the song on.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **gain** (*Optional*, Percentage): With this value you can set the volume of the sound.
 - **on_finished_playback** (*Optional*, [Automation](#automation)): An action to be
   performed when playback is finished.
@@ -96,7 +96,7 @@ on_...:
 ```
 ## All actions
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the rtttl if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the rtttl if you have multiple components.
 
 ## `rtttl.is_playing` Condition
 

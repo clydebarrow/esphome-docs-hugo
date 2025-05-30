@@ -29,9 +29,9 @@ seeed_mr24hpc1:
 ```
 ### Configuration variables:
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
   to use multiple UART buses.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID for this {{< docref "seeed_mr24hpc1/" >}} component if you need multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID for this {{< docref "seeed_mr24hpc1/" >}} component if you need multiple components.
 
 ## Binary Sensor
 

@@ -67,7 +67,7 @@ sensor:
 - **disable_led** (*Optional*): Disables the on-board LED. Defaults to `false`. Only on RG-9 firmware version 1.200-onwards.
 
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
   to use multiple UART buses.
 
 - **moisture** (*Optional*): Rain intensity level from 0-7 ([more detail](https://rainsensors.com/support/rg-9-rg-15-faq/#RG-9RValue)). Only on RG-9.
@@ -97,12 +97,12 @@ sensor:
 
   - All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "../binary_sensor/hydreon_rgxx" >}}
 
 - [Hydreon RG-9](https://rainsensors.com/products/rg-9/)

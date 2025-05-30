@@ -30,11 +30,11 @@ sensor:
 ```
 ## Configuration variables:
 
-- **pin** (**Required**, [config-pin](#config-pin)): The pin to measure the voltage on.
-  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see [adc-vcc](#adc-vcc).
+- **pin** (**Required**, [Pin](#config-pin)): The pin to measure the voltage on.
+  Or on the ESP8266 or Raspberry Pi Pico it could alternatively be set to `VCC`, see [Measuring VCC](#adc-vcc).
 - **attenuation** (*Optional*): Only on ESP32. Specify the ADC
-  attenuation to use. See [adc-esp32_attenuation](#adc-esp32_attenuation). Defaults to `0db`.
-- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See [adc-raw](#adc-raw). Defaults to `false`.
+  attenuation to use. See [ESP32 Attenuation](#adc-esp32_attenuation). Defaults to `0db`.
+- **raw** (*Optional*): Allows to read the raw ADC output without any conversion or calibration. See [Different ESP32-ADC behavior since 2021.11](#adc-raw). Defaults to `false`.
 - **samples** (*Optional*): The amount of ADC readings to take per sensor update. On the ESP32 this value is ignored if `attenuation` is set to `auto`. Defaults to `1`.
 - **sampling_mode** (*Optional*): Sampling method to use when multiple samples are taken.
 
@@ -42,7 +42,7 @@ sensor:
   - `min` minimal value from all samples
   - `max` maximal value from all samples
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval
+- **update_interval** (*Optional*, [Time](#config-time)): The interval
   to check the sensor. Defaults to `60s`.
 - All other options from [Sensor](#config-sensor).
 
@@ -194,7 +194,7 @@ This works on SKU:DFR0654. For more information see: [manufacturer's website](ht
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "ads1115/" >}}
 - {{< docref "max6675/" >}}
 - {{< apiref "adc/adc_sensor.h" "adc/adc_sensor.h" >}}

@@ -47,7 +47,7 @@ sensor:
 - **heater** (*Optional*): The information for the heater sensor.
   All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 - **model** (*Optional*): Possible values are HTU21D, SI7021, SHT21. Defaults to HTU21D.
 
@@ -55,7 +55,7 @@ The heater may be enabled to help correct the reading; see the datasheet for mor
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}

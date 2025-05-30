@@ -27,7 +27,7 @@ light:
 ```
 ## Configuration variables
 
-- **pin** (**Required**, [config-pin](#config-pin)): The pin for the data line of the light.
+- **pin** (**Required**, [Pin](#config-pin)): The pin for the data line of the light.
 - **num_leds** (**Required**, int): The number of LEDs in the strip.
 - **chipset** (**Required**, enum): The chipset to apply known timings from.
     - `WS2812`
@@ -45,7 +45,7 @@ light:
 
 - **is_rgbw** (*Optional*, boolean): Set to `true` if the strip is RGBW. Defaults to `false`.
 - **is_wrgb** (*Optional*, boolean): Set to `true` if the strip is WRGB. Defaults to `false`.
-- **max_refresh_rate** (*Optional*, [config-time](#config-time)):
+- **max_refresh_rate** (*Optional*, [Time](#config-time)):
   A time interval used to limit the number of commands a light can handle per second. For example
   16ms will limit the light to a refresh rate of about 60Hz. Defaults to sending commands as quickly as
   changes are made to the lights.

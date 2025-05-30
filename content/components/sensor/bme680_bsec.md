@@ -111,16 +111,16 @@ Configuration variables:
   This controls the sampling rate for gas-dependent sensors and will govern the interval at which the sensor heater is operated.
   By default, this rate will also be used for temperature, pressure, and humidity sensors but these can be overridden on a per-sensor level if required.
 
-- **state_save_interval** (*Optional*, [config-time](#config-time)): The minimum interval at which to save calibrated BSEC algorithm state to
+- **state_save_interval** (*Optional*, [Time](#config-time)): The minimum interval at which to save calibrated BSEC algorithm state to
   flash so that calibration doesn't have to start from zero on device restart. Defaults to `6h`.
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation. Use this ID in the sensor section to refer to the correct BME680 if you have more than one device. This will also be used to refer to the calibrated BSEC algorithm state saved to flash.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation. Use this ID in the sensor section to refer to the correct BME680 if you have more than one device. This will also be used to refer to the calibrated BSEC algorithm state saved to flash.
 
 ## Sensor
 
 Configuration variables:
 
-- **bme680_bsec_id** (*Optional*, [config-id](#config-id)): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
+- **bme680_bsec_id** (*Optional*, [ID](#config-id)): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
 
 - **temperature** (*Optional*): The information for the temperature sensor.
 
@@ -163,7 +163,7 @@ Accuracy can be reported in text format.
 
 Configuration variables:
 
-- **bme680_bsec_id** (*Optional*, [config-id](#config-id)): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
+- **bme680_bsec_id** (*Optional*, [ID](#config-id)): Sets the ID of the bme680_bsec component to refer to. Useful when working with multiple devices.
 
 - **iaq_accuracy** (*Optional*): The information for the IAQ accuracy sensor. Shows: Stabilizing,
   Uncertain, Calibrating, Calibrated.
@@ -410,7 +410,7 @@ so that the process does not have to start from zero on device restart.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "bme680/" >}}
 - {{< apiref "bme680_bsec/bme680_bsec.h" "bme680_bsec/bme680_bsec.h" >}}

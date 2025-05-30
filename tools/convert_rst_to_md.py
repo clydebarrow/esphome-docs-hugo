@@ -571,7 +571,10 @@ def process_inline_markup(line):
             return f"[{text}](#{ref_id})"
         # Simple references
         # Look up the document path for this anchor
-        anchor_text = content
+        doc_path, anchor_text = anchor_map.get(content, ("", ""))
+        if not doc_path:
+            print(f"Warning: Could not find document path for anchor '{content}'")
+        anchor_text = anchor_text or content
         # If we can't find the document, just use the anchor
         return f"[{anchor_text}](#{content.lower()})"
 
@@ -1708,7 +1711,7 @@ def process_directory(input_dir, output_dir):
     for root, _, files in os.walk(input_dir):
         for file in files:
             fullpath = os.path.join(root, file)
-            if fullpath == "./esphome-docs/index.rst":
+            if fullpath.endswith("esphome-docs/index.rst"):
                 continue
             if fullpath in included_files:
                 print("Skipping included file:", fullpath)

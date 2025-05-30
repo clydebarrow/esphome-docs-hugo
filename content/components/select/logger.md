@@ -18,8 +18,12 @@ select:
     name: "Logger select"
 
 ```
+{{< note >}}
+The only selections available will be log levels below the level set in the logger component definition. If not set, the default of DEBUG is used.
+
+{{< /note >}}
 ## See Also
 
-- [automation](#automation)
+- [Automation](#automation)
 - {{< docref "/components/logger" >}}
 

@@ -11,7 +11,7 @@ params:
 
 The `rgbww` light platform creates an RGBWW (cold white + warm white)
 light from 5 [float output components](#output) (one for each channel). The cold and warm
-white channels can be controlled individually or together, see [cwww_mixing](#cwww_mixing) for more information.
+white channels can be controlled individually or together, see [Mixing](#cwww_mixing) for more information.
 
 ```yaml
 # Example configuration entry
@@ -70,12 +70,12 @@ the `color_mode` option of the [light control actions](#light-turn_on_action).
 
 ## Configuration variables:
 
-- **red** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the red channel.
-- **green** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the green channel.
-- **blue** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the blue channel.
-- **cold_white** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the cold
+- **red** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the red channel.
+- **green** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the green channel.
+- **blue** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the blue channel.
+- **cold_white** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the cold
   white channel.
-- **warm_white** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the warm
+- **warm_white** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the warm
   white channel.
 - **cold_white_color_temperature** (*Optional*, float): The color temperature (in
   [mireds](https://en.wikipedia.org/wiki/Mired) or Kelvin) of the cold white channel. Note that when the color interlock
@@ -88,7 +88,7 @@ the `color_mode` option of the [light control actions](#light-turn_on_action).
   reduces the possible overall brightness but is necessary for some power supplies that are not able to run
   both channels at full brightness at once. Defaults to `false`.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See [rgbw_color_interlock](#rgbw_color_interlock) for more information. Defaults to `false`.
+  time as RGB leds. See [Color Interlock](#rgbw_color_interlock) for more information. Defaults to `false`.
 - All other options from [Light](#config-light).
 
 ## See Also

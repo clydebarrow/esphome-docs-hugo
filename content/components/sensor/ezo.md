@@ -39,7 +39,7 @@ sensor:
 ## Configuration variables:
 
 - **address** (**Required**, int): Specify the I²C address of the sensor.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - All other options from [Sensor](#config-sensor).
 
@@ -169,6 +169,6 @@ with the information retrieved from the sensor. For more information on the comm
   ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "ezo/ezo.h" "ezo/ezo.h" >}}
 

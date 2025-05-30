@@ -24,7 +24,7 @@ light:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [config-id](#config-id)): The id of the binary [output](#output) to use for this light.
+- **output** (**Required**, [ID](#config-id)): The id of the binary [Output Component](#output) to use for this light.
 - All other options from [Light](#config-light).
 
 ## See Also

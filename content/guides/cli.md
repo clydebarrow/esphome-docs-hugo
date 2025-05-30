@@ -147,7 +147,7 @@ Specify the host port to use for legacy Over the Air uploads.
 
 
 The `esphome clean-mqtt <CONFIG>` cleans retained MQTT discovery messages from the MQTT broker.
-See [mqtt-using_with_home_assistant_entities](#mqtt-using_with_home_assistant_entities).
+See [Using with Home Assistant MQTT entities](#mqtt-using_with_home_assistant_entities).
 
 {{< option "--topic TOPIC" >}}
 Manually set the topic to clean retained messages from (defaults to the MQTT discovery topic of the
@@ -175,7 +175,7 @@ The `esphome wizard <CONFIG>` command starts the ESPHome configuration creation 
 
 
 The `esphome mqtt-fingerprint <CONFIG>` command shows the MQTT SSL fingerprints of the remote used
-for SSL MQTT connections. See [mqtt-ssl_fingerprints](#mqtt-ssl_fingerprints).
+for SSL MQTT connections. See [SSL Fingerprints](#mqtt-ssl_fingerprints).
 
 ## `version` Command
 

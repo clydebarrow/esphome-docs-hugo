@@ -64,15 +64,15 @@ sensor:
 
   - All other options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `60s`
 - **store_baseline** (*Optional*, boolean): Stores and retrieves the baseline information for quicker startups. Defaults to `true`
 
 - **compensation** (*Optional*): The block containing sensors used for compensation. If not set defaults will be used.
 
-  - **temperature_source** (*Optional*, [config-id](#config-id)): Give an external temperature sensor ID
+  - **temperature_source** (*Optional*, [ID](#config-id)): Give an external temperature sensor ID
     here. This can improve the sensor's internal calculations. Defaults to `25`
 
-  - **humidity_source** (*Optional*, [config-id](#config-id)): Give an external humidity sensor ID
+  - **humidity_source** (*Optional*, [ID](#config-id)): Give an external humidity sensor ID
     here. This can improve the sensor's internal calculations. Defaults to `50`
 
 
@@ -92,7 +92,7 @@ sensor:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "dht/" >}}
 - {{< docref "dht12/" >}}
 - {{< docref "hdc1080/" >}}

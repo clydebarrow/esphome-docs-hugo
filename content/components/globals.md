@@ -39,7 +39,7 @@ globals:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): Give the global variable an ID so that you can refer
+- **id** (**Required**, [ID](#config-id)): Give the global variable an ID so that you can refer
   to it later in [lambdas](#config-lambda).
 - **type** (**Required**, string): The C++ type of the global variable, for example `bool` (for `true`/`false`),
   `int` (for integers), `float` (for decimal numbers), `int[50]` for an array of 50 integers, etc.
@@ -67,7 +67,7 @@ on_...:
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The [config-id](#config-id) of the global variable to set.
+- **id** (**Required**, [ID](#config-id)): The [ID](#config-id) of the global variable to set.
 - **value** (**Required**, [templatable](#config-templatable)): The value to set the global
   variable to.
 

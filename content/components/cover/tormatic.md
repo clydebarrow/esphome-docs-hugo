@@ -21,9 +21,10 @@ be supported:
 {{< img src="tormatic.png" alt="Image" caption="Tormatic Black 600 Garage Door Drive" class="center" >}}
 
 {{< note >}}
-This component was written and tested against a Novoferm 423, so
-compatibility with other models is currently not guaranteed. Please update
-this documentation if you confirm this to work on other models as well.
+This component was written against a Novoferm 423. It has been successfully
+tested with Novoferm 423 and Tormatic Black 600, so compatibility with other
+models is currently not guaranteed. Please update this documentation if you
+confirm this to work on other models as well.
 
 The vendor's cloud-based remote is not known to perform model or feature
 detection, so it's assumed that the protocol is the same across all models.
@@ -70,13 +71,13 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 ## Configuration variables:
 
 - **name** (**Required**, string): The name of the cover.
-- **open_duration** (*Optional*, [config-time](#config-time)): The amount of time the
+- **open_duration** (*Optional*, [Time](#config-time)): The amount of time the
   gate is expected to need to go from a fully closed to opened state. Defaults
   to `15s`. Used to interpolate the position value published to Home Assistant
   during gate movements, and for stopping the gate at a specific requested
   position. This value is automatically recalibrated after an uninterrupted
   closed -> opened movement.
-- **close_duration** (*Optional*, [config-time](#config-time)): The opposite of
+- **close_duration** (*Optional*, [Time](#config-time)): The opposite of
   `open_duration`. Defaults to `22s`.
 - All other options from [Cover](#config-cover).
 
@@ -95,6 +96,6 @@ can be bent 90 degrees to sit parallel to the PCB, keeping a low profile.
 ## See Also
 
 - {{< docref "index/" >}}
-- [automation](#automation)
+- [Automation](#automation)
 - {{< apiref "tormatic/tormatic_cover.h" "tormatic/tormatic_cover.h" >}}
 

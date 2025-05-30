@@ -28,15 +28,15 @@ ota:
 ## Configuration variables:
 
 -  **on_begin** (*Optional*, [Automation](#automation)): An action to be performed when an OTA update is started.
-   See [ota-on_begin](#ota-on_begin).
+   See [`on_begin`](#ota-on_begin).
 -  **on_progress** (*Optional*, [Automation](#automation)): An action to be performed (approximately each second)
-   while an OTA update is in progress. See [ota-on_progress](#ota-on_progress).
+   while an OTA update is in progress. See [`on_progress`](#ota-on_progress).
 -  **on_end** (*Optional*, [Automation](#automation)): An action to be performed after a successful OTA update.
-   See [ota-on_end](#ota-on_end).
+   See [`on_end`](#ota-on_end).
 -  **on_error** (*Optional*, [Automation](#automation)): An action to be performed after a failed OTA update.
-   See [ota-on_error](#ota-on_error).
+   See [`on_error`](#ota-on_error).
 -  **on_state_change** (*Optional*, [Automation](#automation)): An action to be performed when an OTA update state
-   change happens. See [ota-on_state_change](#ota-on_state_change).
+   change happens. See [`on_state_change`](#ota-on_state_change).
 
 {{< anchor "ota-automations" >}}
 
@@ -107,7 +107,7 @@ ota:
 
 This automation will be triggered when an OTA update has failed. You can get the internal error code with variable `x`.
 
-Just like for [ota-on_end](#ota-on_end), you can safely use an automation that takes some time to complete as the OTA update
+Just like for [`on_end`](#ota-on_end), you can safely use an automation that takes some time to complete as the OTA update
 process has already finished.
 
 ```yaml

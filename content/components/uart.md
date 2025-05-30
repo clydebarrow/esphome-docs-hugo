@@ -28,7 +28,7 @@ receive/send data at using the `baud_rate` option. Two common baud rates are 960
 
 In some cases only **TX** or **RX** exists as the device at the other end only accepts data or sends data.
 
-The UART component may be used as a platform for the [packet-transport](#packet-transport) component, enabling sensor data to be sent
+The UART component may be used as a platform for the [Packet Transport Component](#packet-transport) component, enabling sensor data to be sent
 directly from one ESPHome node to another over a UART bus. When using RS485 this can operate in a multi-drop configuration.
 
 {{< note >}}
@@ -59,15 +59,15 @@ uart:
 ## Configuration variables:
 
 - **baud_rate** (**Required**, int): The baud rate of the UART bus.
-- **tx_pin** (*Optional*, [config-pin](#config-pin)): The pin to send data to from the ESP's perspective. Use the full pin schema and set `inverted: true` to invert logic levels. Not supported by host platform.
-- **rx_pin** (*Optional*, [config-pin](#config-pin)): The pin to receive data on from the ESP's perspective. Use the full pin schema and set `inverted: true` to invert logic levels. Not supported by host platform.
+- **tx_pin** (*Optional*, [Pin](#config-pin)): The pin to send data to from the ESP's perspective. Use the full pin schema and set `inverted: true` to invert logic levels. Not supported by host platform.
+- **rx_pin** (*Optional*, [Pin](#config-pin)): The pin to receive data on from the ESP's perspective. Use the full pin schema and set `inverted: true` to invert logic levels. Not supported by host platform.
 - **port** (*Optional*, string): Host platform only. Unix style name of the port to use.
 - **rx_buffer_size** (*Optional*, int): The size of the buffer used for receiving UART messages. Increase if you use an integration that needs to read big payloads from UART. Defaults to `256`.
 - **data_bits** (*Optional*, int): The number of data bits used on the UART bus. Options: 5 to 8. Defaults to 8.
 - **parity** (*Optional*): The parity used on the UART bus. Options: `NONE`, `EVEN`, `ODD`. Defaults to `NONE`.
 - **stop_bits** (*Optional*, int): The number of stop bits to send. Options: 1, 2. Defaults to 1.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID for this UART hub if you need multiple UART hubs.
-- **debug** (*Optional*, mapping): Options for debugging communication on the UART hub, see [uart-debugging](#uart-debugging).
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID for this UART hub if you need multiple UART hubs.
+- **debug** (*Optional*, mapping): Options for debugging communication on the UART hub, see [Debugging](#uart-debugging).
 
 {{< anchor "uart-hardware_uarts" >}}
 
@@ -154,7 +154,7 @@ uart:
   to trigger publishing the accumulated bytes. The possible options are:
 
   - **bytes** (*Optional*, int): Trigger after accumulating the specified number of bytes. Defaults to 150.
-  - **timeout** (*Optional*, [config-time](#config-time)): Trigger after no communication has been seen during the
+  - **timeout** (*Optional*, [Time](#config-time)): Trigger after no communication has been seen during the
     specified timeout, while one or more bytes have been accumulated. Defaults to 100ms.
   - **delimiter** (*Optional*, string or list of bytes): Trigger after the specified sequence of bytes is
     detected in the communication.

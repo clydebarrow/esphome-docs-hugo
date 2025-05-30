@@ -32,10 +32,10 @@ sensor:
 ## Configuration variables:
 
 - **address** (*Optional*, int): Specify the I²C address of the sensor. Defaults to `0x3C`.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
-- **id** (*Optional*, [config-id](#config-id)): Set the ID of this sensor for use in lambdas.
-- **temperature_sensor** (*Optional*, [config-id](#config-id)): Set the ID of the temperature
+- **id** (*Optional*, [ID](#config-id)): Set the ID of this sensor for use in lambdas.
+- **temperature_sensor** (*Optional*, [ID](#config-id)): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
 - **ec** (*Optional*, [Sensor](#config-sensor)): Set the EC sensor configuration. All options from [Sensor](#config-sensor).
 - **temperature** (*Optional*, [Sensor](#config-sensor)): Set the onboard temperature sensor configuration. All options from [Sensor](#config-sensor).
@@ -68,7 +68,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the ufire EC sensor.
+- **id** (**Required**, [ID](#config-id)): The ID of the ufire EC sensor.
 - **solution** (**Required**, float): Solution reference EC value.
 - **temperature** (**Required**, float): Solution current temperature.
 
@@ -93,10 +93,10 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the ufire EC sensor.
+- **id** (**Required**, [ID](#config-id)): The ID of the ufire EC sensor.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "ufire_ec/ufire_ec.h" "ufire_ec/ufire_ec.h" >}}
 

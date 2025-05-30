@@ -52,8 +52,8 @@ sml:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
   to use multiple UART buses.
 
 ## Sensor
@@ -76,7 +76,7 @@ sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [config-id](#config-id)): The ID of the [SML platform](#sml-platform)
+- **sml_id** (*Optional*, [ID](#config-id)): The ID of the [SML platform](#sml-platform)
 - All other options from [Sensor](#config-sensor).
 
 
@@ -95,7 +95,7 @@ text_sensor:
 - **obis_code** (**Required**, string): Specify the OBIS code you want to retrieve data for from the device.
   The format must be (A-B:C.D.E, e.g. 1-0:1.8.0)
 - **server_id** (*Optional*, string): Specify the device's server_id to retrieve the OBIS code from. Should be specified if more then one device is connected to the same hardware sensor component.
-- **sml_id** (*Optional*, [config-id](#config-id)): The ID of the [SML platform](#sml-platform)
+- **sml_id** (*Optional*, [ID](#config-id)): The ID of the [SML platform](#sml-platform)
 - **format** (*Optional*, string): Override the automatic interpretation of the transmitted binary data value. Possible values (`int`, `uint`, `bool`, `hex`, `text`).
 - All other options from [Text Sensor](#config-text_sensor).
 
@@ -103,7 +103,7 @@ text_sensor:
 ## Automations:
 
 - **on_data** (*Optional*, [Automation](#automation)): An automation to perform when a
-  SML message is received. See [sml-on-data](#sml-on-data).
+  SML message is received. See [`on_data` Trigger](#sml-on-data).
 
 {{< anchor "sml-on-data" >}}
 

@@ -27,7 +27,7 @@ switch:
 ```
 ## Configuration variables:
 
-- **haier_id** (**Required**, [config-id](#config-id)): The id of Haier climate component
+- **haier_id** (**Required**, [ID](#config-id)): The id of Haier climate component
 - **beeper** (*Optional*): (supported only by hOn) A switch that enables or disables Haier climate sound feedback.
   All options from [Switch](#config-switch).
 - **health_mode** (*Optional*): A switch that enables or disables Haier climate health mode ([UV light sterilization](https://www.haierhvac.eu/en/node/1809)).

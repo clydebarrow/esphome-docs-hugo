@@ -47,7 +47,7 @@ light:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the UART hub.
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the UART hub.
 
 {{< note >}}
 Currently, only the first hardware UART of the ESP is supported, which has to be configured like this:
@@ -64,8 +64,8 @@ uart:
 - **min_brightness** (*Optional*, int): Minimum brightness value on a scale from 0..1000, the default is 0.
 - **max_brightness** (*Optional*, int): Maximum brightness value on a scale from 0..1000, the default is 1000.
 - **warmup_brightness** (*Optional*, int): Brightness threshold below which the dimmer switches on later in mains current cycle. [This might help with dimming LEDs](https://github.com/jamesturton/shelly-dimmer-stm32/pull/23). The value is from 0..1000 with an default of 0.
-- **nrst_pin** (*Optional*, [config-pin](#config-pin)): Pin connected with "NRST" of STM32. The  default is "GPIO5".
-- **boot0_pin** (*Optional*, [config-pin](#config-pin)): Pin connected with "BOOT0" of STM32. The  default is "GPIO4".
+- **nrst_pin** (*Optional*, [Pin](#config-pin)): Pin connected with "NRST" of STM32. The  default is "GPIO5".
+- **boot0_pin** (*Optional*, [Pin](#config-pin)): Pin connected with "BOOT0" of STM32. The  default is "GPIO4".
 - **current** (*Optional*): Sensor of the current in Amperes. All options from
   [Sensor](#config-sensor).
 - **voltage** (*Optional*): Sensor of the voltage in Volts. Only accurate if neutral is connected. All options from [Sensor](#config-sensor).

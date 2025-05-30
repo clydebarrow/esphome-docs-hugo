@@ -65,12 +65,12 @@ the `color_mode` option of the [light control actions](#light-turn_on_action).
 
 ## Configuration variables:
 
-- **red** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the red channel.
-- **green** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the green channel.
-- **blue** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the blue channel.
-- **white** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the white channel.
+- **red** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the red channel.
+- **green** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the green channel.
+- **blue** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the blue channel.
+- **white** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the white channel.
 - **color_interlock** (*Optional*, boolean): When enabled, this will prevent white leds being on at the same
-  time as RGB leds. See [rgbw_color_interlock](#rgbw_color_interlock) for more information. Defaults to `false`.
+  time as RGB leds. See [Color Interlock](#rgbw_color_interlock) for more information. Defaults to `false`.
 - All other options from [Light](#config-light).
 
 ## See Also

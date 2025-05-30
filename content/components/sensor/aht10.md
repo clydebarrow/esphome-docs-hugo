@@ -49,12 +49,12 @@ sensor:
 
   - All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< apiref "aht10/aht10.h" "aht10/aht10.h" >}}
 - [AHT10 Library](https://github.com/Thinary/AHT10)  by [Thinary Electronic](https://github.com/Thinary)

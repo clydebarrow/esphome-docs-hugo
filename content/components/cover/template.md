@@ -101,7 +101,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the template cover.
+- **id** (**Required**, [ID](#config-id)): The ID of the template cover.
 - **state** (*Optional*, [templatable](#config-templatable)):
   The state to publish. One of `OPEN`, `CLOSED`. If using a lambda, use `COVER_OPEN` or `COVER_CLOSED`.
 - **position** (*Optional*, [templatable](#config-templatable), float):
@@ -124,7 +124,7 @@ id(template_cov).publish_state();
 ## See Also
 
 - {{< docref "/components/cover" >}}
-- [automation](#automation)
+- [Automation](#automation)
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/cover/template_cover.h" "template/cover/template_cover.h" >}}
 

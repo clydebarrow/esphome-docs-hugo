@@ -44,7 +44,7 @@ Support for esp-idf is still experminental. Please report issues you have with m
 - **clean_session** (*Optional*, boolean): Whether the broker will clean
   the MQTT session after disconnect. Defaults to `false`.
 - **client_id** (*Optional*, string): The client id to use for opening
-  connections. See [mqtt-defaults](#mqtt-defaults) for more information.
+  connections. See [Defaults](#mqtt-defaults) for more information.
 - **discover_ip** (*Optional*, boolean): If Home Assistant automatic device
   discovery should be enabled. Defaults to `true`.
 - **discovery** (*Optional*, boolean): If Home Assistant automatic entity
@@ -69,33 +69,33 @@ Support for esp-idf is still experminental. Please report issues you have with m
   messages. Should not contain trailing slash. Defaults to `<APP_NAME>`.
   Use `null` to disable publishing or subscribing of any MQTT topic unless
   it is explicitly configured.
-- **log_topic** (*Optional*, [mqtt-message](#mqtt-message)): The topic to send MQTT log
+- **log_topic** (*Optional*, [MQTTMessage](#mqtt-message)): The topic to send MQTT log
   messages to. Use `null` if you want to disable sending logs to MQTT.
 
   The `log_topic` has an additional configuration option:
 
   - **level** (*Optional*, string): The log level to use for MQTT logs. See
-    [logger-log_levels](#logger-log_levels) for options.
+    [Log Levels](#logger-log_levels) for options.
 
-- **birth_message** (*Optional*, [mqtt-message](#mqtt-message)): The message to send when
-  a connection to the broker is established. See [mqtt-last_will_birth](#mqtt-last_will_birth) for more information.
-- **will_message** (*Optional*, [mqtt-message](#mqtt-message)): The message to send when
-  the MQTT connection is dropped. See [mqtt-last_will_birth](#mqtt-last_will_birth) for more information.
-- **shutdown_message** (*Optional*, [mqtt-message](#mqtt-message)): The message to send when
-  the node shuts down and the connection is closed cleanly. See [mqtt-last_will_birth](#mqtt-last_will_birth) for more information.
+- **birth_message** (*Optional*, [MQTTMessage](#mqtt-message)): The message to send when
+  a connection to the broker is established. See [Last Will And Birth Messages](#mqtt-last_will_birth) for more information.
+- **will_message** (*Optional*, [MQTTMessage](#mqtt-message)): The message to send when
+  the MQTT connection is dropped. See [Last Will And Birth Messages](#mqtt-last_will_birth) for more information.
+- **shutdown_message** (*Optional*, [MQTTMessage](#mqtt-message)): The message to send when
+  the node shuts down and the connection is closed cleanly. See [Last Will And Birth Messages](#mqtt-last_will_birth) for more information.
 - **ssl_fingerprints** (*Optional*, list): Only on ESP8266. A list of SHA1 hashes used
-  for verifying SSL connections. See [mqtt-ssl_fingerprints](#mqtt-ssl_fingerprints).
+  for verifying SSL connections. See [SSL Fingerprints](#mqtt-ssl_fingerprints).
   for more information.
-- **certificate_authority** (*Optional*, string): Only with `esp-idf`. CA certificate in PEM format. See [mqtt-tls-idf](#mqtt-tls-idf) for more information
+- **certificate_authority** (*Optional*, string): Only with `esp-idf`. CA certificate in PEM format. See [TLS with esp-idf (esp32)](#mqtt-tls-idf) for more information
 - **client_certificate** (*Optional*, string): Only on `esp32`. Client certificate in PEM format.
 - **client_certificate_key** (*Optional*, string): Only on `esp32`. Client private key in PEM format.
 - **skip_cert_cn_check** (*Optional*, bool): Only with `esp-idf`. Don't verify if the common name in the server certificate matches the value of `broker`.
 - **idf_send_async** (*Optional*, bool): Only with `esp-idf`. If true publishing the message happens from the internal mqtt task. The client only enqueues the message. Defaults to `false`.
   The advantage of asyncronous publishing is that it doesn't block the esphome main thread. The disadvantage is a delay (up to 1-2 seconds) until the messages are actually sent out.
   Set this to true if you send large amounts of of data over mqtt.
-- **reboot_timeout** (*Optional*, [config-time](#config-time)): The amount of time to wait before rebooting when no
+- **reboot_timeout** (*Optional*, [Time](#config-time)): The amount of time to wait before rebooting when no
   MQTT connection exists. Can be disabled by setting this to `0s`. Defaults to `15min`.
-- **keepalive** (*Optional*, [config-time](#config-time)): The time
+- **keepalive** (*Optional*, [Time](#config-time)): The time
   to keep the MQTT socket alive, decreasing this can help with overall stability due to more
   WiFi traffic with more pings. Defaults to 15 seconds.
 - **on_connect** (*Optional*, [Automation](#automation)): An action to be performed when a connection
@@ -103,10 +103,10 @@ Support for esp-idf is still experminental. Please report issues you have with m
 - **on_disconnect** (*Optional*, [Automation](#automation)): An action to be performed when the connection
   to the broker is dropped.
 - **on_message** (*Optional*, [Automation](#automation)): An action to be
-  performed when a message on a specific MQTT topic is received. See [mqtt-on_message](#mqtt-on_message).
+  performed when a message on a specific MQTT topic is received. See [`on_message` Trigger](#mqtt-on_message).
 - **on_json_message** (*Optional*, [Automation](#automation)): An action to be
-  performed when a JSON message on a specific MQTT topic is received. See [mqtt-on_json_message](#mqtt-on_json_message).
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+  performed when a JSON message on a specific MQTT topic is received. See [`on_json_message` Trigger](#mqtt-on_json_message).
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **publish_nan_as_none** (*Optional*, bool): Publish `None` instead of `NaN` to handle Unknown/Unavailable sensor states in Home Assistant. Defaults to `false`.
 
 {{< anchor "mqtt-message" >}}
@@ -319,8 +319,8 @@ mqtt:
     payload: offline
 
 ```
-- **birth_message** (*Optional*, [mqtt-message](#mqtt-message))
-- **will_message** (*Optional*, [mqtt-message](#mqtt-message))
+- **birth_message** (*Optional*, [MQTTMessage](#mqtt-message))
+- **will_message** (*Optional*, [MQTTMessage](#mqtt-message))
 
 If the birth message and last will message have empty topics or topics
 that are different from each other, availability reporting will be

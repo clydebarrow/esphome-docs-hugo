@@ -59,9 +59,9 @@ sensor:
   [Sensor](#config-sensor).
 - **voltage** (*Optional*): Use the voltage value of the sensor in volts.
   All options from [Sensor](#config-sensor).
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the [UART Component](#uart) if you want
   to use multiple UART buses.
 
 ## Hardware considerations:
@@ -79,7 +79,7 @@ Your ESP shall be powered by an external power supply and cannot be connected to
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "pzemac/" >}}
 - {{< docref "pzemdc/" >}}
 - {{< apiref "pzem004t/pzem004t.h" "pzem004t/pzem004t.h" >}}

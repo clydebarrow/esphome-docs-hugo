@@ -26,7 +26,7 @@ light:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for this light.
+- **output** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for this light.
 - All other options from [Light](#config-light).
 
 ## See Also

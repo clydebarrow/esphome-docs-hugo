@@ -58,7 +58,7 @@ you want the text to use that name, you can set `name: None`.
 Automations:
 
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
-  when a new value is published. See [text-on_value](#text-on_value).
+  when a new value is published. See [`on_value`](#text-on_value).
 
 MQTT Options:
 
@@ -103,7 +103,7 @@ This is an [Action](#config-action) for setting a text state.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the text to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the text to set.
 - **value** (**Required**, string, [templatable](#config-templatable)):
   The value to set the text to.
 

@@ -26,8 +26,8 @@ m5stack_8angle:
 ```
 ### Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
-- **i2c_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [I²C Component](#i2c) if you need
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
+- **i2c_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the [I²C Component](#i2c) if you need
 - **address** (*Optional*, int): Manually specify the I²C address of the device. Defaults to `0x43`.
 
 
@@ -50,7 +50,7 @@ sensor:
 ```
 ### Configuration variables:
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `10s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `10s`.
 - **bit_depth** (*Optional*, one of `12 bit` or `8 bit`) determines the precision of the analog readout, defaults to `8bit`.
 - **raw** (*Optional*, boolean) if true, the sensor returns the raw readout value of the knob.
 - All other options from [Sensor](#config-sensor).
@@ -69,7 +69,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `10s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `10s`.
 - All other options from [Binary Sensor](#config-binary_sensor).
 
 
@@ -127,7 +127,7 @@ light:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "/components/binary_sensor" >}}
 - {{< docref "/components/light" >}}
 - {{< docref "template/" >}}

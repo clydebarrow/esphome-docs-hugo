@@ -83,7 +83,7 @@ logging with the `baud_rate: 0` option.
 {{< /warning >}}
 Configuration variables:
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the UART hub used to connect to the device.
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the UART hub used to connect to the device.
 
 {{< note >}}
 Functionality of the sensors depends on the type of the device and the scheme arrangement of the hydraulic

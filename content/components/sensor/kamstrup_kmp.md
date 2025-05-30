@@ -107,6 +107,6 @@ magnets.
 
 ## See Also
 
-- [config-sensor](#config-sensor)
+- [Base Sensor Configuration](#config-sensor)
 - [DIY hardware with housing](https://github.com/cfeenstra1024/kamstrup-multical-hardware#readme) by [Chris Feenstra](https://github.com/cfeenstra1024)
 

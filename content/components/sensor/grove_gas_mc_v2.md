@@ -18,7 +18,7 @@ Compounds (VOCs).
 The Grove Multichannel Gas Sensor V2 is a qualitative, not quantitative, sensor.
 This means values reported back are raw ADC values. Values are **not** in a common unit
 of measurement, such as PPM (parts per million). If you have known baseline readings
-for any of the gases, [sensor-filters](#sensor-filters) could be used to calibrate the raw readings.
+for any of the gases, [Sensor Filters](#sensor-filters) could be used to calibrate the raw readings.
 
 {{< /note >}}
 {{< img src="grove-gas-mc-v2.png" alt="Image" caption="Grove Multichannel Gas Sensor V2" width="50.0%" class="center" >}}
@@ -50,7 +50,7 @@ sensor:
 - **tvoc** (**Required**): The Total Volatile Organic Compounds (TVOC) sensor data.
   All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 Advanced:
@@ -72,7 +72,7 @@ than 6 months.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - [Grove Multichannel V2 Library](https://github.com/Seeed-Studio/Seeed_Arduino_MultiGas)
 - {{< apiref "grove_gas_mc_v2/grove_gas_mc_v2.h" "grove_gas_mc_v2/grove_gas_mc_v2.h" >}}
 

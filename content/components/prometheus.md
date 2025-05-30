@@ -28,10 +28,10 @@ prometheus:
 ```
 ## Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **include_internal** (*Optional*, boolean): Whether `internal` entities should be displayed on the
   web interface. Defaults to `false`.
-- **relabel** (*Optional*): Override metric labels. See [prometheus-relabel](#prometheus-relabel)
+- **relabel** (*Optional*): Override metric labels. See [`relabel`](#prometheus-relabel)
 
 {{< note >}}
 Example integration into the configuration of your prometheus:
@@ -97,7 +97,7 @@ prometheus:
 ## See Also
 
 - {{< docref "/components/web_server" >}}
-- [api-rest](#api-rest)
+- [REST API](#api-rest)
 - {{< docref "/components/http_request" >}}
 - {{< apiref "prometheus/prometheus_handler.h" "prometheus/prometheus_handler.h" >}}
 - [Prometheus](https://prometheus.io/)

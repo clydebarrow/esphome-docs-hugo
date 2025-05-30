@@ -43,13 +43,13 @@ graphical_display_menu:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
-- **display** (*Optional*, [config-id](#config-id)): ID of the display to render to. See
-  [drawing_modes](#drawing_modes) for more details
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
+- **display** (*Optional*, [ID](#config-id)): ID of the display to render to. See
+  [Drawing Modes](#drawing_modes) for more details
 - **font** (**Required**, [Font](#display-fonts)): Specifies the font to use
-- **foreground_color** (*Optional*, [config-color](#config-color)): Specifies the foreground color to use.
+- **foreground_color** (*Optional*, [Color](#config-color)): Specifies the foreground color to use.
   Defaults to COLOR_ON
-- **background_color** (*Optional*, [config-color](#config-color)): Specifies the background color to use.
+- **background_color** (*Optional*, [Color](#config-color)): Specifies the background color to use.
   Defaults to COLOR_OFF
 
 Automations:
@@ -139,7 +139,7 @@ display:
 By default menu items with a value will be rendered between a set of parenthesis. This can be
 controlled via the `menu_item_value` parameter.
 
-- **menu_item_value** (*Optional*, [config-lambda](#config-lambda)): Specifies how to render values for
+- **menu_item_value** (*Optional*, [Templates](#config-lambda)): Specifies how to render values for
   menu items that have values (eg. Selects, numbers). Defaults to rendering the value as
   "(value here)". Receives a MenuItemValueArguments as the argument`it`.
 
@@ -229,7 +229,7 @@ binary_sensor:
 
 - [Display Menu](#display_menu)
 - [Display](#display-engine)
-- [display-fonts](#display-fonts)
-- [display-pages](#display-pages)
+- [Font Renderer Component](#display-fonts)
+- [Display Pages](#display-pages)
 - {{< apiref "graphical_display_menu/graphical_display_menu.h" "graphical_display_menu/graphical_display_menu.h" >}}
 

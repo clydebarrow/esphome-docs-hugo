@@ -26,7 +26,7 @@ text_sensor:
 ```
 ## Configuration variables:
 
-- **haier_id** (**Required**, [config-id](#config-id)): The id of haier climate component
+- **haier_id** (**Required**, [ID](#config-id)): The id of haier climate component
 - **appliance_name** (*Optional*): A text sensor that indicates Haier appliance name.
   All options from [Text Sensor](#config-text_sensor).
 - **cleaning_status** (*Optional*): A text sensor that indicates cleaning status. Possible values "No cleaning", "Self clean", "56°C Steri-Clean".

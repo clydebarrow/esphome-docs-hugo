@@ -21,10 +21,10 @@ time:
 
 - **servers** (*Optional*, list of strings): Choose up to 3 NTP servers that are used for the clock source.
   Defaults to `0.pool.ntp.org`, `1.pool.ntp.org` and `2.pool.ntp.org`
-- All other options from [base_time_config](#base_time_config).
+- All other options from [Base Time Configuration](#base_time_config).
 
 {{< note >}}
-If your are using [wifi-manual_ip](#wifi-manual_ip) make sure to configure a DNS Server (dns1, dns2) or use only IP addresses for the NTP servers.
+If your are using [Manual IPs](#wifi-manual_ip) make sure to configure a DNS Server (dns1, dns2) or use only IP addresses for the NTP servers.
 
 {{< /note >}}
 {{< warning >}}

@@ -134,12 +134,12 @@ sensor:
   kilo watt hours. All options from [Sensor](#config-sensor).
 - **inverter_module_temp** (*Optional*): Use the inverter module temperature value of the sensor in
   degree celsius. All options from [Sensor](#config-sensor).
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `10s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 

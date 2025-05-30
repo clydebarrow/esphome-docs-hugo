@@ -146,15 +146,15 @@ The BUSY pin on the `gdew0154m09`, the `Waveshare 7.30in-f` and the `Waveshare 7
   because artifacts accumulate. On the `1.54in`, `1.54inv2`, `2.13in`, `2.13inv2`, `2.90in`, `2.90inv2`,  `7.50inV2p` and `gdew029t5` models, you have the option to only
   do a full-redraw every x-th time using this option. Defaults to `30` on the described models and a full update for
   all other models.
-- **reset_duration** (*Optional*, [config-time](#config-time)): Duration for the display reset operation. Defaults to `200ms`.
+- **reset_duration** (*Optional*, [Time](#config-time)): Duration for the display reset operation. Defaults to `200ms`.
   Setting this value to `2ms` may resolve issues with newer e-Paper Driver modules (e.g. Rev 2.1).
 - **lambda** (*Optional*, [lambda](#config-lambda)): The lambda to use for rendering the content on the display.
-  See [display-engine](#display-engine) for more information.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to re-draw the screen. Defaults to `1s`, use `never` to only manually update the screen via `component.update`.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [display-pages](#display-pages).
-- **spi_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the [SPI Component](#spi) if you want
+  See [Display Rendering Engine](#display-engine) for more information.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to re-draw the screen. Defaults to `1s`, use `never` to only manually update the screen via `component.update`.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages](#display-pages).
+- **spi_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the [SPI Component](#spi) if you want
   to use multiple SPI buses.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 
 ## See Also
 

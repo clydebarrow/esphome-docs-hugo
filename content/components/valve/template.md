@@ -94,7 +94,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the template valve.
+- **id** (**Required**, [ID](#config-id)): The ID of the template valve.
 - **state** (*Optional*, [templatable](#config-templatable)):
   The state to publish. One of `OPEN`, `CLOSED`. If using a lambda, use `VALVE_OPEN` or `VALVE_CLOSED`.
 - **position** (*Optional*, [templatable](#config-templatable), float):
@@ -115,7 +115,7 @@ id(my_template_valve).publish_state();
 ## See Also
 
 - {{< docref "/components/valve" >}}
-- [automation](#automation)
+- [Automation](#automation)
 - {{< docref "/cookbook/garage-door" >}}
 - {{< apiref "template/valve/template_valve.h" "template/valve/template_valve.h" >}}
 

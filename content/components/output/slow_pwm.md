@@ -32,8 +32,8 @@ output:
 ```
 ## Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The id to use for this output component.
-- **period** (**Required**, [config-time](#config-time)): The duration of each cycle. (i.e. a 10s
+- **id** (**Required**, [ID](#config-id)): The id to use for this output component.
+- **period** (**Required**, [Time](#config-time)): The duration of each cycle. (i.e. a 10s
   period at 50% duty would result in the pin being turned on for 5s, then off for 5s)
 - **pin** (*Optional*, [Pin Schema](#config-pin_schema)): The pin to pulse.
 - **state_change_action** (*Optional*, [Automation](#automation)): An automation to perform when the load is switched. If a lambda is used the boolean `state` parameter holds the new status.

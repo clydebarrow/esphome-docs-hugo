@@ -26,9 +26,9 @@ binary_sensor:
 ```
 ## Configuration variables
 
--  **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+-  **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 -  **provider** (**Required**, string): The name of the provider node.
--  **remote_id** (*Optional*, [config-id](#config-id)): The ID of the original binary sensor in the provider device. If not specified defaults to the ID configured with `id:`.
+-  **remote_id** (*Optional*, [ID](#config-id)): The ID of the original binary sensor in the provider device. If not specified defaults to the ID configured with `id:`.
 -  **name** (*Optional*, string): The name of the binary sensor.
 -  **internal** (*Optional*, boolean): Whether the sensor should be exposed via API (e.g. to Home Assistant.) Defaults to `true` if name is not set, required if name is provided.
 -  All other options from [Binary Sensor](#config-binary_sensor).
@@ -49,5 +49,5 @@ configured.
 
 - {{< docref "/components/packet_transport" >}}
 - {{< docref "/components/sensor" >}}
-- [automation](#automation)
+- [Automation](#automation)
 

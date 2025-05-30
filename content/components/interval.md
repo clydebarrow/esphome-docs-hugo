@@ -22,8 +22,8 @@ If a startup delay is configured, the first execution of the actions will not oc
 
 ## Configuration variables:
 
-- **interval** (**Required**, [config-time](#config-time)): The interval to execute the action with.
-- **startup_delay** (*Optional*, [config-time](#config-time)): An optional startup delay - defaults to zero.
+- **interval** (**Required**, [Time](#config-time)): The interval to execute the action with.
+- **startup_delay** (*Optional*, [Time](#config-time)): An optional startup delay - defaults to zero.
 - **then** (**Required**, [Action](#config-action)): The action to perform.
 
 # See Also

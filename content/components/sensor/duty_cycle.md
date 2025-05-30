@@ -29,13 +29,13 @@ sensor:
 
 - **pin** (*Optional*, [Pin Schema](#config-pin_schema)): The pin to observe for the duty
   cycle.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `60s`.
 
-- **id** (*Optional*, [config-id](#config-id)): Set the ID of this sensor for use in lambdas.
+- **id** (*Optional*, [ID](#config-id)): Set the ID of this sensor for use in lambdas.
 - All other options from [Sensor](#config-sensor).
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "duty_cycle/duty_cycle_sensor.h" "duty_cycle/duty_cycle_sensor.h" >}}
 

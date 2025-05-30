@@ -96,6 +96,6 @@ binary_sensor:
 ## See Also
 
 - {{< docref "/components/binary_sensor" >}}
-- [config-pin_schema](#config-pin_schema)
+- [Pin Schema](#config-pin_schema)
 - {{< apiref "gpio/binary_sensor/gpio_binary_sensor.h" "gpio/binary_sensor/gpio_binary_sensor.h" >}}
 

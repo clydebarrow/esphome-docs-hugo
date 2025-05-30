@@ -64,17 +64,17 @@ climate:
 ```
 ## Configuration Variables:
 
-- **sensor** (*Optional*, [config-id](#config-id)): The sensor that is used to measure the ambient
+- **sensor** (*Optional*, [ID](#config-id)): The sensor that is used to measure the ambient
   temperature. This is only for reporting the current temperature in the frontend.
 - **supports_cool** (*Optional*, boolean): Enables setting cooling mode for this climate device. Defaults to `true`.
 - **supports_heat** (*Optional*, boolean): Enables setting heating mode for this climate device. Defaults to `true`.
-- **receiver_id** (*Optional*, [config-id](#config-id)): The id of the remote_receiver if this platform supports
-  receiver. see: [ir-receiver_id](#ir-receiver_id).
+- **receiver_id** (*Optional*, [ID](#config-id)): The id of the remote_receiver if this platform supports
+  receiver. see: [Using a Receiver](#ir-receiver_id).
 - All other options from [Climate](#config-climate).
 
 **Advanced Options**
 
-- **transmitter_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the remote transmitter.
+- **transmitter_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the remote transmitter.
 
 **Specific configuration variables:**
 
@@ -82,11 +82,11 @@ climate:
 
 `climate_ir_lg` **Climate**:
 
-- **header_high** (*Optional*, [config-time](#config-time)): time for the high part of the header for the LG protocol. Defaults to `8000us`
-- **header_low** (*Optional*, [config-time](#config-time)): time for the low part of the header for the LG protocol. Defaults to `4000us`
-- **bit_high** (*Optional*, [config-time](#config-time)): time for the high part of any bit in the LG protocol. Defaults to `600us`
-- **bit_one_low** (*Optional*, [config-time](#config-time)): time for the low part of a '1' bit in the LG protocol. Defaults to `1600us`
-- **bit_zero_low** (*Optional*, [config-time](#config-time)): time for the low part of a '0' bit in the LG protocol. Defaults to `550us`
+- **header_high** (*Optional*, [Time](#config-time)): time for the high part of the header for the LG protocol. Defaults to `8000us`
+- **header_low** (*Optional*, [Time](#config-time)): time for the low part of the header for the LG protocol. Defaults to `4000us`
+- **bit_high** (*Optional*, [Time](#config-time)): time for the high part of any bit in the LG protocol. Defaults to `600us`
+- **bit_one_low** (*Optional*, [Time](#config-time)): time for the low part of a '1' bit in the LG protocol. Defaults to `1600us`
+- **bit_zero_low** (*Optional*, [Time](#config-time)): time for the low part of a '0' bit in the LG protocol. Defaults to `550us`
 
 ```yaml
 # Example configuration entry
@@ -331,7 +331,7 @@ Additional configuration must be specified for this platform:
 - **vertical_default** (**Required**, string): What to default to when the AC unit's vertical direction is *not* set to swing. Options are: `down`, `mdown`, `middle`, `mup`, `up`, `auto`
 - **max_temperature** (**Required**, float): The maximum temperature that the AC unit supports being set to.
 - **min_temperature** (**Required**, float): The minimum temperature that the AC unit supports being set to.
-- **sensor** (*Optional*, [config-id](#config-id)): The sensor that is used to measure the ambient temperature.
+- **sensor** (*Optional*, [ID](#config-id)): The sensor that is used to measure the ambient temperature.
 
 {{< note >}}
 The `greeyac` protocol in `heatpumpir` supports a feature Gree calls "I-Feel". The handheld remote control

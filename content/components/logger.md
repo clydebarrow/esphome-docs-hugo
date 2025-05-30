@@ -36,7 +36,7 @@ logger:
 -  **logs** (*Optional*, mapping): Manually set the log level for a
    specific component or tag. See :ref:`Manual Log Levels for more
    information <logger-manual_tag_specific_levels>`.
--  **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+-  **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 
 Advanced settings:
 
@@ -184,7 +184,7 @@ that have a lower severity than the global log level.
 
 Print a formatted message to the logs.
 
-In the `format` option, you can use `printf`-style formatting (see [display-printf](#display-printf)).
+In the `format` option, you can use `printf`-style formatting (see [Formatted Text](#display-printf)).
 
 ```yaml
 on_...:

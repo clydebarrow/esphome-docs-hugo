@@ -35,8 +35,8 @@ control the colors in the [light control actions](#light-turn_on_action), you ne
 
 ## Configuration variables:
 
-- **pin_a** (**Required**, [config-id](#config-id)): The id of the first float [output](#output) to use for this light.
-- **pin_b** (**Required**, [config-id](#config-id)): The id of the second float [output](#output) to use for this light.
+- **pin_a** (**Required**, [ID](#config-id)): The id of the first float [Output Component](#output) to use for this light.
+- **pin_b** (**Required**, [ID](#config-id)): The id of the second float [Output Component](#output) to use for this light.
 - All other options from [Light](#config-light).
 
 {{< note >}}

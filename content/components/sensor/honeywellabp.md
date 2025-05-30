@@ -51,11 +51,11 @@ datasheet indicates that the sensor does not measure temperature.
 
 
 - **cs_pin** (**Required**, [SPI](#spi)): Chip select pin.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "honeywellabp/honeywellabp.h" "honeywellabp/honeywellabp.h" >}}
 

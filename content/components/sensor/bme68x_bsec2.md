@@ -66,9 +66,9 @@ bme68x_bsec2_i2c:
 - **temperature_offset** (*Optional*, float): Temperature offset if device is in enclosure and reads too high. This
   value is subtracted from the reading (for example, if the sensor reads 5°C higher than expected, set this to `5`)
   and also corrects the relative humidity readings. Defaults to `0`.
-- **state_save_interval** (*Optional*, [config-time](#config-time)): The minimum interval at which to save the calibrated BSEC2
+- **state_save_interval** (*Optional*, [Time](#config-time)): The minimum interval at which to save the calibrated BSEC2
   algorithm state to flash so that calibration doesn't have to start from scratch on device restart. Defaults to `6h`.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation. Use this ID in the sensor
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation. Use this ID in the sensor
   section to refer to the correct BME68x sensor if you have more than one device. This will also be used to refer to
   the calibrated BSEC2 algorithm state saved to flash.
 
@@ -94,7 +94,7 @@ sensor:
 ```
 ### Configuration variables:
 
-- **bme68x_bsec2_id** (*Optional*, [config-id](#config-id)): The ID of the `bme68x_bsec2_i2c` component sensors will refer
+- **bme68x_bsec2_id** (*Optional*, [ID](#config-id)): The ID of the `bme68x_bsec2_i2c` component sensors will refer
   to. Useful when multiple devices are present in your configuration.
 
 - **temperature** (*Optional*): Configuration for the temperature sensor.
@@ -152,7 +152,7 @@ text_sensor:
 ```
 ### Configuration variables:
 
-- **bme68x_bsec2_id** (*Optional*, [config-id](#config-id)): The ID of the `bme68x_bsec2_i2c` component the text sensor
+- **bme68x_bsec2_id** (*Optional*, [ID](#config-id)): The ID of the `bme68x_bsec2_i2c` component the text sensor
   will refer to. Useful when multiple devices are present in your configuration.
 - **iaq_accuracy** (*Optional*): Configuration for the IAQ accuracy sensor. Shows: `Stabilizing`, `Uncertain`,
   `Calibrating`, `Calibrated`.
@@ -243,7 +243,7 @@ saved to flash so that the process does not have to start from scratch on device
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "bme680/" >}}
 - {{< apiref "bme68x_bsec2_i2c/bme68x_bsec2_i2c.h" "bme68x_bsec2_i2c/bme68x_bsec2_i2c.h" >}}

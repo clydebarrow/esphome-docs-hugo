@@ -32,10 +32,10 @@ sensor:
 ## Configuration variables:
 
 - **address** (*Optional*, int): Specify the I²C address of the sensor. Defaults to `0x3f`.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
-- **id** (*Optional*, [config-id](#config-id)): Set the ID of this sensor for use in lambdas.
-- **temperature_sensor** (*Optional*, [config-id](#config-id)): Set the ID of the temperature
+- **id** (*Optional*, [ID](#config-id)): Set the ID of this sensor for use in lambdas.
+- **temperature_sensor** (*Optional*, [ID](#config-id)): Set the ID of the temperature
   sensor. Only needed if the onboard temperature sensor is not used.
 - **ph** (*Optional*, [Sensor](#config-sensor)): Set the pH sensor configuration. All options from [Sensor](#config-sensor).
 - **temperature** (*Optional*, [Sensor](#config-sensor)): Set the onboard temperature sensor configuration. All options from [Sensor](#config-sensor).
@@ -65,7 +65,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the ufire pH sensor.
+- **id** (**Required**, [ID](#config-id)): The ID of the ufire pH sensor.
 - **solution** (**Required**, float): Solution reference pH value.
 
 {{< anchor "sensor-ufire_ise-calibrate_probe_low_action" >}}
@@ -92,7 +92,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the ufire pH sensor.
+- **id** (**Required**, [ID](#config-id)): The ID of the ufire pH sensor.
 - **solution** (**Required**, float): Solution reference pH value.
 
 {{< anchor "sensor-ufire_ise-reset_action" >}}
@@ -116,10 +116,10 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the ufire pH sensor.
+- **id** (**Required**, [ID](#config-id)): The ID of the ufire pH sensor.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "ufire_ise/ufire_ise.h" "ufire_ise/ufire_ise.h" >}}
 

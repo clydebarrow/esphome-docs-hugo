@@ -42,7 +42,7 @@ online_image:
 ## Configuration variables
 
 - **url** (**Required**, url): The URL where the image will be downloaded from.
-- **id** (**Required**, [config-id](#config-id)): The ID with which you will be able to reference the image later
+- **id** (**Required**, [ID](#config-id)): The ID with which you will be able to reference the image later
   in your display code.
 - **format** (**Required**): The format that the image is encoded with.
 
@@ -51,7 +51,7 @@ online_image:
   - `PNG`: The image on the server is encoded in PNG format.
 - **resize** (*Optional*, string): If set, this will resize the image to fit inside the given dimensions `WIDTHxHEIGHT`
   and preserve the aspect ratio.
-- **placeholder** (*Optional*, [config-id](#config-id)): ID of an {{< docref "/components/image" "Image" >}} to display while the downloaded image is not yet ready.
+- **placeholder** (*Optional*, [ID](#config-id)): ID of an {{< docref "/components/image" "Image" >}} to display while the downloaded image is not yet ready.
   This placeholder image will **not** be resized; regardless of the `resize` option value for the `online_image`.
 - **type** (*Required*): Specifies how to encode image internally.
 
@@ -81,7 +81,7 @@ A good example for that is to update the display component after the download su
 
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The image to update the URL for.
+- **id** (**Required**, [ID](#config-id)): The image to update the URL for.
 - **url** (**Required**, url): The new URL to download the image from.
 
 ```yaml
@@ -96,7 +96,7 @@ on_...:
 
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The image to update the URL for.
+- **id** (**Required**, [ID](#config-id)): The image to update the URL for.
 
 ```yaml
 on_...:

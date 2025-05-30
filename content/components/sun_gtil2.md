@@ -42,7 +42,7 @@ sun_gtil2:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The id to use for this component.
+- **id** (**Required**, [ID](#config-id)): The id to use for this component.
 - **uart_id** (*Optional*): The UART Bus ID for receiving messages sent from the inverter's controller to the display.
 
 ## Sensor
@@ -125,5 +125,5 @@ text_sensor:
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 

@@ -80,11 +80,11 @@ sensor:
   All options from [Sensor](#config-sensor).
 - **power_factor** (*Optional*): Use the power factor value of the sensor.
   All options from [Sensor](#config-sensor).
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
-- **modbus_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the Modbus hub.
+- **modbus_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the Modbus hub.
 
 {{< anchor "pzemac-reset_energy_action" >}}
 
@@ -152,7 +152,7 @@ modbus_controller:
 ```
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "pzem004t/" >}}
 - {{< docref "pzemdc/" >}}
 - {{< apiref "pzemac/pzemac.h" "pzemac/pzemac.h" >}}

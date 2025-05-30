@@ -9,7 +9,7 @@ params:
 
 
 
-The `binary` fan platform lets you represent any binary [output](#output) as a fan.
+The `binary` fan platform lets you represent any binary [Output Component](#output) as a fan.
 
 {{< img src="fan-ui.png" alt="Image" width="80.0%" class="center" >}}
 
@@ -23,11 +23,11 @@ fan:
 ```
 ## Configuration variables:
 
-- **output** (**Required**, [config-id](#config-id)): The id of the
+- **output** (**Required**, [ID](#config-id)): The id of the
   binary output component to use for this fan.
-- **oscillation_output** (*Optional*, [config-id](#config-id)): The id of the
+- **oscillation_output** (*Optional*, [ID](#config-id)): The id of the
   [output](#output) to use for the oscillation state of this fan. Default is empty.
-- **direction_output** (*Optional*, [config-id](#config-id)): The id of the
+- **direction_output** (*Optional*, [ID](#config-id)): The id of the
   [output](#output) to use for the direction state of the fan. Default is empty.
 - All other options from [Fan Component](#config-fan).
 

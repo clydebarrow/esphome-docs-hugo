@@ -24,7 +24,7 @@ button:
 ```
 ## Configuration variables:
 
-- **haier_id** (**Required**, [config-id](#config-id)): The id of Haier climate component
+- **haier_id** (**Required**, [ID](#config-id)): The id of Haier climate component
 - **self_cleaning** (*Optional*): A button that starts Haier climate self cleaning.
   All options from [Button](#config-button).
 - **steri_cleaning** (*Optional*): A button that starts Haier climate 56°C Steri-Clean.

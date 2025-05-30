@@ -125,7 +125,7 @@ Advanced options:
   by the chip on reset to configure initial operation, e.g. to enable bootstrap mode.
   Using such pins for I/O should be avoided and ESPHome will warn if I/O is configured on a strapping pin.
 
-  For more detail see [strapping-warnings](#strapping-warnings).
+  For more detail see [Why am I getting a warning about strapping pins?](#strapping-warnings).
 
   If you are *absolutely* sure that you are using a strapping pin for I/O in a way that will not cause problems,
   you can suppress the warning by setting this option to `true` in the pin configuration.

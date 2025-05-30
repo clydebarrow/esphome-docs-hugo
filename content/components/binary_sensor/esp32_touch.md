@@ -12,8 +12,8 @@ params:
 Capacitive touch detection is possible on ESP32, ESP32-S2 or ESP32-S3 processors.
 In ESPHome, it is configured in two parts:
 
-- [esp32-touch-component](#esp32-touch-component)
-- [esp32-touch-binary-sensor](#esp32-touch-binary-sensor)
+- [Component/Hub](#esp32-touch-component)
+- [Binary Sensor](#esp32-touch-binary-sensor)
 
 {{< anchor "esp32-touch-component" >}}
 
@@ -35,7 +35,7 @@ esp32_touch:
    be displayed in the logs. Useful for finding out suitable thresholds for the binary sensors, but
    will spam the logs. See [setting up touch pads](#esp32-touch-binary-sensor)
    for more information. Defaults to `false`.
--  **id** (*Optional*, [config-id](#config-id)): Manually specify the ID for code generation.
+-  **id** (*Optional*, [ID](#config-id)): Manually specify the ID for code generation.
 
 **Advanced options**
 
@@ -44,10 +44,10 @@ the sensors aren't behaving as expected.
 
 *All processors:*
 
-- **sleep_duration** (*Optional*, [config-time](#config-time)): Set a time period
+- **sleep_duration** (*Optional*, [Time](#config-time)): Set a time period
   denoting the amount of time the touch peripheral should sleep between measurements. This can decrease
   power usage but make the sensor slower. Default is about 27 milliseconds.
-- **measurement_duration** (*Optional*, [config-time](#config-time)): Set the conversion
+- **measurement_duration** (*Optional*, [Time](#config-time)): Set the conversion
   time for all touch pads. A longer conversion time means that more charge/discharge cycles of the touch pad
   can be performed, therefore increasing accuracy. Default is about 8ms, the maximum amount.
 - **low_voltage_reference** (*Optional*): The low voltage reference to use for the charge cycles. One of `0.5V`,
@@ -62,7 +62,7 @@ For a more detailed explanation of the parameters above, please see the
 
 *ESP32 only*
 
-- **iir_filter** (*Optional*, [config-time](#config-time)): Optionally set up an
+- **iir_filter** (*Optional*, [Time](#config-time)): Optionally set up an
   [Infinite Impulse Response](https://en.wikipedia.org/wiki/Infinite_impulse_response)
   filter should be applied to all touch pads. This can increase the accuracy of the touch pads a lot, but higher values
   decrease the response time. A good value to start with is `10ms`. By default, the IIR filter is inactive.
@@ -99,7 +99,7 @@ For a more detailed explanation of the denoise configuration, please see the
 
 Waterproof configuration:
 
-- **waterproof_guard_ring** (*Optional*, [config-pin](#config-pin)): Sets the touch channel to use for the guard pad. The guard
+- **waterproof_guard_ring** (*Optional*, [Pin](#config-pin)): Sets the touch channel to use for the guard pad. The guard
   pad is used to detect the large area of water covering the touch panel.
 - **waterproof_shield_driver** (*Optional*): Shield channel drive capability configuration; the larger the
   parasitic capacitance on the shielding channel, the higher the drive capability needs to be set. Must be one of
@@ -135,13 +135,13 @@ binary_sensor:
 ```
 ### Configuration variables:
 
--  **pin** (**Required**, [config-pin](#config-pin)): The pin to detect touch
+-  **pin** (**Required**, [Pin](#config-pin)): The pin to detect touch
    events on.
 -  **threshold** (**Required**, `int`): The threshold to use to detect touch events. See
-   [esp32-finding-thresholds](#esp32-finding-thresholds) below for help determining this value.
+   [Finding Thresholds](#esp32-finding-thresholds) below for help determining this value.
 -  **wakeup_threshold** (*Optional*, `int`): The threshold to use to detect touch events to wake-up from deep sleep.
-   See [esp32-finding-thresholds](#esp32-finding-thresholds) below for help determining this value. Touch pad sensors that should trigger a
-   wake-up from deep sleep must specify this value. The [deep_sleep-component](#deep_sleep-component) must also be configured to enable
+   See [Finding Thresholds](#esp32-finding-thresholds) below for help determining this value. Touch pad sensors that should trigger a
+   wake-up from deep sleep must specify this value. The [Deep Sleep Component](#deep_sleep-component) must also be configured to enable
    wake-up from a touch event. Note that no filter(s) is/are active during deep sleep.
 -  All other options from [Binary Sensor](#config-binary_sensor).
 

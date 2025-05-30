@@ -15,7 +15,7 @@ with Home Assistant. Min, Max and Step are not configurable for this platform be
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
-[connecting-your-device-to-home-assistant](#connecting-your-device-to-home-assistant).
+[Connecting your device to Home Assistant](#connecting-your-device-to-home-assistant).
 
 {{< /note >}}
 ```yaml
@@ -34,10 +34,10 @@ number:
 ## `number.set` Action
 
 You can also set the number for the Home Assistant number from elsewhere in your YAML file
-with the [number-set_action](#number-set_action).
+with the [`number.set` Action](#number-set_action).
 
 ## See Also
 
-- [automation](#automation)
+- [Automation](#automation)
 - {{< apiref "homeassistant/number/homeassistant_number.h" "homeassistant/number/homeassistant_number.h" >}}
 

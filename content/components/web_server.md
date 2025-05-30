@@ -10,7 +10,7 @@ params:
 
 
 The `web_server` component creates a simple web server on the node that can be accessed
-through any browser and a simple [api-rest](#api-rest). Please note that enabling this component
+through any browser and a simple [REST API](#api-rest). Please note that enabling this component
 will take up *a lot* of memory and may decrease stability, especially on ESP8266.
 
 {{< img src="web_server.png" alt="Image" caption="Web server version 1" width="86.0%" class="center" >}}
@@ -55,12 +55,12 @@ web_server:
   Defaults to `true`.
 - **log** (*Optional*, boolean): Turn on or off the log feature inside webserver. Defaults to `true`.
 - **ota** (*Optional*, boolean): Turn on or off the OTA feature inside webserver. Strongly not suggested without enabled authentication settings. Defaults to `true`. Cannot be used with the `esp-idf` framework.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **local** (*Optional*, boolean): Include supporting javascript locally allowing it to work without internet access. Defaults to `false`.
 - **version** (*Optional*, string): `1`, `2` or `3`. Version 1 displays as a table. Version 2 uses web components and has more functionality. Version 3 uses HA-Styling. Defaults to `2`.
 - **sorting_groups** (*Optional*, list): Available only on `version: 3`. A list of group ID's and names to group the entities. See [Webserver Entity Grouping](#config-webserver-grouping).
 
-  - **id** (**Required**, [config-id](#config-id)): Manually specify the ID used for the group.
+  - **id** (**Required**, [ID](#config-id)): Manually specify the ID used for the group.
   - **name** (**Required**, string): A string representing the group name which is displayed as the header of the group
   - **sorting_weight** (*Optional*, float): A float representing the weight of the group. A group with a smaller `sorting_weight` will be displayed first. Defaults to `50`
 
@@ -219,8 +219,8 @@ By clicking on any sensor it will expand a graph with the historical values for 
 
 ## See Also
 
-- [api-event-source](#api-event-source)
-- [api-rest](#api-rest)
+- [Event Source API](#api-event-source)
+- [REST API](#api-rest)
 - {{< apiref "web_server/web_server.h" "web_server/web_server.h" >}}
 - {{< docref "prometheus/" >}}
 

@@ -50,18 +50,18 @@ api:
 Support for configuring the encryption key on-the-fly will be implemented in a future release of Home Assistant.
 
 {{< /note >}}
-- **actions** (*Optional*, list): A list of user-defined actions. See [api-device-actions](#api-device-actions).
-- **reboot_timeout** (*Optional*, [config-time](#config-time)): The amount of time to wait before rebooting when no
+- **actions** (*Optional*, list): A list of user-defined actions. See [User-defined Actions](#api-device-actions).
+- **reboot_timeout** (*Optional*, [Time](#config-time)): The amount of time to wait before rebooting when no
   client connects to the API. This is needed because sometimes the low level ESP functions report that
   the ESP is connected to the network, when in fact it is not - only a full reboot fixes it.
   Can be disabled by setting this to `0s`. Defaults to `15min`.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **password** (*Optional*, **Deprecated**, string): The password to protect the API Server with. Defaults
   to no password. It is recommended to use the `encryption` -> `key` above instead of the the `password`.
 - **on_client_connected** (*Optional*, [Action](#config-action)): An automation to perform when a client
-  connects to the API. See [api-on_client_connected_trigger](#api-on_client_connected_trigger).
+  connects to the API. See [`on_client_connected` Trigger](#api-on_client_connected_trigger).
 - **on_client_disconnected** (*Optional*, [Action](#config-action)): An automation to perform when a client
-  disconnects from the API. See [api-on_client_disconnected_trigger](#api-on_client_disconnected_trigger).
+  disconnects from the API. See [`on_client_disconnected` Trigger](#api-on_client_disconnected_trigger).
 
 {{< anchor "api-actions" >}}
 

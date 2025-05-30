@@ -68,7 +68,7 @@ you want the button to use that name, you can set `name: None`.
 Automations:
 
 - **on_press** (*Optional*, [Automation](#automation)): An automation to perform
-  when the button is pressed. See [button-on_press](#button-on_press).
+  when the button is pressed. See [`on_press`](#button-on_press).
 
 MQTT options:
 
@@ -105,7 +105,7 @@ This is an [Action](#config-action) for pressing a button in an Automation.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the button to set.
+- **id** (**Required**, [ID](#config-id)): The ID of the button to set.
 
 {{< note >}}
 Buttons are designed to trigger an action on a device from Home Assistant, and have an unidirectional flow from

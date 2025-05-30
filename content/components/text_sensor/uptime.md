@@ -27,7 +27,7 @@ text_sensor:
 ```
 ## Configuration variables:
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The sensor reporting interval. Defaults to `30s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The sensor reporting interval. Defaults to `30s`.
 - **expand** (*Optional*, boolean): If set, the text will always include all elements, even if they are zero. Defaults to `false`.
 - **format** (*Optional*, list): Allows the customization of the output format. The following options are available:
 
@@ -44,6 +44,6 @@ The resolution of the reported uptime will be determined by the update interval.
 
 ## See Also
 - {{< docref "/components/sensor/uptime" >}}
-- [text_sensor-filters](#text_sensor-filters)
+- [Text Sensor Filters](#text_sensor-filters)
 - {{< apiref "uptime/uptime_text_sensor.h" "uptime/uptime_text_sensor.h" >}}
 

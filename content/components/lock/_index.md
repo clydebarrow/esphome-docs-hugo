@@ -38,9 +38,9 @@ you want the lock to use that name, you can set `name: None`.
   not be exposed to the frontend (like Home Assistant). Only specifying an `id` without
   a `name` will implicitly set this to true.
 - **on_lock** (*Optional*, [Action](#config-action)): An automation to perform
-  when the lock is locked. See [lock-on_lock_unlock_trigger](#lock-on_lock_unlock_trigger).
+  when the lock is locked. See [`lock.on_lock` / `lock.on_unlock` Trigger](#lock-on_lock_unlock_trigger).
 - **on_unlock** (*Optional*, [Action](#config-action)): An automation to perform
-  when the lock is unlocked. See [lock-on_lock_unlock_trigger](#lock-on_lock_unlock_trigger)..
+  when the lock is unlocked. See [`lock.on_lock` / `lock.on_unlock` Trigger](#lock-on_lock_unlock_trigger)..
 - **disabled_by_default** (*Optional*, boolean): If true, then this entity should not be added to any client's frontend,
   (usually Home Assistant) without the user manually enabling it (via the Home Assistant UI).
   Defaults to `false`.

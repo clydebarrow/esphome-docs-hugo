@@ -55,9 +55,9 @@ Remember that `gamma_correct` is enabled by default (`γ=2.8`), and you may want
 {{< /note >}}
 ## Configuration variables:
 
-- **red** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the red channel.
-- **green** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the green channel.
-- **blue** (**Required**, [config-id](#config-id)): The id of the float [output](#output) to use for the blue channel.
+- **red** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the red channel.
+- **green** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the green channel.
+- **blue** (**Required**, [ID](#config-id)): The id of the float [Output Component](#output) to use for the blue channel.
 - All other options from [Light](#config-light).
 
 ## See Also

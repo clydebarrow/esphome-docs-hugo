@@ -36,8 +36,8 @@ sensor:
 ```
 ## Configuration variables:
 
-- **clock_pin** (**Required**, [config-pin](#config-pin)): The pin where the clock bus is connected.
-- **data_pin** (**Required**, [config-pin](#config-pin)): The pin where the data bus is connected.
+- **clock_pin** (**Required**, [Pin](#config-pin)): The pin where the clock bus is connected.
+- **data_pin** (**Required**, [Pin](#config-pin)): The pin where the data bus is connected.
 - **co2** (*Optional*): The information for the CO2 sensor.
 
   - All options from [Sensor](#config-sensor).
@@ -50,7 +50,7 @@ sensor:
 
   - All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 
 
@@ -62,7 +62,7 @@ on. Only after this timespan will the sensor report correct values. It's not rec
 {{< /note >}}
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< docref "absolute_humidity/" >}}
 - {{< docref "mhz19/" >}}
 - [CO2mon-esp firmware](https://github.com/Anonym-tsk/co2mon-esp) by [@anonym-tsk](https://github.com/Anonym-tsk)

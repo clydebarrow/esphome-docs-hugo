@@ -30,7 +30,7 @@ update:
 ## Configuration variables:
 
 - **source** (**Required**, string): The URL of the YAML manifest file containing the firmware metadata.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval at which to check for (**not install**) updates.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval at which to check for (**not install**) updates.
   Defaults to 6 hours.
 - All other options from [Update](#config-update).
 

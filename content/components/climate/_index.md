@@ -146,7 +146,7 @@ This is an [Action](#config-action) for setting parameters for climate devices.
 ```
 Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the climate device to control.
+- **id** (**Required**, [ID](#config-id)): The ID of the climate device to control.
 - **mode** (*Optional*, string, [templatable](#config-templatable)): Put the climate device
   in a specific mode. One of
 

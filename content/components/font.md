@@ -131,7 +131,7 @@ display:
 
   - **url** (**Required**, string): The URL of the TrueType or bitmap font file.
 
-- **id** (**Required**, [config-id](#config-id)): The ID with which you will be able to reference the font later
+- **id** (**Required**, [ID](#config-id)): The ID with which you will be able to reference the font later
   in your display code.
 - **size** (*Optional*, int): The desired size of the font. This will be the size (height) of the font in pixels
   when rendered. If you want to use the same font in different sizes, create two font objects.
@@ -185,7 +185,7 @@ to install it using `pip install "pillow==10.4.0"`.
 ## See Also
 
 - {{< apiref "display/display_buffer.h" "display/display_buffer.h" >}}
-- [display-engine](#display-engine)
+- [Display Rendering Engine](#display-engine)
 - {{< docref "/components/lvgl" >}}
 - [MDI cheatsheet](https://pictogrammers.com/library/mdi/)
 - [MDI font repository](https://github.com/Pictogrammers/pictogrammers.github.io/tree/main/%40mdi/font/)

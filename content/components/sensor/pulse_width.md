@@ -30,14 +30,14 @@ sensor:
 
 - **pin** (*Optional*, [Pin Schema](#config-pin_schema)): The pin to observe for the
   pulse width.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor.
   Defaults to `60s`.
 
-- **id** (*Optional*, [config-id](#config-id)): Set the ID of this sensor for use in lambdas.
+- **id** (*Optional*, [ID](#config-id)): Set the ID of this sensor for use in lambdas.
 - All other options from [Sensor](#config-sensor).
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "pulse_width/pulse_width.h" "pulse_width/pulse_width.h" >}}
 

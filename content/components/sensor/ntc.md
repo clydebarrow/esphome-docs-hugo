@@ -76,7 +76,7 @@ sensor:
 ```
 ## Configuration variables:
 
-- **sensor** (**Required**, [config-id](#config-id)): The sensor to read the resistance values from
+- **sensor** (**Required**, [ID](#config-id)): The sensor to read the resistance values from
   to convert to temperature readings.
 - **calibration** (**Required**, float): The calibration parameters of the sensor - see above
   for more details.
@@ -122,6 +122,6 @@ interval:
 
 - {{< docref "adc/" >}}
 - {{< docref "resistance/" >}}
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "ntc/ntc.h" "ntc/ntc.h" >}}
 

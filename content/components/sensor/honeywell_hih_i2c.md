@@ -33,11 +33,11 @@ sensor:
 - **humidity** (**Required**): The information for the humidity sensor.
   All options from [Sensor](#config-sensor).
 
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "honeywell_hih_i2c/honeywell_hih.h" "honeywell_hih_i2c/honeywell_hih.h" >}}
 

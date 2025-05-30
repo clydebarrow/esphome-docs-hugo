@@ -38,7 +38,7 @@ The `fastled_clockless` light platform allows you to create RGB lights
 in ESPHome for a [number of supported chipsets](#fastled_clockless-chipsets).
 
 Clockless FastLED lights differ from the
-[fastled-spi](#fastled-spi) in that they only have a single data wire to connect, and not separate data and clock wires.
+[SPI](#fastled-spi) in that they only have a single data wire to connect, and not separate data and clock wires.
 
 {{< img src="fastled_clockless-ui.png" alt="Image" width="60.0%" class="center" >}}
 
@@ -56,14 +56,14 @@ light:
 ### Configuration variables:
 
 - **chipset** (**Required**, string): Set a chipset to use.
-  See [fastled_clockless-chipsets](#fastled_clockless-chipsets) for options.
-- **pin** (**Required**, [config-pin](#config-pin)): The pin for the data line of the FastLED light.
+  See [Supported Chipsets](#fastled_clockless-chipsets) for options.
+- **pin** (**Required**, [Pin](#config-pin)): The pin for the data line of the FastLED light.
 - **num_leds** (**Required**, int): The number of LEDs attached.
 - **rgb_order** (*Optional*, string): The order of the RGB channels. Use this if your
   light doesn't seem to map the RGB light channels correctly. For example if your light
   shows up green when you set a red color through the frontend. Valid values are `RGB`,
   `RBG`, `GRB`, `GBR`, `BRG` and `BGR`. Defaults to `RGB`.
-- **max_refresh_rate** (*Optional*, [config-time](#config-time)):
+- **max_refresh_rate** (*Optional*, [Time](#config-time)):
   A time interval used to limit the number of commands a light can handle per second. For example
   16ms will limit the light to a refresh rate of about 60Hz. Defaults to the default value for the used chipset.
 - All other options from [Light](#config-light).
@@ -108,7 +108,7 @@ in ESPHome for a [number of supported chipsets](#fastled_spi-chipsets).
 See {{< docref "/components/light/spi_led_strip" >}} for an alternative component that works on ESP-IDF (and Arduino.)
 
 SPI FastLED lights differ from the
-[fastled-clockless](#fastled-clockless) in that they require two pins to be connected, one for a data and one for a clock signal
+[Clockless](#fastled-clockless) in that they require two pins to be connected, one for a data and one for a clock signal
 whereas the clockless lights only need a single pin.
 
 {{< img src="fastled_spi-ui.png" alt="Image" width="60.0%" class="center" >}}
@@ -127,15 +127,15 @@ light:
 ```
 ### Configuration variables:
 
-- **chipset** (**Required**, string): Set a chipset to use. See [fastled_spi-chipsets](#fastled_spi-chipsets) for options.
-- **data_pin** (**Required**, [config-pin](#config-pin)): The pin for the data line of the FastLED light.
-- **clock_pin** (**Required**, [config-pin](#config-pin)): The pin for the clock line of the FastLED light.
+- **chipset** (**Required**, string): Set a chipset to use. See [Supported Chipsets](#fastled_spi-chipsets) for options.
+- **data_pin** (**Required**, [Pin](#config-pin)): The pin for the data line of the FastLED light.
+- **clock_pin** (**Required**, [Pin](#config-pin)): The pin for the clock line of the FastLED light.
 - **num_leds** (**Required**, int): The number of LEDs attached.
 - **rgb_order** (*Optional*, string): The order of the RGB channels. Use this if your
   light doesn't seem to map the RGB light channels correctly. For example if your light
   shows up green when you set a red color through the frontend. Valid values are `RGB`,
   `RBG`, `GRB`, `GBR`, `BRG` and `BGR`. Defaults to `RGB`.
-- **max_refresh_rate** (*Optional*, [config-time](#config-time)):
+- **max_refresh_rate** (*Optional*, [Time](#config-time)):
   A time interval used to limit the number of commands a light can handle per second. For example
   16ms will limit the light to a refresh rate of about 60Hz. Defaults to the default value for the used chipset.
 - **data_rate** (*Optional*, frequency): The data rate to use for shifting data to the light. Can help if you

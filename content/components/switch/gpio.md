@@ -28,8 +28,8 @@ switch:
 - **pin** (**Required**, [Pin Schema](#config-pin_schema)): The
   GPIO pin to use for the switch.
 - **interlock** (*Optional*, list): A list of other GPIO switches in an interlock group. See
-  [switch-gpio-interlocking](#switch-gpio-interlocking).
-- **interlock_wait_time** (*Optional*, [config-time](#config-time)): For interlocking mode, set how long
+  [Interlocking](#switch-gpio-interlocking).
+- **interlock_wait_time** (*Optional*, [Time](#config-time)): For interlocking mode, set how long
   to wait after other items in an interlock group have been disabled before re-activating.
   Useful for motors where immediately turning on in the other direction could cause problems.
 

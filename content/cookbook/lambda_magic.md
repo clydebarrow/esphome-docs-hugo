@@ -16,7 +16,7 @@ These don't require external components and demonstrate how powerful [Lambdas](#
 
 ## Display pages alternative
 
-Some displays like [lcd-pcf8574](#lcd-pcf8574) don't support pages natively, but you can easily implement them
+Some displays like [lcd_pcf8574 Component](#lcd-pcf8574) don't support pages natively, but you can easily implement them
 using Lambdas:
 
 ```yaml
@@ -343,7 +343,7 @@ button:
 ```
 ## See Also
 
-- [config-lambda](#config-lambda)
-- [automation](#automation)
+- [Templates](#config-lambda)
+- [Automation](#automation)
 
 

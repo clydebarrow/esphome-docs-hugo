@@ -43,11 +43,11 @@ bedjet:
 ```
 ### Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
-- **ble_client_id** (**Required**, [config-id](#config-id)): The ID of the BLE Client.
-- **time_id** (*Optional*, [config-id](#config-id)): The ID of a {{< docref "/components/time" >}} which
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
+- **ble_client_id** (**Required**, [ID](#config-id)): The ID of the BLE Client.
+- **time_id** (*Optional*, [ID](#config-id)): The ID of a {{< docref "/components/time" >}} which
   can be used to set the time on the BedJet device.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to dispatch status
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to dispatch status
   changes to child components. Defaults to `5s`. Each child component can decide whether to
   publish its own updated state on this interval, or use another (longer) update interval to
   throttle its own updates.
@@ -107,7 +107,7 @@ climate:
 ```
 ### Configuration variables:
 
-- **bedjet_id** (**Required**, [config-id](#config-id)): The ID of the Bedjet component.
+- **bedjet_id** (**Required**, [ID](#config-id)): The ID of the Bedjet component.
 - **heat_mode** (*Optional*, string): The primary heating mode to use for `HVACMode.HEAT`:
 
     - `heat` (Default) - Setting `hvac_mode=heat` uses the BedJet "HEAT" mode.
@@ -142,7 +142,7 @@ fan:
 ```
 ### Configuration variables:
 
-- **bedjet_id** (**Required**, [config-id](#config-id)): The ID of the Bedjet component.
+- **bedjet_id** (**Required**, [ID](#config-id)): The ID of the Bedjet component.
 - Other options from [Fan](#config-fan).
 
 ## `bedjet` Sensor

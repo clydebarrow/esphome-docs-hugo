@@ -693,6 +693,8 @@ Often known as "tag" or "card" readers within the community.
 # Energy/Solar Management
 
 {{< imgtable >}}
+"Growatt Solar","components/sensor/growatt_solar","growatt.jpg",""
+"Havells Solar","components/sensor/havells_solar","havellsgti5000d_s.jpg",""
 "PipSolar-compatible PV Inverter","components/pipsolar","pipsolar.jpg",""
 "Power Supply","components/power_supply","power.svg","dark-invert"
 "Resol VBus","components/vbus","resol_deltasol_bs_plus.jpg",""

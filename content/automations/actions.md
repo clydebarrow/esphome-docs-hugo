@@ -64,7 +64,7 @@ switch:
      id: dehumidifier1
 
 ```
-First, we have to give the dehumidifier `switch` an [config-id](#config-id) so that we can refer to it inside of our
+First, we have to give the dehumidifier `switch` an [ID](#config-id) so that we can refer to it inside of our
 automation.
 
 {{< anchor "actions-trigger" >}}
@@ -292,7 +292,7 @@ on_...:
 Configuration variables:
 
 - **condition** (**Required**, [Condition](#config-condition)): The condition to wait to become true.
-- **timeout** (*Optional*, [config-time](#config-time)): Time to wait before timing out. Defaults to never timing out.
+- **timeout** (*Optional*, [Time](#config-time)): Time to wait before timing out. Defaults to never timing out.
 
 {{< anchor "while_action" >}}
 
@@ -447,7 +447,7 @@ on_...:
 ```
 Configuration variables:
 
-- **time** (**Required**, [templatable](#config-templatable), [config-time](#config-time)):
+- **time** (**Required**, [templatable](#config-templatable), [Time](#config-time)):
   The time for which the condition has to have been true.
 - **condition** (**Required**, [condition](#config-condition)): The condition to check.
 

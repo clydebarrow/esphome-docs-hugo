@@ -70,7 +70,7 @@ sprinkler:
         valve_switch_id: lawn_sprinkler_valve_sw1
 
 ```
-Please see the [sprinkler-controller-examples](#sprinkler-controller-examples) section below for extensive, detailed configuration
+Please see the [Controller Examples](#sprinkler-controller-examples) section below for extensive, detailed configuration
 examples that are ready for you to copy and paste!
 
 ## Configuration variables:
@@ -86,9 +86,9 @@ examples that are ready for you to copy and paste!
   controller will automatically advance to the next enabled valve as a part of a "full cycle" of the
   system. When turned off, the sprinkler controller will shut down after the active valve's
   `run_duration` is reached (unless there are valves in the queue -- see
-  [sprinkler-controller-sprinkler_controller_queue](#sprinkler-controller-sprinkler_controller_queue) section below for more detail). This switch will
+  [The Sprinkler Controller Queue](#sprinkler-controller-sprinkler_controller_queue) section below for more detail). This switch will
   not appear in the front end if the controller is configured with only one valve.
-- **manual_selection_delay** (*Optional*, [config-time](#config-time)): The amount of time the controller should
+- **manual_selection_delay** (*Optional*, [Time](#config-time)): The amount of time the controller should
   wait to activate a valve after the `next_valve` and `previous_valve` actions are called. Useful
   if the control interface consists of only forward/reverse buttons as the button(s) may be pressed
   multiple times to make the selection.
@@ -96,7 +96,7 @@ examples that are ready for you to copy and paste!
   switch as it will appear in the front end. When this switch is turned on or not provided, the controller
   will select the next valve/zone to run based on the contents of the queue; the queue takes precedence over
   valves that would otherwise run as a part of a full cycle of the system (when auto-advance is on/enabled).
-  See [sprinkler-controller-sprinkler_controller_queue](#sprinkler-controller-sprinkler_controller_queue) section below for more detail.
+  See [The Sprinkler Controller Queue](#sprinkler-controller-sprinkler_controller_queue) section below for more detail.
 - **reverse_switch** (*Optional*, *string*): The name for the sprinkler controller's reverse switch
   as it will appear in the front end. When this switch is turned on, the controller will iterate through
   the valves in reverse order (last-to-first as they appear in the controller's configuration). When
@@ -105,36 +105,36 @@ examples that are ready for you to copy and paste!
 - **standby_switch** (*Optional*, *string*): The name for the sprinkler controller's standby switch
   as it will appear in the front end. When this switch is turned on, the controller *will not start any valves.*
   **This can result in confusing/unexpected behavior if there is no visual indication of this condition!**
-- **valve_open_delay** (*Optional*, [config-time](#config-time)): The *minimum* delay in seconds that should be
+- **valve_open_delay** (*Optional*, [Time](#config-time)): The *minimum* delay in seconds that should be
   inserted between (distribution) valve switching -- in other words, the amount of time that must elapse
   between one valve switching off and the next one switching on. Useful for systems with valves which depend
   on sufficient water pressure to close. May not be used with `valve_overlap`.
-- **valve_overlap** (*Optional*, [config-time](#config-time)): The amount of time in seconds that the current valve
+- **valve_overlap** (*Optional*, [Time](#config-time)): The amount of time in seconds that the current valve
   and the next valve should run simultaneously as the next valve/zone starts up. This may help prevent pipes
   from banging as valves close. May not be used with `valve_open_delay`.
 - **pump_switch_off_during_valve_open_delay** (*Optional*, boolean): If set to `true`, the pump will be
   switched off during the `valve_open_delay` interval; otherwise, it remains on. This may only be
   specified when `valve_open_delay` is configured (see above). Defaults to `false`.
-- **pump_start_pump_delay** (*Optional*, [config-time](#config-time)): The delay in seconds from when a distribution
+- **pump_start_pump_delay** (*Optional*, [Time](#config-time)): The delay in seconds from when a distribution
   valve is opened to when the associated pump is activated. Useful to ensure pressure does not build
   up from running the pump when no distribution valves are open. May not be used with `pump_start_valve_delay`.
-- **pump_start_valve_delay** (*Optional*, [config-time](#config-time)): The delay in seconds from when a pump
+- **pump_start_valve_delay** (*Optional*, [Time](#config-time)): The delay in seconds from when a pump
   is started to when the associated distribution valve is opened. Useful for systems where distribution
   valves require sufficient pressure to fully/quickly close. May not be used with `pump_start_pump_delay`.
-- **pump_stop_pump_delay** (*Optional*, [config-time](#config-time)): The delay in seconds from when a distribution
+- **pump_stop_pump_delay** (*Optional*, [Time](#config-time)): The delay in seconds from when a distribution
   valve is closed to when the respective pump is deactivated. Useful for systems where distribution valves
   require sufficient pressure to fully/quickly close. May not be used with `pump_stop_valve_delay`.
-- **pump_stop_valve_delay** (*Optional*, [config-time](#config-time)): The delay in seconds from when a pump is
+- **pump_stop_valve_delay** (*Optional*, [Time](#config-time)): The delay in seconds from when a pump is
   deactivated to when the respective distribution valve is closed. Useful to ensure pressure does not build
   up from running the pump when no distribution valves are open or to allow the main line out to distribution
   valves to drain. May not be used with `pump_stop_pump_delay`.
-- **pump_pulse_duration** (*Optional*, [config-time](#config-time)): The *minimum* length of the pulse generated to
+- **pump_pulse_duration** (*Optional*, [Time](#config-time)): The *minimum* length of the pulse generated to
   operate a pump in milliseconds. *Required* when one or more latching pumps is configured. Note that the *exact*
   length of the pulse is determined by the frequency of the main application loop (as are other `delay` timers
   used in ESPHome). Typically this is expected to provide a resolution of approximately 16 milliseconds, however
   this may vary somewhat depending on your exact configuration. Regardless, it should provide
   more-than-sufficient precision to operate any such valve.
-- **valve_pulse_duration** (*Optional*, [config-time](#config-time)): The *minimum* length of the pulse generated to
+- **valve_pulse_duration** (*Optional*, [Time](#config-time)): The *minimum* length of the pulse generated to
   operate a valve in milliseconds. *Required* when one or more latching valves is configured. Note that the *exact*
   length of the pulse is determined by the frequency of the main application loop (as are other `delay` timers
   used in ESPHome). Typically this is expected to provide a resolution of approximately 16 milliseconds, however
@@ -142,17 +142,17 @@ examples that are ready for you to copy and paste!
   precision to operate any such valve.
 - **multiplier_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component that
   should be presented to the front end (Home Assistant) to enable control of the sprinkler controller's `multiplier`
-  value. See [sprinkler-controller-sprinkler_controller_numbers](#sprinkler-controller-sprinkler_controller_numbers) below for more detail.
+  value. See [Using the Sprinkler Controller's Numbers](#sprinkler-controller-sprinkler_controller_numbers) below for more detail.
 - **repeat_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component that
   should be presented to the front end (Home Assistant) to enable control of the sprinkler controller's `repeat`
-  value. May not be used with `repeat`. See [sprinkler-controller-sprinkler_controller_numbers](#sprinkler-controller-sprinkler_controller_numbers) below for more
+  value. May not be used with `repeat`. See [Using the Sprinkler Controller's Numbers](#sprinkler-controller-sprinkler_controller_numbers) below for more
   detail.
 - **repeat** (*Optional*, int): The number of times a full cycle should be repeated. Defaults to 0. May not be used
   with `repeat_number`.
 - **next_prev_ignore_disabled** (*Optional*, boolean): Set to `true` to cause
-  [sprinkler-controller-action_next_valve](#sprinkler-controller-action_next_valve) and [sprinkler-controller-action_previous_valve](#sprinkler-controller-action_previous_valve) to skip
+  [`sprinkler.next_valve` action](#sprinkler-controller-action_next_valve) and [`sprinkler.previous_valve` action](#sprinkler-controller-action_previous_valve) to skip
   over valves that are not enabled. Defaults to `false`.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation. While optional,
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation. While optional,
   this is necessary to identify the controller instance (particularly in cases where more than one is
   defined) when calling controller actions (see below) such as `start_full_cycle` or `shutdown`.
 - **valves** (**Required**, *list*): A list of valves the controller should use. Each valve consists of:
@@ -170,26 +170,26 @@ examples that are ready for you to copy and paste!
     component to be used to control the valve's pump or upstream electric valve. Typically this would be a
     {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay or other switching device which in turn would
     activate the respective pump/valve. *It is not recommended to expose this switch to the front end; please
-    see* [sprinkler-controller-an_important_note_about_gpio_switches_and_control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control) *below for more detail.*
+    see* [An Important Note about GPIO Switches and Control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control) *below for more detail.*
     May not be specified with *pump_off_switch_id* or *pump_on_switch_id*.
   - **pump_off_switch_id** (*Optional*, [Switch](#config-switch)): This is the [switch](#config-switch)
     component to be used to *turn off* the valve's pump or upstream electric *latching* valve. Typically this
     would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay or other switching device which in turn
     would *switch off* the respective pump/valve. *It is not recommended to expose this switch to the front end; please
-    see* [sprinkler-controller-an_important_note_about_gpio_switches_and_control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control) *below for more detail.*
+    see* [An Important Note about GPIO Switches and Control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control) *below for more detail.*
     May not be specified with *pump_switch_id*.
   - **pump_on_switch_id** (*Optional*, [Switch](#config-switch)): This is the [switch](#config-switch)
     component to be used to *turn on* the valve's pump or upstream electric *latching* valve. Typically this
     would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay or other switching device which in turn
     would *switch on* the respective pump/valve. *It is not recommended to expose this switch to the front end; please
-    see* [sprinkler-controller-an_important_note_about_gpio_switches_and_control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control) *below for more detail.*
+    see* [An Important Note about GPIO Switches and Control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control) *below for more detail.*
     May not be specified with *pump_switch_id*.
   - **run_duration_number** (*Optional*, *string*): The name of the {{< docref "/components/number/index" "number" >}} component
     that should be presented to the front end (Home Assistant) to enable control of the valve's `run_duration` value.
-    May not be used with `run_duration`. See [sprinkler-controller-sprinkler_controller_numbers](#sprinkler-controller-sprinkler_controller_numbers) below for more
+    May not be used with `run_duration`. See [Using the Sprinkler Controller's Numbers](#sprinkler-controller-sprinkler_controller_numbers) below for more
     detail. **Pro tip:** Want times in minutes? Add `unit_of_measurement: min` to the number configuration. See
-    [sprinkler-controller-sprinkler_controller_numbers](#sprinkler-controller-sprinkler_controller_numbers) for more detail.
-  - **run_duration** (*Optional*, [config-time](#config-time)): Required when `run_duration_number` is not provided. The
+    [Using the Sprinkler Controller's Numbers](#sprinkler-controller-sprinkler_controller_numbers) for more detail.
+  - **run_duration** (*Optional*, [Time](#config-time)): Required when `run_duration_number` is not provided. The
     duration in seconds this valve should remain on/open after it is activated. When a given valve is activated, the
     controller's multiplier value is multiplied by this value to determine the actual run duration for the valve, thus
     allowing the run duration for all valves/zones to be proportionally increased or decreased as desired. May not be
@@ -198,19 +198,19 @@ examples that are ready for you to copy and paste!
     component to be used to control the valve that operates the given section or zone of the sprinkler
     system. Typically this would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay
     or other switching device which in turn would activate the respective valve. *It is not recommended
-    to expose this switch to the front end; please see* [sprinkler-controller-an_important_note_about_gpio_switches_and_control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control)
+    to expose this switch to the front end; please see* [An Important Note about GPIO Switches and Control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control)
     *below for more detail.* May not be specified with *valve_off_switch_id* or *valve_on_switch_id*.
   - **valve_off_switch_id** (**Required**, [Switch](#config-switch)): This is the [switch](#config-switch)
     component to be used to *turn off* the *latching* valve that operates the given section or zone of the
     sprinkler system. Typically this would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay
     or other switching device which in turn would *switch off* the respective valve. *It is not recommended
-    to expose this switch to the front end; please see* [sprinkler-controller-an_important_note_about_gpio_switches_and_control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control)
+    to expose this switch to the front end; please see* [An Important Note about GPIO Switches and Control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control)
     *below for more detail.* May not be specified with *valve_switch_id*.
   - **valve_on_switch_id** (**Required**, [Switch](#config-switch)): This is the [switch](#config-switch)
     component to be used to *turn on* the *latching* valve that operates the given section or zone of the
     sprinkler system. Typically this would be a {{< docref "switch/gpio" "GPIO switch" >}} wired to control a relay
     or other switching device which in turn would *switch on* the respective valve. *It is not recommended
-    to expose this switch to the front end; please see* [sprinkler-controller-an_important_note_about_gpio_switches_and_control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control)
+    to expose this switch to the front end; please see* [An Important Note about GPIO Switches and Control](#sprinkler-controller-an_important_note_about_gpio_switches_and_control)
     *below for more detail.* May not be specified with *valve_switch_id*.
 
 {{< anchor "sprinkler-controller-an_important_note_about_gpio_switches_and_control" >}}
@@ -294,7 +294,7 @@ queue request or for their configured `run_duration` multiplied by the controlle
 the valve is enabled; that is, queued valves will always run once the controller is started, unless, of
 course, the queue is (manually) cleared prior to the queue reaching them. Also note that, at present,
 the queue has a hard-coded limit of 100 entries to limit memory use.*
-See [sprinkler-controller-sprinkler_controller_queue](#sprinkler-controller-sprinkler_controller_queue) section below for more detail.
+See [The Sprinkler Controller Queue](#sprinkler-controller-sprinkler_controller_queue) section below for more detail.
 
 ```yaml
 on_...:
@@ -412,7 +412,7 @@ take precedence over valves scheduled as a part of a full cycle of the system (w
 enabled). If `run_duration` is not specified or is zero, the sprinkler controller will use the
 valve's configured run duration. Valves are numbered in the order they appear in the sprinkler
 controller's configuration starting at zero (0). *Note that, at present, the queue has a hard-coded
-limit of 100 entries to limit memory use.* Please see [sprinkler-controller-sprinkler_controller_queue](#sprinkler-controller-sprinkler_controller_queue)
+limit of 100 entries to limit memory use.* Please see [The Sprinkler Controller Queue](#sprinkler-controller-sprinkler_controller_queue)
 section below for more detail and examples.
 
 ```yaml
@@ -428,7 +428,7 @@ on_...:
 
 ### `sprinkler.clear_queued_valves` action
 
-Removes all queued valves from the controller's queue. Please see [sprinkler-controller-sprinkler_controller_queue](#sprinkler-controller-sprinkler_controller_queue)
+Removes all queued valves from the controller's queue. Please see [The Sprinkler Controller Queue](#sprinkler-controller-sprinkler_controller_queue)
 section below for more detail and examples.
 
 ```yaml
@@ -518,7 +518,7 @@ on_...:
 - The `start_single_valve` action ignores whether a valve is enabled via its enable switch.
 - The `next_valve` and `previous_valve` actions may not appear to respond immediately if either
   `manual_selection_delay` or any of the various delay mechanisms described in the
-  [sprinkler-controller-pump_and_distribution_valve_coordination](#sprinkler-controller-pump_and_distribution_valve_coordination) section below are configured.
+  [Pump and Distribution Valve Coordination](#sprinkler-controller-pump_and_distribution_valve_coordination) section below are configured.
   If you are using any of these configuration options, be sure to allow the delay intervals to elapse
   before assuming something isn't working!
 - If a valve is active when its `run_duration` or the multiplier value is changed, the active

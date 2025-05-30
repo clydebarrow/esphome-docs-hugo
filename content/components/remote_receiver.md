@@ -18,7 +18,7 @@ The component is split into two parts:
 - Individual [remote receiver binary sensors](#remote-receiver-binary-sensor) which will activate when their
   respective signal is received.
 
-**See** [remote-setting-up-infrared](#remote-setting-up-infrared) **and** [remote-setting-up-rf](#remote-setting-up-rf) **for details.**
+**See** [Setting up IR Devices](#remote-setting-up-infrared) **and** [Setting up RF Devices](#remote-setting-up-rf) **for details.**
 
 ```yaml
 # Example configuration entry
@@ -31,7 +31,7 @@ Multiple remote receivers can be configured as a list of dict definitions within
 
 ## Configuration variables:
 
-- **pin** (**Required**, [config-pin](#config-pin)): The pin to receive the remote signal on.
+- **pin** (**Required**, [Pin](#config-pin)): The pin to receive the remote signal on.
 - **dump** (*Optional*, list): Decode and dump these remote codes in the logs (at log.level=DEBUG).
   Set to `all` to dump all available codecs:
 
@@ -70,20 +70,20 @@ Multiple remote receivers can be configured as a list of dict definitions within
   - **mirage**: Decode and dump Mirage infrared codes.
   - **toto**: Decode and dump Toto infrared codes.
 
-- **tolerance** (*Optional*, int, [config-time](#config-time) or mapping): The percentage or time that the remote signal lengths
+- **tolerance** (*Optional*, int, [Time](#config-time) or mapping): The percentage or time that the remote signal lengths
   can deviate in the decoding process.  Defaults to `25%`.
 
   - **type** (**Required**, enum): Set the type of the tolerance. Can be `percentage` or `time`.
-  - **value** (**Required**, int or [config-time](#config-time)): The percentage or time value. Allowed values are in range `0`
+  - **value** (**Required**, int or [Time](#config-time)): The percentage or time value. Allowed values are in range `0`
     to `100%` or `0` to `4294967295us`.
 
 - **buffer_size** (*Optional*, int): The size of the internal buffer for storing the remote codes. Defaults to `10kB`
   on the ESP32 and `1kB` on the ESP8266.
-- **filter** (*Optional*, [config-time](#config-time)): Filter any pulses that are shorter than this. Useful for removing
+- **filter** (*Optional*, [Time](#config-time)): Filter any pulses that are shorter than this. Useful for removing
   glitches from noisy signals. Allowed values are in range `0` to `4294967295us`. Defaults to `50us`.
-- **idle** (*Optional*, [config-time](#config-time)): The amount of time that a signal should remain stable/unchanged for it to
+- **idle** (*Optional*, [Time](#config-time)): The amount of time that a signal should remain stable/unchanged for it to
   be considered complete. Allowed values are in range `0` to `4294967295us`. Defaults to `10ms`.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation. Useful when multiple
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation. Useful when multiple
   receivers are configured on a single device.
 
 ### ESP32 IDF configuration variables:
@@ -276,7 +276,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **receiver_id** (*Optional*, [config-id](#config-id)): The remote receiver to receive the remote code with. Required if
+- **receiver_id** (*Optional*, [ID](#config-id)): The remote receiver to receive the remote code with. Required if
   multiple receivers configured.
 - All other options from [Binary Sensor](#config-binary_sensor).
 
@@ -440,7 +440,7 @@ Remote code selection (exactly one of these has to be included):
 
   - **code** (**Required**, string): The remote code to listen for, copy this from the dumper output. To ignore a bit
     in the received data, use `x` at that place in the **code**.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol](#remote_transmitter-rc_switch-protocol) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](#remote_transmitter-rc_switch-protocol) for
     more info.
 
 - **rc_switch_type_a**: Trigger on a decoded RC Switch Type A remote code with the given data.
@@ -448,7 +448,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, string): The group, binary string.
   - **device** (**Required**, string): The device in the group, binary string.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol](#remote_transmitter-rc_switch-protocol) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](#remote_transmitter-rc_switch-protocol) for
     more info.
 
 - **rc_switch_type_b**: Trigger on a decoded RC Switch Type B remote code with the given data.
@@ -456,7 +456,7 @@ Remote code selection (exactly one of these has to be included):
   - **address** (**Required**, int): The address, int from 1 to 4.
   - **channel** (**Required**, int): The channel, int from 1 to 4.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol](#remote_transmitter-rc_switch-protocol) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](#remote_transmitter-rc_switch-protocol) for
     more info.
 
 - **rc_switch_type_c**: Trigger on a decoded RC Switch Type C remote code with the given data.
@@ -465,7 +465,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, int): The group. Range is 1 to 4.
   - **device** (**Required**, int): The device. Range is 1 to 4.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol](#remote_transmitter-rc_switch-protocol) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](#remote_transmitter-rc_switch-protocol) for
     more info.
 
 - **rc_switch_type_d**: Trigger on a decoded RC Switch Type D remote code with the given data.
@@ -473,7 +473,7 @@ Remote code selection (exactly one of these has to be included):
   - **group** (**Required**, int): The group. Range is 1 to 4.
   - **device** (**Required**, int): The device. Range is 1 to 3.
   - **state** (**Required**, boolean): The on/off state to trigger on.
-  - **protocol** (*Optional*): The RC Switch protocol to use, see [remote_transmitter-rc_switch-protocol](#remote_transmitter-rc_switch-protocol) for
+  - **protocol** (*Optional*): The RC Switch protocol to use, see [RC Switch Protocol](#remote_transmitter-rc_switch-protocol) for
     more info.
 
 - **roomba**: Trigger on a decoded Roomba remote code with the given data.
@@ -582,8 +582,8 @@ remote_transmitter:
 
 - {{< docref "index/" >}}
 - {{< docref "/components/remote_transmitter" >}}
-- [remote-setting-up-infrared](#remote-setting-up-infrared)
-- [remote-setting-up-rf](#remote-setting-up-rf)
+- [Setting up IR Devices](#remote-setting-up-infrared)
+- [Setting up RF Devices](#remote-setting-up-rf)
 - {{< docref "/components/rf_bridge" >}}
 - [RCSwitch](https://github.com/sui77/rc-switch) by [Suat Özgür](https://github.com/sui77)
 - {{< apiref "remote/remote_receiver.h" "remote/remote_receiver.h" >}}

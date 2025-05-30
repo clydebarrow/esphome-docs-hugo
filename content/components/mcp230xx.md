@@ -13,9 +13,9 @@ The Microchip MCP230xx series of general purpose, parallel I/O expansion for I²
 
 **Supported Variants :**
 
-- [mcp23008-label](#mcp23008-label)
-- [mcp23016-label](#mcp23016-label)
-- [mcp23017-label](#mcp23017-label)
+- [MCP23008 Component](#mcp23008-label)
+- [MCP23016 Component](#mcp23016-label)
+- [MCP23017 Component](#mcp23017-label)
 
 {{< anchor "mcp23008-label" >}}
 
@@ -58,7 +58,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The id to use for this MCP23008 component.
+- **id** (**Required**, [ID](#config-id)): The id to use for this MCP23008 component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x20`.
 - **open_drain_interrupt** (*Optional*, boolean): Configure the interrupt pin to open-drain mode.
@@ -67,7 +67,7 @@ binary_sensor:
 
 ### Pin configuration variables:
 
-- **mcp23xxx** (**Required**, [config-id](#config-id)): The id of the MCP23008 component.
+- **mcp23xxx** (**Required**, [ID](#config-id)): The id of the MCP23008 component.
 - **interrupt** (*Optional*): Set this pin to trigger the INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
 - **number** (**Required**, int): The pin number.
 - **inverted** (*Optional*, boolean): If all read and written values
@@ -118,13 +118,13 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The id to use for this MCP23016 component.
+- **id** (**Required**, [ID](#config-id)): The id to use for this MCP23016 component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x20`.
 
 ### Pin configuration variables:
 
-- **mcp23xxx** (**Required**, [config-id](#config-id)): The id of the MCP23016 component.
+- **mcp23xxx** (**Required**, [ID](#config-id)): The id of the MCP23016 component.
 - All other options from [Pin Schema](#config-pin_schema)
 
 
@@ -180,7 +180,7 @@ binary_sensor:
 ```
 ### Configuration variables:
 
-- **id** (**Required**, [config-id](#config-id)): The id to use for this MCP23017 component.
+- **id** (**Required**, [ID](#config-id)): The id to use for this MCP23017 component.
 - **address** (*Optional*, int): The I²C address of the driver.
   Defaults to `0x20`.
 - **open_drain_interrupt** (*Optional*, boolean): Configure interrupt pins to open-drain mode.
@@ -189,14 +189,14 @@ binary_sensor:
 
 ### Pin configuration variables:
 
-- **mcp23xxx** (**Required**, [config-id](#config-id)): The id of the MCP23017 component.
+- **mcp23xxx** (**Required**, [ID](#config-id)): The id of the MCP23017 component.
 - **interrupt** (*Optional*): Set this pin to trigger the port INT pin on the component. Can be one of `CHANGE`, `RISING`, `FALLING`.
 - All other options from [Pin Schema](#config-pin_schema)
 
 
 ## See Also
 
-- [i2c](#i2c)
+- [I²C Bus](#i2c)
 - {{< docref "switch/gpio" >}}
 - {{< docref "binary_sensor/gpio" >}}
 - {{< apiref "API Reference (MCP23008)" "mcp23008/mcp23008.h" >}}

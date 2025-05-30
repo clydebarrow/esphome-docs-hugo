@@ -100,14 +100,14 @@ sensor:
   kilovolt amps reactive hours (kVArh). All options from [Sensor](#config-sensor).
 - **export_reactive_energy** (*Optional*): Use the export reactive energy value of the sensor in
   kilovolt amps reactive hours (kVArh). All options from [Sensor](#config-sensor).
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
   sensor. Defaults to `60s`.
 - **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
   the same UART bus. You will need to set the address of each device manually. Defaults to `1`.
 
 ## See Also
 
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "sdm220m/sdm220m.h" "sdm220m/sdm220m.h" >}}
 
 

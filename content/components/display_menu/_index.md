@@ -79,7 +79,7 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **root_item_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the root menu item.
+- **root_item_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the root menu item.
 - **active** (*Optional*, boolean): Whether the menu should start as active, meaning accepting
   user interactions and displaying output. Defaults to `true`.
 - **mode** (*Optional*, enum): Defines the navigation logic. Defaults to `rotary`.
@@ -97,16 +97,16 @@ Configuration variables:
 Automations:
 
 - **on_enter** (*Optional*, [Automation](#automation)): An automation to perform
-  when the menu level (here the root one) is entered. See [display_menu-on_enter](#display_menu-on_enter).
+  when the menu level (here the root one) is entered. See [`on_enter`](#display_menu-on_enter).
 - **on_leave** (*Optional*, [Automation](#automation)): An automation to perform
   when the menu level is not displayed anymore.
-  See [display_menu-on_leave](#display_menu-on_leave).
+  See [`on_leave`](#display_menu-on_leave).
 
 ## Menu Items
 
 The component manages a hierarchy of menu items. The common configuration variables are:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **type** (**Required**, string): The type of the menu item (see below).
 - **text** (*Optional*, string, [templatable](#config-templatable)): The text displayed
   for the menu item. If a lambda is specified it gets an `it` argument pointing to
@@ -178,10 +178,10 @@ Configuration variables:
 Automations:
 
 - **on_enter** (*Optional*, [Automation](#automation)): An automation to perform
-  when the menu level is entered. See [display_menu-on_enter](#display_menu-on_enter).
+  when the menu level is entered. See [`on_enter`](#display_menu-on_enter).
 - **on_leave** (*Optional*, [Automation](#automation)): An automation to perform
   when the menu level is not displayed anymore.
-  See [display_menu-on_leave](#display_menu-on_leave).
+  See [`on_leave`](#display_menu-on_leave).
 
 ### Back
 
@@ -231,7 +231,7 @@ Configuration variables:
 
 - **immediate_edit** (*Optional*, boolean): Whether the item can be immediately edited when
   selected. See [Editing Values](#display_menu-edit_mode). Defaults to `false`.
-- **select** (**Required**, [config-id](#config-id)): A `select` component managing
+- **select** (**Required**, [ID](#config-id)): A `select` component managing
   the edited value.
 - **value_lambda** (*Optional*, [lambda](#config-lambda)):
   Lambda returning a string to be displayed as value. The lambda gets an `it` argument
@@ -241,13 +241,13 @@ Configuration variables:
 Automations:
 
 - **on_enter** (*Optional*, [Automation](#automation)): An automation to perform
-  when the editing mode is activated. See [display_menu-on_enter](#display_menu-on_enter).
+  when the editing mode is activated. See [`on_enter`](#display_menu-on_enter).
 - **on_leave** (*Optional*, [Automation](#automation)): An automation to perform
   when the editing mode is exited.
-  See [display_menu-on_leave](#display_menu-on_leave).
+  See [`on_leave`](#display_menu-on_leave).
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
   when the value is changed.
-  See [display_menu-on_value](#display_menu-on_value).
+  See [`on_value`](#display_menu-on_value).
 
 ### Number
 
@@ -296,7 +296,7 @@ Configuration variables:
 - **immediate_edit** (*Optional*, boolean): Whether the item can be immediately edited when
   selected. See [Editing Values](#display_menu-edit_mode). Ignored in the `rotary` mode.
   Defaults to `false`.
-- **number** (**Required**, [config-id](#config-id)): A `number` component managing
+- **number** (**Required**, [ID](#config-id)): A `number` component managing
   the edited value. If on entering the value is less than `min_value` or more than
   `max_value`, the value is capped to fall into the range.
 - **format** (*Optional*, string): A `printf`-like format string specifying
@@ -310,13 +310,13 @@ Configuration variables:
 Automations:
 
 - **on_enter** (*Optional*, [Automation](#automation)): An automation to perform
-  when the editing mode is activated. See [display_menu-on_enter](#display_menu-on_enter).
+  when the editing mode is activated. See [`on_enter`](#display_menu-on_enter).
 - **on_leave** (*Optional*, [Automation](#automation)): An automation to perform
   when the editing mode is exited.
-  See [display_menu-on_leave](#display_menu-on_leave).
+  See [`on_leave`](#display_menu-on_leave).
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
   when the value is changed.
-  See [display_menu-on_value](#display_menu-on_value).
+  See [`on_value`](#display_menu-on_value).
 
 ### Switch
 
@@ -353,7 +353,7 @@ Configuration variables:
   selected. See [Editing Values](#display_menu-edit_mode). Defaults to `false`.
 - **on_text** (*Optional*, string): The text for the `ON` state. Defaults to `On`.
 - **off_text** (*Optional*, string): The text for the `OFF` state. Defaults to `Off`.
-- **switch** (**Required**, [config-id](#config-id)): A `switch` component managing
+- **switch** (**Required**, [ID](#config-id)): A `switch` component managing
   the edited value.
 - **value_lambda** (*Optional*, [lambda](#config-lambda)):
   Lambda returning a string to be displayed as value. The lambda gets an `it` argument
@@ -362,13 +362,13 @@ Configuration variables:
 Automations:
 
 - **on_enter** (*Optional*, [Automation](#automation)): An automation to perform
-  when the editing mode is activated. See [display_menu-on_enter](#display_menu-on_enter).
+  when the editing mode is activated. See [`on_enter`](#display_menu-on_enter).
 - **on_leave** (*Optional*, [Automation](#automation)): An automation to perform
   when the editing mode is exited.
-  See [display_menu-on_leave](#display_menu-on_leave).
+  See [`on_leave`](#display_menu-on_leave).
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
   when the value is changed.
-  See [display_menu-on_value](#display_menu-on_value).
+  See [`on_value`](#display_menu-on_value).
 
 ### Command
 
@@ -388,7 +388,7 @@ Automations:
 
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
   when the menu item is clicked.
-  See [display_menu-on_value](#display_menu-on_value).
+  See [`on_value`](#display_menu-on_value).
 
 ### Custom
 
@@ -421,19 +421,19 @@ Configuration variables:
 Automations:
 
 - **on_enter** (*Optional*, [Automation](#automation)): An automation to perform
-  when the editing mode is activated. See [display_menu-on_enter](#display_menu-on_enter).
+  when the editing mode is activated. See [`on_enter`](#display_menu-on_enter).
 - **on_leave** (*Optional*, [Automation](#automation)): An automation to perform
   when the editing mode is exited.
-  See [display_menu-on_leave](#display_menu-on_leave).
+  See [`on_leave`](#display_menu-on_leave).
 - **on_value** (*Optional*, [Automation](#automation)): An automation to perform
   when the value is changed.
-  See [display_menu-on_value](#display_menu-on_value).
+  See [`on_value`](#display_menu-on_value).
 - **on_next** (*Optional*, [Automation](#automation)): An automation to perform
   when the user navigates to the next value.
-  See [display_menu-on_next](#display_menu-on_next).
+  See [`on_next`](#display_menu-on_next).
 - **on_prev** (*Optional*, [Automation](#automation)): An automation to perform
   when the user navigates to the previous value.
-  See [display_menu-on_prev](#display_menu-on_prev).
+  See [`on_prev`](#display_menu-on_prev).
 
 ## Automations
 
@@ -554,7 +554,7 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to navigate.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to navigate.
 
 {{< anchor "display_menu-down_action" >}}
 
@@ -574,7 +574,7 @@ sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to navigate.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to navigate.
 
 {{< anchor "display_menu-left_action" >}}
 
@@ -597,7 +597,7 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to navigate.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to navigate.
 
 {{< anchor "display_menu-right_action" >}}
 
@@ -619,7 +619,7 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to navigate.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to navigate.
 
 {{< anchor "display_menu-enter_action" >}}
 
@@ -643,7 +643,7 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to navigate.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to navigate.
 
 .. display_menu-show_action:
 
@@ -667,7 +667,7 @@ on_press:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to show.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to show.
 
 .. display_menu-hide_action:
 
@@ -689,7 +689,7 @@ lcd_menu:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to hide.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to hide.
 
 .. display_menu-show_main_action:
 
@@ -710,7 +710,7 @@ lcd_menu:
 ```
 Configuration variables:
 
-- **id** (*Optional*, [config-id](#config-id)): The ID of the menu to hide.
+- **id** (*Optional*, [ID](#config-id)): The ID of the menu to hide.
 
 {{< anchor "display_menu-is_active" >}}
 

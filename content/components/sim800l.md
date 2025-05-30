@@ -49,12 +49,12 @@ logger:
 ```
 Configuration variables:
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **on_sms_received** (*Optional*, [Automation](#automation)): An action to be
-  performed when an SMS is received. See [sim800l-on_sms_received](#sim800l-on_sms_received).
+  performed when an SMS is received. See [`on_sms_received` Trigger](#sim800l-on_sms_received).
 - **on_incoming_call** (*Optional*, [Automation](#automation)): An action to be
-  performed when a call is received. See [sim800l-on_incoming_call](#sim800l-on_incoming_call).
+  performed when a call is received. See [`on_incoming_call` Trigger](#sim800l-on_incoming_call).
 - **on_call_connected** (*Optional*, [Automation](#automation)): An action to be
   performed when a call is connected, either because an outgoing call accepted is
   accepted or an incoming call answered.
@@ -168,7 +168,7 @@ Configuration options:
 - **recipient** (**Required**, string, [templatable](#config-templatable)): The message recipient.
   number.
 - **message** (**Required**, string, [templatable](#config-templatable)): The message content.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the SIM800L if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the SIM800L if you have multiple components.
 
 
 {{< anchor "sim800l-dial_action" >}}
@@ -187,7 +187,7 @@ on_...:
 Configuration options:
 
 - **recipient** (**Required**, string, [templatable](#config-templatable)): The number to dial.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the SIM800L if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the SIM800L if you have multiple components.
 
 
 ## `sim800l.connect` Action

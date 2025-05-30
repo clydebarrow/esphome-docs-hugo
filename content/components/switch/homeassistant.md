@@ -15,7 +15,7 @@ states and allow **control** via your Home Assistant instance using the {{< docr
 {{< note >}}
 Although you might not plan to *export* states from the node and you do not need an entity of the node
 in Home Assistant, this component still requires you to register the node under Home Assistant. See:
-[connecting-your-device-to-home-assistant](#connecting-your-device-to-home-assistant).
+[Connecting your device to Home Assistant](#connecting-your-device-to-home-assistant).
 
 {{< /note >}}
 ```yaml
@@ -46,6 +46,6 @@ The following entity domains from Home Assistant are supported by this platform.
 
 ## See Also
 
-- [automation](#automation)
+- [Automation](#automation)
 - {{< apiref "homeassistant/switch/homeassistant_switch.h" "homeassistant/switch/homeassistant_switch.h" >}}
 

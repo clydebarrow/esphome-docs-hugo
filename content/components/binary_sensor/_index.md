@@ -43,25 +43,25 @@ you want the binary sensor to use that name, you can set `name: None`.
   for a list of available options.
 - **icon** (*Optional*, icon): Manually set the icon to use for the binary sensor in the frontend.
 - **filters** (*Optional*, list): A list of filters to apply on the binary sensor values such as
-  inverting signals. See [binary_sensor-filters](#binary_sensor-filters).
+  inverting signals. See [Binary Sensor Filters](#binary_sensor-filters).
 
 Automations:
 
 - **on_press** (*Optional*, [Automation](#automation)): An automation to perform
-  when the button is pressed. See [binary_sensor-on_press](#binary_sensor-on_press).
+  when the button is pressed. See [`on_press`](#binary_sensor-on_press).
 - **on_release** (*Optional*, [Automation](#automation)): An automation to perform
-  when the button is released. See [binary_sensor-on_release](#binary_sensor-on_release).
+  when the button is released. See [`on_release`](#binary_sensor-on_release).
 - **on_state** (*Optional*, [Automation](#automation)): An automation to perform
-  when a state change is published. See [binary_sensor-on_state](#binary_sensor-on_state).
+  when a state change is published. See [`on_state`](#binary_sensor-on_state).
 - **on_click** (*Optional*, [Automation](#automation)): An automation to perform
   when the button is held down for a specified period of time.
-  See [binary_sensor-on_click](#binary_sensor-on_click).
+  See [`on_click`](#binary_sensor-on_click).
 - **on_double_click** (*Optional*, [Automation](#automation)): An automation to perform
   when the button is pressed twice for specified periods of time.
-  See [binary_sensor-on_double_click](#binary_sensor-on_double_click).
+  See [`on_double_click`](#binary_sensor-on_double_click).
 - **on_multi_click** (*Optional*, [Automation](#automation)): An automation to perform
   when the button is pressed in a specific sequence.
-  See [binary_sensor-on_multi_click](#binary_sensor-on_multi_click).
+  See [`on_multi_click`](#binary_sensor-on_multi_click).
 
 Advanced options:
 
@@ -196,9 +196,9 @@ set to default values.
 
 Configuration variables:
 
-- **delay** (*Optional*, [config-time](#config-time)): Delay to proceed to the next timing. Defaults to `1s`.
-- **time_off** (*Optional*, [config-time](#config-time)): Interval to hold the output at OFF. Defaults to `100ms`.
-- **time_on** (*Optional*, [config-time](#config-time)): Interval to hold the output at ON. Defaults to `900ms`.
+- **delay** (*Optional*, [Time](#config-time)): Delay to proceed to the next timing. Defaults to `1s`.
+- **time_off** (*Optional*, [Time](#config-time)): Interval to hold the output at OFF. Defaults to `100ms`.
+- **time_on** (*Optional*, [Time](#config-time)): Interval to hold the output at ON. Defaults to `900ms`.
 
 ### `lambda`
 
@@ -299,12 +299,12 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **min_length** (*Optional*, [config-time](#config-time)): The minimum duration the click should last. Defaults to `50ms`.
-- **max_length** (*Optional*, [config-time](#config-time)): The maximum duration the click should last. Defaults to `350ms`.
+- **min_length** (*Optional*, [Time](#config-time)): The minimum duration the click should last. Defaults to `50ms`.
+- **max_length** (*Optional*, [Time](#config-time)): The maximum duration the click should last. Defaults to `350ms`.
 - See [Automation](#automation).
 
 {{< note >}}
-Multiple `on_click` entries can be defined like this (see also [binary_sensor-on_multi_click](#binary_sensor-on_multi_click)
+Multiple `on_click` entries can be defined like this (see also [`on_multi_click`](#binary_sensor-on_multi_click)
 for more complex matching):
 
 ```yaml
@@ -344,8 +344,8 @@ binary_sensor:
 ```
 Configuration variables:
 
-- **min_length** (*Optional*, [config-time](#config-time)): The minimum duration the click should last. Defaults to `50ms`.
-- **max_length** (*Optional*, [config-time](#config-time)): The maximum duration the click should last. Defaults to `350ms`.
+- **min_length** (*Optional*, [Time](#config-time)): The minimum duration the click should last. Defaults to `50ms`.
+- **max_length** (*Optional*, [Time](#config-time)): The maximum duration the click should last. Defaults to `350ms`.
 - See [Automation](#automation).
 
 {{< anchor "binary_sensor-on_multi_click" >}}
@@ -378,7 +378,7 @@ Configuration variables:
   - `<ON/OFF> for at least <TIME>`
   - `<ON/OFF> for at most <TIME>`
 
-- **invalid_cooldown** (*Optional*, [config-time](#config-time)): If a multi click is started, but the timing
+- **invalid_cooldown** (*Optional*, [Time](#config-time)): If a multi click is started, but the timing
   set in `timing` does not match, a "cool down" period will be activated during which no timing
   will be matched. Defaults to `1s`.
 - See [Automation](#automation).

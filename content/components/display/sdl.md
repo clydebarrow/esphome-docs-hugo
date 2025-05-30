@@ -35,11 +35,11 @@ display:
 ### Configuration variables:
 
 - **lambda** (*Optional*, [lambda](#config-lambda)): The lambda to use for rendering the content on the display.
-  See [display-engine](#display-engine) for more information.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to re-draw the screen. Defaults to `1s`.
+  See [Display Rendering Engine](#display-engine) for more information.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to re-draw the screen. Defaults to `1s`.
 - **sdl_options** (*Optional*, string): Build arguments if required to specify include or library paths. Should not be required if SDL2 is properly installed.
-- **pages** (*Optional*, list): Show pages instead of a single lambda. See [display-pages](#display-pages).
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **pages** (*Optional*, list): Show pages instead of a single lambda. See [Display Pages](#display-pages).
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 
 
 {{< note >}}

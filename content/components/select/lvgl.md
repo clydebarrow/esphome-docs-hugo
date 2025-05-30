@@ -12,7 +12,7 @@ params:
 The `lvgl` select platform creates a select from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are [lvgl-widget-dropdown](#lvgl-widget-dropdown) and [lvgl-widget-roller](#lvgl-widget-roller). A single select supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome select component.
+Supported widgets are [`dropdown`](#lvgl-widget-dropdown) and [`roller`](#lvgl-widget-roller). A single select supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome select component.
 
 ## Configuration variables:
 

@@ -30,28 +30,28 @@ you want the switch to use that name, you can set `name: None`.
 
 {{< /note >}}
 - **on_state** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm changes state. See [alarm_control_panel_on_state_trigger](#alarm_control_panel_on_state_trigger).
+  when the alarm changes state. See [`on_state` Trigger](#alarm_control_panel_on_state_trigger).
 - **on_arming** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm state changes to `arming`. See [alarm_control_panel_on_arming_trigger](#alarm_control_panel_on_arming_trigger).
+  when the alarm state changes to `arming`. See [`on_arming` Trigger](#alarm_control_panel_on_arming_trigger).
 - **on_pending** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm state changes to `pending`. See [alarm_control_panel_on_pending_trigger](#alarm_control_panel_on_pending_trigger).
+  when the alarm state changes to `pending`. See [`on_pending` Trigger](#alarm_control_panel_on_pending_trigger).
 - **on_armed_home** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm state changes to `armed_home`. See [alarm_control_panel_on_armed_home_trigger](#alarm_control_panel_on_armed_home_trigger).
+  when the alarm state changes to `armed_home`. See [`on_armed_home` Trigger](#alarm_control_panel_on_armed_home_trigger).
 - **on_armed_night** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm state changes to `armed_night`. See [alarm_control_panel_on_armed_night_trigger](#alarm_control_panel_on_armed_night_trigger).
+  when the alarm state changes to `armed_night`. See [`on_armed_night` Trigger](#alarm_control_panel_on_armed_night_trigger).
 - **on_armed_away** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm state changes to `armed_away`. See [alarm_control_panel_on_armed_away_trigger](#alarm_control_panel_on_armed_away_trigger).
+  when the alarm state changes to `armed_away`. See [`on_armed_away` Trigger](#alarm_control_panel_on_armed_away_trigger).
 - **on_triggered** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm triggers. See [alarm_control_panel_on_triggered_trigger](#alarm_control_panel_on_triggered_trigger).
+  when the alarm triggers. See [`on_triggered` Trigger](#alarm_control_panel_on_triggered_trigger).
 - **on_disarmed** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm state changes to `disarmed`. See [alarm_control_panel_on_disarmed_trigger](#alarm_control_panel_on_disarmed_trigger).
+  when the alarm state changes to `disarmed`. See [`on_disarmed` Trigger](#alarm_control_panel_on_disarmed_trigger).
 - **on_cleared** (*Optional*, [Action](#config-action)): An automation to perform
-  when the alarm clears. See [alarm_control_panel_on_cleared_trigger](#alarm_control_panel_on_cleared_trigger).
+  when the alarm clears. See [`on_cleared` Trigger](#alarm_control_panel_on_cleared_trigger).
 - **on_ready** (*Optional*, [Action](#config-action)): An automation to perform
-  when the logical 'and' of all the zone sensors change state. See [alarm_control_panel_on_ready_trigger](#alarm_control_panel_on_ready_trigger).
+  when the logical 'and' of all the zone sensors change state. See [`on_ready` Trigger](#alarm_control_panel_on_ready_trigger).
 - **on_chime** (*Optional*, [Action](#config-action)): An automation to perform
   when a zone has been marked as chime in the configuration, and it changes from closed to open.
-  See [alarm_control_panel_on_chime_trigger](#alarm_control_panel_on_chime_trigger).
+  See [`on_chime` Trigger](#alarm_control_panel_on_chime_trigger).
 - If Webserver enabled and version 3 is selected, All other options from Webserver Component.. See [Webserver Version 3](#config-webserver-version-3-options).
 - If MQTT enabled, all other options from [MQTT Component](#config-mqtt-component).
 

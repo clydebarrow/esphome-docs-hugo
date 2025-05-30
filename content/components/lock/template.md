@@ -89,7 +89,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (**Required**, [config-id](#config-id)): The ID of the template lock.
+- **id** (**Required**, [ID](#config-id)): The ID of the template lock.
 - **state** (**Required**, boolean, [templatable](#config-templatable)):
   The state to publish.
 

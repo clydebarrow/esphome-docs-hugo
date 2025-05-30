@@ -40,10 +40,10 @@ rf_bridge:
 ```
 ## Configuration variables:
 
-- **uart_id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the UART hub.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID used for code generation.
+- **uart_id** (*Optional*, [ID](#config-id)): Manually specify the ID of the UART hub.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 - **on_code_received** (*Optional*, [Automation](#automation)): An action to be
-  performed when a code is received. See [rf_bridge-on_code_received](#rf_bridge-on_code_received).
+  performed when a code is received. See [`on_code_received` Trigger](#rf_bridge-on_code_received).
 
 {{< anchor "rf_bridge-on_code_received" >}}
 
@@ -87,7 +87,7 @@ Configuration options:
 - **low** (**Required**, int, [templatable](#config-templatable)): RF Low timing
 - **high** (**Required**, int, [templatable](#config-templatable)): RF high timing
 - **code** (**Required**, int, [templatable](#config-templatable)): RF code
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -105,7 +105,7 @@ Send a raw command to the onboard EFM8BB1 chip.
 You can see a list of available commands and format in the [Portisch Wiki](https://github.com/Portisch/RF-Bridge-EFM8BB1/wiki/Commands)
 
 This can be used to send raw RF codes in automation's, mainly for protocols that are not supported.
-If you have *Portisch* firmware installed, these raw codes can be obtained with the help of [rf_bridge-start_bucket_sniffing_action](#rf_bridge-start_bucket_sniffing_action)
+If you have *Portisch* firmware installed, these raw codes can be obtained with the help of [`rf_bridge.start_bucket_sniffing` Action](#rf_bridge-start_bucket_sniffing_action)
 
 ```yaml
 on_...:
@@ -117,7 +117,7 @@ on_...:
 Configuration options:
 
 - **raw** (**Required**, string, [templatable](#config-templatable)): RF raw string
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -132,7 +132,7 @@ id(rf_bridge).send_raw("AAA5070008001000ABC12355");
 ## `rf_bridge.learn` Action
 
 Tell the RF Bridge to learn new protocol timings using this action in automations.
-A new code with timings will be returned to [rf_bridge-on_code_received](#rf_bridge-on_code_received)
+A new code with timings will be returned to [`on_code_received` Trigger](#rf_bridge-on_code_received)
 
 ```yaml
 on_...:
@@ -142,7 +142,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -162,7 +162,7 @@ ESPHome is able to receive the extra protocols that can be decoded as well as ac
 
 ### `on_advanced_code_received` Trigger
 
-Similar to [rf_bridge-on_code_received](#rf_bridge-on_code_received), this trigger receives the codes after advanced sniffing is started.
+Similar to [`on_code_received` Trigger](#rf_bridge-on_code_received), this trigger receives the codes after advanced sniffing is started.
 To use the code, use a [lambda](#config-lambda) template, the code and the corresponding protocol and length
 are available inside that lambda under the variables named `code`, `protocol` and `length`.
 
@@ -196,7 +196,7 @@ Configuration options:
 - **length** (**Required**, int, [templatable](#config-templatable)): Length of code plus protocol
 - **protocol** (**Required**, int, [templatable](#config-templatable)): RF Protocol
 - **code** (**Required**, string, [templatable](#config-templatable)): RF code
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -211,7 +211,7 @@ id(rf_bridge).send_advanced_code(0x04, 0x01, "ABC123");
 ### `rf_bridge.start_advanced_sniffing` Action
 
 Tell the RF Bridge to listen for the advanced/extra protocols defined in the portisch firmware.
-The decoded codes with length and protocol will be returned to [rf_bridge-on_advanced_code_received](#rf_bridge-on_advanced_code_received)
+The decoded codes with length and protocol will be returned to [`on_advanced_code_received` Trigger](#rf_bridge-on_advanced_code_received)
 
 ```yaml
 on_...:
@@ -221,7 +221,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -245,7 +245,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -260,7 +260,7 @@ id(rf_bridge).stop_advanced_sniffing();
 ### `rf_bridge.start_bucket_sniffing` Action
 
 Tell the RF Bridge to dump raw sniffing data. Useful for getting codes for unsupported protocols.
-The raw data will be available in the log and can later be used with [rf_bridge-send_raw_action](#rf_bridge-send_raw_action) action.
+The raw data will be available in the log and can later be used with [`rf_bridge.send_raw` Action](#rf_bridge-send_raw_action) action.
 
 {{< note >}}
 A conversion from *B1* (received) raw format to *B0* (send) raw command format should be applied.
@@ -280,7 +280,7 @@ on_...:
 ```
 Configuration options:
 
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -307,7 +307,7 @@ on_...:
 Configuration options:
 
 - **duration** (**Required**, string, [templatable](#config-templatable)): beep duration in milliseconds.
-- **id** (*Optional*, [config-id](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
+- **id** (*Optional*, [ID](#config-id)): Manually specify the ID of the RF Bridge if you have multiple components.
 
 {{< note >}}
 This action can also be written in [lambdas](#config-lambda):
@@ -380,7 +380,7 @@ automation:
 ## See Also
 
 - {{< apiref "rf_bridge/rf_bridge.h" "rf_bridge/rf_bridge.h" >}}
-- [lambda_magic_rf_queues](#lambda_magic_rf_queues)
+- [Delaying Remote Transmissions](#lambda_magic_rf_queues)
 - [RF-Bridge-EFM8BB1](https://github.com/Portisch/RF-Bridge-EFM8BB1) by [Portisch](https://github.com/Portisch)
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/remote_receiver" >}}

@@ -12,7 +12,7 @@ params:
 The `lvgl` number platform creates a number component from an LVGL widget
 and requires {{< docref "/components/lvgl/index" "LVGL" >}} to be configured.
 
-Supported widgets are [lvgl-widget-arc](#lvgl-widget-arc), [lvgl-widget-bar](#lvgl-widget-bar), [lvgl-widget-slider](#lvgl-widget-slider) and [lvgl-widget-spinbox](#lvgl-widget-spinbox). A single number supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome number component.
+Supported widgets are [`arc`](#lvgl-widget-arc), [`bar`](#lvgl-widget-bar), [`slider`](#lvgl-widget-slider) and [`spinbox`](#lvgl-widget-spinbox). A single number supports only a single widget; in other words, it's not possible to have multiple widgets associated with a single ESPHome number component.
 
 ## Configuration variables:
 

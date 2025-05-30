@@ -36,16 +36,16 @@ esp32_ble_server:
 ```
 ## Configuration variables:
 
-- **manufacturer** (*Optional*, [esp32_ble_server-value](#esp32_ble_server-value)): The name of the manufacturer/firmware creator. Defaults to `ESPHome`.
-- **model** (*Optional*, [esp32_ble_server-value](#esp32_ble_server-value)): The model name of the device. Defaults to the project's name defined in the [core configuration](#esphome-creators_project) if present, otherwise to the friendly name of the `board` chosen in the [core configuration](#esphome-configuration_variables).
+- **manufacturer** (*Optional*, [Value Configuration](#esp32_ble_server-value)): The name of the manufacturer/firmware creator. Defaults to `ESPHome`.
+- **model** (*Optional*, [Value Configuration](#esp32_ble_server-value)): The model name of the device. Defaults to the project's name defined in the [core configuration](#esphome-creators_project) if present, otherwise to the friendly name of the `board` chosen in the [core configuration](#esphome-configuration_variables).
 - **appearance** (*Optional*, int): Sets the [appearance](https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/core/appearance_values.yaml) of the device (included in advertising data.) Defaults to `0`.
-- **firmware_version** (*Optional*, [esp32_ble_server-value](#esp32_ble_server-value)): The firmware version of the device. Defaults to the project's version defined in the [core configuration](#esphome-creators_project) if present, otherwise to the ESPHome version.
+- **firmware_version** (*Optional*, [Value Configuration](#esp32_ble_server-value)): The firmware version of the device. Defaults to the project's version defined in the [core configuration](#esphome-creators_project) if present, otherwise to the ESPHome version.
 - **manufacturer_data** (*Optional*, list of bytes): The manufacturer-specific data to include in the advertising
   packet. Should be a list of bytes, where the first two are the little-endian representation of the 16-bit
   manufacturer ID as assigned by the Bluetooth SIG.
 - **on_connect** (*Optional*, [Automation](#automation)): An action to be performed when a client connects to the BLE server. It provides the `id` variable which contains the ID of the client that connected.
 - **on_disconnect** (*Optional*, [Automation](#automation)): An action to be performed when a client disconnects from the BLE server. It provides the `id` variable which contains the ID of the client that disconnected.
-- **services** (*Optional*, list of [esp32_ble_server-service](#esp32_ble_server-service)): A list of services to expose on the BLE GATT server.
+- **services** (*Optional*, list of [Service Configuration](#esp32_ble_server-service)): A list of services to expose on the BLE GATT server.
 
 
 {{< anchor "esp32_ble_server-service" >}}
@@ -70,7 +70,7 @@ Configuration variables:
 
 - **uuid** (**Required**, string, int): The UUID of the service.
 - **advertise** (*Optional*, boolean): If the service should be advertised. Defaults to `false`.
-- **characteristics** (*Optional*, list of [esp32_ble_server-characteristic](#esp32_ble_server-characteristic)): A list of characteristics to expose in this service.
+- **characteristics** (*Optional*, list of [Characteristic Configuration](#esp32_ble_server-characteristic)): A list of characteristics to expose in this service.
 
 
 {{< anchor "esp32_ble_server-characteristic" >}}
@@ -103,16 +103,16 @@ Configuration variables:
 
 - **id** (*Optional*, string): An ID to refer to this characteristic in automations.
 - **uuid** (**Required**, string, int): The UUID of the characteristic.
-- **description** (*Optional*, [esp32_ble_server-value](#esp32_ble_server-value)): The description of the characteristic - not templatable. It will add a `CUD` descriptor (0x2901) to the characteristic with the value of the description.
+- **description** (*Optional*, [Value Configuration](#esp32_ble_server-value)): The description of the characteristic - not templatable. It will add a `CUD` descriptor (0x2901) to the characteristic with the value of the description.
 - **read** (*Optional*, boolean): If the characteristic should be readable. Defaults to `false`.
 - **write** (*Optional*, boolean): If the characteristic should be writable. Defaults to `false`.
 - **broadcast** (*Optional*, boolean): If the characteristic should be broadcast. Defaults to `false`.
 - **notify** (*Optional*, boolean): If the characteristic supports notifications. If `true`, a `CCCD` descriptor will be automatically added to the characteristic. Defaults to `false`.
 - **indicate** (*Optional*, boolean): If the characteristic supports indications. If `true`, a `CCCD` descriptor will be automatically added to the characteristic. Defaults to `false`.
 - **write_no_response** (*Optional*, boolean): If the characteristic should be writable without a response. Defaults to `false`.
-- **value** (*Optional*, [esp32_ble_server-value](#esp32_ble_server-value)): The value of the characteristic.
-- **descriptors** (*Optional*, list of [esp32_ble_server-descriptor](#esp32_ble_server-descriptor)): A list of descriptors to expose in this characteristic.
-- **on_write** (*Optional*, [Automation](#automation)): An action to be performed when the characteristic is written to. The characteristic must have the `write` property. See [esp32_ble_server-characteristic-on_write](#esp32_ble_server-characteristic-on_write).
+- **value** (*Optional*, [Value Configuration](#esp32_ble_server-value)): The value of the characteristic.
+- **descriptors** (*Optional*, list of [Descriptor Configuration](#esp32_ble_server-descriptor)): A list of descriptors to expose in this characteristic.
+- **on_write** (*Optional*, [Automation](#automation)): An action to be performed when the characteristic is written to. The characteristic must have the `write` property. See [`on_write` Trigger](#esp32_ble_server-characteristic-on_write).
 
 
 {{< anchor "esp32_ble_server-descriptor" >}}
@@ -137,7 +137,7 @@ Configuration variables:
 
 - **id** (*Optional*, string): An ID to refer to this descriptor in automations.
 - **uuid** (**Required**, string, int): The UUID of the descriptor.
-- **value** (**Required**, [esp32_ble_server-value](#esp32_ble_server-value)): The value of the descriptor. [templatable](#config-templatable) values are not allowed. In order to set the value of a descriptor dynamically, use the [esp32_ble_server-descriptor-set_value](#esp32_ble_server-descriptor-set_value) action.
+- **value** (**Required**, [Value Configuration](#esp32_ble_server-value)): The value of the descriptor. [templatable](#config-templatable) values are not allowed. In order to set the value of a descriptor dynamically, use the [`ble_server.descriptor.set_value` Action](#esp32_ble_server-descriptor-set_value) action.
 
 
 {{< anchor "esp32_ble_server-value" >}}
@@ -224,7 +224,7 @@ on_...:
 Configuration variables:
 
 - **id** (**Required**, string): The ID of the characteristic to set the value of.
-- **value** (**Required**, [esp32_ble_server-value](#esp32_ble_server-value)): The new value of the characteristic.
+- **value** (**Required**, [Value Configuration](#esp32_ble_server-value)): The new value of the characteristic.
 
 
 ## `ble_server.characteristic.notify` Action
@@ -259,7 +259,7 @@ on_...:
 Configuration variables:
 
 - **id** (**Required**, string): The ID of the descriptor to set the value of.
-- **value** (**Required**, [esp32_ble_server-value](#esp32_ble_server-value)): The new value of the descriptor.
+- **value** (**Required**, [Value Configuration](#esp32_ble_server-value)): The new value of the descriptor.
 
 
 ## See Also

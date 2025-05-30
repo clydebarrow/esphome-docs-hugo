@@ -42,11 +42,11 @@ sensor:
 - **temperature** (*Optional*): All options from [Sensor](#config-sensor).
 - **pressure** (*Optional*): All options from [Sensor](#config-sensor).
 - **k_value** (*Optional*, int): The K value comes from the datasheet. It will default to 4096 if not specified, which is appropriate for a sensor with a range of +/- 0.5kPa.
-- **update_interval** (*Optional*, [config-time](#config-time)): The interval to check the sensor. Defaults to `60s`.
+- **update_interval** (*Optional*, [Time](#config-time)): The interval to check the sensor. Defaults to `60s`.
 
 
 ## See Also
 - [esphome-pressure device](https://github.com/gcormier/esphome-pressure/)
-- [sensor-filters](#sensor-filters)
+- [Sensor Filters](#sensor-filters)
 - {{< apiref "sdp3x/sdp3x.h" "sdp3x/sdp3x.h" >}}
 

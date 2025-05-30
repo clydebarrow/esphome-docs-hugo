@@ -3,8 +3,8 @@
 {{ $style := .style }}
 {{ $thumbSize := .thumbSize | default "180x q20" }}
 {{/* Check if image exists in local images directory first */}}
-{{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) (strings.TrimPrefix "images/" .src) -}}
-{{- $globalPath := printf "images/%s" (strings.TrimPrefix "images/" .src) -}}
+{{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) (strings.TrimPrefix "/images/" .src) -}}
+{{- $globalPath := printf "images/%s" (strings.TrimPrefix "/images/" .src) -}}
 
 {{ $image := resources.Get $componentPath }}
 {{ if not $image }}
@@ -17,7 +17,7 @@
     {{ warnf "Unresolved image '%s' in page '%s'" .src .Page.File.Path }}
 {{ end }}
 
-{{ if and $image (eq $ext ".svg") }}
+{{- if and $image (eq $ext ".svg") -}}
     <img src="{{ $image.RelPermalink }}" {{ if .width }}width="{{.width}}" {{ end }} alt="{{ .alt }}" {{ $style }}/>
 {{ end }}
 {{ if and $image (in (split ".jpeg,.jpg,.png" ",") $ext) }}

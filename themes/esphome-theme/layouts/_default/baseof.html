@@ -151,7 +151,10 @@
                 <h3>{{ .Name }}</h3>
                 <ul>
                 {{ range .Children }}
-                    <li><a href="{{ .URL | relURL }}"><i class="{{ .Post }}"></i>{{ .Name}}</a></li>
+                    <li><a href="{{ .URL | relURL }}">
+                        {{ os.ReadFile (printf "static/images/icons/%s.svg" .Post) | safeHTML }}
+                        {{ .Name}}
+                    </a></li>
                 {{ end }}
                 </ul>
             </div>

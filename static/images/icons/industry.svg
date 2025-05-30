@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-  <path d="M128 32c-17.7 0-32 14.3-32 32V224H64V96c0-17.7-14.3-32-32-32S0 78.3 0 96V224v96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224c0-17.7-14.3-32-32-32s-32 14.3-32 32v96H384V224c0-17.7-14.3-32-32-32s-32 14.3-32 32v96H192V96c0-17.7-14.3-32-32-32s-32 14.3-32 32V320v96H128V96c0-17.7-14.3-32-32-32z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 32C145.7 32 160 46.33 160 64V215.4L316.6 131C332.6 122.4 352 134 352 152.2V215.4L508.6 131C524.6 122.4 544 134 544 152.2V432C544 458.5 522.5 480 496 480H80C53.49 480 32 458.5 32 432V64C32 46.33 46.33 32 64 32H128z"/></svg>

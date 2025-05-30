@@ -1700,6 +1700,7 @@ def process_directory(input_dir, output_dir):
 
     for root, _, files in os.walk(input_dir):
         for file in files:
+            # Skip the top-level index
             if file.endswith('.rst'):
                 fullpath = os.path.join(root, file)
                 included_files.update(set(find_included_files(fullpath)))
@@ -1707,6 +1708,8 @@ def process_directory(input_dir, output_dir):
     for root, _, files in os.walk(input_dir):
         for file in files:
             fullpath = os.path.join(root, file)
+            if fullpath == "./esphome-docs/index.rst":
+                continue
             if fullpath in included_files:
                 print("Skipping included file:", fullpath)
             elif file.endswith('.rst'):

@@ -753,7 +753,7 @@ main {
   border-color: var(--border-color);
 }
 
-.sidebar svg, .sidebar img {
+.sidebar-resource svg, .sidebar-resource img {
   height: .8em;
   width: .8em;
   margin-right: 0.5em;

@@ -128,7 +128,3 @@ id(light_1).set_level(0.5);
 - {{< docref "/components/fan/speed" >}}
 - {{< apiref "binary_output.h" "output/binary_output.h" >}},
   {{< apiref "float_output.h" "output/float_output.h" >}}
-
-
-
-

@@ -289,4 +289,4 @@ See Also
 - {{< docref "/components/sensor/packet_transport" >}}
 - [Automation](#automation)
 - {{< apiref "packet_transport/packet_transport.h" "packet_transport/packet_transport.h" >}}
-- :ghedit:`Edit`
+

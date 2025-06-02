@@ -442,8 +442,6 @@ def convert_rst_to_md(lines, filename):
 
             processed_line = process_inline_markup(fixed_line)
             processed_line = replace_substitutions(processed_line)
-            if ":ghedit:" in processed_line:
-                processed_line = ""
 
 
             # Fix image paths in markdown content
@@ -638,7 +636,8 @@ def process_inline_markup(line):
     processed_line = re.sub(r'`\s*([^`]*[^` ]+)\s*<([^`]+)>`_+', fr'[\1](\2)', processed_line)
     processed_line = re.sub(r'^\.\. _([^:]+):\s*(http.*)$', r'[\1](\2)', processed_line)
 
-    # Match [1]_, [#]_, or [#label]_ formats and convert to [^1], [^label], etc.
+    if ":ghedit:" in processed_line:
+        processed_line = ""
 
     return processed_line
 

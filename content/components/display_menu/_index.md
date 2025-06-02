@@ -730,5 +730,3 @@ on_press:
 ## See Also
 
 - {{< apiref "display_menu_base/display_menu_base.h" "display_menu_base/display_menu_base.h" >}}
-
-

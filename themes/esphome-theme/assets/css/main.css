@@ -613,7 +613,7 @@ main {
   border-color: var(--border-color);
 }
 
-.sidebar svg {
+.sidebar svg, img {
   height: .8em;
   width: .8em;
   margin-right: 0.5em;

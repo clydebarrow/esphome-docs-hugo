@@ -487,20 +487,6 @@ img {
     color: #ececec;
   }
 
-  .sidebar {
-    background: var(--sidebar-background);
-    color: var(--text-color);
-    border-color: #222b36;
-  }
-
-  .sidebar a {
-    color: #99e6fc;
-  }
-
-  .sidebar a:hover {
-    color: #fff;
-  }
-
   .content {
     background: #181c20;
     color: #ececec;
@@ -606,6 +592,7 @@ main {
 }
 
 .sidebar {
+  background: var(--sidebar-background);
   width: 300px;
   flex-shrink: 0;
   background: var(--sidebar-background);
@@ -613,7 +600,7 @@ main {
   border-color: var(--border-color);
 }
 
-.sidebar svg, img {
+.sidebar svg, .sidebar img {
   height: .8em;
   width: .8em;
   margin-right: 0.5em;
@@ -1219,7 +1206,6 @@ figcaption {
   inset: 0;
   background: rgba(20,20,20,0.07);
   display: none;
-  z-index: 999;
 }
 
 .overlay.show {
@@ -1227,14 +1213,17 @@ figcaption {
 }
 
 @media (min-width: 1001px) {
-  .overlay.show {
+  .overlay.show, .sidebar-mobile {
     display: none;
   }
 }
 /* Responsive */
 /* @media (max-width: var(--mobile-width-stop)) {  // sadly does not work */
 @media (max-width: 1000px) {
-  .sidebar {
+  .sidebar-fixed {
+    display: none;
+  }
+  .sidebar-mobile {
     margin-top: calc(var(--nav-height) + 32px); /* Add space for the fixed header */
   }
   .sticky-nav {
@@ -1265,7 +1254,6 @@ figcaption {
 
   .nav-links {
     position: absolute;
-    display: flex;
     top: 100%;
     right: 0;
     background-color: var(--nav-bg);
@@ -1273,14 +1261,15 @@ figcaption {
     align-items: stretch;
     padding: 1em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    opacity: 0;
+    z-index: 0;
+    display: none;
     height: 0;
   }
 
   .nav-links.active {
     display: flex;
     opacity: 100%;
+    z-index: 1000;
     height: fit-content;
     transition: height 0.3s ease, opacity 0.3s ease;
   }
@@ -1344,7 +1333,6 @@ figcaption {
     left: -100%; /* hide off-screen */
     width: 80%;
     height: 100%;
-    z-index: 1000;
     transition: left 0.3s ease;
     padding: 1rem;
     padding-left: 3rem;
@@ -1352,6 +1340,7 @@ figcaption {
   }
   .sidebar.open {
     left: 0;
+    z-index: 1;
   }
 }
 

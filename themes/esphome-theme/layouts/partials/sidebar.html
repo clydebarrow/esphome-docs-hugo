@@ -5,17 +5,21 @@
     <nav class="sidebar-nav">
         {{ if .Fragments }}
         {{ if .Fragments.Headings }}
+            {{ $headings := slice }}
             <ul>
             {{ range .Fragments.HeadingsMap }}
-                <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a>
-                    {{ if .Headings }}
-                        <ul>
-                        {{ range .Headings }}
-                            <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a></li>
+                {{ if eq .Level 2 }}
+                    <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a>
+                        {{ if .Headings }}
+                            <ul>
+                            {{ range .Headings }}
+                                {{ $headings := collections.Append .ID $headings }}
+                                <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a></li>
+                            {{ end }}
+                            </ul>
                         {{ end }}
-                        </ul>
+                    </li>
                     {{ end }}
-                </li>
             {{ end }}
             </ul>
         {{ end }}
@@ -43,9 +47,8 @@
             <a href="{{ $path }}" class="ghedit">
                 {{ os.ReadFile "static/images/icons/edit.svg" | safeHTML }}
                 Edit this page on GitHub
-            </a></li>
+            </a>
         {{ end }}
         </ul>
     </div>
 </div>
-<div id="overlay" class="overlay"></div>

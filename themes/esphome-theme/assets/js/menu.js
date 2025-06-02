@@ -6,7 +6,7 @@ const isMobile = (window.innerWidth <= mobileWidthStop);
 function openTOC() {
     const tocToggle = document.getElementById('toc-toggle');
     if (!isMobile || !tocToggle) return;
-    const tocPanel = document.getElementsByClassName('sidebar')[0];
+    const tocPanel = document.getElementsByClassName('sidebar-mobile')[0];
     const overlay = document.getElementById('overlay');
     tocToggle.classList.add('open');
     tocPanel.classList.add('open');
@@ -16,7 +16,7 @@ function openTOC() {
 function closeTOC() {
     const tocToggle = document.getElementById('toc-toggle');
     if (!isMobile || !tocToggle) return;
-    const tocPanel = document.getElementsByClassName('sidebar')[0];
+    const tocPanel = document.getElementsByClassName('sidebar-mobile')[0];
     const overlay = document.getElementById('overlay');
     tocToggle.classList.remove('open');
     tocPanel.classList.remove('open');
@@ -43,9 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const tocToggle = document.getElementById('toc-toggle');
     const overlay = document.getElementById('overlay');
     if (tocToggle)
-        tocToggle.addEventListener('click', openTOC);
+        tocToggle.addEventListener('click', event => {
+            if (tocToggle.classList.contains("open"))
+                closeTOC();
+            else
+                openTOC();
+        });
     if (overlay)
         overlay.addEventListener('click', closeTOC);
+    const sidebarMobile = document.querySelectorAll('.sidebar-mobile');
+    sidebarMobile.forEach(sidebar => {
+        sidebar.addEventListener("click", closeTOC);
+    })
 
     const dropdownButtons = document.querySelectorAll('.dropbtn button');
 

@@ -40,11 +40,12 @@
         {{ $repo := strings.TrimSuffix ".git" .Site.Data.repo.url }}
         {{ with .File }}
             {{ $path := printf "%s/blob/current/content/%s" $repo .Path }}
-            <a href="{{ $path }}" class="ghedit dark-invert">
-                <img src="/images/icons/edit.svg" class="dark-invert">
+            <a href="{{ $path }}" class="ghedit">
+                {{ os.ReadFile "static/images/icons/edit.svg" | safeHTML }}
                 Edit this page on GitHub
-            </a>
+            </a></li>
         {{ end }}
         </ul>
     </div>
 </div>
+<div id="overlay" class="overlay"></div>

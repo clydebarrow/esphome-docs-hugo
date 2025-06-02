@@ -140,7 +140,7 @@ def get_indented_block(lines, i, current_indent):
         if not line:
             md_lines.append('')
             i += 1
-        elif this_indent >= code_indent -1:
+        elif this_indent and this_indent >= code_indent -1:
             # Remove only the code block indentation, preserve any existing indentation
             if this_indent >= code_indent:
                 line = line[this_indent:]
@@ -374,9 +374,7 @@ def convert_rst_to_md(lines, filename):
 
             # Skip toctree
             if this_line.startswith('.. toctree::'):
-                current_idx += 1
-                while current_idx < len(inner_lines) and (inner_lines[current_idx].startswith('    ') or not inner_lines[current_idx].strip()):
-                    current_idx += 1
+                current_idx, _ = get_indented_block(inner_lines, current_idx + 1, current_indent)
                 continue
 
             # Handle grid tables

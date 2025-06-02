@@ -393,6 +393,7 @@ Of course, you can delete the sensors your don't care about, but then you'd have
 Because the option `register_count: 6` is used for the first sensor, *one* command *read multiple registers from 0 to 6* will be used but the values in between will be ignored.
 
 {{< note >}}
+{{< /note >}}
 ## Protocol decoding example
 
 ```yaml
@@ -734,5 +735,3 @@ modbus_controller:
 - [EPEVER MPPT Solar Charge Controller (Tracer-AN Series)](https://devices.esphome.io/devices/epever_mptt_tracer_an)
 - [Genvex, Nibe, Alpha-Innotec heat recovery ventilation](https://devices.esphome.io/devices/Genvex-Nibe-AlphaInnotec-heat-recovery-ventilation)
 
-
-{{< /note >}}

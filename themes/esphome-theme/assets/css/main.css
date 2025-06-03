@@ -28,7 +28,7 @@
   --footer-bg: #111;
   --footer-text: #333;
   --border-color: #e0e0e0;
-  --link-accent: #00979d;
+  --link-accent: #00878d;
   --component-card-bg: #fff;
   --component-card-text: #333;
   --admonition-note-bg: #e7f2fa;
@@ -98,7 +98,7 @@ a:hover {
   text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .footer-heading, .getting-started-heading {
   font-family: Figtree, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 600;
   margin: 1em 0 0.5em 0;
@@ -722,9 +722,9 @@ img {
   }
 }
 
-.getting-started-heading {
+.getting-started-heading, .footer-heading {
   font-size: 1.5em;
-  font-weight: bold;
+  color: white;
 }
 
 .page-container {

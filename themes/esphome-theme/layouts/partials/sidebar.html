@@ -40,7 +40,6 @@
 
     <div class="sidebar-resource">
         <hr>
-        <ul class="sidebar-social">
         {{ $repo := strings.TrimSuffix ".git" .Site.Data.repo.url }}
         {{ with .File }}
             {{ $path := printf "%s/blob/current/content/%s" $repo .Path }}
@@ -49,6 +48,5 @@
                 Edit this page on GitHub
             </a>
         {{ end }}
-        </ul>
     </div>
 </div>

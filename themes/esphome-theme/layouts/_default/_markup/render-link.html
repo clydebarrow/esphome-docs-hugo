@@ -24,7 +24,8 @@
         {{- if eq hugo.Environment "development" -}}
             {{ warnf "Unresolved anchor '%s' in page '%s'" $link .Page.File.Path }}
             <a href="{{ $link }}" class="unresolved-anchor"{{ with .Title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
-        {{- else -}}
+        {{- end -}}
+        {{- if eq hugo.Environment "production" -}}
             {{ errorf "Unresolved anchor '%s' in page '%s'" $link .Page.File.Path }}
         {{- end -}}
     {{- end -}}

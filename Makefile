@@ -4,7 +4,7 @@ check-links: repo-data anchors
 	hugo --environment production
 
 anchors:
-	hugo --environment development
+	hugo --environment anchors
 	python3 tools/md_anchors.py
 
 production: repo-data anchors

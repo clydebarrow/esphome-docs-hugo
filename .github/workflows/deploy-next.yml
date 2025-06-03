@@ -21,6 +21,20 @@ jobs:
       deployments: write
     
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: current
+          fetch-depth: 0
+
+      - name: Checkout upstream
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          repository: esphome/esphome-docs
+          ref: next
+          path: esphome-docs
+
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
@@ -36,20 +50,6 @@ jobs:
         uses: jaxxstorm/action-install-gh-release@v1.10.0
         with:
           repo: cloudcannon/pagefind
-
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: current
-          fetch-depth: 0
-
-      - name: Checkout upstream
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          repository: esphome/esphome-docs
-          ref: next
-          path: esphome-docs
 
       - name: Run convert script
         run: |

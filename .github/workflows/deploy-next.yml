@@ -1,0 +1,67 @@
+name: Deploy a conversion of esphome-docs@next
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 20 * * *"
+
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+env:
+  TZ: "UTC"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    
+    steps:
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install -r requirements.txt
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Install Pagefind
+        uses: jaxxstorm/action-install-gh-release@v1.10.0
+        with:
+          repo: cloudcannon/pagefind
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: current
+          fetch-depth: 0
+
+      - name: Checkout upstream
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          repository: esphome/esphome-docs
+          ref: next
+          path: esphome-docs
+
+      - name: Run convert script
+        run: |
+          python tools/convert_rst_to_md.py esphome-docs .
+
+      - name: Build with Hugo
+        run: |
+            make production
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=esphome-docs --branch="next"

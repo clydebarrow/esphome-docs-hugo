@@ -1,0 +1,51 @@
+name: Update Current
+
+on:
+  schedule:
+    - cron: "10 20 * * *"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TZ: "UTC"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    
+    steps:
+      - name: Checkout up
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: current
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install -r requirements.txt
+
+      - name: Checkout upstream
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          repository: esphome/esphome-docs
+          ref: current
+          path: esphome-docs
+
+      - name: Run convert script
+        run: |
+          python tools/convert_rst_to_md.py esphome-docs .
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: 'content'

@@ -28,7 +28,8 @@
         {{ $src_set := slice (print $image.RelPermalink " " $image.Width "w") }}
         {{ $maxwidth := .maxwidth | default 1500 }}
 
-        {{ range $wid := slice  (div $maxwidth 3) (div $maxwidth 2) (div $maxwidth 1.5) $maxwidth }}
+        <!-- Generate a range of image sizes to allow adaptive loading -->
+        {{ range $wid := slice  (div $maxwidth 5) (div $maxwidth 3) (div $maxwidth 2) (div $maxwidth 1.5) $maxwidth }}
             {{ $iwid := int $wid }}
             {{ if ge $image.Width $iwid}}
                 {{ $i := $image.Resize (print $iwid "x" ) }}

@@ -146,19 +146,21 @@
                 <span>ESPHome is a project from the</span>
                 <img src="{{ "images/ohf-logo-on-dark.svg" | relURL }}" alt="ESPHome Logo" width="220px" height="49px">
             </a>
-            {{ range (index .Site.Menus "footer") }}
-            <div class="footer-column {{ if eq .Weight 1000 }}push-right{{ end }}">
-                <h3>{{ .Name }}</h3>
-                <ul>
-                {{ range .Children }}
-                    <li><a href="{{ .URL | relURL }}">
-                        {{ os.ReadFile (printf "static/images/icons/%s.svg" .Post) | safeHTML }}
-                        {{ .Name}}
-                    </a></li>
+            <div class="footer-links">
+                {{ range (index .Site.Menus "footer") }}
+                    <div class="footer-column">
+                        <h3>{{ .Name }}</h3>
+                        <ul>
+                        {{ range .Children }}
+                            <li><a href="{{ .URL | relURL }}">
+                                {{ os.ReadFile (printf "static/images/icons/%s.svg" .Post) | safeHTML }}
+                                {{ .Name}}
+                            </a></li>
+                        {{ end }}
+                        </ul>
+                    </div>
                 {{ end }}
-                </ul>
             </div>
-            {{ end }}
         </div>
     </footer>
 </div>
@@ -179,6 +181,7 @@
 {{ partial "asset.html" (dict "path" "/js/lazysizes.min.js" "defer" true) }}
 {{ partial "asset.html" (dict "path" "/pagefind/pagefind-modular-ui.js" "defer" true) }}
 {{ partial "asset.html" (dict "path" "/js/menu.js" "defer" true) }}
+{{ partial "asset.html" (dict "path" "/js/search.js" "defer" true) }}
 {{ partial "asset.html" (dict "path" "/js/main.js" "defer" true) }}
 {{ if .Store.Get "hasCode" }}
     {{ partial "asset.html" (dict "path" "css/chroma.css" "defer" true) }}

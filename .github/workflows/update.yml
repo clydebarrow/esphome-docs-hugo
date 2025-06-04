@@ -47,6 +47,13 @@ jobs:
         run: |
           python tools/convert_rst_to_md.py esphome-docs .
 
-      - uses: EndBug/add-and-commit@v9
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
         with:
           add: 'content static'
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: deploy-current
+

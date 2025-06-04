@@ -5,7 +5,9 @@ on:
     branches:
       - current
   workflow_dispatch:
-  workflow_call:
+  repository_dispatch:
+    types: [ deploy-current ]
+
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

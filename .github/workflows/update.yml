@@ -15,6 +15,7 @@ env:
 permissions:
   contents: write
   pull-requests: write
+  deployments: write
 
 jobs:
   update-from-upstream:

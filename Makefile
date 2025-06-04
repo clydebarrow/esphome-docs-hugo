@@ -16,9 +16,9 @@ repo-data:
 	mkdir -p data/automations
 	echo "url: `git config --get remote.origin.url`" > data/repo.yaml
 	echo "branch: `git branch --show-current`" >> data/repo.yaml
-	curl https://data.esphome.io/release/automations.json | ./collate_automations.sh > data/automations/current.json
-	curl https://data.esphome.io/beta/automations.json | ./collate_automations.sh > data/automations/beta.json
-	curl https://data.esphome.io/dev/automations.json | ./collate_automations.sh > data/automations/next.json
+	curl -s -S https://data.esphome.io/release/automations.json | tools/collate_automations.sh > data/automations/current.json
+	curl -s -S https://data.esphome.io/beta/automations.json | tools/collate_automations.sh > data/automations/beta.json
+	curl -s -S https://data.esphome.io/dev/automations.json | tools/collate_automations.sh > data/automations/next.json
 
 live-html:	repo-data anchors
 	npx pagefind

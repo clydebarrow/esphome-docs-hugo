@@ -48,7 +48,4 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: 'content'
-
-  call-deploy:
-    uses: ./.github/workflows/deploy.yml
+          add: 'content', 'static'

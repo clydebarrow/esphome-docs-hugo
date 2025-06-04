@@ -49,4 +49,4 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: ['content', 'static']
+          add: 'content static'

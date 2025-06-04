@@ -5,12 +5,7 @@ on:
     branches:
       - current
   workflow_dispatch:
-  workflow_run:
-    workflows: [ "Update Current" ]
-    types:
-      - completed
-
-
+  workflow_call:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

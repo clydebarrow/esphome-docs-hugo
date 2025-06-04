@@ -115,8 +115,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Header scroll behavior
     let ticking = false; // Flag to prevent multiple rAF calls
+    let tocScroll = false;
+    let scrollEndTimeout = null;
+
 
     function handleScroll() {
+        if (tocScroll) {
+            clearTimeout(scrollEndTimeout);
+            scrollEndTimeout = setTimeout( () => { tocScroll = false; }, 100);
+            ticking = false;
+            return;
+        }
         const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
 
         // Check if we've scrolled more than the threshold
@@ -154,57 +163,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Table of Contents highlighting
-    const tocLinks = document.querySelectorAll('#TableOfContents a');
+    const tocLinks = document.querySelectorAll('.toc-entry');
     if (tocLinks.length > 0) {
         // Get all headings that correspond to TOC entries
         const headings = Array.from(tocLinks).map(link => {
             const id = link.getAttribute('href').substring(1);
             return document.getElementById(id);
         }).filter(Boolean);
-
-        // Function to determine which heading is currently in view
-        function findActiveHeading() {
-            // Get current scroll position with a small offset to highlight section a bit earlier
-            const scrollPosition = window.scrollY + 100;
-
-            // Find the last heading that is above the current scroll position
-            for (let i = headings.length - 1; i >= 0; i--) {
-                if (headings[i].offsetTop <= scrollPosition) {
-                    return headings[i];
-                }
-            }
-
-            // If no heading is found, return the first one
-            return headings[0];
-        }
-
-        // Function to update active TOC item
-        function updateActiveTocItem() {
-            // Remove active class from all TOC links
-            tocLinks.forEach(link => link.classList.remove('active'));
-
-            // Find the active heading
-            const activeHeading = findActiveHeading();
-            if (activeHeading) {
-                // Find the corresponding TOC link and add active class
-                const activeLink = document.querySelector(`.page-toc a[href="#${activeHeading.id}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
-            }
-        }
-
-        // Update on scroll (with debounce for performance)
-        let scrollTimeout;
-        window.addEventListener('scroll', function () {
-            if (scrollTimeout) {
-                clearTimeout(scrollTimeout);
-            }
-            scrollTimeout = setTimeout(updateActiveTocItem, 100);
-        });
-
-        // Initial update
-        updateActiveTocItem();
 
         // Add smooth scrolling to TOC links
         tocLinks.forEach(link => {
@@ -215,16 +180,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
+                    tocScroll = true;
                     window.scrollTo({
                         top: targetElement.offsetTop - 80, // Offset for fixed header
                         behavior: 'smooth'
                     });
+                    scroll_bar(navContainer.offsetHeight);
 
                     // Update URL hash without jumping
                     history.pushState(null, null, `#${targetId}`);
-
-                    // Update active TOC item
-                    updateActiveTocItem();
                 }
             });
         });

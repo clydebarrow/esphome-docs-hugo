@@ -76,6 +76,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  scroll-padding-top: calc(var(--nav-height) + 10px);
 }
 
 body {

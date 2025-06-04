@@ -15,7 +15,7 @@
                 {{ end }}
                 {{ range .Fragments.HeadingsMap }}
                     {{ if eq .Level $start_level }}
-                        <li><a href="#{{ .ID }}">{{ .Title |  safeHTML }}</a>
+                        <li><a class="toc-entry" href="#{{ .ID }}">{{ .Title |  safeHTML }}</a>
                             {{ if .Headings }}
                                 <ul>
                                 {{ range .Headings }}

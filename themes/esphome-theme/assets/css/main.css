@@ -239,7 +239,7 @@ img {
   margin-bottom: 0.5em;
 }
 
-.sidebar-nav ul {
+.sidebar-nav ul, .sidebar-nav ol {
   list-style: disc;
   margin-top: 0;
   margin-right: 0;
@@ -247,6 +247,11 @@ img {
   margin-bottom: 0.5em;
 
   & ul {
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 0.75em;
+  }
+  & ol {
     list-style: none;
     margin-bottom: 0;
     margin-left: 0.75em;

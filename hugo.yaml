@@ -136,6 +136,11 @@ markup:
       unsafe: true  # Allow HTML in markdown files
     extensions:
       footnote: true
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
+    ordered: true
+
 
 outputs:
   home:

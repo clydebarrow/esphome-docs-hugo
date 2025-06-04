@@ -6,7 +6,7 @@ on:
     - cron: "10 20 * * *"
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}
   cancel-in-progress: true
 
 env:
@@ -17,12 +17,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  build-and-deploy:
+  update-from-upstream:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      deployments: write
-    
+      contents: write
+
     steps:
       - name: Checkout up
         uses: actions/checkout@v4

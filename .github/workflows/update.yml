@@ -52,4 +52,5 @@ jobs:
           add: 'content'
 
   call-deploy:
+    needs: update-from-upstream
     uses: ./.github/workflows/deploy.yml

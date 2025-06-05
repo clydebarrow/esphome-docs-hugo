@@ -963,6 +963,7 @@ ESPHome to cellular networks. **Does not encompass Wi-Fi.**
 "Sonoff Fishpond Pump","cookbook/sonoff-fishpond-pump","cookbook-sonoff-fishpond-pump.jpg",""
 "Arduino Port Extender","cookbook/arduino_port_extender","arduino_logo.svg",""
 "EHMTX a matrix status/text display","cookbook/ehmtx","ehmtx.jpg",""
+"Pulse Catcher","cookbook/pulse-catcher","pulses.png",""
 {{< /imgtable >}}
 # Contributing
 

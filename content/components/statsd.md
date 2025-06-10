@@ -7,7 +7,6 @@ params:
 ---
 
 
-{{< anchor "statsd" >}}
 
 
 StatsD is a [protocol](https://github.com/statsd/statsd/blob/master/docs/metric_types.md) to send metrics to a Daemon to store and aggregate them.

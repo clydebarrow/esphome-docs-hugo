@@ -254,7 +254,6 @@ make sure to check if `.is_valid()` evaluates to `true` before triggering any ac
 
 
 {{< /note >}}
-{{< anchor "strftime" >}}
 
 ### strftime
 

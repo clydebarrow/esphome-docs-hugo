@@ -204,7 +204,6 @@ Check out the various Modbus components available at the bottom of the document 
 
 Below you find a few general tips about using Modbus in more advanced scenarios. Applicable component functionalities have links pointing here:
 
-{{< anchor "bitmasks" >}}
 
 ## Bitmasks
 

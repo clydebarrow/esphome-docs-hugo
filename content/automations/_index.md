@@ -8,7 +8,6 @@ params:
 ---
 
 
-{{< anchor "automation" >}}
 
 
 Automations are a very powerful aspect of ESPHome; they allow you to easily perform actions given some condition(s).

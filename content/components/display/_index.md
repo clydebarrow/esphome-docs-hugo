@@ -591,7 +591,6 @@ display:
 
 Additionally the old page will be given as the variable `from` and the new one as the variable `to`.
 
-{{< anchor "troubleshooting" >}}
 
 ### Troubleshooting
 

@@ -155,6 +155,21 @@ def get_indented_block(lines, i, current_indent):
 bullet_regex = re.compile(r'^(\s*)([-*+])\s+')
 
 
+def get_heading(lines, index, heading_underlines):
+    while index < len(lines):
+        line = lines[index]
+        if line.strip() == '':
+            index += 1
+            continue
+        if line and index + 1 < len(lines) and len(lines[index + 1]) >= len(line):
+            next_line = lines[index + 1]
+            uchar = next_line[0]
+            if uchar in heading_underlines and all(x == uchar for x in next_line):
+                level = heading_underlines.index(uchar) + 1
+                return level, index + 2, line.strip()
+        break
+    return None, None, None
+
 
 def convert_rst_to_md(lines, filename):
     """Convert RST content to Markdown using line-by-line processing."""
@@ -255,11 +270,20 @@ def convert_rst_to_md(lines, filename):
                 current_idx += 2
                 continue
 
+            # Handle existing anchor shortcodes
+            anchor_name = None
+            if re.match(r'^\{{<\s+anchor\s+["\'](\w+)["\']\s+>}}', this_line):
+                anchor_name = re.match(r'^\{{<\s+anchor\s+["\'](\w+)["\']\s+>}}', this_line).group(1)
             # Handle RST anchors (.. _anchor:)
-            if this_line.startswith('.. _') and this_line.endswith(':'):
+            elif this_line.startswith('.. _') and this_line.endswith(':'):
                 anchor_name = this_line[4:-1]  # Extract the anchor name without the '.. _' prefix and ':' suffix
-                result_lines.append(f'{{{{< anchor "{anchor_name.lower()}" >}}}}')
+            if anchor_name:
                 current_idx += 1
+                level, next_index, heading = get_heading(inner_lines, current_idx, heading_underlines)
+                if heading:
+                    heading = heading.lower().replace(' ', '-')
+                if heading != anchor_name.lower():
+                    result_lines.append(f'{{{{< anchor "{anchor_name.lower()}" >}}}}')
                 continue
 
             # Handle raw HTML blocks that might contain buttons

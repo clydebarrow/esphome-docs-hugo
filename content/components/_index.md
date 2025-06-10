@@ -948,7 +948,6 @@ ESPHome to cellular networks. **Does not encompass Wi-Fi.**
 "Sun","components/sun","weather-sunny.svg","dark-invert"
 "Tuya MCU","components/tuya","tuya.png",""
 {{< /imgtable >}}
-{{< anchor "cookbook" >}}
 
 # Cookbook
 

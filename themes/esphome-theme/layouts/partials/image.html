@@ -3,8 +3,10 @@
 {{ $style := .style }}
 {{ $thumbSize := .thumbSize | default "180x q20" }}
 {{/* Check if image exists in local images directory first */}}
-{{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) (strings.TrimPrefix "/images/" .src) -}}
-{{- $globalPath := printf "images/%s" (strings.TrimPrefix "/images/" .src) -}}
+{{ $src := strings.TrimPrefix "/images/" .src }}
+{{ $src = strings.TrimPrefix "images/" $src }}
+{{- $componentPath := printf "content/%s/images/%s" (path.Dir $page.File.Path) $src -}}
+{{- $globalPath := printf "images/%s" $src -}}
 
 {{ $image := resources.Get $componentPath }}
 {{ if not $image }}

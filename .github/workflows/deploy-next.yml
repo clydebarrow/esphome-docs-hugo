@@ -60,7 +60,7 @@ jobs:
 
       - name: Run convert script
         run: |
-          python tools/convert_rst_to_md.py esphome-docs .
+          make convert-from-rst
 
       - name: Build with Hugo
         env:

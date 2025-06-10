@@ -61,7 +61,7 @@
     {{ block "head" . }}{{ end }}
 
 </head>
-<body class="body">
+<body class="body branch-{{ .Site.Params.Branch }}">
 <div class="page-container">
     <div class="nav-container" id="nav-container">
         <nav class="sticky-nav">
@@ -138,6 +138,7 @@
 
     <main data-pagefind-body>
         {{ block "main" . }}{{ end }}
+        <div class="branch-overlay">{{ .Site.Params.Branch | upper }}</div>
     </main>
 
     <footer>

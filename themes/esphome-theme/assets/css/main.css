@@ -183,6 +183,20 @@ img {
   }
 }
 
+.branch-overlay {
+  display: none;
+  font-size: 4em;
+  color: #FF808080;
+  z-index: 99999;
+  position: fixed;
+  bottom: 0;
+  right: 100px;
+}
+
+.branch-next .branch-overlay {
+  display: block;
+}
+
 .spin-once {
   animation: spin 0.5s linear;
 }

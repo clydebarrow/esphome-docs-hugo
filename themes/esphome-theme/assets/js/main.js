@@ -161,6 +161,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    const buildInfoButton = document.getElementById('build-info-button');
+    const buildInfoPopup = document.getElementById('build-info-popup');
+    const buildInfoClose = document.querySelector('.build-info-close');
+
+    if (buildInfoButton && buildInfoPopup) {
+        buildInfoButton.addEventListener('click', function() {
+            buildInfoPopup.style.display = 'block';
+        });
+
+        buildInfoClose.addEventListener('click', function() {
+            buildInfoPopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === buildInfoPopup) {
+                buildInfoPopup.style.display = 'none';
+            }
+        });
+    }
 
     // Table of Contents highlighting
     const tocLinks = document.querySelectorAll('.toc-entry');

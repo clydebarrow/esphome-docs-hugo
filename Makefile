@@ -1,5 +1,10 @@
 .PHONY: html clean live-html automations check-links anchors production convert-from-rst
 
+export HUGO_PARAMS_COMMIT_HASH=$(shell git rev-parse --short HEAD)
+export HUGO_PARAMS_COMMIT_TITLE=$(shell git log -1 --pretty=%s)
+export HUGO_PARAMS_COMMIT_DATE=$(shell git log -1 --date=format-local:'%Y-%m-%d %H:%M:%S UTC' --pretty=%cd)
+export HUGO_PARAMS_BRANCH=$(shell git branch --show-current)
+
 check-links: repo-data anchors
 	hugo --environment production
 

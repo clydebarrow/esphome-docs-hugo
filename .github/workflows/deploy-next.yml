@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: current
+          ref: next
           fetch-depth: 0
 
       - name: Checkout upstream
@@ -39,13 +39,6 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip3 install -r requirements.txt
-
-      - name: Get current branch name
-        id: get_branch_name
-        run: |
-          BRANCH_NAME="${GITHUB_REF##*/}"
-          echo "CURRENT_GIT_BRANCH=${BRANCH_NAME}" >> "$GITHUB_ENV"
-          echo "Current Git branch: $BRANCH_NAME"
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -63,8 +56,6 @@ jobs:
           make convert-from-rst
 
       - name: Build with Hugo
-        env:
-          HUGO_PARAMS_Branch: ${{ env.CURRENT_GIT_BRANCH }}
         run: |
             make production
 

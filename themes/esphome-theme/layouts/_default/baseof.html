@@ -44,7 +44,7 @@
     <meta name="twitter:title" content="{{ .Page.Title }}">
 
     <script data-cfasync="false" type="text/javascript">
-        // cfasync is set to false to prevent Cloudflare from modifying the script
+        // cfasync is set false to prevent Cloudflare from modifying the script
         // Critical theme preferences
         // Theme handling
         const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -163,6 +163,36 @@
                 {{ end }}
             </div>
         </div>
+        <pre>{{ debug.Dump .Site.Params  }}</pre>
+        <div class="build-info">
+            <button id="build-info-button" class="build-info-button" title="Show build information">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="8"></line>
+                </svg>
+            </button>
+            <div id="build-info-popup" class="build-info-popup">
+                <div class="build-info-content">
+                    <span class="build-info-close">&times;</span>
+                    <h4>Build Information</h4>
+                    <div class="build-info-grid">
+                        <div class="build-info-label">Branch:</div>
+                        <div class="build-info-value">{{ .Site.Params.branch | default "development" }}</div>
+                        
+                        {{ $repo := strings.TrimSuffix ".git" .Site.Data.repo.url }}
+                        <div class="build-info-label">Commit:</div>
+                        <div class="build-info-value"><a href="{{ $repo }}/commit/{{ .Site.Params.commit.hash }}" target="_blank">{{ .Site.Params.commit.hash }}</a></div>
+                        
+                        <div class="build-info-label">Message:</div>
+                        <div class="build-info-value">{{ .Site.Params.commit.title }}</div>
+                        
+                        <div class="build-info-label">Build date:</div>
+                        <div class="build-info-value">{{ now.Format "2006-01-02" }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </div>
 
@@ -184,6 +214,8 @@
 {{ partial "asset.html" (dict "path" "/js/menu.js" "defer" true) }}
 {{ partial "asset.html" (dict "path" "/js/search.js" "defer" true) }}
 {{ partial "asset.html" (dict "path" "/js/main.js" "defer" true) }}
+
+<!-- Build info popup script -->
 {{ if .Store.Get "hasCode" }}
     {{ partial "asset.html" (dict "path" "css/chroma.css" "defer" true) }}
 {{ end }}

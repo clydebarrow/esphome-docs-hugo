@@ -45,12 +45,6 @@ jobs:
         with:
           repo: cloudcannon/pagefind
 
-      - name: Set commit variables
-        run: |
-          echo "HUGO_COMMIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-          echo "HUGO_COMMIT_TITLE=$(git log -1 --pretty=%s)" >> $GITHUB_ENV
-          echo "HUGO_COMMIT_DATE=$(git log -1 --date=format-local:'%Y-%m-%d %H:%M:%S UTC' --pretty=%cd)" >> $GITHUB_ENV
-
       - name: Build with Hugo
         run: |
             make production

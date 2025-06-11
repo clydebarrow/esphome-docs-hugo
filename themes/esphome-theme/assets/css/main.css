@@ -1408,7 +1408,7 @@ figcaption {
 
 .build-info {
   position: relative;
-  text-align: center;
+  text-align: left;
 }
 
 .build-info-button {
@@ -1449,6 +1449,9 @@ figcaption {
   width: 80%;
   max-width: 500px;
   position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .build-info-close {
@@ -1462,12 +1465,12 @@ figcaption {
 }
 
 .build-info-close:hover {
-  color: var(--color-primary);
+  color: var(--primary-color);
 }
 
 .build-info-content h4 {
   margin-top: 0;
-  color: var(--color-primary);
+  color: var(--text-color);
 }
 
 .build-info-content p {
@@ -1475,7 +1478,7 @@ figcaption {
 }
 
 .build-info-content a {
-  color: var(--color-primary);
+  color: var(--link-accent);
 }
 
 @media (max-width: 768px) {

@@ -27,6 +27,7 @@ repo-data:
 
 live-html:	repo-data anchors
 	npx pagefind
+	env | grep HUGO
 	hugo server --bind 0.0.0.0
 
 clean:

@@ -43,7 +43,7 @@ sensor:
     cpu_frequency:
       name: "CPU Frequency"
 
-# Logger must be at least debug (default)
+# Logger must be configured
 logger:
   level: debug
 

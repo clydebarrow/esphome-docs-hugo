@@ -143,6 +143,8 @@ Create update entities simplifying management of OTA updates.
 "OpenTherm","components/opentherm","opentherm.png"
 "SPI Bus","components/spi","spi.svg"
 "UART","components/uart","uart.svg"
+"USB Host","components/usb_host","usb.svg"
+"USB UART","components/usb_uart","usb.svg"
 {{< /imgtable >}}
 # I/O Expanders/Multiplexers
 
@@ -189,6 +191,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 "AGS10","components/sensor/ags10","ags10.jpg","Volatile Organic Compound Sensor","",""
 "AirThings BLE","components/sensor/airthings_ble","airthings_logo.png","Radon","CO2","Volatile organics"
 "CCS811","components/sensor/ccs811","ccs811.jpg","CO2 & Volatile organics","",""
+"CM1106","components/sensor/cm1106","cm1106.png","CO2","",""
 "EE895","components/sensor/ee895","EE895.png","CO2 & Temperature & Pressure","",""
 "ENS160","components/sensor/ens160","ens160.jpg","CO2 & Air Quality","",""
 "GCJA5","components/sensor/gcja5","gcja5.svg","Particulate","",""
@@ -424,6 +427,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 "Havells Solar","components/sensor/havells_solar","havellsgti5000d_s.jpg","Solar rooftop"
 "Integration","components/sensor/integration","sigma.svg","dark-invert"
 "Kuntze pool sensor","components/sensor/kuntze","kuntze.jpg",""
+"LC709203F","components/sensor/lc709203f","lc709203f.jpg","Battery Monitor"
 "LVGL widget","components/sensor/lvgl","lvgl_c_num.png",""
 "M5Stack Unit 8 Angle","components/sensor/m5stack_8angle","m5stack_8angle.png",""
 "MAX17043","components/sensor/max17043","max17043.jpg","Battery"
@@ -574,6 +578,7 @@ Often known as "tag" or "card" readers within the community.
 "AIC3204","components/audio_dac/aic3204","aic3204.svg"
 "ES8156","components/audio_dac/es8156","es8156.svg"
 "ES8311","components/audio_dac/es8311","es8311.svg"
+"ES8388","components/audio_dac/es8388","es8388.svg"
 {{< /imgtable >}}
 # Button Components
 
@@ -962,7 +967,6 @@ ESPHome to cellular networks. **Does not encompass Wi-Fi.**
 "Sonoff Fishpond Pump","cookbook/sonoff-fishpond-pump","cookbook-sonoff-fishpond-pump.jpg",""
 "Arduino Port Extender","cookbook/arduino_port_extender","arduino_logo.svg",""
 "EHMTX a matrix status/text display","cookbook/ehmtx","ehmtx.jpg",""
-"Pulse Catcher","cookbook/pulse-catcher","pulses.png",""
 {{< /imgtable >}}
 # Contributing
 

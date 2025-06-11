@@ -87,15 +87,13 @@ sensor:
 
 This [action](#config-action) manually calibrates the sensor to the provided value in ppm.
 Operate the SCD4x in the operation mode later used in normal sensor operation (periodic measurement, low power periodic measurement or single shot) for > 3 minutes in an environment with homogenous and constant CO2 concentration before performing a forced recalibration.
-As of March 2025, the global monthly mean CO₂ concentration is 426 ppm.
+As of April 2022 the average fresh air Co² concentration is 419 ppm.
 
 ```yaml
 on_...:
   then:
     - scd4x.perform_forced_calibration:
-        # Global Monthly Mean CO₂
-        # https://gml.noaa.gov/ccgg/trends/global.html
-        value: 426
+        value: 419   # outside average April 2022
         id: my_scd41
 
 ```

@@ -20,34 +20,29 @@ The [I²C Bus](#i2c) is required to be set up in your configuration for this sen
 sensor:
   - platform: sgp30
     eco2:
-      name: "Workshop eCO2"
-      accuracy_decimals: 1
+      name: "eCO2"
     tvoc:
-      name: "Workshop TVOC"
-      accuracy_decimals: 1
-    store_baseline: yes
-    address: 0x58
-    update_interval: 1s
+      name: "TVOC"
 
 ```
 ## Configuration variables:
 
-- **eco2** (**Required**): The information for the CO₂eq. sensor.
+- **eco2** (*Optional*): The information for the CO₂eq. sensor.
 
   - All options from [Sensor](#config-sensor).
 
-- **tvoc** (**Required**): The information for the total Volatile Organic Compounds sensor.
+- **tvoc** (*Optional*): The information for the total Volatile Organic Compounds sensor.
 
   - All options from [Sensor](#config-sensor).
 
 - **store_baseline** (*Optional*, boolean): Store the sensor baselines persistently when calculated or updated.
-  Defaults to yes.
+  Defaults to `true`.
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor.
   Defaults to `0x58`.
 
 - **update_interval** (*Optional*, [Time](#config-time)): The interval to check the
-  sensor. Defaults to `1s`.
+  sensor. Defaults to `60s`.
 
 Advanced:
 

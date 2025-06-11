@@ -64,4 +64,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=esphome-docs --branch="next"
+          command: pages deploy public --project-name=esphome-docs --branch="next" --commit-dirty=true

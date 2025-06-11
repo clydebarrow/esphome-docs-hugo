@@ -1,4 +1,4 @@
-name: Deploy a conversion of esphome-docs@next
+name: Deploy esphome-docs@next converted
 
 on:
   workflow_dispatch:

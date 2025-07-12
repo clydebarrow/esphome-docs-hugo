@@ -9,6 +9,7 @@ check-links: repo-data anchors
 	hugo --environment production
 
 anchors:
+	npx pagefind -s pagefind-bootstrap
 	hugo --environment anchors
 	python3 tools/md_anchors.py
 
@@ -31,8 +32,8 @@ live-html:	repo-data anchors
 	hugo server --bind 0.0.0.0
 
 clean:
-	rm -rf "public/*"
-	rm -rf "pagefind/*"
+	rm -rf public/*
+	rm -rf pagefind/*
 	rm -rf data/automations/
 	rm -rf data/repo.yaml
 	hugo mod clean

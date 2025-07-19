@@ -35,6 +35,7 @@ information about ESPHome configuration files.
 "RP2040","components/rp2040","rp2040.svg",""
 "BK72xx","components/libretiny","bk72xx.svg",""
 "RTL87xx","components/libretiny","rtl87xx.svg",""
+"LN882x","components/libretiny","ln882x.svg",""
 "Host","components/host","host.svg","dark-invert"
 {{< /imgtable >}}
 # Microcontroller Peripherals
@@ -44,6 +45,7 @@ Peripherals which directly support the operation of the microcontroller's proces
 {{< imgtable >}}
 "PSRAM","components/psram","psram.svg",""
 "Deep Sleep","components/deep_sleep","hotel.svg","dark-invert"
+"ESP32-P4 LDO regulator","components/esp_ldo","ldo.svg","dark-invert"
 {{< /imgtable >}}
 # ESPHome Automations
 
@@ -80,6 +82,8 @@ ESPHome-specific components or components supporting ESPHome device provisioning
 {{< imgtable >}}
 "WiFi","components/wifi","network-wifi.svg","dark-invert"
 "ESP32 Ethernet","components/ethernet","ethernet.svg","dark-invert"
+"ESP32 Hosted","components/esp32_hosted","network-wifi.svg","dark-invert"
+"OpenThread","components/openthread","openthread.png",""
 {{< /imgtable >}}
 # Network Protocols
 
@@ -136,13 +140,15 @@ Create update entities simplifying management of OTA updates.
 # Hardware Peripheral Interfaces/Busses
 
 {{< imgtable >}}
-"1-Wire","components/one_wire","one-wire.svg"
-"CAN Bus","components/canbus/index","canbus.svg"
-"I²C Bus","components/i2c","i2c.svg"
-"I²S Audio","components/i2s_audio","i2s_audio.svg"
-"OpenTherm","components/opentherm","opentherm.png"
-"SPI Bus","components/spi","spi.svg"
-"UART","components/uart","uart.svg"
+"1-Wire","components/one_wire/index","one-wire.svg",""
+"CAN Bus","components/canbus/index","canbus.svg",""
+"I²C Bus","components/i2c","i2c.svg",""
+"I²S Audio","components/i2s_audio","i2s_audio.svg",""
+"OpenTherm","components/opentherm","opentherm.png",""
+"SPI Bus","components/spi","spi.svg",""
+"UART","components/uart","uart.svg",""
+"USB Host","components/usb_host","usb.svg","dark-invert"
+"USB UART","components/usb_uart","usb.svg","dark-invert"
 {{< /imgtable >}}
 # I/O Expanders/Multiplexers
 
@@ -154,6 +160,7 @@ Create update entities simplifying management of OTA updates.
 "PCA6416A","components/pca6416a","pca6416a.svg"
 "PCA9554","components/pca9554","pca9554a.jpg"
 "PCF8574","components/pcf8574","pcf8574.jpg"
+"PI4IOE5V6408","components/pi4ioe5v6408","pca9554a.jpg"
 "SN74HC165","components/sn74hc165","sn74hc595.jpg"
 "SN74HC595","components/sn74hc595","sn74hc595.jpg"
 "SX1509","components/sx1509","sx1509.jpg"
@@ -162,10 +169,21 @@ Create update entities simplifying management of OTA updates.
 "WeiKai SPI/I²C UART/IO Expander","components/weikai","wk2168.jpg"
 "XL9535","components/xl9535","xl9535.svg"
 {{< /imgtable >}}
-# CAN Bus
+# 1-Wire Bus
+
+Platforms which specifically support or extend the {{< docref "/components/one_wire" >}}, allowing communication with
+1-Wire-based devices.
 
 {{< imgtable >}}
-"CAN Bus","components/canbus/index","canbus.svg"
+"DS2484","components/one_wire/ds2484","ds2484.svg"
+"GPIO","components/one_wire/gpio","gpio.svg"
+{{< /imgtable >}}
+# CAN Bus
+
+Platforms which specifically support or extend the {{< docref "/components/canbus" >}}, allowing communication with
+CAN-based devices.
+
+{{< imgtable >}}
 "ESP32 CAN","components/canbus/esp32_can","esp32.svg"
 "MCP2515","components/canbus/mcp2515","mcp2515.svg"
 {{< /imgtable >}}
@@ -189,6 +207,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 "AGS10","components/sensor/ags10","ags10.jpg","Volatile Organic Compound Sensor","",""
 "AirThings BLE","components/sensor/airthings_ble","airthings_logo.png","Radon","CO2","Volatile organics"
 "CCS811","components/sensor/ccs811","ccs811.jpg","CO2 & Volatile organics","",""
+"CM1106","components/sensor/cm1106","cm1106.png","CO2","",""
 "EE895","components/sensor/ee895","EE895.png","CO2 & Temperature & Pressure","",""
 "ENS160","components/sensor/ens160","ens160.jpg","CO2 & Air Quality","",""
 "GCJA5","components/sensor/gcja5","gcja5.svg","Particulate","",""
@@ -257,6 +276,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 {{< imgtable >}}
 "A01NYUB","components/sensor/a01nyub","a01nyub.jpg","Acoustic distance"
 "A02YYUW","components/sensor/a02yyuw","a02yyuw.jpg","Acoustic distance"
+"GL-R01 Time of Flight Sensor","components/sensor/gl_r01","gl_r01.jpg","IR optical distance"
 "HRXL MaxSonar WR","components/sensor/hrxl_maxsonar_wr","hrxl_maxsonar_wr.jpg","Acoustic distance"
 "JSN-SR04T","components/sensor/jsn_sr04t","jsn-sr04t-v3.jpg","Acoustic distance"
 "TOF10120","components/sensor/tof10120","tof10120.jpg","IR optical distance"
@@ -337,6 +357,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 "HYT271","components/sensor/hyt271","hyt271.jpg","Temperature & Humidity",""
 "Inkbird IBS-TH1 Mini","components/sensor/inkbird_ibsth1_mini","inkbird_isbth1_mini.jpg","Temperature & Humidity",""
 "Internal Temperature","components/sensor/internal_temperature","thermometer.svg","Temperature","dark-invert"
+"LPS22","components/sensor/lps22","lps22.avif","Temperature & Barometric Pressure",""
 "MCP9808","components/sensor/mcp9808","mcp9808.jpg","Temperature",""
 "MH-Z19","components/sensor/mhz19","mhz19.jpg","CO2 & Temperature",""
 "MLX90614","components/sensor/mlx90614","mlx90614.jpg","Temperature",""
@@ -391,6 +412,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 "LTR559","components/sensor/ltr_als_ps","ltr559.jpg","Lux & Proximity"
 "LTR659","components/sensor/ltr_als_ps","ltr-ps.jpg","Proximity"
 "MAX44009","components/sensor/max44009","max44009.svg","Lux"
+"OPT3001","components/sensor/opt3001","opt3001.jpg","Lux"
 "TCS34725","components/sensor/tcs34725","tcs34725.jpg","Lux & RGB colour"
 "TSL2561","components/sensor/tsl2561","tsl2561.jpg","Lux"
 "TSL2591","components/sensor/tsl2591","tsl2591.jpg","Lux"
@@ -401,13 +423,12 @@ Sensors are organized into categories; if a given sensor fits into more than one
 ## Magnetic
 
 {{< imgtable >}}
-"AS5600","components/sensor/as5600","as5600.jpg","12-Bit Magnetic Position Sensor",""
-"ESP32 Hall Sensor","components/sensor/esp32_hall","magnet.svg","ESP internal","dark-invert"
-"HMC5883L","components/sensor/hmc5883l","hmc5883l.jpg","3-Axis magnetometer",""
-"MLX90393","components/sensor/mlx90393","mlx90393.jpg","3-Axis magnetometer",""
-"MMC5603","components/sensor/mmc5603","mmc5603.jpg","3-Axis magnetometer",""
-"MMC5983","components/sensor/mmc5983","mmc5983.jpg","3-Axis magnetometer",""
-"QMC5883L","components/sensor/qmc5883l","qmc5883l.jpg","3-Axis magnetometer",""
+"AS5600","components/sensor/as5600","as5600.jpg","12-Bit Magnetic Position Sensor"
+"HMC5883L","components/sensor/hmc5883l","hmc5883l.jpg","3-Axis magnetometer"
+"MLX90393","components/sensor/mlx90393","mlx90393.jpg","3-Axis magnetometer"
+"MMC5603","components/sensor/mmc5603","mmc5603.jpg","3-Axis magnetometer"
+"MMC5983","components/sensor/mmc5983","mmc5983.jpg","3-Axis magnetometer"
+"QMC5883L","components/sensor/qmc5883l","qmc5883l.jpg","3-Axis magnetometer"
 {{< /imgtable >}}
 ## Miscellaneous
 
@@ -424,6 +445,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 "Havells Solar","components/sensor/havells_solar","havellsgti5000d_s.jpg","Solar rooftop"
 "Integration","components/sensor/integration","sigma.svg","dark-invert"
 "Kuntze pool sensor","components/sensor/kuntze","kuntze.jpg",""
+"LC709203F","components/sensor/lc709203f","lc709203f.jpg","Battery Monitor"
 "LVGL widget","components/sensor/lvgl","lvgl_c_num.png",""
 "M5Stack Unit 8 Angle","components/sensor/m5stack_8angle","m5stack_8angle.png",""
 "MAX17043","components/sensor/max17043","max17043.jpg","Battery"
@@ -574,6 +596,7 @@ Often known as "tag" or "card" readers within the community.
 "AIC3204","components/audio_dac/aic3204","aic3204.svg"
 "ES8156","components/audio_dac/es8156","es8156.svg"
 "ES8311","components/audio_dac/es8311","es8311.svg"
+"ES8388","components/audio_dac/es8388","es8388.svg"
 {{< /imgtable >}}
 # Button Components
 
@@ -934,6 +957,8 @@ ESPHome to cellular networks. **Does not encompass Wi-Fi.**
 "Remote Transmitter","components/remote_transmitter","remote.svg","dark-invert"
 "RF Bridge","components/rf_bridge","rf_bridge.jpg",""
 "SIM800L","components/sim800l","sim800l.jpg",""
+"SX126x","components/sx126x","sx126x.png",""
+"SX127x","components/sx127x","sx127x.png",""
 {{< /imgtable >}}
 # Miscellaneous Components
 

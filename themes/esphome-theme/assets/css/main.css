@@ -67,6 +67,7 @@
   --logo-text-color: #FFFFFF;
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -184,17 +185,13 @@ img {
 }
 
 .branch-overlay {
-  display: none;
+  display: block;
   font-size: 4em;
   color: #FF808080;
   z-index: 99999;
   position: fixed;
   bottom: 0;
   right: 100px;
-}
-
-.branch-next .branch-overlay {
-  display: block;
 }
 
 .spin-once {
@@ -1054,6 +1051,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
+  position: relative;
 }
 
 .footer-links {
@@ -1121,8 +1119,8 @@ footer {
 /* Components page */
 .component-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5em;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 24%));
+  gap: 0.5em;
   margin-bottom: 2em;
 }
 
@@ -1141,12 +1139,12 @@ footer {
 .component-card {
   background-color: var(--component-card-bg);
   border-radius: 5px;
-  padding: 1.5em;
+  padding: 0.5em;
   text-align: center;
 
   color: var(--component-card-text);
   border-color: var(--border-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s;
 }
 
@@ -1249,7 +1247,7 @@ figcaption {
   }
 
   .toc-button {
-    transform-origin: 40% 60%;
+    transform-origin: 40% 45%;
     transform: rotate(0deg);
     transition: transform 0.3s ease;
   }
@@ -1407,8 +1405,23 @@ figcaption {
 }
 
 .build-info {
-  position: relative;
+  position: absolute;
   text-align: left;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+.print-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 3rem;
+  padding: 0.5rem;
+}
+
+.print-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .build-info-button {
@@ -1503,4 +1516,26 @@ figcaption {
 
 .build-info-value {
   text-align: left;
+}
+
+.header-print, .footer-logo-print {
+  display: none;
+}
+
+@media print {
+  .nav-container, footer, .sidebar, .copy-button {
+    display: none;
+  }
+  [aria-hidden="true"] {
+    display: none;
+  }
+  .footer-logo-print {
+    display: block;
+  }
+  .header-print {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+  }
 }

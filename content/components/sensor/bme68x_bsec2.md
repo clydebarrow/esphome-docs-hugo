@@ -52,6 +52,7 @@ bme68x_bsec2_i2c:
 
 - **address** (*Optional*, int): Manually specify the I²C address of the sensor. Defaults to `0x76`. The sensor can
   also be configured to use `0x77`.
+- **i2c_id** (**Optional**, [ID](#config-id)): The ID of the [I²C bus](#i2c) the bme68x is connected to.
 - **model** (*Required*, string): The model of the connected sensor; either `BME680` or `BME688`.
 - **algorithm_output** (*Optional*, string): The output of the BSEC2 algorithm. Either `classification` (default) or
   `regression`. *Only valid when model is BME688.*

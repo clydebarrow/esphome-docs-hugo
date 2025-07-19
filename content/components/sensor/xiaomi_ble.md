@@ -245,6 +245,27 @@ sensor:
       name: "ATC Signal"
 
 ```
+### XMWSDJ04MMC
+
+Hygro thermometer, small square body, e-ink display, encrypted, broadcasts temperature, humidity and battery status. Requires a bindkey in order to decrypt the received data (see [Obtaining the Bindkey](#obtaining_the_bindkey)).
+
+{{< img src="xiaomi_xmwsdj04mmc.png" alt="Image" width="30.0%" class="center" >}}
+
+Configuration example:
+
+```yaml
+sensor:
+  - platform: xiaomi_xmwsdj04mmc
+    mac_address: XX:XX:XX:XX:XX:XX
+    bindkey: "eef418daf699a0c188f3bfd17e4565d9"
+    temperature:
+      name: "XMWSDJ04MMC Temperature"
+    humidity:
+      name: "XMWSDJ04MMC Humidity"
+    battery_level:
+      name: "XMWSDJ04MMC Battery Level"
+
+```
 ### MHO-C303
 
 Hygro thermometer clock with alarm, rectangular body, e-ink display, broadcasts temperature, humidity and battery status. Not encrypted.

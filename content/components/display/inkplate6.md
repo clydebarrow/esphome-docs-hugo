@@ -81,6 +81,11 @@ It just ignores the function call in that case.
 - **greyscale** (*Optional*, boolean): Makes the screen display 3 bit colors. Defaults to `false`
 - **partial_updating** (*Optional*, boolean): Makes the screen update partially, which is faster, but leaves burnin. Defaults to `false`
 - **full_update_every** (*Optional*, int): When partial updating is enabled, forces a full screen update after chosen number of updates. Defaults to `10`
+- **transform** (*Optional*): Transform the display presentation.
+
+    - **flip_y** (*Optional*, boolean): Flip the screen on the Y axis. Defaults to `false`
+    - **flip_x** (*Optional*, boolean): Flip the screen on the X axis. Defaults to `false`
+
 - **lambda** (*Optional*, [lambda](#config-lambda)): The lambda to use for rendering the content on the display.
   See [Display Rendering Engine](#display-engine) for more information.
 - **update_interval** (*Optional*, [Time](#config-time)): The interval to re-draw the screen. Defaults to `5s`.

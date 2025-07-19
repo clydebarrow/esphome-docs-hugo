@@ -136,7 +136,7 @@ When using an encoder input device the navigation works as follows:
 {{< /tip >}}
 - **resume_on_input** (*Optional*, boolean): If LVGL is paused and the user interacts with the screen, resume the activity of LVGL. Defaults to `true`. "Interacts" means to release a touch or button, or rotate an encoder.
 - **color_depth** (*Optional*, string): The color depth at which the contents are generated. Currently only `16` is supported (RGB565, 2 bytes/pixel), which is the default value.
-- **buffer_size** (*Optional*, percentage): The percentage of screen size to allocate buffer memory. Default is `100%` (or `1.0`). For devices without PSRAM, the recommended value is `25%`.
+- **buffer_size** (*Optional*, percentage): The percentage of screen size to allocate buffer memory. If unconfigured, the default is `100%` with runtime fallback to `12%` if a full size buffer allocation fails. For devices without PSRAM, the recommended value is `25%`.
 - **draw_rounding** (*Optional*, int): An optional value to use for rounding draw areas to a specified boundary. Defaults to 2. Useful for displays that require draw windows to be on specified boundaries (usually powers of 2.)
 - **log_level** (*Optional*, string): Set the logger level specifically for the messages of the LVGL library: `TRACE`, `INFO`, `WARN`, `ERROR`, `USER`, `NONE`. Defaults to `WARN`.
 - **byte_order** (*Optional*, int16): The byte order of the data LVGL outputs; either `big_endian` or `little_endian`. Defaults to `big_endian`.
@@ -184,7 +184,9 @@ See [Page navigation footer](#lvgl-cookbook-navigator) in the Cookbook for an ex
 The `buffer_size` option is a percentage of the display size. For example, if you have a 320x240 display, the buffer size is `320 * 240 * 2` bytes (for RGB565) = `153600` bytes. If you set the buffer size to `50%`,
 then the buffer will be `76800` bytes. If you set it to `25%`, then the buffer will be `38400` bytes. The default value is `100%`.
 
-When using larger displays on devices with limited RAM (i.e. no PSRAM), you may need to reduce the buffer size to avoid running out of RAM.
+When using larger displays on devices with limited RAM (i.e. no PSRAM), you may want to reduce the buffer size to avoid running out of RAM.
+If not specified, the buffer size will be 100%, but a fallback
+at runtime to 12% will be attempted if a full size buffer fails. If a specific buffer size is set, the fallback will not be attempted.
 A failure to allocate a buffer will result in an error message in the log and the LVGL component being marked "Failed".
 
 Generally speaking a larger buffer will provide better performance, but the effect of reducing the buffer size from 100% is not as bad as you might think. The LVGL library is designed to be efficient and will only redraw the parts of the screen that have changed.
@@ -587,7 +589,11 @@ It can arrange items into a 2D "table" that has rows or columns (tracks). The it
 - *gap*: the space between the rows and columns or the items on a track.
 - *free unit (FR)*: a proportional distribution unit for the space available on the track. It accepts a unitless integer value that serves as a proportion. It dictates what amount of the available space the widget should take up. For example if all items on the track have a `FR` set to `1`, the space in the track will be distributed equally to all of them. If one of the items has a value of 2, that one would take up twice as much of the space as either one of the others.
 
-**Configuration variables:**
+Child widgets can be placed on the grid using the `grid_cell_row_pos` and `grid_cell_column_pos` configuration variables.
+If either is specified both must be specified. If neither is specified the widget will be placed in the first available position, in a row-major order.
+Row and column spans will be taken into account when reserving space.
+
+**Configuration variables (must be placed under the layout key):**
 
 - **grid_rows** (**Required**): The number of rows in the grid, expressed a list of values in pixels, `CONTENT` or `FR(n)` (free units, where `n` is a proportional integer value).
 - **grid_columns** (**Required**): The number of columns in the grid, expressed a list of values in pixels, `CONTENT` or `FR(n)` (free units, where `n` is a proportional integer value).
@@ -596,17 +602,17 @@ It can arrange items into a 2D "table" that has rows or columns (tracks). The it
 - **pad_row** (*Optional*, int16): Set the padding between the rows, in pixels.
 - **pad_column** (*Optional*, int16): Set the padding between the columns, in pixels.
 
-In a grid layout, *all the widgets placed on the grid* will get some additional configuration variables to help with placement:
+In a grid layout, *all the widgets placed on the grid* can have some additional configuration variables to help with placement:
 
-- **grid_cell_row_pos** (**Required**, int16): Position of the widget, in which row to appear (0 based count).
-- **grid_cell_column_pos** (**Required**, int16): Position of the widget, in which column to appear (0 based count).
+- **grid_cell_row_pos** (*Optional*, int16): Position of the widget, in which row to appear (0 based count).
+- **grid_cell_column_pos** (*Optional*, int16): Position of the widget, in which column to appear (0 based count).
 - **grid_cell_x_align** (*Optional*, string): How to align the widget horizontally within the cell. Can also be applied through [Style properties](#lvgl-styling). Possible options below.
 - **grid_cell_y_align** (*Optional*, string): How to align the widget vertically within the cell. Can also be applied through [Style properties](#lvgl-styling). Possible options below.
 - **grid_cell_row_span**  (*Optional*, int16): How many rows to span across the widget. Defaults to `1`.
 - **grid_cell_column_span** (*Optional*, int16): How many columns to span across the widget. . Defaults to `1`.
 
 {{< note >}}
-These `grid_cell_` variables apply to widget configuations!
+These `grid_cell_` variables are applied to individual widgets (cells) within the grid layout!
 
 {{< /note >}}
 Values for use with `grid_column_align`, `grid_row_align`, `grid_cell_x_align`, `grid_cell_y_align`:
@@ -627,13 +633,25 @@ Values for use with `grid_column_align`, `grid_row_align`, `grid_cell_x_align`, 
       type: grid
       grid_row_align: end
       grid_rows: [25px, fr(1), content]
-      grid_columns: [40, fr(1), fr(1)]
+      grid_columns: [fr(1), fr(1)]
       pad_row: 6px
       pad_column: 0
     widgets:
       - image:
           grid_cell_row_pos: 0
           grid_cell_column_pos: 0
+      - obj:
+          grid_cell_row_pos: 0
+          grid_cell_column_pos: 1
+      - obj:
+          grid_cell_row_pos: 2
+          grid_cell_column_pos: 0
+      - label:
+          text: "This will be placed in row 1, column 0"
+      - label:
+          text: "This will be placed in row 1, column 1"
+      - label:
+          text: "This will be placed in row 2, column 1, since 2/0 is occupied"
 
 ```
 {{< tip >}}

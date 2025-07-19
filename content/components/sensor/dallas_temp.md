@@ -12,7 +12,7 @@ params:
 The `dallas_temp` component allows you to use
 [DS18B20](https://www.adafruit.com/product/374)
 ([datasheet](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf))
-and similar 1-Wire temperature sensors.  A [1-Wire bus](#one_wire) is
+and similar 1-Wire temperature sensors.  A {{< docref "/components/one_wire/index" "1-Wire bus" >}} is
 required to be set up in your configuration for this sensor to work.
 
 ```yaml
@@ -31,7 +31,7 @@ sensor:
   Defaults to the maximum for most Dallas temperature sensors: 12.
 - **update_interval** (*Optional*, [Time](#config-time)): The interval that the sensors should be checked.
   Defaults to 60 seconds.
-- **one_wire_id** (*Optional*, [1-Wire Bus](#one_wire)): The ID of the 1-Wire bus to use.
+- **one_wire_id** (*Optional*, {{< docref "/components/one_wire" >}}): The ID of the 1-Wire bus to use.
   Required if there is more than one bus.
 - All other options from [Sensor](#config-sensor).
 

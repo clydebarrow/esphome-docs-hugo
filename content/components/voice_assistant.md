@@ -22,6 +22,8 @@ Audio and voice components consume a significant amount of resources (RAM, CPU) 
 configuration. In particular, Bluetooth/BLE components are known to cause issues when used in
 combination with Voice Assistant and/or other audio components.
 
+If you experience crashes, see the {{< docref "/guides/troubleshooting" >}} guide for how to get a backtrace.
+
 {{< /warning >}}
 ## Configuration variables:
 
@@ -44,6 +46,8 @@ voice_assistant:
 - **conversation_timeout** (*Optional*, [Time](#config-time)): How long to wait before resetting the `conversation_id`
   sent to the voice assist pipeline, which contains the context of the current assist pipeline. Defaults to `300s`.
 - **on_intent_start** (*Optional*, [Automation](#automation)): An automation to perform when intent processing starts.
+- **on_intent_progress** (*Optional*, [Automation](#automation)): An automation to perform when intent progress happens.
+  The variable `x` is a non-empty string containing the streaming TTS response URL only if it is sent to the media player.
 - **on_intent_end** (*Optional*, [Automation](#automation)): An automation to perform when intent processing ends.
 - **on_listening** (*Optional*, [Automation](#automation)): An automation to
   perform when the voice assistant microphone starts listening.

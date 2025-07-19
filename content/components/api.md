@@ -34,6 +34,16 @@ Documentation will only refer to **Actions**.
 api:
 
 ```
+```yaml
+# Example with more options
+api:
+  port: 6053
+  batch_delay: 50ms  # Reduce latency for real-time applications
+  encryption:
+    key: "YOUR_ENCRYPTION_KEY_HERE"
+  reboot_timeout: 30min
+
+```
 ## Configuration variables:
 
 - **port** (*Optional*, int): The port to run the API server on. Defaults to `6053`.
@@ -51,6 +61,19 @@ Support for configuring the encryption key on-the-fly will be implemented in a f
 
 {{< /note >}}
 - **actions** (*Optional*, list): A list of user-defined actions. See [User-defined Actions](#api-device-actions).
+- **batch_delay** (*Optional*, [Time](#config-time)): The delay time for batching multiple state update messages
+  together to reduce network overhead. Lower values send updates sooner but use more network packets,
+  while higher values batch more efficiently but add latency. Must be between `0ms` and `65535ms`
+  (65.535 seconds). Defaults to `100ms`.
+
+{{< note >}}
+Setting `batch_delay: 0ms` enables immediate sending mode for state updates. This is useful for
+applications that require real-time responsiveness, such as IR remote binary sensors where rapid
+ON→OFF transitions must be preserved. However, this will increase network traffic and may impact
+WiFi performance with many rapidly-changing sensors. Only use this setting when necessary.
+
+{{< /note >}}
+- **custom_services** (*Optional*, boolean): Enable compilation of custom API services for external components that use the C++ `CustomAPIDevice` class. Only needed when external components register their own services via the native API. Defaults to `false`.
 - **reboot_timeout** (*Optional*, [Time](#config-time)): The amount of time to wait before rebooting when no
   client connects to the API. This is needed because sometimes the low level ESP functions report that
   the ESP is connected to the network, when in fact it is not - only a full reboot fixes it.

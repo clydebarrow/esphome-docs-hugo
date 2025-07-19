@@ -45,6 +45,7 @@ clean:
 
 convert-from-rst: 
 	python3 tools/convert_rst_to_md.py ./esphome-docs .
+	python3 tools/version.py
 
 convert-branch-in-place:
 	sh tools/migrate.sh

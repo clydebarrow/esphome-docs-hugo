@@ -96,5 +96,6 @@ Configuration variables:
 
 - [Sensor Filters](#sensor-filters)
 - {{< docref "logger/" >}}
+- {{< docref "/guides/troubleshooting" >}} - Troubleshooting guide for debugging crashes and boot failures
 - {{< apiref "debug/debug_component.h" "debug/debug_component.h" >}}
 

@@ -259,5 +259,6 @@ and the `ESP_LOGx` logging macros in this automation.
 
 - {{< docref "/components/uart" >}}
 - {{< docref "/components/select/logger" >}}
+- {{< docref "/guides/troubleshooting" >}} - Troubleshooting guide for debugging crashes and boot failures
 - {{< apiref "logger/logger.h" "logger/logger.h" >}}
 

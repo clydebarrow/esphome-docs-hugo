@@ -102,6 +102,7 @@ the post.
 - [Garage Door Opener with position control using a relay and one or two reed sensors](https://github.com/tronikos/esphome-gdo) by {{< ghuser name="tronikos" >}}
 - [Medisana BS440 (and propably more scales)](https://github.com/bwynants/weegschaal) by [bwynants](https://github.com/bwynants)
 - [Novy Pureline Pro extractor hood](https://github.com/bwynants/purelinepro) by [bwynants](https://github.com/bwynants)
+- [Digoo DG-R8H and similar nexus433 sensors to MQTT component](https://github.com/FreeBear-nc/esphome-nexus433) by {{< ghuser name="FreeBear-nc" >}}
 
 ## Sample Configurations
 

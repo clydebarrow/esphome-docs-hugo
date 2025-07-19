@@ -52,4 +52,5 @@ and OTA component(s).
 - {{< apiref "safe_mode/safe_mode.h" "safe_mode/safe_mode.h" >}}
 - {{< docref "/components/button/safe_mode" >}}
 - {{< docref "/components/switch/safe_mode" >}}
+- {{< docref "/guides/troubleshooting" >}} - Troubleshooting guide for debugging crashes and boot failures
 

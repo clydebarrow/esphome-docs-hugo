@@ -40,6 +40,15 @@ binary_sensor:
     name: "Legacy Sensor"
     use_interrupt: false  # Use polling instead of interrupts
 
+# Example with shared pin (automatic polling mode)
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO15
+      allow_other_uses: true  # Pin is shared with other components
+    name: "Pump Status"
+    # Interrupts will be automatically disabled for compatibility
+
 ```
 ## Configuration variables:
 
@@ -83,6 +92,13 @@ expanders (like PCF8574) will automatically fall back to polling mode.
 LibreTiny-based platforms (BK72xx, RTL87xx, LN882x) default to polling mode
 due to hardware limitations with edge interrupts. You can explicitly enable
 interrupt mode if needed, but it may not work reliably on all pins.
+
+{{< /note >}}
+{{< note >}}
+When a pin is configured with `allow_other_uses: true` (for sharing with
+other components), interrupts are automatically disabled to prevent conflicts.
+This ensures compatibility with components like `duty_cycle` sensors that
+need to monitor pin state changes. The sensor will use polling mode instead.
 
 {{< /note >}}
 ## Activating internal pullups

@@ -665,6 +665,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Fabian Affolter (@fabaff)](https://github.com/fabaff)
 - [Fabian (@Fabian-Schmidt)](https://github.com/Fabian-Schmidt)
 - [Fabian Muehlberger (@fabianmuehlberger)](https://github.com/fabianmuehlberger)
+- [Fabiano Arruda (@fabianoarruda)](https://github.com/fabianoarruda)
 - [Federico Ariel Castagnini (@facastagnini)](https://github.com/facastagnini)
 - [C W (@fake-name)](https://github.com/fake-name)
 - [Kouvaris Theofanis (@faniskou)](https://github.com/faniskou)
@@ -1997,6 +1998,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [TJ Horner (@tjhorner)](https://github.com/tjhorner)
 - [Theodore Ni (@tjni)](https://github.com/tjni)
 - [Max Efremov (@Tmin10)](https://github.com/Tmin10)
+- [tmpeh (@tmpeh)](https://github.com/tmpeh)
 - [Christian (@Tntdruid)](https://github.com/Tntdruid)
 - [Lars R. (@TNTLarsn)](https://github.com/TNTLarsn)
 - [Snōwball (@tobias-)](https://github.com/tobias-)
@@ -2188,4 +2190,4 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Christian Zufferey (@zuzu59)](https://github.com/zuzu59)
 - [Zynth-dev (@Zynth-dev)](https://github.com/Zynth-dev)
 
-*This page was last updated July 19, 2025.*
+*This page was last updated July 23, 2025.*

@@ -299,6 +299,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Ruben Brites (@Brites89)](https://github.com/Brites89)
 - [Ben Brooks (@brooksben11)](https://github.com/brooksben11)
 - [brtchip-tuannguyen (@brtchip-tuannguyen)](https://github.com/brtchip-tuannguyen)
+- [bruvv (@bruvv)](https://github.com/bruvv)
 - [Vaclav (@bruxy70)](https://github.com/bruxy70)
 - [Bernhard Tittelbach (@btittelbach)](https://github.com/btittelbach)
 - [buddydvd (@buddydvd)](https://github.com/buddydvd)
@@ -401,6 +402,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [James Crook (@cooljimy84)](https://github.com/cooljimy84)
 - [Cooper Dale (@Cooper-Dale)](https://github.com/Cooper-Dale)
 - [copercini (@copercini)](https://github.com/copercini)
+- [GitHub Copilot (@Copilot)](https://github.com/Copilot)
 - [Corban Mailloux (@corbanmailloux)](https://github.com/corbanmailloux)
 - [Bertrand Roussel (@CoRfr)](https://github.com/CoRfr)
 - [Dmitry Berezovsky (@corvis)](https://github.com/corvis)
@@ -415,6 +417,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Corey Rice (@crice009)](https://github.com/crice009)
 - [crp500 (@crp500)](https://github.com/crp500)
 - [cryptelli (@cryptelli)](https://github.com/cryptelli)
+- [cryptk (@cryptk)](https://github.com/cryptk)
 - [cs-xm (@cs-xm)](https://github.com/cs-xm)
 - [Christian Schwarzgruber (@cslux)](https://github.com/cslux)
 - [cstaahl (@cstaahl)](https://github.com/cstaahl)
@@ -757,6 +760,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Giampiero Baggiani (@giampiero7)](https://github.com/giampiero7)
 - [Gideon Kanikevich (@gid204)](https://github.com/gid204)
 - [Giel Janssens (@gieljnssns)](https://github.com/gieljnssns)
+- [GilDev (@GilDev)](https://github.com/GilDev)
 - [Giovanni (@Gio-dot)](https://github.com/Gio-dot)
 - [Giovanni (@gio-dot)](https://github.com/gio-dot)
 - [git2212 (@git2212)](https://github.com/git2212)
@@ -851,6 +855,7 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Hobby Components (@HobbyComponents)](https://github.com/HobbyComponents)
 - [Marcel Hoppe (@hobbypunk90)](https://github.com/hobbypunk90)
 - [Sebastian Raff (@hobbyquaker)](https://github.com/hobbyquaker)
+- [Eric Hoffmann (@Hofferic)](https://github.com/Hofferic)
 - [MoA (@honomoa)](https://github.com/honomoa)
 - [Hopperpop (@Hopperpop)](https://github.com/Hopperpop)
 - [Ilia Sotnikov (@hostcc)](https://github.com/hostcc)
@@ -2198,4 +2203,4 @@ ESPHome was originally founded by [Otto Winter (@OttoWinter)](https://github.com
 - [Christian Zufferey (@zuzu59)](https://github.com/zuzu59)
 - [Zynth-dev (@Zynth-dev)](https://github.com/Zynth-dev)
 
-*This page was last updated July 28, 2025.*
+*This page was last updated August 5, 2025.*

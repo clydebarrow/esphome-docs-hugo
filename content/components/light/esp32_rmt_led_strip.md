@@ -21,14 +21,6 @@ light:
     name: "My Light"
 
 ```
-Only for Arduino platforms (and ESP-IDF <5 which was used until ESPHome 2025), the RMT channel must be defined.
-
-```yaml
-light:
-  - platform: esp32_rmt_led_strip
-    ...
-
-```
 ## Configuration variables
 
 - **pin** (**Required**, [Pin](#config-pin)): The pin for the data line of the light.

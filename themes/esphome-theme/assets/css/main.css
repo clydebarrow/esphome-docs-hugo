@@ -33,10 +33,12 @@
   --component-card-text: #333;
   --admonition-note-bg: #e7f2fa;
   --admonition-note-border: #3498db;
-  --admonition-note-title: #3498db;
+  --admonition-note-title: #1080c0;
   --admonition-tip-bg: #e8f8e5;
   --admonition-tip-border: #2ecc71;
   --admonition-tip-title: #2ecc71;
+  --admonition-warning-bg: #fff3cd;
+  --admonition-warning-border: #ffcc00;
 }
 
 [data-theme="dark"] {
@@ -64,6 +66,8 @@
   --admonition-tip-bg: #1d2a1d;
   --admonition-tip-border: #58d68d;
   --admonition-tip-title: #58d68d;
+  --admonition-warning-bg: #23272e;
+  --admonition-warning-border: #ffcc00;
   --logo-text-color: #FFFFFF;
 }
 
@@ -253,10 +257,7 @@ img {
 
 .sidebar-nav ul, .sidebar-nav ol {
   list-style: disc;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em;
 
   & ul {
     list-style: none;
@@ -271,7 +272,7 @@ img {
 }
 
 .sidebar-nav li {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   & li {
     margin-bottom: 0;
   }
@@ -319,6 +320,31 @@ img {
   font-size: 0.9rem;
 }
 
+.toc-sort-button {
+  z-index: 1001;
+  right: 0.7rem;
+  top: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: absolute;
+}
+[data-toc-sort="alphabetic"] .toc-alphabetic {
+  display: block;
+}
+[data-toc-sort="alphabetic"] .toc-linear {
+  display: none;
+}
+
+[data-toc-sort]:not([data-toc-sort="alphabetic"]) .toc-alphabetic {
+  display: none;
+}
+
+[data-toc-sort]:not([data-toc-sort="alphabetic"]) .toc-linear {
+  display: block;
+}
+
 .page-toc ul {
   list-style-type: none;
   padding-left: 1rem;
@@ -347,10 +373,9 @@ img {
 .page-toc a {
   color: var(--text-color);
   display: block;
-  padding: 0.2rem 0;
   text-decoration: none;
   border-left: 2px solid transparent;
-  padding-left: 0.5rem;
+  padding: 0.2rem 0 0.2rem 0.5rem;
   transition: all 0.2s ease;
 }
 
@@ -391,14 +416,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.5em;
-  padding-right: 2em;
-  padding-left: 3em;
-  padding-bottom: 0.5em;
+  padding: 0.5em 2em 0.5em 3em;
   margin: 0 auto;
   background-color: var(--nav-bg);
   color: var(--nav-text);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 .sticky-nav button svg {
@@ -411,6 +432,7 @@ img {
 }
 .nav-logo img, .nav-logo svg {
   height: 30px;
+  max-width: 150px;
   padding: 0;
   width: fit-content;
 }
@@ -635,6 +657,9 @@ img {
   img.dark-invert {
     filter: invert(1.0);
   }
+  svg.dark-invert {
+    filter: invert(1.0);
+  }
   .sticky-nav {
     background-color: #222b36;
     color: #f1f1f1;
@@ -697,7 +722,6 @@ img {
   }
 
   .note, .tip, .warning, .caution, .important {
-    background: #23272e;
     color: #fff;
     border-color: #00979d;
   }
@@ -874,7 +898,6 @@ main {
 }
 
 .collapse-header {
-  background-color: #f3f6f6;
   padding: 0.75em 1em;
   cursor: pointer;
   display: flex;
@@ -951,7 +974,7 @@ main {
 }
 
 .admonition.warning, .admonition.caution, .admonition.important {
-   background-color: #fef5e7;
+   background-color: var(--admonition-warning-bg);
    border-color: #e67e22;
 }
 
@@ -1070,6 +1093,10 @@ footer {
   flex-grow: 2;
 }
 
+.footer-logo div {
+  min-height: 200px;
+}
+
 .footer-logo img {
   width: 220px;
   height: 49px;
@@ -1118,8 +1145,8 @@ footer {
 
 /* Components page */
 .component-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 24%));
+  display: flex;
+  flex-flow: row wrap;
   gap: 0.5em;
   margin-bottom: 2em;
 }
@@ -1141,6 +1168,12 @@ footer {
   border-radius: 5px;
   padding: 0.5em;
   text-align: center;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 
   color: var(--component-card-text);
   border-color: var(--border-color);
@@ -1150,6 +1183,7 @@ footer {
 
 .component-card a {
   width: 100%;
+  max-width: 120px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1162,20 +1196,20 @@ footer {
 }
 
 .component-icon {
-  margin-bottom: auto;
   margin-top: auto;
 }
 
 .component-icon img {
-  min-width: 80%;
-  max-height: 100%;
-  max-width: 100%;
+  min-width: 120px;
+  max-height: 130px;
+  width: 80%;
 }
 
 .component-name {
   font-weight: bold;
-  margin-bottom: 0.5em;
   margin-top: auto;
+  min-height: 3.5rem;
+  line-height: 1.3rem;
 }
 
 .component-card h2, .component-card h3, .component-card p, .component-card a {

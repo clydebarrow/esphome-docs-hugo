@@ -59,7 +59,7 @@
             </figure>
         </noscript>
         {{ $srclist := delimit $src_set ", " }}
-        <figure class="{{ .classes }} lazy">
+        <figure role="none" class="{{ .classes }} lazy">
             {{ if .href }}
             <a href='{{ .href }}'>
                 {{ end }}
@@ -69,7 +69,6 @@
                      srcset="data:image/jpeg;base64,{{ $placeholder.Content | base64Encode }}"
                      data-src="{{ $image.RelPermalink }}"
                      data-srcset="{{ $srclist }}"
-                     style="max-width: {{ $image.Width }}px; max-height: {{ $image.Height }}px;"
                      width="{{ $image.Width }}" height="{{ $image.Height }}"
                      alt="{{ .alt }}"/>
                 {{ if .href }}

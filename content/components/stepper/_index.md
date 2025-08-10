@@ -81,6 +81,20 @@ stepper:
 
 ```
 {{< /note >}}
+{{< note >}}
+TMC drivers are pin-compatible with the A4988, but instead of a `SLEEP` pin they expose an `ENABLE` pin.
+When using a TMC driver with the `a4988` platform you therefore need to invert the `sleep_pin`:
+
+```yaml
+stepper:
+  - platform: a4988
+    # ...
+    sleep_pin:
+      number: GPIOXX
+      inverted: true
+
+```
+{{< /note >}}
 ## ULN2003 Component
 
 Put this code into the configuration file on ESPHome for this device.

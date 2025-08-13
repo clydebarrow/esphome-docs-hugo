@@ -189,7 +189,7 @@ companies.
 
 {{< anchor "remote_transmitter-transmit_beo4" >}}
 
-`remote_transmitter.transmit_beo4` **Action**
+### `remote_transmitter.transmit_beo4` **Action**
 
 This [action](#config-action) sends a B&O Beo4 infrared protocol code to a remote transmitter.
 
@@ -369,7 +369,7 @@ Configuration variables:
 
 {{< anchor "remote_transmitter-transmit_gobox" >}}
 
-`remote_transmitter.transmit_gobox` **Action**
+### `remote_transmitter.transmit_gobox` **Action**
 
 This [action](#config-action) sends a command to a Go-Box via the IR transmitter.
 

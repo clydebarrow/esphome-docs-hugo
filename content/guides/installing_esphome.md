@@ -21,31 +21,40 @@ Open the start menu and type `cmd`. Press the enter key.
 In the terminal that comes up, check that Python is installed:
 
 ```console
-> python --version
+python --version
+
+```
+It should show something like:
+
+```console
 Python 3.10.1
 
 ```
-{{< note >}}
-Don't copy the `>`. That's used to show that this is a command that goes
-in the console, and to let you see what the expected results are (shown on
-the next line without a `>`)
-
-{{< /note >}}
 Looks good? You can go ahead and install ESPHome:
 
 ```console
-> pip3 install wheel
-> pip3 install esphome
+pip3 install wheel
+pip3 install esphome
 
 ```
 And you should be good to go! You can test that things are properly installed
-with the following:
+with:
 
 ```console
-> esphome version
-Version: 2021.12.3
+esphome version
 
 ```
+It should show something like:
+
+```console
+Version: 2025.5.2
+
+```
+{{< note >}}
+You may additionally need to install git for the external components feature.
+Download git from [the official link](https://git-scm.com/downloads)
+
+{{< /note >}}
 ## Mac
 
 ESPHome supports macOS. There are several ways to install ESPHome on macOS:
@@ -60,24 +69,28 @@ ESPHome supports macOS. There are several ways to install ESPHome on macOS:
 An easy way for installation is via [Homebrew](https://brew.sh/):
 
 ```console
-$ brew install esphome
+brew install esphome
 
 ```
 Verify the installation:
 
 ```console
-$ esphome version
-Version: 2024.12.0
+esphome version
 
 ```
-If you encounter any issues with Homebrew installation, please check the
-[ESPHome Homebrew Formula](https://formulae.brew.sh/formula/esphome) page
-for additional information.
+It should show something like:
 
+```console
+Version: 2025.5.2
+
+```
 {{< note >}}
-Homebrew may not always provide the latest version immediately. Updating Homebrew will
-automatically update ESPHome. If this is ok for you, Homebrew is the easiest way to
-install ESPHome.
+- If you encounter any issues with Homebrew installation, please check the
+  [ESPHome Homebrew Formula](https://formulae.brew.sh/formula/esphome) page
+  for additional information.
+- Homebrew may not always provide the latest version immediately. Updating Homebrew will
+  automatically update ESPHome. If this is ok for you, Homebrew is the easiest way to
+  install ESPHome.
 
 {{< /note >}}
 **pip**
@@ -87,7 +100,7 @@ and may need additional dependencies and path settings. Setting up a virtual env
 highly recommended. If you are not familiar with Python virtual environments, Homebrew
 may be easier.
 
-You will require Python 3.9 or newer. While your Mac may have a version of Python installed it may not be up-to-date.
+You will require Python 3.10 or newer. While your Mac may have a version of Python installed it may not be up-to-date.
 Python can be installed from the [official site](https://www.python.org/downloads)
 or with Homebrew. Once Python is installed, create and activate a virtual environment and install ESPHome with pip:
 
@@ -108,18 +121,23 @@ For development purposes, we recommend cloning the repository. See our
 ## Linux
 
 Your distribution probably already has Python installed. Confirm that it is at
-least version 3.9:
+least version 3.10:
 
 ```console
-$ python3 --version
-Python 3.9.15
+python3 --version
+
+```
+It should show something like:
+
+```console
+Python 3.10.1
 
 ```
 Looks good? Now create a virtual environment to contain ESPHome and it's dependencies.
 
 ```console
-$ python3 -m venv venv
-$ source venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 
 ```
 You may or may not see `(venv)` at the beginning of your prompt depending on your shell configuration. This indicates that you are in the virtual environment.
@@ -132,7 +150,7 @@ pip3 install esphome
 ```
 {{< caution >}}
 Don't use `sudo` with pip. If you do, you'll run into trouble updating
-your OS down the road.
+your Distro down the road.
 
 For details, see `DontBreakDebian
 <https://wiki.debian.org/DontBreakDebian#A.27make_install.27_can_conflict_with_packages>`_.
@@ -140,14 +158,19 @@ For details, see `DontBreakDebian
 advice in the article applies to all Linux distributions, not just Debian.
 
 Some people install ESPHome without the virtual environment, which can lead to issues with PATHs etc.
-Non virtual environment installations are considered not "supported" as people end up having to know your exact system setup.
+Installations without `venv` are considered not "supported" as people end up having to know your exact system setup.
 
 {{< /caution >}}
-At this point, you should be able confirm that ESPHome has been successfully installed:
+At this point, you should be able to confirm that ESPHome has been successfully installed:
 
 ```console
-$ esphome version
-Version: 2022.11.4
+esphome version
+
+```
+It should show something like:
+
+```console
+Version: 2025.5.2
 
 ```
 If you get an error like "Command not found", you need to add the binary to

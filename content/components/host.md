@@ -17,9 +17,12 @@ configuration to Home Assistant (the native MAC address is not readily available
 
 {{< note >}}
 HA will not automatically discover an ESPHome instance running on `host` using mDNS, and you will need
-to add it explicitly using the IP address of your host computer.
-
+to add it explicitly using the IP address of your host computer. If HA cannot establish a connection when
+adding the device manually, the firewall settings of the local host computer may be the cause. The
+ESPHome *API* port (`6053`) must be allowed through the firewall.
+See {{< docref "/components/api" >}} for details.
 {{< /note >}}
+
 Many components, especially those interfacing to actual hardware, will not be available when using `host`. Do not
 configure wifi - network will automatically be available using the host computer.
 

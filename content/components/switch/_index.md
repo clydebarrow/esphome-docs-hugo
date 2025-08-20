@@ -110,6 +110,33 @@ on_...:
     - switch.turn_off: relay_1
 
 ```
+{{< anchor "switch-control_action" >}}
+
+### `switch.control` Action
+
+This action allows you to control a switch with more flexibility than the basic `turn_on` and `turn_off` actions.
+It accepts a templatable `state` parameter, making it useful when the desired switch state is determined dynamically.
+
+```yaml
+on_...:
+  then:
+    - switch.control:
+        id: relay_1
+        state: true
+
+    # Or with a template
+    - switch.control:
+        id: relay_1
+        state: !lambda |-
+          return id(some_sensor).state > 50.0;
+
+```
+Configuration variables:
+
+- **id** (**Required**, [ID](#config-id)): The ID of the switch to control.
+- **state** (**Required**, boolean, [templatable](#config-templatable)):
+  The state to set the switch to. `true` turns the switch on, `false` turns it off.
+
 {{< anchor "switch-is_on_condition" >}}
 {{< anchor "switch-is_off_condition" >}}
 
@@ -193,6 +220,35 @@ switch:
     - logger.log: "Switch Turned Off!"
 
 ```
+{{< anchor "switch-on_state_trigger" >}}
+
+### `switch.on_state` Trigger
+
+This trigger is activated each time the switch changes state (either ON or OFF).
+It provides the new state as a boolean variable `x` that can be used in the automation.
+
+```yaml
+switch:
+  - platform: gpio  # or any other platform
+    # ...
+    on_state:
+      - light.control:
+          id: my_light
+          state: !lambda return x;
+      - if:
+          condition:
+            lambda: 'return x;'
+          then:
+            - logger.log: "Switch is now ON!"
+          else:
+            - logger.log: "Switch is now OFF!"
+
+```
+The variable `x` is a boolean that represents the new state:
+
+- `true` when the switch turns ON
+- `false` when the switch turns OFF
+
 ## See Also
 
 - {{< apiref "switch/switch.h" "switch/switch.h" >}}

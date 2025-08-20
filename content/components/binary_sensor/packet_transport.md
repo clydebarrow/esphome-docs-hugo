@@ -30,7 +30,7 @@ binary_sensor:
    - platform: ...
 
 ```
-## Configuration variables
+## Configuration variables:
 
 -  **id** (*Optional*, [ID](#config-id)): Manually specify the ID used for code generation.
 -  **provider** (**Required**, string): The name of the provider node.

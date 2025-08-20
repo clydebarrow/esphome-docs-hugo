@@ -52,7 +52,11 @@ Float outputs only:
 - **zero_means_zero** (*Optional*, boolean): Sets the output to use actual 0 instead of `min_power`.
   Defaults to `false`.
 
+{{< note >}}
+The `min_power` and `max_power` values are automatically clamped to ensure `0.0 ≤ min_power ≤ max_power ≤ 1.0`.
+This prevents invalid configurations and ensures stable output behavior.
 
+{{< /note >}}
 {{< anchor "output-turn_on_action" >}}
 
 ### `output.turn_on` Action
@@ -97,9 +101,14 @@ id(light_1).turn_off();
 
 ### `output.set_level` Action
 
-This action sets the float output to the given level when executed. Note: This only
-works with floating point outputs like {{< docref "/components/output/esp8266_pwm" >}}, {{< docref "/components/output/ledc" >}}, {{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/slow_pwm" >}}.
+This action sets the float output to the given level when executed.
 
+{{< note >}}
+This only works with floating point outputs like {{< docref "/components/output/ac_dimmer" >}},
+{{< docref "/components/output/esp8266_pwm" >}}, {{< docref "/components/output/ledc" >}},
+{{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/slow_pwm" >}}.
+
+{{< /note >}}
 ```yaml
 on_...:
   then:
@@ -114,6 +123,66 @@ This action can also be expressed in [lambdas](#config-lambda):
 ```cpp
 // range is 0.0 (off) to 1.0 (on)
 id(light_1).set_level(0.5);
+
+```
+{{< /note >}}
+{{< anchor "output-set_min_power_action" >}}
+
+### `output.set_min_power` Action
+
+This action sets the minimum output power level for the specified float output platform.
+It allows you to dynamically adjust the `min_power` configuration variable at runtime.
+
+{{< note >}}
+This only works with floating point outputs like {{< docref "/components/output/ac_dimmer" >}},
+{{< docref "/components/output/esp8266_pwm" >}}, {{< docref "/components/output/ledc" >}},
+{{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/slow_pwm" >}}.
+
+{{< /note >}}
+```yaml
+on_...:
+  then:
+    - output.set_min_power:
+        id: light_1
+        min_power: 20%
+
+```
+{{< note >}}
+This action can also be expressed in [lambdas](#config-lambda):
+
+```cpp
+// range is 0.0 (off) to 1.0 (on)
+id(light_1).set_min_power(0.2);
+
+```
+{{< /note >}}
+{{< anchor "output-set_max_power_action" >}}
+
+### `output.set_max_power` Action
+
+This action sets the maximum output power level for the specified float output platform.
+It allows you to dynamically adjust the `max_power` configuration variable at runtime.
+
+{{< note >}}
+This only works with floating point outputs like {{< docref "/components/output/ac_dimmer" >}},
+{{< docref "/components/output/esp8266_pwm" >}}, {{< docref "/components/output/ledc" >}},
+{{< docref "/components/output/sigma_delta_output" >}}, {{< docref "/components/output/slow_pwm" >}}.
+
+{{< /note >}}
+```yaml
+on_...:
+  then:
+    - output.set_max_power:
+        id: light_1
+        max_power: 80%
+
+```
+{{< note >}}
+This action can also be expressed in [lambdas](#config-lambda):
+
+```cpp
+// range is 0.0 (off) to 1.0 (on)
+id(light_1).set_max_power(0.8);
 
 ```
 {{< /note >}}

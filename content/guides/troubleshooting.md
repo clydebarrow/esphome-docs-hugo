@@ -112,9 +112,21 @@ The .elf file must be from the same compilation that produced the firmware curre
 This tool runs entirely in your browser - no data is sent to any server, ensuring your firmware and debug information remain private.
 
 {{< /note >}}
+## Performance Troubleshooting
+
+If your device is experiencing performance issues such as:
+
+- Slow response times
+- Missed sensor readings
+- Connectivity problems
+- Components not updating as expected
+
+The {{< docref "/components/runtime_stats" >}} component can help identify which components are consuming the most processing time or blocking the event loop. See the runtime_stats documentation for detailed usage instructions and examples.
+
 ## See Also
 
 - {{< docref "/components/logger" >}} - Configure logging levels and outputs
 - {{< docref "/components/debug" >}} - Debug component for additional diagnostics
+- {{< docref "/components/runtime_stats" >}} - Performance analysis and debugging
 - {{< docref "/components/safe_mode" >}} - Safe Mode recovery guide
 - {{< docref "/guides/faq" >}} - Frequently asked questions

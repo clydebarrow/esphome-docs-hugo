@@ -55,6 +55,8 @@ you want the media player to use that name, you can set `name: None`.
 All `media_player` actions can be used without specifying an `id` if you have only one `media_player` in
 your configuration YAML.
 
+The actions `turn_off` and `turn_on` are optional and based on the platform implementing the `supports_turn_off_on` trait.
+
 Configuration variables:
 
 **id** (*Optional*, [ID](#config-id)): The media player to control. Defaults to the only one in YAML.
@@ -111,6 +113,18 @@ Configuration variables:
 ### `media_player.toggle` Action
 
 This action will pause or resume the current playback.
+
+{{< anchor "media_player-turn_off" >}}
+
+### `media_player.turn_off` Action
+
+This action will turn off the media player.
+
+{{< anchor "media_player-turn_on" >}}
+
+### `media_player.turn_on` Action
+
+This action will turn on the media player.
 
 {{< anchor "media_player-volume_up" >}}
 
@@ -219,6 +233,34 @@ media_player:
       - logger.log: "Announcing!"
 
 ```
+{{< anchor "media_player-on_turn_off_trigger" >}}
+
+### `media_player.on_turn_off` Trigger
+
+This trigger is activated every time the media player is turned off.
+
+```yaml
+media_player:
+  - platform: ...  # any platform implementing the `supports_turn_off_on` trait
+    # ...
+    on_turn_off:
+      - logger.log: "Media Player is Turned Off"
+
+```
+{{< anchor "media_player-on_turn_on_trigger" >}}
+
+### `media_player.on_turn_on` Trigger
+
+This trigger is activated every time the media player is turned on.
+
+```yaml
+media_player:
+  - platform: ...  # any platform implementing the `supports_turn_off_on` trait
+    # ...
+    on_turn_on:
+      - logger.log: "Media Player is Turned On"
+
+```
 {{< anchor "media_player-is_idle_condition" >}}
 
 ### `media_player.is_idle` Condition
@@ -273,6 +315,34 @@ on_...:
   if:
     condition:
       media_player.is_announcing:
+
+```
+{{< anchor "media_player-is_off_condition" >}}
+
+### `media_player.is_off` Condition
+
+This condition checks if the media player is turned off.
+
+```yaml
+# In some trigger:
+on_...:
+  if:
+    condition:
+      media_player.is_off:
+
+```
+{{< anchor "media_player-is_on_condition" >}}
+
+### `media_player.is_on` Condition
+
+This condition checks if the media player is turned on.
+
+```yaml
+# In some trigger:
+on_...:
+  if:
+    condition:
+      media_player.is_on:
 
 ```
 ## Play media in order

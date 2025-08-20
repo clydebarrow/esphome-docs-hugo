@@ -13,9 +13,9 @@ The Analog To Digital (`adc`) Sensor allows you to use the built-in
 ADC in your device to measure a voltage on certain pins.
 
 - ESP8266: Only pin A0 (GPIO17) can be used.
-- ESP32: GPIO32 through GPIO39 can be used.
+- ESP32: Available pins vary by variant, see [ESP32 pins and Hardware Details](#adc-esp32_pins).
 - RP2040: GPIO26 through GPIO29 can be used.
-
+- nRF52840: AIN0 through AIN7, VDD, VDDHDIV5 can be used.
 
 {{< img src="adc-ui.png" alt="Image" width="80.0%" class="center" >}}
 
@@ -79,22 +79,35 @@ Even though the measurements are calibrated, the range *limits* are variable amo
 {{< /note >}}
 {{< anchor "adc-esp32_pins" >}}
 
-## ESP32 pins
+## ESP32 pins and Hardware Details
 
-`ADC2` pins are only usable when Wi-Fi is not configured on the device.
 
 | Variant |  ADC1 |  ADC2 |
 | --- | --- | --- |
 | ESP32 |  GPIO32 - GPIO39 |  GPIO0, GPIO2, GPIO4, GPIO12 - GPIO15, GPIO25 - GPIO27 |
 | ESP32-C2 |  GPIO0 - GPIO4 |  GPIO5 |
 | ESP32-C3 |  GPIO0 - GPIO4 |  GPIO5 |
+| ESP32-C5 |  GPIO1 - GPIO6 |  no `ADC2` |
 | ESP32-C6 |  GPIO0 - GPIO6 |  no `ADC2` |
 | ESP32-H2 |  GPIO1 - GPIO5 |  no `ADC2` |
 | ESP32-S2 |  GPIO1 - GPIO10 |  GPIO11 - GPIO20 |
 | ESP32-S3 |  GPIO1 - GPIO10 |  GPIO11 - GPIO20 |
+| ESP32-P4 |  GPIO16 - GPIO23 |  GPIO49 - GPIO54 |
 
 
+Different ESP32 variants use different ADC calibration methods:
 
+* Original ESP32 (non-variant) & ESP32-S2: Use line-fitting calibration
+* ESP32-C3, ESP32-C5, ESP32-C6, ESP32-H2, ESP32-S3 & ESP32-P4: Use curve-fitting calibration
+
+This is handled automatically by the code, but it's worth noting if you're debugging ADC readings or need to understand the calibration process.
+
+
+{{< warning >}}
+On ESP32-C5, GPIO2 is a strapping pin used during boot. While it can be used as an ADC input, avoid connecting circuits that might interfere with the boot process.
+
+
+{{< /warning >}}
 {{< anchor "adc-raw" >}}
 
 ## Different ESP32-ADC behavior since 2021.11
@@ -142,10 +155,13 @@ To avoid confusion: It measures the voltage at the chip, and not at the VCC pin 
 {{< /note >}}
 ### On Raspberry Pi Pico
 
-On the Raspberry Pi Pico and Pico W the ADC can measure VSYS voltage.
+On the Raspberry Pi Pico and Pico W, setting `pin:` to `VCC` allows you to measure the VSYS voltage through ADC3 (GPIO29).
 
-Depending on how VSYS is powered the readings will have different meanings - either power supply voltage when it is connected to VSYS pin directly, or USB voltage (VBUS) minus some drop on the Schottky diode the Raspberry Pi Pico has between those pins.
-Our experiments indicate the drop being ~0.1V for Pico and ~0.25V for Pico W; you can use sensor filters to adjust the final value.
+The reading will reflect either:
+- Direct power supply voltage when powered through the VSYS pin
+- USB voltage (VBUS) minus diode drop when powered via USB
+
+Our experiments indicate the diode drop being ~0.1V for Pico and ~0.25V for Pico W; you can use sensor filters to adjust the final value.
 
 {{< note >}}
 On Raspberry Pi Pico W the ADC GPIO29 pin for VSYS is shared with WiFi chip, so attempting to use it explicitly will likely hang the WiFi connection.

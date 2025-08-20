@@ -143,6 +143,14 @@ lvgl:
 To see what mathematical functions ara available,
 refer to [Python math library](https://docs.python.org/3/library/math.html) documentation.
 
+### Built-in functions
+
+In addition to the Jinja expressions, ESPHome supports a number of built-in functions that can be used in substitutions.
+
+- `ord` Returns the Unicode code point for a given character. Example: `ord("A") == 65`
+- `chr` Returns the character for a given Unicode code point. Example: `chr(65) == "A"`
+- `len` Returns the length of the string. Example: `len("Hello") == 5`
+
 {{< anchor "substitute-include-variables" >}}
 
 ## Substitute !include variables

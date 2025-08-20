@@ -37,6 +37,7 @@ information about ESPHome configuration files.
 "RTL87xx","components/libretiny","rtl87xx.svg",""
 "LN882x","components/libretiny","ln882x.svg",""
 "Host","components/host","host.svg","dark-invert"
+"NRF52","components/nrf52","nrf52.svg",""
 {{< /imgtable >}}
 # Microcontroller Peripherals
 
@@ -76,6 +77,7 @@ ESPHome-specific components or components supporting ESPHome device provisioning
 "Mapping","components/mapping","mapping.svg","dark-invert"
 "XXTEA","components/xxtea","xxtea.svg",""
 "Script","components/script","description.svg","dark-invert"
+"Factory Reset","components/factory_reset","restart-alert.svg","dark-invert"
 {{< /imgtable >}}
 # Network Hardware
 
@@ -91,6 +93,7 @@ ESPHome-specific components or components supporting ESPHome device provisioning
 "Network Core","components/network","server-network.svg","dark-invert"
 "Native API","components/api","server-network.svg","dark-invert"
 "MQTT","components/mqtt","mqtt.png",""
+"ESP-NOW","components/espnow","esp-now.svg",""
 "HTTP Request","components/http_request","connection.svg","dark-invert"
 "mDNS","components/mdns","radio-tower.svg","dark-invert"
 "WireGuard","components/wireguard","wireguard_custom_logo.svg","dark-invert"
@@ -469,6 +472,7 @@ Sensors are organized into categories; if a given sensor fits into more than one
 "APDS9960","components/sensor/apds9960","apds9960.jpg","Colour & Gesture"
 "BMI160","components/sensor/bmi160","bmi160.jpg","Accelerometer & Gyroscope"
 "LD2410","components/sensor/ld2410","ld2410.jpg","Motion & Presence"
+"LD2412","components/sensor/ld2412","ld2412.jpg","Motion & Presence"
 "LD2420","components/sensor/ld2420","ld2420.jpg","Motion & Presence"
 "LD2450","components/sensor/ld2450","ld2450.png","Motion & Presence"
 "MPU6050","components/sensor/mpu6050","mpu6050.jpg","Accelerometer & Gyroscope"
@@ -558,6 +562,7 @@ Often known as "tag" or "card" readers within the community.
 "AT581X","components/at581x","at581x.png"
 "DFRobot mmWave Radar","components/dfrobot_sen0395","dfrobot_sen0395.jpg"
 "LD2410","components/sensor/ld2410","ld2410.jpg"
+"LD2412","components/sensor/ld2412","ld2412.jpg"
 "LD2420","components/sensor/ld2420","ld2420.jpg"
 "LD2450","components/sensor/ld2450","ld2450.png"
 "Seeed Studio MR24HPC1 mmWave","components/seeed_mr24hpc1","seeed-mr24hpc1.jpg"
@@ -667,6 +672,7 @@ Often known as "tag" or "card" readers within the community.
 
 {{< imgtable >}}
 "Addressable Light","components/display/addressable_light","addressable_light.jpg"
+"MIPI DSI Displays","components/display/mipi_dsi","tab5.jpg"
 "MIPI SPI Displays","components/display/mipi_spi","t4-s3.jpg"
 "ILI9xxx","components/display/ili9xxx","ili9341.jpg"
 "ILI9341","components/display/ili9xxx","ili9341.svg"

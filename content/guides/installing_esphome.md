@@ -27,7 +27,7 @@ python --version
 It should show something like:
 
 ```console
-Python 3.10.1
+Python 3.11.13
 
 ```
 Looks good? You can go ahead and install ESPHome:
@@ -47,7 +47,7 @@ esphome version
 It should show something like:
 
 ```console
-Version: 2025.5.2
+Version: 2025.8.0
 
 ```
 {{< note >}}
@@ -81,7 +81,7 @@ esphome version
 It should show something like:
 
 ```console
-Version: 2025.5.2
+Version: 2025.8.0
 
 ```
 {{< note >}}
@@ -100,7 +100,7 @@ and may need additional dependencies and path settings. Setting up a virtual env
 highly recommended. If you are not familiar with Python virtual environments, Homebrew
 may be easier.
 
-You will require Python 3.10 or newer. While your Mac may have a version of Python installed it may not be up-to-date.
+You will require Python 3.11 or newer. While your Mac may have a version of Python installed it may not be up-to-date.
 Python can be installed from the [official site](https://www.python.org/downloads)
 or with Homebrew. Once Python is installed, create and activate a virtual environment and install ESPHome with pip:
 
@@ -121,7 +121,7 @@ For development purposes, we recommend cloning the repository. See our
 ## Linux
 
 Your distribution probably already has Python installed. Confirm that it is at
-least version 3.10:
+least version 3.11:
 
 ```console
 python3 --version
@@ -130,7 +130,7 @@ python3 --version
 It should show something like:
 
 ```console
-Python 3.10.1
+Python 3.11.13
 
 ```
 Looks good? Now create a virtual environment to contain ESPHome and it's dependencies.
@@ -170,7 +170,7 @@ esphome version
 It should show something like:
 
 ```console
-Version: 2025.5.2
+Version: 2025.8.0
 
 ```
 If you get an error like "Command not found", you need to add the binary to

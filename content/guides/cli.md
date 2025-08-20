@@ -72,6 +72,16 @@ The `esphome run <CONFIG>` command is the most common command for ESPHome. It
 Manually specify the upload port/IP to use. For example `/dev/cu.SLAB_USBtoUART`, or `192.168.1.176`
 to perform an OTA.
 
+Multiple `--device` options can be specified to provide fallback addresses. ESPHome will
+try each address in order until one succeeds. This is particularly useful for devices with
+multiple IP addresses (IPv4/IPv6).
+
+Example:
+
+.. code-block:: console
+
+esphome run my-device.yaml --device 192.168.1.100 --device 2001:db8::1
+
 {{< /option >}}
 {{< option "--upload_speed BAUD_RATE" >}}
 The upload speed for serial flashing defaults to 460800 or as set with the environment variable `ESPHOME_UPLOAD_SPEED`.
@@ -131,6 +141,15 @@ The `esphome upload <CONFIG>` validates the configuration and uploads the most r
 {{< option "--device UPLOAD_PORT" >}}
 Manually specify the upload port/IP address to use. For example `/dev/cu.SLAB_USBtoUART`, or `192.168.1.176`
 to perform an OTA.
+
+Multiple `--device` options can be specified to provide fallback addresses. ESPHome will
+try each address in order until one succeeds.
+
+Example:
+
+.. code-block:: console
+
+esphome upload my-device.yaml --device 192.168.1.100 --device 2001:db8::1
 
 {{< /option >}}
 {{< option "--upload_speed BAUD_RATE" >}}
@@ -243,6 +262,16 @@ Manually set the client id.
 {{< /option >}}
 {{< option "--device SERIAL_PORT" >}}
 Manually specify a serial port/IP to use. For example `/dev/cu.SLAB_USBtoUART`.
+
+Multiple `--device` options can be specified to provide fallback addresses. When using the
+native API for logs, all addresses are passed to the API client which uses the Happy Eyeballs
+algorithm (RFC 8305) to efficiently connect using the fastest available address.
+
+Example:
+
+.. code-block:: console
+
+esphome logs my-device.yaml --device 192.168.1.100 --device 2001:db8::1
 
 {{< /option >}}
 {{< option "--reset" >}}

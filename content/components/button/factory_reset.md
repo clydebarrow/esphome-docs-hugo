@@ -40,6 +40,7 @@ button:
 
 ## See Also
 
+- {{< docref "/components/factory_reset" >}}
 - {{< docref "shutdown/" >}}
 - {{< docref "restart/" >}}
 - {{< docref "safe_mode/" >}}

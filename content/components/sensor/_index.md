@@ -157,6 +157,11 @@ filters:
       send_every: 15
   - throttle: 1s
   - throttle_average: 1s
+  - throttle_with_priority:
+      timeout: 1s
+      value:
+        - 42.0
+        - 43.0
   - heartbeat: 5s
   - debounce: 0.1s
   - timeout: 1min
@@ -270,7 +275,7 @@ This difference can be calculated in two ways an absolute difference or a percen
 
 If a number is specified, it will be used as the absolute difference required.
 For example if the filter were configured with a value of 2 and the last value passed through was 10,
-only values greater than 12 or less than 8 would be passed through.
+only values greater than or equal to 12 or less than or equal to 8 would be passed through.
 
 ```yaml
 filters:
@@ -279,8 +284,9 @@ filters:
 ```
 If a percentage is specified a percentage of the last value will be used as the required difference.
 For example if the filter were configured with a value of 20% and the last value passed through was 10,
-only values greater than 12 or less than 8 would be passed through.
-However, if the last value passed through was 100 only values greater than 120 or less than 80 would be passed through.
+only values greater than or equal to 12 or less than or equal to 8 would be passed through.
+However, if the last value passed through was 100 only values greater than or equal to 120 or less than or
+equal to 80 would be passed through.
 
 ```yaml
 filters:
@@ -624,12 +630,33 @@ In comparison to the `throttle` filter, it won't discard any values. In comparis
 
 
 
+### `throttle_with_priority`
+
+Throttle the incoming values unless they match a prioritized value. When this filter gets an incoming value, it first
+checks if it matches one of the prioritized values. If so, the value is passed through immediately. Otherwise, it
+checks if the last incoming value is at least `specified time period` old. If it is not older than the configured
+value, the value is not passed forward.
+
+```yaml
+# Example filters:
+filters:
+  - throttle_with_priority:
+      timeout: 1s
+      value:
+        - nan
+        - 0
+
+```
 ### `timeout`
 
-After the first value has been sent, if no subsequent value is published within the
-`specified time period`, send a templatable value which defaults to `NaN`.
-Especially useful when data is derived from some other communication
-channel, e.g. a serial port, which can potentially be interrupted.
+After the first value has been sent, if no subsequent value is published within the specified `timeout` period, send
+a templatable value which defaults to `NaN`. The value may also be set to `last`, which will result in the last
+value received by the filter being sent again.
+
+This filter particularly is useful when:
+
+- data is derived from some communication channel (a serial port, for example) which can potentially be interrupted.
+- placed ahead of a throttle filter to ensure that the last value published will pass through the throttle.
 
 ```yaml
 # Example filters:
@@ -638,6 +665,9 @@ filters:
   - timeout:
       timeout: 10s
       value: !lambda return 0;
+  - timeout:
+      timeout: 10s
+      value: last  # sent value will be the last value received by the filter
 
 ```
 ### `to_ntc_resistance`

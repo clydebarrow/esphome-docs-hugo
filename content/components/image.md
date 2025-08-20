@@ -85,13 +85,37 @@ Additionally, if you want to use SVG images (including MDI images), you will
 additionally need to have the python `cairosvg` package installed. These are automatically installed when
 setting up ESPHome via the usual methods.
 
-{{< /note >}}
-## Grouping images by type
 
-You can group images by type to make it easier to manage them. This is useful when you have a lot of images to be encoded in the same way, and avoids having to repeat the same type for each image. The type name is used as the key for the group. For example:
+{{< /note >}}
+## Setting defaults
+
+For the situation where most or all of your images share common attributes, you can use another schema style to provide default values. In this case
+the `defaults:` option will provide fallback values for all images. When using this format the `images:` key takes a list of image definitions.
 
 ```yaml
 image:
+  defaults:
+    type: rgb565
+    transparency: opaque
+    resize: 100x100
+  images:
+    - file: "image1.png"
+      id: image1
+    - file: "image2.png"
+      id: image2
+      resize: 200x200  # overrides the default resize
+
+```
+## Grouping images by type
+
+You can group images by type to make it easier to manage them. This is useful when you have a lot of images to be encoded in the same way,
+and avoids having to repeat the same type for each image. A `defaults:` group can be used to specify default values other than the type.
+The type name is used as the key for the group. For example:
+
+```yaml
+image:
+  defaults:
+    resize: 100x100
   grayscale:
     - file: "image1.png"
       id: image1
@@ -119,23 +143,6 @@ image:
       id: image2
     opaque:
     - file: "image2.png"
-
-```
-For the situation where most or all of your images share common attributes, you can use another schema style to provide default values. In this case
-the `defaults:` option will provide fallback values for all images. When using this format the `images:` key takes only a list of image definitions.
-
-```yaml
-image:
-  defaults:
-    type: rgb565
-    transparency: opaque
-    resize: 100x100
-  images:
-    - file: "image1.png"
-      id: image1
-    - file: "image2.png"
-      id: image2
-      resize: 200x200  # overrides the default resize
 
 ```
 ## Displaying Images
